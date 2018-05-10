@@ -1,27 +1,25 @@
 ---
-title: "Устранение неполадок с подключением к серверу и базе данных в Reporting Services | Документы Майкрософт"
-ms.custom: 
+title: Устранение неполадок с подключением к серверу и базе данных в Reporting Services | Документы Майкрософт
+ms.custom: ''
 ms.date: 02/28/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d6544043e8925c77dc88d7d1191e8ccd690b7a00
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3e639f2f410584a4b9d1cefc991e9c6540f9ea7f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Устранение неполадок с подключением к серверу и базе данных в Reporting Services
 Используйте этот раздел, чтобы решать проблемы, возникающие при подключении к серверу отчетов. Также в этом разделе описываются сообщения о непредвиденных ошибках. Дополнительные сведения о настройке источников данных и настройке данных о подключении сервера отчетов см. в разделах [Задание учетных данных и сведений о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) и [Настройка соединения с базой данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -58,7 +56,7 @@ ms.lasthandoff: 01/09/2018
 3. Выберите **Протоколы для MSSQLSERVER**.  
 4. Щелкните правой кнопкой мыши пункт **TCP/IP**и выберите **Включить**.  
 5. Выберите **Службы SQL Server**.  
-6. Щелкните правой кнопкой мыши **SQL Server (MSSQLSERVER)**и выберите команду **Перезапустить**.  
+6. Щелкните правой кнопкой мыши **SQL Server (MSSQLSERVER)** и выберите команду **Перезапустить**.  
   
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>Ошибка инструментария WMI при соединении с сервером отчетов в среде Management Studio  
 По умолчанию среда Management Studio использует инструментарий управления Windows (WMI) служб Reporting Services, чтобы установить соединение с сервером отчетов. Если поставщик WMI установлен неправильно, при попытке установить соединение с сервером отчетов возникнет следующая ошибка.  

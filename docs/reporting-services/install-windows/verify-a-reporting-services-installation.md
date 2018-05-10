@@ -1,16 +1,15 @@
 ---
-title: "Проверка установки служб Reporting Services | Документы Майкрософт"
-ms.custom: 
+title: Проверка установки служб Reporting Services | Документы Майкрософт
+ms.custom: ''
 ms.date: 06/03/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - checking report server installations
 - verifying report server installations
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], verifying installations
 - Setup [Reporting Services], verifying installations
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b7135112da1536af6b279b8f0de55bfcb646e4b4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 629c6da03fa04942a498fd2859748ac79c53fb64
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно установить в один из двух режимов — в собственном режиме или в режиме интеграции с SharePoint. Шаги, которые необходимо выполнить для проверки установки, зависят от выбранного режима сервера отчетов.  
@@ -99,7 +97,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  Откройте браузер и в строке адреса введите URL-адрес веб-портала. Адрес состоит из имени сервера и имени виртуального каталога, указанного для [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] в процессе установки или на странице "URL-адрес веб-портала" в программе настройки служб Reporting Services. По умолчанию виртуальный каталог [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] называется **Reports**. Можно использовать следующий URL-адрес для проверки установки [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] :  
   
-     http://*\<имя компьютера>*Reports*\<_имя экземпляра>*.  
+     http://*\<имя компьютера>* Reports*\<_имя экземпляра>*.  
   
 2.  Используйте [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] для создания новой папки или передачи файла с целью проверки, возвращаются ли определения обратно в базу данных сервера отчетов. Если эти операции успешно завершаются, то соединение функционирует.  
   

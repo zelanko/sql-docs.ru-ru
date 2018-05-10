@@ -1,16 +1,15 @@
 ---
-title: "Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint | Документы Майкрософт"
-ms.custom: 
+title: Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - security [Reporting Services], tasks
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - security [Reporting Services], predefined roles
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7d115273f5072941acde9c0f2370e7f42b484678
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0ec18593b6e7f65116492829f90d8a531c73405d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint
   В этом разделе приводится сравнение функции авторизации на основе ролей и задач служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , работающих в собственном режиме, со средствами безопасности из продуктов SharePoint. В нем сравнивается терминология и характеристики ролей, задач, групп SharePoint, уровней разрешений и самих разрешений.  
@@ -68,7 +66,7 @@ ms.lasthandoff: 01/09/2018
   
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Роль|Группы SharePoint|  
 |--------------------------------------|-----------------------|  
-|**Браузер**<br /><br /> Просмотр|Используйте группу **Посетители** для предоставления разрешений на просмотр отчетов. Группа **Посетители** имеет уровень разрешений «Чтение», который позволяет членам группы просматривать страницы, элементы списков и документы.|  
+|**Браузер**<br /><br /> Представление|Используйте группу **Посетители** для предоставления разрешений на просмотр отчетов. Группа **Посетители** имеет уровень разрешений «Чтение», который позволяет членам группы просматривать страницы, элементы списков и документы.|  
 |**Диспетчер содержимого**<br /><br /> Полный набор разрешений на все элементы и операции на уровне элементов, включая разрешения на установку параметров безопасности|Используйте группу **Владельцы** для предоставления полного доступа к элементам сервера отчетов на сайте SharePoint. Группа **Владельцы** имеет разрешения «Полный доступ», позволяющие членам этой группы изменять содержимое, страницы и функциональность сайта. Уровень доступа «Полный доступ» должен предоставляться только администраторам сайта.|  
 |**Мои отчеты**|Эквивалентной группы нет. Роль**Мои отчеты** не поддерживается на сервере отчетов, работающем в режиме интеграции с SharePoint. Если необходима эквивалентная функциональность, можно воспользоваться функциями «Мой сайт» служб [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] .|  
 |**Издатель**<br /><br /> Добавление, обновление, просмотр и удаление отчетов, моделей отчетов, общих источников данных и ресурсов.|Используйте группу **Члены** для предоставления разрешений на добавление и изменение элементов, а также обновление ссылок на зависимые элементы на сайте SharePoint. Группа **Члены** имеет уровень разрешений «Участие», который позволяет членам группы просматривать страницы, добавлять и обновлять элементы и отправлять изменения на утверждение.|  

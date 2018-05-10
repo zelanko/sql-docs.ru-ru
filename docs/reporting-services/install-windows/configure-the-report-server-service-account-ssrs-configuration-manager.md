@@ -1,27 +1,25 @@
 ---
-title: "Настройка учетной записи службы сервера отчетов (диспетчер конфигураций служб SSRS) | Документы Майкрософт"
-ms.custom: 
+title: Настройка учетной записи службы сервера отчетов (диспетчер конфигураций служб SSRS) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: fc3bb7568ce6aeb2222ef73dba8d3e9fb42a5482
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: b8bb7adbc79619f26e9de5d79dd8d460672d0e4a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] реализован в виде единой службы, состоящей из веб-службы сервера отчетов, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]и приложения фоновой обработки, которое предназначено для запланированной обработки отчетов и доставки подписки. В этом разделе описан процесс начальной настройки учетной записи службы, а также изменения учетной записи или пароля при помощи программы настройки служб Reporting Services.  

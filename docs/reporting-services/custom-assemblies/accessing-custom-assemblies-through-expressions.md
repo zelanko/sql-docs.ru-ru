@@ -1,17 +1,17 @@
 ---
-title: "Доступ к пользовательским сборкам с использованием выражений | Документация Майкрософт"
-ms.custom: 
+title: Доступ к пользовательским сборкам с использованием выражений | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: custom-assemblies
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - expressions [Reporting Services], custom assemblies
 - static member calls
@@ -19,16 +19,15 @@ helpviewer_keywords:
 - calling class members
 - custom assemblies [Reporting Services], expressions
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4fbeded846679fc6925175f7c833e8c9b0c55e8c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 726f21d764504fc72fc833dbff10acd380f4087d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Доступ к пользовательским сборкам посредством выражений
   После того как пользовательская сборка была создана, сделана доступной для конструктора отчетов или сервера отчетов, добавлена к подходящей политике безопасности, а также после того, как в определение отчета была добавлена ссылка на данную пользовательскую сборку, появится возможность доступа к членам классов сборки посредством выражений отчетов. Для ссылки в выражении на пользовательский код следует вызвать элемент класса этой сборки. Способ создания ссылки зависит от того, является ли метод статическим или основывается на экземпляре.  
@@ -50,7 +49,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="calling-instance-members-from-a-report-definition-file"></a>Вызов членов экземпляров из файла определения отчета  
  Если в пользовательской сборке содержатся члены экземпляров, к которым нужно обращаться из определения отчета, то в отчет следует добавить имя экземпляра класса. Имя экземпляра для класса можно добавить, использовав вкладку **Код** диалогового окна **Свойства отчета**. Дополнительные сведения о добавлении экземпляров классов в отчет см. в разделе [Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
- Для вызова статического члена необходимо сослаться на него как на выражение, принимающее следующий вид =Code*.ИмяЭкземпляра.Метод*.  
+ Для вызова статического члена необходимо сослаться на него как на выражение, принимающее следующий вид =Code *.ИмяЭкземпляра.Метод*.  
   
 #### <a name="to-call-instance-members"></a>Вызов членов экземпляра  
   

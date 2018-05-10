@@ -1,30 +1,28 @@
 ---
-title: "Средство просмотра HTML-страниц и панель инструментов отчета | Документы Майкрософт"
+title: Средство просмотра HTML-страниц и панель инструментов отчета | Документы Майкрософт
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a00f751dbb765e8835fa40430dfdd00a8079f3c6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 00353fa42e692ef0a4e25d279a0ea5def83a067c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Средство просмотра HTML-страниц и панель инструментов отчета
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] есть средство просмотра HTML-страниц, которое предназначено для отображения отчетов по запросу в том виде, в каком они запрашиваются с сервера отчетов. Средство просмотра HTML-страниц обеспечивает платформу для просмотра отчетов в формате HTML. Она включает в себя панель инструментов отчета, раздел параметров, раздел учетных данных и схему документа. Панель инструментов отчета в средстве просмотра HTML-страниц предлагает функции, которые можно использовать для работы с отчетом, включая параметры экспорта, поэтому можно просмотреть отчет в форматах, отличных от HTML. Раздел параметров и схема документа появляются только тогда, когда открываются отчеты, настроенные для использования параметров и управления схемой документа.  

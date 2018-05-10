@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.userdefineddatatype.general.f1
 - sql13.swb.new.datatype.properties.general.f1
@@ -22,13 +21,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 435137451447ffa28f95befc098e1a1eb9358571
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 411b717866ff137b498d12aff3994e2a7436101d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Создание псевдонима определяемого пользователем типа данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,7 +75,7 @@ ms.lasthandoff: 04/16/2018
      **Длина/точность**  
      Отображает длину и точность представления типа данных, где это применимо. Параметр**Длина** применяется к символьным определяемым пользователем типам данных; параметр **Точность** ― только к числовым определяемым пользователем типам данных. Метка изменяется в зависимости от типа данных, выбранного ранее. Это поле не редактируется, если длина или точность выбранного элемента данных фиксированы.  
   
-     Длина не отображается для типов данных **nvarchar(max)**, **varchar(max)**и **varbinary(max)** .  
+     Длина не отображается для типов данных **nvarchar(max)**, **varchar(max)** и **varbinary(max)** .  
   
      **Название**  
      При создании нового псевдонима определяемого пользователем типа данных введите уникальное имя, которое будет использоваться в базе данных для представления этого псевдонима определяемого пользователем типа данных. Максимальное количество символов должно соответствовать системному типу данных **SYSNAME** . Имя существующего псевдонима определяемого пользователем типа данных не может быть изменено.  
@@ -103,7 +101,7 @@ ms.lasthandoff: 04/16/2018
   
      Для типов данных **nchar** и **nvarchar** значение размера хранилища всегда в два раза больше значения параметра **Длина**.  
   
-     Значение хранилища не отображается для типов данных **nvarchar(max)**, **varchar(max)**и **varbinary(max)** .  
+     Значение хранилища не отображается для типов данных **nvarchar(max)**, **varchar(max)** и **varbinary(max)** .  
   
 2.  В диалоговом окне **Создание определяемого пользователем типа данных** введите в поле **Схема** схему, которая будет владеть новым псевдонимом типа данных, или выберите схему, нажав кнопку обзора.  
   

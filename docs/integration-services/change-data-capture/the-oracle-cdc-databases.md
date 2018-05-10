@@ -1,28 +1,26 @@
 ---
-title: "Базы данных CDC Oracle | Документы Майкрософт"
-ms.custom: 
+title: Базы данных CDC Oracle | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 54eb41670979c83b200060128da8564b765bcd5d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: bf36c117d636579d0f2048b67cd903eca224cc3d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-oracle-cdc-databases"></a>Базы данных CDC Oracle
   Экземпляр CDC Oracle связан с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тем же именем на целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта база данных называется базой данных Oracle (или базой данных CDC).  
@@ -104,7 +102,7 @@ ms.lasthandoff: 02/15/2018
 |Элемент|Description|  
 |----------|-----------------|  
 |version|Отслеживает версию конфигурации экземпляра CDC. Обновляется при каждом обновлении таблицы, а также при добавлении нового экземпляра или удалении существующего экземпляра отслеживания.|  
-|connect_string|Строки подключения Oracle. Простой пример:<br /><br /> `<server>:<port>/<instance>` (например, `erp.contoso.com:1521/orcl`).<br /><br /> В строке подключения также может указываться дескриптор подключения Oracle Net, например `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`<br /><br /> Если используется сервер каталогов или файл tnsname, то строкой подключения может быть имя соединения.<br /><br /> Дополнительные сведения о строках подключения Oracle см. в статье [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) , которая содержит подробную информацию о строках подключения к базам данных Oracle для клиента Oracle Instant Client, используемого службой CDC Oracle Service.|  
+|connect_string|Строки подключения Oracle. Простой пример:<br /><br /> `<server>:<port>/<instance>` (например, `erp.contoso.com:1521/orcl`).<br /><br /> В строке подключения также может указываться дескриптор подключения Oracle Net, например `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`<br /><br /> Если используется сервер каталогов или файл tnsname, то строкой подключения может быть имя соединения.<br /><br /> Дополнительные сведения о строках подключения Oracle см. в статье [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153), которая содержит подробную информацию о строках подключения к базам данных Oracle для клиента Oracle Instant Client, используемого службой CDC Oracle Service.|  
 |use_windows_authentication|Логическое значение, которое может быть.<br /><br /> **0**: имя пользователя и пароль Oracle указываются для проверки подлинности (по умолчанию)<br /><br /> **1**: проверка подлинности Windows используется для соединения с базой данных Oracle. Этот параметр можно использовать только в том случае, если в базе данных Oracle настроено использование проверки подлинности Windows.|  
 |username|Имя пользователя базы данных Oracle, выполняющего интеллектуальный анализ журнала. Обязателен только в том случае, если **use_windows_authentication = 0**.|  
 |password|Пароль пользователя базы данных Oracle, выполняющего интеллектуальный анализ журнала. Обязателен только в том случае, если **use_windows_authentication = 0**.|  
@@ -114,7 +112,7 @@ ms.lasthandoff: 02/15/2018
   
  В следующей таблице содержится описание доступных параметров.  
   
-|Имя|Default|Min|Max|Статические|Description|  
+|Имя|По умолчанию|Min|Max|Статические|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |трассировка|False|-|-|False|Возможные значения:<br /><br /> True<br /><br /> False<br /><br /> on<br /><br /> off|  
 |cdc_update_state_interval|10|1|120|False|Размер (в килобайтах) фрагментов памяти, выделяемых для транзакции (транзакции может быть выделено несколько фрагментов). См. столбец memory_limit в таблице [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) .|  

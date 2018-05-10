@@ -1,16 +1,15 @@
 ---
-title: "Средства служб Reporting Services | Документы Майкрософт"
-ms.custom: 
+title: Средства служб Reporting Services | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, tools
 - Reporting Services, tools
@@ -23,19 +22,18 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-caps.latest.revision: 
+caps.latest.revision: 80
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d5027e12a7cc0bfe310c4eb6b291667cfa4d0c4f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ed20fdaf6d06ae31e903e5043f51a5f8ba5491fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-tools"></a>Инструментальные средства служб Reporting Services
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] содержат набор графических средств и средств для работы со скриптами, поддерживающих разработку и использование форматируемых отчетов в управляемой среде. В набор средств входят средства разработки, настройки и администрирования, а также средства просмотра отчетов. В этом разделе содержится краткий обзор средств в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и способов доступа к ним.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] содержат набор графических средств и средств для работы со скриптами, поддерживающих разработку и использование отчетов с широкими возможностями в управляемой среде. В набор средств входят средства разработки, настройки и администрирования, а также средства просмотра отчетов. В этом разделе содержится краткий обзор средств в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и способов доступа к ним.  
   
  Сведения о том, как быстро найти нужное средство, см. в разделе [Учебник. Инструкции по поиску и запуску средств служб Reporting Services (SSRS)](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 02/15/2018
 |----------|-----------------|-------------------|  
 |Диспетчер конфигурации служб Reporting Services|Это средство используется для настройки установки служб Reporting Services. Доступны следующие задачи.<br /><br /> Настройка локальных и удаленных экземпляров сервера отчетов<br /><br /> Настройка учетной записи службы сервера отчетов.<br /><br /> Создание и настройка одного или нескольких URL-адресов веб-службы.<br /><br /> Настройка URL-адреса диспетчера отчетов<br /><br /> Создание и настройка базы данных сервера отчетов.<br /><br /> Настройка масштабного развертывания.<br /><br /> Резервное копирование, восстановление или замена симметричного ключа, используемого для шифрования хранимых строк подключения и учетных данных.<br /><br /> Настройка учетной записи автоматического выполнения.<br /><br /> Настройка SMTP-сервера для доставки электронной почты.<br /><br /> <br /><br /> Примечание. Диспетчер настройки служб Reporting Services не предназначен для управления содержимым сервера отчетов, включения дополнительных компонентов или предоставления доступа к серверу.<br /><br /> Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).|Меню «Пуск»|  
 |Среда SQL Server Management Studio|Это средство используется для управления одним или несколькими экземплярами сервера отчетов в единой среде, включая следующие действия.<br /><br /> Управление локальными и удаленными экземплярами сервера отчетов<br /><br /> Установка свойств сервера отчетов<br /><br /> Изменение определений ролей<br /><br /> Отключение неиспользуемых функций сервера отчетов.<br /><br /> Управление заданиями<br /><br /> Управление общими расписаниями|Меню «Пуск»|  
-|Диспетчер конфигурации SQL Server|Это средство используется для следующих целей.<br /><br /> Запуск и остановка служб Windows Reporting Services<br /><br /> Настройка передачи отзывов пользователей, расположения каталога дампа и отчетов об ошибках<br /><br /> <br /><br /> **\*\* Предупреждение. \*\***Не используйте это средство для настройки учетных записей службы. Используйте вместо него средство настройки служб Reporting Services.<br /><br /> Дополнительные сведения см. в разделе [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).|Меню «Пуск»|  
+|Диспетчер конфигурации SQL Server|Это средство используется для следующих целей.<br /><br /> Запуск и остановка служб Windows Reporting Services<br /><br /> Настройка передачи отзывов пользователей, расположения каталога дампа и отчетов об ошибках<br /><br /> <br /><br /> **\*\* Предупреждение. \*\*** Не используйте это средство для настройки учетных записей службы. Используйте вместо него средство настройки служб Reporting Services.<br /><br /> Дополнительные сведения см. в разделе [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).|Меню «Пуск»|  
 |Программа rsconfig|Это средство используется для настройки соединения сервера отчетов с базой данных сервера отчетов и управления им. Кроме того, с ее помощью можно указать учетную запись пользователя, которую следует использовать для автоматической обработки отчетов.<br /><br /> Дополнительные сведения см. в разделе [Программы командной строки сервера отчетов (службы SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).|С помощью командной строки|  
 |Программа rskeymgmt|Это средство используется для следующих целей.<br /><br /> Извлечение, восстановление, создание и удаление симметричного ключа, используемого для шифрования данных сервера отчетов<br /><br /> Соединение экземпляров сервера отчетов при масштабном развертывании<br /><br /> <br /><br /> Дополнительные сведения см. в разделе [Программы командной строки сервера отчетов (службы SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).|С помощью командной строки|  
 |Классы инструментария управления Windows (WMI)|Эти классы используются для автоматизации задач настройки в диспетчере конфигурации служб Reporting Services без использования графического пользовательского интерфейса.<br /><br /> Дополнительные сведения см. в разделе [Accessing the WMI Provider Programmatically](../../reporting-services/accessing-the-wmi-provider-programmatically.md).|Скрипт Visual Basic|  

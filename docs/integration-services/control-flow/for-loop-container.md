@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.forloopcontainerdetails.f1
 - sql13.dts.designer.forloopcontainer.f1
@@ -24,12 +23,11 @@ caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3062db607cb3f0ead45a29002abe5db5de937bf7
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 7251cc1185476365f91bebd3421b51b8d68aee16
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="for-loop-container"></a>Контейнер «цикл по элементам»
   Контейнер «цикл по элементам» определяет повторяющийся поток управления в пакете. Управление циклом аналогично структуре цикла **For** в языках программирования. В ходе каждого повтора цикла контейнер «цикл по элементам» вычисляет выражение и повторяет рабочий процесс до тех пор, пока результатом выражения не станет **False**.  

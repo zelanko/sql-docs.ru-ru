@@ -1,27 +1,25 @@
 ---
-title: "Справочник по агрегатным функциям (построитель отчетов и службы SSRS) | Документы Майкрософт"
-ms.custom: 
+title: Справочник по агрегатным функциям (построитель отчетов и службы SSRS) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 4fcaa7101ebdd8042d0148b4a216335a74af837b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 931cd60d3a2e1691dcb6f9d2c58976ec242d2d68
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Функции построителя отчетов — справочник по агрегатным функциям
   Чтобы включить в отчет статистические значения, в выражениях можно использовать агрегатные функции. Агрегатная функция по умолчанию для числовых полей — функция SUM. Можно изменить выражение и использовать другую встроенную агрегатную функцию или указать другую область. Область определяет набор данных, используемый при вычислениях.  

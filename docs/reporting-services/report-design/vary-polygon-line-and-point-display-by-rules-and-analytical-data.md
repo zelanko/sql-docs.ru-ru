@@ -1,16 +1,15 @@
 ---
-title: "Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных | Документы Майкрософт"
-ms.custom: 
+title: Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10538"
 - "10537"
@@ -22,16 +21,15 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-caps.latest.revision: 
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 428f89c51b60f1e9f33170ab03cb43a87caf6a78
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3e78b0319639852d8bb4cac5be3f3b2157ac0703
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных
   Параметры отображения многоугольников, линий и точек слоя карты управляются настройками слоя, правилами для элементов слоя карты или переопределенными параметрами отдельных внедренных элементов слоя карты.  
@@ -123,7 +121,7 @@ ms.lasthandoff: 01/09/2018
   
  Для управления местом отображения условных обозначений используйте диалоговое окно «Свойства условных обозначений», которое позволяет указать положение условных обозначений относительно окна просмотра карты. Дополнительные сведения см. в разделе [Изменение условных обозначений карты, цветовой шкалы и связанных правил (построитель отчетов и службы SSRS)](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
- Условные обозначения автоматически расширяются, чтобы отобразить заголовок или текст условных обозначений. Чтобы форматировать текст элементов условных обозначений, используйте ключевые слова для условных обозначений карты и пользовательские форматы. Дополнительные сведения см. в разделе [Изменение формата содержимого в условных обозначениях](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems).  
+ Условные обозначения автоматически расширяются, чтобы отобразить заголовок или текст условных обозначений. Чтобы форматировать текст элементов условных обозначений, используйте ключевые слова для условных обозначений карты и пользовательские форматы. Дополнительные сведения см. в разделе [To change the format of content in a legend](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems).  
   
  В следующей таблице показаны примеры различных доступных форматов.  
   

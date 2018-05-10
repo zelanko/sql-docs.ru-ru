@@ -1,27 +1,25 @@
 ---
-title: "Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS) | Документы Майкрософт"
-ms.custom: 
+title: Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d2e0640a2712cb6880fbae2d5d9e043957df1d4b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 763840cf9aacac3d890dfa0c1ad9b1e389a48d63
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)
   К каждой точке данных ряда диаграммы можно добавить подсказку со сведениями, относящимися к точке данных, например имя группы, значение точки данных, значение точки данных в процентах от всего ряда. Эти сведения отображаются при наведении указателя на точку данных отображаемого отчета с разбиением на страницы.  
