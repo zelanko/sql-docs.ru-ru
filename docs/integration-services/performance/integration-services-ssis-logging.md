@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.configuredtslogs.containers.f1
 - sql13.dts.designer.configuredtslogs.loggingdetails.f1
@@ -36,17 +35,16 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 603f1d339745e83c3a16ec5b036a8c2f2cc4c980
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: bd0e92f62d99f30d244b9fc14bbf0ebb42f15269
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-ssis-logging"></a>Ведение журналов в службах Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат регистраторы, которые могут использоваться для реализации ведения журналов в пакетах, контейнерах и задачах. При ведении журнала можно записать текущие сведения о пакете, что поможет при каждом выполнении пакета проводить его аудит и устранять неисправности. Например, журнал может записать имя оператора, запускающего пакет, и время, в которое пакет был начат или завершен.  
   
- Вы можете настроить область ведения журнала на время выполнения пакета на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в разделе [Enable Logging for Package Execution on the SSIS Server](#server_logging).  
+ Вы можете настроить область ведения журнала на время выполнения пакета на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в разделе [Включение ведения журналов при выполнении пакета на сервере служб SSIS](#server_logging).  
   
  Можно также включить ведение журнала при выполнении пакета из командной строки с помощью программы **dtexec** . Дополнительные сведения об аргументах командной строки, относящихся к ведению журналов, см. в разделе [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
@@ -385,7 +383,7 @@ ms.lasthandoff: 04/26/2018
   
 9. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
 
-## <a name="server_logging"></a> Enable Logging for Package Execution on the SSIS Server
+## <a name="server_logging"></a> Включение ведения журналов при выполнении пакета на сервере служб SSIS
   В этой статье описывается, как задать или изменить уровень ведения журнала для пакета, когда выполняется пакет, развернутый на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Уровень ведения журнала, задаваемый при выполнении пакета, переопределяет уровень, настроенный во время разработки с помощью [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения см. в разделе [Включение средств ведения журналов в SQL Server Data Tools](#ssdt) .  
   
  В разделе **Свойства сервера**в SQL Server вы можете выбрать ведение журнала на уровне сервера (вариант по умолчанию) для свойства **Уровень ведения журнала сервера** . Вы можете выбрать один из встроенных уровней ведения журнала, описанных в этой статье, или существующий пользовательский уровень. Выбранный уровень применяется по умолчанию ко всем пакетам, развернутым в каталоге служб SSIS. По умолчанию этот уровень применяется также к заданию агента SQL Server, в рамках которого запущен пакет служб SSIS.  

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
@@ -19,12 +18,11 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b7c05dcf7a4bd38a98637ecb4e9da576e74b8ab9
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 6552bb3f8b4294fed3a14eaaf71dab1575380dad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Просмотр сопоставления типов данных (мастер импорта и экспорта SQL Server)
 Если заданное сопоставление типов данных не добавится в список **Сопоставления** диалогового окна **Сопоставления столбцов** , в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Просмотр сопоставления типов данных** . На этой странице еще раз просмотрите подробные сведения о преобразованиях типов данных, которые пришлось выполнить мастеру, чтобы сделать данные источника совместимыми с назначением. Эти сведения включают в себя визуальные отличия преобразований типов данных, для которых ожидается успешное выполнение, от преобразований, которые могут вызвать ошибки или усечения. Для каждого преобразования можно указать, принимать ли предлагаемое мастером преобразование, а также способ обработки возможных ошибок.   

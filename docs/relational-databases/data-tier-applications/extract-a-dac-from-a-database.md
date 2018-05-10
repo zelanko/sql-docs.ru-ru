@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.extractdacwizard.validationandsummary.f1
 - sql13.swb.extractdacwizard.introduction.f1
@@ -28,12 +27,11 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 35745b0b3e167a34ceb73f8e7cee7f9af7d8d3d6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f7141252a11e4391d14a4b8aff5240e849ad27d8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="extract-a-dac-from-a-database"></a>Извлечение приложения уровня данных из базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +104,7 @@ ms.lasthandoff: 04/16/2018
 ###  <a name="ValidateSummary"></a> Validation and summary page  
  На этой странице мастер проверяет, все ли объекты базы данных поддерживаются приложением уровня данных. На ней также проверяются зависимости между объектами базы данных, чтобы определить набор объектов, которые могут быть успешно включены в DAC. После этого отображается отчет о проверке, содержащий сводку параметров, выбранных в этом мастере. Чтобы изменить параметр, нажмите кнопку **Назад**. Чтобы начать извлечение DAC, нажмите кнопку **Далее**.  
   
-> **Примечание.**Если один или несколько объектов не поддерживаются DAC, то кнопка **Далее** будет недоступна и процесс извлечения не может быть продолжен. В таком случае рекомендуется удалить неподдерживаемые объекты и вновь запустить данный мастер.  
+> **Примечание.** Если один или несколько объектов не поддерживаются DAC, то кнопка **Далее** будет недоступна и процесс извлечения не может быть продолжен. В таком случае рекомендуется удалить неподдерживаемые объекты и вновь запустить данный мастер.  
   
  **Сводка** — сводка выбранных параметров перечисляется в разделе **Свойства приложения уровня данных**. Результаты проверки отображаются в разделе **Объекты DAC**. Существует три типа результатов проверки:  
   
