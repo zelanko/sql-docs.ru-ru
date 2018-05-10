@@ -1,25 +1,24 @@
 ---
-title: Просмотр R и пакеты Python, установленные на сервере SQL Server | Документы Microsoft
+title: Получить сведения о пакете R и Python для машинного обучения SQL Server | Документы Microsoft
+description: Определить версию пакета R и Python, проверка установки и получить список установленных пакетов на SQL Server R Services или службы обучения машины.
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7cea8b82337ca7d5b4cd17b1038a1eccc99370be
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
-ms.translationtype: MT
+ms.openlocfilehash: 3295bbdbb00c73c9aaa37dcb15d35121b82454bb
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="viewing-r-or-python-packages-installed-on-sql-server"></a>Просмотр R и пакеты Python, установленные на сервере SQL Server
+#  <a name="get-r-and-python-package-information-on-sql-server-machine-learning"></a>Получение информации о пакете R и Python в SQL Server машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Если установлено несколько сред Python или использование нескольких средств R, его можно легко установить пакет неправильный библиотеки или среды и затем не сможет найти его позже. 
-
-Эта статья содержит некоторые запросы, которые можно использовать для определения текущей версии и список пакетов, установленных в текущей среде SQL Server.
+Если установлено несколько сред Python или использование нескольких средств R, его можно легко установить пакет неправильный библиотеки или среды и затем не сможет найти его позже. В этой статье приведены запросы и инструкции полезны для версии пакета determininga и получить список пакетов, установленных в текущей среде SQL Server.
 
 ## <a name="verify-the-current-default-library"></a>Проверка текущей библиотеки по умолчанию
 

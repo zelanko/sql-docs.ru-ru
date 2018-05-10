@@ -1,29 +1,27 @@
 ---
-title: "Занятие 6. Добавление группирования и итогов (службы Reporting Services) | Документы Майкрософт"
-ms.custom: 
+title: Занятие 6. Добавление группирования и итогов (службы Reporting Services) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: 
+caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 2949110180da3c51a0bb536279cc9003d60be947
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f069b1f4303566aed0bcb486717b7f254691553d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 На этом занятии вы добавите группирование и итоги к отчету [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для организации и суммирования данных.  
@@ -57,7 +55,7 @@ ms.lasthandoff: 02/15/2018
   
 8.  В поле **Тип** введите **31 января 2000 года**.  
   
-9.  [!INCLUDE[clickOK](../includes/clickok-md.md)], и делает это по-другому.  
+9.  [!INCLUDE[clickOK](../includes/clickok-md.md)].  
   
 10.  Откройте вкладку **Просмотр** для просмотра отчета. Он должен выглядеть примерно так, как на следующей иллюстрации:  
     ![rs_BasicTableGroupsPreview](../reporting-services/media/rs-basictablegroupspreview.png) 

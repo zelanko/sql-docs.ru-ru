@@ -1,27 +1,25 @@
 ---
-title: "Добавление фильтров набора данных, фильтров области данных и групповых фильтров | Документы Майкрософт"
-ms.custom: 
+title: Добавление фильтров набора данных, фильтров области данных и групповых фильтров | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 3b3d4f355e52f27689dad4f157ca65edad99fa99
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 58b46f8ae50aaf31318d75a45ad767170c15b575
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Добавление фильтров набора данных, фильтров области данных и групповых фильтров
   В отчете фильтр является частью набора данных, области данных или группы области данных, созданной для ограничения объема данных, используемого в отчете. Фильтры могут быть использованы для управления данными отчета в случае, когда невозможно изменить запрос к набору данных, например при использовании общего набора данных.  
@@ -76,7 +74,7 @@ ms.lasthandoff: 01/09/2018
   
 |**Тип данных схемы определения отчета**|**Типы CLR**|  
 |--------------------------------------------|-----------------------|  
-|**Логическое значение**|**Логическое значение**|  
+|**Boolean**|**Boolean**|  
 |**DateTime**|**DateTime**, **DateTimeOffset**|  
 |**Integer**|**Int16**, **Int32**, **UInt16**, **Byte**, **SByte**|  
 |**Число с плавающей запятой**|**Single**, **Double**, **Decimal**|  
