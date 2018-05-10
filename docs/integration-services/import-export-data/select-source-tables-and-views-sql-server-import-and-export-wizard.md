@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 04/02/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.selectsourcetablesandviews.f1
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
@@ -19,12 +18,11 @@ caps.latest.revision: 96
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d54bc394abb518238e6c00eb65e7b8121d9f2410
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 8a5ebd644020b4c2bb6e07aff74e11e4e2474338
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Выбор исходных таблиц и представлений (мастер импорта и экспорта SQL Server)
   После того как вы укажете, хотите ли вы скопировать всю таблицу, или после определения запроса в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Выбор исходных таблиц и представлений**. На этой странице выберите существующие таблицы и представления, которые нужно скопировать. Затем следует сопоставить исходные таблицы с новыми или существующими целевыми таблицами. При необходимости можно проверить, правильно ли сопоставлены отдельные столбцы, и открыть предпросмотр образца данных.

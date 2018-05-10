@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
@@ -19,12 +18,11 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e0154191456a551a40c5d4a1968db667b16a5d46
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 6402f1d995dcbff64bdc74db128e422be9350cc3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Занятие 4. Добавление перенаправления потока ошибок с помощью служб SSIS
 Для обработки ошибок, которые могут возникать в процессе преобразования, в службах [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] можно указать, как должны обрабатываться данные отдельных компонентов и столбцов, недоступные для преобразования. Можно проигнорировать ошибки в определенных столбцах, перенаправить всю строку с ошибкой или просто завершить работу компонента с ошибкой. По умолчанию для всех компонентов в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] указано завершение работы при возникновении ошибки. Завершение работы компонента с ошибкой, в свою очередь, приводит к сбою в работе пакета и остановке дальнейшей обработки.  

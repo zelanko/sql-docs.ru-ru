@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 05/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -35,41 +33,41 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da1f46475be001737512dc3a0da074d2f97c403c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 23b48b3246509d62459daee8ecf50dd9f54ab8c4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>Предложение SELECT ...INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Инструкция SELECT…INTO создает новую таблицу в файловой группе по умолчанию и вставляет в нее результирующие строки из запроса. Полный синтаксис SELECT см. в разделе [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).  
+Инструкция SELECT…INTO создает новую таблицу в файловой группе по умолчанию и вставляет в нее результирующие строки из запроса. Полный синтаксис SELECT см. в разделе [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
 [ INTO new_table ]
-[ ON filegroup]
+[ ON filegroup ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *new_table*  
+ *new_table*   
  Указывает имя новой таблицы, создаваемой на основе столбцов, указанных в списке выбора, и строк, выбираемых из источника данных.  
- 
-  *filegroup*
- 
- Указывает имя файловой группы, в которой будет создана таблица. Указанная файловая группа должна существовать в базе данных, в противном случае обработчик SQL Server создает ошибку. Эта возможность поддерживается только начиная с [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
  
  Формат аргумента *new_table* определяется путем расчета выражений, указанных в списке выбора. Столбцы в таблице, указанной в аргументе *new_table*, создаются в порядке, соответствующем списку выбора. Все столбцы таблицы, указанной в аргументе *new_table*, получают такие же имена, значения, типы данных и свойства допустимости значений NULL, которые указаны в соответствующем выражении в списке выбора. Свойство IDENTITY столбца переносится за исключением случаев, когда наступают условия, описанные в подразделе «Примечания» раздела «Работа со столбцами идентификаторов».  
   
  Для того чтобы создать таблицу в другой базе данных в этом же экземпляре службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], определите *new_table* в качестве полного имени в форме *database.schema.table_name*.  
   
  *new_table* нельзя создать на удаленном сервере, однако *new_table* можно заполнить из удаленного источника данных. Для создания таблицы *new_table* из удаленного источника таблицы определите источник таблицы, используя четырехчастное имя в форме *linked_server*.*catalog*.*schema*.*object* в предложении FROM инструкции SELECT. Для указания удаленного источника данных также можно использовать функцию [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) или функцию [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) в предложении FROM.  
+ 
+ *filegroup*    
+ Указывает имя файловой группы, в которой будет создана таблица. Указанная файловая группа должна существовать в базе данных, в противном случае обработчик SQL Server создает ошибку.   
+ 
+ **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="data-types"></a>Типы данных  
  Атрибут FILESTREAM не переносится в новую таблицу. Объекты BLOB FILESTREAM копируются и хранятся в новой таблице как объекты BLOB типа **varbinary(max)**. Без атрибута FILESTREAM тип данных **varbinary(max)** имеет ограничение в 2 ГБ. Если размер большого двоичного объекта FILESTREAM превышает это значение, происходит ошибка 7119 и инструкция прекращает работу.  
@@ -91,18 +89,18 @@ ms.lasthandoff: 04/16/2018
 ## <a name="limitations-and-restrictions"></a>Ограничения  
  В качестве новой таблицы нельзя указывать табличную переменную или возвращающий табличное значение параметр.  
   
- Инструкцию SELECT…INTO нельзя использовать для создания секционированной таблицы, даже если исходная таблица является секционированной. Инструкция SELECT...INTO не использует схему секционирования исходной таблицы. Вместо этого новая таблица создается в файловой группе по умолчанию. Для вставки строк в секционированную таблицу необходимо сначала создать секционированную таблицу, а затем использовать инструкцию INSERT INTO...SELECT FROM.  
+ Инструкцию `SELECT…INTO` нельзя использовать для создания секционированной таблицы, даже если исходная таблица является секционированной. Инструкция `SELECT...INTO` не использует схему секционирования исходной таблицы. Вместо этого новая таблица создается в файловой группе по умолчанию. Для вставки строк в секционированную таблицу необходимо сначала создать секционированную таблицу, а затем использовать инструкцию `INSERT INTO...SELECT...FROM`.  
   
- Индексы, ограничения и триггеры, определенные в исходной таблице, не переносятся в новую таблицу, их также нельзя указывать в инструкции SELECT...INTO. Если эти объекты нужны для дальнейшей работы, их можно создать после выполнения инструкции SELECT...INTO.  
+ Индексы, ограничения и триггеры, определенные в исходной таблице, не переносятся в новую таблицу, их также нельзя указывать в инструкции `SELECT...INTO`. Если эти объекты нужны для дальнейшей работы, их можно создать после выполнения инструкции `SELECT...INTO`.  
   
- Указание предложения ORDER BY не гарантирует, что строки будут вставлены в указанном порядке.  
+ Указание предложения `ORDER BY` не гарантирует, что строки будут вставлены в указанном порядке.  
   
  Если в список выбора входит разреженный столбец, то свойство разреженного столбца не передается столбцу в новой таблице. Если это свойство необходимо в новой таблице, измените определение столбца после выполнения инструкции SELECT...INTO для включения этого свойства.  
   
- Если в список выбора входит вычисляемый столбец, соответствующий столбец новой таблицы не будет вычисляемым. Значениями нового столбца становятся значения, вычисленные при выполнении инструкции SELECT...INTO.  
+ Если в список выбора входит вычисляемый столбец, соответствующий столбец новой таблицы не будет вычисляемым. Значениями нового столбца становятся значения, вычисленные при выполнении инструкции `SELECT...INTO`.  
   
 ## <a name="logging-behavior"></a>Режим ведения журнала  
- Объем информации, записываемой в журнал для операции SELECT...INTO, зависит от модели восстановления, действующей для базы данных. В модели восстановления с неполным протоколированием и в простой модели массовые операции минимально протоколируются. При минимальном ведении журнала использование инструкции SELECT… INTO может оказаться более эффективным, чем создание таблицы и заполнение ее инструкцией INSERT. Дополнительные сведения см. в статье [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Объем информации, записываемой в журнал для операции `SELECT...INTO`, зависит от модели восстановления, действующей для базы данных. В модели восстановления с неполным протоколированием и в простой модели массовые операции минимально протоколируются. При минимальном ведении журнала использование инструкции `SELECT...INTO` может оказаться более эффективным, чем создание таблицы и заполнение ее инструкцией INSERT. Дополнительные сведения см. в статье [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение CREATE TABLE в целевой базе данных.  
@@ -214,7 +212,7 @@ FROM OPENDATASOURCE('SQLNCLI',
 GO  
 ```  
   
-### <a name="e-import-from-an-external-table-created-with--polybase"></a>Д. Импорт из внешней таблицы, созданной с помощью PolyBase  
+### <a name="e-import-from-an-external-table-created-with-polybase"></a>Д. Импорт из внешней таблицы, созданной с помощью PolyBase  
  Вы можете импортировать данные из Hadoop или службы хранилища Azure в SQL Server для постоянного хранения. Чтобы импортировать данные, на которые ссылается внешняя таблица, следует использовать `SELECT INTO`. Оперативно создайте реляционную таблицу, а затем индекс хранилища столбца на основе таблицы, описанной на втором шаге.  
   
  **Применимо к:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -229,13 +227,12 @@ INTO Fast_Customers from Insured_Customers INNER JOIN
         SELECT * FROM CarSensor_Data where Speed > 35   
 ) AS SensorD  
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
-ORDER BY YearlyIncome  
-  
+ORDER BY YearlyIncome;  
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>Е. Создание новой таблицы в качестве копии другой таблицы и ее загрузка в указанную файловую группу
 В следующем примере показано создание новой таблицы в качестве копии другой таблицы и ее загрузка в указанную файловую группу, отличную от файловой группы по умолчанию для пользователя.
 
- **Применимо к:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+ **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
@@ -247,7 +244,7 @@ FILENAME = '/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf'
 )
 TO FILEGROUP FG2;
 GO
-SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
+SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
 ```
   
 ## <a name="see-also"></a>См. также:  

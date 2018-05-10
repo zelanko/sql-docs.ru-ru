@@ -1,16 +1,15 @@
 ---
-title: "Подключение к серверу отчетов в среде Management Studio | Документы Майкрософт"
-ms.custom: 
+title: Подключение к серверу отчетов в среде Management Studio | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.connecttors.connectionproperties.f1
 - sql13.swb.connecttors.login.f1
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], registering
 - Connect to Server dialog box, Reporting Services
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
-caps.latest.revision: "53"
+caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 951f22989a1fb2bb725073cd27da6f1307c71551
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 96d62699a9745543973976c68bcf212f041deead
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Подключение к серверу отчетов в среде Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] предоставляет обозреватель объектов, позволяющий подключиться к любому серверу семейства [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и просматривать его содержимое в графическом виде. Применительно к службам Reporting Services, обозреватель объектов можно использовать для следующих операций.  

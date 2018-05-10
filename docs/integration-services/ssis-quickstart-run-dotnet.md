@@ -1,10 +1,9 @@
 ---
 title: Выполнение проекта SSIS с кодом .NET (C#) | Документы Майкрософт
 ms.date: 09/25/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
@@ -13,12 +12,11 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 82e928aed1c5d460ff03332912e670582434fbad
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: d53d460267c8eaee91da326000db806a28e2db39
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>Выполнение пакета служб SSIS с кодом C# в приложении .NET
 В этом кратком руководстве описано написание кода C# для подключения к серверу базы данных и выполнения пакета служб SSIS.

@@ -3,15 +3,13 @@ title: Указание сетевого адреса сервера (зерка
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - database mirroring [SQL Server], endpoint
@@ -22,12 +20,11 @@ caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8f607c3615c11c8cbca92937f3859b9dbe2a77dd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c285e189f6c209855415b62e76e51c1780d2a34a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Указание сетевого адреса сервера (зеркальное отображение базы данных)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +40,7 @@ ms.lasthandoff: 04/16/2018
   
  где  
   
--   *\<адрес_системы>* — строка, однозначно определяющая целевой компьютер. Обычно сетевой адрес представляет собой системное имя (если компьютеры входят в один домен), полное доменное имя или IP-адрес.  
+-   *\<адрес_системы>*  — строка, однозначно определяющая целевой компьютер. Обычно сетевой адрес представляет собой системное имя (если компьютеры входят в один домен), полное доменное имя или IP-адрес.  
   
     -   Если компьютеры входят в один домен, можно указать имя компьютера (например `SYSTEM46`).  
   
@@ -62,7 +59,7 @@ ms.lasthandoff: 04/16/2018
         > [!NOTE]  
         >  Дополнительные сведения об определении полного доменного имени см. в подразделе «Определение полного доменного имени» далее в этом разделе.  
   
--   *\<порт>* — порт, используемый конечной точкой зеркального отображения экземпляра сервера-участника. Сведения об определении конечной точки см. в разделе [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+-   *\<порт>*  — порт, используемый конечной точкой зеркального отображения экземпляра сервера-участника. Сведения об определении конечной точки см. в разделе [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
      Конечная точка зеркального отображения базы данных может использовать любой доступный порт. Номер каждого порта в компьютерной системе должен быть связан только с одной конечной точкой, а каждая конечная точка должна быть связана только с одним экземпляром сервера; таким образом, разные экземпляры сервера на одном и том же сервере прослушивают различные конечные точки через различные порты. Поэтому порт, указанный в сетевом адресе сервера при настройке сеанса зеркального отображения базы данных, будет всегда направлять сеанс к экземпляру сервера, конечная точка которого связана с этим портом.  
   

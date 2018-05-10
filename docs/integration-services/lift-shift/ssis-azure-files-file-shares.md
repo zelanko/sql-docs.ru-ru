@@ -2,19 +2,18 @@
 title: Хранение файлов в общих папках в локальной среде и в Azure и их извлечение | Документы Майкрософт
 description: В этой статье описывается использование файловой системы и общих папок в локальной среде и в Azure со службами SQL Server Integration Services
 ms.date: 11/27/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b9fb260101c1f814c85360d3fe5998b6e9234101
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 7fcc0c0f61ce62a2e891d269eea16902ff691080
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="store-and-retrieve-files-on-file-shares-on-premises-and-in-azure-with-ssis"></a>Хранение файлов в общих папках в локальной среде и в Azure и их извлечение
 В этой статье описывается, как обновить пакеты служб SQL Server Integration Services (SSIS), использующие локальную файловую систему, при их переносе в службы SSIS в Azure.

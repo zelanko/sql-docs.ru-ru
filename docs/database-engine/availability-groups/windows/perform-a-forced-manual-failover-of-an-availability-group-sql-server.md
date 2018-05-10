@@ -3,15 +3,12 @@ title: Выполнение принудительного перехода на
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.forcefailover.f1
 helpviewer_keywords:
@@ -22,12 +19,11 @@ caps.latest.revision: 83
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 91c5899208288042efa2a73c13bd18a463a10693
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fa61e85b6e8db7a1e3dc967230ea2c939c13f2cb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Выполнение принудительного перехода на другой ресурс вручную для группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +49,7 @@ ms.lasthandoff: 04/16/2018
     >  Если кластер WSFC имеет работоспособный кворум, при выполнении команды принудительного перехода на синхронизированную вторичную реплику реплика фактически выполнит запланированный переход на другой ресурс вручную.  
   
 > [!NOTE]  
->  Дополнительные сведения о требованиях и рекомендациях для принудительной отработки отказа, а также пример использования принудительного перехода на другой ресурс для восстановления из ситуации критического сбоя см. в статье [Example Scenario: Using a Forced Failover to Recover from a Catastrophic Failure](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)далее в этой статье.  
+>  [ Дополнительные сведения о требованиях и рекомендациях для принудительной отработки отказа, а также пример использования принудительного перехода на другой ресурс для восстановления из ситуации критического сбоя см. в разделе ](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)Example Scenario: Using a Forced Failover to Recover from a Catastrophic Failureдалее в этой статье.  
   
 -   **Перед началом работы**  
   
@@ -281,7 +277,7 @@ ms.lasthandoff: 04/16/2018
   
     -   [Создание резервной копии журнала транзакций (SQL Server)](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
-##  <a name="ExampleRecoveryFromCatastrophy"></a> Example Scenario: Using a Forced Failover to Recover from a Catastrophic Failure  
+##  <a name="ExampleRecoveryFromCatastrophy"></a> Пример сценария: Использование принудительной отработки отказа для восстановления после разрушительного сбоя  
  В случае отказа первичной реплики при отсутствии синхронизированной вторичной реплики может оказаться целесообразной принудительная отработка отказа группы доступности. Целесообразность принудительной отработки отказа зависит от следующего: (1) ожидается ли остановка первичной реплики на время, превышающее допустимое время простоя в соглашении об уровне обслуживания (SLA), и (2) есть ли смысл рисковать возможной потерей данных для обеспечения быстрого доступа к базе данных-источнику. Если принято решение о принудительной отработке отказа группы доступности, сама принудительная отработка отказа является лишь одним этапом многошагового процесса.  
   
  Для иллюстрации шагов, необходимых для восстановления после разрушительного сбоя с помощью принудительной отработки отказа, в данном разделе представлен один из возможных сценариев восстановления. Данный сценарий подразумевает наличие группы доступности, изначальная топология которой состоит из основного центра обработки данных, где размещены три реплики доступности с синхронной фиксацией (в том числе первичная реплика), и удаленного центра обработки данных, где размещены две вторичные реплики с асинхронной фиксацией. На следующем рисунке изображена изначальная топология группы доступности в данном примере: Группа доступности размещается в кластере WSFC со несколькими подсетями; три узла находятся в основном центре обработки данных (**Node 01**, **Node 02**и **Node 03**), и два узла в удаленном центре обработки данных (**Node 04** и **Node 05**).  

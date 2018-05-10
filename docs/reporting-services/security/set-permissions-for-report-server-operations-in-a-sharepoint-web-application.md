@@ -1,16 +1,15 @@
 ---
-title: "Определение разрешений для работы сервера отчетов в веб-приложении SharePoint | Документы Майкрософт"
-ms.custom: 
+title: Определение разрешений для работы сервера отчетов в веб-приложении SharePoint | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - Report Builder 1.0, SharePoint integration
 - model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a03feca8dfe4da40235745087577e307af69ba7f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2fc28110b4d927e95eb3791f9d3408f046c683d9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Задание разрешений для работы сервера отчетов в веб-приложении SharePoint
   Для сервера отчетов, работающего в режиме интеграции с SharePoint, настройки безопасности, определенные на сайте SharePoint, определяют также, каким образом производится просмотр и управление отчетами, моделями отчетов и общими источниками данных. Если используются группы SharePoint, уровни разрешений и назначения разрешений по умолчанию, то работать с отчетами и другими документами можно с использованием текущих настроек безопасности.  

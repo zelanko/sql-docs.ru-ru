@@ -1,28 +1,26 @@
 ---
-title: "Подключение к источнику данных PostgreSQL (мастер импорта и экспорта SQL Server) | Документы Майкрософт"
-ms.custom: 
+title: Подключение к источнику данных PostgreSQL (мастер импорта и экспорта SQL Server) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5f57bd2510c80e676a979c691b1e3d43707c6885
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bc6221ec311e5836f94ef5fd2d865f1fc91e0588
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных PostgreSQL (мастер импорта и экспорта SQL Server)
 В этом разделе показано, как подключаться к источникам данных **PostgreSQL** со страницы **Выбор источника данных** или **Выбор назначения** в мастере импорта и экспорта SQL Server. 
@@ -38,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 ![Установка ODBC для PostgreSQL с помощью построителя стека](../../integration-services/import-export-data/media/install-postgresql-odbc-with-stack-builder.png)
 
 ### <a name="or-download-the-latest-odbc-driver"></a>Скачивание последней версии драйвера ODBC
-Или скачайте установщик Windows для последней версии драйвера ODBC для PostgreSQL (psqlODBC) прямо с этого FTP-сайта — [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/). Извлеките содержимое ZIP-файла и запустите файл MSI.
+Или скачайте установщик Windows для последней версии драйвера ODBC для PostgreSQL (psqlODBC) прямо с этого FTP-сайта — [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/). Извлеките содержимое ZIP-файла и запустите файл MSI.
 
 ## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>Подключение к PostgreSQL с помощью драйвера ODBC для PostgreSQL (psqlODBC)
 Драйверы ODBC не приводятся в раскрывающемся списке источников данных. Чтобы подключиться с помощью драйвера ODBC, сначала выберите **поставщик данных .NET Framework для ODBC** в качестве источника данных на странице **Выбор источника данных** или **Выбор назначения**. Этот поставщик служит оболочкой для драйвера ODBC.
