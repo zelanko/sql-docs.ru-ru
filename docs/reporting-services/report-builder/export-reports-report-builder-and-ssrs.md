@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-builder
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
@@ -18,12 +17,11 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: ed5a8e47a39df2d7d521181fff55fe6734062ce8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9c4b6d1ac7e16cc7260667ffc786b68a5f2d9a18
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Экспорт отчетов (построитель отчетов и службы SSRS)
 
@@ -123,8 +121,8 @@ ms.lasthandoff: 01/09/2018
 |Формат|Тип модуля подготовки отчетов|Description|  
 |------------|------------------------------|-----------------|  
 |Файл Acrobat (PDF)|Жесткие разрывы страниц|Модуль подготовки отчетов в формате PDF создает отчет в файлах, которые можно открыть в Adobe Acrobat и других средствах просмотра PDF сторонних разработчиков, поддерживающих формат PDF 1.3. Хотя формат PDF версии 1.3 совместим с Adobe Acrobat 4.0 и более поздними версиями, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают Adobe Acrobat 6 или более поздние версии. Модуль подготовки отчетов не требует программного обеспечения Adobe для создания отчета. Однако средства просмотра PDF, например Adobe Acrobat, необходимы для просмотра или печати отчетов в формате PDF.<br /><br /> Дополнительные сведения см. в разделе [Экспорт в PDF-файл](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).|  
-|Atom|data|Модуль подготовки отчетов Atom создает на основе отчетов веб-канал данных, совместимый с Atom. Веб-каналы данных доступны для чтения и обмена данными с такими приложениями, как Power Pivot и Power BI, работающими с Atom-совместимыми веб-каналами данных.<br /><br /> Выводом является сервисный документ Atom, в котором перечислены веб-каналы данных, доступные из отчета. Для каждой области данных отчета создается по крайней мере один веб-канал данных. В зависимости от типа области данных и самих данных, которые отображает эта область, может быть создано несколько веб-каналов данных.<br /><br /> Дополнительные сведения см. в разделе [Формирование веб-каналов данных из отчетов](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
-|CSV|data|Модуль подготовки отчетов в формате с разделителями-запятыми (CSV) готовит отчеты для просмотра в виде плоских представлений данных стандартизованного текстового вида. Этот формат легко читается и может использоваться для обмена со многими приложениями.<br /><br /> Дополнительные сведения см. в разделе [Экспорт в CSV-файл](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
+|Atom|Данные |Модуль подготовки отчетов Atom создает на основе отчетов веб-канал данных, совместимый с Atom. Веб-каналы данных доступны для чтения и обмена данными с такими приложениями, как Power Pivot и Power BI, работающими с Atom-совместимыми веб-каналами данных.<br /><br /> Выводом является сервисный документ Atom, в котором перечислены веб-каналы данных, доступные из отчета. Для каждой области данных отчета создается по крайней мере один веб-канал данных. В зависимости от типа области данных и самих данных, которые отображает эта область, может быть создано несколько веб-каналов данных.<br /><br /> Дополнительные сведения см. в разделе [Формирование веб-каналов данных из отчетов](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
+|CSV|Данные |Модуль подготовки отчетов в формате с разделителями-запятыми (CSV) готовит отчеты для просмотра в виде плоских представлений данных стандартизованного текстового вида. Этот формат легко читается и может использоваться для обмена со многими приложениями.<br /><br /> Дополнительные сведения см. в разделе [Экспорт в CSV-файл](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
 |EXCELOPENXML|Мягкие разрывы страниц|При просмотре отчетов отображается как Excel в меню экспорта. Модуль подготовки отчетов Excel преобразует отчет для просмотра в качестве документа Excel (XLSX), совместимого с [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013.  Дополнительные сведения см. в разделе [Экспорт в Microsoft Excel](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |PowerPoint|Жесткие разрывы страниц|Модуль подготовки отчетов PowerPoint преобразует отчет для просмотра в качестве документа PowerPoint (PPTX), совместимого с PowerPoint 2013.|  
 |TIFF-файл|Жесткие разрывы страниц|Модуль подготовки отчетов изображений преобразует отчет в битовую карту или метафайл. По умолчанию модуль подготовки изображения создает отчет в файле TIFF, который можно просматривать на нескольких страницах. Полученное изображение клиент может просмотреть в программе просмотра изображений и распечатать.<br /><br /> Модуль подготовки изображений способен создавать файлы в любых форматах, поддерживаемых [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG и TIFF.<br /><br /> Дополнительные сведения см. в разделе [Экспорт в файл изображения](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  

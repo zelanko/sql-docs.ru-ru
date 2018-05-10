@@ -1,30 +1,28 @@
 ---
-title: "Диспетчер предупреждений данных для оповещения администраторов | Документы Майкрософт"
-ms.custom: 
+title: Диспетчер предупреждений данных для оповещения администраторов | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
-caps.latest.revision: 
+caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: db92638d0dc02085e238a4702daa933dd8691107
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: b551310752346de912c6b38147b79473bbbaebea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Диспетчер предупреждений данных для оповещения администраторов
 
@@ -53,7 +51,7 @@ ms.lasthandoff: 01/09/2018
   
  ![Раздел служб Reporting Services на странице "Параметры сайта"](../reporting-services/media/rs-sitesettings.gif "Раздел служб Reporting Services на странице "Параметры сайта"")  
   
- Диспетчер предупреждений об изменении данных содержит таблицу, в которой перечисляются имя предупреждения, имя отчета, имя владельца отчета, сколько раз предупреждающее сообщение было отправлено, время последнего запуска предупреждения, время последнего изменения определения предупреждения, а также состояние сообщения с предупреждением. Если предупреждение не удалось создать или отправить, в столбце «Состояние» содержатся сведения об ошибке, которые помогают устранить проблему. Дополнительные сведения см. в статье [Управление всеми предупреждениями данных на сайте SharePoint в диспетчере предупреждений данных](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
+ Диспетчер предупреждений об изменении данных содержит таблицу, в которой перечисляются имя предупреждения, имя отчета, имя владельца отчета, сколько раз предупреждающее сообщение было отправлено, время последнего запуска предупреждения, время последнего изменения определения предупреждения, а также состояние сообщения с предупреждением. Если предупреждение не удалось создать или отправить, в столбце «Состояние» содержатся сведения об ошибке, которые помогают устранить проблему. Дополнительные сведения см. в статье [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
  В следующей таблице показаны образцы данных из таблицы в диспетчере предупреждений об изменении данных. Если возникла ошибка, то сообщение об ошибке и идентификатор записи в журнале (идентификатор GUID) включается в поле **Состояние** в таблице.  
   
@@ -80,7 +78,7 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="HowTo"></a> Связанные задачи  
  В этом разделе перечислены процедуры, которые показывают, как управлять предупреждениями.  
   
--   [Управление всеми предупреждениями на сайте SharePoint в диспетчере предупреждений данных](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
+-   [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
 
 ## <a name="see-also"></a>См. также:
 

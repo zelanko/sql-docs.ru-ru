@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,17 +25,16 @@ caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d0342940a8fb5155439d7ea58640666aa1c5bf85
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8fc0dda131ae6dc0b2d38b712e654e83d2f7b0a4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает определенную длину столбца в байтах.
+Эта функция возвращает длину столбца в байтах.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,21 +49,21 @@ COL_LENGTH ( 'table' , 'column' )
 Имя таблицы, для которой необходимо получить сведения о длине столбца. *table* — это выражение типа **nvarchar**.
   
 **'** *column* **'**  
-Имя столбца, для которого необходимо определить длину. *column* — это выражение типа **nvarchar**.
+Имя столбца, длину которого требуется определить. *column* — это выражение типа **nvarchar**.
   
 ## <a name="return-type"></a>Возвращаемый тип
 **smallint**
   
 ## <a name="exceptions"></a>Исключения  
-Возвращает значение NULL в случае ошибки или если участник не имеет разрешений для просмотра объекта.
+Возвращает значение NULL в случае ошибки или если участник не имеет правильных разрешений для просмотра объекта.
   
-В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователь может просматривать только метаданные защищаемых объектов, которыми он владеет или на которые ему были предоставлены разрешения. Это означает, что встроенные функции, создающие метаданные, такие как COL_LENGTH, могут вернуть значение NULL в случае, если пользователь не имеет разрешений на объект. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователь может просматривать только метаданные защищаемых объектов, которыми он владеет или на которые ему были предоставлены разрешения. Это означает, что встроенные функции, создающие метаданные, такие как COL_LENGTH, могут вернуть значение NULL в случае, если у пользователя нет правильных разрешений на объект. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
 ## <a name="remarks"></a>Remarks  
-Для столбцов типа **varchar**, объявленных с описателем **max** (**varchar(max)**), функция COL_LENGTH возвращает значение –1.
+Для столбцов **varchar**, объявленных с описателем **max** (**varchar(max)**), функция COL_LENGTH возвращает значение –1.
   
 ## <a name="examples"></a>Примеры  
-В следующем примере демонстрируются возвращаемые значения для столбца типа `varchar(40)` и для столбца типа `nvarchar(40)`.
+В этом примере демонстрируются возвращаемые значения для столбца типа `varchar(40)` и для столбца типа `nvarchar(40)`.
   
 ```sql
 USE AdventureWorks2012;  

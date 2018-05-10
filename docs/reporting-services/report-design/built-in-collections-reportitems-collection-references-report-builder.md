@@ -1,27 +1,25 @@
 ---
-title: "Ссылки на коллекцию ReportItems (построитель отчетов и службы SSRS) | Документы Майкрософт"
-ms.custom: 
+title: Ссылки на коллекцию ReportItems (построитель отчетов и службы SSRS) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5a084d3bb236100728b5decab3569c37f46600f8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0779913a4334a1142c8a5c8d7561aaa9ecd980cc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Встроенные коллекции — ссылки на коллекцию ReportItems (построитель отчетов)
   Встроенная коллекция **ReportItems** является набором текстовых полей из элементов отчета, например строк области данных или текстовых полей в области конструктора отчетов. Коллекция **ReportItems** включает текстовые поля, находящиеся в текущей области верхнего колонтитула, нижнего колонтитула или текста отчета. Эта коллекция определяется во время выполнения обработчика отчетов и модуля подготовки отчетов. Текущая область изменяется после успешного объединения обработчиком отчетов данных отчета и элементов макета элементов отчета, когда пользователь просматривает страницы отчета. Встроенная коллекция **ReportItems** может использоваться для формирования верхних колонтитулов страницы в стиле словаря, отображающих первый и последний элемент на каждой странице.  

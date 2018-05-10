@@ -1,16 +1,15 @@
 ---
-title: "Задание учетных данных и сведений о соединении для источников данных отчета | Документы Майкрософт"
-ms.custom: 
+title: Задание учетных данных и сведений о соединении для источников данных отчета | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
 - impersonation [Reporting Services]
@@ -30,16 +29,15 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-caps.latest.revision: "61"
+caps.latest.revision: 61
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 9cea8af15340bcc5cbf744e59678e04d6ab6e8b6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 444cfe13b05a60b3b2a7017f98100f6ecf093140
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Задание учетных данных и сведениях о соединении для источников данных отчета
   Сервер отчетов использует учетные данные для подключения к внешним источникам данных, предоставляющих содержимое для отчетов или сведения о получателе для подписок, управляемых данными. Можно задать учетные данные, использующие проверку подлинности Windows, проверку подлинности базы данных, нестандартную проверку подлинности, или учетные данные, не использующие проверку подлинности. При отправке по сети запроса на соединение сервер отчетов олицетворяет или учетную запись пользователя, или учетную запись автоматического выполнения. Дополнительные сведения о контексте безопасности, в котором выполняется запрос соединения, см. в подразделе [Настройка источника данных и сетевые подключения](#DataSourceConfigurationConnections) далее в этом разделе.  

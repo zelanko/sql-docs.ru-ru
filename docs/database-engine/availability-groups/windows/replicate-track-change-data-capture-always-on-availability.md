@@ -1,17 +1,14 @@
 ---
 title: Репликация, отслеживание изменений, изменение данных в группах доступности AlwaysOn | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/02/2017
+ms.date: 04/25/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
 - change data capture [SQL Server], AlwaysOn Availability Groups
@@ -22,12 +19,11 @@ caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 39f67dedc8724fdff327229fc39d0985e4843cb7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 60f20c48befbd5dcb24db4e1c7e247cf9b8346c0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Репликация, отслеживание изменений, изменение данных в группах доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +95,7 @@ ms.lasthandoff: 04/16/2018
   
      В следующем примере создается задание отслеживания.  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'capture';  
     ```  
   
@@ -111,7 +107,7 @@ ms.lasthandoff: 04/16/2018
   
      Чтобы обеспечить соответствующую очистку в новой базе данных-источнике, необходимо также создать локальное задание очистки. В следующем примере создается задание очистки.  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'cleanup';  
     ```  
   
@@ -137,7 +133,7 @@ ms.lasthandoff: 04/16/2018
   
      Воспользуйтесь следующим запросом, чтобы определить, было ли имя прослушивателя группы доступности определено для размещения CDC-базы данных группой доступности. Запрос возвращает имя прослушивателя группы доступности, если оно уже создано.  
   
-    ```  
+    ```sql  
     SELECT dns_name   
     FROM sys.availability_group_listeners AS l  
     INNER JOIN sys.availability_databases_cluster AS d  
@@ -153,7 +149,7 @@ ms.lasthandoff: 04/16/2018
   
      Чтобы определить, требуется ли намерение только для чтения для подключения к вторичной реплике, доступной для чтения, воспользуйтесь следующим запросом.  
   
-    ```  
+    ```sql  
     SELECT g.name AS AG, replica_server_name, secondary_role_allow_connections_desc  
     FROM sys.availability_replicas AS r  
     JOIN sys.availability_groups AS g  
@@ -165,7 +161,7 @@ ms.lasthandoff: 04/16/2018
   
      При использовании **sp_addlinkedserver** для создания связанного сервера и доступа к получателю в параметре *@datasrc* указывается имя прослушивателя группы доступности или явное имя сервера, а в параметре *@provstr* — намерение только для чтения.  
   
-    ```  
+    ```sql  
     EXEC sp_addlinkedserver   
     @server = N'linked_svr',   
     @srvproduct=N'SqlServer',  
@@ -207,8 +203,6 @@ ms.lasthandoff: 04/16/2018
   
     -   Подписка по запросу: базы данных издателя, распространителя и подписчика должны находиться на экземпляре с версией не ниже [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Это связано с тем, что агент слияния на подписчике должен иметь сведения о том, как группа доступности может выполнить отработку отказа на базу данных-получатель.  
   
--   Размещение базы данных распространителя в группе доступности не поддерживается.  
-  
 -   Экземпляры издателя должны удовлетворять всем предварительным условиям, необходимым для участия в группе доступности AlwaysOn. Дополнительные сведения см. в разделе [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="restrictions"></a>Ограничения  
@@ -224,7 +218,7 @@ ms.lasthandoff: 04/16/2018
   
  *Переход на другой ресурс реплики базы данных выполняется вручную. Автоматический переход на другой ресурс не предоставляется.  
   
- ** База данных распространителя не поддерживается для использования с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] или с зеркальным отображением базы данных.  
+ ** База данных распространителя не поддерживается для использования с зеркальным отображением базы данных.  
   
 ### <a name="considerations"></a>Замечания  
   

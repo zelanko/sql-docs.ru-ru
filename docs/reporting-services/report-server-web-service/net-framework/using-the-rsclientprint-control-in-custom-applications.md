@@ -1,33 +1,32 @@
 ---
-title: "Использование элемента управления RSClientPrint в пользовательских приложениях | Документы Майкрософт"
-ms.custom: 
+title: Использование элемента управления RSClientPrint в пользовательских приложениях | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - RSPrintClient control
 - print controls [Reporting Services]
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 34becf7210dd08dbf663d99e6cf5cd1b7f57c190
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 67ee94b303f8d75e3249b1f20b2ed891c632dc92
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Использование элемента управления RSClientPrint в пользовательских приложениях
   Элемент управления [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX **RSPrintClient** обеспечивает работу функций печати отчетов в средстве просмотра HTML-страниц на стороне клиента. Он отображает диалоговое окно **Печать**, в котором просматривается отчет, указываются номера и изменяются поля печатаемых страниц, а также запускается задание на печать. При выполнении операции печати на стороне клиента сервер отчетов подготавливает отчет с помощью модуля подготовки отчетов в графическом формате (EMF), создает задание на печать и отправляет его на принтер с помощью средств операционной системы.  
@@ -72,7 +71,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="rsclientprint-properties"></a>Свойства RSClientPrint  
   
-|Свойство|Тип|RW|Default|Description|  
+|Свойство|Тип|RW|По умолчанию|Description|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|RW|Параметры отчета|Возвращает или задает левое поле. Значение по умолчанию — 12,2 мм (если оно не задано разработчиком или не указано в отчете).|  
 |MarginRight|Double|RW|Параметры отчета|Возвращает или задает правое поле. Значение по умолчанию — 12,2 мм (если оно не задано разработчиком или не указано в отчете).|  

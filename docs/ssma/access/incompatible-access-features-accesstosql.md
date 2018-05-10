@@ -1,17 +1,15 @@
 ---
 title: Несовместимые доступа к функциям (AccessToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -38,12 +36,11 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 04ee37e885c2fcab0739e2a4ddf8c857c954d745
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: dbfcb395194371bf761f340cc74943791a649aaa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="incompatible-access-features-accesstosql"></a>Несовместимые доступа к функциям (AccessToSQL)
 Не все функции доступа к базе данных совместимы с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Например [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и доступ имеют разные наборы зарезервированных ключевых слов. Проблемы, например, они могут помешать успешной миграции для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Используйте следующую таблицу для получения сведений о возможные проблемы миграции и что делать о них.  

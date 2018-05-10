@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,17 +25,16 @@ caps.latest.revision: 53
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 0e825d73f773949618589618b522c0e4a8c09aa6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bdb9328c484e2441d6b3f5aac817450d26440e88
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает битовый шаблон **varbinary**, который показывает, какие столбцы таблицы или представления добавлялись или изменялись. Функция COLUMNS_UPDATED используется в теле триггера [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT или UPDATE для проверки возможности выполнения триггером определенных операций.
+Эта функция возвращает битовый шаблон **varbinary**, который показывает, какие столбцы таблицы или представления добавлялись или изменялись. `COLUMNS_UPDATED` используется в любом месте внутри тела триггера INSERT или UPDATE [!INCLUDE[tsql](../../includes/tsql-md.md)], чтобы проверить необходимость выполнения определенных действий.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -51,15 +48,15 @@ COLUMNS_UPDATED ( )
 **varbinary**
   
 ## <a name="remarks"></a>Remarks  
-Функция COLUMNS_UPDATED проверяет возможность выполнения операций триггером UPDATE или INSERT над множеством столбцов. Чтобы проверить срабатывание триггера UPDATE или INSERT в одном столбце, используйте инструкцию [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md).
+Функция `COLUMNS_UPDATED` проверяет возможность выполнения операций триггером UPDATE или INSERT над несколькими столбцами. Чтобы проверить срабатывание триггера UPDATE или INSERT в одном столбце, используйте инструкцию [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md).
   
-Функция COLUMNS_UPDATED возвращает один или более байтов, которые упорядочены слева направо по принципу: крайний правый бит — наименее значащий бит в байте. Крайний правый бит крайнего левого байта представляет первый столбец в таблице, следующий бит слева представляет второй столбец и так далее. Функция COLUMNS_UPDATED возвращает множество байт, если таблица в которой триггер создается, содержит более чем восемь столбцов, с наименее значащим байтом в крайней левой позиции. Функция COLUMNS_UPDATED возвращает значение TRUE для всех столбцов при операциях INSERT, поскольку при вставке столбцам присваиваются явно указанные значения или неявные значения (NULL).
+Функция `COLUMNS_UPDATED` возвращает один байт или несколько, которые упорядочены слева направо. Крайний правый бит каждого байта является наименее значимым битом. Крайний правый бит крайнего левого байта представляет первый столбец в таблице, следующий бит слева представляет второй столбец и так далее. Функция `COLUMNS_UPDATED` возвращает несколько байт, если таблица в которой триггер создается, содержит более чем восемь столбцов, с наименее значащим байтом в крайней левой позиции. Функция `COLUMNS_UPDATED` возвращает значение TRUE для всех столбцов при операциях INSERT, так как при вставке столбцам присваиваются явно указанные значения или неявные значения (NULL).
   
-Чтобы проверить обновление и вставку в определенные столбцы, следуйте синтаксису битовых операторов и целой битовой маске проверяемого столбца. Например, таблица **t1** содержит столбцы **C1**, **C2**, **C3**, **C4** и **C5**. Чтобы проверить, обновлены ли все столбцы **C2**, **C3** и **C4** (в таблице **t1** под действием триггера UPDATE), следуйте синтаксису **& 14**. Чтобы проверить обновление только столбца **C2**, укажите **& 2**.
+Чтобы проверить обновление и вставку в определенные столбцы, следуйте синтаксису битовых операторов и целой битовой маске проверяемого столбца. Например, пусть таблица **t1** содержит столбцы **C1**, **C2**, **C3**, **C4** и **C5**. Чтобы проверить, все ли столбцы **C2**, **C3** и **C4** (в таблице **t1** под действием триггера UPDATE) успешно обновлены, следуйте синтаксису **& 14**. Чтобы проверить обновление только столбца **C2**, укажите **& 2**. Фактические примеры см. в разделе [Пример A](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) и [Примере Б](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#b-using-columns_updated-to-test-more-than-eight-columns).
   
-Функция COLUMNS_UPDATED может быть использована внутри триггера языка [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT или UPDATE.
+Функция `COLUMNS_UPDATED` может быть использована внутри триггера INSERT или UPDATE языка [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-Столбец ORDINAL_POSITION представления INFORMATION_SCHEMA.COLUMNS несовместим с битовым шаблоном столбцов, возвращаемым функцией COLUMNS_UPDATED. Чтобы получить битовый шаблон, совместимый с функцией COLUMNS_UPDATED, обратитесь к свойству `ColumnID` системной функции `COLUMNPROPERTY` при запросе представления `INFORMATION_SCHEMA.COLUMNS`, как показано в следующем примере:
+Столбец ORDINAL_POSITION представления INFORMATION_SCHEMA.COLUMNS несовместим с битовым шаблоном столбцов, возвращаемым функцией `COLUMNS_UPDATED`. Чтобы получить битовый шаблон, совместимый с функцией `COLUMNS_UPDATED`, обратитесь к свойству `ColumnID` системной функции `COLUMNPROPERTY` при запросе представления `INFORMATION_SCHEMA.COLUMNS`, как показано в следующем примере.
   
 ```sql
 SELECT TABLE_NAME, COLUMN_NAME,  
@@ -70,19 +67,19 @@ WHERE TABLE_NAME = 'Person';
 ```  
   
 ## <a name="column-sets"></a>Наборы столбцов
-Если в таблице определен набор столбцов, функция COLUMNS_UPDATED действует следующими способами.
--   Если столбец из набора столбцов явным образом обновляется, соответствующему биту для этого столбца присваивается значение 1, а биту для набора столбцов присваивается значение 1.  
--   Если набор столбцов явным образом обновляется, биту для набора столбцов присваивается значение 1 и биты для всех разреженных столбцов в этой таблице получают значение 1.  
+Если в таблице определен набор столбцов, функция `COLUMNS_UPDATED` действует следующими способами.
+-   Если явным образом обновляется столбец из набора столбцов, соответствующему биту для этого столбца присваивается значение 1, а биту для набора столбцов присваивается значение 1.  
+-   Если явным образом обновляется набор столбцов, биту для набора столбцов присваивается значение 1 и биты для всех разреженных столбцов в этой таблице получают значение 1.  
 -   При операциях вставки всем битам присваивается значение 1.  
   
-     Поскольку при изменениях в наборе столбцов битам для всех столбцов в наборе столбцов присваивается значение 1, столбцы в наборе столбцов, не подвергавшиеся изменениям, будут выглядеть как измененные. Дополнительные сведения о наборах столбцов см. в разделе [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md).  
+     Так как при изменениях в наборе столбцов битам для всех столбцов в наборе столбцов присваивается значение 1, столбцы в наборе столбцов, не подвергавшиеся изменениям, будут выглядеть как измененные. Дополнительные сведения о наборах столбцов см. в разделе [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md).  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-columnsupdated-to-test-the-first-eight-columns-of-a-table"></a>A. Использование функции COLUMNS_UPDATED для проверки первых восьми столбцов таблицы  
-В следующем примере создаются две таблицы, `employeeData` и `auditEmployeeData`. Таблица `employeeData` содержит сведения о заработной плате служащих и может быть изменена членами отдела кадров. Если номер социальной страховки (SSN), ежегодная заработная плата или номер банковского счета служащего изменен, то создается запись аудита и вставляется в таблицу аудита `auditEmployeeData`.
+В этом примере создается две таблицы: `employeeData` и `auditEmployeeData`. Таблица `employeeData` содержит сведения о заработной плате служащих и может быть изменена членами отдела кадров. Если номер социальной страховки (SSN), ежегодная заработная плата или номер банковского счета служащего изменяется, то создается запись аудита и вставляется в таблицу аудита `auditEmployeeData`.
   
-С помощью функции `COLUMNS_UPDATED()` можно выполнить быструю проверку всех изменений в столбцах, которые содержат важные сведения о служащих. Использование функции `COLUMNS_UPDATED()` таким способом будет оправдано, только если пытаться выявить изменения в первых восьми столбцах таблицы.
+С помощью функции `COLUMNS_UPDATED()` можно быстро проверить все изменения, внесенные в столбцы, содержащие важные сведения о служащих. Такое использование функции `COLUMNS_UPDATED()` будет оправдано, только если пытаться выявить изменения в первых восьми столбцах таблицы.
   
 ```sql
 USE AdventureWorks2012;  
@@ -118,15 +115,15 @@ GO
 CREATE TRIGGER dbo.updEmployeeData   
 ON dbo.employeeData   
 AFTER UPDATE AS  
-/*Check whether columns 2, 3 or 4 have been updated. If any or all  
+/* Check whether columns 2, 3 or 4 have been updated. If any or all  
 columns 2, 3 or 4 have been changed, create an audit record. The
-bitmask is: power(2,(2-1))+power(2,(3-1))+power(2,(4-1)) = 14. To test   
-whether all columns 2, 3, and 4 are updated, use = 14 instead of >0  
-(below).*/
+bitmask is: power(2, (2-1)) + power(2, (3-1)) + power(2, (4-1)) = 14. To test   
+whether all columns 2, 3, and 4 are updated, use = 14 instead of > 0  
+(below). */
   
    IF (COLUMNS_UPDATED() & 14) > 0  
-/*Use IF (COLUMNS_UPDATED() & 14) = 14 to see whether all columns 2, 3,   
-and 4 are updated.*/  
+/* Use IF (COLUMNS_UPDATED() & 14) = 14 to see whether all columns 2, 3,   
+and 4 are updated. */  
       BEGIN  
 -- Audit OLD record.  
       INSERT INTO dbo.auditEmployeeData  
@@ -158,14 +155,14 @@ and 4 are updated.*/
    END;  
 GO  
   
-/*Inserting a new employee does not cause the UPDATE trigger to fire.*/  
+/* Inserting a new employee does not cause the UPDATE trigger to fire. */  
 INSERT INTO employeeData  
    VALUES ( 101, 'USA-987-01', 23000, 'R-M53550M', N'Mendel', N'Roland', 32);  
 GO  
   
-/*Updating the employee record for employee number 101 to change the   
+/* Updating the employee record for employee number 101 to change the   
 salary to 51000 causes the UPDATE trigger to fire and an audit trail to   
-be produced.*/  
+be produced. */  
   
 UPDATE dbo.employeeData  
    SET emp_salary = 51000  
@@ -174,9 +171,9 @@ GO
 SELECT * FROM auditEmployeeData;  
 GO  
   
-/*Updating the employee record for employee number 101 to change both   
+/* Updating the employee record for employee number 101 to change both   
 the bank account number and social security number (SSN) causes the   
-UPDATE trigger to fire and an audit trail to be produced.*/  
+UPDATE trigger to fire and an audit trail to be produced. */  
   
 UPDATE dbo.employeeData  
    SET emp_bankAccountNumber = '133146A0', emp_SSN = 'R-M53550M'  
@@ -188,7 +185,7 @@ GO
 ```  
   
 ### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>Б. Использование функции COLUMNS_UPDATED для проверки более чем восьми столбцов  
-Чтобы проверить обновления других столбцов таблицы, кроме первых восьми, используйте функцию `SUBSTRING` для проверки корректности бита, возвращенного функцией `COLUMNS_UPDATED`. В приведенном ниже примере проверяется обновление столбцов `3`, `5` и `9` таблицы `AdventureWorks2012.Person.Person`.
+Чтобы проверить обновления других столбцов таблицы, кроме первых восьми, используйте функцию `SUBSTRING` для проверки корректности бита, возвращенного функцией `COLUMNS_UPDATED`. В этом примере проверяется обновление столбцов `3`, `5` и `9` таблицы `AdventureWorks2012.Person.Person`.
   
 ```sql
 USE AdventureWorks2012;  
@@ -198,8 +195,8 @@ IF OBJECT_ID (N'Person.uContact2', N'TR') IS NOT NULL
 GO  
 CREATE TRIGGER Person.uContact2 ON Person.Person  
 AFTER UPDATE AS  
-    IF ( (SUBSTRING(COLUMNS_UPDATED(),1,1) & 20 = 20)   
-        AND (SUBSTRING(COLUMNS_UPDATED(),2,1) & 1 = 1) )   
+    IF ( (SUBSTRING(COLUMNS_UPDATED(), 1, 1) & 20 = 20)   
+        AND (SUBSTRING(COLUMNS_UPDATED(), 2, 1) & 1 = 1) )   
     PRINT 'Columns 3, 5 and 9 updated';  
 GO  
   

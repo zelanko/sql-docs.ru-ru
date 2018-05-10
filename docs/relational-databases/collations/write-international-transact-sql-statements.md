@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: collations
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - writing international statements
 - Transact-SQL international considerations
@@ -25,13 +24,12 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42d1376c0f6a823741ae04878f71ca197375fd5f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e6a26cdde92df6b1d08a445f195e3e5f9ebc4d2b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="write-international-transact-sql-statements"></a>Написание инструкций Transact-SQL, адаптированных к международному использованию
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,11 +43,11 @@ ms.lasthandoff: 04/16/2018
   
     -   В приложениях ADO, OLE DB и ODBC следует использовать принятые в ODBC форматы отметок времени, даты и времени:  
   
-         **{ ts'**гггг**-***мм***-***дд**чч***:***мм***:***сс*[**.***fff*] **'}**, например: **{ ts'**1998**-**09**-**24 10**:**02**:**20**' }**  
+         **{ ts'** гггг**-***мм***-***дд**чч ***:*** мм ***:*** сс *[**.***fff*] **'}**, например: **{ ts'** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **' }**  
   
-         **{ d'** *гггг* **-** *мм* **-** *дд* **'}** , например: **{ d'**1998**-**09**-**24**'}**  
+         **{ d'** *гггг* **-** *мм* **-** *дд* **'}** , например: **{ d'** 1998**-** 09**-** 24 **'}**  
   
-         **{ t'** *чч* **:** *мм* **:** *сс* **'}** , например: **{ t'**10:02:20**'}**  
+         **{ t'** *чч* **:** *мм* **:** *сс* **'}** , например: **{ t'** 10:02:20 **'}**  
   
     -   В приложениях с использованием других прикладных программных API-интерфейсов, а также в скриптах языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , хранимых процедурах и триггерах следует использовать числовые строки без разделителей. Например, *yyyymmdd* в виде 19980924.  
   

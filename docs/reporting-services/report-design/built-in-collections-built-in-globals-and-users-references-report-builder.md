@@ -1,27 +1,25 @@
 ---
-title: "Встроенные глобальные значения и ссылки на пользовательские поля (построитель отчетов и службы SSRS) | Документы Майкрософт"
-ms.custom: 
+title: Встроенные глобальные значения и ссылки на пользовательские поля (построитель отчетов и службы SSRS) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 4c0d92d44a11aad84fe249649ef921123f78aa0b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 55074e9c10cbe8b5afb3e94533c37befb892416a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Встроенные коллекции — глобальные значения и ссылки на пользовательские поля (построитель отчетов)
   Коллекция "Встроенные поля", включающая как коллекцию **Глобальные переменные** , так и коллекцию **Пользователь** , представляет глобальные значения, предоставленные службами Reporting Services при обработке отчета. Коллекция **Globals** предоставляет такие значения, как имя отчета, время начала обработки отчета и текущее количество страниц для верхнего или нижнего колонтитула отчета. Коллекция **User** предоставляет идентификатор пользователя и параметры языка. Эти значения можно использовать в выражениях для фильтрации результатов отчета.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 01/09/2018
 |Член|Тип|Description|  
 |------------|----------|-----------------|  
 |Имя|**String**|Имя модуля подготовки, зарегистрированное в файле конфигурации RSReportServer.<br /><br /> Доступно на протяжении конкретных участков цикла обработки отчета и подготовки его к просмотру.|  
-|IsInteractive|**Логическое значение**|Используется ли в текущем запросе на подготовку к просмотру интерактивный формат подготовки к просмотру.|  
+|IsInteractive|**Boolean**|Используется ли в текущем запросе на подготовку к просмотру интерактивный формат подготовки к просмотру.|  
 |DeviceInfo|Предназначенная только для чтения коллекция «имя/значение»|Пары «ключ/значение» для параметров DeviceInfo, относящихся к текущему запросу на подготовку к просмотру.<br /><br /> Строковые значения могут быть заданы с помощью ключа или индекса в коллекции.|  
   
 ### <a name="examples"></a>Примеры  

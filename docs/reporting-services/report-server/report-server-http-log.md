@@ -1,29 +1,27 @@
 ---
-title: "Журнал HTTP-запросов сервера отчетов | Документы Майкрософт"
-ms.custom: 
+title: Журнал HTTP-запросов сервера отчетов | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/02/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 705ec73a7198793754a70edfdc854a5c9c15e47c
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 55682735cb578c7f01f3c64caa057f5f4bcec6c3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-server-http-log"></a>Журнал HTTP-запросов сервера отчетов
   В файле журнала HTTP сервера отчетов хранится информация для каждого HTTP-запроса и ответа, обработанного сервером отчетов. Сообщения об ошибках, связанных с переполнением очереди запросов и временем ожидания, не достигают сервера отчетов, поэтому не регистрируются в файле журнала.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 03/05/2018
 |||  
 |-|-|  
 |Имя файла|По умолчанию этот файл имеет имя ReportServerService_HTTP_\<отметка_времени>.log. Можно задать другой префикс имени файла, изменив атрибут HttpTraceFileName в файле конфигурации ReportingServicesService.exe.config. Отметки времени создаются на основе времени по Гринвичу (UTC).|  
-|Размещение файла|Этот файл расположен в папке \Microsoft SQL Server\\*\<экземпляр SQL Server>*\Reporting Services\LogFiles.|  
+|Размещение файла|Этот файл расположен в папке \Microsoft SQL Server\\*\<экземпляр SQL Server>* \Reporting Services\LogFiles.|  
 |Формат файла|Этот файл имеет формат EN-US. Он представляет собой текстовый ASCII-файл.|  
 |Создание и хранение файла|Журнал HTTP создается после его включения в файле конфигурации, перезапуска службы и обработки сервером отчетов HTTP-запроса. Если необходимые параметры были настроены, но файл журнала отсутствует, откройте какой-либо отчет или запустите одно из приложений сервера отчетов (например, диспетчер отчетов), чтобы был сформирован HTTP-запрос для создания этого файла.<br /><br /> После каждого перезапуска службы и последующего HTTP-запроса на сервер отчетов создается новый экземпляр файла журнала.<br /><br /> По умолчанию размер журналов трассировки ограничен 32 МБ, а срок их хранения — 14 дней.|  
   
@@ -62,7 +60,7 @@ ms.lasthandoff: 03/05/2018
 ## <a name="log-file-fields"></a>Поля файла журнала  
  В следующей таблице описаны поля, доступные в журнале. Список полей можно изменить. С помощью параметра конфигурации **HTTPTraceSwitches** можно указать, какие поля необходимо включить. Столбец **По умолчанию** указывает, будет ли поле включено в файл журнала автоматически, если не указано значение **HTTPTraceSwitches**.  
   
-|Поле|Description|Default|  
+|Поле|Description|По умолчанию|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Это значение является необязательным. Значением по умолчанию является ReportServerServiceHTTP_. Можно указать другое значение, если требуется использовать другое соглашение об именах (например, чтобы включить имя сервера, если файлы журналов сохраняются в каком-то централизованном расположении).|Да|  
 |HTTPTraceSwitches|Это значение является необязательным. Если указан этот параметр, можно настроить поля, используемые в файле журнала, в формате с разделителями-запятыми.|нет|  

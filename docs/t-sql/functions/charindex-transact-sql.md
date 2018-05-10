@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,18 +25,17 @@ caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b0da42fc1b6a06c0a17f758bf692f065c1e3866c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ff2ac6ad32b049eedf30817ae6ba099c02abd7ef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Ищет в выражении другое выражение и возвращает его начальную позицию, если оно найдено.
+Эта функция выполняет поиск одного символьного выражения внутри второго символьного выражения, возвращая начальную позицию первого выражения, если найдено.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,25 +47,25 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
   
 ## <a name="arguments"></a>Аргументы  
 *expressionToFind*  
-Символьное [выражение](../../t-sql/language-elements/expressions-transact-sql.md), содержащее последовательность символов, которую надо найти. Аргумент *expressionToFind* ограничен длиной 8000 символов.
+Символьное [выражение](../../t-sql/language-elements/expressions-transact-sql.md), содержащее последовательность для поиска. *expressionToFind* имеет ограничение 8000 символов.
   
 *expressionToSearch*  
 Символьное выражение, в котором производится поиск.
   
 *start_location*  
-Выражение тип **integer** или **bigint**, с которого начинается поиск. Если аргумент *start_location* не указан, имеет отрицательное значение или равен нулю, то поиск начинается с начала выражения *expressionToSearch*.
+Выражение типа **integer** или **bigint**, с которого начинается поиск. Если аргумент *start_location* не указан, имеет отрицательное значение или равен нулю (0), то поиск начинается с начала выражения *expressionToSearch*.
   
 ## <a name="return-types"></a>Типы возвращаемых данных
-**bigint**, если *expressionToSearch* имеет тип данных **varchar(max)**, **nvarchar(max)** или **varbinary(max)**; в противном случае **int**.
+**bigint**, если *expressionToSearch* имеет тип данных **nvarchar(max)**, **varbinary(max)** или **varchar(max)**; в противном случае **int**.
   
 ## <a name="remarks"></a>Remarks  
-Если один из аргументов *expressionToFind* или *expressionToSearch* имеет тип данных Юникода (**nvarchar** или **nchar**), а другой аргумент — нет, то другой аргумент преобразовывается в тип данных Юникода. Функция CHARINDEX не поддерживает типы данных **text**, **ntext** и **image**.
+Если выражение *expressionToFind* или  *expressionToSearch* имеет тип данных Юникода (**nchar** или **nvarchar**), а второе выражение — нет, функция CHARINDEX преобразует такое другое выражение в тип данных Юникода. Функция CHARINDEX не поддерживает типы данных **image**, **ntext** и **text**.
   
-Если *expressionToFind* или *expressionToSearch* имеет значение NULL, то CHARINDEX возвращает значение NULL.
+Если выражение *expressionToFind* или *expressionToSearch* имеет значение NULL, то CHARINDEX возвращает значение NULL.
   
-Если аргумент *expressionToFind* не найден в *expressionToSearch*, функция CHARINDEX возвращает 0.
+Если функции CHARINDEXне удается найти *expressionToFind* в *expressionToSearch*, она возвращает 0.
   
-Функция CHARINDEX выполняет сравнения на основе параметров сортировки входных данных. Для выполнения сравнения в указанных параметрах сортировки можно воспользоваться функцией COLLATE, чтобы явно указать параметры сортировки для входных данных.
+Функция CHARINDEX выполняет сравнения на основе параметров сортировки входных данных. Для выполнения сравнения в указанных параметрах сортировки используйте функцию COLLATE, чтобы явно указать параметры сортировки для входных данных.
   
 Начальная возвращенная позиция начинается с 1, а не с 0.
   
@@ -80,7 +77,7 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-returning-the-starting-position-of-an-expression"></a>A. Возвращение начальной позиции выражения  
-В следующем примере возвращается позиция, с которой начинается последовательность символов `bicycle` в столбце `DocumentSummary` таблицы `Document` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
+В этом примере выполняется поиск `bicycle` в переменной строкового значения `@document`.
   
 ```sql
 DECLARE @document varchar(64);  
@@ -98,7 +95,7 @@ GO
 ```  
   
 ### <a name="b-searching-from-a-specific-position"></a>Б. Поиск с конкретной позиции  
-В приведенном ниже примере используется необязательный параметр *start_location* для поиска `vital` в столбце `DocumentSummary` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], начиная с пятого символа.
+В этом примере используется необязательный параметр *start_location* для запуска поиска `vital` в пятом столбце переменной строкового значения `@document`.
   
 ```sql
 DECLARE @document varchar(64);  
@@ -119,7 +116,7 @@ GO
 ```  
   
 ### <a name="c-searching-for-a-nonexistent-expression"></a>В. Поиск несуществующего выражения  
-В приведенном ниже примере показан результирующий набор, если аргумент *expressionToFind* не найден в аргументе *expressionToSearch*.
+В этом примере показан результирующий набор, который выводится если функции CHARINDEX не удается найти *expressionToFind* в *expressionToSearch*.
   
 ```sql
 DECLARE @document varchar(64);  
@@ -140,7 +137,7 @@ GO
 ```
   
 ### <a name="d-performing-a-case-sensitive-search"></a>Г. Выполнение поиска с учетом регистра  
-В приведенном ниже примере выполняется поиск строки `'TEST'` с учетом регистра в `'This is a Test``'`.
+В этом примере выполняется поиск строки `'TEST'` в строке `'This is a Test``'` с учетом регистра.
   
 ```sql
 USE tempdb;  
@@ -158,7 +155,7 @@ SELECT CHARINDEX ( 'TEST',
 0
 ```  
   
-В приведенном ниже примере выполняется поиск строки `'Test'` с учетом регистра в `'This is a Test'`.
+В этом примере выполняется поиск строки `'Test'` в `'This is a Test'` с учетом регистра.
   
 ```sql
   
@@ -173,11 +170,11 @@ SELECT CHARINDEX ( 'Test',
   
 ```
 -----------
-13
+11
 ```  
   
 ### <a name="e-performing-a-case-insensitive-search"></a>Д. Выполнение поиска без учета регистра  
-В следующем примере выполняется поиск строки `'TEST'` в `'This is a Test'` без учета регистра.
+В этом примере выполняется поиск строки `'TEST'` в `'This is a Test'` без учета регистра.
   
 ```sql
   
@@ -199,7 +196,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-searching-from-the-start-of-a-string-expression"></a>Е. Поиск с начала строкового выражения  
-В приведенном ниже примере возвращается первая позиция строки `is` в `This is a string`, начиная с позиции 1 (первого символа) в строке.
+В этом примере возвращается первая позиция строки `is` в строке `This is a string`, начиная с позиции 1 (первого символа) в строке `This is a string`.
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string');  
@@ -213,7 +210,7 @@ SELECT CHARINDEX('is', 'This is a string');
 ```  
   
 ### <a name="g-searching-from-a-position-other-than-the-first-position"></a>Ж. Поиск с позиции, отличной от первой  
-В приведенном ниже примере возвращается первая позиция строки `is` в `This is a string`, начиная с четвертой позиции.
+В этом примере возвращается первая позиция строки `is` в строке `This is a string`, начиная с позиции 4 (четвертого символа).
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string', 4);  
@@ -227,7 +224,7 @@ SELECT CHARINDEX('is', 'This is a string', 4);
  ```  
   
 ### <a name="h-results-when-the-string-is-not-found"></a>З. Результаты в случае, если строка не найдена  
-В приведенном ниже примере демонстрируется возвращаемое значение в случае, если значение *string_pattern* не найдено в строке.
+В этом примере демонстрируется возвращаемое значение в случае, если функции CHARINDEX не удается найти строку *string_pattern* в строке.
   
 ```sql
 SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;  
