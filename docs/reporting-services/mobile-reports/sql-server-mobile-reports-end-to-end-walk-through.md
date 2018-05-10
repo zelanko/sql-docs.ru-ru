@@ -1,27 +1,25 @@
 ---
-title: "Мобильные отчеты SQL Server: руководство по использованию | Документы Майкрософт"
-ms.custom: 
+title: 'Мобильные отчеты SQL Server: руководство по использованию | Документы Майкрософт'
+ms.custom: ''
 ms.date: 11/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: 
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 3233c1433d1e09038d66af3db7e84a732e81926a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5b6bdc2fb6be0a80639d5f396fa9bc24abfb8833
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Мобильные отчеты SQL Server: руководство по использованию
 Используйте пошаговые инструкции по созданию мобильных отчетов для экрана любого размера с помощью [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] и по просмотру отчетов в мобильных приложениях Power BI.
@@ -31,7 +29,7 @@ ms.lasthandoff: 02/15/2018
 В этой статье рассматриваются такие вопросы:   
   
 - создание общего источника данных и набора данных на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] с использованием базы данных AdventureWorks в качестве образца источника данных;  
-- Создание мобильного отчета Reporting Services в средстве [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
+- создание мобильных отчетов служб Reporting Services в средстве " [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]";  
 - публикация мобильных отчетов на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] ;  
 - просмотр мобильных отчетов в мобильном приложении Power BI.  
   
@@ -151,7 +149,7 @@ ms.lasthandoff: 02/15/2018
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)
 
-   [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] сначала открывает сетку с разметкой образца.  
+   [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] открывает сетку с разметкой образца.  
   
 2. На вкладке **Макет** прокрутите экран вниз до раздела "Диаграммы".  
   

@@ -1,31 +1,29 @@
 ---
-title: "Диалоговое окно \"Свойства набора данных\" — \"Параметры\" (построитель отчетов) | Документы Майкрософт"
-ms.custom: 
+title: Диалоговое окно "Свойства набора данных" — "Параметры" (построитель отчетов) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - "10020"
 - sql13.rtp.rptdesigner.datasetproperties.options.f1
 - "10130"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 842012b19e26041065ef6adbd42cf6dc5e5990cd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 411fe1b3d55ec8ad34120fd69ee129910e75a6b0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Настройки» (построитель отчетов)
   Перейдите на вкладку **Настройки** в диалоговом окне **Свойства набора данных** , чтобы изменить параметры данных для запроса, такие как параметры сортировки и обработка промежуточных итогов как подробных данных. Дополнительные сведения о параметрах сортировки см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md) в [электронной документации по SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  

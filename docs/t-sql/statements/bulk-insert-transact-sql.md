@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -33,12 +31,11 @@ caps.latest.revision: 153
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: d6ac507a908d77618aa4171bc222e60cbd051ed0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6388c41cf93e79b215927fbec6a2e31a4ef6ed3f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -95,7 +92,7 @@ BULK INSERT
  *schema_name*  
  Имя схемы таблицы или представления. Указание аргумента *schema_name* необязательно, если схемой по умолчанию для пользователя, выполняющего операцию массового импорта, является схема указанной таблицы или представления. Если аргумент *schema* не указан и схема по умолчанию для пользователя, выполняющего операцию массового импорта, отличается от схемы таблицы или представления, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке и операция массового импорта не выполняется.  
   
- *имя_таблицы*  
+ *table_name*  
  Имя таблицы или представления, куда производится массовый импорт данных. Могут указываться только те представления, в которых все столбцы относятся к одной и той же базовой таблице. Дополнительные сведения об ограничениях, накладываемых на загрузку данных в представления, см. в разделе [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).  
   
  **'** *data_file* **'**  

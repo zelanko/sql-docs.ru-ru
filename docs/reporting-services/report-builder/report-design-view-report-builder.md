@@ -1,16 +1,15 @@
 ---
-title: "Представление конструктора отчетов (построитель отчетов) | Документы Майкрософт"
-ms.custom: 
+title: Представление конструктора отчетов (построитель отчетов) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10440"
 - "10426"
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c5b5bc4bfaac7322b902cc4ea941c64c6b58f4f8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 38b8c4c77f81a9454ba21c4e3b4fbc7fa8de7ff3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-design-view-report-builder"></a>Представление конструктора отчетов (построитель отчетов)
   Окно построителя отчетов предназначено для упрощения организации ресурсов отчета и быстрого построения нужных отчетов с разбиением на страницы. В центре окна расположена область конструктора, в верхней части — лента, а слева, внизу и справа находятся панели. В области конструктора добавляются и организовываются элементы отчета. В этой статье содержатся сведения о панелях, используемых для добавления, выбора и организации ресурсов отчета и изменения свойств элементов отчета.  

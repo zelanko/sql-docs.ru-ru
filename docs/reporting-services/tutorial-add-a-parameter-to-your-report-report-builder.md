@@ -1,28 +1,27 @@
 ---
-title: "Учебник. Добавление параметра к отчету (построитель отчетов) | Документация Майкрософт"
-ms.custom: 
+title: Учебник. Добавление параметра к отчету (построитель отчетов) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 7d8b0e4051da1cbcfc2ae641c2eb99102a13ac45
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: eb1fa8539eb0ba96edb5c48d29af160507e61998
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Учебник. Добавление параметра к отчету (построитель отчетов)
 В этом учебнике вы добавите параметр к отчету [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы, чтобы его читатели могли фильтровать данные по одному или нескольким значениям. 
@@ -369,7 +368,7 @@ For *@StoreID*в средстве просмотра отчетов отобра
   
     В матрице будут отображены данные только о магазине «Contoso Catalog Store».  
   
-9. На панели инструментов средства просмотра отчетов в области **Название магазина:**выберите **Contoso Asia Online Store**, затем нажмите кнопку **Просмотреть отчет**.  
+9. На панели инструментов средства просмотра отчетов в области **Название магазина:** выберите **Contoso Asia Online Store**, затем нажмите кнопку **Просмотреть отчет**.  
   
 В матрице будут отображены данные, соответствующие выбранному магазину.  
   

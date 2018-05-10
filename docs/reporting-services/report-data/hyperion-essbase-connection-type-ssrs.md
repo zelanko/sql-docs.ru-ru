@@ -1,27 +1,25 @@
 ---
-title: "Тип подключения к Hyperion Essbase (службы SSRS) | Документы Майкрософт"
-ms.custom: 
+title: Тип подключения к Hyperion Essbase (службы SSRS) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b70d9cbcbca9a8898d6b838f667f786cecf64805
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4856d84a8ee9cc8917ca6791260ca13fa083320e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Тип соединения Hyperion Essbase (службы SSRS)
   Чтобы включить данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] в отчет, пользователь должен иметь набор данных, основанный на источнике данных отчета типа [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных для [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], позволяющего извлекать многомерные данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -88,7 +86,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 |**Свойство**|**Тип**|**Описание или ожидаемое значение**|  
 |------------------|--------------|---------------------------------------|  
 |**Value**|**Объект**|Указывает значение данных поля.<br /><br /> Для свойства измерения оно сопоставлено с параметром MEMBER_CAPTION. Для меры оно сопоставлено со значением данных.|  
-|**IsMissing**|**Логическое значение**|Указывает, найдено ли поле в результирующем наборе данных.|  
+|**IsMissing**|**Boolean**|Указывает, найдено ли поле в результирующем наборе данных.|  
 |**FormattedValue**|**String**|Возвращает форматированное значение для ключевой цифры.<br /><br /> В многомерном выражении сопоставляется с FORMATTED_VALUE.|  
 |**BackgroundColor**|**String**|Возвращает цвет фона, заданный в базе данных для этого поля.<br /><br /> В многомерном выражении сопоставляется с BACK_COLOR.|  
 |**Color**|**String**|Возвращает цвет переднего плана, заданный в базе данных для этого элемента.<br /><br /> В многомерном выражении сопоставляется с FORE_COLOR.|  

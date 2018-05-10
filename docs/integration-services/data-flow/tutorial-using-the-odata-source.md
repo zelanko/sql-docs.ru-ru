@@ -1,31 +1,29 @@
 ---
-title: "Учебник. Использование источника OData | Документы Майкрософт"
-ms.custom: 
+title: Учебник. Использование источника OData | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4721c9e3854aba63a2d38209212435e2b0f5f4e1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fefca580838b5331bb1dea488082c1b6cd080131
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-using-the-odata-source"></a>Учебник. Использование источника OData
-  Настоящий учебник расскажет о процессе извлечения коллекции **Employees** из образца **Northwind** службы OData (http://services.odata.org/V3/Northwind/Northwind.svc/) и последующей ее загрузки в неструктурированный файл.  
+  Этот учебник содержит процедуру извлечения коллекции **Employees** из образца **Northwind** службы OData (http://services.odata.org/V3/Northwind/Northwind.svc/)) и последующей ее загрузки в неструктурированный файл.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Создание проекта служб Integration Services  
   
@@ -51,7 +49,7 @@ ms.lasthandoff: 01/25/2018
   
 5.  В меню **Создать…** , чтобы добавить новый диспетчера соединений с OData.  
   
-6.  Введите URL-адрес службы OData в поле **Расположение сервисного документа**. Это может быть URL-адрес сервисного документа либо определенный веб-канал или сущность. Для целей этого учебного примера введите URL-адрес сервисного документа [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
+6.  Введите URL-адрес службы OData в поле **Расположение сервисного документа**. Это может быть URL-адрес сервисного документа либо определенный веб-канал или сущность. В целях этого учебника введите URL-адрес сервисного документа: [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
   
 7.  Убедитесь, что выбрано **Проверка подлинности Windows** для **проверки подлинности** для использования для доступа к службе OData. **Проверка подлинности Windows** выбрана по умолчанию.  
   

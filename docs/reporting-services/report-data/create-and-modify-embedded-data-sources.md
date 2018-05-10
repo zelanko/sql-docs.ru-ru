@@ -1,27 +1,25 @@
 ---
-title: "Создание и изменение внедренных источников данных | Документы Майкрософт"
-ms.custom: 
+title: Создание и изменение внедренных источников данных | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c55223a992c7965dcb247aaaa36b53a7649b6a31
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6cd7dff5dc1d9ee6ba3b0d46296cd1f6fcebfe73
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>Создание и изменение внедренных источников данных
   Внедренный источник данных определяется в определении отчета и используется только этим отчетом.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 01/09/2018
   
         -   Введите строку соединения непосредственно в текстовое поле **Строка подключения** . Список примеров строк подключения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) или [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-        -   Нажмите кнопку выражения**(fx)** , чтобы создать выражение, результатом которого является строка подключения. В диалоговом окне **Выражение** введите выражение на панели выражений. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+        -   Нажмите кнопку выражения **(fx)** , чтобы создать выражение, результатом которого является строка подключения. В диалоговом окне **Выражение** введите выражение на панели выражений. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
         -   Нажмите кнопку **Изменить** , чтобы открыть диалоговое окно **Свойства соединения** для типа источника данных, выбранного в шаге 2.  
   
@@ -69,7 +67,7 @@ ms.lasthandoff: 01/09/2018
   
         -   Введите строку соединения непосредственно в текстовое поле **Строка подключения** . Список примеров строк подключения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
-        -   Нажмите кнопку выражения**(fx)** , чтобы создать выражение, результатом которого является строка подключения. В диалоговом окне **Выражение** введите выражение на панели выражений. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+        -   Нажмите кнопку выражения **(fx)** , чтобы создать выражение, результатом которого является строка подключения. В диалоговом окне **Выражение** введите выражение на панели выражений. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
         -   Нажмите кнопку **Построить** , чтобы открыть диалоговое окно **Свойства соединения** для типа источника данных, выбранного в шаге 2.  
   

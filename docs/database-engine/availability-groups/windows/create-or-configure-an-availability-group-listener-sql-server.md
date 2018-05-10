@@ -3,15 +3,12 @@ title: Создание или настройка прослушивателя �
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.newaglistener.general.f1
 helpviewer_keywords:
@@ -22,12 +19,11 @@ caps.latest.revision: 52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.workload: Active
-ms.openlocfilehash: 746cdda3b75aee4f15f7c03f9754614f15c68434
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1b1106913af5e7b6c2e9cd4a2e8b329efa0d596a
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Создание или настройка прослушивателя группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -284,7 +280,7 @@ ms.lasthandoff: 04/16/2018
   
      **Преимущества**. В случае перехода на другой ресурс по нескольким подсетям обеспечивается быстрое восстановление клиента.  
   
-     **Недостатки.**Установление 50 % соединений клиентов потребует более 20 секунд.  
+     **Недостатки.** Установление 50 % соединений клиентов потребует более 20 секунд.  
   
 -   При наличии разрешений на работу с ресурсами кластера рекомендуется задать `RegisterAllProvidersIP=0`в качестве сетевого имени прослушивателя группы доступности. Дополнительные сведения см. в подразделе «Установка значения RegisterAllProvidersIP» далее в этом разделе.  
   

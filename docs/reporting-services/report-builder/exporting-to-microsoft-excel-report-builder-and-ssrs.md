@@ -1,27 +1,25 @@
 ---
-title: "Экспорт в Microsoft Excel (построитель отчетов и службы SSRS) | Документы Майкрософт"
-ms.custom: 
+title: Экспорт в Microsoft Excel (построитель отчетов и службы SSRS) | Документы Майкрософт
+ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 
+caps.latest.revision: 28
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 604952211abf63d6dacb111c8170d678acd2d80a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2985d8337cfbbb33b867de3f84f307bea4a6a67b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel подготавливает отчет [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы в формате [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (XLSX). Благодаря модулю для подготовки отчетов, ширина столбцов в Excel более аккуратно отражает ширину столбцов в отчете.  
@@ -214,7 +212,7 @@ ms.lasthandoff: 02/15/2018
   
 |Свойства элемента отчета|Description|  
 |-------------------------------|-----------------|  
-|Создан|Дата и время выполнения отчета со значением в формате ISO.|  
+|Создание|Дата и время выполнения отчета со значением в формате ISO.|  
 |Автор|Report.Author|  
 |Description|Report.Description|  
 |LastSaved|Дата и время выполнения отчета со значением в формате ISO.|  

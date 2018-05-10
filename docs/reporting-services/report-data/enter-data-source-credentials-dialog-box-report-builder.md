@@ -1,30 +1,28 @@
 ---
-title: "Диалоговое окно \"Ввод учетных данных для источника данных\" (построитель отчетов) | Документы Майкрософт"
-ms.custom: 
+title: Диалоговое окно "Ввод учетных данных для источника данных" (построитель отчетов) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - "10128"
 - sql13.rtp.rptdesigner.runtimecredentials.f1
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 986fa8f8fa16b75d8a565ec1e9a18bd97d0ce45a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: b59cbbf3eb811054fa20969a34a2a606751dedfc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>Диалоговое окно «Ввод учетных данных для источника данных» (построитель отчетов)
   Используйте диалоговое окно **Ввод учетных данных для источника данных** , чтобы предоставить учетные данные для получения данных из источника данных.  

@@ -1,9 +1,11 @@
 ---
 title: Объектная модель ADO | Документы Microsoft
 ms.prod: sql
-ms.prod_service: connectivity
+ms.prod_service: drivers
+ms.service: ''
 ms.component: ado
-ms.technology: connectivity
+ms.technology:
+- drivers
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,9 +19,9 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b282ebb1ba7ce6b2ad80c95891aade57df93758
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7b37fe759b0a7a4fa426d902b0eb7e4030c3c6a5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
 ---

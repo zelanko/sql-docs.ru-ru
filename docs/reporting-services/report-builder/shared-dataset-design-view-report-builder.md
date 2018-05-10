@@ -1,27 +1,25 @@
 ---
-title: "Представление конструктора общих наборов данных (построитель отчетов) | Документы Майкрософт"
-ms.custom: 
+title: Представление конструктора общих наборов данных (построитель отчетов) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e1301fbcb05441ea09d6eb6e7450ce0d050aaa65
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 7348789d794cb10892ed4a6c7f22c68b1bfb75cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Представление конструктора общих наборов данных (построитель отчетов)
   Набор данных в отчете представляет данные отчета, возвращаемые из запроса к внешнему источнику данных. Общие наборы данных публикуются на сервере отчетов и могут использоваться в нескольких отчетах. Можно создавать наборы данных для совместного использования с другими пользователями. В окне создания общего набора данных можно выбрать общий источник данных, указать свойства для общего набора данных и создать запрос в конструкторе запросов.  
@@ -83,7 +81,7 @@ ms.lasthandoff: 01/09/2018
   
  Когда автор отчета добавляет этот набор данных к отчету, добавляется указатель на определение набора данных на сервере отчетов. В отчете коллекция полей набора данных появляется на панели данных отчета. Текст запроса недоступен.  
   
- Учетные данные, используемые для выполнения запроса, отделены от учетных данных, используемых для просмотра отчета или выполнения отчета с сервера отчетов. Дополнительные сведения см. в статье [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+ Учетные данные, используемые для выполнения запроса, отделены от учетных данных, используемых для просмотра отчета или выполнения отчета с сервера отчетов. Дополнительные сведения см. в статье [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ### <a name="running-a-report-with-parameters"></a>Запуск отчета с параметрами  
  Если запрос включает переменные запроса, параметры набора данных создаются автоматически. В свою очередь после завершения построения запроса к набору данных параметры отчета, заданные для параметров набора данных, создаются автоматически.  

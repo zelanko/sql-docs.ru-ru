@@ -1,15 +1,14 @@
 ---
-title: "План выполнения и выделение буферов | Документы Майкрософт"
-ms.custom: 
+title: План выполнения и выделение буферов | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: extending-packages-custom-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -24,16 +23,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], execution plans
 - execution plans [Integration Services]
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 80531a48b65578c296d79318735e60d7fb203840
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 65c540fec5a19b8c99057b56b83f12c8b49d1ac3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>План выполнения и выделение буферов
   Перед выполнением задача потока данных проверяет свои компоненты и формирует план выполнения для каждой последовательности компонентов. В этом разделе предоставляются сведения о плане выполнения, рассматривается, как просмотреть план и как на основании плана выполнения выделяются входной и выходной буферы.  
