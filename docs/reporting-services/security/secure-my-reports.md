@@ -1,16 +1,15 @@
 ---
-title: "Защита папки \"Мои отчеты\" | Документы Майкрософт"
-ms.custom: 
+title: Защита папки "Мои отчеты" | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - denying My Reports folder access
 - private folders [Reporting Services]
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - security [Reporting Services], My Reports folder
 - My Reports folder [Reporting Services]
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1777c84f25373806c3aab4f1c05a0a676b78097f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: db7ab6718c89132a0aabbfdda826db786628dc68
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="secure-my-reports"></a>Обеспечение безопасности «Моих отчетов»
   В компоненте «Мои отчеты» представлено управляемое пользователем рабочее пространство для работы с отчетами. Чтобы обеспечить соответствие своему назначению, для папки «Мои отчеты» требуются более широкие права доступа, чем для других папок, доступных для общего пользования. Пользователям, имеющим разрешения в других папках только на просмотр и запуск отчетов, могут потребоваться дополнительные разрешения для управления их папками My Reports и содержимым, которое им принадлежит. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет для этого специальный механизм назначения и определения ролей.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 01/09/2018
   
  Назначение роли папки **Мои отчеты** включает следующие элементы:  
   
--   пользовательская папка "Мои отчеты", находящаяся в папке "Папки пользователей\\*\<имя_пользователя>*\Мои отчеты";  
+-   пользовательская папка "Мои отчеты", находящаяся в папке "Папки пользователей\\*\<имя_пользователя>* \Мои отчеты";  
   
 -   учетная запись пользователя, определяемая при активации папки «Мои отчеты». Папка активируется при щелчке пользователем папки «Мои отчеты» в диспетчере отчетов или при публикации отчета в папке «Мои отчеты» из конструктора отчетов. Эта папка также активируется при запросе пользователем свойств по ссылке «Мои отчеты»;  
   

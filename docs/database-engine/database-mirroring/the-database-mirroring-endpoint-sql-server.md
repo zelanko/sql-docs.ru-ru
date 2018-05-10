@@ -3,15 +3,13 @@ title: Конечная точка зеркального отображения
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - database mirroring [SQL Server], endpoint
@@ -23,15 +21,17 @@ caps.latest.revision: 47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 74bf6671aec23583b03ea255cfdf5bcd7e0ae3be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 16d23cf23aba77a37346fdbe8bd8ffe6d29a2c8b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Конечная точка зеркального отображения базы данных (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Для участия в [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] или зеркальном отображении базы данных экземпляр сервера должен иметь собственную выделенную *конечную точку зеркального отображения базы данных*. Это специальная конечная точка, которая используется исключительно для приема соединений от других экземпляров сервера. В каждом экземпляре сервера для каждого соединения [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] или зеркального отображения базы данных с любым другим экземпляром сервера требуется одна конечная точка зеркального отображения базы данных.  
   
  Для передачи и получения сообщений между экземплярами серверов, участвующими в сеансах зеркального отображения базы данных или размещающих реплики доступности, в конечных точках зеркального отображения базы данных используется протокол TCP. Конечная точка зеркального отображения базы данных прослушивает порт TCP с уникальным номером.  

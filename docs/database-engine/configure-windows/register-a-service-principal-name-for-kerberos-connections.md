@@ -3,15 +3,12 @@ title: Регистрация имени участника-службы для 
 ms.custom: ''
 ms.date: 11/20/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], SPNs
 - network connections [SQL Server], SPNs
@@ -23,12 +20,11 @@ caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: fe8e537bb8d01784f68dd168ba84df9d6daac4db
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 728d36ad9bb4630fb1457d92164a09d9dbeb64cb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Регистрация имени участника-службы для соединений Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,11 +79,11 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
     -   **MSSQLSvc** — регистрируемая служба;  
   
-    -   **\<FQDN>** — полное доменное имя сервера.  
+    -   **\<FQDN>**  — полное доменное имя сервера.  
   
-    -   **\<port>** — номер порта TCP.  
+    -   **\<port>**  — номер порта TCP.  
   
-    -   **\<instancename>** — имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    -   **\<instancename>**  — имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 **Экземпляр по умолчанию**  
   
@@ -95,9 +91,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
     -   **MSSQLSvc** — регистрируемая служба;  
   
-    -   **\<FQDN>** — полное доменное имя сервера.  
+    -   **\<FQDN>**  — полное доменное имя сервера.  
   
-    -   **\<port>** — номер порта TCP.  
+    -   **\<port>**  — номер порта TCP.  
   
     > [!NOTE]
     > Новый формат имени участника-службы не требует наличия номера порта. В результате этого серверы с несколькими портами и протоколы, не использующие номера портов, смогут использовать проверку подлинности Kerberos.  

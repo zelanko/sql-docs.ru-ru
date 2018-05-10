@@ -1,9 +1,11 @@
 ---
 title: Свойства объекта набора ячеек, методы и события | Документы Microsoft
 ms.prod: sql
-ms.prod_service: connectivity
+ms.prod_service: drivers
+ms.service: ''
 ms.component: ado
-ms.technology: connectivity
+ms.technology:
+- drivers
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,9 +19,9 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1bc353f4980eb9cfc4b6446a6f508120c3fc4fb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 71c6fa35b7b6652b7c1b5b1080ff2270e1846628
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
 ---

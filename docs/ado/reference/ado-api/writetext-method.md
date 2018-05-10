@@ -1,9 +1,11 @@
 ---
 title: Метод WriteText | Документы Microsoft
 ms.prod: sql
-ms.prod_service: connectivity
+ms.prod_service: drivers
+ms.service: ''
 ms.component: ado
-ms.technology: connectivity
+ms.technology:
+- drivers
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,9 +23,9 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2b12293935df6f9afaf6a1691e2decce3f6c6f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: dda7b8a8aa215f43cadfc080a1d0df24b7c94e0d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
 ---

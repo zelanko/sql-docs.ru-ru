@@ -21,11 +21,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 27ad3ba5560be3fa547975d0d86099b3f4ab1450
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: HT
+ms.openlocfilehash: d4f66b0608afcfa883f4e12d0e3dfe39e8bf7512
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>CDC.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,9 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  Необходимо членство в предопределенной роли сервера sysadmin или предопределенной роли базы данных db_owner. Всем остальным пользователям необходимо разрешение SELECT для всех отслеживаемых столбцов в исходной таблице. Кроме того, если для экземпляра отслеживания была определена шлюзовая роль, требуется членство в этой роли базы данных. Если вызывающий объект не располагает разрешением на просмотр исходных данных, функция возвращает ошибку 208 (недопустимое имя объекта).  
   
 ## <a name="remarks"></a>Замечания  
- Если указанный диапазон номеров LSN выходит за пределы временной шкалы для отслеживания изменений в экземпляре отслеживания, функция возвращает ошибку 208 (недопустимое имя объекта).  
+ Если указанный диапазон номеров LSN выходит за пределы временной шкалы для отслеживания изменений в экземпляре отслеживания, функция возвращает ошибку 208 (недопустимое имя объекта).
+
+ Изменения на уникальный идентификатор строки вызовет fn_cdc_get_net_changes для отображения начальной команды UPDATE с помощью удаления и ВСТАВЬТЕ команду.  Это поведение возникает необходимость отслеживать ключ до и после изменения.
   
 ## <a name="examples"></a>Примеры  
  В следующем примере используется функция `cdc.fn_cdc_get_net_changes_HR_Department` сообщить о сетевых изменениях в исходной таблице `HumanResources.Department` во время в заданном интервале времени.  

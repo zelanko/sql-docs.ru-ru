@@ -1,27 +1,25 @@
 ---
-title: "Предупреждения об изменении данных в службах Reporting Services | Документы Майкрософт"
-ms.custom: 
+title: Предупреждения об изменении данных в службах Reporting Services | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c66c095233b8e7642e4c491767ce678218d8ef42
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1cfc5097bc391a9d8487506b2958635dead23b7a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-data-alerts"></a>Предупреждения об изменении данных в службах Reporting Services
 
@@ -44,7 +42,7 @@ SQL Server Reporting Services — это управляемое данными
   
 -   **Запуск определений предупреждений об изменении данных**— служба предупреждений обрабатывает определения предупреждений в запланированное время, извлекает данные отчетов и создает экземпляры предупреждений об изменении данных на основе правил, заданных в определении предупреждения.  
   
--   **Доставка предупреждений об изменении данных получателям.**Служба оповещений создает экземпляр предупреждения об изменении данных и отправляет предупреждающее сообщение получателям по электронной почте.  
+-   **Доставка предупреждений об изменении данных получателям.** Служба оповещений создает экземпляр предупреждения об изменении данных и отправляет предупреждающее сообщение получателям по электронной почте.  
   
  Кроме того, если вы являетесь владельцем предупреждения об изменении данных, вы можете просматривать сведения о своих предупреждениях, удалять и изменять созданные вами определения предупреждений. Каждое предупреждение имеет одного и только одного владельца — пользователя, который его создал.  
   

@@ -1,9 +1,11 @@
 ---
 title: Пример свойства версию (Visual Basic) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: connectivity
+ms.prod_service: drivers
+ms.service: ''
 ms.component: ado
-ms.technology: connectivity
+ms.technology:
+- drivers
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,9 +21,9 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c48b12324b24a03452e7520afe04579c2989252
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 94d6019a7be9bf80fafa23f52d20ed56eb032ff7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
 ---

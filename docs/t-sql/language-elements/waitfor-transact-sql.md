@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -33,12 +31,11 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 2bf3df5733c9b427f7c34459b95404768d4520d5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bbf4b982faa988290573368818f4d75961fd38c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,13 +62,13 @@ WAITFOR
  Заданный период времени (не более 24 часов), который должен пройти до выполнения пакета, хранимой процедуры или продолжения транзакции.  
   
  '*time_to_pass*'  
- Период времени ожидания. Аргумент *time_to_pass* может быть задан в одном из допустимых форматов для данных типа **datetime** или в виде локальной переменной. Даты не могут быть указаны, поэтому часть значения **datetime**, относящаяся к дате, не разрешена.  
+ Период времени ожидания. Аргумент *time_to_pass* может быть задан в одном из допустимых форматов для данных типа **datetime** или в виде локальной переменной. Даты не могут быть указаны, поэтому часть значения **datetime**, относящаяся к дате, не разрешена. Это представляется в формате чч:мм[[:сс].мсс].
   
  TIME  
  Заданное время выполнения пакета, хранимой процедуры или транзакции.  
   
  '*time_to_execute*'  
- Время, в которое инструкция WAITFOR завершает работу. Аргумент *time_to_execute* может быть задан в одном из допустимых форматов для данных типа **datetime** или в виде локальной переменной. Даты не могут быть указаны, поэтому часть значения **datetime**, относящаяся к дате, не разрешена.  
+ Время, в которое инструкция WAITFOR завершает работу. Аргумент *time_to_execute* может быть задан в одном из допустимых форматов для данных типа **datetime** или в виде локальной переменной. Даты не могут быть указаны, поэтому часть значения **datetime**, относящаяся к дате, не разрешена. Это представляется в формате чч:мм[[:сс].мсс] и при необходимости может включать дату 1900-01-01.
   
  *receive_statement*  
  Допустимая инструкция RECEIVE.  

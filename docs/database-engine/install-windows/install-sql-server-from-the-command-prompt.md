@@ -3,15 +3,13 @@ title: Установка SQL Server из командной строки | До
 ms.custom: ''
 ms.date: 01/17/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, command prompt
 - installation scripts [SQL Server]
@@ -91,11 +89,11 @@ caps.latest.revision: 255
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 09d891f23f0e04b02f9d7bfd761be66c7db6747d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ac7f9dc22f86f5da53efaa0b348362e582045683
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Установка SQL Server из командной строки
 
@@ -220,7 +218,7 @@ ms.lasthandoff: 04/16/2018
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/PID<br /><br /> **Необязательно**|Указывает ключ продукта для выпуска SQL Server. Если этот параметр не указан, то используется выпуск Evaluation.|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/Q<br /><br /> **Необязательно**|Указывает, что программа установки работает в тихом режиме (без пользовательского интерфейса). Этот параметр предназначен для автоматической установки.|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/QS<br /><br /> **Необязательно**|Указывает, что программа установки запускается и отображает в пользовательском интерфейсе ход выполнения, но не принимает вводимые значения и не выводит сообщения об ошибке.|  
-|Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/UIMODE<br /><br /> **Необязательно**|Показывает, нужно ли выводить в ходе установки лишь минимально необходимое количество диалоговых окон.<br /><br /> Параметр**/UIMode** может использоваться только вместе с параметрами **/ACTION=INSTALL** и **UPGRADE** . Поддерживаемые значения:<br /><br /> Значение**/UIMODE=Normal** используется по умолчанию для всех выпусков, кроме Express. В этом случае выводятся все диалоговые окна программы установки для выбранных компонентов.<br /><br /> Значение**/UIMODE=AutoAdvance** используется по умолчанию для выпусков Express. В этом случае необязательные диалоговые окна пропускаются.<br /><br /> <br /><br /> Обратите внимание на то, что в сочетании с другими параметрами **UIMODE** переопределяется. Например, если указаны оба параметра, **/UIMODE=AutoAdvance** и **/ADDCURRENTUSERASSQLADMIN=FALSE** , то диалоговое окно провизионирования не заполняется автоматически в соответствии с текущим пользователем.<br /><br /> Параметр **UIMode** нельзя использовать вместе с параметрами **/Q** и **/QS** .|  
+|Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/UIMODE<br /><br /> **Необязательно**|Показывает, нужно ли выводить в ходе установки лишь минимально необходимое количество диалоговых окон.<br /><br /> Параметр **/UIMode** может использоваться только вместе с параметрами **/ACTION=INSTALL** и **UPGRADE** . Поддерживаемые значения:<br /><br /> Значение **/UIMODE=Normal** используется по умолчанию для всех выпусков, кроме Express. В этом случае выводятся все диалоговые окна программы установки для выбранных компонентов.<br /><br /> Значение **/UIMODE=AutoAdvance** используется по умолчанию для выпусков Express. В этом случае необязательные диалоговые окна пропускаются.<br /><br /> <br /><br /> Обратите внимание на то, что в сочетании с другими параметрами **UIMODE** переопределяется. Например, если указаны оба параметра, **/UIMODE=AutoAdvance** и **/ADDCURRENTUSERASSQLADMIN=FALSE** , то диалоговое окно провизионирования не заполняется автоматически в соответствии с текущим пользователем.<br /><br /> Параметр **UIMode** нельзя использовать вместе с параметрами **/Q** и **/QS** .|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/SQMREPORTING<br /><br /> **Необязательно**|Данный параметр не делает ничего в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. <br/><br/>Сведения о том, как управлять отправкой отзывов об ошибках в корпорацию Майкрософт, см. в статье [How to configure [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] to send feedback to Microsoft](http://support.microsoft.com/kb/3153756) (Как настроить отправку отзывов в корпорацию Майкрософт в SQL Server 2016). <br/><br/>В предыдущих версиях этот компонент задает отправку отчетов об использовании компонентов для SQL Server.<br /><br />Поддерживаемые значения:<br /><br /> 0=отключено<br /><br /> 1 = включено|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/HIDECONSOLE<br /><br /> **Необязательно**|Указывает, что окно консоли скрыто или закрыто.|  
 |Агент[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |/AGTSVCACCOUNT<br /><br /> **Обязательно**|Задает учетную запись для службы агента SQL Server.|  
@@ -411,7 +409,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTANCENAME<br /><br /> **Обязательно**|Указывает имя экземпляра [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .<br /><br /> Дополнительные сведения см. в разделе [Instance Configuration](../../database-engine/install-windows/install-sql-server.md).|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/PID<br /><br /> **Необязательно**|Указывает ключ продукта для выпуска SQL Server. Если этот параметр не указан, то используется выпуск Evaluation.|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/Q<br /><br /> **Необязательно**|Указывает, что программа установки работает в тихом режиме (без пользовательского интерфейса). Этот параметр предназначен для автоматической установки.|  
-|Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/UIMODE<br /><br /> **Необязательно**|Показывает, нужно ли выводить в ходе установки лишь минимально необходимое количество диалоговых окон. <br />                Параметр**/UIMode** может использоваться только вместе с параметрами **/ACTION=INSTALL** и **UPGRADE** . Поддерживаемые значения:<br /><br /> Значение**/UIMODE=Normal** используется по умолчанию для всех выпусков, кроме Express. В этом случае выводятся все диалоговые окна программы установки для выбранных компонентов.<br /><br /> Значение**/UIMODE=AutoAdvance** используется по умолчанию для выпусков Express. В этом случае необязательные диалоговые окна пропускаются.<br /><br /> Обратите внимание на то, что параметр **UIMode** нельзя использовать вместе с параметрами **/Q** и **/QS** .|  
+|Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/UIMODE<br /><br /> **Необязательно**|Показывает, нужно ли выводить в ходе установки лишь минимально необходимое количество диалоговых окон. <br />                Параметр **/UIMode** может использоваться только вместе с параметрами **/ACTION=INSTALL** и **UPGRADE** . Поддерживаемые значения:<br /><br /> Значение **/UIMODE=Normal** используется по умолчанию для всех выпусков, кроме Express. В этом случае выводятся все диалоговые окна программы установки для выбранных компонентов.<br /><br /> Значение **/UIMODE=AutoAdvance** используется по умолчанию для выпусков Express. В этом случае необязательные диалоговые окна пропускаются.<br /><br /> Обратите внимание на то, что параметр **UIMode** нельзя использовать вместе с параметрами **/Q** и **/QS** .|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQMREPORTING<br /><br /> **Необязательно**|Данный параметр не делает ничего в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. <br/><br/>Сведения о том, как управлять отправкой отзывов об ошибках в корпорацию Майкрософт, см. в статье [How to configure [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] to send feedback to Microsoft](http://support.microsoft.com/kb/3153756) (Как настроить отправку отзывов в корпорацию Майкрософт в SQL Server 2016). <br/><br/>В предыдущих версиях этот компонент задает отправку отчетов об использовании компонентов для SQL Server.<br /><br />Поддерживаемые значения:<br /><br /> 1 = включено<br /><br /> 0=отключено|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/HIDECONSOLE<br /><br /> **Необязательно**|Указывает, что окно консоли должно быть скрыто или закрыто.|  
 |служба «SQL Server, браузер»|/BROWSERSVCSTARTUPTYPE<br /><br /> **Необязательно**|Указывает режим [запуска](#Accounts) для службы обозревателя SQL Server. Поддерживаемые значения:<br /><br /> **Автоматически**<br /><br /> **Отключено**<br /><br /> **Вручную**|  

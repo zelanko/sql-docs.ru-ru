@@ -1,27 +1,25 @@
 ---
-title: "Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS) | Документация Майкрософт"
-ms.custom: 
+title: Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS) | Документация Майкрософт
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 89baca75b96115ac70e6f520cd2248f03497cbda
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 99fedd6b1dd298f545b578342b79ca91aafc0eef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)
 
@@ -48,7 +46,7 @@ ms.lasthandoff: 01/09/2018
   
 |Категория|Level|Description|  
 |--------------|-----------|-----------------|  
-|база данных|Подробный|Регистрирует события, требующие доступа к базе данных.|  
+|База данных|Подробный|Регистрирует события, требующие доступа к базе данных.|  
 |Общие|Подробный|Регистрирует события, требующие доступа к следующим элементам.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Обработчик HTTP-данных средства просмотра отчетов.<br /><br /> Доступ к отчету (RDL-файлы).<br /><br /> Источники данных (RSDS-файлы).<br /><br /> URL-адреса на сайте SharePoint (SMDL-файлы).|  
 |Office Server General|Exception|Регистрирует ошибки входа.|  
 |Топология|Verbose|Регистрирует текущую информацию пользователя.|  

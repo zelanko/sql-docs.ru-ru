@@ -1,31 +1,29 @@
 ---
-title: "Удаление элемента (Management Studio) | Документы Майкрософт"
-ms.custom: 
+title: Удаление элемента (Management Studio) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], deleting
 - deleting report items
 - report items [Reporting Services], deleting
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 548ac3d13e04695c32e9bc8c8699910bad05d173
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c1c87a676fec96aed0eb02eda6d9eb3eef92f6ab
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-an-item-management-studio"></a>удалить элемент (среда Management Studio)
   При подключении к экземпляру сервера отчетов в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]можно удалять определения ролей и общие расписания. Нельзя удалять отчеты, модели и другие элементы на сервере отчетов. Для удаления содержимого сервера отчетов используется диспетчер отчетов. Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, используйте функции управления в библиотеке SharePoint, в которой хранится нужное содержимое.  

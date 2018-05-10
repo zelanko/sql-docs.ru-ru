@@ -1,30 +1,28 @@
 ---
-title: "Домены приложений для приложений сервера отчетов | Документы Майкрософт"
-ms.custom: 
+title: Домены приложений для приложений сервера отчетов | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f892ef4a4849385e0a48272dd7eef826e4b49635
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: fad2f5fd529550e7d5ed1f6101f271d15753364a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-domains-for-report-server-applications"></a>Домены приложений для приложений сервера отчетов
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]сервер отчетов реализован как единственная служба, включающая веб-службу сервера отчетов, диспетчер отчетов и приложение фоновой обработки. Каждое приложение эксплуатируется в собственном домене приложения, в составе общего процесса сервера отчетов. Создание, настройка и управление доменами приложений обычно осуществляются внутри процесса. Однако знание того, как происходят операции очистки для доменов приложений сервера отчетов, может быть полезным при исследовании проблем производительности или использования памяти и при устранении неполадок в работе службы.  

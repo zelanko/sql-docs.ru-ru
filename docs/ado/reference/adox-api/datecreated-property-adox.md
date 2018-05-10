@@ -1,9 +1,11 @@
 ---
 title: Свойство DateCreated (ADOX) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: connectivity
+ms.prod_service: drivers
+ms.service: ''
 ms.component: ado
-ms.technology: connectivity
+ms.technology:
+- drivers
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,9 +24,9 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2b1848170421fec72fd6b0e502c015fa5be48f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4c7504f93093291e2a8863367a5f05b18d9214ae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
 ---

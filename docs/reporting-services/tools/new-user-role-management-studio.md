@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: tools
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.newrole.f1
 ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
@@ -18,12 +17,11 @@ caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8e07be39cc18dc7c60f845ad1721f36c3e5a7952
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 86bebcd1ff8e22993b67877acd05f73bc8bc1dd4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-user-role-management-studio"></a>Создание пользовательской роли (среда Management Studio)
   На этой странице можно создать определение роли на уровне элемента. Определение роли на уровне элемента — это именованная коллекция задач, которые пользователь может выполнять в отношении папок, отчетов, моделей, ресурсов и общих источников данных. Примером определения роли на уровне элемента является заранее определенная роль «Браузер», определяющая типы действий, которые могут понадобиться конечным пользователям отчетов для перемещения по папкам и просмотра отчетов.  

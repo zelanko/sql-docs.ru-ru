@@ -1,30 +1,28 @@
 ---
-title: "Спарклайны и гистограммы (построитель отчетов и службы SSRS) | Документы Майкрософт"
-ms.custom: 
+title: Спарклайны и гистограммы (построитель отчетов и службы SSRS) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: fcca620035420f293cda90a0481380efdd4d2c25
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6bde9dbc2bc91c5de90b65c0173d4b691e888086
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Спарклайны и гистограммы (построитель отчетов и службы SSRS)
   Sparkline-графики и гистограммы — это небольшие простые диаграммы, которые содержат много сведений в небольшом пространстве и часто бывают встроены в текст.   

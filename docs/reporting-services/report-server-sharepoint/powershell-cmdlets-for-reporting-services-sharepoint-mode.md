@@ -1,25 +1,23 @@
 ---
-title: "Командлеты PowerShell для режима интеграции служб Reporting Services с SharePoint | Документы Майкрософт"
-ms.custom: 
+title: Командлеты PowerShell для режима интеграции служб Reporting Services с SharePoint | Документы Майкрософт
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7b2d501e76e281716d1d88f858d6642c3a0a1ef5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 245a6f2b2c8484ad83d70c2e76dc55522fde7d1b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Командлеты PowerShell для режима интеграции служб Reporting Services с SharePoint
 
@@ -115,7 +113,7 @@ ms.lasthandoff: 01/09/2018
 |New-SPRSExtension|Регистрирует новый модуль для работы с приложением службы Reporting Services.|  
 |Set-SPRSExtension|Задает свойства существующего модуля служб Reporting Services.|  
 |Remove-SPRSExtension|Удаляет модуль из приложения службы Reporting Services.|  
-|Get-SPRSExtension|Возвращает один или несколько модулей Reporting Services для приложения службы Reporting Services.<br /><br /> Допустимые значения:<br /><br /> <br /><br /> Доставка<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> data<br /><br /> безопасность<br /><br /> Проверка подлинности<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Конструктор<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSExtension|Возвращает один или несколько модулей Reporting Services для приложения службы Reporting Services.<br /><br /> Допустимые значения:<br /><br /> <br /><br /> Доставка<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> Данные <br /><br /> безопасность<br /><br /> Проверка подлинности<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Конструктор<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|Возвращает сайты SharePoint с учетом того, включена ли на них функция «ReportingService». По умолчанию возвращаются сайты, на которых включена функция «ReportingService».|  
   
 ## <a name="basic-samples"></a>Простые примеры

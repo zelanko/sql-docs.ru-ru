@@ -1,15 +1,13 @@
 ---
 title: DATABASEPROPERTYEX (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -26,13 +24,12 @@ caps.latest.revision: 84
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4331e2c3e4b68a3c439ed72a16f0941068b76802
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c7525291002bb22109c05600e25fdcd551c86b9e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,10 +67,10 @@ DATABASEPROPERTYEX ( database , property )
 |IsArithmeticAbortEnabled|Запрос завершается, если в процессе его выполнения происходит ошибка переполнения или деления на нуль.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**|  
 |IsAutoClose|После выхода последнего пользователя база данных корректно выключается и освобождает ресурсы.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**|  
 |IsAutoCreateStatistics|Оптимизатор запросов при необходимости создает статистику по отдельным столбцам для повышения производительности запросов.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**|  
-|IsAutoCreateStatisticsIncremental|Автоматические статистики в одном столбце создаются в дополнительном виде везде, где это возможно.|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**|  
+|IsAutoCreateStatisticsIncremental|Автоматические статистики в одном столбце создаются в дополнительном виде везде, где это возможно.|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**|  
 |IsAutoShrink|Файлы базы данных являются кандидатами на автоматическое периодическое сжатие.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**|  
 |IsAutoUpdateStatistics|Оптимизатор запросов обновляет существующую статистику, если она используется в запросе и может оказаться устаревшей.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**|
-|IsClone|База данных представляет собой копию только схемы и статистики пользовательской базы данных.|**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2).<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**| 
+|IsClone|База данных представляет собой копию только схемы и статистики пользовательской базы данных, созданной с помощью DBCC CLONEDATABASE. Дополнительные сведения см. в этой [статье службы поддержки Майкрософт](http://support.microsoft.com/help/3177838).|**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**| 
 |IsCloseCursorsOnCommitEnabled|Открытые курсоры закрываются при фиксации транзакции.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**|  
 |IsFulltextEnabled|В базе данных включены полнотекстовое и семантическое индексирование.|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**<br /><br /> **Примечание**. Значение этого свойства не учитывается. Полнотекстовый поиск всегда включен для пользовательских баз данных. Этот столбец будет удален в будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не используйте этот столбец при работе над новыми приложениями и как можно быстрее измените приложения, в настоящее время использующие любые из этих столбцов.|  
 |IsInStandBy|В режиме «в сети» база данных доступна только для чтения, при этом разрешен журнал восстановления.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**|  
@@ -88,8 +85,10 @@ DATABASEPROPERTYEX ( database , property )
 |IsRecursiveTriggersEnabled|Рекурсивное срабатывание триггеров разрешено.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**|  
 |IsSubscribed|База данных подписана на публикацию.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**|  
 |IsSyncWithBackup|База данных является опубликованной либо является базой данных распространителя и может быть восстановлена без нарушения репликации транзакций.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**|  
-|IsTornPageDetectionEnabled|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] выявляет незавершенные операции ввода-вывода, вызванные сбоями питания или другими перерывами в работе системы.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**|  
-|IsXTPSupported|Указывает, поддерживает ли база данных выполняющуюся в памяти OLTP, то есть создание и использование таблиц, оптимизированных для памяти, и модулей, скомпилированных в собственном коде.<br /><br /> Относится к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported не зависит от наличия файловой группы MEMORY_OPTIMIZED_DATA, которая требуется для создания объектов выполняющейся в памяти OLTP.|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> **Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо<br /><br /> Базовый тип данных: **int**|  
+|IsTornPageDetectionEnabled|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] выявляет незавершенные операции ввода-вывода, вызванные сбоями питания или другими перерывами в работе системы.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**| 
+|IsVerifiedClone|База данных представляет собой копию только схемы и статистики пользовательской базы данных, созданной с помощью параметра WITH VERIFY_CLONEDB функции DBCC CLONEDATABASE. Дополнительные сведения см. в этой [статье службы поддержки Майкрософт](http://support.microsoft.com/help/3177838).|**Применимо к** : начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления SP2.<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **int**| 
+|IsXTPSupported|Указывает, поддерживает ли база данных выполняющуюся в памяти OLTP, то есть создание и использование таблиц, оптимизированных для памяти, и модулей, скомпилированных в собственном коде.<br /><br /> Относится к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported не зависит от наличия файловой группы MEMORY_OPTIMIZED_DATA, которая требуется для создания объектов выполняющейся в памяти OLTP.|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо<br /><br /> Базовый тип данных: **int**|  
+|LastGoodCheckDbTime|Дата и время последнего успешного выполнения DBCC CHECKDB для запуска в указанной базе данных.|**Применимо к** : начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления SP2.<br /><br /> NULL = недопустимые входные данные.<br /><br /> Базовый тип данных: **datetime**| 
 |LCID|Языковой стандарт (код языка) Windows для параметров сортировки.|Значение кода языка (в десятичном формате).<br /><br /> Базовый тип данных: **int**|  
 |MaxSizeInBytes|Максимальный размер базы данных в байтах.|**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL = база данных не запущена<br /><br /> Базовый тип данных: **bigint**|  
 |Восстановление|Модель восстановления базы данных.|FULL = модель полного восстановления.<br /><br /> BULK_LOGGED = модель восстановления с неполным протоколированием.<br /><br /> SIMPLE = простая модель восстановления.<br /><br /> Базовый тип данных: **nvarchar(128)**|  

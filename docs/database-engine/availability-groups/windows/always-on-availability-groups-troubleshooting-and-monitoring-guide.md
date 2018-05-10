@@ -2,23 +2,22 @@
 title: Руководство по мониторингу и устранению неполадок в группах доступности AlwaysOn (SQL Server) | Документы Майкрософт
 ms.custom: ag-guide
 ms.date: 05/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 caps.latest.revision: 8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b78d697f5e8359580e8ebbf602587584964b017c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e82c43cbca60f1804c2a5b2becfcdbaaf734fd26
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Руководство по мониторингу и устранению неполадок в группах доступности AlwaysOn
  Это руководство поможет вам приступить к мониторингу групп доступности AlwaysOn и устранению некоторых распространенных проблем с ними. Оно предоставляет исходное содержимое, а также целевую страницу с полезной информацией, опубликованной в другом месте. Хотя это руководство не может полностью охватить все возможные проблемы с группами доступности, оно способно указать вам правильное направление для анализа первопричин и разрешения проблем. 
