@@ -1,6 +1,6 @@
 ---
-title: Общие сведения о табличной объектной модели (TOM) в Analysis Services AMO | Документы Microsoft
-ms.date: 05/07/2018
+title: Основные сведения о табличной объектной модели (TOM) в Analysis Services AMO | Документы Microsoft
+ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: tabular-models
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 03171e57bc57e3caa3d6cc475fd1fee4910cdf4d
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 6c5f4a9e8c7190801bc6f0ef7b19833f1921ade5
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Общие сведения о табличной объектной модели (TOM) в службах Analysis Services объектов AMO
+# <a name="understanding-tabular-object-model-tom-in-analysis-services-amo"></a>Основные сведения о табличной объектной модели (TOM) в службах Analysis Services объектов AMO
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Модели табличных объектов (TOM) — это расширение клиентской библиотеки управление объектов служб Analysis Services (AMO), созданный для поддержки сценариев программирования для табличных моделей, построенных на уровне совместимости 1200 и выше. С помощью объектов AMO, TOM предоставляет программный способ обработки административных функций, таких как создание моделей, Импорт и обновление данных и назначение роли и разрешения.  
   

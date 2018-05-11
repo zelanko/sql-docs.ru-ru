@@ -1,38 +1,19 @@
 ---
 title: Ячейки элемент (MDDataSet) (XMLA) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
 ms.topic: reference
-apiname:
-- Cell Element (MDDataSet)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- microsoft.xml.analysis.cell
-- http://schemas.microsoft.com/analysisservices/2003/engine#Cell
-- urn:schemas-microsoft-com:xml-analysis#Cell
-helpviewer_keywords:
-- Cell element
-ms.assetid: c4ea08a4-f653-4ade-be07-b91eb5b1ef32
-caps.latest.revision: 13
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 22d0920699f9acee9dc7a371a9dceb8a633293e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 83e0ffaf4b7db3307e05d1096dfca95fdec62529
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="cell-element-mddataset-xmla"></a>Элемент Cell (MDDataSet) (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -72,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 |---------------|-----------------|  
 |CellOrdinal|Требуется **unsignedInt** атрибута. Порядковый номер ячейки в многомерном наборе данных.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  В родительском объекте **корневой** элемент, **осей** следуют элемент **CellData** элемент, набор **ячейки** элементов, содержащих значения свойств для каждой ячейки, возвращенной в многомерном наборе данных. **Ячейки** элемент содержит **CellOrdinal** атрибут, который указывает отсчитываемый от нуля порядковый номер ячейки в многомерном наборе данных и один элемент для каждого значения свойства ячейки связанное с ячейкой. Каждое значение свойства ячейки в **ячейки** элемент определяется отдельным элементом XML. Значение свойства ячейки имеет данные, содержащиеся в XML-элемента и имя свойства ячейки, как определено в **CellInfo** элемент родительского корневого элемента, соответствует имени XML-элемента.  
   
  Ниже представлен синтаксис записи значения свойства ячейки.  

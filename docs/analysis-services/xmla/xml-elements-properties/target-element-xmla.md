@@ -1,38 +1,19 @@
 ---
 title: Целевой элемент (XMLA) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
 ms.topic: reference
-apiname:
-- Target Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- microsoft.xml.analysis.target
-- http://schemas.microsoft.com/analysisservices/2003/engine#Target
-- urn:schemas-microsoft-com:xml-analysis#Target
-helpviewer_keywords:
-- Target element
-ms.assetid: 9a69a777-5f34-4e94-b470-6bab2a98df8b
-caps.latest.revision: 14
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe731e5442cc10d708876fa1ba95689a2f52b3a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6ef1d3f1ff5848453d79daba6ad65eeefabcd36b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="target-element-xmla"></a>Элемент Target (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -67,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 |Родительские элементы|[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)|  
 |Дочерние элементы|[CubeID](../../../analysis-services/xmla/xml-elements-properties/cubeid-element-xmla.md), [DatabaseID](../../../analysis-services/xmla/xml-elements-properties/databaseid-element-xmla.md), [MeasureGroupID](../../../analysis-services/xmla/xml-elements-properties/measuregroupid-element-xmla.md), [PartitionID](../../../analysis-services/xmla/xml-elements-properties/partitionid-element-xmla.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **Целевой** элемент является ссылкой на объект для одной секции, в которой содержимое исходных секций, определяемое [источников](../../../analysis-services/xmla/xml-elements-properties/sources-element-xmla.md) родителя **MergePartitions** элемент, объединяемые.  
   
 ## <a name="example"></a>Пример  

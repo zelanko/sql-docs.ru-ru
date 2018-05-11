@@ -1,38 +1,19 @@
 ---
 title: Изменить элемент (XMLA) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
 ms.topic: reference
-apiname:
-- Alter Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#Alter
-- microsoft.xml.analysis.alter
-- urn:schemas-microsoft-com:xml-analysis#Alter
-helpviewer_keywords:
-- Alter command
-ms.assetid: 84e58385-c9ba-48fa-a867-94d35b777a56
-caps.latest.revision: 15
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 85729a160d1b369ba53be403b85157918ac97a7b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: bea5dd730bda2c5ad6f8ea0edc58b884f50dac83
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="alter-element-xmla"></a>Элемент Alter (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -73,7 +54,7 @@ ms.lasthandoff: 05/03/2018
 |ObjectExpansion|Необязательный атрибут типа **Enum** . Определяет масштаб изменений, которые будут произведены методом **Execute** .<br /><br /> Если установлено значение *ObjectProperties*, элемент **ObjectDefinition** должен содержать только полное описание изменяемого главного объекта, включающее описания подчиненных ему второстепенных объектов. Подчиненные главные объекты изменяемого объекта затронуты не будут.<br /><br /> Примечание: При использовании *ObjectProperties* с [ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md) тип данных [данные](../../../analysis-services/scripting/objects/data-element-assl.md) элемент связанного [ClrAssemblyFile](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md) необходимо указать типы данных. Если параметр не указан, то **ClrAssembly** использует существующие файлы.<br /><br /> Если установлено значение *ExpandFull*, то в элементе **ObjectDefinition** должно содержаться не только определение изменяемого объекта, но и определения всех главных объектов, являющихся его потомками.<br /><br /> Примечание: *ExpandFull* параметр не может использоваться с [сервера](../../../analysis-services/scripting/objects/server-element-assl.md) элемента.|  
 |Область действия|Необязательный атрибут типа **Enum** . Определяет срок жизни объектов, определенных в элементе **ObjectDefinition** .<br /><br /> Если установлено значение *Session*, то объекты, определенные в элементе **ObjectDefinition** , будут существовать только в течение сеанса XMLA.<br /><br /> Примечание: При использовании *сеанса* параметр **ObjectDefinition** элемент может содержать только [измерения](../../../analysis-services/scripting/objects/dimension-element-assl.md), [куба](../../../analysis-services/scripting/objects/cube-element-assl.md), или [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) элементы языка ASSL.<br /><br /> Если этот атрибут опускается, объекты, определенные в **ObjectDefinition** , сохраняются в [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Каждый **Alter** команда изменяет определение одного главного объекта в родительский объект, определяемый [ParentObject](../../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md) элемента.  
   
 ## <a name="see-also"></a>См. также  

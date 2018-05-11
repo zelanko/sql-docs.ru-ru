@@ -1,30 +1,19 @@
 ---
 title: Модель интеллектуального анализа данных для моделей линейной регрессии | Документы Microsoft
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- linear regression algorithms [Analysis Services]
-- mining model content, linear regression models
-- regression algorithms [Analysis Services]
-ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
-caps.latest.revision: 18
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 58fa05a49598019abdc7c5d452d027a4c1552672
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: a81e3b15fdd736f7960c76630e1dd716b913da7b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -144,7 +133,7 @@ ms.lasthandoff: 05/03/2018
  MSOLAP_NODE_SHORT_CAPTION  
  Метка, используемая для отображения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Когда модель создается по алгоритму линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] , подсистема интеллектуального анализа данных создает специальный экземпляр модели дерева принятия решений и передает параметры, которые ограничивают дерево так, что все обучающие данные хранятся в одном узле. Все непрерывные входные данные помечаются флагами и рассматриваются как потенциальные регрессоры, но в конечной модели регрессорами остаются только те, которые подходят для обрабатываемых данных. В результате анализа получается либо одна формула регрессии для каждого регрессора, либо ни одной формулы регрессии.  
   
  Полную формулу регрессии можно просмотреть в окне **Условные обозначения интеллектуального анализа данных**, если щелкнуть узел **(Все)** в [средстве просмотра деревьев (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md).  

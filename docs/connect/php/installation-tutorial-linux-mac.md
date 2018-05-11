@@ -1,6 +1,6 @@
 ---
 title: Linux и macOS учебника установки драйвера Microsoft SQL Server для PHP | Документы Microsoft
-ms.date: 04/11/2018
+ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.component: php
@@ -11,11 +11,11 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 0874b2aa4d526f8a283e8e54b5c7f101ac1f1c45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c1115eaf304fa360cf446b67fe98157d324c2347
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Linux и macOS учебника установки драйвера Microsoft SQL Server для PHP
 Следующие инструкции предполагают чистую среду и показано, как установка 7.x PHP, драйвер Microsoft ODBC, Apache и драйверы Майкрософт для PHP для SQL Server на Ubuntu 16.04 и 17.10, RedHat 7, Debian 8 и 9, Suse 12 и macOS X 10.11 и 10.12. Эти инструкции следует рекомендовать Установка драйверов с помощью нагрузка PECL, но можно также загрузить готовых двоичных файлов с [драйверы Майкрософт для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases) Github страница проекта и установите их следуйте инструкциям в разделе [ Загрузка драйверов Майкрософт для PHP для SQL Server](../../connect/php/loading-the-php-sql-driver.md). Описание загрузки расширения и почему мы не добавляйте расширения файл PHP.ini, разделе [загрузка драйверов](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).
@@ -47,12 +47,12 @@ apt-get install php7.2 php7.2-dev php7.2-xml -y --allow-unauthenticated
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Шаг 3. Установить драйверы PHP для Microsoft SQL Server
 ```
+sudo pecl install sqlsrv
+sudo pecl install pdo_sqlsrv
 sudo su
 echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
 exit
-sudo pecl install sqlsrv
-sudo pecl install pdo_sqlsrv
 ```
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Шаг 4. Установка Apache и настройка Загрузка драйвера
 ```
@@ -61,8 +61,9 @@ apt-get install libapache2-mod-php7.2 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
 a2enmod php7.2
-echo "extension=sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
+echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/apache2/conf.d/30-pdo_sqlsrv.ini
+echo "extension=sqlsrv.so" >> /etc/php/7.2/apache2/conf.d/20-sqlsrv.ini
+exit
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Шаг 5. Перезапустите Apache и протестировать пример сценария
 ```
@@ -98,12 +99,12 @@ scl enable devtoolset-7 bash
 ```
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Шаг 3. Установить драйверы PHP для Microsoft SQL Server
 ```
+sudo pecl install sqlsrv
+sudo pecl install pdo_sqlsrv
 sudo su
 echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
 exit
-sudo pecl install sqlsrv
-sudo pecl install pdo_sqlsrv
 ```
 Проблемы в нагрузка PECL может препятствовать правильной установке последней версии драйверов, даже если вы обновили GCC. Для установки, загрузите пакеты и скомпилируйте вручную:
 ```
@@ -145,7 +146,7 @@ apt-get install curl apt-transport-https
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
 apt-get update
-apt-get install –y php7.2 php7.2-dev php7.2-xml
+apt-get install -y php7.2 php7.2-dev php7.2-xml
 ```
 ### <a name="step-2-install-prerequisites"></a>Шаг 2. Установка необходимых компонентов
 Установка драйвера ODBC для Debian, следуя указаниям [Linux и macOS страница установки](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
@@ -159,12 +160,12 @@ locale-gen
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Шаг 3. Установить драйверы PHP для Microsoft SQL Server
 ```
+sudo pecl install sqlsrv
+sudo pecl install pdo_sqlsrv
 sudo su
 echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
 exit
-sudo pecl install sqlsrv
-sudo pecl install pdo_sqlsrv
 ```
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Шаг 4. Установка Apache и настройка Загрузка драйвера
 ```
@@ -173,8 +174,8 @@ apt-get install libapache2-mod-php7.2 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
 a2enmod php7.2
-echo "extension=sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
+echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/apache2/conf.d/30-pdo_sqlsrv.ini
+echo "extension=sqlsrv.so" >> /etc/php/7.2/apache2/conf.d/20-sqlsrv.ini
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Шаг 5. Перезапустите Apache и протестировать пример сценария
 ```
@@ -200,12 +201,12 @@ zypper -n install php7 php7-pear php7-devel
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Шаг 3. Установить драйверы PHP для Microsoft SQL Server
 ```
+sudo pecl install sqlsrv
+sudo pecl install pdo_sqlsrv
 sudo su
 echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/pdo_sqlsrv.ini
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/sqlsrv.ini
 exit
-sudo pecl install sqlsrv
-sudo pecl install pdo_sqlsrv
 ```
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Шаг 4. Установка Apache и настройка Загрузка драйвера
 ```

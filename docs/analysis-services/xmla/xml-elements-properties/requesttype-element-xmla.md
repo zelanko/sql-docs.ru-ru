@@ -1,38 +1,19 @@
 ---
 title: Элемент RequestType (XML для Аналитики) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
 ms.topic: reference
-apiname:
-- RequestType Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#RequestType
-- urn:schemas-microsoft-com:xml-analysis#RequestType
-- microsoft.xml.analysis.requesttype
-helpviewer_keywords:
-- RequestType element
-ms.assetid: 54270a57-e327-4233-b4b2-d85b44652ac5
-caps.latest.revision: 12
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6cd09e6308a3915313e944b183769d18bb29e314
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cc420aa56d535c826bcff4b78739740e8e5f6bbe
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="requesttype-element-xmla"></a>Элемент RequestType (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -64,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 |Родительские элементы|[Обнаружение](../../../analysis-services/xmla/xml-elements-methods-discover.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **RequestType** определяет набор строк схемы, из которого **Discover** метод возвращает данные. Это перечисление ограничивается именами наборов строк схемы, поддерживаемых [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Дополнительные сведения о наборах строк схемы см. в разделе [наборы строк схемы служб Analysis](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).  
   
 > [!NOTE]  

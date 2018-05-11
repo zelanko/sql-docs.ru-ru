@@ -1,36 +1,19 @@
 ---
 title: Элемент ProductName (ASSL) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 5/8/2018
+ms.prod: sql
+ms.component: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname:
-- ProductName Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ProductName
-helpviewer_keywords:
-- ProductName element
-ms.assetid: f8129bb2-55c9-44e1-8857-82dc01c04a7f
-caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 9a98fc802452b3a8d402d8a3d7eba9b6b9744ac5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 55dac0fb7f1ec69d023e1c98ff16f32023100b65
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="productname-element-assl"></a>Элемент ProductName (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 |Родительский элемент|[Server](../../../analysis-services/scripting/objects/server-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **ProductName** элемент предоставляет доступ только для чтения к имени продукта, связанного с экземпляром [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  Элемент, соответствующий родителю параметра **ProductName** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Server>.  

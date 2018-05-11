@@ -1,27 +1,19 @@
 ---
 title: Элемент CollectionCaption (ASSL) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 33929373-11df-4f89-8d2e-d63923c44f53
-caps.latest.revision: 6
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: bf4cd44498950095a6b744084014362842bf8c57
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0db69ee63b84ae9ad9c082eb7fea16c26e84ea98
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="collectioncaption-element-assl"></a>Элемент CollectionCaption (язык ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 |Родительские элементы|[RelationshipEndTranslation](../../../analysis-services/scripting/data-type/relationshipendtranslation-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Элемент, соответствующий родителю параметра **CollectionCaption** в объекте Analysis Management объекты AMO модели: t:Microsoft.AnalysisServices.relationshipendtranslation.  
   
   

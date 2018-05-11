@@ -1,38 +1,19 @@
 ---
 title: Тип данных ResultSet (XML для Аналитики) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
 ms.topic: reference
-apiname:
-- Resultset Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#Resultset
-- urn:schemas-microsoft-com:xml-analysis#Resultset
-- Resultset
-helpviewer_keywords:
-- Resultset data type
-ms.assetid: 45e7d7d6-1f89-4dc8-b39d-9270ea2db541
-caps.latest.revision: 30
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: d0b04a2141e17a2f17ba983027f2ded317a57f60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 68843bb4e08e1383b6df88a0f8f776a8ebab77a3
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="resultset-data-type-xmla"></a>Тип данных Resultset (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -65,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 |Дочерние элементы|[Исключение](../../../analysis-services/xmla/xml-elements-properties/exception-element-xmla.md), [сообщения](../../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)|  
 |Производные элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Тип данных **Resultset** представляет собой описывающий сам себя результирующий набор XML, который может включать и схему, и данные, в зависимости от типа возвращаемых данных.  
   
 ## <a name="see-also"></a>См. также  

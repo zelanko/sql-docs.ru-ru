@@ -1,37 +1,19 @@
 ---
 title: Элемент Axis (XML для Аналитики) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
 ms.topic: reference
-apiname:
-- Axis Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- microsoft.xml.analysis.axis
-- http://schemas.microsoft.com/analysisservices/2003/engine#Axis
-helpviewer_keywords:
-- Axis element
-ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
-caps.latest.revision: 11
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 136ce9c4b39d0b9a93abc491850b63783ff4bf1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4c4f7b48d02a7dd923c6882f96227f52d404390f
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="axis-element-xmla"></a>Элемент Axis (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -68,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 |Родительские элементы|[Оси](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md)|  
 |Дочерние элементы|[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) или [кортежей](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Содержимое **оси** элемент изменяется в зависимости от значения **AxisFormat** XMLA-свойства, используемые **Execute** метод.  
   
 ## <a name="tupleformat"></a>TupleFormat  

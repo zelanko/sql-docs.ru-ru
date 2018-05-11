@@ -1,30 +1,19 @@
 ---
 title: Содержимое модели интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- nearest neighbor [Data Mining]
-- clustering [Data Mining]
-- mining model content, clustering models
-- clustering algorithms [Analysis Services]
-ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
-caps.latest.revision: 15
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 998cf40c855f1ac4e0784f140da4a9fc59326772
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: fe8677e9286ffaa24272d8cf4c38eff36c1575fe
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -157,7 +146,7 @@ ms.lasthandoff: 05/03/2018
   
  **Узлы кластера** Имя кластера. Пример. Кластер 1.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляется несколько методов создания модели кластеризации. Если неизвестно, какие методы использовались для создания модели, с которой происходит работа, метаданные модели можно получить программным путем, с помощью клиента ADOMD или объектов AMO, либо с помощью запроса к набору строк схемы интеллектуального анализа данных. Дополнительные сведения см. в разделе [Запрос параметров, используемых для создания модели интеллектуального анализа данных](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  

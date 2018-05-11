@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: amo
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9ba64d48fe93ea047210c00717d84cde0e4dcae9
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 2c0cd9ff11f2d2bc12a823c4696690ce9a7a8c44
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="programming-amo-data-mining-objects"></a>Программирование объектов интеллектуального анализа данных AMO
   Программирование объектов интеллектуального анализа данных при помощи объектов AMO осуществляется просто и понятно. Первый шаг заключается в создании модели структуры данных для поддержки проекта интеллектуального анализа. Затем создается модель интеллектуального анализа данных, поддерживающая алгоритм интеллектуального анализа, который будет использоваться для прогнозирования или поиска невидимых связей, лежащих в основе данных. Создав проект интеллектуального анализа данных (в том числе структуру и алгоритмы), можно приступить к обработке моделей интеллектуального анализа данных для получения обученных моделей, которые впоследствии будут использоваться при выполнении запросов и прогнозировании из клиентского приложения.  

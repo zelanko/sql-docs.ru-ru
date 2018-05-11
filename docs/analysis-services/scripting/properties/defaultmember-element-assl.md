@@ -1,36 +1,19 @@
 ---
 title: Элемент DefaultMember (ASSL) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 5/8/2018
+ms.prod: sql
+ms.component: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname:
-- DefaultMember Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DefaultMember
-helpviewer_keywords:
-- DefaultMember element
-ms.assetid: db4eea9f-f7cf-40de-abd0-b62014e7ec2d
-caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 6214a899d1bb1cc48e4fd3399d5840a9e7a01beb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d050c0cb2209c855da35a7f1afd2fe028575edf7
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="defaultmember-element-assl"></a>Элемент DefaultMember (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 |Родительский элемент|[AttributePermission](../../../analysis-services/scripting/objects/attributepermission-element-assl.md), [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md), [ManyToManyMeasureGroupDimension](../../../analysis-services/scripting/data-type/manytomanymeasuregroupdimension-data-type-assl.md), [PerspectiveAttribute](../../../analysis-services/scripting/data-type/perspectiveattribute-data-type-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Элемент **DefaultMember** определяет элемент по умолчанию для родительского элемента. Если **DefaultMember** не указан или равен пустой строке, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] сами выбирают элемент для использования в качестве элемента по умолчанию.  
   
  Для элементов **ManyToManyMeasureGroupDimension** элемент **DefaultMember** содержит многомерное выражение, указывающее элемент в измерении, заданный в элементе **CubeDimensionID** для измерения **ManyToManyMeasureGroupDimension**. Многомерное выражение аналогично [StrToMember](../../../mdx/strtomember-mdx.md) MDX-функцию с ключевым словом CONSTRAINED тем, что оно не может включать многомерных Выражений или определяемые пользователем функции.  

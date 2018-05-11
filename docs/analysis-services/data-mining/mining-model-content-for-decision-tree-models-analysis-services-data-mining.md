@@ -1,29 +1,19 @@
 ---
 title: Модель интеллектуального анализа данных для модели дерева принятия решений | Документы Microsoft
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- mining model content, decision tree models
-- decision tree algorithms [Analysis Services]
-- decision trees [Analysis Services]
-ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: 25
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: a1817491dbc523f1fa2ceb87b9667024a36e79d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 45ef1cfb772e8c1154bc3b525bbf02d44b58a8b7
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей дерева принятия решений (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -164,7 +154,7 @@ ms.lasthandoff: 05/03/2018
  MSOLAP_NODE_SHORT_CAPTION  
  Метка, используемая для отображения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  В модели дерева принятия решений отсутствует отдельный узел, хранящий статистику для модели в целом, такой как узел граничной статистики в модели упрощенного алгоритма Байеса или модели нейронной сети. Вместо этого модель создает отдельное дерево для каждого прогнозируемого атрибута, и на верхнем уровне дерева располагается узел (Все). Каждое дерево независимо от других. Если модель содержит только один прогнозируемый атрибут, в модели будет только одно дерево и только один узел (Все).  
   
  Каждое дерево, представляющее выходной атрибут, дополнительно делится на внутренние ветви (NODE_TYPE = 3), которые представляют разбиения. Каждое из этих деревьев содержит статистику о распределении целевого атрибута. Кроме этого, каждый конечный узел (NODE_TYPE = 4) содержит статистику, описывающую входные атрибуты и их значения, а также количество вариантов, входящих в несущее множество каждой пары «атрибут-значение». Поэтому в каждой ветви дерева принятия решений можно легко просмотреть вероятности или распределение данных без необходимости запрашивать исходные данные. Каждый уровень дерева обязательно представляет сумму своих непосредственных потомков.  

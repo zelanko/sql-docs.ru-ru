@@ -2,9 +2,9 @@
 title: Заметки о выпуске Microsoft SQL Studio операций (Предварительная версия) | Документы Microsoft
 description: Заметки о выпуске Microsoft SQL Studio операций (Предварительная версия)
 ms.custom: tools|sos
-ms.date: 04/25/2018
+ms.date: 05/08/2018
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,15 +13,42 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e13f0604ebbfc616a70768d7382b0e044055ec6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Заметки о выпуске Studio операций SQL (Предварительная версия)
 
-**[Скачать предварительную версию апреля Public](download.md)**
+**[Загрузите мая общедоступной предварительной версии](download.md)**
+
+
+## <a name="may-2018-may-public-preview"></a>2018 мая (май общедоступной предварительной версии)
+
+Дата выпуска: 7 мая 2018  
+версия: 0.29.3
+
+*Может общедоступной предварительной версии* основное внимание уделено стабилизации и исправления ошибок. Эта сборка содержит следующие основные особенности:  
+
+- Представляем поиска Redgate SQL доступно это расширение в диспетчере расширений.
+- Локализация сообщества для 10 языках: немецкий, испанский, французский, итальянский, японский, корейский, португальский, русский, упрощенный китайский и традиционного китайского письма.
+- GDPR-совместимые сборки с ограниченными сбор данных телеметрии, улучшенное взаимодействие отказаться и ссылки на продукты в заявлении о конфиденциальности.
+- Диспетчер расширений имеет улучшенную Marketplace быстрого обнаружения расширения community столкнуться.
+- Расширение задания агента SQL Server и журнал заданий на просмотр улучшения.
+- Обновления для whoisactive и расширения сервера отчетов.
+- Повысить прокрутки Управление свойствами панели мониторинга.
+- Устранение неполадок GitHub:
+   - Исправьте [выдачи 703](https://github.com/Microsoft/sqlopsstudio/issues/703): ввод текстовый HTML в изменения данных приводит значение к неправильному отображению только при обновлении
+   - Исправьте [выдачи 821](https://github.com/Microsoft/sqlopsstudio/issues/821): sqlopsstudio.deb зависимостей пакета
+   - Исправьте [выдавать 1260](https://github.com/Microsoft/sqlopsstudio/issues/1260): ключевое слово «distinct» не выделен
+   - Исправьте [выдачи 1332](https://github.com/Microsoft/sqlopsstudio/issues/1332): отменить изменения данных строк не работает
+   - Исправьте [выдачи 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): расширение агента SQL и строка состояния
+   - Исправьте [выдачи 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): изменение размера не агента SQL после изменения размера windows
+
+
+Дополнительные сведения см. в разделе [журнал изменений](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), и [выпуски](https://github.com/Microsoft/sqlopsstudio/releases).
+
 
 
 ## <a name="april-2018-april-public-preview"></a>2018 апреля (апрель общедоступную предварительную версию.)

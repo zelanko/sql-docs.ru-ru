@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 69f937bd8842d2e89d25527587342978ab8686bd
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 49bfcc651b00f9d6afc5d2028e174062b0916515
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="developing-with-adomdnet"></a>Разработка с использованием ADOMD.NET
   ADOMD.NET — [!INCLUDE[msCoName](../../../includes/msconame-md.md)] поставщика данных .NET Framework, предназначенных для связи с [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. В компоненте ADOMD.NET используется протокол XML для аналитики в целях обеспечения связи с источниками аналитических данных при помощи соединений по протоколу TCP/IP или HTTP, что позволяет передавать и принимать SOAP-запросы и ответы, совместимые со спецификацией XML для аналитики. Команды могут передаваться на языке MDX, языке DMX, языке ASSL или даже с использованием ограниченного синтаксиса SQL и могут не возвращать результат. При помощи модели объектов ADOMD.NET можно выполнять запросы к аналитическим данным, ключевым показателям эффективности и моделям интеллектуального анализа данных, а также управлять ими. Компонент ADOMD.NET позволяет также просматривать и работать с метаданными путем извлечения совместимых с OLE DB наборов строк схемы либо при помощи модели объектов ADOMD.NET.  
