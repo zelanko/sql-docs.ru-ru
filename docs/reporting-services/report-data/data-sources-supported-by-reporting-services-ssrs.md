@@ -1,16 +1,15 @@
 ---
-title: "Источники данных, поддерживаемые службами Reporting Services (SSRS) | Документы Майкрософт"
-ms.custom: 
+title: Источники данных, поддерживаемые службами Reporting Services (SSRS) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server data processing extension [Reporting Services]
 - XML data processing extension [Reporting Services]
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - ODBC data processing extension
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-caps.latest.revision: "96"
+caps.latest.revision: 96
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 29c605b8a41fefd8d4cdc1bebe3131823aa6ca20
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 5b243958293408ce8ebf1f6e41124bb5f9034d05
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Источники данных, поддерживаемые службами Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] получают через модульный и расширяемый уровень данных, где работают модули обработки данных. Для получения данных отчета из источника данных необходимо выбрать модуль обработки данных, поддерживающий как тип источника данных, так и версию программного обеспечения источника данных и его платформу (32-разрядная или 64-разрядная [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -105,7 +103,7 @@ ms.lasthandoff: 01/09/2018
   
 ###  <a name="DataSourcesTable"></a> Типы источников данных  
   
-|Источник<br /><br /> данных отчета|Тип источника данных служб Reporting Services|Имя модуля обработки данных или поставщика данных|Версия базового поставщика данных<br /><br /> (необязательно)|data<br /><br /> Source<br /><br /> на платформе x86|Данные<br /><br /> Source<br /><br /> на платформе x64|Версия источника данных|Сервер отчетов<br /><br /> на платформе x86|Сервер отчетов<br /><br /> на платформе x64|  
+|Источник<br /><br /> данных отчета|Тип источника данных служб Reporting Services|Имя модуля обработки данных или поставщика данных|Версия базового поставщика данных<br /><br /> (необязательно)|Данные <br /><br /> Source<br /><br /> на платформе x86|Данные<br /><br /> Source<br /><br /> на платформе x64|Версия источника данных|Сервер отчетов<br /><br /> на платформе x86|Сервер отчетов<br /><br /> на платформе x64|  
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реляционная база данных|[Microsoft SQL Server](#MicrosoftSQLServer)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.SqlClient|Да|Да|SQL Server 2008 и более поздней версии.|Да|Да|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реляционная база данных|OLEDB|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.OledbClient|Да|Да|SQL Server 2008 и более поздней версии.|Да|Да|  

@@ -1,31 +1,29 @@
 ---
-title: "Использованные подключения к данным Office (ODC) в отчетах | Документы Майкрософт"
-ms.custom: 
+title: Использованные подключения к данным Office (ODC) в отчетах | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Office Data Connection (.odc) files
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 68cbb3437a7f994a60e13163a8372f2e5c0a7174
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 83af0a0eda5039eb1e9cedb554cd425e04a03145
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>использовать в отчетах ODC-файл подключения к данным Office
   В некоторых случаях для предоставления в отчет служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сведений о соединении можно использовать существующий ODC-файл. ODC-файл может быть использован вместо RSDS-файла при создании общего источника данных. Сервер отчетов использует ODC-файл так же, как и RSDS-файлы. Он считывает из файла тип источника данных, строку соединения и сведения об учетных данных.  

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
@@ -19,12 +18,11 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef503f632053f45580ddfc3d6ccc004d70db4ec6
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: cf045c6fd461ed8dfda86dd611cbedd1d424cd4f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Параметры запроса профиля соотношения значений NULL в столбцах (задача «Профилирование данных»)
   При помощи панели **Свойства запроса** страницы **Запросы профиля** можно задать параметры для варианта **Запрос соотношения значений NULL в столбцах** , выбранного на панели запросов. Профиль «Соотношение значений NULL в столбцах» сообщает процент значений NULL в выбранном столбце. Этот профиль поможет выявить проблемы в данных, например появление непредвиденно высокого процента значений NULL в некотором столбце. Например, с помощью профиля «Соотношение значений NULL в столбцах» можно профилировать столбец «Почтовый индекс» и обнаружить неприемлемо высокий процент отсутствующих почтовых индексов.  

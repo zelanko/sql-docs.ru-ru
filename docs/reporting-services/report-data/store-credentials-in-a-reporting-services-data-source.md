@@ -1,32 +1,30 @@
 ---
-title: "Сохранение учетных данных в источнике данных Reporting Services | Документы Майкрософт"
-ms.custom: 
+title: Сохранение учетных данных в источнике данных Reporting Services | Документы Майкрософт
+ms.custom: ''
 ms.date: 09/23/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - credentials [Reporting Services]
 - security [Analysis Services], data sources
 - stored credentials [Reporting Services]
 - data sources [Reporting Services], stored credentials
 ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e92d76e0bb1c48f066e516fc603ebac50389278b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: fa7bc5471455e428fb680dbe0369bc1fd4888dbe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Сохраненные учетные данные в источнике данных Reporting Services
   Сохраненные учетные данные, используемые сервером отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , можно настроить для получения доступа к внешним данным отчета. Сохраненные учетные данные используются, если отчет запускается автоматически, например, подписка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , которая публикует отчет как электронное письмо. Сервер отчетов возвращает и использует учетные данные при планировании или запуске обработки отчета. В этом разделе описывается настройка сохраненных учетных данных для серверов отчетов как в собственном режиме, так и в режиме интеграции с SharePoint.  
