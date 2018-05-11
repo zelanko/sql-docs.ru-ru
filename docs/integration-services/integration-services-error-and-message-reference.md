@@ -1,32 +1,30 @@
 ---
-title: "Справочник по сообщениям об ошибках служб Integration Services | Документы Майкрософт"
-ms.custom: 
+title: Справочник по сообщениям об ошибках служб Integration Services | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 
+caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 16f1793a182cf762882a90889ec8576c9fc6d99e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 55b664bda08e6842333fed67dafeab6e58a605e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-error-and-message-reference"></a>Справочник по сообщениям об ошибках служб Integration Services
   Следующие таблицы содержат стандартные ошибки, предупреждения и информационные сообщения служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в возрастающей цифровой последовательности в каждой категории вместе с числовыми кодами и символьными именами. Каждая ошибка определена как поле в классе <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> в пространстве имен <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -236,8 +234,8 @@ ms.lasthandoff: 01/25/2018
 |0xC0015004|-1073655804|DTS_E_CANTWRITETOFILE|Не удалось открыть файл "%1" для записи. Возможно, файл доступен только для чтения или нет достаточных разрешений.|  
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|Отсутствует результирующий набор строк, связанный с выполнением этого запроса. Результат указан неверно.|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|Отладочные файлы дампа не были правильно созданы. Значение hresult равно 0x%1!8.8X!.|  
-|0xC0016001|-1073651711|DTS_E_INVALIDURL|Указан недопустимый URL-адрес. Это может случиться, когда URL-адрес сервера или прокси-сервера содержит значение NULL или имеет неверный формат. Допустимый формат URL-адреса: http://имя_сервера:порт/путь_к_ресурсу или https://имя_сервера:порт/путь_к_ресурсу.|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|Недопустимый URL-адрес %1. Это может происходить, когда указана схема, отличная от указанной http или https, или URL-адрес имеет неверный формат. Допустимый формат URL-адреса: http://имя_сервера:порт/путь_к_ресурсу или https://имя_сервера:порт/путь_к_ресурсу.|  
+|0xC0016001|-1073651711|DTS_E_INVALIDURL|Указан недопустимый URL-адрес. Это может случиться, когда URL-адрес сервера или прокси-сервера содержит значение NULL или имеет неверный формат. Допустимый формат URL-адреса в форме http://ServerName:Port/ResourcePath или https://ServerName:Port/ResourcePath.|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|Недопустимый URL-адрес %1. Это может происходить, когда указана схема, отличная от указанной http или https, или URL-адрес имеет неверный формат. Допустимый формат URL-адреса в форме http://ServerName:Port/ResourcePath или https://ServerName:Port/ResourcePath.|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|Не удалось установить соединение с сервером %1. Эта ошибка может возникать, когда сервер не существует или неверно настроен прокси-сервер.|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|Соединение с сервером было сброшено или прервано. Повторите попытку позже.|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|Неудачная попытка входа для "%1". Эта ошибка возникает, когда предоставлены неверные учетные данные входа. Проверьте учетные данные входа.|  
@@ -2019,7 +2017,7 @@ ms.lasthandoff: 01/25/2018
 |0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|Сведения о типе данных схемы XML для "%1" в элементе "%2" были изменены.  Выполните повторную инициализацию метаданных для этого компонента и проверьте сопоставления столбцов.|  
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1 не используется при соединении или копировании. Удалите неиспользуемый столбец из списка входных столбцов.|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|Ошибка сортировки входящего буфера. Произошло переполнение стека.  Задайте меньшее значение для свойства DefaultBufferMaxRows в задаче потока данных.|  
-|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Рекомендуется изменить параметр PROVIDER в строке соединения на %1 или загрузить с узла http://www.microsoft.com/downloads и установить файлы поддержки для %2.|  
+|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Рекомендуется изменить параметр PROVIDER в строке подключения на %1 или загрузить с сайта http://www.microsoft.com/downloads и установить файлы поддержки для %2.|  
 |||DTS_E_INITTASKOBJECTFAILED|Не удалось инициализировать объект задачи для задачи "%1!s!" типа "%2!s!" из-за ошибки 0x%3!8.8X! "%4!s!".|  
 |||DTS_E_GETCATMANAGERFAILED|Не удалось создать диспетчер категорий компонентов COM из-за ошибки 0x%1!8.8X! "%2!s!".|  
 |||DTS_E_COMPONENTINITFAILED|Компонент %1!s! не удалось инициализировать из-за ошибки 0x%2!8.8X! "%3!s!".|  

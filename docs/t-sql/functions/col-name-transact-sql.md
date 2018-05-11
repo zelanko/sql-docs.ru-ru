@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,18 +25,17 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4438a86353a8fdbc6174a718d401656bf05df4fe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c79414874a166ad005a2caf9e65ca0a051a732de
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="colname-transact-sql"></a>COL_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Возвращает имя столбца из указанного идентификационного номера соответствующей таблицы и идентификационный номер столбца.
+Эта функция возвращает имя столбца таблицы на основе значений идентификационного номера таблицы и столбца для этого столбца таблицы.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,18 +47,18 @@ COL_NAME ( table_id , column_id )
   
 ## <a name="arguments"></a>Аргументы  
 *table_id*  
-Идентификационный номер таблицы, содержащей данный столбец. Аргумент *table_id* имеет тип **int**.
+Идентификационный номер таблицы, содержащей этот столбец. Аргумент *table_id* имеет тип данных **int**.
   
 *column_id*  
-Идентификатор столбца. Параметр *column_id* имеет тип **int**.
+Идентификационный номер столбца. Аргумент *column_id* имеет тип данных **int**.
   
 ## <a name="return-types"></a>Типы возвращаемых данных
 **sysname**
   
 ## <a name="exceptions"></a>Исключения  
-Возвращает значение NULL в случае ошибки или если участник не имеет разрешений для просмотра объекта.
+Возвращает значение NULL в случае ошибки или если участник не имеет правильных разрешений для просмотра объекта.
   
-Пользователь может просматривать только метаданные защищаемых объектов, которыми он владеет или на которые пользователю были предоставлены разрешения. Это означает, что встроенные функции, создающие метаданные, такие как COL_NAME, могут вернуть значение NULL в случае, если пользователь не имеет разрешений на объект. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователь может просматривать только метаданные защищаемых объектов, которыми он владеет или на которые ему были предоставлены разрешения. Это означает, что встроенные функции, создающие метаданные, такие как `COL_NAME`, могут вернуть значение NULL в случае, если у пользователя нет правильных разрешений на объект. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
 ## <a name="remarks"></a>Remarks  
 Аргументы *table_id* и *column_id* совместно образуют строку имени столбца.
@@ -69,7 +66,7 @@ COL_NAME ( table_id , column_id )
 Дополнительные сведения о получении идентификационных номеров таблиц и столбцов см. в статье [OBJECT_ID (Transact-SQL)](../../t-sql/functions/object-id-transact-sql.md).
   
 ## <a name="examples"></a>Примеры  
-В приведенном ниже примере возвращается имя первого столбца в образце таблицы `Employee`.
+В этом примере возвращается имя первого столбца в образце таблицы `Employee`.
   
 ```sql
 -- Uses AdventureWorks  

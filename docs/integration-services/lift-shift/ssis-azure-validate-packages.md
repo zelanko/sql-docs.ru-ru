@@ -1,10 +1,9 @@
 ---
 title: Проверка пакетов SSIS, развертываемых в Azure | Документация Майкрософт
 ms.date: 11/27/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
@@ -13,11 +12,11 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e2bf8f48751d819293edbaa0e40a85e74b0c513
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 09086d0f4ff9c5a3f69a922e0c17c046c84001fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="validate-ssis-packages-deployed-to-azure"></a>Проверка пакетов SSIS, развертываемых в Azure
 При развертывании проекта SQL Server Integration Services (SSIS) в базе данных каталога SSIS (SSISDB) на сервере Azure мастер развертывания пакетов добавляет шаг проверки после страницы **Проверка**. На этом шаге пакеты в проекте проверяются на предмет известных проблем, которые могут препятствовать их запуску, как ожидается в среде выполнения интеграции Azure SSIS. Затем мастер отобразит применимые предупреждения на странице **Проверка**.

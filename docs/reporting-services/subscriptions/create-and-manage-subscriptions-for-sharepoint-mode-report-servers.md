@@ -1,31 +1,29 @@
 ---
-title: "Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками | Документы Майкрософт"
-ms.custom: 
+title: Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: subscriptions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], creating
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-caps.latest.revision: 
+caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 31d672c16ed9cf4854be7b64507daaf381a6a175
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 67991ac7def0691b3d2df38ce54ea34766dbd574
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками
   Вы можете создать подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на доставку отчетов из веб-приложения SharePoint, работающим в режиме интеграции с SharePoint. Подписки могут доставлять отчеты в библиотеку документов, папку с файлами или по электронной почте. В этой статье приведена сводка по требованиям и шагам для создания подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -61,7 +59,7 @@ ms.lasthandoff: 01/09/2018
   
  При создании подписки можно выбрать формат выходного файла. Не всякий отчет может быть адекватно представлен в любом формате. Перед выбором формата для подписки, откройте отчет и экспортируйте его в различные форматы. Убедитесь в том, что он отображается так, как предполагалось.  
   
- Чтобы иметь возможность создавать подписки **, пользователям требуются разрешения списка** Изменение элементов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в SharePoint. Дополнительные сведения см. в разделе [Справочная таблица по разрешениям на сайты и списки для элементов сервера отчетов](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
+ Чтобы иметь возможность создавать подписки **, пользователям требуются разрешения списка** Изменение элементов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в SharePoint. Дополнительные сведения см. в разделе [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
 > [!IMPORTANT]  
 >  Подписка, доставляющая отчет в библиотеку или в общую папку, создает новый статический файл на базе исходного отчета, но он не является определением отчета, выполняемым в веб-части «Средство просмотра отчетов». Если в исходном отчете содержатся интерактивные возможности (такие, как ссылки детализации) или динамическое содержимое, эти возможности не будут представлены в статическом файле, доставляемом в целевое расположение. Если выбрать параметр «Веб-страница», можно сохранить интерактивность, но так как документ не является RDL-файлом, выполняемым в средстве просмотра отчетов, щелчок отчета создает в сеансе браузера новые страницы, которые необходимо прокрутить до конца, чтобы вернуться на сайт.  
