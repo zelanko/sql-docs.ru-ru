@@ -10,11 +10,13 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: fe8d438d95e994438df565013eaf79da92ccf9b3
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.prod: sql
+ms.technology: ssms
+ms.openlocfilehash: e663bf07fb724e5b65a47573f26702a6b1ccae14
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Учебник. Подключение к экземпляру SQL Server и выполнение запросов с помощью SQL Server Management Studio
 Это руководство научит вас подключаться к экземпляру SQL Server с использованием SQL Server Management Studio (SSMS) и выполнять некоторые базовые команды Transact-SQL (T-SQL). В статье показано, как выполнять следующие задачи.
@@ -28,7 +30,7 @@ ms.lasthandoff: 04/03/2018
 > * Проверка свойств подключения с помощью таблицы окна запросов 
 > * Изменение сервера, к которому подключено окно запросов
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 Для работы с этим руководством необходима среда SQL Server Management Studio и доступ к экземпляру SQL Server. 
 
 - Установите [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
@@ -49,8 +51,6 @@ ms.lasthandoff: 04/03/2018
 
     - В поле **Тип сервера** выберите **Ядро СУБД** (обычно это параметр по умолчанию).
     - В поле **Имя сервера** введите имя своего экземпляра SQL Server. (В этой статье используется имя экземпляра SQL2016ST и имя узла NODE5: NODE5\SQL2016ST.) Если вы не знаете, как определить имя экземпляра SQL Server, см. раздел [Дополнительные советы и рекомендации по использованию SSMS](ssms-tricks.md#determine-sql-server-name).  
-
-    ![Поле "Имя сервера" с примером имени экземпляра](media/connect-query-sql-server/connection.png)
 
     ![Поле "Имя сервера" с возможностью использовать экземпляр SQL Server](media/connect-query-sql-server/connection2.png)
 
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/03/2018
    ![Изменение базы данных](media/connect-query-sql-server/changedb.png)
 
 2. Вставьте в окно запросов следующий фрагмент кода T-SQL, выберите его, а затем нажмите кнопку **Выполнить** (или клавишу F5).  
-   Вы можете заменить имеющийся текст в окне запросов или добавить новый текст в конце. Чтобы выполнить весь код в окне запросов, нажмите кнопку **Выполнить**. Чтобы выполнить часть кода, сначала выделите ее, а затем нажмите кнопку **Выполнить**.  
+   Вы можете заменить имеющийся текст в окне запроса или добавить новый текст в конце. Чтобы выполнить весь код в окне запросов, нажмите кнопку **Выполнить**. Чтобы выполнить часть кода, сначала выделите ее, а затем нажмите кнопку **Выполнить**.  
   
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
