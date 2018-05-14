@@ -3,17 +3,17 @@ title: Элемент Actions (ASSL) | Документы Microsoft
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: assl
+ms.custom: assl
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e8c46d142f0c904b179e1135f74d5fbf914dc1ce
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 66bffdd48ec8093c34ae712aaad99d85e8d42334
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="actions-element-assl"></a>Элемент Actions (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/04/2018
 |[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|[DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md), [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md), [StandardAction](../../../analysis-services/scripting/data-type/standardaction-data-type-assl.md)|  
 |[Перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md)|[PerspectiveAction](../../../analysis-services/scripting/data-type/perspectiveaction-data-type-assl.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Соответствующие элементы в модели объектов AMO — это <xref:Microsoft.AnalysisServices.ActionCollection> и <xref:Microsoft.AnalysisServices.PerspectiveActionCollection>.  
   
 ## <a name="see-also"></a>См. также  

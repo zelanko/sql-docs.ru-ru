@@ -3,17 +3,17 @@ title: Разбивает элемент (ASSL) | Документы Microsoft
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: assl
+ms.custom: assl
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b44ea98c56eb561efcf36444cccdba0e8854582
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2faa85cb0caa87e537fc66f3385e574559d00ce2
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="partitions-element-assl"></a>Элемент Partitions (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 05/04/2018
 |[Группа мер](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|[Секции](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
 |[MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-out-of-line-assl.md)|[Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) с типом данных [PartitionBinding](../../../analysis-services/scripting/data-type/partitionbinding-data-type-assl.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.PartitionCollection>.  
   
 ## <a name="see-also"></a>См. также  

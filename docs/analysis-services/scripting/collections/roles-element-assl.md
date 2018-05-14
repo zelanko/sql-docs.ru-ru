@@ -3,17 +3,17 @@ title: Элемент Roles (ASSL) | Документы Microsoft
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: assl
+ms.custom: assl
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 64e5cb2958602c75fc6eb78041cfc62ea72b2955
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d246999149c2b23868522fe5d4beb50526993287
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="roles-element-assl"></a>Элемент Roles (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/04/2018
 |Родительские элементы|[Database](../../../analysis-services/scripting/objects/database-element-assl.md), [Server](../../../analysis-services/scripting/objects/server-element-assl.md)|  
 |Дочерние элементы|[Роль](../../../analysis-services/scripting/objects/role-element-assl.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Элемент **Roles** , связанный с элементом **Server** , содержит только одну роль Administrators, которая представляет роль администратора сервера. Роль администратора сервера не может быть изменена или удалена, кроме того, к этой коллекции не могут быть добавлены дополнительные роли.  
   
  Элемент **Roles** , связанный с элементом **Database** , содержит роли, определенные для этой базы данных.  

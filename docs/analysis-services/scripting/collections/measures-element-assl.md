@@ -3,17 +3,17 @@ title: Измеряет элемент (ASSL) | Документы Microsoft
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: assl
+ms.custom: assl
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e35ebfbbac89c9419068546a6346be2229caaa56
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 708aba9db7cc5156a0c765af62e529631ac18892
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="measures-element-assl"></a>Элемент Measures (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/04/2018
 |Родительские элементы|[AggregationInstance](../../../analysis-services/scripting/objects/aggregationinstance-element-assl.md), [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md), [MeasureGroupBinding (вне строки)](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-out-of-line-assl.md), [PerspectiveMeasureGroup](../../../analysis-services/scripting/data-type/perspectivemeasuregroup-data-type-assl.md)|  
 |Дочерние элементы|[Меры](../../../analysis-services/scripting/objects/measure-element-assl.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Соответствующие элементы в модели объектов AMO — это <xref:Microsoft.AnalysisServices.MeasureCollection> и <xref:Microsoft.AnalysisServices.PerspectiveMeasureCollection>.  
   
 ## <a name="see-also"></a>См. также  

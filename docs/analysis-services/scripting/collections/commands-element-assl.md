@@ -3,17 +3,17 @@ title: Команды элемент (ASSL) | Документы Microsoft
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: assl
+ms.custom: assl
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 734d5bc25c44f8ac3cd22d1ab786837504d9e02f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7a2647c27dce381cc6c408ed39cc43bbd9f927c1
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="commands-element-assl"></a>Элемент Commands (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/04/2018
 |Родительский элемент|[MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)|  
 |Дочерние элементы|[Command](../../../analysis-services/scripting/objects/command-element-assl.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.CommandCollection>.  
   
 ## <a name="see-also"></a>См. также  

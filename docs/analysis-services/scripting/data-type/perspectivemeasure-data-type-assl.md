@@ -3,17 +3,17 @@ title: Тип данных PerspectiveMeasure (ASSL) | Документы Micros
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: assl
+ms.custom: assl
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 02fc14ac85a98e08d004824308216f9f09a0eba3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c8f0d33d1e68d222ff520143e62a8a92d673afb1
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="perspectivemeasure-data-type-assl"></a>Тип данных PerspectiveMeasure (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/04/2018
 |Дочерние элементы|[Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [MeasureID](../../../analysis-services/scripting/properties/measureid-element-assl.md)|  
 |Производные элементы|[Measure](../../../analysis-services/scripting/objects/measure-element-assl.md) (коллекция[Measures](../../../analysis-services/scripting/collections/measures-element-assl.md) элемента [PerspectiveMeasureGroup](../../../analysis-services/scripting/data-type/perspectivemeasuregroup-data-type-assl.md))|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.PerspectiveMeasure>.  
   
 ## <a name="see-also"></a>См. также  

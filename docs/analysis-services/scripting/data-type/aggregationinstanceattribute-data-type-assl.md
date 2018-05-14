@@ -3,17 +3,17 @@ title: Тип данных AggregationInstanceAttribute (ASSL) | Докумен�
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: assl
+ms.custom: assl
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 66bbd4ac60351c24a4705c857f18248fdea4f946
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cfb21808fa9cc5a8640eec279ba7ac59e34c6801
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="aggregationinstanceattribute-data-type-assl"></a>Тип данных AggregationInstanceAttribute (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/04/2018
 |Дочерние элементы|[AttributeID](../../../analysis-services/scripting/properties/attributeid-element-assl.md), [KeyColumns](../../../analysis-services/scripting/collections/keycolumns-element-assl.md)|  
 |Производные элементы|[Атрибут](../../../analysis-services/scripting/objects/attribute-element-assl.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.AggregationInstanceAttribute>.  
   
 ## <a name="see-also"></a>См. также  

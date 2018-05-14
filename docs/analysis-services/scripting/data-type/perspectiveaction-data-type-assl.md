@@ -3,17 +3,17 @@ title: Тип данных PerspectiveAction (ASSL) | Документы Microso
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: assl
+ms.custom: assl
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 24b8402dc3180fdf874054308ff1ab70e64b4b71
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2087fa9c903aef13d120d5297766d2dfc1d8d4d0
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="perspectiveaction-data-type-assl"></a>Тип данных PerspectiveAction (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/04/2018
 |Дочерние элементы|[ActionID](../../../analysis-services/scripting/properties/actionid-element-assl.md), [заметок](../../../analysis-services/scripting/collections/annotations-element-assl.md)|  
 |Производные элементы|[Действие](../../../analysis-services/scripting/objects/action-element-assl.md) ([действия](../../../analysis-services/scripting/collections/actions-element-assl.md) коллекцию [перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md))|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.PerspectiveAction>.  
   
 ## <a name="see-also"></a>См. также  
