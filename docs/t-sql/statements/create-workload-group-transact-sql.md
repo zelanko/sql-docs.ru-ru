@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -23,15 +21,14 @@ helpviewer_keywords:
 - CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 caps.latest.revision: 47
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: de17c3a1d00554e36537ce76eafcebba2ac0e55d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 82f3df3e82ae7be0c8df9e12e29afbffdb43f92d
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +102,7 @@ CREATE WORKLOAD GROUP group_name
 > По умолчанию по истечении лимита времени Resource Governor не прекращает выполнение запроса. Однако будет сформировано событие. Дополнительные сведения см. в разделе [Класс событий CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
 
 > [!IMPORTANT]
-> Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 3 (CU3) и в случае использования [флага трассировки 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) при превышении максимального значения времени Resource Governor прервет запрос. 
+> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 3 и в случае использования [флага трассировки 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) при превышении максимального значения времени Resource Governor прервет запрос. 
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Задает максимальное время (в секундах), в течение которого запрос может ожидать выделения памяти (памяти рабочего буфера).  

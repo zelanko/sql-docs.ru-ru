@@ -8,24 +8,22 @@ ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 caps.latest.revision: 59
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8ec342637bfea8b611fb79800da9f04f58a621bc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 237c0a53319d7b4c0478cdd8527737401ab5b5f1
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (хранилище данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -104,7 +102,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  *schema_name*  
  Схема таблицы. *Схема* является необязательной. Если схема не указана, используется схема по умолчанию.  
   
- *имя_таблицы*  
+ *table_name*  
  Имя новой таблицы. Чтобы создать локальную временную таблицу, укажите # перед именем таблицы.  Пояснения и рекомендации для временных таблиц см. в разделе [Временные таблицы в хранилище данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/). 
  
  *column_name*  

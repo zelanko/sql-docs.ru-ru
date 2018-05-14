@@ -8,22 +8,20 @@ ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 caps.latest.revision: 9
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a11ac54520c834ec31d61e820bbc7fc28f63d6c7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 619fe7055ef67a7be88dfa6fbf08ceeb8dae66ee
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -58,7 +56,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
  *schema_name*  
  Схема новой таблицы. По умолчанию — схема по умолчанию для имени входа пользователя в месте назначения экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *имя_таблицы*  
+ *table_name*  
  Имя новой таблицы. Сведения о разрешенных именах таблиц см. в разделе "Правила именования объектов" в статье [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
  Удаленная таблица создается как куча. Она не имеет проверочных ограничений или триггеров. Параметры сортировки столбцов удаленной таблицы совпадают с параметрами сортировки столбцов исходной таблицы. Эти параметры применяются к столбцам типа **char**, **varchar**, **nchar** и **nvarchar**.  
