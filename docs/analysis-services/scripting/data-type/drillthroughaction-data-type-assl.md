@@ -3,17 +3,17 @@ title: Тип данных DrillThroughAction (ASSL) | Документы Micros
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: assl
+ms.custom: assl
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e2080d33c71f5e31ecd04148f275dab8bc9e27ce
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cf418aad050e918933851343f4118707c0a62914
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="drillthroughaction-data-type-assl"></a>Тип данных DrillThroughAction (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/04/2018
 |Дочерние элементы|[Столбцы](../../../analysis-services/scripting/collections/columns-element-assl.md), [по умолчанию](../../../analysis-services/scripting/properties/default-element-assl.md)|  
 |Производные элементы|[Действие](../../../analysis-services/scripting/objects/action-element-assl.md) ([действия](../../../analysis-services/scripting/collections/actions-element-assl.md), коллекция [куба](../../../analysis-services/scripting/objects/cube-element-assl.md), или [перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md))|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.DrillThroughAction>.  
   
 ## <a name="see-also"></a>См. также  

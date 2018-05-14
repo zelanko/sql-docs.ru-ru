@@ -3,17 +3,17 @@ title: Элемент hierarchies (ASSL) | Документы Microsoft
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: assl
+ms.custom: assl
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dd31f29dc3dac32fbb3acf9e9cd1a206ac092533
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 33348335eef71547f58e0e8d45a85bd2eab6c827
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="hierarchies-element-assl"></a>Элемент Hierarchies (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/04/2018
 |[Измерения](../../../analysis-services/scripting/objects/dimension-element-assl.md)|[Иерархия](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)|  
 |[PerspectiveDimension](../../../analysis-services/scripting/data-type/perspectivedimension-data-type-assl.md)|[Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) с типом данных [PerspectiveHierarchy](../../../analysis-services/scripting/data-type/perspectivehierarchy-data-type-assl.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Соответствующие элементы в модели объектов AMO — это <xref:Microsoft.AnalysisServices.HierarchyCollection>, <xref:Microsoft.AnalysisServices.CubeHierarchyCollection> и <xref:Microsoft.AnalysisServices.PerspectiveHierarchyCollection>.  
   
 ## <a name="see-also"></a>См. также  

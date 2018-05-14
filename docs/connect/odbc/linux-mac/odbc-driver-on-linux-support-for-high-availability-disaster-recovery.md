@@ -14,11 +14,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38d39d96a32223e9ebe90315dc01c0cd7ab82c31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d416abb8076e4728724ff971845a9efd970cccc2
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Драйвер ODBC для Linux и macOS поддержку высокого уровня доступности и аварийного восстановления
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="connecting-with-multisubnetfailover"></a>Соединение с помощью MultiSubnetFailover
 
-Всегда указывайте **MultiSubnetFailover = Yes** (или **= True**) при подключении к [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] прослушивателя группы доступности или [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] экземпляра отказоустойчивого кластера. **MultiSubnetFailover** обеспечивает ускоренную отработку отказа для всех групп доступности и экземпляра отказоустойчивого кластера в [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **MultiSubnetFailover** также значительно сокращает время отработки отказа для топологий AlwaysOn с одной или несколькими подсетями. При отработке отказа в сети с несколькими подсетями клиент пытается установить соединения параллельно. При отработке отказа драйвер агрессивно повторяет попытки соединения по протоколу TCP.
+Всегда указывайте **MultiSubnetFailover = Yes** при подключении к [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] прослушивателя группы доступности или [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] экземпляра отказоустойчивого кластера. **MultiSubnetFailover** обеспечивает ускоренную отработку отказа для всех групп доступности и экземпляра отказоустойчивого кластера в [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **MultiSubnetFailover** также значительно сокращает время отработки отказа для топологий AlwaysOn с одной или несколькими подсетями. При отработке отказа в сети с несколькими подсетями клиент пытается установить соединения параллельно. При отработке отказа драйвер агрессивно повторяет попытки соединения по протоколу TCP.
 
 Свойство соединения **MultiSubnetFailover** указывает, что приложение развертывается в группе доступности или экземпляре отказоустойчивого кластера. Драйвер пытается соединиться с базой данных на сервере-источнике [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] экземпляра, пытаясь подключиться ко всем IP-адресов. При соединении с **MultiSubnetFailover = Yes**, клиент повторяет попытку соединения по TCP быстрее, чем интервалов повторной передачи TCP операционной системы по умолчанию. **MultiSubnetFailover = Yes** позволяет ускорить восстановление соединения после отработки отказа группы доступности AlwaysOn или экземпляра отказоустойчивого кластера AlwaysOn. **MultiSubnetFailover = Yes** относятся к одним и несколькими подсетями группы доступности и экземпляров отказоустойчивых кластеров.  
 
