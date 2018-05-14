@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance-monitor
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
@@ -19,12 +18,11 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 34d57610273cd1496c0cfb7be8e79f3ba674d671
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 375d21441757d274dbd62bcd94638b03a0ded57f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Диалоговое окно «Расширенное редактирование» (условие)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,15 +89,15 @@ ms.lasthandoff: 04/16/2018
 |**Guid()**|Guid Guid(String *guidString*)|возвращает значение идентификатора GUID из строки.|*guidString* — строковое представление создаваемого идентификатора GUID.|возвращает идентификатор GUID, созданный на основе строки.|`Guid('12340000-0000-3455-0000-000000000454')`|  
 |**IsNull()**|Variant IsNull (Variant *check_expression*, Variant *replacement_value*)|Возвращается значение *check_expression* , если это выражение не равно NULL; в противном случае возвращается значение *replacement_value* . Если тип аргументов отличается, тип аргумента *replacement_value* неявно преобразуется в тип аргумента *check_expression*.|*check_expression* — выражение, для которого проверяется значение NULL. *check_expression* может иметь любой тип, поддерживаемый управлением на основе политик: Numeric, String, Bool, DateTime, Array и Guid.<br /><br /> *replacement_value* — выражение, возвращаемое, если *check_expression* имеет значение NULL. Аргумент*replacement_value* должен иметь тип, который неявно преобразован в тип *check_expression*.|Возвращаемый тип — *check_expression* в том случае, если значение *check_expression* не равно NULL. В противном случае возвращается тип *replacement_value* .||  
 |**Len()**|Numeric Len (*string_expression*)|возвращает количество символов указанного строкового выражения, исключая конечные пробелы.|*string_expression* — оцениваемое строковое выражение.|возвращает значение из категории типа данных integer.|`Len('Hello')` в этом примере возвращает значение `5` .|  
-|**Lower()**|String Lower (String*_expression*)|возвращает строку после преобразования всех символов верхнего регистра в нижний регистр.|*expression* — выражение исходной строки.|возвращает строку, которая представляет исходную строку после преобразования всех символов верхнего регистра в нижний регистр.|`Len('HeLlO')` в этом примере возвращает значение `'hello'` .|  
+|**Lower()**|String Lower (String *_expression*)|возвращает строку после преобразования всех символов верхнего регистра в нижний регистр.|*expression* — выражение исходной строки.|возвращает строку, которая представляет исходную строку после преобразования всех символов верхнего регистра в нижний регистр.|`Len('HeLlO')` в этом примере возвращает значение `'hello'` .|  
 |**Mod()**|Numeric Mod (Numeric *expression_dividend*, Numeric *expression_divisor*)|вычисляет целочисленный остаток после деления первого числового выражения на второе.|*expression_dividend* — делимое числовое выражение. Аргумент*expression_dividend* должен быть допустимым выражением любого типа данных из категории целочисленных или числовых.<br /><br /> *expression_divisor* — это числовое выражение, на которое делится делимое. Аргумент*expression_divisor* должен быть допустимым выражением любого типа данных из категории целочисленных или числовых.|возвращает значение из категории типа данных integer.|`Mod(Property1, 3)`|  
 |**Multiply()**|Numeric Multiply (Numeric *expression1*, Numeric *expression2*)|умножает два выражения.|*expression1* и *expression2* — любое допустимое выражение любого из типов данных в категории числовых данных, кроме типа данных **datetime** .|возвращает тип данных аргумента, у которого более высокий приоритет.|`Multiply(Property1, .20)`|  
 |**Power()**|Numeric Power (Numeric *numeric_expression*, Numeric *expression_power*)|возвращает значение указанного выражения, возведенное в заданную степень.|*numeric_expression* — выражение категории точного числового или приблизительного числового типа данных, за исключением типа данных bit.<br /><br /> *expression_power* — степень, в которую возводится арумент *numeric_expression*. *expression_power* может быть выражением категории точного или приблизительного числового типа данных, за исключением типа данных **bit** .|Возвращаемым типом является такой же тип, как и у выражения *numeric_expression*.|`Power(Property1, 3)`|  
 |**Round()**|Numeric Round (Numeric *expression*, Numeric *expression_precision*)|Возвращает числовое выражение, округленное до указанной длины или точности.|*expression* — выражение категории точного числового или приблизительного числового типа данных, за исключением типа данных **bit** .<br /><br /> *expression_precision* — точность, до которой должно быть округлено значение выражения. Если аргумент *expression_precision* является положительным числом, значение *numeric_expression* округляется до числа десятичных разрядов, указанных в виде длины. Когда *expression_precision* является отрицательным числом, *numeric_expression* округляется слева от точки, отделяющей десятичную дробь от целого числа, как указано в *expression_precision*.|Возвращает тот же тип, что и аргумент *numeric_expression*.|`Round(5.333, 0)`|  
-|**String()**|String String (Variant*_expression*)|преобразует данные типа Variant в строку.|*expression* — выражение типа Variant, которое должно быть преобразовано в строку.|возвращает строковое значение выражения типа Variant.|`String(4)`|  
+|**String()**|String String (Variant *_expression*)|преобразует данные типа Variant в строку.|*expression* — выражение типа Variant, которое должно быть преобразовано в строку.|возвращает строковое значение выражения типа Variant.|`String(4)`|  
 |**Sum()**|Numeric Sum (*VarArgs*)|возвращает сумму всех значений в списке аргументов. Эту функцию можно использовать с численными значениями.|*VarArgs*— список выражений типа Variant, относящихся к категории точных числовых или приблизительных числовых типов данных, за исключением типа данных **bit** .|возвращает сумму всех значений выражения, представленную в наиболее точном формате данных.<br /><br /> Если результат выражения относится к категории **integer**, **numeric**, **money** , **small money**, **float** и **real** ,то возвращаемыми типами являются **int**, **numeric**, **money**и **float**, соответственно.|`Sum(1.0, 2.0, 3.0, 4.0, 5.0)` в этом примере возвращает значение `15` .|  
 |**True()**|Bool TRUE()|возвращает логическое значение TRUE.||возвращает логическое значение TRUE.|`IsDatabaseMailEnabled = True()`|  
-|**Upper()**|String Upper (String*_expression*)|возвращает строку после преобразования всех символов нижнего регистра в верхний регистр.|*expression* — выражение исходной строки.|возвращает строку, представляющую собой исходное строковое выражение после преобразования всех символов нижнего регистра в верхний регистр.|`Upper('HeLlO')` в этом примере возвращает значение `'HELLO'` .|  
+|**Upper()**|String Upper (String *_expression*)|возвращает строку после преобразования всех символов нижнего регистра в верхний регистр.|*expression* — выражение исходной строки.|возвращает строку, представляющую собой исходное строковое выражение после преобразования всех символов нижнего регистра в верхний регистр.|`Upper('HeLlO')` в этом примере возвращает значение `'HELLO'` .|  
   
 ## <a name="see-also"></a>См. также раздел  
  [Диалоговое окно «Создание нового условия» или «Открытие условия», страница «Общие»](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)   

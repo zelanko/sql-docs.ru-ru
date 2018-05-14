@@ -71,7 +71,7 @@ GO
 Сведения о дополнительных параметрах см. в статье [sp_help_fulltext_system_components (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md).
  
 ## <a name="if-you-add-or-remove-a-word-breaker"></a>Что если добавить или удалить средство разбиения по словам  
-При добавлении, удалении или изменении средства разбиения по словам следует обновить список кодов локалей, поддерживаемых в Microsoft Windows для полнотекстового индексирования и для выполнения запросов. Дополнительные сведения см. в статье [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
+При добавлении, удалении или изменении средства разбиения по словам следует обновить список кодов локалей, поддерживаемых в Microsoft Windows для полнотекстового индексирования и для выполнения запросов. Дополнительные сведения см. в статье [Просмотр или изменение зарегистрированных фильтры и разделители слов](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
 ##  <a name="default"></a> Установка параметра "Язык полнотекстового поиска по умолчанию"  
  Для локализованной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программа установки задает в качестве значения параметра **default full-text language** язык сервера, если для него существует совпадение. Для нелокализованной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]параметр **default full-text language** по умолчанию имеет значение, соответствующее английскому языку.  

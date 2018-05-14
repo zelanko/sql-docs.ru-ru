@@ -3,7 +3,6 @@ title: Использование мастера планов обслужива
 ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: maintenance-plans
 ms.reviewer: ''
 ms.suite: sql
@@ -11,7 +10,7 @@ ms.custom: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.ag.maintwiz.integrity.f1
 - sql13.ag.maintwiz.order.f1
@@ -41,12 +40,11 @@ caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: e0aa3d178355e9b50ad381f3ef3517aabce8c78f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 233ca9b2714bcce3ddccf400cdb85acbc07afb5b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Использование мастера планов обслуживания
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -321,7 +319,7 @@ ms.lasthandoff: 04/16/2018
      Этот журнал может помочь устранить ошибки, возникшие при выполнении заданий плана обслуживания, или определить, почему были выполнены операции с базой данных.  
   
      **Удалить из журнала записи старше**  
-     Укажите возраст элементов, которые следует удалить. Можно указать срок в **ч**, **дн.**, **нед.** (по умолчанию), **мес.**или **годах**.  
+     Укажите возраст элементов, которые следует удалить. Можно указать срок в **ч**, **дн.**, **нед.** (по умолчанию), **мес.** или **годах**.  
   
 #### <a name="define-the-execute-agent-job-task"></a>Определение задачи «Выполнение задания агента»  
   

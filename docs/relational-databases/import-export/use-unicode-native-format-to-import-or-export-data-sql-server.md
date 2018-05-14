@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 09/30/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: import-export
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [SQL Server], bulk importing and exporting
 - data formats [SQL Server], Unicode native
@@ -20,13 +18,12 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b1c2633bbf073e01d6460de8ad4af72826dc76b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d384ba04beface0d9d784fc3073722208d281095
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Использование собственного формата Юникода для импорта или экспорта данных (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +103,7 @@ Notepad D:\BCP\myWidenative.fmt
 В приведенных ниже примерах используется база данных и файлы форматирования, созданные ранее.
 
 ### **Использование bcp и собственного формата Юникода для экспорта данных**<a name="bcp_widenative_export"></a>
-Параметр**-N** и команда **OUT** .  Примечание. Файл данных, созданный в этом примере, будет использоваться во всех последующих примерах.  В командной строке введите следующие команды:
+Параметр **-N** и команда **OUT** .  Примечание. Файл данных, созданный в этом примере, будет использоваться во всех последующих примерах.  В командной строке введите следующие команды:
 ```
 bcp TestDatabase.dbo.myWidenative OUT D:\BCP\myWidenative.bcp -T -N
 
@@ -115,7 +112,7 @@ NOTEPAD D:\BCP\myWidenative.bcp
 ```
 
 ### **Использование bcp и собственного формата Юникода для импорта данных без файла форматирования**<a name="bcp_widenative_import"></a>
-Параметр**-N** и команда **IN** .  В командной строке введите следующие команды:
+Параметр **-N** и команда **IN** .  В командной строке введите следующие команды:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myWidenative;"
@@ -127,7 +124,7 @@ REM Review results is SSMS
 ```
 
 ### **Использование bcp и собственного формата Юникода для импорта данных при помощи файла форматирования, не являющегося XML**<a name="bcp_widenative_import_fmt"></a>
-Параметры**-N** и **-f** switches и **IN** commи.  В командной строке введите следующие команды:
+Параметры **-N** и **-f** switches и **IN** commи.  В командной строке введите следующие команды:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myWidenative;"
