@@ -67,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   Просмотр количества свободного (нераспределенного) пространства в базе данных. Дополнительные сведения см. в разделе [Display Data and Log Space Information for a Database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md).  
+-   Просмотр количества свободного (нераспределенного) пространства в базе данных. Дополнительные сведения см. в разделе [Отображение данных и сведений о пространстве журнала для базы данных](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md).  
   
 -   Обратите внимание на следующие сведения при планировании сжатия базы данных.  
   
