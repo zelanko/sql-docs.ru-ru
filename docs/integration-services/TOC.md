@@ -23,14 +23,14 @@
 ### [Запуск с помощью PowerShell](ssis-quickstart-run-powershell.md)
 ### [Запуск с помощью C#](./ssis-quickstart-run-dotnet.md) 
 
-# [Перенос пакетов SSIS в Azure методом lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
-## [Учебник: развертывание, запуск и отслеживание пакета в Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [Подключения к источникам данных с проверкой подлинности Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
+# [Развертывание и запуск пакетов в Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [Руководство. Развертывание и запуск пакетов в Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [Подключение к данным с проверкой подлинности Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [Подключение к файлам и общим папкам](lift-shift/ssis-azure-files-file-shares.md)
+## [Подключение к SSISDB в Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Проверка пакетов, развертываемых в Azure](lift-shift/ssis-azure-validate-packages.md)
-## [Подключение к каталогу служб SSIS в Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
-## [Планирование выполнения пакета в Azure](lift-shift/ssis-azure-schedule-packages.md)
-## [Планирование выполнения пакета в Azure с помощью SSMS](lift-shift/ssis-azure-schedule-packages-ssms.md)
+## [Планирование выполнения пакетов в Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Планирование выполнения пакетов в Azure с помощью SSMS](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
 # [Установка или обновление](../integration-services/install-windows/install-integration-services.md)
 
