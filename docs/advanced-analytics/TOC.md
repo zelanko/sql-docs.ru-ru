@@ -29,9 +29,9 @@
 ## SQL Server 2016
 ### [Службы R (в базе данных)](install/sql-r-services-windows-install.md)
 ### [R Server (изолированный)](install/sql-r-standalone-windows-install.md)
-### [Привязка к Microsoft ML Server](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ## [Установка из командной строки](install/sql-ml-component-commandline-install.md)
 ## [Автономная установка (без Интернета)](install/sql-ml-component-install-without-internet-access.md)
+## [Обновление R и Python](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ## [Настройка средств R](r/set-up-a-data-science-client.md)
 ## [Настройка средств Python](python/setup-python-client-tools-sql.md)
 
@@ -95,15 +95,16 @@
 # [Инструкции](r/sql-server-machine-learning-tasks.md)
 
 ## [Управление пакетами](r/r-package-management-for-sql-server-r-services.md)
-### [Установка новых пакетов R в SQL Server](r/install-additional-r-packages-on-sql-server.md)
-### [Установка новых пакетов Python в SQL Server](python/install-additional-python-packages-on-sql-server.md)
-### [Включение управления пакетами R для экземпляра SQL Server](r/r-package-how-to-enable-or-disable.md)
-### [Определение установленных пакетов на SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)
-### [Использование функций RevoScaleR для поиска или установки пакетов R в SQL Server](r/use-revoscaler-to-manage-r-packages.md)
-### [Синхронизация пакетов R, установленных в SQL Server](r/package-install-uninstall-and-sync.md)
-### [Пакеты R, установленные вместе с SQL Server](r/installing-and-managing-r-packages.md)
-### [Создание локального репозитория пакетов с помощью miniCRAN](r/create-a-local-package-repository-using-minicran.md)
-### [Как избежать ошибок, связанных с библиотеками пакетов пользователей для R](r/packages-installed-in-user-libraries.md)
+### [Пакеты по умолчанию](r/installing-and-managing-r-packages.md)
+### [Получение сведений о пакете](r/determine-which-packages-are-installed-on-sql-server.md)
+### [Установка новых пакетов R](r/install-additional-r-packages-on-sql-server.md)
+### [Установка новых пакетов Python](python/install-additional-python-packages-on-sql-server.md)
+### Только для R
+#### [Включение удаленного управления пакетами R](r/r-package-how-to-enable-or-disable.md)
+#### [Функции RevoScaleR для управления пакетами R](r/use-revoscaler-to-manage-r-packages.md)
+#### [Синхронизация пакетов R](r/package-install-uninstall-and-sync.md)
+#### [miniCRAN для локального репозитория пакетов R](r/create-a-local-package-repository-using-minicran.md)
+#### [Обходные пути для "пользовательских библиотек" R](r/packages-installed-in-user-libraries.md)
 
 ## Изучение данных и моделирование
 ### [Библиотеки и типы данных R](r/r-libraries-and-data-types.md)
@@ -155,7 +156,6 @@
 ## [Известные проблемы](known-issues-for-sql-server-machine-learning-services.md)
 ## [Заметки о выпуске](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
 ## [Новые и обновленные Статьи](new-updated-advanced-analytics.md)
-## [Использование R в Базах данных SQL Azure](r/using-r-in-azure-sql-database.md)
 
 ## [Рекомендации по настройке и устранению неполадок](machine-learning-troubleshooting-faq.md)
 ### [Настройка виртуальной машины](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)

@@ -1,1 +1,1 @@
-![Скачать](../ssdt/media/download.png)[Скачать драйвер PHP](https://go.microsoft.com/fwlink/?linkid=871846)
+![Скачать](../ssdt/media/download.png)[Скачать драйвер PHP](../connect/php/download-drivers-php-sql-server.md)

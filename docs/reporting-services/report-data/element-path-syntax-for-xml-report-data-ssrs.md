@@ -1,30 +1,28 @@
 ---
-title: "Синтаксис пути к элементу для XML-данных отчета (SSRS) | Документация Майкрософт"
-ms.custom: 
+title: Синтаксис пути к элементу для XML-данных отчета (SSRS) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 643ad56c8c758c4711d731a6c5121206e8ce0998
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e9ef6761a754f9f25dc47cb033ef491be544ee74
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Синтаксис пути к элементу для XML-данных отчета (SSRS)
   В конструкторе отчетов для определения данных из источника данных XML, которые должны использоваться в отчете, указывается путь к элементу с учетом регистра. Путь к элементу — это путь по иерархическим XML-узлам в источнике XML-данных и атрибуты этих узлов. Чтобы использовать путь к элементу по умолчанию, оставьте пустым запрос набора данных или XML **ElementPath** для XML- **Query** . При получении данных из источника XML-данных узлы элементов, которые имеют текстовые значения и атрибуты узла элемента, преобразуются в столбцы результирующего набора. При выполнении запроса значения этих узлов и атрибуты преобразуются в данные строк. Эти столбцы появляются в качестве коллекции полей набора данных в области данных отчета. В этом разделе содержится информация о синтаксисе пути к элементу.  
@@ -103,7 +101,7 @@ XMLLocalName :: =
 |Порядок|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
 |Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
-|Table|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
+|Таблица|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
 |Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
 |EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
   
@@ -128,7 +126,7 @@ XMLLocalName :: =
 |Порядок|Qty|  
 |-----------|---------|  
 |Chair|6|  
-|Table|1|  
+|Таблица|1|  
 |Sofa|2|  
 |EndTables|2|  
   

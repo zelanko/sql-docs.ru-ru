@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -24,17 +22,16 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 95c95ad472c5b5d4cb5420fa3b0da8f88053c0c5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 51685541435f4ab0192792341d2a29210dc9f504
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает сведения о свойствах уникального соединения, по которому получен запрос.
+Для запроса, поступающего на сервер, эта функция возвращает сведения о свойствах уникального подключения с поддержкой этого запроса.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,18 +43,18 @@ CONNECTIONPROPERTY ( property )
   
 ## <a name="arguments"></a>Аргументы  
 *property*  
-Свойство соединения. Аргумент *property* может иметь одно из перечисленных ниже значений.
+Свойство подключения. Аргумент *property* может иметь одно из следующих значений:
   
 |Значение|Тип данных|Description|  
 |---|---|---|
-|net_transport|**nvarchar(40)**|Возвращает описание физического транспортного протокола, используемого данным соединением. Не допускает значение NULL.<br /><br /> Возвращаемые значения: **HTTP**, **Named pipe**, **Session**, **Shared memory**, **SSL**, **TCP** и **VIA**.<br /><br /> Примечание. Всегда возвращает значение **Session**, если в соединении включен режим "множественный активный результирующий набор" (MARS), а также включено использование пулов соединений.|  
+|net_transport|**nvarchar(40)**|Возвращает описание физического транспортного протокола, используемого этим соединением. Значение NULL не допускается. Возможные возвращаемые значения:<br /><br /> **HTTP**<br /> **Именованный канал**<br /> **Session**<br /> **Общая память**<br /> **SSL**<br /> **TCP**<br /><br /> и<br /><br /> **VIA**<br /><br /> Примечание. Всегда возвращает значение **Session**, если при подключении используется множественный активный результирующий набор (функция MARS), а также включено использование пулов подключений.|  
 |protocol_type|**nvarchar(40)**|Возвращает тип протокола передачи полезных данных. В настоящее время различаются протоколы TDS (TSQL) и SOAP. Допускает значение NULL.|  
-|auth_scheme|**nvarchar(40)**|Возвращает схему проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для соединения. Схема проверки подлинности предусматривает использование проверки подлинности Windows (NTLM, KERBEROS, DIGEST, BASIC, NEGOTIATE) либо проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не допускает значение NULL.|  
-|local_net_address|**varchar(48)**|Возвращает IP-адрес сервера, с которым установлено данное соединение. Доступен только для соединений, которые в качестве транспорта данных используют протокол TCP. Допускает значение NULL.|  
-|local_tcp_port|**int**|Возвращает TCP-порт сервера, с которым установлено соединение, если для соединения используется протокол TCP. Допускает значение NULL.|  
-|client_net_address|**varchar(48)**|Запрашивает адрес клиента, устанавливающего соединение с данным сервером. Допускает значение NULL.|  
-|physical_net_transport|**nvarchar(40)**|Возвращает описание физического транспортного протокола, используемого данным соединением. Возвращает точные данные, если для соединения включен режим MARS.|  
-|\<любая другая строка>||Возвращает значение NULL при недопустимости входных данных.|  
+|auth_scheme|**nvarchar(40)**|Возвращает схему аутентификации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для подключения. Схема проверки подлинности предусматривает использование проверки подлинности Windows (NTLM, KERBEROS, DIGEST, BASIC, NEGOTIATE) либо проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не допускает значение NULL.|  
+|local_net_address|**varchar(48)**|Возвращает IP-адрес сервера, с которым установлено определенное подключение. Можно использовать только для подключений, которые в качестве транспорта данных используют протокол TCP. Допускает значение NULL.|  
+|local_tcp_port|**int**|Возвращает TCP-порт сервера, с которым установлено подключение, которое использует протокол TCP. Допускает значение NULL.|  
+|client_net_address|**varchar(48)**|Запрашивает адрес клиента, который пытается подключиться к этому серверу. Допускает значение NULL.|  
+|physical_net_transport|**nvarchar(40)**|Возвращает описание физического транспортного протокола, используемого этим соединением. Возвращает точные данные, если для соединения включен режим MARS.|  
+|\<любая другая строка>||Возвращает значение NULL для недопустимых входных данных.|  
   
 ## <a name="remarks"></a>Remarks  
 **local_net_address** и **local_tcp_port** возвращают значение NULL в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].

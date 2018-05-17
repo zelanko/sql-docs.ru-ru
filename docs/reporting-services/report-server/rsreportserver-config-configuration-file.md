@@ -1,27 +1,25 @@
 ---
-title: "Файл конфигурации RsReportServer.config | Документация Майкрософт"
-ms.custom: 
+title: Файл конфигурации RsReportServer.config | Документация Майкрософт
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 
+caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 87efa1c9f3fd309ac6b9da150545ac7e08630cd5
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 1be44e3e1f30aab2be4c446e6efd23610b9ae68b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 В файле [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** хранятся параметры, которые используются веб-службой сервера отчетов и для фоновой обработки. Все приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] работают в одном процессе, который считывает параметры конфигурации, хранящиеся в файле RSReportServer.config. Серверы отчетов, работающие в собственном режиме и в режиме интеграции с SharePoint, используют файл RSReportServer.config, однако в этих режимах используются разные параметры из этого файла конфигурации. Версия файла для режима интеграции с SharePoint имеет меньший размер, поскольку многие параметры для этого режима хранятся не в файле, а в базах данных конфигурации SharePoint. В этом разделе описывается файл конфигурации по умолчанию, который устанавливается для собственного режима и для режима интеграции с SharePoint, а также некоторые важные параметры и варианты работы, которые управляются файлом конфигурации.  
@@ -65,7 +63,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  В следующей таблице представлены сведения об общих параметрах конфигурации в первой части файла. Параметры представлены в том порядке, в котором они следуют в файле конфигурации. В последнем столбце таблицы указывается, к какому режиму работы сервера отчетов относится данный параметр: основному режиму **(N)** , режиму интеграции с SharePoint **(S)** или к обоим режимам.  
   
 > [!NOTE]  
->  В этом разделе «максимальное целое число» соответствует значению INT_MAX, равному 2147483647.  Дополнительные сведения можно найти в статье [Ограничения целых чисел](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
+>  В этом разделе «максимальное целое число» соответствует значению INT_MAX, равному 2147483647.  См. дополнительные сведения об [ограничении ресурсов](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Настройка|Description|Режим|  
 |-------------|-----------------|----------|  
@@ -98,7 +96,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  Раздел**URLReservations** определяет доступ по протоколу HTTP к веб-службе сервера отчетов и веб-порталу для текущего экземпляра. URL-адреса резервируются и хранятся в компоненте HTTP.SYS при настройке сервера отчетов.  
   
 > [!WARNING]  
->  Для режима интеграции с SharePoint резервирование URL-адресов настраивается в центре администрирования SharePoint. Дополнительные сведения можно найти в статье [Настройка альтернативного сопоставления доступа (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
+>  Для режима интеграции с SharePoint резервирование URL-адресов настраивается в центре администрирования SharePoint. См. дополнительные сведения о [настройке альтернативного сопоставления доступа (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
   
  Не изменяйте резервирования URL-адресов напрямую в файле конфигурации. Чтобы создать или изменить резервирования URL-адресов для сервера отчетов, работающего в собственном режиме, всегда используйте диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или поставщик WMI сервера отчетов. Если изменять значения в файле конфигурации, можно повредить резервирования и тем самым вызвать серьезные ошибки во время выполнения или оставить несвязанные резервирования в компоненте HTTP.SYS, которые не будут удалены при удалении программного обеспечения. Дополнительные сведения см. в статьях [Настройка URL-адресов сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) и [URL-адреса файлов конфигурации &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md).  
   

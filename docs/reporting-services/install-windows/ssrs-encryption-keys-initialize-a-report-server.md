@@ -1,16 +1,15 @@
 ---
-title: "Инициализация сервера отчетов (диспетчер конфигурации служб SSRS) | Документы Майкрософт"
-ms.custom: 
+title: Инициализация сервера отчетов (диспетчер конфигурации служб SSRS) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], initializing
 - initialization process [Reporting Services]
@@ -19,23 +18,22 @@ helpviewer_keywords:
 - initializing report servers [Reporting Services]
 - verifying report server initializations
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2b5b5a5142b8712196484e3cca32aeae7373639b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f51884df3e202153f3da1b75b63cd2155270eedc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Ключи шифрования служб SSRS — инициализация сервера отчетов
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]инициализированный сервер — это сервер, способный шифровать и дешифровать данные в базе данных сервера отчетов. Инициализация является необходимым условием функционирования сервера отчетов. Инициализация происходит, когда служба сервера отчетов запускается впервые. Она также происходит, когда сервер отчетов соединяется с уже развернутой системой или когда вручную повторно создаются ключи как часть процесса восстановления. Дополнительные сведения о том, как и почему использовать ключи шифрования, см. в разделах [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) и [Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Ключи шифрования частично основываются на данных профиля в службе сервера отчетов. Если изменяется удостоверение пользователя, которое применяется для запуска службы сервера отчетов, необходимо соответствующим образом обновить ключи. Если используется программа настройки служб Reporting Services для изменения удостоверения пользователя, этот шаг выполняется автоматически.  
   
- Если инициализация по какой-либо причине прошла неудачно, сервер отчетов возвращает ошибку **RSReportServerNotActivated** в ответ на запросы пользователя и службы. В такой ситуации, вероятно, потребуется произвести диагностику и устранение неисправностей в системе или конфигурации сервера. Дополнительные сведения см. в статье [Устранение неполадок и ошибок служб Reporting Services](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) в Technet Wiki.  
+ Если инициализация по какой-либо причине прошла неудачно, сервер отчетов возвращает ошибку **RSReportServerNotActivated** в ответ на запросы пользователя и службы. В такой ситуации, вероятно, потребуется произвести диагностику и устранение неисправностей в системе или конфигурации сервера. Дополнительные сведения см. в руководстве по [устранению неполадок со службами Reporting Services](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) вики-статья Technet.  
   
 ## <a name="overview-of-the-initialization-process"></a>Общие сведения о процессе инициализации  
  Процесс инициализации создает и хранит симметричный ключ, используемый для шифрования. Симметричный ключ создается службами криптографии [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows и впоследствии используется службой сервера отчетов для шифрования и дешифрования данных. Сам симметричный ключ зашифрован при помощи асимметричного ключа.  

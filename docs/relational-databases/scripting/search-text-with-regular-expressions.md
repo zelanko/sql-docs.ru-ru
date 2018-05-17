@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vsregularexpressionhelp
 - vs.regularexpressionhelp
@@ -25,13 +23,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de05d593aa47001a5afd2f698d5d1c181757d4c7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1ca12a4b1a5ddcd7d08fb4cd1badb7daa3b88c4e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>Поиск текста с помощью регулярных выражений
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 2.  В этом случае становится доступной треугольная кнопка **Список ссылок** , расположенная рядом с полем **Найти** . Нажмите кнопку для просмотра списка наиболее часто используемых регулярных выражений. При выборе любого элемента в построителе выражений он автоматически вставляется в поле **Найти** .  
   
 > [!NOTE]  
->  Выражения, используемые в поле **Найти** , имеют некоторые синтаксические отличия от регулярных выражений, используемых в программировании на платформе [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Например, в режиме **Найти и заменить**фигурные скобки ({}) употребляются для выражений с тегами. Например, выражение "zo\{1\}" отвечает всем вхождениям "zo", за которыми следует тег 1, как, например, "Alonzo1" или "Gonzo1". Внутри же платформы .NET Framework фигурные скобки употребляются в качестве квантификаторов. Таким образом, выражение "zo\{1\}" отвечает всем вхождениям символа "z", за которым следует только один символ "o", как в слове "zone", но не "zoo".  
+>  Выражения, используемые в поле **Найти** , имеют некоторые синтаксические отличия от регулярных выражений, используемых в программировании на платформе [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Например, в режиме **Найти и заменить**фигурные скобки {} используются в выражениях с тегами. Например, выражение «zo{1}» отвечает всем вхождениям «zo», за которыми следует тег 1, как, например, «Alonzo1» или «Gonzo1». В рамках платформы .NET Framework фигурные скобки {} используются в качестве квантификаторов. Таким образом, выражение «zo{1}» отвечает всем вхождениям символа «z», за которым следует только 1 символ «o», как в слове «zone», но не как в «zoo».  
   
  В следующей таблице описываются регулярные выражения, доступные в поле **Справочный список**.  
   

@@ -2,16 +2,15 @@
 title: Служебная программа sqlcmd | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: sqlcmd
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
 - QUIT command
@@ -33,13 +32,12 @@ caps.latest.revision: 155
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8553c5cd52df6436bb0ad75acfad6987e6085c4c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 6454e750ae8ed30c3e06a91e374ffae47037d566
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcmd-utility"></a>Служебная программа sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -597,7 +595,7 @@ sqlcmd
 > [!NOTE]  
 >  Параметр **-X** предотвращает передачу переменных среды программе **sqlcmd**.  
   
- Если существует переменная среды, имеющая то же имя, что и переменная, определенная командой **:Setvar** **,** то последняя имеет больший приоритет.  
+ Если переменная, определенная с использованием **:Setvar** и переменной окружения, имеет одно и то же имя, переменная, определенная с помощью **:Setvar** имеет преимущество.  
   
  Имена переменных не должны содержать пробелы.  
   

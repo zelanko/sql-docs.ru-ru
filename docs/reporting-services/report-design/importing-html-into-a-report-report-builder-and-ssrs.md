@@ -1,27 +1,25 @@
 ---
-title: "Импорт HTML в отчет (построитель отчетов и службы SSRS) | Документы Майкрософт"
-ms.custom: 
+title: Импорт HTML в отчет (построитель отчетов и службы SSRS) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a2ec424333d0b7bc277c3ecc884f58a853c0397b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d1635b53a1a5deffc2289820682d608cedded4bc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Импорт HTML в отчет (построитель отчетов и службы SSRS)
   Текстовое поле можно использовать для вставки в отчет текста в формате HTML, выбранного из поля набора данных. Этот текст может исходить из любого простого или сложного выражения, обработка которого приводит к получению правильно отформатированного кода HTML. Отформатированный текст может быть подготовлен к просмотру в любом поддерживаемом формате вывода, включая PDF.  
@@ -72,7 +70,7 @@ ms.lasthandoff: 01/09/2018
   
     -   Относительные единицы длины CSS пропускаются и не поддерживаются. Неподдерживаемые единицы включают em, ex, px, %, rem.  
   
-     Дополнительные сведения о единицах CSS см. в статье [Справочник по значениям и единицам CSS](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx).  
+     См. дополнительные сведения о [значениях и единицах CSS](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx).  
   
 -   color  
   

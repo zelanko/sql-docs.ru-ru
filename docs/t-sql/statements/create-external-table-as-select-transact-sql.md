@@ -26,28 +26,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e727b05f4b57e00694c2bf12aa60a972838a9af2
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3d61d87f1e19088d7f667029bdaaf935d150dc88
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Создает внешнюю таблицу, а затем параллельно экспортирует результаты инструкции SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] в Hadoop или хранилище BLOB-объектов Azure.  
-  
- Используйте инструкцию CREATE EXTERNAL TABLE AS SELECT (CETAS) для решения следующих задач:  
-  
--   экспорт таблицы базы данных в Hadoop или хранилище BLOB-объектов Azure;  
-  
--   импорт данных из Hadoop или хранилища BLOB-объектов Azure и сохранение их в базе данных;  
-  
--   запрос данных из Hadoop или хранилища BLOB-объектов Azure, объединение их с реляционными таблицами базы данных и запись результатов обратно в Hadoop или хранилище BLOB-объектов Azure;  
-  
--   запрос данных из Hadoop или хранилища BLOB-объектов Azure, преобразование данных с использованием доступных в базе данных функций быстрой обработки, запись данных обратно в Hadoop или хранилище BLOB-объектов Azure.  
-  
- Дополнительные сведения см. в разделе [Приступая к работе с PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -1,27 +1,25 @@
 ---
-title: "Перенос установки служб Reporting Services (режим интеграции с SharePoint) | Документы Майкрософт"
-ms.custom: 
+title: Перенос установки служб Reporting Services (режим интеграции с SharePoint) | Документы Майкрософт
+ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
-caps.latest.revision: 
+caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 627029330280cef882f631701d5ea9a0ed8a8791
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 94cb6edf73b942b7cf3d41aee922fa25ca25c755
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Перенос установки служб Reporting Services (режим интеграции с SharePoint)
 
@@ -59,7 +57,7 @@ ms.lasthandoff: 02/15/2018
   
 -   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .** Скрипты могут переносить содержимое и ресурсы между серверами отчетов в собственном режиме и режиме интеграции с SharePoint. Дополнительные сведения см. в статьях [Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) и [Скрипт программы RS.exe служб Reporting Services, который переносит содержимое с одного сервера отчетов на другой](http://azuresql.codeplex.com/releases/view/115207).  
   
--   **Средство миграции служб Reporting Services** . Средство миграции может скопировать элементы отчета с сервера в основном режиме на сервер в режиме интеграции с SharePoint. Дополнительные сведения см. в документе [Средство миграции служб Reporting Services](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560).  
+-   **Средство миграции служб Reporting Services** . Средство миграции может скопировать элементы отчета с сервера в основном режиме на сервер в режиме интеграции с SharePoint. См. дополнительные сведения о [средстве миграции служб Reporting Services](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560).  
   
 ###  <a name="bkmk_full_migration"></a> Полный перенос  
  **Полная миграция** . При переносе в новую ферму баз данных содержимого SharePoint вместе с базами данных каталогов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать серию параметров архивации и восстановления, представленных в данном разделе. В некоторых случаях на этапе восстановления необходимо использовать инструменты, отличные от инструментов, которые использовались при резервном копировании. Например, диспетчер конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать для резервного копирования ключей шифрования из предыдущей версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Но для восстановления ключей шифрования в установку SQL Server 2016 Reporting Services в режиме интеграции с SharePoint необходимо использовать центр администрирования SharePoint или PowerShell.  
@@ -67,7 +65,7 @@ ms.lasthandoff: 02/15/2018
 ####  <a name="bkmk_databases"></a> Базы данных, доступные для просмотра после завершения миграции  
  В следующей таблице описаны базы данных SQL Server, которые связаны с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и доступны после успешного переноса установки SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-|база данных|Пример имени||  
+|База данных|Пример имени||  
 |--------------|------------------|-|  
 |База данных каталогов|ReportingService_[идентификатор GUID приложения службы] **(\*)**|Пользователь выполняет перенос.|  
 |Временная база данных|ReportingService_[идентификатор GUID приложения службы]TempDB **(\*)**|Пользователь выполняет перенос.|  
@@ -94,7 +92,7 @@ ms.lasthandoff: 02/15/2018
   
 ||Объекты|Метод|Примечания|  
 |-|-------------|------------|-----------|  
-|**1**|Восстановите базы данных содержимого SharePoint в новую ферму.|Метод «Обновление присоединения базы данных» SharePoint.|Основные шаги:<br /><br /> 1) Восстановите базу данных на новом сервере.<br /><br /> 2) Подключите базу данных содержимого к веб-приложению, указав URL-адрес.<br /><br /> 3) Используйте Get-SPWebapplication для вывода списка всех веб-приложений и URL-адресов.<br /><br /> <br /><br /> Дополнительные сведения см. в подразделе об обновлении присоединения баз данных в разделе [Определение стратегии обновления до SharePoint 2010 (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx)и в статье [Обновление баз данных контента до версии SharePoint 2010 (http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx).|  
+|**1**|Восстановите базы данных содержимого SharePoint в новую ферму.|Метод «Обновление присоединения базы данных» SharePoint.|Основные шаги:<br /><br /> 1) Восстановите базу данных на новом сервере.<br /><br /> 2) Подключите базу данных содержимого к веб-приложению, указав URL-адрес.<br /><br /> 3) Используйте Get-SPWebapplication для вывода списка всех веб-приложений и URL-адресов.<br /><br /> <br /><br /> Дополнительные сведения см. в подразделе об обновлении присоединения баз данных в разделе [Определение стратегии обновления до SharePoint 2010 (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx) и [Присоединение баз данных и обновление до SharePoint Server 2010 (http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx).|  
 |**2**|Восстановите базу данных SQL Server, которая является базой данных каталогов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (ReportServer).|Резервное копирование и восстановление баз данных SQL.<br /><br /> **или диспетчер конфигурации служб**<br /><br /> Присоединение и отсоединение баз данных SQL Server.|При первом использовании базы данных службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] обновляют схему баз данных, которая требуется для работы со средой SQL Server 2016.|  
 |**3**|Создайте новое приложение службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Создайте новое приложение службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|При создании нового приложения службы настройте его для использования скопированной базы данных сервера отчетов.<br /><br /> Дополнительные сведения об использовании центра администрирования SharePoint см. в разделе "Шаг 3. Создание приложения служб Reporting Services" по ссылке [Install Reporting Services SharePoint Mode](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md).<br /><br /> Примеры использования PowerShell см. в разделе «Создание приложения службы Reporting Services с помощью PowerShell» в [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**4**|Восстановите файлы конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Простая копия файла.|Пример расположения файлов по умолчанию: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\.|  
@@ -128,9 +126,9 @@ ms.lasthandoff: 02/15/2018
   
 ##  <a name="bkmk_additional_resources"></a> Дополнительные ресурсы  
   
--   [Начало обновления до SharePoint 2013 (http://technet.microsoft.com/library/ee833948.aspx)](http://technet.microsoft.com/library/ee833948.aspx).  
+-   [Обновление до SharePoint 2013 (http://technet.microsoft.com/library/ee833948.aspx)](http://technet.microsoft.com/library/ee833948.aspx).  
   
--   [Обзор процесса обновления до SharePoint 2013 (http://technet.microsoft.com/library/cc262483.aspx)](http://technet.microsoft.com/library/cc262483.aspx).  
+-   [Общие сведения об обновлении до SharePoint 2013 (http://technet.microsoft.com/library/cc262483.aspx)](http://technet.microsoft.com/library/cc262483.aspx).  
 
 ## <a name="next-steps"></a>Следующие шаги
 

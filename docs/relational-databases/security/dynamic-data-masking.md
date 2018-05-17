@@ -1,29 +1,23 @@
 ---
 title: Динамическое маскирование данных | Документация Майкрософт
-ms.custom: ''
-ms.date: 09/26/2016
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1a261930d257f4c787a5f28af59d82ee75a7af7c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0aa8b9f31337bbbe2b4a545574c3a9cfc0e03116
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamic-data-masking"></a>Динамическое маскирование данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,9 +35,9 @@ ms.lasthandoff: 04/16/2018
 
 Например, специалист службы поддержки в центре вызовов может идентифицировать абонентов по нескольким цифрам номера социального страхования или кредитной карты, при этом эти номера не должны предоставляться полностью. Можно определить правило маскирования, которое маскирует все цифры номера социального страхования или кредитной карты за исключением последних четырех в результирующем наборе любого запроса. Другой пример — с помощью соответствующей маски для защиты персональных данных разработчик может отправлять запросы к рабочей среде для устранения неполадок, не нарушая правил соответствия.
 
- Назначение динамического маскирования данных — ограничение раскрытия конфиденциальных данных, при котором пользователи, у которых нет доступа к данным, не смогут их просматривать. Динамическое маскирование данных не сможет помешать пользователям подключиться к базе данных напрямую и выполнить запросы для получения фрагментов конфиденциальных данных. Динамическое маскирование данных дополняет другие функции безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (аудит, шифрование, безопасность на уровне строк...). Настоятельно рекомендуется использовать маскирование вместе с этими функциями для лучшей защиты конфиденциальных данных в базе данных.  
+Назначение динамического маскирования данных — ограничение раскрытия конфиденциальных данных, при котором пользователи, у которых нет доступа к данным, не смогут их просматривать. Динамическое маскирование данных не сможет помешать пользователям подключиться к базе данных напрямую и выполнить запросы для получения фрагментов конфиденциальных данных. Динамическое маскирование данных дополняет другие функции безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (аудит, шифрование, безопасность на уровне строк...). Настоятельно рекомендуется использовать маскирование вместе с этими функциями для лучшей защиты конфиденциальных данных в базе данных.  
   
- Динамическое маскирование данных доступно в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]и настраивается с помощью команд [!INCLUDE[tsql](../../includes/tsql-md.md)] . Дополнительные сведения о настройке динамического маскирования данных с помощью портала Azure см. в разделе [Приступая к работе с динамическим маскированием данных в базах данных SQL (портал Azure)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
+Динамическое маскирование данных доступно в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]и настраивается с помощью команд [!INCLUDE[tsql](../../includes/tsql-md.md)] . Дополнительные сведения о настройке динамического маскирования данных с помощью портала Azure см. в разделе [Приступая к работе с динамическим маскированием данных в базах данных SQL (портал Azure)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
   
 ## <a name="defining-a-dynamic-data-mask"></a>Определение маски для динамического маскирования данных  
  Правило маскирования можно задать для столбца в таблице, чтобы замаскировать данные в этом столбце. Доступны четыре типа маскирования.  
@@ -70,12 +64,12 @@ ms.lasthandoff: 04/16/2018
   
 -   Используйте `SELECT INTO` или `INSERT INTO` для копирования данных из маскированного столбца в результаты для другой таблицы в маскированных данных в целевой таблице.  
   
--   Динамическое маскирование данных применяется при запуске импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Файл резервной копии для базы данных с маскированными столбцами будет содержать маскированные данные (при условии, что она была экспортирована пользователем без привилегий **UNMASK** ), а импортированная база данных будет содержать статически маскированные данные.  
+-   Динамическое маскирование данных применяется при запуске импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Файл экспортированных данных для базы данных с маскированными столбцами будет содержать маскированные данные (при условии, что она была экспортирована пользователем без привилегий **UNMASK** ), а импортированная база данных будет содержать статически маскированные данные.  
   
 ## <a name="querying-for-masked-columns"></a>Запрос данных для маскированных столбцов  
  Используйте представление **sys.masked_columns** для запроса данных для столбцов таблицы, к которым применена функция маскирования. Это представление наследуется из представления **sys.columns** . Оно возвращает все столбцы в представлении **sys.columns** , а также столбцы **is_masked** и **masking_function** , указывающие, маскирован ли столбец, и если да, то какая функция маскирования определена. В этом представлении отображаются только столбцы, к которым применена функция маскирования.  
   
-```  
+```sql 
 SELECT c.name, tbl.name as table_name, c.is_masked, c.masking_function  
 FROM sys.masked_columns AS c  
 JOIN sys.tables AS tbl   
@@ -108,7 +102,7 @@ WHERE is_masked = 1;
 Например, рассмотрим субъект базы данных, который обладает достаточными правами для выполнения нерегламентированных запросов к базе данных и пытается "подобрать" базовые данные, чтобы в конечном счете получить фактические значения. Предположим, что мы задали маску для столбца `[Employee].[Salary]` , а этот пользователь подключается непосредственно к базе данных и начинает подбор значений, стремясь получить значение `[Salary]` для набора сотрудников:
  
 
-```
+```sql
 SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
@@ -128,7 +122,7 @@ WHERE Salary > 99999 and Salary < 100001;
 ### <a name="creating-a-dynamic-data-mask"></a>Создание маски для динамического маскирования данных  
  В следующем примере создается таблица, в которой используется три различных типа динамического маскирования данных. В примере заполняется таблица, затем выполняется запрос выборки для отображения результатов.  
   
-```  
+```sql
 CREATE TABLE Membership  
   (MemberID int IDENTITY PRIMARY KEY,  
    FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)') NULL,  
@@ -145,7 +139,7 @@ SELECT * FROM Membership;
   
  Новый пользователь создается, и ему предоставляется разрешение **SELECT** для таблицы. Запросы, выполняемые как `TestUser` , возвращают маскированные данные.  
   
-```  
+```sql 
 CREATE USER TestUser WITHOUT LOGIN;  
 GRANT SELECT ON Membership TO TestUser;  
   
@@ -166,14 +160,14 @@ REVERT;
  Используйте инструкцию **ALTER TABLE** для добавления маски к существующему столбцу в таблице или для изменения маски для этого столбца.  
 В следующем примере функция маскирования добавляется к столбцу `LastName` :  
   
-```  
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"XXX",0)');  
 ```  
   
  В следующем примере функция маскирования для столбца `LastName` изменяется:  
-  
-```  
+
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');  
 ```  
@@ -181,7 +175,7 @@ ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');
 ### <a name="granting-permissions-to-view-unmasked-data"></a>Предоставление разрешений на просмотр немаскированных данных  
  Предоставление разрешения **UNMASK** позволяет `TestUser` просматривать немаскированные данные.  
   
-```  
+```sql
 GRANT UNMASK TO TestUser;  
 EXECUTE AS USER = 'TestUser';  
 SELECT * FROM Membership;  
@@ -194,7 +188,7 @@ REVOKE UNMASK TO TestUser;
 ### <a name="dropping-a-dynamic-data-mask"></a>Удаление маски для динамического маскирования данных  
  Следующая инструкция удаляет маску для столбца `LastName` , созданного в предыдущем примере:  
   
-```  
+```sql  
 ALTER TABLE Membership   
 ALTER COLUMN LastName DROP MASKED;  
 ```  
@@ -205,5 +199,3 @@ ALTER COLUMN LastName DROP MASKED;
  [column_definition (Transact-SQL)](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
  [Приступая к работе с динамическим маскированием данных в базах данных SQL (портал предварительной версии Azure)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
-  
-  

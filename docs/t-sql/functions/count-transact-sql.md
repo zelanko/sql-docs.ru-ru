@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -29,18 +27,17 @@ caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9872e4754e375168a3ba3d2687018cc32157c71f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 665edc29f3989f73ba997e1ac693634356689aa4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="count-transact-sql"></a>Функция COUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Возвращает количество элементов в группе. Функция COUNT работает аналогично функции [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md). Единственное различие между двумя функциями — возвращаемые значения. Функция COUNT всегда возвращает значение типа данных **int**. Функция COUNT_BIG всегда возвращает значение типа данных **bigint**.
+Эта функция возвращает количество элементов, найденных в группе. Функция `COUNT` работает подобно функции [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md). Эти функции различаются только типами данных в возвращаемых значениях. Функция `COUNT` всегда возвращает значение типа данных **int**. Функция `COUNT_BIG` всегда возвращает значение типа данных **bigint**.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -69,38 +66,38 @@ COUNT ( { expression | * } ) OVER ( [ <partition_by_clause> ] )
   
 ## <a name="arguments"></a>Аргументы  
 **ALL**  
-Применяет агрегатную функцию ко всем значениям. ALL является параметром по умолчанию.
+Применяет агрегатную функцию ко всем значениям. Аргумент ALL используется по умолчанию.
   
 DISTINCT  
-Указывает, что функция COUNT возвращает количество уникальных значений, не равных NULL.
+Указывает, что функция `COUNT` возвращает количество уникальных значений, не равных NULL.
   
 *expression*  
-[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого типа, кроме **text**, **image** и **ntext**. Агрегатные функции и вложенные запросы не допускаются.
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого типа, кроме**image**, **ntext** и **text**. Обратите внимание, что функция `COUNT` не поддерживает агрегатные функции и вложенные запросы в выражении.
   
 \*  
-Указывает, что все строки должны быть подсчитаны для возврата общего числа строк в таблице. Функция COUNT(\*) не принимает параметров и не может использоваться с ключевым словом DISTINCT. Функция COUNT(\*) не требует параметра *expression*, так как по определению она не использует сведения о конкретном столбце. Функция COUNT(*) возвращает количество строк в указанной таблице, не отбрасывая дублированные строки. Она подсчитывает каждую строку отдельно. При этом учитываются и строки, содержащие значения NULL.
+Указывает, что функция `COUNT` должна учитывать все строки, чтобы определить общее количество строк таблицы для возврата. Функция `COUNT(*)` не принимает параметры и не поддерживает использование аргумента DISTINCT. Для функции `COUNT(*)` не требуется параметр *expression*, так как по определению она не использует сведения о конкретном столбце. Функция `COUNT(*)` возвращает количество строк в указанной таблице с учетом повторяющихся строк. Она подсчитывает каждую строку отдельно. При этом учитываются и строки, содержащие значения NULL.
   
 OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
-*partition_by_clause* делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы. *order_by_clause* определяет логический порядок, в котором выполняется операция. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).
-  
+*partition_by_clause* делит результирующий набор, полученный с помощью предложения `FROM`, на секции, к которым применяется функция `COUNT`. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы. *order_by_clause* определяет логический порядок выполнения операции. Дополнительные сведения см. в статье [SELECT — предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md). 
+
 ## <a name="return-types"></a>Типы возвращаемых данных
  **int**  
   
 ## <a name="remarks"></a>Remarks  
-Функция COUNT(*) возвращает количество элементов в группе. Сюда входят значения NULL и повторяющиеся значения.
+Функция COUNT(\*) возвращает количество элементов в группе. Сюда входят значения NULL и повторяющиеся значения.
   
 Функция COUNT(ALL *expression*) вычисляет *expression* для каждой строки в группе и возвращает количество значений, не равных NULL.
   
 Функция COUNT(DISTINCT *expression*) вычисляет *expression* для каждой строки в группе и возвращает количество уникальных значений, не равных NULL.
   
-Для возвращаемых значений, больших 2^31-1, функция COUNT формирует сообщение об ошибке. Вместо этого следует использовать COUNT_BIG.
+Для возвращаемых значений, которые превышают значение 2^31-1, функция `COUNT` возвращает ошибку. В таких случаях используйте вместо нее функцию `COUNT_BIG`.
   
-COUNT — это детерминированная функция, если она используется без предложений OVER и ORDER BY. Она не детерминирована при использовании с предложениями OVER и ORDER BY. Дополнительные сведения см. в разделе [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+`COUNT` — это детерминированная функция, если она используется ***без*** предложений OVER и ORDER BY. Она не детерминирована при использовании ***с*** предложениями OVER и ORDER BY. Дополнительные сведения см. в статье [Детерминированные и недетерминированные функции](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-count-and-distinct"></a>A. Использование функции COUNT и параметра DISTINCT  
-В следующем примере приводится количество различных должностей, которые могут иметь служащие, работающие в компании [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].
+В этом примере функция возвращает количество различных должностей, которые может иметь сотрудник [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].
   
 ```sql
 SELECT COUNT(DISTINCT Title)  
@@ -117,8 +114,8 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="b-using-count"></a>Б. Использование функции COUNT(*)  
-В следующем примере определяется общее количество служащих, работающих в компании [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].
+### <a name="b-using-count"></a>Б. Использование функции COUNT(\*)  
+В этом примере функция возвращает общее количество сотрудников [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].
   
 ```sql
 SELECT COUNT(*)  
@@ -135,8 +132,8 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="c-using-count-with-other-aggregates"></a>В. Использование функции COUNT(*) совместно с другими статистическими функциями  
-В следующем примере показывается, что функция `COUNT(*)` в списке выбора может сочетаться с другими агрегатными функциями. В этом примере используется база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
+### <a name="c-using-count-with-other-aggregates"></a>В. Использование функции COUNT(\*) совместно с другими статистическими функциями  
+В этом примере показано, что функция `COUNT(*)` работает с другими статистическими функциями в списке `SELECT`. В этом примере используется база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
 SELECT COUNT(*), AVG(Bonus)  
@@ -155,7 +152,7 @@ GO
 ```
   
 ### <a name="d-using-the-over-clause"></a>Г. Использование предложения OVER  
-В следующем примере рассматривается применение функций MIN, MAX, AVG и COUNT с предложением OVER для получения статистических значений для каждого из отделов в таблице `HumanResources.Department` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
+В этом примере функции `MIN`, `MAX`, `AVG` и `COUNT` используются с предложением `OVER`, чтобы получить статистические значения для каждого из отделов в таблице `HumanResources.Department` базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
 SELECT DISTINCT Name  
@@ -200,7 +197,7 @@ Tool Design                   8.62                  29.8462               23.505
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-count-and-distinct"></a>Д. Использование функции COUNT и параметра DISTINCT  
-В приведенном ниже примере приводится количество различных должностей, которые может иметь сотрудник, работающий в определенной компании.
+В этом примере функция возвращает количество различных должностей, которые может иметь конкретный сотрудник компании.
   
 ```sql
 USE ssawPDW;  
@@ -216,8 +213,8 @@ FROM dbo.DimEmployee;
 67
 ```  
   
-### <a name="f-using-count"></a>Е. Использование функции COUNT(*)  
-В приведенном ниже примере возвращается общее количество строк в таблице `dbo.DimEmployee`.
+### <a name="f-using-count"></a>Е. Использование функции COUNT(\*)  
+В этом примере функция возвращает общее количество строк в таблице `dbo.DimEmployee`.
   
 ```sql
 USE ssawPDW;  
@@ -233,8 +230,8 @@ FROM dbo.DimEmployee;
 296
 ```  
   
-### <a name="g-using-count-with-other-aggregates"></a>Ж. Использование функции COUNT(*) совместно с другими статистическими функциями  
-В приведенном ниже примере функция `COUNT(*)` сочетается в списке SELECT с другими агрегатными функциями. Запрос возвращает число торговых представителей с годовой квотой продаж более 500 000 долл. США и среднюю квоту продаж.
+### <a name="g-using-count-with-other-aggregates"></a>Ж. Использование функции COUNT(\*) совместно с другими статистическими функциями  
+В этом примере функция `COUNT(*)` работает с другими статистическими функциями в списке `SELECT`. Запрос возвращает количество торговых представителей с годовой квотой продаж более 500 000 долл. США и их среднюю квоту продаж.
   
 ```sql
 USE ssawPDW;  
@@ -254,7 +251,7 @@ TotalCount  Average Sales Quota
 ```
   
 ### <a name="h-using-count-with-having"></a>З. Использование функции COUNT с предложением HAVING  
-В приведенном ниже примере функция COUNT используется с предложением HAVING для получения отделов компании, в которых работает более 15 сотрудников.
+В этом примере функция `COUNT` используется с предложением `HAVING`, чтобы получить список подразделений компании, в каждом из которых работает более 15 сотрудников.
   
 ```sql
 USE ssawPDW;  
@@ -276,7 +273,7 @@ Production      179
 ```
   
 ### <a name="i-using-count-with-over"></a>И. Использование функции COUNT с предложением OVER  
-В приведенном ниже примере функция COUNT используется с предложением OVER для получения количества продуктов, содержащихся в каждом из указанных заказов на продажу.
+В этом примере функция `COUNT` используется с предложением `OVER`, чтобы получить количество продуктов, содержащихся в каждом из указанных заказов на продажу.
   
 ```sql
 USE ssawPDW;  

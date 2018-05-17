@@ -30,6 +30,7 @@
 ## [Проверка пакетов, развертываемых в Azure](lift-shift/ssis-azure-validate-packages.md)
 ## [Подключение к каталогу служб SSIS в Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Планирование выполнения пакета в Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Планирование выполнения пакета в Azure с помощью SSMS](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
 # [Установка или обновление](../integration-services/install-windows/install-integration-services.md)
 

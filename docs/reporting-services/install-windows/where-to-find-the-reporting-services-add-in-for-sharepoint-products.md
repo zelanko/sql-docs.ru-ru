@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 05/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: ''
 ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rsSharePoint
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
@@ -18,12 +17,11 @@ caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c0f23f6d5410bf5eeeb59476ae491fc82afd93dc
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 90971587434165ebafccd2867736c56ce781c732
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Где найти надстройку службы Reporting Services для продуктов SharePoint
 
@@ -59,9 +57,9 @@ ms.lasthandoff: 01/09/2018
   
  Дополнительные сведения о загрузке и установке надстройки см. в центре загрузки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
--   **Надстройка для пакета обновления 1 (SP1):**  [надстройка Microsoft® SQL Server® 2012 с пакетом обновления 1 (SP1) Reporting Services для Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
+-   **Надстройка пакета обновления 1 (SP1).** [Надстройка служб Microsoft® SQL Server® 2012 Reporting Services с пакетом обновления 1 (SP1) для Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
   
--   **Пакет обновления 1 (SP1):**  [Microsoft® SQL Server® 2012 с пакетом обновления 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906).  
+-   **Пакет обновления 1 (SP1).** [Microsoft® SQL Server® 2012 с пакетом обновления 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906).  
 
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Надстройка служб Reporting Services для продуктов SharePoint 2010
 

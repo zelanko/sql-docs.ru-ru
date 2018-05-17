@@ -7,6 +7,8 @@ ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: Tutorial
 ms.suite: sql
+ms.prod: sql
+ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
@@ -18,11 +20,11 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: a01586f4ab3d002e33b7679f6fe2e5a165f260e1
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: c4ddbf149048b7cb7f89be24369c60afc47bdb4a
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-using-templates-within-sql-server-management-studio"></a>Учебник. Использование шаблонов в среде SQL Server Management Studio
 В этом учебнике приводятся основные сведения о готовых шаблонах Transact-SQL (T-SQL), доступных в среде SQL Server Management Studio (SSMS). Вы узнаете, как выполнять следующие задачи:
@@ -37,8 +39,8 @@ ms.lasthandoff: 03/22/2018
 ## <a name="prerequisites"></a>предварительные требования
 Для работы с этим учебником требуется среда SQL Server Management Studio и доступ к SQL Server. 
 
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
  
 

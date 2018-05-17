@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
@@ -18,17 +17,17 @@ caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 94e454e201b2e9130b115e527ee2433f04f2ab60
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0eead8d73153621430037141e0a509adac4cd1fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Настройка соединений SSL для сервера отчетов, работающего в собственном режиме
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] В собственном режиме используется HTTP-служба протокола SSL для установления зашифрованного соединения с сервером отчетов. Если в локальном хранилище сертификатов на компьютере сервера отчетов установлен CER-файл сертификата, можно связать его с резервированием URL-адресов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для поддержки соединений сервера отчетов через зашифрованный канал.  
   
 > [!TIP]  
->  Если используется режим интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с SharePoint, см. дополнительные сведения в документации по SharePoint. Например, [Включение протокола SSL для веб-приложения SharePoint 2010 (http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx).  
+>  Если используется режим интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с SharePoint, см. дополнительные сведения в документации по SharePoint. Например, руководство по [включению SSL в веб-приложении SharePoint 2010 (http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx).  
   
  Поскольку службы IIS также используют HTTP-службу SSL, возникает ряд важных проблем взаимодействия, которые необходимо учитывать при запуске служб IIS и служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на одном компьютере. Ознакомьтесь с разделом «Проблемы взаимодействия со службами IIS», где приводятся рекомендации по решению данных проблем.  
   

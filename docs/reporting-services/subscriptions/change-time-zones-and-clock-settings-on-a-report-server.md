@@ -1,32 +1,30 @@
 ---
-title: "Изменение часовых поясов и параметров часов на сервере отчетов | Документы Майкрософт"
-ms.custom: 
+title: Изменение часовых поясов и параметров часов на сервере отчетов | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: subscriptions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - time zones [Reporting Services]
 - clocks [Reporting Services]
 - schedules [Reporting Services], clock settings
 - schedules [Reporting Services], time zones
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 91f37c8df4a278fef841b12ff727e8e11c04a808
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f9e613a2212a852f386343de6463d06b9b57b3ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>Изменение часовых поясов и настроек часов на сервере отчетов
   Сервер отчетов всегда использует локальное время компьютера, на котором он установлен. Задать для сервера отчетов другой часовой пояс нельзя. Если клиентское приложение обращается к серверу отчетов, работающему в другом часовом поясе, запланированная операция выполняется в соответствии с часовым поясом сервера отчетов. На страницах управления диспетчером отчетов и службами SharePoint часовой пояс указывается на каждой странице расписания, чтобы пользователь точно знал, когда будет выполнена запланированная операция. Например, на странице для создания пользовательского расписания указано «Время выражено в (UTC-08:00) по тихоокеанскому времени (США и Канада)».  
@@ -41,7 +39,7 @@ ms.lasthandoff: 01/09/2018
  Значения отметок времени, являющихся свойствами (например время создания папки или элемента связанного отчета), не синхронизируются с новым значением часового пояса. Если элемент создан 25 июня в 9:00, после чего будет изменен часовой пояс или время, отметка времени останется прежней.  
   
 ## <a name="changing-the-time-zone-sharepoint-mode"></a>Изменение часового пояса (режим интеграции с SharePoint)  
- Конфигурация часового пояса для режима интеграции с SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] управляется как часть региональных настроек SharePoint. Дополнительные сведения см. в статье [Региональные настройки (SharePoint Server 2010 (http://technet.microsoft.com/library/cc824907.aspx)](http://technet.microsoft.com/library/cc824907.aspx).  
+ Конфигурация часового пояса для режима интеграции с SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] управляется как часть региональных настроек SharePoint. Дополнительные сведения см. в разделе [Загрузка пакета обновления 1 (SP1) для SharePoint Server 2010 (http://technet.microsoft.com/library/cc824907.aspx)](http://technet.microsoft.com/library/cc824907.aspx).  
   
 ## <a name="changing-the-clock-settings"></a>Изменение времени  
  Изменение показаний часов компьютера не влияет на значения существующих отметок времени (например, если перевести часы на 1 час вперед, отметки времени моментальных снимков журналов отчетов не изменятся). Перед тем как обработчик планирования и доставки примет новое значение времени, возможна задержка длительностью 10 секунд. Фактическая длительность задержки может оказаться иной, если изменены параметры интервала опроса в файлах конфигурации.  

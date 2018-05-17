@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -33,12 +31,11 @@ caps.latest.revision: 92
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: be6c818401a74f4f14d6a8381fe696bc02a48e6e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a284d0d144b4cdc091a866d4c660d6a84ad0c2dc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -270,6 +267,12 @@ column_name <data_type>
   
 ## <a name="permissions"></a>Разрешения  
  Требует разрешения CREATE TYPE в текущей базе данных и разрешения ALTER для схемы *schema_name*. Если аргумент *schema_name* не указан, в действие вступают принимаемые по умолчанию правила разрешения имен с целью определения схемы для текущего пользователя. Если аргумент *assembly_name* указан, пользователь должен либо быть владельцем данной сборки, либо иметь разрешение REFERENCES для работы с ней.  
+
+ Если какие-либо столбцы в инструкции CREATE TABLE определены как принадлежащие к определяемому пользователем типу данных, необходимо иметь разрешение REFERENCES на него.
+ 
+   >[!NOTE]
+  > После создания таблицы со столбцом, который использует определяемый пользователем тип, потребуется разрешение REFERENCES для работы с такими типами.
+  > Если эта таблица должна создаваться в базе данных TempDB, либо разрешение REFERENCES должно предоставляться явным образом **перед** каждой процедурой создания таблицы, либо этот тип данных и разрешения REFERENCES нужно добавить в базу данных модели. В таком случае этот тип данных и разрешения будут всегда доступны в базе данных TempDB. В противном случае определяемый пользователем тип данных и разрешения нельзя будет использовать после перезапуска SQL Server. Дополнительные сведения см. в разделе [CREATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql?view=sql-server-2017#permissions-1).
   
 ## <a name="examples"></a>Примеры  
   

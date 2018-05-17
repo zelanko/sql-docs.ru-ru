@@ -1,31 +1,29 @@
 ---
-title: "Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS) | Документы Майкрософт"
-ms.custom: 
+title: Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.rtp.rptdesigner.mapandlayerwizard.f1
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8799fa0b54d60990ee701f4fef2950cf5e0d2b86
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1ea786a129d8ce3607269c55d12405543104b637
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS)
  В отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы мастер карт и мастер слоев карт автоматизируют задачи создания карты, добавления слоя карты или изменения параметров слоя карты применительно к существующему слою.  
@@ -122,7 +120,7 @@ ms.lasthandoff: 01/09/2018
  Галерея карт содержит карты из отчетов. Они расположены в папке галереи карт среды создания отчетов. Карты из этой галереи позволяют быстро добавить карту в отчет. Стандартные карты в галерее предоставлены поставщиком карт.  
   
 > [!NOTE]  
->  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют данные из файлов фигур TIGER/Line, поставляемых с разрешения Бюро переписи населения США ([http://www.census.gov/](http://www.census.gov/)). Файлы фигур TIGER/Line содержат выборочную географическую и картографическую информацию из базы данных Census MAF/TIGER. Файлы фигур TIGER/Line бесплатно распространяются Бюро переписи населения США. Дополнительные сведения о шейп-файлах TIGER/Line можно получить на странице [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Информация о границах в шейп-файлах TIGER/Line может использоваться только для сбора и табулирования статистических данных. Их описание и использование в статистических целях не может повлечь изменения юридических полномочий или прав собственности. Они не являются законными описаниями земель. Census TIGER и TIGER/Line являются охраняемыми товарными знаками Бюро переписи населения США.  
+>  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют данные из файлов фигур TIGER/Line, поставляемых с разрешения Бюро переписи населения США ([http://www.census.gov/](http://www.census.gov/)). Файлы фигур TIGER/Line содержат выборочную географическую и картографическую информацию из базы данных Census MAF/TIGER. Файлы фигур TIGER/Line бесплатно распространяются Бюро переписи населения США. Дополнительные сведения о файлах фигуры TIGER/Line см. на странице [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Информация о границах в шейп-файлах TIGER/Line может использоваться только для сбора и табулирования статистических данных. Их описание и использование в статистических целях не может повлечь изменения юридических полномочий или прав собственности. Они не являются законными описаниями земель. Census TIGER и TIGER/Line являются охраняемыми товарными знаками Бюро переписи населения США.  
   
  Для расширения галереи карт можно добавлять или удалять отчеты из каталога галереи карт, а также добавлять папки для структуризации карт. Дополнительные сведения см. в разделе [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   

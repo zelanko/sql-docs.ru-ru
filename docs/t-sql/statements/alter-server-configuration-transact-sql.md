@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,12 +25,11 @@ caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e21a2e591b9bd5c38d4abf458c938b17563cc89c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fb2dd1c54653b825d135e9ca3fb1b478212f70f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -193,7 +190,7 @@ SQLDUMPEREDUMPFLAGS
 **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  HADR CLUSTER CONTEXT **=** { **'***remote_windows_cluster***'** | LOCAL }  
- Переключает контекст кластера HADR экземпляра сервера (WSFC) до указанного кластера WSFC. *Контекст кластера HADR* определяет кластер Windows Server Failover Clustering (WSFC), который управляет метаданными для реплик доступности, размещенных в экземпляре сервера. Используйте параметр SET HADR CLUSTER CONTEXT только во время миграции с кластера [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] на экземпляр [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] или более новой версии в новом кластере WSFC.  
+ Переключает контекст кластера HADR экземпляра сервера на указанный отказоустойчивый кластер Windows Server (WSFC). *Контекст кластера HADR* определяет кластер WSFC, который управляет метаданными для реплик доступности, размещенных в экземпляре сервера. Используйте параметр SET HADR CLUSTER CONTEXT только во время миграции с кластера [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] на экземпляр [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] или более новой версии в новом кластере WSFC.  
   
  Переключать контекст кластера HADR можно только с локального кластера WSFC на удаленный и обратно с удаленного кластера на локальный. Контекст кластера HADR можно переключить на удаленный кластер, только если на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не размещено ни одной реплики доступности.  
   
@@ -202,7 +199,10 @@ SQLDUMPEREDUMPFLAGS
  Для определения целевого кластера укажите одно из следующих значений:  
   
  *кластер_windows*  
- Объект имени WSFC-кластера (CNO). Вы можете указать короткое имя или полное имя домена. Для поиска целевого IP-адреса короткого имени ALTER SERVER CONFIGURATION использует разрешение DNS. В некоторых ситуациях краткое имя может вызвать затруднения, и DNS может вернуть неправильный IP-адрес. Таким образом, рекомендуется указывать полное имя домена.  
+ Имя netwirj кластера WSFC. Вы можете указать короткое имя или полное имя домена. Для поиска целевого IP-адреса короткого имени ALTER SERVER CONFIGURATION использует разрешение DNS. В некоторых ситуациях краткое имя может вызвать затруднения, и DNS может вернуть неправильный IP-адрес. Таким образом, рекомендуется указывать полное имя домена.  
+  
+  > [!NOTE] 
+  > Миграция между кластерами с помощью этого параметра больше не поддерживается. Для переноса между кластерами, используйте распределенную группу доступности или другой способ, например доставку журналов. 
   
  LOCAL  
  Локальный кластер WSFC.  

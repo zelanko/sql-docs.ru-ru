@@ -1,30 +1,28 @@
 ---
-title: "Управляемые данными подписки | Документы Майкрософт"
-ms.custom: 
+title: Управляемые данными подписки | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: subscriptions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8deb6531b2bc14cb156787c6de115af34f402cc4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a1aba2e3fe24e781039a436fddad866cf214a9ad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-driven-subscriptions"></a>управляемая данными подписка
   Управляемая данными подписка обеспечивает возможность использования данных динамической подписки, получаемых от внешнего источника данных во время выполнения. В управляемой данными подписке можно также использовать статический текст и значения по умолчанию, указываемые при определении подписки. С помощью управляемых данными подписок можно осуществлять следующее.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="requirements-for-using-data-driven-subscriptions"></a>Требование для использования управляемых данными подписок  
  Функциональность управляемых данными подписок доступна не во всех выпусках продукта. Существуют также ограничения на виды источников данных, которые можно использовать для получения данных о подписчиках во время выполнения. В следующем списке содержатся дополнительные сведения о требованиях.  
   
--   Дополнительные сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающих функции управляемых данными подписок, см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   Дополнительные сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с поддержкой функций управляемых данными подписок см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   Выберите источник данных подписки, который будет поставлять серверу отчетов данные схемы. Примеры поддерживаемых типов источников данных включают реляционные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , базы данных Oracle, базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , данные пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , источники данных ODBC и OLE DB. Дополнительные сведения о требованиях к источникам данных подписчиков см. в разделе [Использование внешнего источника данных подписчика (управляемая данными подписка)](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   

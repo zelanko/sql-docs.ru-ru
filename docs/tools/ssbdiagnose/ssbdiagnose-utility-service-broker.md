@@ -2,16 +2,15 @@
 title: Программа ssbdiagnose (компонент Service Broker) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssbdiagnose
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
 - Service Broker, command prompt utilities
@@ -32,15 +31,15 @@ caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ee4dfdfeb9dd22130a287000731d656fbcfb803c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: ebe736c1282342332a99a156dd95aadbe8cf32a5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Программа ssbdiagnose (компонент Service Broker)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Программа **ssbdiagnose** сообщает о проблемах в диалогах [!INCLUDE[ssSB](../../includes/sssb-md.md)] или в конфигурации служб [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Проверка конфигурации может быть выполнена для одной или для двух служб. Сведения о неполадках могут выводиться в окне командной строки в виде удобочитаемого текста или в формате XML, который может быть перенаправлен в файл или в другую программу.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Программа **ssbdiagnose** сообщает о проблемах в диалогах [!INCLUDE[ssSB](../../includes/sssb-md.md)] или в конфигурации службы [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Проверка конфигурации может быть выполнена для одной или для двух служб. Сведения о неполадках могут выводиться в окне командной строки в виде удобочитаемого текста или в формате XML, который может быть перенаправлен в файл или в другую программу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -207,7 +206,7 @@ WHERE database_id = DB_ID();
  Идентификаторы диалогов отображаются в столбце **conversation_id** представления каталога **sys.conversation_endpoints** .  
   
  **-TIMEOUT** *timeout_interval*  
- Задает время выполнения отчета **RUNTIME** в секундах. Если параметр **-TIMEOUT** не задан, то отчет может выполняться бесконечно долго. Параметр **-TIMEOUT** используется только для отчетов **RUNTIME**, а не для отчетов **CONFIGURATION**. Работу программы **ssbdiagnose** можно завершить нажатием клавиш CTRL+C, если параметр **-TIMEOUT** не указан, а также если нужно завершить отчет до истечения времени ожидания. Параметр*timeout_interval* должен быть числом от 1 до 2 147 483 647.  
+ Задает время выполнения отчета **RUNTIME** в секундах. Если параметр **-TIMEOUT** не задан, то отчет может выполняться бесконечно долго. Параметр **-TIMEOUT** используется только для отчетов **RUNTIME**, а не для отчетов **CONFIGURATION**. Работу программы **ssbdiagnose** можно завершить нажатием клавиш CTRL+C, если параметр **-TIMEOUT** не указан, а также если нужно завершить отчет до истечения времени ожидания **-**. Параметр*timeout_interval* должен быть числом от 1 до 2 147 483 647.  
   
  **\<runtimeconnectionoptions >**  
  Задает сведения для соединения с базой данных, где содержатся службы, связанные с отслеживаемыми элементами диалога. Если все службы расположены в одной базе данных, нужно указать только одно предложение **CONNECT TO** . Если службы находятся в разных базах данных, то предложение **CONNECT TO** необходимо указать для каждой базы данных. Если параметры **runtimeconnectionoptions** не указаны, то **ssbdiagnose** использует сведения о подключении из **baseconnectionoptions**.  
@@ -250,7 +249,7 @@ WHERE database_id = DB_ID();
  **baseconnetionoptions** *server_name*[\\*instance_name*]  
  Задает экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , где размещаются службы компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] для анализа.  
   
- Укажите значение *server_name* , чтобы подключиться к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию на этом сервере. Укажите *server_name***\\*** instance_name*, чтобы подключиться к именованному экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на этом сервере. Если параметр **-S** не указан, то программа **ssbdiagnose** использует значение переменной среды SQLCMDSERVER. Если переменная SQLCMDSERVER также не задана, то программа **ssbdiagnose** соединяется с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию на локальном компьютере.  
+ Укажите значение *server_name* , чтобы подключиться к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию на этом сервере. Укажите *server_name***\\***instance_name*, чтобы подключиться к именованному экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на этом сервере. Если параметр **-S** не указан, то программа **ssbdiagnose** использует значение переменной среды SQLCMDSERVER. Если переменная SQLCMDSERVER также не задана, то программа **ssbdiagnose** соединяется с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию на локальном компьютере.  
   
  **-S** *database_name*  
  Задает базу данных, где размещаются службы компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] для анализа. Если такой базы данных не существует, то выдается ошибка. Если параметр **-d** не задан, то по умолчанию используется база данных, указанная в свойстве default-database текущего имени входа.  

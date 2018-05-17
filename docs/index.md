@@ -8,11 +8,11 @@ ms.author: craigg
 ms.topic: hub-page
 ms.prod: sql
 ms.technology: install
-ms.openlocfilehash: dcb91e3b5e4f59da44bf76d618dc17bb93abb6bf
-ms.sourcegitcommit: 9f61aa4d556bb5726b1e49d619ae2bbccf1590e3
+ms.openlocfilehash: a9e466cc1e88300164036aa831e8cbe2e2c45e6e
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2018
+ms.lasthandoff: 05/08/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -74,6 +74,7 @@ ms.lasthandoff: 04/29/2018
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming">Подключение к клиентским приложениям</a></li>
                                                     <li><a class="barLink" href="/sql/relational-databases/database-features">Основные понятия реляционной базы данных</a></li>
+                                                    <li><a class="barLink" href="/sql/relational-databases/security">Безопасность SQL</a></li>
                                                 </ul>
                                                 <h4>Инструменты</h4>
                                                 <ul class="noBullet">
@@ -88,11 +89,11 @@ ms.lasthandoff: 04/29/2018
                                                     <li><a class="barLink" href="/sql/powershell/sql-server-powershell">PowerShell</a></li>
                                                     <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">XQuery</a></li>
                                                 </ul>
-                                                <h4>Образцы на GitHub</h4>
+                                                <h4>Примеры</h4>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/tree/master/samples">Примеры кода</a></li>
-                                                    <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0">Wide World Importers</a></li>
-                                                    <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks">AdventureWorks</a></li>
+                                                    <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/tree/master/samples">Примеры кода на GitHub</a></li>
+                                                    <li><a class="barLink" href="https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is?view=sql-server-2017">База данных Wide World Importers</a></li>
+                                                    <li><a class="barLink" href="https://docs.microsoft.com/sql/samples/sql-samples-where-are?view=sql-server-2017">База данных AdventureWorks</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -113,10 +114,6 @@ ms.lasthandoff: 04/29/2018
                                                     <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li> 
                                                     <li><a class="barLink" href="/azure/stream-analytics/">Azure Stream Analytics</a></li>
                                                     <li><a class="barLink" href="/azure/data-lake-analytics/">Azure Data Lake Analytics</a></li>
-                                                    <li><a class="barLink" href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-ads.standard-data-science-vm">Виртуальная машина обработки и анализа данных</a></li>
-                                                </ul>
-                                                <h4>Машинное обучение</h4>
-                                                <ul class="noBullet">
                                                     <li><a class="barLink" href="https://docs.microsoft.com/azure/machine-learning/">Машинное обучение Azure</a></li> 
                                                     <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">Изучение служб машины SQL Server</a></li>
                                                     <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone">Сервер машинного обучения (автономный)</a></li>

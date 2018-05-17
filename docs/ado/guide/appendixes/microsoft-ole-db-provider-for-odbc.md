@@ -1,11 +1,9 @@
 ---
 title: Поставщик Microsoft OLE DB для ODBC | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a05ee69c7b22365dd6acbbaf6ff15d078279c5ee
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: HT
+ms.openlocfilehash: 612ca78e6af181aaf3e2d3b1eb16ae5fea7eec3c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Поставщик Microsoft OLE DB для ODBC Обзор
 Программисту ADO или служб удаленных рабочих СТОЛОВ идеальном мире бы одно данных каждый источник предоставляет интерфейс OLE DB, чтобы вызвать ADO непосредственно в источник данных. Несмотря на то, что все чаще других поставщиков базы данных реализует интерфейсы OLE DB, некоторые источники данных не еще доступны таким образом. Однако большинство систем DBMS в настоящее время доступны через ODBC.

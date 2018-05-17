@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
@@ -19,12 +18,11 @@ caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 465d8d500030e49b7b3e462d6da3be256d82ca3a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0498eda438389648df868c34da088500a0e3710c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Занятие 2. Соединение с другого компьютера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +62,7 @@ ms.lasthandoff: 04/16/2018
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  В **диспетчере конфигурации SQL Server**разверните раздел **Сетевая конфигурация SQL Server**и щелкните элемент **Протоколы для** *<InstanceName>*.  
+2.  В **диспетчер конфигурации SQL Server**разверните раздел **Сетевая конфигурация SQL Server**и щелкните элемент **Протоколы для** *<InstanceName>*.  
   
     Экземпляр по умолчанию (неименованный экземпляр) указан в списке под именем **MSSQLSERVER**. Если был установлен именованный экземпляр, то в списке будет приведено заданное ему имя. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] устанавливается как **SQLEXPRESS**, если это имя не было изменено при установке.  
   

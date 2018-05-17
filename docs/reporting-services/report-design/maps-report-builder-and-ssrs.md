@@ -1,16 +1,15 @@
 ---
-title: "Карты (построитель отчетов и службы SSRS) | Документы Майкрософт"
-ms.custom: 
+title: Карты (построитель отчетов и службы SSRS) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10508"
 - MICROSOFT.REPORTDESIGNER.MAPBINDINGFIELDPAIR.FIELDNAME
@@ -19,16 +18,15 @@ f1_keywords:
 - "10500"
 - sql13.rtp.rptdesigner.maptitleproperties.general.f1
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1ac5c7b4af5efb160b311e7c13cd6dda0cb327f2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0e26ea4a4fc338cdb86e881d545436d00083c015
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Карты (построитель отчетов и службы SSRS)
   Для визуализации бизнес-данных в географическом контексте можно добавить в отчет с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] карту. Выбранный тип карты будет зависеть от того, какую информацию следует взять из отчета. Можно добавить карту, которая отображает только местоположения, или пузырьковую карту, которая изменяет размер пузырьков в зависимости от количества домов в области, или карту с отметками, которая изменяет стиль маркера в зависимости от наиболее доходного продукта в каждом магазине, или линейную карту, которая отображает маршруты между магазинами.  
@@ -81,7 +79,7 @@ ms.lasthandoff: 01/09/2018
 -   **Отчеты галереи карт.** Пространственные данные внедряются в отчеты, находящиеся в коллекции карт. По умолчанию коллекция карт устанавливается в папку *\<диск>*:\Program Files\Microsoft SQL Server\Report Builder\MapGallery.  
   
     > [!NOTE]  
-    >  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют данные из файлов фигур TIGER/Line, поставляемых с разрешения Бюро переписи населения США ([http://www.census.gov/](http://www.census.gov/)). Файлы фигур TIGER/Line содержат выборочную географическую и картографическую информацию из базы данных Census MAF/TIGER. Файлы фигур TIGER/Line бесплатно распространяются Бюро переписи населения США. Дополнительные сведения о шейп-файлах TIGER/Line можно получить на странице [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Информация о границах в шейп-файлах TIGER/Line может использоваться только для сбора и табулирования статистических данных. Их описание и использование в статистических целях не может повлечь изменения юридических полномочий или прав собственности. Они не являются законными описаниями земель. Census TIGER и TIGER/Line являются охраняемыми товарными знаками Бюро переписи населения США.  
+    >  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют данные из файлов фигур TIGER/Line, поставляемых с разрешения Бюро переписи населения США ([http://www.census.gov/](http://www.census.gov/)). Файлы фигур TIGER/Line содержат выборочную географическую и картографическую информацию из базы данных Census MAF/TIGER. Файлы фигур TIGER/Line бесплатно распространяются Бюро переписи населения США. Дополнительные сведения о файлах фигуры TIGER/Line см. на странице [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Информация о границах в шейп-файлах TIGER/Line может использоваться только для сбора и табулирования статистических данных. Их описание и использование в статистических целях не может повлечь изменения юридических полномочий или прав собственности. Они не являются законными описаниями земель. Census TIGER и TIGER/Line являются охраняемыми товарными знаками Бюро переписи населения США.  
   
 -   **Шейп-файлы ESRI.** Шейп-файлы ESRI содержат данные, соответствующие формату хранения пространственных данных Института исследования окружающей среды. (Environmental Systems Research Institute, ESRI). Шейп-файлы ESRI представляют собой набор файлов. Данные в SHP-файле указывают на географические или геометрические фигуры. Данные в DBF-файле содержат в себе атрибуты фигур. Чтобы просмотреть карту в режиме конструктора или выполнить ее на сервере отчетов, оба файла должны находиться в одной и той же папке. При добавлении пространственных данных из локального SHP-файла пространственные данные внедряются в отчет. Чтобы пространственные данные извлекались динамически во время выполнения, передайте шейп-файлы ESRI на сервер отчетов и укажите их в качестве источника пространственных данных. Дополнительные сведения см. в разделе [Поиск шейп-файлов ESRI для карты](http://go.microsoft.com/fwlink/?linkid=178814).  
   

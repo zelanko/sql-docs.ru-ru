@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c7d3f93304f08cbbf316e092b62ed7c4b62e199d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c275770e6bbf7579d3d9f02a21937d22a2a66dfa
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -313,7 +313,7 @@ WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`,
 
 Если параметр SERVICE_OBJECTIVE не указан, база данных-получатель создается на том же уровне службы, что и база данных-источник. Если параметр SERVICE_OBJECTIVE указан, база данных-получатель создается на указанном уровне. Этот параметр поддерживает создание геореплицированных объектов-получателей с менее дорогими уровнями обслуживания. Указанный параметр SERVICE_OBJECTIVE должен находиться в том же выпуске, что и источник. Например, если используется выпуск Premium, параметр S0 указать невозможно.  
   
-ELASTIC_POOL (name = \<elastic_pool_name)  
+ELASTIC_POOL (name = \<имя_эластичного_пула>)  
 
 Если параметр ELASTIC_POOL не указан, база данных-получатель не создается в эластичном пуле. Если параметр ELASTIC_POOL указан, база данных-получатель создается в указанном пуле.  
   

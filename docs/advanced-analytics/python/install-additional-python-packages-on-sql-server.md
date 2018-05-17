@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 77cc91c4d0a9fbe339e92705a71a3a8642de5563
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fa1ed2612fb88653a7259af0675b496fac4a6723
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Установить новые пакеты Python на сервере SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -123,13 +123,13 @@ import cntk as cntk
 cntk._version_
 ```
 
-##  <a name="how-to-view-installed-packages-using-conda"></a>Просмотр установленных пакетов с помощью conda
+## <a name="list-installed-packages-using-conda"></a>Список установленных пакетов с помощью conda
 
 Можно различными способами, которые можно получить список установленных пакетов. Например, можно просмотреть установленные пакеты в **среды Python** windows из Visual Studio.
 
-При использовании в командной строке Python, можно использовать **conda** диспетчер пакетов, которые входят в среду Anaconda Python, добавить программа установки SQL Server.
+При использовании в командной строке Python, можно использовать либо **Pip** или **conda** диспетчер пакетов, входящий в состав среды Anaconda Python, добавить программа установки SQL Server.
 
-Предположим, что вы добавили папку «скрипты» для переменной среды PATH, выполните следующую команду из командной строки администратора для перечисления пакетов в среде Python.
+Предположим, что вы добавили папку «скрипты» для переменной среды PATH, выполните следующую команду из командной строки администратора для перечисления пакетов в среде Python. См. в противном случае [данные пакетов R, получения и Python](../r/determine-which-packages-are-installed-on-sql-server.md#pip-conda) для указателей на запуск средств Python в SQL Server.
 
 ```python
 conda list

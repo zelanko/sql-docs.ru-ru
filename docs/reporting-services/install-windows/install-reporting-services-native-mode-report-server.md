@@ -1,31 +1,29 @@
 ---
-title: "Установка сервера отчетов служб Reporting Services 2016 в собственном режиме | Документы Майкрософт"
-ms.custom: 
+title: Установка сервера отчетов служб Reporting Services 2016 в собственном режиме | Документы Майкрософт
+ms.custom: ''
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - default configuration [Reporting Services]
 - report servers [Reporting Services], default configurations
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-caps.latest.revision: "68"
+caps.latest.revision: 68
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 23104fa56aeb157b19d43b332c2d570613ed5a62
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6f5209c2e5017e208110886521f74cfa37ab388e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Установка сервера отчетов служб Reporting Services 2016 в собственном режиме
 
@@ -79,7 +77,7 @@ ms.lasthandoff: 01/09/2018
   
 -   Учетная запись пользователя, использованная для выполнения программы установки, должна быть членом локальной группы администраторов. Кроме того, она должна обладать разрешениями для доступа и создания баз данных в экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , на котором размещены базы данных сервера отчетов.  
   
--   Программа установки должна иметь возможность использовать значения по умолчанию, чтобы резервировать URL-адреса, которые обеспечивают доступ к серверу и [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Этими значениями являются порт 80, строгий подстановочный знак и имена виртуальных каталогов в формате **ReportServer_\<***имя_экземпляра***>** и **Reports_\<***имя_экземпляра***>**.  
+-   Программа установки должна иметь возможность использовать значения по умолчанию, чтобы резервировать URL-адреса, которые обеспечивают доступ к серверу и [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Этими значениями являются порт 80, строгий подстановочный знак и имена виртуальных каталогов в формате **ReportServer_\<***имя_экземпляра***>** и **Reports_\<***имя_экземпляра***>**.  
   
 -   Программа установки должна иметь возможность создания баз данных сервера отчетов с использованием значений по умолчанию. Это значения **ReportServer** и **ReportServerTempDB**. Если от предыдущей установки остались базы данных, то программа установки будет заблокирована, поскольку она не сможет настроить сервер отчетов в конфигурации по умолчанию для собственного режима. Чтобы снять блокировку программы установки, следует переименовать, переместить или удалить базы данных.  
   
