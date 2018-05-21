@@ -21,11 +21,11 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: e812b2dcdc7293a51f1c014681d04674c9995d37
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 961c9f7e093f61db909360f0dd7f8ac30f2d13e1
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Учебник. Создание скриптов для объектов в среде SQL Server Management Studio
 В этом учебнике вы научитесь создавать скрипты Transact-SQL (T-SQL) для различных объектов, доступных в SQL Server Management Studio (SSMS). В нем приводятся примеры создания скриптов для следующих объектов:
@@ -43,11 +43,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="prerequisites"></a>предварительные требования
 Для работы с этим учебником требуется среда SQL Server Management Studio, доступ к серверу SQL Server и база данных AdventureWorks.
 
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Скачайте [образцы баз данных AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases).
 
-Инструкции по восстановлению баз данных в SSMS см. в статье [Восстановление базы данных](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+Инструкции по восстановлению баз данных в SSMS см. в статье [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
 ## <a name="script-queries-from-the-gui"></a>Создание скриптов для запросов в графическом пользовательском интерфейсе
@@ -134,7 +134,7 @@ ms.lasthandoff: 05/03/2018
    ![Объекты скриптов](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > Вы можете создать скрипт данных для базы данных при выборе варианта *Схема и данные* для параметра **Типы данных для создания скриптов**. Однако это не подходит для крупных баз данных. Может потребоваться больше памяти, чем SSMS может выделить. Это ограничение не влияет на небольшие базы данных. Если вы хотите переместить данные в более крупную базу данных, используйте [мастер импорта и экспорта](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+   > Вы можете создать скрипт данных для базы данных при выборе варианта *Схема и данные* для параметра **Типы данных для создания скриптов**. Однако это не подходит для крупных баз данных. Может потребоваться больше памяти, чем SSMS может выделить. Это ограничение не влияет на небольшие базы данных. Если вы хотите переместить данные в более крупную базу данных, используйте [мастер импорта и экспорта](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
 
 1. Нажмите кнопку **ОК**, а затем кнопку **Далее**.
@@ -173,7 +173,7 @@ ms.lasthandoff: 05/03/2018
     ![Создание скриптов для хранимых процедур](media/scripting-ssms/scriptstoredprocedure.PNG)
 
 ## <a name="script-extended-events"></a>Создание скриптов для расширенных событий
-В этом разделе описывается, как создать скрипты для [расширенных событий](https://docs.microsoft.com/en-us/sql/relational-databases/extended-events/extended-events).
+В этом разделе описывается, как создать скрипты для [расширенных событий](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
 
 1. Подключитесь к серверу SQL Server.
 2. Разверните узел **Управление**.
