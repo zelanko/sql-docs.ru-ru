@@ -1,27 +1,24 @@
 ---
 title: Поддержка Azure Active Directory в SQL Server Data Tools (SSDT) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/05/2018
-ms.prod: sql
+ms.date: 04/09/2018
+ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssdt
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssdt
+ms.technology: ssdt
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1e8f19c1dcc629ec6e97aa02cd23be1c101ad596
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 62ed13f6bb3eb5859976b5a5d970f3297c42304e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Поддержка Azure Active Directory в SQL Server Data Tools (SSDT)
 
@@ -39,13 +36,13 @@ SQL Server Data Tools предоставляет несколько методо
 
 Интегрированная проверка подлинности Active Directory — это механизм подключения к базе данных Azure SQL с помощью удостоверений в Azure Active Directory. Используйте этот метод для подключения, если вы вошли в Windows с учетными данными Azure Active Directory из федеративного домена. Дополнительные сведения см. в статье [Подключение к базе данных SQL с использованием проверки подлинности Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
 
-## <a name="active-directory-interactive-authentication-preview"></a>Интерактивная проверка подлинности Active Directory (предварительная версия)
+## <a name="active-directory-interactive-authentication"></a>Интерактивная проверка подлинности Active Directory
 
 В SSDT предусмотрен новый метод проверки подлинности для подключения к базе данных Azure SQL — **интерактивная проверка подлинности Active Directory**.
 
 
 > [!NOTE]
-> Этот метод проверки подлинности доступен при подключении к SSDT в [Visual Studio 2017 (предварительная версия)](https://www.visualstudio.com/vs/preview/). Для него нужно установить [предварительную версию .NET 4.7.2 (KB4038188)](https://go.microsoft.com/fwlink/?linkid=867317) на компьютере, где запущены инструменты SSDT. Если предварительная версия .NET 4.7.2 (KB4038188) не установлена, параметр интерактивной проверки подлинности Active Directory не будет доступен.
+> Этот метод проверки подлинности доступен при подключении к SSDT в [Visual Studio 2017 версии 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes). Для него нужно [скачать и установить .NET Framework 4.7.2](https://www.microsoft.com/net/download/all) на компьютере, где работают инструменты SSDT. Если платформа [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) не установлена, интерактивная проверка подлинности Active Directory не будет доступна.
 
 
 Этот метод поддерживает интерактивную проверку подлинности, что позволяет применять многофакторную идентификацию (MFA) Azure Active Directory (AD) для проверки подлинности в базе данных Azure SQL. Он поддерживается для пользователей Azure AD из собственного и федеративного домена, гостевых пользователей из других учетных записей (включая пользователей B2B, а также пользователей с учетными записями Майкрософт и сторонними учетными записями, например @outlook.com, @hotmail.com, @live.com и @gmail.com). Если выбран этот метод, нужно указать **имя пользователя**. Поле пароля поле будет отключено. 

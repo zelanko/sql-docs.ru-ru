@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
 ms.component: relational-databases
-ms.date: 02/03/2018
-ms.openlocfilehash: fc37abbb88aa597a6173fa5579fa320e0024581f
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.date: 04/28/2018
+ms.openlocfilehash: a885befe2411a76dc8c68bf2a7b543a838a52877
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>Новые и недавно обновленные статьи — документы по реляционным базам данных
 
@@ -28,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 
 
 
-- *Диапазон дат обновлений:* &nbsp; **03.12.2017**&nbsp;–&nbsp;**03.02.2018**
+- *Даты обновлений:* &nbsp; **02.03.2018**&nbsp;–&nbsp;**28.04.2018**
 - *Предметная область:* &nbsp; **Реляционные базы данных**.
 
 
@@ -41,8 +43,13 @@ ms.lasthandoff: 04/26/2018
 Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
 
-1. [Хранение документов JSON в SQL Server или базе данных SQL](json/store-json-documents-in-sql-tables.md)
-2. [Оценка уязвимостей SQL](security/sql-vulnerability-assessment.md)
+1. [Соединения (SQL Server)](performance/joins.md)
+2. [Вложенные запросы (SQL Server)](performance/subqueries.md)
+3. [Настройка базы данных распространителя репликации в группе доступности AlwaysOn](replication/configure-distribution-availability-group.md)
+4. [Обнаружение и классификация данных SQL](security/sql-data-discovery-and-classification.md)
+5. [Руководство по блокировке и управлению версиями строк транзакций](sql-server-transaction-locking-and-row-versioning-guide.md)
+6. [sys.dm_os_job_object (база данных SQL Azure)](system-dynamic-management-views/sys-dm-os-job-object-transact-sql.md)
+7. [Системные хранимые процедуры Filestream и FileTable (Transact-SQL)](system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
 
 
 
@@ -68,15 +75,16 @@ ms.lasthandoff: 04/26/2018
 
 В этом сокращенном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
 
-1. [Инициализация файлов базы данных](#TitleNum_1)
-2. [База данных tempdb](#TitleNum_2)
-3. [Данные JSON в SQL Server](#TitleNum_3)
-4. [Занятие 1. Подключение к ядру СУБД](#TitleNum_4)
-5. [Управление размером файла журнала транзакций](#TitleNum_5)
-6. [bcp_bind](#TitleNum_6)
-7. [Руководство по проектированию индексов SQL Server](#TitleNum_7)
-8. [sp_execute_external_script (Transact-SQL)](#TitleNum_8)
-9. [Создание первичных ключей](#TitleNum_9)
+1. [Использование файла форматирования для пропуска столбца таблицы (SQL Server)](#TitleNum_1)
+2. [Данные JSON в SQL Server](#TitleNum_2)
+3. [Руководство по архитектуре обработки запросов](#TitleNum_3)
+4. [Учебник. Подготовка SQL Server для репликации — издатель, распространитель, подписчик](#TitleNum_4)
+5. [Учебник. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций)](#TitleNum_5)
+6. [Учебник. Настройка репликации между сервером и мобильными клиентами (репликация слиянием)](#TitleNum_6)
+7. [Запросы с полнотекстовым поиском](#TitleNum_7)
+8. [Прозрачное шифрование с поддержкой использования собственных ключей для хранилища и базы данных SQL Azure](#TitleNum_8)
+9. [Включение прозрачного шифрования данных с использованием собственного ключа из Azure Key Vault с помощью PowerShell и CLI](#TitleNum_9)
+10. [Отслеживание измененных данных (SQL Server)](#TitleNum_10)
 
 
 
@@ -87,32 +95,43 @@ ms.lasthandoff: 04/26/2018
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-database-file-initializationdatabasesdatabase-instant-file-initializationmd"></a>1. &nbsp; [Инициализация файлов базы данных](databases/database-instant-file-initialization.md)
+### <a name="1-nbsp-use-a-format-file-to-skip-a-table-column-sql-serverimport-exportuse-a-format-file-to-skip-a-table-column-sql-servermd"></a>1. &nbsp; [Использование файла форматирования для пропуска столбца таблицы (SQL Server)](import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)
 
-*Обновление: 23.01.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Далее](#TitleNum_2))
+*Обновлено: 13.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Далее](#TitleNum_2))
 
-<!-- Source markdown line 81.  ms.author= "sstein".  -->
+<!-- Source markdown line 221.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 c5f2aa53a8b43d4c43e0602cf945cb7c7028a27d 04c261c6588af1f53cda2fce3e9a86167c50b686  (PR=4702  ,  Filename=database-instant-file-initialization.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=3206a31870f8febab7d1718fa59fe0590d4d45db) -->
+<!-- git diff --ignore-all-space --unified=0 167916d79c5de1e7f13990cb7acc41ceb541b9a7 cb92eb201292294e3397879c98f353fba45f1c1c  (PR=0  ,  Filename=use-a-format-file-to-skip-a-table-column-sql-server.md  ,  Dirpath=docs\relational-databases\import-export\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
+
+**Применение инструкции OPENROWSET(BULK...)**
+
+
+Чтобы использовать XML-файл форматирования для пропуска столбца таблицы с помощью `OPENROWSET(BULK...)`, предоставьте в явном виде следующий список столбцов в списке выбора и в целевой таблице, как показано ниже:
 
 ```
-Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...)
 ```
 
-**Применимо к:** SQL Server (начиная с SQL Server 2012 с пакетом обновления 4 (SP4), SQL Server 2014 с пакетом обновления 2 (SP2) и с SQL Server 2016 по SQL Server 2017)
+В следующем примере используется поставщик массового набора строк `OPENROWSET` и файл форматирования `myTestSkipCol2.xml` . В примере выполняется массовый импорт файла данных `myTestSkipCol2.dat` в таблицу `myTestSkipCol` . Инструкция, в соответствии с требованиями, содержит явный список столбцов в списке выбора, а также в целевой таблице.
 
-**Вопросы безопасности**
+Выполните в SSMS следующий код. Обновите пути файловой системы к файлам образцов на вашем компьютере.
 
-При использовании мгновенной инициализации файлов (IFI), так как удаленное содержимое диска перезаписывается только по мере записи в файлы новых данных, пока в помеченную удаленной область файла данных не будут записаны другие данные, неавторизованный субъект может получить доступ к удаленному содержимому. Когда файл базы данных подключен к экземпляру SQL Server, риск раскрытия информации уменьшается благодаря списку управления доступом на уровне пользователей (DACL) в файле. DACL разрешает доступ к файлу только учетной записи службы SQL Server и локальному администратору. Однако при отключении файла доступ к нему может получить пользователь или служба, которым не предоставлено разрешение SE\_MANAGE\_VOLUME_NAME. Аналогичная проблема существует при резервном копировании базы данных. Если файл резервной копии не защищен с помощью соответствующего DACL, удаленное содержимое может стать доступным неавторизованному пользователю или службе.
-
-Следует учитывать и то, что при увеличении файла с помощью IFI администратор SQL Server потенциально может получить доступ к содержимому необработанных страниц и просматривать ранее удаленное содержимое.
-
-Если файлы базы данных размещаются в сети хранения данных, она может всегда представлять новые страницы в виде предварительно инициализированных, что может создавать излишнюю нагрузку, так как операционной системе требуется инициализировать эти страницы повторно.
+```
+USE WideWorldImporters;
+GO
+INSERT INTO myTestSkipCol
+  (Col1,Col3)
+    SELECT Col1,Col3
+      FROM  OPENROWSET(BULK  'C:\myTestSkipCol2.Dat',
+      FORMATFILE='C:\myTestSkipCol2.Xml'
+       ) as t1 ;
+GO
+```
 
 
 
@@ -124,46 +143,53 @@ Database Instant File Initialization: disabled. For security and performance con
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-tempdb-databasedatabasestempdb-databasemd"></a>2. &nbsp; [База данных tempdb](databases/tempdb-database.md)
+### <a name="2-nbsp-json-data-in-sql-serverjsonjson-data-sql-servermd"></a>2. &nbsp; [Данные JSON в SQL Server](json/json-data-sql-server.md)
 
-*Обновлено: 17.01.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_1) | [Далее](#TitleNum_3))
+*Обновлено: 13.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_1) | [Далее](#TitleNum_3))
 
-<!-- Source markdown line 100.  ms.author= "sstein".  -->
+<!-- Source markdown line 145.  ms.author= "jovanpop".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 337555ea28f4c3fdd6b78f1bfb4d62607a6bf92d 3257c92d6e2a88968fc44e5f6262c02cd0624635  (PR=0  ,  Filename=tempdb-database.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
+<!-- git diff --ignore-all-space --unified=0 19e276637a463b412f2c29a84f9fb7d0b0f5fcc5 e2f2e8b4732779b3f24561cc0c4da3a958f4edbb  (PR=0  ,  Filename=json-data-sql-server.md  ,  Dirpath=docs\relational-databases\json\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
- Описание этих баз данных см. в статье [Параметры ALTER DATABASE SET (Transact-SQL)](databases/../../t-sql/statements/alter-database-transact-sql-set-options.md).
+Документы JSON могут содержать вложенные элементы и иерархические данные, которые невозможно напрямую сопоставить со стандартными реляционными столбцами. В этом случае можно выполнить сведение иерархии JSON посредством соединения родительской сущности с вложенными массивами.
 
-**База данных tempdb в базе данных SQL**
+В следующем примере второй объект в массиве содержит вложенный массив, представляющий навыки сотрудника. Каждый вложенный объект может быть проанализирован с помощью дополнительных вызовов функции `OPENJSON`:
 
+```
+DECLARE @json NVARCHAR(MAX)
+SET @json =
+N'[
+       { "id" : 2,"info": { "name": "John", "surname": "Smith" }, "age": 25 },
+       { "id" : 5,"info": { "name": "Jane", "surname": "Smith", "skills": ["SQL", "C#", "Azure"] }, "dob": "2005-11-04T12:00:00" }
+ ]'
 
-|SLO|Максимальный размер файла данных Tempdb (МБ)|Число файлов данных tempdb|Максимальный размер данных tempdb (МБ)|
-|---|---:|---:|---:|
-|Basic|14,225|1|14,225|
-|S0|14,225|1|14,225|
-|S1|14,225|1|14,225|
-|S2|14,225| 1|14,225|
-|S3|32,768|1|32,768|
-|S4|32,768|2|65 536|
-|S6|32,768|3|98,304|
-|S7|32,768|6|196,608|
-|S9|32,768|12|393,216|
-|S12|32,768|12|393,216|
-|P1|32,768|12|393,216|
-|P2|32,768|12|393,216|
-|P4|32,768|12|393,216|
-|P6|32,768|12|393,216|
-|P11|32,768|12|393,216|
-|P15|32,768|12|393,216|
-|Эластичные пулы уровня "Премиум" (все конфигурации DTU)|14,225|12|170,700|
-|Эластичные пулы уровня "Стандартный" (все конфигурации DTU)|14,225|12|170,700|
-|Эластичные пулы уровня "Базовый" (все конфигурации DTU)|14,225|12|170,700|
-||||
+SELECT *
+FROM OPENJSON(@json)
+  WITH (id int 'strict $.id',
+        firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',
+        age int, dateOfBirth datetime2 '$.dob',
+    skills nvarchar(max) '$.skills' as json)
+    outer apply openjson( a.skills )
+                     with ( skill nvarchar(8) '$' ) as b
+```
+Массив **skills** возвращается в первой функции `OPENJSON` в качестве исходного фрагмента текста JSON и передается в другую функцию `OPENJSON` с использованием оператора `APPLY`. Вторая функция `OPENJSON` анализирует массив JSON и возвращает строковые значения в виде единого набора строк столбцов, который будет соединен с результатами первой функции `OPENJSON`.
+Результат этого запроса показан в следующей таблице:
+
+**Результаты**
+
+|идентификатор|firstName|lastName|age|dateOfBirth|skill|
+|--------|---------------|--------------|---------|-----------------|----------|
+|2|Джон|Смит|25|||
+|5|Джейн|Смит||2005-11-04T12:00:00|SQL|
+|5|Джейн|Смит||2005-11-04T12:00:00|C#|
+|5|Джейн|Смит||2005-11-04T12:00:00|Azure|
+
+Функция `OUTER APPLY OPENJSON` соединит сущности первого уровня с вложенным массивом и вернет преобразованный в плоскую структуру набор результатов. Из-за выполнения операции JOIN вторая строка будет повторяться для каждого навыка.
 
 
 
@@ -176,40 +202,54 @@ Database Instant File Initialization: disabled. For security and performance con
 
 <a name="TitleNum_3"/>
 
-### <a name="3-nbsp-json-data-in-sql-serverjsonjson-data-sql-servermd"></a>3. &nbsp; [Данные JSON в SQL Server](json/json-data-sql-server.md)
+### <a name="3-nbsp-query-processing-architecture-guidequery-processing-architecture-guidemd"></a>3. &nbsp; [Руководство по архитектуре обработки запросов](query-processing-architecture-guide.md)
 
-*Обновлено: 01.02.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_2) | [Далее](#TitleNum_4))
+*Обновлено: 13.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_2) | [Далее](#TitleNum_4))
 
-<!-- Source markdown line 233.  ms.author= "douglasl".  -->
+<!-- Source markdown line 34.  ms.author= "jroth".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 62dd9c68d8cb72d6bf51b941a0731224514f0a7f 19e276637a463b412f2c29a84f9fb7d0b0f5fcc5  (PR=4783  ,  Filename=json-data-sql-server.md  ,  Dirpath=docs\relational-databases\json\  ,  MergeCommitSha40=73f18ae24a9a48234bf997ee9a2ef441bc4918b9) -->
+<!-- git diff --ignore-all-space --unified=0 96d91b39acdb2f32aaff323e374e92d6f229d241 2c1d2f8585632ada174388399782dc3ed2721dba  (PR=0  ,  Filename=query-processing-architecture-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
--   [Загрузка данных GeoJSON в SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/loading-geojson-data-into-sql-server/)
+**Приоритет логических операторов**
 
-**Анализ данных JSON с помощью запросов SQL**
 
-Если вам нужно отфильтровать или вычислить данные JSON для целей отчетности, JSON можно преобразовать в реляционный формат с помощью **OPENJSON**. После этого подготовьте отчеты, используя стандартный язык Transact-SQL и встроенные функции.
+При использовании в инструкции нескольких логических операторов первым вычисляется `NOT`, затем `AND` и, наконец, `OR`. Арифметические и побитовые операторы выполняются до логических. Дополнительные сведения см. в разделе [Приоритет операторов].
+
+В приведенном ниже примере условие цвета относится к модели продукта 21, но не к модели продукта 20, так как оператора `AND` имеет приоритет над оператором `OR`.
 
 ```
-SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date
-FROM   SalesOrderRecord AS Tab
-          CROSS APPLY
-     OPENJSON (Tab.json, N'$.Orders.OrdersArray')
-           WITH (
-              Number   varchar(200) N'$.Order.Number',
-              Date     datetime     N'$.Order.Date',
-              Customer varchar(200) N'$.AccountNumber',
-              Quantity int          N'$.Item.Quantity'
-           )
-  AS SalesOrderJsonData
-WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'
-ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
 ```
+
+Можно изменить смысл запроса, добавляя скобки, чтобы добиться вычисления `OR` сначала. В приведенном ниже запросе будут найдены модели 20 и 21 красного цвета.
+
+```
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+С помощью скобок, даже если они не требуются, можно улучшить читаемость запросов и уменьшить вероятность совершения незаметной ошибки из-за приоритета операторов. Использование скобок практически не влияет на производительность. Следующий пример более понятен, чем исходный, хотя синтаксически они равноправны.
+
+```
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
+
 
 
 
@@ -221,35 +261,37 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_4"/>
 
-### <a name="4-nbsp-lesson-1-connecting-to-the-database-enginelesson-1-connecting-to-the-database-enginemd"></a>4. &nbsp; [Урок 1. Соединение с ядром СУБД](lesson-1-connecting-to-the-database-engine.md)
+### <a name="4-nbsp-tutorial-prepare-sql-server-for-replication---publisher-distributor-subscriberreplicationtutorial-preparing-the-server-for-replicationmd"></a>4. &nbsp; [Учебник. Подготовка SQL Server к репликации — издатель, распространитель, подписчик](replication/tutorial-preparing-the-server-for-replication.md)
 
-*Обновлено: 13.12.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_3) | [Далее](#TitleNum_5))
+*Обновлено: 13.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_3) | [Далее](#TitleNum_5))
 
-<!-- Source markdown line 79.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 56.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 3c070935895450fd2ea054e2be9e1c48f7dc2b6c 0c386e3d47fb7f8f1e63b9301f0cafec2bc88ab0  (PR=4282  ,  Filename=lesson-1-connecting-to-the-database-engine.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=6e016a4ffd28b09456008f40ff88aef3d911c7ba) -->
+<!-- git diff --ignore-all-space --unified=0 6e5caedacff193ce79bdd98708ae1b9dc91f0a8f 9f7af4d3f8b1cffd048db2a5b29fc9e6013f5ed2  (PR=0  ,  Filename=tutorial-preparing-the-server-for-replication.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-2.  Выберите **Компонент Database Engine**.
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Скачайте [образцы баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Инструкции по восстановлению базы данных из копии в среде SSMS см. в разделе [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).
 
-    ![object-explorer](../relational-databases/media/object-explorer.png)
+>[!NOTE]
+> - Репликация не поддерживается на серверах SQL Server, которые отличаются друг от друга более чем на две версии. Дополнительные сведения см. в разделе [Поддерживаемые версии SQL в топологии репликации](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
+> - В среде *{укажите_включенный_контент}* необходимо подключиться к издателю и подписчику по имени для входа, относящегося к предопределенной роли сервера **sysadmin**. Дополнительные сведения о роли sysadmin см. в разделе [Роли уровня сервера](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).
 
-3.  В поле **Имя сервера** введите имя экземпляра ядра СУБД. В экземпляре SQL Server по умолчанию имя сервера совпадает с именем компьютера. Для именованного экземпляра SQL Server имя сервера имеет вид *<имя_компьютера>***\\***<имя_экземпляра>*, например **ACCTG_SRVR\SQLEXPRESS**. На снимке экрана ниже показано подключение к экземпляру SQL Server по умолчанию (неименованному) на компьютере с именем PracticeComputer. В Windows вошел пользователь Mary из домена Contoso. При использовании проверки подлинности Windows нельзя изменить имя пользователя.
 
-    ![connect-to-server](../relational-databases/media/connect-to-server.png)
+**Предполагаемое время для выполнения заданий данного учебника: 30 минут**
 
-4.  Нажмите кнопку **Соединить**.
+**Создание учетных записей Windows для репликации**
 
-> [!NOTE]
-> В этом учебнике предполагается, что вы не знакомы с SQL Server и у вас нет проблем с подключением. Этого достаточно в большинстве случаев, и это позволяет упростить учебник. Подробные инструкции по устранению неполадок см. в разделе [Устранение неполадок при соединении с компонентом SQL Server Database Engine](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
+В этом разделе будут созданы учетные записи Windows для запуска агентов репликации. На локальном сервере будут созданы отдельные учетные записи Windows для следующих агентов:
 
-**<a name="additional"></a>Разрешение дополнительных подключений**
-
-Теперь, после подключения к SQL Server в качестве администратора, одной из первых задач будет обеспечить возможность подключения других пользователей. Это делается посредством создания имени входа и предоставления ему разрешения на доступ к базе данных в качестве пользователя. Имена входа могут быть или именами входа для проверки подлинности Windows, использующей учетные данные Windows, или именами входа для проверки подлинности SQL Server, при которой учетные данные хранятся в SQL Server и не зависят от учетных данных Windows. По возможности используйте проверку подлинности Windows.
+|Агент|Местоположение|Имя учетной записи|
+|---------|------------|----------------|
+|агент моментальных снимков|Издатель|<*имя_компьютера*>\repl_snapshot|
 
 
 
@@ -261,28 +303,41 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_5"/>
 
-### <a name="5-nbsp-manage-the-size-of-the-transaction-log-filelogsmanage-the-size-of-the-transaction-log-filemd"></a>5. &nbsp; [Управление размером файла журнала транзакций](logs/manage-the-size-of-the-transaction-log-file.md)
+### <a name="5-nbsp-tutorial-configure-replication-between-two-fully-connected-servers-transactionalreplicationtutorial-replicating-data-between-continuously-connected-serversmd"></a>5. &nbsp; [Учебник. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций)](replication/tutorial-replicating-data-between-continuously-connected-servers.md)
 
-*Обновлено: 17.01.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_4) | [Далее](#TitleNum_6))
+*Обновлено: 13.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_4) | [Далее](#TitleNum_6))
 
-<!-- Source markdown line 105.  ms.author= "jhubbard".  -->
+<!-- Source markdown line 162.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 5847b31cf8f6003a380f0c8aaa289efdc55be678 84e45320d81db218cde17fbf8b9668a9ac3805a7  (PR=0  ,  Filename=manage-the-size-of-the-transaction-log-file.md  ,  Dirpath=docs\relational-databases\logs\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
+<!-- git diff --ignore-all-space --unified=0 0d74f984d0ffc01cce0376837e6d94df3c5654d7 4ecf4d724286130927dd43687d6845059af6f9b7  (PR=0  ,  Filename=tutorial-replicating-data-between-continuously-connected-servers.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
--   При небольшом шаге приращения может формироваться слишком много [виртуальных файлов журнала](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) малого размера и снижаться производительность. Чтобы определить оптимальное распределение виртуальных файлов журнала для текущего размера журнала транзакций всех баз данных в определенном экземпляре, а также требуемые приращения для достижения нужного размера, см. следующий [скрипт](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+**Создание подписки на публикацию транзакций**
 
--   При большом шаге приращения может формироваться слишком мало крупных [виртуальных файлов журнала](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch), что также повлияет на производительность. Чтобы определить оптимальное распределение виртуальных файлов журнала для текущего размера журнала транзакций всех баз данных в определенном экземпляре, а также требуемые приращения для достижения нужного размера, см. следующий [скрипт](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+В этом разделе описывается добавление подписчика к ранее созданной публикации. В этом учебнике используется удаленный подписчик (NODE2\SQL2016), однако при необходимости подписку для издателя можно также добавить локально.
 
--   Даже если включено автоматическое увеличение, вы можете получить сообщение, что журнал транзакций заполнен, если его размер не может достаточно быстро увеличиваться под нужды вашего запроса. Дополнительные сведения об изменении шага приращения см. в разделе [Параметры инструкции ALTER DATABASE (Transact-SQL) для файлов и файловых групп](logs/../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
+**Создание подписки**
 
--   Наличие множества файлов журнала в базе данных не способствует повышению производительности, так как файлы журнала транзакций не используют [пропорциональное заполнение](logs/../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill), как файлы данных в одной файловой группе.
 
--   Вы можете настроить автоматическое сжатие файлов журналов. Но делать это **не рекомендуется**, и параметру базы данных **auto_shrink** по умолчанию задано значение FALSE. Если параметру **auto_shrink** задано значение TRUE, автоматическое сжатие уменьшает размер файла, только если в нем не использовано более 25 % объема.
+1.  Подключитесь к издателю в среде *{укажите_включенный_контент}*, а затем разверните узел сервера и папку **Репликация** .
+
+2.  В папке **Локальные публикации** щелкните правой кнопкой мыши публикацию **AdvWorksProductTrans** и выберите команду **Создать подписку**.  Откроется мастер создания подписки:
+
+    Создать подписку
+
+3.  На странице "Публикация" выберите публикацию **AdvWorksProductTrans** и нажмите кнопку **Далее**:
+
+    Выбор издателя транзакций
+
+4.  На странице "Расположение агента распространителя" установите флажок **Выполнять все агенты на распространителе** и нажмите кнопку **Далее**.  Дополнительные сведения о подписках см. в статье [Подписка на публикации](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications):
+
+    Выполнение агентов на распространителе
+
+5.  На странице "Подписчики", если имя экземпляра подписчика не отображается, выберите пункт **Добавить подписчик**, а затем выберите **Добавить подписчик SQL Server** из раскрывающегося списка. Откроется диалоговое окно **Соединение с сервером**. Введите имя экземпляра подписчика, а затем выберите **Подключиться**.
 
 
 
@@ -294,62 +349,39 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_6"/>
 
-### <a name="6-nbsp-bcpbindnative-client-odbc-extensions-bulk-copy-functionsbcp-bindmd"></a>6. &nbsp; [bcp_bind](native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)
+### <a name="6-nbsp-tutorial-configure-replication-between-a-server-and-mobile-clients-mergereplicationtutorial-replicating-data-with-mobile-clientsmd"></a>6. &nbsp; [Учебник. Настройка репликации между сервером и мобильными клиентами (репликация слиянием)](replication/tutorial-replicating-data-with-mobile-clients.md)
 
-*Обновлено: 30.01.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_5) | [Далее](#TitleNum_7))
+*Обновлено: 13.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_5) | [Далее](#TitleNum_7))
 
-<!-- Source markdown line 127.  ms.author= "genemi".  -->
+<!-- Source markdown line 93.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 d50791cef948ce8b3066438e317ab4d34d535258 e6f70559e7237cfc86dfc5746d218c08bec52af6  (PR=4762  ,  Filename=bcp-bind.md  ,  Dirpath=docs\relational-databases\native-client-odbc-extensions-bulk-copy-functions\  ,  MergeCommitSha40=60006e90d03fdb75b282bbc0dad3d40571bacacc) -->
+<!-- git diff --ignore-all-space --unified=0 0eed78dfe83c88358c030539a2b25d11ef5ec2d3 79b2a3f32c940fede94b11ad2a3ef8a00b911a39  (PR=0  ,  Filename=tutorial-replicating-data-with-mobile-clients.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
- В приведенной ниже таблице перечислены допустимые перечисляемые типы данных и соответствующие типы данных C в ODBC.
+Таблица Employee содержит столбец (OrganizationNode) с типом данных hierarchyid, который поддерживается для репликации только в SQL 2017. Если вы используете сборку ниже версии SQL 2017, в нижней части экрана появится сообщение с уведомлением о риске потери данных при использовании этого столбца для двусторонней репликации. В рамках этого учебника данное сообщение можно игнорировать. Тем не менее, если вы не используете поддерживаемую сборку в рабочей среде, этот тип данных не должен участвовать в репликации. Дополнительные сведения о репликации типа данных hierarchyid см. в разделе [Использование столбцов Hierarchyid в репликации](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables)
 
-|eDataType|Тип C|
-|-----------------------|------------|
-|SQLTEXT|char *|
-|SQLNTEXT|wchar_t *|
-|SQLCHARACTER|char *|
-|SQLBIGCHAR|char *|
-|SQLVARCHAR|char *|
-|SQLBIGVARCHAR|char *|
-|SQLNCHAR|wchar_t *|
-|SQLNVARCHAR|wchar_t *|
-|SQLBINARY|unsigned char *|
-|SQLBIGBINARY|unsigned char *|
-|SQLVARBINARY|unsigned char *|
-|SQLBIGVARBINARY|unsigned char *|
-|SQLBIT|char;|
-|SQLBITN|char;|
-|SQLINT1|char;|
-|SQLINT2|short int|
-|SQLINT4|ssNoversion|
-|SQLINT8|_int64|
-|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|
-|SQLFLT4|FLOAT|
-|SQLFLT8|FLOAT|
-|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|
-|SQLDECIMALN|SQL_NUMERIC_STRUCT|
-|SQLNUMERICN|SQL_NUMERIC_STRUCT|
-|SQLMONEY|DBMONEY|
-|SQLMONEY4|DBMONEY4|
-|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|
-|SQLTIMEN|SQL_SS_TIME2_STRUCT|
-|SQLDATEN|SQL_DATE_STRUCT|
-|SQLDATETIM4|DBDATETIM4|
-|SQLDATETIME|DBDATETIME|
-|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|
-|SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|
-|SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|
-|SQLIMAGE|unsigned char *|
-|SQLUDT|unsigned char *|
-|SQLUNIQUEID|SQLGUID|
-|SQLVARIANT|*Любой тип данных, кроме следующих:*<br />— text<br />— ntext<br />— image<br />— varchar(max)<br />— varbinary(max)<br />— nvarchar(max)<br />— xml<br />— timestamp|
-|SQLXML|*Поддерживаемые типы данных C:*<br />— char *<br />— wchar_t *<br />— unsigned char *|
+
+-  На странице "Фильтрация строк таблицы" выберите **Добавить**, а затем щелкните **Добавить фильтр**.
+
+-  В диалоговом окне **Добавить фильтр** выберите **Employee (HumanResources)** в поле **Выбрать таблицу для фильтрации**. Щелкните столбец **LoginID**, щелкните стрелку вправо, чтобы добавить столбец в предложение WHERE фильтрующего запроса, и измените предложение WHERE следующим образом:
+
+    ```
+    WHERE [LoginID] = HOST_NAME()
+    ```
+
+    A. Щелкните элемент **Строка из этой таблицы будет отправлена только одной подписке** и нажмите кнопку **ОК**:
+
+    Добавление фильтра
+
+
+
+- На странице **Фильтрация строк таблицы** выберите **Employee (Human Resources)**, нажмите **Добавить**, а затем **Добавить соединение для расширения выбранного фильтра**.
+
+    A. В диалоговом окне **Добавление соединения** выберите **Sales.SalesOrderHeader** в поле **Соединяемая таблица**. Выберите **Записать инструкцию соединения вручную** и завершите инструкцию соединения следующим образом:
 
 
 
@@ -361,36 +393,36 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_7"/>
 
-### <a name="7-nbsp-sql-server-index-design-guidesql-server-index-design-guidemd"></a>7. &nbsp; [Руководство по проектированию индексов SQL Server](sql-server-index-design-guide.md)
+### <a name="7-nbsp-query-with-full-text-searchsearchquery-with-full-text-searchmd"></a>7. &nbsp; [Запрос с полнотекстовым поиском](search/query-with-full-text-search.md)
 
-*Обновлено: 02.01.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_6) | [Далее](#TitleNum_8))
+*Обновлено: 13.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_6) | [Далее](#TitleNum_8))
 
-<!-- Source markdown line 700.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 247.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 bd09c9e66cd3cf5f3ebebe7ffa6e937978353169 8e5cbbf0063971676a8bafefba75aa5c7c28be61  (PR=0  ,  Filename=sql-server-index-design-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=74daee358fef75a25d75c69d971d08536c5bd2be) -->
+<!-- git diff --ignore-all-space --unified=0 5ec67b56aa0a6eadadbcfa8b73b6726e75eca2bb 4eb108b202d3dd035a312bac7872cf02bcf31cfa  (PR=0  ,  Filename=query-with-full-text-search.md  ,  Dirpath=docs\relational-databases\search\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-Начиная с версии SQL Server 2016 можно создавать обновляемый **некластеризованный индекс columnstore в таблице rowstore**. Индекс columnstore сохраняет копию данных, так что вам обязательно потребуется дополнительное хранилище. Тем не менее данные в индексе columnstore будут сжаты до меньшего размера, чем это требуется для таблицы rowstore.  Таким образом, вы сможете выполнять аналитику на основе индекса columnstore и транзакции на основе индекса rowstore одновременно. Хранилище столбцов обновляется при каждом изменении данных в таблице rowstore, поэтому оба индекса работают с одними и теми же данными.
-
-Начиная с версии SQL Server 2016 **индекс columnstore может включать один или несколько некластеризованных индексов rowstore**. Это обеспечивает эффективность поиска по таблицам на основе базового индекса columnstore. Кроме того, появляется доступ к другим возможностям. Например, можно принудительно задать ограничение PRIMARY KEY, применив к таблице rowstore ограничение UNIQUE. Поскольку неуникальное значение в таблицу rowstore не вставляется, SQL Server не может вставить значение в columnstore.
-
-**Вопросы производительности**
+**Дополнительные сведения о создании условий поиска**
 
 
--   Определение некластеризованного индекса columnstore поддерживает использование отфильтрованных условий. Чтобы свести к минимуму негативное влияние на производительность, вызванное добавлением некластеризованного индекса columnstore для таблицы OLTP, можно использовать отфильтрованное условие для создания некластеризованного индекса columnstore только для холодных данных операционной рабочей нагрузки.
+*Словоформы* — это глаголы в различных временах и лицах или существительные в формах единственного или множественного числа.
 
--   Таблица в памяти может включать один индекс columnstore. Его можно создать при создании таблицы или добавить позже с помощью процедуры [ALTER TABLE (Transact-SQL)](../t-sql/statements/alter-table-transact-sql.md). До версии SQL Server 2016 создание индекса columnstore допускалось только в таблицах на дисках.
+Примером такого поиска может служить поиск словоформ слова "водить". Если разные строки таблицы содержат слова "водить", "водит", "водят", "водил" и "водите", все они войдут в результирующий набор, потому что каждое из этих слов можно образовать флективным способом от слова "водить".
 
-Дополнительные сведения см. в статье [Производительность запросов по индексам columnstore](../relational-databases/indexes/columnstore-indexes-query-performance.md).
+Запросы [FREETEXT] и [FREETEXTTABLE] по умолчанию ищут словоформы всех указанных слов. Запросы [CONTAINS] и [CONTAINSTABLE] поддерживают необязательный аргумент `INFLECTIONAL`.
 
-**Руководство по проектированию**
+**Поиск синонимов конкретного слова**
 
 
--   Таблица rowstore может включать один обновляемый некластеризованный индекс columnstore. До версии SQL Server 2014 некластеризованный индекс columnstore был доступен только для чтения.
+В *тезаурусе* определяются пользовательские синонимы терминов. Дополнительные сведения о файлах тезауруса см. в статье [Настройка файлов тезауруса для полнотекстового поиска и управление ими].
+
+Например, если в тезаурусе есть запись "{машина, автомобиль, грузовик, фургон}", можно искать синонимическую форму слова "машина". В результирующий набор войдут все строки таблицы, содержащие слова "автомобиль", "грузовик", "фургон" или "машина", потому что каждое из этих слов входит в состав расширяющего набора синонимов, содержащего и слово "машина".
+
+По умолчанию тезаурус используется в запросах [FREETEXT] и [FREETEXTTABLE]. Запросы [CONTAINS] и [CONTAINSTABLE] поддерживают необязательный аргумент `THESAURUS`.
 
 
 
@@ -402,63 +434,37 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_8"/>
 
-### <a name="8-nbsp-spexecuteexternalscript-transact-sqlsystem-stored-proceduressp-execute-external-script-transact-sqlmd"></a>8. &nbsp; [sp_execute_external_script (Transact-SQL)](system-stored-procedures/sp-execute-external-script-transact-sql.md)
+### <a name="8-nbsp-transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehousesecurityencryptiontransparent-data-encryption-byok-azure-sqlmd"></a>8. &nbsp; [Прозрачное шифрование с поддержкой использования собственных ключей для хранилища и базы данных SQL Azure](security/encryption/transparent-data-encryption-byok-azure-sql.md)
 
-*Обновлено: 23.01.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_7) | [Далее](#TitleNum_9))
+*Обновлено: 24.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_7) | [Далее](#TitleNum_9))
 
-<!-- Source markdown line 207.  ms.author= "edmaca".  -->
+<!-- Source markdown line 110.  ms.author= "aliceku".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 0ee4d591ae9d9a5c015eec98aad9ccbb86268761 ac9b439c23ffae5fcc77639de6ff955763cf5844  (PR=4696  ,  Filename=sp-execute-external-script-transact-sql.md  ,  Dirpath=docs\relational-databases\system-stored-procedures\  ,  MergeCommitSha40=d7dcbcebbf416298f838a39dd5de6a46ca9f77aa) -->
+<!-- git diff --ignore-all-space --unified=0 9527658848d430bf0148be84474a75b232cbd112 70ed2a129c580962384f808e8526673957f00d2c  (PR=5662  ,  Filename=transparent-data-encryption-byok-azure-sql.md  ,  Dirpath=docs\relational-databases\security\encryption\  ,  MergeCommitSha40=91a9c812739a1c9a6ec9e7b8cda71ee1f5adae3d) -->
 
 
 
-Чтобы создать аналогичную модель с помощью Python, необходимо изменить идентификатор языка с `@language=N'R'` на `@language = N'Python'` и внести необходимые изменения в аргумент `@script`. В противном случае все параметры будут работать так же, как в R.
-
-**В. Создание модели Python и формирование оценок на ее основе**
+**Настройка географического аварийного восстановления с использованием Azure Key Vault**
 
 
-В этом примере показано, как использовать процедуру sp\_execute\_external\_script для создания оценок на основе простой модели Python.
+Чтобы обеспечить высокую доступность средств защиты TDE для зашифрованных баз данных, необходимо настроить избыточные Azure Key Vault на основе существующих групп отработки отказа или активных экземпляров копий георепликации базы данных SQL.  Каждому геореплицированному серверу требуется отдельное хранилище ключей, которое должно находиться в том же регионе Azure, что и сервер. Если база данных-источник станет недоступной из-за сбоя в одном регионе и активации отработки отказа, база данных-получатель сможет использовать вторичное хранилище ключей.
 
-```
-CREATE PROCEDURE [dbo].[py_generate_customer_scores]
-AS
-BEGIN
+Для геореплицированных баз данных SQL Azure требуется следующая конфигурация Azure Key Vault:
+- Одна база данных-источник с хранилищем ключей в регионе, а также одна база данных-получатель с хранилищем ключей в регионе.
+- Обязательно наличие как минимум одной базы данных-получателя (всего поддерживается до четырех таких баз).
+- Создание цепочек баз данных, являющихся получателями баз данных-получателей, не поддерживается.
 
-**Input query to generate the customer data**
+В следующем разделе действия по настройке и конфигурации будут описаны более подробно.
 
-DECLARE @input_query NVARCHAR(MAX) = N'SELECT customer, orders, items, cost FROM dbo.Sales.Orders`
+**Действия по конфигурации Azure Key Vault**
 
-EXEC sp_execute_external_script @language = N'Python', @script = N'
-import pandas as pd
-from sklearn.cluster import KMeans
 
-**Get data from input query**
-
-customer_data = my_input_data
-
-**Define the model**
-
-n_clusters = 4
-est = KMeans(n_clusters=n_clusters, random_state=111).fit(customer_data[["orders","items","cost"]])
-clusters = est.labels_
-customer_data["cluster"] = clusters
-
-OutputDataSet = customer_data
-'
-, @input_data_1 = @input_query
-, @input_data_1_name = N'my_input_data'
-WITH RESULT SETS (("CustomerID" int, "Orders" float,"Items" float,"Cost" float,"ClusterResult" float));
-END;
-GO
-```
-
-Заголовки столбцов, используемые в коде Python, не выводятся в SQL Server, поэтому используйте инструкцию WITH RESULTS, чтобы указать имена столбцов и типы данных для SQL.
-
-Для оценки можно также применять собственную функцию [PREDICT](system-stored-procedures/../../t-sql/queries/predict-transact-sql.md), которая обычно выполняется быстрее, так как не вызывает среду выполнения Python или R.
-
+- Установите [PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0)
+- Создайте два хранилища Azure Key Vault в двух разных регионах, используя [PowerShell для включения свойства "soft-delete"](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-powershell) хранилищ ключей (этот параметр сейчас недоступен на портале Azure Key Vault, но по-прежнему является обязательным для SQL).
+- Для работы функций резервного копирования и восстановления ключей оба хранилища ключей Azure Key Vault должны быть расположены в двух регионах, доступных в одном географическом регионе Azure.  Если вам требуется, чтобы два хранилища ключей располагались в разных географических регионах в соответствии с требованиями к георепликации SQL, используйте [процесс BYOK](https://docs.microsoft.com/azure/key-vault/key-vault-hsm-protected-keys), который позволяет импортировать ключи из локального аппаратного модуля безопасности.
 
 
 
@@ -470,42 +476,89 @@ GO
 
 <a name="TitleNum_9"/>
 
-### <a name="9-nbsp-create-primary-keystablescreate-primary-keysmd"></a>9. &nbsp; [Создание первичных ключей](tables/create-primary-keys.md)
+### <a name="9-nbsp-powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vaultsecurityencryptiontransparent-data-encryption-byok-azure-sql-configuremd"></a>9. &nbsp; [Включение прозрачного шифрования данных с использованием собственного ключа из Azure Key Vault с помощью PowerShell и CLI](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
 
-*Обновлено: 18.01.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_8))
+*Обновлено: 24.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_8) | [Далее](#TitleNum_10))
 
-<!-- Source markdown line 102.  ms.author= "sstein".  -->
+<!-- Source markdown line 196.  ms.author= "aliceku".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 d18b485f314cc005d624cab8a51650d3b8f55f89 9bd2e9453206e8940d30b0a01c43f9d8e1aed606  (PR=4652  ,  Filename=create-primary-keys.md  ,  Dirpath=docs\relational-databases\tables\  ,  MergeCommitSha40=6b4aae3706247ce9b311682774b13ac067f60a79) -->
+<!-- git diff --ignore-all-space --unified=0 a0e00f5701d9a493f503a477c69097ce65aba174 721e8fb856a55ee1e8e9e7fc06036a03adab647b  (PR=5662  ,  Filename=transparent-data-encryption-byok-azure-sql-configure.md  ,  Dirpath=docs\relational-databases\security\encryption\  ,  MergeCommitSha40=91a9c812739a1c9a6ec9e7b8cda71ee1f5adae3d) -->
 
 
 
-**Создание первичного ключа с некластеризованным индексом в новой таблице**
+**Необходимые условия для использования CLI**
 
 
-1.  В **обозревателе объектов** подключитесь к экземпляру ядра СУБД.
+- Требуется подписка Azure и права администратора этой подписки.
+- [Рекомендуется, но необязательно] Наличие аппаратного модуля безопасности (HSM) или локального хранилища ключей для создания локальной копии материала ключа средства защиты TDE.
+- Интерфейс командной строки версии 2.0 или более поздней. Чтобы установить последнюю версию и подключиться к подписке Azure, см. статью [Установка и настройка кроссплатформенного интерфейса командной строки Azure 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Созданные Azure Key Vault и ключ для TDE.
+   - [Управление Key Vault с помощью CLI 2.0](https://docs.microsoft.com/azure/key-vault/key-vault-manage-with-cli2)
+   - [Инструкции по использованию аппаратного модуля безопасности (HSM) и хранилища Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+ - Хранилище ключей, используемое для прозрачного шифрования данных, должно поддерживать следующее свойство:
+   - [обратимое удаление](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete).
+   - [Как использовать обратимое удаление в Key Vault с помощью интерфейса командной строки](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-cli)
+- Ключ, используемый для прозрачного шифрования данных, должен иметь следующие характеристики:
+   - быть бессрочным;
+   - не быть отключенным;
+   - иметь возможность выполнять операции *получения*, *упаковки ключа*, *распаковки ключа*.
 
-2.  На стандартной панели выберите пункт **Создать запрос**.
+**Шаг. Создание сервера и назначение ему удостоверения Azure Active Directory**
 
-3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере создается таблица и определяется первичный ключ для столбца `CustomerID` и кластеризованный индекс для `TransactionID`.
+      cli
+      # create server (with identity) and database
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_10"/>
+
+### <a name="10-nbsp-about-change-data-capture-sql-servertrack-changesabout-change-data-capture-sql-servermd"></a>10. &nbsp; [Об отслеживании измененных данных (SQL Server)](track-changes/about-change-data-capture-sql-server.md)
+
+*Обновлено: 17.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_9))
+
+<!-- Source markdown line 112.  ms.author= "jroth".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 588bff652adefd719e799e9777a416b70184c5f8 77ebdbb1b98b24054d5c5afbb3f1d40e94d1e6bc  (PR=5574  ,  Filename=about-change-data-capture-sql-server.md  ,  Dirpath=docs\relational-databases\track-changes\  ,  MergeCommitSha40=bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68) -->
+
+
+
+**Различия в работе с параметрами сортировки баз данных и таблиц**
+
+
+Важно учитывать различия в параметрах сортировки между базой данных и столбцами таблицы, настроенных для отслеживания измененных данных. При отслеживании измененных данных используется промежуточное хранилище для заполнения побочных таблиц. Если таблица содержит столбцы типа CHAR или VARCHAR с параметрами сортировки, которые отличаются от параметров сортировки в базе данных, а также если в этих столбцах хранятся символы, не входящие в набор ASCII (например, двухбайтовые символы DBCS), технология отслеживания измененных данных не всегда будет сохранять измененные данные в соответствии с данными в базовых таблицах. Это связано с тем, что с переменными промежуточного хранилища не связаны параметры сортировки.
+
+Чтобы обеспечить согласованность отслеживания измененных данных с базовыми таблицами, следует применять один из приведенных ниже подходов:
+
+- Используйте тип данных NCHAR и NVARCHAR для столбцов, содержащих данные, не относящиеся к набору ASCII.
+
+- Также можно использовать одинаковые параметры сортировки для столбцов и для базы данных.
+
+Например, если в базе данных используются параметры сортировки SQL_Latin1_General_CP1_CI_AS, можно использовать следующую таблицу:
 
 ```
-    USE AdventureWorks2012;
-    GO
-    CREATE TABLE Production.TransactionHistoryArchive1
-    (
-       CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
-       TransactionID int IDENTITY (1,1) NOT NULL,
-       CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY NONCLUSTERED (uniqueidentifier)
-    );
-    GO
+CREATE TABLE T1(
+     C1 INT PRIMARY KEY,
+     C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
+```
 
-    -- Now add the clustered index
-    CREATE CLUSTERED INDEX CIX_TransactionID ON Production.TransactionHistoryArchive1 (TransactionID);
-    GO
+Технология отслеживания измененных данных может не получать двоичные данные для столбца C2, поскольку он использует другие параметры сортировки (Chinese_PRC_CI_AI). Чтобы избежать этой проблемы, используйте тип NVARCHAR:
+
+```
+CREATE TABLE T1(
+     C1 INT PRIMARY KEY,
+     C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
 
 
@@ -519,40 +572,36 @@ GO
 Этот раздел содержит статьи, очень близкие к недавно измененным статьям из других предметных областей в общедоступном репозитории GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Предметные области, *содержащие* новые или недавно обновленные статьи
 
-
-- [Новые + обновленные (1+3):&nbsp; **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новые + обновленные (0+1):&nbsp; **Analytics Platform System для SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Новые + обновленные (0+1):&nbsp; **Подключение к SQL**](../connect/new-updated-connect.md)
-- [Новые + обновленные (0+1):&nbsp; **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
-- [Новые + обновленные (12+1): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
-- [Новые + обновленные (6+2):&nbsp; **Linux для SQL**](../linux/new-updated-linux.md)
-- [Новые + обновленные (15+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
-- [Новые + обновленные (2+9):&nbsp; **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Новые + обновленные (1+0):&nbsp; **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Новые + обновленные (1+1):&nbsp; **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Новые + обновленные(1+1):&nbsp; **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Новые + обновленные (0+1):&nbsp; **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Новые + обновленные (1+2):&nbsp; **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Новые + обновленные (0+2):&nbsp; **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Новые + обновленные (11+6): &nbsp; &nbsp;**Углубленная аналитика для SQL** (документация)](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новые + обновленные (18+0): &nbsp;&nbsp;**Analysis Services для SQL** (документация)](../analysis-services/new-updated-analysis-services.md)
+- [Новые + обновленные (218+14):  **Подключение к SQL** (документация)](../connect/new-updated-connect.md)
+- [Новые + обновленные (14+0): &nbsp; &nbsp;**Ядро СУБД для SQL** (документация)](../database-engine/new-updated-database-engine.md)
+- [Новые + обновленные (3+2): &nbsp; &nbsp;**Integration Services для SQL** (документация)](../integration-services/new-updated-integration-services.md)
+- [Новые + обновленные (3+3): &nbsp; &nbsp;**Linux для SQL** (документация)](../linux/new-updated-linux.md)
+- [Новые + обновленные (7+10): &nbsp; &nbsp;**Реляционные базы данных для SQL** (документация)](../relational-databases/new-updated-relational-databases.md)
+- [Новые + обновленные (0+2): &nbsp; **&nbsp;Reporting Services для SQL** (документация)](../reporting-services/new-updated-reporting-services.md)
+- [Новые + обновленные (1+3): &nbsp; &nbsp;**SQL Operations Studio** (документация)](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Новые + обновленные(2+3): &nbsp; &nbsp;**Microsoft SQL Server** (документация)](../sql-server/new-updated-sql-server.md)
+- [Новые + обновленные (1+1): &nbsp; &nbsp;**SQL Server Data Tools (SSDT)** (документация)](../ssdt/new-updated-ssdt.md)
+- [Новые + обновленные (5+2): &nbsp; &nbsp;**SQL Server Management Studio (SSMS)** (документация)](../ssms/new-updated-ssms.md)
+- [Новые + обновленные (0+2): &nbsp; &nbsp;**Transact-SQL** (документация)](../t-sql/new-updated-t-sql.md)
+- [Новые + обновленные (1+1): &nbsp;**&nbsp;Инструменты для SQL** (документация)](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Предметные области, *не* содержащие новые или недавно обновленные статьи
 
-
-- [Новые + обновленные (0+0): **Data Migration Assistant (DMA) для SQL**](../dma/new-updated-dma.md)
-- [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
-- [Новые + обновленные (0+0): документация **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новые + обновленные (0+0):  **Analytics Platform System для SQL** (документация)](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
 - [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
+- [Новые + обновленные (0+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
 - [Новые + обновленные (0+0): **примеры для SQL**](../samples/new-updated-samples.md)
 - [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
-- [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
-
 

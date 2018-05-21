@@ -9,11 +9,11 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb1428f577c1a6094d1fe58cfdcd7cd8f62f8036
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 899569bffcb0e521d6bcb36e0172498fa0da340c
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Основные сведения о Power View для многомерных моделей
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -93,7 +93,7 @@ ms.lasthandoff: 05/10/2018
  ![Статистически необрабатываемая иерархия в Power View](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "Статистически необрабатываемая иерархия в Power View")  
   
 ### <a name="implicit-measures"></a>Неявные меры  
- Табличные модели предоставляют пользователям возможность создавать *неявные* меры, такие как количество, сумма или среднее по полям. Что касается многомерных моделей, то данные атрибутов измерений хранятся по-разному, поэтому выполнение запросов к неявным мерам может потребовать много времени. По этой причине неявные меры недоступны в Power View.  
+ Табличные модели предоставляют пользователям возможность создавать *неявные* меры, такие как количество, сумма или среднее по полям. Для многомерных моделей так как данные атрибутов измерений хранятся по-разному, запрос неявные меры может занять много времени. По этой причине неявные меры недоступны в Power View.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Измерения, атрибуты и иерархии  
  Доступ к измерениям куба предоставляется как к таблицам в табличных метаданных. В списке полей Power View атрибуты измерений показаны как столбцы в папках отображения.  Атрибуты измерений, имеющие свойство AttributeHierarchyEnabled или AttributeHierarchyVisible со значением false, например атрибут даты рождения в измерении "Клиент", не будут отображены в этом списке. Доступ к многоуровневым иерархиям или пользовательским иерархиям, например Customer Geography в измерении Customer, предоставляется как к иерархиям в списке полей Power View. Доступ к скрытым элементам UnknownMembers атрибута измерения предоставляется в запросах DAX и в Power View.  

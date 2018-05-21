@@ -61,7 +61,7 @@ ms.lasthandoff: 05/03/2018
  **Переключение режимов обновления**  
   
  Для переключения между режимами обновления необходимо разрешить оба режима обновления для публикации и подписки, а затем можно переключаться между режимами по мере необходимости. Дополнительные сведения см. в разделе  
-[Switch Between Update Modes for an Updatable Transactional Subscription](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
+[Переключение между режимами обновления для обновляемой подписки на публикацию транзакций](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>Вопросы использования обновляемых подписок  
   

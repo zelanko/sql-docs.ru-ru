@@ -97,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
     -   Если значение **allow_push** равно **0**, то необходимо выполнить процедуру [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав **allow_push** в **@property** и значение **true** в **@value**.  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Укажите **@publication**, **@subscriber** и значение **@destination_db**. Укажите значение **push** в **@subscription_type**. Сведения об обновлении подписок см. в разделе [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Укажите **@publication**, **@subscriber** и значение **@destination_db**. Укажите значение **push** в **@subscription_type**. Сведения об обновлении подписок см. в разделе [Создание обновляемых подписок для публикаций транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Укажите следующее.  
   

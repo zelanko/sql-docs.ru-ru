@@ -14,11 +14,11 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c891393018f69c47e93e56cd49ddf318756256d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10f225602ed302aa8573b09e0b0a852f50a1971f
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="odbc-64-bit-information"></a>Сведения о 64-разрядных ODBC
 Начиная с Windows Server 2003, поддерживается библиотеки ODBC 64-разрядных операционных систем корпорации Майкрософт. ODBC заголовки и библиотеки, сначала в состав MDAC 2.7 SDK содержат изменения позволяют разработчикам легко писать код для нового 64-разрядных платформах. За счет того, что код использует ODBC определенных типов, перечисленных ниже, можно скомпилировать одного исходного кода для 64-разрядных и 32-разрядных платформ на основе **_WIN64** или **WIN32** макросы.  
@@ -397,7 +397,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetDescField**  
   
- Когда *FieldIdentifier* параметр может иметь одно из следующих значений, 64-разрядное значение передается в **ValuePtr*:  
+ Когда *FieldIdentifier* параметр может иметь одно из следующих значений, 64-разрядное значение передается в *ValuePtr*:  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -421,7 +421,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtAttr**  
   
- Когда *атрибута* параметр может иметь одно из следующих значений, 64-разрядное значение передается в **ValuePtr*:  
+ Когда *атрибута* параметр может иметь одно из следующих значений, 64-разрядное значение передается в *ValuePtr*:  
   
  SQL_ATTR_APP_PARAM_DESC  
   
@@ -489,7 +489,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtOption**  
   
- Когда *параметр* параметр может иметь одно из следующих значений, 64-разрядное значение передается в **значение*:  
+ Когда *параметр* параметр может иметь одно из следующих значений, 64-разрядное значение передается в *значение*:  
   
  SQL_KEYSET_SIZE  
   

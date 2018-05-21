@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
 - CE (cardinality estimator)
@@ -21,18 +20,16 @@ caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 71d5c75e27a71a76f014376ad61a04a13bac389c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f967039ead6e8ef7377cfc069ae4d7e9afca5f56
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cardinality-estimation-sql-server"></a>Оценка количества элементов (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  
 В этой статье показано, как оценить и выбрать оптимальную конфигурацию оценки количества элементов (CE) для вашей системы SQL. В большинстве систем используется последняя версия CE, поскольку она наиболее точна. CE прогнозирует количество строк, которое скорее всего будет возвращено запросом. Прогноз кратности используется оптимизатором запросов для создания оптимального плана запроса. Чем точнее оценки, тем, как правило, оптимальнее план запроса.  
   
 В системе приложения, возможно, существовал важный запрос, план обработки которого был изменен на более медленный с учетом нового CE. Такой запрос может представлять собой следующее:  
@@ -40,84 +37,92 @@ ms.lasthandoff: 04/16/2018
 - Запрос OLTP (оперативной обработки транзакций), который выполняется настолько часто, что несколько экземпляров этого запроса выполняются параллельно.  
 - Инструкция SELECT с существенной статистической обработкой, которая выполняется в рабочие часы OLTP.  
   
-У вас есть методы определения запроса, который с учетом новых данных CE выполняется медленнее. И у вас есть несколько способов решения проблемы производительности.  
-  
+У вас есть методы определения запроса, который с учетом новых данных CE выполняется медленнее. И у вас есть несколько способов решения проблемы производительности.     
   
 ## <a name="versions-of-the-ce"></a>Версии CE  
+В 1998 г. основное обновление CE входило в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0. Уровень совместимости компонента был равен 70. Эта версия модели CE основана на четырех допущениях.
+
+-  **Независимость**: предполагается, что данные, распределенные по разным столбцам, независимы друг от друга, если нет доступных или используемых сведений о корреляции.
+-  **Единообразие**: отдельные значения равномерно распределены и имеют одинаковую частоту. Говоря точнее, отдельные значения равномерно распределены на каждом шаге [гистограммы](../../relational-databases/statistics/statistics.md#histogram) и все значения имеют одинаковую частоту. 
+-  **Автономность (простая)**: пользователи запрашивают существующие данные. Например, в случае соединения по равенству между двумя таблицами учитывайте избирательность предикатов <sup>1</sup> в каждой входной гистограмме перед соединением гистограмм для оценки избирательности соединения. 
+-  **Включение**: для предикатов фильтра, где `Column = Constant`, предполагается, что константа фактически существует для связанного столбца. Если соответствующий шаг гистограммы не пуст, предполагается, что одно из конкретных значений шага совпадает со значением из предиката.
+
+  <sup>1</sup> Число строк, удовлетворяющее предикат.
+
+Последующие обновления выпущены вместе с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с уровнем совместимости 120 и выше. Обновления CE для уровней 120 и выше включают обновленные допущения и алгоритмы, которые хорошо сочетаются с современными хранилищами данных и рабочими нагрузками OLTP. Из допущений CE 70 были изменены следующие допущения моделей, начиная с CE 120:
+
+-  **Независимость** стала **корреляцией**: комбинация разных значений столбцов, которые не обязательно будут независимы. Это может напоминать более реальные запросы данных.
+-  **Простая автономность** стала **базовой автономностью**: пользователи могут запрашивать несуществующие данные. Например, в случае соединения по равенству между двумя таблицами используются гистограммы базовых таблиц для оценки избирательности соединений, а затем учитывается избирательность предикатов.
   
- В 1998 году основное обновление CE входило в состав Microsoft SQL Server 7.0. Уровень совместимости компонента был равен 70. Последующие обновления выпущены вместе с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с уровнем совместимости 120 и выше. Обновления CE для уровней 120 и выше включают допущения и алгоритмы, которые хорошо сочетаются с современными хранилищами данных и рабочими нагрузками OLTP.  
-  
- **Уровень совместимости:** чтобы убедиться, что база данных находится на определенном уровне, используйте следующий код на языке Transact-SQL для [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+**Уровень совместимости**: чтобы убедиться, что база данных находится на определенном уровне, используйте следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] для [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
-go  
+GO  
   
 ALTER DATABASE <yourDatabase>  
-    SET COMPATIBILITY_LEVEL = 130;  
-go  
+SET COMPATIBILITY_LEVEL = 130;  
+GO  
   
 SELECT d.name, d.compatibility_level  
-    FROM sys.databases AS d  
-    WHERE d.name = 'yourDatabase';  
-go  
+FROM sys.databases AS d  
+WHERE d.name = 'yourDatabase';  
+GO  
 ```  
   
- В базах данных SQL Server с уровнем совместимости 120 или выше при активации [флага трассировки 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) система принудительно использует CE версии 70.  
+В базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с уровнем совместимости 120 или выше при активации [флага трассировки 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) система принудительно использует CE версии 70.  
   
- **Устаревшая CE**: для базы данных SQL Server с уровнем совместимости 120 или выше CE версии 70 может быть активирована на уровне базы данных с помощью инструкции [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+**Устаревшая CE**: для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с уровнем совместимости 120 или выше CE версии 70 может быть активирована на уровне базы данных с помощью инструкции [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```sql  
-ALTER DATABASE
-    SCOPED CONFIGURATION  
-        SET LEGACY_CARDINALITY_ESTIMATION = ON;  
-go  
+ALTER DATABASE SCOPED CONFIGURATION 
+SET LEGACY_CARDINALITY_ESTIMATION = ON;  
+GO  
   
 SELECT name, value  
-    FROM sys.database_scoped_configurations  
-    WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';  
+FROM sys.database_scoped_configurations  
+WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';  
+GO
 ```  
  
- Или, начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1), используется [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
+Или, начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1), используется [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
  ```sql  
 SELECT CustomerId, OrderAddedDate  
-    FROM OrderTable  
-    WHERE OrderAddedDate >= '2016-05-01'; 
-    OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+FROM OrderTable  
+WHERE OrderAddedDate >= '2016-05-01'; 
+OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
- **Хранилище запросов**: появившееся в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] хранилище запросов является удобным инструментом для анализа производительности запросов. В среде [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] откройте **обозреватель объектов**. Затем откройте узел вашей базы данных; если хранилище запросов включено, вы увидите узел **Хранилище запросов**.  
+**Хранилище запросов**: появившееся в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] хранилище запросов является удобным инструментом для анализа производительности запросов. В среде [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] откройте **обозреватель объектов**. Затем откройте узел вашей базы данных; если хранилище запросов включено, вы увидите узел **Хранилище запросов**.  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  
-    SET QUERY_STORE = ON;  
-go  
+SET QUERY_STORE = ON;  
+GO  
   
-SELECT  
-        q.actual_state_desc AS [actual_state_desc-ofQueryStore],  
+SELECT q.actual_state_desc AS [actual_state_desc_of_QueryStore],  
         q.desired_state_desc,  
         q.query_capture_mode_desc  
-    FROM  
-        sys.database_query_store_options  AS q;  
-go  
+FROM sys.database_query_store_options AS q;  
+GO  
   
 ALTER DATABASE <yourDatabase>  
-    SET QUERY_STORE CLEAR;  
+SET QUERY_STORE CLEAR;  
 ```  
   
- > [!TIP] 
- > Рекомендуется установить последний выпуск [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) и регулярно обновлять его.  
+> [!TIP] 
+> Рекомендуется установить последний выпуск [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) и регулярно обновлять его.  
   
- Другой способ отслеживания процесса оценки кратности (CE) подразумевает использование расширенного события с именем **query_optimizer_estimate_cardinality**. Следующий пример кода T-SQL выполняется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Он записывает XEL-файл в папку C:\Temp\ (хотя этот путь можно изменить). При открытии XEL-файла в [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] отображаются подробные сведения об этом файле.  
+Другой способ отслеживания процесса оценки кратности (CE) подразумевает использование расширенного события с именем **query_optimizer_estimate_cardinality**. Следующий пример кода [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Он записывает XEL-файл в папку `C:\Temp\` (хотя этот путь можно изменить). При открытии XEL-файла в [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] отображаются подробные сведения об этом файле.  
   
 ```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
 go  
   
 CREATE EVENT SESSION Test_the_CE_qoec_1  
-    ON SERVER  
-    ADD EVENT sqlserver.query_optimizer_estimate_cardinality  
+ON SERVER  
+ADD EVENT sqlserver.query_optimizer_estimate_cardinality  
     (  
         ACTION (sqlserver.sql_text)  
             WHERE (  
@@ -125,25 +130,24 @@ CREATE EVENT SESSION Test_the_CE_qoec_1
                 and sql_text LIKE '%SUM(%'  
             )  
     )  
-    ADD TARGET package0.asynchronous_file_target   
+ADD TARGET package0.asynchronous_file_target   
         (SET  
             filename = 'c:\temp\xe_qoec_1.xel',  
             metadatafile = 'c:\temp\xe_qoec_1.xem'  
         );  
-go  
+GO  
   
 ALTER EVENT SESSION Test_the_CE_qoec_1  
-    ON SERVER  
-    STATE = START;  --STOP;  
-go  
+ON SERVER  
+STATE = START;  --STOP;  
+GO  
 ```  
   
- Сведения о расширенных событиях, адаптированных для [!INCLUDE[ssSDS](../../includes/sssds-md.md)], см. в разделе [Расширенные события в базе данных SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
-  
+Сведения о расширенных событиях, адаптированных для [!INCLUDE[ssSDS](../../includes/sssds-md.md)], см. в разделе [Расширенные события в базе данных SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
   
 ## <a name="steps-to-assess-the-ce-version"></a>Процедура оценки версии CE  
   
- Далее приводятся пошаговые инструкции, позволяющие оценить, не выполняется ли какой-нибудь из важных запросов медленнее с учетом последних данных CE. Для выполнения некоторых шагов нужно выполнить пример кода из предыдущего раздела.  
+Далее приводятся пошаговые инструкции, позволяющие оценить, не выполняется ли какой-нибудь из важных запросов медленнее с учетом последних данных CE. Для выполнения некоторых шагов нужно выполнить пример кода из предыдущего раздела.  
   
 1.  Откройте [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. Убедитесь, что для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задан наивысший доступный уровень совместимости.  
   
@@ -205,17 +209,19 @@ go
   
 ## <a name="how-to-activate-the-best-query-plan"></a>Активация оптимального плана запроса  
   
-Допустим, что при использовании нового CE в системе создается план более медленной обработки запроса. Ниже дается несколько рекомендаций, позволяющих активировать план более быстрой обработки.  
+Предположим, что при использовании CE 120 и выше создается менее эффективный план обработки запроса. Ниже дается несколько рекомендаций, позволяющих активировать более эффективный план.  
   
-Можно установить более низкий уровень совместимости (не самый высокий из доступных) для всей базы данных.  
+1. Можно установить более низкий уровень совместимости (не самый высокий из доступных) для всей базы данных.  
   
-- В этом случае активируется старая CE, однако для обработки всех запросов будет использоваться прежнее, менее точное значение CE.  
+   - Например, при задании уровня совместимости 110 или ниже активируется CE 70, но все запросы подчиняются предыдущей модели CE.  
   
-- Кроме того, в этом случае вы не сможете воспользоваться всеми усовершенствованиями, реализованными в оптимизаторе запросов.  
+   - Кроме того, на более низком уровне совместимости нет ряда улучшений оптимизатора запросов, которые есть в более поздних версиях.  
   
-Можно использовать команду `LEGACY_CARDINALITY_ESTIMATION`, чтобы задать принудительное использование прежнего значения CE или только конкретного запроса всей базой данных и при этом реализовать усовершенствования оптимизатора запросов.  
+2. Можно использовать параметр базы данных `LEGACY_CARDINALITY_ESTIMATION`, чтобы задать принудительное использование прежнего значения CE во всей базе данных и при этом реализовать усовершенствования оптимизатора запросов.   
+
+3. Можно использовать указание запроса `LEGACY_CARDINALITY_ESTIMATION`, чтобы один запрос использовал прежнее значение CE, и при этом реализовать усовершенствования оптимизатора запросов.  
   
-Для осуществления еще более точного контроля можно назначить *принудительное* использование системой SQL плана, составленного с более старым значением CE во время тестирования. После *закрепления* выбранного плана можно настроить всю базу данных для использования самого высокого уровня совместимости и последнего CE. Далее этот вариант рассматривается более подробно.  
+Для еще более точного контроля можно назначить *принудительное* использование системой плана, составленного с CE 70 во время тестирования. После *закрепления* выбранного плана можно настроить всю базу данных для использования самого высокого уровня совместимости и последнего CE. Далее этот вариант рассматривается более подробно.  
   
 ### <a name="how-to-force-a-particular-query-plan"></a>Настройка принудительного использования определенного плана запросов  
   
@@ -225,8 +231,7 @@ go
   
 - В [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] разверните узел **Хранилище запросов**, щелкните правой кнопкой мыши **Ключевые узлы — потребители ресурсов**, а затем щелкните **Просмотр ключевых узлов — потребителей ресурсов**. На дисплее отображаются кнопки **Принудительное использование плана** и **Отменить принудительное использование плана**.  
   
- Дополнительные сведения о хранилище запросов см. в разделе [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
-  
+Дополнительные сведения о хранилище запросов см. в разделе [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
 ## <a name="examples-of-ce-improvements"></a>Примеры улучшения CE  
   
@@ -234,7 +239,7 @@ go
   
 ### <a name="example-a-ce-understands-maximum-value-might-be-higher-than-when-statistics-were-last-gathered"></a>Пример А. Расчет CE выполняется с тем допущением, что максимальное значение может быть больше, чем на момент сбора статистики  
   
-Допустим, сбор статистики по параметру OrderTable последний раз выполнялся 30 апреля 2016 года, когда максимальное значение параметра OrderAddedDate было 2016-04-30. Расчет CE для уровня совместимости 120 (и выше) выполняется с допущением, что столбцы в таблице OrderTable с данными *по возрастанию* содержали значения, превышающие записанный в статистике максимум. Исходя из этого план обработки запросов для объектов SQL SELECT оптимизируется следующим образом.  
+Предположим, последняя статистика для `OrderTable` была собрана `2016-04-30`, когда максимум `OrderAddedDate` был равен `2016-04-30`. CE 120 (и более поздние версии) учитывает, что столбцы в `OrderTable` с данными *по возрастанию* содержали значения, превышающие записанный в статистике максимум. Исходя из этого план обработки запросов для инструкций SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] оптимизируется следующим образом.  
   
 ```sql  
 SELECT CustomerId, OrderAddedDate  
@@ -244,33 +249,32 @@ WHERE OrderAddedDate >= '2016-05-01';
   
 ### <a name="example-b-ce-understands-that-filtered-predicates-on-the-same-table-are-often-correlated"></a>Пример Б. Расчет CE выполняется с допущением, что фильтрованные предикаты в одной и той же таблице часто коррелируют  
   
-В следующем примере выполнения инструкции SELECT мы видим фильтрованные предикаты для Model и ModelVariant. Мы интуитивно понимаем, что если Model имеет значение "Xbox", есть вероятность, что ModelVariant имеет значение "One", учитывая, что у "Xbox" был вариант "One".  
+В следующем примере выполнения инструкции SELECT мы видим фильтрованные предикаты для `Model` и `ModelVariant`. Мы интуитивно понимаем, что если `Model` имеет значение "Xbox", есть вероятность, что `ModelVariant` имеет значение "One", учитывая, что у консоли Xbox была модель One.  
   
-На уровне 120 расчет CE выполняется с тем допущением, что, возможно, существует корреляция между двумя столбцами одной и той же таблицы: Model и ModelVariant. CE более точно оценивает, сколько строк будет возвращено запросом, а оптимизатор запросов создает оптимизированный план.  
+Начиная с CE уровня 120, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учитывает, что может существовать корреляция между двумя столбцами одной и той же таблицы: `Model` и `ModelVariant`. CE более точно оценивает, сколько строк будет возвращено запросом, а [оптимизатор запросов](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) создает оптимизированный план.  
   
 ```sql  
 SELECT Model, Purchase_Price  
 FROM dbo.Hardware  
-WHERE Model  = 'Xbox'  AND  
+WHERE Model = 'Xbox' AND  
       ModelVariant = 'One';  
 ```  
   
 ### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tables"></a>Пример В. При расчете CE мы более не допускаем никаких корреляций между фильтрованными предикатами из разных таблиц 
-Если провести новое исследование с актуальными рабочими нагрузками и фактическими бизнес-данными, обнаружится, что фильтры предикатов из разных таблиц, как правило, не коррелируют друг с другом. В следующем запросе при расчете CE предполагается, что между s.type и r.date нет никакой корреляции. Следовательно, CE оценивает, что число возвращаемых строк будет меньше.  
+Если провести новое исследование с актуальными рабочими нагрузками и фактическими бизнес-данными, обнаружится, что фильтры предикатов из разных таблиц, как правило, не коррелируют друг с другом. В следующем запросе при расчете CE предполагается, что между `s.type` и `r.date` нет никакой корреляции. Следовательно, CE оценивает, что число возвращаемых строк будет меньше.  
   
 ```sql  
 SELECT s.ticket, s.customer, r.store  
 FROM dbo.Sales    AS s  
 CROSS JOIN dbo.Returns  AS r  
-WHERE s.ticket = r.ticket  AND  
-      s.type   = 'toy'     AND  
-      r.date   = '2016-05-11';  
+WHERE s.ticket = r.ticket AND  
+      s.type = 'toy' AND  
+      r.date = '2016-05-11';  
 ```  
-  
   
 ## <a name="see-also"></a>См. также:  
  [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [Оптимизация планов запроса с помощью средства оценки кратности SQL Server 2014](http://msdn.microsoft.com/library/dn673537.aspx)  
- [Указания запросов](../../t-sql/queries/hints-transact-sql-query.md)    
+ [Указания запросов](../../t-sql/queries/hints-transact-sql-query.md) [Указания запросов USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)     
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md)   

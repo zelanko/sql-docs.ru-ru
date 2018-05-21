@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
      Будет запущен мастер SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] .  
   
-3.  Выполните оставшиеся действия в [To install Report Builder from the download site](#download).  
+3.  Выполните оставшиеся действия в [Установка построителя отчетов с сайта загрузки](#download).  
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-the-command-line"></a>Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] из командной строки 
 

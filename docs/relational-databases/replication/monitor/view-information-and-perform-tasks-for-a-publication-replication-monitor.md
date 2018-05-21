@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  Чтобы просмотреть сведения о предупреждениях агентов и пороговых значениях, перейдите на вкладку **Предупреждения** . Дополнительные сведения см. в разделе [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
-6.  Чтобы просмотреть сведения о трассировочных токенах, перейдите на вкладку **Трассировочные токены** . Дополнительные сведения об использовании трассировочных токенов см. в разделе [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
+6.  Чтобы просмотреть сведения о трассировочных токенах, перейдите на вкладку **Трассировочные токены** . Дополнительные сведения об использовании трассировочных токенов см. в разделе [Измерение задержки и проверка правильности соединений для репликации транзакций](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

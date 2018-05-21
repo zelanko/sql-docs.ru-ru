@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
-ms.component: t-sql|database-console-commands
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -27,12 +24,11 @@ caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 64ec9fcd7b4a8411d665a96614ee99f2dacddcd6
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 52ad63dc661cce6950b5d0939d4a6d508fb6a137
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON — флаги трассировки (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -99,6 +95,7 @@ ms.lasthandoff: 04/26/2018
 |**3226**|По умолчанию каждая успешная операция резервного копирования добавляет запись в журнал ошибок служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в журнал системных событий. При частом выполнении резервного копирования журнала такие сообщения об успешном выполнении быстро накапливаются, в результате чего создаются огромные журналы ошибок, в которых трудно найти другие сообщения.<br /><br />С помощью этого флага трассировки можно подавить такие записи журнала. Это может быть полезным при частом выполнении резервного копирования журнала и в случае, если ни один из используемых скриптов не зависит от этих записей.<br /><br />**Область**: только глобальная|   
 |**3427**|Позволяет решить проблему в ситуации, когда много последовательных транзакций, вставляющих данные во временные таблицы в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] или [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], потребляют больше ресурсов ЦП, чем в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Дополнительные сведения см. в этой [статье службы поддержки Майкрософт](http://support.microsoft.com/help/3216543)<br /><br />**Примечание.** Этот флаг трассировки применяется к [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) и накопительным пакетом обновления 2 (CU2) и более поздней версии сборки. Начиная с версии [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 4 (CU4), этот флаг трассировки не действует.<br /><br />**Область**: только глобальная|  
 |**3459**|Отключает параллельные повторы действий. Дополнительные сведения см. в [этой](http://support.microsoft.com/help/3200975) и [этой](http://support.microsoft.com/help/4101554) статьях службы поддержки Майкрософт.<br /><br />**Примечание.** Этот флаг трассировки применяется к [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].<br /><br />**Область**: только глобальная| 
+|**3468**|Отключает [косвенные контрольные точки](https://docs.microsoft.com/en-us/sql/relational-databases/logs/database-checkpoints-sql-server?view=sql-server-2017#IndirectChkpt) в TempDB.<br /><br />**Примечание**. Этот флаг трассировки применяется к [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) и накопительным пакетом обновления 5 (CU5), к [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 1 (CU1) и более поздним версиям сборок.<br /><br />**Область**: только глобальная|  
 |**3608**|Запрещает автоматический запуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и восстановление любых баз данных, кроме базы данных **master**. Если инициируются действия, для которых требуется **tempdb**, то **модель** восстанавливается, и создается **tempdb**. Другие базы данных будут запущены и восстановлены при открытии. Могут не работать некоторые функции, например изоляция моментального снимка и изоляция зафиксированной операции чтения с моментальным снимком. Используйте для [перемещения системных баз данных](../../relational-databases/databases/move-system-databases.md) и [перемещения пользовательских баз данных](../../relational-databases/databases/move-user-databases.md).<br /><br />**Примечание.** Не используйте при обычной работе.<br /><br />**Область**: только глобальная|   
 |**3625**|Ограничивает объем сведений, возвращаемый пользователям, которые не являются членами предопределенной роли сервера sysadmin, маскируя параметры некоторых сообщений об ошибках символами '\*\*\*\*\*\*'. Это поможет предотвратить раскрытие конфиденциальных сведений.<br /><br />**Область**: только глобальная|  
 |**4136**|Отключает сканирование параметров, если не используется OPTION(RECOMPILE), WITH RECOMPILE или OPTIMIZE FOR \<value>. Дополнительные сведения см. в этой [статье службы поддержки Майкрософт](http://support.microsoft.com/kb/980653). Чтобы выполнить эту задачу на уровне база данных, см. описание параметра PARAMETER_SNIFFING в разделе [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Для выполнения этой задачи на уровне запроса добавьте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) OPTIMIZE FOR UNKNOWN. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) существует второй вариант выполнения этой задачи на уровне запроса — добавьте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) USE HINT 'PARAMETER_SNIFFING' вместо этого флага трассировки.<br /><br />**Примечание.** Тщательно протестируйте этот параметр, прежде чем развертывать его в рабочей среде.<br /><br />**Область**: глобальная или сеанс|  

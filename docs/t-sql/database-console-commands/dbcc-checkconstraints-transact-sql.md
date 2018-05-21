@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
-ms.component: t-sql|database-console-commands
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,15 +24,14 @@ helpviewer_keywords:
 - integrity [SQL Server], constraints
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 caps.latest.revision: 45
-author: barbkess
-ms.author: barbkess
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 60066dd19c22c44e530743d479db7ac5f5ead50b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a274fea3b1171774def99daea9248ca96cd4c365
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,10 +97,10 @@ DBCC CHECKCONSTRAINTS проверяет целостность ограниче
   
 |Проверить|Дополнительные сведения в выходных данных в случае неудачного завершения проверки|  
 |-----------|-----------------------------------------------|  
-|PeriodEndColumn ≥ PeriodStartColumn (current)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
-|PeriodEndColumn ≥ PeriodStartColumn (current, history)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
-|PeriodStartColumn < current_utc_time (current)|[sys_start] = '{0}' AND SYSUTCTIME|  
-|PeriodEndColumn < current_utc_time (history)|[sys_end] = '{0}' AND SYSUTCTIME|  
+|PeriodEndColumn ≥ PeriodStartColumn (current)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
+|PeriodEndColumn ≥ PeriodStartColumn (current, history)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
+|PeriodStartColumn < current_utc_time (current)|[sys_start] = '{0}' AND SYSUTCTIME|  
+|PeriodEndColumn < current_utc_time (history)|[sys_end] = '{0}' AND SYSUTCTIME|  
 |Перекрытия|(sys_start1, sys_end1) , (sys_start2, sys_end2) для двух перекрывающихся записей.<br /><br /> Если перекрывающихся записей больше двух, в выходных данных будет несколько строк, в каждой из которых содержится одна пара перекрытий.|  
   
 Невозможно указать constraint_name или constraint_id для выполнения только проверок согласованности темпоральных данных.

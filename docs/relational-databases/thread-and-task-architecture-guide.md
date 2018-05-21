@@ -128,8 +128,7 @@ SQL Server не начинает автоматически использова
 |Службы Integration Services   |Is.exe |нет |  
 |Компонент Service Broker |Sb.exe |нет |  
 |Компонент Full-text Search   |Fts.exe    |нет |  
-|Агент SQL Server
-   |Sqlagent.exe   |нет |  
+|Агент SQL Server   |Sqlagent.exe   |нет |  
 |Среда SQL Server Management Studio   |Ssms.exe   |нет |  
 |программа установки SQL Server   |Setup.exe  |нет |  
 

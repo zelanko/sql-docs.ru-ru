@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
  Параметризованные фильтры применяются к одиночной таблице и обычно комбинируются с фильтрами соединения для распространения фильтрования на связанные таблицы. Дополнительные сведения см. в статье [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
- Чтобы задать или изменить параметризованный фильтр строк, см. раздел [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+ Чтобы задать или изменить параметризованный фильтр строк, см. раздел [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 ## <a name="how-parameterized-filters-work"></a>Как работают параметризованные фильтры  
  Параметризованный фильтр строк использует предложение WHERE, чтобы выбрать нужные для публикации данные. Вместо того чтобы задавать буквенное значение в предложении (как для статического фильтра строк), вы указываете одну или обе системные функции: SUSER_SNAME() и HOST_NAME(). Можно использовать и пользовательские функции, но они должны содержать в своем теле SUSER_SNAME() или HOST_NAME() либо вычислять одну из этих системных функций (например, `MyUDF(SUSER_SNAME()`). Если пользовательская функция содержит в своем теле SUSER_SNAME() или HOST_NAME(), функции невозможно передать параметры.  

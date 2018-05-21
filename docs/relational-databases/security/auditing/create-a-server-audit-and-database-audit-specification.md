@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  В обозревателе объектов раскройте папку **Безопасность** .  
   
-2.  Щелкните правой кнопкой мыши папку **Аудиты** и выберите пункт **Создать аудит...** Дополнительные сведения см. в статье [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
+2.  Щелкните правой кнопкой мыши папку **Аудиты** и выберите пункт **Создать аудит...** Дополнительные сведения см. в статье [Создание аудита сервера и спецификации аудита сервера](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
   
 3.  После завершения выбора параметров нажмите кнопку **ОК**.  
   

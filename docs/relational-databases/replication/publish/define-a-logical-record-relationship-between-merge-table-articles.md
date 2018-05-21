@@ -64,7 +64,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  На странице **Фильтрация строк** таблицы мастера создания публикаций или странице **Фильтрация строк** диалогового окна **Свойства публикации — \<публикация>** выберите фильтр строк в области **Отфильтрованные таблицы**.  
   
-     Связь логических записей ассоциирована с фильтром соединения, который расширяет фильтр строк. Поэтому необходимо определить фильтр строк, прежде чем можно будет расширить фильтр с помощью фильтра соединения и применить связь логических записей. После того как определен один фильтр соединения, можно расширить этот фильтр соединения с помощью еще одного фильтра соединения. Дополнительные сведения об определении фильтров соединения см. в разделе [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+     Связь логических записей ассоциирована с фильтром соединения, который расширяет фильтр строк. Поэтому необходимо определить фильтр строк, прежде чем можно будет расширить фильтр с помощью фильтра соединения и применить связь логических записей. После того как определен один фильтр соединения, можно расширить этот фильтр соединения с помощью еще одного фильтра соединения. Дополнительные сведения об определении фильтров соединения см. в разделе [Определение и изменение фильтра соединения между статьями публикации слиянием](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 2.  Щелкните **Добавить**и выберите **Добавить соединение для расширения выбранного фильтра**.  
   
@@ -208,7 +208,7 @@ ms.lasthandoff: 05/03/2018
  [!code-vb[HowTo#rmo_vb_CreateLogicalRecord](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
   
 ## <a name="see-also"></a>См. также:  
- [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Определение и изменение фильтра соединения между статьями публикации слиянием](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Определение и изменение статического строкового фильтра](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [Группирование изменений в связанных строках с помощью логических записей](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)   

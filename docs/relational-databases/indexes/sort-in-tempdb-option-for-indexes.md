@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 # <a name="sortintempdb-option-for-indexes"></a>Параметр SORT_IN_TEMPDB для индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  При создании или перестроении индекса можно установить параметр SORT_IN_TEMPDB в значение ON, чтобы компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использовал базу данных **tempdb** для хранения промежуточных результатов сортировки, которые применяются для построения индекса. Данный параметр увеличивает место на диске, временно занимаемое при построении индекса, но с его помощью можно сократить время, необходимое для создания или перестроения индекса, когда **tempdb** находится в наборе дисков, отличном от набора, используемого для размещения пользовательской базы данных. Дополнительные сведения о параметре **tempdb**см. в разделе [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
+  При создании или перестроении индекса можно установить параметр SORT_IN_TEMPDB в значение ON, чтобы компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использовал базу данных **tempdb** для хранения промежуточных результатов сортировки, которые применяются для построения индекса. Данный параметр увеличивает место на диске, временно занимаемое при построении индекса, но с его помощью можно сократить время, необходимое для создания или перестроения индекса, когда **tempdb** находится в наборе дисков, отличном от набора, используемого для размещения пользовательской базы данных. Дополнительные сведения о параметре **tempdb**см. в разделе [Настройка параметра конфигурации сервера index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
   
 ## <a name="phases-of-index-building"></a>Фазы построения индекса  
  Процесс построения индекса компонентой [!INCLUDE[ssDE](../../includes/ssde-md.md)] состоит из следующих фаз.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="related-content"></a>См. также  
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
   
- [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
+ [Настройка параметра конфигурации сервера index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   
  [Требования к месту на диске для DDL-операций индекса](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   

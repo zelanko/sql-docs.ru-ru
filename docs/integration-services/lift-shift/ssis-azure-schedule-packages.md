@@ -1,10 +1,9 @@
 ---
 title: Планирование выполнения пакета служб SSIS в Azure | Документы Майкрософт
-ms.date: 04/17/2018
-ms.topic: article
+ms.date: 05/07/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
@@ -13,19 +12,79 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c946055e7579478d65de31f737b1c265b2a38eba
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 946fb9c302057844eed3c1e14aed1243e0d4c7f7
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Планирование выполнения пакета служб SSIS в Azure
 Вы можете запланировать выполнение пакетов, хранящихся в базе данных каталога SSISDB на сервере базы данных SQL Azure, выбрав один из следующих вариантов планирования:
--   [Агент SQL Server](#agent)
+-   [Параметр "Расписание" в среде SQL Server Management Studio (SSMS)](#ssms)
+-   [Операция выполнения пакета служб SSIS для фабрики данных Azure](#execute)
+-   [Операция хранимой процедуры SQL Server для фабрики данных Azure](#stored proc)
 -   [Задания обработки эластичных баз данных SQL](#elastic)
--   [Операция выполнения пакета служб SSIS для фабрики данных Azure](#activities)
--   [Операция хранимой процедуры SQL Server для фабрики данных Azure](#activities)
+-   [Агент SQL Server](#agent)
+
+## <a name="ssms"></a> Планирование выполнения пакета в среде SSMS
+
+В SQL Server Management Studio (SSMS) щелкните правой кнопкой мыши пакет, развернутый в базе данных каталога SSIS, SSISDB, и выберите **Расписание**, чтобы открыть диалоговое окно **Новое расписание**.
+
+## <a name="execute"></a> Планирование выполнения пакета с помощью операции "Выполнить пакет SSIS"
+
+Сведения о создании расписания для пакета SSIS с помощью операции "Выполнить пакет SSIS" в фабрике данных Azure см. в разделе [Выполнение пакета SSIS с помощью операции SSIS в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+
+## <a name="storedproc"></a> Планирование выполнения пакета с помощью операции хранимой процедуры
+
+Сведения о создании расписания для пакета SSIS с помощью операции хранимой процедуры в фабрике данных Azure см. в разделе [Выполнение пакета SSIS с помощью операции хранимой процедуры в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
+
+В случае фабрики данных версии 1 см. раздел [Выполнение пакета SSIS с помощью операции хранимой процедуры в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity).
+
+## <a name="elastic"></a> Планирование пакета с использованием заданий обработки эластичных баз данных SQL
+
+Дополнительные сведения о заданиях обработки эластичных баз данных SQL см. в разделе [Управление облачными базами данных с горизонтальным масштабированием](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
+
+### <a name="prerequisites"></a>предварительные требования
+
+Прежде чем использовать задания обработки эластичных баз данных для планирования пакетов SSIS, хранящихся в каталоге базы данных SSISDB на сервере базы данных SQL Azure, необходимо выполнить следующие действия:
+
+1.  Установить и настроить компоненты для заданий обработки эластичных баз данных. Дополнительные сведения см. в разделе [Общие сведения об установке заданий обработки эластичных баз данных](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
+
+2. Создать учетные данные уровня базы данных, которые задания смогут использовать для отправки команд в базу данных каталога SSIS. Дополнительные сведения см. в разделе [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+
+### <a name="create-an-elastic-job"></a>Создание задания обработки эластичных баз данных
+
+Чтобы создать задание, используйте скрипт Transact-SQL, аналогичный приведенному в следующем примере:
+
+```sql
+-- Create Elastic Jobs target group 
+EXEC jobs.sp_add_target_group 'TargetGroup' 
+
+-- Add Elastic Jobs target group member 
+EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup', 
+    @target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
+    @database_name='SSISDB' 
+
+-- Add a job to schedule SSIS package execution
+EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
+    @schedule_interval_type='Minutes', @schedule_interval_count=60
+
+-- Add a job step to create/start SSIS package execution using SSISDB catalog stored procedures
+EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
+    @command=N'DECLARE @exe_id bigint 
+        EXEC [SSISDB].[catalog].[create_execution]
+            @folder_name=N''folderName'', @project_name=N''projectName'',
+            @package_name=N''packageName'', @use32bitruntime=0,
+            @runinscaleout=1, @useanyworker=1, 
+            @execution_id=@exe_id OUTPUT         
+        EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
+    @credential_name='YourDBScopedCredentials', 
+    @target_group_name='TargetGroup' 
+
+-- Enable the job schedule 
+EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
+    @schedule_interval_type='Minutes', @schedule_interval_count=60 
+```
 
 ## <a name="agent"></a> Планирование пакета с помощью агента SQL Server
 
@@ -96,62 +155,6 @@ ms.lasthandoff: 04/26/2018
     ```
 
 6.  Завершите настройку и планирование задания.
-
-## <a name="elastic"></a> Планирование пакета с использованием заданий обработки эластичных баз данных SQL
-
-Дополнительные сведения о заданиях обработки эластичных баз данных SQL см. в разделе [Управление облачными базами данных с горизонтальным масштабированием](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
-
-### <a name="prerequisites"></a>предварительные требования
-
-Прежде чем использовать задания обработки эластичных баз данных для планирования пакетов SSIS, хранящихся в каталоге базы данных SSISDB на сервере базы данных SQL Azure, необходимо выполнить следующие действия:
-
-1.  Установить и настроить компоненты для заданий обработки эластичных баз данных. Дополнительные сведения см. в разделе [Общие сведения об установке заданий обработки эластичных баз данных](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
-
-2. Создать учетные данные уровня базы данных, которые задания смогут использовать для отправки команд в базу данных каталога SSIS. Дополнительные сведения см. в разделе [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
-
-### <a name="create-an-elastic-job"></a>Создание задания обработки эластичных баз данных
-
-Чтобы создать задание, используйте скрипт Transact-SQL, аналогичный приведенному в следующем примере:
-
-```sql
--- Create Elastic Jobs target group 
-EXEC jobs.sp_add_target_group 'TargetGroup' 
-
--- Add Elastic Jobs target group member 
-EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup', 
-    @target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
-    @database_name='SSISDB' 
-
--- Add a job to schedule SSIS package execution
-EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
-    @schedule_interval_type='Minutes', @schedule_interval_count=60
-
--- Add a job step to create/start SSIS package execution using SSISDB catalog stored procedures
-EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
-    @command=N'DECLARE @exe_id bigint 
-        EXEC [SSISDB].[catalog].[create_execution]
-            @folder_name=N''folderName'', @project_name=N''projectName'',
-            @package_name=N''packageName'', @use32bitruntime=0,
-            @runinscaleout=1, @useanyworker=1, 
-            @execution_id=@exe_id OUTPUT         
-        EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
-    @credential_name='YourDBScopedCredentials', 
-    @target_group_name='TargetGroup' 
-
--- Enable the job schedule 
-EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
-    @schedule_interval_type='Minutes', @schedule_interval_count=60 
-```
-
-## <a name="activities"></a> Планирование пакета с использованием фабрики данных Azure
-
-Сведения о планировании пакета служб SSIS с помощью операций фабрики данных Azure см. в следующих статьях:
-
--   Для фабрики данных версии 2: [Выполнение пакета служб SSIS с помощью операции SSIS в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
-
--   Для фабрики данных версии 2: [Выполнение пакета служб SSIS с помощью операции хранимой процедуры в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
-
--   Для фабрики данных версии 1: [Выполнение пакета служб SSIS с помощью операции хранимой процедуры в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>Следующие шаги
 Дополнительные сведения об агенте SQL Server см. в разделе [Пакеты служб из заданий агента SQL Server](../packages/sql-server-agent-jobs-for-packages.md).

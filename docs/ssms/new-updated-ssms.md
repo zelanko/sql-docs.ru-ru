@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
 ms.component: ssms
-ms.date: 02/03/2018
-ms.openlocfilehash: 8f2ad52b9741a3220a8c5db0a60924a41cc62d27
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.date: 04/28/2018
+ms.openlocfilehash: 1ce446219f71baca0f4cdedc835fca929b572a0f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>Новые и недавно обновленные: SQL Server Management Studio (SSMS) для SQL Server
 
@@ -28,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 
 
 
-- *Диапазон дат обновлений:* &nbsp; **03.12.2017**&nbsp;–&nbsp;**03.02.2018**
+- *Даты обновлений:* &nbsp; **02.03.2018**&nbsp;–&nbsp;**28.04.2018**
 - *Предметная область:* &nbsp; **SQL Server Management Studio (SSMS)**.
 
 
@@ -41,7 +43,11 @@ ms.lasthandoff: 04/26/2018
 Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
 
-1. [Установка локализованных версий SQL Server Management Studio (SSMS)](install-other-languages.md)
+1. [Учебник. Подключение к экземпляру SQL Server и выполнение запросов с помощью SQL Server Management Studio](tutorials/connect-query-sql-server.md)
+2. [Учебник. Создание скриптов для объектов в среде SQL Server Management Studio](tutorials/scripting-ssms.md)
+3. [Учебник. Компоненты и конфигурация SQL Server Management Studio](tutorials/ssms-configuration.md)
+4. [Учебник: дополнительные советы и рекомендации по использованию SSMS](tutorials/ssms-tricks.md)
+5. [Учебник. Использование шаблонов в среде SQL Server Management Studio](tutorials/templates-ssms.md)
 
 
 
@@ -67,8 +73,8 @@ ms.lasthandoff: 04/26/2018
 
 В этом сокращенном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
 
-1. [Скачивание SQL Server Management Studio (SSMS)](#TitleNum_1)
-2. [Среда SQL Server Management Studio (SSMS) — журнал изменений](#TitleNum_2)
+1. [Среда SQL Server Management Studio (SSMS) — журнал изменений](#TitleNum_1)
+2. [Учебники по SQL Server Management Studio (SSMS)](#TitleNum_2)
 
 
 
@@ -79,46 +85,54 @@ ms.lasthandoff: 04/26/2018
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-download-sql-server-management-studio-ssmsdownload-sql-server-management-studio-ssmsmd"></a>1. &nbsp; [Скачивание SQL Server Management Studio (SSMS)](download-sql-server-management-studio-ssms.md)
+### <a name="1-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>1. &nbsp; [Среда SQL Server Management Studio (SSMS) — журнал изменений](sql-server-management-studio-changelog-ssms.md)
 
-*Обновление: 18.01.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Далее](#TitleNum_2))
+*Обновлено: 25.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Далее](#TitleNum_2))
 
-<!-- Source markdown line 83.  ms.author= "sstein".  -->
+<!-- Source markdown line 27.  ms.author= "sstein".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 0e123e7bdf04f02fcd26ac31fa30ed5f31b19c7d 924246b55d3cad6a5d068da8a41f4be23dcfeb2b  (PR=4652  ,  Filename=download-sql-server-management-studio-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=6b4aae3706247ce9b311682774b13ac067f60a79) -->
+<!-- git diff --ignore-all-space --unified=0 eb641ac39386a26a76dc303f5bd55eb3f9f4c78d f560f09b51ea30b255c10f7eb86857c3090881d9  (PR=5676  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
 
 
 
-SSMS 17.4 — это новейшая версия SQL Server Management Studio. Поколение 17.x среды SSMS поддерживает почти все функциональные возможности выпусков SQL Server 2008 — SQL Server 2017. Версия 17.x также поддерживает SQL Analysis Services в режиме PaaS.
+**[SSMS 17.6]**
 
-Версия 17.4 включает следующее.
 
-Оценка уязвимостей:
-- Добавлена новая служба оценки уязвимости SQL, которая проверяет базы данных на наличие потенциальных уязвимостей и отклонений от рекомендаций, например неверных настроек, избыточных разрешений и незащищенных конфиденциальных данных.
-- Результаты оценки включают в себя практические действия по устранению каждой проблемы, а также настроенные скрипты исправления, если это возможно. Отчет об оценке можно настроить для конкретной среды и конкретных требований. Дополнительные сведения об [оценке уязвимостей SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment).
+Номер выпуска: 17.6<br>
+Номер сборки: 14.0.17230.0<br>
+Дата выпуска: 20 марта 2018 г.
 
-SMO:
-- Исправлена проблема, из-за которой свойство *HasMemoryOptimizedObjects* вызывало исключение в Azure.
-- Добавлена поддержка новой функции CATALOG_COLLATION.
+**Новые возможности**
 
-Панель мониторинга AlwaysOn:
-- Усовершенствован анализ задержек в группах доступности.
-- Добавлены два новых отчета: *AlwaysOn\_Latency\_Primary* и *AlwaysOn\_Latency\_Secondary*.
 
-Showplan
-- Обновленные ссылки указывают на правильную документацию.
-- Анализ отдельного плана выполняется непосредственно на основе фактического плана.
-- Создан новый набор значков.
-- Добавлена поддержка для распознания логических операторов применения, например GbApply, InnerApply.
+**Общие ошибки SSMS**
 
-XE Profiler:
-- Переименован в XEvent Profiler.
-- Теперь при помощи команд меню для остановки и запуска сеанс останавливается и запускается по умолчанию.
-- Включена поддержка сочетаний клавиш (например, CTRL+F для поиска).
-- Добавлены действия database\_name и client\_hostname для соответствующих событий в сеансах XEvent Profiler. Чтобы изменения вступили в силу, возможно, потребуется удалить существующие экземпляры сеансов QuickSessionStandard или QuickSessionTSQL на серверах. Дополнительные сведения см. на странице [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981).
+Управляемый экземпляр базы данных SQL:
+
+- Добавлена поддержка [Управляемого экземпляра базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance). Управляемый экземпляр базы данных SQL Azure (предварительная версия) — это новая разновидность базы данных SQL Azure, предоставляющая почти полную совместимость с локальным развертыванием SQL Server, собственную реализацию [виртуальной сети](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview), которая решает распространенные проблемы безопасности, и [бизнес-модель](https://azure.microsoft.com/pricing/details/sql-database/), подходящую клиентам локальных версий SQL Server.
+- Поддержка распространенных сценариев управления, таких как:
+   - создание и изменение баз данных;
+   - резервное копирование и восстановление баз данных;
+   - импорт, экспорт, извлечение и публикация приложений уровня данных;
+   - просмотр и изменение свойств сервера;
+   - полная поддержка обозревателя объектов;
+   - создание скриптов для объектов базы данных;
+   - поддержка заданий агента SQL;
+   - поддержка связанных серверов.
+- Дополнительные сведения об управляемых экземплярах можно найти [здесь](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/).
+
+Обозреватель объектов:
+- Добавлены параметры, отключающие принудительное заключение имен в скобки при перетаскивании из обозревателя объектов в окно запроса. (Предложения пользователей [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) и [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051).)
+
+Классификация данных:
+- Общие усовершенствования и исправления ошибок.
+
+**Integration Services (IS)**
+
+- Добавлена поддержка развертывания пакетов в [Управляемом экземпляре базы данных SQL Azure](docs/ssms/https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
 
 
 
@@ -130,54 +144,45 @@ XE Profiler:
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>2. &nbsp; [Среда SQL Server Management Studio (SSMS) — журнал изменений](sql-server-management-studio-changelog-ssms.md)
+### <a name="2-nbsp-tutorials-for-sql-server-management-studio-ssmstutorialstutorial-sql-server-management-studiomd"></a>2. &nbsp; [Учебники по SQL Server Management Studio (SSMS)](tutorials/tutorial-sql-server-management-studio.md)
 
-*Обновлено: 29.01.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_1))
+*Обновлено: 25.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_1))
 
-<!-- Source markdown line 27.  ms.author= "sstein".  -->
+<!-- Source markdown line 49.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 b5096fa8f1ae3f2e4bc040f43cb8810d96f2c69c eb641ac39386a26a76dc303f5bd55eb3f9f4c78d  (PR=0  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=ba4b1c2e5200f2f78786b710da18fd38fedde6c9) -->
+<!-- git diff --ignore-all-space --unified=0 b272c75bab04912ebb706098cf6b6a6c80d9e2b8 d453ebc8251fb83ffcb1af58c9a08bb65b3e9fa2  (PR=5676  ,  Filename=tutorial-sql-server-management-studio.md  ,  Dirpath=docs\ssms\tutorials\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
 
 
 
-**[SSMS 17.4](download-sql-server-management-studio-ssms.md)**
+- Учебник. Подключение к SQL Server и выполнение запросов с помощью SSMS
 
-Общедоступная версия | Номер сборки: 14.0.17213.0
+    Из этого учебника вы узнаете, как подключиться к экземпляру SQL Server. Вы также ознакомитесь с некоторыми основными командами Transact-SQL (T-SQL) для создания базы данных и выполнения запросов к ней.
 
-**Новые возможности**
+- Учебник. Создание скриптов для объектов в SSMS
+
+    Из этого учебника вы узнаете, как создавать скрипты для различных объектов в среде SSMS, включая базы данных и запросы.
+
+- Учебник. Использование шаблонов в SSMS
+
+    Из этого учебника вы узнаете, как работать с готовыми шаблонами в среде SSMS. Шаблоны — это малоизвестный компонент, в котором хранится ряд фрагментов кода Transact-SQL для разных задач администрирования баз данных.
+
+- Учебник. Настройка SSMS
+
+    Из этого учебника вы узнаете основы настройки среды SSMS, например изменение структуры среды. В нем также описываются разные компоненты SSMS.
 
 
-**Общие ошибки SSMS**
+- Учебник: дополнительные советы и рекомендации по использованию SSMS
 
-Оценка уязвимостей:
-- Добавлена новая служба оценки уязвимости SQL, которая проверяет базы данных на наличие потенциальных уязвимостей и отклонений от рекомендаций, например неверных настроек, избыточных разрешений и незащищенных конфиденциальных данных.
-- Результаты оценки включают в себя практические действия по устранению каждой проблемы, а также настроенные скрипты исправления, если это возможно. Отчет об оценке можно настроить для конкретной среды и конкретных требований. Дополнительные сведения об [оценке уязвимостей SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment).
+    Из этого учебника вы получите дополнительные советы и рекомендации по использованию среды SSMS. Учебник включает следующее:
+    - закомментирование и раскомментирование текста;
+    - добавление отступов в тексте;
+    - фильтрация объектов в обозревателе объектов;
+    - доступ к журналу ошибок SQL Server;
+    - определение имени экземпляра.
 
-SMO:
-- Исправлена проблема, из-за которой свойство *HasMemoryOptimizedObjects* вызывало исключение в Azure.
-- Добавлена поддержка новой функции CATALOG_COLLATION.
-
-Панель мониторинга AlwaysOn:
-- Усовершенствован анализ задержек в группах доступности.
-- Добавлены два новых отчета: *AlwaysOn\_Latency\_Primary* и *AlwaysOn\_Latency\_Secondary*.
-
-Showplan
-- Обновленные ссылки указывают на правильную документацию.
-- Анализ отдельного плана выполняется непосредственно на основе фактического плана.
-- Создан новый набор значков.
-- Добавлена поддержка для распознания логических операторов применения, например GbApply, InnerApply.
-
-XE Profiler:
-- Переименован в XEvent Profiler.
-- Теперь при помощи команд меню для остановки и запуска сеанс останавливается и запускается по умолчанию.
-- Включена поддержка сочетаний клавиш (например, CTRL+F для поиска).
-- Добавлены действия database\_name и client\_hostname для соответствующих событий в сеансах XEvent Profiler. Чтобы изменения вступили в силу, возможно, потребуется удалить существующие экземпляры сеансов QuickSessionStandard или QuickSessionTSQL на серверах. Дополнительные сведения см. на странице [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981).
-
-Командная строка:
-- Добавлен новый параметр командной строки (-G), с помощью которого SSMS может автоматически подключаться к серверу или базе данных с использованием аутентификации Active Directory (встроенная аутентификация или аутентификация с помощью пароля). Дополнительные сведения см. в статье [Программа SSMS](ssms-utility.md).
 
 
 
@@ -190,40 +195,36 @@ XE Profiler:
 Этот раздел содержит статьи, очень близкие к недавно измененным статьям из других предметных областей в общедоступном репозитории GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Предметные области, *содержащие* новые или недавно обновленные статьи
 
-
-- [Новые + обновленные (1+3):&nbsp; **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новые + обновленные (0+1):&nbsp; **Analytics Platform System для SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Новые + обновленные (0+1):&nbsp; **Подключение к SQL**](../connect/new-updated-connect.md)
-- [Новые + обновленные (0+1):&nbsp; **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
-- [Новые + обновленные (12+1): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
-- [Новые + обновленные (6+2):&nbsp; **Linux для SQL**](../linux/new-updated-linux.md)
-- [Новые + обновленные (15+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
-- [Новые + обновленные (2+9):&nbsp; **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Новые + обновленные (1+0):&nbsp; **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Новые + обновленные (1+1):&nbsp; **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Новые + обновленные(1+1):&nbsp; **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Новые + обновленные (0+1):&nbsp; **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Новые + обновленные (1+2):&nbsp; **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Новые + обновленные (0+2):&nbsp; **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Новые + обновленные (11+6): &nbsp; &nbsp;**Углубленная аналитика для SQL** (документация)](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новые + обновленные (18+0): &nbsp;&nbsp;**Analysis Services для SQL** (документация)](../analysis-services/new-updated-analysis-services.md)
+- [Новые + обновленные (218+14):  **Подключение к SQL** (документация)](../connect/new-updated-connect.md)
+- [Новые + обновленные (14+0): &nbsp; &nbsp;**Ядро СУБД для SQL** (документация)](../database-engine/new-updated-database-engine.md)
+- [Новые + обновленные (3+2): &nbsp; &nbsp;**Integration Services для SQL** (документация)](../integration-services/new-updated-integration-services.md)
+- [Новые + обновленные (3+3): &nbsp; &nbsp;**Linux для SQL** (документация)](../linux/new-updated-linux.md)
+- [Новые + обновленные (7+10): &nbsp; &nbsp;**Реляционные базы данных для SQL** (документация)](../relational-databases/new-updated-relational-databases.md)
+- [Новые + обновленные (0+2): &nbsp; **&nbsp;Reporting Services для SQL** (документация)](../reporting-services/new-updated-reporting-services.md)
+- [Новые + обновленные (1+3): &nbsp; &nbsp;**SQL Operations Studio** (документация)](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Новые + обновленные(2+3): &nbsp; &nbsp;**Microsoft SQL Server** (документация)](../sql-server/new-updated-sql-server.md)
+- [Новые + обновленные (1+1): &nbsp; &nbsp;**SQL Server Data Tools (SSDT)** (документация)](../ssdt/new-updated-ssdt.md)
+- [Новые + обновленные (5+2): &nbsp; &nbsp;**SQL Server Management Studio (SSMS)** (документация)](../ssms/new-updated-ssms.md)
+- [Новые + обновленные (0+2): &nbsp; &nbsp;**Transact-SQL** (документация)](../t-sql/new-updated-t-sql.md)
+- [Новые + обновленные (1+1): &nbsp;**&nbsp;Инструменты для SQL** (документация)](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Предметные области, *не* содержащие новые или недавно обновленные статьи
 
-
-- [Новые + обновленные (0+0): **Data Migration Assistant (DMA) для SQL**](../dma/new-updated-dma.md)
-- [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
-- [Новые + обновленные (0+0): документация **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новые + обновленные (0+0):  **Analytics Platform System для SQL** (документация)](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
 - [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
+- [Новые + обновленные (0+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
 - [Новые + обновленные (0+0): **примеры для SQL**](../samples/new-updated-samples.md)
 - [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
-- [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
-
 
