@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
  Соединение с намерением только чтения  
  Базы данных-получатели доступны только для соединений, для которых свойство соединения **Назначение приложения** имеет значение **ReadOnly** (*соединения с намерением чтения*).  
   
- Дополнительные сведения об этом свойстве соединения см. в разделе [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Дополнительные сведения об этом свойстве соединения см. в разделе [Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
  Разрешить любые соединения только для чтения  
  Для всех баз данных-получателей разрешены соединения доступа только для чтения. Этот вариант разрешает соединения клиентам с более ранними версиями ПО.  
