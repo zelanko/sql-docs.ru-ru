@@ -3,8 +3,6 @@ title: Уровни серьезности ошибок ядра СУБД | До
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -21,11 +19,11 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48c7c90062c05084bf004a592d192563d7aa7f80
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7d5c5a6ddee7f8d5e9b734651fa7722df56349db
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="database-engine-error-severities"></a>Степени серьезности ошибок компонента Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +32,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="levels-of-severity"></a>Уровни серьезности  
  В следующей таблице описаны уровни серьезности ошибок, формируемых компонентом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-|Степень серьезности|Description|  
+|Степень серьезности|Описание|  
 |--------------------|-----------------|  
 |0-9|Информационные сообщения, возвращающие сведения о состоянии или оповещающие о несерьезных ошибках. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не формирует системные ошибки с уровнем серьезности от 0 до 9.|  
 |10|Информационные сообщения, возвращающие сведения о состоянии или оповещающие о несерьезных ошибках. Для обеспечения совместимости компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] перед возвратом сведений об ошибке в вызвавшее приложение преобразует уровень серьезности 10 в уровень 0.|  

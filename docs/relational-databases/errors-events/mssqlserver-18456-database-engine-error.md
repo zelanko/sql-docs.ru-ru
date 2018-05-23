@@ -3,8 +3,6 @@ title: MSSQLSERVER_18456 | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -17,11 +15,11 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49aeb80c984dd3b01f300e38d81e423a1fee56d2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b5bb3731947cebbd5ff1fe2d0f5f1f1875867724
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +63,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="additional-error-information"></a>Дополнительные сведения об ошибке  
 В целях повышения безопасности сообщение об ошибке, возвращаемое клиенту, намеренно скрывает природу ошибки проверки подлинности. Однако в журнале ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для соответствующей ошибки указано состояние, которое можно сопоставить с условиями сбоя проверки подлинности. Сравните состояние ошибки со следующим списком, чтобы определить причину ошибки имени входа.  
   
-|Состояние|Description|  
+|Состояние|Описание|  
 |---------|---------------|  
 |1|Сведения об ошибке недоступны. Это состояние обычно означает отсутствие разрешений на получение сведений об ошибке. За дополнительными сведениями обратитесь к администратору [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |2|Недопустимый идентификатор пользователя.|  

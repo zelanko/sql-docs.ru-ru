@@ -3,12 +3,9 @@ title: Центр производительности для базы данн�
 ms.custom: ''
 ms.date: 04/08/2016
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
-ms.component: performance
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +23,11 @@ caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4f95779084ebec71ed169abdb5d4461c7532d288
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0dc039e723483777fee9d670ca943fb101a29aa5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Центр производительности для базы данных Azure SQL и SQL Server Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 |||  
 |-|-|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Индексы](../../relational-databases/indexes/indexes.md)**|[Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)<br />[Указание коэффициента заполнения для индекса](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)<br />[Настройка параллельных операций с индексами](../../relational-databases/indexes/configure-parallel-index-operations.md)<br />[Параметр SORT_IN_TEMPDB для индексов](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)<br />[Повышение производительности полнотекстовых индексов](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)<br />[Настройка параметра конфигурации сервера «min memory per query»](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)<br />[Настроить опцию конфигурации сервера конфигурации памяти](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Индексы](../../relational-databases/indexes/indexes.md)**|[Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)<br />[Указание коэффициента заполнения для индекса](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)<br />[Настройка параллельных операций с индексами](../../relational-databases/indexes/configure-parallel-index-operations.md)<br />[Параметр SORT_IN_TEMPDB для индексов](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)<br />[Повышение производительности полнотекстовых индексов](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)<br />[Настройка параметра конфигурации сервера «min memory per query»](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)<br />[Настройка параметра конфигурации сервера index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Секционированные таблицы и индексы](../../relational-databases/partitions/partitioned-tables-and-indexes.md)**|[Преимущества секционирования](https://msdn.microsoft.com/library/ms190787.aspx#Anchor_0)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Соединения](../../relational-databases/performance/joins.md)**|[Основные принципы соединения](../../relational-databases/performance/joins.md#fundamentals)<br />[Соединение вложенными циклами](../../relational-databases/performance/joins.md#nested_loops)<br />[Соединение слиянием](../../relational-databases/performance/joins.md#merge)<br />[Хэш-соединение](../../relational-databases/performance/joins.md#hash)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Вложенные запросы](../../relational-databases/performance/subqueries.md)**|[Основы вложенных запросов](../../relational-databases/performance/subqueries.md#fundamentals)<br />[Коррелированные вложенные запросы](../../relational-databases/performance/subqueries.md#correlated)<br />[Типы вложенных запросов](../../relational-databases/performance/subqueries.md#types)|  

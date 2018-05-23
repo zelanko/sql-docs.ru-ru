@@ -3,12 +3,9 @@ title: Класс событий Audit Broker Login | Документация �
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73220c28a2a5399247ff7c7aab96adbab9cd3b8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1064f0902369f81cff96f94ee68520ded419d39
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Столбцы класса событий Audit Broker Login  
   
-|Столбец данных|Тип|Description|Номер столбца|Фильтруемый|  
+|Столбец данных|Тип|Описание|Номер столбца|Фильтруемый|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Не используется в этом классе событий.|10|Да|  
 |**ClientProcessID**|**int**|Не используется в этом классе событий.|9|Да|  
@@ -58,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
  Следующая таблица содержит список значений подклассов события для этого класса событий.  
   
-|Идентификатор|Подкласс|Description|  
+|Идентификатор|Подкласс|Описание|  
 |--------|--------------|-----------------|  
 |1|Успешный вход|Событие Login Success (успешный вход) извещает об успешном завершении соответствующего процесса регистрации брокера.|  
 |2|Ошибка входного протокола|Событие Login Protocol Error (ошибка протокола входа) извещает о том, что брокер получил синтаксически правильное, но неправильное при текущем состоянии процесса регистрации сообщение. Сообщение могло быть потеряно или отослано вне очереди.|  

@@ -12,11 +12,11 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 639f02809a003bc5418ecb5ec33930f89205701f
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: ef69dc52b041541b89052038cadad94b9fa2f45c
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>Подключение к базе данных каталога SSIS (SSISDB) в Azure
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/15/2018
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Тип сервера** | Компонент Database Engine | Это значение обязательно. |
    | **Имя сервера** | Полное имя сервера | Имя должно быть в следующем формате: **mysqldbserver.database.windows.net**. |
-   | **Проверка подлинности** | Проверка подлинности SQL Server | В этом кратком руководстве используется проверка подлинности SQL. |
+   | **Проверка подлинности** | Проверка подлинности SQL Server | |
    | **Имя входа** | Учетная запись администратора сервера | Это учетная запись, которая была указана при создании сервера. |
    | **Пароль** | Пароль для учетной записи администратора сервера | Это пароль, который был указан при создании сервера. |
 

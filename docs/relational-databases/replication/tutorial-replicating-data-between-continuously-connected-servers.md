@@ -22,11 +22,11 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50569b63d34534472e4db8d0afc9dd48e1160f96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f67623539244916e430976d46f07f4a1e73baf4
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Руководство. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="prerequisites"></a>предварительные требования  
 Это руководство для пользователей, которые умеют выполнять основные операции с базами данных и которые имеют ограниченный опыт репликации. Прежде чем приступить к работе с этим руководством, ознакомьтесь с [руководством по подготовке SQL Server к репликации](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
-Для работы с этим руководством требуется SQL Server, среда SQL Server Management Studio (SSMS) и база данных AdventureWorks:  
+Для работы с этим учебником требуется SQL Server, среда SQL Server Management Studio (SSMS) и база данных AdventureWorks.  
   
 - На сервере-издателе (источник) установите следующее:  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 - На сервере-подписчике (целевом) установите любой выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кроме [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] не может быть подписчиком при репликации транзакций.  
   
 - Установите [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+- Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
 - Скачайте [пример базы данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). См. дополнительные сведения о [восстановлении базы данных в среде SSMS](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
  
 >[!NOTE]
@@ -141,7 +141,7 @@ ms.lasthandoff: 05/03/2018
 
 ![Кнопка "Запустить" и изменение в сообщении о состоянии, информирующее о запуске агента моментальных снимков](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-Если отображается сообщение об ошибке, ознакомьтесь с разделом [Устранение неполадок с агентом моментальных снимков](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#troubleshoot-errors-with-snapshot-agent). 
+Если отображается сообщение об ошибке, ознакомьтесь с разделом [Устранение неполадок с агентом моментальных снимков](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-snapshot-agent). 
 
   
 ### <a name="add-the-distribution-agent-login-to-the-pal"></a>Добавление имени входа агента распространения в список доступа к публикации  
@@ -195,7 +195,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="set-database-permissions-at-the-subscriber"></a>Установка разрешений базы данных на подписчике  
   
-1. Установите подключение к подписчику в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Разверните узел **Безопасность**, щелкните правой кнопкой мыши **Имена для входа**, а затем выберите пункт **Создать имя для входа**.     
+1. Установите подключение к подписчику в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Разверните узел **Безопасность**, щелкните правой кнопкой мыши **Имена для входа**, а затем выберите команду **Создать имя для входа**.     
   
    A. На странице **Общие** в разделе **Имя для входа** выберите **Найти** и добавьте имя для входа для <*имя_компьютера_подписчика*>**\repl_distribution**.
 

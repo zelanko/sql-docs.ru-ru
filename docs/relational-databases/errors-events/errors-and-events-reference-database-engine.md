@@ -3,8 +3,6 @@ title: Справочник по ошибкам и событиям (ядро С
 ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -19,11 +17,11 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b28a5ca483dded374cb7c5bdc31a205fd18c23ef
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: de9cc2a589a7dbf9f8322a02841688f551de3f7a
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Справочник по ошибкам и событиям (компонент Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 05/04/2018
   
  В следующей таблице указаны ссылки на эти источники, а также приведено их описание.  
   
-|Ресурс|Description|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Сообщество SQL Server](http://go.microsoft.com/fwlink/?LinkId=42455)|Этот сайт содержит ссылки на группы новостей и форумы, контролируемые сообществом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Кроме того, здесь перечислены источники данных сообщества, такие как блоги и сайты. Сообщество [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оказывает значительную помощь, отвечая на вопросы, однако ответ не может быть гарантирован.|  
 |[Сообщество центра разработчиков SQL Server](http://go.microsoft.com/fwlink/?LinkId=42456)|На этом сайте находятся группы новостей, форумы и другие источники сообщества, которые полезны для разработчиков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
