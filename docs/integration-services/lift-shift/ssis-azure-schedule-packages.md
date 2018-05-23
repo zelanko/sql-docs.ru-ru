@@ -1,6 +1,6 @@
 ---
-title: Планирование выполнения пакета служб SSIS в Azure | Документы Майкрософт
-ms.date: 05/07/2018
+title: Планирование выполнения пакетов MSSQL Integration Services в Azure | Документы Майкрософт
+ms.date: 05/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,23 +12,25 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 946fb9c302057844eed3c1e14aed1243e0d4c7f7
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 4bfad00425848189d88bd780296db00ec810b37c
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Планирование выполнения пакета служб SSIS в Azure
+# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>Планирование выполнения пакета MSSQL Integration Services в Azure
 Вы можете запланировать выполнение пакетов, хранящихся в базе данных каталога SSISDB на сервере базы данных SQL Azure, выбрав один из следующих вариантов планирования:
 -   [Параметр "Расписание" в среде SQL Server Management Studio (SSMS)](#ssms)
 -   [Операция выполнения пакета служб SSIS для фабрики данных Azure](#execute)
--   [Операция хранимой процедуры SQL Server для фабрики данных Azure](#stored proc)
+-   [Операция хранимой процедуры SQL Server для фабрики данных Azure](#storedproc)
 -   [Задания обработки эластичных баз данных SQL](#elastic)
 -   [Агент SQL Server](#agent)
 
 ## <a name="ssms"></a> Планирование выполнения пакета в среде SSMS
 
-В SQL Server Management Studio (SSMS) щелкните правой кнопкой мыши пакет, развернутый в базе данных каталога SSIS, SSISDB, и выберите **Расписание**, чтобы открыть диалоговое окно **Новое расписание**.
+В SQL Server Management Studio (SSMS) щелкните правой кнопкой мыши пакет, развернутый в базе данных каталога SSIS, SSISDB, и выберите **Расписание**, чтобы открыть диалоговое окно **Новое расписание**. Дополнительные сведения см. в статье [Планирование выполнения пакета MSSQL Integration Services в Azure в помощью SSMS](ssis-azure-schedule-packages-ssms.md).
+
+Для запуска этого компонента требуется SQL Server Management Studio версии 17.7 или более поздней. Чтобы получить последнюю версию SSMS, перейдите на страницу [скачивания SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
 ## <a name="execute"></a> Планирование выполнения пакета с помощью операции "Выполнить пакет SSIS"
 
