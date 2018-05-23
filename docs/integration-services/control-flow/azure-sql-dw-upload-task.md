@@ -19,14 +19,14 @@ caps.latest.revision: 5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: e9dc3062b902074f052475f5c63130244e9a582e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8da49de795c0a0fbc8d6da2cf28374a07d7f8778
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="azure-sql-dw-upload-task"></a>Задача отправки информации в хранилище данных SQL Azure
-**Задача отправки информации в хранилище данных SQL Azure** позволяет отправить локальные данные в таблицу хранилища данных SQL Azure с использованием пакета SSIS. В настоящее время в качестве формата исходного файла данных поддерживается текст с разделителями в кодировке UTF-8. В процессе передачи реализован эффективный подход PolyBase, описанный в статье [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/)(Стратегии и подходы, реализованные в процессе загрузки информации в хранилище данных SQL Azure). В частности, данные сначала будут переданы в хранилище BLOB-объектов Azure и лишь затем в хранилище данных SQL Azure. Поэтому для использования этой задачи требуется учетная запись хранилища BLOB-объектов Azure.
+**Задача отправки информации в хранилище данных SQL Azure** позволяет отправить локальные данные в таблицу хранилища данных SQL Azure с использованием пакета SSIS. В настоящее время в качестве формата исходного файла данных поддерживается текст с разделителями в кодировке UTF-8. В процессе передачи реализован эффективный подход PolyBase, описанный в статье [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) (Стратегии и подходы, реализованные в процессе загрузки информации в хранилище данных SQL Azure). В частности, данные сначала будут переданы в хранилище BLOB-объектов Azure и лишь затем в хранилище данных SQL Azure. Поэтому для использования этой задачи требуется учетная запись хранилища BLOB-объектов Azure.
 
 **Задача отправки информации в хранилище данных SQL Azure** входит в состав [пакета дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 
 На странице **Общие** настройте следующие свойства.
 
-Поле|Description
+Поле|Описание
 -----|-----------
 LocalDirectory|Указывает локальный каталог с файлами данных для отправки.
 Рекурсивно|Указывает, выполнять ли рекурсивный поиск в подкаталогах.

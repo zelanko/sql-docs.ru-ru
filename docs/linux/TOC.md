@@ -47,7 +47,6 @@
 ## [Разработка](sql-server-linux-develop-overview.md)
 ### [Библиотеки подключений](sql-server-linux-develop-connectivity-libraries.md)
 ### [Использование Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-### [Использование SSMS](sql-server-linux-develop-use-ssms.md)
 ### [Использование SSDT](sql-server-linux-develop-use-ssdt.md)
 
 ## [Управление](sql-server-linux-management-overview.md)

@@ -3,8 +3,6 @@ title: MSSQLSERVER_2546 | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -17,11 +15,11 @@ caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa504a0068e444ca0c423791000582bee782fb40
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bb3f01e875daa3ee2a12c0a7d7f927f1cd106ebd
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver2546"></a>MSSQLSERVER_2546
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,6 +42,6 @@ ms.lasthandoff: 05/04/2018
 Перестройте индекс с помощью оператора ALTER INDEX.  
   
 ## <a name="see-also"></a>См. также:  
-[ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)  
+[ALTER INDEX (Transact-SQL)](~/t-sql/statements/alter-index-transact-sql.md)  
 [Реорганизация и перестроение индексов](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
   
