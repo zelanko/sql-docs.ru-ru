@@ -36,19 +36,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 465567e7b115b0ce92f2154a2e6047de4000a831
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a5dd72c23867d45fa015ebd8c055f7e8758c188
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Возвращает текущую системную метку времени базы данных в виде значения **datetime** без смещения часового пояса базы данных. Это значение наследуется от операционной системы компьютера, на котором работает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Эта функция возвращает текущую системную метку времени базы данных в виде значения **datetime** без смещения часового пояса базы данных. `CURRENT_TIMESTAMP` наследует это значение от операционной системы компьютера, на котором работает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 > [!NOTE]  
->  SYSDATETIME и SYSUTCDATE имеют большую точность в долях секунды, чем GETDATE и GETUTCDATE. SYSDATETIMEOFFSET включает смещение часового пояса, заданное в системе. Функции SYSDATETIME, SYSUTCDATETIME и SYSDATETIMEOFFSET могут быть присвоены переменным любого типа даты и времени.  
+>  `SYSDATETIME` и `SYSUTCDATE` имеют большую точность в долях секунды, чем `GETDATE` и `GETUTCDATE`. Функция `SYSDATETIMEOFFSET` включает смещение часового пояса, заданное в системе. Функции `SYSDATETIME`, `SYSUTCDATE` и `SYSDATETIMEOFFSET` могут быть присвоены переменным любого типа даты и времени.  
   
 Эта функция ANSI SQL эквивалентна функции [GETDATE](../../t-sql/functions/getdate-transact-sql.md).
   
@@ -63,18 +63,18 @@ CURRENT_TIMESTAMP
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-Нет аргументов.
+Эта функция не имеет аргументов.
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-Функция CURRENT_TIMESTAMP может использоваться в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] везде, где допустимо использование выражений **datetime**.
+Функция `CURRENT_TIMESTAMP` может использоваться в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] везде, где допустимо использование выражения **datetime**.
   
-Функция CURRENT_TIMESTAMP недетерминированная. Невозможно проиндексировать представления и выражения, ссылающиеся на этот столбец.
+`CURRENT_TIMESTAMP` является недетерминированной функцией. Невозможно проиндексировать представления и выражения, ссылающиеся на этот столбец.
   
 ## <a name="examples"></a>Примеры  
-В следующих примерах с помощью шести системных функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые возвращают текущую дату и время, возвращается дата, время или дата и время. Значения возвращаются последовательно, поэтому могут различаться на доли секунды.
+В приведенных ниже примерах с помощью шести системных функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые возвращают текущую дату и время, возвращается дата, время или дата и время. Значения возвращаются последовательно, поэтому могут различаться на доли секунды. Обратите внимание на то, что возвращаемые значения будут соответствовать фактическим дню и времени выполнения.
   
 ### <a name="a-get-the-current-system-date-and-time"></a>A. Получение текущих системных значений даты и времени  
   
@@ -92,6 +92,7 @@ SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
 CURRENT_TIMESTAMP  2007-04-30 13:10:02.047  
 GETDATE()          2007-04-30 13:10:02.047  
 GETUTCDATE()       2007-04-30 20:10:02.047  
+*/
 ```  
   
 ### <a name="b-get-the-current-system-date"></a>Б. Получение текущей системной даты  

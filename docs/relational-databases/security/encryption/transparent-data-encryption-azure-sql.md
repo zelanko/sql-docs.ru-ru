@@ -13,19 +13,19 @@ ms.service: sql-database
 ms.component: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 04/10/2018
+ms.date: 05/08/2018
 ms.author: rebeccaz
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: bc007f1021c68c782d8a3e2e426cad3c43f3047a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b88dfeac58ef9c00307b2cfee35aca3ea0549f02
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Прозрачное шифрование данных для хранилища данных и базы данных SQL Azure
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Прозрачное шифрование данных защищает хранилище данных Azure и базу данных SQL Azure от вредоносных действий. В реальном времени оно выполняет шифрование и расшифровку неактивной базы данных, а также неактивных связанных резервных копий и файлов журнала транзакций. При этом изменение приложения не требуется.
+Прозрачное шифрование данных (TDE) защищает хранилище данных Azure и базу данных SQL Azure от вредоносных действий. В реальном времени оно выполняет шифрование и расшифровку неактивной базы данных, а также неактивных связанных резервных копий и файлов журнала транзакций. При этом изменение приложения не требуется. Прозрачное шифрование данных включается по умолчанию для всех новых развертываемых баз данных SQL Azure, однако для старых баз данных его может потребоваться включить вручную.  
 
 Прозрачное шифрование данных шифрует пространство хранения всей базы данных, используя симметричный ключ, который называется ключом шифрования базы данных. Ключ шифрования базы данных защищается средством защиты прозрачного шифрования данных. Оно представляет собой либо управляемый службой сертификат (прозрачное шифрование данных, управляемое службой), либо асимметричный ключ, хранящийся в Azure Key Vault (создание собственных ключей). Настройка средства защиты прозрачного шифрования данных производится на уровне сервера. 
 
@@ -84,7 +84,7 @@ SQL Server, запущенный на виртуальной машине Azure,
 
 Чтобы настроить прозрачное шифрование данных через PowerShell, нужно подключиться в качестве владельца Azure, участника или диспетчера безопасности SQL. 
 
-| Командлет | Description |
+| Командлет | Описание |
 | --- | --- |
 | [Set-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) |Включает или отключает прозрачное шифрование данных для базы данных.|
 | [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |Получает состояние прозрачного шифрования данных для базы данных. |
@@ -100,7 +100,7 @@ SQL Server, запущенный на виртуальной машине Azure,
 
 Подключитесь к базе данных, используя учетные данные администратора или участника роли **dbmanager** в базе данных master.
 
-| Command | Description |
+| Command | Описание |
 | --- | --- |
 | [ALTER DATABASE (база данных Azure SQL)](/sql/t-sql/statements/alter-database-azure-sql-database) | Параметр SET ENCRYPTION ON/OFF используется для шифрования и расшифровки базы данных. |
 | [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) |Возвращает сведения о состоянии шифрования базы данных и о связанных ключах шифрования базы данных. |
@@ -113,7 +113,7 @@ SQL Server, запущенный на виртуальной машине Azure,
  
 Чтобы настроить прозрачное шифрование данных через REST API, нужно подключиться в качестве владельца Azure, участника или диспетчера безопасности SQL. 
 
-| Command | Description |
+| Command | Описание |
 | --- | --- |
 |[Создать или обновить сервер](/rest/api/sql/servers/createorupdate)|Добавляет удостоверение Azure Active Directory в экземпляр SQL Server (используется для предоставления доступа к Key Vault).|
 |[Создать или обновить ключ сервера](/rest/api/sql/serverkeys/createorupdate)|Добавляет ключ Key Vault в экземпляр SQL Server.|

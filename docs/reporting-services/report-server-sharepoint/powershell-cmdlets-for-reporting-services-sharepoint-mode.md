@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 245a6f2b2c8484ad83d70c2e76dc55522fde7d1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ccff01afbd9e51f0754ceaecf885b36a5b28f9b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Командлеты PowerShell для режима интеграции служб Reporting Services с SharePoint
 
@@ -73,7 +73,7 @@ ms.lasthandoff: 05/03/2018
 
  В приведенной ниже таблице содержатся командлеты PowerShell для общих служб Reporting Services, интегрированных с SharePoint.  
   
-|Командлет|Description|  
+|Командлет|Описание|  
 |------------|-----------------|  
 |Install-SPRSService|Устанавливает и регистрирует либо удаляет общие службы Reporting Services. Это можно сделать только на компьютере, где установлены службы SQL Server Reporting Services в режиме интеграции с SharePoint. При установке выполняются две операции.<br /><br /> — Службы Reporting Services устанавливаются в ферме.<br /><br /> — Экземпляр служб Reporting Services устанавливается на текущем компьютере.<br /><br /> При удалении выполняются две операции.<br /><br /> — Службы Reporting Services удаляются с текущего компьютера.<br /><br /> — Службы Reporting Services удаляются из фермы.<br /><br /> <br /><br /> Если в ферме имеются другие компьютеры, на которых установлены службы Reporting Services, или если в ферме все еще выполняются приложения служб Reporting Services, будет выведено предупреждающее сообщение.|  
 |Install-SPRSServiceProxy|Устанавливает и регистрирует или удаляет прокси-сервер службы Reporting Services на ферме SharePoint.|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 05/03/2018
 
  В приведенной ниже таблице содержатся командлеты PowerShell для приложений служб Reporting Services и связанных с ними прокси-серверов.  
   
-|командлет|Description|  
+|командлет|Описание|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|Возвращает один или несколько объектов приложений служб Reporting Services.|  
 |New-SPRSServiceApplication|Создание нового приложения службы Reporting Services и связанных баз данных.<br /><br /> Параметр LogonType указывает, использует ли сервер отчетов учетную запись пула приложений служб SSRS или имя входа SQL Server для доступа к базе данных сервера отчетов. Допустимые значения:<br /><br /> 0 Проверка подлинности Windows<br /><br /> 1 SQL Server<br /><br /> 2 Учетная запись пула приложений (по умолчанию)|  
@@ -102,9 +102,9 @@ ms.lasthandoff: 05/03/2018
 |Get-SPRSDatabaseRightsScript|Выводит на экран скрипт определения прав базы данных для приложения служб Reporting Services. Запрашивает необходимые сведения о пользователе и базе данных, а затем возвращает код Transact-SQL, который можно выполнить для изменения разрешений. Затем этот скрипт можно запустить в среде SQL Server Management Studio.|  
 |Get-SPRSDatabaseUpgradeScript|Выводит скрипт обновления базы данных на экран. Скрипт обновит базы данных приложения служб Reporting Services до версии текущей установки служб Reporting Services.|  
   
-## <a name="reporting-services-custom-runctionality-cmdlets"></a>Командлеты пользовательской функциональности служб Reporting Services
+## <a name="reporting-services-custom-functionality-cmdlets"></a>Командлеты пользовательской функциональности служб Reporting Services
   
-|Командлет|Description|  
+|Командлет|Описание|  
 |------------|-----------------|  
 |Update-SPRSEncryptionKey|Обновляет ключ шифрования для указанного приложения службы Reporting Services и повторно шифрует его данные.|  
 |Restore-SPRSEncryptionKey|Восстанавливает созданную ранее резервную копию ключа шифрования для приложения службы Reporting Services.|  

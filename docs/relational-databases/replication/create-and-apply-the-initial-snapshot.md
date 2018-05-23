@@ -27,7 +27,7 @@ ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Создание и применение исходного моментального снимка
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  В данном разделе описывается процесс создания и применения исходного моментального снимка в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. Публикации слиянием, использующие параметризованные фильтры, требуют моментальных снимков, состоящих из двух частей. Дополнительные сведения см. в статье [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+  В данном разделе описывается процесс создания и применения исходного моментального снимка в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. Публикации слиянием, использующие параметризованные фильтры, требуют моментальных снимков, состоящих из двух частей. Дополнительные сведения см. в статье [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  **В этом разделе**  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 05/03/2018
     > [!IMPORTANT]  
     >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-3.  Добавьте статьи к публикации. Дополнительные сведения см. в статье [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
+3.  Добавьте статьи к публикации. Дополнительные сведения см. в статье [определить статью](../../relational-databases/replication/publish/define-an-article.md).  
   
 4.  На издателе в базе данных публикации выполните хранимую процедуру [sp_startpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md), указав в параметре **@publication** значение из шага 1.  
   
@@ -105,9 +105,9 @@ ms.lasthandoff: 05/03/2018
   
 1.  Создайте моментальный снимок, публикацию слиянием или публикацию транзакций. Дополнительные сведения см. в разделе [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  Добавьте статьи к публикации. Дополнительные сведения см. в статье [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
+2.  Добавьте статьи к публикации. Дополнительные сведения см. в статье [определить статью](../../relational-databases/replication/publish/define-an-article.md).  
   
-3.  Из командной строки или из пакетного файла запустите [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md) , вызвав программу **snapshot.exe**со следующими параметрами командной строки.  
+3.  Из командной строки или из пакетного файла запустите [агент слияния репликации](../../relational-databases/replication/agents/replication-snapshot-agent.md) , вызвав программу **snapshot.exe**со следующими параметрами командной строки.  
   
     -   **-Publication**  
   

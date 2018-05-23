@@ -1,5 +1,5 @@
 ---
-title: Развертывание, запуск и отслеживание пакета служб SSIS в Azure | Документы Майкрософт
+title: Развертывание и запуск пакета служб SSIS в Azure | Документы Майкрософт
 ms.date: 02/05/2018
 ms.topic: conceptual
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a15194b18efb21c7a7947e23b8bc673021606b31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27c7e77b5143bca56b7ded2233c01e11ad088d5f
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Развертывание, запуск и отслеживание пакета служб SSIS в Azure
+# <a name="deploy-and-run-an-ssis-package-in-azure"></a>Развертывание и запуск пакета служб SSIS в Azure
 Этот учебник рассказывает, как развернуть проект служб SQL Server Integration Services в базе данных каталога SSISDB, расположенной в базе данных SQL Azure, запустить пакет в среде Integration Runtime для Azure-SSIS и отслеживать его выполнение.
 
 ## <a name="prerequisites"></a>предварительные требования
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 
 2. **Подключение к серверу**. В диалоговом окне **Соединение с сервером** введите следующие данные:
 
-   | Настройка       | Предлагаемое значение | Description | 
+   | Настройка       | Предлагаемое значение | Описание | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Тип сервера** | Компонент Database Engine | Это значение обязательно. |
    | **Имя сервера** | Полное имя сервера | Имя должно быть в следующем формате: **mysqldbserver.database.windows.net**. Если вам нужно узнать имя сервера, см. раздел [Подключение к базе данных каталога SSISDB в Azure](ssis-azure-connect-to-catalog-database.md). |

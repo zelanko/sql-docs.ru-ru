@@ -25,16 +25,16 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: e0583570ce9a4d11b2e4aa6c019c8f4ccc753239
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e297fd93c5e91eac02008fab13d7c66c71ce0e90
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает идентификационный номер участника в текущей базе данных. Дополнительные сведения о субъектах см. в статье [Субъекты (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md).
+Эта функция возвращает идентификационный номер субъекта в текущей базе данных. Дополнительные сведения о субъектах см. в статье [Субъекты &#40;ядро СУБД&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,20 +46,19 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
   
 ## <a name="arguments"></a>Аргументы  
 *principal_name*  
-Выражение типа **sysname**, представляющее субъект.  
-Если аргумент *principal_name* не задан, возвращается идентификатор текущего пользователя. Необходимо поставить скобки.
+Выражение типа **sysname**, представляющее субъект. Если аргумент *principal_name* не задан, `DATABASE_PRINCIPAL_ID` возвращает идентификатор текущего пользователя. `DATABASE_PRINCIPAL_ID` необходимо заключить в скобки.
   
 ## <a name="return-types"></a>Типы возвращаемых данных
 **int**  
-Значение NULL, когда участник базы данных не существует
+Значение NULL, если субъект базы данных не существует.
   
 ## <a name="remarks"></a>Remarks  
-Функция DATABASE_PRINCIPAL_ID может использоваться в списке выборки, в предложении WHERE и в любом месте, где разрешено выражение. Дополнительные сведения см. в разделе [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).
+Используйте `DATABASE_PRINCIPAL_ID` в списке выбора, предложении WHERE или любом другом месте, допускающем выражение. Дополнительные сведения см. в статье [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-retrieving-the-id-of-the-current-user"></a>A. Извлечение идентификатора текущего пользователя  
-Следующий пример возвращает идентификатор участника базы данных текущего пользователя.
+В приведенном ниже примере возвращается идентификатор субъекта базы данных текущего пользователя.
   
 ```sql
 SELECT DATABASE_PRINCIPAL_ID();  
@@ -67,7 +66,7 @@ GO
 ```  
   
 ### <a name="b-retrieving-the-id-of-a-specified-database-principal"></a>Б. Извлечение идентификатора указанного участника базы данных  
-Следующий пример возвращает идентификатор участника базы данных для роли базы данных `db_owner`.
+В приведенном ниже примере возвращается идентификатор субъекта базы данных для роли базы данных `db_owner`.
   
 ```sql
 SELECT DATABASE_PRINCIPAL_ID('db_owner');  

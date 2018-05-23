@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a07cd66ebc67b5885ce535425ce8984f0181dc04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a0f1b6936644f2cae9cee469cb763696786a628
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Подключение к локальным источникам данных и общим папкам Azure с помощью проверки подлинности Windows
+# <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication-in-ssis"></a>Подключение к локальным источникам данных и общим папкам Azure с помощью проверки подлинности Windows в SQL Server Integration Services
 В этой статье описывается, как настроить каталог служб SQL Server Integration Services в базе данных SQL Azure для запуска пакетов, которые используют проверку подлинности Windows для подключения к локальным источникам данных и общим папкам Azure. С помощью проверки подлинности Windows можно подключаться к источникам данных в той же виртуальной сети, в которой размещена среда Azure SSIS Integration Runtime. Источники могут находиться в локальной среде, в виртуальных машинах Azure и в службе файлов Azure.
 
 > [!WARNING]

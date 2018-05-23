@@ -1,7 +1,7 @@
 ---
 title: Среда SQL Server Management Studio (SSMS) — журнал изменений | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,22 +15,91 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b53c720b6f08583dc94fd45c270ee07bff399a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5190c4bbd8e0ade4f32831f5d696cc6f26296e5
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 В этой статье приводятся подробные сведения об обновлениях, улучшениях и исправлениях ошибок в текущей и предыдущих версиях SQL Server Management Studio. Скачать [предыдущие версии SQL Server Management Studio можно ниже](#previous-ssms-releases).
 
 
-## <a name="ssms-176download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.6](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-177download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.7](download-sql-server-management-studio-ssms.md)
 
-Номер выпуска: 17.6<br>
+Номер выпуска: 17.7<br>
+Номер сборки: 14.0.17254.0<br>
+Дата выпуска: 9 мая 2018 г.
+
+### <a name="whats-new"></a>новые возможности
+
+**Общие ошибки SSMS**
+
+Монитор репликации:   
+- Монитор репликации теперь поддерживает регистрацию прослушивателя в сценариях, когда база данных издателя или база данных распространителя входит в группу доступности. Теперь можно отслеживать среды репликации, в которых база данных издателя или база данных распространителя входит в группу доступности AlwaysOn. 
+ 
+Хранилище данных SQL Azure: 
+- Добавлена поддержка расположения отклоненных строк для внешних таблиц в хранилище данных SQL Azure. 
+
+**Integration Services (IS)**
+
+- Добавлена функция для планирования выполнения пакетов SQL Server Integration Services, развернутых в базе данных SQL Azure. В отличие от локального сервера SQL Server и управляемого экземпляра базы данных SQL Azure (предварительная версия), которые имеют полноценный планировщик заданий (агент SQL Server), база данных SQL Azure не имеет встроенного планировщика. Новая функция SSMS предоставляет знакомый пользовательский интерфейс для планирования выполнения пакетов, развернутых в базе данных SQL, который похож на аналогичный интерфейс агента SQL Server. Если база данных каталога SQL Server Integration Services (SSISDB) размещается в базе данных SQL, с помощью этой функции SSMS можно создать конвейеры, действия и триггеры фабрики данных, необходимые для планирования пакетов SQL Server Integration Services. Затем можно изменять и расширять эти объекты в фабрике данных. Дополнительные сведения см. в статье [Планирование выполнения пакета служб SSIS в базе данных SQL Azure с помощью SSMS](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md). Дополнительные сведения о конвейерах, действиях и триггерах фабрики данных Azure см. в статьях [Конвейеры и действия в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities) и [Выполнение конвейера и триггеры в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers).
+- Поддержка планирования выполнения пакетов SQL Server Integration Services в агенте SQL в управляемом экземпляре SQL. Теперь можно создавать задания агента SQL для выполнения пакетов SQL Server Integration Services в управляемом экземпляре. 
+
+### <a name="bug-fixes"></a>Исправления ошибок
+
+**Общие ошибки SSMS** 
+
+План обслуживания:   
+- Устранена проблема, из-за которой при попытке изменить расписание существующего плана обслуживания возникало исключение. Подробные сведения см. в описании ошибки [Аварийное завершение SSMS 17.6 при щелчке по расписанию в плане обслуживания](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924).
+
+Always On: 
+- Устранена проблема, из-за которой панель мониторинга задержки AlwaysOn не работала с SQL Server 2012.
+ 
+Написание скриптов: 
+- Устранена проблема, из-за которой создание скрипта на основе хранимой процедуры в хранилище данных SQL Azure не выполнялось для пользователя без прав администратора.
+- Устранена проблема, из-за которой при создании скрипта на основе базы данных в базе данных SQL Azure в скрипт не включались свойства *SCOPED CONFIGURATION*.
+ 
+Телеметрия: 
+- Устранена проблема, из-за которой после отказа от отправки телеметрии происходило аварийное завершение SSMS, а затем выполнялась попытка подключиться к серверу.
+ 
+База данных SQL Azure: 
+- Устранена проблема, из-за которой пользователь не мог задать или изменить уровень доступности (раскрывающийся список был пуст). Примечание. Чтобы задать уровень совместимости 150, пользователю по-прежнему необходимо нажать кнопку *Скрипт* и вручную изменить скрипт. 
+ 
+SMO: 
+- В SMO стал доступен параметр "Размер журнала ошибок". Подробные сведения см. на странице [Задание максимального размера для журналов ошибок SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115).  
+- Исправлена проблема с переводом строки в скриптах в SMO для Linux.
+- Различные улучшения производительности при извлечении редко используемых свойств.  
+
+Технология IntelliSense: 
+- Улучшение производительности: сокращен объем запросов IntelliSense для данных столбцов. Это особенно полезно при работе с таблицами, содержащими очень много столбцов. 
+
+Параметры пользователя SSMS:
+- Устранена проблема с изменением размеров страницы параметров.
+
+Прочее:  
+- Улучшено отображение текста на странице *Подробная статистика*. 
+
+**Integration Services (IS)**
+
+- Улучшена поддержка управляемого экземпляра базы данных SQL Azure.
+- Устранена проблема, из-за которой пользователь не мог создать каталог для SQL Server 2014 или более ранней версии.
+- Устранены две проблемы с отчетами:
+   - Удалено имя компьютера для серверов Azure.
+   - Улучшена обработка локализованных имен объектов.
+
+
+### <a name="known-issues"></a>Известные проблемы
+
+При работе с новыми выпусками базы данных SQL Azure (*общего назначения* или *критически важный для бизнеса*) в некоторых диалоговых окнах выводится сообщение о недопустимом выпуске.
+
+## <a name="downloadssdtmediadownloadpng-ssms-176httpsgomicrosoftcomfwlinklinkid870039"></a>![скачать](../ssdt/media/download.png) [SSMS 17.6](https://go.microsoft.com/fwlink/?linkid=870039)
+
 Номер сборки: 14.0.17230.0<br>
 Дата выпуска: 20 марта 2018 г.
+
+[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
 
 ### <a name="whats-new"></a>новые возможности
 

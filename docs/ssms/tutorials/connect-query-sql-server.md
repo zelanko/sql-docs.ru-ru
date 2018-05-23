@@ -12,11 +12,11 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: e663bf07fb724e5b65a47573f26702a6b1ccae14
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Учебник. Подключение к экземпляру SQL Server и выполнение запросов с помощью SQL Server Management Studio
 Это руководство научит вас подключаться к экземпляру SQL Server с использованием SQL Server Management Studio (SSMS) и выполнять некоторые базовые команды Transact-SQL (T-SQL). В статье показано, как выполнять следующие задачи.
@@ -33,17 +33,16 @@ ms.lasthandoff: 05/03/2018
 ## <a name="prerequisites"></a>предварительные требования
 Для работы с этим руководством необходима среда SQL Server Management Studio и доступ к экземпляру SQL Server. 
 
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Если у вас нет доступа к экземпляру SQL Server, выберите свою платформу в следующих ссылках. При выборе проверки подлинности SQL используйте учетные данные SQL Server.
-- **Windows**: [скачать выпуск SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- **macOS**: [скачать SQL Server 2017 для Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker).
+- **Windows**: [скачать выпуск SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS**: [скачать SQL Server 2017 для Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 
 ## <a name="connect-to-a-sql-server-instance"></a>Подключение к экземпляру SQL Server
 
-1. Запустите среду SQL Server Management Studio.  
-    При первом запуске SSMS откроется окно **Подключение к серверу**. Если этого не происходит, вы можете открыть его вручную, последовательно выбрав **Обозреватель объектов** > **Подключить** > **Ядро СУБД**.
+1. Запустите среду SQL Server Management Studio. При первом запуске SSMS откроется окно **Подключение к серверу**. Если этого не происходит, вы можете открыть его вручную, последовательно выбрав **Обозреватель объектов** > **Подключить** > **Ядро СУБД**.
 
     ![Ссылка для подключения в обозревателе объектов](media/connect-query-sql-server/connectobjexp.png)
 
@@ -54,15 +53,21 @@ ms.lasthandoff: 05/03/2018
 
     ![Поле "Имя сервера" с возможностью использовать экземпляр SQL Server](media/connect-query-sql-server/connection2.png)
 
-    - В поле **Проверка подлинности** выберите **Проверка подлинности Windows**. В этой статье используется проверка подлинности Windows, но поддерживаются также и учетные данные SQL Server. При выборе **Учетных данных SQL** у вас запросят имя пользователя и пароль. Дополнительные сведения о типах проверки подлинности см. в разделе [Подключение к серверу (ядро СУБД)](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine).
+    - В поле **Проверка подлинности** выберите **Проверка подлинности Windows**. В этой статье используется проверка подлинности Windows, но поддерживаются также и учетные данные SQL Server. При выборе **Учетных данных SQL** у вас запросят имя пользователя и пароль. Дополнительные сведения о типах проверки подлинности см. в разделе [Подключение к серверу (ядро СУБД)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
 
     Вы также можете изменить дополнительные параметры подключения, выбрав **Параметры**. Примеры параметров подключения: база данных, к которой вы подключаетесь, время ожидания подключения и сетевой протокол. Эта статья использует во всех параметрах значения по умолчанию. 
 
 3. После заполнения всех полей выберите **Подключить**. 
 
-4. Убедитесь, что подключение к экземпляру SQL Server установлено. Для этого просмотрите объекты в обозревателе объектов, как показано здесь: 
+### <a name="examples-of-successful-connections"></a>Примеры успешных соединений
+Чтобы проверить, успешно ли установлено подключение к серверу SQL Server, просмотрите объекты в **обозревателе объектов**. Эти объекты будут различаться в зависимости от типа сервера, к которому установлено подключение. 
 
-   ![Подключение выполнено](media/connect-query-sql-server/successfulconnection.png)
+- Подключение к локальному серверу SQL Server — NODE5\SQL2016ST: ![Подключение к локальному серверу](media/connect-query-sql-server/connect-on-prem.png)
+
+- Подключение к базе данных SQL Azure — msftestserver.database.windows.net: ![Подключение к базе данных SQL Azure](media/connect-query-sql-server/connect-sql-azure.png)
+
+  >[!NOTE]
+  > Ранее в этом учебнике вы подключились к локальному серверу SQL Server с помощью *проверки подлинности Windows*, но для базы данных SQL Azure этот способ не поддерживается. На этом рисунке показано подключение к базе данных SQL Azure с помощью проверки подлинности SQL. Дополнительные сведения см. в разделах, посвященных [локальной проверке подлинности SQL](../../relational-databases/security/choose-an-authentication-mode.md) и [проверке подлинности SQL в Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access). 
 
 ## <a name="create-a-database"></a>Создание базы данных
 Сделайте следующее, чтобы создать базу данных с именем TutorialDB. 
@@ -170,8 +175,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="change-the-server-that-the-query-window-is-connected-to"></a>Изменение сервера, к которому подключено окно запросов
 Чтобы изменить сервер, к которому подключено текущее окно запросов, сделайте следующее.
 
-1. Щелкните окно запросов правой кнопкой мыши и выберите **Подключение** > **Изменить подключение**.  
-    Снова откроется окно **Подключение к серверу**.
+1. Щелкните окно запросов правой кнопкой мыши и выберите **Подключение** > **Изменить подключение**. Снова откроется окно **Подключение к серверу**.
 2. Измените сервер, к которому подключен ваш запрос. 
  
    ![Команда "Изменить подключение"](media/connect-query-sql-server/changeconnection.png)

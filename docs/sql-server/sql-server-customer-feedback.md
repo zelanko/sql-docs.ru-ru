@@ -5,19 +5,18 @@ author: annashres
 ms.author: anshrest
 manager: craigg
 ms.date: 07/12/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: sql
 ms.component: sql-non-specified
 ms.suite: sql
 ms.custom: ''
-ms.technology: database-engine
-ms.assetid: ''
-ms.openlocfilehash: 8941a2e2e542a33f08a1c30f71a7745072a9c495
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: configuration
+ms.openlocfilehash: 6684d58710b8be2cf96e06029792836cab9c69a3
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Настройка SQL Server для отправки отзывов в корпорацию Майкрософт
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ AND instance_name = '_Total'
 - С помощью приложения отчетов об ошибках и использовании.
 - С помощью настройки определенных разделов реестра на сервере.
 
-См. дополнительные сведения об [отзывах клиентов SQL Server в Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-customer-feedback.md).
+См. дополнительные сведения об [отзывах клиентов SQL Server в Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-customer-feedback).
 
 > [!NOTE]
 > Вы можете отключить отправку данных в корпорацию Майкрософт только в платной версии SQL Server.
@@ -107,15 +106,15 @@ AND instance_name = '_Total'
 
     тип записи DWORD: 0 — не участвовать; 1 — участвовать.
 
-Кроме того, для отказа от отправки отчетов об ошибках и использовании на уровне Visual Studio можно настроить следующие параметры подраздела:
+    Кроме того, среда SSMS 17.x основана на оболочке Visual Studio 2015, а в экземпляре Visual Studio функция сбора отзывов пользователей включена по умолчанию.  
 
--    Подраздел = HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\Telemetry;
+    Чтобы отключить сбор отзывов пользователей в Visual Studio на отдельных компьютерах, измените значение следующего подраздела реестра на строку "0":  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn
 
--    Имя RegEntry = TurnOffSwitch;
+    Например, измените подраздел следующим образом:  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn="0")
 
--    тип записи DWORD: 0 — не участвовать; 1 — участвовать.
- 
-Групповая политика на базе реестра с этими подразделами будет соблюдаться системой сбора данных об использовании SQL Server 2017.
+    Групповая политика на базе реестра с этими подразделами будет соблюдаться системой сбора данных об использовании SQL Server 2017.
 
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>Настройка подразделов реестра для сбора аварийных дампов
 

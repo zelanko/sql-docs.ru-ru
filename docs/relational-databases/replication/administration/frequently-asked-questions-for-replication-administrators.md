@@ -19,11 +19,11 @@ caps.latest.revision: 59
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce21bef20a2fa73ca0a9acee22e2eeddefd5fce1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd85694c8b2678d85b66db6c84b89a409fa0fc4a
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Вопросы, часто задаваемые администраторам репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,7 +164,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="database-maintenance"></a>Обслуживание базы данных  
   
 ### <a name="why-cant-i-run-truncate-table-on-a-published-table"></a>Почему нельзя запускать операцию TRUNCATE TABLE на публикуемой таблице?  
- Операция TRUNCATE TABLE не записывается в журнал и не вызывает срабатывание триггеров. Она недопустима, поскольку репликация не может отследить вносимые ею изменения: репликация транзакций отслеживает изменения посредством журнала транзакций, репликация слиянием отслеживает изменения посредством триггеров на публикуемых таблицах.  
+ TRUNCATE TABLE — это инструкция на языке DDL, которая не записывает в журнал отдельные операции удаления строк и не вызывает срабатывание триггеров DML. Она недопустима, так как репликация не может отследить вносимые ею изменения: репликация транзакций отслеживает изменения посредством журнала транзакций, а репликация слиянием — посредством триггеров DML в публикуемых таблицах.  
   
 ### <a name="what-is-the-effect-of-running-a-bulk-insert-command-on-a-replicated-database"></a>Каков эффект выполнения команды массовой вставки в реплицированной базе данных?  
  В случае репликации транзакций отслеживание и репликация массовой вставки производится аналогично другим вставкам. В случае репликации слиянием необходимо гарантировать надлежащее обновление метаданных отслеживания изменений.  

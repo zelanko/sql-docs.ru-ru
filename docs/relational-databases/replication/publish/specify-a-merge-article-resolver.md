@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
     -   Сопоставитель по умолчанию. Поведение сопоставителя по умолчанию зависит от того, является подписка клиентской или серверной. Дополнительные сведения об указании типа подписки см. в статье [Указание типа подписки слиянием и приоритета устранения конфликтов](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md).  
   
-    -   Пользовательский сопоставитель, который может быть обработчиком бизнес-логики (написанным на управляемом коде), или пользовательским, основанным на технологии COM. Дополнительные сведения см. в разделе [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Если требуется применить пользовательскую логику, исполняемую для каждой реплицируемой строки, а не только для конфликтующих строк, см. раздел [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   Пользовательский сопоставитель, который может быть обработчиком бизнес-логики (написанным на управляемом коде), или пользовательским, основанным на технологии COM. Дополнительные сведения см. в разделе [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Если требуется применить пользовательскую логику, исполняемую для каждой реплицируемой строки, а не только для конфликтующих строк, см. раздел [Реализация обработчика бизнес-логики для статьи публикации слиянием](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
     -   Стандартный арбитр, основанный на COM, который входит в состав [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -87,9 +87,9 @@ ms.lasthandoff: 05/03/2018
   
 1.  Если планируется зарегистрировать собственный пользовательский сопоставитель конфликтов, создайте один из следующих типов.  
   
-    -   Сопоставитель на основе управляемого кода в качестве обработчика бизнес-логики. Дополнительные сведения см. в разделе [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   Сопоставитель на основе управляемого кода в качестве обработчика бизнес-логики. Дополнительные сведения см. в разделе [Реализация обработчика бизнес-логики для статьи публикации слиянием](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
-    -   Арбитр на основе хранимых процедур и арбитр на основе COM. Дополнительные сведения см. в разделе [Implement a Custom Conflict Resolver for a Merge Article](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md).  
+    -   Арбитр на основе хранимых процедур и арбитр на основе COM. Дополнительные сведения см. в разделе [Реализация пользовательского арбитра конфликтов для статьи публикации слиянием](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md).  
   
 2.  Чтобы определить, зарегистрирован ли нужный сопоставитель, выполните хранимую процедуру [sp_enumcustomresolvers (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) на издателе для любой базы данных. Будет выведено описание пользовательского сопоставителя, а также идентификатор класса (CLSID) для каждого сопоставителя на основе COM, зарегистрированного на распространителе, или сведения об управляемой сборке для каждого обработчика бизнес-логики, зарегистрированного на распространителе.  
   
@@ -151,6 +151,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>См. также:  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+ [Реализация обработчика бизнес-логики для статьи публикации слиянием](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

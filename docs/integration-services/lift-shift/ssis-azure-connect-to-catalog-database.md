@@ -1,5 +1,5 @@
 ---
-title: Подключение к базе данных каталога SSISDB в Azure | Документы Майкрософт
+title: Подключение к базе данных каталога SSIS (SSISDB) в Azure | Документы Майкрософт
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b34e28dca32da44b60f65f92934373d1f7a42f12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 639f02809a003bc5418ecb5ec33930f89205701f
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Подключение к базе данных каталога SSISDB в Azure
+# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>Подключение к базе данных каталога SSIS (SSISDB) в Azure
 
 Получите сведения, необходимые для подключения к базе данных каталога SSISDB, размещенной на сервере базы данных SQL Azure. Для подключения вам потребуется следующее:
 - Полное имя сервера
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 
 2. **Подключение к серверу**. В диалоговом окне **Соединение с сервером** введите следующие данные:
 
-   | Настройка       | Предлагаемое значение | Description | 
+   | Настройка       | Предлагаемое значение | Описание | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Тип сервера** | Компонент Database Engine | Это значение обязательно. |
    | **Имя сервера** | Полное имя сервера | Имя должно быть в следующем формате: **mysqldbserver.database.windows.net**. |

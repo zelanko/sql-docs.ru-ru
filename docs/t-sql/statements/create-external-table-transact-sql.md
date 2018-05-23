@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/27/2017
+ms.date: 5/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: t-sql|statements
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fc04195092a1371be93410cc77d8d06460c957da
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 0ea81621b94490c267b6d7c9f3e010bd22279610
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -133,9 +133,10 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
 <reject_options> ::=  
 {  
-    | REJECT_TYPE = value | percentage  
-    | REJECT_VALUE = reject_value  
-    | REJECT_SAMPLE_VALUE = reject_sample_value  
+    | REJECT_TYPE = value | percentage,  
+    | REJECT_VALUE = reject_value,  
+    | REJECT_SAMPLE_VALUE = reject_sample_value,
+    | REJECTED_ROW_LOCATION = '\REJECT_Directory'
   
 }  
 ```  
@@ -234,7 +235,8 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 > [!NOTE]  
 >  Поскольку PolyBase вычисляет процент отклоненных строк с интервалами, фактический процент отклоненных строк может превысить *reject_value*.  
   
- Пример  
+
+Пример  
   
  В этом примере показано, как три параметра REJECT взаимодействуют друг с другом. Например, если задано REJECT_TYPE = percentage, REJECT_VALUE = 30 и REJECT_SAMPLE_VALUE = 100, произойдет следующее:  
   
@@ -247,6 +249,13 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -   Процент отклоненных строк пересчитывается и составляет 50 %. Процент отклоненных строк превысил значение отклонения 30 %.  
   
 -   Запрос PolyBase завершается ошибкой, поскольку после попытки извлечение первых 200 строк 50 % из них было отклонено. Обратите внимание, что до того, как запрос PolyBase выявил превышение порога отклонения, были возвращены соответствующие строки.  
+  
+REJECTED_ROW_LOCATION = *расположение каталога*
+  
+  Указывает каталог во внешнем источнике данных, в который должны записываться строки и соответствующий файл ошибок.
+Если указанный файл не существует, PolyBase создаст его от вашего имени. Создается дочерний каталог с именем "_rejectedrows". Благодаря символу "_" каталог исключается из других процессов обработки данных, если он явно не указан в параметре LOCATION. В этом каталоге создается папка, имя которой соответствует времени отправки загруженных данных в формате "ГодМесяцДень-ЧасМинутаСекунда" (например, 20180330-173205). В эту папку записываются файлы двух типов: файлы причин и файлы данных. 
+
+Как файлы причин, так и файлы данных имеют идентификаторы queryID, связанные с инструкцией CTAS. Так как данные и причины хранятся в отдельных файлах, эти файлы имеют соответствующие суффиксы. 
   
  Параметры сегментированных внешних таблиц  
  Указывает внешний источник данных (не источник данных SQL Server) и метод распределения для [запроса эластичной базы данных](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  

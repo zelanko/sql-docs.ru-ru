@@ -27,16 +27,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5387cd3acba6a6d4dab83213fbb44ef7c9e8c3e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29765164d6eb5e677c307091cf37aa8623674f00
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="currentuser-transact-sql"></a>CURRENT_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Возвращает имя текущего пользователя. Эта функция эквивалента функции USER_NAME().
+Эта функция возвращает имя текущего пользователя. Она эквивалентна функции `USER_NAME()`.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,14 +50,14 @@ CURRENT_USER
 **sysname**
   
 ## <a name="remarks"></a>Remarks  
-Функция CURRENT_USER возвращает имя текущего контекста безопасности. Если CURRENT_USER выполняется после вызова EXECUTE AS для переключения контекста, функция CURRENT_USER возвращает имя олицетворенного контекста. Если участник Windows обратился к базе данных в качестве участника группы, вместо имени группы возвращается имя участника Windows.
+Функция `CURRENT_USER` возвращает имя текущего контекста безопасности. Если `CURRENT_USER` выполняется после того, как вызов `EXECUTE AS` переключает контекст, функция `CURRENT_USER` возвращает имя олицетворенного контекста. Если субъект Windows попытается получить доступ к базе данных в качестве члена группы, функция `CURRENT_USER` вернет имя этого субъекта, а не имя группы.
   
-Сведения о получении имени входа текущего пользователя см. в статьях [SUSER_NAME (Transact-SQL)](../../t-sql/functions/suser-name-transact-sql.md) и [SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md).
+Сведения о получении имени входа текущего пользователя см. в статьях [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) и [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md).
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-currentuser-to-return-the-current-user-name"></a>A. Использование ключевого слова CURRENT_USER для возврата имени текущего пользователя  
-В следующем примере возвращается имя текущего пользователя.
+В приведенном ниже примере возвращается имя текущего пользователя.
   
 ```sql
 SELECT CURRENT_USER;  
@@ -65,7 +65,7 @@ GO
 ```  
   
 ### <a name="b-using-currentuser-as-a-default-constraint"></a>Б. Использование ключевого слова CURRENT_USER в качестве ограничения DEFAULT  
-В следующем примере создается таблица, использующая функцию `CURRENT_USER` в качестве ограничения `DEFAULT` для столбца `order_person` на строке продаж.
+В приведенном ниже примере создается таблица, использующая функцию `CURRENT_USER` в качестве ограничения `DEFAULT` для столбца `order_person` в строке продаж.
   
 ```sql
 USE AdventureWorks2012;  
@@ -86,7 +86,7 @@ order_person char(30) NOT NULL DEFAULT CURRENT_USER
 GO  
 ```  
   
-Следующий код осуществляет вставку записи в таблицу. Пользователь, выполняющий эти инструкции, имеет имя `Wanida`.
+В приведенном ниже коде запись вставляется в таблицу. Пользователь, выполняющий эти инструкции, имеет имя `Wanida`.
   
 ```sql
 INSERT orders22 (cust_id, order_amt)  
@@ -96,7 +96,7 @@ SET NOCOUNT OFF;
 GO  
 ```  
   
-Следующий запрос выбирает все данные из таблицы `orders22`.
+Приведенный ниже запрос выбирает все данные из таблицы `orders22`.
   
 ```sql
 SELECT * FROM orders22;  
@@ -114,12 +114,12 @@ order_id    cust_id     order_date           order_amt    order_person
 ```
   
 ### <a name="c-using-currentuser-from-an-impersonated-context"></a>В. Использование ключевого слова CURRENT_USER из олицетворенного контекста  
-В следующем примере пользователь `Wanida` выполняет следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)].
+В этом примере пользователь `Wanida` выполняет следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)]:
   
 ```sql
 SELECT CURRENT_USER;  
 GO  
-EXECUTE AS USER = 'Arnalfo';  
+EXECUTE AS USER = 'Wanida';  
 GO  
 SELECT CURRENT_USER;  
 GO  

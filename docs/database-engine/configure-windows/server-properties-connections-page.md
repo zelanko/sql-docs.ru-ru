@@ -65,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  Задает время (в секундах), в течение которого может выполняться удаленная операция перед истечением времени ожидания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Значение по умолчанию составляет 600 секунд, то есть 10 минут ожидания.  
   
  **Требовать применения распределенных транзакций для соединения «сервер-сервер»**  
- Защищает действия процедуры между серверами посредством транзакции координатора распределенных транзакций (MS DTC) ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Дополнительные сведения см. в статье [Configure the remote proc trans Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).  
+ Защищает действия процедуры между серверами посредством транзакции координатора распределенных транзакций (MS DTC) ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Дополнительные сведения см. в статье [Настройка параметра конфигурации сервера remote proc trans](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).  
   
 ## <a name="property-page-display-options"></a>Параметры отображения страницы свойств  
  **Настроенные значения**  

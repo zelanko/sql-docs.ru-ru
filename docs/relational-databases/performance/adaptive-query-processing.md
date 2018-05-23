@@ -2,7 +2,7 @@
 title: Адаптивная обработка запросов в базах данных Microsoft SQL | Документация Майкрософт | Документация Майкрософт
 description: Функции адаптивной обработки запросов для улучшения производительности запросов в SQL Server (2017 и более поздних версиях) и базе данных SQL Azure.
 ms.custom: ''
-ms.date: 11/13/2017
+ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: performance
@@ -17,11 +17,11 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2874e8bb59a47b5732d716924ec3d49a9f80992d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 464696823e99e81a763fbbc4a2835c86ef9bea5c
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Адаптивная обработка запросов в базах данных SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,6 +83,31 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>Обратная связь по временно предоставляемому буферу памяти, регулятор ресурсов и указания запроса
 Фактический объем предоставляемой памяти учитывает лимит памяти запросов, определяемый регулятором ресурсов или указанием запроса.
 
+### <a name="disabling-memory-grant-feedback-without-changing-the-compatibility-level"></a>Отключение сброса данных во временно предоставляемый буфер памяти без изменения уровня совместимости
+Сброс данных во временно предоставляемый буфер памяти можно отключить в области базы данных или инструкции, сохранив уровень совместимости базы данных 140 или более высокий. Чтобы отключить сброс данных во временно предоставляемый буфер памяти в пакетном режиме для всех запросов, выполняемых из базы данных, выполните следующую команду в контексте соответствующей базы данных:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+Когда этот параметр включен, он будет иметь соответствующее состояние в представлении sys.database_scoped_configurations.
+
+Чтобы снова включить сброс данных во временно предоставляемый буфер памяти в пакетном режиме для всех запросов, выполняемых из базы данных, выполните следующую команду в контексте соответствующей базы данных:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+Вы также можете отключить сброс данных во временно предоставляемый буфер памяти в пакетном режиме для определенного запроса, назначив DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK в качестве указания запроса USE HINT.  Пример:
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+Указание запроса USE HINT имеет приоритет над конфигурацией, областью действия которой является база данных, или флагом трассировки.
+
 ## <a name="batch-mode-adaptive-joins"></a>Адаптивные соединения в пакетном режиме
 Функция адаптивных соединений в пакетном режиме позволяет отложить выбор метода [хэш-соединения или соединения вложенными циклами](../../relational-databases/performance/joins.md) **до** завершения сканирования первых входных данных. Оператор адаптивного соединения определяет пороговое значение, по которому принимается решение о переключении на план вложенного цикла. Таким образом, во время выполнения план может динамически переключаться на более эффективную стратегию соединения.
 Это работает следующим образом:
@@ -139,7 +164,7 @@ WHERE [fo].[Quantity] = 361;
 ### <a name="tracking-adaptive-join-activity"></a>Отслеживание операций адаптивного соединения
 Оператор адаптивного соединения имеет следующие атрибуты оператора плана:
 
-| Атрибут плана | Description |
+| Атрибут плана | Описание |
 |--- |--- |
 | AdaptiveThresholdRows | Показывает пороговое значение, используемое для переключения с хэш-соединения на соединение вложенными циклами. |
 | EstimatedJoinType | К какому типу, вероятнее всего, относится соединение. |
@@ -165,6 +190,36 @@ WHERE [fo].[Quantity] = 361;
 Приведенная ниже диаграмма показывает пример пересечения между затратами хэш-соединения и затраты альтернативного ему соединения вложенными циклами.  В этой точке пересечения определяется пороговое значение, что, в свою очередь, определяет фактический алгоритм, используемый для операции соединения.
 
 ![Пороговое значение соединения](./media/6_AQPJoinThreshold.png)
+
+### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>Отключение адаптивных соединений без изменения уровня совместимости
+
+Адаптивные соединения можно отключить в области базы данных или инструкции, сохранив уровень совместимости базы данных 140 или более высокий.  
+Чтобы отключить адаптивные соединения для всех запросов, выполняемых из базы данных, выполните следующую команду в контексте соответствующей базы данных:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+```
+
+Когда этот параметр включен, он будет иметь соответствующее состояние в представлении sys.database_scoped_configurations.
+Чтобы снова включить адаптивные соединения для всех запросов, выполняемых из базы данных, выполните следующую команду в контексте соответствующей базы данных:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+```
+
+Вы также можете отключить адаптивные соединения для определенного запроса, назначив DISABLE_BATCH_MODE_ADAPTIVE_JOINS в качестве указания запроса USE HINT.  Пример:
+
+```sql
+SELECT s.CustomerID,
+       s.CustomerName,
+       sc.CustomerCategoryName
+FROM Sales.Customers AS s
+LEFT OUTER JOIN Sales.CustomerCategories AS sc
+ON s.CustomerCategoryID = sc.CustomerCategoryID
+OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
+```
+
+Указание запроса USE HINT имеет приоритет над конфигурацией, областью действия которой является база данных, или флагом трассировки.
 
 ## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>Выполнение с чередованием для функций с табличным значением с несколькими инструкциями
 Выполнение с чередованием изменяет однонаправленную границу между этапами оптимизации и выполнения для выполнения с одним запросом и позволяет планам адаптироваться с учетом пересмотренных оценок кратности. Если во время оптимизации нам встречается кандидат на выполнение с чередованием, который сейчас является **функциями с табличным значением с несколькими инструкциями (MSTVF)**, мы приостановим оптимизацию, выполним соответствующее поддерево, запишем точные оценки кратности и возобновим оптимизацию для нисходящих операций.
@@ -205,14 +260,14 @@ WHERE [fo].[Quantity] = 361;
 ### <a name="tracking-interleaved-execution-activity"></a>Отслеживание операций выполнения с чередованием
 Вы можете просмотреть атрибуты использования в фактическом плане выполнения запроса:
 
-| Атрибут плана выполнения | Description |
+| Атрибут плана выполнения | Описание |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | Применяется к узлу *QueryPlan*. Значение *true* означает, что план содержит кандидаты на выполнение с чередованием. |
 | IsInterleavedExecuted | Атрибут элемента *RuntimeInformation* под RelOp для узла TVF. Если значение равно *true*, значит, операция была материализована как часть операции выполнения с чередованием. |
 
 Вы также можете отслеживать случаи выполнения с чередованием с помощью следующих событий xEvents:
 
-| xEvent | Description |
+| xEvent | Описание |
 | ---- | --- |
 | interleaved_exec_status | Это событие возникает, когда происходит выполнение с чередованием. |
 | interleaved_exec_stats_update | Это событие описывает оценки кратности, обновленные выполнением с чередованием. |
@@ -226,6 +281,41 @@ WHERE [fo].[Quantity] = 361;
 
 ### <a name="interleaved-execution-and-query-store-interoperability"></a>Взаимодействие выполнения с чередованием и хранилища запросов
 Планы с использованием выполнения с чередованием можно применять принудительно. План представляет собой версию с оценками кратности, исправленными на основе начального выполнения.    
+
+### <a name="disabling-interleaved-execution-without-changing-the-compatibility-level"></a>Отключение выполнения с чередованием без изменения уровня совместимости
+
+Выполнение с чередованием можно отключить в области базы данных или инструкции, сохранив уровень совместимости базы данных 140 или более высокий.  Чтобы отключить выполнение с чередованием для всех запросов, выполняемых из базы данных, выполните следующую команду в контексте соответствующей базы данных:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+```
+
+Когда этот параметр включен, он будет иметь соответствующее состояние в представлении sys.database_scoped_configurations.
+Чтобы снова включить выполнение с чередованием для всех запросов, выполняемых из базы данных, выполните следующую команду в контексте соответствующей базы данных:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+```
+
+Вы также можете отключить выполнение с чередованием для определенного запроса, назначив DISABLE_INTERLEAVED_EXECUTION_TVF в качестве указания запроса USE HINT.  Пример:
+
+```sql
+SELECT  [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
+FROM    [Fact].[Order] AS [fo]
+INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
+                            '1-01-2013',
+                            '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
+                            AND [fo].[City Key] = [foo].[City Key]
+                            AND [fo].[Customer Key] = [foo].[Customer Key]
+                            AND [fo].[Stock Item Key] = [foo].[Stock Item Key]
+                            AND [fo].[Order Date Key] = [foo].[Order Date Key]
+                            AND [fo].[Picked Date Key] = [foo].[Picked Date Key]
+                            AND [fo].[Salesperson Key] = [foo].[Salesperson Key]
+                            AND [fo].[Picker Key] = [foo].[Picker Key]
+OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
+```
+
+Указание запроса USE HINT имеет приоритет над конфигурацией, областью действия которой является база данных, или флагом трассировки.
 
 ## <a name="see-also"></a>См. также:
 [Центр производительности для базы данных SQL Azure и ядра СУБД SQL Server](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

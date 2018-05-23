@@ -114,7 +114,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  Определите параметры фильтрации статьи, к которой производится присоединение (она также называется родительской статьей).  
   
-    -   Дополнительные сведения о фильтрации статьи при помощи параметризованного фильтра строк см. в разделе [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+    -   Дополнительные сведения о фильтрации статьи при помощи параметризованного фильтра строк см. в разделе [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
     -   Дополнительные сведения о фильтрации статьи с помощью статического строкового фильтра см. в разделе [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
@@ -136,7 +136,7 @@ ms.lasthandoff: 05/03/2018
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_1.sql)]  
   
- В следующем примере определяется группа статей в публикации слиянием, где производится фильтрация статей с помощью набора фильтров соединения по таблице `Employee` , для фильтрации которой, в свою очередь, используется параметризованный фильтр строк по значению параметра [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) в столбце **LoginID** . Дополнительные сведения см. в статье [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+ В следующем примере определяется группа статей в публикации слиянием, где производится фильтрация статей с помощью набора фильтров соединения по таблице `Employee` , для фильтрации которой, в свою очередь, используется параметризованный фильтр строк по значению параметра [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) в столбце **LoginID** . Дополнительные сведения см. в статье [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_2.sql)]  
   

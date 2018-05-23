@@ -2,7 +2,7 @@
 title: Устранение неполадок в работе SQL Server Integration Services (SSIS) Scale Out | Документы Майкрософт
 ms.description: This article describes how to troubleshoot common issues with SSIS Scale Out
 ms.custom: ''
-ms.date: 12/19/2017
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: scale-out
@@ -16,11 +16,11 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 5baceaa51a0e4f4b1059bce5e19a0fd79fa3a71d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d1fa967fa5e755a8072a6837df44c327b39087c
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="troubleshoot-scale-out"></a>Устранение неполадок Scale Out
 
@@ -141,7 +141,15 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     Значение параметра: **0 (False)**
 
-4.  Если не удается очистить все сертификаты, которые не являются самозаверяющими, на шаге 2. Присвойте значение 2 параметру реестра на шаге 3.
+4.  Если не удается очистить все сертификаты, которые не являются самозаверяющими в шаге 2, присвойте значение 2 указанному ниже параметру реестра.
+
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
+
+    Имя параметра: **ClientAuthTrustMode** 
+
+    Тип параметра: **REG_DWORD** 
+
+    Значение параметра: **2**
 
 ## <a name="http-request-error"></a>Ошибка HTTP-запроса
 

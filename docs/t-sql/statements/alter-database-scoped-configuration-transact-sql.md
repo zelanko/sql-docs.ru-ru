@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 05/142018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|statements
@@ -26,11 +26,11 @@ caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9d9f156deb3fa8b59de0703da2b7f1f309862c16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b164097dd08b5b428797319a7152974ac626b84b
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,6 +45,8 @@ ms.lasthandoff: 05/03/2018
 - включить или выключить кэширование идентификации на уровне базы данных;
 - включить или выключить заглушку компилированного плана для сохранения в кэше при первом компилировании пакета.  
 - включить или выключить сбор статистики выполнения для скомпилированных в собственном коде модулей T-SQL.
+- Включение или отключение параметров режима "в сети" по умолчанию для инструкций DDL, поддерживающих синтаксис ONLINE=
+- Включение или отключение параметров возобновляемого выполнения по умолчанию для инструкций DDL, поддерживающих синтаксис RESUMABLE= 
   
  ![Значок ссылки](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,7 +70,9 @@ ALTER DATABASE SCOPED CONFIGURATION
     | IDENTITY_CACHE = { ON | OFF }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
     | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF } 
-    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }     
+    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }    
+    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED } 
+    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }  
 }  
 ```  
   
@@ -164,6 +168,40 @@ XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }
 
 Дополнительные сведения о мониторинге производительности скомпилированных в собственном коде модулей T-SQL см. в разделе [Мониторинг производительности скомпилированных в собственном коде хранимых процедур](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
 
+ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**Применимо к**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
+
+Позволяет выбирать параметры, предписывающие ядру автоматически переводить поддерживаемые операции в режим "в сети". Значение по умолчанию — OFF. Оно означает, что операции не будут переводиться в режим "в сети", если это явно не указано в инструкции. В представлении [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) указывается текущее значение ELEVATE_ONLINE. Эти параметры применяются только к операциям, которые поддерживают режим "в сети".  
+
+FAIL_UNSUPPORTED
+
+Это значение переводит все поддерживаемые операции DDL в режим "в сети". Операции, не поддерживающие выполнение в режиме "в сети", завершатся сбоем и выдадут предупреждение.
+
+WHEN_SUPPORTED  
+
+Это значение изменяет режим выполнения операций, поддерживающих режим "в сети". Операции, не поддерживающие режим "в сети", будут выполняться в режиме "вне сети".
+
+> [!NOTE]
+> Переопределить значение по умолчанию можно, отправив инструкцию с параметром ONLINE. 
+ 
+ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**Применимо к**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
+
+Позволяет выбирать параметры, предписывающие ядру автоматически переводить поддерживаемые операции в возобновляемый режим. Значение по умолчанию — OFF. Оно означает, что операции не будут переводиться в возобновляемый режим, если это явно не указано в инструкции. В представлении [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) указывается текущее значение ELEVATE_RESUMABLE. Эти параметры применяются только к операциям, которые поддерживают возобновляемый режим. 
+
+FAIL_UNSUPPORTED
+
+Это значение переводит все поддерживаемые операции DDL в возобновляемый режим. Операции, не поддерживающие возобновляемое выполнение, завершатся сбоем и выдадут предупреждение.
+
+WHEN_SUPPORTED  
+
+Это значение изменяет режим выполнения операций, поддерживающих возобновляемое выполнение. Операции, не поддерживающие возобновляемый режим, будут выполняться в невозобновляемом режиме.  
+
+> [!NOTE]
+> Переопределить значение по умолчанию можно, отправив инструкцию с параметром RESUMABLE. 
+
 ##  <a name="Permissions"></a> Permissions  
  Требует разрешения ALTER ANY DATABASE SCOPE CONFIGURATION   
 в базе данных. Это разрешение может быть предоставлено пользователем, имеющим разрешение CONTROL для базы данных.  
@@ -205,6 +243,15 @@ XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }
 **DacFx**  
   
  Так как инструкция ALTER DATABASE SCOPED CONFIGURATION — это новая функция в базе данных SQL Azure и SQL Server, начиная с SQL Server 2016, которая влияет на схему базы данных, экспорты схемы (с данными или без них) невозможно импортировать в более старую версию SQL Server, например [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Например, экспорт в [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) или [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) из базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], использовавшей эту новую функцию, невозможно будет импортировать на сервер нижнего уровня.  
+
+**ELEVATE_ONLINE** 
+
+Этот параметр применяется только к инструкциям DDL, поддерживающим синтаксис WITH(ONLINE=. XML-индексы не затрагиваются. 
+
+**ELEVATE_RESUMABLE**
+
+Этот параметр применяется только к инструкциям DDL, поддерживающим синтаксис WITH(ONLINE=. XML-индексы не затрагиваются. 
+
   
 ## <a name="metadata"></a>Метаданные  
 
@@ -307,6 +354,63 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
+### <a name="i--set-elevateonline"></a>И.  Задание ELEVATE_ONLINE 
+
+**Применимо к**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
+ 
+В этом примере параметру ELEVATE_ONLINE присваивается значение FAIL_UNSUPPORTED.  tsqlCopy 
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
+```  
+
+### <a name="j-set-elevateresumable"></a>К. Задание ELEVATE_RESUMABLE 
+
+**Применимо к**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
+
+В этом примере параметру ELEVEATE_RESUMABLE присваивается значение WHEN_SUPPORTED.  tsqlCopy 
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;  
+``` 
+
+### <a name="k-query-state-of-alter-database-scoped-configuration-based-on-different-statements"></a>Л. Запрос состояния ALTER DATABASE SCOPED CONFIGURATION на основе различных инструкций
+
+**Применимо к**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
+
+```sql 
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = OFF;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = OFF;
+SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
+GO
+
+|configuration_id|name|value|value_for_secondary|is_value_default|
+|----------------|:---|:----|:------------------|:---------------|
+|11|ELEVATE_ONLINE|OFF|NULL|1|
+|12|ELEVATE_RESUMABLE|OFF|NULL|1|
+
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = WHEN_SUPPORTED;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED;
+SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
+GO
+
+|configuration_id|name|value|value_for_secondary|is_value_default|
+|----------------|:---|:----|:------------------|:---------------|
+|11|ELEVATE_ONLINE|WHEN_SUPPORTED|NULL|0|
+|12|ELEVATE_RESUMABLE|WHEN_SUPPORTED|NULL|0|
+
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = FAIL_UNSUPPORTED;
+SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
+GO
+
+|configuration_id|name|value|value_for_secondary|is_value_default|
+|----------------|:---|:----|:------------------|:---------------|
+|11|ELEVATE_ONLINE|FAIL_UNSUPPORTED|NULL|0|
+|12|ELEVATE_RESUMABLE|FAIL_UNSUPPORTED|NULL|0|
+
+```
+
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 ### <a name="maxdop-resources"></a>Ресурсы MAXDOP 
@@ -325,6 +429,14 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 * [Флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [Модель обслуживания флага трассировки 4199 для исправления оптимизатора запросов SQL Server](https://support.microsoft.com/en-us/kb/974006)
 
+### <a name="elevateonline-resources"></a>Ресурсы по ELEVATE_ONLINE 
+
+- [Рекомендации по операциям с индексами в оперативном режиме](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
+
+### <a name="elevateresumable-resources"></a>Ресурсы по ELEVATE_RESUMABLE 
+
+- [Рекомендации по операциям с индексами в оперативном режиме](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
+ 
 ## <a name="more-information"></a>Дополнительные сведения  
  [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
  [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   

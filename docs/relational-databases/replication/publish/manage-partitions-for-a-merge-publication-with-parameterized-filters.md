@@ -116,7 +116,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **@host_name** — если параметризованный фильтр определен значением, возвращенным [HOST_NAME (Transact-SQL)](../../../t-sql/functions/host-name-transact-sql.md).  
   
-2.  Создайте и инициализируйте параметризованный снимок для новой секции. Дополнительные сведения см. в статье [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+2.  Создайте и инициализируйте параметризованный снимок для новой секции. Дополнительные сведения см. в статье [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### <a name="to-delete-a-partition"></a>Удаление секции  
   
@@ -129,7 +129,7 @@ ms.lasthandoff: 05/03/2018
      При этом также будет удалено задание моментального снимка и все файлы снимка для этой секции.  
   
 ##  <a name="RMOProcedure"></a> При помощи объектов RMO  
- Программное формирование новых, перебор существующих и удаление секций подписчика с помощью объектов RMO обеспечивает большую управляемость публикации с параметризованными фильтрами. Сведения о создании секций подписчика см. в разделе [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Для существующей секции доступны следующие сведения.  
+ Программное формирование новых, перебор существующих и удаление секций подписчика с помощью объектов RMO обеспечивает большую управляемость публикации с параметризованными фильтрами. Сведения о создании секций подписчика см. в разделе [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Для существующей секции доступны следующие сведения.  
   
 -   Значение и функция фильтрации, на которых базируется секция.  
   

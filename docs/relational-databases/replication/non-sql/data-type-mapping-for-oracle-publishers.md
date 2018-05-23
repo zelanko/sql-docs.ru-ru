@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
 ---
-# <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
+# <a name="data-type-mapping-for-oracle-publishers"></a>Сопоставление типов данных для издателей Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Типы данных Oracle и типы данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не всегда полностью совпадают. Там, где это возможно, выбор подходящего типа данных при публикации таблицы Oracle осуществляется автоматически. В случаях, когда выбор однозначного соответствия типов данных не очевиден, предлагаются альтернативные сопоставления типов данных. Сведения о выборе альтернативных соответствий типов данных см. ниже в разделе «Указание альтернативных сопоставлений типов данных».  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Глобальная замена значений по умолчанию для всех последующих статей с помощью хранимых процедур (значения по умолчанию для существующих статей не изменяются).  
   
- Чтобы указать альтернативные сопоставления типов данных, см. раздел [Specify Data Type Mappings for an Oracle Publisher](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
+ Чтобы указать альтернативные сопоставления типов данных, см. раздел [Указание сопоставления типов данных для издателя Oracle](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Настройка издателя Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

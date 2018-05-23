@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  Выберите службу CDC, с которой требуется выполнить действия.  
   
-     Также можно щелкнуть правой кнопкой мыши службу CDC, с которой требуется начать работу, и выбрать нужное действие. См. раздел [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
+     Также можно щелкнуть правой кнопкой мыши службу CDC, с которой требуется начать работу, и выбрать нужное действие. См. раздел [Что можно сделать с помощью службы CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
  **OR**  
   
@@ -41,9 +41,9 @@ ms.lasthandoff: 05/03/2018
   
 2.  В средней части консоли настройки службы CDC выберите службу, с которой требуется начать работу.  
   
-     Также можно щелкнуть правой кнопкой мыши службу CDC, с которой требуется начать работу, и выбрать нужное действие. См. раздел [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
+     Также можно щелкнуть правой кнопкой мыши службу CDC, с которой требуется начать работу, и выбрать нужное действие. См. раздел [Что можно сделать с помощью службы CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> What can you do with a CDC Service  
+##  <a name="BKMK_WhatcandowithCDCService"></a> Что можно сделать с помощью службы CDC Service  
  При работе со службой CDC можно выполнять следующие действия.  
   
 ### <a name="delete-the-service"></a>Удаление службы  

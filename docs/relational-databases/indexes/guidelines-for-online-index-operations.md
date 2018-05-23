@@ -1,7 +1,7 @@
 ---
 title: Рекомендации по операциям с индексами | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/10/2017
+ms.date: 05/14/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -22,11 +22,11 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 03b9ea68c0c0139a3faca89fb0e3c5c59e5b11f8
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 97a125f6de05f5a17a5b1015c247f6d84cf8d434
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>Руководящие принципы для операций с индексами
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,6 +111,16 @@ ms.lasthandoff: 05/07/2018
 - Для рабочей нагрузки, связанной с большим объемом обновлений, пропускная способность может упасть (наши тесты показали снижение производительности менее чем на 10 %).
 
 Качество дефрагментации при возобновляемом и невозобновляемом перестроении индекса в режиме "в сети" обычно одинаково.
+
+## <a name="online-default-options"></a>Параметры режима "в сети" по умолчанию 
+
+Задать настройки по умолчанию для режима "в сети" или возобновляемых операций на уровне базы данных можно с помощью параметров конфигурации ELEVATE_ONLINE или ELEVATE_RESUMABLE, областью действия которых является база данных. Параметры по умолчанию позволяют избежать случайного выполнения операций, которые переводят базу данных в режим "вне сети". Оба параметра предписывают ядру автоматически перевести определенные операции в режим выполнения "в сети" или режим возобновляемого выполнения.  
+Для каждого из параметров можно задать значение FAIL_UNSUPPORTED, WHEN_SUPPORTED или NEVER. Для режима "в сети" и возобновляемого выполнения можно настроить разные значения. 
+
+Параметры ELEVATE_ONLINE и ELEVATE_RESUMABLE применяются только к инструкциям DDL, которые поддерживают синтаксис выполнения "в сети" и возобновляемого выполнения соответственно. Например, при попытке создать XML-индекс с параметром ELEVATE_ONLINE=FAIL_UNSUPORTED операция будет выполняться "вне сети", так как XML-индексы не поддерживают синтаксис ONLINE=. Параметры действуют только для инструкций DDL, для которых не указан параметр ONLINE или RESUMABLE. Например, передав инструкцию с параметром ONLINE=OFF или RESUMABLE=OFF, пользователь может переопределить параметр FAIL_UNSUPPORTED и выполнить инструкцию в режиме "вне сети" или в невозобновляемом режиме. 
+ 
+> [!NOTE]
+> Параметры ELEVATE_ONLINE и ELEVATE_RESUMABLE не применяются к операциям с XML-индексом. 
  
 ## <a name="related-content"></a>См. также  
  [Об операциях с индексами в сети](../../relational-databases/indexes/how-online-index-operations-work.md)  
