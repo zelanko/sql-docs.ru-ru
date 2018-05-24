@@ -97,13 +97,13 @@ distrib [-?]
  Выводит список всех доступных параметров.  
   
  **-Publisher** *имя_сервера*[**\\***и**мя_экземпляра*]  
- Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *имя_сервера***\\*** имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере.  
+ Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *имя_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере.  
   
  **-PublisherDB** *база_данных_издателя*  
  Имя базы данных издателя.  
   
  **-Subscriber** *имя_сервера*[**\\***имя_экземпляра*]  
- Имя подписчика. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *имя_сервера***\\*** имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере.  
+ Имя подписчика. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *имя_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере.  
   
  **-SubscriberDB** *subscriber_database*  
  Имя базы данных подписчика.  
