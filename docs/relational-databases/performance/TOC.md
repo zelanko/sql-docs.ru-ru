@@ -2,9 +2,10 @@
 # [Центр производительности для базы данных SQL Azure и ядра СУБД SQL Server](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 # [Настройка дисковых пространств с помощью кэша обратной записи NVDIMM-N](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
-# [Обработка адаптивной запросов](adaptive-query-processing.md)
 # [Автоматическая настройка](../automatic-tuning/automatic-tuning.md)
 # [Оценка количества элементов](cardinality-estimation-sql-server.md)  
+# [Интеллектуальная обработка запросов](intelligent-query-processing.md)
+## [Обработка адаптивной запросов](adaptive-query-processing.md)
 
 # [Наблюдение и настройка производительности](monitor-and-tune-for-performance.md)  
 ## [Мониторинг компонентов SQL Server](monitor-sql-server-components.md)  
@@ -59,4 +60,4 @@
 
 # [Joins](joins.md)   
 
-# [вложенные запросы](subqueries.md)    
+# [Вложенные запросы](subqueries.md)    

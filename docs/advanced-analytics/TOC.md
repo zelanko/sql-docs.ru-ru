@@ -97,13 +97,14 @@
 ## [Управление пакетами](r/r-package-management-for-sql-server-r-services.md)
 ### [Пакеты по умолчанию](r/installing-and-managing-r-packages.md)
 ### [Получение сведений о пакете](r/determine-which-packages-are-installed-on-sql-server.md)
-### [Установка новых пакетов R](r/install-additional-r-packages-on-sql-server.md)
 ### [Установка новых пакетов Python](python/install-additional-python-packages-on-sql-server.md)
-### Только для R
+### [Установка новых пакетов R](r/install-additional-r-packages-on-sql-server.md)
+#### [Использование диспетчеров пакетов R](r/install-additional-r-packages-on-sql-server.md)
+#### [Использование RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
+#### [Использование T-SQL](r/install-r-packages-tsql.md)
+#### [Использование репозитория miniCRAN](r/create-a-local-package-repository-using-minicran.md)
 #### [Включение удаленного управления пакетами R](r/r-package-how-to-enable-or-disable.md)
-#### [Функции RevoScaleR для управления пакетами R](r/use-revoscaler-to-manage-r-packages.md)
-#### [Синхронизация пакетов R](r/package-install-uninstall-and-sync.md)
-#### [miniCRAN для локального репозитория пакетов R](r/create-a-local-package-repository-using-minicran.md)
+#### [Синхронизация пакетов R](r/package-install-uninstall-and-sync.md)
 #### [Обходные пути для "пользовательских библиотек" R](r/packages-installed-in-user-libraries.md)
 
 ## Изучение данных и моделирование
