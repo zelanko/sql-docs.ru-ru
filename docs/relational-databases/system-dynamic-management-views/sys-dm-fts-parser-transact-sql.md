@@ -3,8 +3,6 @@ title: sys.dm_fts_parser (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +23,11 @@ caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8440729e968355c09bd9616090c3da35fa5f723
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 717e97ca38fdc68b0ba807f546a253793234375b
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +79,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |expansion_type|**int**|Содержит сведения о природе расширения данного термина, в том числе:<br /><br /> 0 — отдельное слово;<br /><br /> 2 — расширение-словоформа;<br /><br /> 4 — расширение/замена тезауруса.<br /><br /> Например, предположим, что тезаурус определяет слово run как расширение слова `jog`:<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> Термин `FORMSOF (FREETEXT, run)` формирует следующие выходные данные:<br /><br /> `run` со значением expansion_type=0;<br /><br /> `runs` со значением expansion_type=2;<br /><br /> `running` со значением expansion_type=2;<br /><br /> `ran` со значением expansion_type=2;<br /><br /> `jog` со значением expansion_type=4.|  
 |source_term|**nvarchar(4000)**|Термин или фраза, из которой сформирован или создан в результате анализа данный термин. Например, запрос для `word breakers" AND stemmers'` выдает следующие значения source_term для английского языка.<br /><br /> `word breakers` для display_term`word`<br />`word breakers` для display_term`breakers`<br />`stemmers` для display_term`stemmers`|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sys.dm_fts_parser** поддерживает синтаксис и возможности полнотекстовых предикатов, например [CONTAINS](../../t-sql/queries/contains-transact-sql.md) и [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)и функции, такие как [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)и [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>Использование формата Юникода для синтаксического анализа специальных символов  

@@ -3,8 +3,6 @@ title: представление sys.dm_resource_governor_resource_pool_affinit
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +23,11 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02b8ecfc4081c32d242c96980716134714bd238b
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: b9142b5219a8f404ee81ebfb51460d451ff2096a
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmresourcegovernorresourcepoolaffinity-transact-sql"></a>Представление sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +42,7 @@ ms.lasthandoff: 05/07/2018
 |Processor_group|**smallint**|Идентификатор логической группы процессоров Windows. Не допускает значение NULL.|  
 |Scheduler_mask|**bigint**|Двоичная маска, представляющая планировщики, связанные с этим пулом. Не допускает значение NULL.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Пулы, которые созданы со сходством AUTO, не будут появляться в этом представлении, поскольку не имеют сходства. Дополнительные сведения см. в разделе [CREATE RESOURCE POOL &#40;Transact-SQL&#41; ](../../t-sql/statements/create-resource-pool-transact-sql.md) и [ALTER RESOURCE POOL &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-resource-pool-transact-sql.md) инструкции.  
   
 ## <a name="see-also"></a>См. также  

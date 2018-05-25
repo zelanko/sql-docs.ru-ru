@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fb4ea904413d32b2f11979130bce42bb7730255d
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 2ea9d2aa6365c421bcf8e04920c2cf1bd4ab415a
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -80,7 +79,7 @@ ms.lasthandoff: 05/07/2018
 |processor_group|**smallint**|Сохраняет идентификатор группы процессоров, назначенный данному потоку.|  
 |pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если значением состояния исполнителя является RUNNING, и исполнитель выполняется в режиме без приоритетного прерывания, адрес исполнителя совпадает со значением active_worker_address в sys.dm_os_schedulers.  
   
  Когда исполнитель, ожидающий события, получает сигнал, он помещается в начало очереди готовых к работе исполнителей. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает делать это тысячу раз подряд, после чего исполнитель помещается в конец очереди. Перемещение исполнителя в конец очереди имеет некоторые последствия для производительности.  

@@ -3,8 +3,6 @@ title: sys.dm_os_latch_stats (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -24,11 +22,11 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 65aec12105ab38ff76a560c500ee6a6799db8f9f
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 72dabd38cbb974ead8a231b4da9569dee9441284
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +49,7 @@ ms.lasthandoff: 05/07/2018
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Представление динамического управления sys.dm_os_latch_stats может быть использовано для выявления источника состязания между кратковременными блокировками путем исследования относительного числа ожиданий и времени ожидания для различных классов кратковременных блокировок. В некоторых ситуациях возможно устранение состязания между кратковременными блокировками или снижение его остроты. Тем не менее, может возникнуть ситуация, когда будет необходимо обратиться в службу [!INCLUDE[msCoName](../../includes/msconame-md.md)] в службу поддержки пользователей.  
   
  Очистить содержимое представления sys.dm_os_latch_stats с помощью инструкции `DBCC SQLPERF` можно следующим образом.  

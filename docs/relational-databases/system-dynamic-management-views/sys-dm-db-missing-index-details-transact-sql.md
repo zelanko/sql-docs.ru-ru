@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -26,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8f90002eb8dc0b67356f01abb6e0f6ccdc5bb7a4
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 7d3b07692b4e12ab4bdd0be15566cf115ad71b76
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmdbmissingindexdetails-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.lasthandoff: 05/07/2018
 |**included_columns**|**nvarchar(4000)**|Список столбцов с разделителями-запятыми, необходимых в качестве столбцов для запроса. Дополнительные сведения о или включенных столбцах см. в разделе [создание индексов с включенными столбцами](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> Для индексов, оптимизированных для памяти (оба хэширования и оптимизированных для памяти некластеризованный), игнорировать **included_columns**. Все столбцы таблицы включаются в каждый индекс с оптимизацией для памяти.|  
 |**инструкция**|**nvarchar(4000)**|Имя таблицы, в которой отсутствует индекс.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Сведения, возвращаемые функцией **sys.dm_db_missing_index_details** обновляется, когда запрос оптимизирован оптимизатором запросов и не сохраняется. Сведения об отсутствующих индексах хранятся только до перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Администраторы базы данных должны периодически делать резервные копии сведений об отсутствующих индексах, чтобы сохранить их после перезагрузки сервера.  
   
  Чтобы определить, какие группы входит отсутствующий индекс является частью, вы можете запросить **sys.dm_db_missing_index_groups** динамическому административному представлению, объединив его с **sys.dm_db_missing_index_details**  на основе **index_handle** столбца.  

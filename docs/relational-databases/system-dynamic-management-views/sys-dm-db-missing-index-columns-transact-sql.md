@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -26,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5799ed8cc30c2d03f50edc4471addc0111469e36
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: c457cd76f0c1090147d2df41a47c4c6f3c2ef5ad
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sys.dm_db_missing_index_columns(index_handle)
 |**column_name**|**sysname**|Имя столбца таблицы.|  
 |**column_usage**|**varchar(20)**|Способ использования столбца запросом. Ниже приведены возможные значения и их описания.<br /><br /> РАВЕНСТВО: Столбец участвует в предикате, выражающем равенство, в формате: <br />                        *table.column* = *constant_value*<br /><br /> НЕРАВЕНСТВО: Столбец участвует в предикате, выражающем неравенство, например предикат в формате: *таблица.столбец* > *constant_value*. Любой оператор сравнения, кроме «=», выражает неравенство.<br /><br /> ВКЛЮЧИТЬ: Столбец не используется для вычисления предиката, но использовать по другой причине, например, для выполнения запроса.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Сведения, возвращаемые функцией **sys.dm_db_missing_index_columns** обновляется, когда запрос оптимизирован оптимизатором запросов и не сохраняется. Сведения об отсутствующих индексах хранятся только до перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Администраторы базы данных должны периодически делать резервные копии сведений об отсутствующих индексах, чтобы сохранить их после перезагрузки сервера.  
   
 ## <a name="transaction-consistency"></a>Согласованность транзакций  

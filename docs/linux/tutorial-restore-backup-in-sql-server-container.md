@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.openlocfilehash: 0e86081f681c87e09b5cfde1fec85f20967de1a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: linux
+ms.openlocfilehash: dbab0dd07db4859c83a827285e810ee818c3aeb8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Восстановление базы данных SQL Server в контейнер Linux Docker
 
@@ -139,7 +138,7 @@ ms.lasthandoff: 05/03/2018
 Файл резервной копии теперь находится внутри контейнера. Перед восстановлением резервной копии, важно знать логических имен файлов и типов файлов в резервной копии. Следующие команды Transact-SQL проверки резервной копии и выполнить восстановление с помощью **sqlcmd** в контейнере.
 
 > [!TIP]
-> В этом учебнике используется **sqlcmd** внутри контейнера, так как контейнер поставляется с предварительно установлено это средство. Тем не менее, можно выполнять также инструкции Transact-SQL с другими клиентами средств вне контейнера, таких как [кода Visual Studio](sql-server-linux-develop-use-vscode.md) или [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md). Чтобы подключиться, используйте порт узла, который был сопоставлен порт 1433 в контейнере. В этом примере это **localhost, 1401** на хост-компьютере и **Host_IP_Address 1401** удаленно.
+> В этом учебнике используется **sqlcmd** внутри контейнера, так как контейнер поставляется с предварительно установлено это средство. Тем не менее, можно выполнять также инструкции Transact-SQL с другими клиентами средств вне контейнера, таких как [кода Visual Studio](sql-server-linux-develop-use-vscode.md) или [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Чтобы подключиться, используйте порт узла, который был сопоставлен порт 1433 в контейнере. В этом примере это **localhost, 1401** на хост-компьютере и **Host_IP_Address 1401** удаленно.
 
 1. Запустите **sqlcmd** внутри контейнера, в список логических имен файлов и путей внутри резервной копии. Это делается с **RESTORE FILELISTONLY** инструкции Transact-SQL.
 

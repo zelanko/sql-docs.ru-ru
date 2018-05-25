@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 04/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -25,11 +24,11 @@ author: josack
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 90645c4d2d0bff9716926c0260853a76d39941d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9d36c4a67fab2f9f7c867a3ba6b7e7d01fc5d29
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ SQL Server необходимо разрешение VIEW SERVER STATE на се
 База данных SQL Azure требуется разрешение VIEW DATABASE STATE в базе данных.
 
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
 SQL Server использует подход, многоуровневых шлюза будет регулировать количество разрешенных параллельных компиляций.  Используются три шлюзы, включая малых, средних и большие. Шлюзы предотвращения исчерпания общего объема ресурсов памяти потребители памяти требует большего компиляции.
 
 Ожидает результат шлюза в отложенной компиляции. Помимо задержки в компиляции регулируемые запросы будут иметь связанный RESOURCE_SEMAPHORE_QUERY_COMPILE накопления типа ожидания. Тип ожидания RESOURCE_SEMAPHORE_QUERY_COMPILE может означать, запросы используют большой объем памяти для компиляции и что память будет исчерпан, или в качестве альтернативы имеется достаточный объем памяти в целом, однако доступных единиц в определенном шлюз исчерпаны. Выходные данные **sys.dm_exec_query_optimizer_memory_gateways** можно использовать для исправления ситуации, когда недостаточно памяти для компиляции плана выполнения запроса.  

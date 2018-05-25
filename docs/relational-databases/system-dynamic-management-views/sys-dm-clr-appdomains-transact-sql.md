@@ -3,8 +3,6 @@ title: sys.dm_clr_appdomains (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -24,11 +22,11 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 501e126a3064489852987671c83326f0d4a53832
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: e37769be6369fe1a18b8c6fb03dbecd534df502a
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +54,7 @@ ms.lasthandoff: 05/07/2018
 |**total_allocated_memory_kb**|**bigint**|Общий размер (в килобайтах) всей выделенной памяти, которая была выделена в домене приложения с момента его создания (без вычета освобожденной и собранной памяти). Это эквивалентно **System.AppDomain.MonitoringTotalAllocatedMemorySize**.|  
 |**survived_memory_kb**|**bigint**|Количество килобайт, сохранившихся после последней полной, блокирующей сборки мусора, на которые заведомо существуют ссылки из текущего домена приложения. Это эквивалентно **System.AppDomain.MonitoringSurvivedMemorySize**.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Имеется отношение "один ко многим" между **dm_clr_appdomains.appdomain_address** и **dm_clr_loaded_assemblies.appdomain_address**.  
   
  В следующих таблицах список возможных **состояние** значения, их описания и в случае, если **AppDomain** жизненного цикла. Эти сведения можно использовать, чтобы отслеживать жизненный цикл **AppDomain** , контролировать подозрительную или повторяющуюся **AppDomain** экземпляров домена приложений без необходимости анализировать журнал событий Windows.  

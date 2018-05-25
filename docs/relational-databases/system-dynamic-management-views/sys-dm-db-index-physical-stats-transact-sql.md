@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -26,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 230833a06bfdfdfdc237b1f446d63b91eb7a71db
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 1853bdbf62701cfbaa5302615eac61684089ac5a
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,7 +117,7 @@ sys.dm_db_index_physical_stats (
 |column_store_delete_buffer_state|tinyint|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN;<br /><br /> 2 = СТОК<br /><br /> 3 = ЗАПИСЬ НА ДИСК<br /><br /> 4 = СНЯТИЯ С УЧЕТА<br /><br /> 5 = ГОТОВНОСТЬ|  
 |column_store_delete_buff_state_desc||**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE — родительский индекс не является индексом columnstore.<br /><br /> OPEN — методов Deleter и сканеры используйте его.<br /><br /> СТОК — методов Deleter расходуя, но сканеры по-прежнему использовать.<br /><br /> ОЧИСТКА — буфер закрыт и строк в буфере, записываются в точечном рисунке delete.<br /><br /> Снятия с УЧЕТА — строк в буфере закрытых delete были записаны в точечном рисунке delete, но буфер не был усечен, поскольку сканеры используют ее. Новый сканеры нет необходимости использовать приходят буфера, поскольку достаточно открыть буфера.<br /><br /> ГОТОВ – это буфера удаления готов к использованию.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Функция динамического управления sys.dm_db_index_physical_stats заменяет инструкцию DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Режимы просмотра  

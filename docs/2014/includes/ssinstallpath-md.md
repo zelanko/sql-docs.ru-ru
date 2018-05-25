@@ -1,0 +1,1 @@
+C:\\программные файлы\\Microsoft SQL Server\\120\\

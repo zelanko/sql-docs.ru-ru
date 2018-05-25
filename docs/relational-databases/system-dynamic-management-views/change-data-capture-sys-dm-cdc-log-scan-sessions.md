@@ -3,8 +3,6 @@ title: sys.dm_cdc_log_scan_sessions (Transact-SQL) | Документы Microsof
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +23,11 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8ccd464e2d11112223acdcdf6b6c580c488bbfce
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 74a99cc08a030327c4f0b70f11c64f6c2a952dec
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>Для отслеживания измененных данных - sys.dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +58,7 @@ ms.lasthandoff: 05/07/2018
 |**empty_scan_count**|**int**|Количество последовательных сеансов, не содержащих транзакций системы отслеживания измененных данных.|  
 |**failed_sessions_count**|**int**|Число сеансов, завершившихся неудачно.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Значения в этом динамическом административном представлении сбрасываются при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Разрешения  

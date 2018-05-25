@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1a9491bcb49d04d9270aa0a8ef207deff94e7529
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 559aea789fd19fcbbe11fea0868f77c0fdd8b90c
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -132,7 +131,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|Количество страниц, которые были оценены как пригодные для сжатия на уровне страницы для конкретных секций таблицы, индекса или индексированного представления. Включает несжатые страницы, поскольку это не привело бы к значительной экономии. Всегда 0 для индекса columnstore.|    
 |**page_compression_success_count**|**bigint**|Количество страниц данных, которые были сжаты с помощью сжатия PAGE для конкретной секции таблицы, индекса или индексированного представления. Всегда 0 для индекса columnstore.|    
     
-## <a name="remarks"></a>Замечания    
+## <a name="remarks"></a>Примечания    
  Этот объект DMO не принимает коррелированные параметры из CROSS APPLY и OUTER APPLY.    
     
  Можно использовать **sys.dm_db_index_operational_stats** для отслеживания продолжительности ожидания пользователями на чтение или запись в таблицы, индекса или секции и определения таблиц или индексов, которые появляются много операций ввода-вывода или горячей времени зоны.    

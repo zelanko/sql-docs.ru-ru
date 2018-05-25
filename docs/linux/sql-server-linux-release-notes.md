@@ -4,20 +4,19 @@ description: В этой статье содержатся заметки о в�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/20/2018
+ms.date: 05/24/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: b89daab4515e3017aa6e80f462e54020caf4ff91
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 07782a5b8290b41a5a11557c503fcbfd0736790b
+ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для 2017 г. SQL Server в Linux
 
@@ -47,6 +46,7 @@ ms.lasthandoff: 05/03/2018
 
 | Выпуск | Версия | Дата выпуска |
 |-----|-----|-----|
+| [CU7](#CU7) | 14.0.3026.27 | 5 2018 |
 | [CU6](#CU6) | 14.0.3025.34 | 4 2018 |
 | [CU5](#CU5) | 14.0.3023.8 | 3 2018 |
 | [CU4](#CU4) | 14.0.3022.28 | 2 2018 |
@@ -65,6 +65,20 @@ ms.lasthandoff: 05/03/2018
 - [Установить пакет Full-text Search](sql-server-linux-setup-full-text-search.md)
 - [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Включить агент SQL Server](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU7"></a> CU7 (май 2018)
+
+Это накопительный пакет обновления 7 (CU7) выпуска 2017 г. SQL Server. Версия ядра SQL Server для этого выпуска, 14.0.3026.27. Сведения о исправления и улучшения в этом выпуске см. в разделе [ https://support.microsoft.com/en-us/help/4229789 ](https://support.microsoft.com/en-us/help/4229789).
+
+### <a name="package-details"></a>Сведения о пакете
+
+Для установки пакетов вне сети или вручную можно загрузить пакеты RPM и Debian с информацией в таблице ниже:
+
+| Пакет | версия пакета | Файлы для загрузки |
+|-----|-----|-----|
+| Пакет Red Hat RPM | 14.0.3026.27-2 | [Пакет RPM ядра](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3026.27-2.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3026.27-2.x86_64.rpm)</br>[Пакет полнотекстового поиска об/мин](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3026.27-2.x86_64.rpm)</br>[Пакет служб SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Пакет SLES RPM | 14.0.3026.27-2 | [пакет RPM ядра сервера MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3026.27-2.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3026.27-2.x86_64.rpm)</br>[Пакет полнотекстового поиска об/мин](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3026.27-2.x86_64.rpm) | 
+| Пакет Debian Ubuntu 16.04 | 14.0.3026.27-2 | [Пакет Debian ядра](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3026.27-2_amd64.deb)</br>[Высокий уровень доступности Debian пакета](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3026.27-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3026.27-2_amd64.deb)<br/>[Пакет служб SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU6"></a> CU6 (апрель 2018)
 
@@ -353,7 +367,7 @@ sudo systemctl start mssql-server
 -   [Установка SQL Server Integration Services (SSIS) для Linux](sql-server-linux-setup-ssis.md)
 -   [Извлечения, преобразования и загрузки данных в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md)
 
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
+#### <a name="-a-idssmsa-sql-server-management-studio-ssms"></a>< a id = «ssms» ></a> SQL Server Management Studio (SSMS)
 
 В SSMS для подключения к SQL Server в Linux Windows применяются следующие ограничения.
 

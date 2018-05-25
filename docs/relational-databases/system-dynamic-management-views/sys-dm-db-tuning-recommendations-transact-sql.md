@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 07/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -27,11 +26,11 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 12d8e9346d7e079cdcdb4fcf5cdb765a50574d39
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 148c1d6573b0731b0b3dc4361dfafb8d98de7048
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.DM\_db\_СУБД\_рекомендации (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ ms.lasthandoff: 05/04/2018
 | **Оценка** | **int** | Предполагаемое значение и влияние этой рекомендации по 0-100 масштаб (чем больше тем лучше) |
 | **Подробные сведения** | **nvarchar(max)** | Документ JSON, который содержит дополнительные сведения о рекомендации. Доступны следующие поля:<br /><br />`planForceDetails`<br />-    `queryId` -запрос\_идентификатор регрессионных запросов.<br />-    `regressedPlanId` -plan_id регрессионных плана.<br />-   `regressedPlanExecutionCount` -Обнаружено число выполнений запроса с планом регрессионных перед регрессии.<br />-    `regressedPlanAbortedCount` -Число обнаружены ошибки во время выполнения регрессионных плана.<br />-    `regressedPlanCpuTimeAverage` -Среднее время ЦП, использованных запросом регрессионных до обнаружения регрессии.<br />-    `regressedPlanCpuTimeStddev` -Обнаружена стандартное отклонение время ЦП, затраченное на выполнение запроса регрессионных перед регрессии.<br />-    `recommendedPlanId` -plan_id плана, обязательно.<br />-   `recommendedPlanExecutionCount`— Число выполнений запроса с планом, обязательно до обнаружения регрессии.<br />-    `recommendedPlanAbortedCount` -Число обнаружены ошибки во время выполнения с планом, обязательно.<br />-    `recommendedPlanCpuTimeAverage` -Среднее время ЦП, затраченное на выполнение запроса, выполняться в плане, должно быть принудительно (вычисляется до обнаружения Регрессия).<br />-    `recommendedPlanCpuTimeStddev` Обнаружена стандартное отклонение время ЦП, затраченное на выполнение запроса регрессионных перед регрессии.<br /><br />`implementationDetails`<br />-  `method` -Метод, который следует использовать для устранения регрессии. Значение всегда равно `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] скрипт, который должен быть выполнен для принудительного плана, рекомендуется. |
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Сведения, возвращаемые функцией `sys.dm_db_tuning_recommendations` обновляется, когда компонент database engine определяет потенциальные снижением производительности запросов и не сохраняется. Рекомендации хранится только до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перезапускается. Администраторы базы данных должны периодически делать резервные копии рекомендации по настройке, если необходимо сохранить их после перезагрузки сервера. 
 
  `currentValue` в поле `state` столбец может иметь следующие значения:

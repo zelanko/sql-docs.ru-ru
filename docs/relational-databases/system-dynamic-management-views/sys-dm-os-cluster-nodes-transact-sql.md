@@ -3,8 +3,6 @@ title: sys.dm_os_cluster_nodes (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -24,11 +22,11 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 899240e32383b283396c45d866682dc6f1bafb45
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 6fb5b957cfdaa340ec90a9bb30a5e9db6a54ca31
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmosclusternodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +43,7 @@ ms.lasthandoff: 05/07/2018
 |is_current_owner|bit|1 означает, что этот узел является текущим владельцем ресурса отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Когда отказоустойчивый кластер включен, экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может работать на любом из узлов отказоустойчивого кластера, входящих в конфигурацию экземпляра отказоустойчивого кластера (виртуального сервера) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > **Примечание:** данное представление заменит функцию fn_virtualservernodes, которая будет считаться устаревшей в следующей версии.  

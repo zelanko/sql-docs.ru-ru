@@ -6,7 +6,6 @@ ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.service: sql-database
-ms.component: dmv's
 ms.suite: sql
 ms.technology: system-objects
 ms.tgt_pltfrm: ''
@@ -27,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 105bb0005720861604bbda1542d0c0b2abb439ad
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a91988c36604ce38c7022e6bc111cc1941e43a03
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="permissions"></a>Разрешения  
  Для этого представления необходимо разрешение VIEW DATABASE STATE.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Данные, возвращенные **sys.dm_db_resource_stats** выражается в процентах от максимально разрешенных ограничений на уровень производительности и уровня обслуживания, который вы используете.
  
  Если база данных переключилась на другой сервер за последние 60 минут, представление будет возвращать только данные за то время, в течение которого она была базой данных-источником с момента отработки отказа.  

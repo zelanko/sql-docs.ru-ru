@@ -4,20 +4,19 @@ description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 08/23/2017
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: sql-linux
-ms.openlocfilehash: f36ea5f22b285576fc7489b72330232d0776baa0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b6293e7c0d80eb1ebe02d6cd03f17626d793c05
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Использование среды SQL Server Management Studio в Windows для управления SQL Server в Linux
 
@@ -25,29 +24,82 @@ ms.lasthandoff: 05/03/2018
 
 В этой статье описаны [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) и будет выполнено несколько типичных задач. SSMS — это приложение Windows, поэтому SSMS следует использовать при наличии компьютером Windows, можно подключиться к удаленному экземпляру SQL Server в Linux.
 
-[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) входит в набор средств SQL, которые корпорация Microsoft предлагает бесплатно для задач разработки и управления. Среда SSMS — это интегрированная среда для доступа, настройки, управления, администрирования и разработки всех компонентов SQL Server, работающий локально или в облаке, в Linux, Windows или Docker на macOS и базы данных SQL Azure и хранилище данных SQL Azure. Среда SSMS объединяет большое число графических средств с несколькими расширенными редакторами скриптов для предоставления доступа к SQL Server для разработчиков и администраторов с любым опытом.
+> [!TIP]
+> Если у вас выполнять SSMS на компьютере с ОС Windows, рассмотрите возможность новый [SQL Server Operations Studio](../sql-operations-studio/index.md). Оно предоставляет графическое средство для управления SQL Server и работает на Windows и Linux.
+
+[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) входит в набор средств SQL, которые корпорация Microsoft предлагает бесплатно для задач разработки и управления. Среда SSMS — это интегрированная среда для доступа, настройки, управления, администрирования и разработки всех компонентов SQL Server. Он может подключиться к SQL Server на любой платформе как локально, в контейнеры Docker и в облаке. Также он подключается к базе данных SQL Azure и хранилище данных SQL Azure. Среда SSMS объединяет большое число графических средств с несколькими расширенными редакторами скриптов для предоставления доступа к SQL Server для разработчиков и администраторов с любым опытом.
 
 Среда SSMS предлагает широкий спектр возможностей разработки и управления для SQL Server, включая средства:
 
-- Настройка, отслеживать и администрировать одного или нескольких экземпляров SQL Server
+- Настройки, наблюдения и администрирования одного или нескольких экземпляров SQL Server
 - развертывание, мониторинг и обновления компонентов уровня данных, таких как базы данных и хранилищ данных
 - резервное копирование и восстановление баз данных
 - Построение и выполнение запросов T-SQL и скриптов и просмотреть результаты
 - Создание скриптов T-SQL для объектов базы данных
 - Просмотр и изменение данных в базах данных
-- визуальное проектирование запросов T-SQL и объектов базы данных, такие как представления, таблицы и хранимые процедуры
+- Визуальное проектирование запросов T-SQL и объектов базы данных, такие как представления, таблицы и хранимые процедуры
 
-В разделе [использования SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/ms174173.aspx) для получения дополнительной информации.
+В разделе [возможности SSMS?](../ssms/sql-server-management-studio-ssms.md) Дополнительные сведения о SSMS.
 
 ## <a name="install-the-newest-version-of-sql-server-management-studio-ssms"></a>Установите последнюю версию служб SQL Server Management Studio (SSMS)
 
-При работе с SQL Server, следует всегда использовать последнюю версию служб SQL Server Management Studio (SSMS). Последнюю версию SSMS постоянно обновляется и оптимизированы и в настоящее время работает с SQL Server 2017 в Linux. Чтобы загрузить и установить последнюю версию, в разделе [загрузка SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Быть в курсе событий, последняя версия SSMS предлагает при наличии доступного для загрузки новой версии. 
+При работе с SQL Server, следует всегда использовать последнюю версию служб SQL Server Management Studio (SSMS). Последнюю версию SSMS постоянно обновляется и оптимизированы и в настоящее время работает с SQL Server 2017 в Linux. Чтобы загрузить и установить последнюю версию, в разделе [загрузка SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Быть в курсе событий, последняя версия SSMS предлагает при наличии доступного для загрузки новой версии.
 
-## <a name="before-you-begin"></a>Перед началом
-- В разделе [используйте SSMS в Windows для подключения к SQL Server в Linux](sql-server-linux-develop-use-ssms.md) способ подключения и запроса с помощью среды SSMS
-- Чтение [известные проблемы](sql-server-linux-release-notes.md) для SQL Server 2017 г. в Linux
+> [!NOTE]
+> Перед использованием SSMS для управления Linux, просмотрите [известные проблемы](sql-server-linux-release-notes.md) для SSMS в Linux.
+
+## <a name="connect-to-sql-server-on-linux"></a>Подключение к SQL Server в Linux
+
+Используйте следующие основные шаги для подключения:
+
+1. Запустите SSMS, введя **Microsoft SQL Server Management Studio** поле поиска в Windows и нажмите кнопку классического приложения.
+
+    ![Среда SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png)
+
+1. В **соединение с сервером** окно, введите следующие сведения (если SSMS уже запущен, щелкните **Connect > Database Engine** для открытия **соединение с сервером** окна):
+
+   | Настройка | Описание |
+   |-----|-----|
+   | **Тип сервера** | Значение по умолчанию — компонент database engine; не изменяйте это значение. |
+   | **Имя сервера** | Введите имя целевом компьютере Linux SQL Server или его IP-адрес. |
+   | **Проверка подлинности** | SQL Server 2017 г. в Linux, используйте **проверки подлинности SQL Server**. |
+   | **Имя входа** | Введите имя пользователя, имеющего доступ к базе данных на сервере (например, значение по умолчанию **SA** учетную запись, созданную во время установки). |
+   | **Пароль** | Введите пароль для указанного пользователя (для **SA** учетной записи, вы создали это во время установки). |
+
+    ![SQL Server Management Studio: Подключиться к базе данных SQL server](./media/sql-server-linux-manage-ssms/connect.png)
+
+1. Нажмите кнопку **Соединить**.
+
+    > [!TIP]
+    > Если произойдет сбой подключения, сначала попробуйте узнать проблему по сообщению об ошибке. Затем ознакомьтесь с [рекомендациями по устранению неполадок с подключением](sql-server-linux-troubleshooting-guide.md#connection).
+ 
+1. После успешного подключения к серверу SQL **обозревателя объектов** и теперь имеют доступ к базе данных для выполнения задач администрирования или запроса данных.
+
+## <a name="run-transact-sql-queries"></a>Выполнение запросов Transact-SQL
+
+После подключения к серверу можно подключиться к базе данных и выполнения запросов Transact-SQL. Можно использовать запросы Transact-SQL для задачи практически любой базы данных.
+
+1. В **обозревателя объектов**, перейдите в целевую базу данных на сервере. Например, разверните **системных баз данных** для работы с **master** базы данных.
+
+1. Щелкните правой кнопкой мыши базу данных, а затем выберите **новый запрос**.
+
+1. В окне запроса напишите запрос Transact-SQL для выбора возвращают имена всех баз данных на сервере.
+
+   ```sql
+   SELECT [Name]
+   FROM sys.Databases
+   ```
+
+   Если вы новичок в написании запросов, см. раздел [написание инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
+
+1. Нажмите кнопку **Execute** кнопку, чтобы запустить запрос и просмотреть результаты.
+
+   ![Успешно. Подключиться к базе данных SQL server: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+
+Хотя это можно выполнить почти любую задачу управления, с запросами Transact-SQL, SSMS — это графическое средство, которое делает является упрощение управления SQL Server. В следующих разделах некоторые примеры использования графического пользовательского интерфейса.
 
 ## <a name="create-and-manage-databases"></a>Создание и управление базами данных
+
 При подключении к *master* базы данных, можно создавать базы данных на сервере и изменить или удалить существующие базы данных. Далее описывается, как выполнить несколько общие задачи управления базами данных через среду Management Studio. Для выполнения этих задач, убедитесь, что вы подключены к *master* базы данных с именем входа субъекта серверного уровня, созданный при настройке 2017 г. SQL Server в Linux.
 
 ### <a name="create-a-new-database"></a>Создание базы данных
@@ -74,13 +126,14 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="use-activity-monitor-to-see-information-about-sql-server-activity"></a>Чтобы получить сведения об активности сервера SQL используйте монитора активности
 
-[Монитора активности](../relational-databases/performance-monitor/activity-monitor.md) средство встроена в SQL Server Management Studio (SSMS) и отображает сведения о процессах SQL Server и как эти процессы влияют на текущий экземпляр SQL Server.
+[Монитора активности](../relational-databases/performance-monitor/activity-monitor.md) средство встроен в SQL Server Management Studio (SSMS) и отображает сведения о процессах SQL Server и как эти процессы влияют на текущий экземпляр SQL Server.
 
 1. Запустите SSMS и подключитесь к серверу в 2017 г. SQL Server в Linux
 
-2. В обозревателе объектов щелкните правой кнопкой мыши *сервера* , а затем щелкните *монитора активности*
+1. В обозревателе объектов щелкните правой кнопкой мыши *сервера* , а затем щелкните *монитора активности*
 
-Монитор активности показывает развертываемыми и свертываемыми панелями с следующие сведения:
+Монитор активности показывает развертываемыми и свертываемыми панелями со следующими сведениями:
+
 - Обзор
 - Процессы
 - Ожидание ресурсов
@@ -91,8 +144,8 @@ ms.lasthandoff: 05/03/2018
 При разворачивании панели монитор активности выполняет запрос к экземпляру сведения. При свертывании панели выполнение всех операций запроса для этой панели приостанавливается. Вы можете развернуть одну или несколько областей, в то же время для просмотра различных типов активности в экземпляре.
 
 ## <a name="see-also"></a>См. также:
-- [Использование среды SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/ms174173.aspx)
+- [Что такое SSMS?](../ssms/sql-server-management-studio-ssms.md)
 - [Экспорт и импорт базы данных с помощью SSMS](sql-server-linux-migrate-ssms.md)
-- [Руководство: SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/bb934498.aspx)
+- [Руководство: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 - [Учебник. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Производительность сервера и мониторинг активности](../relational-databases/performance/server-performance-and-activity-monitoring.md)

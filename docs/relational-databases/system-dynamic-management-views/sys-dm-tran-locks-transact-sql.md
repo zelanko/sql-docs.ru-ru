@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b2e8adf59403318df0fc46bd817fc6ff12bcef0f
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: fbc8bb6eb7dc1a178a44e67b9e23b7ec98c75dce
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +68,7 @@ ms.lasthandoff: 05/07/2018
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
  
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Состояние предоставленного запроса показывает, что блокировка ресурса была предоставлена запрашивающему объекту. Ожидающий запрос обозначает, что запрос еще не был предоставлен. Возвращаются следующие типы ожидающих запросов **request_status** столбца:  
   
 -   Состояние преобразованного запроса означает, что запрашивающий объект получил запрос ресурса и в настоящий момент ожидает, пока будет предоставлено обновление исходного запроса.  

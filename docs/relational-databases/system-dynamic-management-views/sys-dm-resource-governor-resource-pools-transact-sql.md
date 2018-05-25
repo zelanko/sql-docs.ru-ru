@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4715d2363f5bd1799b64ca670d206db240daed95
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 0317d8dbebebe43cf23c1f97299c9f81098f08e3
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmresourcegovernorresourcepools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -82,7 +81,7 @@ ms.lasthandoff: 05/07/2018
 |io_issue_delay_total_ms|**bigint**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общее время (в миллисекундах) между запланированной проблемой и фактической проблемой ввода-вывода. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.|  
 |pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Между группами рабочей нагрузки регулятора ресурсов и пулами ресурсов регулятора ресурсов существует связь «многие к одному». В результате многие статистики пула ресурсов являются производными от статистик группы рабочей нагрузки.  
   
  Данное динамическое административное представление отображает конфигурацию, хранимую в памяти. Чтобы просмотреть сохраненные метаданные конфигурации, используйте представление каталога sys.resource_governor_resource_pools.  

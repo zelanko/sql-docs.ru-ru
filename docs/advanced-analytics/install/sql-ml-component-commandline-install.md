@@ -7,21 +7,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 921bdddf6ae1638ae637df58a0a7e8301fd91dc0
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 7211eda2caaf579267e4c6089be13750022f0ef8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>Компоненты SQL Server машины обучения из командной строки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Эта статья содержит инструкции для машины SQL Server intalling обучения компонентов из командной строки:
 
-+ [В базе данных экземпляра](#indb)
++ [Новое в базе данных экземпляра](#indb)
 + [Добавить к существующему экземпляру ядра базы данных](#add-existing)
 + [Автоматическая установка](#silent)
-+ [Отдельный сервер](#shared-feature)
++ [Новый изолированный сервер](#shared-feature)
 
 Можно выбрать автоматическое, базовое или полное взаимодействие с пользовательским интерфейсом программы установки. В этой статье дополняет [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), охватывающие параметры, уникальные для компонентов обучения машины R и Python.
 

@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
+ms.technology: linux
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 9d23843466886a70d18038988d00c7152075ff07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de149b0a75a550101e761baa109bc07dac062fcd
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Краткое руководство: Установка SQL Server и создать базу данных в Red Hat
 
@@ -118,7 +117,7 @@ ms.lasthandoff: 05/03/2018
 > **Sqlcmd** — лишь один инструмент для подключения к SQL Server для выполнения запросов и выполнять задачи управления и разработки. Ниже перечислены другие инструменты.
 >
 > * [SQL Server Operations Studio (предварительная версия)](../sql-operations-studio/what-is.md);
-> * [Среда SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [Среда SQL Server Management Studio](sql-server-linux-manage-ssms.md)
 > * [Код Visual Studio](sql-server-linux-develop-use-vscode.md).
 > * [mssql-cli (предварительная версия)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/).
 
