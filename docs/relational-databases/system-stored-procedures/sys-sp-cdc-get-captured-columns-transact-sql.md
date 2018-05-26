@@ -26,11 +26,11 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5c9c09866f34736adec722c8988c18dab16fc2dd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b131dce10e231bc0ee479ff0157a614bcfb2d6f4
+ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sys.sp_cdc_get_captured_columns
 |capture_instance|**sysname**|Имя экземпляра отслеживания.|  
 |column_name|**sysname**|Имя отслеживаемого исходного столбца данных.|  
 |column_id|**int**|Идентификатор столбца в исходной таблице.|  
-|ordinal_position|**int**|Положение столбца в исходной таблице.|  
+|column_ordinal|**int**|Положение столбца в исходной таблице.|  
 |Тип данных|**sysname**|Тип данных столбца.|  
 |character_maximum_length|**int**|Максимальная длина символьного столбца; в противном случае — NULL.|  
 |numeric_precision|**tinyint**|Точность чисел для числового столбца; в противном случае — NULL.|  
@@ -73,7 +73,7 @@ sys.sp_cdc_get_captured_columns
 |numeric_scale|**int**|Масштаб числового столбца; в противном случае — NULL.|  
 |datetime_precision|**smallint**|Точность для столбца типа datetime; в противном случае — NULL.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Чтобы получить сведения об отслеживаемых столбцах, возвращенное в результате запроса функций запроса экземпляра отслеживания, используйте процедуру sys.sp_cdc_get_captured_columns [cdc.fn_cdc_get_all_changes_ < экземпляр_отслеживания >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) или [cdc.fn_cdc_get_net_changes_ < экземпляр_отслеживания >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md). Имена, идентификаторы и положение столбцов не изменяются в течение всего времени существования экземпляра отслеживания. Изменяется только тип данных столбца, если изменяется тип данных базового исходного столбца отслеживаемой таблицы. Столбцы, которые добавлены или удалены из исходной таблицы оказывает влияния на существующие экземпляры отслеживания отслеживаемых столбцов.  
   
  Используйте [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) для получения сведений об определении данных инструкции языка DDL, применяемые к исходной таблице. Результирующий набор содержит сведения обо всех изменениях DDL, изменивших структуру отслеживаемого исходного столбца.  
