@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 41eabe46f654f2cb0464d2f7589cb0ce50a7c214
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
-ms.translationtype: HT
+ms.openlocfilehash: efc03030c4d0c329fa7736e3622c621f684eecb3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Используйте Visual Studio для создания баз данных для SQL Server в Linux
 
@@ -27,7 +26,7 @@ SQL Server Data Tools (SSDT) примет мощные среды разрабо
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Установите Visual Studio и SQL Server Data Tools
 
-1. Если вы еще не установили Visual Studio на компьютере Windows [загрузки и установки Visual Studio]. Если нет лицензии Visual Studio, Visual Studio Community edition является бесплатной, полнофункциональной интегрированной среды разработки для учащихся, открытым исходным кодом и для отдельных разработчиков.
+1. Если вы еще не установили Visual Studio на компьютере Windows [Загрузите и установите Visual Studio]. Если нет лицензии Visual Studio, Visual Studio Community edition является бесплатной, полнофункциональной интегрированной среды разработки для учащихся, открытым исходным кодом и для отдельных разработчиков.
 
 2. Во время установки Visual Studio, выберите **настраиваемый** для **выберите тип установки** параметр. Нажмите кнопку **Далее**
 
@@ -109,12 +108,12 @@ SQL Server Data Tools (SSDT) примет мощные среды разрабо
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Если вы не знакомы с T-SQL, см. раздел [учебника: написание инструкций Transact-SQL] и [Справочник по Transact-SQL (компонент Database Engine)].
+Если вы не знакомы с T-SQL, см. раздел [Учебник. Составление инструкций Transact-SQL] и [Справочник по Transact-SQL (компонент Database Engine)].
 
 Дополнительные сведения о разработке базы данных с SQL Data Tools см. в разделе [документы MSDN по SSDT]
 
-[загрузки и установки Visual Studio]:https://www.visualstudio.com/downloads/
+[Загрузите и установите Visual Studio]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
-[документы MSDN по SSDT]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
-[учебника: написание инструкций Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
+[Документы MSDN по SSDT]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
+[Учебник. Составление инструкций Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
 [Справочник по Transact-SQL (компонент Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx

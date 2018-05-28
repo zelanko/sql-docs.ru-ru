@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: ccbd45cb28a4c1cea48b832fbe77dc662ab7eeb4
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
-ms.translationtype: HT
+ms.openlocfilehash: 3291767b4fa1f7b18e751661f9beeb0e061f8146
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Использование кода Visual Studio для создания и выполнения скриптов Transact-SQL для SQL Server
 
@@ -28,7 +27,7 @@ ms.lasthandoff: 05/17/2018
 Код Visual Studio — это редактор графического кода для Linux, macOS и Windows, которая поддерживает расширения. [ **Mssql** расширения VS Code] позволяет подключиться к SQL Server, запрос с помощью Transact-SQL (T-SQL) и просмотреть результаты.
 
 ## <a name="install-vs-code"></a>Установить VS Code
-1. Если вы еще не установили VS Code [загрузки и установки VS Code] на компьютере.
+1. Если вы еще не установили VS Code [Загрузите и установите VS Code] на компьютере.
 
 2. Запуск VS Code.
 
@@ -50,7 +49,7 @@ ms.lasthandoff: 05/17/2018
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 600px;"/>
 
    > [!NOTE]
-   > Для macOS необходимо установить OpenSSL. Это является необходимым условием для .net Core, используемый расширением mssql. Выполните **Установка предварительные** шагов в [.Net Core инструкции]. Или можно выполнить следующие команды в вашей macOS терминалов.
+   > Для macOS необходимо установить OpenSSL. Это является необходимым условием для .net Core, используемый расширением mssql. Выполните **Установка предварительные** шагов в [Инструкции по .net core]. Или можно выполнить следующие команды в вашей macOS терминалов.
    >
    >   ```bash
    >   brew update
@@ -60,7 +59,7 @@ ms.lasthandoff: 05/17/2018
    >   ```
    
    > [!NOTE]
-   > Для Windows 8.1, Windows Server 2012 или более ранние версии, необходимо загрузить и установить [среды выполнения Windows 10 универсальной C]. Загрузите и откройте ZIP-файл. Затем запустите установщик (MSU-файл), предназначенных для текущей конфигурации операционной системы.
+   > Для Windows 8.1, Windows Server 2012 или более ранние версии, необходимо загрузить и установить [Среда выполнения C универсальных Windows 10]. Загрузите и откройте ZIP-файл. Затем запустите установщик (MSU-файл), предназначенных для текущей конфигурации операционной системы.
 
 ## <a name="create-or-open-a-sql-file"></a>Создать или открыть файл SQL
 
@@ -103,7 +102,7 @@ ms.lasthandoff: 05/17/2018
    | **[Необязательно] Введите имя для этого профиля** | Имя профиля подключения. Например, можно назвать профиль **профиль localhost**. 
 
    > [!Tip] 
-   > Можно создавать и изменять профили подключения в файле параметров пользователя (settings.json). Откройте файл параметров, выбрав **предпочтения** и затем **параметры пользователя** в меню VS Code. Дополнительные сведения см. в разделе [управления профилями подключения].
+   > Можно создавать и изменять профили подключения в файле параметров пользователя (settings.json). Откройте файл параметров, выбрав **предпочтения** и затем **параметры пользователя** в меню VS Code. Дополнительные сведения см. в разделе [Управление профилями подключения].
 
 6. Чтобы закрыть информационное сообщение о том, что профиль создан и подключен, нажмите клавишу **ESC**.
 
@@ -225,7 +224,7 @@ ms.lasthandoff: 05/17/2018
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-toggle-messages-pannel.png" alt="Toggle Messages" style="width: 500px;" />
 
    > [!TIP]
-   > Можно настроить поведение по умолчанию расширения mssql. В разделе [настройки параметров расширения].
+   > Можно настроить поведение по умолчанию расширения mssql. В разделе [Настройка параметров расширения].
 
 2. Щелкните значок развернуть сетки на второй сетки, чтобы увеличить масштаб.
 
@@ -252,21 +251,21 @@ ms.lasthandoff: 05/17/2018
 
 В реальном сценарии, можно создать сценарий, необходимый для сохранения и выполнения более поздней версии (для администрирования или в рамках более крупного проекта разработки). В этом случае можно сохранить скрипт с **.sql** расширения.
 
-Если вы не знакомы с T-SQL, см. раздел [учебника: написание инструкций Transact-SQL] и [Справочник по Transact-SQL (компонент Database Engine)].
+Если вы не знакомы с T-SQL, см. раздел [Учебник. Составление инструкций Transact-SQL] и [Справочник по Transact-SQL (компонент Database Engine)].
 
 Дополнительные сведения о с помощью или способствовали расширения mssql. в разделе [на вики-сайте mssql расширения проекта].
 
 Дополнительные сведения об использовании VS Code см. в разделе [документации Visual Studio Code](https://code.visualstudio.com/docs).
 
 [**mssql** расширения VS Code]:https://aka.ms/mssql-marketplace
-[загрузки и установки VS Code]:https://code.visualstudio.com/Download
-[.Net Core инструкции]:https://www.microsoft.com/net/core
-[управления профилями подключения]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
+[Загрузите и установите VS Code]:https://code.visualstudio.com/Download
+[Инструкции по .net core]:https://www.microsoft.com/net/core
+[Управление профилями подключения]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [рекомендациями по устранению неполадок с подключением]:./sql-server-linux-troubleshooting-guide.md#connection
 [настроить сочетания клавиш]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
-[учебника: написание инструкций Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
+[Учебник. Составление инструкций Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
 [Справочник по Transact-SQL (компонент Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx
 [Visual Studio Code documentation]:https://code.visualstudio.com/docs
-[среды выполнения Windows 10 универсальной C]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
-[настройки параметров расширения]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options
+[Среда выполнения C универсальных Windows 10]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
+[Настройка параметров расширения]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options
 [на вики-сайте mssql расширения проекта]: https://github.com/Microsoft/vscode-mssql/wiki
