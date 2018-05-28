@@ -18,6 +18,7 @@
 ## [Настройка сетевых адаптеров InfiniBand](configure-infiniband-network-adapters.md)
 
 # Запрос
+## [Настройка авто-статистики](configure-auto-statistics.md)
 ## [Мониторинг активных запросов](monitoring-active-queries.md)
 
 # Загрузить
@@ -69,6 +70,7 @@
 ### [Конфигурация сети устройства](appliance-network-configuration.md)
 ### [Топология PDW](pdw-topology.md)
 ### [Подготовка сертификата PDW](pdw-certificate-provisioning.md)
+### [Переключение компонентов PDW](appliance-feature-switch.md)
 ### [Конфигурация брандмауэра PDW](pdw-firewall-configuration.md)
 ### [Состояние служб PDW](pdw-services-status.md)
 ### [Конфигурация мгновенной инициализации файлов](instant-file-initialization-configuration.md)
