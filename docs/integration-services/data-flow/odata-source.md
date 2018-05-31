@@ -21,11 +21,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdf20d18d4397b0d8ed2f0598b287a88d03caf0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20e98a86e61ba084073022eb515d436787f6a341
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455418"
 ---
 # <a name="odata-source"></a>Источник OData
 Компонент источника OData используется в пакете служб SSIS для получения данных от служб OData. Этот компонент поддерживает протоколы OData версии 3 и 4.  
@@ -37,7 +38,10 @@ ms.lasthandoff: 05/03/2018
 Источник OData поддерживает следующие источники данных:
 -   Microsoft Dynamics AX Online и Microsoft Dynamics CRM Online.
 -   Списки SharePoint. Просмотреть все списки на сервере SharePoint можно по следующему URL-адресу: http://\<сервер>/_vti_bin/ListData.svc. Дополнительные сведения о соглашениях об URL-адресах SharePoint см. в разделе [Интерфейс REST SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
-  
+
+> [!NOTE]
+> Компонент источника OData не поддерживает сложные типы в списках SharePoint, такие как элементы множественного выбора.
+
 ## <a name="odata-format-and-performance"></a>Формат OData и производительность
  Большинство служб OData могут возвращать результаты в различных форматах. Можно указать формат результирующего набора с помощью параметра запроса `$format`. Такие форматы, как JSON и JSON Light, более эффективны, чем ATOM или XML, и способны обеспечить более высокую производительность при передаче больших объемов данных. В следующей таблице отображаются результаты типовых тестов. Как видно, прирост производительности составил 30–53 % при переходе от ATOM к JSON и 67 % при переходе от ATOM к новому формату JSON Light (доступный в WCF Data Services 5.1).  
   
@@ -69,7 +73,7 @@ ms.lasthandoff: 05/03/2018
  **Использование пути к коллекции или ресурсу**  
  Укажите метод выбора данных из источника.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |Коллекция|Извлечение данных из источника OData с помощью имени коллекции.|  
 |Путь к ресурсу|Извлечение данных из источника OData с помощью пути к ресурсу.|  

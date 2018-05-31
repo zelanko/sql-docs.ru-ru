@@ -33,11 +33,12 @@ caps.latest.revision: 87
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 70ac1b9a973aff7f15309d29a85e3fddd6f2954f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a771f30b82a81fa05ea65409bce9a132cbb42dad
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300342"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +78,8 @@ DBCC SHRINKFILE
 Если аргумент *target_size* указан, то инструкция DBCC SHRINKFILE пытается сжать файл до заданного размера. Используемые страницы в освобождаемой части файла перемещаются в свободное место сохраняемой части файла. Например, если размер файла данных составляет 10 МБ, инструкция DBCC SHRINKFILE со значением аргумента *target_size*, равным 8, перемещает все страницы, используемые в последних 2 МБ файла, на место любых нераспределенных страниц в первых 8 МБ файла. Инструкция DBCC SHRINKFILE не сжимает файл до меньшего размера, чем требуется для хранения данных в файле. Например, если в файле данных, размер которого составляет 10 МБ, используется 7 МБ, инструкция DBCC SHRINKFILE со значением аргумента *target_size*, равным 6, сжимает файл только до 7 МБ, а не до 6 МБ.
   
 EMPTYFILE  
-Переносит все данные из указанного файла в другие файлы в **той же файловой группе**. Другими словами, EmptyFile переносит данные из указанного файла в другие файлы в той же файловой группе. Emptyfile гарантирует, что новые данные не будут добавляться в файл. Файл можно удалить с помощью инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
+Переносит все данные из указанного файла в другие файлы в **той же файловой группе**. Другими словами, EmptyFile переносит данные из указанного файла в другие файлы в той же файловой группе. Emptyfile гарантирует, что в файл не будут добавляться новые данные, даже если файл не имеет отметки "Только для чтения". Файл можно удалить с помощью инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Если размер файла изменяется с помощью инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md), флаг "Только для чтения" сбрасывается, позволяя добавлять данные.
+
 Для контейнеров файловых групп FILESTREAM файл нельзя удалить с помощью ALTER DATABASE до тех пор, пока сборщик мусора FILESTREAM не выполнит и не удалит все ненужные файлы контейнеров файловых групп, которые были скопированы в другой контейнер с помощью EMPTYFILE. Дополнительные сведения см. в статье [sp_filestream_force_garbage_collection (Transact-SQL)](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   
 > [!NOTE]  
@@ -98,7 +100,7 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>Результирующие наборы  
 В следующей таблице отображены столбцы результирующего набора.
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |---|---|
 |**DbId**|Идентификатор базы данных, файл которой компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] пытался сжать.|  
 |**FileId**|Идентификационный номер файла, сжатие которого было предпринято компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  

@@ -31,11 +31,12 @@ caps.latest.revision: 62
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: b6fe7fcf315849e6779b66087e8a87d2953d96d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e6022b5609c2d4b4d362f90088bee4e84ad874c7
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34236415"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +81,7 @@ DBCC SHRINKDATABASE
 ## <a name="result-sets"></a>Результирующие наборы  
 В следующей таблице отображены столбцы результирующего набора.
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |**DbId**|Идентификатор базы данных, файл которой компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] пытался сжать.|  
 |**FileId**|Идентификатор файла, который компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] пытался сжать.|  
@@ -93,6 +94,10 @@ DBCC SHRINKDATABASE
 > Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не отображает строки для файлов, размер которых не был сокращен.  
   
 ## <a name="remarks"></a>Remarks  
+
+>[!NOTE]
+> Хранилище данных SQL Azure сейчас не поддерживает команду DBCC SHRINKDATABASE. Выполнение этой команды не рекомендуется, так как она интенсивно использует ввод-вывод и может привести к недоступности вашего хранилища данных. Кроме того, она может потребовать дополнительных затрат на моментальные снимки хранилища данных. 
+
 Чтобы сжать все файлы данных и журналов указанной базы данных, выполните команду DBCC SHRINKDATABASE. Чтобы сжать один файл данных или файл журнала в указанной базе данных, выполните команду [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md).
   
 Чтобы просмотреть количество свободного (нераспределенного) пространства в базе данных, выполните процедуру [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).
@@ -106,9 +111,6 @@ DBCC SHRINKDATABASE
 Сжимаемая база данных не должна находиться в однопользовательском режиме. Другие пользователи могут работать с базой данных при ее сжатии. Это касается системных баз данных.
   
 Невозможно сжать базу данных во время создания ее резервной копии. И наоборот, нельзя создать резервную копию базы данных во время операции сжатия.
-
->[!NOTE]
-> В настоящее время хранилище данных SQL Azure не поддерживает команду DBCC SHRINKDATABASE с включенным прозрачным шифрованием данных.
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>Работа команды DBCC SHRINKDATABASE  
 Инструкция DBCC SHRINKDATABASE сжимает файлы данных по одному, а файлы журнала так, как будто все они представляют один непрерывный пул журнала. Сжатие файлов всегда ведется с конца.

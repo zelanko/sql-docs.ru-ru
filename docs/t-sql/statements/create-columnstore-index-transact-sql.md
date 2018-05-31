@@ -34,11 +34,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e1ea30abed242b49684c685b55b05622b360159e
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: f00d346a509c7a240b00ce287782001804126311
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34236145"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -340,8 +341,8 @@ ON
 -   uniqueidentifier (область применения: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
 
 **Некластеризованные индексы columnstore:**
--   Не более 1024 столбцов.  
--   Таблица с некластеризованным индексом columnstore может иметь ограничения уникальности, ограничения первичного ключа или ограничения внешнего ключа, но эти ограничения не могут быть включены в некластеризованный индекс columnstore.  
+-   Не более 1024 столбцов.
+-   Невозможно создать как индексы на основе ограничений. Таблица с индексом columnstore может иметь ограничения уникальности, ограничения первичного ключа и ограничения внешнего ключа. Ограничения всегда применяются с помощью индекса row-store. Ограничения невозможно применить с помощью индекса columnstore (кластеризованного или некластеризованного).
 -   Не может быть создан для представления или индексированного представления.  
 -   Не может содержать разреженный столбец.  
 -   Не может быть изменено с использованием инструкции **ALTER INDEX**. Чтобы изменить некластеризованный индекс, следует удалить и повторно создать индекс columnstore. Инструкция **ALTER INDEX** позволяет отключить и перестроить индекс columnstore.  

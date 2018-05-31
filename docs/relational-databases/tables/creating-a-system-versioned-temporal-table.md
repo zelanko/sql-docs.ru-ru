@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7415cfbe4343f9f50de42c26db5444b6582a572
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03077d7ede10d42b4d4812ce6ef93a35dd295a22
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455557"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Создание темпоральной таблицы с системным управлением версиями
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -184,7 +185,7 @@ ALTER TABLE InsurancePolicy
   
 -   При добавлении периода будет выполнена проверка согласованности данных в текущей таблице, чтобы убедиться в том, что значения по умолчанию для столбцов периода являются допустимыми.  
   
--   Если при включении **SYSTEM_VERSIONING**будет указана существующая таблица журнала, проверка согласованности данных будет выполнена и в текущей таблице, и в таблице журнала. Этот шаг можно пропустить, если в качестве дополнительного параметра задать **DATA_CONISTENCY_CHECK = OFF** .  
+-   Если при включении **SYSTEM_VERSIONING**будет указана существующая таблица журнала, проверка согласованности данных будет выполнена и в текущей таблице, и в таблице журнала. Этот шаг можно пропустить, если указать **DATA_CONISTENCY_CHECK = OFF** в качестве дополнительного параметра.  
   
 ### <a name="migrate-existing-tables-to-built-in-support"></a>Перенос существующих таблиц в решение со встроенной поддержкой  
  В этом примере показано, как выполнить перенос существующего решения на основе триггеров в решение со встроенной темпоральной поддержкой. В этом примере предполагается, что в имеющемся пользовательском решении текущие данные и данные журнала разделены на две отдельные пользовательские таблицы (**ProjectTaskCurrent** и **ProjectTaskHistory**). Если в имеющемся решении используется одна таблица для хранения текущих строк и строк журнала, следует разбить данные на две таблицы до переноса, описанного в этом примере:  

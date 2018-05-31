@@ -20,11 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8292b866a6e3c78296b99e75dd6efb67b735b15a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 360e15e879672fd3fb0568cad22e29e36a0ac45c
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300572"
 ---
 # <a name="json-data-in-sql-server"></a>Данные JSON в SQL Server
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -66,9 +67,9 @@ JSON — это популярный формат текстовых данны
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>Извлечение значений из текста JSON и их использование в запросах
 Если у вас есть текст JSON, который хранится в таблицах базы данных, вы можете прочитать или изменить значения в тексте JSON с помощью следующих встроенных функций.  
     
--   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) извлекает скалярное значение из строки JSON.
--   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) извлекает объект или массив из строки JSON.
--   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) проверяет наличие допустимых данных JSON в строке.
+-   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) проверяет наличие в строке допустимых данных JSON.
+-   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) извлекает из строки JSON скалярное значение.
+-   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) извлекает из строки JSON объект или массив.
 -   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) изменяет значение в строке JSON.
 
 **Пример**

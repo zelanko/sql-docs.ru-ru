@@ -1,6 +1,6 @@
 ---
 title: Развертывание и запуск пакета служб SSIS в Azure | Документы Майкрософт
-ms.date: 02/05/2018
+ms.date: 5/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,11 +12,12 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27c7e77b5143bca56b7ded2233c01e11ad088d5f
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 42041134b027d9a9f274a31d0b6a7276dcc23ef8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455478"
 ---
 # <a name="deploy-and-run-an-ssis-package-in-azure"></a>Развертывание и запуск пакета служб SSIS в Azure
 Этот учебник рассказывает, как развернуть проект служб SQL Server Integration Services в базе данных каталога SSISDB, расположенной в базе данных SQL Azure, запустить пакет в среде Integration Runtime для Azure-SSIS и отслеживать его выполнение.
@@ -25,10 +26,16 @@ ms.lasthandoff: 05/15/2018
 
 Прежде чем начать, убедитесь в наличии SQL Server Management Studio версии 17.2 или более поздней. Чтобы скачать последнюю версию SSMS, перейдите на страницу [скачивания SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Также убедитесь, что настроена база данных SSISDB и подготовлена среда Integration Runtime для Azure-SSIS. Дополнительные сведения о том, как подготовить SSIS в Azure, см. в разделе [Развертывание пакетов SSIS в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
+Вы также должны настроить базу данных SSISDB в Azure и подготовить среду Azure-SSIS Integration Runtime. Дополнительные сведения о подготовке служб SSIS в Azure: [Развертывание пакетов SQL Server Integration Services в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
-> [!NOTE]
-> Развертывание в Azure поддерживает только модели развертывания проекта.
+## <a name="for-azure-sql-database-get-the-connection-info"></a>Получение сведений о подключении для базы данных SQL Azure
+
+Для запуска пакета в базе данных SQL Azure вам нужны сведения, необходимые для подключения к базе данных каталога служб SSIS (SSISDB). В описанных ниже процедурах вам потребуется полное имя сервера и имя для входа.
+
+1. Войдите на [портал Azure](https://portal.azure.com/).
+2. Выберите **Базы данных SQL** в меню слева, а затем на странице **Базы данных SQL** — базу данных SSISDB. 
+3. На странице **Обзор** для базы данных просмотрите полное имя сервера. Чтобы увидеть параметр **Щелкните, чтобы скопировать**, наведите указатель мыши на имя сервера. 
+4. Если вы забыли учетные данные входа на сервер базы данных SQL Azure, перейдите на страницу этого сервера, чтобы узнать имя его администратора. При необходимости вы можете сбросить пароль.
 
 ## <a name="connect-to-the-ssisdb-database"></a>Подключение к базе данных SSISDB
 
@@ -49,7 +56,7 @@ ms.lasthandoff: 05/15/2018
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Тип сервера** | Компонент Database Engine | Это значение обязательно. |
    | **Имя сервера** | Полное имя сервера | Имя должно быть в следующем формате: **mysqldbserver.database.windows.net**. Если вам нужно узнать имя сервера, см. раздел [Подключение к базе данных каталога SSISDB в Azure](ssis-azure-connect-to-catalog-database.md). |
-   | **Проверка подлинности** | Проверка подлинности SQL Server | В этом кратком руководстве используется проверка подлинности SQL. |
+   | **Проверка подлинности** | Проверка подлинности SQL Server | Вы не можете подключаться к базе данных SQL Azure с помощью проверки подлинности Windows. |
    | **Имя входа** | Учетная запись администратора сервера | Учетная запись, которая была указана при создании сервера. |
    | **Пароль** | Пароль для учетной записи администратора сервера | Пароль, который был указан при создании сервера. |
 
@@ -62,6 +69,9 @@ ms.lasthandoff: 05/15/2018
 ## <a name="deploy-a-project-with-the-deployment-wizard"></a>Развертывание проекта с помощью мастера развертываний
 
 Дополнительные сведения о развертывании пакетов и о мастере развертывания см. в разделе [Развертывание проектов и пакетов служб Integration Services (SSIS)](../packages/deploy-integration-services-ssis-projects-and-packages.md) и [Мастер развертывания служб Integration Services](../packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
+
+> [!NOTE]
+> Развертывание в Azure поддерживает только модели развертывания проекта.
 
 ### <a name="start-the-integration-services-deployment-wizard"></a>Запуск мастера развертывания Integration Services
 1. В обозревателе объектов SSMS разверните узлы **Каталоги служб Integration Services** и **SSISDB**, а затем папку проекта.
@@ -84,8 +94,9 @@ ms.lasthandoff: 05/15/2018
   
 3.  На странице **Выбор назначения** выберите назначение для проекта.
     -   Введите полное имя сервера в формате `<server_name>.database.windows.net`.
+    -   Предоставьте сведения о проверке подлинности и выберите **Подключиться**.
     -   Нажмите кнопку **Обзор** для выбора целевой папки в SSISDB.
-    -   Нажмите кнопку **Далее**, чтобы перейти на страницу **Проверка**.  
+    -   Затем нажмите кнопку **Далее**, чтобы перейти на страницу **Проверка**. (Кнопка **Далее** станет доступна, только когда вы выберете **Подключиться**.)
   
 4.  Просмотрите выбранные параметры на странице **Проверка**.
     -   Вы можете изменить выбранные параметры, нажав кнопку **Назад** или кнопку любого из шагов на левой панели.
@@ -182,7 +193,7 @@ Write-Host "All done."
 
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>Мониторинг среды Integration Runtime для Azure-SSIS
 
-Чтобы получить сведения о состоянии среды Integration Runtime для Azure-SSIS, где выполняются пакеты, используйте приведенные ниже команды PowerShell — для каждой команды укажите имена фабрики данных, Azure-SSIS IR и группы ресурсов.
+Чтобы получить сведения о состоянии среды Azure-SSIS Integration Runtime, где запускаются пакеты, используйте следующие команды PowerShell. Для каждой команды предоставьте имена фабрики данных, среды Azure-SSIS Integration Runtime и группы ресурсов. См. дополнительные сведения о [Мониторинге среды выполнения интеграции Azure-SSIS](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Получение метаданных о среде Integration Runtime для Azure-SSIS
 

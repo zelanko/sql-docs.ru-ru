@@ -1,7 +1,7 @@
 ---
 title: Загрузка SQL Server Management Studio (SSMS) | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,11 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83dfecad826aea459a842b1eb908801bb469c5e8
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 8075a2ac4eaeb7b37d828eeee255f2a4e141968e
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34334905"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -130,7 +131,7 @@ SSMS 17.7 — это новейшая версия SQL Server Management Stud
   * Убедитесь, что на компьютере используется платформа .NET Framework 4.6.1 (или более поздней версии).
   * Закройте все остальные экземпляры Visual Studio, открытые на компьютере.
   * Убедитесь, что на компьютере установлены все последние обновления операционной системы.
-  * Указанные действия обычно требуется выполнить всего один раз. В некоторых ситуациях перезагрузка необходима для дополнительных обновлений до того же основного номера версии SSMS. Все необходимые компоненты SSMS для промежуточных обновлений уже будут установлены на компьютере.
+  * Указанные действия обычно требуется выполнить всего один раз. В некоторых ситуациях перезагрузка необходима для дополнительных обновлений до того же основного номера версии SSMS. Все необходимые компоненты SSMS для промежуточных обновлений уже установлены на компьютере.
 
 
 ## <a name="release-notes"></a>Заметки о выпуске
@@ -138,6 +139,33 @@ SSMS 17.7 — это новейшая версия SQL Server Management Stud
 Ниже перечислены проблемы и ограничения в выпуске 17.7.
 
 При работе с новыми выпусками базы данных SQL Azure (*общего назначения* или *критически важный для бизнеса*) в некоторых диалоговых окнах выводится сообщение о недопустимом выпуске.
+
+
+## <a name="uninstall-and-reinstall-ssms"></a>Удаление и повторная установка SSMS
+
+Если в SSMS возникают проблемы, которые не удается устранить посредством удаления и повторной установки, попробуйте [восстановить](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) Visual Studio 2015 IsoShell. Если восстановление Visual Studio 2015 IsoShell не помогло решить проблему, выполните следующие действия, которые помогут устранить ряд различных проблем:
+
+1.  Удалите SSMS так же, как обычное приложение (в разделе *Приложения и компоненты*, *Программы и компоненты* и т. п. в зависимости от вашей версии Windows).
+
+2.  Удалите Visual Studio 2015 IsoShell **из командной строки с повышенными привилегиями**:
+   
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
+
+    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
+
+3.  Удалите распространяемый пакет Microsoft Visual C++ 2015 так же, как обычное приложение. Если на вашем компьютере есть обе версии x86 и x64, удалите их.
+
+4.  Повторно установите Visual Studio 2015 IsoShell **из командной строки с повышенными привилегиями**:  
+
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
+ 
+    ```vs_isoshell.exe /PromptRestart```
+
+5.  Повторно установите SSMS.
+
+6.  [Обновите распространяемый пакет Visual C++ 2015 до последней версии](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads), если он не обновлен.
+
+
 
 
 ## <a name="previous-releases"></a>Предыдущие выпуски

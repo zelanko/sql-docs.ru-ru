@@ -1,5 +1,5 @@
 ---
-title: Загрузка данных в приложение Excel или из него с помощью служб SSIS | Документы Майкрософт
+title: Импорт из Excel или экспорт в Excel с помощью SSIS | Документы Майкрософт
 ms.description: Describes how to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS). Also describes prerequisites, known issues, and limitations.
 ms.date: 04/10/2018
 ms.prod: sql
@@ -14,27 +14,28 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd5a4863f2f94a693ae7216f39fbe0472a94a68b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 075cb9c74fa551a6d6053c70ebfe77255b56a7a8
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34236135"
 ---
-# <a name="load-data-from-or-to-excel-with-sql-server-integration-services-ssis"></a>Загрузка данных в приложение Excel или из него с помощью служб SQL Server Integration Services (SSIS)
+# <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Импорт данных из Excel или экспорт данных в Excel с помощью служб SQL Server Integration Services (SSIS)
 
 В этой статье описывается порядок импорта данных из приложения Excel или экспорта данных в него с помощью служб SQL Server Integration Services (SSIS). Кроме того, здесь описываются необходимые условия, ограничения и известные проблемы.
 
 Чтобы импортировать данные из приложения Excel или экспортировать данные в него, можно создать пакет SSIS и использовать диспетчер соединений Excel, а также источник или назначение Excel. Кроме того, вы можете использовать для этих целей мастер импорта и экспорта SQL Server, который построен на основе служб SSIS.
 
 В этой статье содержатся три набора информации, которые необходимы для успешной работы с приложением Excel из служб SSIS, а также для понимания и устранения распространенных проблем:
--   [Необходимые файлы](#files-you-need).
--   Сведения, которые необходимо предоставить при загрузке данных в приложение Excel или из него.
+1.  [Необходимые файлы](#files-you-need).
+2.  Сведения, которые необходимо предоставить при загрузке данных в приложение Excel или из него.
     -   [Укажите Excel](#specify-excel) в качестве источника данных.
     -   Укажите [имя файла Excel и путь к нему](#excel-file).
     -   Выберите [версию Excel](#excel-version).
     -   Укажите, содержит ли [первая строка имена столбцов](#first-row).
     -   Укажите [лист или диапазон, который содержит данные](#sheets-ranges).
--   Известные проблемы и ограничения.
+3.  Известные проблемы и ограничения.
     -   Проблемы с [типами данных](#issues-types).
     -   Проблемы с [импортом](#issues-importing).
     -   Проблемы с [экспортом](#issues-exporting).
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 
 При возникновении проблем с установкой распространяемого пакета версии 2016 установите вместо него распространяемый пакет версии 2010 со следующей страницы: [Распространяемый пакет ядра СУБД Microsoft Access 2010](https://www.microsoft.com/download/details.aspx?id=13255). (Для Excel 2013 распространяемый пакет не предусмотрен.)
 
-## <a name="specify-excel"></a> Начало работы
+## <a name="specify-excel"></a> Указание Excel
 
 Сначала необходимо указать, что вам требуется установить подключение к Excel.
 

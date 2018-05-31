@@ -1,7 +1,7 @@
 ---
 title: Настройка группы доступности для распределенных транзакций | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/19/2017
+ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -20,11 +20,12 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 73563a02f1e51e91719a4831ac8b5dd34465aaa6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bde3ca6e1b9712e34a3e0b43f0a52687de25a40f
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455537"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Настройка группы доступности для распределенных транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 Для выполнения распределенных транзакций группу доступности необходимо настроить таким образом, чтобы базы данных регистрировались как диспетчеры ресурсов распределенных транзакций.  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] также поддерживает распределенные транзакции, а вот в [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] их поддержка ограничена. В [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] распределенная транзакция с базой данных в группе доступности не поддерживается, если включает больше одной базы данных на одном сервере. В [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] подобного ограничения нет. 
+>[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] с пакетом обновления 2 и более поздней версии предоставляет полную поддержку распределенных транзакций в группах доступности. В версиях [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] до пакета обновления 2 распределенные транзакции между базами данных (т. е. транзакции между базами данных на одном и том же экземпляре SQL Server), включающие базу данных в группе доступности, не поддерживаются. В [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] подобного ограничения нет. 
 >
 >Конфигурация [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] настраивается точно так же, как и конфигурация [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
 
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 
 Группу доступности для распределенных транзакций можно создать в [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] или более поздней версии. Чтобы создать группу доступности для распределенных транзакций, включите в определении группы доступности `DTC_SUPPORT = PER_DB`. Представленный ниже скрипт создает группу доступности для распределенных транзакций. 
 
-```transact-sql
+```sql
 CREATE AVAILABILITY GROUP MyAG
    WITH (
       DTC_SUPPORT = PER_DB  
@@ -82,7 +83,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 Группу доступности для распределенных транзакций можно изменить в [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] или более поздней версии. Чтобы изменить группу доступности для распределенных транзакций, включите `DTC_SUPPORT = PER_DB` в скрипт `ALTER AVAILABILITY GROUP`. Скрипт в данном примере изменяет группу доступности, позволяя ее поддерживать распределенные транзакции. 
 
-```transact-sql
+```sql
 ALTER AVAILABILITY GROUP MyaAG
    SET (
       DTC_SUPPORT = PER_DB  
@@ -167,19 +168,19 @@ following the guideline for Troubleshooting DTC Transactions.
 
    * Чтобы зафиксировать транзакцию, обновите и выполните следующий скрипт, заменив `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` на UOW сомнительной транзакции из полученного ранее сообщения об ошибке и выполнив следующий код:
 
-      ```transact-sql
-      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
-      ```
+   ```sql
+   KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
+   ```
 
    * Чтобы выполнить откат транзакции, обновите и выполните следующий скрипт, заменив `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` на UOW сомнительной транзакции из полученного ранее сообщения об ошибке и выполнив следующий код:
 
-      ```transact-sql
-      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
-     ```
+   ```sql
+   KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
+   ```
 
 После фиксации или отката транзакции базу данных можно перевести в режим онлайн, используя `ALTER DATABASE`. Обновите и выполните следующий скрипт, указав имя базы данных вместо имени сомнительной базы данных:
 
-   ```transact-sql
+   ```sql
    ALTER DATABASE [DB1] SET ONLINE
    ```
 

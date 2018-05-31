@@ -1,6 +1,6 @@
 ---
 title: Развертывание проекта служб SSIS с помощью Transact-SQL (Visual Studio Code) | Документы Майкрософт
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,17 +12,15 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c32302d499f1c8dc450d6e10451f080b30249d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4611b711b9f220af26a7f629480fa9f7b4c071c
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455447"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Развертывание проекта служб SSIS из Visual Studio Code с помощью Transact-SQL
-В этом кратком руководстве демонстрируется использование Visual Studio Code для подключения к базе данных каталога SSIS и последующее использование инструкций Transact-SQL для развертывания проекта служб SSIS в каталоге SSIS.
-
-> [!NOTE]
-> Описываемый в этой статье метод недоступен при подключении к серверу базы данных SQL Azure с помощью Visual Studio Code. Хранимая процедура `catalog.deploy_project` ожидает, что путь к файлу `.ispac` находится в локальной файловой системе.
+В этом кратком руководстве демонстрируется подключение к базе данных каталога SSIS в Visual Studio Code и развертывание проекта SSIS в каталоге SSIS с помощью инструкций Transact-SQL.
 
 Visual Studio Code — это редактор кода для Windows, macOS и Linux, который поддерживает расширения, в том числе расширение `mssql` для подключения к Microsoft SQL Server, базе данных SQL Azure или хранилищу данных SQL Azure. Дополнительные сведения о Visual Studio Code см. на странице [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -31,6 +29,16 @@ Visual Studio Code — это редактор кода для Windows, macOS и
 Прежде чем приступить к работе, нужно установить последнюю версию Visual Studio Code и загрузить расширение `mssql`. Скачать эти средства можно на следующих страницах:
 -   [Скачать Visual Studio Code](https://code.visualstudio.com/Download)
 -   [Расширение mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+
+## <a name="supported-platforms"></a>Поддерживаемые платформы
+
+Сведения, приведенные в этом кратком руководстве, можно использовать для развертывания проекта SSIS на следующих платформах:
+
+-   SQL Server в Windows.
+
+Сведения в этом кратком руководстве неприменимы для развертывания пакета SSIS в базе данных SQL Azure. Хранимая процедура `catalog.deploy_project` ожидает, что путь к файлу `.ispac` находится в локальной файловой системе. Дополнительные сведения о развертывании и запуске пакетов в Azure см. в разделе [Перенос рабочих нагрузок SQL Server Integration Services в облако](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+Сведения, приведенные в этом кратком руководстве, не могут быть использованы для развертывания пакета SSIS на SQL Server в Linux. Дополнительные сведения о запуске пакетов на Linux см. в разделе [Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>Выбор языкового режима SQL в Visual Studio Code
 
@@ -46,9 +54,6 @@ Visual Studio Code — это редактор кода для Windows, macOS и
 
 С помощью Visual Studio Code установите соединение с каталогом служб SSIS.
 
-> [!IMPORTANT]
-> Прежде чем продолжить, необходимо подготовить сведения о сервере, базе данных и имени для входа. Если вы переключитесь из окна Visual Studio Code на другое окно после того, как начнете вводить сведения о профиле подключения, процедуру создания профиля придется начать сначала.
-
 1. В Visual Studio Code нажмите клавиши **CTRL+SHIFT+P** (или **F1**), чтобы открыть палитру команд.
 
 2. Введите **sqlcon** и нажмите клавишу **ВВОД**.
@@ -61,7 +66,7 @@ Visual Studio Code — это редактор кода для Windows, macOS и
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Имя сервера** | Полное имя сервера |  |
    | **Имя базы данных** | **SSISDB** | Имя базы данных, с которой необходимо установить соединение. |
-   | **Проверка подлинности** | Имя входа SQL| В этом кратком руководстве используется проверка подлинности SQL. |
+   | **Проверка подлинности** | Имя входа SQL | |
    | **User name** | Учетная запись администратора сервера | Это учетная запись, которая была указана при создании сервера. |
    | **Пароль (имя входа SQL)** | Пароль для учетной записи администратора сервера | Это пароль, который был указан при создании сервера. |
    | **Сохранить пароль?** | "Да" или "Нет". | Чтобы каждый раз вводить пароль, выберите "Да". |

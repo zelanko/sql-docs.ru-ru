@@ -89,11 +89,12 @@ caps.latest.revision: 255
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ac7f9dc22f86f5da53efaa0b348362e582045683
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5842e2885aff9fa774ab98d4ededb1c18f7e9ac2
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455717"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Установка SQL Server из командной строки
 
@@ -192,11 +193,12 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="Install"></a> Параметры установки  
  При разработке скриптов установки из командной строки можно использовать параметры, приведенные в следующей таблице.  
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на рабочий процесс операций установки.<br /><br /> Поддерживаемые значения: **Установка**.|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Требуется только в том случае, если для автоматической установки указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.|  
-|Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R|/IACCEPTROPENLICENSETERMS <br /><br /> **Требуется только в том случае, если для автоматической установки, включающей службы R (в базе данных) или Microsoft R Server, указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.| 
+|Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R|/IACCEPTPYTHONOPENLICENSETERMS <br /><br /> **Требуется только в том случае, если для автоматической установки, включающей пакет Anaconda Python, указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.| 
+|Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R|/IACCEPTROPENLICENSETERMS <br /><br /> **Требуется только в том случае, если для автоматической установки, включающей пакет Microsoft R Open, указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.| 
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ENU<br /><br /> **Необязательно**|Этот параметр используется для установки англоязычной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в локализованной операционной системе, если на установочном носителе доступны языковые пакеты для английского языка и языка операционной системы.|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/UpdateEnabled<br /><br /> **Необязательно**|Задает, должна ли программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаруживать и включать обновления продукта. Допустимые значения — True и False либо 1 и 0. По умолчанию программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет включать найденные обновления.|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/UpdateSource<br /><br /> **Необязательно**|Задает расположение, откуда программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет получать обновления продукта. Допустимые значения: "MU" (поиск в Центре обновления [!INCLUDE[msCoName](../../includes/msconame-md.md)]); допустимый путь к папке, относительный путь (например, `.\MyUpdates`) или общая папка в формате UNC. По умолчанию программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет поиск в центре обновления [!INCLUDE[msCoName](../../includes/msconame-md.md)] или в службе обновления Windows через службы Windows Server Update Services.|  
@@ -275,7 +277,8 @@ ms.lasthandoff: 05/03/2018
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **Обязательно**|Указывает стартовую учетную запись для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Указывает пароль стартовой учетной записи для службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Необязательно**|Указывает режим [запуска](#Accounts) для службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|Службы R (в базе данных)|MRCACHEDIRECTORY|Используйте этот параметр для указания каталога кэша для компонентов Microsoft R Open и Microsoft R Server или Machine Learning Server, как описано в [этой статье](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access). Этот параметр обычно используется при установке машинного обучения SQL Server из командной строки на компьютере без доступа к Интернету.|  
+|Python или службы машинного обучения (в базе данных)|MPYCACHEDIRECTORY|Используйте этот параметр, чтобы указать каталог кэша для поддержки компонентов Python в службах машинного обучения или на сервере машинного обучения (изолированного) SQL Server 2017. Этот параметр обычно используется при установке компонентов Python из [командной строки на компьютере без доступа к Интернету](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
+|R или службы машинного обучения (в базе данных)|MRCACHEDIRECTORY|Используйте этот параметр, чтобы указать каталог кэша для поддержки Microsoft R Open, служб R в SQL Server 2016, SQL Server 2016 R Server (изолированного) или для компонентов R в службах машинного обучения и на сервере машинного обучения (изолированном) SQL Server 2017. Этот параметр обычно используется при установке компонентов R из [командной строки на компьютере без доступа к Интернету](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
   
 ###### <a name="sample-syntax"></a>Образец синтаксиса  
  Установка нового изолированного экземпляра с компонентами [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Full-Text Search и поддержкой репликации и включение мгновенной инициализации файлов для [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 
@@ -292,7 +295,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 #### <a name="prepare-image-parameters"></a>Подготовка параметров образа  
  При разработке сценариев командной строки для подготовки экземпляра SQL Server без настройки можно использовать параметры, приведенные в следующей таблице. 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на рабочий процесс операций установки.<br /><br /> Поддерживаемые значения: **PrepareImage**|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Требуется только в том случае, если для автоматической установки указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.|  
@@ -325,7 +328,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 #### <a name="complete-image-parameters"></a>Параметры завершения образа  
  При разработке сценариев командной строки для завершения и настройки подготовленного экземпляра SQL Server можно использовать параметры, приведенные в следующей таблице. 
   
-|Компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на рабочий процесс операций установки.<br /><br /> Поддерживаемые значения: **CompleteImage**|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Требуется только в том случае, если для автоматической установки указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.|  
@@ -346,12 +349,9 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/QS<br /><br /> **Необязательно**|Указывает, что программа установки запускается и отображает в пользовательском интерфейсе ход выполнения, но не принимает вводимые значения и не выводит сообщения об ошибке.|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/SQMREPORTING<br /><br /> **Необязательно**|Данный параметр не делает ничего в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. <br/><br/>Сведения о том, как управлять отправкой отзывов об ошибках в корпорацию Майкрософт, см. в статье [How to configure [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] to send feedback to Microsoft](http://support.microsoft.com/kb/3153756) (Как настроить отправку отзывов в корпорацию Майкрософт в SQL Server 2016). <br/><br/>В предыдущих версиях этот компонент задает отправку отчетов об использовании компонентов для SQL Server.<br /><br />Поддерживаемые значения:<br /><br /> 0=отключено<br /><br /> 1 = включено|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/HIDECONSOLE<br /><br /> **Необязательно**|Указывает, что окно консоли скрыто или закрыто.|  
-|Агент SQL Server
-|/AGTSVCACCOUNT<br /><br /> **Обязательно**|Задает учетную запись для службы агента SQL Server.|  
-|Агент SQL Server
-|/AGTSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Задает пароль для учетной записи службы агента SQL Server.|  
-|Агент SQL Server
-|/AGTSVCSTARTUPTYPE<br /><br /> **Необязательно**|Задает режим [запуска](#Accounts) для службы агента SQL Server. Поддерживаемые значения:<br /><br /> **Автоматически**<br /><br /> **Отключено**<br /><br /> **Вручную**|  
+|Агент SQL Server|/AGTSVCACCOUNT<br /><br /> **Обязательно**|Задает учетную запись для службы агента SQL Server.|  
+|Агент SQL Server|/AGTSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Задает пароль для учетной записи службы агента SQL Server.|  
+|Агент SQL Server|/AGTSVCSTARTUPTYPE<br /><br /> **Необязательно**|Задает режим [запуска](#Accounts) для службы агента SQL Server. Поддерживаемые значения:<br /><br /> **Автоматически**<br /><br /> **Отключено**<br /><br /> **Вручную**|  
 |Обозреватель SQL Server|/BROWSERSVCSTARTUPTYPE<br /><br /> **Необязательно**|Указывает режим [запуска](#Accounts) для службы обозревателя SQL Server. Поддерживаемые значения:<br /><br /> **Автоматически**<br /><br /> **Отключено**<br /><br /> **Вручную**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENABLERANU<br /><br /> **Необязательно**|Включает ввод учетных данных в режиме «Запуск от имени» для установки [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] .|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **Необязательно**|Указывает каталог для файлов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Значения по умолчанию:<br /><br /> Для режима WOW в 64-разрядной системе: `%Program Files(x86)%\Microsoft SQL Server\`.<br /><br /> Для всех других вариантов установки: `%Program Files%\Microsoft SQL Server\`.|  
@@ -393,7 +393,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 ##  <a name="Upgrade"></a> Параметры обновления  
  При разработке скриптов командной строки для обновления можно использовать параметры, приведенные в следующей таблице. 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на рабочий процесс операций установки. Поддерживаемые значения:<br /><br /> **Обновление**<br /><br /> **EditionUpgrade**<br /><br /> <br /><br /> Значение **EditionUpgrade** используется для обновления существующего выпуска [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на другой выпуск. Дополнительные сведения о поддерживаемой версии и обновлении выпуском см. в разделе [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Требуется только в том случае, если для автоматической установки указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.|  
@@ -431,7 +431,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 ##  <a name="Repair"></a> Параметры исправления  
  При разработке скриптов командной строки для исправления можно использовать параметры, приведенные в следующей таблице. 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на рабочий процесс операций исправления.<br /><br /> Поддерживаемые значения: **Repair**|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENU<br /><br /> **Необязательно**|Этот параметр используется для установки англоязычной версии [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в локализованной операционной системе, если на установочном носителе доступны языковые пакеты для английского языка и языка операционной системы.|  
@@ -455,7 +455,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Rebuild"></a> Параметры перестроения системной базы данных  
  При разработке скриптов, запускаемых из командной строки для перестройки системных баз данных master, model, msdb и tempdb, используются параметры, приведенные в следующей таблице. Дополнительные сведения см. в разделе [Перестроение системных баз данных](../../relational-databases/databases/rebuild-system-databases.md). 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на рабочий процесс операций перестроения баз данных.<br /><br /> Поддерживаемые значения: **Rebuilddatabase**|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTANCENAME<br /><br /> **Обязательно**|Указывает имя экземпляра [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .<br /><br /> Дополнительные сведения см. в разделе [Instance Configuration](../../database-engine/install-windows/install-sql-server.md).|  
@@ -474,7 +474,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Uninstall"></a> Параметры удаления  
  При разработке скриптов командной строки для удаления можно использовать параметры, приведенные в следующей таблице. 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на поток операций удаления.<br /><br /> Поддерживаемые значения: **Uninstall**|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/CONFIGURATIONFILE<br /><br /> **Необязательно**|Указывает используемый файл [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) .|  
@@ -549,10 +549,8 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/FAILOVERCLUSTERDISKS<br /><br /> **Необязательно**|Указывает список общих дисков, которые должны быть включены в группу ресурсов отказоустойчивого кластера [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .<br /><br /> Значение по умолчанию: первый диск используется в качестве диска по умолчанию для всех баз данных.|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **Обязательно**|Указывает зашифрованный IP-адрес. Шифры разделяются точкой с запятой (;) и имеют формат: \<тип IP>;\<адрес>;\<сетевое имя>;\<маска подсети>. Поддерживаемые типы IP: DHCP, IPv4 и IPv6.<br />Можно указать IP-адреса нескольких отказоустойчивых кластеров, разделив их пробелами. См. следующие примеры.<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **Обязательно**|Указывает сетевое имя для нового отказоустойчивого кластера [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Это имя используется для идентификации нового экземпляра отказоустойчивого кластера [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в сети.|  
-|Агент SQL Server
-|/AGTSVCACCOUNT<br /><br /> **Обязательно**|Задает учетную запись для службы агента SQL Server.|  
-|Агент SQL Server
-|/AGTSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Задает пароль для учетной записи службы агента SQL Server.|  
+|Агент SQL Server|/AGTSVCACCOUNT<br /><br /> **Обязательно**|Задает учетную запись для службы агента SQL Server.|  
+|Агент SQL Server|/AGTSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Задает пароль для учетной записи службы агента SQL Server.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **Необязательно**|Указывает каталог для файлов резервных копий служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Значения по умолчанию:<br /><br /> Для режима WOW в 64-разрядной системе: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`.<br /><br /> Для всех других вариантов установки: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **Необязательно**|Задает параметры сортировки для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> Значение по умолчанию: **Latin1_General_CI_AS**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **Необязательно**|Указывает каталог для файлов конфигурации служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Значения по умолчанию:<br /><br /> Для режима WOW в 64-разрядной системе: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`.<br /><br /> Для всех других вариантов установки: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`.|  
@@ -606,7 +604,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 #### <a name="prepare-failover-cluster-parameters"></a>Параметры подготовки отказоустойчивого кластера  
  При разработке скриптов подготовки отказоустойчивого кластера из командной строки можно использовать параметры, приведенные в следующей таблице. В качестве первого шага в расширенной установке отказоустойчивого кластера необходимо подготовить экземпляры отказоустойчивого кластера на всех узлах отказоустойчивого кластера. Дополнительные сведения см. в разделе [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на поток операций подготовки отказоустойчивого кластера.<br /><br /> Поддерживаемые значения: **PrepareFailoverCluster**|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Требуется только в том случае, если для автоматической установки указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.|  
@@ -633,10 +631,8 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/QS<br /><br /> **Необязательно**|Указывает, что программа установки запускается и отображает в пользовательском интерфейсе ход выполнения, но не принимает вводимые значения и не выводит сообщения об ошибке.|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQMREPORTING<br /><br /> **Необязательно**|Данный параметр не делает ничего в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. <br/><br/>Сведения о том, как управлять отправкой отзывов об ошибках в корпорацию Майкрософт, см. в статье [How to configure [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] to send feedback to Microsoft](http://support.microsoft.com/kb/3153756) (Как настроить отправку отзывов в корпорацию Майкрософт в SQL Server 2016). <br/><br/>В предыдущих версиях этот компонент задает отправку отчетов об использовании компонентов для SQL Server.<br /><br />Поддерживаемые значения:<br /><br /> 0=отключено<br /><br /> 1 = включено|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/HIDECONSOLE<br /><br /> **Необязательно**|Указывает, что окно консоли скрыто или закрыто.|  
-|Агент SQL Server
-|/AGTSVCACCOUNT<br /><br /> **Обязательно**|Задает учетную запись для службы агента SQL Server.|  
-|Агент SQL Server
-|/AGTSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Задает пароль для учетной записи службы агента SQL Server.|  
+|Агент SQL Server|/AGTSVCACCOUNT<br /><br /> **Обязательно**|Задает учетную запись для службы агента SQL Server.|  
+|Агент SQL Server|/AGTSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Задает пароль для учетной записи службы агента SQL Server.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **Обязательно**|Задает учетную запись для службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Указывает пароль для службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **Обязательно**|Указывает учетную запись запуска для службы SQL Server.|  
@@ -673,7 +669,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 #### <a name="complete-failover-cluster-parameters"></a>Параметры завершения отказоустойчивого кластера  
  При разработке скриптов завершения отказоустойчивого кластера из командной строки можно использовать параметры, приведенные в следующей таблице. Это действие является вторым шагом в расширенной установке отказоустойчивого кластера. После выполнения подготовки на всех узлах отказоустойчивого кластера необходимо выполнить эту команду на узле, которому принадлежат общие диски. Дополнительные сведения см. в разделе [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на поток операций завершения отказоустойчивого кластера.<br /><br /> Поддерживаемые значения: **CompleteFailoverCluster**|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENU<br /><br /> **Необязательно**|Этот параметр используется для установки англоязычной версии SQL Server в локализованной операционной системе, если на установочном носителе доступны языковые пакеты для английского языка и языка операционной системы.|  
@@ -736,7 +732,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 #### <a name="upgrade-failover-cluster-parameters"></a>Параметры обновления отказоустойчивого кластера  
  При разработке скриптов обновления отказоустойчивого кластера из командной строки можно использовать параметры, приведенные в следующей таблице. Дополнительные сведения см. в статьях [Обновление экземпляра отказоустойчивого кластера [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] (программа установки)](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) и [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на рабочий процесс операций установки.<br /><br /> Поддерживаемое значение: **Upgrade**|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Требуется только в том случае, если для автоматической установки указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.|  
@@ -766,7 +762,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 ####  <a name="AddNode"></a> Параметры добавления узла  
  При разработке скриптов командной строки для добавления узла можно использовать параметры, приведенные в следующей таблице. 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на поток операций добавления узла.<br /><br /> Поддерживаемое значение: **AddNode**|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Требуется только в том случае, если для автоматической установки указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.|  
@@ -788,10 +784,8 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/HIDECONSOLE<br /><br /> **Необязательно**|Указывает, что окно консоли скрыто или закрыто.|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **Обязательно**|Указывает зашифрованный IP-адрес. Шифры разделяются точкой с запятой (;) и имеют формат: \<тип IP>;\<адрес>;\<сетевое имя>;\<маска подсети>. Поддерживаемые типы IP: DHCP, IPv4 и IPv6.<br />Можно указать IP-адреса нескольких отказоустойчивых кластеров, разделив их пробелами. См. следующие примеры.<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`<br /><br /> <br /><br /> Дополнительные сведения см. в статье [Добавление и удаление узлов в отказоустойчивом кластере [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] (программа установки)](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/CONFIRMIPDEPENDENCYCHANGE<br /><br /> **Обязательно**|Указывает согласие присвоить зависимости ресурса IP-адреса значение OR для отказоустойчивых кластеров с несколькими подсетями. Дополнительные сведения см. в статье [Добавление и удаление узлов в отказоустойчивом кластере [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] (программа установки)](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). Поддерживаемые значения:<br /><br /> 0 = False (значение по умолчанию)<br /><br /> 1 = True|  
-|Агент SQL Server
-|/AGTSVCACCOUNT<br /><br /> **Обязательно**|Задает учетную запись для службы агента SQL Server.|  
-|Агент SQL Server
-|/AGTSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Задает пароль для учетной записи службы агента SQL Server.|  
+|Агент SQL Server|/AGTSVCACCOUNT<br /><br /> **Обязательно**|Задает учетную запись для службы агента SQL Server.|  
+|Агент SQL Server|/AGTSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Задает пароль для учетной записи службы агента SQL Server.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **Обязательно**|Задает учетную запись для службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Указывает пароль для службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **Обязательно**|Указывает учетную запись запуска для службы SQL Server.|  
@@ -813,7 +807,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 #### <a name="remove-node-parameters"></a>Параметры удаления узла  
  При разработке скриптов удаления узла из командной строки можно использовать параметры, приведенные в следующей таблице. Для удаления отказоустойчивого кластера необходимо выполнить операцию удаления узла на каждом узле отказоустойчивого кластера. Дополнительные сведения см. в разделе [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на поток операций удаления узла.<br /><br /> Поддерживаемое значение: **RemoveNode**|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/CONFIGURATIONFILE<br /><br /> **Необязательно**|Указывает используемый файл [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) .|  
@@ -842,8 +836,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 |Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр учетной записи|Параметр пароля|Тип запуска|  
 |-----------------------------------------|-----------------------|------------------------|------------------|  
-|Агент SQL Server
-|/AGTSVCACCOUNT|/AGTSVCPASSWORD|/AGTSVCSTARTUPTYPE|  
+|Агент SQL Server|/AGTSVCACCOUNT|/AGTSVCPASSWORD|/AGTSVCSTARTUPTYPE|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT|/ASSVCPASSWORD|/ASSVCSTARTUPTYPE|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT|/SQLSVCPASSWORD|/SQLSVCSTARTUPTYPE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT|/ISSVCPASSWORD|/ISSVCStartupType|  
@@ -852,7 +845,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ##  <a name="Feature"></a> Параметры компонентов  
  Чтобы установить конкретные компоненты, необходимо использовать параметр /FEATURES и указать родительский компонент или один из компонентов, приведенных в следующей таблице. Сведения о функциях, поддерживаемых различными выпусками SQL Server, см. в статье [Возможности, поддерживаемые различными выпусками [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). 
   
-|Параметр родительского компонента|Параметр компонента|Description|  
+|Параметр родительского компонента|Параметр компонента|Описание|  
 |:---|:---|:---|  
 |SQL||Устанавливает компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], компонент репликации, компонент Fulltext и [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].|  
 ||SQLEngine|Устанавливает только компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
@@ -860,7 +853,9 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||FullText|Устанавливает компонент FullText вместе с компонентом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 ||DQ|Копирует файлы, необходимые для завершения установки [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . После завершения установки SQL Server необходимо запустить файл DQSInstaller.exe, чтобы завершить установку [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Дополнительные сведения см. в разделе [Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md). Также устанавливает компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 ||PolyBase|Устанавливает компоненты PolyBase.|  
-||AdvancedAnalytics|Устанавливает службы R Services (в базе данных).|  
+||AdvancedAnalytics|Устанавливает [службы машинного обучения SQL Server 2017](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install) или [службы R в SQL Server 2016 (в базе данных)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-services-windows-install).|  
+||SQL_INST_MR |Применяется к [службам машинного обучения SQL Server 2017](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install). Настройте связь с **AdvancedAnalytics**, чтобы установить компонент R Open и входящие в него пакеты R.|  
+||SQL_INST_MPY|Применяется к [службам машинного обучения SQL Server 2017](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install). Настройте связь с **AdvancedAnalytics**, чтобы установить компонент Anaconda и входящие в него пакеты Python.|  
 |AS||Устанавливает все компоненты служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |Сервер отчетов||Устанавливает все компоненты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |RS_SHP||Устанавливает компоненты [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для SharePoint.|  
@@ -868,7 +863,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |DQC||Установка среды [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].|  
 |IS||Устанавливает все компоненты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
 |MDS||Установка среды [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|  
-|SQL_SHARED_MR||Устанавливает Microsoft R Server.|  
+|SQL_SHARED_MPY||Устанавливает пакеты Python для [сервера машинного обучения SQL Server 2017 (изолированного)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install) |  
+|SQL_SHARED_MR||Устанавливает пакеты R для [SQL Server 2016 R Server (изолированного)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-standalone-windows-install) или сервера машинного обучения SQL Server 2017 (изолированного) |  
 |Инструменты*||Устанавливает клиентские средства и компоненты электронной документации по SQL Server.|  
 ||BC|Устанавливает компоненты обратной совместимости.|  
 ||Conn|Устанавливает компоненты связи.|
@@ -884,7 +880,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 ### <a name="feature-parameter-examples"></a>Примеры параметров компонентов  
   
-|Параметр и значения|Description| 
+|Параметр и значения|Описание| 
 |---------------|-----------------|  
 |/FEATURES=SQLEngine|Устанавливает компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] без репликации и без компонента Full-Text Search.|  
 |/FEATURES=SQLEngine, FullText|Устанавливает компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] с компонентом Full-Text Search.|  
@@ -897,7 +893,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
  Роль AllFeatures_WithDefaults действует по умолчанию для выпусков [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] и позволяет сократить количество диалоговых окон, показываемых пользователю. Она может быть указана из командной строки при установке выпуска SQL Server, не являющегося [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
   
-|Роль|Description|Установка...|  
+|Роль|Описание|Установка...|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|Устанавливает службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в качестве именованного экземпляра [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в существующей ферме [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] или на отдельном сервере.|Модуль вычислений[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , предварительно настроенный для хранения и обработки данных в оперативной памяти.<br /><br /> Пакеты решения[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] <br /><br /> Установщик для [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> электронная документация по SQL Server|  
 |SPI_AS_NewFarm|Устанавливает службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] как именованный экземпляр [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в новой ненастроенной ферме Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] или на отдельном сервере. Программа установки SQL Server настроит ферму при установке роли.|Модуль вычислений[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , предварительно настроенный для хранения и обработки данных в оперативной памяти.<br /><br /> Пакеты решения[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] <br /><br /> электронная документация по SQL Server<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> Средства настройки<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
