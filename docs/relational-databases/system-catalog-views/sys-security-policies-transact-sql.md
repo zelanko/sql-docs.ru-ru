@@ -30,10 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dae89c39aa55f8139ce76942f0bdda660b645241
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33221135"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/04/2018
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|имя|**sysname**|Уникальное имя политики безопасности в базе данных.|  
+|name|**sysname**|Уникальное имя политики безопасности в базе данных.|  
 |object_id|**int**|Идентификатор политики безопасности.|  
 |principal_id|**int**|Идентификатор владельца политики безопасности, зарегистрированный в базе данных. Значение NULL, если владелец определяется посредством схемы.|  
 |schema_id|**int**|Идентификатор схемы, в которой находится объект.|  
@@ -51,11 +52,11 @@ ms.lasthandoff: 05/04/2018
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|Дата создания политики безопасности в формате UTC.|  
 |modify_date|**datetime**|Дата последнего изменения политики безопасности в формате UTC.|  
-|is_ms_shipped|**бит**|Всегда значение false.|  
-|is_enabled|**бит**|Состояние спецификации политики безопасности.<br /><br /> 0 = отключен<br /><br /> 1 = включен|  
-|is_not_for_replication|**бит**|Политика была создана с параметром NOT FOR REPLICATION.|  
-|uses_database_collation|**бит**|Использует те же параметры сортировки, что и база данных.|  
-|is_schemabinding_enabled|**бит**|Состояние предложения SCHEMABINDING для политики безопасности:<br /><br /> 0 или NULL = включено<br /><br /> 1 = отключено|  
+|is_ms_shipped|**bit**|Всегда значение false.|  
+|is_enabled|**bit**|Состояние спецификации политики безопасности.<br /><br /> 0 = отключен<br /><br /> 1 = включен|  
+|is_not_for_replication|**bit**|Политика была создана с параметром NOT FOR REPLICATION.|  
+|uses_database_collation|**bit**|Использует те же параметры сортировки, что и база данных.|  
+|is_schemabinding_enabled|**bit**|Состояние предложения SCHEMABINDING для политики безопасности:<br /><br /> 0 или NULL = включено<br /><br /> 1 = отключено|  
   
 ## <a name="permissions"></a>Разрешения  
  Участники **ALTER ANY SECURITY POLICY** разрешение имеют доступ ко всем объектам в этом представлении каталога, а также все, кто имеет **VIEW DEFINITION** в объекте.  

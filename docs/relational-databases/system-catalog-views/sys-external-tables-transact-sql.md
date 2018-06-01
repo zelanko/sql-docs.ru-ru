@@ -19,10 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 06f71aedda72735652da9ee353dcd62e5c24b48c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33181320"
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/04/2018
 |-----------------|---------------|-----------------|-----------|  
 |\<Унаследованные столбцы >||Список столбцов, наследуемых этим представлением см. в разделе [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).||  
 |max_column_id_used|**int**|Максимальный идентификатор использовали для этой таблицы.||  
-|uses_ansi_nulls|**бит**|Таблица была создана при установленном параметре SET ANSI_NULLS = ON.||  
+|uses_ansi_nulls|**bit**|Таблица была создана при установленном параметре SET ANSI_NULLS = ON.||  
 |data_source_id|**int**|Идентификатор объекта для внешнего источника данных.||  
 |file_format_id|**int**|Для внешних таблиц через HADOOP внешнего источника данных это идентификатор объекта для формата внешнего файла.||  
 |location|**nvarchar(4000)**|Для внешних таблиц через HADOOP внешнего источника данных это путь к внешним данным в HDFS.||  

@@ -25,10 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 90fbd2b92ccfcf01da2c2742a3b5a083f30f1e03
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33221955"
 ---
 # <a name="sysxmlschemacomponents-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/04/2018
 |**xml_component_id**|**int**|Уникальный идентификатор компонента схемы XML в базе данных.|  
 |**xml_collection_id**|**int**|Идентификатор коллекции XML-схем, содержащей пространство имен данного компонента.|  
 |**xml_namespace_id**|**int**|Идентификатор пространства имен XML в пределах коллекции.|  
-|**is_qualified**|**бит**|1 = данный компонент имеет явный квалификатор пространства имен.<br /><br /> 0 = это компонент локальной области. В этом случае пара **namespace_id**, **collection_id**, ссылается на «нет пространство имен» **targetNamespace**.<br /><br /> Для компонентов с подстановкой это значение может быть равным 1.|  
+|**is_qualified**|**bit**|1 = данный компонент имеет явный квалификатор пространства имен.<br /><br /> 0 = это компонент локальной области. В этом случае пара **namespace_id**, **collection_id**, ссылается на «нет пространство имен» **targetNamespace**.<br /><br /> Для компонентов с подстановкой это значение может быть равным 1.|  
 |**name**|**nvarchar**<br /><br /> **(4000)**|Уникальное имя компонента XML-схемы. Если значение равно NULL, компонент является неименованным.|  
 |**symbol_space**|**char(1)**|Место, в котором имя символа уникально, на основе **вид**:<br /><br /> N = нет<br /><br /> T = тип<br /><br /> E = элемент<br /><br /> M = модель-группа<br /><br /> A = атрибут<br /><br /> G = атрибут-группа|  
 |**symbol_space_desc**|**nvarchar**<br /><br /> **(60)**|Описание пространства, в котором имя символа уникально, на основе **вид**:<br /><br /> None<br /><br /> TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP|  

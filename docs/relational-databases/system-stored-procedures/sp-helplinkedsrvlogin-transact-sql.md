@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b9615c833939c18b3653fa4035258b91bb5bdfc8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33253267"
 ---
 # <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |**Собственный сопоставление**|**smallint**|0 = **локальное имя входа** сопоставляется **удаленного входа** при подключении к **связанного сервера**.<br /><br /> 1 = **локальное имя входа** сопоставляется имя входа и пароль при подключении к **связанного сервера**.|  
 |**Удаленное имя входа**|**sysname**|Имя входа на **LinkedServer** сопоставленный **LocalLogin** при **IsSelfMapping** — 0. Если **IsSelfMapping** -1, **RemoteLogin** имеет значение NULL.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Перед удалением сопоставлений имен входа с помощью **sp_helplinkedsrvlogin** для определения связанных серверов, которые участвуют.  
   
 ## <a name="permissions"></a>Разрешения  
