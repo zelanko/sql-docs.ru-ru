@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: efc077bda6d05642107a6e8694d53418401ff12c
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 718a076822a4304e0ba951f3ca1903bb7c009e17
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586066"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Загрузка данных со службами Integration Services для параллельного хранилища данных
 Предоставляет информации о развертывании и ссылки для загрузки данных в хранилище параллельных данных SQL Server с помощью пакетов служб SQL Server Integration Services (SSIS).  
@@ -28,7 +29,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -55,12 +56,12 @@ For general information about developing Integration Services packages, see [Des
 ### <a name="run-from-powershell"></a>Выполните в PowerShell  
 Чтобы запустить пакет из Windows PowerShell с помощью **dtexec** программы: `dtexec /FILE <packagePath>`  
   
-Например: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Например `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Командную строку запуска из Windows 
 Чтобы запустить пакет из командной строки Windows, с помощью **dtexec** программы: `dtexec /FILE <packagePath>`  
   
-Например: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Например: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`.  
   
 ## <a name="DataTypes"></a>Типы данных  
 При использовании службы Integration Services для загрузки данных из источника данных в базе данных SQL Server PDW, сначала сопоставляются данные из источника данных в типы данных служб Integration Services. Это позволяет сопоставлять данные из нескольких источников с общим набором типов данных.  
@@ -83,7 +84,7 @@ For general information about developing Integration Services packages, see [Des
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -247,16 +248,16 @@ id,city,lastUpdateDate,orderDate
   
 ## <a name="see-also"></a>См. также  
 [Создать задачу «скрипт», использующий адаптер назначения PDW служб SSIS](create-ssis-script-task-using-pdw-destination-adapter.md)  
-[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
-[Проектирование и разработка пакетов (службы Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  
-[Учебник: Создание основного пакета с помощью мастера](http://technet.microsoft.com/library/ms365330&#40;v=sql11&#40;.aspx)  
+[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026\(v=sql11\).aspx)  
+[Проектирование и разработка пакетов (службы Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[Учебник: Создание основного пакета с помощью мастера](http://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [Приступая к работе (службы Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
 [Пример создания динамического пакета](http://go.microsoft.com/fwlink/?LinkId=202413)  
 [Проектирование пакетов служб SSIS для параллелизма (видеоматериал по SQL Server)](http://msdn.microsoft.com/library/dd795221.aspx)  
 [Примеры сообщества Microsoft SQL Server: Службы Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
-[Повышение эффективности добавочной загрузки с измененных данных](http://msdn.microsoft.com/library/bb895315&#40;v=sql11&#40;.aspx)  
-[Преобразование "Медленно изменяющееся измерение"](http://msdn.microsoft.com/library/ms141715&#40;v=sql11&#40;.aspx)  
-[Задача «Массовая вставка»](http://msdn.microsoft.com/library/ms141239&#40;v=sql11&#40;.aspx)  
+[Повышение эффективности добавочной загрузки с измененных данных](http://msdn.microsoft.com/library/bb895315\(v=sql11\).aspx)  
+[Преобразование "Медленно изменяющееся измерение"](http://msdn.microsoft.com/library/ms141715\(v=sql11\).aspx)  
+[Задача «Массовая вставка»](http://msdn.microsoft.com/library/ms141239\(v=sql11\).aspx)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9b5f42140d8987cb36ea95c4c4314798a1ee7633
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 986fade6d9db3d6170d47181ac960d15febdf260
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573926"
 ---
 # <a name="mddataset-data-type-xmla"></a>Тип данных MDDataSet (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/10/2018
 |Базовые типы данных|[Результирующий набор](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
 |Производные типы данных|None|  
   
-## <a name="data-type-relationships"></a>Связи типа данных  
+## <a name="data-type-relationships"></a>Связи между типами данных  
   
 |Связь|Элемент|  
 |------------------|-------------|  
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/10/2018
   
  Для получения основных сведений о структурах наборов данных OLE DB для OLAP см. раздел «Сопоставление типов данных MDDataSet для OLE DB» в спецификации «XML для аналитики 1.1». Полный образец определения типа данных **MDDataSet** на языке XSD приведен в документе «Приложение Г. пример типа данных MDDataSet» в спецификации «XML для аналитики 1.1».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
  [Типы данных XML &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

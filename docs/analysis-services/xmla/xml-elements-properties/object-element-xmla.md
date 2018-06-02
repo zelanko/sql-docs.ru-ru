@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 56de6684969db18c66d57c95e3dec589a48fed89
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f9ef2f645895e567d69d06e4e1383e0c477b6ed1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575916"
 ---
 # <a name="object-element-xmla"></a>Элемент Object (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/10/2018
   
 ```xml  
   
-<Alter> <!-- or any of the parent elements in the Element Relationships table -->  
+<Alter> <!-- or any of the parent elements in the Element relationships table -->  
 ...  
    <Object>  
       <!-- One or more object identifiers, depending on the parent element -->  
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/10/2018
   
 |Предок или родитель|Количество элементов|  
 |------------------------|-----------------|  
-|[ALTER](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|0—1: необязательный элемент, который может появляться только один раз.|  
+|[ALTER](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|0-1: необязательный элемент, который может встречаться только один раз.|  
 |Все остальные|1-1: обязательный элемент, который встречается ровно один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
@@ -55,9 +56,9 @@ ms.lasthandoff: 05/10/2018
 ## <a name="remarks"></a>Примечания  
  Порядок следования идентификаторов неважен.  
   
- Для **Alter** элементов, экземпляр [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] используется как объект по умолчанию, если **объекта** элемент не указан.  
+ Для **Alter** элементов в экземпляре служб Analysis Services используется в качестве объекта по умолчанию, если **объекта** элемент не указан.  
   
-## <a name="see-also"></a>См. также  
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

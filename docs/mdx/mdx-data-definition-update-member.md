@@ -1,33 +1,20 @@
 ---
 title: Инструкция UPDATE MEMBER (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- UPDATE_MEMBER
-- UPDATE MEMBER
-- MEMBER
-- UPDATE
-helpviewer_keywords:
-- calculated members [MDX]
-- UPDATE MEMBER statement
-ms.assetid: 07ab708d-d165-4fb1-a9f9-fb8197ff0dab
-caps.latest.revision: 12
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: ce4205db398dd7a61d7d9def31dccdaf93d78672
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: cd74ca9c5ebe5195dd65c88f657587583be55e92
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579846"
 ---
 # <a name="mdx-data-definition---update-member"></a>Определение данных MDX - UPDATE MEMBER
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +47,7 @@ UPDATE MEMBER Cube_Name.Member_Name
  *Property_Value*  
  Допустимое скалярное выражение, содержащее значение свойства вычисляемого элемента.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Инструкция UPDATE MEMBER обновляет существующие вычисляемые элементы, сохраняя относительную очередность элемента по отношению к другим вычислениям. Поэтому использовать инструкцию UPDATE MEMBER для изменения элемента SOLVEORDER нельзя.  
   
  Инструкцию UPDATE MEMBER нельзя указать в скрипте многомерных выражений для куба.  
@@ -83,7 +70,7 @@ UPDATE MEMBER Cube_Name.Member_Name
   
 ## <a name="see-also"></a>См. также  
  [Инструкция DROP MEMBER &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-drop-member.md)   
- [CREATE MEMBER, инструкция #40; Многомерные Выражения & #41;](../mdx/mdx-data-definition-create-member.md)   
+ [Инструкция CREATE MEMBER &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-create-member.md)   
  [Инструкции определения данных многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

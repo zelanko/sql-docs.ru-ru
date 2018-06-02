@@ -3,8 +3,6 @@ title: 'Как: извлечение параметров вывода с пом
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +15,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8699d76ace19555c57ff3bcd8992f60a5cef526a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81a94f68d7198285125236337a0025e41f1bf8ef
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563892"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 Когда потоковые типы, такие как SQLSRV_SQLTYPE_VARCHAR('max'), используются в качестве параметров вывода, может возникнуть усечение данных. Использование потоковых типов в качестве параметров вывода не поддерживается. Для непотоковых типов усечение данных может произойти, если длина параметра вывода не указана или если указанная длина недостаточна для параметра вывода.  
   
-## <a name="example"></a>Пример  
+## <a name="example-1"></a>Пример 1
 Следующий пример вызывает хранимую процедуру, которая возвращает продажи для определенного сотрудника за период с начала года и до настоящего момента. Переменная *$lastName* PHP является параметром ввода, а *$salesYTD* — параметром вывода.  
   
 > [!NOTE]  
@@ -125,9 +124,9 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> При привязке выходного параметра в значение типа bigint, если значение может оказаться за пределами диапазона [целое](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), необходимо указать его тип SQL в качестве SQLSRV_SQLTYPE_BIGINT. В противном случае это может привести к исключению «значение вне допустимого диапазона».
+> При привязке выходной параметр типа bigint, если значение может оказаться за пределами диапазона [целое](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), необходимо указать его тип SQL в качестве SQLSRV_SQLTYPE_BIGINT. В противном случае это может привести к исключению «значение вне допустимого диапазона».
 
-## <a name="example"></a>Пример  
+## <a name="example-2"></a>Пример 2
 В этом примере кода демонстрируется привязка значения больших bigint в качестве выходного параметра.  
 
 ```

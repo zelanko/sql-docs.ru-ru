@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3717dc967dbcb1f1523f2cc4efe535b928a663c3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 937ea7bb52e1b1ab4be992b5a8415edd51e680a9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573956"
 ---
 # <a name="mergepartitions-element-xmla"></a>Элемент MergePartitions (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,12 +45,12 @@ ms.lasthandoff: 05/10/2018
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
-|Дочерние элементы|[Sources](../../../analysis-services/xmla/xml-elements-properties/sources-element-xmla.md), [Target](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)|  
+|Дочерние элементы|[Источники](../../../analysis-services/xmla/xml-elements-properties/sources-element-xmla.md), [цели](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
  Все ссылки на объекты в элементах **Sources** и **Target** должны указывать на отдельные секции в одной группе мер. В противном случае возникает ошибка.  
   
-## <a name="see-also"></a>См. также:  
- [Команды & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>См. также
+ [Команды &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

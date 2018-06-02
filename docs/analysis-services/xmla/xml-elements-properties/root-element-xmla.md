@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f4fc4072c7b19cff327463dd8df8af7d136e6c1e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 794e33d6270ef9540396fd7d2f38a08ccab4c8d2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578136"
 ---
 # <a name="root-element-xmla"></a>Элемент root (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -54,10 +55,10 @@ ms.lasthandoff: 05/10/2018
 |Родительские элементы|[результаты](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md), [возврата](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **Корневой** элемент содержит данные, возвращаемые в любом [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) элемент, возвращаемый один **Discover** вызова метода, или в [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) элемент, возвращаемый в отдельной команде XMLA, выполненной при единственном **Execute** вызова метода.  
   
-## <a name="see-also"></a>См. также:  
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

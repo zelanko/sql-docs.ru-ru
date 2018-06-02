@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2880798794e24f12763f403fd9bed26e62a0789e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2f941b50c8e2f6d23fc65d96a3f4eaa61075e76e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574996"
 ---
 # <a name="command-element-xmla"></a>Элемент Command (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -92,14 +93,14 @@ ms.lasthandoff: 05/10/2018
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительские элементы|[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
+|Родительские элементы|[Выполнение](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
 |Дочерние элементы|[ALTER](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md), [резервного копирования](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [пакета](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md), [BeginTransaction](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md), [отменить](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md), [ClearCache](../../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md) , [CommitTransaction](../../../analysis-services/xmla/xml-elements-commands/committransaction-element-xmla.md), [создания](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md), [удаление](../../../analysis-services/xmla/xml-elements-commands/delete-element-xmla.md), [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md), [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md), [Вставить](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [блокировки](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md), [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md), [NotifyTableChange](../../../analysis-services/xmla/xml-elements-commands/notifytablechange-element-xmla.md), [процесс](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md), [Восстановить](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md), [RollbackTransaction](../../../analysis-services/xmla/xml-elements-commands/rollbacktransaction-element-xmla.md), [SetPasswordEncryptionKey](http://msdn.microsoft.com/en-us/fb262737-f0f4-4441-985e-3b2a94d00a9e), [инструкции](../../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md), [ Подписка](../../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md), [синхронизации](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md), [разблокировать](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md), [обновление](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- **Команда** используется **Execute** для передачи команд в источнике данных. Хотя XML для аналитики (XMLA) 1.1 спецификации поддерживает только **инструкции** команды [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживает множество новых команд XMLA. Дополнительные сведения о команде XMLA, поддерживаемых [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], в разделе [команды &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md).  
+ **Команда** используется **Execute** для передачи команд в источнике данных. Хотя XML для аналитики (XMLA) 1.1 спецификации поддерживает только **инструкции** команды службы Analysis Services поддерживают множество новых команд XMLA. Дополнительные сведения о команде XMLA, поддерживаемых [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], в разделе [команды &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md).  
   
-## <a name="see-also"></a>См. также  
- [Типы данных XML & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Типы данных XML &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6b379fde8b0561af0af41cabcef1b91adf459a26
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 049756318b4d0e14b0bd2fe858d7a2153673cfd5
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575006"
 ---
 # <a name="notifytablechange-element-xmla"></a>Элемент NotifyTableChange (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Уведомляет экземпляр служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , что в таблицах указанного источника данных произошло изменение.  
+  Уведомляет экземпляр служб Analysis Services, что в таблицах указанного источника данных произошло изменение.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/10/2018
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
-|Дочерние элементы|[Object](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md), [TableNotifications](../../../analysis-services/xmla/xml-elements-properties/tablenotifications-element-xmla.md)|  
+|Дочерние элементы|[Объект](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md), [TableNotifications](../../../analysis-services/xmla/xml-elements-properties/tablenotifications-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
  **NotifyTableChange** команда позволяет клиентскому приложению явно уведомить [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра, что один или несколько таблиц, содержащихся в источнике данных были изменены. Для упреждающего кэширования такое уведомление указывает, что объекты реляционного OLAP (ROLAP), основанные на этих таблицах, должны быть проверены и обновлены.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/10/2018
   
  Дополнительные сведения об упреждающем кэшировании см. в разделе [Упреждающее кэширование (секции)](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
-## <a name="see-also"></a>См. также:  
- [Команды & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>См. также
+ [Команды &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

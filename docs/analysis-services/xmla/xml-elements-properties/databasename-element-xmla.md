@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9cbf32fcc67c7a9e08d45d6099bf58bf521be6e2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: adc35002f6d5f7cb129131529359e667fb53fdb3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573616"
 ---
 # <a name="databasename-element-xmla"></a>Элемент DatabaseName (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Определяет базу данных служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , которую требуется восстановить родительской командой [Restore](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) .  
+  Определяет базу данных служб Analysis Services для восстановления в родительском [восстановить](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) команды.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,9 +35,9 @@ ms.lasthandoff: 05/10/2018
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|Строковые значения|  
+|Тип данных и длина|String|  
 |Значение по умолчанию|None|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -50,8 +51,8 @@ ms.lasthandoff: 05/10/2018
   
  Наличие этой базы данных на целевом экземпляре приводит к возникновению ошибки, если элементу **AllowOverwrite** родительской команды **Restore** не присвоено значение **True**.  
   
-## <a name="see-also"></a>См. также  
- [Элемент AllowOverwrite & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md)   
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Элемент AllowOverwrite &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md)   
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

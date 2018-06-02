@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: af8c03d33fe0e0b42fe09fbe1b900166d50e25cd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ccdccaf4a3624bef365cec85e452a88526b9fd6b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585936"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Подготовка данных с помощью PowerShell (Пошаговое руководство)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -83,7 +84,7 @@ ms.lasthandoff: 04/16/2018
 
 ### <a name="install-required-packages-on-the-server"></a>Установка необходимых пакетов на сервере
 
-Существует множество различных способов, необходимо установить пакеты на сервере SQL Server. Например, SQL Server предоставляет [пакета управления](../r/installing-and-managing-r-packages.md) функция, которая позволяет администраторам баз данных создайте репозитория пакетов и назначьте пользователя прав для установки собственных пакетов. Тем не менее если вы являетесь администратором на компьютере, можно установить новые пакеты, с помощью R, при условии, что установка в правильную библиотеку.
+Существует множество различных способов, необходимо установить пакеты на сервере SQL Server. Например, SQL Server предоставляет [R пакета управления](../r/install-additional-r-packages-on-sql-server.md) функция, которая позволяет администраторам баз данных создайте репозитория пакетов и назначьте пользователя прав для установки собственных пакетов. Тем не менее если вы являетесь администратором на компьютере, можно установить новые пакеты, с помощью R, при условии, что установка в правильную библиотеку.
 
 > [!NOTE]
 > На сервере **не** установить библиотеку пользователя даже при появлении соответствующего запроса. При установке в библиотеке пользователя экземпляра SQL Server не удается найти или запускать пакеты. Дополнительные сведения см. в статье [Installing New R Packages on SQL Server](../r/install-additional-r-packages-on-sql-server.md)(Установка новых пакетов R в SQL Server).
@@ -162,7 +163,7 @@ Plug in the database server name, database name, user name and password into the
 This step (plugging in database information) takes 0.48 seconds.
 ```
 
-Щелкните эту ссылку, чтобы перейти к следующему занятию: [представление и просматривать данные, используя SQL](/walkthrough-view-and-explore-the-data.md)
+Щелкните эту ссылку, чтобы перейти к следующему занятию: [представление и просматривать данные, используя SQL](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="bkmk_Troubleshooting"></a>Устранение неполадок
 
@@ -282,7 +283,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 |Имя файла скрипта SQL|Описание|
 |------------------------|----------------|
-|create-db-tb-upload-data.sql|Создает базу данных и две таблицы:<br /><br /> *nyctaxi_sample:*таблица, в которой хранятся данные для обучения — выборка из набора данных по работе такси в Нью-Йорке. К таблице добавляется кластеризованный индекс columnstore для оптимизации хранения данных и производительности запросов.<br /><br /> *nyc_taxi_models*: таблица, используемая для хранения обученных моделей в двоичном формате.|
+|create-db-tb-upload-data.sql|Создает базу данных и две таблицы:<br /><br /> *nyctaxi_sample:* таблица, в которой хранятся данные для обучения — выборка из набора данных по работе такси в Нью-Йорке. К таблице добавляется кластеризованный индекс columnstore для оптимизации хранения данных и производительности запросов.<br /><br /> *nyc_taxi_models*: таблица, используемая для хранения обученных моделей в двоичном формате.|
 |PredictTipBatchMode.sql|Создает хранимую процедуру, которая вызывает обученную модель с целью прогнозирования меток для новых наблюдений. В качестве входного параметра она принимает запрос.|
 |PredictTipSingleMode.sql|Создает хранимую процедуру, которая вызывает обученную модель классификации с целью прогнозирования меток для новых наблюдений. Переменные новых наблюдений передаются в процедуру в виде встроенных параметров.|
 |PersistModel.sql|Создает хранимую процедуру, которая позволяет сохранять двоичное представление модели классификации в таблице базы данных.|
@@ -296,10 +297,10 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 ## <a name="next-lesson"></a>Следующее занятие
 
-[Просмотр и изучение данных с помощью SQL и R](/walkthrough-view-and-explore-the-data.md)
+[Просмотр и изучение данных с помощью SQL и R](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="previous-lesson"></a>Предыдущее занятие
 
-[Пошаговое руководство обработки и анализа данных с начала до конца R и SQL Server](/walkthrough-data-science-end-to-end-walkthrough.md)
+[Пошаговое руководство обработки и анализа данных с начала до конца R и SQL Server](walkthrough-data-science-end-to-end-walkthrough.md)
 
 [Предварительные требования для работы с пошаговыми руководствами по обработке и анализу данных](walkthrough-prerequisites-for-data-science-walkthroughs.md)
