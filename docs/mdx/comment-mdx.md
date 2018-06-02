@@ -1,33 +1,20 @@
 ---
 title: Комментарий (MDX) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- '*/'
-- /*
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- commenting characters
-- /*...*/ (comment)
-ms.assetid: 64434ae4-80ce-4634-86b8-4125dfaa7f61
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 4a4c9aa5bfbb27fd208b6f418e18b1c224451f27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 0a38b7c7ed805afbcdfd3b5426141358bfde742c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577446"
 ---
 # <a name="comment-mdx"></a>Комментарий (многомерные Выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +32,7 @@ ms.lasthandoff: 05/03/2018
  *Comment_Text*  
  Строка, содержащая текст комментария.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Сервер не обрабатывает текст между символами комментария / * и \*/. Комментарии можно вставлять отдельной строкой либо вставлять в инструкцию многомерных выражений. Многострочные комментарии должны обозначаться символами /\* и \*/.  
   
  Длина комментариев не ограничена. Можно создавать вложенные комментарии. Например, `/* Test /*Comment*/ Text*/` — вложенный комментарий.  
@@ -68,7 +55,7 @@ WHERE
   
 ## <a name="see-also"></a>См. также  
  [&#40;Комментарий&#41; &#40;многомерных Выражений&#41;](../mdx/comment-mdx-double-slash.md)   
- [--& #40; Комментарий & #41; & #40; Многомерные Выражения & #41;](../mdx/comment-mdx-operator-reference.md)   
+ [-- (Комментарий) (MDX)](../mdx/comment-mdx-operator-reference.md)   
  [Справочник по операторам Многомерных &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

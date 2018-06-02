@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 14cbfaf2e50a2eb77b3918317113823a342857cc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c4ea0e1f9bfab567c792bdd7b233bea038e87f54
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576247"
 ---
 # <a name="security-element-xmla"></a>Элемент Security (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/10/2018
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
 |Значение по умолчанию|*skipMembership*|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/10/2018
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- **Безопасности** определяет, является ли определения безопасности, такие как роли и разрешения, определенные в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных резервного копирования или восстановления во время выполнения, соответственно, **Резервного копирования** или **восстановить** команды. Этот элемент также определяет, распространяются ли команды **Backup** и **Restore** на учетные записи пользователей и группы Windows, являющиеся членами определений безопасности.  
+ **Безопасности** определяет, являются ли определения безопасности, такие как роли и разрешения, определенные в базе данных служб Analysis Services резервного копирования или восстановления во время выполнения, соответственно, **резервного копирования** или **Восстановить** команды. Этот элемент также определяет, распространяются ли команды **Backup** и **Restore** на учетные записи пользователей и группы Windows, являющиеся членами определений безопасности.  
   
  Значением этого элемента может быть только одна из строк в следующей таблице.  
   
@@ -56,8 +57,8 @@ ms.lasthandoff: 05/10/2018
 |*CopyAll*|Включить определения безопасности и сведения о членстве при выполнении команд **Backup** или **Restore** .|  
 |*IgnoreSecurity*|Исключить определения безопасности при выполнении команд **Backup** или **Restore** .|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
  [Элемент SynchronizeSecurity &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/synchronizesecurity-element-xmla.md)   
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

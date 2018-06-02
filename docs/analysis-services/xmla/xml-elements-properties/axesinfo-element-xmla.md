@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 465bb84d5a9aa0cd2d87dd6565cd67f2de007301
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c766cc155b0e0b04af65c34653fbd5a5dcef4e64
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575826"
 ---
 # <a name="axesinfo-element-xmla"></a>Элемент AxesInfo (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/10/2018
 ## <a name="remarks"></a>Примечания  
  **AxesInfo** элемент содержит один **AxisInfo** элемент для каждой оси в многомерном наборе данных, возвращенных **корневой** элемента с помощью  **MDDataSet** тип данных.  
   
-## <a name="see-also"></a>См. также  
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

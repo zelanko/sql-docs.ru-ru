@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 02b9c91f30c45e59d0f5eba00a5b76262070d711
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3a8dfff1c8a551157661bcb1de5700bf51a7f914
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574916"
 ---
 # <a name="axes-element-xmla"></a>Элемент Axes (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/10/2018
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[корень](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
-|Дочерние элементы|[Оси](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|Дочерние элементы|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
  В разделе **осей** элемент, **оси** элементы перечислены в порядке их появления в наборе данных, начиная с нуля. **AxisFormat** определяет параметр свойства XMLA как **оси** должны быть отформатированы элементы. Дополнительные сведения о **AxisFormat** свойство, в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/10/2018
   
  В следующей таблице перечислены операции, которые могут использоваться для определения и описания характеристик структуры и членов оси.  
   
-|Операция|Description|  
+|Операция|Описание|  
 |---------------|-----------------|  
 |Член|Наименьшая единица измерения на оси, представляющая элемент в иерархии измерений.|  
 |Члены|Коллекция **член** объекты из той же иерархии измерений.|  
@@ -103,8 +104,8 @@ CrossProduct (
   
  Клиент может использовать **AxisFormat** свойство для затребования конкретного представления.  
   
-## <a name="see-also"></a>См. также  
- [Тип данных MDDataSet & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Тип данных MDDataSet &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

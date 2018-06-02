@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0df58b0279d7035ac01df0b582ca0a6d1ac2b5cf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a1e93de452634e0f97d648e6548357cc040b9aca
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574116"
 ---
 # <a name="cubeinfo-element-xmla"></a>Элемент CubeInfo (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,9 +52,9 @@ ms.lasthandoff: 05/10/2018
  **CubeInfo** элемент содержит один **куба** элемент для каждого куба, на которые ссылается многомерного набора данных.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Возвращает только один **куба** элемент в этой коллекции из-за [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] не поддерживает инструкции, ссылающиеся на несколько кубов в предложении FROM языка многомерных выражений (MDX).  
+>  Службы Analysis Services возвращают только один **куба** элемент в этой коллекции из-за [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] не поддерживает инструкции, ссылающиеся на несколько кубов в предложении FROM языка многомерных выражений (MDX).  
   
-## <a name="see-also"></a>См. также  
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: febc2ed744664bf4488bfd1028c1798f2668f6c1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 53cf0589cff69dab21c07979ba89e84e35f30d11
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576526"
 ---
 # <a name="target-element-xmla"></a>Элемент Target (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -80,8 +81,8 @@ ms.lasthandoff: 05/10/2018
 </MergePartitions>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
  [Элемент Source &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)   
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

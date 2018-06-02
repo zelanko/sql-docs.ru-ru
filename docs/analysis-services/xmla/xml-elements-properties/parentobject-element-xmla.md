@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c5ad08e36625073701996333e5e0a9d886ecfa92
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ff9ebc460691d9f97e5cfe64783574b00eab6915
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576006"
 ---
 # <a name="parentobject-element-xmla"></a>Элемент ParentObject (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/10/2018
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/10/2018
  Порядок следования идентификаторов неважен.  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается **Покупательского** структуры интеллектуального анализа данных, включенных в [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] пример [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных.  
+ В следующем примере создается **Покупательского** структуры интеллектуального анализа данных, включенных в [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] образца базы данных служб Analysis Services.  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -173,7 +174,7 @@ ms.lasthandoff: 05/10/2018
 </Create>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

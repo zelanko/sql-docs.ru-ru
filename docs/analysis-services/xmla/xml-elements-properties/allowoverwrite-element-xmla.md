@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1350d7fba1800f2ec0ea38a6ed57b776e163919a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 76ba7c6b3046e5298a346cb84472de3ba090e2bc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577526"
 ---
 # <a name="allowoverwrite-element-xmla"></a>Элемент AllowOverwrite (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,9 +35,9 @@ ms.lasthandoff: 05/10/2018
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|Boolean|  
+|Тип данных и длина|Логическое значение|  
 |Значение по умолчанию|False|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -48,11 +49,11 @@ ms.lasthandoff: 05/10/2018
 ## <a name="remarks"></a>Примечания  
  Для команд **Backup** элемент **AllowOverwrite** определяет, будут ли они перезаписывать файл резервной копии, заданный в элементе **File** .  
   
- Для **восстановить** элементов, **AllowOverwrite** определяет, может ли команда перезаписать [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных, указанной в **DatabaseName** элемента.  
+ Для **восстановить** элементов, **AllowOverwrite** определяет, может ли команда Перезаписать базу данных служб Analysis Services, указанную в **DatabaseName** элемент.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
  [Элемент DatabaseName &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/databasename-element-xmla.md)   
  [Файл элемента &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md)   
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

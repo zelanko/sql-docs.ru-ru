@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 53ed40e206e25b2e8f2c770cd68a9c4662ac0268
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bca744567d0feabafbcd489f619d76be9f2ade06
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577966"
 ---
 # <a name="xml-elements---properties"></a>Элементы XML - свойства
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -111,7 +112,7 @@ ms.lasthandoff: 05/10/2018
 |[Элемент PartitionID &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/partitionid-element-xmla.md)||  
 |[Элемент Password &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md)||  
 |[Элемент Properties &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)||  
-|[Элемент PropertyList & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)||  
+|[Элемент PropertyList &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)||  
 |[Запрашивает элемент &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)||  
 |[Элемент запроса &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)||  
 |[Элемент RequestType &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)||  
@@ -149,8 +150,8 @@ ms.lasthandoff: 05/10/2018
 |[Когда элемент &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)||  
 |[Элемент WritebackTableCreation &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/writebacktablecreation-element-xmla.md)||  
   
-## <a name="see-also"></a>См. также  
- [Типы данных XML & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
- [XML-элементы & #40; XML для Аналитики & #41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)  
+## <a name="see-also"></a>См. также
+ [Типы данных XML &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
+ [XML-элементы &#40;XML для Аналитики&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)  
   
   

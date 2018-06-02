@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1d7422a79112ef09da406eccf6f52f5b71851607
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: eb80a091c9b9585a6efc29088d15139db7033efb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575196"
 ---
 # <a name="file-element-xmla"></a>Элемент File (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/10/2018
   
 ```xml  
   
-<Backup> <!-- or one of the elements listed below in the Element Relationships table -->  
+<Backup> <!-- or one of the elements listed below in the Element relationships table -->  
    ...  
    <File>...</File>  
    ...  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/10/2018
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|Строковые значения|  
+|Тип данных и длина|String|  
 |Значение по умолчанию|None|  
 |Количество элементов|1-1: обязательный элемент, который встречается ровно один раз.|  
   
@@ -48,14 +49,14 @@ ms.lasthandoff: 05/10/2018
 ## <a name="remarks"></a>Примечания  
  **Файл** элемент содержит UNC-имя файла и его родительский элемент определяет использование **файл** элемента.  
   
- Для **резервного копирования** команд, **файл** определяет имя файла резервной копии, созданные **резервного копирования** команды. Если путь не указан как часть имени файла, путь, указанный в **BackupDir** свойство конфигурации для экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] используется. Если указанный файл уже существует, возникает ошибка, если не **AllowOverwrite** родителя **резервного копирования** набор команд **True**.  
+ Для **резервного копирования** команд, **файл** определяет имя файла резервной копии, созданные **резервного копирования** команды. Если путь не указан как часть имени файла, путь, указанный в **BackupDir** используется свойство конфигурации для экземпляра служб Analysis Services. Если указанный файл уже существует, возникает ошибка, если не **AllowOverwrite** родителя **резервного копирования** набор команд **True**.  
   
  Для **восстановить** команд, **файл** определяет имя файла резервной копии, которую требуется восстановить **восстановить** команды.  
   
- Для **расположение** элементов, **файл** элемент описывает удаленный файл резервной копии для [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляр, который содержит удаленные секции. Дополнительные сведения о резервном копировании и восстановлении удаленных секций см. в разделе [резервное копирование, восстановление и синхронизация баз данных & #40; XML для Аналитики & #41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Для **расположение** элементов, **файл** элемент описывает удаленный файл резервной копии для [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляр, который содержит удаленные секции. Дополнительные сведения о резервном копировании и восстановлении удаленных секций см. в разделе [резервное копирование, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
-## <a name="see-also"></a>См. также:  
- [Элемент AllowOverwrite & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md)   
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Элемент AllowOverwrite &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md)   
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

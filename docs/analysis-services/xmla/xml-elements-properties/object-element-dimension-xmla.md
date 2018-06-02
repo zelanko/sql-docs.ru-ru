@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 28bd87a5f77d0b285e39cb0c82d505bc91690d04
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6b321a6c26edb4f569b4174d64a0a50b8ac23ae6
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575766"
 ---
 # <a name="object-element-dimension-xmla"></a>Элемент Object (Dimension) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/10/2018
   
 ```xml  
   
-<Insert> <!-- or any of the parent elements in the Element Relationships table -->  
+<Insert> <!-- or any of the parent elements in the Element relationships table -->  
 ...  
    <Object>  
       <Database>...</Database>  
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

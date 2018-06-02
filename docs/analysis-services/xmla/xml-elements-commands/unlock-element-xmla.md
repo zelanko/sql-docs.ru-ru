@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfilee"
-ms.openlocfilehash: eb9cced037ab7fcf7072e6db56cb645333a02311
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 18b81434c2e863ef3fc4db6ce2458f236dafdd53
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573876"
 ---
 # <a name="unlock-element-xmla"></a>Элемент Unlock (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Снимает указанную блокировку на [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра.  
+  Снимает указанную блокировку на экземпляре служб Analysis Services.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,8 +51,8 @@ ms.lasthandoff: 05/10/2018
   
  Все блокировки удерживаются в контексте текущей транзакции. После фиксации или отката текущей транзакции все блокировки, определенные в рамках транзакции, автоматически снимаются.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
  [Заблокировать элемент &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)   
- [Команды & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+ [Команды &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

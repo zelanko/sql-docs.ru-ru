@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f0c18df53f7e53d044c5a5fe1ef3f59d9c4f7dd7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8aaef002e649e01a51b99bd007ae5459e8cdbd97
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576426"
 ---
 # <a name="source-element-xmla"></a>Элемент Source (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -68,8 +69,8 @@ ms.lasthandoff: 05/10/2018
 </MergePartitions>  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Целевой элемент & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Целевой элемент &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
