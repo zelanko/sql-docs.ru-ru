@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 20498cc4e2c4ad959fce263984b58e3186630cea
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: f2c1e0e17e2cbfb5816632a25ecdebe5d92ee024
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34706752"
 ---
 # <a name="instant-file-initialization-configuration"></a>Мгновенная инициализация конфигурации
 Мгновенная инициализация файлов является компонентом SQL Server, который обеспечивает более быстрое выполнение операций файла данных. Установка флажка, чтобы включить мгновенную инициализацию файлов улучшит производительность SQL Server PDW. Тем не менее если это представляет угрозу безопасности за вас бизнеса, затем оставьте поле флажок снят.  
@@ -53,5 +54,5 @@ ms.lasthandoff: 04/19/2018
   
 ![Инициализация устройств DWConfig PDW момент файла](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
   
-Дополнительные сведения о быстрой инициализации файлов см. в разделе [быстрой инициализации файлов](http://technet.microsoft.com/en-us/library/ms175935(v=SQL.105).aspx).  
+Дополнительные сведения о быстрой инициализации файлов см. в разделе [быстрой инициализации файлов](http://technet.microsoft.com/library/ms175935(v=SQL.105).aspx).  
   

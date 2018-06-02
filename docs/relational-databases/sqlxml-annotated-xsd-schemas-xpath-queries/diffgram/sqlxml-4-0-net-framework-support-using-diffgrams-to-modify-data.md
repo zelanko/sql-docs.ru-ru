@@ -32,10 +32,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b054765ab3fe626d1eb8360691a56da17b3174c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707402"
 ---
 # <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>SQLXML 4.0 поддержка .NET Framework - изменение данных с помощью дельты
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,17 +45,17 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Этот раздел содержит краткие сведения о дельтах и примеры их использования. Предполагается знакомство с дельтами на платформе .NET Framework. В этой документации основное внимание уделяется проблемам формата дельт, специфичным для SQLXML.  
   
-## <a name="in-this-section"></a>В этом разделе  
- [Введение в работу с Дельтами в SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/introduction-to-diffgrams-in-sqlxml-4-0.md)  
+## <a name="in-this-section"></a>в этом разделе  
+ [Введение в работу с дельтами в SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/introduction-to-diffgrams-in-sqlxml-4-0.md)  
  Предоставляет основные сведения о дельтах.  
   
- [Примеры дельт & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
+ [Примеры дельт &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
  Предоставляет примеры использования дельт.  
   
- [Выполнение дельты с помощью ADO & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  
+ [Выполнение дельты с помощью ADO &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  
  Предоставляет пример выполнения дельты с объектами ADO.  
   
- [Выполнение дельты с помощью SQLXML управляемые классы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-sqlxml-managed-classes.md)  
+ [Выполнение дельты с использованием управляемых классов SQLXML](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-sqlxml-managed-classes.md)  
  Предоставляет пример выполнения дельты с управляемыми классами SQLXML.  
   
   

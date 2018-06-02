@@ -8,11 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 694cbb2a6addc89f40dd6d9670768ad13a84ef3f
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 11b9e58c583712d8ee5ae70f4dbb98b6c175239c
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707692"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Обновление компонентов машины обучения (R и Python) в экземплярах SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,30 +27,26 @@ ms.lasthandoff: 05/23/2018
 > [!NOTE]
 > Привязка применима ко только экземпляры (в базе данных). Привязка не относится к установке (автономный).
 
-**SQL Server 2017**
+**Вопросы привязки 2017 г. SQL Server**
 
 Для служб SQL Server 2017 г машины обучения считает привязки только в том случае, если Microsoft машины обучения сервер начинает предлагать дополнительные пакеты или более новых версий над теми, которые уже есть.
 
-**SQL Server 2016**
+**Вопросы привязки SQL Server 2016**
 
-Для клиентов служб R SQL Server 2016, существует два пути для получения новых и обновленных пакетов R. Один из них требует обновления до 2017 г. SQL Server; Второе привязку к серверу обучения Майкрософт машины.
+Для SQL Server 2016 R Services предоставляет клиентам, привязка обновить пакеты R, новых пакетов не является частью исходной установки и предварительно обученные модели, каждый из которых можно дальнейшей обновляются с каждым новым выпуском основной и дополнительный обучения машины Microsoft Server. Привязки не предоставляет поддержку Python, которая реализована 2017 г. SQL Server. 
 
-Обновление до SQL Server 2017 г. позволяет пакеты R в версиях, включенные в этот выпуск, а также компонентов Python. Кроме того привязка получает вы обновленные пакеты R, которые дополнительно могут обновляться с каждым новым выпуском основной и дополнительный обучения машины Microsoft Server. 
+## <a name="version-map"></a>Сопоставление версий
 
-Привязки не предоставляет поддержку Python, которая реализована 2017 г. SQL Server. 
+В следующей таблице приведен версии карта, показывающая версии пакетов через транспортных средств выпуска, можно получить сведения об обновлении potentional при привязке (прежнее название — R Server перед добавлением поддержка Python машины обучения Microsoft Server начиная с версии MLS 9.2.1). 
 
-**Обновление компонентов, доступных через сервер обучения машины Microsoft**
-
-Следующая таблица представляет собой версию, отображается версия, установленная с SQL Server с помощью возможности обновления при привязке обучения сервера машины (ранее — R Server перед добавлением поддержки Python, начиная с MLS 9.2.1). 
-
-Обратите внимание, что привязка не обеспечивает самые последние версии R или Anaconda. При привязке к серверу обучения машины Microsoft можно получить версию R или Python, устанавливаются с помощью программы установки, который может быть или не быть доступны в Интернете последней версии.
+Обратите внимание, что привязка не обеспечивает самые последние версии R или Anaconda. При привязке к Microsoft машины обучения Server (MLS), можно получить версию R или Python, устанавливаются с помощью программы установки, который не является последней версии, доступны в Интернете.
 
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
-Компонент |Первоначальный выпуск | R Server 9.0.1 | R Server 9.1 | MLS 9.2.1 | MLS 9.3 |
+Компонент |Первоначальный выпуск | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
 ----------|----------------|----------------|--------------|---------|-------|
 Microsoft R Open (MRO) через R | R 3.2.2     | 3.3.2 R   |R 3.3.3.   | 3.4.1 R  | R 3.4.3 |
-[RevoScaleR](https://docs.microsoft.com/achine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [предварительно обученные модели](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
@@ -266,7 +263,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ### <a name="parameters"></a>Параметры
 
-|Название|Описание|
+|Имя|Описание|
 |------|------|
 |*list*| Выводит список идентификаторов всех экземпляров баз данных SQL на текущем компьютере.|
 |*bind*| Обновляет указанный экземпляр базы данных SQL до последней версии R Server и обеспечивает автоматическое получение экземпляром будущих обновлений для R Server.|
@@ -301,7 +298,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 Более поздняя версия SqlBindR автоматически восстановить исходные компоненты R, устраняя необходимость в повторной установки компонентов R или повторно исправление для сервера. Тем не менее необходимо установить все обновления пакета R, которые могли быть добавлены после первоначальной установки.
 
-При использовании роли пакетов управления для установки и распределения пакета эту задачу гораздо проще: команды R можно использовать для синхронизации установленные пакеты в файловую систему, с помощью записи в базе данных и наоборот. Дополнительные сведения см. в разделе [R пакета управления для SQL Server](r-package-management-for-sql-server-r-services.md).
+При использовании роли пакетов управления для установки и распределения пакета эту задачу гораздо проще: команды R можно использовать для синхронизации установленные пакеты в файловую систему, с помощью записи в базе данных и наоборот. Дополнительные сведения см. в разделе [R пакета управления для SQL Server](install-additional-r-packages-on-sql-server.md).
 
 ### <a name="problems-with-multiple-upgrades-from-sql-server"></a>Проблемы с помощью нескольких обновлений из SQL Server
 
@@ -322,7 +319,7 @@ Microsoft Server обучения машины 9.2.1 и 9.3 нет этой пр
 > [!NOTE]
 > Убедитесь, что дождитесь завершения установки. Он может занять много времени для удаления библиотеки R, связанные с одной версии, а затем добавьте новые библиотеки R. По завершении операции будут удалены временные папки.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 + [Установка компьютера обучения для Windows Server (подключенную к Интернету)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 + [Установка компьютера обучения для Windows Server (автономный)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)

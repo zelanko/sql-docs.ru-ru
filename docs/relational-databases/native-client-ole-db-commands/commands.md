@@ -20,10 +20,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 56749be182165535e7fb8678cdda09a3a485a95f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707982"
 ---
 # <a name="commands"></a>Команды
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,15 +32,15 @@ ms.lasthandoff: 05/03/2018
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента предоставляет **ICommand** интерфейс и объекты команд, которые описаны в этом разделе:  
   
--   [Синтаксис команды](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
+-   [Синтаксис команд](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
   
--   [Параметры команды](../../relational-databases/native-client-ole-db-commands/command-parameters.md)  
+-   [Параметры команд](../../relational-databases/native-client-ole-db-commands/command-parameters.md)  
   
 -   [Подготовка команд](../../relational-databases/native-client-ole-db-commands/preparing-commands.md)  
   
--   [Команды, формирующие результаты, содержащие](../../relational-databases/native-client-ole-db-commands/commands-generating-multiple-rowset-results.md)  
+-   [Команды, формирующие результаты с несколькими наборами строк](../../relational-databases/native-client-ole-db-commands/commands-generating-multiple-rowset-results.md)  
   
-## <a name="see-also"></a>См. также:  
- [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
+## <a name="see-also"></a>См. также  
+ [SQL Server Native Client (OLE DB)](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

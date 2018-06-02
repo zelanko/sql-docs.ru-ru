@@ -2,39 +2,36 @@
 title: Устранение неполадок и вопросы и ответы для машинного обучения в SQL Server | Документы Microsoft
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 80d153baed382c95c85793e1605b700c2719e13c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6ef72ae56973e695b96f0dfac7c0a3414bca5225
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707362"
 ---
-# <a name="troubleshoot-machine-learning"></a>Устранение неполадок машинного обучения
+# <a name="troubleshoot-machine-learning-in-sql-server"></a>Устранение неполадок машинного обучения в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этой статье по устранению неполадок ссылки на руководства, известные проблемы и заметки о выпуске. Другие статьи, связанные с из этой статьи, предоставляют советы по оптимизации производительности по обучению машины в SQL Server.
-
-Используйте эту страницу в качестве отправной точки для поиска известных проблем, часто задаваемые вопросы установки и процедуры для устранения неполадок.
+Используйте эту страницу для начала работы в рамках известных проблем.
 
 **Применяется к:** служб R SQL Server 2016, SQL Server 2017 г машинного обучения службы (R и Python)
 
 ## <a name="known-issues"></a>Известные проблемы
 
-Следующие статьи список известных проблем в текущем выпуске или описаны проблемы, связанные с предыдущими версиями:
+В следующих статьях описывается известные проблемы с текущих и предыдущих выпусках:
 
 + [Известные проблемы для служб R](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
 + [Заметки о выпуске для SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
 + [Заметки о выпуске для SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)
 
-## <a name="troubleshooting-prerequisites"></a>Устранение неполадок предварительные требования
+## <a name="how-to-gather-system-information"></a>Как собирать сведения о системе
 
-Если произошла ошибка, или необходимо понять проблему в вашей среде, важно систематически собирать сведения. Эта информация включает версию, выпуск, контекст безопасности и контекст выполнения.
-
-Следующие статьи список информации, которая позволяет самостоятельного устранения неполадок или запрос для получения технической поддержки.
+Если произошла ошибка, или необходимо понять проблему в вашей среде, важно систематически собирать сведения. Следующие статьи список информации, которая позволяет самостоятельного устранения неполадок или запрос для получения технической поддержки.
 
 + [Сбор данных для устранения неполадок машинного обучения](data-collection-ml-troubleshooting-process.md)
 
@@ -45,7 +42,7 @@ ms.lasthandoff: 04/16/2018
 + [Установка служб SQL Server 2017 г машинного обучения (в базе данных)](install/sql-machine-learning-services-windows-install.md)
 + [Установка обучения машины 2017 г. сервер SQL Server (автономный)](install/sql-machine-learning-standalone-windows-install.md)
 + [Установка служб R SQL Server 2016 (в базе данных)](install/sql-r-services-windows-install.md)
-+ [Установка сервера SQL Server 2016R (автономный)](install/sql-r-standalone-windows-install.md)
++ [Установка SQL Server 2016 R Server (изолированный)](install/sql-r-standalone-windows-install.md)
 + [Программа установки командной строки](install/sql-ml-component-commandline-install.md)
 + [Автономная установка (без Интернета)](install/sql-ml-component-install-without-internet-access.md)
 

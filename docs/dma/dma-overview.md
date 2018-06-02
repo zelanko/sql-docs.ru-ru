@@ -17,18 +17,19 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 16550b6c195f426d914f5a4b4d521cbd739765ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd681a6445c6759b0ec17e06dc0b4dbf24b3b72f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707972"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Общие сведения о данных помощник по миграции
 
 Помощник по миграции данных (DMA) дает возможность обновления к платформе современных данных путем обнаружения проблемы совместимости, которые могут повлиять на функциональность базы данных в новой версии SQL Server и базы данных SQL Azure. DMA рекомендует производительности и улучшения производительности для целевой среды и позволяет переносить схемы, данные и неавтономные объекты с исходного сервера на целевой сервер.
 
 > [!NOTE] 
-> Для больших (с точки зрения числа и размера баз данных) миграций, рекомендуется использовать [службу миграции базы данных Azure](https://docs.microsoft.com/en-us/azure/dms/dms-overview), который можно перенести базы данных в масштабе.
+> Для больших (с точки зрения числа и размера баз данных) миграций, рекомендуется использовать [службу миграции базы данных Azure](https://docs.microsoft.com/azure/dms/dms-overview), который можно перенести базы данных в масштабе.
   
 ## <a name="capabilities"></a>Возможности
 
@@ -69,15 +70,15 @@ DMA заменяет все предыдущие версии помощника
 - SQL Server 2008 R2
 - SQL Server 2012 
 - SQL Server 2014
-- SQL Server 2016
+- SQL Server 2016
 - SQL Server 2017 г. для Windows
 
 **Целевые объекты**
 - SQL Server 2012
 - SQL Server 2014
-- SQL Server 2016
+- SQL Server 2016
 - SQL Server 2017 г. в Windows и Linux
-- Azure SQL Database
+- База данных SQL Azure
 
 > [!NOTE] 
 > DMA сейчас не поддерживает экземпляр управляемого базы данных Azure SQL как целевой объект.
@@ -86,7 +87,7 @@ DMA заменяет все предыдущие версии помощника
 
 Чтобы установить DMA, загрузите последнюю версию средства из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=53595), а затем запустите **DataMigrationAssistant.msi** файла.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Оценка миграции SQL Server](../dma/dma-assesssqlonprem.md)
 

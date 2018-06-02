@@ -22,32 +22,33 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d6101bbe97a4ca329aba1e455fbaa234bdd5a32d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708692"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Использование запросов XPath в SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Поддержка Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аннотированных схем XSD позволяет создавать XML-представления реляционных данных, хранящихся в базе данных. Можно использовать подмножество языка XPath для запроса XML-представлений, созданных аннотированными схемами XSD.  
   
 > [!NOTE]  
->  Чтобы получить представление о запросах XPath в SQLXML 4.0, необходим опыт работы с XML-представлениями и другими связанными основными понятиями — шаблонами и схемами сопоставления. Дополнительные сведения см. в разделе [введение в аннотированные схемы XSD & #40; SQLXML 4.0 & #41; ](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Дополнительные сведения о XPath см. в стандарте XPath определен консорциумом World Wide Web (W3C) в http://www.w3.org/TR/xpath.  
+>  Чтобы получить представление о запросах XPath в SQLXML 4.0, необходим опыт работы с XML-представлениями и другими связанными основными понятиями — шаблонами и схемами сопоставления. Дополнительные сведения см. в разделе [введение в схемы XSD с заметками &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Дополнительные сведения о XPath см. в стандарте XPath определен консорциумом World Wide Web (W3C) в http://www.w3.org/TR/xpath.  
   
-## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения об использовании запросов XPath & #40; SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)  
+## <a name="in-this-section"></a>в этом разделе  
+ [Общие сведения об использовании запросов XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)  
  Содержит вводные сведения о запросах XPath в SQLXML 4.0 (в том числе поддерживаемые и неподдерживаемые возможности из спецификации XPath консорциума W3C).  
   
- [Указание пути & #40; SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-location-path-sqlxml-4-0.md)  
+ [Указание пути &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-location-path-sqlxml-4-0.md)  
  Содержит способы указания путей доступа в запросах XPath.  
   
- [Образцы запросов XPath & #40; SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-xpath-queries-sqlxml-4-0.md)  
+ [Образцы запросов XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-xpath-queries-sqlxml-4-0.md)  
  Содержит образцы запросов XPath для SQLXML 4.0.  
   
- [Типы данных XPath & #40; SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)  
+ [Типы данных XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)  
  Содержит описание типов данных XPath, которые значительно отличаются от типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и XSD.  
   
-## <a name="see-also"></a>См. также:  
- [Форматирование XML на стороне клиента & #40; SQLXML 4.0 & #41;](../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
+## <a name="see-also"></a>См. также  
+ [Форматирование XML на стороне клиента &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   
   

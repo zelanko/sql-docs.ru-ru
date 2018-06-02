@@ -23,10 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c2cad3730cd0948f94adc8ad5b877fd2e921bc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708742"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Указание пути доступа (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="location-steps"></a>Шаги доступа  
  Путь доступа (абсолютный или относительный) состоит из шагов доступа, составленных из следующих трех частей.  
   
--   **Оси**  
+-   **Axis**  
   
      Ось определяет древовидную связь между узлами, которые выбираются шагом доступа, и контекстными узлами. **Родительского**, **дочерних**, **атрибута**, и **self** поддерживаются оси. Если **дочерних** оси указывается в путь к расположению, все узлы, выбранные запросом являются дочерними элементами контекстного узла. Если **родительского** оси указан, то выбранный узел имеет родительский узел текущего узла. Если **атрибута** оси указан, выбранные узлы будут атрибутами контекстного узла.  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
      Синтаксис шага доступа: имя оси и проверки узла, разделенные двумя двоеточиями, за которыми следует ноль или более выражений — каждое в квадратных скобках. Например, выражение XPath (путь) **child::Customer [@CustomerID= «ALFKI»]** выбирает все  **\<клиента >** дочерние элементы узла контекста. Затем в наборе узлов, который возвращает только применяется проверка в предикате  **\<клиента >** узлов элементов с помощью атрибута значение «ALFKI» для его **CustomerID** атрибута.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Указание оси &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  
  Содержит примеры указания оси.  
   

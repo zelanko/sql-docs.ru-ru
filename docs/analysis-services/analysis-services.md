@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 704c2f1638676bd838c7aac367a1b610143fd85d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707042"
 ---
 # <a name="about-sql-server-analysis-services"></a>О SQL Server Analysis Services
 
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/10/2018
 *  [Документация для разработчиков](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
 *  [Технический справочник](../analysis-services/powershell/technical-reference-ssas.md)
 
-См. также:
+См. также
 
 [Документация по Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/)   
 [Документация по SQL Server](../sql-server/sql-server-technical-documentation.md)

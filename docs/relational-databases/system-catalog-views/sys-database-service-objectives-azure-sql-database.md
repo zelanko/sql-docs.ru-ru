@@ -22,11 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: a63c3142cdc5ca670117ef7d14c4d6079b575972
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 0dd29dbfe5e71f3dbae8d0330c1413dda2d3cc26
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708602"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/19/2018
 Возвращает выпуск (уровень службы), цель службы (ценовой категории) и имя эластичного пула, если таковые имеются, для базы данных Azure SQL или хранилище данных SQL Azure. Если в системе базы данных master на сервере базы данных SQL Azure, возвращает сведения обо всех базах данных. Для хранилища данных SQL Azure должен быть подключен к базе данных master.  
   
   
- Сведения о ценах см. в разделе [параметры базы данных SQL и производительность: цены на базы данных SQL](https://azure.microsoft.com/en-us/pricing/details/sql-database/) и [цены на хранилище данных SQL](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
+ Сведения о ценах см. в разделе [параметры базы данных SQL и производительность: цены на базы данных SQL](https://azure.microsoft.com/pricing/details/sql-database/) и [цены на хранилище данных SQL](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
  Чтобы изменить параметры службы, в разделе [инструкции ALTER DATABASE (база данных SQL Azure)](../../t-sql/statements/alter-database-azure-sql-database.md) и [инструкции ALTER DATABASE (хранилище данных SQL Azure)](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/19/2018
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|database_id|int|Идентификатор базы данных, уникальное внутри экземпляра сервера базы данных SQL Azure. Joinable с [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|ssNoversion|Идентификатор базы данных, уникальное внутри экземпляра сервера базы данных SQL Azure. Joinable с [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edition|sysname|Уровень обслуживания для базы данных или хранилища данных: **основные**, **Стандартная**, **Premium** или **хранилища данных**.|  
 |значение service_objective|sysname|Ценовой категории базы данных. Если база данных находится в пуле эластичных, возвращает **ElasticPool**.<br /><br /> На **основные** уровня возвращает **основные**.<br /><br /> **Одной базы данных в уровень обслуживания standard** возвращает одно из следующих действий: S0, S1, S2 или S3.<br /><br /> **Одной базы данных в уровня premium** возвращает из следующих: P1, P2, P4, P6/P3 или P11.<br /><br /> **Хранилище данных SQL** возвращает DW100 через DW10000c.|  
 |elastic_pool_name|sysname|Имя [эластичного пула](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) , к которой принадлежит базе данных. Возвращает **NULL** при одной базы данных или warehoue данных базы данных.|  

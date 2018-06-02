@@ -21,7 +21,7 @@
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
 <!-- ### [Resource Governance for Python](python/resource-governance-for-python.md)-->
 
-# Установить 
+# Установка 
 
 ## [Аналитика в базе данных](install/sql-machine-learning-services-windows-install.md)
 ## [Отдельный сервер](install/sql-machine-learning-standalone-windows-install.md)
@@ -94,18 +94,18 @@
 
 # [Инструкции](r/sql-server-machine-learning-tasks.md)
 
-## [Управление пакетами](r/r-package-management-for-sql-server-r-services.md)
+## Управление пакетами
 ### [Пакеты по умолчанию](r/installing-and-managing-r-packages.md)
 ### [Получение сведений о пакете](r/determine-which-packages-are-installed-on-sql-server.md)
 ### [Установка новых пакетов Python](python/install-additional-python-packages-on-sql-server.md)
 ### [Установка новых пакетов R](r/install-additional-r-packages-on-sql-server.md)
-#### [Использование диспетчеров пакетов R](r/install-additional-r-packages-on-sql-server.md)
-#### [Использование RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
+#### [Использование диспетчеров пакетов R](r/use-r-package-managers-on-sql-server.md)
 #### [Использование T-SQL](r/install-r-packages-tsql.md)
-#### [Использование репозитория miniCRAN](r/create-a-local-package-repository-using-minicran.md)
-#### [Включение удаленного управления пакетами R](r/r-package-how-to-enable-or-disable.md)
-#### [Синхронизация пакетов R](r/package-install-uninstall-and-sync.md)
-#### [Обходные пути для "пользовательских библиотек" R](r/packages-installed-in-user-libraries.md)
+#### [Использование RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
+##### [Включение удаленного управления пакетами R](r/r-package-how-to-enable-or-disable.md)
+##### [Синхронизация пакетов R](r/package-install-uninstall-and-sync.md)
+#### [Создание репозитория miniCRAN](r/create-a-local-package-repository-using-minicran.md)
+#### [Советы по использованию пакетов r.](r/packages-installed-in-user-libraries.md)
 
 ## Изучение данных и моделирование
 ### [Библиотеки и типы данных R](r/r-libraries-and-data-types.md)
@@ -156,19 +156,18 @@
 
 ## [Известные проблемы](known-issues-for-sql-server-machine-learning-services.md)
 ## [Заметки о выпуске](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
-## [Новые и обновленные Статьи](new-updated-advanced-analytics.md)
-
-## [Рекомендации по настройке и устранению неполадок](machine-learning-troubleshooting-faq.md)
-### [Настройка виртуальной машины](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [Сбор данных для устранения неполадок](data-collection-ml-troubleshooting-process.md)
-### [Вопросы и ответы по обновлению и установке](r/upgrade-and-installation-faq-sql-server-r-services.md)
-### [Распространенные проблемы при выполнении внешних скриптов](common-issues-external-script-execution.md)
+## [Настройка виртуальной машины](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
+## [Устранение неполадок](machine-learning-troubleshooting-faq.md)
+### [Сбор данных](data-collection-ml-troubleshooting-process.md)
+### [Установка и обновление ошибки](r/upgrade-and-installation-faq-sql-server-r-services.md)
+### [Панель запуска и внешних ошибки выполнения скрипта](common-issues-external-script-execution.md)
+### [Ошибок создания скриптов R](r-script-execution-errors.md)
 
 ## Блоги
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [R Server](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/)
 ### [Машинное обучение](https://blogs.technet.microsoft.com/machinelearning/)
 
-## Форумы отзывов
+## Форумы
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-### [Microsoft R Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
+### [Машинного обучения сервера](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)

@@ -20,11 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: de3984b5005114a2b8644c99706dcce48ab873e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e77a1d7e24fa2635b3e699672338e588c1f5c1c
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707772"
 ---
 # <a name="automatic-tuning"></a>Автоматическая настройка
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -95,7 +96,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 В [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], можно найти с помощью системных представлений хранилища запросов регрессию при выборе плана. В [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], [!INCLUDE[ssde_md](../../includes/ssde_md.md)] обнаруживает и отображает потенциальных регрессию при выборе плана и рекомендуемые действия, которые должны применяться в [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) представления. В представлении отображаются сведения о проблему, важность проблемы и сведения, например указанный запрос, идентификатор регрессионных плана, идентификатор, используемый для сравнения, в качестве базового плана и [!INCLUDE[tsql_md](../../includes/tsql_md.md)] инструкцию, которая может выполняться по устранению проблема.
 
-| Тип | description | datetime | score | подробности | … |
+| Тип | description | DATETIME | score | подробности | … |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Изменено с 4 мс на 14 мс времени ЦП | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Изменено с 37 ms 84 мс времени ЦП | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -165,7 +166,7 @@ FROM sys.dm_db_tuning_recommendations
 
 Помимо обнаружения [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] могут автоматически применять идентифицированных рекомендации. Если обнаружится, что встроенные правила повышения производительности базы данных, можно разрешить [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] автоматически управлять индексах.
 
-Включение автоматической настройки в базе данных SQL Azure и позволяют полностью управлять работой функция автоматической настройки, в разделе [включить автоматическую настройку в базе данных SQL Azure с помощью портала Azure](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automatic-tuning-enable).
+Включение автоматической настройки в базе данных SQL Azure и позволяют полностью управлять работой функция автоматической настройки, в разделе [включить автоматическую настройку в базе данных SQL Azure с помощью портала Azure](https://docs.microsoft.com/azure/sql-database/sql-database-automatic-tuning-enable).
 
 Когда [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] относится рекомендация CREATE INDEX или DROP INDEX, он автоматически отслеживает производительность запросов, которые повлияли индекс. Создание индекса будут храниться только в том случае, если улучшить производительность соответствующих запросов. Удаленный индекс будет автоматически создан повторно, если некоторые запросы, которые выполняются медленнее из-за отсутствия индекса.
 
@@ -177,7 +178,7 @@ FROM sys.dm_db_tuning_recommendations
 
 Без управления автоматическое индекс, ему потребуется вручную запросить [sys.dm_db_missing_index_details &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) представление, чтобы найти индексы, которые могут повысить производительность, создать индексы, используя указанные данные в состав этого представления и вручную монитор производительности запроса. Чтобы найти индексы, которые должны быть удалены, пользователи должны статистику операционного использования индексов для поиска редко используемые индексы.
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] упрощает этот процесс. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] анализа рабочей нагрузки, определяет запросы, которые могут выполняться быстрее с новым индексом и идентифицирует неиспользуемые или повторяющиеся индексы. Дополнительные сведения об идентификации индексов, которые должны быть изменены на [найти рекомендации по индексам на портале Azure](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal).
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] упрощает этот процесс. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] анализа рабочей нагрузки, определяет запросы, которые могут выполняться быстрее с новым индексом и идентифицирует неиспользуемые или повторяющиеся индексы. Дополнительные сведения об идентификации индексов, которые должны быть изменены на [найти рекомендации по индексам на портале Azure](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal).
 
 ## <a name="see-also"></a>См. также  
  [ALTER базы данных SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
