@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 858cb8be01a16d9ccb7d6455043d370865f1c3e6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 52c3b114c1082a895325170fa8fbf6fef656b8ca
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574336"
 ---
 # <a name="axisinfo-element-xmla"></a>Элемент AxisInfo (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,14 +50,14 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>Атрибуты  
   
-|Attribute|Description|  
+|attribute|Описание|  
 |---------------|-----------------|  
-|Название|Обязательный атрибут типа **String** . Имя оси.|  
+|Имя|Обязательный атрибут типа **String** . Имя оси.|  
   
 ## <a name="remarks"></a>Примечания  
  В **корневой** элемент, который использует **MDDataSet** объекта, **AxisInfo** элемент содержит коллекцию **HierarchyInfo** элементов, , в сочетании со значением **имя** атрибут представляет определение одной оси, возвращаемых в многомерном наборе данных.  
   
-## <a name="see-also"></a>См. также  
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

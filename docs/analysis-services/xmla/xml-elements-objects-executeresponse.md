@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 30e63e8275c018eeef7603b46170709770e5cb09
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a1ff44c8e2fb23e40aac30e70c73b4d260145bfd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576286"
 ---
 # <a name="xml-elements---objects---executeresponse"></a>ExecuteResponse элементов - объектов - XML
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Содержит информацию, возвращаемую экземпляром служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в ответ на [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) вызова метода.  
+  Содержит информацию, возвращаемую экземпляром служб Analysis Services в ответ на [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) вызова метода.  
   
  **Пространство имен** urn:schemas-microsoft-com:xml-analysis  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/10/2018
 ## <a name="remarks"></a>Примечания  
  **ExecuteResponse** элемент является элементом верхнего уровня в тексте ответа SOAP для **Execute** метод.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
  [Элемент DiscoverResponse &#40;XML для Аналитики&#41;](../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)   
  [Объекты &#40;XML для Аналитики&#41;](../../analysis-services/xmla/xml-elements-objects.md)  
   

@@ -1,30 +1,20 @@
 ---
 title: Соглашения о синтаксисе многомерных Выражений (MDX) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Multidimensional Expressions [Analysis Services], syntax
-- MDX [Analysis Services], syntax
-ms.assetid: 50a6e723-91c4-407b-a0d5-87d0d4e4e0f6
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f916008b155c8fd8c70ed239d23fbca2753ff0f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 4bcf7e11254db3219f8f39c9c4d9d6f00eddf9a5
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580906"
 ---
 # <a name="mdx-syntax-conventions-mdx"></a>Синтаксические соглашения в многомерных выражениях (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 |\<label> ::=|Имя синтаксического блока. Это обозначение используется для группирования и именования длинных фрагментов синтаксиса или синтаксических блоков, которые могут использоваться в нескольких местах внутри инструкции. Каждое место, в котором используется этот синтаксический блок, обозначается меткой, заключенной в угловые скобки: \<метка >.|  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по языку многомерных Выражений & #40; Многомерные Выражения & #41;](../mdx/mdx-language-reference-mdx.md)  
+ [Справочник по языку многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
 

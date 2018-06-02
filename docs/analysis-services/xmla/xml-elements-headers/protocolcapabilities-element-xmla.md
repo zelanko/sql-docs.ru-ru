@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 29ad501e7a29e77c1f6b1ed04e497c2881b9a7d0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 85ddeb22fac03e5ae7f66521ac3ca8a46e210fe7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574786"
 ---
 # <a name="protocolcapabilities-element-xmla"></a>Элемент ProtocolCapabilities (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Использует заголовок SOAP в сообщении SOAP-запроса для определения возможностей протокола между экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и клиентским приложением.  
+  Использует заголовок SOAP в сообщении SOAP-запроса для определения возможностей протокола между экземпляром служб Analysis Services и клиентским приложением.  
   
  **Пространство имен** `http://schemas.microsoft.com/analysisservices/2003/engine`  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/10/2018
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -71,8 +72,8 @@ ms.lasthandoff: 05/10/2018
   
  Возможности протокола не обязательно согласовывать явно. То есть клиентскому приложению не обязательно включать элемент **ProtocolCapabilities** , как часть запроса. Если запрос SOAP не включает **ProtocolCapabilities** элемент, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляр отвечает, используя тот же формат запроса SOAP.  
   
-## <a name="see-also"></a>См. также  
- [Управление & #40; соединений и сеансов XML для Аналитики & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [Заголовки & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
+## <a name="see-also"></a>См. также
+ [Управление соединениями и сеансами &#40;XML для Аналитики&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [Заголовки &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   

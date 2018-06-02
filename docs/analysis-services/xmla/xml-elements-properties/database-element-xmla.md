@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f874d72700646456fa046b820f0fdf29e4738d58
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2c56749bab8c2318d0394ceca1b11d371fa6d23d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573566"
 ---
 # <a name="database-element-xmla"></a>Элемент Database (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/10/2018
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|Строковые значения|  
+|Тип данных и длина|String|  
 |Значение по умолчанию|None|  
 |Количество элементов|1-1: обязательный элемент, который встречается ровно один раз.|  
   
@@ -48,9 +49,9 @@ ms.lasthandoff: 05/10/2018
 ## <a name="remarks"></a>Примечания  
  **Базы данных** элемент представляет собой идентификатор объекта, который содержит имя базы данных служб Analysis Services, которая содержит измерение, представленное **объекта** элемент.  
   
-## <a name="see-also"></a>См. также  
- [Элемент CUBE & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/cube-element-xmla.md)   
- [Элемент измерения & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/dimension-element-xmla.md)   
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Куб элемент &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/cube-element-xmla.md)   
+ [Элемент измерения &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/dimension-element-xmla.md)   
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b51ada71b3460e43090cae6c833cb7fb24344199
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fecd3b679f69166d8a9946372ba58d95e79c9f3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575066"
 ---
 # <a name="clearcache-element-xmla"></a>Элемент ClearCache (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Очищает кэш памяти для заданного объекта в экземпляре служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
+  Очищает кэш памяти для заданного объекта в экземпляре служб Analysis Services.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/10/2018
 ## <a name="remarks"></a>Примечания  
  **ClearCache** команда очищает кэш для указанной базы данных, измерения, куба, группы мер или секции на [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра. Если в элементе **Object** задан объект, не являющийся базой данных, измерением, кубом, группой мер или секцией, возвращается ошибка.  
   
-## <a name="see-also"></a>См. также  
- [Команды & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>См. также
+ [Команды &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

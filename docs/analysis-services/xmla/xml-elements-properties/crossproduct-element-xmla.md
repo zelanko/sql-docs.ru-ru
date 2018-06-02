@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 07e34958589bd9366cda6b42207c289bfda72453
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2b2c5b195e2bc95d95a555557accd481aa9836f7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574766"
 ---
 # <a name="crossproduct-element-xmla"></a>Элемент CrossProduct (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,12 +45,12 @@ ms.lasthandoff: 05/10/2018
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительские элементы|[Оси](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|Родительские элементы|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
 |Дочерние элементы|[Члены](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)|  
   
 ## <a name="attributes"></a>Атрибуты  
   
-|Attribute|Описание|  
+|attribute|Описание|  
 |---------------|-----------------|  
 |Размер|Требуется **целое** атрибута. Указывает число кортежей, содержащихся в перекрестное произведение, представленного **CrossProduct** элемента.|  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 05/10/2018
 </Axes>  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 56a48ffaf6d290d99503d7c8e1018f17e8d99a33
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6c47a3c1a297bd636c64e52fcb83fda6a2b7bad5
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574936"
 ---
 # <a name="xml-elements---methods---execute"></a>Элементы XML - методы — выполнение
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Отправляет XML для аналитики (XMLA) команды для экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Сюда входят запросы, связанные с передачей данных, например извлечение или обновление данных на сервере.  
+  Отправляет XML для аналитики (XMLA) команды к экземпляру служб Analysis Services. Сюда входят запросы, связанные с передачей данных, например извлечение или обновление данных на сервере.  
   
  **Пространство имен** urn:schemas-microsoft-com:xml-analysis  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/10/2018
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительский элемент|Нет|  
+|Родительский элемент|None|  
 |Дочерние элементы|[Команда](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md), [параметры](../../analysis-services/xmla/xml-elements-properties/parameters-element-xmla.md), [свойства](../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
@@ -73,11 +74,11 @@ ms.lasthandoff: 05/10/2018
 </Execute>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Типы данных XML & #40; XML для Аналитики & #41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
+## <a name="see-also"></a>См. также
+ [Типы данных XML &#40;XML для Аналитики&#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
  [Метод Discover &#40;XML для Аналитики&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
  [Методы &#40;XML для Аналитики&#41;](../../analysis-services/xmla/xml-elements-methods.md)   
- [XML-элементы & #40; XML для Аналитики & #41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
- [Службы Analysis Services наборы строк схемы](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
+ [XML-элементы &#40;XML для Аналитики&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
+ [Наборы строк схемы служб Analysis Services](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

@@ -1,31 +1,20 @@
 ---
 title: LastPeriods (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- LASTPERIODS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- LastPeriods function
-ms.assetid: a15df7a1-b261-48ed-aacc-d2804db8dbf7
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 35d093cbb4fea7cf02aef5835afc300f8cf74698
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 102382bf2acc2300d5862b48c5341c218e785275
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578986"
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ LastPeriods(Index [ ,Member_Expression ] )
  *Member_Expression.*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если указанное число периодов положительно, **LastPeriods** функция возвращает набор элементов, которые начинаются с элемента, отстающего *индекс* -1 от указанного выражения элемента и заканчивается указанным элементом. Число элементов, возвращаемых функцией равно *индекса*.  
   
  Если число периодов отрицательно, **LastPeriods** функция возвращает набор, начинающийся с указанного элемента и заканчивающийся элементом (- *индекс* - 1) из заданного элемента. Число элементов, возвращаемых функцией равно абсолютное значение *индекса*.  
@@ -78,6 +67,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

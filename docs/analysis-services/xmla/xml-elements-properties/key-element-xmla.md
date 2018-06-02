@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3971abfd4c5bbcc90d43d0f427353f24967b0c5d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bea00c5b5fdff010d667db19ef3af28284ce3ed9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575786"
 ---
 # <a name="key-element-xmla"></a>Элемент Key (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,17 +46,17 @@ ms.lasthandoff: 05/10/2018
 |Родительские элементы|[Ключи](../../../analysis-services/xmla/xml-elements-properties/keys-element-xmla.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используемый этим элементом тип данных должен соответствовать типу данных надлежащего ключевого столбца указанного атрибута. Если для родителя **Key** элементы **Attribute** не указаны, то для определения модифицируемых элементов атрибута используются элементы **AttributeName** и **Name** , указанные в родительском элементе **Attribute** .  
   
-## <a name="see-also"></a>См. также  
- [Элемент Attribute & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)   
- [Элемент AttributeName & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/attributename-element-xmla.md)   
- [Удалить элемент & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
- [Вставить элемент & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Элемент KeyColumn & #40; ASSL & #41;](../../../analysis-services/scripting/objects/keycolumn-element-assl.md)   
- [Обновить элемент & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
- [Где элемент & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)   
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Атрибут элемента &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)   
+ [Элемент AttributeName &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/attributename-element-xmla.md)   
+ [Элемент DROP &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
+ [Элемент INSERT &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+ [Элемент KeyColumn &#40;ASSL&#41;](../../../analysis-services/scripting/objects/keycolumn-element-assl.md)   
+ [Элемент Update &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [Когда элемент &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)   
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

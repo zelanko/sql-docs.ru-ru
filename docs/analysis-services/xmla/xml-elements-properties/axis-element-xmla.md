@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bbe1d450abcabcfd5c438ce8c733db67e6e65cc0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 50d2694db85b1391602c6f8d9d9307da4e79b65b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574426"
 ---
 # <a name="axis-element-xmla"></a>Элемент Axis (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/10/2018
 |Иерархия **Time**|1999|1999|2000|  
 |Иерархия **Category**|Actual|Budget|Budget|  
   
-### <a name="code"></a>код  
+### <a name="code"></a>Код  
   
 ```  
 <Axes>  
@@ -123,7 +124,7 @@ ms.lasthandoff: 05/10/2018
 |Иерархия **Category**|Actual|Budget|Budget|Budget|  
 |Clusters|Кластер 1|Кластер 1|Кластер 1|Кластер 2|  
   
-### <a name="code"></a>код  
+### <a name="code"></a>Код  
   
 ```  
 <Axes>  
@@ -169,7 +170,7 @@ ms.lasthandoff: 05/10/2018
 </Axes>  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

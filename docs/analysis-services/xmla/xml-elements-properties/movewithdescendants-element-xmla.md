@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 34ea88c2aee76684c3876195bda9b1f2633bab3a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 518c95efa36c6a234036a1c7f293c3df8283749a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575736"
 ---
 # <a name="movewithdescendants-element-xmla"></a>Элемент MoveWithDescendants (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,9 +35,9 @@ ms.lasthandoff: 05/10/2018
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|Boolean|  
+|Тип данных и длина|Логическое значение|  
 |Значение по умолчанию|False|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/10/2018
   
  Дополнительные сведения об обновлении элементов см. в разделе [Вставка, обновление и удаление членов &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
-## <a name="see-also"></a>См. также  
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

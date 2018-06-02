@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 01f1bfbd4565c42f4867a781b8f4502ede3a09f4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ab164b2326cedfaf32100d7354f40684c41a8255
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574126"
 ---
 # <a name="celldata-element-xmla"></a>Элемент CellData (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,12 +45,12 @@ ms.lasthandoff: 05/10/2018
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[корень](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
-|Дочерние элементы|[Ячейки](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)|  
+|Дочерние элементы|[Cell](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
  В родительском корневом элементе, за элементом **Axes** следует элемент **CellData** , коллекция элементов **Cell** , которая содержит значения свойств ячейки для каждой ячейки, возвращенной в многомерном наборе данных.  
   
-## <a name="see-also"></a>См. также  
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

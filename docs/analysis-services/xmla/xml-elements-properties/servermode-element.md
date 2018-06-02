@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bcbd6e0315fc8a418ccff20fe5c2a69eebe4490b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 21e9344ef945311b3af07398e6e927482718f5ff
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576266"
 ---
 # <a name="servermode-element"></a>Элемент ServerMode
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/10/2018
 |*Табличные*|Табличный режим|  
 |*SharePoint*|Режим интеграции с SharePoint|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
  [Server](../../../analysis-services/scripting/objects/server-element-assl.md)  
   
   

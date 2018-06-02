@@ -1,31 +1,20 @@
 ---
 title: EXCEPT (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- EXCEPT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Except function
-ms.assetid: 5d832c82-1e6d-4308-9c26-7edb8afe11dd
-caps.latest.revision: 37
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a918ebbed1b43dae8ad8e8aacb634f3b37781163
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 9ec5eba8f7df7fa7aabd65479fcf08ee7afec9c7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578296"
 ---
 # <a name="except-mdx-function"></a>EXCEPT, функция (многомерные Выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ Except(Set_Expression1, Set_Expression2 [, ALL ] )
  *Set_Expression2*  
  Допустимое многомерное выражение, возвращающее набор.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если **все** будет указано, функция сохраняет повторяющиеся значения, обнаруженные в первом наборе; повторяющиеся значения из второго набора удаляются. Функция возвращает элементы в порядке их следования в первом наборе.  
   
 ## <a name="examples"></a>Примеры  
@@ -70,6 +59,6 @@ WHERE
   
 ## <a name="see-also"></a>См. также  
  [- &#40;За исключением&#41; &#40;многомерных Выражений&#41;](../mdx/except-mdx-operator.md)   
- [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

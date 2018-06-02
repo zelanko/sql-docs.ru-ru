@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9afae9806592f09ebc32611d4566d7c67e65d743
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5ade8d12812212193a082afddf1504eebadb270e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575056"
 ---
 # <a name="committransaction-element-xmla"></a>Элемент CommitTransaction (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Фиксирует транзакцию в текущем сеансе с [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра.  
+  Фиксирует транзакцию в текущем сеансе с экземпляром служб Analysis Services.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,10 +47,10 @@ ms.lasthandoff: 05/10/2018
 ## <a name="remarks"></a>Примечания  
  Команда **CommitTransaction** фиксирует активную транзакцию, явно определенную с использованием элемента **BeginTransaction** в текущем сеансе. Если еще не существует активной транзакции, возникает ошибка. Если активная транзакция уже существует, то в экземпляре служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] уменьшается количество ссылок на транзакции для текущего сеанса. Если количество ссылок на явно определенные активные транзакции достигает нуля, в экземпляре служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] фиксируется соответствующая транзакция.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
  [Элемент BeginTransaction &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)   
  [Элемент Cancel &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)   
  [Элемент RollbackTransaction &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/rollbacktransaction-element-xmla.md)   
- [Команды & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+ [Команды &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

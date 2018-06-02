@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5ade2d80141163c3a2cb0effb805f82ee837390c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c0686dfbb5949c9b2fe3a20e34824e731369b266
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575816"
 ---
 # <a name="name-element-xmla"></a>Элемент Name (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,14 +35,14 @@ ms.lasthandoff: 05/10/2018
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|Строковые значения|  
+|Тип данных и длина|String|  
 |Значение по умолчанию|None|  
 |Количество элементов|См. таблицу ниже.|  
   
 |Предок или родитель|Количество элементов|  
 |------------------------|-----------------|  
-|[Атрибут](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)|1-1: обязательный элемент, который встречается ровно один раз.|  
-|[Перевод](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)|0—1: необязательный элемент, который может появляться только один раз.|  
+|[Attribute](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)|1-1: обязательный элемент, который встречается ровно один раз.|  
+|[Перевод](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -55,10 +56,10 @@ ms.lasthandoff: 05/10/2018
   
  Для **перевода** элементов, **имя** элемент содержит заголовок элемента атрибута, в языке, указанном в **язык** родителя **Перевод** объекта. Если **имя** элемент не указан или является пустой строкой, значение **имя** элемент для **атрибута** элемент, содержащий  **Перевод** используется элемент.  
   
-## <a name="see-also"></a>См. также  
- [Вставить элемент & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+## <a name="see-also"></a>См. также
+ [Элемент INSERT &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
  [Элемент языка &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/language-element-xmla.md)   
- [Обновить элемент & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Элемент Update &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

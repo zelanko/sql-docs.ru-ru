@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b13cf011fda2d72b2c013da53753cf34238f46b5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 33e81bd76e7f900a396b1f9bfbae808092a2877e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575086"
 ---
 # <a name="backupremotepartitions-element-xmla"></a>Элемент BackupRemotePartitions (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,9 +35,9 @@ ms.lasthandoff: 05/10/2018
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|Boolean|  
+|Тип данных и длина|Логическое значение|  
 |Значение по умолчанию|False|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -46,11 +47,11 @@ ms.lasthandoff: 05/10/2018
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Если элемент **BackupRemotePartitions** имеет значение **True**, в команду **Locations** должен включаться элемент **Location** , содержащий один или несколько элементов **Backup** , иначе возникает ошибка. Дополнительные сведения о резервном копировании и восстановлении удаленных секций см. в разделе [резервное копирование, восстановление и синхронизация баз данных & #40; XML для Аналитики & #41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Если элемент **BackupRemotePartitions** имеет значение **True**, в команду **Locations** должен включаться элемент **Location** , содержащий один или несколько элементов **Backup** , иначе возникает ошибка. Дополнительные сведения о резервном копировании и восстановлении удаленных секций см. в разделе [резервное копирование, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
  [Элемент Locations &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md)   
  [Элемент Location &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)   
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
