@@ -1,31 +1,20 @@
 ---
 title: DrilldownMember (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DRILLDOWNMEMBER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DrilldownMember function
-ms.assetid: 765f2fc7-0baa-428b-864a-22c9f3113083
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 05187989fb551e43bbf089c5944c9330f04dad11
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 9f50d68c383f758bfa75d8fd50964eaaf8c89fa4
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578066"
 ---
 # <a name="drilldownmember-mdx"></a>DrilldownMember (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +46,7 @@ DrillDownMember(<Set_Expression1>, <Set_Expression2> [,[<Target_Hierarchy>]] [,[
  *Include_Calc_Members*  
  Ключевое слово, позволяющее включать вычисляемые элементы в результаты углубленной детализации.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Эта функция возвращает набор дочерних элементов, упорядоченных по иерархии, который включает элементы, указанные в первом наборе, которые также присутствуют во втором наборе. Детализация родительских элементов не производится, если первый набор содержит родительский элемент и один или несколько дочерних элементов. Первый набор может иметь любую размерность, но второй набор должен быть одномерным. Порядок следования исходных элементов первого набора сохраняется, однако все дочерние элементы, входящие в результирующий набор функции, следуют непосредственно за своим родительским элементом. Функция создает результирующий набор, извлекая потомков каждого элемента первого набора, присутствующих во втором наборе. Если **РЕКУРСИВНЫЕ** указано, функция продолжает рекурсивно сравнивать элементы результирующего набора со вторым набором, извлекая потомков каждого элемента результирующего набора, присутствующих во втором наборе, пока не больше из результирующего набора можно будет найти элементы во втором наборе.  
   
  Запрос свойства XMLA **MdpropMdxDrillFunctions** позволяет проверить уровень поддержки, обеспечиваемой сервером для функций детализации; см. раздел [поддерживаемые свойства XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)подробные сведения.  
@@ -93,6 +82,6 @@ SELECT DrilldownMember
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

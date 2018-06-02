@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5705cda42aa49ad565b320bc13e38b57675b126d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e8c0cc23eb76d3da97aadbb9a1738580ebdbc62f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576786"
 ---
 # <a name="olapinfo-element-xmla"></a>Элемент OlapInfo (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/10/2018
 ## <a name="remarks"></a>Примечания  
  **OLAPInfo** раздел **корневой** элемента с помощью **MDDataSet** тип данных содержит метаданные о кубе, осях многомерного результата, и свойства ячеек, включенных в результат.  
   
-## <a name="see-also"></a>См. также  
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

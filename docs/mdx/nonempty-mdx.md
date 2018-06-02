@@ -1,29 +1,20 @@
 ---
 title: NonEmpty (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- NonEmpty function
-ms.assetid: dfbfa747-3175-405c-aa5b-15c187b06338
-caps.latest.revision: 17
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a568734c2e46b3653a5b2c38491dc5a362aeb252
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 4a718a7e75a9b31b7d35cdc33883c97739aee68c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580286"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +35,7 @@ NONEMPTY(set_expression1 [,set_expression2])
  *set_expression2*  
  Допустимое многомерное выражение, возвращающее набор.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Эта функция возвращает непустые кортежи из первого заданного кортежа, полученные с учетом кортежей второго набора. **NonEmpty** функция отслеживает вычисления и сохраняет повторяющиеся кортежи. Если второй набор не предоставлен, выражение рассматривается в контексте текущих координат элементов иерархий атрибута и мер в кубе.  
   
 > [!NOTE]  
@@ -98,9 +89,9 @@ NONEMPTY(set_expression1 [,set_expression2])
   
 ## <a name="see-also"></a>См. также  
  [DefaultMember &#40;многомерных Выражений&#41;](../mdx/defaultmember-mdx.md)   
- [Фильтр & #40; Многомерные Выражения & #41;](../mdx/filter-mdx.md)   
+ [Фильтр &#40;многомерных Выражений&#41;](../mdx/filter-mdx.md)   
  [IsEmpty &#40;многомерных Выражений&#41;](../mdx/isempty-mdx.md)   
- [Справочник по функциям многомерных Выражений & #40; Многомерные Выражения & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)   
  [NonEmptyCrossjoin &#40;многомерных Выражений&#41;](../mdx/nonemptycrossjoin-mdx.md)  
   
   

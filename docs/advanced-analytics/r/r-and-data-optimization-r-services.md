@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 98605a5eb5291444e0bd46d64bd3b84ab7c1b008
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5a30ff30651bacde42c60a1e0b265105e3c932e3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563762"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Производительность служб R - оптимизация данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="factors"></a>Факторы
 
-Язык R использует концепцию «факторов», которые являются специальная переменная для категориальных данных. Специалисты по анализу данных часто коэффициент переменные используются в формуле их, так как обработка категориальные переменные как факторы, гарантирует, что данные обрабатываются правильно машины обучения функции. Дополнительные сведения см. в разделе [R для «чайников»: переменные коэффициент] (http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
+Язык R использует концепцию «факторов», которые являются специальная переменная для категориальных данных. Специалисты по анализу данных часто коэффициент переменные используются в формуле их, так как обработка категориальные переменные как факторы, гарантирует, что данные обрабатываются правильно машины обучения функции. Дополнительные сведения см. в разделе [R для «чайников»: переменные коэффициент](http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
 
 Разработчиками предусмотрено коэффициент переменные можно преобразовать из строк целых чисел и обратно снова для хранения и обработки. R `data.frame` функция обрабатывает все строки как переменные коэффициент, если аргумент *stringsAsFactors* равно **False**. Это означает, что строки автоматически преобразуется в целое число для обработки и затем сопоставляются с исходной строки.
 

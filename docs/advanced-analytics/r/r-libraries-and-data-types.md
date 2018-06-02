@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56a3bc495fa6541208a094f82ede9a43b4021c23
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d06f34210f5ec4aee741d3f3a70a01f60f10fb98
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586046"
 ---
 # <a name="r-libraries-and-r-data-types"></a>Библиотеки R и типами данных R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/16/2018
 
 Версии R, включенных в определенной версии Microsoft R Server, в разделе [R Server — новые](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
 
-Обратите внимание, что означает, что несколько версий пакет R можно установить на том же компьютере с несколькими пользователями, совместное использование того же пакета, или с использованием разных версий одного пакета, система управления пакетами в SQL Server. Дополнительные сведения см. в разделе [управления пакета R в SQL Server](../r/r-package-management-for-sql-server-r-services.md).
+Обратите внимание, что означает, что несколько версий пакет R можно установить на том же компьютере с несколькими пользователями, совместное использование того же пакета, или с использованием разных версий одного пакета, система управления пакетами в SQL Server. Дополнительные сведения см. в разделе [управления пакета R в SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 ## <a name="r-and-sql-data-types"></a>Типы данных SQL и R
 
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/16/2018
 |-|-|-|-|
 |**bigint**|`numeric`|**float**||
 |**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Может использоваться только для входных параметров и выходных данных|
-|**бит**|`logical`|**бит**||
+|**bit**|`logical`|**bit**||
 |**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
 |**datetime**|`POSIXct`|**datetime**|Указывается в формате GMT|
 |**date**|`POSIXct`|**datetime**|Указывается в формате GMT|
@@ -166,7 +167,7 @@ outputDataSet <- inputDataSet'
   
 -   **Столбец C2**. В **ssNoversion** этот столбец имеет тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в R — `factor` , а в выходном наборе данных — **varchar(max)** .  
   
-     Обратите внимание, что тип выходных данных изменился. Любая строка из R (фактор или обычная строка) будет представлена как **varchar(max)**вне зависимости от длины строки.  
+     Обратите внимание, что тип выходных данных изменился. Любая строка из R (фактор или обычная строка) будет представлена как **varchar(max)** вне зависимости от длины строки.  
   
 -   **Столбец C3**.  В **ssNoversion** этот столбец имеет тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в R — `character` , а в выходном наборе данных — **varchar(max)** .
   

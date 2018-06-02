@@ -24,16 +24,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 559aea789fd19fcbbe11fea0868f77c0fdd8b90c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: fb0db9ea7c4d58fdecf8ef4973e4d8f971ebb3d3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34553806"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  Возвращает текущую активность ввода-вывода низкого уровня, блокировки, кратковременной блокировки и метода доступа для каждой секции таблицы или индекса в базе данных.    
+  Возвращает текущую ввода-вывода более низкого уровня, блокировки, кратковременной блокировки и метода доступа для каждой секции таблицы или индекса в базе данных.    
     
  Индексы с оптимизацией для памяти в данном DMV не отображаются.    
     
@@ -175,7 +176,7 @@ sys.dm_db_index_operational_stats (
 ## <a name="column-remarks"></a>Примечания по столбцам    
  Значения в **lob_orphan_create_count** и **lob_orphan_insert_count** всегда должны быть равны.    
     
- Значение в столбцах **lob_fetch_in_pages** и **lob_fetch_in_bytes** может быть больше нуля для некластеризованных индексов, содержащих один или несколько столбцов LOB как включенные столбцы. Дополнительные сведения см. в статье [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md). Аналогичным образом, значения в столбцах **row_overflow_fetch_in_pages** и **row_overflow_fetch_in_bytes** может быть больше 0 для некластеризованных индексов, если индекс содержит столбцы, которые могут быть принудительно отправлены вне строки.    
+ Значение в столбцах **lob_fetch_in_pages** и **lob_fetch_in_bytes** может быть больше нуля для некластеризованных индексов, содержащих один или несколько столбцов LOB как включенные столбцы. Дополнительные сведения см. в статье [Создание индексов с включенными столбцами](../../relational-databases/indexes/create-indexes-with-included-columns.md). Аналогичным образом, значения в столбцах **row_overflow_fetch_in_pages** и **row_overflow_fetch_in_bytes** может быть больше 0 для некластеризованных индексов, если индекс содержит столбцы, которые могут быть принудительно отправлены вне строки.    
     
 ## <a name="how-the-counters-in-the-metadata-cache-are-reset"></a>Переустановка счетчиков в кэше метаданных    
  Данные, возвращенные **sys.dm_db_index_operational_stats** существует только при условии, что объект кэша метаданных, представляющий кучу или индекс доступен. Эти данные не являются постоянными и не согласованы на уровне транзакций. Это означает, что эти счетчики не позволяют определить факт использования индекса или время, когда индекс применялся последний раз. Сведения об этом см. в разделе [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md).    
@@ -241,7 +242,7 @@ GO
 ## <a name="see-also"></a>См. также    
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
  [Динамические административные представления и функции, связанные с индексами &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
  [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
  [sys.dm_os_latch_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     

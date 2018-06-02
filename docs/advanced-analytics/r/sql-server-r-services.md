@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24ef28cd5bfb8e09e3f0ac7dbfe46b5838ce029c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 559309a29944f20f8c006ccc92769f0b2824e3b3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585966"
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQL Server машинного обучения и служб R (в базе данных)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -124,8 +125,8 @@ SQL Server 2016 — R только. SQL Server 2017 поддерживает R 
 **Ресурсы**
 
 + [Управление ресурсами для R](resource-governance-for-r-services.md)
-+ [Управление пакетами R для SQL Server](r-package-management-for-sql-server-r-services.md)
++ [Управление пакетами R для SQL Server](install-additional-r-packages-on-sql-server.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
  [SQL Server машинного обучения и R Server (изолированный)](sql-server-r-services.md)

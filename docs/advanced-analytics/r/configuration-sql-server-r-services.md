@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0b524e7e9fb24ff0296fc0e70c8bb8a462f3d199
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b24832c8debe12c11aaa337e9558d99e7fae5ae0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585506"
 ---
 # <a name="configure-and-manage-machine-learning-components-in-sql-server"></a>Настройка и управление ими компонентов машины обучения в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/16/2018
 
 Эти статьи описывается, как установить новый R-пакеты на экземпляре SQL Server, управление библиотеками пакет R и восстановление библиотеки пакета после восстановления базы данных.
 
-+ [Установка пакетов R и управление ими](installing-and-managing-r-packages.md)
++ [По умолчанию R и Python пакетов в SQL Server](installing-and-managing-r-packages.md)
 + [Установка нового R-пакеты](install-additional-r-packages-on-sql-server.md)
 + [Включение пакета управления для экземпляра с помощью ролей базы данных](r-package-how-to-enable-or-disable.md)
 + [Создание локального репозитория пакетов с помощью miniCRAN](create-a-local-package-repository-using-minicran.md)

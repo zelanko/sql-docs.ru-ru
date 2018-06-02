@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 577d5266c98211949db8d1992bf559161d8ee97d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 23fed22efe90a91905c4b36c967ad5fa72717b3f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585876"
 ---
 # <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>Установка SQL Server 2017 г. машинного самообучения, службы (в базе данных) в Windows 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -301,7 +302,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 Пакеты, которыми вы хотите пользоваться из SQL Server, должны быть установлены в библиотеке по умолчанию, используемой экземпляром. Если имеется отдельная Установка служб R на компьютере или установленных пакетов для библиотек пользователей, его нельзя будет использовать эти пакеты из T-SQL.
 
-Процесс установки пакетов и управления ими R отличается в SQL Server 2016 и 2017 г. SQL Server. В SQL Server 2016 администратор базы данных необходимо установить пакеты R, которые нужны пользователю. В SQL Server 2017 г можно настроить группы пользователей для совместного использования пакетов на уровне каждой базы данных или настроить роли базы данных, чтобы пользователи могли установить собственные пакеты. Дополнительные сведения см. в разделе [пакета управления](../r/r-package-management-for-sql-server-r-services.md).
+Процесс установки пакетов и управления ими R отличается в SQL Server 2016 и 2017 г. SQL Server. В SQL Server 2016 администратор базы данных необходимо установить пакеты R, которые нужны пользователю. В SQL Server 2017 г можно настроить группы пользователей для совместного использования пакетов на уровне каждой базы данных или настроить роли базы данных, чтобы пользователи могли установить собственные пакеты. Дополнительные сведения см. в разделе [установить новые пакеты R в SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 
 ## <a name="get-help"></a>Получить справку

@@ -1,29 +1,20 @@
 ---
 title: Если инструкция (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- statements [MDX], IF
-ms.assetid: 8830cce5-9e06-4f89-a555-295bb0d0a8a1
-caps.latest.revision: 13
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: ffe88aae91e19f0f4e55d104a323870caf4e67b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e7426c609de80ab249cd71e4364979ff07165598
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579866"
 ---
 # <a name="mdx-scripting---if"></a>Скрипты многомерных Выражений: Если
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +35,7 @@ IF expression THEN assignment END IF
  *Назначение*  
  Многомерное выражение, присваивающее значение вложенному кубу или вычисляемому свойству.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте инструкцию IF для потока управления, который в отличие от [IIf &#40;многомерных Выражений&#41; ](../mdx/iif-mdx.md) функции и [инструкции CASE &#40;многомерных Выражений&#41; ](../mdx/case-statement-mdx.md) , может использоваться только для возвращения значений или объектов.  
   
 ## <a name="examples"></a>Примеры  
@@ -57,6 +48,6 @@ IF expression THEN assignment END IF
  `END SCOPE`;  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

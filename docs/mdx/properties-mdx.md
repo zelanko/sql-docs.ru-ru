@@ -1,31 +1,20 @@
 ---
 title: Свойства (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Properties
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Properties function
-ms.assetid: 2d8442c5-30c4-4fd1-99ea-9845b6533e41
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 17d866d9a98c4ca7cc3fb3ce4586e54ab0439d72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b564d11696999ec2dbd778d15a3e881cab415259
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581136"
 ---
 # <a name="properties-mdx"></a>Properties (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  *Property_name*  
  Допустимое строковое выражение, обозначающее имя свойства элемента.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **Свойства** функция возвращает значение указанного элемента для указанного свойства элемента. Свойство элемента может быть любой внутренние свойства элементов, таких как **имя**, **идентификатор**, **ключ**, или **заголовок**, или он может быть свойством определяемого пользователем элемента. Дополнительные сведения см. в разделе [внутренние свойства элементов &#40;многомерных Выражений&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) и [определяемые пользователем свойства элементов &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
   
  По умолчанию значение приводится к строке. Если **ТИПИЗИРОВАННОГО** указан, возвращаемое значение является типобезопасным.  
@@ -117,7 +106,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [С помощью свойства элементов & #40; Многомерные Выражения & #41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Использование свойств элементов &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

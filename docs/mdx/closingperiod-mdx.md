@@ -1,31 +1,20 @@
 ---
 title: ClosingPeriod (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CLOSINGPERIOD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- ClosingPeriod function
-ms.assetid: ae709017-219d-43e1-a98a-a85bd365b4cd
-caps.latest.revision: 37
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 43094cc0934c516a871e249fd9bbdc22d0c4bf12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 3d082ec7958ab1b29b5b42108d6f9c5c78fc3470
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577366"
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression.*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Эта функция прежде всего предназначена для использования в измерении времени, но может быть использована и для других измерений.  
   
 -   Если выражение уровня указано, **ClosingPeriod** функция использует измерение, содержащее заданный уровень и возвращает последнего родственника из потомков элемента по умолчанию на заданном уровне.  
@@ -93,7 +82,7 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>См. также  
  [OpeningPeriod &#40;многомерных Выражений&#41;](../mdx/openingperiod-mdx.md)   
- [Справочник по функциям многомерных Выражений & #40; Многомерные Выражения & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)   
  [LastSibling &#40;многомерных Выражений&#41;](../mdx/lastsibling-mdx.md)  
   
   

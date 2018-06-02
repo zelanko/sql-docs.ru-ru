@@ -1,31 +1,20 @@
 ---
 title: NonEmptyCrossjoin (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- NONEMPTYCROSSJOIN
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- NonEmptyCrossjoin function
-ms.assetid: 3dc9522d-9126-4f7a-b587-216fa7a06c62
-caps.latest.revision: 33
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 13cef2dd7887a6a1cd595f29524a4ff9b97dcf03
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 5d77262ce3f6cf4f9e9cb1720d42b1bcbd85f31f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580686"
 ---
 # <a name="nonemptycrossjoin-mdx"></a>NonEmptyCrossjoin (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,10 +35,10 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
  *Set_Expression2*  
  Допустимое многомерное выражение, возвращающее набор.  
   
- *Count*  
+ *Счетчик*  
  Допустимое числовое выражение, указывающее количество наборов, которые необходимо вернуть.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **NonEmptyCrossjoin** функция возвращает перекрестное произведение двух или более множеств в виде одного множества, исключая пустые кортежи и кортежи без данных, предоставленных базовым таблицам фактов. Специфика **NonEmptyCrossjoin** работы функции все вычисляемые элементы автоматически исключаются.  
   
  Если *число* не указан, функция выполняет перекрестное соединение всех указанных наборов и исключает из полученного набора пустые элементы. В противном случае функция выполняет перекрестное соединение указанного количества наборов, начиная с первого. **NonEmptyCrossjoin** функция использует остальные наборы, которые заданы в последующих указанных наборов, но которые не были перекрестного присоединены, чтобы определить, какие непустых элементов в результирующем наборе перекрестного соединения. **NonEmptyCrossjoin** функции отношениях **NON_EMPTY_BEHAVIOR** Задание вычисляемых мер.  
@@ -58,6 +47,6 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
 >  Эта функция устарела, использовать ее не следует. Она сохранена только для поддержки обратной совместимости. Вместо этого следует использовать [Exists (многомерные Выражения)](../mdx/exists-mdx.md) функцию с аргументом имя группы мер или [NonEmpty (многомерные Выражения)](../mdx/nonempty-mdx.md) функции.  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

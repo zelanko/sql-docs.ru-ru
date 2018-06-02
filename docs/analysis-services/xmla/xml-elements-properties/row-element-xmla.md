@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 78539bfa16bfca56cbac10a4d1d9a793f685a333
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 84cf252303832ed157981103ffaede9718949e16
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576216"
 ---
 # <a name="row-element-xmla"></a>Элемент row (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Содержит единственную строку данных для элемента [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) , содержащего табличные данные, возвращаемые методом [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) или [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) .  
+  Содержит одну строку данных для [корневой](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) элемент, который содержит табличные данные, возвращенные [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) или [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) вызова метода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/10/2018
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительские элементы|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) (с помощью типа данных [Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) )|  
+|Родительские элементы|[корневой](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) (с помощью [строк](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) тип данных)|  
 |Дочерние элементы|Один или несколько элементов столбца.|  
   
 ## <a name="remarks"></a>Примечания  
@@ -81,9 +82,9 @@ ms.lasthandoff: 05/10/2018
 </row>  
 ```  
   
- Дополнительные сведения об именовании столбцов и сведения о схеме для табличных данных см. в разделе [Rowset, тип данных & #40; XML для Аналитики & #41; ](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
+ Дополнительные сведения об именовании столбцов и сведения о схеме для табличных данных см. в разделе [Rowset, тип данных &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
   
-## <a name="see-also"></a>См. также:  
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

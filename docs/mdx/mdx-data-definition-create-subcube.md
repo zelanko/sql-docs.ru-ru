@@ -1,35 +1,20 @@
 ---
 title: Инструкция CREATE SUBCUBE (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE_SUBCUBE
-- CREATE SUBCUBE
-- CREATE
-- SUBCUBE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- subcubes [MDX]
-- CREATE SUBCUBE statement
-ms.assetid: 15b6ac4c-b68a-4f9f-b33c-f5f7c4a74535
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 364bf7fe910e5073130bef1a75d88bfa560dd9f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 730d6f3b1445017cc1b1988c49bda176c6ba4ced
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580746"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Определения данных многомерных Выражений — Создание вложенного КУБА
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +38,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  В разделе [инструкции SELECT &#40;многомерных Выражений&#41; ](../mdx/mdx-data-manipulation-select.md) для подробные сведения о синтаксисе инструкций Select и **НЕВИЗУАЛЬНЫЕ** предложения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если элементы по умолчанию исключаются из определения вложенного куба, то координаты изменяются соответствующим образом. Для атрибутов, которые могут быть статистически вычислены, элемент по умолчанию перемещается в элемент [Все]. Для атрибутов, которые не могут быть статистически вычислены, элемент по умолчанию перемещается в элемент, существующий во вложенном кубе. В следующей таблице приведен пример вложенного куба и комбинаций элемента по умолчанию.  
   
 |Исходный элемент по умолчанию|Статистически вычисляемый|Подзапрос выборки|Измененный элемент по умолчанию|  
@@ -107,7 +92,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
 |||||  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
+||Все продукты|Accessories|Clothing|  
 |All Resellers|$2,031,079.39|$ 506 172,45|$ 1 524 906,93|  
 |Value Added Reseller|$767,388.52|$ 175 002,81|$ 592 385,71|  
 |Warehouse|$1,263,690.86|$ 331 169,64|$ 932 521,23|  
@@ -136,7 +121,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
 |||||  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
+||Все продукты|Accessories|Clothing|  
 |All Resellers|$ 80 450 596,98|$ 571 297,93|$ 1 777 840,84|  
 |Торговый посредник, создающий добавленную стоимость|$ 34 967 517,33|$ 175 002,81|$ 592 385,71|  
 |Warehouse|$ 38 726 913,48|$ 331 169,64|$ 932 521,23|  
@@ -144,9 +129,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [All Products] и [All Resellers], столбец и строка соответственно, содержат итоги всех элементов, а не только тех, что видимы.  
   
 ## <a name="see-also"></a>См. также  
- [Ключевые понятия многомерных Выражений & #40; Службы Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Основные понятия многомерных выражений &#40;служб Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Инструкции сценариев многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [Инструкция DROP SUBCUBE &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [Инструкция SELECT & #40; Многомерные Выражения & #41;](../mdx/mdx-data-manipulation-select.md)  
+ [Инструкция SELECT &#40;многомерных Выражений&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

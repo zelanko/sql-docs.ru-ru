@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7766b9043475ef0cc0db69951fbe1f3f5c9fcc75
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c51e99c4dcfde8de6060bf57e248d32322da8ac9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574076"
 ---
 # <a name="binding-element-xmla"></a>Элемент Binding (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Определяет привязку с возможностью вне строки для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объекта, такого как атрибут в измерении, для [привязки](../../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md) коллекцию [пакета](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) или [ Процесс](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) команды.  
+  Определяет привязку вне строки для объекта служб Analysis Services, например атрибут в измерении, для [привязки](../../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md) коллекцию [пакета](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) или [процесс](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) команды.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,9 +51,9 @@ ms.lasthandoff: 05/10/2018
 ## <a name="remarks"></a>Примечания  
  **Привязка** элементы определяют out-привязок, отличных от источников данных и представления источников данных, для [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объектов для обработки **пакета** или **процесс** команды. Дополнительные сведения об обработке объектов см. в разделе [обработки объектов &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md).  
   
- Дополнительные сведения о ожидания привязок см. в разделе [& #40; источники данных и привязки Многомерные службы SSAS & #41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Дополнительные сведения о ожидания привязок см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
-## <a name="see-also"></a>См. также  
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

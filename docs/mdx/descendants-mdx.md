@@ -1,31 +1,20 @@
 ---
 title: Descendants (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DESCENDANTS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Descendants function
-ms.assetid: d103b0f5-e794-4828-aa57-43f6918a0749
-caps.latest.revision: 38
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f5f38c620972906ec17820ffa1bb4a7c865dba16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 047c9e0edc8120003cdd8a38953e33e779ab0994
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580416"
 ---
 # <a name="descendants-mdx"></a>Descendants (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +55,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Desc_Flag*  
  Допустимая строка выражения, указывающая описание флага, коррелирующего с возможными наборами потомков.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если уровень указан, **потомков** функция возвращает набор, содержащий потомки заданного элемента или элементы заданного набора на заданном уровне, выборочно изменяемом при помощи флага, определенного в *Desc_Flag*.  
   
  Если *расстояние* указано, **потомков** функция возвращает набор, содержащий потомки заданного элемента или элементы заданного набора, заданного количество уровней вне иерархии заданного элемента, выборочно изменяемом при помощи флага, определенного в *Desc_Flag*. Обычно эта функция используется с аргументом Distance для распределения неоднородных иерархий. Если заданное расстояние равно нулю, то функция возвращает набор, состоящий только из заданного элемента или заданного набора.  
@@ -174,6 +163,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

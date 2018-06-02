@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb1a181a73a6e6a2f4998fb12381c522afb4e510
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a795b4cf935f7eae8052c52a3527005f362b533c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573806"
 ---
 # <a name="enumstring-data-type-xmla"></a>Тип данных EnumString (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/10/2018
 |Базовые типы данных|**строка**|  
 |Производные типы данных|None|  
   
-## <a name="data-type-relationships"></a>Связи типа данных  
+## <a name="data-type-relationships"></a>Связи между типами данных  
   
 |Связь|Элемент|  
 |------------------|-------------|  
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/10/2018
 ## <a name="remarks"></a>Примечания  
  В XML для аналитики используются перечисления, позволяющие ограничить строковые значения набором параметров, которые можно проверить. **EnumString** использует стандартный тип данных XML **string** . Конкретные значения для каждой именованной константы указываются в определении перечислителя. Перечислители определяются путем добавления их в [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) набора строк схемы и может быть получен с помощью [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метод с DISCOVER_ENUMERATORS тип запроса.  
   
- В следующей таблице описаны перечислители, поддерживаемые экземпляром служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ В следующей таблице описаны перечислители, поддерживаемые экземпляром служб Analysis Services.  
   
 |Перечислитель|Описание|  
 |----------------|-----------------|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/10/2018
 |ResultsetContents|Поддерживает свойство XMLA **Content**, определяющее, возвращает ли элемент **root** метаданные или обычные данные.<br /><br /> Дополнительные сведения о **содержимого**, в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
 |MDXSupportLevel|Поддерживает свойство XMLA **MDXSupport**, которое определяет уровень поддержки многомерных выражений (MDX), доступные на [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра.<br /><br /> Дополнительные сведения о **MDXSupport**, в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
  [Типы данных XML &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

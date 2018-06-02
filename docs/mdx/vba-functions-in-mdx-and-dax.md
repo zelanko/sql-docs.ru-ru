@@ -1,25 +1,20 @@
 ---
 title: Функции VBA в MDX и DAX | Документы Microsoft
-ms.custom: ''
-ms.date: 01/30/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 11
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6dce57c7a8043a8d25b31b389e47763df261baa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a9764d4e302a663800bd71a5c7083d985ea230bc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582526"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Функции VBA в DAX и многомерных выражениях
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -73,7 +68,7 @@ ms.lasthandoff: 05/03/2018
 |FileAttr|Не поддерживается||  
 |FileDateTime|Не поддерживается||  
 |FileLen|Не поддерживается||  
-|Фильтр|Не поддерживается|**Предупреждение** в многомерных Выражениях реализована другая функция с тем же именем, и функция FILTER (Set_Expression, Logical_Expression) возвращает набор, полученный в результате фильтрации заданного набора на основе условия поиска по заданным аргументам<br /><br /> **Предупреждение** DAX реализована другая функция с тем же именем; фильтр (\<таблицы >,\<фильтра >) функция возвращает таблицу, представляющую подмножество другой таблицы или выражения по заданным аргументам|  
+|Filter|Не поддерживается|**Предупреждение** в многомерных Выражениях реализована другая функция с тем же именем, и функция FILTER (Set_Expression, Logical_Expression) возвращает набор, полученный в результате фильтрации заданного набора на основе условия поиска по заданным аргументам<br /><br /> **Предупреждение** DAX реализована другая функция с тем же именем; фильтр (\<таблицы >,\<фильтра >) функция возвращает таблицу, представляющую подмножество другой таблицы или выражения по заданным аргументам|  
 |Fix|Только многомерные выражения||  
 |Format (Visual Basic для приложений)|DAX, многомерные выражения||  
 |FormatCurrency|Не поддерживается||  

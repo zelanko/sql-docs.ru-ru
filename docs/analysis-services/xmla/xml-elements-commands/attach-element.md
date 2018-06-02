@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 98643e4b3581fa102e42aa647efeaf69974bf2ac
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fa13ada270ffe7c7d7a1290dd3645efae5f4c6a1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574066"
 ---
 # <a name="attach-element"></a>Элемент Attach
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Присоединяет [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных, которая ранее была отсоединена от текущего экземпляра сервера или из другого экземпляра для текущего экземпляра сервера.  
+  Присоединяет базу данных служб Analysis Services, которая ранее была отсоединена от текущего экземпляра сервера или из другого экземпляра для текущего экземпляра сервера.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/10/2018
 |Родительские элементы|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
 |Дочерние элементы|[Папка](../../../analysis-services/xmla/xml-elements-properties/folder-element-xmla.md)<br /><br /> [readWriteMode](../../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)<br /><br /> [Пароль](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Элемент detach](../../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
  [Присоединение и отсоединение баз данных служб Analysis Services](../../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   

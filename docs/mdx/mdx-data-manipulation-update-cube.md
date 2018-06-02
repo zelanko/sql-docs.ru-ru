@@ -1,37 +1,20 @@
 ---
 title: Инструкция UPDATE CUBE (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Cube
-- UPDATE CUBE
-- UPDATE_CUBE
-- UPDATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- updating cubes
-- cubes [Analysis Services], modifying
-- modifying cubes
-- UPDATE CUBE statement
-ms.assetid: 6c8f23bb-401b-49de-843a-5324ac977239
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 805b6f1bf5966cefd3879ff53f8908f20944c441
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 1569d8024e23bab1841bf7757ffd828a3bc7dd4f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579756"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>Управление данными MDX - UPDATE CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +53,7 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  Допустимое числовое многомерное выражение, возвращающее десятичное значение от 0 до 1.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Можно обновить значение указанной конечной или неконечной ячейки куба, по желанию размещая значение для указанной неконечной ячейки в зависимых конечных ячейках. Ячейка, указанная кортежным выражением, может представлять любую ячейку многомерного пространства (другими словами, ячейка необязательно должна быть конечной). Тем не менее, ячейки должны быть собраны с [сумма](../mdx/sum-mdx.md) агрегатной функции и не должны содержать вычисляемый элемент в кортеж, который используется для идентификации ячейки.  
   
  Может быть полезным подумать об **UPDATE CUBE** инструкцию как подпрограмму, которая автоматически создаст серию отдельных операций обратной записи в конечные и неконечные ячейки, сводимые в указанную сумму.  

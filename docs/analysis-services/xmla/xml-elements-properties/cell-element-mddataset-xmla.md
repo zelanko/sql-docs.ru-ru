@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6af1143891fff7bc5ddc8fd25d4908fae5246bba
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ba73a6ea5926de6f445c5ca5cec8142b3e196bd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576276"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Элемент Cell (MDDataSet) (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>Атрибуты  
   
-|Attribute|Описание|  
+|attribute|Описание|  
 |---------------|-----------------|  
 |CellOrdinal|Требуется **unsignedInt** атрибута. Порядковый номер ячейки в многомерном наборе данных.|  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/10/2018
  Тип данных для значения свойства ячейки указывается только для свойства ячейки VALUE. Типы данных для других свойств ячейки, определяются определение свойства ячейки, включенные в **CellInfo** элемента. Элемент значения свойства ячейки можно исключить, если задано значение по умолчанию (путем включения **по умолчанию** элемент для определения свойства ячейки, содержащиеся в **CellInfo** элемент) для свойства ячейки или если был указан без значения по умолчанию, а значение свойства ячейки равно null.  
   
 ## <a name="cell-property-errors"></a>Ошибки свойств ячейки  
- Если свойство ячейки не может быть возвращен из-за ошибки, возникшей в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], такие как ошибки вычисления, которая предотвращает возврат для заданной ячейки, значение **ошибка** содержимое свойства рассматриваемой ячейки замещается элементом. В следующем примере кода XML описывается ошибка свойства ячейки.  
+ Если свойство ячейки не может быть возвращен из-за ошибки, возникшей на экземпляре служб Analysis Services, например ошибки вычисления, которая предотвращает возврат для заданной ячейки, значение **ошибка** элемент заменяет содержимое свойства рассматриваемой ячейки. В следующем примере кода XML описывается ошибка свойства ячейки.  
   
 ```  
 <Cell CellOrdinal="0">  
@@ -89,7 +90,7 @@ ms.lasthandoff: 05/10/2018
 ||К2|18052|15332.02|38396.75|5915|  
 ||К3|18370|**15672.83**|**39394.05**|**6014**|  
 ||К4|21436|**18094.5**|**45201.84**|**7015**|  
-|Oregon|К1|19287|**16081.07**|**40170.29**|**6184**|  
+|Орегон|К1|19287|**16081.07**|**40170.29**|**6184**|  
 ||К2|15079|12678.96|31772.88|4799|  
 ||К3|16940|14273.78|35880.46|5432|  
 ||К4|16353|13738.68|34453.44|5196|  
@@ -125,8 +126,8 @@ ms.lasthandoff: 05/10/2018
 </CellData>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Тип данных MDDataSet & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также
+ [Тип данных MDDataSet &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

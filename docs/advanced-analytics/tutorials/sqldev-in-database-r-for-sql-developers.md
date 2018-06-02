@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 21bc5d6af2ad34a23bb56a589f7bcbacb6034ff3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e1ff2799ba37c97f5ff82c1c15cdeb986220a947
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585276"
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>Аналитика в базе данных R для разработчиков SQL (учебник)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/16/2018
 
 ### <a name="requirements"></a>Требования
 
-Этот учебник предназначен для пользователей, которые уже знакомы с основами работы баз данных, таких как создание баз данных и таблиц, импорт данных в таблицы и создания SQL-запросов. Весь необходимый код на языке R предоставляется, поэтому среда разработки R не требуется. Опытные программисты SQL должны иметь возможность выполнить в этом примере с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]и с помощью предоставленного скриптов PowerShell.
+Этот учебник предназначен для пользователей, знакомых с основных операций базы данных, таких как создание баз данных и таблиц, импорт данных в таблицах и подготавливая SQL-запросы. Весь необходимый код на языке R предоставляется, поэтому среда разработки R не требуется. Можно использовать как Опытный программист SQL [! ВКЛЮЧИТЬ [tsql] (.. /.. и включает/tsql md.md)] в [! ВКЛЮЧИТЬ [ssManStudioFull] (.. /.. и включает / ssmanstudiofull md.md) и запустите предоставленный скрипт PowerShell, чтобы завершить этот пример. Тем не менее прежде чем начать этого учебника, необходимо выполнить следующие подготовительные действия.
 
 Тем не менее перед началом работы с учебником необходимо завершить следующие подготовительные действия:
 

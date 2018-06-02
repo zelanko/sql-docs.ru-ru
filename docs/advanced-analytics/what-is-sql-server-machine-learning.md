@@ -7,11 +7,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d52196007b5a1de4753e9846e4057295113baa7b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: ecd58ee9670724a2732ce8aabc5d9f2c62042995
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585456"
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>Новые возможности служб SQL Server машины обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -101,4 +102,4 @@ ms.lasthandoff: 05/03/2018
 
 **Шаг 3.** Добавьте избранные пакеты R и Python и использовать их вместе с пакетами, предоставляемых корпорацией Майкрософт
 
-+ [R-пакет управления для SQL Server](r/r-package-management-for-sql-server-r-services.md)
++ [R-пакет управления для SQL Server](r/install-additional-r-packages-on-sql-server.md)

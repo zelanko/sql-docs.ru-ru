@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5c3a4d20c7799281f40fa6ae13e89010cebe1ec6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 11804b9b6ca9ac430bdb47c0b9050b8c6995cf7f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574566"
 ---
 # <a name="synchronize-element-xmla"></a>Элемент Synchronize (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Синхронизирует [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных с другой существующей базой данных.  
+  Синхронизирует базу данных служб Analysis Services с другой существующей базой данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,11 +64,11 @@ ms.lasthandoff: 05/10/2018
   
  Дополнительные сведения о синхронизации баз данных см. в разделе [резервное копирование, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
-## <a name="see-also"></a>См. также  
- [Резервный элемент & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
- [Элемент Batch & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [Элемент Parallel & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)   
- [Восстановить элемент & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [Команды & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>См. также
+ [Резервное копирование элемента &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
+ [Элемент Batch &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [Параллельные элемент &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)   
+ [Элемент RESTORE &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
+ [Команды &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

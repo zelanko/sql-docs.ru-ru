@@ -1,31 +1,20 @@
 ---
 title: StrToValue (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- STRTOVALUE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- StrToValue function
-ms.assetid: 118a9c4f-74a3-48d5-a4f4-318664bc51bc
-caps.latest.revision: 30
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c9df8d31e49019abf730f70664a74c50d7bdc678
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 1cf21e5b5dac57ce2d0c59e0ab82263727260792
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582296"
 ---
 # <a name="strtovalue-mdx"></a>StrToValue (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +32,7 @@ StrToValue(MDX_Expression [,CONSTRAINED] )
  *MDX_Expression*  
  Допустимое строковое выражение, разрешающееся (напрямую или косвенно) в одну ячейку.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **StrToValue** функция возвращает числовое значение, заданное Многомерным выражением. **StrToValue** функция обычно используется с пользовательскими функциями для передачи Многомерного выражения из внешней функции обратно в инструкцию многомерных Выражений, которое разрешается в одну ячейку.  
   
 -   При использовании флага CONSTRAINED многомерное выражение должно содержать только скалярное значение. Флаг CONSTRAINED позволяет снизить вероятность атак через указанную строку. Если указано Многомерное выражение, которое не разрешается до скалярной величины, возникает следующая ошибка: «ограничения, установленные флагом CONSTRAINED функции STRTOVALUE нарушены.»  
@@ -69,6 +58,6 @@ WHERE [Product].[Product Categories].[Bikes]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

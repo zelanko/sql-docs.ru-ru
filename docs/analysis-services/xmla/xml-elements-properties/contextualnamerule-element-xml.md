@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: beb58b21c88bf5500ba7c15c336b866df59b0c7e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4b2c49f32029078bbe67e70066845f5b8f7d4f3c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573516"
 ---
 # <a name="contextualnamerule-element-xml"></a>Элемент ContextualNameRule (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/10/2018
   
  Значением элемента **ContextualNameRule** может быть только одна из строк в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*None*|Используется имя атрибута.|  
 |*Контекст*|Используется имя входящей связи.|  

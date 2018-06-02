@@ -1,7 +1,7 @@
 ---
 title: sp_datatype_info (Transact-SQL) | Документы Microsoft
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/25/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -22,14 +22,15 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b5dd1eff2fb088fa96498334899631e2dd04a90f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 187b7969d46b6ab0a85779d108a66cbe8ae2d62b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34553754"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>Хранимая процедура sp_datatype_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
   Возвращает сведения о типах данных, поддерживаемых текущей средой.  
   
@@ -51,7 +52,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
  Версия используемого протокола ODBC. *odbc_version* — **tinyint**, значение по умолчанию 2.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет  
+ None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -78,7 +79,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|Значение точности интервала, если *data_type* — **интервал**; в противном случае — значение NULL.|  
 |USERTYPE|**smallint**|**usertype** значение из таблицы systypes.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  sp_datatype_info эквивалентна SQLGetTypeInfo в ODBC. Возвращаемые этой процедурой результаты упорядочиваются по значению DATA_TYPE, а затем по степени соответствия типа данных аналогичному типу данных ODBC SQL.  
   
 ## <a name="permissions"></a>Разрешения  
