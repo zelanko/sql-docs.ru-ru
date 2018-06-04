@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32870439"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Выполнение принудительного перехода на другой ресурс вручную для группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
     >  Если кластер WSFC имеет работоспособный кворум, при выполнении команды принудительного перехода на синхронизированную вторичную реплику реплика фактически выполнит запланированный переход на другой ресурс вручную.  
   
 > [!NOTE]  
->  [ Дополнительные сведения о требованиях и рекомендациях для принудительной отработки отказа, а также пример использования принудительного перехода на другой ресурс для восстановления из ситуации критического сбоя см. в разделе ](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)Example Scenario: Using a Forced Failover to Recover from a Catastrophic Failureдалее в этой статье.  
+>  Дополнительные сведения о требованиях и рекомендациях для принудительной отработки отказа, а также пример использования принудительного перехода на другой ресурс для восстановления из ситуации критического сбоя см. в разделе [Пример сценария. Использование принудительной отработки отказа для восстановления после разрушительного сбоя](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)далее в этой статье.  
   
 -   **Перед началом работы**  
   
