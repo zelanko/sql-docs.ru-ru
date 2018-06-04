@@ -7,45 +7,35 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5a76258825b92a09ec957f8d6f19e996eed11dba
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9b0fdd8d198675720188d6ab2417be97a9280c57
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708412"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Устранение неполадок при сборе данных для машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Тип данных, которые следует собирать при попытке устранить проблемы с установки, настройки или производительность машинного обучения в SQL Server описаны в этой статье. Такие данные включают журналы, сообщения об ошибках и сведения о системе.
-
-В статье описаны источники данных, которые наиболее полезны при выполнении диагностики на основе самостоятельного устранения неполадок. Сбор этих сведений также полезен при запросе технической поддержки для проблемы, связанные с функции обучения компьютера SQL Server.
+В этой статье описаны методы сбора данных, который следует использовать для устранения неполадок на локальном или с помощью клиента Microsoft поддержки при попытке. 
 
 **Применяется к:** служб R SQL Server 2016, SQL Server 2017 г машинного обучения службы (R и Python)
 
-## <a name="sql-server-and-r-versions"></a>Версии SQL Server и R
 
-Обратите внимание на то, является ли версия новой установки или обновления. Если это обновление, определите, как было выполнено:
+## <a name="sql-server-version-and-edition"></a>Версии и выпуска SQL Server
 
-- Какая версия обновления? 
-- Была удалена старых компонентов или обновления на месте?
-- Были ли изменены какие-либо параметры компонента во время обновления? 
+SQL Server 2016 R Services находится в первом выпуске SQL Server для поддержки интеграции R. SQL Server 2016 с пакетом обновления 1 (SP1) включает в себя значительные улучшения, включая возможность запуска внешних скриптов. Если вы являетесь клиентом SQL Server 2016, рассмотрите возможность установки пакета обновления 1 или более поздней версии.
 
-### <a name="which-edition-of-sql-server-is-installed-and-which-version"></a>Установленной версии SQL Server, а также версию? 
+SQL Server 2017 г. добавлены интеграции языка Python. Не удается получить Python функция интеграции в более ранних выпусках.
 
-SQL Server R Services впервые появился в SQL Server 2016. Предыдущие версии не поддерживают машинного обучения. Кроме того последующие пакеты обновления для выпуска 2016 включены многие исправления и улучшения. В качестве первого шага следует установка пакета обновления 1 или более поздней версии.
+Помощь начало выпуска и версии, см. в этой статье перечислены номера построения для каждого из [версий SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions).
 
-В SQL Server 2017 г расширенная поддержка теперь языка Python. Поддержка Python не указано в более ранних выпусках.
-
-Если вам нужна помощь, чтобы определить, какой выпуск и версия, см. статью, который содержит список номеров построений для каждого из [версий SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions).
-
-В зависимости от выпуска SQL Server, вы используете некоторые машинного обучения функциональность может быть недоступность или ограниченная.
-
-См. следующие статьи для получения списка функций компьютера обучения в выпусках Enterprise, Developer, Standard и Express.
+В зависимости от выпуска SQL Server, вы используете некоторые машинного обучения функциональность может быть недоступность или ограниченная. Следующий список статей функции обучения компьютера в выпусках Enterprise, Developer, Standard и Express.
 
 * [Выпуски и поддерживаемых функций SQL Server](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
-* [Различия в возможностях R между выпусками SQL Server](https://docs.microsoft.com/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server)
+* [Функции R и Python выпусках SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
 
-### <a name="which-version-of-microsoft-r-is-installed"></a>Какие версии Microsoft R?
+## <a name="r-language-and-tool-versions"></a>Версии языка и средства R
 
 Как правило версии Microsoft R, которая устанавливается при выборе функции служб R и службах обучения машин определяется номер сборки SQL Server. Если выполняется обновление или исправление для SQL Server, необходимо обновить или исправить его компонентов R.
 
@@ -53,7 +43,7 @@ SQL Server R Services впервые появился в SQL Server 2016. Пре
 
 Это возможно обновление компонентов R Server отдельно от SQL Server database engine, в процессе, называемом привязки. Таким образом версии R, используемый при выполнении кода R в SQL Server могут отличаться в зависимости от установленной версии SQL Server и на ли были перенесены сервер до последней версии R.
 
-#### <a name="determine-the-r-version"></a>Определить версию R
+### <a name="determine-the-r-version"></a>Определить версию R
 
 Для определения версии R проще всего получить свойствам среды выполнения, выполнив инструкции из следующего:
 
@@ -82,7 +72,7 @@ WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
 
 В качестве последнего средства можно открывать файлы на сервере, чтобы определить установленную версию. Чтобы сделать это, найдите файл rlauncher.config, чтобы получить расположение среды выполнения R и текущего рабочего каталога. Рекомендуется создать и открыть копию файла, чтобы случайного изменения любого свойства.
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name\MSSQL\Binn\rlauncher.config`
 
@@ -92,7 +82,7 @@ WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
 
 Чтобы получить версии R и RevoScaleR, откройте окно командной строки R или открыть RGui, который связан с экземпляром.
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64\RGui.exe`
 
@@ -112,9 +102,7 @@ WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
     *Loading Microsoft R Server packages, version 9.1.0.*
 
 
-### <a name="what-version-of-python-is-installed"></a>Какие версии Python?
-
-Поддержка Python, доступны только в SQL Server 2017 г. сообщества Technology Preview (CTP) 2.0 и более поздней версии.
+## <a name="python-versions"></a>Версии Python
 
 Существует несколько способов получить версию Python. Проще всего выполнить эту инструкцию из среды Management Studio или другого средства запросов SQL:
 
@@ -143,7 +131,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 > [!NOTE]
 > После установки Python и R в SQL Server 2017 г., рабочий каталог и пул рабочих учетных записей являются общими для языков R и Python.
 
-### <a name="are-multiple-instances-of-r-or-python-installed"></a>Несколько экземпляров R или Python установлен?
+## <a name="are-multiple-instances-of-r-or-python-installed"></a>Несколько экземпляров R или Python установлен?
 
 Проверьте, установлена ли более одной копии библиотек R на компьютере. Это дублирование может произойти, если:
 
@@ -156,7 +144,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 Если установлено несколько библиотек или сред выполнения, убедитесь, что вы получите только ошибки, связанные с сред выполнения Python или R, которые используются экземпляром SQL Server.
 
-## <a name="errors-and-messages"></a>Ошибки и сообщения
+## <a name="origin-of-errors"></a>Источник ошибки
 
 Ошибки, которые возникают при попытке запуска кода R могут поступать из любой из следующих источников:
 
@@ -171,11 +159,11 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 - Вы используете среду Management Studio? Внешнее приложение?
 - Выполняется ли код R, в удаленных клиентов или непосредственно в хранимой процедуре?
 
-### <a name="what-errors-has-sql-server-logged"></a>Какие ошибки выполнил SQL Server
+## <a name="sql-server-log-files"></a>Файлы журнала SQL Server
 
 Получите самые последние ОШИБОК SQL Server. Полный набор файлов журнала ошибок, состоит из файлов в папке журнала по умолчанию:
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.SQL2016\MSSQL\Log\ExtensibilityLog`
 
@@ -187,7 +175,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 > Точное имя папки зависит от того, имя экземпляра.
 
 
-### <a name="what-errors-were-returned-by-the-spexecuteexternalscript-command"></a>Какие ошибки, возвращенные командой sp_execute_external_script?
+## <a name="errors-returned-by-spexecuteexternalscript"></a>Ошибки, возвращенные sp_execute_external_script
 
 Получите полный текст ошибки, которые возвращаются, если таковая имеется, при выполнении команды sp_execute_external_script. 
 
@@ -213,13 +201,13 @@ with result sets (([hello] int not null));
 go
 ```
 
-### <a name="what-errors-are-generated-by-the-extensibility-framework"></a>Какие ошибки создаются с помощью extensibility framework?
+## <a name="errors-generated-by-the-extensibility-framework"></a>Ошибки, созданные с помощью extensibility framework
 
 SQL Server создает отдельные файлы журналов для среды выполнения языка внешних скриптов. Эти ошибки не формируются языка Python или R. Они будут созданы из компонентов расширяемости в SQL Server, включая средства запуска конкретного языка и их вспомогательных процессов.
 
 Эти журналы можно получить из следующих расположений по умолчанию.
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\MSSQL\Log\ExtensibilityLog`
 
@@ -244,7 +232,7 @@ SQL Server создает отдельные файлы журналов для 
 
 * *Не удалось инициализировать диспетчер сеансов вспомогательных*
 
-### <a name="are-there-any-related-system-events"></a>Существуют ли все связанные системные события?
+## <a name="system-events"></a>Системные события
 
 1. Откройте средство просмотра событий Windows и поиск **системное событие** журнала для сообщений, содержащих строки *запуска*. 
 2. Откройте файл ExtLaunchErrorlog и наличие строки *ErrorCode*. Ознакомьтесь с сообщением, связанной с ErrorCode.
@@ -257,7 +245,7 @@ SQL Server создает отдельные файлы журналов для 
 
 * *Время ожидания (в миллисекундах 120000) во время ожидания для службы панели запуска SQL Server (MSSQLSERVER) для подключения.* 
 
-### <a name="did-any-components-start-and-then-crash"></a>Все компоненты запустить и затем аварийно завершить работу?
+## <a name="dump-files"></a>Файлы дампа
 
 Если знаниями об отладке, файлы дампа можно использовать для анализа сбоев в панель запуска.
 
@@ -268,7 +256,7 @@ SQL Server создает отдельные файлы журналов для 
 Точное расположение может отличаться в вашей системе, и может оказаться на диске, отличном от диска C. Убедитесь в том, что получить журналы для экземпляра, где установлен машинного обучения. 
 
 
-## <a name="related-tools-and-configuration"></a>Дополнительные средства и конфигурации
+## <a name="configuration-settings"></a>Параметры конфигурации
 
 В этом разделе перечислены дополнительные компоненты или поставщики, которые могут быть источника ошибок при выполнении скриптов R или Python.
 
@@ -319,20 +307,7 @@ SQL Server создает отдельные файлы журналов для 
 
 2. Определяет, создается ли правило брандмауэра для SQL Server. По соображениям безопасности при установке по умолчанию не возможно для удаленных клиентов R или Python для подключения к экземпляру. Дополнительные сведения см. в разделе [Устранение неполадок подключения к SQL Server](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
 
-### <a name="can-you-run-r-script-outside-t-sql"></a>Можно запустить сценарий R за пределами T-SQL?
 
-Можно попробовать запустить среду выполнения R, который связан с экземпляром SQL Server с помощью других средств R. Таким образом, можно определить, установлены ли необходимые библиотеки.
-
-Базовой установки R включает несколько средств, которые можно использовать для запуска сценария R из командной строки, а также RGui интерактивного выполнения скриптов.
-
-Если работает среды выполнения R, но сценарий возвращает ошибки, рекомендуется попробовать отладка скриптов в специальной среде разработки R, такие как средства R для Visual Studio.
-
-Также рекомендуется изучить и немного измените сценарий для исправления любых проблем с типами данных, которые могут возникнуть при перемещении данных между R и компонент database engine. Дополнительные сведения см. в разделе [R библиотек и типы данных](r/r-libraries-and-data-types.md).
-
-Кроме того можно использовать пакет sqlrutils для формирования пакета R-скриптов в формате, который является более простой в использовании как хранимую процедуру. Дополнительные сведения см. в разделе:
-* [Создание хранимой процедуры для кода R с помощью пакета sqlrutils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
-* [Создание хранимой процедуры с помощью sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
-
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Устранение неполадок машинного обучения в SQL Server](machine-learning-troubleshooting-faq.md)
