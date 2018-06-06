@@ -21,11 +21,12 @@ caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 44f4992239c15b7382ede007b5da47ef13b03566
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b417d30db2ed5ecd85ba154ab304be7181c2dc71
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550535"
 ---
 # <a name="authentication-with-the-report-server"></a>Проверка подлинности с использованием сервера отчетов
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="authentication-types"></a>Типы проверки подлинности  
  Подлинность всех пользователей и приложений, запрашивающих доступ к содержимому сервера отчетов или операциям, должна быть проверена до предоставления доступа способом, заданным для сервера отчетов. В следующей таблице описываются типы проверки подлинности, поддерживаемые службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-|Имя типа проверки подлинности|Значение уровня проверки подлинности HTTP|Используется по умолчанию|Description|  
+|Имя типа проверки подлинности|Значение уровня проверки подлинности HTTP|Используется по умолчанию|Описание|  
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
 |RSWindowsNegotiate|Согласование|Да|В этом режиме сначала делается попытка встроенной проверки подлинности по протоколу Kerberos, но если служба каталогов Active Directory не может предоставить серверу отчетов билет для клиентского запроса, используется NTLM. Проверка подлинности Negotiate возвращается к NTLM только в том случае, если не удалось получить билет. Если первая попытка завершилась ошибкой, а не отсутствием билета, то сервер отчетов вторую попытку не предпринимает.|  
 |RSWindowsNTLM|NTLM|Да|Использует NTLM для встроенной проверки подлинности Windows.<br /><br /> Делегирование и олицетворение учетных данных при выполнении других запросов не производится. Последующие запросы выполняются по новой последовательности вызов-ответ. В зависимости от того, как настроена безопасность сети, запрос проверки подлинности будет обрабатываться прозрачно либо пользователю может быть предложено ввести учетные данные.|  
@@ -89,7 +90,6 @@ ms.lasthandoff: 05/03/2018
 [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
 [Реализация модуля безопасности](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
-[настроить доступ к построителю отчетов](../../reporting-services/report-server/configure-report-builder-access.md)   
 [Общие сведения о модулях безопасности](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Проверка подлинности в службах Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Авторизация в службах Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  

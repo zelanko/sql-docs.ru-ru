@@ -18,10 +18,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6532283a3315ad60587ce6fd126f91859f42f29f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708382"
 ---
 # <a name="indexes"></a>Индексы
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="available-index-types"></a>Доступные типы индексов
 В следующей таблице приведен список типов индексов, доступных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также указаны ссылки на дополнительные сведения.  
   
-|Тип индекса|Description|Дополнительные сведения|  
+|Тип индекса|Описание|Дополнительные сведения|  
 |----------------|-----------------|----------------------------|  
 |Хэш|При использовании хэш-индекса доступ к данным осуществляется через хэш-таблицу в памяти. Хэш-индексы используют фиксированный размер памяти, который зависит от числа контейнеров.|[Рекомендации по использованию индексов в таблицах, оптимизированных для памяти](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [Рекомендации по проектированию хэш-индексов](../../relational-databases/sql-server-index-design-guide.md#hash_index)|  
 |Некластеризованный индекс, оптимизированный для памяти|Для оптимизированных для памяти некластеризованных индексов потребление памяти является функцией от количества строк и размера ключевых столбцов индекса|[Рекомендации по использованию индексов в таблицах, оптимизированных для памяти](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [Рекомендации по проектированию некластеризованных индексов, оптимизированных для памяти](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)|  

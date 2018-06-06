@@ -21,11 +21,12 @@ caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 82533018e021d38612b7cb73f5cfaa6788f23e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f4a41d9238315719bc6e47fb3bc9c598222673a6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550775"
 ---
 # <a name="secure-reports-and-resources"></a>Защищенные отчеты и ресурсы
   Можно управлять степенью предоставляемого пользователям доступа к отдельным отчетам и ресурсам. По умолчанию только пользователи, являющиеся членами встроенной группы **Администраторы** , могут выполнять отчеты, просматривать ресурсы, изменять свойства и удалять элементы. Остальные пользователи должны иметь созданные для них назначения ролей, предоставляющие доступ к отчету или ресурсу.  
@@ -79,7 +80,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>См. также:  
  [Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [настроить доступ к построителю отчетов](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Защита совместно используемых элементов источника данных](../../reporting-services/security/secure-shared-data-source-items.md)   
  [Сохраненные учетные данные в источнике данных Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  

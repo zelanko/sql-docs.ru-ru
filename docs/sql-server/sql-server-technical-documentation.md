@@ -24,12 +24,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b2fc97c10ee40d90704459dd820882c5b97d22d2
-ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
+ms.openlocfilehash: 2d71913e69d5b4a7f10239f8afe24e65ef15fe27
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225442"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709072"
 ---
 # <a name="sql-server-documentation"></a>Документация по SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ SQL Server является центральной частью платформ
 |[Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
 
 ![info_tip](../sql-server/media/info-tip.png) Скоро все содержимое SQL Server 2014 будет объединено на сайте документации.  Сейчас можно прочитать следующее.
-- [Электронная документация по SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
+- [Электронная документация по SQL Server 2014](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [Новые возможности SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
 - [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
-- [Предыдущие версии](https://docs.microsoft.com/en-us/previous-versions/sql/)
+- [Предыдущие версии](https://docs.microsoft.com/previous-versions/sql/)
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -107,7 +107,7 @@ SQL Server является центральной частью платформ
 - [Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Перенос базы данных SQL Server в Базу данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 - [Помощник по переносу данных Майкрософт](https://www.microsoft.com/download/details.aspx?id=53595)
-- [Миграция Azure — оценка, миграция, оптимизация](https://azure.microsoft.com/en-us/migration/)]
+- [Миграция Azure — оценка, миграция, оптимизация](https://azure.microsoft.com/migration/)]
 ::: moniker-end
 
 ::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
@@ -126,8 +126,8 @@ SQL Server является центральной частью платформ
 
 ## <a name="samples"></a>Примеры
 
-- [Образец базы данных Wide World Importers](https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is)
-- [Образцы баз данных AdventureWorks и скрипты для SQL Server 2016](https://docs.microsoft.com/en-us/sql/samples/sql-samples-where-are) 
+- [Образец базы данных Wide World Importers](https://docs.microsoft.com/sql/samples/wide-world-importers-what-is)
+- [Образцы баз данных AdventureWorks и скрипты для SQL Server 2016](https://docs.microsoft.com/sql/samples/sql-samples-where-are) 
 - [Образцы SQL Server на GitHub](https://github.com/Microsoft/sql-server-samples)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -16,11 +16,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: bd9c61743812b386d4bcf420debfce6e83fb0778
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d11bd76d4bc8f811cbaa4ea34258b56aaf6d6763
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470246"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Поддержка Scale Out для обеспечения высокой доступности с помощью экземпляра отказоустойчивого кластера SQL Server
 
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
 ![Включение службы](media/bring-online.PNG)
 
 > [!NOTE]
-> Чтобы реализовать раздельную отработку отказа для служб SSISDB и мастера Scale Out, выполните шаг [7. Настройка роли службы мастера Scale Out для отказоустойчивого кластера Windows](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster)
+> Чтобы реализовать раздельную отработку отказа для служб SSISDB и мастера Scale Out, выполните шаг [7. Настройка роли службы мастера Scale Out для отказоустойчивого кластера Windows](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster)
 
 ## <a name="7-install-scale-out-workers"></a>7. Установка рабочих ролей Scale Out
 Установите рабочую роль Scale Out на рабочие узлы. Во время установки укажите https://[сетевое имя SQL Server]:[порт мастера] в качестве конечной точки мастера. 

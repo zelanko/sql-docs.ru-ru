@@ -1,7 +1,7 @@
 ---
 title: Указание соединений для пользовательских модулей обработки данных | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -26,11 +26,12 @@ caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f1bef72f7a07df727462e569c8b0971dcfa2f696
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c0b6fa4f93320e0648ffb1923aaf593ff708b53
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550505"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>Указание соединений для пользовательских модулей обработки данных
   Для расширения возможностей поддерживаемых источников данных или поддержки их дополнительных типов, недоступных при стандартной установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , на сервере отчетов можно создавать пользовательские модули обработки данных или использовать модули сторонних разработчиков. Соединения обрабатываются по-разному, в зависимости от реализации. Для модулей обработки данных существуют следующие реализации.  
@@ -85,8 +86,6 @@ ms.lasthandoff: 05/03/2018
  [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Реализация модуля обработки данных](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Настройка свойств источника данных для отчета (диспетчер отчетов)](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Настройка свойств источника данных для отчета](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

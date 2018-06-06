@@ -3,12 +3,9 @@ title: Справка мастера установки | Документаци
 ms.custom: ''
 ms.date: 2017-04-21
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,15 +14,16 @@ helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-caps.latest.revision: 62
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 0366b0613623960afd56a2877ad9462fded60bf5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2224040e62b1c9f75cf93e4231cef1443edfbac
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772770"
 ---
 # <a name="installation-wizard-help"></a>Справка мастера установки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +133,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
   
-|Description|Каталог по умолчанию|Рекомендации|  
+|Описание|Каталог по умолчанию|Рекомендации|  
 |-----------------|-----------------------|---------------------|  
 |Корневой каталог данных|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<ИД_экземпляра>\OLAP\Data\ |Убедитесь, чтобы папка \Program files\Microsoft SQL Server\ была защищена ограниченными разрешениями. Во многих конфигурациях производительность служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] зависит от производительности хранилища, в котором размещается каталог данных. Поместите этот каталог в доступном хранилище, имеющем самое высокое быстродействие. При установке отказоустойчивых кластеров каталоги данных должны находиться на общем диске.|  
 |Каталог файла журнала|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<ИД_экземпляра>\OLAP\Log\ |Это каталог для файлов журнала служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], в нем размещается журнал FlightRecorder. При увеличении времени существования «черного ящика» позаботьтесь о том, чтобы в каталоге журнала было достаточно места.|  
@@ -173,7 +171,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
   
-|Description|Поддерживаемые типы хранилища|Каталог по умолчанию|Рекомендации|  
+|Описание|Поддерживаемые типы хранилища|Каталог по умолчанию|Рекомендации|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |Корневой каталог данных|Локальный диск, файловый сервер SMB, общее хранилище* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |Программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроит списки ACL для каталогов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отменит наследование как часть конфигурации.|  
 |Каталог пользовательской базы данных|Локальный диск, файловый сервер SMB, общее хранилище*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ИД_экземпляра>\MSSQL\Data |Рекомендации пользователю каталогов данных зависят от рабочей нагрузки и требований производительности.|  
@@ -185,7 +183,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  В следующей таблице приведены поддерживаемые типы хранилища и каталоги по умолчанию для экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые можно изменить в программе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Description|Поддерживаемые типы хранилища|Каталог по умолчанию|Рекомендации|  
+|Описание|Поддерживаемые типы хранилища|Каталог по умолчанию|Рекомендации|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |Корневой каталог данных|Общее хранилище, файловый сервер SMB|\<Диск:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> Совет. Если на странице **Выбор диска кластера** был указан общий диск, по умолчанию используется первый общий диск. Если на странице **Выбор диска кластера** не было указано никакого значения, это поле по умолчанию остается пустым.|Программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроит списки ACL для каталогов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отменит наследование как часть конфигурации.|  
 |Каталог пользовательской базы данных|Общее хранилище, файловый сервер SMB|\<Диск:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ИД_экземпляра>\MSSQL\Data<br /><br /> Совет. Если на странице **Выбор диска кластера** был указан общий диск, по умолчанию используется первый общий диск. Если на странице **Выбор диска кластера** не было указано никакого значения, это поле по умолчанию остается пустым.|Рекомендации пользователю каталогов данных зависят от рабочей нагрузки и требований производительности.|  
@@ -225,7 +223,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
   
-|Description|Каталог по умолчанию|Рекомендации|  
+|Описание|Каталог по умолчанию|Рекомендации|  
 |-----------------|-----------------------|---------------------|  
 |Корневой каталог данных |C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<ИД_экземпляра>\OLAP\Data |Убедитесь, чтобы папка \Program files\Microsoft SQL Server\ была защищена ограниченными разрешениями. Во многих конфигурациях производительность служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] зависит от производительности хранилища, в котором размещается каталог данных. Поместите этот каталог в доступном хранилище, имеющем самое высокое быстродействие. При установке отказоустойчивых кластеров каталоги данных должны находиться на общем диске.|  
 |Каталог файла журнала|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<ИД_экземпляра>\OLAP\Log |Это каталог для файлов журнала служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], в нем размещается журнал FlightRecorder. При увеличении времени существования «черного ящика» позаботьтесь о том, чтобы в каталоге журнала было достаточно места.|  
@@ -369,7 +367,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>Каталоги данных и журналов для изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  В таблице ниже указаны поддерживаемые типы хранилища и каталоги по умолчанию для изолированных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые можно настроить в процессе установки.  
   
-|Description|Поддерживаемые типы хранилища|Каталог по умолчанию|Рекомендации|  
+|Описание|Поддерживаемые типы хранилища|Каталог по умолчанию|Рекомендации|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**Каталоги данных**|Локальный диск, файловый сервер SMB, общее хранилище* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ИД_экземпляра>\MSSQL\Data|Программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроит списки ACL для каталогов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отменит наследование как часть конфигурации.<br /><br /> Рекомендации для каталогов **temdb** зависят от рабочей нагрузки и требований к производительности. Укажите несколько папок (дисков), чтобы распределить файлы данных на несколько томов.|  
 |**Каталог журналов**|Локальный диск, файловый сервер SMB, общее хранилище*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ИД_экземпляра>\MSSQL\Data|Убедитесь, что каталог журнала имеет достаточно свободного места.|  
@@ -379,7 +377,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Каталоги данных и журналов для экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  В следующей таблице приведены поддерживаемые типы хранилища и каталоги по умолчанию для экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые можно изменить в программе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Description|Поддерживаемые типы хранилища|Каталог по умолчанию|Рекомендации|  
+|Описание|Поддерживаемые типы хранилища|Каталог по умолчанию|Рекомендации|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |Каталог данных**tempdb** |Локальный диск, общее хранилище, файловый сервер SMB|\<Диск:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ИД_экземпляра>\Data<br /><br /> Совет. Если на странице **Выбор диска кластера** был указан общий диск, по умолчанию используется первый общий диск. Если на странице **Выбор диска кластера** не было указано никакого значения, это поле по умолчанию остается пустым.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроит ACL для каталогов и отменит наследование как часть конфигурации.<br /><br /> Убедитесь, что указанный каталог (или каталоги, если указано несколько файлов) допустим для всех узлов кластера. Если во время отработки отказа каталоги **tempdb** недоступны на целевом узле отработки отказа, то при подключении ресурсов SQL Server к сети произойдет ошибка.|  
 |Каталог журнала**tempdb** |Локальный диск, общее хранилище, файловый сервер SMB|\<Диск:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ИД_экземпляра>\MSSQL\Data<br /><br /> Совет. Если на странице **Выбор диска кластера** был указан общий диск, по умолчанию используется первый общий диск. Если на странице **Выбор диска кластера** не было указано никакого значения, это поле по умолчанию остается пустым.|Рекомендации пользователю каталогов данных зависят от рабочей нагрузки и требований производительности.<br /><br /> Указанный каталог должен быть допустимым для всех узлов кластера. Если во время отработки отказа каталоги **tempdb** недоступны на целевом узле отработки отказа, то при подключении ресурсов SQL Server к сети произойдет ошибка.<br /><br /> Убедитесь, что каталог журнала имеет достаточно свободного места.|  

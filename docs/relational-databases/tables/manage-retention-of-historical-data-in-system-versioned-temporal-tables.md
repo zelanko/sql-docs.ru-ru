@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e612894249f42ef081f989eda29b3d2f8900cc80
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 924fa0d289c7225587962c9551d445d348f73939
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563812"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Управление хранением данных журнала в темпоральных таблицах с системным управлением версиями
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 > **ПРИМЕЧАНИЕ.**  Использование базы данных Stretch применимо только к [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и не может применяться к [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- [база данных Stretch;](../../sql-server/stretch-database/stretch-database.md) в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] прозрачно переносит данных журнала в Azure. Для обеспечения дополнительной защиты можно зашифровать передаваемые данные с помощью функции SQL Server [Постоянное шифрование](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) . Кроме того, для защиты данных можно использовать [защиту на уровне строк](../../relational-databases/security/row-level-security.md) и другие дополнительные функции безопасности SQL Server с помощью средств Temporal и базы данных Stretch.  
+ [база данных Stretch;](../../sql-server/stretch-database/stretch-database.md) в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] прозрачно переносит данных журнала в Azure. Для обеспечения дополнительной защиты можно зашифровать передаваемые данные с помощью функции SQL Server [Постоянное шифрование](https://msdn.microsoft.com/library/mt163865.aspx) . Кроме того, для защиты данных можно использовать [защиту на уровне строк](../../relational-databases/security/row-level-security.md) и другие дополнительные функции безопасности SQL Server с помощью средств Temporal и базы данных Stretch.  
   
  Используя базу данных Stretch, можно растянуть часть таблиц или все темпоральные таблицы журнала в Azure, и сервер SQL Server автоматически переместит данные журнала в Azure. Использование технологии Stretch для таблицы журнала не влияет на взаимодействие с темпоральной таблицей в части изменения данных и темпоральных запросов.  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  В окне **Выбор таблиц** установите флажок рядом с темпоральной таблицей журнала и нажмите кнопку "Далее".  
   
-     ![Выбор таблицы журнала на странице "Выбор таблиц"](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Выбор таблицы журнала на странице "Выбор таблиц"")  
+     ![Выбор таблицы журнала на странице "Выбор таблиц"](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Выбор таблицы журнала на странице \"Выбор таблиц\"")  
   
 3.  В окне **Настройка Azure** укажите учетные данные для входа. Выполните вход в Microsoft Azure или зарегистрируйте учетную запись. Выберите подписку, которую будете использовать, и регион Azure. Затем создайте новый сервер или выберите существующий. Нажмите кнопку **Далее**.  
   

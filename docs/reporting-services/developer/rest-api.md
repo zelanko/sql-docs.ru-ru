@@ -1,7 +1,7 @@
 ---
 title: Разработка с помощью API REST для служб Reporting Services | Документы Майкрософт
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-ms.date: 10/19/2017
+ms.date: 05/25/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: developer
@@ -14,11 +14,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5a180e19628ad832b970026422e9b03e7373ecfb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f2f0959639736379bc28c6add71d09769352fed
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34553835"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Разработка с помощью API REST для служб Reporting Services
 
@@ -27,6 +28,8 @@ ms.lasthandoff: 05/03/2018
 Службы отчетов Microsoft SQL Server 2017 поддерживают API-интерфейсы REST. API-интерфейсы REST — это конечные точки службы, которые поддерживают набор операций HTTP (методов), предоставляющих доступ на создание, получение, обновление или удаление ресурсов в сервере отчетов.
 
 API REST обеспечивает программный доступ к объектам в каталоге сервера отчетов служб SQL Server 2017 Reporting Services. Примерами объектов являются папки, отчеты, ключевые показатели эффективности, источники данных, наборы данных, планы обновления, подписки и многое другое. С помощью API REST можно, например, перемещаться по иерархии папок, обнаруживать содержимое папки или загружать определение отчета. Можно также создавать, обновлять и удалять объекты. Примерами работы с объектами являются отправка отчета, выполнение плана обновления, удаление папки и т. д.
+
+[!INCLUDE [GDPR-related guidance](../../includes/gdpr-hybrid-note.md)]
 
 ## <a name="components-of-a-rest-api-requestresponse"></a>Компоненты запроса и ответа API REST
 

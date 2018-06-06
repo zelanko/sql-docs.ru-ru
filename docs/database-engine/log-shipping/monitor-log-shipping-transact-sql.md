@@ -3,8 +3,6 @@ title: Наблюдение за доставкой журналов (Transact-S
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: high-availability
-ms.component: log-shipping
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -20,14 +18,15 @@ helpviewer_keywords:
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 caps.latest.revision: 29
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04c9988606f8729ae0e49c825ed6b40a431889ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d805bc8bdb62f5aad87afa19fd12e4d134a6ed8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771700"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Наблюдение за доставкой журналов (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  Эти таблицы можно опрашивать, чтобы следить за состоянием сеанса доставки журналов. Например, чтобы узнать состояние доставки журналов, можно проверить состояние и историю заданий резервного копирования, копирования и восстановления. Можно просматривать отдельные журналы доставки и подробные сведения об ошибках, выполняя запросы к описанным ниже таблицам мониторинга.  
   
-|Таблица|Description|  
+|Таблица|Описание|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Содержит идентификатор задания предупреждения.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Содержит подробное описание ошибок заданий доставки журналов. Выполняя запросы к этой таблице, можно получать сведения об ошибках в сеансах агентов. При необходимости можно выполнить сортировку ошибок по дате и времени их внесения в журнал. Каждая ошибка записывается в журнал как последовательность исключений, и на один сеанс агента может приходиться несколько ошибок (последовательностей).|  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>Хранимые процедуры для мониторинга доставки журналов  
  Сведения мониторинга и данные журналов хранятся в таблицах в базе данных **msdb**, к которым можно получить доступ посредством использования хранимых процедур доставки журналов. Выполняйте эти хранимые процедуры на указанных в следующей таблице серверах.  
   
-|Хранимая процедура|Description|Место выполнения процедуры|  
+|Хранимая процедура|Описание|Место выполнения процедуры|  
 |----------------------|-----------------|---------------------------|  
 |[sp_help_log_shipping_monitor_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)|Возвращает записи монитора для указанной базы данных-источника из таблицы **log_shipping_monitor_primary** .|Сервер мониторинга или сервер-источник|  
 |[sp_help_log_shipping_monitor_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)|Возвращает записи монитора для указанной базы данных-получателя из таблицы **log_shipping_monitor_secondary** .|Сервер мониторинга или сервер-получатель|  

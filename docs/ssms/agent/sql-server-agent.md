@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6eacddc4432560bcde519602dd26c2b472b37041
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80b6776f555fd5bdaa8ed4c4977dc5193a27eba2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708942"
 ---
 # <a name="sql-server-agent"></a>Агент SQL Server
-
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -128,7 +128,7 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 > Режимы отправки уведомлений с помощью пейджера и команды **net send** будут удалены из агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время.  
   
-Для отправки операторам уведомлений по электронной почте или на пейджер необходимо настроить агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] для использования компонента Database Mail. Дополнительные сведения см. в разделе [Database Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1).  
+Для отправки операторам уведомлений по электронной почте или на пейджер необходимо настроить агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] для использования компонента Database Mail. Дополнительные сведения см. в разделе [Database Mail](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1).  
   
 Можно определить оператора как псевдоним для группы лиц. Таким способом все члены этого псевдонима будут уведомлены одновременно. Дополнительные сведения см. в статье [Операторы](../../ssms/agent/operators.md).  
   
@@ -143,7 +143,7 @@ ms.lasthandoff: 05/03/2018
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] определяет подсистемы, перечисленные в следующей таблице:  
   
-|Имя подсистемы|Description|  
+|Имя подсистемы|Описание|  
 |--------------|-----------|  
 |Скрипт Microsoft ActiveX|Выполните шаг задания со скриптом ActiveX.<br /><br />**Предупреждение** Подсистема сценариев ActiveX будет удалена из агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в последующей версии [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
 |Операционная система (**CmdExec**)|Запустите исполняемую программу.|  
@@ -183,16 +183,16 @@ ms.lasthandoff: 05/03/2018
   
 Используйте следующие задачи, чтобы начать работу с агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
-|Description|Раздел|  
+|Описание|Раздел|  
 |-----------|-----|  
 |Содержит инструкции по настройке агента SQL Server.|[Настройка агента SQL Server](../../ssms/agent/configure-sql-server-agent.md)|  
 |Описывает запуск, остановку и приостановку службы агента SQL Server.|[Запуск, остановка или приостановка службы агента SQL Server](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  
 |Описывает вопросы задания учетных записей для службы агента SQL Server.|[Выбор учетной записи для службы агента SQL Server](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)|  
 |Описывает использование журнала ошибок агента SQL Server.|[Журнал ошибок агента SQL Server](../../ssms/agent/sql-server-agent-error-log.md)|  
 |Содержит инструкции по использованию объектов производительности.|[Использование объектов производительности](../../ssms/agent/use-performance-objects.md)|  
-|Описывает мастер планов обслуживания программу, которая используется для создания заданий, оповещений и операторов для автоматизации администрирования экземпляра SQL Server.|[Использование мастера планов обслуживания](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
+|Описывает мастер планов обслуживания программу, которая используется для создания заданий, оповещений и операторов для автоматизации администрирования экземпляра SQL Server.|[Использование мастера планов обслуживания](http://msdn.microsoft.com/db65c726-9892-480c-873b-3af29afcee44)|  
 |Описывает автоматизацию задач администрирования с помощью агента SQL Server.|[Задачи автоматизированного администрирования (агент SQL Server)](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
 ## <a name="see-also"></a>См. также:  
-[Настройка контактной зоны](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  
+[Настройка контактной зоны](http://msdn.microsoft.com/f741169c-1453-4ad2-830b-bf2be27d712f)  
   

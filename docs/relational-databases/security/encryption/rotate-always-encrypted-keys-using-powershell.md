@@ -15,11 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0b16ad6c18bec1954d9c52ada5fd22202e3ff9da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fed2dac0cb435e906a3c880022f53fdc35880754
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34581986"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Смена ключей постоянного шифрования с помощью PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -312,7 +313,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 |Шаг 3. Проверка подлинности в Azure, если главный ключ столбца (защищающий ключ шифрования, подлежащий смене) хранится в хранилище ключей Azure | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Да | нет
 |Шаг 4. Создание ключа шифрования столбца, его шифрование с помощью главного ключа столбца и создание метаданных ключа шифрования столбца в базе данных.  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Примечание.** Используйте разновидность командлета, который внутренним образом создает и шифрует ключ шифрования столбца.<br>На самом деле для создания метаданных ключа командлет выполняет инструкцию [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) . | Да | Да
 |Шаг 5. Поиск всех столбцов, зашифрованных с помощью старого ключа шифрования столбца. | [Учебник по программированию управляющих объектов SQL Server (SMO)](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | нет | Да
-|Шаг 6. Создание объекта *SqlColumnEncryptionSettings* для каждого затронутого столбца.  SqlColumnMasterKeySettings — это объект, который существует в памяти (PowerShell). Он определяет целевую схему шифрования столбца. В этом случае объект должен указывать, что затронутый столбец следует зашифровать с помощью нового ключа шифрования столбца. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeysettings) | нет | нет
+|Шаг 6. Создание объекта *SqlColumnEncryptionSettings* для каждого затронутого столбца.  SqlColumnMasterKeySettings — это объект, который существует в памяти (PowerShell). Он определяет целевую схему шифрования столбца. В этом случае объект должен указывать, что затронутый столбец следует зашифровать с помощью нового ключа шифрования столбца. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | нет | нет
 |Шаг 7. Повторное шифрование столбцов, определенных на шаге 5, с помощью нового ключа шифрования столбца. | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Примечание.** Выполнение этого шага может занять длительное время. Приложения не будут иметь доступа к таблицам на протяжении всей операции или ее части в зависимости от выбранного вами режима (в сети или вне сети). | Да | Да
 |Шаг 8. Удаление метаданных для старого ключа шифрования столбца. | [Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey) | нет | Да
 
