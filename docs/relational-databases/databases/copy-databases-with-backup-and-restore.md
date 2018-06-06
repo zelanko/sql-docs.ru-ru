@@ -29,13 +29,14 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32931099"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Копирование баз данных путем создания и восстановления резервных копий
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]можно создать новую базу данных, восстановив резервную копию пользовательской базы данных, созданной в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии. Однако резервные копии баз данных **master**, **model** и **msdb** , созданных в более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , восстановить на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]невозможно. Кроме того, резервные копии, созданные в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , невозможно восстановить в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
->**ВАЖНО!** SQL Server 2016 использует путь по умолчанию, отличный от пути, использованного в предыдущих версиях. Поэтому для восстановления резервной копии базы данных, созданной в месте расположения по умолчанию для ранних версий, необходимо использовать параметр MOVE. Сведения о новом пути по умолчанию см. в разделе [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Дополнительные сведения о перемещении файлов баз данных см. в статье «Перемещение файлов баз данных» далее в этом подразделе.  
+>**ВАЖНО!** SQL Server 2016 использует путь по умолчанию, отличный от пути, использованного в предыдущих версиях. Поэтому для восстановления резервной копии базы данных, созданной в месте расположения по умолчанию для ранних версий, необходимо использовать параметр MOVE. Сведения о новом пути по умолчанию см. в разделе [Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Дополнительные сведения о перемещении файлов баз данных см. в статье «Перемещение файлов баз данных» далее в этом подразделе.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Основные этапы копирования базы данных, используя функции резервного копирования и восстановления  
  При использовании резервного копирования и восстановления для копирования базы данных на другой экземпляр SQL Server компьютер-источник и целевой компьютер могут быть любой платформой, на которой запускается SQL Server.  
@@ -140,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>См. также раздел  
  [Копирование баз данных на другие серверы](../../relational-databases/databases/copy-databases-to-other-servers.md)   
- [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
+ [Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
  [Инструкция RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
  [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   
