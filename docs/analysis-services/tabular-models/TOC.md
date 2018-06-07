@@ -107,4 +107,3 @@
 
 ## [Восстановление из Power Pivot](restore-from-power-pivot.md)  
 
-# [Доступ к данным табличной модели](tabular-model-data-access.md)  

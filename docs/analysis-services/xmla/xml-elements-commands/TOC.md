@@ -1,4 +1,4 @@
-# [XML-элементы — команды](xml-elements-commands.md)
+# [Элементы XMLA - команды](xml-elements-commands.md)
 
 # [Элемент Alter (XML для аналитики)](alter-element-xmla.md)
 # [Элемент Attach](attach-element.md)

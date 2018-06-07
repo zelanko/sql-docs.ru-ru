@@ -1,4 +1,4 @@
-# [Типы данных XML (XML для аналитики)](xml-data-types-xmla.md)
+# [Типы данных XML для Аналитики](xml-data-types-xmla.md)
 
 # [Тип данных EmptyResult (XML для аналитики)](emptyresult-data-type-xmla.md)
 # [Тип данных EnumString (XML для аналитики)](enumstring-data-type-xmla.md)

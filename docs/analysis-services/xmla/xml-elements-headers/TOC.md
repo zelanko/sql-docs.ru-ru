@@ -1,4 +1,4 @@
-# [XML-элементы — заголовки](xml-elements-headers.md)
+# [Элементы XMLA - заголовки](xml-elements-headers.md)
 
 # [Элемент BeginSession (XML для аналитики)](beginsession-element-xmla.md)
 # [Элемент EndSession (XML для аналитики)](endsession-element-xmla.md)

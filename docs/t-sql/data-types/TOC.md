@@ -3,8 +3,7 @@
 # [Преобразование](data-type-conversion-database-engine.md)  
 # [Приоритет](data-type-precedence-transact-sql.md)  
 # [Синонимы](data-type-synonyms-transact-sql.md)  
-# [Точность, масштаб и длина](precision-scale-and-length-transact-sql.md)  
-# [bit](bit-transact-sql.md)  
+# [Точность, масштаб и длина](precision-scale-and-length-transact-sql.md)    
 # [курсор](cursor-transact-sql.md)  
 # [Дата и время](date-and-time-types.md)  
 ## [date](date-transact-sql.md)  
@@ -27,6 +26,7 @@
 ## [Write (компонент Database Engine)](write-database-engine.md)  
 
 # [Числовые типы](numeric-types.md)  
+## [bit](bit-transact-sql.md)
 ## [decimal и numeric](decimal-and-numeric-transact-sql.md)  
 ## [float и real](float-and-real-transact-sql.md)  
 ## [int, bigint, smallint и tinyint](int-bigint-smallint-and-tinyint-transact-sql.md)  
