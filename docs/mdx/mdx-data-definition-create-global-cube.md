@@ -1,40 +1,23 @@
 ---
 title: Инструкция CREATE GLOBAL CUBE (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- GLOBAL CUBE
-- CUBE
-- GLOBAL
-- CREATE
-- CREATE GLOBAL
-- CREATE GLOBAL CUBE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- statements [MDX], CREATE GLOBAL CUBE
-- CREATE GLOBAL CUBE
-ms.assetid: b46f3c98-a4f1-4ebb-915f-a3333f4054dc
-caps.latest.revision: 17
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: dc74fe731c98609a0840c12f0cd216b89d53e0a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 6fb1bc0055748c711762d89ad2757a12d1161254
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741345"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>Определение данных MDX - СОЗДАНИЯ глобального КУБА
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Создает и заполняет значениями локально материализованный куб на основе вложенного куба из куба на сервере. Чтобы соединиться с локально материализованным кубом, соединяться с сервером необязательно. Дополнительные сведения о локальных кубах см. в разделе [локальных кубов &#40;службы Analysis Services — многомерные данные&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
   
@@ -131,7 +114,7 @@ FROM source_cube_name (<param list>)
  \<Тип уровня >  
  Спецификация, допустимая только для определения производного измерения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Локальный куб является definedin условия мер и измерений, которые его определяют. Существует два типа измерений.  
   
 -   Измерения источника — это измерения, которые были частью одного из исходных кубов.  

@@ -1,6 +1,6 @@
 ---
 title: Зарезервированные ключевые слова (синтаксис многомерных Выражений) | Документы Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b82117f17ecc1d7b98648a6641dc697b2fd40b9c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2f50b0292b9139dcbb2b3a5652ad41136b31702a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582266"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742633"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Зарезервированные ключевые слова (синтаксис многомерных выражений)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] резервируют определенные ключевые слова для эксклюзивного использования. Список зарезервированных ключевых слов см. в разделе [зарезервированные слова многомерных Выражений](../mdx/mdx-reserved-words.md).  
+
+  Службы Analysis Services резервируют определенные ключевые слова для эксклюзивного использования. Список зарезервированных ключевых слов см. в разделе [зарезервированные слова многомерных Выражений](../mdx/mdx-reserved-words.md).  
   
  Для зарезервированных ключевых слов есть правила:   
   

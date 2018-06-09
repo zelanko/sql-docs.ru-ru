@@ -1,6 +1,6 @@
 ---
 title: Инструкция UPDATE MEMBER (многомерные Выражения) | Документы Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cd74ca9c5ebe5195dd65c88f657587583be55e92
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 829aabfa7028814e20bcecd47a53495f6dc6bc6a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579846"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742713"
 ---
 # <a name="mdx-data-definition---update-member"></a>Определение данных MDX - UPDATE MEMBER
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Обновляет существующий вычисляемый элемент.  
   
@@ -61,7 +61,7 @@ UPDATE MEMBER Cube_Name.Member_Name
   
 |Идентификатор свойства|Значение|  
 |-------------------------|-------------|  
-|FORMAT_STRING|Объект [!INCLUDE[msCoName](../includes/msconame-md.md)] строка форматирования Office, клиентское приложение можно использовать для отображения значений ячеек.|  
+|FORMAT_STRING|Строка формата стиля Office, клиентское приложение может использовать для отображения значений ячеек.|  
 |VISIBLE|Значение, определяющее видимость вычисляемого элемента в наборе строк схемы. Видимые вычисляемые элементы могут добавляться к набору функцией [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) функции. Ненулевое значение указывает, что данный вычисляемый элемент видим. Значение по умолчанию для этого свойства — *Visible*.<br /><br /> Невидимые вычисляемые элементы обычно используются как промежуточные шаги при вычислении более сложных элементов. К таким вычисляемым элементам могут также обращаться другие типы элементов, например меры.|  
 |NON_EMPTY_BEHAVIOR|Мера или набор, используемые для определения поведения вычисляемых элементов при разрешении пустых ячеек.|  
 |CAPTION|Значение строки, определяющее заголовок, используемый клиентским приложением для отображения элемента.|  

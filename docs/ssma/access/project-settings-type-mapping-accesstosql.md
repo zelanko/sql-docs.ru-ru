@@ -1,8 +1,6 @@
 ---
 title: Параметры (сопоставление типов) проекта (AccessToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -25,11 +23,12 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 072d8aaf4582237cc60a3e3e6d76b02a86dc27c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd5bc6a0db71d2836c068a261681d813bc2011b3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774470"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Параметры (сопоставление типов) проекта (AccessToSQL)
 Параметры сопоставления типов проекта позволяют задать сопоставления типов по умолчанию для проекта SSMA. Можно также указать сопоставления типов для отдельных объектов базы данных. Дополнительные сведения см. в разделе [сопоставление исходной и целевой типы данных](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9).  
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 |Тип данных Microsoft Access|Тип данных SQL Server|  
 |--------------------|------------------------|  
 |**двоичные [\*... \*]**|**varbinary [\*]**|  
-|**boolean**|**бит**|  
+|**boolean**|**bit**|  
 |**byte**|**tinyint**|  
 |**Валюта**|**money**|  
 |**date**|**datetime**|  
@@ -71,7 +70,7 @@ ms.lasthandoff: 05/03/2018
 **Добавить**  
 Щелкните, чтобы добавить в список сопоставления типа данных.  
   
-**Правка**  
+**Изменить**  
 Щелкните, чтобы изменить тип данных в списке сопоставления.  
   
 **Удалить**  

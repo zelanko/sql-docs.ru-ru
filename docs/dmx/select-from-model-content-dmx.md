@@ -1,34 +1,20 @@
 ---
 title: SELECT FROM &lt;модели&gt;. СОДЕРЖИМОЕ (ДАННЫХ DMX) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-- FROM
-- Content
-dev_langs:
-- DMX
-helpviewer_keywords:
-- schema rowsets [Analysis Services], data mining
-- SELECT FROM <model>.CONTENT statement
-ms.assetid: a270b33f-77be-41fa-9340-2f6cb0dd75e5
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c68fe4831c0fcbae281eae4ca3ed823d737267cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842667"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;модели&gt;. СОДЕРЖИМОЕ (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +32,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>Аргументы  
  *n*  
- Необязательно. Целое число, указывающее количество возвращаемых строк.  
+ Необязательный параметр. Целое число, указывающее количество возвращаемых строк.  
   
  *список выражений*  
  Список столбцов с разделителем-запятой, полученных от набора строк схемы Content.  
@@ -55,12 +41,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Идентификатор модели.  
   
  *Условное выражение*  
- Необязательно. Условие ограничения значений, возвращаемых из списка столбцов.  
+ Необязательный параметр. Условие ограничения значений, возвращаемых из списка столбцов.  
   
  *expression*  
- Необязательно. Выражение, возвращающее скалярное значение.  
+ Необязательный параметр. Выражение, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **SELECT FROM**  *\<модели > ***. СОДЕРЖИМОЕ** инструкция возвращает содержимое, определенное для каждого алгоритма. Например, можно использовать описания всех правил модели правил взаимосвязей в пользовательском приложении. Можно использовать **SELECT FROM \<модели >. СОДЕРЖИМОГО** инструкции для возврата значений в столбце NODE_RULE модели.  
   
  В следующей таблице перечислены столбцы, включенные в содержимое модели интеллектуального анализа данных.  
@@ -76,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|Имя атрибута, соответствующего этому узлу.|  
 |NODE_NAME|Имя узла.|  
 |NODE_UNIQUE_NAME|Уникальное имя узла внутри модели.|  
-|NODE_TYPE|Целое число, представляющее тип узла. .|  
+|NODE_TYPE|Целое число, представляющее тип узла. , и делает это по-другому.|  
 |NODE_GUID|Идентификатор GUID узла. Имеет значение NULL, если идентификатор GUID отсутствует.|  
 |NODE_CAPTION|Метка или заголовок, связанный с узлом. В основном используется в целях отображения. Если заголовка не существует, возвращается значение NODE_NAME.|  
 |CHILDREN_CARDINALITY|Количество имеющихся у узла потомков.|  
@@ -159,7 +145,7 @@ WHERE NODE_TYPE = 26
   
 ## <a name="see-also"></a>См. также  
  [ВЫБЕРИТЕ &AMP;#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&AMP;#41;](../dmx/select-dmx.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции обработки данных](../dmx/dmx-statements-data-manipulation.md)   
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

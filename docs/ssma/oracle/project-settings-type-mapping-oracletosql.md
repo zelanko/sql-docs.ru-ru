@@ -1,8 +1,6 @@
 ---
 title: Параметры (сопоставление типов) проекта (OracleToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 18d49c123b42a41db33fd6eb37f580eba34f786e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4b0e239c2dfe345ff17b82fa002550e44fb5b09
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778150"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Параметры (сопоставление типов) проекта (OracleToSQL)
 На странице сопоставление типов **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует типы данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типов данных.  
@@ -46,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 **Добавить**  
 Щелкните, чтобы добавить в список сопоставления типа данных.  
   
-**Правка**  
+**Изменить**  
 Щелкните для изменения выбранного типа данных в списке сопоставления.  
   
 **Удалить**  
@@ -66,7 +65,7 @@ SSMA для Oracle настраивается нестандартные соп�
 |BFILE|varbinary(max)|  
 |binary_double|число с плавающей запятой [53]|  
 |binary_float|число с плавающей запятой [53]|  
-|binary_integer|int|  
+|binary_integer|ssNoversion|  
 |большой двоичный объект|varbinary(max)|  
 |boolean|bit|  
 |char;|varchar(max)|  
@@ -74,13 +73,13 @@ SSMA для Oracle настраивается нестандартные соп�
 |character|varchar(max)|  
 |character varying|varchar(max)|  
 |CLOB|varchar(max)|  
-|date|datetime2 [0]|  
+|Дата|datetime2 [0]|  
 |dec|dec[38][0]|  
 |Decimal|число с плавающей запятой [53]|  
 |число двойной точности|число с плавающей запятой [53]|  
-|float|число с плавающей запятой [53]|  
-|int|int|  
-|integer|int|  
+|FLOAT|число с плавающей запятой [53]|  
+|ssNoversion|ssNoversion|  
+|integer|ssNoversion|  
 |long|varchar(max)|  
 |Long raw|varbinary(max)|  
 |Long raw [\*... 8000]<sup>*</sup>|varbinary [*]|  
@@ -93,19 +92,19 @@ SSMA для Oracle настраивается нестандартные соп�
 |NCHAR|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
 |number|число с плавающей запятой [53]|  
-|numeric|число с плавающей запятой [53]|  
+|NUMERIC|число с плавающей запятой [53]|  
 |NVARCHAR2|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|ssNoversion|  
 |raw|varbinary(max)|  
-|real|число с плавающей запятой [53]|  
-|RowId|uniqueidentifier|  
-|Signtype|smallint|  
-|smallint|smallint|  
+|REAL|число с плавающей запятой [53]|  
+|RowId|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|SMALLINT|SMALLINT|  
 |строка|varchar(max)|  
 |TIMESTAMP|datetime2|  
 |Отметка времени с местным часовым поясом|datetimeoffset|  
 |Отметка времени с часовым поясом|datetimeoffset|  
-|Urowid|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
 |VARCHAR2|varchar(max)|  
 |Xmltype|xml|  
@@ -130,7 +129,7 @@ SSMA для Oracle настраивается нестандартные соп�
 |символ varying [*.. \*]|varchar [*]|  
 |символ [*.. \*]|char [*]|  
 |CLOB|varchar(max)|  
-|date|datetime2 [0]|  
+|Дата|datetime2 [0]|  
 |dec|dec[38][0]|  
 |DEC [*.. \*]|DEC [*] [0]|  
 |dec[*..\*][\*..\*]|dec[*][\*]|  
@@ -138,11 +137,11 @@ SSMA для Oracle настраивается нестандартные соп�
 |Decimal [*.. \*]|Decimal [*] [0]|  
 |Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
 |число двойной точности|число с плавающей запятой [53]|  
-|float|число с плавающей запятой [53]|  
+|FLOAT|число с плавающей запятой [53]|  
 |число с плавающей запятой [*.. 53]|число с плавающей запятой [*]|  
 |число с плавающей запятой [54.. *]|число с плавающей запятой [53]|  
-|int|int|  
-|integer|int|  
+|ssNoversion|ssNoversion|  
+|integer|ssNoversion|  
 |long|varchar(max)|  
 |Long raw|varbinary(max)|  
 |Long raw [*.. 8000]|varbinary [*]|  
@@ -162,22 +161,22 @@ SSMA для Oracle настраивается нестандартные соп�
 |number|число с плавающей запятой [53]|  
 |Номер [*.. \*]|числовой [*]|  
 |Номер [*.. \*][\*.. \*]|числовой [*] [\*]|  
-|numeric|numeric|  
+|NUMERIC|NUMERIC|  
 |числовые [*.. \*]|числовой [*]|  
 |numeric[*..\*][\*..\*]|числовой [*] [\*]|  
 |NVARCHAR2 [*.. \*]|nvarchar [*]|  
 |Необработанный [*.. \*]|varbinary [*]|  
-|real|число с плавающей запятой [53]|  
-|RowId|uniqueidentifier|  
-|smallint|smallint|  
+|REAL|число с плавающей запятой [53]|  
+|RowId|UNIQUEIDENTIFIER|  
+|SMALLINT|SMALLINT|  
 |TIMESTAMP|datetime2|  
 |Отметка времени с местным часовым поясом|datetimeoffset|  
 |Отметка времени с местным часовым поясом [*.. \*]|DateTimeOffset [*]|  
 |Отметка времени с часовым поясом|datetimeoffset|  
 |Отметка времени с часовым поясом [*.. \*]|DateTimeOffset [*]|  
 |Отметка времени [*.. \*]|datetime2 [*]|  
-|Urowid|uniqueidentifier|  
-|urowid [*.. \*]|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
+|urowid [*.. \*]|UNIQUEIDENTIFIER|  
 |varchar [*.. \*]|varchar [*]|  
 |VARCHAR2 [*.. \*]|varchar [*]|  
 |Xmltype|xml|  
@@ -190,9 +189,9 @@ SSMA для Oracle настраивается нестандартные соп�
 |BFILE|varbinary(max)|  
 |binary_double|число с плавающей запятой [53]|  
 |binary_float|число с плавающей запятой [53]|  
-|binary_interger|int|  
+|binary_interger|ssNoversion|  
 |BLOB-объект|varbinary(max)|  
-|Boolean|bit|  
+|Логическое значение|bit|  
 |CHAR|char;|  
 |переменной типа char [*.. 8000]|varchar [*]|  
 |переменной типа char [8001.. *]|varchar(max)|  
@@ -204,7 +203,7 @@ SSMA для Oracle настраивается нестандартные соп�
 |символ [*.. 8000]|char [*]|  
 |символ [8001.. *]|varchar(max)|  
 |CLOB|varchar(max)|  
-|date|datetime2 [0]|  
+|Дата|datetime2 [0]|  
 |dec|dec[38][0]|  
 |DEC [*.. \*]|DEC [*] [0]|  
 |dec[*..\*][\*..\*]|dec[*][\*]|  
@@ -212,11 +211,11 @@ SSMA для Oracle настраивается нестандартные соп�
 |Decimal [*.. \*]|Decimal [*] [0]|  
 |Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
 |число двойной точности|число с плавающей запятой [53]|  
-|Число с плавающей запятой|число с плавающей запятой [53]|  
+|float|число с плавающей запятой [53]|  
 |число с плавающей запятой [*.. 53]|число с плавающей запятой [*]|  
 |число с плавающей запятой [54.. *]|число с плавающей запятой [53]|  
-|int|int|  
-|Целочисленный|int|  
+|int|ssNoversion|  
+|Целочисленный|ssNoversion|  
 |целое число со знаком [*.. \*]|числовой [*] [0]|  
 |Long|varchar(max)|  
 |Long raw|varbinary(max)|  
@@ -246,13 +245,13 @@ SSMA для Oracle настраивается нестандартные соп�
 |numeric[*..\*][\*..\*]|числовой [*] [\*]|  
 |NVARCHAR2 [*.. 4000]|nvarchar [*]|  
 |NVARCHAR2 [4001.. *]|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|ssNoversion|  
 |Необработанный [*.. 8000]|varbinary [*]|  
 |Необработанный [8001.. *]|varbinary(max)|  
 |Real|число с плавающей запятой [53]|  
-|RowId|uniqueidentifier|  
-|Signtype|smallint|  
-|Smallint|smallint|  
+|RowId|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|Smallint|SMALLINT|  
 |строки [*.. 8000]|varchar [*]|  
 |string[8001..*]|varchar(max)|  
 |TIMESTAMP|datetime2|  
@@ -261,8 +260,8 @@ SSMA для Oracle настраивается нестандартные соп�
 |Отметка времени с местным часовым поясом [*.. \*]|DateTimeOffset [*]|  
 |Отметка времени с часовым поясом [*.. \*]|DateTimeOffset [*]|  
 |Отметка времени [*.. \*]|datetime2 [*]|  
-|Urowid|uniqueidentifier|  
-|urowid [*.. \*]|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
+|urowid [*.. \*]|UNIQUEIDENTIFIER|  
 |varchar [*.. 8000]|varchar [*]|  
 |varchar [8001.. *]|varchar(max)|  
 |VARCHAR2 [*.. 8000]|varchar [*]|  

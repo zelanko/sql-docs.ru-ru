@@ -1,41 +1,20 @@
 ---
 title: SELECT FROM &lt;модель&gt; PREDICTION JOIN (DMX) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PREDICTION
-- PREDICTION_JOIN
-- SELECT
-- join
-- FROM
-- PREDICTION JOIN
-dev_langs:
-- DMX
-helpviewer_keywords:
-- prediction joins [DMX]
-- PREDICTION JOIN statement
-- natural prediction joins [DMX]
-- open query predictions
-- singleton query predictions [DMX]
-- SELECT FROM <model> PREDICTION JOIN statement
-ms.assetid: 7ca37fec-4a50-4d79-b1d6-1c7c12176946
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 7014d546d0484dcd5d741844a98c8060f925c96c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842167"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;модель&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +34,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>Аргументы  
  *n*  
- Необязательно. Целое число, указывающее количество возвращаемых строк.  
+ Необязательный параметр. Целое число, указывающее количество возвращаемых строк.  
   
  *Выберите список выражений*  
  Разделенный запятыми список идентификаторов столбцов и выражений, производных от модели интеллектуального анализа данных.  
@@ -70,15 +49,15 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Исходный запрос.  
   
  *список соответствия соединения*  
- Необязательно. Логическое выражение сравнения столбцов модели со столбцами исходного запроса.  
+ Необязательный параметр. Логическое выражение сравнения столбцов модели со столбцами исходного запроса.  
   
  *Условное выражение*  
- Необязательно. Условие ограничения значений, возвращаемых из списка столбцов.  
+ Необязательный параметр. Условие ограничения значений, возвращаемых из списка столбцов.  
   
  *expression*  
- Необязательно. Выражение, возвращающее скалярное значение.  
+ Необязательный параметр. Выражение, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Предложение ON определяет сопоставление столбцов исходного запроса со столбцами модели интеллектуального анализа данных. Такое сопоставление используется для того, чтобы направить столбцы из исходного запроса в столбцы модели интеллектуального анализа данных и чтобы при создании прогнозов можно было использовать эти столбцы в качестве входных. Столбцы в \< *списка сопоставления соединения*> соотносятся с помощью знака равенства (=), как показано в следующем примере:  
   
 ```  
@@ -209,8 +188,8 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>См. также  
  [ВЫБЕРИТЕ &AMP;#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&AMP;#41;](../dmx/select-dmx.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции обработки данных](../dmx/dmx-statements-data-manipulation.md)   
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

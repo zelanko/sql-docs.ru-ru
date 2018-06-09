@@ -1,31 +1,20 @@
 ---
 title: PredictStdev (расширения интеллектуального анализа данных) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictStdev
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictStdev function
-ms.assetid: 2614aad0-f3f2-4f56-9dad-9c436f11a35f
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 0722045df83ce2a70d6c17ba9b55d482799b6039
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 56d8ade3b270f1e81cb2ac0455a245bd78cacd70
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841547"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +34,7 @@ PredictStdev(<scalar column reference>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Скалярное значение типа, который задается параметром  *\<ссылка на скалярный столбец >*.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если ссылка на столбец является дискретной, **PredictStdev** возвращает 0, так как невозможно вычислить среднеквадратичное отклонение по дискретным значениям.  
   
 ## <a name="examples"></a>Примеры  

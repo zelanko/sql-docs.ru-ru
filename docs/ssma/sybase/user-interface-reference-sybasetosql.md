@@ -3,8 +3,6 @@ title: Справочник по пользовательскому интерф
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,16 +16,17 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c157057dfb313c52ea4c3988f1c73a7449e7292e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5a7a8d163592b8234c99c7608c70da64cbc6fb0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779560"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Справочник по пользовательскому интерфейсу (SybaseToSQL)
 Этот раздел содержит подразделы справки по [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) для Sybase.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 |Раздел|Описание|  
 |---------|---------------|  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 |[Глобальные параметры &#40;входа&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-logging-sybasetosql.md)|Используйте **глобальные параметры** диалогового окна для настройки параметров для SSMA для интерфейса пользователя Sybase.|  
 |[Глобальные параметры &#40;тест-инженер&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-tester-sybasetosql.md)|Используйте страницу тест-инженер **GlobalSettings** диалогового окна для задания параметров для тест-инженера.|  
 |[Новый проект &#40;SybaseToSQL&#41;](../../ssma/sybase/new-project-sybasetosql.md)|Используйте **новый проект** диалоговое окно «» для создания нового SSMA для Sybase проекта.|  
-|[Параметры проекта &#40;Преобразование&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)|Используйте страницу преобразования **параметры проекта** диалоговое окно «», чтобы указать, каким образом преобразует SSMA для СУБД Sybase, функции и глобальные переменные.|  
+|[Параметры проекта &#40;преобразования&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)|Используйте страницу преобразования **параметры проекта** диалоговое окно «», чтобы указать, каким образом преобразует SSMA для СУБД Sybase, функции и глобальные переменные.|  
 |[Параметры проекта &#40;графического интерфейса пользователя&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md)|Используйте страницу графического пользовательского интерфейса **параметры проекта** диалоговое окно «», чтобы указать, какой объем данных, отображаемых в **данные** вкладки.|  
 |[Параметры проекта &#40;миграции&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md)|Используйте страницу миграции **параметры проекта** окне настройки как перемещает данные SSMA для СУБД Sybase ASE для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure.|  
 |[Параметры проекта &#40;синхронизации&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)|Используйте страницу синхронизации **параметры проекта** окне настройки как SSMA для СУБД Sybase создает или изменяет перенесенные объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure.|  

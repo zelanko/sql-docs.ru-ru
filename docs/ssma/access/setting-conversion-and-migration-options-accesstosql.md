@@ -1,8 +1,6 @@
 ---
 title: Параметров преобразования и миграции (AccessToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -25,11 +23,12 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 61814a4d5f4b62c3f7262c7c249b165dd8a99571
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d727866a07be1f796eb81b9e26a755fd7991560
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774180"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Параметров преобразования и миграции (AccessToSQL)
 Для каждого проекта SSMA можно задать параметры на уровне проекта. Эти параметры задают преобразование объектов, процесс миграции данных и сопоставлении типов данных источника к типам данных целевого объекта. Перед началом преобразования объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure или переноса данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, убедитесь, что параметры конфигурации подходят для проекта.  

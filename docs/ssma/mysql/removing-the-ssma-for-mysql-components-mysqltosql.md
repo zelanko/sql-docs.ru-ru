@@ -1,8 +1,6 @@
 ---
 title: Удаление SSMA для MySQL компонентов (MySQLToSql) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6cfa6f4638beca9f41f7bbd1646a64a4d294212b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db4762c702597b197aad75a8aee2b2987c11c581
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776770"
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>Удаление SSMA для MySQL компонентов (MySQLToSql)
 После завершения миграции баз данных MySQL для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], может потребоваться удалить компоненты SSMA. Клиентские компоненты можно удалить в любое время. Однако при удалении пакета расширения из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , затем SSMA больше не будет поддерживать переноса данных из MySQL в целевую базу данных (SQL Server или SQL Azure) с использованием механизма серверных данных миграции.  

@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 26868cfd136f3d06366a47ec7d52fa17e3c8fe39
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: ddbe5f25cf3153b3354425fd426798e7061bdf36
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799814"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Отработка отказа группы доступности AlwaysOn в Linux
 
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/19/2018
 - **Пример RHEL/Ubuntu**
 
    ```bash
-   sudo pcs constraint --full
+   sudo pcs constraint list --full
    ```
 
 - **Пример SLES**
@@ -80,35 +81,17 @@ ms.lasthandoff: 05/19/2018
    crm config show
    ```
 
-Удалите ограничение расположение, будущих переход на другой ресурс — включая автоматический переход на другой ресурс — успешно. 
-
-Чтобы удалить ограничение, выполните следующую команду: 
-
-- **Пример RHEL/Ubuntu**
-
-   В этом примере `ag_cluster-master` имя ресурса, который отработку отказа. 
-
-   ```bash
-   sudo pcs resource clear ag_cluster-master 
-   ```
-
-- **Пример SLES**
-
-   В этом примере `ag_cluster` имя ресурса, который отработку отказа. 
-
-   ```bash
-   crm resource clear ag_cluster
-   ```
-
-Вы также можете выполнить приведенную ниже команду для удаления ограничения расположения,  
+Пример ограничения, которое создается из-за отказа вручную. 
+ `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
 - **Пример RHEL/Ubuntu**
 
-   где `cli-prefer-ag_cluster-master` — это код ограничения, которое необходимо удалить. `sudo pcs constraint --full` возвращает этот код. 
-
+   где `cli-prefer-ag_cluster-master` — это код ограничения, которое необходимо удалить. `sudo pcs constraint list --full` возвращает этот код. 
+   
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
+   
 - **Пример SLES**
 
    В следующей команде `cli-prefer-ms-ag_cluster` идентификатор ограничения. `crm config show` возвращает этот код. 

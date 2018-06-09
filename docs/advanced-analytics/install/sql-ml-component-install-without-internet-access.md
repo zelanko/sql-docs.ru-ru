@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 289f304cf445882981fb110e9c00a395cac90e5f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3a340acfbbcf19a6015e3b2745b1f6089e12d3fd
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34585616"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34822197"
 ---
 # <a name="install-sql-server-machine-learning-components-without-internet-access"></a>Установка SQL Server машинного обучения компоненты без доступа к Интернету
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ Microsoft R Server      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlin
 Сервер Microsoft Python    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)|
 **CU7 SQL Server 2017 г.** |
 Microsoft R Open     |без изменений; использовать предыдущее|
-Microsoft R Server      |o изменений; использовать предыдущее|
+Microsoft R Server      |без изменений; использовать предыдущее|
 Откройте Microsoft Python     |без изменений; использовать предыдущее|
 Сервер Microsoft Python    |без изменений; использовать предыдущее|
 

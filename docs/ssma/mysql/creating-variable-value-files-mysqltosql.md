@@ -1,8 +1,6 @@
 ---
 title: Создание файлов значение переменной (MySQLToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 48b32cf3319c39b617586495f233ff706d72044d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d350957cb1590fa2aec5fcd31028849191d8f5d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775876"
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>Создание файлов значение переменной (MySQLToSQL)
 Файл значение переменной является XML-файл, состоящий из значений параметра команд как имя сервера источника или назначения, которые часто изменяются в зависимости от одного сервера миграции. При возникновении большое количество миграции базы данных, несколько файлов переменной для хранения значения каждого исходного сервера создается, на которые ссылается файл сценария master **– v** переключения командной строки. Это помогает при ведении статических значений в несколько файлов скриптов, если значения переменных в нескольких файлах переменной.  
@@ -98,7 +97,7 @@ ms.lasthandoff: 05/03/2018
 Пользователь может легко проверить свой файл значение переменной, соответствие файлу определения схемы **«ConsoleScriptVariablesSchema.xsd»** доступны в папке «Схемы».  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующий шаг в работе консоли — [Создание файлы подключения Server &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
+Следующий шаг в работе консоли — [Создание файлов подключения сервера &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
   
 ## <a name="see-also"></a>См. также  
 [Создание файлов подключения сервера (MySQL)](http://msdn.microsoft.com/en-us/df0e970c-da0b-4118-b359-c9dcbbad16d6)  

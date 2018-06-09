@@ -3,8 +3,6 @@ title: Подключения к базе данных Azure SQL (SybaseToSQL) |
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f73b6e88e457ef74a82512876715a333d0a52d71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb6a49072e16f00ba12dd32f1ccd4b6cab8a3620
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778840"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Подключения к базе данных Azure SQL (SybaseToSQL)
 Используйте подключение к базе данных SQL Azure-диалоговое окно для подключения к базе данных SQL Azure базы данных, которые требуется перенести.  

@@ -1,8 +1,6 @@
 ---
 title: Параметры командной строки в консоли SSMA (DB2ToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a3c09bc2341a5dd5933badc711c1d34137477df6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b526920e1a4ce7156f2dbbf53d88256c80225514
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775110"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Параметры командной строки в консоли SSMA (DB2ToSQL)
 Корпорация Майкрософт предоставляет широкий набор параметры командной строки для выполнения и контроля над SSMA действий. В последующих разделах подробно одинаковыми.  

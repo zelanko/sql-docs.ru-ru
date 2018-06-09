@@ -1,8 +1,6 @@
 ---
 title: Устранение неполадок (AccessToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,22 +16,23 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 96725d8f1dceae433aa4ceef6619e4fcf7530340
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d017b56e358ab70360f216aa985e73392858f584
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774870"
 ---
 # <a name="troubleshooting-accesstosql"></a>Устранение неполадок (AccessToSQL)
 Довольно часто для запуска в выполнении консоли скрипты или команды, посередине проблемы миграции.  
   
 Могут быть исправлены ошибки может быть связана с:  
   
-1.  Функция  
+1.  Компонент  
   
 2.  Процедура  
   
-3.  Просмотр  
+3.  Представление  
   
 4.  Триггер  
   

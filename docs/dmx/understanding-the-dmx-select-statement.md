@@ -1,36 +1,20 @@
 ---
 title: Основные сведения о расширениях интеллектуального анализа данных инструкция Select | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- browsing mining model [Analysis Services]
-- Data Mining Extensions [Analysis Services], statements
-- DMX [Analysis Services], statements
-- predictions [DMX]
-- queries [DMX], Select statement
-- SELECT statement [DMX]
-- statements [DMX], SELECT statement
-- copying mining models
-ms.assetid: 61e97285-4a06-4434-9a40-38cde5af7c3f
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 84f8a735323fe347f97585f453527e9b55afe374
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a63354280ef9c955c081d34d87d337ba0c9d4f87
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842607"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Общие сведения об инструкции расширения интеллектуального анализа данных SELECT
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -79,8 +63,8 @@ ms.lasthandoff: 05/03/2018
   
 |Тип запроса|Описание|  
 |----------------|-----------------|  
-|SELECT FROM [NATURAL] PREDICTION JOIN|Возвращает прогноз, созданный путем соединения столбцов модели интеллектуального анализа данных со столбцами внутреннего источника данных.<br /><br /> Доменом для этого типа запроса являются прогнозируемые столбцы модели и столбцы входного источника данных.<br /><br /> [SELECT FROM &#60;модель&#62; PREDICTION JOIN &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [Прогнозирующие запросы & #40; интеллектуального анализа данных & #41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
-|SELECT FROM  *\<модели >*|Возвращает наиболее вероятное состояние прогнозируемого столбца исключительно на основе модели интеллектуального анализа данных. Этот тип запроса представляет собой быстрый способ создания прогноза с пустым прогнозируемым соединением.<br /><br /> Доменом для этого типа запроса являются прогнозируемые столбцы модели.<br /><br /> [SELECT FROM &#60;модель&#62; &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [Прогнозирующие запросы & #40; интеллектуального анализа данных & #41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
+|SELECT FROM [NATURAL] PREDICTION JOIN|Возвращает прогноз, созданный путем соединения столбцов модели интеллектуального анализа данных со столбцами внутреннего источника данных.<br /><br /> Доменом для этого типа запроса являются прогнозируемые столбцы модели и столбцы входного источника данных.<br /><br /> [SELECT FROM &#60;модель&#62; PREDICTION JOIN &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [Прогнозирующие запросы &#40;интеллектуального анализа данных&#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
+|SELECT FROM  *\<модели >*|Возвращает наиболее вероятное состояние прогнозируемого столбца исключительно на основе модели интеллектуального анализа данных. Этот тип запроса представляет собой быстрый способ создания прогноза с пустым прогнозируемым соединением.<br /><br /> Доменом для этого типа запроса являются прогнозируемые столбцы модели.<br /><br /> [SELECT FROM &#60;модель&#62; &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [Прогнозирующие запросы &#40;интеллектуального анализа данных&#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
   
  [Чтобы выбрать типы](#Select_Types)  
   
@@ -112,13 +96,13 @@ ms.lasthandoff: 05/03/2018
 |----------------|-----------------|  
 |SELECT FROM  *\<модели >*. ВАРИАНТЫ|Возвращает варианты, использовавшиеся для обучения модели интеллектуального анализа данных.<br /><br /> Доменом для этого типа запроса является модель интеллектуального анализа данных.<br /><br /> [SELECT FROM &#60;модель&#62;. СЛУЧАИ &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Создание запросов детализации с помощью расширений интеллектуального анализа данных](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
 |SELECT FROM  *\<модели >*. SAMPLE_CASES|Возвращает образец варианта, который представляет варианты, использовавшиеся для обучения модели интеллектуального анализа данных.<br /><br /> Доменом для этого типа запроса является модель интеллектуального анализа данных.<br /><br /> [SELECT FROM &#60;модель&#62;. SAMPLE_CASES &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
-|SELECT FROM  *\<структуры >*. ВАРИАНТЫ|Возвращает строки подробных данных из базовой структуры интеллектуального анализа данных, даже если при обучении модели интеллектуального анализа данных какие-то сведения не использовались.<br /><br /> [SELECT FROM &#60;структуры&#62;. ВАРИАНТЫ](../dmx/select-from-structure-cases.md)<br /><br /> [Запросы детализации & #40; интеллектуального анализа данных & #41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)|  
+|SELECT FROM  *\<структуры >*. ВАРИАНТЫ|Возвращает строки подробных данных из базовой структуры интеллектуального анализа данных, даже если при обучении модели интеллектуального анализа данных какие-то сведения не использовались.<br /><br /> [SELECT FROM &#60;структуры&#62;. ВАРИАНТЫ](../dmx/select-from-structure-cases.md)<br /><br /> [Запросы детализации &#40;интеллектуального анализа данных&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)|  
   
  [Чтобы выбрать типы](#Select_Types)  
   
 ## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных & #40; расширений интеллектуального анализа данных & #41; Ссылка](../dmx/data-mining-extensions-dmx-reference.md)   
- [Расширения интеллектуального анализа данных & #40; расширений интеллектуального анализа данных & #41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; ссылки](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; синтаксические обозначения](../dmx/data-mining-extensions-dmx-syntax-conventions.md)  
   
   

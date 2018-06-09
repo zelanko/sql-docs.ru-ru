@@ -1,8 +1,6 @@
 ---
 title: Настройка параметров проекта (OracleToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,11 +15,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 8b30a9a0127191c42213fc9b0a5d2e125e3ff764
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c606de3c03038f7e2fbb9f974ba96dd64bef779
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777980"
 ---
 # <a name="setting-project-options-oracletosql"></a>Настройка параметров проекта (OracleToSQL)
 Для каждого проекта SSMA можно задать параметры проекта. Эти параметры задают преобразование объекта, объект загрузки, параметры пользовательского интерфейса и данных миграции. Перед началом преобразования объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или переноса данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], убедитесь, что параметры конфигурации подходят для проекта.  
@@ -47,7 +46,7 @@ SSMA имеет пять наборов параметров проекта.
   
 -   Optimistic  
   
--   Полная  
+-   Полное  
   
 -   Другой  
   

@@ -1,8 +1,6 @@
 ---
 title: Начало работы с SSMA для DB2 консоли (DB2ToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fd7e0f118854a6ba07988065d02aea6a2e7f6f0f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6990e771de81bbb3df4069f65104b8b41c308807
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774890"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Начало работы с SSMA для DB2 консоли (DB2ToSQL)
 В этом разделе описывается, как запустить и приступить к работе с DB2 консольного приложения. Также перечислены в настоящем документе, соглашения используются в типичного окна вывода консоли SSMA.  

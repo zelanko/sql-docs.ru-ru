@@ -3,8 +3,6 @@ title: Тестирование перенесенные объекты базы
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 02cc2deb2721759f938ba8e0244f46b4464b86fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f95ab1a14679d919a11fcc5a0c26554ac6120f2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779410"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>Тестирование перенесенные объекты базы данных (SybaseToSQL)
 Microsoft SQL Server Migration Assistant для Sybase тест-инженера (SSMA тестировщик) автоматически выполняют проверку преобразования объекта базы данных и переноса данных, внесенных SSMA. После завершения всех шагов миграции SSMA используйте тест-инженер SSMA для проверки, преобразованные объекты работать так же, как и все данные были перемещены должным образом.  
@@ -69,5 +68,5 @@ Microsoft SQL Server Migration Assistant для Sybase тест-инженера
   
 ## <a name="see-also"></a>См. также  
 [Установка компонентов SSMA на SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
-[Параметры проекта &#40;Преобразование&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
+[Параметры проекта &#40;преобразования&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
   

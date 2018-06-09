@@ -1,8 +1,6 @@
 ---
 title: С помощью репозиториев теста (OracleToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: aea9c873a139ed53b64098ef88c9e23aef39bef4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b17f0cf6eabbf1268b849e63c24233aefabc089c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778480"
 ---
 # <a name="using-test-repositories-oracletosql"></a>С помощью репозиториев теста (OracleToSQL)
 Хранилище тестов SSMA хранилищ инженер-испытатель SSMA тестовые случаи и результаты теста для последующего использования. Репозиторий данных сохраняются в таблицах SQL Server **TestCaseRepository** и **RunTestCaseResultRepository** в схеме **ssma_oracle_utilities** из **ssmatesterdb** базы данных.  

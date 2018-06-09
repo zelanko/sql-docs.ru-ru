@@ -3,8 +3,6 @@ title: Сопоставление Sybase ASE и типов данных SQL Serv
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -21,11 +19,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8015121c04b75b0f99d56503715a43539db8dceb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 775d251eb43ae33457d6707f1d881a72d54c0112
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779148"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Сопоставление Sybase ASE и типов данных SQL Server (SybaseToSQL)
 Типы базы данных Sybase адаптивной Server Enterprise (ASE) отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или типов базы данных SQL Azure. При преобразовании ASE объекты базы данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или объекты, SQL Azure, необходимо указать способ сопоставления типов данных из ASE для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure. Вы можете принять сопоставления типов данных по умолчанию или можно настроить сопоставления, как показано в следующих разделах.  

@@ -1,8 +1,6 @@
 ---
 title: Параметры (GUI) (AccessToSQL) проекта | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 89e28906e9dbe52cbd4e607e2b4a542812e49f15
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bac59169e33bd821f7773e28833e43981c9a5f43
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774080"
 ---
 # <a name="project-settings-gui-accesstosql"></a>Параметры проекта (GUI) (AccessToSQL)
 Параметры проекта графического пользовательского интерфейса позволяют настроить способ отображения данных на **данные** вкладку и, если для включения данных отчетов с отчетами оценки.  

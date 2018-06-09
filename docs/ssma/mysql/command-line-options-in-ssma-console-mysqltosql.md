@@ -1,8 +1,6 @@
 ---
 title: Параметры командной строки в консоли SSMA (MySQLToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -28,11 +26,12 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1c7d3f83668df0413b1898d888385fed2a183f00
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 86a385361799ef1d8a410f46b3aaf16b1fba55ac
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775580"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>Параметры командной строки в консоли SSMA (MySQLToSQL)
 Корпорация Майкрософт предоставляет широкий набор параметры командной строки для выполнения и контроля над SSMA действий. В последующих разделах подробно одинаковыми.  

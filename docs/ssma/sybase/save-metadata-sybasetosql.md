@@ -3,8 +3,6 @@ title: Сохранение метаданных (SybaseToSQL) | Докумен�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c13fea955d12a27e26dd593d95bb62b462e10676
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5cb17fa5dcec7a01f1067db8b09604ea69dc9411
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779520"
 ---
 # <a name="save-metadata--sybasetosql"></a>Сохранение метаданных (SybaseToSQL)
 **Сохранить метаданные** диалоговом окне будет предложено загрузить метаданные в проект SSMA перед сохранением. Это позволяет иметь полный файл проекта, который можно использовать в автономном режиме и отправить другим пользователям, например, сотрудники службы технической поддержки.  

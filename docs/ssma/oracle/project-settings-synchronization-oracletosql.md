@@ -1,8 +1,6 @@
 ---
 title: Проект Settings(Synchronization) (OracleToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5df187de582e8200a0df4c08da5ed0ba7ae42ba8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd1b299df5f14b08cfb379aaa8b85c808923e786
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777780"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>Проект Settings(Synchronization) (OracleToSQL)
 На странице синхронизации **параметры проекта** диалоговое окно содержит параметры, которые настройки SSMA загружает и обновление базы данных объектов, таких как таблицы и хранимые процедуры в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

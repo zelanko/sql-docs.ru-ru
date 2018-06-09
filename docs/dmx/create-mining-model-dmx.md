@@ -1,38 +1,20 @@
 ---
 title: СОЗДАНИЕ МОДЕЛИ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ (DMX) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE MINING MODEL
-- CREATE
-- CREATE_MINING_MODEL
-dev_langs:
-- DMX
-helpviewer_keywords:
-- RELATED TO column
-- mining models [Analysis Services], creating
-- column definition lists [DMX]
-- parameter lists [DMX]
-- SESSION clause
-- CREATE MINING MODEL statement
-ms.assetid: 43e4b591-7b34-494c-9b2d-7f0fe69af788
-caps.latest.revision: 57
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b496ad8ea528345fed110c388c1ffa632c6b0cb3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842637"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +23,7 @@ ms.lasthandoff: 05/03/2018
   
  Имя структуры интеллектуального анализа данных формируется путем добавления строки «_structure» к имени модели, что гарантирует несовпадение имени структуры и модели.  
   
- Чтобы создать модель интеллектуального анализа данных для существующей структуры интеллектуального анализа данных, используйте [ALTER MINING STRUCTURE &#40; расширений интеллектуального анализа данных &#41;](../dmx/alter-mining-structure-dmx.md) инструкции.  
+ Чтобы создать модель интеллектуального анализа данных для существующей структуры интеллектуального анализа данных, используйте [ALTER MINING STRUCTURE &#40;расширений интеллектуального анализа данных&#41; ](../dmx/alter-mining-structure-dmx.md) инструкции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -69,7 +51,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  Список алгоритмов, поддерживаемых текущим поставщиком можно получить с помощью [строк DMSCHEMA_MINING_SERVICES](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Для просмотра алгоритмы, поддерживаемые в текущем экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], в разделе [свойства интеллектуального анализа данных](../analysis-services/server-properties/data-mining-properties.md).  
   
  *Список параметров*  
- Необязательно. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
+ Необязательный параметр. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
   
  *XML-строка*  
  (Для опытных пользователей.) Модель, закодированная на языке XML (PMML). Строка должна быть заключена в одиночные кавычки (').  
@@ -113,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Список типов данных, типов содержимого, распределений столбцов и флагов моделирования, используемых при определении столбца, см. в следующих разделах.  
   
--   [Типы данных &#40; интеллектуального анализа данных &#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Типы данных &#40;интеллектуального анализа данных&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Содержимого типы &#40; интеллектуального анализа данных &#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Типы содержимого &#40;интеллектуального анализа данных&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [Распределения столбцов &#40; интеллектуального анализа данных &#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Распределения столбцов &#40;интеллектуального анализа данных&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Моделирование флаги &#40; интеллектуального анализа данных &#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Флаги моделирования &#40;интеллектуального анализа данных&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  К инструкции можно добавить предложение, описывающее связь между двумя столбцами. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает использование следующих \<связи столбцов > предложения.  
   
@@ -140,9 +122,9 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,…]  
 ```  
   
- Список параметров, которые связаны с каждым алгоритмом, см. [алгоритмов интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41; ](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Список параметров, которые связаны с каждым алгоритмом, см. [алгоритмов интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если необходимо создать модель со встроенным набором проверочных данных, следует после ALTER MINING STRUCTURE использовать инструкцию CREATE MINING STRUCTURE. При этом не все типы моделей поддерживают набор контрольных данных. Дополнительные сведения см. в статье [CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md).  
   
  Пошаговое руководство по созданию модели интеллектуального анализа данных при помощи инструкции CREATEMODEL см. в разделе [учебника расширений интеллектуального анализа данных прогнозирования ряда времени](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
@@ -206,8 +188,8 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции обработки данных](../dmx/dmx-statements-data-manipulation.md)   
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

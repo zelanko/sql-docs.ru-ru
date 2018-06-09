@@ -5,24 +5,25 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 06/06/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 8e666a50f90a390307f00e8fd310f965fb7a50b7
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 33f798fd3b7816cae61137292392cb9cca729ec7
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34822207"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Ограничения и известные проблемы для служб SSIS в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Эта статья описывает текущие ограничения и известные проблемы для SQL Server Integration Services (SSIS) для Linux.
+В этой статье описываются ограничения и известные проблемы для SQL Server Integration Services (SSIS) для Linux.
 
 ## <a name="general-limitations-and-known-issues"></a>Общие ограничения и известные проблемы
 
@@ -41,11 +42,9 @@ ms.lasthandoff: 05/19/2018
 
 ## <a name="components"></a> Поддерживаемые и неподдерживаемые компоненты
 
-На платформе Linux поддерживаются следующие встроенные компоненты служб Integration Services. Некоторые из них имеют ограничения на платформе Linux, как описано в следующих таблицах.
+На платформе Linux поддерживаются следующие встроенные компоненты служб Integration Services. Некоторые из них имеют ограничения на платформе Linux. Встроенные компоненты, которые не указаны здесь не поддерживаются в Linux.
 
-Встроенные компоненты, которые не указаны здесь не поддерживаются в Linux.
-
-### <a name="supported-control-flow-tasks"></a>Поддерживается задач потока управления
+## <a name="supported-control-flow-tasks"></a>Поддерживается задач потока управления
 - задача «Массовая вставка»
 - Задача потока данных
 - Задача «Профилирование данных»
@@ -54,9 +53,9 @@ ms.lasthandoff: 05/19/2018
 - Задания выражения
 - Задача «FTP»
 - Задача «Веб-служба»
-- XML Task
+- Задача «XML»
 
-### <a name="control-flow-tasks-supported-with-limitations"></a>Такие ограничения задач потока управления
+## <a name="control-flow-tasks-supported-with-limitations"></a>Такие ограничения задач потока управления
 
 | Задача | Ограничения |
 |------------|---|
@@ -67,16 +66,34 @@ ms.lasthandoff: 05/19/2018
 | Задача «Передача базы данных» | Пути в формате UNC не поддерживаются. |
 | | |
 
-### <a name="supported-control-flow-containers"></a>Поддерживается контейнеры потока управления
+## <a name="supported-and-unsupported-maintenance-plan-tasks"></a>Задачи плана обслуживания поддерживаемые и неподдерживаемые
+
+В план обслуживания SQL Server обычно можно использовать разнообразные задачи служб SSIS.
+
+Следующие задачи плана обслуживания не поддерживаются в Linux:
+- Уведомление оператора
+- Выполнение задания агента SQL Server
+
+На платформе Linux поддерживаются следующие задачи плана обслуживания:
+- Проверка целостности базы данных
+- Сжатие базы данных
+- Реорганизация индекса
+- Перестроение индекса
+- Обновить статистику
+- Очистка журнала
+- Резервное копирование базы данных
+- Инструкции T-SQL
+
+## <a name="supported-control-flow-containers"></a>Поддерживается контейнеры потока управления
 - контейнер последовательности
 - Контейнер «цикл по элементам»
 - Контейнер «цикл по каждому элементу»
 
-### <a name="supported-data-flow-sources-and-destinations"></a>Источники потока данных и назначения
+## <a name="supported-data-flow-sources-and-destinations"></a>Источники потока данных и назначения
 - Необработанный файл источника и назначения
 - XML-источник
 
-### <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Источники потока данных и назначения, такие ограничения
+## <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Источники потока данных и назначения, такие ограничения
 
 | Компонент | Ограничения |
 |------------|---|
@@ -87,7 +104,7 @@ ms.lasthandoff: 05/19/2018
 | Источник OLE DB и назначение | Поддерживается только SQL Server Native Client 11.0 и поставщик Microsoft OLE DB для SQL Server. |
 | | |
 
-### <a name="supported-data-flow-transformations"></a>Поддерживаемые преобразования потока данных
+## <a name="supported-data-flow-transformations"></a>Поддерживаемые преобразования потока данных
 - Статистическое
 - Аудит
 - Распространитель сбалансированных данных
@@ -107,12 +124,12 @@ ms.lasthandoff: 05/19/2018
 - Сведение
 - Количество строк
 - Медленно изменяющееся измерение
-- Сортировка
+- Sort
 - Уточняющий запрос термина
 - UNION All
 - отмена свертывания
 
-### <a name="data-flow-transformations-supported-with-limitations"></a>Такие ограничения преобразований потока данных
+## <a name="data-flow-transformations-supported-with-limitations"></a>Такие ограничения преобразований потока данных
 
 | Компонент | Ограничения |
 |------------|---|
@@ -120,7 +137,7 @@ ms.lasthandoff: 05/19/2018
 | компонент скрипта | Поддерживает только стандартные API платформы .NET Framework. |
 | | |
 
-### <a name="supported-and-unsupported-log-providers"></a>Поддерживаемые и неподдерживаемые регистраторов.
+## <a name="supported-and-unsupported-log-providers"></a>Поддерживаемые и неподдерживаемые регистраторов.
 Все встроенные поставщики журналов служб SSIS, поддерживаются в Linux, за исключением поставщик журнала событий Windows.
 
 Поставщик журнала SQL Server поддерживает только проверку подлинности SQL; он не поддерживает проверку подлинности Windows.

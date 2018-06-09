@@ -3,8 +3,6 @@ title: Настройка параметров проекта (SybaseToSQL) | Д
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bd7f7c08b6fbf74b11a99cf9ae662e304ec62869
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af0584a64be3ec5454517a8b00349b1261835026
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779400"
 ---
 # <a name="setting-project-options-sybasetosql"></a>Настройка параметров проекта (SybaseToSQL)
 Для каждого проекта SSMA можно задать параметры проекта. Эти параметры задают преобразование объекта, объект загрузки, SQL azure, пользовательский интерфейс и параметры миграции данных. Перед началом преобразования объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure или переноса данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, убедитесь, что параметры конфигурации подходят для проекта.  
@@ -50,7 +49,7 @@ SSMA имеет пять наборов параметров проекта.
   
 2.  Optimistic  
   
-3.  Полная  
+3.  Полное  
   
 4.  Другой  
   
@@ -58,7 +57,7 @@ SSMA имеет пять наборов параметров проекта.
   
 Параметры описаны в разделе Справочник по пользовательскому интерфейсу этой документации. Дополнительные сведения о параметрах и применение параметров в каждом режиме см. в следующих разделах:  
   
--   [Параметры проекта &#40;Преобразование&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
+-   [Параметры проекта &#40;преобразования&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
   
 -   [Параметры проекта &#40;миграции&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md)  
   

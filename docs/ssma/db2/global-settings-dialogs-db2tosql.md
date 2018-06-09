@@ -1,8 +1,6 @@
 ---
 title: Глобальные параметры (диалоговые окна) (DB2ToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 88ada3b15e6c3b0ff23661876a713f633ea93262
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ce168a2cfe2937195bffe20c39a9a2a4f3fbf3b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774820"
 ---
 # <a name="global-settings-dialogs-db2tosql"></a>Глобальные параметры (диалоговые окна) (DB2ToSQL)
 Используйте диалоговые окна страницу **глобальные параметры** для указания действий пользователя по умолчанию и параметры предупреждения для SSMA.  
