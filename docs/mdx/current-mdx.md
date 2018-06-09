@@ -1,6 +1,6 @@
 ---
 title: Current (многомерные Выражения) | Документы Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e30e2a7940223c7872151d96f05ff79ca919decf
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 4e4962dfd9eba7d3a21710fef33aa39256dcfbfa
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577696"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739483"
 ---
 # <a name="current-mdx"></a>Current (многомерные выражения)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Возвращает текущий кортеж из набора во время выполнения цикла.  
   

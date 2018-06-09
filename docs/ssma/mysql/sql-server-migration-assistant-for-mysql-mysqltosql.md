@@ -1,8 +1,6 @@
 ---
 title: SQL Server Migration Assistant для MySQL (MySQLToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 08/09/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 37dad40566af3492be7ab288711a6aeb22bed0ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd4995fcab20957e0766008aaa9ae3effc819a95
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776520"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>SQL Server Migration Assistant для MySQL (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) для MySQL — это средство для миграции баз данных MySQL для [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 г. в Windows и Linux (Предварительная версия) или Azure [!INCLUDE[msCoName](../../includes/msconame_md.md)] DB. SSMA для объектов базы данных SQL Server, MySQL преобразует объекты базы данных MySQL создает эти объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], а затем переносит данные из MySQL для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 |||  
 |-|-|  
-|**Раздел**|**Description**|  
+|**Раздел**|**Описание**|  
 |[Новые возможности SSMA для MySQL](http://msdn.microsoft.com/en-us/1451a0b0-6713-4d0c-954f-ea3d8fce1d31)|Новые возможности этой версии SSMA для MySQL|  
 |[Установка SSMA для MySQL &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)|Содержит разделы, содержащие необходимые условия и инструкции по установке SSMA для MySQL клиента и необходимых компонентов на компьютере, на котором выполняется SQL Server.|  
 |[Начало работы с SSMA для MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)|Представляет интерфейс, проектов и конфигурации параметры пользователя.|  

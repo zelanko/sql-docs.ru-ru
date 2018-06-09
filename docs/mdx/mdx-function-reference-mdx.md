@@ -1,6 +1,6 @@
 ---
 title: Справочник по функциям многомерных Выражений (MDX) | Документы Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7fd5b9ee4a70ac58ab44a056f0abfb1086d24b76
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9137655ce59efbfa13466fe50f8142987b0ec81a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580036"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742013"
 ---
 # <a name="mdx-function-reference-mdx"></a>Справочник по функциям многомерных выражений (многомерные выражения)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] предоставляет для использования функций в синтаксисе многомерных выражений (MDX). Функции могут включаться во все допустимые инструкции многомерных выражений. Они часто применяются в запросах, пользовательских свертках и других вычислениях. В данном разделе содержатся сведения о функциях многомерных выражений в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+
+  Службы Analysis Services предоставляет для использования функций в синтаксисе многомерных выражений (MDX). Функции могут включаться во все допустимые инструкции многомерных выражений. Они часто применяются в запросах, пользовательских свертках и других вычислениях. В этом разделе содержатся сведения о функциях многомерных Выражений.  
   
  В следующих таблицах можно найти функцию по категории значений, возвращаемых ею, или выбрать имя функции из алфавитного списка в оглавлении.  
   

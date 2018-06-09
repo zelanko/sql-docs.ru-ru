@@ -1,8 +1,6 @@
 ---
 title: Глобальные параметры (протоколирование) (AccessToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 457471b585ac15389e2df39943b781b6ed1771ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aaf2ccc19a6acdaba9aa1d44d563293ae8e0e390
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774310"
 ---
 # <a name="global-settings-logging-accesstosql"></a>Глобальные параметры (протоколирование) (AccessToSQL)
 Используйте **глобальные параметры** диалоговое окно «», чтобы указать параметры ведения журнала для SSMA. Как правило нужно изменить эти параметры только при работе с технической поддержки.  

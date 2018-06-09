@@ -1,6 +1,6 @@
 ---
 title: Комментарии (синтаксис многомерных Выражений) | Документы Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c2a5c543ca5f611c671566dcbdac16f2248a59af
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 17693d0dc76dd6cb8b3a4d0c3ead9f95c0599580
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578456"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740765"
 ---
 # <a name="comments-mdx-syntax"></a>Комментарии (синтаксис многомерных выражений)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Комментарии — это невыполняемые строки кода программы (их также называют пометками). Комментарии используются для документирования кода или временного отключения фрагментов инструкций и скриптов многомерных выражений для отладки. Документирование кода при помощи комментариев упрощает его дальнейшее обслуживание. Комментарии часто используют, чтобы записать имя программы, имя автора и даты основных изменений кода. Кроме того, комментарии можно использовать для пояснения сложных вычислений и описания метода программирования.  
   
  При использовании комментариев в многомерных выражениях необходимо помнить следующее.  
   
--   В комментариях можно использовать все алфавитно-цифровые символы и знаки. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] пропускает все символы внутри комментария.  
+-   В комментариях можно использовать все алфавитно-цифровые символы и знаки.  Все символы внутри комментария, игнорируются.  
   
 -   Длина комментария в инструкции или скрипте не ограничивается. Комментарии могут состоять из одной или нескольких строк.  
   

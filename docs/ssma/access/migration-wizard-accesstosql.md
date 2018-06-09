@@ -1,8 +1,6 @@
 ---
 title: Мастер миграции (AccessToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -27,11 +25,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 356f06ec66e0fa18c0406f34ce706eae0eaf2886
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2479b1b3061cf675830607e7cbff46140e75a1b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774020"
 ---
 # <a name="migration-wizard-accesstosql"></a>Мастер миграции (AccessToSQL)
 Мастер миграции поможет миграции одной или нескольких баз данных с доступом к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure. С помощью мастера, будет создание проекта, добавьте в проект базы данных, выберите объекты для переноса и подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure. Будет также преобразовать, загрузить и перенести доступа схемы и данные. При необходимости можно связать доступа к таблицам для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] таблиц или SQL Azure.  
