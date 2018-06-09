@@ -7,16 +7,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d2b7aefa675bc4cfe8ea6fab463053395d5f45d0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a0780d4f974761af563ff2ed6e20e444b2d85ef9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563682"
 ---
 # <a name="install-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Установка SQL Server машинного обучения функции на виртуальной машине Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-Мы рекомендуем использовать [виртуальная машина анализа данных](ttps://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm), но если требуется, чтобы к виртуальной Машине с только что служб SQL Server 2017 г машины обучения или служб R SQL Server 2016, в этой статье поможет выполнить действия.
+Мы рекомендуем использовать [виртуальная машина анализа данных](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm), но если требуется, чтобы к виртуальной Машине с только что служб SQL Server 2017 г машины обучения или служб R SQL Server 2016, в этой статье поможет выполнить действия.
 
 ## <a name="create-a-virtual-machine-on-azure"></a>Создание виртуальной машины в Azure
 

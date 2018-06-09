@@ -1,34 +1,23 @@
 ---
 title: AVG (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- AVG
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Avg function [MDX]
-ms.assetid: efe61272-c3eb-4a33-b231-e00c30be16aa
-caps.latest.revision: 42
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: dd508fcef5ecd378dea8ec4afe86dfd35e45d1a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7d6b2e91504c2c9ba796d2c0a55ba19fb3f6493e
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740543"
 ---
 # <a name="avg-mdx"></a>Avg (многомерные выражения)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Вычисляет набор и возвращает среднее непустых значений ячеек набора; среднее считается по мерам в наборе или по указанной мере.  
   
@@ -46,7 +35,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  Допустимое числовое выражение (обычно многомерное выражение координат ячейки), возвращающее число.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если указан набор пустых кортежей или пустой набор, **Avg** функция возвращает пустое значение.  
   
  **Avg** функция вычисляет среднее из непустых значений ячеек в указанном наборе, сначала рассчитывается сумма значений для ячеек в указанном наборе, а затем полученная сумма делится на число непустых ячеек в указанном наборе.  
@@ -157,6 +146,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

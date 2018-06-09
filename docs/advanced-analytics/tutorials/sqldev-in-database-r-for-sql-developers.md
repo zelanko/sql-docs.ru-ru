@@ -1,20 +1,21 @@
 ---
-title: В базе данных аналитики R для разработчиков SQL (учебник) | Документы Microsoft
+title: Внедренные учебника analytics R для SQL Server машинного обучения для разработчиков | Документы Microsoft
+description: Руководство для внедрения в SQL Server R хранимые процедуры и функции T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e1ff2799ba37c97f5ff82c1c15cdeb986220a947
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3d2b77d73bb1b8f5d4c507b884d0a09f4647012b
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34585276"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250027"
 ---
-# <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>Аналитика в базе данных R для разработчиков SQL (учебник)
+# <a name="tutorial-embedded-r-in-stored-procedures-and-t-sql-functions"></a>Учебник: Внедренных R в хранимые процедуры и функции T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Цель данного руководства — предоставить программисты SQL практический опыт создания машинного обучения решения в SQL Server. В этом учебнике вы узнаете, как включить R в приложение или решение бизнес-Аналитики, заключив код R в хранимые процедуры.
@@ -31,41 +32,30 @@ ms.locfileid: "34585276"
 
 В этом учебнике предполагается, что был предоставлен код R, необходимых для решения и сосредоточиться на построение и развертывание решения с помощью SQL Server.
 
-- [Урок 1: Загрузите образец данных](../tutorials/sqldev-download-the-sample-data.md)
+- [Урок 1: Загрузите образцы данных и сценариев](../tutorials/sqldev-download-the-sample-data.md)
 
-    Скачайте образец набора данных и образцы файлов скриптов SQL на локальный компьютер.
+- [Занятие 2: Настройка учебника среды](../r/sqldev-import-data-to-sql-server-using-powershell.md)
 
-- [Занятие 2: Импорт данных в SQL Server с помощью PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+- [Занятие 3: Анализ и визуализация данных фигуры и распространение путем вызова функций R в хранимые процедуры](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-    Выполните скрипт PowerShell, который создает базу данных и таблицу в экземпляре [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , а затем загружает образец данных в таблицу.
-
-- [Занятие 3: Анализ и визуализация данных](../tutorials/sqldev-explore-and-visualize-the-data.md)
-
-    Выполните базовые действия по анализу и визуализации данных, вызвав пакеты и функции R из хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)] .
-
-- [Занятие 4: Создание компонентов данных, с помощью T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
-
-    Сформируйте характеристики данных с помощью пользовательских функций SQL.
+- [Занятие 4: Создание компонентов данных, с использованием R в функции T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
   
--   [Занятие 5: Обучения и сохранить модель R с помощью T-SQL](../r/sqldev-train-and-save-a-model-using-t-sql.md)
-
-    Создать модель машинного обучения, R в хранимые процедуры. Сохраните модель в таблицу SQL Server.
+- [Занятие 5: Обучения и сохранить модель R с помощью функций и хранимых процедур](../r/sqldev-train-and-save-a-model-using-t-sql.md)
   
--   [Урок 6: Модель ввода в эксплуатацию](../tutorials/sqldev-operationalize-the-model.md)
+- [Урок 6: Wrap R код в хранимую процедуру для ввода в эксплуатацию](../tutorials/sqldev-operationalize-the-model.md). 
+  Сохранив модель в базе данных, вызовите ее для прогнозирования из [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью хранимых процедур.
 
-    Сохранив модель в базе данных, вызовите ее для прогнозирования из [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью хранимых процедур.
-
-### <a name="scenario"></a>Сценарий
+## <a name="scenario"></a>Сценарий
 
 В этом учебнике используется хорошо известных открытый набор данных, на приема-передачи в Нью-Йорк такси основе. Для запуска образца кода быстрее, мы создали репрезентативной выборки данных 1%. Эти данные будут использоваться для создания модели двоичной классификации, прогнозирующей ли определенный trip шансов получить совет или нет, на основе столбцов, таких как время дня, расстояние и место сбора.
 
-### <a name="requirements"></a>Требования
+## <a name="requirements"></a>Требования
 
-Этот учебник предназначен для пользователей, знакомых с основных операций базы данных, таких как создание баз данных и таблиц, импорт данных в таблицах и подготавливая SQL-запросы. Весь необходимый код на языке R предоставляется, поэтому среда разработки R не требуется. Можно использовать как Опытный программист SQL [! ВКЛЮЧИТЬ [tsql] (.. /.. и включает/tsql md.md)] в [! ВКЛЮЧИТЬ [ssManStudioFull] (.. /.. и включает / ssmanstudiofull md.md) и запустите предоставленный скрипт PowerShell, чтобы завершить этот пример. Тем не менее прежде чем начать этого учебника, необходимо выполнить следующие подготовительные действия.
+В этом учебнике предполагается Знакомство с основных операций базы данных, таких как создание баз данных и таблиц, импорт данных и подготавливая SQL-запросы. Он не предполагается, что вы знаете R. Таким образом весь код R предоставляется. Опытный программист SQL можно использовать предоставленный скрипт PowerShell, образцы данных на GitHub, и [!INCLUDE[tsql](../../includes/tsql-md.md)] в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для завершения этого примера. 
 
-Тем не менее перед началом работы с учебником необходимо завершить следующие подготовительные действия:
+Перед началом работы с учебником:
 
-- Подключитесь к экземпляру компонента SQL Server 2016 со службами R Services или 2017 г. SQL Server с компьютера службы обучения и R включены.
+- Проверьте, имеется настроенный экземпляр [служб R SQL Server 2016](../install/sql-r-services-windows-install.md#verify-installation) или [служб SQL Server 2017 г машины обучения с помощью R включены](../install/sql-machine-learning-services-windows-install.md#verify-installation). Кроме того [убедитесь, что вы установили библиотек R](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location).
 - Пользователь, который используется для этого учебника необходимо иметь разрешения на создание баз данных и других объектов для передачи данных, выбора данных и выполнения хранимых процедур.
 
 > [!NOTE]

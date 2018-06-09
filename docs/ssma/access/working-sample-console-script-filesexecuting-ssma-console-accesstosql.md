@@ -1,8 +1,6 @@
 ---
 title: Работать с FilesExecuting сценария образец консоли консоли SSMA | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a581236e29da44646eee8fa55f432ad92e9d586c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b6ebe456c8dc7f678740ab479c317eff041e132
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774270"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>Работа с FilesExecuting сценария образец консоли SSMA консоли (AccessToSQL)
 Несколько файлов образец предоставляется вместе с продуктом использования и справочник по пользовательскому. Этот раздел описывает способ легко настроить эти сценарии, в соответствии с потребностями пользователя.  
@@ -64,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **ConversionAndDataMigrationSample.xml:** в этом примере пользователь может выполнить миграцию комплексных преобразование для переноса данных. Список значения обязательных атрибутов, которые потребуется изменить перечисленные ниже.  
   
-    |Имя команды|Описание|Attribute|  
+    |Имя команды|Описание|attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|Сопоставление схемы базы данных-источника в целевую схему.|`source-schema:` Указывает, требуется для преобразования базы данных-источника.<br /><br />`sql-server-schema`: Указывает, перемещаются в целевой базе данных|  
     |`convert-schema`|Выполняет преобразование схемы из источника в целевую схему.<br /><br />Если пользователь имеет для оценки нескольких объектов и баз данных, он можно указать несколько `metabase-object` узлов, как показано в `convert-schema` 4 пример команды консоли образца файла скрипта.|`object-name`Для указания базы данных-источника или имя, которое требуется для преобразования объекта. Убедитесь, что соответствующие `object-type` изменяется в зависимости от типа объекта, указанного в `object-name`|  

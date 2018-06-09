@@ -1,24 +1,26 @@
 ---
-title: Урок 6 ввода в эксплуатацию R-модели | Документы Microsoft
+title: Занятие 6 возможных выхода прогноза с помощью модели R (SQL Server машинного обучения) | Документы Microsoft
+description: Руководство для внедрения в SQL Server R хранимые процедуры и функции T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/08/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1503467f1979e2e123f12227cc92ea975b6cd6a3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32984626dfac11bd2465cb783c583f6b210f6b68
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249857"
 ---
-# <a name="lesson-6-operationalize-the-r-model"></a>Урок 6: R-модели ввода в эксплуатацию
+# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Урок 6: Прогнозирования возможных результатов, с помощью R-модели в хранимой процедуре
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье является частью учебника для разработчиков SQL по использованию R в SQL Server.
 
-На этом шаге вы научитесь *ввода в эксплуатацию* модели с помощью хранимой процедуры. Эта хранимая процедура может вызываться напрямую другими приложениями для создания прогнозов на основе новых наблюдений. В примере демонстрируются два способа выполнения оценки с помощью R-модели в хранимой процедуре:
+На этом шаге вы узнаете, как использовать модель для нового наблюдения для прогнозирования возможных результатов. Модели заключается в оболочку в хранимой процедуре, который может вызываться другими приложениями. В примере демонстрируются несколько способов выполнения оценки:
 
 - **Режим оценки пакета**: использовать запрос SELECT в качестве входных данных для хранимой процедуры. Хранимая процедура возвращает таблицу наблюдений, соответствующую входным вариантам.
 
@@ -28,7 +30,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="basic-scoring"></a>Основные вычисления
 
-Хранимая процедура _PredictTip_ иллюстрирует базовый синтаксис для заключения вызова прогноза в хранимую процедуру.
+Хранимая процедура **PredictTip** иллюстрирует базовый синтаксис для заключения вызова прогноза в хранимую процедуру.
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
@@ -54,7 +56,7 @@ GO
 
 + Инструкция SELECT получает сериализованную модель из базы данных и хранится в переменной R модель `mod` для дальнейшей обработки с помощью языка R.
 
-+ Для оценки новых случаев извлекаются из [!INCLUDE[tsql](../../includes/tsql-md.md)] запрос, указанный в `@inquery`, первый параметр хранимой процедуры. По мере считывания данных запроса строки сохраняются в кадре данных по умолчанию `InputDataSet`. Этот кадр данных передается в функцию `rxPredict` на языке R, которая формирует оценки.
++ Для оценки новых случаев извлекаются из [!INCLUDE[tsql](../../includes/tsql-md.md)] запрос, указанный в `@inquery`, первый параметр хранимой процедуры. По мере считывания данных запроса строки сохраняются в кадре данных по умолчанию `InputDataSet`. Этот кадр данных передается [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) функционировать в [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), служащего для создания оценки.
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -91,13 +93,13 @@ GO
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    Этот запрос можно использовать в качестве входных данных для хранимой процедуры _PredictTipBatchMode_, в качестве части загрузки.
+    Этот запрос можно использовать в качестве входных данных для хранимой процедуры **PredictTipMode**, в качестве части загрузки.
 
-2. Внимательно просмотрите код хранимой процедуры _PredictTipBatchMode_ в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. Внимательно просмотрите код хранимой процедуры **PredictTipMode** в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
     ```SQL
-    /****** Object:  StoredProcedure [dbo].[PredictTipBatchMode]  ******/
-    CREATE PROCEDURE [dbo].[PredictTipBatchMode] @inquery nvarchar(max)
+    /****** Object:  StoredProcedure [dbo].[PredictTipMode]  ******/
+    CREATE PROCEDURE [dbo].[PredictTipMode] @inquery nvarchar(max)
     AS
     BEGIN
     DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
@@ -141,7 +143,7 @@ GO
 
 В этом разделе вы научитесь создавать единичные прогнозы с помощью хранимой процедуры.
 
-1. Изучите код хранимой процедуры _PredictTipSingleMode_, которая входит в состав скачанного пакета.
+1. Внимательно просмотрите код хранимой процедуры **PredictTipSingleMode**, который входит в состав загрузки.
   
     ```SQL
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0

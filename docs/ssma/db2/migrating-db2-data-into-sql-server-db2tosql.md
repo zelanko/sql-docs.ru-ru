@@ -1,8 +1,6 @@
 ---
 title: Миграция данных DB2 в SQL Server (DB2ToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ffcbf3b0e59026fea0005cd3d955de6b4af89059
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03cee0cc854642d76401570099d93616be189a68
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775060"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>Перенос данных DB2 в SQL Server (DB2ToSQL)
 После успешной синхронизации преобразованные объекты с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], можно выполнить перенос данных из DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

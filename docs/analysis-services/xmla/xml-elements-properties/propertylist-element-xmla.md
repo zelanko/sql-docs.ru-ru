@@ -13,7 +13,7 @@ ms.openlocfilehash: 3e773de16e65aa9c7f1be521214088aa9f06b369
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34577836"
 ---
 # <a name="propertylist-element-xmla"></a>Элемент PropertyList (XML для аналитики)

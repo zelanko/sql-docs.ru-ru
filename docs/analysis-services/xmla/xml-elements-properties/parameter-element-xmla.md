@@ -13,7 +13,7 @@ ms.openlocfilehash: e361215425c1e7b0e54b2e8a92b2987d30b00790
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575956"
 ---
 # <a name="parameter-element-xmla"></a>Элемент Parameter (XML для аналитики)
