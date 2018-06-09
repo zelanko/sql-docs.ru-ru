@@ -1,34 +1,23 @@
 ---
 title: StdevP (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- STDEVP
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- StdevP function [MDX]
-ms.assetid: cd8ae7c9-3cef-49f0-bb41-8f577c7b6f31
-caps.latest.revision: 30
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c9a1f716c03f1615d258626e4895abd4b8d06813
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 14117ed4a3e3e7afc0152c5e659d1c7f040957e9
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742933"
 ---
 # <a name="stdevp-mdx"></a>StdevP (многомерные выражения)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Возвращает среднеквадратичное отклонение совокупности для числового выражения, вычисляемого на наборе по формуле смещенной совокупности (делением *n*).  
   
@@ -46,7 +35,7 @@ StdevP(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  Допустимое числовое выражение (обычно многомерное выражение координат ячейки), возвращающее число.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **StdevP** функция использует смещенной совокупности формул при [Stdev](../mdx/stdev-mdx.md) функции используется формула несмещенной совокупности.  
   
 ## <a name="example"></a>Пример  
@@ -64,6 +53,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
