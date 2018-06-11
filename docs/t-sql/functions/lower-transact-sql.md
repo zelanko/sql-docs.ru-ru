@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 # <a name="lower-transact-sql"></a>LOWER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает символьное выражение после преобразования символов нижнего регистра в символы верхнего регистра.  
+  Возвращает символьное выражение после преобразования символов верхнего регистра в символы нижнего регистра.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
