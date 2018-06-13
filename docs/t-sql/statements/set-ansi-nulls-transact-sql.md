@@ -30,11 +30,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e1a05133d905e6211cded5afc46dba8db75757f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe1bbff7ae50d44885c061eee1550adc78f1df11
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582566"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -66,7 +67,22 @@ SET ANSI_NULLS ON
  Если SET ANSI_NULLS установлено в OFF, операторы «равно» (=) и «не равно» (<>) не следуют стандарту ISO. Инструкция SELECT, использующая предложение WHERE *column_name* = **NULL**, вернет строки, имеющие значения NULL, в столбце *column_name*. Инструкция SELECT, использующая предложение WHERE *column_name* <> **NULL**, вернет строки, имеющие значения, отличные от NULL, в столбце. Также любая инструкция SELECT, использующая предложение WHERE *column_name* <> *XYZ_value*, возвращает все строки со значениями, не равными *XYZ_value* и не равными NULL.  
   
  Если SET ANSI_NULLS равняется ON, все сравнения со значением NULL возвращают значение UNKNOWN. Когда SET ANSI_NULLS равняется OFF, сравнение любых значений с NULL вернет TRUE только в том случае, если сравниваемое значение тоже NULL. Если параметр SET ANSI_NULLS не указан, применяется значение параметра ANSI_NULLS текущей базы данных. Дополнительные сведения о параметре базы данных ANSI_NULLS см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
+
+ В следующей таблице показано влияние значения параметра ANSI_NULLS на результаты нескольких логических выражений с использованием значений NULL и значений, отличных от NULL.  
   
+|Логическое выражение|SET ANSI_NULLS ON|SET ANSI_NULLS OFF|  
+|---------------|---------------|------------|  
+|NULL = NULL|UNKNOWN|TRUE|  
+|1 = NULL|UNKNOWN|FALSE|  
+|NULL <> NULL|UNKNOWN|FALSE|  
+|1 <> NULL|UNKNOWN|TRUE|  
+|NULL > NULL|UNKNOWN|UNKNOWN|  
+|1 > NULL|UNKNOWN|UNKNOWN|  
+|NULL IS NULL|TRUE|TRUE|  
+|1 IS NULL|FALSE|FALSE|  
+|NULL IS NOT NULL|FALSE|FALSE|  
+|1 IS NOT NULL|TRUE|TRUE|  
+
  Директива SET ANSI_NULLS ON влияет только на сравнения, в которых в качестве одного из операндов используется NULL в виде переменной или литеральной константы. Если оба операнда представляют собой столбцы или составные выражения, эта настройка не влияет на результат сравнения.  
   
  Чтобы скрипт работал в соответствии с первоначальным замыслом, вне зависимости от параметра базы данных ANSI NULLS или настроек SET ANSI_NULLS, в сравнениях, которые могут содержать значения NULL, следует использовать выражения IS NULL и IS NOT NULL.  

@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cb0ea7d3443e338190e9bc63c7132aa554aa843
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aed0b8b2aa36b215f894ee4c032ff38e8a23f43f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550815"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +90,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsTornPageDetectionEnabled|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] выявляет незавершенные операции ввода-вывода, вызванные сбоями питания или другими перерывами в работе системы.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**| 
 |IsVerifiedClone|База данных представляет собой копию только схемы и статистики пользовательской базы данных, созданной с помощью параметра WITH VERIFY_CLONEDB функции DBCC CLONEDATABASE. Дополнительные сведения см. в этой [статье службы поддержки Майкрософт](http://support.microsoft.com/help/3177838).|**Применимо к** : начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления SP2.<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**| 
 |IsXTPSupported|Указывает, поддерживает ли база данных выполняющуюся в памяти OLTP, то есть создание и использование таблиц, оптимизированных для памяти, и модулей, скомпилированных в собственном коде.<br /><br /> Относится к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported не зависит от наличия файловой группы MEMORY_OPTIMIZED_DATA, которая требуется для создания объектов выполняющейся в памяти OLTP.|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимый ввод, ошибка или неприменимо<br /><br /> Базовый тип данных: **int**|  
-|LastGoodCheckDbTime|Дата и время последнего успешного выполнения DBCC CHECKDB в указанной базе данных.|**Применимо к** : начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления SP2.<br /><br /> Значение datetime<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **datetime**| 
+|LastGoodCheckDbTime|Дата и время последней успешной команды DBCC CHECKDB, выполненной в указанной базе данных. <sup>1</sup> Если команда DBCC CHECKDB не была выполнена в базе данных, возвращается 1900-01-01 00:00:00.000.|**Применимо к** : начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления SP2.<br /><br /> Значение datetime<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **datetime**| 
 |LCID|Код языка Windows для параметров сортировки.|Значение кода языка (в десятичном формате).<br /><br /> Базовый тип данных: **int**|  
 |MaxSizeInBytes|Максимальный размер базы данных в байтах.|**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: база данных не запущена<br /><br /> Базовый тип данных: **bigint**|  
 |Восстановление|Модель восстановления базы данных|FULL: модель полного восстановления<br /><br /> BULK_LOGGED: модель восстановления с неполным протоколированием<br /><br /> SIMPLE: простая модель восстановления<br /><br /> Базовый тип данных: **nvarchar(128)**|  
@@ -99,8 +100,12 @@ DATABASEPROPERTYEX ( database , property )
 |Состояние|Состояние базы данных.|ONLINE: база данных доступна для запросов.<br /><br /> **Примечание**. Состояние базы данных ONLINE может быть возвращено, когда база открывается и еще не восстановилась. Чтобы определить, может ли база данных принимать соединения, запросите свойство Collation функции **DATABASEPROPERTYEX**. База данных может принимать соединения, если параметры сортировки базы данных возвращают значение, отличное от NULL. Применительно к базам данных AlwaysOn выполните запрос к столбцу database_state или database_state_desc представления `sys.dm_hadr_database_replica_states`.<br /><br /> OFFLINE: база данных явным образом переведена в режим "вне сети".<br /><br /> RESTORING: началось восстановление базы данных.<br /><br /> RECOVERING: восстановление базы данных началось, и она еще не готова к запросам.<br /><br /> SUSPECT: база данных не восстанавливалась.<br /><br /> EMERGENCY: база данных находится в аварийном состоянии и доступна только для чтения. Доступ ограничен членами роли sysadmin.<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |Updateability|Указывает, можно ли изменять данные.|READ_ONLY: база данных поддерживает операции чтения, но не изменения данных.<br /><br /> READ_WRITE: база данных поддерживает операции чтения и изменения данных.<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |UserAccess|Указывает пользователей, имеющих доступ к базе данных.|SINGLE_USER: в каждый момент времени доступ имеет только один пользователь db_owner, dbcreator или sysadmin<br /><br /> RESTRICTED_USER: только члены ролей db_owner, dbcreator или sysadmin<br /><br /> MULTI_USER: все пользователи<br /><br /> Базовый тип данных: **nvarchar(128)**|  
-|Версия|Внутренний номер версии того кода [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с которым была создана база данных. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Номер версии: база данных открыта.<br /><br /> NULL: база данных не запущена.<br /><br /> Базовый тип данных: **int**|  
-  
+|Версия|Внутренний номер версии того кода [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с которым была создана база данных. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Номер версии: база данных открыта.<br /><br /> NULL: база данных не запущена.<br /><br /> Базовый тип данных: **int**| 
+<br/>   
+
+> [!NOTE]  
+> <sup>1</sup> Для баз данных, входящих в группу доступности, `LastGoodCheckDbTime` возвращает дату и время последней успешной команды DBCC CHECKDB в первичной реплике независимо от того, из какой реплики она запускалась. 
+
 ## <a name="return-types"></a>Типы возвращаемых данных
 **sql_variant**
   

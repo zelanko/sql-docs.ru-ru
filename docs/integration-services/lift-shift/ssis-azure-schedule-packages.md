@@ -1,6 +1,6 @@
 ---
 title: Планирование выполнения пакетов MSSQL Integration Services в Azure | Документы Майкрософт
-ms.date: 05/09/2018
+ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,35 +12,32 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bfad00425848189d88bd780296db00ec810b37c
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 62980562b7f89293177307cd4c3ad02f54e977f0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585846"
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>Планирование выполнения пакета MSSQL Integration Services в Azure
-Вы можете запланировать выполнение пакетов, хранящихся в базе данных каталога SSISDB на сервере базы данных SQL Azure, выбрав один из следующих вариантов планирования:
--   [Параметр "Расписание" в среде SQL Server Management Studio (SSMS)](#ssms)
--   [Операция выполнения пакета служб SSIS для фабрики данных Azure](#execute)
--   [Операция хранимой процедуры SQL Server для фабрики данных Azure](#storedproc)
--   [Задания обработки эластичных баз данных SQL](#elastic)
--   [Агент SQL Server](#agent)
+Для планирования выполнения пакетов служб SSIS, развернутых в базе данных каталога SSISDB на сервере базы данных SQL Azure, можно выбрать один из вариантов, описанных в этой статье. Можно запланировать прямое выполнение пакета или косвенное выполнение в составе конвейера фабрики данных Azure. Общие сведения о службах SSIS в Azure см. в статье [Перенос рабочих нагрузок SQL Server Integration Services в облако](ssis-azure-lift-shift-ssis-packages-overview.md).
+
+- Планирование выполнения пакета напрямую
+
+  - [Планирование с помощью параметра "Расписание" в среде SQL Server Management Studio (SSMS)](#ssms)
+
+  - [Задания обработки эластичных баз данных SQL](#elastic)
+
+  - [Агент SQL Server](#agent)
+
+- [Планирование косвенного выполнения пакета в составе конвейера фабрики данных Azure](#activity)
+
 
 ## <a name="ssms"></a> Планирование выполнения пакета в среде SSMS
 
 В SQL Server Management Studio (SSMS) щелкните правой кнопкой мыши пакет, развернутый в базе данных каталога SSIS, SSISDB, и выберите **Расписание**, чтобы открыть диалоговое окно **Новое расписание**. Дополнительные сведения см. в статье [Планирование выполнения пакета MSSQL Integration Services в Azure в помощью SSMS](ssis-azure-schedule-packages-ssms.md).
 
 Для запуска этого компонента требуется SQL Server Management Studio версии 17.7 или более поздней. Чтобы получить последнюю версию SSMS, перейдите на страницу [скачивания SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
-
-## <a name="execute"></a> Планирование выполнения пакета с помощью операции "Выполнить пакет SSIS"
-
-Сведения о создании расписания для пакета SSIS с помощью операции "Выполнить пакет SSIS" в фабрике данных Azure см. в разделе [Выполнение пакета SSIS с помощью операции SSIS в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
-
-## <a name="storedproc"></a> Планирование выполнения пакета с помощью операции хранимой процедуры
-
-Сведения о создании расписания для пакета SSIS с помощью операции хранимой процедуры в фабрике данных Azure см. в разделе [Выполнение пакета SSIS с помощью операции хранимой процедуры в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
-
-В случае фабрики данных версии 1 см. раздел [Выполнение пакета SSIS с помощью операции хранимой процедуры в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity).
 
 ## <a name="elastic"></a> Планирование пакета с использованием заданий обработки эластичных баз данных SQL
 
@@ -88,7 +85,9 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="agent"></a> Планирование пакета с помощью агента SQL Server
+## <a name="agent"></a> Планирование выполнения пакета с помощью агента SQL Server в локальной среде
+
+Дополнительные сведения об агенте SQL Server см. в разделе [Пакеты служб из заданий агента SQL Server](../packages/sql-server-agent-jobs-for-packages.md).
 
 ### <a name="prerequisite---create-a-linked-server"></a>Необходимое условие — создание связанного сервера
 
@@ -158,7 +157,24 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 
 6.  Завершите настройку и планирование задания.
 
-## <a name="next-steps"></a>Следующие шаги
-Дополнительные сведения об агенте SQL Server см. в разделе [Пакеты служб из заданий агента SQL Server](../packages/sql-server-agent-jobs-for-packages.md).
+## <a name="activity"></a> Планирование выполнения пакета в составе конвейера фабрики данных Azure
 
-Дополнительные сведения о заданиях обработки эластичных баз данных SQL см. в разделе [Управление облачными базами данных с горизонтальным масштабированием](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
+Можно запланировать косвенное выполнение пакета с помощью триггера, запускающего конвейер фабрики данных Azure, где выполняется пакет служб SSIS.
+
+Чтобы запланировать запуск конвейера фабрики данных, используйте один из следующих триггеров:
+
+- [триггер расписания](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger);
+
+- [триггер "переворачивающегося" окна](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger);
+
+- [триггер на основе событий](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger).
+
+Чтобы выполнить пакет служб SSIS в составе конвейера фабрики данных, используйте одно из следующих действий:
+
+- [действие "Выполнение пакета служб SSIS"](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity);
+
+- [действие хранимой процедуры](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
+
+## <a name="next-steps"></a>Следующие шаги
+
+Узнайте о способах выполнения пакетов служб SSIS, развернутых в Azure. Дополнительные сведения см. в статье [Выполнение пакета служб SSIS в Azure](ssis-azure-run-packages.md).

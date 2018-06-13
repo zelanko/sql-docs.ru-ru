@@ -1,7 +1,7 @@
 ---
 title: Добавление, изменение или удаление карты или слоя карты (построитель отчетов и службы SSRS) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -32,11 +32,12 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8e627e570e310239c1973b8b24a44499b0bd47e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 459aa9dde1f5c148257323d80e9d26841ecb9a53
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550675"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Добавление, изменение или удаление карты или слоя карты (построитель отчетов и службы SSRS)
   Карта представляет собой набор слоев. При добавлении карты в отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы необходимо определить первый ее слой. Дополнительные слои можно создать с помощью мастера «Слой карты».  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице содержатся значки панели инструментов панель **Карта** .  
   
-|Символ|Description|Назначение|  
+|Символ|Описание|Назначение|  
 |------------|-----------------|-----------------|  
 |![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Мастер «Слой карты»|Чтобы добавить слой с помощью мастера, нажмите кнопку **Мастер создания слоя**.|  
 |![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Добавить слой|Чтобы добавить слой вручную, нажмите кнопку **Добавить слой**и выберите тип добавляемого слоя карты.|  
@@ -152,7 +153,7 @@ ms.lasthandoff: 05/03/2018
 4.  Введите в поле **Имя файла**путь к файлу фигуры ESRI или нажмите кнопку **Обзор** и выберите файл фигуры ESRI.  
   
     > [!NOTE]  
-    >  Если файл фигуры расположен на локальном компьютере, пространственные данные внедряются в определение отчета. Чтобы динамически получать данные при обработке отчета, необходимо загрузить на сервер отчетов шейп-файл ESRI с расширением SHP и его файл поддержки с расширением DBF. Дополнительные сведения см. в статье "Инструкция. Передача файла или отчета (диспетчер отчетов)" в [документации по службам Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) , входящей в состав электронной документации по SQL Server.  
+    >  Если файл фигуры расположен на локальном компьютере, пространственные данные внедряются в определение отчета. Чтобы динамически получать данные при обработке отчета, необходимо загрузить на сервер отчетов шейп-файл ESRI с расширением SHP и его файл поддержки с расширением DBF. Дополнительные сведения см. в статье [Отправка файла или отчета](../reports/upload-a-file-or-report-report-manager.md).  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

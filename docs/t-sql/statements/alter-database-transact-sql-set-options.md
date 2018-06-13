@@ -2,7 +2,7 @@
 title: Параметры ALTER DATABASE SET (Transact-SQL) | Документы Майкрософт
 description: Сведения о том, как задать параметры базы данных, например автоматическую настройку, шифрование, хранилище запросов в SQL Server и базе данных SQL Azure
 ms.custom: ''
-ms.date: 12/20/2017
+ms.date: 6/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|statements
@@ -33,16 +33,17 @@ caps.latest.revision: 159
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: ea637d3853d3e63cbab6806022000c04d95e3e92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52ad590fd7efeddc9a7e086f1337b4e61a850fc1
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744143"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  В данном разделе приведен синтаксис инструкции ALTER DATABASE, связанный с установкой параметров базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Полный синтаксис инструкции ALTER DATABASE см. в приведенных ниже разделах.  
+  В этой статье приведен синтаксис инструкции ALTER DATABASE, связанный с установкой параметров базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Полный синтаксис инструкции ALTER DATABASE см. в приведенных ниже разделах.  
   
 -   [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  
 
@@ -274,7 +275,7 @@ SET
   
  `CURRENT` выполняет действие в текущей базе данных. `CURRENT` работает не со всеми параметрами и не во всех контекстах. Если `CURRENT` не работает, укажите имя базы данных.  
   
- **\<auto_option> ::=**  
+ **\<auto_option> ::=**
   
  Управляет автоматическими параметрами.  
  <a name="auto_close"></a> AUTO_CLOSE { ON | OFF }  
@@ -438,7 +439,7 @@ SET
  OFF  
  Курсоры остаются открытыми при завершении транзакции; откат транзакции закрывает любые курсоры (кроме тех, которые имеют свойства INSENSITIVE или STATIC).  
   
- Настройки уровня соединения, которые установлены с помощью инструкции SET, переопределяют параметры базы данных по умолчанию для CURSOR_CLOSE_ON_COMMIT. По умолчанию клиенты ODBC и OLE DB при соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливают параметр CURSOR_CLOSE_ON_COMMIT инструкции SET уровня подключения в состояние OFF для сеанса. Дополнительные сведения см. в разделе [SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).  
+ Настройки уровня соединения, которые установлены с помощью инструкции SET, переопределяют параметры базы данных по умолчанию для CURSOR_CLOSE_ON_COMMIT. По умолчанию клиенты ODBC и OLE DB при соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливают для сеанса параметр CURSOR_CLOSE_ON_COMMIT инструкции SET уровня подключения в состояние OFF. Дополнительные сведения см. в разделе [SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).  
   
  Состояние этого параметра можно определить с помощью проверки значения столбца is_cursor_close_on_commit_on в представлении каталога sys.databases или свойства IsCloseCursorsOnCommitEnabled функции DATABASEPROPERTYEX.  
   
@@ -538,7 +539,7 @@ SET
  SINGLE_USER  
  **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Недоступно в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- Указывает, что только один пользователь одновременно может обращаться к базе данных. Если параметр SINGLE_USER указан и есть другие пользователи, подключенные к базе данных, инструкция ALTER DATABASE будет блокирована, пока все пользователи не отключатся от указанной базы данных. Чтобы переопределить это поведение, см. описание предложения WITH \<termination>.  
+ Указывает, что только один пользователь одновременно может обращаться к базе данных. Если параметр SINGLE_USER указан и к базе данных подключены другие пользователи, инструкция ALTER DATABASE будет заблокирована, пока все пользователи не отключатся от указанной базы данных. Чтобы переопределить это поведение, см. описание предложения WITH \<termination>.  
   
  База данных остается в режиме SINGLE_USER, даже если пользователь, который установил этот параметр, отключился. В этот момент к базе данных могут подключаться и другие пользователи, но одновременно может быть подключен только один.  
   

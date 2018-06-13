@@ -1,7 +1,7 @@
 ---
 title: Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигураций служб SSRS) | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/24/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: install-windows
@@ -18,11 +18,12 @@ caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 20b53dc4af07f18f4bcb9161e786b3542b162e37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 507308300934270e9008f775b4da6221278c2d18
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550515"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>Создание базы данных сервера отчетов, работающего в собственном режиме
 
@@ -118,7 +119,7 @@ ms.lasthandoff: 05/03/2018
   
 7.  Просмотрите сведения на странице "Сводка" и удостоверьтесь в том, что все настройки указаны правильно, после этого нажмите кнопку **Далее**.  
   
-8.  Проверьте соединение, щелкнув на URL-адресе страницы "URL-адрес сервера отчетов" или страницы "URL-адрес диспетчера отчетов". Тест будет успешным лишь в том случае, если эти URL-адреса заранее определены. Если подключение к базе данных сервера отчетов действует, в окне браузера отображается либо иерархия папок сервера отчетов, либо диспетчер отчетов. Дополнительные сведения см. в статье [Проверка установки служб Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+8.  Проверьте подключение, щелкнув URL-адрес на странице "URL-адрес сервера отчетов". Тест будет успешным лишь в том случае, если эти URL-адреса заранее определены. Если подключение к базе данных сервера отчетов работает, вы увидите иерархию папок сервера отчетов. Дополнительные сведения см. в статье [Проверка установки служб Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
 ## <a name="change-database-credentials"></a>Учетные данные базы данных
 

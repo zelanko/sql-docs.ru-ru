@@ -16,11 +16,12 @@ ms.topic: conceptual
 ms.date: 05/08/2018
 ms.author: rebeccaz
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b88dfeac58ef9c00307b2cfee35aca3ea0549f02
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: c6d5134ac7760ce9156124ad8c7efd864da81878
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34462372"
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Прозрачное шифрование данных для хранилища данных и базы данных SQL Azure
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -66,7 +67,7 @@ SQL Server, запущенный на виртуальной машине Azure,
 
 Например, если файл BACPAC экспортируется из локального экземпляра SQL Server, то импортированное содержимое новой базы данных не шифруется автоматически. Точно так же новая база данных автоматически не шифруется при экспорте файла BACPAC в локальный экземпляр SQL Server.
 
-Единственное исключение — экспорт в базу данных SQL или из нее. Прозрачное шифрование данных в новой базе данных включено, но сам файл PACPAC по-прежнему не шифруется.
+Единственное исключение — экспорт в базу данных SQL или из нее. Прозрачное шифрование данных в новой базе данных включено, но сам BACPAC-файл по-прежнему не шифруется.
 
 ## <a name="manage-transparent-data-encryption-in-the-azure-portal"></a>Управление прозрачным шифрованием данных на портале Azure
 

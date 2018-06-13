@@ -16,16 +16,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d199b9822d591c10f1f4d9af232b9f74d7e8a81
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: b17fcc15be4c8faf496c469bb1e46fe2c6d42012
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550495"
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Изменяет параметры максимального размера базы данных для реплицированных таблиц, распределенных таблиц и журнала транзакций в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. С помощью этой инструкции можно управлять выделением дискового пространства для базы данных по мере изменения ее размера.  
+  Изменяет параметры максимального размера базы данных для реплицированных таблиц, распределенных таблиц и журнала транзакций в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. С помощью этой инструкции можно управлять выделением дискового пространства для базы данных по мере изменения ее размера. В разделе также описан синтаксис, связанный с установкой параметров базы данных в Parallel Data Warehouse. 
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,10 @@ ALTER DATABASE database_name
     AUTOGROW = { ON | OFF }  
     | REPLICATED_SIZE = size [GB]  
     | DISTRIBUTED_SIZE = size [GB]  
-    | LOG_SIZE = size [GB]  
+    | LOG_SIZE = size [GB]
+    | SET AUTO_CREATE_STATISTICS { ON | OFF }
+    | SET AUTO_UPDATE_STATISTICS { ON | OFF } 
+    | SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
 }  
   
 <db_encryption_option> ::=  
@@ -67,10 +71,33 @@ ALTER DATABASE database_name
   
  ENCRYPTION { ON | OFF }  
  Включает шифрование базы данных (ON) или отключает его (OFF). Шифрование можно настроить для [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] только в том случае, если [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) имеет значение **1**. Перед настройкой прозрачного шифрования данных необходимо создать ключ шифрования базы данных. Дополнительные сведения о шифровании баз данных см. в статье [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+
+ SET AUTO_CREATE_STATISTICS { ON | OFF } Если параметр AUTO_CREATE_STATISTICS (автоматическое создание статистики) включен, оптимизатор запросов при необходимости создает статистику по отдельным столбцам в предикате запроса, чтобы улучшить оценку кратности для плана запроса. Такая статистика по отдельным столбцам создается для столбцов, у которых отсутствует гистограмма в существующем объекте статистики.
+
+ Параметр включен по умолчанию для новых баз данных, созданных после обновления до AU7. Параметр отключен по умолчанию для баз данных, созданных до обновления. 
+
+ Дополнительные сведения о статистике см. в статье [Статистика](/sql/relational-databases/statistics/statistics).
+
+ SET AUTO_UPDATE_STATISTICS { ON | OFF } Если параметр AUTO_UPDATE_STATISTICS (автоматическое обновление статистики) включен, оптимизатор запросов определяет, устарела ли статистика, и при необходимости обновляет ее, если она используется в запросе. Статистика становится устаревшей, если операции вставки, обновления, удаления или слияния изменяют распределение данных в таблице или индексированном представлении. Оптимизатор запросов определяет, когда статистика может оказаться устаревшей, подсчитывая операции изменения данных с момента последнего обновления статистики и сравнивая количество изменений с пороговым значением. Пороговое значение основано на количестве строк в таблице или индексированном представлении.
+
+ Параметр включен по умолчанию для новых баз данных, созданных после обновления до AU7. Параметр отключен по умолчанию для баз данных, созданных до обновления. 
+
+ Дополнительные сведения о статистике см. в статье [Статистика](/sql/relational-databases/statistics/statistics).
+
+
+ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } Параметр AUTO_UPDATE_STATISTICS_ASYNC, который управляет асинхронным обновлением статистики, определяет, какой режим обновления статистики использует оптимизатор запросов — синхронный или асинхронный. Параметр AUTO_UPDATE_STATISTICS_ASYNC применяется к объектам статистики, создаваемым для индексов, отдельных столбцов в предикатах запросов, и к статистике, создаваемой инструкцией CREATE STATISTICS.
+
+ Параметр включен по умолчанию для новых баз данных, созданных после обновления до AU7. Параметр отключен по умолчанию для баз данных, созданных до обновления. 
+
+ Дополнительные сведения о статистике см. в статье [Статистика](/sql/relational-databases/statistics/statistics).
+
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER для базы данных.  
   
+## <a name="error-messages"></a>сообщения об ошибках
+Если автоматическая статистика отключена, при попытке изменить параметры статистики в PDW выводится сообщение об ошибке: "Этот параметр не поддерживается в PDW". Системный администратор может включить автоматическую статистику, включив переключатель [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md).
+
 ## <a name="general-remarks"></a>Общие замечания  
  Значения параметров REPLICATED_SIZE, DISTRIBUTED_SIZE и LOG_SIZE могут быть больше, равны или меньше текущих значений для базы данных.  
   
@@ -78,6 +105,8 @@ ALTER DATABASE database_name
  Операции увеличения и уменьшения размера являются приблизительными. Полученные фактические размеры могут отличаться от значений параметров.  
   
  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] выполняет инструкцию ALTER DATABASE не как атомарную операцию. Если выполнение инструкции прерывается, уже внесенные изменения сохраняются.  
+
+Параметры статистики работают, только если администратор включил автоматическую статистику.  Для включения или отключения автоматической статистики служит переключатель [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md). 
   
 ## <a name="locking-behavior"></a>Режим блокировки  
  Принимает совмещаемую блокировку для объекта DATABASE. Изменить базу данных, в которой другой пользователь в настоящее время производит операции чтения или записи, невозможно. Это относится и к сеансам, в рамках которых была выполнена инструкция [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) для базы данных.  
@@ -165,6 +194,29 @@ ALTER DATABASE CustomerSales
 ALTER DATABASE CustomerSales  
     SET ( LOG_SIZE = 10 GB );  
 ```  
+
+### <a name="e-check-for-current-statistics-values"></a>Д. Проверка текущих значений статистики
+
+Следующий запрос возвращает текущие значения статистики для всех баз данных. Значение 1 означает, что функция включена, а 0 — что функция отключена.
+
+```sql
+SELECT NAME,
+    is_auto_create_stats_on,
+    is_auto_update_stats_on,
+    is_auto_update_stats_async_on
+FROM sys.databases;
+```
+### <a name="f-enable-auto-create-and-auto-update-stats-for-a-database"></a>Е. Включение автоматического создания и автоматического обновление статистики для базы данных
+Используйте следующую инструкцию, чтобы включить автоматическое и асинхронное создание и обновление статистики для базы данных CustomerSales.  В результате по мере необходимости создается и обновляется статистика по отдельным столбцам для формирования высококачественных планов запросов.
+
+```sql
+ALTER DATABASE CustomerSales
+    SET AUTO_CREATE_STATISTICS ON;
+ALTER DATABASE CustomerSales
+    SET AUTO_UPDATE_STATISTICS ON; 
+ALTER DATABASE CustomerSales
+    SET AUTO_UPDATE_STATISTICS_ASYNC ON;
+```
   
 ## <a name="see-also"></a>См. также:  
  [CREATE DATABASE (Parallel Data Warehouse)](../../t-sql/statements/create-database-parallel-data-warehouse.md)   

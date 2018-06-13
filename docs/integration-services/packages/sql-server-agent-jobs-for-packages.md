@@ -1,7 +1,7 @@
 ---
 title: Задания агента SQL Server для пакетов | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: packages
@@ -21,15 +21,21 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cb26adf331696cb98901c6c9db387dc4d47f052
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d262b623566f84b1ce5f8595560d4db6b646de97
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772500"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Пакеты служб из заданий агента SQL Server
   Выполнение пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно автоматизировать и запланировать в расписании при помощи агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно задать расписание выполнения пакетов, равернутых на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , хранимых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в хранилище пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , или в файловой системе.  
-  
+ 
+> [!NOTE]
+> В этой статье приводятся общие сведения о планировании выполнения пакетов служб SSIS, а также содержится информация о планировании выполнения пакетов в локальной среде. Выполнять и планировать выполнение пакетов служб SSIS можно на следующих платформах:
+> - **облако Microsoft Azure**. Дополнительные сведения см. в статьях [Перенос рабочих нагрузок SQL Server Integration Services в облако](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) и [Планирование выполнения пакета служб SSIS в Azure](../lift-shift/ssis-azure-schedule-packages.md).
+> - **Linux**. Дополнительные сведения см. в статьях [Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS](../../linux/sql-server-linux-migrate-ssis.md) и [Планирование выполнения пакетов служб SSIS в Linux с помощью Cron](../../linux/sql-server-linux-schedule-ssis-packages.md).
+
 ## <a name="sections-in-this-topic"></a>Подразделы данного раздела  
  Этот раздел состоит из следующих подразделов.  
   
@@ -129,7 +135,7 @@ ms.lasthandoff: 05/03/2018
   
      **В следующей таблице приведены возможные источники пакетов.**  
   
-    |Источник пакета|Description|  
+    |Источник пакета|Описание|  
     |--------------------|-----------------|  
     |**Каталог служб SSIS**|Пакеты, хранимые в базе данных SSISDB. Пакеты хранятся в проектах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , развернутых на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
     |**SQL Server**|Пакеты, хранимые в базе данных MSDB. Для управления этими пакетами используется служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  

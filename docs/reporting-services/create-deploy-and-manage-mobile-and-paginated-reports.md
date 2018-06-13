@@ -2,7 +2,7 @@
 title: Что такое SQL Server Reporting Services (SSRS)? | Документы Майкрософт
 description: Сведения о средствах и службах для создания мобильных отчетов и отчетов Reporting Services с разбивкой на страницы в локальной среде.
 ms.custom: ''
-ms.date: 03/16/2018
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reporting-services
@@ -22,17 +22,18 @@ caps.latest.revision: 70
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 24f4671203d4efecd58cfd9e613bf3dd9dbb8bba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c594502d7a63ce437e680a4b9b6accd095a102d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550335"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Что такое службы SQL Server Reporting Services (SSRS)?
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)] Ищете сервер отчетов Power BI? См. раздел [Начало работы с сервером отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)] Ищете сервер отчетов Power BI? См. статью [Что такое сервер отчетов Power BI?](https://docs.microsoft.com/power-bi/report-server/get-started)
 
 Службы SQL Server Reporting Services (SSRS) предоставляют спектр готовых к использованию средств и служб для создания и развертывания мобильных отчетов и отчетов с разбиением на страницы в локальной среде, а также управления ими.
 

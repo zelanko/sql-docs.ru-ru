@@ -59,11 +59,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a5246b1d7d6a00e4500c95bae20fb2975bbebc9
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470295"
 ---
 # <a name="hints-transact-sql---query"></a>Указания (Transact-SQL) — запросы
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -276,12 +277,15 @@ ms.lasthandoff: 05/14/2018
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
  Позволяет использовать автоматически созданную быструю статистику (поправку к гистограмме) для любого начального столбца индекса, для которого требуется оценить кратность. Гистограмма, используемая для оценки кратности, будет так откорректирована во время компиляции запроса, чтобы учитывать фактическое максимальное или минимальное значение этого столбца. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'  
- Побуждает SQL Server создать план с допущением простого вложения вместо допущения базового вложения по умолчанию в модели [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md) оптимизатора запросов версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или более поздних. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
-*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'  
+ Побуждает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создать план запроса с допущением простого вложения вместо допущения базового вложения по умолчанию для соединений в модели [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md) оптимизатора запросов версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или более поздних. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
+*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  Заставляет оптимизатор запросов использовать модель [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md), которая соответствует текущему уровню совместимости базы данных. Используйте это указание для переопределения параметра [Конфигурация области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON или [флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
-* 'DISABLE_INTERLEAVED_EXECUTION_TVF' Отключает выполнение с чередованием для функций с табличным значением с несколькими инструкциями.
-* 'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK' Отключает обратную связь по временно предоставляемому буферу памяти в пакетном режиме.
-* 'DISABLE_BATCH_MODE_ADAPTIVE_JOINS' Отключает адаптивные соединения в пакетном режиме.
+*  "DISABLE_INTERLEAVED_EXECUTION_TVF"   
+ Отключает выполнение с чередованием для функций с табличным значением с несколькими инструкциями. Дополнительные сведения см. в разделе [Выполнение с чередованием для функций с табличным значением с несколькими инструкциями](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+*  "DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK"     
+ Отключает обратную связь по временно предоставляемому буферу памяти в пакетном режиме. Дополнительные сведения см. в разделе [Обратная связь по временно предоставляемому буферу памяти в пакетном режиме](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
+*  "DISABLE_BATCH_MODE_ADAPTIVE_JOINS"     
+ Отключает адаптивные соединения в пакетном режиме. Дополнительные сведения см. в разделе [Адаптивные соединения в пакетном режиме](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
  
 > [!TIP]
 > В именах указаний учитывается регистр.
@@ -328,7 +332,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 -   Динамические административные представления  
 -   Именованные вложенные запросы  
   
- Табличные указания INDEX, FORCESCAN и FORCESEEK могут быть заданы как указания запроса для запроса, у которого нет существующих табличных указаний. Кроме того, они могут использоваться для замены соответственно существующих указаний INDEX, FORCESCAN или FORCESEEK в таком запросе. Табличные указания, за исключением INDEX, FORCESCAN и FORCESEEK, не могут использоваться как указания запроса, кроме тех случаев, когда в запросе уже содержится предложение WITH, задающее табличное указание. В этом случае, чтобы сохранить семантику запроса, необходимо также задать соответствующее табличное указание в качестве указания запроса, задав в предложении OPTION ключевое слово TABLE HINT. Например, если запрос содержит табличное указание NOLOCK, то предложение OPTION в параметре **@hints** руководства плана также должно содержать указание NOLOCK. См. пример Л. Если задать табличное указание, отличное от INDEX, FORCESCAN или FORCESEEK, с использованием TABLE HINT в предложении OPTION без совпадающего указания запроса (или наоборот), будет возвращена ошибка 8702, показывающая, что предложение OPTION может вызвать изменение в семантике запроса, и запрос завершится с ошибкой.  
+Табличные указания INDEX, FORCESCAN и FORCESEEK могут быть заданы как указания запроса для запроса, у которого нет существующих табличных указаний. Кроме того, они могут использоваться для замены соответственно существующих указаний INDEX, FORCESCAN или FORCESEEK в таком запросе. Табличные указания, за исключением INDEX, FORCESCAN и FORCESEEK, не могут использоваться как указания запроса, кроме тех случаев, когда в запросе уже содержится предложение WITH, задающее табличное указание. В этом случае, чтобы сохранить семантику запроса, необходимо также задать соответствующее табличное указание в качестве указания запроса, задав в предложении OPTION ключевое слово TABLE HINT. Например, если запрос содержит табличное указание NOLOCK, то предложение OPTION в параметре **@hints** руководства плана также должно содержать указание NOLOCK. См. пример Л. Если задать табличное указание, отличное от INDEX, FORCESCAN или FORCESEEK, с использованием TABLE HINT в предложении OPTION без совпадающего указания запроса (или наоборот), будет возвращена ошибка 8702, показывающая, что предложение OPTION может вызвать изменение в семантике запроса, и запрос завершится с ошибкой.  
   
 ## <a name="examples"></a>Примеры  
   

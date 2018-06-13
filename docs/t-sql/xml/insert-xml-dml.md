@@ -22,11 +22,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c851283cd546038c11700ed111282a9aa1a039ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22bc1b365e04c5e06e6278974346b1626434a24b
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744073"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +134,7 @@ GO
 ```  
   
 ### <a name="c-inserting-attributes-into-a-document"></a>В. Вставка атрибутов в документ  
- В следующем примере показано, как атрибуты вставляются в документ. Сначала документ присваивается переменной типа **xml**. Затем используется серия XML-инструкций DML **insert** для вставки атрибутов в документ. После каждой операции вставки с помощью инструкции SELECT отображается результат.  
+ В следующем примере показана вставка атрибутов в документ. Сначала документ заносится в переменную типа **xml**. Затем используется серия XML-инструкций DML **insert** для вставки атрибутов в документ. После каждой операции вставки с помощью инструкции SELECT отображается результат.  
   
 ```  
 USE AdventureWorks;  

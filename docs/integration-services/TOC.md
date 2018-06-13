@@ -29,6 +29,7 @@
 ## [Подключение к файлам и общим папкам](lift-shift/ssis-azure-files-file-shares.md)
 ## [Подключение к SSISDB в Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Проверка пакетов, развертываемых в Azure](lift-shift/ssis-azure-validate-packages.md)
+## [Выполнение пакетов в Azure](lift-shift/ssis-azure-run-packages.md)
 ## [Планирование выполнения пакетов в Azure](lift-shift/ssis-azure-schedule-packages.md)
 ## [Планирование выполнения пакетов в Azure с помощью SSMS](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
@@ -72,6 +73,7 @@
 # [Запросы](integration-services-ssis-queries.md)
 # [Transactions](integration-services-transactions.md)
 # [Развертывание пакетов](packages/deploy-integration-services-ssis-projects-and-packages.md)
+# [Запуск пакетов](packages/run-integration-services-ssis-packages.md)
 # [Масштабирование](scale-out/integration-services-ssis-scale-out.md)
 
 # [Каталог и сервер](catalog/integration-services-ssis-server-and-catalog.md)

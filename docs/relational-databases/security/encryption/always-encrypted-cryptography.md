@@ -19,11 +19,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ead5689c2edb47f4ce2699e6b94bff53957ce9fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a9471302da92abb2b4fef27a6d321a8ec41b01af
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550705"
 ---
 # <a name="always-encrypted-cryptography"></a>Системы шифрования c технологиями постоянного шифрования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  Ключ шифрования столбца — это ключ шифрования содержимого (используется для защиты данных). Он защищен главным ключом столбца.  
   
- Все поставщики хранилища главного столбца ключа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] шифруют ключи шифрования столбца с помощью ключа RSA с оптимальным асимметричным шифрованием с дополнением (RSA-OAEP). При этом используются указанные в RFC 3447 (раздел A.2.1) параметры по умолчанию. В этих параметрах по умолчанию используется хэш-функция SHA-1 и функция генерации маски MGF1 с помощью SHA-1.  
+ Все поставщики хранилища главного столбца ключа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] шифруют ключи шифрования столбца при помощи ключа RSA, используя оптимальное асимметричное шифрование с дополнением (RSA-OAEP). При этом используются указанные в RFC 8017 (раздел A.2.1) параметры по умолчанию. В этих параметрах по умолчанию используется хэш-функция SHA-1 и функция генерации маски MGF1 с помощью SHA-1.  
   
 ## <a name="data-encryption-algorithm"></a>Алгоритм шифрования данных  
  Для шифрования данных в базе данных в технологии постоянного шифрования данных используется алгоритм **AEAD_AES_256_CBC_HMAC_SHA_256** .  

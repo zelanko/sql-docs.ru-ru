@@ -2,7 +2,7 @@
 title: Поддержка высокого уровня доступности в SQL Server Integration Services (SSIS) Scale Out | Документы Майкрософт
 ms.description: This article describes how to configure SSIS Scale Out for high availability
 ms.custom: ''
-ms.date: 12/19/2017
+ms.date: 05/23/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: scale-out
@@ -16,11 +16,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 8cd79327b3733de9f7463f1d5f9d8f924b58a46b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25660b9e6b4edbdd8a2654d092990fef94313bed
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34476046"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Поддержка высокого уровня доступности в Scale Out
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2. Включите имя узла DNS для службы мастера Scale Out в список CN для сертификата мастера Scale Out.
 
-Это имя узла используется в конечной точке мастера Scale Out. 
+Это имя узла используется в конечной точке мастера Scale Out. (Необходимо указать имя узла DNS, а не имя сервера.)
 
 ![Конфигурация мастера высокой доступности](media/ha-master-config.PNG)
 
@@ -61,9 +62,9 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 > Вы можете настроить несколько резервных мастеров Scale Out, повторив эти действия для мастера Scale Out в других вторичных узлах.
 
-## <a name="4-set-up-ssisdb-always-on"></a>4. Настройка AlwaysOn для SSISDB
+## <a name="4-set-up-and-configure-ssisdb-support-for-always-on"></a>4. Настройка поддержки SSISDB для AlwaysOn
 
-Выполните инструкции по настройке AlwaysOn для SSISDB, которые приводятся в разделе [AlwaysOn для каталога служб SSIS (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
+Выполните инструкции по настройке поддержки SSISDB для AlwaysOn, приведенные в статье об [AlwaysOn для каталога служб SSIS (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
 
 Кроме того, необходимо создать прослушиватель группы доступности для группы доступности, в которую добавляется SSISDB. См. раздел [Создание или настройка прослушивателя группы доступности](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
@@ -85,7 +86,7 @@ ms.lasthandoff: 05/03/2018
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
-## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster"></a>7. Настройка роли службы мастера Scale Out для отказоустойчивого кластера Windows
+## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster"></a>7. Настройка роли службы мастера Scale Out для отказоустойчивого кластера Windows Server
 
 1.  В диспетчере отказоустойчивости кластеров установите подключение к кластеру для Scale Out. Выберите кластер. Выберите в меню пункт **Действие**, после чего выберите **Настроить роль**.
 
@@ -96,6 +97,12 @@ ms.lasthandoff: 05/03/2018
     ![Мастер высокой доступности 1](media/ha-wizard1.PNG)
 
 4.  Завершите работу мастера.
+
+Для этого шага на виртуальных машинах Azure нужны дополнительные действия. Полное описание этих основных понятий и шагов выходит за рамки данной статьи.
+
+1.  Необходимо настроить домен Azure. Для работы отказоустойчивой кластеризации Windows Server нужно, чтобы все компьютеры в кластере входили в состав одного домена. Дополнительные сведения см. в статье [Включение доменных служб Azure Active Directory с помощью портала Azure](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
+
+2. Необходимо настроить балансировщик нагрузки Azure. Это требование для прослушивателя группы доступности. Дополнительные сведения см. в статье [Руководство по балансировке нагрузки внутреннего трафика на виртуальных машинах с помощью балансировщика нагрузки уровня "Базовый" на портале Azure](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. Обновление адреса мастера Scale Out в SSISDB
 

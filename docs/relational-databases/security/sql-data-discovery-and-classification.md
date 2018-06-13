@@ -13,20 +13,20 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm
-ms.openlocfilehash: 8900faccfda82e759ee6f31009682eb632df7509
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: a797824724677745d33936ef570abe12f5b15b8d
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743973"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Обнаружение и классификация данных SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Обнаружение и классификация данных — это новое средство, встроенное в SQL Server Management Studio (SSMS), для **обнаружения**, **классификации**, **пометки** &  и **создания отчетов** о конфиденциальных данных в базах данных.
 Обнаружение и классификация наиболее важных данных (деловых, финансовых, персональных и т. д.) может играть ключевую роль в защите информации в вашей организации. На основе этих процессов может формироваться инфраструктура для решения следующих задач:
-* соблюдение стандартов в сфере конфиденциальности данных и нормативных требований, таких как GDPR;
+* соблюдение стандартов конфиденциальности данных;
 * управление доступом к базам данных и столбцам, содержащим конфиденциальные данные, а также усиление их безопасности.
-
 
 > [!NOTE]
 > Средство обнаружения и классификации данных **поддерживается в SQL Server 2008 и более поздних версиях**. Сведения, касающиеся Базы данных SQL Azure, см. в статье [Обнаружение и классификация данных в Базе данных SQL Azure](https://go.microsoft.com/fwlink/?linkid=866265).
@@ -94,7 +94,57 @@ ms.lasthandoff: 05/03/2018
     ![Область навигации][10]
 
 
-## <a id="subheading-3"></a>Следующие шаги
+## <a id="subheading-3"></a>Доступ к метаданным классификации
+
+Метаданные классификации для *типов сведений* и *меток конфиденциальности* хранятся в следующих расширенных свойствах: 
+* sys_information_type_name;
+* sys_sensitivity_label_name.
+
+Доступ к метаданным осуществляется с помощью представления каталога расширенных свойств [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
+
+В следующем примере кода возвращаются все классифицированные столбцы с их соответствующими классификациями.
+
+```sql
+SELECT
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+    sensitivity_label 
+FROM
+    (
+        SELECT
+            IT.major_id,
+            IT.minor_id,
+            IT.information_type,
+            L.sensitivity_label 
+        FROM
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS information_type 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_information_type_name'
+        ) IT 
+        FULL OUTER JOIN
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS sensitivity_label 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_sensitivity_label_name'
+        ) L 
+        ON IT.major_id = L.major_id AND IT.minor_id = L.minor_id
+    ) EP
+    JOIN sys.objects O
+    ON  EP.major_id = O.object_id 
+    JOIN sys.columns C 
+    ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
+```
+
+## <a id="subheading-4"></a>Следующие шаги
 
 Сведения, касающиеся Базы данных SQL Azure, см. в статье [Обнаружение и классификация данных в Базе данных SQL Azure](https://go.microsoft.com/fwlink/?linkid=866265).
 
@@ -106,7 +156,8 @@ ms.lasthandoff: 05/03/2018
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
-[Next Steps]: #subheading-3
+[Accessing the classification metadata]: #subheading-3
+[Next Steps]: #subheading-4
 
 <!--Image references-->
 [1]: ./media/sql-data-discovery-and-classification/1_data_classification_explorer_menu.png

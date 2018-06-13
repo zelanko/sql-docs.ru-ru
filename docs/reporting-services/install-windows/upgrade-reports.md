@@ -1,7 +1,7 @@
 ---
-title: Обновление отчетов | Документы Майкрософт
+title: Обновление отчетов (службы SSRS) | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 06/04/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: install-windows
@@ -24,27 +24,26 @@ caps.latest.revision: 70
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3ae563ddf9c21fc0add692493504dd7ccbdd09fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 569a67511ecf28a4e9800182f823719d47e61120
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771830"
 ---
-# <a name="upgrade-reports"></a>Upgrade Reports
+# <a name="upgrade-reports-ssrs"></a>Обновление отчетов (службы SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
-  RDL-файлы определения отчетов автоматически обновляются следующими способами.  
+RDL-файлы определения отчетов автоматически обновляются следующими способами.  
   
--   При открытии отчета в конструкторе отчетов среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]определение отчета обновляется до поддерживаемой в настоящее время RDL-схемы. Когда вы указываете сервер отчетов [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] в свойствах проекта, определение отчета сохраняется в схеме, совместимой с целевым сервером.  
+-   При открытии отчета с разбивкой на страницы в конструкторе отчетов среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] определение отчета обновляется до поддерживаемой в настоящее время RDL-схемы. Когда вы указываете сервер отчетов [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] в свойствах проекта, определение отчета сохраняется в схеме, совместимой с целевым сервером.  
   
 -   При обновлении установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] до служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] существующие отчеты и моментальные снимки, опубликованные на сервере отчетов, компилируются и автоматически обновляются до новой схемы при первой обработке. Если отчет автоматически обновить не удается, он обрабатывается в режиме обратной совместимости. Определение отчета остается в исходной схеме.  
   
- При передаче файла определения отчета на сервер отчетов или на сайт SharePoint отчеты не обновляются. Обновление определения отчета в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] является единственным способом обновления RDL-файла.  
-  
  После локального обновления отчета или обновления на сервере отчетов могут появиться дополнительные ошибки, предупреждения и сообщения. Это результат изменений внутренней объектной модели отчетов и компонентов обработчиков, которые приводят к появлению сообщений при обнаружении проблем в отчете. Дополнительные сведения см. в статье [Reporting Services Backward Compatibility](../../reporting-services/reporting-services-backward-compatibility.md).  
   
- Дополнительные сведения о новых возможностях см. в разделе [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
+ Дополнительные сведения о новых функциях служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] см. в статье [Новые возможности служб SQL Server Reporting Services (SSRS)](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
 ##  <a name="bkmk_versionsupported"></a> Версии отчетов, которые могут быть обновлены  
  Можно обновить отчеты, созданные в любой из предыдущих версий служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Эти версии включают следующие.  
@@ -109,7 +108,7 @@ ms.lasthandoff: 05/03/2018
  Сведения об определении текущего пространства имен языка определения отчетов для сервера отчетов, среды [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] или отчета см. в разделе [Определение версии схемы определения отчета (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>Обновление отчетов на сервере отчетов  
- При первом запуске отчета [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на сервере отчетов, обновленном до версии [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , отчет автоматически обновляется до текущего пространства имен определения отчета, поддерживаемого сервером отчетов. Отчет мог существовать на сервере отчетов до обновления, либо его могли передать туда с помощью диспетчера отчетов или опубликовать на сервере отчетов из конструктора отчетов в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+ При первом запуске отчета [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на сервере отчетов, обновленном до версии [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , отчет автоматически обновляется до текущего пространства имен определения отчета, поддерживаемого сервером отчетов. Отчет мог существовать на сервере отчетов до обновления, либо его могли передать туда с помощью веб-портала или опубликовать на сервере отчетов из конструктора отчетов в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
  В следующей таблице перечислены действия по обновлению, выполняемые сервером отчетов для каждого конкретного типа пользовательских элементов отчета.  
   

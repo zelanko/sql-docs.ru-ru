@@ -25,11 +25,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e0e5538d69caf96e7eb8864de177d14e99ce642
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46cf351f2a85523737988b93a57fce51924c4ae7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563702"
 ---
 # <a name="comparison-operators-transact-sql"></a>Операторы сравнения (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
  В отличие от других типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], тип **Boolean** не может быть типом столбца таблицы или переменной и не может быть возвращен в результирующем наборе.  
   
- Если параметр SET ANSI_NULLS имеет значение ON, оператор, в число операндов которого входит хотя бы одно выражение NULL, возвращает UNKNOWN. Когда параметр SET ANSI_NULLS имеет значение OFF, действуют те же правила, однако если оба выражения равны NULL, то оператор равенства (=) возвращает TRUE. Например, если параметр SET ANSI_NULLS имеет значение OFF, при обработке выражения NULL = NULL будет возвращено TRUE.  
+ Если параметр SET ANSI_NULLS имеет значение ON, оператор, в число операндов которого входит хотя бы одно выражение NULL, возвращает UNKNOWN. Если параметр SET ANSI_NULLS имеет значение OFF, применяются те же правила, за исключением операторов равенства (=) и неравенства (<>). Если параметр SET ANSI_NULLS имеет значение OFF, эти операторы обрабатывают значение NULL как известное значение, эквивалентное любым другим значениям NULL, и возвращают только значение TRUE или FALSE (и никогда UNKNOWN).  
   
  Выражения со значениями типа **Boolean** используются в предложении WHERE для фильтрации строк, удовлетворяющих условиям поиска, и в инструкциях языка управления потоком, таких как IF и WHILE, например:  
   

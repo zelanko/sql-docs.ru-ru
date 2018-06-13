@@ -26,11 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 77947f8263b66f1b7f26e8ee5a5d52a4d019aeb2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 97d24445d506a41675822f13d0a23d4e03edac3d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563752"
 ---
 # <a name="-equals-transact-sql"></a>= (равно) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,15 +54,15 @@ expression = expression
  Логическое значение  
   
 ## <a name="remarks"></a>Remarks  
- При сравнении двух выражений со значениями NULL результат зависит от параметра `ANSI_NULLS`.  
+ При сравнении с помощью выражения NULL результат зависит от параметра `ANSI_NULLS`.  
   
--   Если параметр `ANSI_NULLS` равен ON, то результат будет равен NULL в соответствии со стандартом ANSI, когда NULL (или неизвестное) значение не равно NULL или другому неизвестному значению.  
+-   Если параметр `ANSI_NULLS` имеет значение ON, результатом любого сравнения со значением NULL является UNKNOWN в соответствии со стандартом ANSI, когда NULL является неизвестным значением и не может сравниваться с любым другим значением, включая другие значения NULL.  
   
--   Если параметр `ANSI_NULLS` равен OFF, то результат сравнения двух значений NULL равен TRUE.  
+-   Если параметр `ANSI_NULLS` имеет значение OFF, результатом сравнения NULL с NULL является значение TRUE, а результатом сравнения NULL с любым другим значением — FALSE.  
 
 Дополнительные сведения см. в разделе [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md).
   
- Результатом сравнения значения NULL (неизвестного значения) со значением, отличным от NULL, всегда является значение FALSE.  
+ Логическое выражение, результатом которого является UNKNOWN, в большинстве, но не во всех случаях действует так, как если бы оно имело значение FALSE. Дополнительные сведения см. в статьях [NULL и UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md) и [NOT (Transact-SQL)](../../t-sql/language-elements/not-transact-sql.md).  
   
   
 ## <a name="examples"></a>Примеры  
