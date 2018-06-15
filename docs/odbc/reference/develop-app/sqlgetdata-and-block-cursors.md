@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910859"
 ---
 # <a name="sqlgetdata-and-block-cursors"></a>SQLGetData и блочных курсоров
 **SQLGetData** работает для одного столбца из одной строки и не удалось извлечь массив, содержащий данные из нескольких строк. Это так, как использовать основной **SQLGetData** — выборка данных long в части, и почти или совсем нет причин для этого для более чем одной строке за раз.  

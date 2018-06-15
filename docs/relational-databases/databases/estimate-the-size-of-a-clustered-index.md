@@ -34,6 +34,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32932489"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Оценка размера кластеризованного индекса
 

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914189"
 ---
 # <a name="sql-data-types"></a>Типы данных SQL
 Каждой СУБД определяет собственные типы SQL. Каждый ODBC-драйвер предоставляет только те типы данных SQL, который определяет связанный СУБД. Сведения о сопоставление драйвер СУБД SQL типах идентификаторы типа SQL, определенных для ODBC и драйвером сопоставление типов СУБД SQL свои собственные идентификаторы типа специфические для драйвера SQL возвращается путем вызова **SQLGetTypeInfo**. Драйвер возвращает типы данных SQL, при описании типы данных столбцов и параметров с помощью вызовов **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, и **SQLSpecialColumns**.  

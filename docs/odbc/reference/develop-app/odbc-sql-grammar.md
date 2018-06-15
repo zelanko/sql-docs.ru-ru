@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912329"
 ---
 # <a name="odbc-sql-grammar"></a>SQL-грамматику ODBC
 Поддерживает возможность взаимодействия приложения всегда должны использовать SQL-грамматику ODBC в инструкциях SQL. Однако даже в этой грамматике допускается значительные отклонения. Дополнительные сведения см. в разделе [взаимодействие инструкций SQL](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md).

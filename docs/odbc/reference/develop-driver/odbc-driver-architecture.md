@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917329"
 ---
 # <a name="odbc-driver-architecture"></a>Архитектура драйвера ODBC
 Авторы драйвер необходимо иметь в виду, что архитектура драйвера могут повлиять на приложения, могут ли использовать СУБД SQL.  

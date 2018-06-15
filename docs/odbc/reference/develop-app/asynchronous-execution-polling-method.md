@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913829"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Асинхронное выполнение (метод опроса)
 Перед ODBC 3.8 и пакета SDK Windows 7 асинхронные операции было разрешено только для функций с инструкциями. Дополнительные сведения см. в разделе **выполнения асинхронной операции инструкции**далее в этом разделе.  

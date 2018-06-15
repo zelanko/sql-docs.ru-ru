@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913279"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Прокрутка и выборка строк (ODBC)
 При использовании прокручиваемого курсора, вызовите приложений **SQLFetchScroll** позицию строки курсора и fetch. **SQLFetchScroll** поддерживает прокрутку относительных (следующего, предыдущего и относительно *n* строк), абсолютный прокрутки (имя, Фамилия, а строку *n*) и позиционирование по закладке. *FetchOrientation* и *FetchOffset* аргументов в **SQLFetchScroll** укажите какие набора строк для выборки, как показано на следующих диаграммах.  

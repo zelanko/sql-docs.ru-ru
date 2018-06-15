@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915189"
 ---
 # <a name="using-scrollable-cursors"></a>С помощью Прокручиваемые курсоры
 С помощью Прокручиваемый курсор требуются следующие три действия:  
