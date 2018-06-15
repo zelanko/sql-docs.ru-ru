@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025461"
 ---
 # <a name="rgdi-device-information-settings"></a>Настройки сведений об устройстве RGDI
   В следующей таблице указаны настройки сведений об устройстве для подготовки отчетов к просмотру в формате RGDI.  

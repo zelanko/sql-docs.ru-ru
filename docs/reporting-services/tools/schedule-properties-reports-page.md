@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029741"
 ---
 # <a name="schedule-properties-reports-page"></a>Свойства расписания (страница отчетов)
   Страница свойств расписания служб [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] в среде [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] используется для просмотра списка всех отчетов, использующих общее расписание. Расписания могут использоваться для обновления моментальных снимков отчетов, формирования журнала отчета, запуска подписки или истечения срока действия кэшированной копии отчета. Сведения об использовании расписания можно найти в свойствах и сведениях о подписке на отчет.  
