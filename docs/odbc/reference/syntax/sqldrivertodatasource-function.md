@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918489"
 ---
 # <a name="sqldrivertodatasource-function"></a>Функция трансляции SQLDriverToDataSource
 **Трансляции SQLDriverToDataSource** поддерживает переводы для драйверов ODBC. Эта функция не вызывается приложений с поддержкой ODBC; приложения запрашивают трансляции с помощью **SQLSetConnectAttr**. Драйвера, связанного с *ConnectionHandle* указано в **SQLSetConnectAttr** вызывает указанную библиотеку DLL для выполнения преобразования всех данных, поступающих от драйвера к источнику данных. Перевод DLL по умолчанию можно указать в файле инициализации ODBC.  

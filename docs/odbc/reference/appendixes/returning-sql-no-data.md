@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906369"
 ---
 # <a name="returning-sqlnodata"></a>Возвращает значение SQL_NO_DATA
 Когда ODBC 2. *x* workingwith приложения ODBC 3 *.x* драйвер вызывает **SQLExecDirect**, **SQLExecute**, или **SQLParamData**, и в которой выполняется поиск инструкция update или delete была выполнена, но не влияют на все строки в источнике данных ODBC 3 *.x* драйвер должен возвращать значение SQL_SUCCESS. Когда ODBC 3 *.x* приложения, работа с ODBC 3 *.x* драйвер вызывает **SQLExecDirect**, **SQLExecute**, или  **SQLParamData** с тем же ODBC 3 *.x* драйвер вернет значение SQL_NO_DATA.  

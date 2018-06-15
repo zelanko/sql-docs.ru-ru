@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908589"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>Выделение дескриптора соединения ODBC
 Прежде чем приложение может подключиться к источнику данных или драйверу, оно должно выделить дескриптор соединения следующим образом:  

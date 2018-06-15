@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913349"
 ---
 # <a name="new-features"></a>Новые возможности
 Следующие новые функциональные возможности была введена в ODBC 3. *x*. ODBC 3. *x* приложения, работа с ODBC 2 *.x* драйвера, не смогут использовать эту функцию. ODBC 3. *x* диспетчер драйверов не сопоставляет эти возможности при работе с ODBC 2 *.x* драйвера.  

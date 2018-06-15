@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906359"
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>C, чтобы примеры преобразования данных SQL
 В следующих примерах показано, как драйвер преобразует данных C к данным SQL:  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908719"
 ---
 # <a name="consistency-check"></a>Проверка согласованности
 Проверка согласованности выполняется драйвер автоматически каждый раз, когда приложение задает поле SQL_DESC_DATA_PTR в APD, Отменить или IPD. Каждый раз, когда это поле имеет значение, драйвер проверяет значение поля SQL_DESC_TYPE и значения, применяемые к поле SQL_DESC_TYPE в той же записи, правильны и согласуются.  

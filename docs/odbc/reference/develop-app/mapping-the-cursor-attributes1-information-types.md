@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910549"
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>Сопоставление типов курсоров Attributes1 сведения
 Когда ODBC 3. *x* приложение вызывает **SQLGetInfo** в ODBC 2 *.x* драйвер с типом SQL_XXXX_CURSOR_ATTRIBUTES1 сведения (для динамических, однонаправленные, управляемые набором ключей, или статические курсоры) определяется параметр битов, возвращаемых диспетчером драйверов ODBC 2. *x* драйвер возвращает для соответствующего ODBC 2. *x* типы информации. Биты установлены, как показано в следующей таблице.  

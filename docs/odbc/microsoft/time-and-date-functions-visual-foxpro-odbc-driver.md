@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908709"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Время и функции даты (драйвер ODBC для Visual FoxPro)
 В следующей таблице перечислены ODBC функций даты и времени поддерживаются драйвером Visual FoxPro ODBC; Если Visual FoxPro грамматики для той же функции отличается от синтаксиса ODBC, отображается Visual FoxPro эквивалент.  

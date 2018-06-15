@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912369"
 ---
 # <a name="sql-data-types-in-odbc"></a>Типы данных SQL в ODBC
 Типы данных SQL — это типы, в которых данные хранятся в источнике данных.  
