@@ -2,7 +2,6 @@
 title: RecordCreateOptionsEnum | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3109e7e7116fac22e007c65167bb718edf2b29b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cb2c6a46518a64989bd59fc5106dde52e93b6dd5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281173"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 Указывает существующую **запись** должен быть открыт или новый **запись** для [запись](../../../ado/reference/ado-api/record-object-ado.md) объекта [откройте](../../../ado/reference/ado-api/open-method-ado-record.md) метод. Значения могут быть объединены с помощью оператора.  

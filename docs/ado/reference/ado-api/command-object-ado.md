@@ -2,7 +2,6 @@
 title: Команды объекта (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf4a875b8ffbae9442f415fcf56d72809900da81
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42d1e3e442de94bd9cc062fc903a694c20a9a547
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276643"
 ---
 # <a name="command-object-ado"></a>Объект команды (ADO)
 Определяет той или иной команды, которую планируется выполнить в источнике данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **команда** для запросов к базе данных и возвращать записи в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта, для выполнения операции массового или для работы со структурой базы данных. В зависимости от функции поставщика, некоторые **команда** коллекции, методы или свойства может привести к ошибке, если они ссылаются.  
   
  С коллекциями, методы и свойства **команда** объекта, можно сделать следующее:  

@@ -2,7 +2,6 @@
 title: Типы курсоров (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a90421cb473d280586ed3c7877e2a188f545eda
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ead4e034fde49ac9826e63f091d7234ec0ecff7e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272943"
 ---
 # <a name="types-of-cursors-ado"></a>Типы курсоров (ADO)
 Как правило приложение должно использовать простой курсор, который предоставляет доступ необходимых данных. Характеристик курсора дополнительные расширенные возможности (однопроходный, только для чтения, статическим, прокрутка, без буферизации) имеет цену — в клиентской памяти, сетевой нагрузки или производительности. Во многих случаях параметры курсора по умолчанию создать курсор сложнее, чем фактически приложению.  

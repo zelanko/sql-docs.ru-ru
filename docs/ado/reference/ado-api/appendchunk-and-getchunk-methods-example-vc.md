@@ -2,7 +2,6 @@
 title: AppendChunk и пример методы GetChunk (VC ++) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b18c2331740e6f687331ae80c4ff32245a7ef8b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da52a78a8614e230f2e4b26ec4603458a7ada084
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275863"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>AppendChunk и пример методы GetChunk (VC ++)
 В этом примере используется [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) и [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) методы для заполнения поля изображения с данными из другой записи.  

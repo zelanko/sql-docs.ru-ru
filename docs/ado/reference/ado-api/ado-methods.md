@@ -2,7 +2,6 @@
 title: Методы ADO | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,17 +17,18 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a774f4be083e87b81f2200305faaa1802c84c52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c07679210b359517815a245069db95eb6e15b84e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275564"
 ---
 # <a name="ado-methods"></a>Методы ADO
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Создает новую запись для обновляемых **записей** объекта.|  
-|[Append](../../../ado/reference/ado-api/append-method-ado.md)|Добавляет объект в коллекцию. Если коллекция **поля**, новый **поле** объекта могут быть созданы перед добавлением в коллекцию.|  
+|[Добавление](../../../ado/reference/ado-api/append-method-ado.md)|Добавляет объект в коллекцию. Если коллекция **поля**, новый **поле** объекта могут быть созданы перед добавлением в коллекцию.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Добавляет данные большие текстовые или двоичные данные **поле**, или к **параметр** объекта.|  
 |[BeginTrans CommitTrans и RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Управляет обработки в пределах транзакций **подключения** объекта следующим образом:<br /><br /> **BeginTrans** — начинает новую транзакцию.<br /><br /> **CommitTrans** — сохраняет все изменения и завершает текущую транзакцию. Он также может запустить новую транзакцию.<br /><br /> **RollbackTrans** — отменяет все изменения и завершает текущую транзакцию. Он также может запустить новую транзакцию.|  
 |[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|Отменяет выполнение ожидающих вызова асинхронного метода.|  

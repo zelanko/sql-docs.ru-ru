@@ -2,7 +2,6 @@
 title: 'Коллекции (Visual C++ синтаксис индекс с #import) | Документы Microsoft'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92ffc11b2011ff5f37aee25266d0f229b1dfd617
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3378f8e44d8d667933fe41a7164ba4c56acc20ce
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276533"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Коллекции (Visual C++ синтаксис индекс с #import)
 Полезно знать, что коллекции наследуют некоторые общие методы и свойства.  

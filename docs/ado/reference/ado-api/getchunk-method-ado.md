@@ -2,7 +2,6 @@
 title: Метод GetChunk (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38397b5573cfb7ddb10a7454833f4e9b512b769b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0d39075e6d3c16540ded137a8ac78ccc6f8d94f8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278793"
 ---
 # <a name="getchunk-method-ado"></a>Метод GetChunk (ADO)
 Возвращает все или часть, содержимое большие текстовые или двоичные данные [поле](../../../ado/reference/ado-api/field-object.md) объекта.  
@@ -44,7 +44,7 @@ variable = field.GetChunk(Size)
  *Размер*  
  Объект **длинные** выражение, которое равно числу байт или символов, которые требуется извлечь.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **GetChunk** метод **поле** объекта для извлечения всех или части его долго двоичных или символьных данных. В ситуациях, где ограничена системной памяти, можно использовать **GetChunk** метод для обработки длинные значения в части, а не полностью.  
   
  Данные, **GetChunk** вызов возвращает назначается *переменной*. Если *размер* больше, чем оставшиеся данные **GetChunk** метод возвращает оставшиеся данные без заполнения *переменной* пробелами. Если поле не заполнено, **GetChunk** метод возвращает значение null.  

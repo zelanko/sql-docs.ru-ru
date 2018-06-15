@@ -2,7 +2,6 @@
 title: Запись объекта (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0bd0c6e6e5ad0e9d5ff059e0e9f4125137fb08fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1be0a2d0f3124f4f0718fd9f8063f23eb46c9deb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280883"
 ---
 # <a name="record-object-ado"></a>Объект записи (ADO)
 Представляет строку из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) или поставщик данных или объект, возвращенный поставщиком частично структурированными данными, таких как файл или каталог.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Объект **запись** представляет одну строку данных и имеет некоторые общие сходства с одной строки **записей**. В зависимости от возможностей вашего поставщика **запись** объектов могут быть возвращены непосредственно от поставщика, а не одной строки **записей**, — например, когда SQL-запрос, который выбирает только одну строку выполнена. Или **запись** объекта можно получить непосредственно из **записей** объекта. Или **записи** могут быть возвращены непосредственно от поставщика в частично структурированные данные, такие как Microsoft Exchange поставщика OLE DB.  
   
  Можно просмотреть поля, связанные с **запись** объекта посредством [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекции на **записи** объекта. ADO позволяет столбцов, возвращающих табличные значения объекта и включая **записей**, **SafeArray**и скалярных значений в **поля** коллекцию **записи** объекты.  

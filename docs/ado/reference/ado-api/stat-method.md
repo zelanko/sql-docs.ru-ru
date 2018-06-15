@@ -2,7 +2,6 @@
 title: Метод stat | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26dd4f3fa7de49f51c32fd97e184ee356cb16f35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b900386c1890d54ec61d3bfd2328f3d173c9300
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282023"
 ---
 # <a name="stat-method"></a>Stat-метод
 Извлекает сведения о [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
@@ -51,7 +51,7 @@ Long stream.Stat(StatStg, StatFlag)
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Версия Stat метода, реализованного в объекте ADO Stream заполняет структуры STATSTG следующие поля:  
   
  *pwcsName*  

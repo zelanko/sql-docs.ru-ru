@@ -2,7 +2,6 @@
 title: Метод AppendChunk (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ba8020b9bf2666ba3b2ab0ffe9156c771360c95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3446061f98047d6af28725095ede2a30208969a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275913"
 ---
 # <a name="appendchunk-method-ado"></a>Метод AppendChunk (ADO)
 Добавляет данные большие текстовые или двоичные данные [поле](../../../ado/reference/ado-api/field-object.md), или к [параметр](../../../ado/reference/ado-api/parameter-object.md) объекта.  
@@ -38,13 +38,13 @@ object.AppendChunk Data
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *объект*  
+ *object*  
  Объект **поле** или **параметр** объекта.  
   
  *Данные*  
  Объект **Variant** , содержащий данные для добавления в объект.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **AppendChunk** метод **поле** или **параметр** объекта для наполнения долго двоичных или символьных данных. В ситуациях, где ограничена системной памяти, можно использовать **AppendChunk** метод для обработки длинные значения в части, а не полностью.  
   
 ## <a name="field"></a>Поле  

@@ -2,7 +2,6 @@
 title: Модель программирования служб удаленных рабочих СТОЛОВ с объектами | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32cd0b412e06f591eee69581e1e7ea8f871cab7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9501b819e664e4b0841140f6b3d835773d2e2ed
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274083"
 ---
 # <a name="rds-programming-model-with-objects"></a>Модель программирования служб удаленных рабочих СТОЛОВ с объектами
 Службы удаленных рабочих столов предназначена для того, чтобы получить доступ к и обновление источников данных через посредника, такими как службы IIS. Модель программирования определяет последовательность действий, необходимых для достижения этой цели. Объектную модель указывает объекты, методы и свойства, влияющие на модели программирования.  

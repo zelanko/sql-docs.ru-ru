@@ -2,7 +2,6 @@
 title: Clone-метод (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33fee6bf55b3175d75879e06949744d0730f6af0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f993cee93bce398020fdb5ae2b43a7911114a270
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276433"
 ---
 # <a name="clone-method-ado"></a>Метод clone (ADO)
 Создает дубликат [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта из существующего **записей** объекта. При необходимости указывает точную копию только для чтения.  
@@ -48,9 +48,9 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  Объектную переменную, которая идентифицирует **записей** объекта к дублированию.  
   
  *LockType*  
- Необязательно. Объект [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) значение, указывающее тип блокировки исходного **записей**, или только для чтения **записей**. Допустимые значения: **adLockUnspecified** или **adLockReadOnly**.  
+ Необязательный параметр. Объект [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) значение, указывающее тип блокировки исходного **записей**, или только для чтения **записей**. Допустимые значения: **adLockUnspecified** или **adLockReadOnly**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **клон** повторяющийся метод, чтобы создать несколько **записей** объектов, особенно в том случае, если вы хотите поддерживать более чем одна текущая запись в заданном наборе записей. С помощью **клон** метод является более эффективным, чем создание и открытие нового **записей** объект, который использует то же определение оригинала.  
   
  [Фильтра](../../../ado/reference/ado-api/filter-property.md) свойства исходного **записей**, если таковая имеется, не будет применяться клон. Задать **фильтра** нового **записей** для фильтрации результатов. Самый простой способ скопировать все существующие **фильтра** значения — присвоить это напрямую, как показано ниже.  

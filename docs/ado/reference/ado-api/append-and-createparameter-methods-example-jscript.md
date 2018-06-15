@@ -2,7 +2,6 @@
 title: Добавление и пример методы CreateParameter (JScript) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5b7a1e196dd452b5bf6dd407c6dc7e10d237497
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d93d5b956576a9e2b66359ae4aef0b4d8b1e5223
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275813"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Добавление и пример методы CreateParameter (JScript)
 В этом примере используется [Append](../../../ado/reference/ado-api/append-method-ado.md) и [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) методы для выполнения хранимой процедуры с входным параметром. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **AppendJS.asp**.  

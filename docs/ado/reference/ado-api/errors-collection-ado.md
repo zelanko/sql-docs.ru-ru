@@ -2,7 +2,6 @@
 title: Коллекция ошибок (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7c259dda6c491c1992c19ed0ebe3decdc4a42d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 17e21c1d807ba537544a1578cb9ef2b8ea83ad21
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278163"
 ---
 # <a name="errors-collection-ado"></a>Коллекция ошибок (ADO)
 Содержит все [ошибка](../../../ado/reference/ado-api/error-object.md) объектов, созданных в ответ на сбой одного поставщика.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Любая операция, включающее объекты ADO можно создать одну или несколько ошибок поставщика. Как возникли ошибки, один или несколько **ошибка** объектов может быть помещен в **ошибки** коллекцию [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Если другая операция ADO создает ошибку, **ошибки** коллекция очищается и новый набор **ошибка** объектов может быть помещен в **ошибки** коллекции.  
   
  Каждый **ошибка** представляет ошибку конкретного поставщика, а не ошибка ADO. Ошибки ADO предоставляется механизм обработки исключений во время выполнения. Например, в Visual Basic возникновение ошибки конкретного ADO активируют [onError](../../../ado/reference/rds-api/onerror-event-rds.md) событий и отображаются в **Err** объекта.  

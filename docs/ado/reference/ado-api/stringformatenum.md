@@ -2,7 +2,6 @@
 title: StringFormatEnum | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13c4f80064a06299a6049330fcf85c8e0827e619
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac774393a914c13171dfa13150ee708b316fbd03
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282593"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
 Указывает формат при извлечении [записей](../../../ado/reference/ado-api/recordset-object-ado.md) как строка.  

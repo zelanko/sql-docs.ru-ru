@@ -2,7 +2,6 @@
 title: Запрашивать динамические свойства (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc7285d03db3edf52ddb89a91b2b73c5d3ae74c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7b5c0637f7befb1419f5cb96bbcd421d59cc7b8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280635"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Запрашивать динамические свойства (ADO)
 Указывает, должен ли поставщик OLE DB запрашивать у пользователя сведения об инициализации.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает [ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md) значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **Запрос** является динамическим, который может быть добавлен к [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции с помощью поставщика OLE DB. Запрашивает сведения об инициализации, поставщики OLE DB обычно отображает диалоговое окно для пользователя.  
   
  Динамические свойства класса [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта были утеряны при **подключения** закрыт. **Prompt** свойства должен быть сброшен перед повторного открытия **подключения** использовать значение, отличное от по умолчанию.  
