@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899559"
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Создание почтовых наклеек в Microsoft Word, используя данные Visual FoxPro
 Можно использовать Visual FoxPro данных в Microsoft Word для Windows 95 или Windows 98 документа. Например можно создавать наклейки из клиента сведений, хранящихся в таблице Visual FoxPro.  

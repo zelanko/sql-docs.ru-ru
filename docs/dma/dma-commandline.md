@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32866529"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Запустите помощник по миграции данных из командной строки
 С версии 2.1 и выше, когда вы можете установить помощник по миграции данных, она также устанавливает dmacmd.exe в *% ProgramFiles %\\Microsoft данных помощник по миграции\\*. Используйте dmacmd.exe для оценки баз данных в автоматическом режиме и вывода результатов в формате JSON или CSV-файл. Это особенно полезно при оценке несколько баз данных или большой базы данных. 

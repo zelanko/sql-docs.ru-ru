@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899544"
 ---
 # <a name="order-by-clause-limitations"></a>ORDER BY предложения ограничения
 Если инструкция SELECT содержит предложение GROUP BY и ORDER BY, предложение ORDER BY может содержать только столбец результирующего набора или выражения в предложении GROUP BY.

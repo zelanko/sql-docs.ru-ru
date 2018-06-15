@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910019"
 ---
 # <a name="sql-to-c-year-month-intervals"></a>SQL, чтобы интервалы год месяц C:
 Идентификаторы типа данных ODBC SQL interval год месяц следующие:  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901174"
 ---
 # <a name="implementing-desktop-database-drivers"></a>Реализация драйверы для настольных баз данных
 Инструкции и технические примечания о том, как реализовать и настроить Microsoft драйверов ODBC базы данных можно найти в интерактивной справке администратор источников данных ODBC. Этот файл может осуществляться во время процедуры установки драйвера из [администратора источников данных ODBC](../../odbc/admin/odbc-data-source-administrator.md).  

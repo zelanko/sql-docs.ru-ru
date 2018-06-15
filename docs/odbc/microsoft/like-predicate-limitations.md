@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899270"
 ---
 # <a name="like-predicate-limitations"></a>КАК предиката ограничения
 Если данные в столбце длиннее 255 символов, LIKE сравнения будет основываться только на первые 255 символов.  

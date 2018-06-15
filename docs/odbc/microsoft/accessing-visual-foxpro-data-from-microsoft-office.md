@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898919"
 ---
 # <a name="accessing-visual-foxpro-data-from-microsoft-office"></a>Доступ к данным Visual FoxPro с Microsoft Office
 Драйвер ODBC Microsoft Visual FoxPro можно использовать для доступа к данным Visual FoxPro Microsoft Office для приложений Windows 95 или Windows 98.  

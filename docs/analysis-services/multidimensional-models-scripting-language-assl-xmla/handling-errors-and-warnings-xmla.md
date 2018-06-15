@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021452"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Обработка ошибок и предупреждений (XMLA)
   Обработка ошибок является обязательным, если XML для аналитики (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) или [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) вызов метода не выполняется, успешно выполняется, но приводит к возникновению ошибки или предупреждения, или выполняется успешно, но возвращает результаты которые содержат ошибки.  

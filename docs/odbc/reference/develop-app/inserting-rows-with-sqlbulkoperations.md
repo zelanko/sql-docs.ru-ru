@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911120"
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>Вставка строк с SQLBulkOperations
 Вставка данных с **SQLBulkOperations** похож на обновление данных с **SQLBulkOperations** , так как он использует данные из привязанного приложения буферов.  

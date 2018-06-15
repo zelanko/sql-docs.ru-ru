@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900069"
 ---
 # <a name="scalar-functions"></a>Скалярные функции
 Драйверы Microsoft ODBC системной базы данных поддерживают следующие скалярные функции:  

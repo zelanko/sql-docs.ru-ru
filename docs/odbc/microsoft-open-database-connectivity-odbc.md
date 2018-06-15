@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899829"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft Open Database Connectivity (ODBC)
 Интерфейс Microsoft Open Database Connectivity (ODBC) является интерфейс языка программирования C, который позволяет приложениям доступ к данным из различных систем управления базами данных (СУБД). ODBC — это низкоуровневые высокой производительности интерфейс, предназначенный специально для реляционными хранилищами данных.  

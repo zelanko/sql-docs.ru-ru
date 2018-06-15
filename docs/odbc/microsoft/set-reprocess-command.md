@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903589"
 ---
 # <a name="set-reprocess-command"></a>Повторная ОБРАБОТКА команды SET
 Указывает, сколько раз или как long, чтобы заблокировать файлы и записи после блокировки после неудачной попытки.  

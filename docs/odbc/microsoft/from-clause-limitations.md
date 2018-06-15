@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898418"
 ---
 # <a name="from-clause-limitations"></a>ИЗ предложения ограничения
 Максимальное количество таблиц в предложении FROM равно 16.

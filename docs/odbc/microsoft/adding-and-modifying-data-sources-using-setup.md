@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901439"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>Добавление и изменение источников данных с помощью программы установки
 > [!IMPORTANT]  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904619"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Диалоговое окно установки Visual FoxPro ODBC
 **Установки Visual FoxPro ODBC** диалоговое окно позволяет добавить или изменить источник данных Visual FoxPro.  

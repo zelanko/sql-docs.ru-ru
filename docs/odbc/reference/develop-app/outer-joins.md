@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914359"
 ---
 # <a name="outer-joins"></a>Внешние соединения
 ODBC поддерживает SQL-92 слева, правое и полное внешнее соединение синтаксис. Escape-последовательность для внешних соединений  

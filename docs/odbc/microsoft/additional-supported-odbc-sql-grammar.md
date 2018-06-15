@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898929"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Дополнительные поддерживаемые SQL-грамматику ODBC
 Драйверы ODBC полностью поддерживают грамматики минимум 2,5 ODBC и следующие предложения в грамматике основные и расширенные 2.5 ODBC. Дополнительные сведения могут быть отображены за счет перехода [инструкции ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), [корреляционные имена](../../odbc/microsoft/correlation-names.md), и [вызова процедуры](../../odbc/microsoft/procedure-invocation.md) разделы.  

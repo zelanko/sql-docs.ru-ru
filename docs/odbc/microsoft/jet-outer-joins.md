@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898909"
 ---
 # <a name="jet-outer-joins"></a>Jet: Внешние соединения
 Инструкция SELECT может содержать список предложений OUTER JOIN. Поддерживаются вложенные ВНЕШНИЕ СОЕДИНЕНИЯ. Дополнительные сведения о ВНЕШНИЕ СОЕДИНЕНИЯ см. в разделе *Microsoft Jet базы данных подсистемы Руководство программиста*.
