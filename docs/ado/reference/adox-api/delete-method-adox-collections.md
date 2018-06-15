@@ -2,7 +2,6 @@
 title: Удаление метода (ADOX коллекций) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -35,11 +34,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c059ef4390f504363c9cfaa7f42bb99c6799a2da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8704e69c777c9426af158b9866ca89e70de054b5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285883"
 ---
 # <a name="delete-method-adox-collections"></a>Удаление метода (ADOX коллекций)
 Удаляет объект из коллекции.  
@@ -55,7 +55,7 @@ Collection.Delete Name
  *Название*  
  Объект **Variant** , указывающий имя или порядковый номер (индекс) удаляемого объекта.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если произойдет ошибка *имя* не существует в коллекции.  
   
  Для [таблиц](../../../ado/reference/adox-api/tables-collection-adox.md) и [пользователей](../../../ado/reference/adox-api/users-collection-adox.md) коллекций, ошибка возникает, если поставщик не поддерживает удаление таблиц или пользователей, соответственно. Для [процедуры](../../../ado/reference/adox-api/procedures-collection-adox.md) и [представления](../../../ado/reference/adox-api/views-collection-adox.md) коллекций, **удалить** завершится ошибкой, если поставщик не поддерживает сохранение команды.  

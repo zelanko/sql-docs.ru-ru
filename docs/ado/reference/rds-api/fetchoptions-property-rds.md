@@ -2,7 +2,6 @@
 title: Свойство FetchOptions (RDS) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dcbb951a5d17c7b7f0d8be540bef5c74e96b101d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b73931acd678871f05e5aa4022153ded86a830e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288137"
 ---
 # <a name="fetchoptions-property-rds"></a>Свойство FetchOptions (RDS)
 Указывает тип асинхронной доставки данных.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  Каждый клиентский исполняемый файл, который использует эти константы должен предоставить их объявления. Можно вырезать и вставить объявления констант из файла Adcvbs.inc, расположенный в папке установки по умолчанию для библиотеки служб удаленных рабочих СТОЛОВ.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Веб-приложения, обычно требуется использовать **adcFetchAsync** (значение по умолчанию), так как он обеспечивает более высокую производительность. В скомпилированных в клиентском приложении, обычно требуется использовать **adcFetchBackground**.  
   
 ## <a name="applies-to"></a>Объект применения  

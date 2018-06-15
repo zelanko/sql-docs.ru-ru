@@ -2,7 +2,6 @@
 title: Свойство RelatedColumn (ADOX) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 008daa97837a68acfea9671fd795bae8b8f84d65
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b34b5392fe9d718226a9fd5aba34640befb5ee2a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286903"
 ---
 # <a name="relatedcolumn-property-adox"></a>Свойство RelatedColumn (ADOX)
 Указывает имя связанного [объекта столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md) в связанной таблице (только для ключевых столбцов).  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает **строка** значение, представляющее имя связанного столбца в связанной таблице.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Значение по умолчанию — пустая строка.  
   
  Это свойство доступно только для чтения для [столбца](../../../ado/reference/adox-api/column-object-adox.md) объектов уже добавлен в коллекцию.  

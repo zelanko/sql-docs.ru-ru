@@ -2,7 +2,6 @@
 title: Метод CreateRecordset (RDS) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ddc77ab08c04495cd269d4c602e33adcf0eec16f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61f918c7a7530ae504825182a1d6a1c4ced1d84c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287623"
 ---
 # <a name="createrecordset-method-rds"></a>Метод CreateRecordset (RDS)
 Создает пустой, отключен [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -50,9 +50,9 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  Объект **Variant** массив атрибутов, который определяет каждый столбец в **записей** создан. Каждое определение столбца содержит массив из четырех необходимые атрибуты и один необязательный атрибут.  
   
-|Attribute|Description|  
+|attribute|Описание|  
 |---------------|-----------------|  
-|Название|Имя заголовка столбца.|  
+|Имя|Имя заголовка столбца.|  
 |Тип|Целое число типа данных.|  
 |Размер|Целое число от ширины в символах, независимо от типа данных.|  
 |Допускает значения NULL|Логическое значение.|  
@@ -60,7 +60,7 @@ object.CreateRecordset(ColumnInfos)
   
  Набор столбцов массивов, затем группируются в массив, который определяет **записей**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Серверные бизнес-объекта, можно заполнить итоговый **записей** данными из не - поставщик данных OLE DB, такие как операционной системой файл содержащего биржевых котировок.  
   
  В следующей таблице перечислены [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) значений, поддерживаемых **CreateRecordset** метод. Номер, указанный — это номер ссылки, используемый для определения полей.  

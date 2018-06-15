@@ -2,7 +2,6 @@
 title: Пример свойства ParentCatalog (VC ++) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18cb4765f78e7b6b6f303b91cb2b03e105ac2f08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 686e8a9dff329f4082c83af83d25855d4b30e2f2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286593"
 ---
 # <a name="parentcatalog-property-example-vc"></a>Пример свойства ParentCatalog (VC ++)
 Следующий код демонстрирует использование [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) свойство для доступа к специфическое для поставщика свойство до добавления таблицы в каталоге. Свойство **AutoIncrement**, которая создает поле AutoIncrement базы данных Microsoft Jet.  

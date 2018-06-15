@@ -1,14 +1,12 @@
 ---
 title: RDS примеров кода в Visual Basic | Документы Microsoft
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -21,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9bde310044833e421825f32e3f0c61f79690d5f5
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 121eed9a29d46d29b98708b3e18b361cf53e9971
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288303"
 ---
 # <a name="rds-code-examples-in-visual-basic"></a>Примеры кода служб удаленных рабочих СТОЛОВ в Visual Basic
 > [!IMPORTANT]

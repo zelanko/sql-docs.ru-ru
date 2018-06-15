@@ -2,7 +2,7 @@
 title: Поддержка имени участника-службы (SPN) в клиентских соединениях | Документы Microsoft
 description: Поддержка имени участника службы (SPN) в клиентских соединениях
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -18,14 +18,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c119c14cbd0441d22b8e97f8d168d10d652e86d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 802d8593c671ecef58f5a0eea8439e2f16898de1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612329"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Поддержка имени участника-службы в клиентских соединениях
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Начиная с версии [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], поддержка имен участников-служб (SPN) была расширена для поддержки взаимной проверки подлинности по всем протоколам. В предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], имена участников-служб поддерживались только для протокола Kerberos по протоколу TCP при по умолчанию имени участника-службы для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляр был зарегистрирован с помощью Active Directory.  
   
@@ -109,5 +112,5 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>См. также  
  [Драйвер OLE DB для компонентов SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   
- [Регистрация имени участника-службы для соединений Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
+ [Регистрация имя участника-службы для соединений Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

@@ -2,7 +2,6 @@
 title: Append-метод (ADOX столбцы) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e53965f9a8c5602459a08f5c47e5719741bb648
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1bdaa9f13104ca2f56dd44c4b3a08dfd3c424c3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284833"
 ---
 # <a name="append-method-adox-columns"></a>Append-метод (ADOX столбцы)
 Добавляет новый [столбца](../../../ado/reference/adox-api/column-object-adox.md) объект [столбцы](../../../ado/reference/adox-api/columns-collection-adox.md) коллекции.  
@@ -42,10 +42,10 @@ Columns.Append Column [,Type] [,DefinedSize]
  **Столбца** добавляемый объект или имя столбца для создания и добавления.  
   
  *Тип*  
- Необязательно. Объект **длинные** значение, которое указывает тип данных столбца. *Тип* параметр соответствует параметру [тип](../../../ado/reference/adox-api/type-property-column-adox.md) свойство **столбца** объекта.  
+ Необязательный параметр. Объект **длинные** значение, которое указывает тип данных столбца. *Тип* параметр соответствует параметру [тип](../../../ado/reference/adox-api/type-property-column-adox.md) свойство **столбца** объекта.  
   
  *DefinedSize*  
- Необязательно. Объект **длинные** значение, указывающее размер столбца. *DefinedSize* параметр соответствует параметру [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) свойство **столбца** объекта.  
+ Необязательный параметр. Объект **длинные** значение, указывающее размер столбца. *DefinedSize* параметр соответствует параметру [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) свойство **столбца** объекта.  
   
 > [!NOTE]
 >  Произойдет ошибка при наращивании **столбца** для **столбцы** коллекцию [индекс](../../../ado/reference/adox-api/index-object-adox.md) Если **столбца** не существует в [Таблицы](../../../ado/reference/adox-api/table-object-adox.md) , добавляется к уже [таблиц](../../../ado/reference/adox-api/tables-collection-adox.md) коллекции.  

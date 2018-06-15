@@ -2,7 +2,6 @@
 title: Методы ADOX | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf7837fb749222fe3083671632758ea04a112728
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ced2fbeb94aacd1035b28b56a46b10535f17c192
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284803"
 ---
 # <a name="adox-methods"></a>Методы ADOX
 |||  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 |[Append (представления)](../../../ado/reference/adox-api/append-method-adox-views.md)|Добавляет новый **представление** объект **представления** коллекции.|  
 |[Изменение пароля](../../../ado/reference/adox-api/changepassword-method-adox.md)|Изменяет пароль для учетной записи пользователя.|  
 |[Создание](../../../ado/reference/adox-api/create-method-adox.md)|Создает новый каталог.|  
-|[Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Удаляет объект из коллекции.|  
+|[Удаление](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Удаляет объект из коллекции.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Возвращает владельца объекта в каталоге.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Возвращает разрешения для группы или пользователя на объект.|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Задает владельца объекта в каталоге.|  

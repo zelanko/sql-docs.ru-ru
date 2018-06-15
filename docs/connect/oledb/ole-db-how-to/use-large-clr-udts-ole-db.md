@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,11 +13,12 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8df1affa36ba09e0938c4b52d5a555ecaa2c0e95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0f27d6ad2844e5c87ec29d5e09ff150d61bb9ac7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305853"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Использование определяемых пользователем типов больших данных CLR (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
  Выполните второй листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]), чтобы добавить сборку в базу данных master.  
   
- Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните третий листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Чтобы соединиться с именованным экземпляром, измените строку подключения из L"(local)» для L"(local)\\\name», где имя является именем экземпляра. По умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий msoledbsql.h.  
+ Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните третий листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы соединиться с именованным экземпляром, измените строку подключения из L"(local)» для L"(local)\\\name», где имя является именем экземпляра. По умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий msoledbsql.h.  
   
  Выполните четвертый листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]), чтобы удалить сборку из базы данных master.  
   

@@ -2,7 +2,6 @@
 title: Свойство ExecuteOptions (RDS) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e44be9cb2b46b91d536d5a90cbb589365ad7d2c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e054a4ea0ad6a485f0b1d1dedfd53cdf9b07d944
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288163"
 ---
 # <a name="executeoptions-property-rds"></a>Свойство ExecuteOptions (RDS)
 Указывает, включен ли асинхронное выполнение.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  Каждый исполняемый файл, который использует эти константы должен предоставить их объявления. Можно вырезать и вставить объявления констант, которые из файла Adcvbs.inc, расположенный в папке установки по умолчанию для библиотеки служб удаленных рабочих СТОЛОВ.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если **ExecuteOptions** задано значение **adcExecAsync**, то это асинхронно выполняет следующий **обновления** вызывать [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта **записей**.  
   
  Если попытаться вызвать [Сброс](../../../ado/reference/rds-api/reset-method-rds.md), [обновление](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), или [записей](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) тогда как другая асинхронная операция, которая может изменить [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта **записей** выполняется, возникает ошибка.  

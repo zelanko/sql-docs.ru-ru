@@ -2,7 +2,6 @@
 title: Append-метод (ADOX пользователей) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf65ab9c0705019dcc56bae4e605b5cb2247d056
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a3c8bc74cf91e07fcac3bc9b58a7633a7083090
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285403"
 ---
 # <a name="append-method-adox-users"></a>Append-метод (ADOX пользователей)
 Добавляет новый [пользователя](../../../ado/reference/adox-api/user-object-adox.md) объект [пользователей](../../../ado/reference/adox-api/users-collection-adox.md) коллекции.  
@@ -42,9 +42,9 @@ Users.Append User[,Password]
  Объект **Variant** значение, содержащее **пользователя** добавляемый объект или имя пользователя для создания и добавления.  
   
  *Пароль*  
- Необязательно. Объект **строка** значение, содержащее пароль для пользователя. *Пароль* параметр соответствует параметру значение, заданное параметром [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) метод **пользователя** объекта.  
+ Необязательный параметр. Объект **строка** значение, содержащее пароль для пользователя. *Пароль* параметр соответствует параметру значение, заданное параметром [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) метод **пользователя** объекта.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **Пользователей** коллекцию [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) представляет каталог пользователей. **Пользователей** коллекции для [группы](../../../ado/reference/adox-api/group-object-adox.md) представляет только пользователи, имеющие членства в определенной группе.  
   
  Если поставщик не поддерживает создание пользователей, произойдет ошибка.  

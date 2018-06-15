@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 66756bbb8179e9d7644d053dd76c4ab8223032d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0c72810314212a3b5b566d131977c65e8cac118c
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305943"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Поддержка типов данных даты OLE DB и улучшения времени
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.lasthandoff: 05/03/2018
   
 |Тип данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Тип данных OLE DB|Значение|  
 |-----------------------------------------|----------------------|-----------|  
-|datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
+|DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
-|date|DBTYPE_DBDATE|133 (oledb.h)|  
+|Дата|DBTYPE_DBDATE|133 (oledb.h)|  
 |time|DBTYPE_DBTIME2|145 (msoledbsql.h)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (msoledbsql.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -44,9 +44,9 @@ ms.lasthandoff: 05/03/2018
   
 |Тип данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Тип данных OLE DB|Формат строки для клиентских преобразований|  
 |-----------------------------------------|----------------------|------------------------------------------|  
-|datetime|DBTYPE_DBTIMESTAMP|'гггг-мм-дд чч:мм:сс:[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для типа Datetime поддерживает значения долей секунды, состоящие из не более чем трех цифр.|  
+|DATETIME|DBTYPE_DBTIMESTAMP|'гггг-мм-дд чч:мм:сс:[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для типа Datetime поддерживает значения долей секунды, состоящие из не более чем трех цифр.|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'гггг-мм-дд чч:мм:сс'<br /><br /> Этот тип данных имеет точность до одной минуты. При выводе данных секунды будут равны нулю, а при вводе данных они округляются сервером.|  
-|date|DBTYPE_DBDATE|'гггг-мм-дд'|  
+|Дата|DBTYPE_DBDATE|'гггг-мм-дд'|  
 |time|DBTYPE_DBTIME2|'чч:мм:сс[.9999999]'<br /><br /> Дополнительно можно указывать доли секунд до семи цифр.|  
 |datetime2|DBTYPE_DBTIMESTAMP|'гггг-мм-дд чч:мм:сс[.еееееее]'<br /><br /> Дополнительно можно указывать доли секунд до семи цифр.|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|'гггг-мм-дд чч:мм:сс[.еееееее] +/-чч:мм'<br /><br /> Дополнительно можно указывать доли секунд до семи цифр.|  
@@ -177,7 +177,7 @@ enum SQLVARENUM {
   
 |Тип данных OLE DB (*wType*)|Тип данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Примечания|  
 |----------------------------------|-----------------------------------------|-----------|  
-|DBTYPE_DBDATE|date||  
+|DBTYPE_DBDATE|Дата||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|Драйвер OLE DB для SQL Server проверяет элемент DBCOLUMDESC *bScale* участнику, чтобы определить точность в долях секунды.|  
 |DBTYPE_DBTIME2|**время**(p)|Драйвер OLE DB для SQL Server проверяет элемент DBCOLUMDESC *bScale* участнику, чтобы определить точность в долях секунды.|  
 |DBTYPE_DBTIMESTAMPOFFSET|**DateTimeOffset**(p)|Драйвер OLE DB для SQL Server проверяет элемент DBCOLUMDESC *bScale* участнику, чтобы определить точность в долях секунды.|  
@@ -185,6 +185,6 @@ enum SQLVARENUM {
  Если приложение задает DBTYPE_DBTIMESTAMP в *wType*, оно может заменить сопоставление с **datetime2** , предоставив имя типа в *pwszTypeName*. Если **datetime** указано, *bScale* должно быть 3. Если **smalldatetime** указано, *bScale* должно быть равно 0. Если *bScale* не согласуется с *wType* и *pwszTypeName*, возвращается значение db_e_badscale.  
   
 ## <a name="see-also"></a>См. также  
- [Дата и время усовершенствования & #40; OLE DB & #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Дата и время улучшениях &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

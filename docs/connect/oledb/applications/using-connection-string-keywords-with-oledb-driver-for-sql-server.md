@@ -2,7 +2,7 @@
 title: Использование ключевых слов строки подключения с помощью драйвера OLE DB для SQL Server | Документы Microsoft
 description: Использование ключевых слов строки подключения с помощью драйвера OLE DB для SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -21,14 +21,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a88e1ba37c1c5ddab0af1bbba411a08429fd2a05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 40aeb07deacbc5e1341f3d38abf5595986cedd48
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612249"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>Использование ключевых слов строки подключения с помощью драйвера OLE DB для SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -154,7 +155,7 @@ ms.lasthandoff: 05/03/2018
 |**Сетевая библиотека**|SSPROP_INIT_NETWORKLIBRARY|Сетевая библиотека, используемая для установления соединения с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в организации.|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|Размер сетевого пакета. Значение по умолчанию — 4096.|  
 |**Пароль**|DBPROP_AUTH_PASSWORD|Пароль имени входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|**Сохранять сведения о безопасности**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|Принимает в качестве значений строки «true» и «false». Если указано значение «false», объекту источника данных не разрешается сохранять конфиденциальные сведения проверки подлинности.|  
+|**Persist Security Info**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|Принимает в качестве значений строки «true» и «false». Если указано значение «false», объекту источника данных не разрешается сохранять конфиденциальные сведения проверки подлинности.|  
 |**Поставщик**||Драйвер OLE DB для SQL Server это будет «MSOLEDBSQL».|  
 |**Имя участника-службы сервера**|SSPROP_INIT_SERVERSPN|Имя участника-службы для сервера. Значение по умолчанию — пустая строка. Драйвер OLE DB для SQL Server для использования по умолчанию, сформированное поставщиком имя участника-службы в результате пустая строка.|  
 |**Надежный сертификат сервера**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|Принимает в качестве значений строки «true» и «false». По умолчанию имеет значение «false», которое указывает, что сертификат сервера будет проверяться.|  
@@ -206,7 +207,7 @@ ms.lasthandoff: 05/03/2018
 |**Сетевая библиотека**|SSPROP_INIT_NETWORKLIBRARY|Сетевая библиотека, используемая для установления соединения с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в организации.|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|Размер сетевого пакета. Значение по умолчанию — 4096.|  
 |**Пароль**|DBPROP_AUTH_PASSWORD|Пароль имени входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|**Сохранять сведения о безопасности**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|Принимает в качестве значений строки «true» и «false». Если указано значение «false», объекту источника данных не разрешается сохранять конфиденциальные сведения проверки подлинности.|  
+|**Persist Security Info**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|Принимает в качестве значений строки «true» и «false». Если указано значение «false», объекту источника данных не разрешается сохранять конфиденциальные сведения проверки подлинности.|  
 |**Поставщик**||Драйвер OLE DB для SQL Server это будет «MSOLEDBSQL».|  
 |**Имя участника-службы сервера**|SSPROP_INIT_SERVERSPN|Имя участника-службы для сервера. Значение по умолчанию — пустая строка. Драйвер OLE DB для SQL Server для использования по умолчанию, сформированное поставщиком имя участника-службы в результате пустая строка.|  
 |**Надежный сертификат сервера**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|Принимает в качестве значений строки «true» и «false». По умолчанию имеет значение «false», которое указывает, что сертификат сервера будет проверяться.|  
@@ -216,7 +217,7 @@ ms.lasthandoff: 05/03/2018
   
  **Примечание** в строке подключения свойство «Old Password» устанавливает значение свойства SSPROP_AUTH_OLD_PASSWORD, которой является текущий пароль (возможно истекшим сроком действия), недоступным через свойство строки поставщика.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание приложений с помощью драйвера OLE DB для SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
   
   

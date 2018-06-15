@@ -2,7 +2,6 @@
 title: Пример свойства SortOrder (VB) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22c3955934e7e3030251bbb80165edaa6fee159f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22dc816e9f4343d2873f169837d028babbfa111c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286869"
 ---
 # <a name="sortorder-property-example-vb"></a>Пример свойства SortOrder (Visual Basic)
 В этом примере демонстрируется [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) свойство [столбца](../../../ado/reference/adox-api/column-object-adox.md) , добавленную [столбцы](../../../ado/reference/adox-api/columns-collection-adox.md) коллекцию [индекса](../../../ado/reference/adox-api/index-object-adox.md). Код добавляет возрастания индекса в столбце страны в **сотрудников** таблицы, затем отображает записи. Затем код добавляет убывания индекса в столбце страны в **сотрудников** таблицы и отображает записи еще раз. Показано различие между сортировкой по возрастанию и убыванию индексов.  

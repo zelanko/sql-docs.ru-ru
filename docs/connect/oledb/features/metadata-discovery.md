@@ -2,7 +2,7 @@
 title: Обнаружение метаданных | Документы Microsoft
 description: Обнаружение метаданных в драйвер OLE DB для SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 978e6eb5ed864e77fbd6600848d2ce77c0e92d2b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3980b8064b565dc09ebb79e9d81be9c6f85fc21a
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611639"
 ---
 # <a name="metadata-discovery"></a>Обнаружение метаданных
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Улучшенное обнаружение метаданных в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] позволяет драйвер OLE DB для приложений SQL Server, чтобы убедиться, что столбец или идентична метаданные параметров, возвращенные в результате выполнения запроса или совместимые с форматом метаданных, указанным перед началом выполнить запрос. Если формат метаданных, возвращенных в результате выполнения запроса, будет несовместим с форматом, указанным до выполнения запроса, возвращается ошибка.  
   
@@ -29,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
  При разработке приложения с помощью драйвера OLE DB для SQL Server, но подключиться к версии сервера более ранней, чем [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], обнаружение метаданных, функциональные возможности будут соответствовать версии сервера.  
   
-## <a name="remarks"></a>Замечания   
+## <a name="remarks"></a>Примечания   
  В [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] были изменены следующие методы OLE DB, которые теперь обеспечивают улучшенное обнаружение метаданных:  
   
 -   IColumnsInfo::GetColumnInfo  

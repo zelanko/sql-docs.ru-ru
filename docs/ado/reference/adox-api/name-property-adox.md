@@ -2,7 +2,6 @@
 title: Имя свойства (ADOX) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -46,11 +45,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a2ed39fc723fe9d3796e2520c2385b8f4ae3896
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a9bb6d6e570de4595e2c6b3130432b8829da137b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286609"
 ---
 # <a name="name-property-adox"></a>Свойство Name (ADOX)
 Указывает имя объекта.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **строка** значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Имена не обязательно должны быть уникальными в пределах коллекции.  
   
  **Имя** свойство является чтение и запись на [столбца](../../../ado/reference/adox-api/column-object-adox.md), [группы](../../../ado/reference/adox-api/group-object-adox.md), [ключ](../../../ado/reference/adox-api/key-object-adox.md), [индекс](../../../ado/reference/adox-api/index-object-adox.md), [ Таблица](../../../ado/reference/adox-api/table-object-adox.md), и [пользователя](../../../ado/reference/adox-api/user-object-adox.md) объектов. **Имя** свойство доступно только для чтения на [каталога](../../../ado/reference/adox-api/catalog-object-adox.md), [процедура](../../../ado/reference/adox-api/procedure-object-adox.md), и [представление](../../../ado/reference/adox-api/view-object-adox.md) объектов.  

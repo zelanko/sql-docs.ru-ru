@@ -1,11 +1,8 @@
 ---
 title: Таблица свойств объекта, методы и события | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9450321d2c44e8d81c5674a1abaa7bfa9b0d3ea
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 942bac61d249106ae80ed76e19c243926d3a12f8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287203"
 ---
 # <a name="table-object-properties-methods-and-events"></a>Свойства объекта таблицы, методы и события
 ## <a name="propertiescollections"></a>Свойства и коллекции  
