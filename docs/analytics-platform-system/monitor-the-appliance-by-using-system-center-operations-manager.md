@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538984"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Монитор с System Center Operations Manager — система платформы аналитики
 System Center Operations Manager (SCOM) используется для мониторинга устройства Analytics Platform System (APS).

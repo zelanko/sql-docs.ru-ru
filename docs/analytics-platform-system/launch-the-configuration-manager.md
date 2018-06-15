@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544786"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Запустите Диспетчер конфигураций в система платформы аналитики
 Этот раздел содержит инструкции по запуску **Configuration Manager** для устройства Analytics Platform System.  

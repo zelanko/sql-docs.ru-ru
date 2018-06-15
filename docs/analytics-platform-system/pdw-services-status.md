@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539004"
 ---
 # <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Параллельное хранилище данных состояния службы для система платформы аналитики
 Parallel Data Warehouse **состояние служб** текущее состояние всех служб SQL Server PDW страницы в Microsoft Analytics платформы System Configuration Manager, а также предоставляет возможность останавливать и запускать службы PDW. Это единственный поддерживаемый способ запуска и остановки службы PDW. Обратите внимание, что отдельные компоненты и службы не может запускаться независимо друг от друга.  

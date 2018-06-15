@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538724"
 ---
 # <a name="remote-table-copy"></a>Копирование удаленной таблицы
 Описывает, как использовать функцию копирования удаленной таблицы копирование таблиц из базы данных SQL Server PDW для удаленных баз данных SMP SQL Server (отличных от устройства). Используйте копию удаленной таблицы включает звезда сценарии для SQL Server PDW.  

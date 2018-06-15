@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539274"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>Отслеживать оповещения устройства в система платформы аналитики
 В этом разделе описывается использование консоли администрирования и системных представлений для отслеживания оповещений в в SQL Server PDW appliance.  

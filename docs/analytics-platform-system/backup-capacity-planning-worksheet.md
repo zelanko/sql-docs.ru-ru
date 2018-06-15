@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539144"
 ---
 # <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>Резервное копирование сервера емкости лист планирования - Parallel Data Warehouse
 Этот лист планирования емкости поможет вам определить требования для резервного копирования сервера для выполнения резервного копирования базы данных SQL Server PDW операций и восстановления. Используется для создания плана для приобретения новых или подготовки существующих резервных серверов.  

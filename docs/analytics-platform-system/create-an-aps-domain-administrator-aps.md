@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31545120"
 ---
 # <a name="create-an-aps-domain-administrator"></a>Создание администратора домена APS
 Некоторые операции требуются права администратора домена Analytics Platform System. Это описание способов создания Администраторы домена дополнительных устройств.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544936"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>Подготовка сертификата PDW - система платформы аналитики
 **Подготовка сертификата PDW** страница Analytics Platform System **Configuration Manager** импортирует или удаляет сертификат, используемый регион PDW. Использование, сертификат для шифрования соединения может помочь безопасного обмена данными с узла управления через клиенты SQL Server, средства, использующие драйверы SQL Server PDW [консоли администрирования](monitor-the-appliance-by-using-the-admin-console.md), и загружает служб Integration Services.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539474"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Разрешения GRANT T-SQL для параллельного хранилища данных
 Разрешения GRANT T-SQL для операций базы данных в Parallel Data Warehouse.

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544986"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Монитор устройств с консоли администрирования - система платформы аналитики
 Консоль администратора — SQL Server PDW веб-приложения, который предоставляет доступ к информации состояния работоспособности и производительности устройства. Пользователи подключаться к консоли администрирования через Internet Explorer.  

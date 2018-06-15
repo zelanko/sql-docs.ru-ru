@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538864"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>База данных tempdb в Parallel Data Warehouse
 **База данных tempdb** это системная база данных SQL Server PDW, сохраняет локальных временных таблиц для пользовательских баз данных. Временные таблицы часто используются для повышения производительности запросов. Например можно использовать временную таблицу в модуль сценария и использовать вычисляемые данные.  

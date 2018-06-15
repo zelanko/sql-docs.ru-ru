@@ -9,11 +9,11 @@
 ## [Ограничения по производительности вычислений для разных выпусков SQL Server](compute-capacity-limits-by-edition-of-sql-server.md)
 ## [Программа улучшения качества программного обеспечения](customer-experience-improvement-program-for-sql-server-data-tools.md)
 ## [Настройка SQL Server для отправки отзыва в Майкрософт](sql-server-customer-feedback.md)
-### Участники
-#### [Мониторинг](partner-monitor-sql-server.md)
-#### [Высокий уровень доступности и аварийное восстановление](partner-hadr-sql-server.md)
-#### [Управление](partner-management-sql-server.md)
-#### [Разработка](partner-dev-sql-server.md)
+## Участники
+### [Мониторинг](partner-monitor-sql-server.md)
+### [Высокий уровень доступности и аварийное восстановление](partner-hadr-sql-server.md)
+### [Управление](partner-management-sql-server.md)
+### [Разработка](partner-dev-sql-server.md)
 
 # [Новые и обновленные Статьи](new-updated-sql-server.md)
 

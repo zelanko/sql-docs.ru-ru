@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538544"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>База данных master - Parallel Data Warehouse
 База данных master SQL Server PDW сохраняет сведения об имени входа уровня устройства и каталоге базы данных. Это основной базы данных SQL Server, расположенный на узел элемента управления. Таким образом он предоставляет аналогичные функциональные возможности в SQL Server PDW как обеспечивает master для SQL Server.  

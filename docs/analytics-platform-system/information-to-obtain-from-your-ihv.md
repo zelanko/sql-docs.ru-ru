@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538904"
 ---
 # <a name="information-to-obtain-from-your-ihv"></a>Сведения о получении из вашего Оборудования
 Если вашего оборудования независимых поставщиков Оборудования позволяет ваш новый SQL Server PDW appliance, они также предоставлять сведения о конфигурации оборудования устройства, они выполнена на устройстве. Необходимо будет эти сведения для управления вашим устройством.  

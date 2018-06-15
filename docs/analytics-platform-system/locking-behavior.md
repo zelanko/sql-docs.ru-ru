@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539464"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>Режим блокировки в Parallel Data Warehouse
 Узнайте, как параллельное хранилище данных использует блокировки для обеспечения целостности транзакций и поддержания согласованности баз данных, когда несколько пользователей имеют доступ к данным, в то же время.  

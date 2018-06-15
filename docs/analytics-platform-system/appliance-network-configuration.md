@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539314"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Сетевая конфигурация устройства для система платформы аналитики
 Устройство Analytics Platform System (APS) строится и настроен исправление набор IP-адресов на протяжении всех серверов и соответствующие устройства из фабричной установки Оборудования. При доставке устройства необходимо изменить конфигурацию IP-адрес внешнего (Ethernet) обращаться для соответствия требованиям центра данных определенного клиента.  

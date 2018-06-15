@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539494"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>Подготовка сертификата в система платформы аналитики
 **Подготовка сертификата PDW** страница Analytics Platform System**Configuration Manager** импортирует или удаляет сертификат, используемый PDW. 

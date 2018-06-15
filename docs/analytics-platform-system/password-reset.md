@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539424"
 ---
 # <a name="password-reset---analytics-platform-system"></a>Сброс пароля — система платформы аналитики
 **Сброса пароля** страница позволяет изменить пароль для учетной записи администратора, используемой Analytics Platform System.  

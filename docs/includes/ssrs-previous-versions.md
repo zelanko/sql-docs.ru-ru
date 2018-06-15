@@ -13,5 +13,6 @@ ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30078650"
 ---
 Содержимое, связанное с предыдущими версиями SQL Server Reporting Services, см. в статье [SQL Server Reporting Services 2014](https://msdn.microsoft.com/library/ms159106(v=sql.120).aspx).

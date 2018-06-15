@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32559252"
 ---
 # <a name="new-and-recently-updated-odbc-for-sql-server"></a>Новые и недавно обновленные: ODBC для SQL Server
 

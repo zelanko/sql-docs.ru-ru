@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539764"
 ---
 # <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>Основные сведения об оповещениях консоль администрирования в система платформы аналитики
 Оповещения отображаются в устройстве **консоли администрирования** и **System Center Operations Manager** (SCOM). Используйте этот список оповещений, чтобы определить, какие оповещения требуют дополнительного изучения.  

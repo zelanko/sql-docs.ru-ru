@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539684"
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>Настройка подключения к PolyBase для внешних данных
 В этой статье описывается настройка PolyBase в параллельное хранилище данных для подключения к внешней Hadoop или Microsoft Azure BLOB-объектов источников данных службы хранилища. Для выполнения запросов, объединяющие данные из нескольких источников, включая Hadoop, хранилище больших двоичных объектов и параллельного хранилища данных с помощью PolyBase.  

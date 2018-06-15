@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538764"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Power устройство или отключите для система платформы аналитики
 В этом разделе описывается включение и отключение вашей Systemappliance платформы Analytics, выполнение параллельного хранилища данных и при необходимости выполнения зоной HDInsight питания. Используйте этот раздел при перемещении устройства система платформы аналитики или для управления питанием на устройство после разрушительного сбоя.  
