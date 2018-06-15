@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020821"
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>Программирование административных задач с помощью объектов AMO
   Объекты AMO — это библиотека программирования, используемая из клиентских приложений для управления службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. В этом разделе описывается программирование с использованием объектов AMO.  
