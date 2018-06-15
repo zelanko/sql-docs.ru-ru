@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020591"
 ---
 # <a name="amo-classes---introduction"></a>Классы AMO — введение
   Объекты AMO — это библиотека классов, предназначенных для управления экземпляром служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] из клиентского приложения. Классы AMO — это классы, которые используются для администрирования таких объектов служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , как базы данных, измерения, кубы, структуры и модели интеллектуального анализа, роли и разрешения, исключения и др.  

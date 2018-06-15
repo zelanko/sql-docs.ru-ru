@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917339"
 ---
 # <a name="translation-dll-api-reference"></a>Справочник по API библиотеки DLL перевода
 В этом разделе описывается синтаксис преобразования API библиотеки DLL, который состоит из двух функций: **трансляции SQLDriverToDataSource** и **SQLDataSourceToDriver**. Эти функции должны быть включены в библиотеки DLL, которая выполняет миграцию для драйвера.  
