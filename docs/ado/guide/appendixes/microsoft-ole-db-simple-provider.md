@@ -2,7 +2,6 @@
 title: Простой поставщик Microsoft OLE DB | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e757ad77f0312d682027d2363944db552217eba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8d3abb4d2d34220800a1d8c71b6227cc8de0fd88
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271523"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Общие сведения о простой поставщик Microsoft OLE DB
 Microsoft OLE DB простого поставщика (Обещание) обеспечивает доступ к данным, для которых поставщик будет записана с помощью ADO [OLE DB простого поставщика (OSP) Toolkit](http://msdn.microsoft.com/en-us/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Простые поставщики предназначены для доступа к источникам данных, которые требуют только основных поддержки OLE DB, например в памяти массивов или XML-документов.
