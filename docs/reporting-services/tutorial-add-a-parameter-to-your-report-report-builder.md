@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33037231"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Учебник. Добавление параметра к отчету (построитель отчетов)
 В этом учебнике вы добавите параметр к отчету [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы, чтобы его читатели могли фильтровать данные по одному или нескольким значениям. 

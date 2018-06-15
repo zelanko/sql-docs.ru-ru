@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036961"
 ---
 # <a name="tutorial-introducing-expressions"></a>Учебник. Общие сведения о выражениях
 В этом учебнике по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] вы научитесь использовать выражения со стандартными функциями и операторами для создания эффективных и гибких отчетов [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы. 

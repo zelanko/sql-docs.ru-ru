@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550645"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Новые возможности Analytics Platform System масштабируемого хранилища данных MPP
 В разделе новые возможности устройства самые последние обновления для Microsoft® Analytics Platform System (APS). APS является виртуальным устройством масштабируемого локальной, на котором размещена MPP SQL Server Parallel Data Warehouse. 
