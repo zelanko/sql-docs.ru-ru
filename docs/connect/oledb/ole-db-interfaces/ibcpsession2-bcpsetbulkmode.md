@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -17,16 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: edc24c92138ebfa8e1bb72e64a50ed0dc7a2c234
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c41f484dbbe2877e2d358b3d19ee2b7d33107a56
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35304903"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Метода IBCPSession2::BCPSetBulkMode представляет собой альтернативу [IBCPSession::BCPColFmt & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) для указания формата столбца. В отличие от IBCPSession::BCPColFmt, который задает отдельные атрибуты формата столбцов, метода IBCPSession2::BCPSetBulkMode задает все атрибуты.  
+  Метода IBCPSession2::BCPSetBulkMode представляет собой альтернативу [IBCPSession::BCPColFmt &#40;OLE DB&#41; ](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) для указания формата столбца. В отличие от IBCPSession::BCPColFmt, который задает отдельные атрибуты формата столбцов, метода IBCPSession2::BCPSetBulkMode задает все атрибуты.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +42,7 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Свойство*  
+ *property*  
  Константа типа BYTE. Список констант см. в таблице в подразделе «Примечания».  
   
  *pField*  
@@ -68,7 +68,7 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|Недопустимое значение аргумента.|  
 |**E_OUTOFMEMORY**|Ошибка, связанная с нехваткой памяти.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Метода IBCPSession2::BCPSetBulkMode можно использовать для массового копирования из запроса или таблицы. При использовании метода IBCPSession2::BCPSetBulkMode для массового копирования из инструкции запроса его необходимо вызывать до вызова метода `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` для указания инструкции запроса.  
   
  В рамках одной команды не следует сочетать синтаксис вызова RPC с синтаксисом пакетных запросов (например,`{rpc func};SELECT * from Tbl`).  Это приведет к ICommandPrepare::Prepare возвращает сообщение об ошибке и предотвратить получение метаданных. Если в рамках одной команды требуется объединить выполнение хранимой процедуры и пакетный запрос, то следует использовать синтаксис ODBC CALL (например,`{call func}; SELECT * from Tbl`).  
@@ -364,7 +364,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [IBCPSession2 & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
+## <a name="see-also"></a>См. также  
+ [IBCPSession2 &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

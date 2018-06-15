@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2eb3583366cf896ecf2382a5d2f36d1298e4c4a4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9245e7e2fe2ca57d1e8d0a1edaf87746554f5626
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35304583"
 ---
 # <a name="data-source-objects-ole-db"></a>Объекты источников данных (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,9 +78,9 @@ else
   
  Драйвер OLE DB для SQL Server проводит первое соединение для указанного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] как часть успешной инициализации источника данных. Подключение сохраняется до тех пор, пока сохраняется, ссылка на любой интерфейс инициализации источника данных, или пока не **IDBInitialize::Uninitialize** вызывается метод.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
--   [Свойства источника данных & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
+-   [Свойства источника данных &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
   
 -   [Свойства сведений об источнике данных](../../oledb/ole-db-data-source-objects/data-source-information-properties.md)  
   
@@ -90,7 +90,7 @@ else
   
 -   [Свойства сеанса — драйвер OLE DB для SQL Server](../../oledb/ole-db-data-source-objects/session-properties-oledb-driver-for-sql-server.md)  
   
--   [Материализованные данные исходного объекта](../../oledb/ole-db-data-source-objects/persisted-data-source-objects.md)  
+-   [Материализованные объекты источника данных](../../oledb/ole-db-data-source-objects/persisted-data-source-objects.md)  
   
 ## <a name="see-also"></a>См. также  
  [Программирование драйвера OLE DB для SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

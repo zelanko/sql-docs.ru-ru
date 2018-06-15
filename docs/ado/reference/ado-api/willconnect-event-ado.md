@@ -2,7 +2,6 @@
 title: Событие WillConnect (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cbb3a5b97ede8abe7e028e6d46d52a1c5ad7581f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a2ddca516e9c5141e0e874074660579e8144ba7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282873"
 ---
 # <a name="willconnect-event-ado"></a>Событие WillConnect (ADO)
 **WillConnect** событие вызывается до начала соединения.  
@@ -62,7 +62,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *pConnection*  
  [Подключения](../../../ado/reference/ado-api/connection-object-ado.md) объектов, для которого применяется это уведомление о событии. Изменения параметров **подключения** по **WillConnect** обработчик событий не повлияет **соединения**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Когда **WillConnect** вызове *ConnectionString*, *UserID*, *пароль*, и *параметры* параметры устанавливаются значения, заданные в операции, вызвавшего это событие (Ожидание подключения) и может быть изменено до завершения события. **WillConnect** может вернуть запрос отмены ожидающих соединений.  
   
  При отмене этого события **ConnectComplete** будет вызываться с его *adStatus* равным **adStatusErrorsOccurred**.  

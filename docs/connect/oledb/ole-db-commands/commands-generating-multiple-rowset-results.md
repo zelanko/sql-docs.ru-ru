@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-commands
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,11 +20,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e0c3e581d5776e2f36756fc4bd09c1f76dd70841
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a747047ce8a8abd19c602c8924b2d24706a778cf
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305043"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Команды, формирующие результаты с несколькими наборами строк
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,11 +49,11 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
 ## <a name="stored-procedures"></a>Хранимые процедуры  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] возвращает результирующий набор для каждой инструкции в хранимой процедуре, поэтому большинство хранимых процедур [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] возвращает несколько результирующих наборов.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
--   [Обработка нескольких результирующих наборов при помощи интерфейса IMultipleResults](../../oledb/ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
+-   [Обработка нескольких результирующих наборов с помощью интерфейса IMultipleResults](../../oledb/ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Команды](../../oledb/ole-db-commands/commands.md)  
   
   

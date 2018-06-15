@@ -2,7 +2,6 @@
 title: WillMove и MoveComplete события (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ab75264b6cbd3fe8e3ef99b5339763ea469a4f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 30394da01328ad1f533834081cd33f6620c54dd4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282893"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove и MoveComplete события (ADO)
 **WillMove** событие вызывается перед ожидающая выполнения операция изменяет текущую позицию в [записей](../../../ado/reference/ado-api/recordset-object-ado.md). **MoveComplete** событие вызывается после текущей позиции в **записей** изменения.  
@@ -62,7 +62,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  Объект [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта. **Записей** для возникновения этого события.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Объект **WillMove** или **MoveComplete** событие может происходить из-за следующих **записей** операции: [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md), [переместить](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), и [Requery](../../../ado/reference/ado-api/requery-method.md). Эти события могут происходить из-за следующих свойств: [фильтра](../../../ado/reference/ado-api/filter-property.md), [индекс](../../../ado/reference/ado-api/index-property.md), [закладки](../../../ado/reference/ado-api/bookmark-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)и [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md). Эти события также возникнуть, если дочерний элемент **записей** имеет **записей** события подключен и родительским **набора записей** перемещается.  
   
  Необходимо задать *adStatus* параметр **adStatusUnwantedEvent** для каждого возможного *adReason* значение для полной остановки уведомление о событии для любых событий, включает в себя *adReason* параметра.  

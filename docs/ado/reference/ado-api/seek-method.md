@@ -2,7 +2,6 @@
 title: Способа | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59dcdd3426c39449b3d2348218aa7794a75c0474
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fcac398a9c45a43fd59dd29c7a41aeeb9545214c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281623"
 ---
 # <a name="seek-method"></a>Метод поиска
 Выполняет поиск индекса [записей](../../../ado/reference/ado-api/recordset-object-ado.md) быстро найти строку, соответствующем заданным значениям и изменяет текущую позицию строки для этой строки.  
@@ -44,7 +44,7 @@ recordset.Seek KeyValues, SeekOption
  *SeekOption*  
  Объект [SeekEnum](../../../ado/reference/ado-api/seekenum.md) значение, которое указывает тип сравнения между столбцами индекса и соответствующие *KeyValues*.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **Seek** в сочетании с [индекс](../../../ado/reference/ado-api/index-property.md) свойства, если базовый поставщик поддерживает индексы на **записей** объекта. Используйте [поддерживает](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** метод, чтобы определить, поддерживает ли базовый поставщик **Seek**и **Supports(adIndex)** метод, чтобы определить, поддерживает ли поставщик индексов. (Например, [поставщик OLE DB для Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) поддерживает **Seek** и **индекс**.)  
   
  Если **Seek** может не найти нужную строку ошибки не возникает и строка располагается в конце **записей**. Задать **индекс** свойства в нужный индекс перед выполнением этого метода.  

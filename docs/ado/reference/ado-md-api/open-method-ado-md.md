@@ -2,7 +2,6 @@
 title: Open-метод (ADO MD) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6fb508318c54e4b82a4efd301b889baadad6edc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69f746be975d56c4cb6ff6bcb4fd85905acd71bb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284543"
 ---
 # <a name="open-method-ado-md"></a>Метод Open (ADO MD)
 Извлекает результаты многомерного запроса и возвращает результаты в [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
@@ -39,12 +39,12 @@ Cellset.Open Source, ActiveConnection
   
 #### <a name="parameters"></a>Параметры  
  *Source*  
- Необязательно. Объект **Variant** , результат вычисления которого допустимым многомерного запроса, например запрос многомерных выражений (MDX). *Источника* аргумент соответствует [источника](../../../ado/reference/ado-md-api/source-property-ado-md.md) свойство. Дополнительные сведения о многомерных Выражениях см. в разделе [OLE DB для оперативной аналитической обработки (OLAP)](http://msdn.microsoft.com/en-us/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) документации в компоненты пакете Microsoft Data Access SDK.  
+ Необязательный параметр. Объект **Variant** , результат вычисления которого допустимым многомерного запроса, например запрос многомерных выражений (MDX). *Источника* аргумент соответствует [источника](../../../ado/reference/ado-md-api/source-property-ado-md.md) свойство. Дополнительные сведения о многомерных Выражениях см. в разделе [OLE DB для оперативной аналитической обработки (OLAP)](http://msdn.microsoft.com/en-us/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) документации в компоненты пакете Microsoft Data Access SDK.  
   
  *ActiveConnection*  
- Необязательно. Объект **Variant** , результатом которого является строка, указывающая либо допустимым ADO [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта имени переменной или определения для подключения. *ActiveConnection* аргумент указывает соединение, в котором необходимо открыть [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) объекта. Если передать определение подключения для этого аргумента ADO открывает новое соединение, используя указанные параметры. *ActiveConnection* аргумент соответствует [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) свойство.  
+ Необязательный параметр. Объект **Variant** , результатом которого является строка, указывающая либо допустимым ADO [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта имени переменной или определения для подключения. *ActiveConnection* аргумент указывает соединение, в котором необходимо открыть [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) объекта. Если передать определение подключения для этого аргумента ADO открывает новое соединение, используя указанные параметры. *ActiveConnection* аргумент соответствует [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) свойство.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **Откройте** метод создает ошибку, если любой из своих параметров указан, и его соответствующее значение свойства не было задано до попытки открыть **ячеек**.  
   
 ## <a name="applies-to"></a>Объект применения  

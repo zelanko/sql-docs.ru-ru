@@ -2,7 +2,6 @@
 title: Метод SetPermissions (ADOX) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3178c472bfeb58361ae6d7d889d82d3823b09469
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6cb3bb780109c61b5d481d0d0d3bae56badea819
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286815"
 ---
 # <a name="setpermissions-method-adox"></a>Метод SetPermissions (ADOX)
 Задает разрешения для [группы](../../../ado/reference/adox-api/group-object-adox.md) или [пользователя](../../../ado/reference/adox-api/user-object-adox.md) на объект.  
@@ -53,12 +53,12 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  Объект **длинные** значение, которое может быть битовой маской из одного или нескольких [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) констант, которые указывает права на установку.  
   
  *Наследование*  
- Необязательно. Объект **длинные** значение может быть одним из [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) констант, которые указывает, каким образом объекты наследуют эти разрешения. Значение по умолчанию — **adInheritNone**.  
+ Необязательный параметр. Объект **длинные** значение может быть одним из [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) констант, которые указывает, каким образом объекты наследуют эти разрешения. Значение по умолчанию — **adInheritNone**.  
   
  *ObjectTypeId*  
- Необязательно. Объект **Variant** значение, которое указывает идентификатор GUID для типа объекта поставщика, не определенных в спецификации OLE DB. Этот параметр является обязательным, если *ObjectType* равно **adPermObjProviderSpecific**; в противном случае он не используется.  
+ Необязательный параметр. Объект **Variant** значение, которое указывает идентификатор GUID для типа объекта поставщика, не определенных в спецификации OLE DB. Этот параметр является обязательным, если *ObjectType* равно **adPermObjProviderSpecific**; в противном случае он не используется.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если поставщик не поддерживает назначении прав доступа для групп пользователей, произойдет ошибка.  
   
 > [!NOTE]

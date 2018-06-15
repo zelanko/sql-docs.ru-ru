@@ -2,7 +2,6 @@
 title: SchemaEnum | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5cdc032d770f587e8c78c4df0f195d9535688888
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f10586341f780615c3955c32a9b02f9913ff2e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281563"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Указывает тип схемы **записей** , [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) извлекает метод.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Дополнительные сведения о функции и столбцы, возвращаемые для каждой константы ADO можно найти в разделах [приложение б. наборы строк схемы](http://msdn.microsoft.com/en-us/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) ссылки программиста OLE DB. Имя каждого раздела указывается в скобках в разделе "Описание" в следующей таблице.  
   
  Дополнительные сведения о функции и столбцы, возвращаемые для каждой константы ADO MD можно найти в разделах [OLE DB для OLAP-объекты и наборы строк схемы](http://msdn.microsoft.com/en-us/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) в OLE DB для документации оперативной аналитической обработки (OLAP). Имя каждого раздела указывается в скобках в столбце "Описание" в следующей таблице.  

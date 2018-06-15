@@ -2,7 +2,6 @@
 title: Свойство FilterValue (RDS) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a672d4c8508504c8bb1f76e609cb4f269b796d39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8c9d029ffcf40d33805a37334af8953635e2815
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288319"
 ---
 # <a name="filtervalue-property-rds"></a>Свойство FilterValue (RDS)
 Указывает значение для фильтрации записей.  
@@ -44,7 +44,7 @@ DataControl.FilterValue = String
  *Строковые значения*  
  Объект **строка** значение, представляющее значение данных для фильтрации записей (например, `'Programmer'` или `125`).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), **FilterValue**, [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), и [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)свойства предоставляют сортировки и фильтрации функциональность на стороне клиента кэша. Функциональные возможности сортировки упорядочивает записи по значения из одного столбца. Функцию фильтра отображает подмножество записей на основе критериев поиска, при полной [записей](../../../ado/reference/ado-api/recordset-object-ado.md) сохраняется в кэше. [Сброс](../../../ado/reference/rds-api/reset-method-rds.md) метод будет выполнять критерии и заменить текущую **записей** с обновляемым **записей**.  
   
  Ошибка несоответствия типов привести значения NULL.  

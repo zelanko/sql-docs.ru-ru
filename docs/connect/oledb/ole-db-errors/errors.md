@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3869f7cea6f193ebecc8c038faa27360561cefc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0d5d45280226c575f44f162e235d6857d4308aa5
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35304624"
 ---
 # <a name="errors"></a>ошибки
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,15 +39,15 @@ ms.lasthandoff: 05/03/2018
   
  Сведения об ошибках трассировки см. в разделе [трассировка доступа к данным](http://go.microsoft.com/fwlink/?LinkId=125805). Сведения об улучшениях для отслеживания ошибок, появившихся в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], в разделе [доступ к диагностической информации в журнале расширенных событий](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Коды возврата](../../oledb/ole-db-errors/return-codes.md)  
   
--   [Сведения в интерфейсах обработки ошибок](../../oledb/ole-db-errors/information-in-error-interfaces.md)  
+-   [Сведения в интерфейсах ошибок](../../oledb/ole-db-errors/information-in-error-interfaces.md)  
   
 -   [Подробные сведения об ошибках SQL Server](../../oledb/ole-db-errors/sql-server-error-detail.md)  
   
--   [Получение сведений об ошибках](../../oledb/ole-db-errors/retrieving-error-information.md)  
+-   [Получение информации об ошибке](../../oledb/ole-db-errors/retrieving-error-information.md)  
   
 -   [Результаты сообщения SQL Server](../../oledb/ole-db-errors/sql-server-message-results.md)  
   

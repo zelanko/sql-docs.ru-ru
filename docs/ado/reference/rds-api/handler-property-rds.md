@@ -2,7 +2,6 @@
 title: Свойство обработчика (RDS) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b5cba5a709933f89cb7bb19666140053cd6cfc94
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab8e1c2fdfe518a7ab1f331e6961ed6b84b1b33e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288360"
 ---
 # <a name="handler-property-rds"></a>Свойство обработчика (RDS)
 Указывает имя программы настройки на стороне сервера (обработчик), которая расширяет функциональность [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)и любые параметры, используемые *обработчик*.  
@@ -46,7 +46,7 @@ DataControl.Handler = String
  *Строковые значения*  
  Объект **строка** значение, содержащее имя обработчика и все параметры всех разделяемых точкой с запятой (например, `"handlerName,parm1,parm2,...,parm` *N*`"`).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Это свойство поддерживает [настройки](../../../ado/guide/remote-data-service/datafactory-customization.md), функциональные возможности этого требует параметр [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойства **adUseClient**.  
   
  Имя обработчика и его параметрах, если таковые имеются, разделяются запятыми («,»). Приведет к непредсказуемому поведению, если точка с запятой («;») отображается в любом месте в пределах *строка*. Можно написать собственный обработчик, предоставляемых он поддерживает **IDataFactoryHandler** интерфейса.  

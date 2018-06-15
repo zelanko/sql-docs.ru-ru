@@ -2,7 +2,6 @@
 title: Пример свойства StayInSync (VB) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cad6d7a6187430e8243695a07fe1b0752074a6df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d3c5ec82ff3481ab8e6adf11a41f61aa149fe604
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281903"
 ---
 # <a name="stayinsync-property-example-vb"></a>Пример свойства StayInSync (Visual Basic)
 В этом примере показано, как [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) свойство облегчает доступ к строкам в иерархической [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  

@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,11 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 76168e9574b670036644e2a0920b821a0b526564
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 60e0a907bb82d5772395dc846ce6e0a79a6be951
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305223"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Поддержка потоков для выходных параметров BLOB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="example"></a>Пример  
   
-### <a name="code"></a>код  
+### <a name="code"></a>Код  
   
 ```cpp
 // blob_out_param.cpp  
@@ -513,7 +513,7 @@ _Exit:
 }
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Большие двоичные объекты и объекты OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)  
   
   

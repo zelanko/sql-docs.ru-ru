@@ -2,7 +2,6 @@
 title: Свойства ADOX | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,20 +17,21 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e9ea6ff9f515a0dee79d464dda4bf44b8b6ab6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae4cdd06fa7881685aa3eefc499274c0e76b044a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284601"
 ---
 # <a name="adox-properties"></a>Свойства ADOX
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Указывает ADO **подключения** объекта, которому принадлежит каталога.|  
 |[Атрибуты](../../../ado/reference/adox-api/attributes-property-adox.md)|Описывает характеристики столбца.|  
-|[Кластеризованный](../../../ado/reference/adox-api/clustered-property-adox.md)|Указывает, является ли индекс кластеризованным.|  
+|[Кластер](../../../ado/reference/adox-api/clustered-property-adox.md)|Указывает, является ли индекс кластеризованным.|  
 |[Command](../../../ado/reference/adox-api/command-property-adox.md)|Указывает ADO **команда** объект, который может использоваться для создания или выполнения процедуры.|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
+|[Счетчик](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Указывает дату создания объекта.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Указывает дату последнего изменения объекта.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Указывает, указанных выше максимальный размер столбца.|  

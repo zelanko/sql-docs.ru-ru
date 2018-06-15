@@ -2,7 +2,6 @@
 title: Уровень объекта (ADO MD) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f515c5bc8eaac8e674bcf82bd3a5e47eeefc0f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 35263c640b1446397776a4365349afdd522d78f4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283993"
 ---
 # <a name="level-object-ado-md"></a>Объект уровня (ADO MD)
 Содержит набор элементов, каждый из которых имеет один и тот же ранг в иерархии.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  С коллекциями и свойствами **уровень** объекта, можно сделать следующее:  
   
 -   Определить **уровень** с [имя](../../../ado/reference/ado-md-api/name-property-ado-md.md) и [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) свойства.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  **Свойства** коллекция содержит указанный поставщик свойства. В следующей таблице перечислены свойства, которые могут быть доступны. Фактическое свойство списка могут различаться в зависимости от реализации поставщика. См. в документации для поставщика более полный список доступных свойств.  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
 |CatalogName|Имя каталога, к которому принадлежит этот куб.|  
 |CubeName|Имя куба.|  

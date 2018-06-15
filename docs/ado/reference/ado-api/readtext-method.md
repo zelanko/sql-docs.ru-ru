@@ -2,7 +2,6 @@
 title: Метод ReadText | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26221c32339aab70311a6ca9254bb5d514724070
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7c3e2dcf695e9c6748881656d87e02404209dbf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280783"
 ---
 # <a name="readtext-method"></a>Метод ReadText
 Считывает указанное число символов из текстового [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
@@ -39,12 +39,12 @@ String = Stream.ReadText ( NumChars)
   
 #### <a name="parameters"></a>Параметры  
  *NumChars*  
- Необязательно. Объект **длинные** значение, указывающее число символов для чтения из файла или [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) значение. Значение по умолчанию — **adReadAll**.  
+ Необязательный параметр. Объект **длинные** значение, указывающее число символов для чтения из файла или [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) значение. Значение по умолчанию — **adReadAll**.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  **ReadText** метод считывает указанное число символов, всю строку или весь поток из **поток** объекта и возвращает результирующую строку.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если *NumChar* остается больше числа символов в потоке, возвращаются только символов, оставшихся. Чтение строки заполнено в соответствии с длиной, определяемой *NumChar*. Если нет доступных для чтения символов, возвращается значение типа variant, значение которого равно null. **ReadText** не может использоваться для чтения в обратном направлении.  
   
 > [!NOTE]

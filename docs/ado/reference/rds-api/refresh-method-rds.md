@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -22,11 +21,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e86c8965180eb6cec2fda86a2c5141d0c3e6fa75
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee9fd5b4748d2343b78e2dc696e7826341223d53
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288423"
 ---
 # <a name="refresh-method-rds"></a>Обновить метод (RDS)
 Вызывает повторный запрос источника данных, указанного в [Connect](../../../ado/reference/rds-api/connect-property-rds.md) свойств и обновления результатов запроса.  
@@ -45,7 +45,7 @@ DataControl.Refresh
  *DataControl*  
  Объектную переменную, которая представляет [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Необходимо задать [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [сервера](../../../ado/reference/rds-api/server-property-rds.md), и [SQL](../../../ado/reference/rds-api/sql-property.md) свойства, прежде чем использовать **обновление** метод. Все элементы управления с привязкой к данным на форму, связанную с **RDS. DataControl** объекта будет отражать нового набора записей. Все предшествующие [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект будет освобожден, а все несохраненные изменения будут отменены. **Обновление** метод автоматически делает первую запись текущей записи.  
   
  Рекомендуется вызывать **обновление** метод периодически при работе с данными. Если извлечение данных и оставить его на клиентский компьютер на некоторое время, вполне вероятно, станут устаревшими. Это возможно, что любые изменения, внесенные завершится ошибкой, так как кто-то другой могли измениться, запись и отправил изменения, прежде чем.  

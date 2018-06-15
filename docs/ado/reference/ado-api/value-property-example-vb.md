@@ -2,7 +2,6 @@
 title: Значение свойства пример (Visual Basic) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 146659e16fb44d374935a39ca4f79666c361b36b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 008ac421a9b99f6d0365f84556609ba52b37f0fb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282733"
 ---
 # <a name="value-property-example-vb"></a>Пример значения свойства (Visual Basic)
 В этом примере демонстрируется [значение](../../../ado/reference/ado-api/value-property-ado.md) свойство с [поле](../../../ado/reference/ado-api/field-object.md) и [свойство](../../../ado/reference/ado-api/property-object-ado.md) объектов путем отображения значения поля и свойства для ***сотрудников*** таблицы.  

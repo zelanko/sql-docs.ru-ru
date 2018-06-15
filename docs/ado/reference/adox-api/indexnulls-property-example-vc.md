@@ -2,7 +2,6 @@
 title: Пример свойства IndexNulls (VC ++) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23390e73b92f29cbaff19e2ec3a44db9aa5a2980
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a401cd927223e38a21ce496ed771cd0e56248635
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286583"
 ---
 # <a name="indexnulls-property-example-vc"></a>Пример свойства IndexNulls (VC ++)
 В этом примере демонстрируется [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) свойство [индекса](../../../ado/reference/adox-api/index-object-adox.md). Код создает новый индекс и задает значение **IndexNulls** на основе ввода пользователя. Затем **индекс** добавляется к **сотрудников** [таблицы](../../../ado/reference/adox-api/table-object-adox.md) в *Northwind* [каталога](../../../ado/reference/adox-api/catalog-object-adox.md). Новый **индекс** применяется к [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе **сотрудников** таблицы и **записей** открыт. Новая запись добавляется в **сотрудников** таблицы, с **Null** значение индексированного поля. Вывод этой новой записи зависит от настройки **IndexNulls** свойство.  
