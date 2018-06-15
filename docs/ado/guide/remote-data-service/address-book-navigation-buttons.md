@@ -2,7 +2,6 @@
 title: Адрес кнопки навигации книги | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3162bb0a7bd7ed54812848df214658980dc6ec8f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61a43c6aef14cf59561cd433cfe5bd3c66761940
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273703"
 ---
 # <a name="address-book-navigation-buttons"></a>Адрес книги кнопки навигации
 Адресная книга приложение отображает кнопки навигации в нижней части веб-страницы. Можно использовать кнопки навигации для просмотра данных в сетке отображается HTML, выбирая первой или последней строк данных или рядом с выделенной строки.  
