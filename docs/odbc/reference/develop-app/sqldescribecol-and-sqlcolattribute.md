@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914019"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol и SQLColAttribute
 **SQLDescribeCol** и **SQLColAttribute** получаются метаданные результирующего набора. Различие между этими двумя функциями состоит в том **SQLDescribeCol** всегда возвращает же пять (столбца имя, тип данных, точность, масштаб и допустимость значений NULL), при **SQLColAttribute** возвращает одну часть сведений, запрошенный приложением. Тем не менее **SQLColAttribute** может возвращать гораздо более эффективные средства выбора метаданных, включая учет регистра символов для столбца, отображения размера, возможность обновления и возможность поиска.  
