@@ -17,6 +17,7 @@ ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455637"
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Настройка образов контейнеров 2017 г. SQL Server на Docker
 

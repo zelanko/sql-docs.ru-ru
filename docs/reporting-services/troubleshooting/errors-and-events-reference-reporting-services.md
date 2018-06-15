@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035431"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Справочник по ошибкам и событиям (службы Reporting Services)
   Этот раздел содержит сведения об ошибках и событиях служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Файлы журналов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также содержат сведения об ошибках. Дополнительные сведения о доступных типах файлов журналов и способах просмотра журналов см. в разделе [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  

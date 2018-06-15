@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035107"
 ---
 # <a name="rsexe-utility-ssrs"></a>Служебная программа RS.exe (SSRS)
   Скрипт, предоставленный во входном файле, обрабатывается служебной программой rs.exe. Используйте эту программу для автоматизации развертывания сервера отчетов и административных задач.  

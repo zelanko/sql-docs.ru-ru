@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021651"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Встроенные коллекции — ссылки на переменные отчета и группы (построитель отчетов)
   При сложном вычислении, которое используется несколько раз в выражениях отчета, может потребоваться создание переменной. Можно создать переменную отчета или переменную группы. В отчете имена переменных должны быть уникальными.  

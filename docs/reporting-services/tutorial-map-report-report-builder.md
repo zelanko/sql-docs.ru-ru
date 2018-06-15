@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33037001"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Учебник. Отчет-карта (построитель отчетов)
 Этот учебник по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] позволяет изучить функции карты, которые можно использовать для отображения данных отчета [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы в географическом контексте. 

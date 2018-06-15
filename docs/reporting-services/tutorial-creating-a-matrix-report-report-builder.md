@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036461"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Учебник. Создание матричного отчета (построитель отчетов)
 В этом учебнике вы создадите отчет [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы, содержащий матрицу образца данных по продажам во вложенных группах строк и столбцов. 
