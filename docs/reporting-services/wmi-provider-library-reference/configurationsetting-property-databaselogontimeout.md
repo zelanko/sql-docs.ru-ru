@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030051"
 ---
 # <a name="configurationsetting-property---databaselogontimeout"></a>Свойство ConfigurationSetting — DatabaseLogonTimeout
   Указывает число секунд ожидания перед тем, как попытка входа в базу данных сервера отчетов признается неуспешной. Значение **0** указывает на бесконечное время ожидания. Только для чтения.  

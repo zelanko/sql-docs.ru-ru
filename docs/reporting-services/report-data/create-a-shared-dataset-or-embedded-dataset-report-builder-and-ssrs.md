@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022681"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)
 Внедренные наборы данных предназначены для использования в одном отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Общие наборы данных на сервере отчетов можно использовать в нескольких отчетах, как в мобильных, так и с разбиением на страницы. Для создания набора данных необходим внедренный или общий источник данных.  

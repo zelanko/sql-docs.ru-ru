@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022791"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Тип соединения с SQL Azure (SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] это размещаемая реляционная база данных облачного типа на базе технологий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы включить данные из базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] в отчет, необходимо иметь набор данных, основанный на источнике данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Используйте этот тип источника данных для подключения и извлечения данных из [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018091"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Использование элемента управления WinForms ReportViewer
   Для просмотра отчетов, развернутых на сервере отчетов, и отчетов, существующих в локальной файловой системе, можно использовать элемент управления WinForms ReportViewer для подготовки отчетов к просмотру в приложении Windows.  
@@ -176,7 +177,7 @@ End Class
   
 6.  После переименования отчета выберите файл и перейдите в окно «Свойства». Для свойства **Копировать в выходной каталог** задайте значение **Копировать более новые**.  
   
-     ![Настройка параметра "Копировать в выходной каталог"](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Настройка параметра "Копировать в выходной каталог"")  
+     ![Настройка параметра "Копировать в выходной каталог"](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Настройка параметра \"Копировать в выходной каталог\"")  
   
      Если окно **Свойства** не отображается, можно открыть его из меню **Вид**, выбрав **Окно "Свойства"**.  
   

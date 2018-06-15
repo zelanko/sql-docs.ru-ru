@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030772"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Причины ошибок служб Reporting Services и способы их устранения
   Этот раздел содержит сведения о причинах некоторых ошибок компонента служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и способах их устранения. Подразделы по сообщениям об ошибках в этом разделе содержат объяснения сообщений об ошибке, возможные причины и действия по устранению проблемы.  

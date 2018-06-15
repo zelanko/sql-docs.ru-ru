@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028171"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Счетчики производительности для веб-службы MSRS 2011, объекты производительности
   В этом разделе рассматриваются счетчики производительности для объектов производительности **MSRS 2011 Web Service** и **MSRS 2011 Windows Service** . Эти объекты являются частью развертывания служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] в собственном режиме.  

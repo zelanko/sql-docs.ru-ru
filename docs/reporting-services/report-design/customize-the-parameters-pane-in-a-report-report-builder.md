@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021431"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
   При создании отчетов с разбиением на страницы с параметрами в построителе отчетов можно настроить область параметров. В перенаселении конструктора отчетов можно перетащить параметр в конкретный столбец и строку на панели параметров. Для изменения макета панели столбцы можно добавлять и удалять.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  Чтобы отобразить область параметров, на вкладке **Представление** установите флажок **Параметры** .  
   
-     ![Доступ к области параметров с вкладки "Вид"](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Доступ к области параметров с вкладки "Вид"")  
+     ![Доступ к области параметров с вкладки "Вид"](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Доступ к области параметров с вкладки \"Вид\"")  
   
      Панель отобразится в верхней части области конструктора.  
   

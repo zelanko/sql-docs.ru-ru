@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022401"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графические конструкторы запросов для построения запросов многомерных выражений и запросов расширений интеллектуального анализа данных для источника данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Данный раздел посвящен конструктору запросов многомерных выражений. Дополнительные сведения о конструкторе запросов многомерных выражений см. в разделе [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).  
@@ -78,10 +79,10 @@ ms.lasthandoff: 05/03/2018
 |![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Отображение диалогового окна **Построитель вычисляемых элементов** .|  
 |![Переключатель для просмотра пустых ячеек](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек")|Переключение между отображением и скрытием пустых ячеек на панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|  
 |![Автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса")|Автоматически выполнять запрос и отображать результат при каждом изменении. Результаты отображаются в панели «Данные».|  
-|![Кнопка "Показать агрегаты"](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "Кнопка "Показать агрегаты"")|Показать статистические выражения на панели «Данные».|  
+|![Кнопка "Показать агрегаты"](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "Кнопка \"Показать агрегаты\"")|Показать статистические выражения на панели «Данные».|  
 |![Удалить](../../reporting-services/report-data/media/rsqdicon-delete.gif "Удалить")|Удалить выбранный на панель «Данные» столбец из запроса.|  
-|![Значок диалогового окна "Параметры запроса"](../../reporting-services/report-data/media/iconqueryparameter.gif "Значок диалогового окна "Параметры запроса"")|Отображает диалоговое окно **Параметры запроса** . При указании значений для параметра запроса автоматически создается аналогичный параметр отчета с тем же именем. В качестве значения для параметра запроса устанавливается выражение, ссылающееся на параметр отчета.|  
-|![Кнопка "Подготовить запрос"](../../reporting-services/report-data/media/rsqdicon-preparequery.gif "Кнопка "Подготовить запрос"")|Подготовить запрос.|  
+|![Значок диалогового окна "Параметры запроса"](../../reporting-services/report-data/media/iconqueryparameter.gif "Значок диалогового окна \"Параметры запроса\"")|Отображает диалоговое окно **Параметры запроса** . При указании значений для параметра запроса автоматически создается аналогичный параметр отчета с тем же именем. В качестве значения для параметра запроса устанавливается выражение, ссылающееся на параметр отчета.|  
+|![Кнопка "Подготовить запрос"](../../reporting-services/report-data/media/rsqdicon-preparequery.gif "Кнопка \"Подготовить запрос\"")|Подготовить запрос.|  
 |![Выполнить запрос](../../reporting-services/report-data/media/rsqdicon-run.gif "Выполнить запрос")|Выполнить запрос и показать результаты на панели «Данные».|  
 |![Отмена запроса](../../reporting-services/report-data/media/rsqdicon-cancel.gif "Отмена запроса")|Отмена запроса.|  
 |![Переключение в режим конструктора](../../reporting-services/media/rsqdicon-designmode.gif "Переключение в режим конструктора")|Переключение между режимом конструктора и режимом запроса.|  
@@ -119,7 +120,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **Автоматическое выполнение** (![Автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса"))  
   
--   **Показать агрегаты** (![Кнопка "Показать агрегаты"](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "Кнопка "Показать агрегаты""))  
+-   **Показать агрегаты** (![Кнопка "Показать агрегаты"](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "Кнопка \"Показать агрегаты\""))  
   
 ## <a name="see-also"></a>См. также:  
  [Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services (построитель отчетов и службы SSRS)](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023361"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Форматирование линий, цветов и изображений (построитель отчетов и службы SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] позволяют форматировать линии, цвета, области данных, изображения и другие элементы отчета.  

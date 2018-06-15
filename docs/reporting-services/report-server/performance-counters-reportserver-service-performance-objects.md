@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027721"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Счетчики производительности для службы ReportServer, объекты производительности
   В этом разделе описываются счетчики производительности для объектов производительности **ReportServer:Service** и **ReportServerSharePoint:Service** , входящих в развертывание [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  

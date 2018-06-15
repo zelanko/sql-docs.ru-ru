@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035971"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками
   Вы можете создать подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на доставку отчетов из веб-приложения SharePoint, работающим в режиме интеграции с SharePoint. Подписки могут доставлять отчеты в библиотеку документов, папку с файлами или по электронной почте. В этой статье приведена сводка по требованиям и шагам для создания подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019351"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Изменение типа диаграммы (построитель отчетов и службы SSRS)
 При первом создании диаграммы в отчете [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы появляется диалоговое окно **Выбор типа диаграммы** . Если закрыть это диалоговое окно, по умолчанию будет создана диаграмма в виде гистограммы.  

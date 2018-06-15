@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016751"
 ---
 # <a name="how-to-debug-custom-assemblies"></a>Практическое руководство. Отладка пользовательских сборок
   В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предусмотрен ряд средств отладки, помогающих проанализировать код пользовательской сборки и найти в нем ошибки. Выбор наиболее подходящего средства отладки зависит от того, какая цель должна быть достигнута. В этом примере используется [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  

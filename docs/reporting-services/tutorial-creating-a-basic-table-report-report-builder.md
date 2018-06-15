@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036171"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Учебник. Создание простого табличного отчета (построитель отчетов)
 Это учебник поможет создать простой табличный отчет на основе образца данных по продажам. На приведенной ниже иллюстрации показан отчет, который предстоит создать.  

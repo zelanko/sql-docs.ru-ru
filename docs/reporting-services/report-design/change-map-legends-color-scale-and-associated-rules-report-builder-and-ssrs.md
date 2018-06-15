@@ -43,6 +43,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021893"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Изменение условных обозначений карты, цветовой шкалы и связанных правил (построитель отчетов и службы SSRS)
   В отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы карта может содержать условные обозначения, цветовую шкалу и шкалу расстояний. Эти части карты помогают пользователям понять визуализацию данных на карте.  

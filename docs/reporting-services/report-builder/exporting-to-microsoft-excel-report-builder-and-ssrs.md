@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022391"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel подготавливает отчет [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы в формате [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (XLSX). Благодаря модулю для подготовки отчетов, ширина столбцов в Excel более аккуратно отражает ширину столбцов в отчете.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019731"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Поиск и просмотр отчетов на веб-портале (построитель отчетов и службы SSRS)
   Диспетчер отчетов — это веб-инструмент, включающее в себя функции просмотра отчетов и управления ими. Он устанавливается как часть сервера отчетов. Чтобы открыть диспетчер отчетов, введите в окне браузера его URL-адрес. Дополнительные сведения о требованиях к браузеру см. в разделе [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Для получения дополнительных сведений о настройке URL-адреса диспетчера отчетов на сервере отчетов свяжитесь с системным администратором. Дополнительные сведения см. в разделе [Настройка диспетчера отчетов (собственный режим)](../../reporting-services/report-server/configure-report-manager-native-mode.md).  

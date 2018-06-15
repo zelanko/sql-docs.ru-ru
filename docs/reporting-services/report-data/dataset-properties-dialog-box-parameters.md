@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019181"
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>Диалоговое окно «Свойства набора данных» — «Настройки»
   Для добавления, изменения и удаления параметров запроса, включая те, которые связаны с параметрами отчета, используется вкладка **Параметры** диалогового окна **Свойства набора данных** .  

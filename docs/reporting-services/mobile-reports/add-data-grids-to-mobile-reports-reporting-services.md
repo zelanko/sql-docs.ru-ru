@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018981"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Добавление сеток данных в мобильные отчеты | Службы Reporting Services
 Иногда лучшая визуализация — это сами данные. Рассмотрим три вида *сеток данных*(или таблиц) для отображения данных в [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]:

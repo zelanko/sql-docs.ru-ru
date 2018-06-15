@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018701"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Диалоговое окно «Разделы отчета» (построитель отчетов)
   При открытии отчета построитель отчетов проверяет, содержит ли отчет только один элемент **\<Section>** языка определения отчетов (RDL). Открытие отчета с несколькими элементами **\<Section>** не поддерживается.  

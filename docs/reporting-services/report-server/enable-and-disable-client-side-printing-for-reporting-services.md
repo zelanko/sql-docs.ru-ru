@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028161"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Включение и отключение печати на стороне клиента для служб Reporting Services
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="bkmk_clientside_printexpereince"></a> Процесс печати  
  Когда вы нажимаете кнопку печати ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") на панели инструментов средства просмотра отчетов, запускаются разные процессы. Они зависят от используемого браузера и установленных на клиентском компьютере приложений для просмотра PDF-файлов.   Учитывая конфигурацию клиентского компьютера, вы сможете скачать PDF-файл, настроить в диалоговом окне параметры печати или выбрать оба варианта.  
   
- ![Панель инструментов "Отчет"](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Панель инструментов "Отчет"")  
+ ![Панель инструментов "Отчет"](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Панель инструментов \"Отчет\"")  
   
 |||  
 |-|-|  

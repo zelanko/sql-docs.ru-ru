@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028871"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Основные сведения о группах (построитель отчетов и службы SSRS)
   В отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] группа является именованным набором данных из набора данных отчета, привязанного к области данных. В основном, группа организует представление набора данных отчета. Все группы в области данных задают различные представления одного набора данных отчета.  

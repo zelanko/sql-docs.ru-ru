@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33034501"
 ---
 # <a name="rsconfig-utility-ssrs"></a>Программа rsconfig (SSRS)
   Программа **rsconfig.exe** шифрует значения подключения и учетной записи и сохраняет их в файле RSReportServer.config. Зашифрованные значения включают сведения о подключении к базе данных сервера отчетов и значения учетной записи, используемые для автоматической обработки отчетов.  

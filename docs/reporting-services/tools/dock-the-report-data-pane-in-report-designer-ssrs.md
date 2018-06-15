@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029231"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Закрепление области данных отчета в конструкторе отчетов (службы SSRS)
   Панель данных отчета конструктора отчетов среды [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]отображает иерархическую структуру объектов данных, которые можно использовать в отчете, в том числе источники данных, наборы данных, поля, параметры и изображения. Источники данных, показанные в этом представлении, могут быть внедренными, а также представлять собой ссылки на общие источники данных, выводимые в обозревателе решений.  

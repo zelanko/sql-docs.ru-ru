@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030631"
 ---
 # <a name="configurationsetting-property---unattendedexecutionaccount"></a>Свойство ConfigurationSetting — UnattendedExecutionAccount
   Возвращает учетную запись пользователя, которую сервер отчетов олицетворяет при автоматическом запуске отчетов. Только для чтения.  

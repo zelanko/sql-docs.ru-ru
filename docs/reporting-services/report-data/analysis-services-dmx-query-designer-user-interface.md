@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021241"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Пользовательский интерфейс конструктора DMX-запросов служб Analysis Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графические конструкторы запросов для построения DMX-запросов и запросов многомерных выражений из источника данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . В этом разделе описан конструктор DMX-запросов. Дополнительные сведения о конструкторе запросов многомерных выражений см. в разделе [Analysis Services MDX Query Designer User Interface](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md).  
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 |![Переключение в режим DMX-запросов](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Переключение в режим DMX-запросов")|Переключить в режим конструктора DMX-запросов.|  
 |![Обновление результирующих данных](../../reporting-services/report-data/media/rsqdicon-refresh.gif "Обновление результирующих данных")|Обновление метаданных из источника данных.|  
 |![Удалить](../../reporting-services/report-data/media/rsqdicon-delete.gif "Удалить")|Удалить выбранный на панель «Данные» столбец из запроса.|  
-|![Значок диалогового окна "Параметры запроса"](../../reporting-services/report-data/media/iconqueryparameter.gif "Значок диалогового окна "Параметры запроса"")|Отображает диалоговое окно **Параметры запроса** . При присвоении переменной значения по умолчанию создается соответствующий параметр отчета при переключении конструктора отчетов в режим разметки.|  
+|![Значок диалогового окна "Параметры запроса"](../../reporting-services/report-data/media/iconqueryparameter.gif "Значок диалогового окна \"Параметры запроса\"")|Отображает диалоговое окно **Параметры запроса** . При присвоении переменной значения по умолчанию создается соответствующий параметр отчета при переключении конструктора отчетов в режим разметки.|  
 |![Выполнить запрос](../../reporting-services/report-data/media/rsqdicon-run.gif "Выполнить запрос")|Подготовить запрос.|  
 |![Переключение в режим конструктора](../../reporting-services/media/rsqdicon-designmode.gif "Переключение в режим конструктора")|Переключение между режимом конструктора и режимом запроса. Для изменения результирующего представления щелкните правой кнопкой мыши панель конструктора и выберите пункт **Результат**.|  
   

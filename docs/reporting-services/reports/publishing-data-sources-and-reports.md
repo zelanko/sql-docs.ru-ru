@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026298"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Публикация источников данных и отчетов
   До публикации отчета его следует просмотреть, чтобы проверить его внешний вид. Макет отчета можно изменять, пока не будут достигнуты нужные результаты.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021101"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Отображение заголовков строк и столбцов на нескольких страницах (построитель отчетов и службы SSRS)
   Пользователь может указать, следует ли повторять заголовки строк и столбцов на каждой странице отчета [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы для области данных табликса (таблица, матрица или список), которая занимает несколько страниц.

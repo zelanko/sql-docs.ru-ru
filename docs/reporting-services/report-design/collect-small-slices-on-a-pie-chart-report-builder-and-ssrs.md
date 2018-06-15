@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021841"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Сбор мелких срезов на круговой диаграмме (построитель отчетов и службы SSRS)
 Круговые диаграммы со слишком большим количеством срезов могут быть сложны для восприятия. Узнайте, как объединить множество мелких срезов на круговой диаграмме в отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы в один большой срез.
