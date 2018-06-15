@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897969"
 ---
 # <a name="fixed-width-text-file"></a>Текстовый файл с фиксированной шириной
 При использовании драйвера текстового последний столбец фиксированной ширины текстовый файл может быть переменной длины.
