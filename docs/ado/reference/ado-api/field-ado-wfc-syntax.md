@@ -2,7 +2,6 @@
 title: Поля (ADO - синтаксис WFC) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b355a11d2916403c7574c547aac02c61d7b0d71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 327bedf139a68496e4d779dc76fd5273b0fdb99d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278183"
 ---
 # <a name="field-ado---wfc-syntax"></a>Поля (ADO - WFC синтаксис)
 ## <a name="package-commswfcdata"></a>пакет com.ms.wfc.data  

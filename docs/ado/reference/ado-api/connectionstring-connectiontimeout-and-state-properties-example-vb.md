@@ -2,7 +2,6 @@
 title: Пример свойства соединения (VB) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 220f826cae321e928c9ebe6a807ed428c3beb133
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f32ca41bca8a2583102360c99483a14b72d2a2cc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277063"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString, ConnectionTimeout и пример свойства состояния (Visual Basic)
 В этом примере рассматриваются различные способы использования [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойства, чтобы открыть [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Она также использует [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) свойство, чтобы задать период ожидания соединения и [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство для проверки состояния соединения. Функция GetState является обязательным для выполнения этой процедуры.  

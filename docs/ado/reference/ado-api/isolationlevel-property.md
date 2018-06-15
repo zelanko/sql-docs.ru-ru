@@ -2,7 +2,6 @@
 title: Свойство IsolationLevel | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 794c81af3d0f67c7688dab253c8992df1439d149
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4e6de8da487352fe0a26d3524317ced061370771
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279213"
 ---
 # <a name="isolationlevel-property"></a>Свойство IsolationLevel
 Указывает уровень изоляции для [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает [IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md) значение. Значение по умолчанию — **adXactReadCommitted**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **IsolationLevel** свойство, чтобы задать уровень изоляции **подключения** объекта. Параметр вступает в силу только при следующем вызове [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) метод. Если уровень изоляции, запрашивается недоступен, поставщик может возвращать больше следующий уровень изоляции без обновления **IsolationLevel** свойство.  
   
  **IsolationLevel** свойство доступно для чтения/записи.  

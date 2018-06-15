@@ -2,7 +2,6 @@
 title: Сценарий сохраняемости XML записей | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0676644c7429d73d551b65fa56c2203025734b38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c16d37a0ded8b8a4a24666a426e123505eeff8f0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273413"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Сценарий сохраняемости XML набора записей
 В этом сценарии вы создадите приложение Active Server Pages (ASP), сохраняет содержимое объекта набора записей непосредственно в объекте отклика ASP.  

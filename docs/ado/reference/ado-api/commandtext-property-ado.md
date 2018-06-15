@@ -2,7 +2,6 @@
 title: Свойства CommandText (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aaad9ab5bc4def9975631a875071dc69a44b6028
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c333cd961ea8b4b3f37f78c682ebe65c7ac9001
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276863"
 ---
 # <a name="commandtext-property-ado"></a>Свойства CommandText (ADO)
 Показывает, что текст команды должна быть выдан для поставщика.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **строка** значение, содержащее команды поставщика, например инструкцию SQL, имя таблицы, относительный URL-адрес или вызов хранимой процедуры. Значение по умолчанию — пустая строка (»»).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **CommandText** свойство задает или возвращает текст команды, представленного [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта. Обычно это будет инструкция SQL, но также может быть любого типа инструкции команды распознаются поставщиком, например вызов хранимой процедуры. Инструкции SQL должен иметь определенный, диалект или версию, поддерживаемую обработчиком запросов поставщика.  
   
  Если [Готово](../../../ado/reference/ado-api/prepared-property-ado.md) свойство **команда** , присваивается значение **True** и **команда** объект привязан к открытое соединение при установке **CommandText** свойство ADO подготавливает запроса (то есть скомпилированную форму запроса, хранимых поставщиком) при вызове [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) или [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md)методы.  

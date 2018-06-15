@@ -2,7 +2,6 @@
 title: CommandTypeEnum | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d15cf7ce3c4af4d6bb4072dd3070298a846e825
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2120e4e593b0465d7f2412b3e938a8aea6cc2674
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276923"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Указывает, как следует интерпретировать аргумент команды.  

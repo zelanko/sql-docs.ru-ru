@@ -2,7 +2,6 @@
 title: Выполнение и Requery снимите примере методы (VBScript) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 714c07e87c5f373279c4ae30d5b72cd4b0d55957
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 900bacb5c71a5a3ba7d55fa6d3e2d84d6e1c0e60
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278083"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>Выполнение и Requery снимите примере методы (VBScript)
 В этом примере демонстрируется **Execute** при запуске с оба метода [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Она также использует [Requery](../../../ado/reference/ado-api/requery-method.md) метод для извлечения текущих данных в [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md)и [снимите](../../../ado/reference/ado-api/clear-method-ado.md) метод, чтобы удалить содержимое [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md)коллекции. ExecuteCommand и PrintOutput процедуры необходимы для выполнения этой процедуры.  

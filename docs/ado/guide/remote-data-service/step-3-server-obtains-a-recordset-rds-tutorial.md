@@ -2,7 +2,6 @@
 title: 'Шаг 3: Сервер получает набор записей (учебник служб удаленных рабочих СТОЛОВ) | Документы Microsoft'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdefc86152b1a91ab20099e31a748940c5fe57ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0d973dc8e4d4a85ddc1c3654a1deeed79d78ee34
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274553"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Шаг 3: Сервер получает набор записей (учебник служб удаленных рабочих СТОЛОВ)
 Программа сервера использует текста строки и команда connect для запросов к источнику данных для нужные строки. ADO обычно используется для получения этого **записей**, несмотря на то, что другие Microsoft интерфейсы доступа к данным, таких как OLE DB, может быть использовано.  

@@ -2,7 +2,6 @@
 title: Ошибка объекта | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6911493ab691b2c5e40ff4fa7331261070d981be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77851eaeabd460db12938f6386708057e7faee0c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278423"
 ---
 # <a name="error-object"></a>Объект Error
 Содержит сведения об ошибках доступа к данным, которые относятся к одной операции с участием поставщика.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Любая операция, включающее объекты ADO можно создать одну или несколько ошибок поставщика. Как возникли ошибки, один или несколько **ошибка** объекты размещаются в [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md) коллекцию [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Если другая операция ADO создает ошибку, **ошибки** коллекция очищается и новый набор **ошибка** объектов помещается в **ошибки** коллекции.  
   
 > [!NOTE]

@@ -1,11 +1,8 @@
 ---
 title: BOF, свойства EOF (ADO) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -24,11 +21,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a936e28d541749e6575f88e4009875639da2ccaa
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 36399bf938371a464426b3092dcc95b0ceaa9e09
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276153"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, свойства EOF (ADO)
 -   **BOF** указывает, что положение текущей записи находится перед первой записью в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -38,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>Возвращаемое значение  
  **BOF** и **EOF** возвращаемого свойства **логическое** значения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **BOF** и **EOF** свойства, чтобы определить ли **записей** объект содержит записи или вы вышли за пределы возможностей **набора записей**  объекта при переходе от записи к записи.  
   
  **BOF** возвращает **True** (-1), если перед первой записью положения текущей записи и **False** (0), если текущая позиция записи во время или после первого запись.  

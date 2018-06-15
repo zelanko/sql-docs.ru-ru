@@ -2,7 +2,6 @@
 title: ADCPROP_AUTORECALC_ENUM | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7594e31bc4ffbf20b9c7a9cbd9dc65bfe279a76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 760332da1c922c553d326ef583143ba6ac99fde1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275183"
 ---
 # <a name="adcpropautorecalcenum"></a>ADCPROP_AUTORECALC_ENUM
 Указывает, когда [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) поставщик повторно вычисляет статистические и вычисляемые столбцы в иерархических записей.  

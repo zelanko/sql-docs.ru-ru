@@ -2,7 +2,6 @@
 title: Формирование предложение COMPUTE | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25d89db4052234482846dc752e5c0431bb517164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 183d6536d5202c9795837a4e35f740753b77703f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272833"
 ---
 # <a name="shape-compute-clause"></a>Предложение COMPUTE фигуры
 Предложение COMPUTE фигуры приводит к возникновению ошибки родительского **набора записей**, столбцы которых состоят из ссылки на дочерние **набора записей**; является необязательным, содержимое которых главе, новые возможности, или вычисляемых столбцов, столбцов или результат выполнения статистические функции на дочернем **записей** или ранее фигурные **записей**; и любых столбцов с дочернего **набора записей** перечисленные в необязательное предложение.  
@@ -83,12 +83,12 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
 |Состояние|Город|Заполнение|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|или|Medford|200,000|  
-|или|Portland|400,000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
 |CA|Лос-Анджелес|800,000|  
 |CA|Сан-Диего|600,000|  
 |WA|Такома|500,000|  
-|или|Corvallis|300,000|  
+|OR|Corvallis|300,000|  
   
  Теперь выполните эту команду фигуры:  
   
@@ -112,7 +112,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,300,000|Ссылка на child1|CA|  
 |1,200,000|Ссылка на child2|WA|  
-|1,100,000|Ссылка на child3|или|  
+|1,100,000|Ссылка на child3|OR|  
   
 ## <a name="child1"></a>Child1  
   
@@ -132,9 +132,9 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 |Состояние|Город|Заполнение|  
 |-----------|----------|----------------|  
-|или|Medford|200,000|  
-|или|Portland|400,000|  
-|или|Corvallis|300,000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
+|OR|Corvallis|300,000|  
   
 ## <a name="see-also"></a>См. также  
  [Доступ к строк в иерархических записей](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

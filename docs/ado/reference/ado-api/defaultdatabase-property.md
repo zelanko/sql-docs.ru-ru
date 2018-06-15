@@ -2,7 +2,6 @@
 title: Свойство DefaultDatabase | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd4eee432fd8fb8e9cc6fb34b141f3c5845d595d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b7fc72d99273428a1ab4a11f12a021079d8faac
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277463"
 ---
 # <a name="defaultdatabase-property"></a>Свойство DefaultDatabase
 Указывает базу данных по умолчанию для [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **строка** значение, представляющее имя базы данных от поставщика.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **DefaultDatabase** свойство задает или возвращает имя базы данных по умолчанию на определенной **подключения** объекта.  
   
  Если база данных по умолчанию, строки SQL использовать неполное синтаксис для доступа к объектам базы данных. Для доступа к объектам в базе данных, отличной от той, указанный в **DefaultDatabase** свойства, необходимо полностью указывать имена объектов имя нужной базы данных. После создания соединения, поставщик будет записывать сведения о базе данных по умолчанию для **DefaultDatabase** свойство. Некоторые поставщики разрешают использовать только одну базу данных на один сеанс, в этом случае нельзя изменить **DefaultDatabase** свойство.  

@@ -2,7 +2,6 @@
 title: Метод Delete (ADO поля коллекции) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 07256948e8b83c6ddac5000bfb12cf590325fd5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 296364d3fafc4a67767699d55631209658657de1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277553"
 ---
 # <a name="delete-method-ado-fields-collection"></a>Метод Delete (ADO поля коллекции)
 Удаляет объект из [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекции.  
@@ -41,7 +41,7 @@ Fields.Delete Field
  *Поле*  
  Объект **Variant** , указывающий [поле](../../../ado/reference/ado-api/field-object.md) удаляемого объекта. Этот параметр может иметь имя **поле** объекта или порядковый номер **поле** сам объект.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Вызов **Fields.Delete** метода на открытый [записей](../../../ado/reference/ado-api/recordset-object-ado.md) приводит к ошибке во время выполнения.  
   
 ## <a name="applies-to"></a>Объект применения  

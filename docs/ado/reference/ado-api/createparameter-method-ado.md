@@ -2,7 +2,6 @@
 title: Метод CreateParameter (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 878ebc66b72724eea326683634cde7f122a815f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 865b2b0b8009b03e33e24f72ab4f336910a17ace
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277253"
 ---
 # <a name="createparameter-method-ado"></a>Метод CreateParameter (ADO)
 Создает новый [параметр](../../../ado/reference/ado-api/parameter-object.md) объект с указанными свойствами.  
@@ -42,21 +42,21 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
 #### <a name="parameters"></a>Параметры  
  *Название*  
- Необязательно. Объект **строка** значение, содержащее имя **параметр** объекта.  
+ Необязательный параметр. Объект **строка** значение, содержащее имя **параметр** объекта.  
   
  *Тип*  
- Необязательно. Объект [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) значение, указывающее тип данных **параметр** объекта.  
+ Необязательный параметр. Объект [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) значение, указывающее тип данных **параметр** объекта.  
   
  *Направление*  
- Необязательно. Объект [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) значение, указывающее тип **параметр** объекта.  
+ Необязательный параметр. Объект [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) значение, указывающее тип **параметр** объекта.  
   
  *Размер*  
- Необязательно. Объект **длинные** значение, которое указывает максимальную длину для значения параметра в символах или байтах.  
+ Необязательный параметр. Объект **длинные** значение, которое указывает максимальную длину для значения параметра в символах или байтах.  
   
  *Value*  
- Необязательно. Объект **Variant** , определяет значение для **параметр** объекта.  
+ Необязательный параметр. Объект **Variant** , определяет значение для **параметр** объекта.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **CreateParameter** метод для создания нового **параметр** объект с указанным именем, тип, направление, размер и значение. Все значения, переданные аргументы записываются в соответствующий **параметр** свойства.  
   
  Этот метод не добавляет автоматически **параметр** объект **параметры** коллекцию [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта. Это позволяет задать дополнительные свойства которого ADO значения будет проверена при присоединении **параметр** в коллекцию.  

@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 dev_langs:
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2c2aa317f9d4ff810cba13fbb315ce090997583
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b504f924019c20a6203e18974d72e086e65f06c8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273573"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Ссылающееся на библиотеки ADO в приложение Visual Basic 6
 В ADO библиотеки-импорт в приложение Microsoft Visual Basic 6, необходимо задать ссылку в проект Visual Basic.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  Нажмите кнопку **ОК** для завершения настройки ссылки.  
   
-## <a name="backward-compatibility"></a>Обратная совместимость  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  Установка ADO также копирует следующие библиотеки типов из более ранних версий:  
   
 -   *msado27.tlb*, библиотека 2.7 тип ADO  

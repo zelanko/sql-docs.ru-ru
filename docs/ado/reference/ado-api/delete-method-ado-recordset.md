@@ -2,7 +2,6 @@
 title: Удаление метода (набора записей ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afb1071d48cb6c4c1652cc5caab96de97beefae4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46ffdefd753d10067c2c120690fd900ddd114abd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277573"
 ---
 # <a name="delete-method-ado-recordset"></a>Удаление метода (набора записей ADO)
 Удаление текущей записи или группы записей.  
@@ -44,7 +44,7 @@ recordset.Delete AffectRecords
 > [!NOTE]
 >  **adAffectAll** и **adAffectAllChapters** не являются допустимыми аргументами для **удалить**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  С помощью **удаление** метод помечает текущей записи или группы записей в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект для удаления. Если **записей** объекта не допускает удаление записей происходит ошибка. Если вы находитесь в режим немедленного обновления, удаления происходит в базе данных немедленно. Если запись не может успешно удалены (из-за нарушения целостности базы данных, например), запись будет оставаться в режиме редактирования после вызова [обновление](../../../ado/reference/ado-api/update-method.md). Это означает, что необходимо отменить обновление с [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) перед перемещением текущей записи (например, с помощью [закрыть](../../../ado/reference/ado-api/close-method-ado.md), [переместить](../../../ado/reference/ado-api/move-method-ado.md), или [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
   
  При работе в пакетном режиме обновления записи, помечаются для удаления из кэша и фактическое удаление происходит при вызове [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) метод. Используйте [фильтра](../../../ado/reference/ado-api/filter-property.md) свойство, чтобы просмотреть список удаленных записей.  

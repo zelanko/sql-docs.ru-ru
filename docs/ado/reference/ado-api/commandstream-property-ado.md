@@ -2,7 +2,6 @@
 title: Свойство CommandStream (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff08261349b73b7aef5c8b9fe1375b288941d41e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8696706c0a785c77d7ca6a811811e1aba5fe133
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276703"
 ---
 # <a name="commandstream-property-ado"></a>Свойство CommandStream (ADO)
 Указывает поток, используемый в качестве входного для [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает поток, используемый в качестве входного для **команда** объекта. Формат для этого потока поставщика; см. сведения в документации поставщика. Это свойство аналогично [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) свойства, которое используется, чтобы указать строку ввода **команда**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **CommandStream** и **CommandText** являются взаимоисключающими. Когда пользователь задает **CommandStream** свойства **CommandText** свойство задается пустая строка (»»). Если пользователь задает **CommandText** свойства **CommandStream** свойству будет присвоено **ничего не**.  
   
  Поведение **Command.Parameters.Refresh** и **Command.Prepare** методы определяются поставщиком. Значения параметров в потоке не могут быть обновлены.  

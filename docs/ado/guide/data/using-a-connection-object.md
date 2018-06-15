@@ -2,7 +2,6 @@
 title: С помощью объекта соединения | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24dd06d812a1234fd9a7458600e71f77cccdcf63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 07528c4434a7278566ba6a7f3659e64d2638dab9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273103"
 ---
 # <a name="using-a-connection-object"></a>С помощью объекта соединения
 Прежде чем открывать **подключения** объекта, необходимо определить определенные сведения об источнике данных и тип соединения. Большая часть этих сведений, удерживается *ConnectionString* параметр [метод Open](../../../ado/reference/ado-api/open-method-ado-connection.md) на **подключения** объекта, или с помощью [ConnectionString Свойство](../../../ado/reference/ado-api/connectionstring-property-ado.md) на **подключения** объекта. Строка подключения состоит из списка пар аргументов и значений, значения, заключенные в одинарные кавычки, разделенные точкой с запятой. Например:  

@@ -2,7 +2,6 @@
 title: Свойство AbsolutePage (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd1b4230423661a51102293ae04ff1b773b92c47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4bd0696e18e7719038a1b87448477b1b7f4d5bdf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274853"
 ---
 # <a name="absolutepage-property-ado"></a>Свойство AbsolutePage (ADO)
 Указывает, на какой странице находится текущая запись.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  Для 64-разрядного кода используйте тип данных, который обеспечивает хранение 64-разрядное значение. Например, можно использовать либо **длинные** или другое значение, которое может иметь длину 64-разрядной, например DBORDINAL. Не используйте **PositionEnum** значения, поскольку они ограничены длиной 32 бит.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Это свойство может использоваться для идентификации номер страницы, на котором расположена текущая запись. Она использует [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) свойство для логического разделения строк общее число **записей** объекта на последовательность страниц, каждая из которых имеет количество записей равно **PageSize** (за исключением последней страницы, которые могут иметь менее записей). Поставщик должен поддерживать соответствующие функциональные возможности для этого свойства доступно.  
   
 -   При получении или установке **AbsolutePage** свойство, ADO использует [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) свойство и [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) свойство друг с другом, как показано ниже:  

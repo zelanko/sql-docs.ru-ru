@@ -2,7 +2,6 @@
 title: Атрибуты и свойства пример имени (VC ++) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9aaed2959b52ffcd1f0750c6935a5f4708d33f8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 98b4499c5a5dc5788a1430a69cf6334149c65635
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276023"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Атрибуты и свойства пример имени (VC ++)
 В этом примере отображается значение [атрибуты](../../../ado/reference/ado-api/attributes-property-ado.md) свойство [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [поле](../../../ado/reference/ado-api/field-object.md), и [свойство](../../../ado/reference/ado-api/property-object-ado.md) объектов. Она использует [имя](../../../ado/reference/ado-api/name-property-ado.md) свойство для отображения имени каждого **поле** и **свойство** объекта.  

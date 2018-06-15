@@ -2,7 +2,6 @@
 title: Обновление и сохранение данных | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40e92067564f56eb7bc30739c0abd0d758a3b9c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2c4d7fd046631814e263c8bd6a413fb9ef2f00c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273163"
 ---
 # <a name="updating-and-persisting-data"></a>Обновление и сохранение данных
 Предшествующих главах обсуждались, как использовать ADO для получения данных в источнике данных, как перемещение данных и даже о редактировать данные. Конечно Если целью приложения является предоставление пользователям вносить изменения в данные, будет необходимо понять, как сохранить эти изменения. Можно либо сохранить **записей** изменения в файл с помощью **Сохранить** метода, или можно отправить изменения обратно в источник данных для хранилища с помощью **обновление** или  **UpdateBatch** методы.  

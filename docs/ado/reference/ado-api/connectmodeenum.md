@@ -2,7 +2,6 @@
 title: ConnectModeEnum | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f35019573f17e49fea3bdec7bfe6afc17b844f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94b89e379d85002fc58deb36a1b95d1b7457d4c8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277093"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 Задает разрешения, доступные для изменения данных в [подключения](../../../ado/reference/ado-api/connection-object-ado.md), откройте [запись](../../../ado/reference/ado-api/record-object-ado.md), или указания значения для [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойство  **Запись** и [поток](../../../ado/reference/ado-api/stream-object-ado.md) объектов.  

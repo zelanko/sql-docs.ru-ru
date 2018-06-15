@@ -2,7 +2,6 @@
 title: Свойство CursorLocation (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c169441ffc1cc455e0474f54fe923c3e4cd0f4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a720586cc2ee6f866565fe9e43382395bcb44e65
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277283"
 ---
 # <a name="cursorlocation-property-ado"></a>Свойство CursorLocation (ADO)
 Указывает расположение службы курсора.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **длинные** значение, которое может быть присвоено одно из [CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md) значения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Это свойство позволяет выбирать различные библиотеки курсоров, доступ к поставщику. Как правило можно выбрать с помощью библиотеки курсор на стороне клиента, либо, расположенный на сервере.  
   
  Значение этого свойства влияет на соединения установлены только после задания свойства. Изменение **CursorLocation** свойство не оказывает влияния на существующие соединения.  

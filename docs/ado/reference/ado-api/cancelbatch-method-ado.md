@@ -2,7 +2,6 @@
 title: Метод CancelBatch (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 241bf36ab3ee4babf8d4e306b9d27a350985cb20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c2db735e51ec0c71f35e211db50b952f942cc3a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276253"
 ---
 # <a name="cancelbatch-method-ado"></a>Метод CancelBatch (ADO)
 Отменяет ожидающие пакетного обновления.  
@@ -39,9 +39,9 @@ recordset.CancelBatchAffectRecords
   
 #### <a name="parameters"></a>Параметры  
  *AffectRecords*  
- Необязательно. [AffectEnum](../../../ado/reference/ado-api/affectenum.md) значение, указывающее, сколько записей **CancelBatch** повлияет на метод.  
+ Необязательный параметр. [AffectEnum](../../../ado/reference/ado-api/affectenum.md) значение, указывающее, сколько записей **CancelBatch** повлияет на метод.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **CancelBatch** метод, чтобы отменить все имеющиеся обновления в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) в пакетном режиме обновления. Если **записей** находится в режиме немедленного обновления, вызов **CancelBatch** без **adAffectCurrent** приводит к ошибке.  
   
  Если изменения применяются к текущей записи или добавляются новые записи, при вызове **CancelBatch**, сначала вызывает ADO [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) метод, чтобы отменить изменения в кэше. После этого все ожидающие изменения в **записей** отменяются.  

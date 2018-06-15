@@ -2,7 +2,6 @@
 title: Пример (VC ++) модели событий ADO | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec57df4ce7217579d4b409d3a571a077c376d98e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20df675bbbee8b513f7e1008da0cb4772255701c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275473"
 ---
 # <a name="ado-events-model-example-vc"></a>Пример модели событий ADO (VC ++)
 В Visual C++ части [экземпляр события ADO языком](../../../ado/guide/data/ado-event-instantiation-by-language.md) предоставляет общее описание способов создания экземпляра модели событий ADO. Ниже приведен конкретный пример создания экземпляра модели событий в среде, созданные **#import** директивы.  

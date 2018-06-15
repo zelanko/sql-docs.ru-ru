@@ -2,7 +2,6 @@
 title: BOF EOF и пример свойства закладки (VC ++) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 309c33960737c855c4399832db5275461c5bf513
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a09c56981f6884f03551d10d78a51ad8ea3d140
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276083"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF EOF и пример свойства закладки (VC ++)
 Первая функция в этом примере используется [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) и [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) свойства для отображения сообщения, если пользователь пытается перейти на первую или последнюю запись [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Она использует [закладки](../../../ado/reference/ado-api/bookmark-property-ado.md) свойство, чтобы позволить пользователю флаг записи в **записей** и вернуться к нему позднее.  

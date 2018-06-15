@@ -2,7 +2,6 @@
 title: Пример метода AddNew (JScript) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1fdd85812306dc3986fd43109c481df6a044a77
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc30b40f64dac9ff3cb06d51d420eb787803070b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275303"
 ---
 # <a name="addnew-method-example-jscript"></a>Пример метода AddNew (JScript)
 В этом примере используется [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) метод, чтобы создать новую запись с указанным именем. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **AddNewJS.asp**.  
