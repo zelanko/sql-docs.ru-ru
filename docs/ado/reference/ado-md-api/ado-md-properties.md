@@ -2,7 +2,6 @@
 title: ADO MD свойства | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38c342d5f4b44c855ec729dfbb41341f337e14a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 40916a54d3279b2a4afaee83fe56b4ef9c4d4199
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283353"
 ---
 # <a name="ado-md-properties"></a>Свойства ADO MD
 |||  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 |[Заголовок](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Указывает заголовок текста, используемый для отображения **уровень** или **член** объекта.|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|Указывает количество элементов, для которого текущий **член** объект является родительской в иерархии.|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Возвращает коллекцию **элементы** для которого текущий **члена** является родительской в иерархии.|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
+|[Счетчик](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
 |[Глубина](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Указывает число уровней между **уровень** и корневой уровень иерархии.|  
 |[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Возвращает текстовое описание текущего объекта.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Указывает число измерений на оси.|  

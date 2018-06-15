@@ -2,7 +2,6 @@
 title: ObjectStateEnum | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a8d7ba4da1908d2434049c8a71039a259bab8ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46030a27b9a2567f023c2c0d7946536703c91195
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279986"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 Указывает, является ли объект открытым или закрытым, соединение с источником данных, выполнение команды или при получении данных.  

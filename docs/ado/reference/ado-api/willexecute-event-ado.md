@@ -2,7 +2,6 @@
 title: Событие WillExecute (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d9fee251d53f5966f83fb1a49d3ecd75fe0813
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0fd9c97018c5c15710067298a88b4996c5a699f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282883"
 ---
 # <a name="willexecute-event-ado"></a>Событие WillExecute (ADO)
 **WillExecute** событие вызывается непосредственно перед выполнением ожидающие команды для подключения.  
@@ -62,7 +62,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pConnection*  
  [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) объектов, для которого применяется это уведомление о событии.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Объект **WillExecute** событие может происходить из-за соединения.  [Выполнить метод (соединение ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [выполнить метод (команда ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md), или [метода Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод *pConnection* следует параметр всегда содержать допустимую ссылку на **подключения** объекта. Если это событие из-за **Connection.Execute**, *pRecordset* и *командной* параметры имеют значение **ничего не**. Если это событие из-за **Recordset.Open**, *pRecordset* параметр будет ссылаться **записей** объекта и *командной* параметр имеет значение **ничего не**. Если это событие из-за **Command.Execute**, *командной* параметр будет ссылаться **команда** объекта и *pRecordset* параметр имеет значение **ничего не**.  
   
  **WillExecute** позволяет проверять и изменять параметры ожидается выполнение. Это событие может вернуть запрос отмены ожидания выполнения команды.  

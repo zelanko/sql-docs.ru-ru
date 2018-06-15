@@ -1,11 +1,8 @@
 ---
 title: Свойства объекта набора ячеек, методы и события | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 71c6fa35b7b6652b7c1b5b1080ff2270e1846628
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 1dbe45239a811c10bd20def4d2c34f6251c658f2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283593"
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>Свойства объекта набора ячеек, методы и события
 ## <a name="propertiescollections"></a>Свойства и коллекции  
