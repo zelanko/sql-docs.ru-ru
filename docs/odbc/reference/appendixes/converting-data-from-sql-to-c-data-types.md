@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914069"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Преобразование данных из SQL в типы данных C
 Если приложение вызывает **SQLFetch**, **SQLFetchScroll**, или **SQLGetData**, драйвер получает данные из источника данных. Если необходимо, оно преобразует данные из типа данных, в котором драйвер выборки его тип данных, указанный в *TargetType* аргумент в **SQLBindCol** или **SQLGetData.** Наконец, данные сохраняются в расположении, указанном *TargetValuePtr* аргумент в **SQLBindCol** или **SQLGetData** (и поле SQL_DESC_DATA_PTR Отменить).  

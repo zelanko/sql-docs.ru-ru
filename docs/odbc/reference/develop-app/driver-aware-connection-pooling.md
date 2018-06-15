@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912681"
 ---
 # <a name="driver-aware-connection-pooling"></a>Организация пулов соединений с учетом драйвера
 Пул соединений с учетом драйвера — это новая функция из диспетчера драйверов в Windows 8. Пул соединений с учетом драйвера позволяет записи драйвер для настройки поведения в их драйвер ODBC пула подключений.  

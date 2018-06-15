@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906279"
 ---
 # <a name="backward-compatibility-of-c-data-types"></a>Обратная совместимость типов данных C
 SQL_C_SHORT, SQL_C_LONG и SQL_C_TINYINT были заменены в ODBC знаковых и беззнаковых типов: SQL_C_SSHORT и SQL_C_USHORT, SQL_C_SLONG и SQL_C_ULONG и SQL_C_STINYINT и SQL_C_UTINYINT. ODBC 3 *.x* драйвер, который должен работать с ODBC 2. *x* приложения должны поддерживать SQL_C_SHORT, SQL_C_LONG и SQL_C_TINYINT, так как при их вызове диспетчера драйверов передает их с помощью драйвера.

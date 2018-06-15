@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912639"
 ---
 # <a name="level-2-interface-conformance"></a>Соответствие интерфейс уровня 2
 Уровень соответствия интерфейс уровня 2 включает функциональные возможности уровня 1 интерфейс — уровень соответствия, плюс следующие возможности:  

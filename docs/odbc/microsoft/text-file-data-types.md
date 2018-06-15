@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907689"
 ---
 # <a name="text-file-data-types"></a>Типы данных текстового файла
 Следующая таблица показывает, как текстовые типы данных сопоставляются с типами данных ODBC SQL. Обратите внимание, что не все типы данных ODBC SQL поддерживаются драйвером ODBC текста.  

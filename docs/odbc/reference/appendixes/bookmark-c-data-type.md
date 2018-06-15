@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905539"
 ---
 # <a name="bookmark-c-data-type"></a>Тип данных C закладки
 Тип данных C закладки позволяет приложению получить закладки. Закладка C типы используются только для извлечения значения закладки, которые могут быть переменную длину; они не должны преобразоваться в другие типы данных. Приложение извлекает закладки, либо из 0 столбец результирующего набора с **SQLBulkOperations** (с помощью операции SQL_ADD), **SQLFetch**, **SQLFetchScroll**, или **SQLGetData**. Дополнительные сведения см. в разделе [закладки](../../../odbc/reference/develop-app/bookmarks-odbc.md).  

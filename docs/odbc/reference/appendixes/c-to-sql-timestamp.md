@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905899"
 ---
 # <a name="c-to-sql-timestamp"></a>C в SQL: отметка времени
 Идентификатор для типа данных ODBC C timestamp является:  

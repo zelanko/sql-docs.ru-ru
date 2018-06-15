@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913639"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>Блочные курсоры, Прокручиваемые курсоры и обратная совместимость
 На наличие **SQLFetchScroll** и **SQLExtendedFetch** представляет первый clear разбиения в ODBC между приложения программный интерфейс (API), которая представляет собой набор функций приложение вызывает и служба поставщика интерфейса (SPI), которая представляет собой набор функций в драйвере реализованы. Это разделение не требуется, чтобы ODBC 3. *x*, которая использует **SQLFetchScroll**, bealigned стандартам и также должен соответствовать ODBC 2. *x*, которая использует **SQLExtendedFetch**.  

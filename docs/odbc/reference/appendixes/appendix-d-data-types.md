@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906209"
 ---
 # <a name="appendix-d-data-types"></a>Приложение г. типы данных
 ODBC определяет два набора типов данных: SQL типы данных и типы данных C. Типы данных SQL указывают тип данных данные, хранящиеся в источнике данных. Типы данных C указывает тип данных данные, хранящиеся в буферы приложения.  

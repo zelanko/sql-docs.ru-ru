@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905378"
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>Устранение неполадок (драйвер ODBC для Visual FoxPro)
 В следующих разделах рассматриваются способы повышения производительности и устранения проблем, которые могут возникнуть при использовании драйвера ODBC для Visual FoxPro.  

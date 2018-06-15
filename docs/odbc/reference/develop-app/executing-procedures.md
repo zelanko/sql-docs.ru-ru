@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910779"
 ---
 # <a name="executing-procedures"></a>Выполнение процедур
 ODBC определяет стандартные escape-последовательность выполнения процедур. Синтаксис этой последовательности и пример кода, который его использует, в разделе [вызовы процедур](../../../odbc/reference/develop-app/procedure-calls.md).  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910259"
 ---
 # <a name="sqlsetconnectoption-mapping"></a>Сопоставление SQLSetConnectOption
 Когда ODBC 2. *x* приложение вызывает **SQLSetConnectOption** через ODBC 3 *.x* драйвера, вызов  

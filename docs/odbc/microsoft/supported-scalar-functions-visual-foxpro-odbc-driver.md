@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908079"
 ---
 # <a name="supported-scalar-functions-visual-foxpro-odbc-driver"></a>Поддерживаемые скалярные функции (Visual FoxPro драйвер ODBC)
 Драйвер ODBC для Visual FoxPro поддерживает три типа скалярные функции, как определено в SQL-грамматику ODBC: строковые, числовые и функций даты и времени.  

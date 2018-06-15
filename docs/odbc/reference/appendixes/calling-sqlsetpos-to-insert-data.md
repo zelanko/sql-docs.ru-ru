@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905289"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>Вызов SQLSetPos для вставки данных
 Когда ODBC 2. *x* приложения, работа с ODBC 3 *.x* драйвер вызывает **SQLSetPos** с *операции* аргумент SQL_ADD, диспетчер драйверов Этот вызов не соответствует **SQLBulkOperations**. Если ODBC 3 *.x* драйвер должен работать с приложениями, которые вызывают **SQLSetPos** с SQL_ADD, драйвер должен поддерживать этой операции.  

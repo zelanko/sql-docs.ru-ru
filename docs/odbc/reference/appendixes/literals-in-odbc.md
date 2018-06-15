@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905529"
 ---
 # <a name="literals-in-odbc"></a>Литералы в ODBC
 Для интервала и числовые литералы в ODBC используется синтаксис, в следующих разделах. Этот синтаксис предоставляется здесь как вспомогательное средство для средств записи драйвера при выполнении преобразования из строкового типа к типу numeric или интервал или из типа numeric или интервал в строковый тип символа. Дополнительные сведения см. в разделе [интервал литералы](../../../odbc/reference/appendixes/interval-literals.md) и [числовые литералы](../../../odbc/reference/appendixes/numeric-literals.md) в типах данных приложение D:.  
