@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027011"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Свойства Reporting Services — свойства элементов сервера отчетов
   Свойства элементов являются свойствами, зависящими от элементов в базе данных сервера отчетов. Такие элементы включают отчеты, связанные отчеты, папки, ресурсы, модели и источники данных.  

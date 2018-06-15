@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031431"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Устранение неполадок при обработке отчетов служб Reporting Services
 После получения данных отчета обработчик отчетов объединяет данные и сведения о макете. Свойство каждого элемента отчета, имеющее выражение, вычисляется в контексте объединенных данных и макета. Этот раздел помогает устранять эти проблемы.   

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028681"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Макет страницы и подготовка к просмотру (построитель отчетов и службы SSRS)
 Ознакомьтесь со сведениями о модулях подготовки отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для отчетов с разбиением на страницы, чтобы быть уверенным, что отчет выглядит должным образом, включая макет страницы, разбивку на страницы и размер бумаги. 

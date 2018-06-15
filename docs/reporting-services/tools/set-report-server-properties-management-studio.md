@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029721"
 ---
 # <a name="set-report-server-properties-management-studio"></a>Установка свойств сервера отчетов (среда Management Studio)
   Системные свойства сервера отчетов можно установить в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , чтобы включить те или иные функции либо установить параметры по умолчанию.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020721"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Создание группы рекурсивной иерархии (построитель отчетов и службы SSRS)
 В отчетах с разбиением на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] группа рекурсивной иерархии организует данные отдельного набора данных отчета, включающего несколько уровней иерархии, например структуру подчинения для иерархии связей "начальник-подчиненный" в организации.  

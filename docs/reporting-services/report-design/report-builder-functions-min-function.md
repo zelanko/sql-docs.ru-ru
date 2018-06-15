@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024691"
 ---
 # <a name="report-builder-functions---min-function"></a>Функции построителя отчетов — функция Min
   Возвращает минимальное значение всех числовых значений, отличных от NULL, заданных выражением, вычисляемым в контексте данной области.  
