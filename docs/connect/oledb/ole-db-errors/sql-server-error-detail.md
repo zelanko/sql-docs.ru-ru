@@ -2,10 +2,10 @@
 title: Подробные сведения об ошибках SQL Server | Документы Microsoft
 description: Подробные сведения об ошибках SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-errors
+ms.component: oledb|ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f271da81733649c94f01b06281f7463c8ac719b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b69559a6c89f30c73245633aa67db90ce7cd78a
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665584"
 ---
 # <a name="sql-server-error-detail"></a>Подробные сведения об ошибках SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Драйвер OLE DB для SQL Server определяет интерфейс, ошибка поставщика [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1). Интерфейс возвращает более подробные сведения об ошибке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и полезен, если выполнение команды или операции работы с наборами строк завершились с ошибкой.  
   
@@ -49,7 +52,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  Элементы структуры SSERRORINFO обрабатываются потребителем следующим образом.  
   
-|Член|Description|  
+|Член|Описание|  
 |------------|-----------------|  
 |*pwszMessage*|Сообщение об ошибке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Идентично строке, возвращенной в **IErrorInfo::GetDescription**.|  
 |*pwszServer*|Имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для сеанса.|  
@@ -59,8 +62,8 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 |*bClass*|Серьезность сообщения об ошибке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |*wLineNumber*|Если применимо, номер строки хранимой процедуры, в которой возникла ошибка.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ошибки](../../oledb/ole-db-errors/errors.md)   
- [Инструкция RAISERROR & #40; Transact-SQL & #41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR (Transact-SQL)](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

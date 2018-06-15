@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -23,11 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1bd6c32f7a0eaa0937c937abac3f135fd19f143c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f6b4f1bde4b123ba2a8a807a5bd91abe12cdad2
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307723"
 ---
 # <a name="tables-and-indexes"></a>Таблицы и индексы
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,15 +40,15 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] определяет следующее свойство в специфическом для поставщика наборе свойств DBPROPSET_SQLSERVERCOLUMN.  
   
-|Идентификатор свойства|Description|  
+|Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
 |SSPROP_COL_COLLATIONNAME|Тип: VT_BSTR<br /><br /> Записи R Чтение и запись:<br /><br /> По умолчанию: значение Null<br /><br /> Описание: Это свойство используется только в **ITableDefinition**. Строка, указанная в это свойство используется при создании [CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md)<br /><br /> .|  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Создание таблиц SQL Server](../../oledb/ole-db-tables-indexes/creating-sql-server-tables.md)  
   
--   [Добавление столбца к таблице SQL Server](../../oledb/ole-db-tables-indexes/adding-a-column-to-a-sql-server-table.md)  
+-   [Добавление столбца в таблицу SQL Server](../../oledb/ole-db-tables-indexes/adding-a-column-to-a-sql-server-table.md)  
   
 -   [Удаление столбца из таблицы SQL Server](../../oledb/ole-db-tables-indexes/removing-a-column-from-a-sql-server-table.md)  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>См. также  
  [Драйвер OLE DB для SQL Server программирования](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
- [DROP TABLE & #40; Transact-SQL & #41;](../../../t-sql/statements/drop-table-transact-sql.md)   
+ [DROP TABLE (Transact-SQL)](../../../t-sql/statements/drop-table-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../../t-sql/statements/create-index-transact-sql.md)   
  [DROP INDEX (Transact-SQL)](../../../t-sql/statements/drop-index-transact-sql.md)  
   

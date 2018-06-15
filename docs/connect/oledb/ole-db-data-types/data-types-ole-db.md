@@ -2,9 +2,10 @@
 title: Типы данных (OLE DB) | Документы Microsoft
 description: Типы данных (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,15 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: edcefb1e3d8ec5bfa5d36ab74282d019f83aa4ab
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 717e9da58a28daccb6fdfab18f1c3423d9d310df
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35304883"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665164"
 ---
 # <a name="data-types-ole-db"></a>Типы данных (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Для выполнения [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкций и процесс результаты с помощью драйвера OLE DB для SQL Server, необходимо знать, как драйвер OLE DB для SQL Server выполняется сопоставление [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных с типами данных OLE DB при привязке параметров или столбцов в наборе строк, а также при его u SES **ITableDefinition** интерфейс для создания таблицы в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

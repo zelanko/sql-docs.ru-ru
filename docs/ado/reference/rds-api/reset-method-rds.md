@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 504f68bea78f34d2a40ced0453a251105bc5275c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8528794ecf2d52ec62225085c4de03d250ebf16
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288563"
 ---
 # <a name="reset-method-rds"></a>Метод Reset (RDS)
 Выполняет сортировки или фильтрации на стороне клиента **записей** на основе указанного свойств сортировки и фильтрации.  
@@ -42,9 +42,9 @@ DataControl.Reset(value)
  Объектную переменную, которая представляет [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта.  
   
  *value*  
- Необязательно. Объект **логическое** значение, равное **True** (по умолчанию), если нужно выполнить фильтрацию в текущем наборе строк «фильтрация». **False** указывает, что отфильтровать на первоначальный набор строк, удаляя все предыдущие параметры фильтра.  
+ Необязательный параметр. Объект **логическое** значение, равное **True** (по умолчанию), если нужно выполнить фильтрацию в текущем наборе строк «фильтрация». **False** указывает, что отфильтровать на первоначальный набор строк, удаляя все предыдущие параметры фильтра.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), и [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)свойства предоставляют сортировки и фильтрации функциональность на стороне клиента кэша. Функциональные возможности сортировки упорядочивает записи по значения из одного столбца. Функцию фильтра отображает подмножество записей на основе критерия поиска, при полной [записей](../../../ado/reference/ado-api/recordset-object-ado.md) сохраняется в кэше. **Сброс** метод будет выполнять критерии и заменить текущую **записей** с обновляемым **записей**.  
   
  При внесении изменений в исходных данных, которые не были отправлены, **Сброс** метод завершится с ошибкой. Во-первых, используйте [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) метод, чтобы сохранить изменения в чтение и запись **записей**и затем использовать **Сброс** метод сортировки и фильтрации записей.  

@@ -2,10 +2,10 @@
 title: Использование возвращающих табличные значения параметров (OLE DB) | Документы Microsoft
 description: Использование возвращающих табличные значения параметров (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 22cf0dd2810eecde520fc30bcdf786db3ffa583a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0bb98891fbaff6bc0512d2adfeee6e2a19d412b
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666164"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Использование возвращающих табличные значения параметров (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Данный образец работает с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] или более поздней версией. Образец выполняет следующие действия.  
   
@@ -44,7 +47,7 @@ ms.lasthandoff: 05/03/2018
   
  Поместите третий листинг кода в файл OLEDBUtils.hpp.  
   
- Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните четвертый листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Чтобы соединиться с именованным экземпляром, измените строку подключения из L"(local)» для L"(local)\\\name», где имя является именем экземпляра. По умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий msoledbsql.h.  
+ Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните четвертый листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы соединиться с именованным экземпляром, измените строку подключения из L"(local)» для L"(local)\\\name», где имя является именем экземпляра. По умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий msoledbsql.h.  
   
  Пятый листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) создает базу данных, которая используется в образце.  
   

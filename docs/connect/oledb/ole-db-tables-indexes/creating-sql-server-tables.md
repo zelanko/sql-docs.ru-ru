@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5497a74c256282fd14f7c5301f7eea4cfa9aa596
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b26077abc7d714ffebdf36068a2f3d5fc081d7e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306783"
 ---
 # <a name="creating-sql-server-tables"></a>Создание таблиц SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
  Свойства столбцов в структуре DBCOLUMNDESC интерпретируются следующим образом.  
   
-|Идентификатор свойства|Description|  
+|Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
 |DBPROP_COL_AUTOINCREMENT|R Чтение и запись: чтение и запись<br /><br /> Значение по умолчанию — VARIANT_FALSE Описание: задает свойство идентификатора для создаваемого столбца. В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] свойство идентификатора может иметь только один столбец таблицы. Задать свойству значение VARIANT_TRUE для более чем одного столбца приводит к ошибке, когда драйвер OLE DB для SQL Server пытается создать таблицу на сервере.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Свойство identity допустимо только для **целое**, **числовое**, и **десятичное** типов, когда масштаб равен 0. Задать свойству значение VARIANT_TRUE для любого другого типа данных столбца приводит к ошибке, когда драйвер OLE DB для SQL Server пытается создать таблицу на сервере.<br /><br /> Драйвер OLE DB для SQL Server возвращает значение DB_S_ERRORSOCCURRED, если свойства DBPROP_COL_AUTOINCREMENT и DBPROP_COL_NULLABLE имеют значение VARIANT_TRUE и *dwOption* DBPROP_COL_NULLABLE не равен DBPROPOPTIONS_REQUIRED. DB_E_ERRORSOCCURRED возвращается в том случае, если свойства DBPROP_COL_AUTOINCREMENT и DBPROP_COL_NULLABLE имеют значение VARIANT_TRUE и *dwOption* DBPROP_COL_NULLABLE равен DBPROPOPTIONS_REQUIRED. Столбец определен с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] свойство identity и DBPROP_COL_NULLABLE *dwStatus* устанавливается значение DBPROPSTATUS_CONFLICTING.|  
 |DBPROP_COL_DEFAULT|R Чтение и запись: чтение и запись<br /><br /> По умолчанию: нет<br /><br /> Описание [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ограничение по умолчанию для столбца.<br /><br /> *VValue* DBPROP может относиться любой из нескольких типов. *VValue.vt* должен задавать тип, несовместимый с типом данных столбца. Например, если столбец имеет тип DBTYPE_WSTR и для этого столбца задано значение по умолчанию BSTR N/A, эти два типа совместимы. Определять же значение по умолчанию в столбце, определенном типом DBTYPE_R8, возникнет ошибка, когда драйвер OLE DB для SQL Server пытается создать таблицу на сервере.|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
  Когда потребитель вызывает метод **ITableDefinition::CreateTable**, драйвер OLE DB для SQL Server интерпретирует свойства таблицы следующим образом.  
   
-|Идентификатор свойства|Description|  
+|Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
 |DBPROP_TBL_TEMPTABLE|R Чтение и запись: чтение и запись<br /><br /> Значение по умолчанию — VARIANT_FALSE Описание: по умолчанию драйвер OLE DB для SQL Server создает таблицы, имена которых присваивает потребитель. Когда значение VARIANT_TRUE, драйвер OLE DB для SQL Server создает временное имя таблицы для объекта-получателя. Потребитель задает *pTableID* параметр **CreateTable** значение NULL. *PpTableID* параметр должен содержать допустимый указатель.|  
   
@@ -220,7 +220,7 @@ SAFE_EXIT:
     }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы и индексы](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
   

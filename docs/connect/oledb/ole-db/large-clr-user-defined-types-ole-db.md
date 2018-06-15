@@ -2,10 +2,10 @@
 title: Определяемые пользователем типы больших значений CLR (OLE DB) | Документы Microsoft
 description: Большие определяемые пользователем типы данных CLR (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a2b62d0206fc36b69394975f93b7369465edebe1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac07bf034e65d654a2b8577bdad8d5f3fb8ff48d
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611989"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Большие определяемые пользователем типы данных CLR (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   В этом разделе описываются изменения OLE DB в драйвер OLE DB для SQL Server для поддержки больших типами среды CLR (CLR) определяемого пользователем (UDT).  
   
@@ -128,7 +131,7 @@ ms.lasthandoff: 05/03/2018
 |DBTYPE_BSTR|Поддерживается (2), (5)|Недоступно|Поддерживаемые (3), (5)|Недоступно|  
 |DBTYPE_STR|Поддерживается (2), (5)|Недоступно|Поддерживаемые (3), (5)|Недоступно|  
 |DBTYPE_IUNKNOWN|Поддерживаемые (6)|Недоступно|Поддерживаемые (6)|Недоступно|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается (5)|Недоступно|Поддерживаемые (3), (5)|Недоступно|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Поддерживается (5)|Недоступно|Поддерживаемые (3), (5)|Недоступно|  
 |DBTYPE_VARIANT (VT_BSTR)|Поддерживается (2), (5)|Недоступно|Недоступно|Недоступно|  
   
 ### <a name="key-to-symbols"></a>Расшифровка символов  

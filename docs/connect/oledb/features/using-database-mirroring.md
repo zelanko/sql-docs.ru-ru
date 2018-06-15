@@ -2,7 +2,7 @@
 title: Использование зеркального отображения базы данных | Документы Microsoft
 description: Использование зеркального отображения базы данных с помощью драйвера OLE DB для SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -21,18 +21,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9ba469d6f17618f06b92c257982b430c3636b916
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69cf01aa4211bcc75e2bcbecec47a42fabf57e34
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612039"
 ---
 # <a name="using-database-mirroring"></a>Использование зеркального отображения базы данных
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]Используйте [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] вместо него.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
  Зеркальное отображение базы данных, впервые представленное в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], — это решение, предназначенное для повышения доступности баз данных и избыточности данных. Драйвер OLE DB для SQL Server предоставляет неявную поддержку зеркального отображения базы данных, поэтому разработчику не требуется писать дополнительный код или выполнять другие действия после настройки для базы данных.  
   

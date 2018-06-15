@@ -2,9 +2,10 @@
 title: Использовать определяемые пользователем типы больших значений CLR (OLE DB) | Документы Microsoft
 description: Использование больших определяемых пользователем типов CLR (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -13,15 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0f27d6ad2844e5c87ec29d5e09ff150d61bb9ac7
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 8e9733ecabfd5af93eb2e72328819fe54e8d9668
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305853"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666054"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Использование определяемых пользователем типов больших данных CLR (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   В этом образце показывается выборка строк с большими, определяемыми пользователем типами из результирующего набора. Дополнительные сведения см. в разделе [Large CLR User-Defined типы &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md). Данный образец работает с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] или более поздней версией.  
   

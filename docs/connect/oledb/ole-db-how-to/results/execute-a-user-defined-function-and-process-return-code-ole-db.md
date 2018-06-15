@@ -2,10 +2,10 @@
 title: Выполнение определяемой пользователем функции и Обрабатывание кода возврата (OLE DB) | Документы Microsoft
 description: Выполнение определяемой пользователем функции и обрабатывание кода возврата использует драйвер OLE DB для SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,26 +16,29 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2355ea72a10fc5cee1ea35ae5c682cf5cd269c8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a11b48a03bef7b6842b427d43d1a73c311a08b42
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665554"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>Выполнение определяемой пользователем функции и обрабатывание кода возврата (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   В этом примере выполняется определяемая пользователем функция и распечатывается код возврата. Этот образец не поддерживается на архитектуре IA64.  
   
  Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
   
 > [!IMPORTANT]  
->  По возможности используйте проверку подлинности Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Пример  
  Выполните первый листинг кода ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]), чтобы создать хранимую процедуру, используемую приложением.  
   
- Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните второй листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] . Чтобы соединиться с именованным экземпляром, измените строку подключения из L"(local)» для L"(local)\\\name», где имя является именем экземпляра. По умолчанию [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий msoledbsql.h.  
+ Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните второй листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Чтобы соединиться с именованным экземпляром, измените строку подключения из L"(local)» для L"(local)\\\name», где имя является именем экземпляра. По умолчанию [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий msoledbsql.h.  
   
  Выполните третий листинг кода ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]), чтобы удалить хранимую процедуру, используемую приложением.  
   
@@ -369,6 +372,6 @@ go
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Инструкции по обработке результатов & #40; OLE DB & #41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [Результаты инструкции по обработке &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

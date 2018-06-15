@@ -2,10 +2,10 @@
 title: Вызов хранимой процедуры (OLE DB) | Документы Microsoft
 description: Вызов хранимой процедуры (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,14 +22,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6f4ee66e9f1eaf37f78e3a0a4a326655554c58f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1dae3bfeae19e302d7e6320dcd61695d5d79d1e1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612289"
 ---
 # <a name="stored-procedures---calling"></a>Хранимые процедуры - вызов
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Хранимая процедура может иметь ноль и более параметров. Также она может возвращать значение. При использовании драйвера OLE DB для SQL Server, параметры хранимой процедуре могут передаваться по:  
   
@@ -119,7 +122,7 @@ ms.lasthandoff: 05/03/2018
 {rpc SalesByCategory}  
 ```  
   
- Образец приложения, демонстрирующий escape-последовательность RPC, в разделе [выполнение хранимой процедуры & #40; С помощью синтаксиса RPC & #41; и обработки возвращаемых кодов и выходные параметры & #40; OLE DB & #41; ](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Образец приложения, демонстрирующий escape-последовательность RPC, в разделе [выполнение хранимой процедуры &#40;с использованием синтаксиса RPC&#41; и процесс коды возврата и выходные параметры &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Инструкция Transact-SQL EXECUTE  
  Escape-последовательность ODBC CALL и escape-последовательность RPC — это предпочтительные способы для вызова хранимой процедуры, а не [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) инструкции. Драйвер OLE DB для SQL Server использует механизм RPC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для оптимизации обработки команд. Этот протокол RPC повышает производительность, устраняя большую часть обработки параметров и синтаксической проверки инструкций на сервере.  
@@ -130,7 +133,7 @@ ms.lasthandoff: 05/03/2018
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры](../../oledb/ole-db/stored-procedures.md)  
   
   

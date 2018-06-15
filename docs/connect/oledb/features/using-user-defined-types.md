@@ -2,7 +2,7 @@
 title: Использование определяемых пользователем типов | Документы Microsoft
 description: Использование определяемых пользователем типов с помощью драйвера OLE DB для SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -25,14 +25,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 06f444fed839be02320351f1f3862e42500df66f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6dd1191c3bb987f99b854f2e736f86dafb9e5ed1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612239"
 ---
 # <a name="using-user-defined-types"></a>Использование определяемых пользователем типов данных
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   В [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] представлены определяемые пользователем типы данных (UDT). Определяемые пользователем типы расширяют систему типов SQL, позволяя хранить объекты и пользовательские структуры данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных. Определяемые пользователем типы могут содержать несколько типов данных, и их поведение может отличаться от традиционных псевдонимов типов данных, которые состоят из одного системного типа данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Определяемые пользователем типы определяются с помощью любого языка, поддерживаемого средой .NET CLR, который создает поддающийся проверке код. Сюда входят Microsoft Visual C#<sup>®</sup> и Visual Basic<sup>®</sup> .NET. Данные представляются в виде полей и свойств класса или структуры .NET, а поведения определяются методами класса или структуры.  
   
@@ -50,13 +53,13 @@ ms.lasthandoff: 05/03/2018
 |Тип данных|На сервер<br /><br /> **UDT**|На сервер<br /><br /> **не UDT**|С сервера<br /><br /> **UDT**|С сервера<br /><br /> **не UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|Поддерживается<sup>6</sup>|Ошибка<sup>1</sup>|Поддерживается<sup>6</sup>|Ошибка<sup>5</sup>|  
-|DBTYPE_BYTES|Поддерживается<sup>6</sup>|N/A<sup>2</sup>|Поддерживается<sup>6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_WSTR|Поддерживается<sup>3,6</sup>|N/A<sup>2</sup>|Поддерживается<sup>4,6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_BSTR|Поддерживается<sup>3,6</sup>|N/A<sup>2</sup>|Поддерживается<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_STR|Поддерживается<sup>3,6</sup>|N/A<sup>2</sup>|Поддерживается<sup>4,6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Не поддерживается|N/A<sup>2</sup>|Не поддерживается|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается<sup>6</sup>|N/A<sup>2</sup>|Поддерживается<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Поддерживается<sup>3,6</sup>|N/A<sup>2</sup>|Недоступно|N/A<sup>2</sup>|  
+|DBTYPE_BYTES|Поддерживается<sup>6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>6</sup>|Н/Д<sup>2</sup>|  
+|DBTYPE_WSTR|Поддерживается<sup>3,6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>4,6</sup>|Н/Д<sup>2</sup>|  
+|DBTYPE_BSTR|Поддерживается<sup>3,6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>4</sup>|Н/Д<sup>2</sup>|  
+|DBTYPE_STR|Поддерживается<sup>3,6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>4,6</sup>|Н/Д<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Не поддерживается|Н/Д<sup>2</sup>|Не поддерживается|Н/Д<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Поддерживается<sup>6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>4</sup>|Н/Д<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Поддерживается<sup>3,6</sup>|Н/Д<sup>2</sup>|Недоступно|Н/Д<sup>2</sup>|  
   
  <sup>1</sup>Если сервера тип, отличный от DBTYPE_UDT, указывается с **ICommandWithParameters::SetParameterInfo** и типом метода доступа является DBTYPE_UDT, при выполнении инструкции возникает ошибка (DB_E_ERRORSOCCURRED; состояние параметра — DBSTATUS_E_BADACCESSOR). В остальных случаях данные отсылаются на сервер, но сервер возвращает ошибку, указывающую на то, что нет неявного преобразования определяемого пользователем типа в тип данных параметра.  
   
@@ -142,7 +145,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>Набор свойств DBPROPSET_SQLSERVERPARAMETER  
  Для поддержки определяемых пользователем типов через OLE DB, драйвер OLE DB для SQL Server реализует новый набор свойств DBPROPSET_SQLSERVERPARAMETER, который содержит следующие значения:  
   
-|Название|Тип|Описание|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|Идентификатор трехкомпонентного имени.<br /><br /> Для параметров определяемого пользователем типа это свойство содержит строку, представляющую имя каталога, в котором определен этот тип.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|Идентификатор трехкомпонентного имени.<br /><br /> Для параметров определяемого пользователем типа данное свойство содержит строку, представляющую имя схемы, в которой определен этот тип.|  
@@ -153,7 +156,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>Набор свойств DBPROPSET_SQLSERVERCOLUMN  
  Для поддержки создания таблиц в **ITableDefinition** интерфейс, драйвер OLE DB для SQL Server добавляет к набору свойств DBPROPSET_SQLSERVERCOLUMN три новых столбца.  
   
-|Название|Описание|Тип|Описание|  
+|Имя|Описание|Тип|Описание|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|Для столбцов типа DBTYPE_UDT это свойство содержит строку, указывающую имя каталога, в котором определен определяемый пользователем тип.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|Для столбцов типа DBTYPE_UDT это свойство содержит строку, указывающую имя схемы, в которой определен определяемый пользователем тип.|  
@@ -196,6 +199,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>См. также  
  [Драйвер OLE DB для компонентов SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

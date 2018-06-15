@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a6df21ff42d0394b153aa97a0b5639fe47beec9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aab41821d2f4eb1eb3f92ce998fe440593567d0a
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308973"
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -69,7 +69,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 В зависимости от значения параметра *$fetchType* , возвращаемый **массив** может быть **массивом**с числовым индексом и (или) ассоциативным **массивом**. По умолчанию возвращается **массив** с числовыми и ассоциативными ключами. Для значения в возвращенном массиве используется тип данных PHP по умолчанию. Дополнительные сведения о типах данных PHP по умолчанию см. в статье [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
 Если возвращается столбец без имени, то ассоциативным ключом для данного элемента массива будет пустая строка (""). Например, рассмотрим эту инструкцию Transact-SQL, которая вставляет значение в таблицу базы данных и извлекает созданный сервером первичный ключ:  
   
 ```

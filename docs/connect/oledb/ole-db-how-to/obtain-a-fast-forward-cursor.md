@@ -2,9 +2,10 @@
 title: Получение курсора FAST_FORWARD | Документы Microsoft
 description: Получение курсора FAST_FORWARD использует драйвер OLE DB для SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,15 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1ee0d08209aa6d68416e7007303eb7c8c6d7d8c3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 304787325b72951d41e31771b2da5f153af6e554
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305733"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665864"
 ---
 # <a name="obtain-a-fastforward-cursor"></a>Получение курсора FAST_FORWARD
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Чтобы получить курсор только для чтения с последовательным доступом, установите свойства набора строк DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT и DBPROP_OWNUPDATEDELETE в значение VARIANT_TRUE.  
   

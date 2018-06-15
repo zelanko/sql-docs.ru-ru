@@ -2,9 +2,10 @@
 title: Установление подключения к источнику данных | Документы Microsoft
 description: Подключения к источнику данных с помощью драйвера OLE DB для SQL Server
 ms.custom: ''
-ms.date: 06/11/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|oledb-driver-for-sql-server
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,15 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 369837675c2be7790fe1d2e49d95c749c0d68d56
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
-ms.translationtype: HT
+ms.openlocfilehash: 7b4a864d10b109f32e552ed82d9d89868011496d
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403536"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666104"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Устанавливает соединение с источником данных
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Чтобы открыть драйвер OLE DB для SQL Server, потребитель должен сначала создать экземпляр объекта источника данных, вызвав **CoCreateInstance** метод. Каждый поставщик OLE DB определяется уникальным идентификатором класса (CLSID). Драйвер OLE DB для SQL Server идентификатор класса касается CLSID_MSOLEDBSQL. Также можно использовать символ MSOLEDBSQL_CLSID, который разрешает драйвер OLE DB для SQL Server, который используется в msoledbsql.h, на которое имеется ссылка.  
   

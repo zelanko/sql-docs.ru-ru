@@ -3,7 +3,6 @@ title: Устойчивость простоя подключения
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
@@ -11,11 +10,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: b2ffbf3ef57db31fcfd3a714fe9e2f6e0565237f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 250e4e6334a31d760c8fcb3e1e571ec1a726d020
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307263"
 ---
 # <a name="idle-connection-resiliency"></a>Устойчивость простоя подключения
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 
 Если произведение **ConnectRetryCount** умноженное **ConnectRetryInterval** больше, чем **LoginTimeout**, то клиент прекращает попытки подключения один раз  **LoginTimeout** достигается; в противном случае она будет продолжать повторить попытку подключения до **ConnectRetryCount** достигается.
 
-#### <a name="remarks"></a>Замечания
+#### <a name="remarks"></a>Примечания
 
 Устойчивость подключения применяется, если соединение находится в состоянии простоя. Сбои, которые могут возникнуть при выполнении транзакции, например, не будет вызывать попыток повторного соединения — произойдет сбой, в противном случае было бы ожидать. Следующие ситуации, известные как состояния сеанса без возможности восстановления, не будет вызывать попыток повторного соединения:
 

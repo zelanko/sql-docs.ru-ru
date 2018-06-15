@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: caf886971b2163bcdcf855ad22a43b62d4c0b529
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2d327564cc640c0474b2c9009a114f558db5cc4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288553"
 ---
 # <a name="synchronize21-method-rds"></a>Метод Synchronize21 (RDS)
 Синхронизировать заданного набора записей с базой данных, указанной в строке подключения для использования с ADO 2.1.  
@@ -61,7 +61,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *pStatusArray*  
  Значение variant, применяемое для возврата безопасный массив состояния строк для строк, затронутых при синхронизации. Не задается, если задан ни один из следующих параметров синхронизации: *RefreshWithUpdate*, *обновление* и *RefreshConflicts*.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  *HandlerString* параметр может иметь значение null. Что происходит в этом случае зависит от того, как настроен сервер служб удаленных рабочих СТОЛОВ. Обработчик строку «MSDFMAP.handler» указывает, что обработчик предоставленный корпорацией Майкрософт (Msdfmap.dll) следует использовать. Обработчик строку «MASDFMAP.handler,sample.ini» указывает, должны использоваться обработчик Msdfmap.dll и, аргумент «sample.ini» должен передаваться обработчику. Затем Msdfmap.dll интерпретирует аргумент как направление использования sample.ini для проверки строк соединения и запроса.  
   
 > [!NOTE]

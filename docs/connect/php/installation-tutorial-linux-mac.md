@@ -3,7 +3,6 @@ title: Linux и macOS учебника установки драйвера Micro
 ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
@@ -11,11 +10,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: c1115eaf304fa360cf446b67fe98157d324c2347
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 70811e91fc24d96ee311ab149b1124b570845f27
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307933"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Linux и macOS учебника установки драйвера Microsoft SQL Server для PHP
 Следующие инструкции предполагают чистую среду и показано, как установка 7.x PHP, драйвер Microsoft ODBC, Apache и драйверы Майкрософт для PHP для SQL Server на Ubuntu 16.04 и 17.10, RedHat 7, Debian 8 и 9, Suse 12 и macOS X 10.11 и 10.12. Эти инструкции следует рекомендовать Установка драйверов с помощью нагрузка PECL, но можно также загрузить готовых двоичных файлов с [драйверы Майкрософт для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases) Github страница проекта и установите их следуйте инструкциям в разделе [ Загрузка драйверов Майкрософт для PHP для SQL Server](../../connect/php/loading-the-php-sql-driver.md). Описание загрузки расширения и почему мы не добавляйте расширения файл PHP.ini, разделе [загрузка драйверов](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).

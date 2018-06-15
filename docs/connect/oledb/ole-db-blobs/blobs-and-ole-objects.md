@@ -2,10 +2,10 @@
 title: Большие двоичные объекты и объекты OLE | Документы Microsoft
 description: Большие двоичные объекты и объекты OLE
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-blobs
+ms.component: oledb|ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,18 +20,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e78fe8db35684bb35e4111a38d3d0ba938891785
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cacbe007e9bf0187648ad1fd95c8b6616fb8a300
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666084"
 ---
 # <a name="blobs-and-ole-objects"></a>Большие двоичные объекты и объекты OLE
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Драйвер OLE DB для SQL Server предоставляет **ISequentialStream** интерфейс для поддержки доступа потребителя к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **текст**, **изображения** , **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, и типы данных xml в двоичном виде больших объектов (BLOB). **Чтения** метод **ISequentialStream** позволяет потребителю получать большого объема данных в управляемых фрагментах.  
   
- Образец, демонстрирующий эту функцию, в разделе [набор больших данных & #40; OLE DB & #41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
+ Образец, демонстрирующий эту функцию, в разделе [большие объемы данных, задайте &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
  Драйвер OLE DB для SQL Server можно использовать реализованный потребителем **IStorage** интерфейс, если потребитель предоставляет указатель на интерфейс в метод доступа, предназначенном для изменения данных.  
   
@@ -59,13 +62,13 @@ ms.lasthandoff: 05/03/2018
   
 -   Если строка содержит больше чем одно большое значение данных и DBPROP_ACCESSORDER не имеет значения DBPROPVAL_AO_RANDOM, потребитель либо необходимо использовать для извлечения данных в строке или обработать все больших значений данных перед получением других драйвер OLE DB для SQL Server строк, поддерживаемый курсорами значения строк. Если DBPROP_ACCESSORDER имеет значение DBPROPVAL_AO_RANDOM, драйвер OLE DB для SQL Server кэширует все типы данных xml как большие двоичные объекты (BLOB), чтобы он был доступен в любом порядке.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
--   [Получение данных большого объема](../../oledb/ole-db-blobs/getting-large-data.md)  
+-   [Возврат больших данных](../../oledb/ole-db-blobs/getting-large-data.md)  
   
 -   [Присваивание больших данных](../../oledb/ole-db-blobs/setting-large-data.md)  
   
--   [Поддержка потоков для выходных параметров BLOB](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
+-   [Поддержка потоков для выходных параметров BLOB-объектов](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
 ## <a name="see-also"></a>См. также  
  [Драйвер OLE DB для SQL Server программирования](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        

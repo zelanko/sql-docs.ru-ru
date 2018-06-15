@@ -2,9 +2,10 @@
 title: Получение строк с помощью закладок (OLE DB) | Документы Microsoft
 description: Получение строк с помощью закладок (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,15 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6898dcdae2744429397554e0c3ad382a6d3f063f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: b282efe0c230c8070b3be9d92e969aa305c4f654
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306123"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665594"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Получение строк с помощью закладок (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Потребитель устанавливает для поля **dwFlag** значение структуры привязки, равное DBCOLUMNSINFO_ISBOOKMARK, для указания, что столбец используется в качестве закладки. Пользователь также присваивает свойству набора строк DBPROP_BOOKMARKS значение VARIANT_TRUE. Это обеспечивает присутствие в наборе строк столбца с номером 0. Затем с помощью метода**IRowsetLocate::GetRowsAt** производится выборка строк, начиная со строки, указанной в качестве смещения относительно закладки.  
   

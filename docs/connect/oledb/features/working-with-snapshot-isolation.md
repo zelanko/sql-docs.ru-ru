@@ -2,7 +2,7 @@
 title: Работа с изоляцией моментальных снимков | Документы Microsoft
 description: Работа с изоляцией моментальных снимков в драйвер OLE DB для SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -25,14 +25,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7c70ad99b77f4dc70329d86adc936f18faced890
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de034f85b2daa053a3259417d6f10afdef71063d
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611789"
 ---
 # <a name="working-with-snapshot-isolation"></a>Работа с изоляцией моментального снимка
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   В [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] появился новый уровень изоляции «моментального снимка», предназначенный для повышения параллелизма приложений оперативной обработки транзакций (OLTP). В предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] параллелизм был основан исключительно на блокировках, что могло вызвать проблемы с блокировками и взаимоблокировками для некоторых приложений. Изоляция моментального снимка зависит от расширений управления версиями строк и предназначена для улучшения производительности путем исключения сценариев блокировки модулей чтения или записи.  
   
@@ -51,7 +54,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="dbpropsetsession"></a>Набор свойств DBPROPSET_SESSION  
  Набор свойств DBPROPSET_SESSION изменен и указывает на поддержку уровня изоляции моментальных снимков благодаря добавлению значения DBPROPVAL_TI_SNAPSHOT, используемого в свойстве DBPROP_SESS_AUTOCOMMITISOLEVELS. Это новое значение указывает, что уровень изоляции моментального снимка поддерживается независимо от того, включено ли в базе данных управление версиями. В следующей таблице перечислены значения DBPROP_SESS_AUTOCOMMITISOLEVELS:
   
-|Идентификатор свойства|Description|  
+|Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
 |DBPROP_SESS_AUTOCOMMITISOLEVELS|Тип: VT_I4<br /><br /> Только для чтения R Чтение и запись:<br /><br /> Описание: Задает битовую маску, которая указывает уровень изоляции транзакций в режиме автоматической фиксации. Значения, которые могут быть установлены в этой битовой маске совпадают значения, которые могут быть установлены для DBPROP_SUPPORTEDTXNISOLEVELS.|  
   
@@ -63,6 +66,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>См. также  
  [Драйвер OLE DB для компонентов SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
- [Свойства набора строк и поведение](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)  
+ [Свойства и поведение наборов строк](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
   

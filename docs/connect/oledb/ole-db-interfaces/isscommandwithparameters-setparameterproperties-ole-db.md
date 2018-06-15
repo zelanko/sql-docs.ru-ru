@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d10258b631c5ed6852d940682815793497ffb7a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4153cfc2aacf881d6996472ceaec6e387a4d6caa
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305393"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ HRESULT SetParameterProperties(
 ## <a name="return-code-values"></a>Значения кода возврата  
  **ISSCommandWithParameters::SetParameterProperties** метод возвращает те же коды ошибок, что и метод ядра OLE DB **ICommandProperties::SetProperties** метод.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Настройка свойств параметров с помощью этого метода разрешена для каждого параметра в отдельности по порядковому номеру или с помощью одного **ISSCommandWithParameters::SetParameterProperties** вызвать после структура SSPARAMPROPS строится из массива свойств.  
   
  **SetParameterInfo** метод должен вызываться перед вызовом метода **ISSCommandWithParameters::SetParameterProperties** метод. Вызов метода `SetParameterProperties(0, NULL)` очищает все указанные свойства параметра, тогда как вызов метода `SetParameterInfo(0,NULL,NULL)` очищает все сведения о параметре, в том числе все свойства, которые могут быть связаны с параметром.  
@@ -75,15 +75,15 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- Усовершенствования в компоненте database engine, начиная с [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] разрешить ISSCommandWithParameters::SetParameterProperties получать более точные описания ожидаемых результатов. Эти более точные результаты могут отличаться от значения, возвращаемые методом ISSCommandWithParameters::SetParameterProperties в предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Metadata Discovery](../../oledb/features/metadata-discovery.md).  
+ Усовершенствования в компоненте database engine, начиная с [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] разрешить ISSCommandWithParameters::SetParameterProperties получать более точные описания ожидаемых результатов. Эти более точные результаты могут отличаться от значения, возвращаемые методом ISSCommandWithParameters::SetParameterProperties в предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [обнаружение метаданных](../../oledb/features/metadata-discovery.md).  
   
-|Член|Description|  
+|Член|Описание|  
 |------------|-----------------|  
 |*iOrdinal*|Порядковый номер переданного параметра.|  
 |*cPropertySets*|Количество структур DBPROPSET в *rgPropertySets*.|  
 |*rgPropertySets*|Указатель на буфер, в который будет возвращен массив структур DBPROPSET.|  
   
-## <a name="see-also"></a>См. также:  
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+## <a name="see-also"></a>См. также  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

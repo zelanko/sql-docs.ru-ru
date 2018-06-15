@@ -2,10 +2,10 @@
 title: Подготовка команд | Документы Microsoft
 description: Подготовка команд с помощью драйвера OLE DB для SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-commands
+ms.component: oledb|ole-db-commands
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3fadd6d85159607ad9450567ac8f042689da5fa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca162d2fffd23b55d53d34d32ad92a5cdbce7545
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666064"
 ---
 # <a name="preparing-commands"></a>Подготовка команд
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Драйвер OLE DB для SQL Server поддерживает подготовку команды для оптимизированного многократного выполнения одной команды; Подготовка команды создает дополнительную нагрузку, но потребителю нет необходимости подготавливать команду для ее выполнения более одного раза. Как правило, подготовку команды следует выполнять в том случае, если планируется ее не менее чем четырехкратное выполнение.  
   

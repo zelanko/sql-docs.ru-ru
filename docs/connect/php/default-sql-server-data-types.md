@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3aea23b8a3fcf3632b164846a3addaba7a501e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1d49ff27e0698f0c475f8150654b01bbaf1d283
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307233"
 ---
 # <a name="default-sql-server-data-types"></a>Типы данных SQL Server по умолчанию
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,9 +32,9 @@ ms.lasthandoff: 05/03/2018
 |Тип данных PHP|Тип SQL Server по умолчанию в драйвере SQLSRV|Тип SQL Server по умолчанию в драйвере PDO_SQLSRV|  
 |-----------------|------------------------------------------------|-----------------------------------------------------|  
 |NULL|varchar(1)|не поддерживается|  
-|Boolean|bit|bit|  
-|Целочисленный|int|int|  
-|Число с плавающей запятой|float(24)|не поддерживается|  
+|Логическое значение|bit|bit|  
+|Целочисленный|ssNoversion|ssNoversion|  
+|float|float(24)|не поддерживается|  
 |Строка (длина менее 8000 байт)|varchar (<string length>)|varchar (<string length>)|  
 |Строка (длина более 8000 байт)|varchar(max)|varchar(max)|  
 |Ресурс|Не поддерживается.|Не поддерживается.|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 |Поток (кодировка: двоичная)|varbinary|varbinary|  
 |Array|Не поддерживается.|Не поддерживается.|  
 |Объект|Не поддерживается.|Не поддерживается.|  
-|DateTime (1)|datetime|Не поддерживается.|  
+|DateTime (1)|DATETIME|Не поддерживается.|  
   
 ## <a name="see-also"></a>См. также  
 [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)

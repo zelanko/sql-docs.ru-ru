@@ -2,10 +2,10 @@
 title: Сопоставление типов данных в интерфейсе ITableDefinition | Документы Microsoft
 description: Сопоставление типов данных в интерфейсе ITableDefinition
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-types
+ms.component: oledb|ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,14 +22,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ade365add5b89069e86f67d82dfa84638bcb71f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d613fc7be394bbf16c86c5e217e3dfe83a4296a1
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666354"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Сопоставление типов данных в интерфейсе ITableDefinition
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   При создании таблицы с помощью **ITableDefinition::CreateTable** функции, можно указать драйвер OLE DB для SQL Server потребителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных в *pwszTypeName* членом Массив структуры DBCOLUMNDESC, который передается. Если потребитель указывает тип данных столбца по имени, тип данных OLE DB сопоставление, представленное *wType* структуры DBCOLUMNDESC, учитывается.  
   
@@ -37,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 |Тип данных OLE DB|SQL Server<br /><br /> тип данных|Дополнительные сведения|  
 |----------------------|------------------------------|----------------------------|  
-|DBTYPE_BOOL|**бит**||  
+|DBTYPE_BOOL|**bit**||  
 |DBTYPE_BYTES|**двоичный**, **varbinary**, **изображения,** или **varbinary(max)**|Драйвер OLE DB для SQL Server проверяет *ulColumnSize* структуры DBCOLUMNDESC. На основе значения и версию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляра, драйвер OLE DB для SQL Server выполняется сопоставление типа **изображения**.<br /><br /> Если значение *ulColumnSize* меньше, чем максимальная длина **двоичных** тип данных столбца, то драйвер OLE DB для SQL Server проверяет структуры DBCOLUMNDESC *rgPropertySets*член. Если значение DBPROP_COL_FIXEDLENGTH равно VARIANT_FALSE, драйвер OLE DB для SQL Server сопоставляет тип для **двоичных**. Если значение свойства равно VARIANT_FALSE, драйвер OLE DB для SQL Server сопоставляет тип для **varbinary**. В любом случае структуры DBCOLUMNDESC *ulColumnSize* определяет ширину создаваемого столбца SQL Server.|  
 |DBTYPE_CY|**money**||  
 |DBTYPE_DBTIMESTAMP|**datetime2**||  
@@ -58,7 +61,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  При создании новой таблицы, драйвер OLE DB для SQL Server сопоставляет только OLE DB данных типа перечисления значения, указанные в предыдущей таблице. Попытка создать таблицу со столбцом любого другого типа данных OLE DB приводит к ошибке.  
 
-## <a name="see-also"></a>См. также:  
- [Типы данных & #40; OLE DB & #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+## <a name="see-also"></a>См. также  
+ [Типы данных &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

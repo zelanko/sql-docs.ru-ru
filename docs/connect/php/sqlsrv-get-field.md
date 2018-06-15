@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8aea71596e1a977839fb7294df7324f48324e0c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c1396662cc17d54899eb697694c452e663eaf533
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309273"
 ---
 # <a name="sqlsrvgetfield"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,7 +50,7 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
 ## <a name="return-value"></a>Возвращаемое значение  
 Данные поля. Можно указать тип данных PHP для возвращаемых данных с помощью параметра *$getAsType* . Если тип возвращаемых данных не указан, возвращается тип данных PHP по умолчанию. Дополнительные сведения о типах PHP см. в статье [Default PHP Data Types](../../connect/php/default-php-data-types.md). Дополнительные сведения об указании типов данных PHP см. в статье [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
 Сочетание **sqlsrv_fetch** и **sqlsrv_get_field** предоставляет прямой доступ к данным.  
   
 Сочетание **sqlsrv_fetch**/**sqlsrv_get_field** загружает только одно поле результирующего набора строк в память сценария и позволяет PHP тип возвращаемого значения. (Сведения об указании типов возвращаемых данных PHP см. в разделе [как: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).) Это сочетание функций также позволяет извлекать данные в виде потока. (Сведения о получении данных в виде потока см. в разделе [извлечение данных в виде потока с помощью драйвера SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md).)  

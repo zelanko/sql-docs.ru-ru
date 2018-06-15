@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 07782a5b8290b41a5a11557c503fcbfd0736790b
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: f853cb623bee0fcd27d5cc7e6203610ed1603335
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611979"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для 2017 г. SQL Server в Linux
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/24/2018
 > [!TIP]
 > Дополнительные сведения см. в статье [требования к системе для](sql-server-linux-setup.md#system) для SQL Server в Linux. Последние политика поддержки для SQL Server 2017 г. в разделе [политика технической поддержки для Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
-## <a name="tools"></a>Средства
+## <a name="tools"></a>Инструменты
 
 Большинство существующих клиентских средств, предназначенных для SQL Server можно легко выбрать целевую SQL Server на ОС Linux. Некоторые средства может назначить определенную версию для работы с Linux. Полный список средств SQL Server см. в разделе [средства и программы для SQL Server SQL](../tools/overview-sql-tools.md).
 
@@ -215,17 +216,18 @@ sudo systemctl start mssql-server
 | &nbsp; | Растяжение базы данных |
 | &nbsp; | PolyBase |
 | &nbsp; | Распределенный запрос с подключениями сторонних поставщиков |
+| &nbsp; | Связанные серверы с источниками данных, отличных от SQL Server |
 | &nbsp; | Системные расширенные хранимые процедуры (XP_CMDSHELL, и т. д.) |
 | &nbsp; | Таблицы filetable, FILESTREAM |
 | &nbsp; | Задать сборки среды CLR с EXTERNAL_ACCESS или UNSAFE разрешение |
-| &nbsp; | Расширение буферного пула |
+| &nbsp; | Buffer Pool Extension |
 | **Агент SQL Server** |  Подсистемы: CmdExec, PowerShell, агент чтения очереди, служб SSIS, SSAS, SSRS |
-| &nbsp; | Предупреждения |
+| &nbsp; | видны узлы |
 | &nbsp; | Агент чтения журнала. |
 | &nbsp; | Система отслеживания измененных данных |
 | &nbsp; | Управляемое резервное копирование |
 | **Обеспечение высокого уровня доступности** | Зеркальное отображение базы данных  |
-| **Безопасность** | расширенное управление ключами |
+| **безопасность** | расширенное управление ключами |
 | &nbsp; | Проверки подлинности AD для связанных серверов | 
 | &nbsp; | Проверки подлинности AD для групп доступности (и действий) | 
 | &nbsp; | инструменты сторонних AD (Centrify Vintela, Powerbroker) | 
@@ -242,7 +244,7 @@ sudo systemctl start mssql-server
 
 В следующих разделах описаны известные проблемы с выпуском Общая доступность (GA) 2017 г. SQL Server в Linux.
 
-#### <a name="general"></a>Общие сведения
+#### <a name="general"></a>Общие
 
 - Обновление до выпуска общедоступной версии 2017 г. SQL Server поддерживается только из CTP-версии 2.1 или более поздней версии. 
 
@@ -339,7 +341,7 @@ sudo systemctl start mssql-server
 
 - При установке mssql conf и выполнению установки локализованной SQL Server, неправильные символы национального алфавита отображаются после локализованный текст «Настройка SQL Server...». Или для установок на основе нелатинских предложение может отсутствовать полностью. Отсутствует предложение должны отображаться следующие Локализованная строка: «лицензирования продукта успешно обработана.  Новый выпуск [\<имя\> выпуск]». Эта строка выводится только в информационных целях и далее накопительное обновление SQL Server решает эту для всех языков. Это не влияет на установки SQL Server каким-либо образом. 
 
-#### <a name="full-text-search"></a>Full-Text Search
+#### <a name="full-text-search"></a>Компонент Full-text Search
 
 - В этом выпуске, включая фильтры для документов Office доступны не все фильтры. Список поддерживаемых фильтров см. в разделе [установить SQL Server Full-Text Search в Linux](sql-server-linux-setup-full-text-search.md#filters).
 
