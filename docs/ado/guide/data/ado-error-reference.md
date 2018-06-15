@@ -2,7 +2,6 @@
 title: Справочник ошибок ADO | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf0631384cf390752d60e6465372558748880278
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef03fa5fe9a3f7de71fea7ecdc14a315cb6b31c9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271493"
 ---
 # <a name="ado-errors"></a>Ошибок ADO
 **ErrorValueEnum** константа описывает значения ошибок ADO. Полный список этих перечислимых констант, включая значения, в разделе [ошибок ADO приложение б:](../../../ado/guide/appendixes/appendix-b-ado-errors.md). В этом разделе будет изучить некоторые из наиболее интересных ошибок с описаниями некоторых определенных ситуациях, которые могут вызывать их или решений для устранения проблемы. Оба **ErrorValueEnum** перечислены константы и короткий положительное десятичное число.

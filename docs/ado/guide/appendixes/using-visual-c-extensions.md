@@ -2,7 +2,6 @@
 title: Использование расширений Visual C++ | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1c832cff45ad5998918c6f5f67927e49bc9d4e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06e2d13c589d4dc88f3a148122322f483c49d2fb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271593"
 ---
 # <a name="visual-c-extensions"></a>Расширения Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>Интерфейс IADORecordBinding
@@ -116,7 +116,7 @@ Update(CADORecordBinding *binding)
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*Class*|Класс определенные элементы привязки и переменных C/C++.|
+|*Класс*|Класс определенные элементы привязки и переменных C/C++.|
 |*Ordinal*|Порядковый номер, начиная с единицы, из **записей** поле, соответствующее вашей переменной C/C++.|
 |*Тип данных*|Эквивалентным типом данных ADO переменной C/C++ (в разделе [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) список допустимых типов данных). Значение **записей** поля будут преобразованы в этот тип данных, при необходимости.|
 |*Буфер*|Имя переменной C/C++ где **записей** поля будут храниться.|

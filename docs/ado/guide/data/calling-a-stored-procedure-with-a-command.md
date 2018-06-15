@@ -2,7 +2,6 @@
 title: Вызов хранимой процедуры с помощью команды | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dbb9edb3744f1cc2483cfbe4d0d08a06868998d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63e2b0c1958f680b85bfe8b1df99442cc588b291
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270453"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>Вызов хранимой процедуры с помощью команды
 Команду можно использовать для вызова хранимой процедуры. Пример кода в конце этого раздела ссылается на хранимую процедуру в базе данных Northwind, вызывается CustOrdersOrders, которая определяется следующим образом.  

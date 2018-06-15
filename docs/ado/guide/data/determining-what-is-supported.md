@@ -2,7 +2,6 @@
 title: Определение того, что поддерживается | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd86d96489e59926935567a0f8aa7cb23bf9f3ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6eaf6ed08d6e79f8428e86b983794cb32c6447d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270593"
 ---
 # <a name="determining-what-is-supported"></a>Определение того, что поддерживается
 **Поддерживает** метод используется для определения, является ли заданное **записей** объект поддерживает функциональные возможности определенного типа. Он имеет следующий синтаксис:  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 boolean = recordset.Supports(CursorOptions )  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **Поддерживает** метод возвращает логическое значение, указывающее, поддерживает ли поставщик все функции, определяемым аргументом CursorOptions. Можно использовать **поддерживает** метод, чтобы определить, какие функциональные возможности **записей** поддерживает. Если **записей** объект поддерживает функции, соответствующей константы, в *CursorOptions*, **поддерживает** возвращает **True**. В противном случае он возвращает **False**.  
   
  С помощью **поддерживает** метод, можно проверить возможность **записей** объект для добавления новых записей, использование закладок, используйте **найти** используйте прокрутку, используйте  **Индекс** свойство и для выполнения пакетных обновлений. Полный список констант и их значений см. в разделе [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md).  

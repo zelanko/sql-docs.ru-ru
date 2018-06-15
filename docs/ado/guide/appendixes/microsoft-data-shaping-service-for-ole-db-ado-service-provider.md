@@ -2,7 +2,6 @@
 title: Microsoft службы формирования данных для OLE DB (ADO поставщиком услуг) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3020789835820519e07ac3e465899c3ac93b0ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b661ac56f26ffa1a467c65f332ec4b506b2e09e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271353"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Службы OLE DB Обзор формирования данных Microsoft
 > [!IMPORTANT]

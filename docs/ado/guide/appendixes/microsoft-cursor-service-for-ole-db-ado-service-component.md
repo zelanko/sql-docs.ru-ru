@@ -2,7 +2,6 @@
 title: Служба Microsoft курсора для OLE DB (компонент Service ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a829fa8510054489bdc8f310941d9526f25b82a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d119e537cd400f2bfd69720f17485366c23b4582
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271333"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Службы Microsoft курсора OLE DB Обзор
 Служба курсора для OLE DB дополняет поддержки курсорных функций поставщиков данных. В результате пользователь понимает относительно однообразного функции из всех поставщиков данных.
@@ -90,7 +90,7 @@ rs.Properties("Optimize") = True
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Типы курсоров, доступных для дополнения **записей**.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Дополняет типы блокировок, доступных для **записей**. Включает пакетного обновления.|
-|[Сортировка](../../../ado/reference/ado-api/sort-property.md)|Указывает один или несколько полей имен, **записей** сортируется, а также будет ли каждое поле сортируется в порядке возрастания или убывания.|
+|[Sort](../../../ado/reference/ado-api/sort-property.md)|Указывает один или несколько полей имен, **записей** сортируется, а также будет ли каждое поле сортируется в порядке возрастания или убывания.|
 
 ## <a name="method-behavior"></a>Поведение методов
  Служба курсора для OLE DB включает или влияет на поведение [поле](../../../ado/reference/ado-api/field-object.md) объекта [Append](../../../ado/reference/ado-api/append-method-ado.md) метода; и **записей** объекта [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), и [Сохранить](../../../ado/reference/ado-api/save-method.md) методы.

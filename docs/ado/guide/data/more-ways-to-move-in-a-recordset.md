@@ -2,7 +2,6 @@
 title: Дополнительные способы перемещения в наборе записей | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21c9c99d9e168d73a333fe001b56dcdf845339f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 894ab6b4daba13d6d57dda178f45bf07fc8a8f8d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272133"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Дополнительные способы перемещения в наборе записей
 Следующие четыре метода используются для перемещения или перемещения, в **записей**: [MoveFirst, MoveLast, MoveNext и MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Некоторые из этих методов будут недоступны на однонаправленные курсоры).  

@@ -2,7 +2,6 @@
 title: Сохранение данных | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f4fed35b629f8dd1eae89c42895fb8a780c4cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 438a09dd8f835653f9b2c76d73b7ce7f4583c1a5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272203"
 ---
 # <a name="persisting-data"></a>Сохранение данных
 Портативные компьютеры (например, с помощью ноутбуков) создал потребность в приложениях, которые могут выполняться в подключенном и отключенном состоянии. ADO добавлена поддержка это, предоставляя возможность сохранения клиентских курсоров разработчик **записей** на диск и перезагрузить его позже.  
@@ -116,7 +116,7 @@ Destination, PersistFormat
 'EndPersist  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Этот раздел содержит следующие подразделы.  
   
 -   [Дополнительные сведения о сохраняемости набора записей](../../../ado/guide/data/more-about-recordset-persistence.md)  

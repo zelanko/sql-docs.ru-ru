@@ -2,7 +2,6 @@
 title: 'HelloData: Простой ADO приложения | Документы Microsoft'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3fbc270a27350160933019c16c3b354270beb64f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe8a5f0cd56c50441a44ab59da234791438876a7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271703"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Простой ADO приложения
 Это простое приложение пошаговое выполнение каждой из четырех основных операций ADO: начало, проверки, изменение и обновление данных. Эти операции выполняются в образце базы данных Northwind, входящий в состав Microsoft® SQL Server. Чтобы сосредоточиться на основ ADO и снизить перегруженность кода, обработка ошибок в примере сводится к минимуму.  
@@ -46,19 +46,19 @@ ms.lasthandoff: 05/03/2018
   
  ![Показывает форму Form1 для приложения HelloData VB](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Тип элемента управления|property|Значение|  
+|Тип элемента управления|Свойство|Значение|  
 |------------------|--------------|-----------|  
-|форма|Название|Form1|  
+|форма|Имя|Form1|  
 ||Высота|6500|  
 ||Ширина|6500|  
-|MS DataGrid|Название|grdDisplay1|  
-|TextBox|Название|txtDisplay1|  
+|MS DataGrid|Имя|grdDisplay1|  
+|TextBox|Имя|txtDisplay1|  
 ||Multiline|true|  
-|Кнопки|Название|cmdGetData|  
+|Кнопки|Имя|cmdGetData|  
 ||Заголовок|Получение данных|  
-|Кнопки|Название|cmdExamineData|  
+|Кнопки|Имя|cmdExamineData|  
 ||Заголовок|Анализ данных|  
-|Кнопки|Название|cmdEditData|  
+|Кнопки|Имя|cmdEditData|  
 ||Заголовок|Изменение данных|  
-|Кнопки|Название|cmdUpdateData|  
+|Кнопки|Имя|cmdUpdateData|  
 ||Заголовок|Обновление данных|

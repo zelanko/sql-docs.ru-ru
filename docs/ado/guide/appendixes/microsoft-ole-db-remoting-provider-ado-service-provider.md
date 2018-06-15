@@ -2,7 +2,6 @@
 title: Поставщик Microsoft OLE DB удаленного взаимодействия (поставщик службы ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b69c6f64de019aadf71476958c26f99a46dabac2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c68d168716351a8c3adda7b5ff10e6ef825e19cf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271293"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Общие сведения о поставщике Microsoft OLE DB удаленного взаимодействия
 Поставщик Microsoft OLE DB удаленного доступа включает локальный пользователь на компьютере клиента для вызова поставщиков данных на удаленном компьютере. Укажите параметры поставщика данных для удаленного компьютера, как если бы был локального пользователя на удаленном компьютере. Затем укажите параметры, используемые поставщиком удаленного доступа для доступа к удаленным компьютером. Можно затем получить удаленный компьютер, как если бы вы были локального пользователя.
@@ -73,7 +73,7 @@ Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
  В ADO 2.0, поставщик OLE DB удаленного доступа может быть указан только в *ActiveConnection* параметр [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта **откройте** метод. Начиная с ADO 2.1, поставщик может также быть указан в *ConnectionString* параметр [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта **откройте** метод.
 
  Эквивалент **RDS. DataControl** объекта [SQL](../../../ado/reference/rds-api/sql-property.md) свойство недоступно. [Записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта **откройте** метод *источника* используется аргумент.

@@ -2,7 +2,6 @@
 title: Ошибки ADO | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a36f5b96ac0c04b6315ba5a135bbab0dbe75df2b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: adae5d5247a3d0966ad5685eacc1a6cdebdc5437
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270853"
 ---
 # <a name="ado-run-time-errors"></a>Ошибки во время выполнения ADO
 Ошибки во время выполнения ошибки ADO фиксируются в программу. Перехват ошибок механизма язык программирования позволяет перехватывать и обрабатывать их. Например, в Visual Basic, используйте **On Error** инструкции. В Visual C++ он зависит от метода, используемого для доступа к библиотекам ADO. С помощью #import, использовать **try-catch-** блока. В противном случае программистов C++ необходимо явным образом получать объект ошибки путем вызова **GetErrorInfo**. Приведенная ниже процедура sub в Visual Basic демонстрирует перехват ошибка ADO:
