@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916409"
 ---
 # <a name="network-database-access"></a>Сетевой доступ к базе данных
 Доступ к базе данных по сети требуется ряд компонентов, каждый из которых не зависит от и находится под интерфейс программирования. На следующем рисунке показаны эти компоненты.  

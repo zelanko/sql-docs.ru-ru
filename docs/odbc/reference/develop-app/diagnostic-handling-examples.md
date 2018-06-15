@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908199"
 ---
 # <a name="diagnostic-handling-examples"></a>Примеры обработки диагностики
 В следующих примерах показано, как различные компоненты в подключение ODBC может создавать соответствующие диагностические сообщения и того, как различные драйверы могут возвращать диагностики в приложение с **SQLGetDiagRec**.  

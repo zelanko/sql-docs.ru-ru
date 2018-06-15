@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903119"
 ---
 # <a name="paradox-data-types"></a>Типы данных Paradox
 Драйвера ODBC Paradox Paradox типы данных сопоставляются с типами данных ODBC SQL. В следующей таблице перечислены все типы данных Paradox и показаны типы данных, которые они сопоставляются с ODBC SQL.  

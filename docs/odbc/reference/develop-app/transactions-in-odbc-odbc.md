@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915488"
 ---
 # <a name="transactions-in-odbc-odbc"></a>Транзакции в ODBC ODBC
 Транзакции в ODBC выполняются на уровне соединения. то есть когда приложение завершает транзакцию, фиксирует или откатывает назад все операции, выполняемые через все дескрипторы инструкций для этого соединения.  

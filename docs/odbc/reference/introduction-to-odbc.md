@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917129"
 ---
 # <a name="introduction-to-odbc"></a>Общие сведения об ODBC
 В этом разделе содержится краткое журнал языка SQL и ODBC и включает общие сведения об интерфейсе ODBC.  

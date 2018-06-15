@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909399"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>Соединение с помощью SQLDriverConnect
 **SQLDriverConnect** используется для подключения к источнику данных с помощью строки подключения. **SQLDriverConnect** используется вместо **SQLConnect** по следующим причинам:  

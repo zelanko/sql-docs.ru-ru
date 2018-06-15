@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913299"
 ---
 # <a name="sql-conformance-levels"></a>Уровни согласованности SQL
 Указывает значение, возвращаемое вызовом уровень грамматику SQL-92, поддерживаемых драйвером **SQLGetInfo** с типом SQL_SQL_CONFORMANCE сведения. Указывает, соответствует ли драйвер уровни записи, переходном состоянии FIPS, промежуточного или Full, определенные в SQL-92.  

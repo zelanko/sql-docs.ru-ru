@@ -37,6 +37,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904679"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Поддержка для правила, триггеры, значения по умолчанию и хранимые процедуры (Visual FoxPro драйвер ODBC)
 Не удается создать правила Visual FoxPro, триггеры, значения по умолчанию или хранимых процедур с помощью драйвера ODBC для Visual FoxPro. Тем не менее приложения могут взаимодействовать с существующие правила, триггеры, значения по умолчанию или хранимых процедур, как создаются, обновляет или удаляет Visual FoxPro данные, хранящиеся в базе данных.  

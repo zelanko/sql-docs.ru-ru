@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32922069"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Разработка драйвера ODBC, поддерживающие пула соединений
 В этом разделе приведены подробные сведения о разработке драйвер ODBC, который содержит сведения о драйвере следует служб пулов подключений.  

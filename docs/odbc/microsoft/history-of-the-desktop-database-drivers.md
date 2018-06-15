@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902239"
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>Журнал драйверов для настольных баз данных
 В следующей таблице показаны журнал версий драйверов базы данных.  

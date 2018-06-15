@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902889"
 ---
 # <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns (драйверы для настольных баз данных)
 Уникальный индекс будет возвращаться (при наличии) для флага SQL_BEST_ROWID в *fColType*. Результирующий набор не возвращается для флага SQL_ROWVER.  

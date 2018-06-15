@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911809"
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>Сопоставление функции диспетчера драйверов
 Диспетчер драйверов поддерживает две точки входа для функции, принимающие строковые аргументы. Объявление функции (**SQLDriverConnect**) — форма ANSI функции. Форма Юникода снабжен *W* (**SQLDriverConnectW**.)  

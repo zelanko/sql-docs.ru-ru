@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914239"
 ---
 # <a name="what-the-driver-manager-does"></a>Назначение диспетчера драйверов
 В следующей таблице представлены как ODBC 3 *.x* диспетчера драйверов сопоставляет вызовы ODBC 2. *x* а ODBC 3 *.x* драйверы.  

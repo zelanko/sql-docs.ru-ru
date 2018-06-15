@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912199"
 ---
 # <a name="retrieving-results-advanced"></a>Извлечение результатов (Дополнительно)
 Приложение может указать, что смещение добавляется связанный адреса буфер данных и соответствующие длины/индикатора буфера адреса при **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, или **SQLSetPos** вызывается. Результаты этих дополнений определения адреса, используемые в этих операциях.  

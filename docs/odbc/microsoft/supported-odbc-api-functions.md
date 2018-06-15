@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913339"
 ---
 # <a name="supported-odbc-api-functions"></a>Поддерживаемые ODBC функций API
 Выравнивание предназначено для уведомления приложения, какие функции доступны на него с помощью драйвера. Microsoft Desktop базы данных драйверы ODBC поддерживают все функции основных компонентов и уровня 1.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904069"
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>Запросы и обновления данных Visual FoxPro из Microsoft Access
 Можно запрашивать и обновлять данные, хранящиеся в базе данных Visual FoxPro из базы данных Microsoft Access с помощью параметра связанной таблицы.  

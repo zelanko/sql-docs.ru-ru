@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32870729"
 ---
 # <a name="perform-a-sql-server-migration-assessment"></a>Оценка миграции SQL Server
 Следующие пошаговые инструкции помогают выполнять первой оценку по переходу на SQL Server в локальной среде, SQL Server на виртуальной Машине Azure или база данных SQL Azure с помощью помощника по миграции данных.

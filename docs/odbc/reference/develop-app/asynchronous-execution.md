@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907459"
 ---
 # <a name="asynchronous-execution"></a>Асинхронное выполнение
 ODBC поддерживает асинхронные операции для операции инструкции и соединения. Чтобы определить, при завершении асинхронной операции двумя способами.  

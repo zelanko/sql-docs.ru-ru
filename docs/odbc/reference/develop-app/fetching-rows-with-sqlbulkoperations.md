@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912269"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>Выборка строк с SQLBulkOperations
 Данные можно refetched в набор строк с помощью закладок с помощью вызова **SQLBulkOperations.** Строки, которые должны быть извлечены идентифицируются по закладки в столбце привязанного закладки. Не выбраны столбцы со значением SQL_COLUMN_IGNORE.  

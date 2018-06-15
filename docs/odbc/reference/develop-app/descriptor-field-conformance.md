@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911849"
 ---
 # <a name="descriptor-field-conformance"></a>Дескриптор поля соответствия
 Следующая таблица указывает уровень соответствия для каждого ODBC поле заголовка дескриптора, где это является правильно определенным.  
