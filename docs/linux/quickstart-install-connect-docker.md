@@ -18,6 +18,7 @@ ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455498"
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Краткое руководство: Запуск образа контейнера 2017 г. SQL Server с помощью Docker
 

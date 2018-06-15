@@ -22,9 +22,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0019ed3d26abed45ccbbf47892172193099070cf
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33070921"
 ---
 # <a name="name-element-for-schema-dta"></a>Элемент Name описания схемы (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

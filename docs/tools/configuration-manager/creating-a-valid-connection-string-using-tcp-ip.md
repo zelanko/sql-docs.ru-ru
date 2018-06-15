@@ -22,9 +22,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f604651f6b457801b799df81d6cde6d29e79e5d0
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33073131"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>Создание допустимой строки подключения с использованием протокола TCP/IP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

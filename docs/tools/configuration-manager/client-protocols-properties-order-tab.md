@@ -18,9 +18,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 394e659a17fb4a27deac8fd62c342aa11bdac72f
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33069231"
 ---
 # <a name="client-protocols-properties-order-tab"></a>Свойства клиентских протоколов (вкладка «Порядок»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

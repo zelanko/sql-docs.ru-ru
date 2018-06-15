@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035381"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)
 В этом учебнике вы создадите круговую диаграмму в отчете Reporting Services с разбивкой на страницы. Вы добавите процентные значения и объедините несколько небольших секторов в один сектор.

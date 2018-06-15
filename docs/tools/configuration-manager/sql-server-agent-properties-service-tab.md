@@ -16,9 +16,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c95a67c5907b1e546506827a32d69f848026ab1b
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33069851"
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>Свойства агента SQL Server (вкладка «Службы»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

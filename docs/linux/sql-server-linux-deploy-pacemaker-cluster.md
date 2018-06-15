@@ -16,6 +16,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550025"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Развертывание кластера Pacemaker для SQL Server в Linux
 

@@ -22,9 +22,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: faa68d2dd7fa5b1caab9f3ea04e09d873e1a4deb
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33071351"
 ---
 # <a name="database-element-for-workload-dta"></a>Элемент Database описания рабочей нагрузки (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

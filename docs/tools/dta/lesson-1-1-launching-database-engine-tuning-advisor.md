@@ -22,9 +22,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f95e9b831b21ab71053c04d2ab2bc27238906c4d
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33072911"
 ---
 # <a name="lesson-1-1---launching-database-engine-tuning-advisor"></a>Урок 1–1. Запуск помощника по настройке ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

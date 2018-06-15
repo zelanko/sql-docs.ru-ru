@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028701"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)
   Проблемы с картами могут возникнуть при добавлении карты или слоя карты в отчет с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , при настройке существующей карты или слоя карты в отчете, при предварительном просмотре карты в отчете или при публикации отчета с картой. Этот раздел помогает устранять эти проблемы.  

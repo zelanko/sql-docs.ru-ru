@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030281"
 ---
 # <a name="troubleshoot-reporting-services"></a>Устранение неполадок со службами Reporting Services
   Разделы этой статьи содержат сведения о том, как выявить и устранить проблемы с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

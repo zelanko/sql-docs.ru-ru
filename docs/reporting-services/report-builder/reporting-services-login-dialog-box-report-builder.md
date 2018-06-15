@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018691"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Диалоговое окно «Имя входа служб Reporting Services» (построитель отчетов)
   В диалоговом окне **Имя входа служб Reporting Services** задаются учетные данные для публикации отчетов на сервере отчетов. За помощью при возникновении проблем с этими учетными данными обратитесь к администратору сервера отчетов.  

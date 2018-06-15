@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019841"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 Карты — это отличный способ визуализировать географические данные. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] есть три разных типа визуализации карт, а также доступны встроенные карты континентов и некоторых отдельных странах. Вы также можете [передавать и использовать пользовательские карты](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   

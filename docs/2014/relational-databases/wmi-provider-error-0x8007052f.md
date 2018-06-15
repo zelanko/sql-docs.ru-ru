@@ -22,6 +22,7 @@ ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "34426166"
 ---
 # <a name="wmi-error-0x8007052f"></a>WMI Error 0x8007052f
     

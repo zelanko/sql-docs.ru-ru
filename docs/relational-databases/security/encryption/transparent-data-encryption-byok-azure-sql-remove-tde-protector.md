@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32966949"
 ---
 # <a name="remove-a-transparent-data-encryption-tde-protector-using-powershell"></a>Удаление средства защиты прозрачного шифрования данных (TDE) с помощью PowerShell
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

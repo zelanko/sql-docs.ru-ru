@@ -32,9 +32,10 @@ manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c4f0f070a9f8644fe8198adb7ed6c11559932c40
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33074721"
 ---
 # <a name="osql-utility"></a>Программа osql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -101,7 +102,7 @@ C:\>osql
  Использует доверительное соединение вместо запроса пароля.  
   
  **-S** *имя_сервера*[ **\\***имя_экземпляра*]  
- Указывает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для подключения. Укажите значение *имя_сервера* , чтобы подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по умолчанию на этом сервере. Укажите *имя_сервера***\\*** имя_экземпляра*, чтобы подключиться к именованному экземпляру компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на этом сервере. Если сервер не указан, программа **osql** устанавливает подключение к используемому по умолчанию экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на локальном компьютере. Этот параметр необходим при выполнении программы **osql** с удаленного компьютера в сети.  
+ Указывает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для подключения. Укажите значение *имя_сервера* , чтобы подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по умолчанию на этом сервере. Укажите *имя_сервера***\\***имя_экземпляра*, чтобы подключиться к именованному экземпляру компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на этом сервере. Если сервер не указан, программа **osql** устанавливает подключение к используемому по умолчанию экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на локальном компьютере. Этот параметр необходим при выполнении программы **osql** с удаленного компьютера в сети.  
   
  **-H** *имя_рабочей_станции*  
  Имя рабочей станции. Имя рабочей станции хранится в **sysprocesses.hostname** и выводится процедурой **sp_who**. Если этот параметр не указан, используется текущее имя компьютера.  

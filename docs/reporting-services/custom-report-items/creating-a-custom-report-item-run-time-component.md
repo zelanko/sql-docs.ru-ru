@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016001"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Создание компонента времени выполнения пользовательского элемента отчета
   Компонент времени выполнения пользовательского элемента отчета реализуется как компонент [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] с помощью любого CLS-совместимого языка и вызывается обработчиком отчетов во время выполнения. Свойства компонента времени выполнения в среде разработки задаются настройкой соответствующего компонента времени разработки пользовательского элемента отчета.  
