@@ -2,7 +2,6 @@
 title: Поставщик Microsoft OLE DB для ODBC | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 612ca78e6af181aaf3e2d3b1eb16ae5fea7eec3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f539df9c19bacbe449479f45d5e7fd4fe59613d5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271633"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Поставщик Microsoft OLE DB для ODBC Обзор
 Программисту ADO или служб удаленных рабочих СТОЛОВ идеальном мире бы одно данных каждый источник предоставляет интерфейс OLE DB, чтобы вызвать ADO непосредственно в источник данных. Несмотря на то, что все чаще других поставщиков базы данных реализует интерфейсы OLE DB, некоторые источники данных не еще доступны таким образом. Однако большинство систем DBMS в настоящее время доступны через ODBC.
@@ -84,7 +84,7 @@ MSDASQL
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
  Если вы используете **DSN** или **FileDSN**, он должен быть определен через администратор источников данных ODBC в панели управления Windows. В Microsoft Windows 2000 администратор ODBC находится в разделе Администрирование. В более ранних версиях Windows, называется значок администратора ODBC **32-разрядная версия ODBC** или просто **ODBC**.
 
  В качестве альтернативы для параметра **DSN**, можно указать драйвер ODBC (**ДРАЙВЕР =**), такие как «SQL Server»; имя сервера (**SERVER =**); и имя базы данных (**Базы данных =**).
@@ -176,7 +176,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Доступность Стандартная ADO **записей** свойства:
 
-|property|ForwardOnly|Динамический|Keyset|Статические|
+|Свойство|ForwardOnly|Динамический|Keyset|Статические|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|недоступно|недоступно|чтение/запись|чтение/запись|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|недоступно|недоступно|чтение/запись|чтение/запись|
@@ -210,7 +210,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Да|Да|Да|Да|
 |[Клон](../../../ado/reference/ado-api/clone-method-ado.md)|Нет|Нет|Да|Да|
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Да|Да|Да|Да|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Да|Да|Да|Да|
+|[Удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Да|Да|Да|Да|
 |[Получение строк](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|Да|Да|Да|
 |[Переместить](../../../ado/reference/ado-api/move-method-ado.md)|Да|Да|Да|Да|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|Да|Да|Да|
