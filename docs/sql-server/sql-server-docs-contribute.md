@@ -2,8 +2,6 @@
 title: Участие в работе над документацией по SQL Server | Документы Майкрософт
 ms.date: 04/12/2018
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -14,11 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41bdbc55a67865e195ea06a10610af8224edf06b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 508dd4a658810bb6c62c1b4cf7eb067d9ccc563d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288763"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Участие в работе над документацией по SQL Server
 
@@ -75,7 +74,7 @@ ms.lasthandoff: 05/03/2018
 - [Настройка учетной записи GitHub](https://docs.microsoft.com/contribute/get-started-setup-github)
 - [Установка средств для создания содержимого](https://docs.microsoft.com/contribute/get-started-setup-tools)
 - [Локальная настройка репозитория Git для документации](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [Использование средств для внесения изменений](https://docs.microsoft.com/contribute/full-workflow)
+- [Использование средств для внесения изменений](https://docs.microsoft.com/contribute/how-to-write-workflows-majo)
 
 Если вы отправляете запрос на вытягивание со значительными изменениями, вы получите в GitHub комментарий с просьбой отправить **Лицензионное соглашение на участие (CLA)**. Прежде чем ваш запрос на вытягивание будет принят, необходимо заполнить веб-форму.
 
@@ -94,7 +93,7 @@ ms.lasthandoff: 05/03/2018
 
 Содержимое в репозитории [sql-docs](https://github.com/MicrosoftDocs/sql-docs) упорядочивается по нескольким стандартным папкам.
 
-| Папка | Description |
+| Папка | Описание |
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | Содержит все опубликованное содержимое по SQL Server. Разделы содержимого логически упорядочиваются по вложенным папкам. |
 | [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | Содержит включаемые файлы. Они представляют собой блоки содержимого, которые могут включаться в несколько статей. |
@@ -138,5 +137,3 @@ ms.lasthandoff: 05/03/2018
 Найдите статью и отправьте изменение, чтобы помочь сообществу SQL Server. 
 
 Спасибо!
-
-
