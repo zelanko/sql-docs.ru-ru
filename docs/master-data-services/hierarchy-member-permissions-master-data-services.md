@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e14a87d5398f3d47274708e5c411b5259314d883
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 122409bc6f4f03dff871a72f7a70aca83e557308
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402026"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Разрешения на элементы иерархии (службы Master Data Services)
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  Разрешения для элементов иерархии применяются к версии модели, которой они назначаются и ко всем создаваемым в будущем копиям этой версии. Они не применяются к версиям, созданным ранее версии, для которой были назначены эти разрешения.  
   
-|Разрешение|Description|  
+|Разрешение|Описание|  
 |----------------|-----------------|  
 |**Чтение**|Элементы отображаются.<br /><br /> <br /><br /> Примечание. При назначении только разрешения **Чтение** уровню **Корневой**элементы на более низких уровнях, чем **Корневой** , будут доступны только для чтения. Однако в явных иерархиях и коллекциях пользователь может перемещать элементы на уровень **Корневой** и добавлять новые элементы к уровню **Корневой**.|  
 |**Создание**|Разрешение "Создание" недоступно в разрешении элемента иерархии.|  
