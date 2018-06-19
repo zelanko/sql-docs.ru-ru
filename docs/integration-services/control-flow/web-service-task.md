@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c82398a98bcd3233586d0effbc369fe6827321f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ce926659bd322dfc24c105a1c684ff087944352
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411046"
 ---
 # <a name="web-service-task"></a>Задача «Веб-служба»
   Задача «Веб-служба» выполняет метод веб-службы. Возможно использование задачи «Веб-служба» в следующих целях:  
@@ -61,7 +60,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Пользовательские сообщения для ведения журнала, доступные в задаче «Веб-служба»  
  В следующей таблице перечислены пользовательские записи в журнале для задачи «Веб-служба». Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Запись журнала|Description|  
+|Запись журнала|Описание|  
 |---------------|-----------------|  
 |**WSTaskBegin**|Задача получила доступ к веб-службе.|  
 |**WSTaskEnd**|Задача завершила метод веб-службы.|  
@@ -165,7 +164,7 @@ ms.lasthandoff: 05/03/2018
  **OutputType**  
  Выберите тип хранения, используемый для хранения результатов. Это свойство имеет параметры, указанные в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Соединение с файлом**|Хранить результаты в файле. При выборе этого значения отображается динамический параметр **Файл**.|  
 |**Переменная**|Хранить результаты в переменной. При выборе этого значения отображается динамический параметр **Переменная**.|  

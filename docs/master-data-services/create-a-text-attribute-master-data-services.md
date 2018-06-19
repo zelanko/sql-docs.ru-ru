@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d69a53b139216242bc7c26316098e9b95cb01717
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f94ba76faa316e4acb8e40a68d03b00e6b26fc34
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403176"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>Создание текстового атрибута (службы Master Data Services)
 
@@ -43,12 +43,12 @@ ms.lasthandoff: 05/03/2018
 ## <a name="attribute-information"></a>Сведения об атрибутах  
  Для каждого созданного атрибута в сетке создается строка с семью столбцами. В следующей таблице приводятся описания этих столбцов.  
   
-|Столбец|Description|  
+|Столбец|Описание|  
 |------------|-----------------|  
 |Состояние|Состояние атрибута.<br /><br /> Когда вы нажимаете "Сохранить", появляется изображение ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния"), указывающее на обновление атрибута.<br /><br /> Если при создании или редактировании атрибута произойдет ошибка, появится изображение ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки").<br /><br /> В противном случае состояние является нормальным, и появляется изображение ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния").|  
 |Имя|Имя атрибута.|  
 |Отображаемое имя|Отображаемое имя атрибута.|  
-|Description|Описание атрибута.|  
+|Описание|Описание атрибута.|  
 |Ширина отображаемой области (в пикселях)|Ширина атрибута.|  
 |Тип и свойства|Сведения о типе и типе данных атрибута.|  
 |Включить отслеживание изменений|Определяет, включено ли отслеживание изменений для атрибута, а также отображает номер группы в круглых скобках.|  

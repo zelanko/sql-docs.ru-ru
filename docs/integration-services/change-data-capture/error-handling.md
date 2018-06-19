@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
@@ -16,11 +14,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd409daab0e317cff3ad474bda2963115caa1c60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f39b2ff34a821b00e8dd9cc2d003ad3b354df7d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405376"
 ---
 # <a name="error-handling"></a>Обработка ошибок
   Экземпляр Oracle CDC извлекает изменения из одной базы данных-источника Oracle (кластер Oracle RAC считается одной базой данных) и записывает зафиксированные изменения в таблицы изменений в базе данных CDC на целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице описаны различные коды состояния, которые экземпляр Oracle CDC может публиковать в своей таблице состояний.  
   
-|Состояние|Код состояния активности|Код состояния ошибки|Description|Подсостояние|  
+|Состояние|Код состояния активности|Код состояния ошибки|Описание|Подсостояние|  
 |------------|------------------------|-----------------------|-----------------|---------------|  
 |ABORTED|0|1|Экземпляр Oracle CDC не выполняется. Подтип состояния ABORTED указывает, что экземпляр Oracle CDC был активен, а затем неожиданно остановился.|Подтип состояния ABORTED задается главным экземпляром службы Oracle CDC Service, когда служба обнаруживает, что экземпляр Oracle CDC не выполняется, хотя имеет состояние ACTIVE.|  
 |Ошибка|0|1|Экземпляр Oracle CDC не выполняется. Состояние ERROR означает, что экземпляр CDC находился в состоянии ACTIVE, но затем произошла ошибка, которая исключает дальнейшую работу, и экземпляр отключился.|MISCONFIGURED: обнаружена неисправимая ошибка конфигурации.<br /><br /> PASSWORD-REQUIRED: для конструктора системы отслеживания измененных данных для Oracle от Attunity не был задан пароль или заданный пароль недействителен. Причиной может быть изменение пароля асимметричного ключа службы.|  

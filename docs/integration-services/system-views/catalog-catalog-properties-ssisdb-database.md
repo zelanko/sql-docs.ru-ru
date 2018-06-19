@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
@@ -16,18 +14,19 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27c42400a8f9c455a390fad9caac5a5ff2f41d0a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5de2d2b10c1def40790e590ead2d9b7c0c0d2ef7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408186"
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Отображает свойства каталога служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|Имя свойства каталога.|  
 |property_value|**nvarchar(256)**|Значение свойства каталога.|  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="remarks"></a>Remarks  
  В этом представлении отображается строка для каждого свойства каталога.
   
-|Имя свойства|Description|  
+|Имя свойства|Описание|  
 |-------------------|-----------------|  
 |**DEFAULT_EXECUTION_MODE**|Режим выполнения пакетов, установленный по умолчанию на уровне сервера: `Server` (0) или `Scale Out` (1). |
 |**ENCRYPTION_ALGORITHM**|Тип алгоритма шифрования конфиденциальных данных. Допустимыми значениями являются `DES`, `TRIPLE_DES`, `TRIPLE_DES_3KEY`, `DESX`, `AES_128`, `AES_192` и `AES_256`. Примечание. Для изменения этого свойства база данных каталога должна работать в однопользовательском режиме.|

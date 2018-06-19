@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7ca7c6b24514df7d27c42cfaab8aeb304454d5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 596d1922a2159a4fc5bd658cc2739624d71c2c2f
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406296"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Выбор копирования таблицы или запроса (мастер импорта и экспорта SQL Server)
   После того как вы укажете сведения о назначении и о том, как к нему подключиться, в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Выбор копирования таблицы или запроса**. На этой странице можно выбрать один из следующих вариантов действий.
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="screen-shot-of-the-specify-table-copy-or-query-page"></a>Снимок экрана: страница "Выбор копирования таблицы или запроса"    
  На следующем снимке экрана показана страница мастера **Выбор копирования таблицы или запроса** .    
     
- ![Страница "Выбор копирования таблицы или запроса" в мастере импорта и экспорта](../../integration-services/import-export-data/media/table-copy-or-query.png "Страница "Выбор копирования таблицы или запроса" в мастере импорта и экспорта")    
+ ![Страница "Выбор копирования таблицы или запроса" в мастере импорта и экспорта](../../integration-services/import-export-data/media/table-copy-or-query.png "Страница \"Выбор копирования таблицы или запроса\" в мастере импорта и экспорта")    
     
 ## <a name="specify-whether-to-copy-an-entire-table-or-write-a-query"></a>Копирование всей таблицы или создание запроса 
  **Скопировать данные из одной или нескольких таблиц или представлений**    

@@ -1,0 +1,8 @@
+# [Представления](views.md)
+## [Создание представлений](create-views.md)
+## [Создание индексированных представлений](create-indexed-views.md)
+## [Изменение представлений](modify-views.md)
+## [Изменение данных через представление](modify-data-through-a-view.md)
+## [Получение сведений о представлении](get-information-about-a-view.md)
+## [Переименование представлений](rename-views.md)
+## [Удаление представлений](delete-views.md)

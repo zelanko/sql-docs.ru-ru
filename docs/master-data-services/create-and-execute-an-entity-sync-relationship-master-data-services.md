@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d6fc15b14633191d1a7307a5b0fbf510ad3ecebc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dfa543da84e0dcfb454e089379e709075f302104
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402226"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Создание и выполнение отношений синхронизации сущностей (Master Data Services)
 
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="sync-relationship-information"></a>Сведения об отношениях синхронизации  
  Для всех созданных отношений синхронизации в сетке создается строка с 10 столбцами. В следующей таблице приводятся описания этих столбцов.  
   
-|Столбец|Description|  
+|Столбец|Описание|  
 |------------|-----------------|  
 |Состояние|Статус отношений синхронизации.<br /><br /> Когда вы нажимаете **Сохранить** или выполняете отношение синхронизации, появляется изображение ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния"), указывающее на обновление отношения синхронизации.<br /><br /> Если при создании, редактировании или выполнении отношения синхронизации произойдет ошибка, появится изображение ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки").<br /><br /> В противном случае состояние является нормальным, и появляется изображение ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния").|  
 |Исходная модель|Имя исходной модели.|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ec710d698f48e2f0168aa113b0c6d80848da4a6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4819f8384c3d436827db1d6e31c32cb4ac1303ae
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333698"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Явные иерархии (службы основных данных)
 
@@ -84,7 +84,7 @@ ms.lasthandoff: 05/03/2018
   
  Для объединения этих конечных элементов в заданных точках консолидации можно создать консолидированные элементы для сущности Product. Для этого надо вставить консолидированные элементы на том уровне дерева иерархии, где планируется объединить конечные элементы. Не существует никаких ограничений на то, где именно необходимо вставлять консолидированные элементы, однако каждый из них (и конечный, и объединенный) можно использовать только один раз.  
   
- ![Пример явной иерархии от узла "Горный велосипед"](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Пример явной иерархии от узла "Горный велосипед"")  
+ ![Пример явной иерархии от узла "Горный велосипед"](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Пример явной иерархии от узла \"Горный велосипед\"")  
   
  Консолидированные элементы можно использовать для группировки элементов на любом уровне, при этом консолидированные и конечные элементы сортируются в том порядке, который для них определен.  
   

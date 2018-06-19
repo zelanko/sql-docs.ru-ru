@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b68b33eeb18b07c19bf367be9fdcb27b45e632c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 825edb0d4002dec483756551e1c2b175acef7efe
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401456"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Служебная программа для запуска пакетов (dtexecui)
   **Программа выполнения пакетов** используется для запуска пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Служебная программа запускает пакеты, которые хранятся в одном из трех расположений: в базе данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] и файловой системе. Этот пользовательский интерфейс, который можно открыть из [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью команды **dtexecui** в командной строке, представляет альтернативу запуску пакетов с использованием программы командной строки **DTExec** .  
@@ -71,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
 |||  
 |-|-|  
-|Значение|Description|  
+|Значение|Описание|  
 |**SQL Server**|Выберите этот параметр, если пакет находится на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Укажите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и введите имя пользователя и пароль для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Указание каждого имени пользователя и пароля приводит к добавлению в командную строку параметров **/USER** *имя_пользователя* и **/PASSWORD** *пароль* options to the commи prompt.|  
 |**Файловая система**|Выберите этот параметр, если пакет находится в файловой системе.|  
 |**Хранилище пакетов служб SSIS**|Выберите этот параметр, если пакет находится в хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  

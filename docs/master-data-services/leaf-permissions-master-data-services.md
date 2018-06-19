@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -22,11 +21,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cac7056cb11a4d501effb0336496e63e25969292
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0ae7336f2b957d5cd846c0b5546bdaf2e3945ce
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400819"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Разрешения конечного элемента (службы основных данных)
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Разрешения, назначенные для атрибутов **Имя** и **Код** , не применяются.  
   
-|Разрешение|Description|  
+|Разрешение|Описание|  
 |----------------|-----------------|  
 |**Чтение**|Пользователь может просматривать конечные элементы и атрибуты.|  
 |**Создание**|Пользователь может создавать конечные элементы и назначать значения атрибутов во время создания.|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="attribute-permissions"></a>Разрешения атрибута  
  Разрешения атрибута применимы только к значениям атрибута указанной сущности. Пользователи с разрешениями только для атрибутов не могут добавлять или удалять элементы.  
   
-|Разрешение|Description|  
+|Разрешение|Описание|  
 |----------------|-----------------|  
 |**Чтение**|Пользователь может просматривать атрибуты.|  
 |**Создание**|Пользователь может назначать значения при создании элементов.|  

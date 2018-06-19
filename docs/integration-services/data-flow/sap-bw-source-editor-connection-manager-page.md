@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e43d77d15fb417d201e07d389d00df0be7aad145
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 646c2baeb42bbfc122455bd9c5981f0399d781b8
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407106"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Редактор источников SAP BW (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор источника SAP BW** , чтобы выбрать диспетчер соединений SAP BW для источника SAP BW. На этой странице можно также выбрать режим выполнения и параметры для извлечения данных из источника данных системы SAP Netweaver BW.  
@@ -62,7 +61,7 @@ ms.lasthandoff: 05/03/2018
  **Режим выполнения**  
  Укажите метод извлечения данных из источника.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**P – запустить цепочку процесса**|Запустите цепочку процессов. В этом случае пакет [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] запустит процесс извлечения.|  
 |**W – ждать уведомления**|Подождите уведомления системы SAP Netweaver BW перед тем, как начать извлечение данных. В этом случае система SAP Netweaver BW запустит процесс извлечения.|  

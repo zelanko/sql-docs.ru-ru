@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 748eecc0759365057c1dbb2c2610e6307faf6a68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0846c8135c4b9095ab9c5a1f5549fc0884dd6703
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405246"
 ---
 # <a name="transfer-logins-task"></a>Задача «Передача имен входа»
   Задача «Передача имен входа» служит для передачи одного или нескольких имен входа между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -115,7 +114,7 @@ ms.lasthandoff: 05/03/2018
  **LoginsToTransfer**  
  Выберите имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для копирования их с исходного сервера на целевой. Параметры этого свойства приведены в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**AllLogins**|Все имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на исходном сервере будут скопированы на целевой сервер.|  
 |**SelectedLogins**|На целевой сервер будут скопированы только имена входа, заданные списком **LoginsList** .|  
@@ -132,7 +131,7 @@ ms.lasthandoff: 05/03/2018
   
  Параметры этого свойства приведены в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**FailTask**|Задача не выполняется, если такое же имя входа уже существует на целевом сервере.|  
 |**Overwrite**|Задача перезаписывает имя входа на целевом сервере.|  

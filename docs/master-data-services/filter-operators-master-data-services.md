@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f4d3785155a0027f374b25f22b9586a215fd4ae9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e14ee29906ca9773aa88e9d400f17416ee8cd0a1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402616"
 ---
 # <a name="filter-operators-master-data-services"></a>Операторы фильтров (службы Master Data Services)
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="filter-operators"></a>Операторы фильтров  
   
-|Имя элемента управления|Description|  
+|Имя элемента управления|Описание|  
 |------------------|-----------------|  
 |**Равно**|Возвращает значения атрибутов, в точности совпадающие с указанными критериями. Например, для фильтрации по значению **Mountain-100**необходимо ввести **Mountain-100**.|  
 |**Не равно**|Возвращает значения атрибутов, не совпадающие в точности с указанными условиями. Условия фильтра должны точно совпадать со значением атрибута, который необходимо исключить из результатов. Например, чтобы исключить результаты, соответствующие **Mountain-100**, необходимо ввести **Mountain-100**.<br /><br /> <br /><br /> Примечание. Если вы применяете к атрибуту условие фильтра с предложением Is not equal, а в настройках базы данных параметр SET ANSI_NULLS имеет значение ON, все элементы, для которых этот атрибут имеет значение NULL, будут отфильтрованы и возвращены. Чтобы прекратить такое поведение, задайте параметру базы данных SET ANSI_NULLS значение OFF. Если параметр SET ANSI_NULLS имеет значение OFF, сравнение всех данных со значением NULL дает значение TRUE, если данные содержат значение NULL, при этом элемент не будет удовлетворять условию предложения «Is not equal». Дополнительные сведения см. в разделе [SET ANSI_NULLS (Transact-SQL)](../t-sql/statements/set-ansi-nulls-transact-sql.md).|  

@@ -1,14 +1,12 @@
 ---
 title: Диалоговое окно "Фильтр" (надстройка MDS для Excel) | Документы Майкрософт
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e775f606b81fd849f7089f15116d4bd0f4c514d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a9914b45153ccd8912d8009bc0baf7971eacce2
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408566"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Диалоговое окно «Фильтр» (надстройка MDS для Excel)
 
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="columns"></a>Столбцы  
  В разделе **Столбцы** можно определить атрибуты (столбцы), которые должны отображаться в Excel.  
   
-|Имя элемента управления|Description|  
+|Имя элемента управления|Описание|  
 |------------------|-----------------|  
 |Тип атрибута|Тип атрибута описывает тип элементов, с которыми вы собираетесь работать. В большинстве случаев это **Конечный элемент**. Дополнительные сведения о типах элементов см. в разделе [Элементы (службы Master Data Services)](../../master-data-services/members-master-data-services.md).|  
 |Явная иерархия|При выборе типа атрибута **Объединены** нужно также выбрать иерархию, к которой относятся консолидированные элементы. Дополнительные сведения см. в разделе [Явные иерархии (службы Master Data Services)](../../master-data-services/explicit-hierarchies-master-data-services.md).|  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="rows"></a>Строки  
  В разделе **Строки** можно определить элементы (строки), которые нужно отображать в Excel. Это делается путем определения условия фильтрации строк для отображения.  
   
-|Имя элемента управления|Description|  
+|Имя элемента управления|Описание|  
 |------------------|-----------------|  
 |attribute|Отображает атрибут, по которому необходимо фильтровать. Если в списке нет атрибутов, то это означает, что они не добавлены.<br /><br /> Примечание. Можно выполнять фильтрацию по атрибутам, которые не планируется показывать на листе.|  
 |Оператор|Содержит операторы, соответствующие типу выбранного атрибута. Дополнительные сведения см. в разделе [Операторы фильтров (службы Master Data Services)](../../master-data-services/filter-operators-master-data-services.md).|  
@@ -58,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="summary"></a>Сводка  
  В разделе **Сводка** можно просмотреть сведения об объемах данных, которые будут загружены, прежде чем выполнять загрузку.  
   
-|Имя элемента управления|Description|  
+|Имя элемента управления|Описание|  
 |------------------|-----------------|  
 |Модель|Имя модели.|  
 |Версия|Имя версии.|  

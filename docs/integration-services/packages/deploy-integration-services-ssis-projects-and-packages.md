@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,12 +22,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cdefcfcec0c273cfb662966895fc49b09c4460e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 5efe57352b1c3ddbbdc1a4db0eb64ba8a27af65f
+ms.sourcegitcommit: 9e83f308008c9e0da505a6064f652c638b8dfe76
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772148"
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35513019"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Развертывание проектов и пакетов служб Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] поддерживают две модели развертывания: модель развертывания проектов и устаревшую модель развертывания пакетов. Модель развертывания проектов позволяет развертывать проекты на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -152,7 +150,7 @@ ms.locfileid: "34772148"
   
      -или-  
   
-     Из командной строки запустите **isdeploymentwizard.exe** , расположенный в каталоге **%ProgramFiles%\Microsoft SQL Server\110\DTS\Binn**. На 64-разрядных компьютерах есть также 32-разрядная версия средства в каталоге **%ProgramFiles(x86)%\Microsoft SQL Server\100\DTS\Binn**.  
+     Из командной строки запустите **isdeploymentwizard.exe** , расположенный в каталоге **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**. На 64-разрядных компьютерах есть также 32-разрядная версия средства в каталоге **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
 2.  Чтобы выбрать файл развертывания для проекта, на странице **Выбор источника** щелкните **Файл развертывания проекта** .  
   

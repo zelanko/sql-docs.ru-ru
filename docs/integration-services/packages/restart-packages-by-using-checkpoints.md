@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: daae51399d0366cf11f751c7abc17601c8d5e2c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2694e985acff1f3d520647f1db171c3b61471b2
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409296"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Перезапуск пакетов с помощью контрольных точек
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могут перезапустить пакеты, при выполнении которых произошел сбой, начиная с момента этого сбоя вместо перезапуска всего пакета. Если настройка пакета предполагает использование контрольных точек, сведения о выполнении пакета записываются в файл контрольных точек. Файл контрольных точек используется при перезапуске давшего сбой пакета для осуществления повторного запуска пакета с момента сбоя. В случае успешного выполнения пакета файл контрольных точек удаляется, а затем при следующем выполнении пакета создается повторно.  
@@ -58,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице представлены свойства пакета, которые устанавливаются для использования контрольных точек.  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |CheckpointFileName|Определяет имя файла контрольных точек.|  
 |CheckpointUsage|Определяет, используются ли контрольные точки.|  
@@ -71,7 +70,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="checkpoint-usage"></a>Использование контрольных точек  
  Свойство CheckpointUsage может принимать следующие значения:  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Никогда**|Указывает, что файл контрольных точек не используется и пакет выполняется с начала рабочего процесса пакета.|  
 |**Всегда**|Указывает, что файл контрольных точек используется всегда и пакет перезапускается с момента предыдущего сбоя в выполнении. Если файл контрольных точек не обнаружен, при выполнении пакета происходит сбой.|  

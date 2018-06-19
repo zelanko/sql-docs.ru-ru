@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 02/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1353473342bde2498b1c5fc888273f173a29c137
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f90a8b24e68d225cb929d4139b8efc42642e1a22
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411556"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Диалоговое окно «Просмотр данных» (мастер импорта и экспорта SQL Server)
   После указания данных, которые необходимо скопировать, можно нажать кнопку **Просмотр** , чтобы открыть диалоговое окно **Просмотр данных** . На этой странице можно просмотреть до 200 строк образца данных из источника данных. Таким образом вы убедитесь, что мастер будет копировать именно необходимые данные.
@@ -30,7 +29,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="screen-shot-of-the-preview-data-page"></a>Снимок экрана: страница "Просмотр данных" 
  На следующем снимке экрана показано диалоговое окно **Просмотр данных** мастера.  
  
-![Страница "Просмотр данных" в мастере импорта и экспорта](../../integration-services/import-export-data/media/preview-data.png "Страница "Просмотр данных" в мастере импорта и экспорта")  
+![Страница "Просмотр данных" в мастере импорта и экспорта](../../integration-services/import-export-data/media/preview-data.png "Страница \"Просмотр данных\" в мастере импорта и экспорта")  
   
 ## <a name="preview-sample-data"></a>Просмотр образца данных  
  **Source**  

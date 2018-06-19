@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e17c3a8cd3a79332c96a589a7b867509e95bdede
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 590553f65e3a49afe44b491c63e9ae68cef6b789
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411876"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Обработчики событий в службах Integration Services (SSIS)
   Во время выполнения исполняемых объектов (пакетов, контейнеров «цикл по каждому элементу», «цикл по элементам», последовательности и узлы задач) возникают события. Например, в случае ошибки возникает событие OnError. Можно создать пользовательские обработчики событий для этих событий, чтобы расширить функциональность пакетов и упростить управление пакетами во время их выполнения. Обработчики событий могут выполнять следующие задачи:  
@@ -48,7 +47,7 @@ ms.lasthandoff: 05/03/2018
   
  Следующая диаграмма приводит простой пакет, имеющий контейнер «цикл по элементам», который, в свою очередь, содержит задачу «Выполнение SQL».  
   
- ![Пакет, контейнер "Цикл по элементам", сервер задач, задача "Выполнение SQL"](../integration-services/media/mw-dts-eventhandlerpkg.gif "Пакет, контейнер "Цикл по элементам", сервер задач, задача "Выполнение SQL"")  
+ ![Пакет, контейнер "Цикл по элементам", сервер задач, задача "Выполнение SQL"](../integration-services/media/mw-dts-eventhandlerpkg.gif "Пакет, контейнер \"Цикл по элементам\", сервер задач, задача \"Выполнение SQL\"")  
   
  Только у пакета имеется обработчик для события **OnError** . Когда ошибка происходит во время выполнения задачи «Выполнение SQL», то запускается обработчик события **OnError** данного пакета. Следующая диаграмма показывает последовательность вызовов, вследствие которой выполняется обработчик события **OnError** данного пакета.  
   

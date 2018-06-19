@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
@@ -16,11 +14,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c5784cbfda1f6eb935e864b0547db0fbe8cedbbb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22606fe669b6e68efec8c82252d8a2345adb5450
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410626"
 ---
 # <a name="create-infosource-for-transaction-data"></a>Создание InfoSource для данных транзакции
   Используйте диалоговое окно **Создание InfoSource для данных транзакции** , чтобы создать новый InfoSource для данных транзакции в системе SAP Netweaver BW.  
@@ -86,7 +85,7 @@ ms.lasthandoff: 05/03/2018
  **Тип**  
  Отображает тип InfoObject, связанный со столбцом потока данных. В следующей таблице приводятся возможные значения типа.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |CHA|Характеристики|  
 |UNI|Единицы измерения|  

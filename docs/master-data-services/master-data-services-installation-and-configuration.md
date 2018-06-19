@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 44
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 93c239ba5e2138392ba760e96a96d782810419ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0eeea06688707eb143254d62bbfaf59ef5d7d800
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335508"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Установка и настройка Master Data Services
 
@@ -80,7 +80,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  В **диспетчере серверов**в меню **Управление** выберите пункт **Добавить роли и компоненты** .  
    
-     ![Команда "Добавить роли и компоненты" в диспетчере серверов](../master-data-services/media/mds-servermanagerdashboard-addrolesfeaturesmenu.png "Команда "Добавить роли и компоненты" в диспетчере серверов")  
+     ![Команда "Добавить роли и компоненты" в диспетчере серверов](../master-data-services/media/mds-servermanagerdashboard-addrolesfeaturesmenu.png "Команда \"Добавить роли и компоненты\" в диспетчере серверов")  
   
 6.  На странице **Тип установки** **мастера добавления ролей и компонентов**примите значение по умолчанию (**Установка ролей или компонентов**) и нажмите кнопку **Далее**.  
   
@@ -269,7 +269,7 @@ ms.lasthandoff: 05/03/2018
   
      На рисунке ниже показана команда для развертывания образца модели product_en.pkg.  
   
-     ![Командная строка для развертывания образца модели "Продукт"](../master-data-services/media/mds-commandprompt-deployingsamplemodel-product.png "Командная строка для развертывания образца модели "Продукт"")  
+     ![Командная строка для развертывания образца модели "Продукт"](../master-data-services/media/mds-commandprompt-deployingsamplemodel-product.png "Командная строка для развертывания образца модели \"Продукт\"")  
   
 4.  Чтобы просмотреть образцы моделей, выполните указанные ниже действия.  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 84ce9d0f26a0880eb1d1e3aefcd6b5aff0d73f7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc686beb0835a40a6fa1c38d3282aca72b2535f0
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407196"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Добавление диспетчера соединения файлов диалогового окна пользовательского Интерфейса в справочник
   Используйте диалоговое окно **Добавление диспетчера соединения файлов** , чтобы определить соединение с группой файлов или папок.  
@@ -38,7 +37,7 @@ ms.lasthandoff: 05/03/2018
  **Тип применения**  
  Укажите тип файлов для диспетчера подключения нескольких файлов.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Создать файлы**|Диспетчер соединений создаст файлы.|  
 |**Существующие файлы**|Диспетчер соединений будет использовать существующие файлы.|  

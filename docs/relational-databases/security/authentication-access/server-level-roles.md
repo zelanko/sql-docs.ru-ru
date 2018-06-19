@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,12 +27,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1f7cf3212ac6e046e41f46d1d3d6232250182c1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 453d0e7158f19fd958eca3bd611a2670279fe946
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972079"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696385"
 ---
 # <a name="server-level-roles"></a>Роли уровня сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -52,7 +50,7 @@ ms.locfileid: "32972079"
 ## <a name="fixed-server-level-roles"></a>Предопределенные роли уровня сервера  
  В следующей таблице представлены предопределенные роли уровня сервера и их возможности.  
   
-|Предопределенная роль уровня сервера|Description|  
+|Предопределенная роль уровня сервера|Описание|  
 |------------------------------|-----------------|  
 |**sysadmin**|Члены предопределенной роли сервера **sysadmin** могут выполнять любые действия на сервере.|  
 |**serveradmin**|Элементы предопределенной роли сервера **serveradmi** могут изменять параметры конфигурации на уровне сервера, а также выключать сервер.|  
@@ -83,7 +81,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>Работа с ролями уровня сервера  
  В следующей таблице описаны команды, представления и функции, предназначенные для работы с ролями уровня сервера.  
   
-|Компонент|Тип|Description|  
+|Компонент|Тип|Описание|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)|Метаданные|Возвращает список ролей уровня сервера.|  
 |[sp_helpsrvrolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)|Метаданные|Возвращает сведения о членах роли уровня сервера.|  

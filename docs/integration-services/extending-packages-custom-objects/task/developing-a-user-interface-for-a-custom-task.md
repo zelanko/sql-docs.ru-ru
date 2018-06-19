@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -28,18 +27,19 @@ caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aacecfc425af980274435584a191614a0f9536a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 74ab3804f6f62d6aadb9e45a57bd7169aa1d1e96
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409216"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Разработка пользовательского интерфейса для пользовательской задачи
   Объектная модель служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предоставляет разработчикам пользовательских задач удобный способ создания собственного пользовательского интерфейса для задачи, который можно затем интегрировать и вывести в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Пользовательский интерфейс может предоставлять пользователю полезную информацию в конструкторе служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] и помогать пользователям правильно конфигурировать свойства и настройки пользовательской задачи.  
   
  Разработка собственного пользовательского интерфейса задачи требует использования двух важных классов. Эти классы описываются в следующей таблице.  
   
-|Class|Description|  
+|Class|Описание|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|Атрибут, который идентифицирует управляемую задачу и предоставляет через свои свойства информацию времени разработки, определяющую, каким образом конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] выводит объект и взаимодействует с ним.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|Интерфейс, используемый задачей для того, чтобы связать ее с собственным пользовательским интерфейсом.|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице приводится описание свойств атрибута <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>.  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|Выводит имя задачи в области элементов потока управления.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|Описание задачи (наследуется от <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>). Это свойство показывается во всплывающей подсказке.|  

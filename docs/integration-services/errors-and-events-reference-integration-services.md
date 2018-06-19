@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6135e7e65c10d375d6a59529bd1beb3369a8d084
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2a5e265f00931bd06609f288d3c30f733548f39
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408876"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Справочник по ошибкам и событиям (службы Integration Services)
   Этот раздел документации содержит сведения о некоторых ошибках и событиях, связанных со службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Сведения о причинах и способах устранения включены в сообщения об ошибках.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="error-messages"></a>сообщения об ошибках  
   
-|Символическое имя ошибки|Description|  
+|Символическое имя ошибки|Описание|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|Указывает, что пакет нельзя выполнить, так как преобразование «Преобразование кэша» пытается записать данные в кэш, хранимый в памяти. Однако диспетчер соединений с кэшем уже загрузил файл кэша в кэш, который находится в памяти.|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|Указывает, что невозможно выполнить пакет из-за ошибки указанного соединения.|  
@@ -56,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events-sqlispackage"></a>События (SQLISPackage)  
  Дополнительные сведения см. в статье [Регистрация событий в пакете служб Integration Services](../integration-services/performance/events-logged-by-an-integration-services-package.md).  
   
-|Событие|Description|  
+|Событие|Описание|  
 |-----------|-----------------|  
 |SQLISPackage_12288|Указывает, что пакет запущен.|  
 |SQLISPackage_12289|Указывает, что пакет завершил выполнение успешно.|  
@@ -70,7 +69,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events-sqlisservice"></a>События (SQLISService)  
  Дополнительные сведения см. в статье [События, зарегистрированные службами Integration Services](../integration-services/service/events-logged-by-the-integration-services-service.md).  
   
-|Событие|Description|  
+|Событие|Описание|  
 |-----------|-----------------|  
 |SQLISService_256|Указывает, что служба запускается.|  
 |SQLISService_257|Указывает, что служба уже запущена.|  

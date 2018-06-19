@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
@@ -16,16 +14,17 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76b11c452724a324118e07a7b494d1ff0a2ab1c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 18c212529f41739f1e2562b9d21e078a7915d8ef
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404386"
 ---
 # <a name="cdc-control-task-custom-properties"></a>Пользовательские свойства задач управления CDC
   Пользовательские свойства задачи «Управление CDC» описаны в следующей таблице. Все свойства доступны для чтения и записи.  
   
-|Имя свойства|Тип данных|Description|  
+|Имя свойства|Тип данных|Описание|  
 |-------------------|---------------|-----------------|  
 |Соединение|Соединение ADO.NET|Соединение ADO.NET с базой данных CDC [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для доступа к таблицам изменений и к информации состояния CDC, если она хранится в той же базе данных.<br /><br /> Соединение должно быть установлено с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которая включена для CDC и в которой находится выбранная таблица изменений.|  
 |TaskOperation|Integer (перечисление)|Выбранная операция для задачи «Управление CDC». Возможными значениями являются **Отметить начало начальной загрузки**, **Отметить конец начальной загрузки**, **Отметить начало CDC**, **Получить диапазон обработки**, **Отметить обработанный диапазон**и **Сбросить состояние CDC**.<br /><br /> Если выбрано **MarkCdcStart**, **MarkInitialLoadStart**или **MarkInitialLoadEnd** при работе с CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (т е. с базой данных, отличной от Oracle), то пользователем, указанным в диспетчере соединений, должен быть  **db_owner** или **sysadmin**.<br /><br /> Дополнительные сведения об этих операциях см. в разделах [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) и [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87639875b3ae15a514cb44ac5fd8d5fe8997188c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c537b18e067dc52e3c764a8f79ae4c77db5639ee
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333448"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Задача «Передача главных хранимых процедур»
   Задача "Передача главных хранимых процедур" перемещает одну или несколько пользовательских хранимых процедур между базами данных **master** в экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы переместить хранимую процедуру из базы данных **master** , владелец процедуры должен быть dbo.  
@@ -118,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
  Параметры этого свойства приведены в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**FailTask**|Если в базе данных **master** на целевом сервере уже существуют хранимые процедуры с теми же именами, задача завершается ошибкой.|  
 |**Overwrite**|Задача перезаписывает хранимые процедуры с теми же именами в базе данных **master** на целевом сервере.|  
@@ -127,7 +126,7 @@ ms.lasthandoff: 05/03/2018
  **TransferAllStoredProcedures**  
  Укажите, все ли пользовательские хранимые процедуры в базе данных **master** на исходном сервере следует копировать на целевой сервер.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**True**|Копировать все пользовательские хранимые процедуры базы данных **master** .|  
 |**False**|Копировать только указанные хранимые процедуры.|  

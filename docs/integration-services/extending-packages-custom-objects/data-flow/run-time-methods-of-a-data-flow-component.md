@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -23,11 +22,12 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c0b052a919c23915a430de71d1a98b02a73a9d9f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9101f363e8d3eb5a46fd5d0d7b9cb477a8e7d056
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411366"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Методы времени выполнения для компонента потока данных
   Во время выполнения задача потока данных проверяет последовательность компонентов, подготавливает план выполнения и управляет пулом рабочих потоков, выполняющих план работы. Задача загружает строки данных из источников, обрабатывает их с помощью преобразований, а затем сохраняет в соответствующие назначения.  

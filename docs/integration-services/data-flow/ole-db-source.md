@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4b4e9cd95db8a42f4a3e13962770aa018deeec2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 199b1abd026efdf383cbd982ac3ce79d36e5b5cc
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401356"
 ---
 # <a name="ole-db-source"></a>Источник OLE DB
   Источник OLE DB извлекает сведения из множества поддерживающих технологию OLE DB реляционных баз данных с помощью таблицы базы данных, представления или команды SQL. Например, источник OLE DB может извлекать данные из таблиц [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -147,7 +146,7 @@ ms.lasthandoff: 05/03/2018
  **Режим доступа к данным**  
  Укажите метод выбора данных из источника.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |Таблица или представление|Получение данных из таблицы или представления в источнике данных OLE DB.|  
 |Переменная, содержащая имя таблицы или представления|Задайте переменную, содержащую имя таблицы или представления.<br /><br /> **См. также:** [Использование переменных в пакетах](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  

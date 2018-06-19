@@ -3,12 +3,10 @@ title: Создание аудита сервера и спецификаций 
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +19,12 @@ caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 663273f3c8d445e2a27215d44ec33f16d7fcd466
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 186d029c12cd8446af3728bd6755b5dedff7ef61
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971859"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695565"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Создание спецификация аудита для сервера и базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

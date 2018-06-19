@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b46cf88708ea82b468a5d20f31b944e39665b189
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edb489423b701d665c9c3b845c342dec6131a16d
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335718"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Задание интервала для информации об изменениях данных
   Первой задачей в потоке управления пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , который выполняет добавочную загрузку информации об измененных данных, является вычисление конечных точек интервала изменений. Эти конечные точки имеют значения **datetime** и сохраняются в переменных пакета для дальнейшего использования в пакете.  
@@ -86,7 +85,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  На вкладке **Поток управления** в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] добавьте в пакет задачу «Выполнение SQL».  
   
-2.  Откройте **Редактор задачи «Выполнение SQL»**и на странице **Общие** выберите следующие параметры:  
+2.  Откройте **Редактор задачи «Выполнение SQL»** и на странице **Общие** выберите следующие параметры:  
   
     1.  Для параметра **ResultSet**выберите значение **Одна строка**.  
   
@@ -102,7 +101,7 @@ ms.lasthandoff: 05/03/2018
   
         ```  
   
-3.  На странице **Результирующий набор** **Редактора задачи «Выполнение SQL»**сопоставьте результат ExtractStartTime с переменной ExtractStartTime пакета, а результат ExtractEndTime — с переменной ExtractEndTime пакета.  
+3.  На странице **Результирующий набор** **Редактора задачи «Выполнение SQL»** сопоставьте результат ExtractStartTime с переменной ExtractStartTime пакета, а результат ExtractEndTime — с переменной ExtractEndTime пакета.  
   
     > [!NOTE]  
     >  Если для установки значения переменной служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используется выражение, это выражение вычисляется при каждом обращении к значению переменной.  

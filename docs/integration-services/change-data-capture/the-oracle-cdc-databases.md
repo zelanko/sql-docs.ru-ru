@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
@@ -16,11 +14,12 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf36c117d636579d0f2048b67cd903eca224cc3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7095024d2b7636b600fe1e905b335b866b1f30ba
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411546"
 ---
 # <a name="the-oracle-cdc-databases"></a>Базы данных CDC Oracle
   Экземпляр CDC Oracle связан с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тем же именем на целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта база данных называется базой данных Oracle (или базой данных CDC).  
@@ -99,7 +98,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице приводится описание столбцов таблицы **cdc.xdbcdc_config** .  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |----------|-----------------|  
 |version|Отслеживает версию конфигурации экземпляра CDC. Обновляется при каждом обновлении таблицы, а также при добавлении нового экземпляра или удалении существующего экземпляра отслеживания.|  
 |connect_string|Строки подключения Oracle. Простой пример:<br /><br /> `<server>:<port>/<instance>` (например, `erp.contoso.com:1521/orcl`).<br /><br /> В строке подключения также может указываться дескриптор подключения Oracle Net, например `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`<br /><br /> Если используется сервер каталогов или файл tnsname, то строкой подключения может быть имя соединения.<br /><br /> Дополнительные сведения о строках подключения Oracle см. в статье [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153), которая содержит подробную информацию о строках подключения к базам данных Oracle для клиента Oracle Instant Client, используемого службой CDC Oracle Service.|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице содержится описание доступных параметров.  
   
-|Имя|По умолчанию|Min|Max|Статические|Description|  
+|Имя|По умолчанию|Min|Max|Статические|Описание|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |трассировка|False|-|-|False|Возможные значения:<br /><br /> True<br /><br /> False<br /><br /> on<br /><br /> off|  
 |cdc_update_state_interval|10|1|120|False|Размер (в килобайтах) фрагментов памяти, выделяемых для транзакции (транзакции может быть выделено несколько фрагментов). См. столбец memory_limit в таблице [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) .|  
@@ -142,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице описаны столбцы таблицы **cdc.xdbcdc_state** .  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |----------|-----------------|  
 |status|Код текущего состояния экземпляра CDC Oracle. Этот столбец описывает текущее состояние для CDC.|  
 |sub_status|Состояние второго уровня, которое представляет дополнительные сведения о текущем состоянии.|  
@@ -167,7 +166,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице приводится описание столбцов таблицы cdc.xdbcdc_trace.  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |----------|-----------------|  
 |TIMESTAMP|Точная отметка времени в формате UTC, когда была создана запись трассировки.|  
 |type|Содержит одно из следующих значений:<br /><br /> ошибка<br /><br /> INFO<br /><br /> трассировка|  
@@ -182,7 +181,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице приводится описание столбцов таблицы **cdc.xdbcdc_staged_transactions** .  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |----------|-----------------|  
 |transaction_id|Уникальный идентификатор транзакции, которая заносится в промежуточную таблицу.|  
 |seq_num|Номер строки **xcbcdc_staged_transactions** для текущей транзакции (начиная с 0).|  

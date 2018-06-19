@@ -21,12 +21,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 7c270729aa66c05f835cba507884e8d5cda102d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dca31c161bbfa87eb87bb99222389c6a7d92109a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33063569"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701005"
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -45,16 +45,15 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 ```
 
 ## <a name="arguments"></a>Аргументы 
+*expression*  
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого типа данных. Во время объединения выражения преобразуются в тип `NVARCHAR` или `VARCHAR`. Нестроковые типы преобразуются в тип `NVARCHAR`.
 
 *separator*  
 [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа `NVARCHAR` или `VARCHAR`, которое используется в качестве разделителя сцепляемых строк. Может быть литералом или переменной. 
 
-*expression*  
-[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого типа данных. Во время объединения выражения преобразуются в тип `NVARCHAR` или `VARCHAR`. Нестроковые типы преобразуются в тип `NVARCHAR`.
-
-
 <order_clause>   
 При необходимости укажите очередность сцепляемых результатов с помощью предложения `WITHIN GROUP`:
+
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
@@ -77,7 +76,6 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 
 
 ## <a name="remarks"></a>Remarks  
- 
 `STRING_AGG` — это агрегатная функция, которая принимает все выражения из строк и сцепляет их в одну строку. Значения выражений неявно преобразуются в строковые типы и затем сцепляются. Неявное преобразование в строки выполняется по существующим правилам преобразования типов данных. Дополнительные сведения о преобразовании типов данных см. в статье [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
 Если входное выражение имеет тип `VARCHAR`, разделитель не может иметь тип `NVARCHAR`. 
@@ -85,7 +83,6 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 Значения NULL пропускаются, и соответствующий разделитель не добавляется. Чтобы вернуть заполнитель для значений NULL, используйте функцию `ISNULL`, как показано в примере Б.
 
 Функция `STRING_AGG` доступна на любом уровне совместимости.
-
 
 ## <a name="examples"></a>Примеры 
 
@@ -105,7 +102,6 @@ FROM Person.Person;
 > [!NOTE]  
 >  Если в редакторе запросов Management Studio используется режим **В виде сетки**, символы возврата каретки не применяются. Чтобы результирующий набор отображался правильно, перейдите в режим **В виде текста**.   
 
-
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>Б. Формирование списка имен, разделенного запятыми, без значений NULL   
 В приведенном ниже примере значения NULL заменяются на "N/A" и имена, разделенные запятыми, возвращаются в одной результирующей ячейке.  
 ```sql
@@ -114,15 +110,12 @@ FROM Person.Person;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
- 
 
 |Csv | 
 |--- |
 |John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
-
 ### <a name="c-generate-comma-separated-values"></a>В. Формирование списка значений с разделителями-запятыми 
-
 ```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
@@ -137,10 +130,8 @@ FROM Person.Person;
 
 > [!NOTE]  
 >  Если в редакторе запросов Management Studio используется режим **В виде сетки**, символы возврата каретки не применяются. Чтобы результирующий набор отображался правильно, перейдите в режим **В виде текста**.   
- 
 
 ### <a name="d-return-news-articles-with-related-tags"></a>Г. Получение новых статей со связанными тегами 
-
 Статьи и их теги разнесены по разным таблицам. Разработчику необходимо получить одну строку для каждой статьи со всеми связанными тегами. Используется следующий запрос: 
 ```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
@@ -159,7 +150,6 @@ GROUP BY a.articleId, title;
 |177 |Собаки по-прежнему популярнее кошек |опросы,животные| 
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>Д. Формирование списка адресов электронной почты по городам
-
 Следующий запрос находит адреса электронной почты сотрудников и группирует их по городам: 
 ```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
@@ -177,7 +167,6 @@ GROUP BY town;
 Адреса, возвращенные в столбце emails, можно использовать для рассылки сообщений группе людей, работающих в определенном городе. 
 
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>Е. Формирование отсортированного списка адресов электронной почты по городам   
-   
 Так же как в предыдущем примере, следующий запрос находит адреса электронной почты сотрудников, группирует их по городам и сортирует по алфавиту:   
 ```sql
 SELECT town, 
@@ -192,7 +181,6 @@ GROUP BY town;
 |--- |--- |
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
-
 
 ## <a name="see-also"></a>См. также:  
  [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  

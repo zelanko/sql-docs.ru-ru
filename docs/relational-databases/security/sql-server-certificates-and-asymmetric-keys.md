@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +17,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2875295c5978f54dcff3ee2b5a5129db36757f7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2cce77f67f8a38344e7c1d27346618bf8716186
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970599"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700555"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Сертификаты SQL Server и асимметричные ключи
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +48,7 @@ ms.locfileid: "32970599"
 ### <a name="using-a-certificate-in-sql-server"></a>Использование сертификата в SQL Server  
  Сертификаты могут использоваться для защиты соединений, при зеркальном отображении баз данных, подписывании пакетов и других объектов, шифровании данных или соединений. В следующей таблице перечислены дополнительные ресурсы для сертификатов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)|Содержит описание команды создания сертификатов.|  
 |[Определение источника пакетов с помощью цифровых подписей](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|Содержит сведения об использовании сертификатов для подписывания программных пакетов.|  
@@ -64,7 +62,7 @@ ms.locfileid: "32970599"
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>Использование асимметричного ключа в SQL Server  
  Асимметричные ключи можно использовать для защиты данных или подписывания незашифрованного текста. В следующей таблице перечислены дополнительные ресурсы для асимметричных ключей в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)|Содержит описание команды создания асимметричных ключей.|  
 |[SIGNBYASYMKEY (Transact-SQL)](../../t-sql/functions/signbyasymkey-transact-sql.md)|Отображает параметры для подписывания объектов.|  

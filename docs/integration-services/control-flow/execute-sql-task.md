@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 115
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48c90af75a51d0b849f1ce7b0a714bd403e9018d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 35cfefdbc23ef269579476c098d31825b319a41e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404756"
 ---
 # <a name="execute-sql-task"></a>Задача "Выполнение SQL"
   Задача «Выполнение SQL» выполняет инструкции SQL или хранимые процедуры из пакета. Задача может содержать одну инструкцию SQL или несколько инструкций, запускаемых последовательно. Задача «Выполнение SQL» может быть использована для следующих целей:  
@@ -158,7 +157,7 @@ ms.lasthandoff: 05/03/2018
   
  Это свойство имеет параметры, указанные в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Прямой ввод**|Задайте источник для инструкции Transact-SQL. При выборе этого значения отображается динамический параметр **SQLStatement**.|  
 |**Соединение с файлом**|Выберите файл, содержащий инструкцию Transact-SQL. При установке этого параметра отображается динамический параметр **Подключение файла**.|  
@@ -578,7 +577,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="custom-log-entries"></a>Пользовательские записи журнала  
  В следующей таблице перечислены пользовательские записи журнала для задачи «Выполнение SQL». Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Запись журнала|Description|  
+|Запись журнала|Описание|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|Предоставляет сведения об этапах выполнения инструкции SQL. Записи журнала формируются в тот момент, когда задача устанавливает соединение с базой данных, когда задача приступает к подготовке инструкции SQL, и после того, как завершается выполнение инструкции SQL. Запись журнала для этапа подготовки содержит инструкцию SQL, которая используется задачей.|  
 

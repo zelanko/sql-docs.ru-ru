@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cee1fcffe26a8f17d5a8c0fd4e547e98b95d30c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10d89181165d76e0b48dd7b09f0508d3d9f77419
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408526"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Настройка назначения «Неструктурированный файл» (мастер импорта и экспорта SQL Server)
   Если вы выбрали назначение "Неструктурированный файл", то после того как вы укажете, хотите ли вы скопировать таблицу или подать запрос, в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Настройка назначения "Неструктурированный файл"**. На этой странице можно задать параметры форматирования для назначения "Неструктурированный файл". При необходимости проверьте сопоставления отдельных столбцов и просмотрите образец данных.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
  **Разделитель строк**  
  Выберите в списке разделитель для строк в выходных данных. Указать *пользовательский* разделитель строк нельзя.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Разделение строк комбинацией символов возврата каретки и перевода строки.|  
 |**{CR}**|Разделение строк с помощью символа возврата каретки.|  
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
  **Разделитель столбцов**  
  Выберите в списке разделитель для столбцов в выходных данных. Указать *пользовательский* разделитель столбцов нельзя.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Разделение столбцов комбинацией символов возврата каретки и перевода строки.|  
 |**{CR}**|Разделение столбцов с помощью символа возврата каретки.|  

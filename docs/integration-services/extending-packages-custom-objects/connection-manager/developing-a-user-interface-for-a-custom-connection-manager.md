@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -20,11 +19,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ca5c61b48c7bc5376b66ff51f34368362c8e9a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7ab030542b0197bb7055160fc186df80fe66b6e7
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335888"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Разработка пользовательского интерфейса для пользовательского диспетчера соединений
   После переопределения реализации свойств и методов базового класса для выполнения пользовательских функций может потребоваться создание настраиваемого пользовательского интерфейса для диспетчера соединений. Если собственный пользовательский интерфейс не создается, пользователи могут настроить только диспетчер соединений в диалоговом окне «Свойства».  
