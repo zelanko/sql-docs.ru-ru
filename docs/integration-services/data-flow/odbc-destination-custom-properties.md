@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
@@ -16,16 +14,17 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 093b6da73d55129b1a21e36dfad4fac3c899c296
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 716b80d50d8498f2a3325bd4719ddf0a7f1e9946
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334488"
 ---
 # <a name="odbc-destination-custom-properties"></a>Пользовательские свойства назначений ODBC
   В следующей таблице описаны пользовательские свойства назначения ODBC. Все свойства могут быть заданы на основе выражений свойств служб SSIS.  
   
-|Имя свойства|Тип данных|Description|  
+|Имя свойства|Тип данных|Описание|  
 |-------------------|---------------|-----------------|  
 |Соединение|Соединение ODBC|Соединение ODBC для получения доступа к целевой базе данных.|  
 |BatchSize|Целочисленный|Размер пакета для массовой загрузки. Это количество строк, загружаемых в виде одного пакета. Это становится допустимым, только если поддерживается построчная привязка параметров. Если построчная привязка параметров не поддерживается, размер пакета равен 1.|  

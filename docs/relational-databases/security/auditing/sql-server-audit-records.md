@@ -3,12 +3,10 @@ title: Записи подсистемы аудита SQL Server | Докуме�
 ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: da1a84464eed7a273508cccbc073bddb0b98f752
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c2bd68fbbb292b1b9c42144c8bd702fb05a66f5
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697715"
 ---
 # <a name="sql-server-audit-records"></a>Записи подсистемы аудита SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.lasthandoff: 05/03/2018
   
  Аудит содержит ноль или более элементов действия аудита, записываемых в *цель*аудита. Цель аудита может быть двоичным файлом, журналом событий приложений Windows или журналом событий безопасности Windows. Записи, переданные в цель, могут содержать элементы, описанные в приведенной ниже таблице.  
   
-|Имя столбца|Description|Тип|Доступна всегда|  
+|Имя столбца|Описание|Тип|Доступна всегда|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Дата-время срабатывания действия, доступного для аудита.|**datetime2**|Да|  
 |**sequence_no**|Отслеживает последовательность записей в одной записи аудита, слишком большой, чтобы уместиться в буфере записи для аудитов.|**int**|Да|  

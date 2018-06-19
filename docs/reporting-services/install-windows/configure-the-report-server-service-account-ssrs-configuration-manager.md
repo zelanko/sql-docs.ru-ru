@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -15,11 +14,12 @@ caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b8bb7adbc79619f26e9de5d79dd8d460672d0e4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 031c4e058731b02ba93f73c46e8cdeb052d56945
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322303"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] реализован в виде единой службы, состоящей из веб-службы сервера отчетов, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]и приложения фоновой обработки, которое предназначено для запланированной обработки отчетов и доставки подписки. В этом разделе описан процесс начальной настройки учетной записи службы, а также изменения учетной записи или пароля при помощи программы настройки служб Reporting Services.  

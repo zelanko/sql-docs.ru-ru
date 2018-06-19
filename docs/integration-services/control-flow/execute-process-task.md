@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b899645d07b9822c64601263c15e3ca8e1997c9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f88d9b7b79c074d02160fc839066ac6dfde97407
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333428"
 ---
 # <a name="execute-process-task"></a>Задача «Выполнение процесса»
   Задача «Выполнение процесса» запускает приложение или пакетный файл как часть рабочего процесса пакета служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Хотя задача «Выполнение процесса» может использоваться для выполнения любого стандартного приложения, такого как [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] или [!INCLUDE[ofprword](../../includes/ofprword-md.md)], обычно она применяется для запуска бизнес-приложений или командных файлов, работающих с источником данных. Например, задачу «Выполнение процесса» можно использовать для развертывания сжатого текстового файла. Потом пакет сможет использовать текстовый файл в качестве источника данных для потока данных в пакете. Или, например, задача «Выполнение процесса» может использоваться для запуска приложения [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , создающего ежедневный отчет о продажах. Затем можно присоединить отчет к задаче «Отправка почты» и разослать отчет по списку распространения.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-log-entries-available-on-the-execute-process-task"></a>Пользовательские записи журнала, доступные в задаче «Выполнение процесса»  
  В следующей таблице перечислены пользовательские записи в журнале для задачи «Выполнение процесса». Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Запись журнала|Description|  
+|Запись журнала|Описание|  
 |---------------|-----------------|  
 |**ExecuteProcessExecutingProcess**|Предоставляет сведения о процессе, для запуска которого настроена задача.<br /><br /> В журнале формируются две записи. Одна из них предоставляет сведения об имени и месте выполнения исполняемого объекта, на запуск которого настроена задача, другая фиксирует выход из исполняемого объекта.|  
 |**ExecuteProcessVariableRouting**|Предоставляет сведения о том, какие переменные направляются на вход и выходы исполняемого объекта. Данные журнала записываются для потоков stdin (вход), stdout (выход) и stderr (вывод ошибок на выходе).|  

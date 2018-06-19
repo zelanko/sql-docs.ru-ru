@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
@@ -16,11 +14,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 185c7acee5371b1cd2eb0bfa6df3b2ed3f8a251a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 30507a5fadbefbbc277dcea923411194232a331b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334428"
 ---
 # <a name="create-new-infoobject"></a>Создание InfoObject
   Используйте диалоговое окно **Создание нового InfoObject** для создания нового InfoObject в системе SAP Netweaver BW.  
@@ -134,7 +133,7 @@ ms.lasthandoff: 05/03/2018
  **Тип InfoObject**  
  Просмотрите тип InfoObject. В следующей таблице приводятся возможные значения типа.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |CHA|Характеристики|  
 |KYF|Ключевые цифры|  

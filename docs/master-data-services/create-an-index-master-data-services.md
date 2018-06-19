@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1a89debd1efbcb21e75e89c8d2624cd528a24dc2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2711bfe4568255d50d9438653bacb0ae7807e2c1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402066"
 ---
 # <a name="create-an-index-master-data-services"></a>Создание индекса (Master Data Services)
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
  Для каждого созданного индекса в сетке создается строка с четырьмя столбцами. В следующей таблице приводится описание этих столбцов.  
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |Состояние|Состояние индекса.<br /><br /> Когда вы нажимаете **Сохранить**, появляется изображение ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния"), указывающее на обновление индекса.<br /><br /> Если при создании или редактировании индекса произойдет ошибка, появится изображение ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки").<br /><br /> В противном случае состояние является нормальным, и появляется изображение ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния").|  
 |Имя|Имя индекса.|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e2e9851921d808339681080d5df0c9439212a3db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26ecc54177da5a224e1c26c5dcac58d4e4d4cf3e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410466"
 ---
 # <a name="create-an-entity-master-data-services"></a>Создание сущности (службы Master Data Services)
 
@@ -72,11 +72,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="grid-columns"></a>Столбцы сетки  
  Для каждой созданной сущности в сетке создается строка с тринадцатью столбцами. Ниже приведены эти столбцы.  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |Состояние|Состояние сущности. После нажатия кнопки **Сохранить** появится следующее изображение, которое указывает на то, что сущность обновляется.<br /><br /> ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния")<br /><br /> При наличии ошибок во время создания или изменения сущности появляется следующее изображение.<br /><br /> ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки")<br /><br /> Если ее состояние нормальное, появится следующее изображение.<br /><br /> ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния")|  
 |Имя|Имя сущности.|  
-|Description|Описание сущности.|  
+|Описание|Описание сущности.|  
 |Промежуточная таблица|Имя префикса таблицы, которая используется для хранения данных.|  
 |Тип журнала транзакций|Тип журнала транзакций сущности.|  
 |Автоматическое создание кодов|Указывает, включено ли автоматическое создание кода.|  

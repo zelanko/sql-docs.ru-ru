@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9ba340981eb0a80092d9ad17fd061c2f119cbd43
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d64737f0da6faabb2be218da19f2c04b4591d681
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330208"
 ---
 # <a name="model-permissions-master-data-services"></a>Разрешения модели (службы Master Data Services)
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Если пользователь является администратором модели, то модель отображается во всех функциональных областях пользовательского интерфейса. В противном случае модель отображается только в функциональной области **Обозреватель**. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   
-|Разрешение|Description|  
+|Разрешение|Описание|  
 |----------------|-----------------|  
 |**Чтение**|Пользователь может просматривать элементы, атрибуты, членство в иерархии или коллекциях.|  
 |**Создание**|Пользователь может создавать элементы и назначать значения атрибутов во время создания.|  

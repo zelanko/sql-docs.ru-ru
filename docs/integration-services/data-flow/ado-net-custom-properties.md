@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d16d06518a5b58f768f4e87a4361d99b3e2796af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50c968acabb2432118d60bd19fb81c72fbe41d19
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334668"
 ---
 # <a name="ado-net-custom-properties"></a>Пользовательские свойства ADO NET
   **Пользовательские свойства источника**  
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице описаны пользовательские свойства источника «ADO NET». Все свойства доступны для чтения и записи.  
   
-|Имя свойства|Тип данных|Description|  
+|Имя свойства|Тип данных|Описание|  
 |-------------------|---------------|-----------------|  
 |CommandTimeout|String|Задает число секунд до истечения времени ожидания команды SQL. Значение 0 означает, что время выполнения команды не ограничено.|  
 |SqlCommand|String|Инструкция SQL, используемая источником «ADO NET» для извлечения данных.<br /><br /> При загрузке пакета можно динамически обновлять это свойство инструкцией SQL, которая будет использована источником «ADO NET». Дополнительные сведения см. в разделах [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md) и [Использование выражений свойств в пакетах](../../integration-services/expressions/use-property-expressions-in-packages.md).|  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице описаны пользовательские свойства назначения « [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ». Все свойства доступны для чтения и записи. Эти свойства недоступны в диалоговом окне **Редактор назначения «ADO.NET»**, однако их можно установить при помощи окна **Расширенный редактор**.  
   
-|Свойство|Тип данных|Description|  
+|Свойство|Тип данных|Описание|  
 |--------------|---------------|-----------------|  
 |BatchSize|Целочисленный|Количество строк в пакете, отправленном серверу. Значение **0** означает, что размер пакета соответствует размеру внутреннего буфера. Значение этого свойства по умолчанию равно **0**.|  
 |CommandTimeOut|Целочисленный|Максимальное время ожидания в секундах, в течение которого может выполняться команда SQL. Значение **0** указывает на бесконечное время работы. Значение этого свойства по умолчанию равно **0**.|  

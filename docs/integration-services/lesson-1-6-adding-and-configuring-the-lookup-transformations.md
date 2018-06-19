@@ -4,13 +4,11 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
@@ -18,11 +16,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2702b9e69660b4ff0b4fcd2055d522f47d094c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6735e372f7c1a4b49cdf57e73ee5cd82b2930bba
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332738"
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>Занятие 1-6. Добавление и настройка преобразований «Уточняющий запрос»
 После того как источник неструктурированных файлов настроен для извлечения данных из файла источника, следует определить преобразования «Уточняющий запрос», необходимые для получения значений **CurrencyKey** и **DateKey**. Преобразование «Уточняющий запрос» выполняет поиск, соединяя данные указанного входного столбца со столбцом эталонного набора данных. Эталонным набором данных может быть таблица или представление, новая таблица или результат инструкции SQL. В этом учебнике преобразование «Уточняющий запрос» использует диспетчер соединений OLE DB, чтобы подключиться к базе данных, содержащей данные, служащие источником для эталонного набора данных.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e51d79c8d365bb1ba5b28feec4ab19ce445e234a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cf82c10523a2d323e694ea56de205b3ecbb2ba8
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403866"
 ---
 # <a name="export-column-transformation"></a>Преобразование «Экспорт столбца»
   Преобразование «Экспорт столбца» считывает данные из потока и вставляет их в файл. Например, если поток данных содержит сведения о продукте, такие как изображения каждого продукта, можно применить преобразование «Экспорт столбца» для сохранения изображений в файлы.  

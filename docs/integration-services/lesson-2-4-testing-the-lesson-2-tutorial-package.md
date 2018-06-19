@@ -4,13 +4,11 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
@@ -18,11 +16,12 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8f16f44bf7acf8437d51fdc3e5129c01846130b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e087dfd8f039c5b876f4581844944742638c1812
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400566"
 ---
 # <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>Занятие 2–4. Проверка учебного пакета, созданного на занятии 2
 Используя настроенный контейнер «цикл по каждому элементу» и диспетчер соединений с неструктурированными файлами, можно в пакете, созданном на занятии 2, поочередно обрабатывать коллекцию из 14 неструктурированных файлов в папке образцов данных. Каждый раз при обнаружении имени файла, отвечающего указанным критериям имен файлов, в контейнере «цикл по каждому элементу» это имя подставляется в определенную пользователем переменную. В переменной, в свою очередь, обновляется свойство ConnectionString диспетчера соединений с неструктурированными файлами, после чего выполняется соединение с новым неструктурированным файлом. Затем в контейнере «цикл по каждому элементу» выполняется задача неизмененного потока данных по данным нового неструктурированного файла, после чего устанавливается соединение со следующим файлом в папке.  

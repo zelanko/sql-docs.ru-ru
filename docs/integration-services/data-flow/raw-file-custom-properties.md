@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
@@ -16,11 +14,12 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66bcdd48830e2cf5b5311c34d4a8dc72b4f07ce2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ebc381b7698340f1fa91e01d9b8520c01f9d3128
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329178"
 ---
 # <a name="raw-file-custom-properties"></a>Пользовательские свойства необработанного файла
   **Пользовательские свойства источника**  
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице описаны пользовательские свойства источника «Необработанный файл». Все свойства доступны для чтения и записи.  
   
-|Имя свойства|Тип данных|Description|  
+|Имя свойства|Тип данных|Описание|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (перечисление)|Режим, используемый для доступа к необработанным данным. Допустимые значения: **File name** (0) и **File name from variable** (1). Значение по умолчанию — **File name** (0).|  
 |FileName|String|Полный путь и имя исходного файла.|  
@@ -44,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице описаны пользовательские свойства назначения «Необработанный файл». Все свойства доступны для чтения и записи.  
   
-|Имя свойства|Тип данных|Description|  
+|Имя свойства|Тип данных|Описание|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (перечисление)|Значение, указывающее, содержит ли свойство FileName имя файла, или указывающее переменную, которая содержит имя файла. Возможные варианты: **File name** (0) и **File name from variable** (1).|  
 |FileName|String|Имя файла, в который назначение «Необработанный файл» осуществляет запись.|  

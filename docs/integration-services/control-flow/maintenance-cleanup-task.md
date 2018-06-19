@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 99d7f969bb826570210c7bdc74542ce6a6d8ae33
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 592de11e337b3da9b55aa6bfaed714b8e0febdd2
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330838"
 ---
 # <a name="maintenance-cleanup-task"></a>задача «Очистка после обслуживания»
   Задача «Очистка после обслуживания» удаляет файлы, относящиеся к планам обслуживания, включая файлы резервных копий баз данных и отчеты, созданные планами обслуживания. Дополнительные сведения см. в разделах [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md) и [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  

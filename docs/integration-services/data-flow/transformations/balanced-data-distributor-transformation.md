@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 25abb49b664ae7a550aebfacbab01ab59cca3c7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4de0b2c1843d12aa79e9e57417d7411f17ceee27
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401786"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Преобразование распространителя сбалансированных данных
   В процессе преобразования распространителя сбалансированных данных (BDD) используются возможности параллельной обработки современных процессоров. Оно равномерно распределяет буферы входящих строк по отдельным потокам. С помощью отдельных потоков пути для каждого пути вывода компонент BDD улучшает производительность пакета служб SSIS на многоядерных и мультипроцессорных компьютерах.  

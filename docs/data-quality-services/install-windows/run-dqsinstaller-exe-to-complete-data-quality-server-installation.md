@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 789dca5f79bfcd3f00a67e17da2a613c936cd639
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 275d8a790ab95d6ffd3bfb02f7427d8e2e3cecdf
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311273"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS
 
@@ -74,7 +74,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="CommandPrompt"></a> Запуск DQSInstaller.exe из командной строки  
  Вы можете запустить файл DQSInstaller.exe из командной строки со следующими параметрами:  
   
-|Параметр DQSInstaller.exe|Description|Образец синтаксиса|  
+|Параметр DQSInstaller.exe|Описание|Образец синтаксиса|  
 |--------------------------------|-----------------|-------------------|  
 |-collation|Параметры сортировки сервера используются во время установки [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].<br /><br /> Службы DQS поддерживают только параметры сортировки без учета регистра символов. Если указаны параметры сортировки с учетом регистра, то установщик попытается воспользоваться указанной версией параметров сортировки без учета регистра. Если для параметров сортировки отсутствует версия без учета регистра или они не поддерживаются SQL Server, процесс установки сервера [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] завершится ошибкой.<br /><br /> Если параметры сортировки сервера не указаны, используются параметры сортировки по умолчанию: SQL_Latin1_General_CP1_CI_AS.|`dqsinstaller.exe –collation <collation_name>`|  
 |-upgradedlls|Пропускает повторное создание баз данных DQS (DQS_MAIN, DQS_PROJECTS и DQS_STAGING_DATA) и обновляет только сборки среды SQLCLR, используемые службами DQS в базе данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .<br /><br /> Дополнительные сведения см. в разделе [Обновление сборок SQLCLR после обновления .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)|`dqsinstaller.exe -upgradedlls`|  

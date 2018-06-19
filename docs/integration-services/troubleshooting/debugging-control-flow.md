@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: troubleshooting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e156eea066ba43e6debc63be47b45fd18dcd9a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b117289c9877835d6c74d48497152021b47dc5ad
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405306"
 ---
 # <a name="debugging-control-flow"></a>Отладка потока управления
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features и службы tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -47,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предлагают десять условий останова, которые можно установить для всех задач и контейнеров. В диалоговом окне **Задание точек останова** можно установить точки останова по следующим условиям.  
   
-|Условие останова|Description|  
+|Условие останова|Описание|  
 |---------------------|-----------------|  
 |Задача или контейнер получает событие **OnPreExecute** .|Вызывается в момент запуска задачи. Это событие возникает непосредственно перед тем, как задача или контейнер начнет свое выполнение.|  
 |Задача или контейнер получает событие **OnPostExecute** .|Вызывается сразу после того, как задача завершит свою работу. Это событие возникает сразу после того, как задача или контейнер завершит свое выполнение.|  
@@ -72,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице описываются типы счетчика попаданий.  
   
-|Тип счетчика попаданий|Description|  
+|Тип счетчика попаданий|Описание|  
 |--------------------|-----------------|  
 |Всегда|Выполнение приостанавливается при каждом попадании в точку останова.|  
 |Число попаданий|Выполнение приостанавливается, если число попаданий в точку останова равно значению счетчика попаданий.|  
@@ -113,7 +112,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице приводятся описания этих окон.  
   
-|Окно|Description|  
+|Окно|Описание|  
 |------------|-----------------|  
 |Точки останова|Содержит список точек останова пакета и позволяет устанавливать и удалять точки останова.|  
 |Вывод|Отображает сообщения о состоянии объектов [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
@@ -155,7 +154,7 @@ ms.lasthandoff: 05/03/2018
  **Тип счетчика числа попаданий**  
  Позволяет указать условия срабатывания точки останова.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Всегда**|Выполнение приостанавливается при каждом попадании в точку останова.|  
 |**Число попаданий**|Выполнение приостанавливается, если число попаданий в точку останова равно значению счетчика попаданий.|  

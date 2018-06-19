@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
@@ -16,11 +14,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c62c28da819aa4293258784648b1af88a333e156
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 769ce099fc299900c93e11222f58389b2c43249b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332538"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Работа со службой CDC Oracle
   В этом разделе описываются некоторые важные понятия, относящиеся к службе Oracle CDC Service. В разделе описываются следующие понятия.  
@@ -75,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
  Далее описаны элементы, содержащиеся в таблице **dbo.xdbcdc_trace** .  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |----------|-----------------|  
 |TIMESTAMP|Точная отметка времени в формате UTC, когда была создана запись трассировки.|  
 |type|Содержит одно из следующих значений:<br /><br /> ошибка<br /><br /> INFO<br /><br /> трассировка|  
@@ -94,7 +93,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице описаны элементы, содержащиеся в таблице **dbo.xdbcdc_trace** .  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |----------|-----------------|  
 |name|Имя базы данных Oracle, содержащейся в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |config_version|Отметка времени в формате (UTC) последнего изменения в соответствующей таблице **xdbcdc_config** базы данных CDC или отметка времени (UTC) текущей строки этой таблицы.<br /><br /> Триггер UPDATE принудительно присваивает этому элементу значение GETUTCDATE(). **config_version** сообщает службе CDC, какой экземпляр CDC следует проверить на предмет наличия изменений в конфигурации, отключить или включить.|  
@@ -106,7 +105,7 @@ ms.lasthandoff: 05/03/2018
   
  Далее описаны элементы состояния отслеживания изменений, содержащиеся в таблице **dbo.xdbcdc_databases** .  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |----------|-----------------|  
 |cdc_service_name|Имя службы Oracle CDC Service (имя службы Windows).|  
 |cdc_service_sql_login|Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используемое службой Oracle CDC Service для подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Новый пользователь SQL с именем cdc_service создается и связывается с этим именем входа, а затем добавляется к предопределенным ролям базы данных db_ddladmin, db_datareader и db_datawriter для каждой базы данных CDC, обрабатываемой данной службой.|  

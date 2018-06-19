@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e724071d14199f90877fa02a0471a1e5a0b8574
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e989508142069cbee4dc270867360f433af5fbcf
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328248"
 ---
 # <a name="execute-package-task"></a>Задача «Выполнение пакета»
   Задача «Выполнение пакета» расширяет возможности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в рамках организации, позволяя одним пакетам выполнять другие пакеты как часть рабочего процесса.  
@@ -107,7 +106,7 @@ ms.lasthandoff: 05/03/2018
  Дополнительные сведения см. в разделу [Использование значений переменных и параметров в дочернем пакете](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
 ### <a name="accessing-parent-package-variables"></a>Доступ к переменным родительского пакета  
- Дочерние пакеты могут обращаться к переменным родительского пакета с помощью задачи «Скрипт». При вводе имени переменной родительского пакета на странице **Скрипт** в **редактора задачи «Скрипт»**не указывайте **User:** в имени переменной. В противном случае дочерний пакет не сможет обнаружить переменную при выполнении родительского пакета.  
+ Дочерние пакеты могут обращаться к переменным родительского пакета с помощью задачи «Скрипт». При вводе имени переменной родительского пакета на странице **Скрипт** в **редактора задачи «Скрипт»** не указывайте **User:** в имени переменной. В противном случае дочерний пакет не сможет обнаружить переменную при выполнении родительского пакета.  
   
 ## <a name="configuring-the-execute-package-task"></a>Настройка задачи «Выполнение пакета»  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
@@ -173,7 +172,7 @@ ms.lasthandoff: 05/03/2018
  **Местоположение**  
  Выберите местоположение дочернего пакета. Это свойство имеет параметры, указанные в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**SQL Server**|Установите местонахождение экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Файловая система**|Указывает, что местоположение находится в файловой системе.|  

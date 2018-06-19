@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d5a99d26e02695c8c805e30f7a3bc9afb972178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e0595f04bd99e2cab2ef71694d170392fd505b76
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329188"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Справка F1 мастера обновления пакетов служб SSIS
   Воспользуйтесь мастером обновления пакетов SSIS, чтобы обновить пакеты, созданные в более ранних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], до формата пакета текущего выпуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -53,7 +52,7 @@ ms.lasthandoff: 05/03/2018
  **Источник пакета**  
  Укажите место хранения, содержащее обновляемые пакеты. Все возможные значения этого параметра приведены в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Файловая система**|Указывает, что пакеты, подлежащие обновлению, находятся в папке на локальном компьютере.<br /><br /> Чтобы мастер создавал резервные копии исходных пакетов перед их обновлением, исходные пакеты должны храниться в файловой системе. Дополнительные сведения см. в разделе «Как».|  
 |**Хранилище пакетов служб SSIS**|Указывает, что обновляемые пакеты находятся в хранилище пакетов. Хранилище пакетов представляет собой набор папок в файловой системе, управляемый службой Windows служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в разделе [Управление пакетами (службы SSIS)](../integration-services/service/package-management-ssis-service.md).<br /><br /> При выборе этого значения отображается соответствующий динамический параметр **Источник пакета** .|  
@@ -105,7 +104,7 @@ ms.lasthandoff: 05/03/2018
  **Источник пакета**  
  Позволяет указать, где будут храниться обновленные пакеты. Все возможные значения этого параметра приведены в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Файловая система**|Указывает, что обновленные пакеты должны быть сохранены в папку на локальном компьютере.|  
 |**Хранилище пакетов служб SSIS**|Указывает, что обновленные пакеты должны быть сохранены в хранилище пакетов служб Integration Services. Хранилище пакетов представляет собой набор папок в файловой системе, управляемый службами Integration Services. Дополнительные сведения см. в разделе [Управление пакетами (службы SSIS)](../integration-services/service/package-management-ssis-service.md).<br /><br /> При выборе этого значения отображаются соответствующие динамические параметры **Источник пакета** .|  

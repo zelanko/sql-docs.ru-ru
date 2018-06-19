@@ -1,23 +1,21 @@
 ---
 title: Развертывание проекта служб SSIS с помощью SSMS | Документы Майкрософт
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d93e2d18fa2d13106ae0add8c9be5bfe269602e3
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 5ba8568b89863edcc5cf246c1ee09efb956d6a4a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455355"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332088"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Развертывание проекта служб SSIS с помощью SQL Server Management Studio (SSMS)
 В этом кратком руководстве показано, как подключиться к базе данных каталога SSIS с помощью SQL Server Management Studio (SSMS) и развернуть проект SSIS в каталоге SSIS с помощью мастера развертывания служб Integration Services. 
@@ -38,7 +36,7 @@ SQL Server Management Studio — это интегрированная сред�
 
 -   SQL Server в Windows.
 
--   База данных SQL Azure. Дополнительные сведения о развертывании и запуске пакетов в Azure см. в разделе [Перенос рабочих нагрузок SQL Server Integration Services в облако](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+-   База данных SQL Azure. Дополнительные сведения о развертывании и запуске пакетов в Azure см. в разделе [Перенос рабочих нагрузок SQL Server Integration Services в облако](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 Сведения, приведенные в этом кратком руководстве, не могут быть использованы для развертывания пакета SSIS на SQL Server в Linux. Дополнительные сведения о запуске пакетов на Linux см. в разделе [Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS](../linux/sql-server-linux-migrate-ssis.md).
 

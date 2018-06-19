@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 722890bcdd6b8f412052f87f38eea279b8f0c05f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a5d7f6a81a9f13aa82c8aef9320617d23c2f2fbd
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322143"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Настройки электронной почты — основной режим служб Reporting Services (диспетчер конфигураций)
 Службы Reporting Services включают модуль доставки по электронной почте, позволяющий распространять отчеты с помощью электронной почты. В зависимости от того, каким образом определена электронная подписка, рассылка может включать уведомление, ссылку, вложение или внедренный отчет. Модуль доставки по электронной почте работает с существующими технологиями почтовых серверов. Почтовый сервер должен быть либо SMTP-сервером, либо перенаправителем. Сервер отчетов соединяется с SMTP-сервером через объекты данных совместной работы (библиотека cdosys.dll), предоставляемых операционной системой.
@@ -163,7 +163,7 @@ ms.lasthandoff: 05/03/2018
 
 7. Присвойте параметру `<SMTPAuthenticate>` значение **1** , если `<SendUsing>` имеет значение 1 или 2.
 
-7. Задайте параметр `<From>`. Необходимо указать учетную запись, имеющую разрешение на передачу почтовых сообщений из SMTP-сервера.
+7. Задайте `<From>`. Необходимо указать учетную запись, имеющую разрешение на передачу почтовых сообщений из SMTP-сервера.
 
 8. Сохраните файл.
 

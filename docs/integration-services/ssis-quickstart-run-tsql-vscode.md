@@ -1,23 +1,21 @@
 ---
 title: Выполнение пакета служб SSIS с помощью Transact-SQL (Visual Studio Code) | Документы Майкрософт
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33c48b9438d141fac721d246ff2218cb0ccde542
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: de36395eed6cd85512f9e7497500bef53ab6d228
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455157"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332008"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Выполнение пакета служб SSIS из Visual Studio Code с помощью Transact-SQL
 В этом кратком руководстве демонстрируется использование Visual Studio Code для подключения к базе данных каталога SSIS и последующее использование инструкций Transact-SQL для запуска пакета служб SSIS, хранящегося в каталоге SSIS.
@@ -36,7 +34,7 @@ Visual Studio Code — это редактор кода для Windows, macOS и
 
 -   SQL Server в Windows.
 
--   База данных SQL Azure. Дополнительные сведения о развертывании и запуске пакетов в Azure см. в разделе [Перенос рабочих нагрузок SQL Server Integration Services в облако](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+-   База данных SQL Azure. Дополнительные сведения о развертывании и запуске пакетов в Azure см. в разделе [Перенос рабочих нагрузок SQL Server Integration Services в облако](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 Сведения, приведенные в этом кратком руководстве, не могут быть использованы для выполнения пакета SSIS в Linux. Дополнительные сведения о запуске пакетов на Linux см. в разделе [Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS](../linux/sql-server-linux-migrate-ssis.md).
 

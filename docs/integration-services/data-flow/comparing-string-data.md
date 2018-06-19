@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c60572c425df10ab659239217424d789bfe2abc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c803e00b62125c70bf0e99c2c90b550795a5b1d5
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329818"
 ---
 # <a name="comparing-string-data"></a>сравнение строковых данных
   Сравнения строк — важная составляющая любого преобразования, которое выполняется с помощью служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Кроме того, они применяются для вычисления выражений в переменных и выражениях свойств. Например, при преобразовании «Сортировка» сравниваются значения в наборе данных для сортировки данных по возрастанию или по убыванию.  
@@ -72,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
  В приведенной ниже таблице описаны параметры сравнения и стиль сортировки.  
   
-|Параметр сравнения|Description|  
+|Параметр сравнения|Описание|  
 |-----------------------|-----------------|  
 |Игнорировать регистр|Указывает, следует ли при сравнении различать символы в верхнем и нижнем регистре. Если параметр задан, то строковое сравнение игнорирует регистр. Например, «ABC» при сравнении не отличается от «abc».|  
 |Игнорируется тип японской азбуки|Указывает, следует ли различать при сравнении два типа символов японской азбуки: хирагана и катакана. Если параметр задан, то строковое сравнение игнорирует тип японской азбуки.|  

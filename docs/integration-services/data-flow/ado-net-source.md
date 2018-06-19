@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 81566c11122cd67e37e1304f1d56760fcae1ce29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f63cd49b5a78a42bdff0ef25f69ca9f55217c48
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328338"
 ---
 # <a name="ado-net-source"></a>Источник ADO NET
   Источник ADO NET использует данные поставщика .NET и делает данные доступными для потока данных.  
@@ -104,7 +103,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  На вкладке **Поток данных** дважды щелкните источник данных "ADO.NET".  
   
-3.  В окне **Редактор источника «ADO.NET»**нажмите кнопку **Диспетчер соединений**.  
+3.  В окне **Редактор источника «ADO.NET»** нажмите кнопку **Диспетчер соединений**.  
   
 ### <a name="static-options"></a>Статические параметры  
  **Диспетчер соединений ADO.NET**  
@@ -116,7 +115,7 @@ ms.lasthandoff: 05/03/2018
  **Режим доступа к данным**  
  Укажите метод выбора данных из источника.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |Таблица или представление|Выборка данных из таблицы или представления в источнике данных [!INCLUDE[vstecado](../../includes/vstecado-md.md)] .|  
 |Команда SQL|Выборка данных из источника данных [!INCLUDE[vstecado](../../includes/vstecado-md.md)] с использованием SQL-запроса.|  
@@ -154,7 +153,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  На вкладке **Поток данных** дважды щелкните источник данных "ADO.NET".  
   
-3.  В окне **Редактор источника «ADO.NET»**нажмите кнопку **Столбцы**.  
+3.  В окне **Редактор источника «ADO.NET»** нажмите кнопку **Столбцы**.  
   
 ### <a name="options"></a>Параметры  
  **Доступные внешние столбцы**  
@@ -177,7 +176,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  На вкладке **Поток данных** дважды щелкните источник данных "ADO.NET".  
   
-3.  В окне **Редактор источника «ADO.NET»**нажмите кнопку **Вывод ошибок**.  
+3.  В окне **Редактор источника «ADO.NET»** нажмите кнопку **Вывод ошибок**.  
   
 ### <a name="options"></a>Параметры  
  **Ввод-вывод**  

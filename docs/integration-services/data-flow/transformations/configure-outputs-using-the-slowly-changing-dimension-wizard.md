@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a36b2b509108234f985e9fa3534094e54d6c194c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 394edd627a8cb3c62134cf4bec97adc0fe5ecbf5
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331098"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Настройка выходов при помощи мастера медленно изменяющихся измерений
   Мастер медленно изменяющихся измерений выполняет функции редактора преобразования «Медленно изменяющиеся измерения». Построение и настройка потока данных для данных медленно изменяющегося измерения может оказаться сложной задачей. С помощью мастера медленно изменяющихся измерений легко создавать поток данных для выходов преобразования «Медленно изменяющиеся измерения», руководствуясь шагами по сопоставлению столбцов, выбору столбцов с бизнес-ключами, заданию атрибутов изменения столбцов и настройке поддержки выводимого элемента измерения.  

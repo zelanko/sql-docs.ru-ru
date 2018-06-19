@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f9272ce373bbd59b76104b4437f55a98ec89d429
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbf2fd8e1f09e2cab3284b9348971cf6d99cfef4
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402096"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Повторное использование потока управления для нескольких пакетов с помощью частей пакета потока управления
   Можно сохранить часто используемую задачу или контейнер потока управления в отдельный файл части (DTSXP-файл) и повторно использовать их несколько раз в одном или нескольких пакетах с помощью частей пакета потока управления. Такая возможность повторного использования упрощает разработку и обслуживание пакетов служб SSIS.  
@@ -79,7 +78,7 @@ ms.lasthandoff: 05/03/2018
   
  ![Добавление новых шаблонов потоков управления из меню](../integration-services/media/control-flow-templates-add-from-menu.png "Добавление новых шаблонов потоков управления из меню")  
   
- ![Диалоговое окно "Добавление копии существующих шаблонов"](../integration-services/media/control-flow-templates-add-copy-dialog.png "Диалоговое окно "Добавление копии существующих шаблонов"")  
+ ![Диалоговое окно "Добавление копии существующих шаблонов"](../integration-services/media/control-flow-templates-add-copy-dialog.png "Диалоговое окно \"Добавление копии существующих шаблонов\"")  
   
  **Параметры**  
   
@@ -103,7 +102,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="properties-tab"></a>Вкладка «Свойства»  
  Вкладка **Свойства** диалогового окна **Настройка частей пакета**  служит для задания свойств части.  
   
- ![Вкладка "Свойства" диалогового окна "Конфигурация шаблона"](../integration-services/media/template-configuration-properties-tab.png "Вкладка "Свойства" диалогового окна "Конфигурация шаблона"")  
+ ![Вкладка "Свойства" диалогового окна "Конфигурация шаблона"](../integration-services/media/template-configuration-properties-tab.png "Вкладка \"Свойства\" диалогового окна \"Конфигурация шаблона\"")  
   
  В представлении дерева слева перечислены все настраиваемые свойства экземпляра части.  
   
@@ -122,7 +121,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="connection-managers-tab"></a>Вкладка "Диспетчеры подключений"  
  Вкладка **Диспетчеры подключений** диалогового окна **Настройка частей пакета**  служит для задания свойств диспетчеров подключений для экземпляра части.  
   
- ![Вкладка "Диспетчеры подключений" диалогового окна "Конфигурация шаблона"](../integration-services/media/template-configuration-connection-managers-tab.png "Вкладка "Диспетчеры подключений" диалогового окна "Конфигурация шаблона"")  
+ ![Вкладка "Диспетчеры подключений" диалогового окна "Конфигурация шаблона"](../integration-services/media/template-configuration-connection-managers-tab.png "Вкладка \"Диспетчеры подключений\" диалогового окна \"Конфигурация шаблона\"")  
   
  В таблице слева перечислены все диспетчеры подключений, определенные в части потока управления. Выберите нужный диспетчер подключений.  
   

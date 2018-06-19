@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c67cbfeb3797c2e0d9fb5758078dad96f290d4e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 796c0f5e2d0cb2d689921d75b9e2005a49a35106
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332578"
 ---
 # <a name="odbc-source"></a>ODBC-источник
   Источник ODBC извлекает данные из базы данных с поддержкой ODBC с использованием таблицы базы данных, представления или инструкции SQL.  
@@ -111,7 +110,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="data-access-mode"></a>Режим доступа к данным  
  Выберите метод выбора данных из источника. Доступные параметры показаны в следующей таблице.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |Имя таблицы|Получение данных из таблицы или представления в источнике данных ODBC. Если выбран этот параметр, выберите значение из следующего списка.|  
 ||**Имя таблицы или представления**. Выберите доступную таблицу или представление из списка или введите регулярное выражение, определяющее таблицу.|  
@@ -175,7 +174,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="truncation"></a>Усечение  
  Выберите порядок обработки усечений в потоке источником ODBC: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Описание  
  Не используется.  
   
 #### <a name="set-this-value-to-selected-cells"></a>Присвоить указанное значение выбранным ячейкам  

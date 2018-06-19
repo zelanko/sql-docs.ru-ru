@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
@@ -16,18 +14,19 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed06c8dc48838d1758553fa70491d0ea265534e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4409c736d53617d87c6d2a36f1f50b4eab4ee2b3
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403886"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Отображает сведения о проверке правильности всех проектов и пакетов в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |validation_id|**bigint**|Уникальный идентификатор (ID) проверки.|  
 |environment_scope|**Char(1)**|Указывает ссылки на среду, которые учитываются при проверке. Если это значение равно `A`, то в проверку включены все ссылки на среду, связанные с проектом. Если это значение равно `S`, то включена лишь единственная ссылка на среду. Если это значение равно `D`, то никакие ссылки на среду не включены и каждый параметр, чтобы пройти проверку, должен иметь литеральное значение по умолчанию.|  

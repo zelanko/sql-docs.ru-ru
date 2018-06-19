@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -24,11 +24,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 95da332536e968324a61e2001462e4bdae527d24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7bbfd0f9a5572d29451d9a7c18bc3c61aa9613c
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329358"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Настройка компонента скрипта в редакторе компонента скрипта
   Прежде чем приступать к написанию пользовательского кода в компоненте скрипта, необходимо выбрать тип компонента потока данных, который должен быть создан (источник, преобразование или назначение), а затем настроить метаданные и свойства компонента в окне **Редактор преобразования "скрипт"**.  

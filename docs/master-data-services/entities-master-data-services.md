@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4133b59bc3e41f50d8463b52cadb679983282333
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9c44dd9a642fa7b5d49e8452688976661cf1437
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330368"
 ---
 # <a name="entities-master-data-services"></a>Сущности (службы основных данных)
 
@@ -59,11 +59,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="entity-examples"></a>Примеры сущности  
  В следующих примерах сущность имеет атрибуты: Name, Code, Subcategory, StandardCost, ListPrice и FilePhoto. Эти атрибуты описывают элементы. Каждый элемент представлен отдельной строкой значений атрибута.  
   
- ![Таблица продукта "Велосипед"](../master-data-services/media/mds-conc-entity-table-w-data.gif "Таблица продукта "Велосипед"")  
+ ![Таблица продукта "Велосипед"](../master-data-services/media/mds-conc-entity-table-w-data.gif "Таблица продукта \"Велосипед\"")  
   
  В следующем примере сущность «Продукт» является центральной. Сущность «Подкатегория» является атрибутом на основе домена сущности «Продукт». Сущность «Категория» является атрибутом на основе домена сущности «Подкатегория». StandardCost и ListPrice — это атрибуты в свободной форме сущности Product, а FilePhoto — это файловый атрибут сущности Product.  
   
- ![Древовидная структура сущности "Продукт"](../master-data-services/media/mds-conc-entity-ui.gif "Древовидная структура сущности "Продукт"")  
+ ![Древовидная структура сущности "Продукт"](../master-data-services/media/mds-conc-entity-ui.gif "Древовидная структура сущности \"Продукт\"")  
   
 > [!NOTE]  
 >  Это пример на основе пользовательского интерфейса [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Иерархическая древовидная структура показывает отношения между сущностями и атрибутами на основе домена. Она предназначена для отображения отношений, а не для демонстрации уровней важности.  

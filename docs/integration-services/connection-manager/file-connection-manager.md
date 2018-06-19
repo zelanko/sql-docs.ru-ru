@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 465a881b9a999331596bcbbc2329406e0ff5fe65
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f22b22f3134122b733a9d2f233054445d1898c3
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333518"
 ---
 # <a name="file-connection-manager"></a>диспетчер соединения файлов
   Диспетчер соединения файлов позволяет пакету ссылаться на существующий файл или папку или создавать файл или папку в процессе выполнения. Например, можно установить ссылку на файл Excel. Некоторые компоненты из служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используют данные, хранящиеся в файлах, для выполнения своей работы. Например, задача «Выполнение SQL» может ссылаться на файл, содержащий набор инструкций SQL. Другие компоненты выполняют операции с файлами. Например, задача «Файловая система» может ссылаться на файл для его копирования в другое расположение.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице приводятся значения **FileUsageType**.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Диспетчер подключения файлов использует существующий файл.|  
 |**1**|Диспетчер подключения файлов создает файл.|  
@@ -80,7 +79,7 @@ ms.lasthandoff: 05/03/2018
  **Тип применения**  
  Укажите, будет ли **Диспетчер подключения файлов** подключаться к существующему файлу или папке или создаст новый файл или папку.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |Создать файл|Во время выполнения создается новый файл.|  
 |Существующий файл|Использовать существующий файл.|  

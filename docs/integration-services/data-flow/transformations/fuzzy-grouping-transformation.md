@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -34,11 +32,12 @@ caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 94fd84ce9a46537fb90caa47e869f96167493bdc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0772e8230673a23412d880aef729d0a278c448bb
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401626"
 ---
 # <a name="fuzzy-grouping-transformation"></a>преобразование «Нечеткое группирование»
   Преобразование «Нечеткое группирование» выполняет задачи очистки данных путем идентификации строк данных, которые похожи на дубликаты, и выбора канонической строки данных для использования в стандартизации данных.  
@@ -149,7 +148,7 @@ ms.lasthandoff: 05/03/2018
  **Цифры**  
  Задайте значимость начальных и конечных цифр при сравнении данных столбцов. Например, если начальные цифры являются значимыми, группировка строк «123 Main Street» и «456 Main Street» не выполняется.  
   
-|Value|Description|  
+|Value|Описание|  
 |-----------|-----------------|  
 |**Нет**|Начальные и конечные цифры не являются значимыми.|  
 |**Начальные**|Значимыми являются только начальные цифры.|  
