@@ -1,8 +1,5 @@
 # [Обзор](integration-services-ssis-connections.md)  
 # [Источники данных](data-sources.md)  
-# [Подключение к базе данных Access](connect-to-an-access-database.md)  
-# [Подключение к файлу dBASE или другим файлам DBF](connect-to-a-dbase-or-other-dbf-file.md)  
-# [Подключение к книге Excel](connect-to-an-excel-workbook.md)  
 # [Диспетчер подключений объектов данных ActiveX](ado-connection-manager.md)  
 # [Диспетчер подключений ADO.NET](ado-net-connection-manager.md)  
 # [Диспетчер подключений служб Analysis Services](analysis-services-connection-manager.md)  
