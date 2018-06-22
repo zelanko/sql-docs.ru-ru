@@ -53,6 +53,7 @@
 ### [Свойства сервера (страница "Журнал")](server-properties-history-page.md)
 ### [Свойства сервера (страница "Регистрация")](server-properties-logging-page.md)
 ### [Свойства сервера (страница "Безопасность")](server-properties-security-page-reporting-services.md)
+### [Свойства сервера (страница "Дополнительно")](server-properties-advanced-page-reporting-services.md)
 ### [Свойства системной роли](system-role-properties-management-studio.md)
 ### [Свойства роли пользователя](user-role-properties-management-studio.md)
 # [Построитель отчетов](report-builder-authoring-environment-ssrs.md)

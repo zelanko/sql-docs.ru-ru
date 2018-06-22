@@ -37,6 +37,7 @@
 ### [Параметры ("Результаты запроса", "SQL Server", страница "В виде сетки")](../../database-engine/options-query-results-sql-server-results-to-grid-page.md)
 ### [Параметры ("Результаты запроса", "SQL Server", страница "В виде текста")](../../database-engine/options-query-results-sql-server-results-to-text-page.md)
 ### [Параметры (страница "Результаты запроса/SQL Server/Многосерверные")](../../database-engine/options-query-results-sql-server-multi-server.md)
+### [Параметры (Выполнение запросов/Сервер анализа данных/страница «Общие»)](../../database-engine/options-query-execution-analysis-server-general-page.md)
 ### [Параметры (страница "Результаты запроса/Сервер анализа данных/Общие")](../../database-engine/options-query-results-analysis-server-general-page.md)
 ### [Параметры ("Результаты запроса" и страница "Службы зависимостей")](../../database-engine/options-query-results-and-dependency-services-page.md)
 ## [Открытие редактора (среда SQL Server Management Studio)](open-an-editor-sql-server-management-studio.md)

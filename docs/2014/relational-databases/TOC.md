@@ -69,7 +69,8 @@
 ## [Учебник по программированию управляющих объектов SQL Server (SMO) +](server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)
 ## [Инструментарий управления Windows (WMI)](../database-engine/dev-guide/windows-management-instrumentation.md)
 ## [Основные понятия о поставщике WMI для управления конфигурацией +](wmi-provider-configuration/wmi-provider-for-configuration-management.md)
-
+## [SqlToolsVSNativeHelpers](sqltoolsvsnativehelpers.md)
+### [FrameWindowVisible](sqltoolsvsnativehelpers-framewindowvisible.md)
 # [Учебники по компоненту ядра СУБД](database-engine-tutorials.md)
 ## [Учебник. Приступая к работе с компонентом Database Engine](tutorial-getting-started-with-the-database-engine.md)
 ### [Занятие 1. Подключение к ядру СУБД](lesson-1-connecting-to-the-database-engine.md)

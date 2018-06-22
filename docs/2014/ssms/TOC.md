@@ -6,6 +6,7 @@
 ### [Веб-браузер среды SQL Server Management Studio](sql-server-management-studio-web-browser.md)
 ### [Диалоговое окно «Внешние средства»](external-tools-dialog-box.md)
 ### [Диалоговое окно "Аргументы"](arguments-dialog-box.md)
+### [Аргументы для внешних средств](use-of-sql-server-features-and-capabilities-wwi-oltp.md)
 ### [Окно "Свойства" (среда Management Studio)](properties-window-management-studio.md)
 ### [Использование панели элементов](use-the-toolbox.md)
 ## [Возможности среды SQL Server Management Studio](../database-engine/features-in-sql-server-management-studio.md)
