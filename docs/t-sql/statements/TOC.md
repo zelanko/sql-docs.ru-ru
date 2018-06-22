@@ -1,5 +1,9 @@
 # [Обзор](statements.md)
 
+# ADD
+
+## [SENSITIVITY CLASSIFICATION](add-sensitivity-classification-transact-sql.md)
+
 # ALTER
 
 ## [APPLICATION ROLE](alter-application-role-transact-sql.md)
@@ -13,7 +17,7 @@
 ## [CREDENTIAL](alter-credential-transact-sql.md)  
 ## [CRYPTOGRAPHIC PROVIDER](alter-cryptographic-provider-transact-sql.md)  
 
-## [DATABASE](alter-database-transact-sql.md) 
+## [DATABASE](alter-database-transact-sql.md)
 ## [DATABASE (база данных SQL Azure)](alter-database-azure-sql-database.md)  
 ## [DATABASE (хранилище данных SQL Azure)](alter-database-azure-sql-data-warehouse.md)  
 ## [DATABASE (Parallel Data Warehouse)](alter-database-parallel-data-warehouse.md)  
@@ -69,7 +73,7 @@
 ## [TABLE определение_вычисляемого_столбца](alter-table-computed-column-definition-transact-sql.md)
 ## [TABLE вариант_индекса](alter-table-index-option-transact-sql.md)  
 ## [TABLE ограничение_таблицы](alter-table-table-constraint-transact-sql.md)  
- 
+
 ## [TRIGGER](alter-trigger-transact-sql.md)  
 ## [USER](alter-user-transact-sql.md)  
 ## [VIEW](alter-view-transact-sql.md)  
@@ -85,7 +89,7 @@
 
 ## [RESTORE](restore-statements-transact-sql.md)  
 ## [RESTORE (инструкции)](restore-statements-for-restoring-recovering-and-managing-backups-transact-sql.md)  
-## [RESTORE DATABASE (Parallel Data Warehouse)](restore-database-parallel-data-warehouse.md) 
+## [RESTORE DATABASE (Parallel Data Warehouse)](restore-database-parallel-data-warehouse.md)
 
 ## [RESTORE (аргументы)](restore-statements-arguments-transact-sql.md)  
 ## [RESTORE FILELISTONLY](restore-statements-filelistonly-transact-sql.md)  
@@ -98,7 +102,7 @@
 # [BULK INSERT](bulk-insert-transact-sql.md)  
 
 # CREATE
-  
+
 ## [AGGREGATE](create-aggregate-transact-sql.md)  
 ## [APPLICATION ROLE](create-application-role-transact-sql.md)  
 ## [ASSEMBLY](create-assembly-transact-sql.md)  
@@ -168,7 +172,7 @@
 ## [TABLE (хранилище данных SQL Azure)](create-table-azure-sql-data-warehouse.md)  
 ## [TABLE (граф SQL)](create-table-sql-graph.md)  
 ## [TABLE AS SELECT (хранилище данных SQL Azure)](create-table-as-select-azure-sql-data-warehouse.md)
-## [TABLE IDENTITY (свойство)](create-table-transact-sql-identity-property.md) 
+## [TABLE IDENTITY (свойство)](create-table-transact-sql-identity-property.md)
 ## [TRIGGER](create-trigger-transact-sql.md)  
 ## [TYPE](create-type-transact-sql.md)  
 ## [USER](create-user-transact-sql.md)  
@@ -184,7 +188,7 @@
 ## [Имя параметров сортировки Windows](windows-collation-name-transact-sql.md)  
 ## [Очередность параметров сортировки](collation-precedence-transact-sql.md)  
 
-# [DELETE](delete-transact-sql.md) 
+# [DELETE](delete-transact-sql.md)
 # [DISABLE TRIGGER](disable-trigger-transact-sql.md)
 
 # DROP
@@ -234,6 +238,7 @@
 ## [SCHEMA](drop-schema-transact-sql.md)  
 ## [SEARCH PROPERTY LIST](drop-search-property-list-transact-sql.md)  
 ## [SECURITY POLICY](drop-security-policy-transact-sql.md)  
+## [SENSITIVITY CLASSIFICATION](drop-sensitivity-classification-transact-sql.md)
 ## [SEQUENCE](drop-sequence-transact-sql.md)  
 ## [SERVER AUDIT ](drop-server-audit-transact-sql.md)  
 ## [SERVER AUDIT SPECIFICATION](drop-server-audit-specification-transact-sql.md)  
@@ -243,7 +248,7 @@
 ## [STATISTICS](drop-statistics-transact-sql.md)  
 ## [SYMMETRIC KEY](drop-symmetric-key-transact-sql.md)  
 ## [SYNONYM](drop-synonym-transact-sql.md)  
-## [TABLE](drop-table-transact-sql.md) 
+## [TABLE](drop-table-transact-sql.md)
 ## [TRIGGER](drop-trigger-transact-sql.md)  
 ## [TYPE](drop-type-transact-sql.md)  
 ## [USER](drop-user-transact-sql.md)  
@@ -252,12 +257,12 @@
 ## [XML SCHEMA COLLECTION](drop-xml-schema-collection-transact-sql.md)  
 
 # [ENABLE TRIGGER](enable-trigger-transact-sql.md)
-# [INSERT](insert-transact-sql.md) 
-# [INSERT (граф SQL)](insert-sql-graph.md) 
-# [MERGE](merge-transact-sql.md) 
+# [INSERT](insert-transact-sql.md)
+# [INSERT (граф SQL)](insert-sql-graph.md)
+# [MERGE](merge-transact-sql.md)
 # [RENAME](rename-transact-sql.md)  
 
-# Разрешения 
+# Разрешения
 ## [ADD SIGNATURE](add-signature-transact-sql.md)  
 ## [CLOSE MASTER KEY](close-master-key-transact-sql.md)  
 ## [CLOSE SYMMETRIC KEY](close-symmetric-key-transact-sql.md)  
@@ -328,7 +333,7 @@
 ## [REVOKE (разрешения на тип)](revoke-type-permissions-transact-sql.md)  
 ## [REVOKE (разрешения на коллекцию XML-схем)](revoke-xml-schema-collection-permissions-transact-sql.md)  
 ## [SETUSER](setuser-transact-sql.md)
-  
+
 # Компонент Service Broker
 ## [BEGIN CONVERSATION TIMER](begin-conversation-timer-transact-sql.md)  
 ## [BEGIN DIALOG CONVERSATION](begin-dialog-conversation-transact-sql.md)  
@@ -339,7 +344,7 @@
 ## [RECEIVE](receive-transact-sql.md)  
 ## [SEND](send-transact-sql.md)  
 
-# SET 
+# SET
 ## [Обзор](set-statements-transact-sql.md)
 ## [ANSI_DEFAULTS](set-ansi-defaults-transact-sql.md)  
 ## [ANSI_NULL_DFLT_OFF](set-ansi-null-dflt-off-transact-sql.md)  

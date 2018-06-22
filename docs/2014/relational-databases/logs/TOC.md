@@ -1,0 +1,8 @@
+# [Средство просмотра файлов журнала](log-file-viewer.md)
+## [открыть средство просмотра журнала](open-log-file-viewer.md)
+## [Просмотр автономных файлов журнала](view-offline-log-files.md)
+## [Справка средства просмотра журнала F1](log-file-viewer-f1-help.md)
+# [Журнал транзакций (SQL Server)](the-transaction-log-sql-server.md)
+## [Управление размером файла журнала транзакций](manage-the-size-of-the-transaction-log-file.md)
+## [Устранение неполадок при переполнении журнала транзакций (ошибка SQL Server 9002)](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)
+## [Управление устойчивостью транзакций](control-transaction-durability.md)
