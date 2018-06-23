@@ -1,0 +1,71 @@
+---
+title: Диспетчер подключений OLE DB | Документы Майкрософт
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- OLE DB connection manager
+- data sources [Integration Services], connections
+- connection managers [Integration Services], OLE DB
+- connections [Integration Services], OLE DB
+ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
+caps.latest.revision: 56
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.openlocfilehash: c6d2fd657b3fa7cd91f00f98242aed0e959dd5e9
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324608"
+---
+# <a name="ole-db-connection-manager"></a>диспетчер соединений OLE DB
+  Диспетчер соединений OLE DB позволяет пакету подключаться к источнику данных с помощью поставщика OLE DB. Например, диспетчер соединений OLE DB, который подключается к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , может использовать поставщик [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+> [!NOTE]  
+>  Собственный поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 11.0 не поддерживает новые ключевые слова строки соединения (MultiSubnetFailover=True) для отказоустойчивых кластеров с несколькими подсетями. Дополнительные сведения см. в разделе [заметки о выпуске SQL Server](http://go.microsoft.com/fwlink/?LinkId=247824) и в записи блога [Многоподсетевой отработки отказа AlwaysOn и SSIS](http://go.microsoft.com/fwlink/?LinkId=247825), на www.mattmasson.com.  
+  
+ Некоторые задачи служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и компоненты потока данных применяют диспетчер соединений OLE DB. Например, источник OLE DB и назначение «OLE DB» применяют диспетчер соединений для извлечения и загрузки данных, а задача «Выполнение SQL» может применять его для подключения к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы выполнять запросы.  
+  
+ Кроме того, диспетчер соединений OLE DB применяется для доступа к источникам данных OLE DB в пользовательских задачах, написанных неуправляемым кодом на языке, подобном C++.  
+  
+ При добавлении диспетчера соединений OLE DB к пакету [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создают диспетчер, который будет решать задачи соединений OLE DB во время выполнения, устанавливает свойства диспетчера соединений и добавляет диспетчер соединений для соединений `Connections` коллекции пакет.  
+  
+ `ConnectionManagerType` Диспетчера соединений задано значение `OLEDB`.  
+  
+ Диспетчер соединений OLE DB можно настроить следующими способами:  
+  
+-   Укажите конкретную строку соединения, соответствующую требованиям конфигурации выбранного поставщика.  
+  
+-   В зависимости от поставщика предоставьте имя источника данных, к которому производится подключение.  
+  
+-   Предоставьте безопасные учетные данные, соответствующие выбранному поставщику.  
+  
+-   Обозначает, будет ли соединение, созданное из диспетчера соединений, сохранено во время выполнения.  
+  
+## <a name="logging"></a>Ведение журнала  
+ В журнал можно записывать вызовы, сделанные диспетчером соединений OLE DB к внешним поставщикам данных. Эта возможность ведения журнала может быть использована для устранения неполадок соединений, которые выполняются диспетчером соединений OLE DB к внешним источникам данных. Чтобы вести журнал вызовов, которые диспетчер соединений OLE DB совершает к внешним поставщикам данных, необходимо включить ведение журнала пакета и выбрать событие **Диагностика** на уровне пакета. Дополнительные сведения см. в разделе [Инструменты устранения неполадок при выполнении пакетов](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
+  
+## <a name="configuration-of-the-oledb-connection-manager"></a>Настройка диспетчера соединений OLE DB  
+ Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами. Дополнительные сведения о свойствах, которые можно задавать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в разделе [Настройка диспетчера соединений OLE DB](../configure-ole-db-connection-manager.md). Дополнительные сведения о настройке диспетчера соединений программными средствами см. в документации по классу **T:Microsoft.SqlServer.Dts.Runtime.ConnectionManager** в руководстве для разработчиков.  
+  
+## <a name="related-content"></a>См. также  
+  
+-   Статья Wiki [Соединители служб SSIS с Oracle](http://go.microsoft.com/fwlink/?LinkId=220670) на сайте social.technet.microsoft.com  
+  
+-   Техническая статья [Connection Strings for OLE DB Providers](http://go.microsoft.com/fwlink/?LinkId=220744)(Строки подключения для поставщиков OLE DB) на сайте carlprothman.net.  
+  
+## <a name="see-also"></a>См. также  
+ [Источник OLE DB](../data-flow/ole-db-source.md)   
+ [Назначение OLE DB](../data-flow/ole-db-destination.md)   
+ [Задача "Выполнение SQL"](../control-flow/execute-sql-task.md)   
+ [Службы Integration Services &#40;SSIS&#41; подключений](integration-services-ssis-connections.md)  
+  
+  

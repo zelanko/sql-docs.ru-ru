@@ -1,0 +1,71 @@
+---
+title: TRIM (выражение служб SSIS) | Документы Майкрософт
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- leading blanks
+- TRIM function
+- trailing blanks
+ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
+caps.latest.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.openlocfilehash: ef5a948e4734c1965217702f600605666c385c01
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36110196"
+---
+# <a name="trim-ssis-expression"></a>TRIM (выражение служб SSIS)
+  Возвращает символьное выражение после удаления начальных и конечных пробелов.  
+  
+> [!NOTE]  
+>  Функция TRIM не удаляет символы-разделители, такие как знаки табуляции или перевода строки. Юникод обеспечивает элементы кода для множества различных типов пробелов, однако данная функция распознает только элемент кода 0x0020 в Юникоде. Если строки двухбайтовой кодировки (DBCS) преобразованы в Юникод, они могут включать пробелы, отличные от 0x0020. Тогда функция не в состоянии удалить такие пробелы. Чтобы удалить все типы пробелов, можно использовать метод обрезки Microsoft Visual Basic .NET в скрипте, запускаемом из компонента скрипта.  
+  
+## <a name="syntax"></a>Синтаксис  
+  
+```  
+  
+TRIM(character_expression)  
+```  
+  
+## <a name="arguments"></a>Аргументы  
+ *character_expression*  
+ Символьное выражение, из которого удаляются пробелы.  
+  
+## <a name="result-types"></a>Типы результата  
+ DT_WSTR  
+  
+## <a name="remarks"></a>Примечания  
+ Функция TRIM возвращает результат NULL, если аргумент имеет значение NULL.  
+  
+ Функция TRIM работает только с типом данных DT_WSTR. Аргумент *character_expression* , являющийся строковым литералом или столбцом данных с типом данных DT_STR, неявно приведен к типу данных DT_WSTR до выполнения функции TRIM. Прочие типы данных должны быть явно приведены к типу данных DT_WSTR. Дополнительные сведения см. в разделах [Типы данных служб Integration Services](../data-flow/integration-services-data-types.md) и [Приведение (выражение служб SSIS)](cast-ssis-expression.md).  
+  
+## <a name="expression-examples"></a>Примеры выражений  
+ В данном примере удаляются начальные и конечные пробелы из строкового литерала. Возвращаемый результат — «New York».  
+  
+```  
+TRIM("   New York   ")  
+```  
+  
+ Данный пример удаляет начальные и конечные пробелы из результата сцепления столбцов **FirstName** и **LastName** . Пустая строка между столбцами **FirstName** и **LastName** не удалена.  
+  
+```  
+TRIM(FirstName + " "+ LastName)  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Функция LTRIM &#40;выражение служб SSIS&#41;](trim-ssis-expression.md)   
+ [RTRIM &#40;выражение служб SSIS&#41;](rtrim-ssis-expression.md)   
+ [Функции &#40;выражение служб SSIS&#41;](functions-ssis-expression.md)  
+  
+  

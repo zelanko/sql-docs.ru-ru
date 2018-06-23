@@ -1,0 +1,48 @@
+---
+title: Импорт отчетов из Microsoft Access (службы Reporting Services) | Документы Microsoft
+ms.custom: ''
+ms.date: 03/07/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- Access reports [Reporting Services]
+- importing reports
+ms.assetid: 4f29d5b8-b77d-4714-a84a-05523df55646
+caps.latest.revision: 39
+author: douglaslM
+ms.author: douglasl
+manager: mblythe
+ms.openlocfilehash: ec0461f278bfe6556d4a1fa221d5b33426d8ed01
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36188409"
+---
+# <a name="import-reports-from-microsoft-access-reporting-services"></a>Импорт отчетов из базы данных Microsoft Access (службы Reporting Services)
+  В конструкторе отчетов можно импортировать отчеты из [!INCLUDE[msCoName](../includes/msconame-md.md)] базы данных Access или project. СУБД Access 2002 или его более поздняя версия должен быть установлен на том же компьютере, что и конструктор отчетов.  
+  
+ При использовании этой функции выполняется импорт всех отчетов базы данных или проекта. Если файл Access содержит много отчетов, можно создать отдельный проект отчета, в который будет выполняться импорт отчетов, а затем открывать каждый файл на языке определения отчетов в главном проекте отчета. После импорта отчетов в конструктор отчетов их можно изменять.  
+  
+> [!NOTE]  
+>  Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживают не все объекты отчетов Access. Отображаются элементы, которые не преобразуются в **список задач** окна. Дополнительные сведения см. в разделе [поддерживаемые функции отчетов Access &#40;SSRS&#41;](../../2014/reporting-services/supported-access-report-features-ssrs.md).  
+  
+### <a name="to-import-reports-from-microsoft-access"></a>Импорт отчетов из Microsoft Access  
+  
+1.  Откройте или создайте проект, в который планируется импортировать отчеты.  
+  
+2.  На **проекта** последовательно выберите пункты **импортировать отчеты**, а затем нажмите кнопку **Microsoft Access**. Кроме того, щелкните правой кнопкой мыши проект в обозревателе решений, выберите пункт **импортировать отчеты**, а затем нажмите кнопку **Microsoft Access**.  
+  
+3.  В **откройте** диалогового окна выберите базы данных Access (MDB, ACCDB) или проекта (ADP), содержащий отчеты, а затем нажмите кнопку **откройте**. Все отчеты в базе данных или файле проекта импортируются в папку «Отчеты» в обозревателе решений.  
+  
+4.  Проверьте **список задач** окна для ошибок сборки. Для просмотра **список задач** откройте **представление** последовательно выберите пункты **другие окна**, а затем нажмите кнопку **списка задач**.  
+  
+## <a name="see-also"></a>См. также  
+ [Разработка отчетов с использованием конструктора отчетов (SSRS)](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
+  
+  
