@@ -3,11 +3,9 @@ title: Определяемые пользователем функции CLR | 
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +19,12 @@ caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 78f95d7da1a879c2ef33bed15709541cb399660b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3696f621801e493cbcaacfd10fd6d60445fd1a06
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917759"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702085"
 ---
 # <a name="clr-user-defined-functions"></a>Определяемые пользователем функции среды CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,16 +34,16 @@ ms.locfileid: "32917759"
   
  В следующей таблице приводится список подразделов данного раздела.  
   
- [Скалярные функции CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-scalar-valued-functions.md)  
+ [Скалярные функции среды CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-scalar-valued-functions.md)  
  Приводит сведения о требованиях реализации и примеры скалярных функций.  
   
- [Возвращающие табличные значения функции CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)  
+ [Функции среды CLR, возвращающие табличное значение](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)  
  Объясняет реализацию и использование функций с табличным значением (TVF), а также разницу между возвращающими табличные значения функциями в [!INCLUDE[tsql](../../includes/tsql-md.md)] и в среде CLR.  
   
- [Определяемые пользователем статистические функции CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
+ [Определяемые пользователем агрегатные функции среды CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
  Объясняет реализацию и использование определяемых пользователем статистических функций.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определяемые пользователем функции](../../relational-databases/user-defined-functions/user-defined-functions.md)  
   
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a7f4e8a8b6813eecf74fbc4e932296d3eff4631
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0faf40639991005ad7161af9f144af49fb384ba3
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947509"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703495"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +45,7 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Маркер*  
+ *маркер*  
  Значение, указывающее токен типа BCP.  
   
  *field*  
@@ -56,7 +54,7 @@ RETCODE bcp_gettypename (
 ## <a name="returns"></a>Возвращает  
  Строка, содержащая имя типа SQL, соответствующего типу BCP. Если указывается недопустимый тип BCP, возвращается пустая строка.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Токены типа BCP определены в файле заголовка sqlncli.h и библиотеке sqlncli11.lib.  
   
  В следующей таблице указаны возможные типы BCP, независимо от того, являются ли они типами max или нет, а также ожидаемые выходные данные.  
@@ -72,7 +70,7 @@ RETCODE bcp_gettypename (
 |**SQLFLT8**|Допустим любой вариант|**float**|  
 |**SQLDATETIME**|Допустим любой вариант|**datetime**|  
 |**SQLBITN**|Допустим любой вариант|**bit-null**|  
-|**SQLBIT**|Допустим любой вариант|**бит**|  
+|**SQLBIT**|Допустим любой вариант|**bit**|  
 |**SQLBIGCHAR**|Нет|**char**|  
 |**SQLCHARACTER**|Нет|**char**|  
 |**SQLBIGVARCHAR**|Нет|**varchar**|  
@@ -94,7 +92,7 @@ RETCODE bcp_gettypename (
 |**SQLAOPMAX**|Допустим любой вариант|**Max**|  
 |**SQLDATETIM4**|Допустим любой вариант|**smalldatetime**|  
 |**SQLMONEY4**|Допустим любой вариант|**smallmoney**|  
-|**SQLFLT4**|Допустим любой вариант|**Real**|  
+|**SQLFLT4**|Допустим любой вариант|**real**|  
 |**SQLUNIQUEID**|Допустим любой вариант|**uniqueidentifier**|  
 |**SQLNCHAR**|Нет|**nchar**|  
 |**SQLNVARCHAR**|Нет|**Nvarchar**|  
@@ -117,7 +115,7 @@ RETCODE bcp_gettypename (
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Поддержка функцией bcp_getcolfmt улучшенных возможностей работы с датой и временем  
  В столбце «Тип в файле sqlncli.h» в таблице описаны значения параметра токена для типов даты и времени [изменения массового копирования для улучшенной даты и времени &#40;OLE DB и ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Возвращенное значение находится в соответствующей строке столбца «Тип хранения файла».  
   
- Дополнительные сведения см. в разделе [даты и времени усовершенствования & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Дополнительные сведения см. в разделе [даты и времени усовершенствования &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>См. также  
  [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

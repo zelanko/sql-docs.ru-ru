@@ -4,27 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6de9aa78a6cbdd26900eb4565f3edc7783acdeb9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6dd1fbcb2a8d1eee4ad76decb2b81972b8cc2dd2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946289"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701475"
 ---
 # <a name="sessions"></a>Сеансы
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -187,14 +185,14 @@ EXIT:
 }  
 ```  
   
- Подключение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов сеанса поставщика OLE DB для собственного клиента к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут возникнуть существенные издержки для приложений, которые постоянно создают и освобождают объекты сеанса. Издержки можно уменьшить путем управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эффективно объектами сеанса поставщика OLE DB для собственного клиента. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Можно сохранить собственного приложения поставщика OLE DB для клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключения объекта сеанса активным, поддерживая ссылку по крайней мере один интерфейс объекта.  
+ Подключение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов сеанса поставщика OLE DB для собственного клиента к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут возникнуть существенные издержки для приложений, которые постоянно создают и освобождают объекты сеанса. Издержки можно уменьшить путем управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эффективно объектами сеанса поставщика OLE DB для собственного клиента. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Можно сохранить собственного приложения поставщика OLE DB для клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключения объекта сеанса активным, поддерживая ссылку по крайней мере один интерфейс объекта.  
   
  Например, поддержание пула ссылок на объект создания команды сохраняет активными соединения для этих объектов сеанса в пуле. Объекты сеанса, при необходимости, код обслуживания пула передает действительный **IDBCreateCommand** указатель на интерфейс методу приложения, требующему сеанс. Когда сеанс более не требуется методу приложения, метод возвращает указатель интерфейса коду обслуживания пула, а не освобождает ссылку приложения на объект создания команды.  
   
 > [!NOTE]  
->  В приведенном выше примере **IDBCreateCommand** используется интерфейс, так как **ICommand** интерфейс реализует **GetDBSession** метод, единственный метод в области команд или набора строк, позволяющий объекту определить сеанс, в котором он был создан. Поэтому объект команды, и только объект команды, позволяет приложению получить указатель объекта источника данных, из которого могут быть созданы дополнительные сеансы.  
+>  В приведенном выше примере **IDBCreateCommand** используется интерфейс, так как **ICommand** интерфейс реализует **GetDBSession** метод, единственный метод в команде или области набора строк, которая позволяет объекту определить сеанс, в котором он был создан. Поэтому объект команды, и только объект команды, позволяет приложению получить указатель объекта источника данных, из которого могут быть созданы дополнительные сеансы.  
   
-## <a name="see-also"></a>См. также:  
- [Объекты источника данных & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+## <a name="see-also"></a>См. также  
+ [Объекты источников данных &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   
