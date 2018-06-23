@@ -1,0 +1,47 @@
+---
+title: Источники данных из существующих объектов (мастер источников данных) (службы Analysis Services) | Документы Microsoft
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- sql12.asvs.datasourcewizard.specifyobject.f1
+ms.assetid: e6ef6dea-9db8-45c4-8959-f9febd7caf7b
+caps.latest.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: 60f07885aff1d323cb2627e933330af3f35b8d45
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36097639"
+---
+# <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>Источники данных из существующих объектов (мастер источников данных) (службы Analysis Services)
+  Используйте страницу **Источники данных из существующих объектов** для определения существующего источника данных или проекта, на котором будет основан новый источник данных.  
+  
+## <a name="options"></a>Параметры  
+ **Создать источник данных на основе существующего источника данных в решении**  
+ Выберите, если нужно создать новый источник данных на основе уже существующего источника данных в решении. Когда создается, обновляется или развертывается проект, использующий новый источник данных, новый источник данных получает настройки источника данных, определенного выбором этого параметра.  
+  
+ **Источник данных**  
+ Из списка источников данных, сгруппированных по проектам, выберите источник данных, на основе которого нужно создать новый источник.  
+  
+ **Создать источник данных на основе проекта служб Analysis Services**  
+ Выберите, чтобы создать новый источник данных со ссылкой на другой проект служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в текущем решении. Новый источник данных заимствует настройки из свойств `TargetServer` и `TargetDatabase` выбранного проекта. Когда создается, обновляется или развертывается проект, использующий новый источник данных, новый источник данных получает настройки источника данных, определенного выбором этого параметра.  
+  
+ **Проект**  
+ Выберите проект, на который будет ссылаться новый источник данных.  
+  
+## <a name="see-also"></a>См. также  
+ [Справка F1 мастера источников данных &#40;служб Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
+ [Источники данных в многомерных моделях](multidimensional-models/data-sources-in-multidimensional-models.md)   
+ [Источники данных, поддерживаемые &#40;многомерные службы SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+  
+  

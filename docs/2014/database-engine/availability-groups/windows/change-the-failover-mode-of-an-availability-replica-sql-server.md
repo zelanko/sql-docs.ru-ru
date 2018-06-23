@@ -1,0 +1,129 @@
+---
+title: Изменение режима отработки отказа для реплики доступности (SQL Server) | Документы Майкрософт
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- failover modes [SQL Server]
+- Availability Groups [SQL Server], deploying
+- Availability Groups [SQL Server], failover modes
+- Availability Groups [SQL Server], configuring
+ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
+caps.latest.revision: 26
+author: rothja
+ms.author: jroth
+manager: jhubbard
+ms.openlocfilehash: 6a3b16ef9e881332bc6aab301ccf1defdd4cc86a
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36191497"
+---
+# <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>Изменение режима отработки отказа для реплики доступности (SQL Server)
+  В этом разделе описывается изменение режима отработки отказа для реплики доступности в группе доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell. Режим отработки отказа ― это свойство реплики, которое определяет режим отработки отказа для реплик, работающих в режиме доступности с синхронной фиксацией. Дополнительные сведения см. в разделах [Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn)](failover-and-failover-modes-always-on-availability-groups.md) и [Режимы доступности (группы доступности AlwaysOn)](availability-modes-always-on-availability-groups.md).  
+  
+
+  
+##  <a name="BeforeYouBegin"></a> Перед началом  
+  
+###  <a name="Prerequisites"></a> Требования и ограничения  
+  
+-   Эта задача поддерживается только на первичных репликах. Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
+  
+-   Экземпляры отказоустойчивого кластера SQL Server не поддерживают автоматический переход на другой ресурс с учетом групп доступности, поэтому любая реплика доступности, размещенная в них, должна быть настроена для перехода на другой ресурс вручную.  
+  
+###  <a name="Security"></a> безопасность  
+  
+####  <a name="Permissions"></a> Permissions  
+ Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
+  
+##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+ **Изменение режима отработки отказа для реплики доступности**  
+  
+1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена первичная реплика, и разверните дерево сервера.  
+  
+2.  Разверните узел **Высокий уровень доступности AlwaysOn** и узел **Группы доступности** .  
+  
+3.  Щелкните группу доступности, реплику которой нужно изменить.  
+  
+4.  Щелкните правой кнопкой мыши реплику и выберите пункт **Свойства**.  
+  
+5.  В диалоговом окне **Свойства реплики доступности** используйте раскрывающийся список **Режим отработки отказа** , чтобы изменить режим отработки отказа для этой реплики.  
+  
+##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+ **Изменение режима отработки отказа для реплики доступности**  
+  
+1.  Подключитесь к экземпляру сервера, на котором находится первичная реплика.  
+  
+2.  Инструкция [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) используется следующим образом:  
+  
+     ALTER AVAILABILITY GROUP *имя_группы* MODIFY REPLICA ON '*имя_сервера*'  
+  
+     WITH ( {  
+  
+     AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
+  
+     | FAILOVER_MODE = { AUTOMATIC | MANUAL }  
+  
+     }  )  
+  
+     где  
+  
+    -   *имя_группы* — это имя группы доступности.  
+  
+    -   { '*системное_имя*[\\*имя_экземпляра*]' | '*сетевое_имя_FCI*[\\*имя_экземпляра*]' }  
+  
+         Задает адрес экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещена изменяемая реплика доступности. Этот адрес состоит из следующих компонентов:  
+  
+         *системное_имя*  
+         Имя NetBIOS компьютера, на котором расположен изолированный экземпляр сервера.  
+  
+         *сетевое_имя_FCI*  
+         Сетевое имя, используемое для доступа к отказоустойчивому кластеру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , в котором целевой экземпляр сервера является партнером по обеспечению отработки отказа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+  
+         *имя_экземпляра*  
+         Имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещается целевая реплика доступности. Для экземпляра сервера по умолчанию указывать параметр *имя_экземпляра* не обязательно.  
+  
+     Дополнительные сведения об этих параметрах см. в разделе [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql).  
+  
+     В следующем примере для первичной реплики группы доступности *MyAG* режим отработки отказа меняется на автоматический переход на другой ресурс для реплики доступности, находящейся на экземпляре сервера по умолчанию на компьютере *COMPUTER01*.  
+  
+    ```  
+    ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH  
+       (FAILOVER_MODE = AUTOMATIC);  
+    ```  
+  
+##  <a name="PowerShellProcedure"></a> Использование PowerShell  
+ **Изменение режима отработки отказа для реплики доступности**  
+  
+1.  Перейдите в каталог (`cd`) экземпляра сервера, на котором находится первичная реплика.  
+  
+2.  Используйте `Set-SqlAvailabilityReplica` командлет с `FailoverMode` параметра. При настройке автоматического перехода на другой ресурс для реплики, может потребоваться использовать `AvailabilityMode` параметр, чтобы перевести реплику в режим доступности синхронной фиксации.  
+  
+     Например, следующая команда изменяет реплику `MyReplica` в группе доступности `MyAg` , устанавливая использование режима доступности с синхронной фиксацией и поддержку автоматического перехода на другой ресурс.  
+  
+    ```  
+    Set-SqlAvailabilityReplica -AvailabilityMode "SynchronousCommit" -FailoverMode "Automatic" `   
+    -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\Replicas\MyReplica  
+    ```  
+  
+    > [!NOTE]  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь `Get-Help` командлета в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] среде PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+  
+ **Настройка и использование поставщика SQL Server PowerShell**  
+  
+-   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
+  
+## <a name="see-also"></a>См. также  
+ [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Режимы доступности &#40;группы доступности AlwaysOn&#41;](availability-modes-always-on-availability-groups.md)   
+ [Отработка отказа и режимы отработки отказа &#40;группы доступности AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md) 
+  
+  
