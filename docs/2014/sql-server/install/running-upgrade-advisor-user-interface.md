@@ -1,0 +1,87 @@
+---
+title: Запуск помощника по обновлению (пользовательский интерфейс) | Документы Microsoft
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- Upgrade Advisor Report Viewer
+- Upgrade Advisor [SQL Server], running
+- launching Upgrade Advisor
+- Upgrade Advisor Analysis Wizard
+- starting Upgrade Advisor
+- SQL Server Upgrade Advisor, running
+ms.assetid: 7f47c9b3-88d3-43d6-837e-f157b49a55ac
+caps.latest.revision: 40
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 36a31e74e95b966137df96f5e3f2ab05fa7a991f
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36087057"
+---
+# <a name="running-upgrade-advisor-user-interface"></a>Запуск помощника по обновлению (пользовательский интерфейс)
+  Советник по переходу может быть запущен для анализа локальных или удаленных компонентов в процессе планирования обновления. Для каждого проанализированного компонента и экземпляра помощник по обновлению создает отчет.  
+  
+> [!IMPORTANT]  
+>  Помощник по обновлению не анализирует удаленные экземпляры служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Чтобы выполнить анализ экземпляра служб [!INCLUDE[ssRS](../../includes/ssrs-md.md)], необходимо установить помощник по обновлению на компьютере, где установлены службы [!INCLUDE[ssRS](../../includes/ssrs-md.md)].  
+>   
+>  Для анализа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы Integration Services, необходимо иметь [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] установлен и [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] установлен на том же компьютере.  
+  
+## <a name="running-the-upgrade-advisor-analysis-wizard"></a>Мастер анализа помощника по обновлению  
+ Работа мастера анализа помощника по обновлению включает шесть этапов.  
+  
+1.  Запустите мастер с начальной страницы помощника по обновлению.  
+  
+2.  Определите анализируемый сервер и компоненты.  
+  
+3.  Соберите сведения для проверки подлинности.  
+  
+4.  Определите дополнительные параметры в зависимости от типа компонентов.  
+  
+5.  Выполните анализ выбранных компонентов.  
+  
+6.  Создайте отчет о выявленных проблемах обновления.  
+  
+ Дополнительные сведения о мастер анализа помощника по обновлению см. в разделе [как: запуск мастера анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md).  
+  
+ Дополнительные сведения, необходимые для каждого шага см. в разделе [обновление ядра СУБД Справочник по пользовательскому интерфейсу](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md).  
+  
+## <a name="running-the-upgrade-advisor-report-viewer"></a>Средство просмотра отчетов помощника по обновлению  
+ Средство просмотра отчетов помощника по обновлению используется для просмотра отчетов, созданных мастером анализа помощника по обновлению. После загрузки отчета его компоненты можно отфильтровать по следующим параметрам:  
+  
+-   все проблемы;  
+  
+-   все проблемы, связанные с обновлением;  
+  
+-   проблемы, связанные с подготовкой к обновлению;  
+  
+-   все проблемы, связанные с миграцией;  
+  
+-   устраненные проблемы.  
+  
+-   Неустраненные проблемы  
+  
+ Пошаговые инструкции по использованию средства просмотра отчетов см. в следующих разделах.  
+  
+-   [Как: просмотра отчетов помощника по обновлению](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+  
+-   [Как: фильтрация отчетов](../../../2014/sql-server/install/how-to-filter-reports.md)  
+  
+-   [Как: экспорт отчетов](../../../2014/sql-server/install/how-to-export-reports.md)  
+  
+## <a name="see-also"></a>См. также  
+ [Как: запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Справочник по пользовательскому интерфейсу помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
+ [Разрешение проблем с обновлением](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
+ [Работа с помощником по обновлению](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+  
+  

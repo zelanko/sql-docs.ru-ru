@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33270141fc67581adaeaeca9df8411c68fe0ac50
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018001"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700905"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Высокий уровень доступности и масштабируемость в службах Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "34018001"
 |Многомерные модели с использованием хранилища MOLAP|Выбор сбалансированной конфигурации, включающей дисковые операции ввода-вывода для быстрой загрузки данных и достаточный объем ОЗУ для хранения кэшированных данных.|  
 |Многомерные модели с использованием хранилища ROLAP|Максимальное число дисковых операций ввода-вывода и минимальная задержка в сети.|  
   
-## <a name="highly-availability-and-redundancy-through-wsfc"></a>Достижение высокой доступности и избыточности с помощью WSFC  
+## <a name="high-availability-and-redundancy-through-wsfc"></a>Высокий уровень доступности и избыточности с помощью WSFC  
  Службы Analysis Services можно установить в существующий отказоустойчивый кластер (WSFC) — это обеспечит высокий уровень доступности, позволяющий восстановить службу в кратчайшие сроки.  
   
  Отказоустойчивые кластеры предоставляют полный доступ (чтение и обратная запись) к базе данных, но только по одному узлу за раз. Базы данных-получатели выполняются на дополнительных узлах в кластере, которые выступают как резервные серверы в случае отказа первого узла.  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -24,12 +23,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 17367de4b2594834c6758213f54be06023b1381b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0148570aa44220b4229f83bad45b67ffc9812d2d
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951639"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699505"
 ---
 # <a name="using-database-mirroring"></a>Использование зеркального отображения базы данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "32951639"
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]Используйте [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] вместо него.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
  Зеркальное отображение базы данных, впервые представленное в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], — это решение, предназначенное для повышения доступности баз данных и избыточности данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент предоставляет неявную поддержку зеркального отображения базы данных, поэтому разработчику не требуется писать дополнительный код или выполнять другие действия после настройки для базы данных.  
   
