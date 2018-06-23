@@ -2,9 +2,10 @@
 title: Поддержка локальных транзакций | Документы Microsoft
 description: Локальные транзакции в драйвер OLE DB для SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,15 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2c3d85ce4a26c5840b393336e878bda4fa20b142
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 25d6c98c17c139a1658d0711bcff0c1c8f3f1d18
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308003"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689367"
 ---
 # <a name="supporting-local-transactions"></a>Поддержка локальных транзакций
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Сеанс ограничивает область транзакции для драйвера OLE DB для SQL Server локальной транзакции. Когда в направлении потребителя, драйвер OLE DB для SQL Server отправляет запрос на подключенный экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], этот запрос представляет собой единицу работы драйвера OLE DB для SQL Server. Локальные транзакции всегда содержат одну или несколько единиц работы на один драйвер OLE DB для SQL Server сеанса.  
   

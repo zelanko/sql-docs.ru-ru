@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 31f50aa8c094ba983a8382379fd0d833edb0f9dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da9b57c9e3363f03769238e88f165270619a2f73
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948409"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703485"
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -149,11 +147,11 @@ bcp_bind(hdbc, szName, 0,
 |SQLBITN|char;|  
 |SQLINT1|char;|  
 |SQLINT2|short int|  
-|SQLINT4|int|  
+|SQLINT4|ssNoversion|  
 |SQLINT8|_int64|  
 |SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
-|SQLFLT4|float|  
-|SQLFLT8|float|  
+|SQLFLT4|FLOAT|  
+|SQLFLT8|FLOAT|  
 |SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|  
 |SQLDECIMALN|SQL_NUMERIC_STRUCT|  
 |SQLNUMERICN|SQL_NUMERIC_STRUCT|  
@@ -179,7 +177,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **bcp_bind** быстрый и эффективный способ копирования данных из программной переменной в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Вызовите [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) перед вызовом этой или любой другой функции массового копирования. Вызов **bcp_init** задает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] целевой таблицы для массового копирования. При вызове **bcp_init** для использования с **bcp_bind** и [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), **bcp_init** *szDataFile*параметр, указывающий файл данных имеет значение NULL; **bcp_init *** eDirection* параметр имеет значение DB_IN.  
@@ -219,7 +217,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="bcpbind-support-for-enhanced-date-and-time-features"></a>Поддержка функцией bcp_bind улучшенных возможностей даты и времени  
  Дополнительные сведения о типах, используемых с *eDataType* параметров для типов даты и времени, в разделе [изменения массового копирования для улучшенной даты и времени &#40;OLE DB и ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Дополнительные сведения см. в разделе [даты и времени усовершенствования & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Дополнительные сведения см. в разделе [даты и времени усовершенствования &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="example"></a>Пример  
   

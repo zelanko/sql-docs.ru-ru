@@ -2,9 +2,10 @@
 title: Поддержка типов табличное значение параметра OLE DB (свойства) | Документы Microsoft
 description: Поддержка типов параметров OLE DB Table-Valued (свойства)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,15 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c3ac86cd0f9048941c09bbd3cd3d8404f4711f98
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: ea197e5411cb867221814817041f3fd6df7c8005
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306553"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689577"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Поддержка типов параметров OLE DB, возвращающих табличные значения (свойства)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   В данном разделе приводятся сведения о свойствах и наборах свойств OLE DB, связанных с объектами наборов строк для возвращающего табличное значение параметра.  
   

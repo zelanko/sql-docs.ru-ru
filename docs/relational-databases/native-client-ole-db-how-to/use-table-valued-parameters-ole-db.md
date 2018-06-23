@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
@@ -16,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 473381b44456db64f2586337dd7190ddd34a2c32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31af8d841b2d9829914caf3af9dd542407eb531d
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947259"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695465"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Использование возвращающих табличные значения параметров (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "32947259"
   
 -   Демонстрирует обработку ошибок для ошибок SQLNCLI11.  
   
- Дополнительные сведения о возвращающих табличные значения параметров см. в разделе [табличное значение параметры & #40; Собственный клиент SQL Server & #41; ](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
+ Дополнительные сведения о возвращающих табличные значения параметров см. в разделе [табличное значение параметры &#40;собственный клиент SQL Server&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
   
 ## <a name="example"></a>Пример  
  Первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает базу данных, которая используется в образце.  
@@ -48,7 +47,7 @@ ms.locfileid: "32947259"
   
  Поместите третий листинг кода в файл OLEDBUtils.hpp.  
   
- Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните четвертый листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы соединиться с именованным экземпляром, измените строку подключения из L"(local)» для L"(local)\\\name», где имя является именем экземпляра. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
+ Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните четвертый листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы соединиться с именованным экземпляром, измените строку подключения из L"(local)» для L"(local)\\\name», где имя является именем экземпляра. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
  Пятый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает базу данных, которая используется в образце.  
   
