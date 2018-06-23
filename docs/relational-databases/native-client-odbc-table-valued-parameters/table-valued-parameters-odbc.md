@@ -4,27 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC)
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8f8c0f95a894b92c3522fa98d4022d28540d4a29
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 8344d1cbe163aefdb0ac42873a442e2a4fffc8e6
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707302"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694875"
 ---
 # <a name="table-valued-parameters-odbc"></a>Возвращающие табличное значение параметры (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +81,7 @@ ms.locfileid: "34707302"
  [Сводка по API-интерфейсам возвращающих табличное значение параметров ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md)  
  Приводит перечень функций ODBC, которые поддерживают возвращающие табличное значение параметры.  
   
- [Примеры программирования с использованием ODBC табличное значение параметра](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
+ [Примеры программирования с использованием возвращающих табличное значение параметров ODBC](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
  Описывает, как следует выполнять типичные задачи.  
   
 ## <a name="see-also"></a>См. также  

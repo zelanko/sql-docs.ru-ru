@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e64f445788e35563120c357b93395fcfede50410
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edfe93e41d5a9398649550b10b11f6db64ca7afc
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946299"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695775"
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +58,7 @@ RETCODE bcp_moretext (
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Эта функция может использоваться в сочетании с [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) и [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) для копирования длинного значения данных переменной длины в SQL Server на число небольшими фрагментами. **bcp_moretext** может использоваться со столбцами, имеющими следующие типы данных SQL Server: **текст**, **ntext**, **изображения**, **varchar(max)** , **nvarchar(max)**, **varbinary(max)**, определяемых пользователем типов (UDT) и XML. **bcp_moretext** не поддерживает преобразование данных, передаваемых данных должен соответствовать типу данных целевого столбца.  
   
  Если **bcp_bind** вызывается с НЕНУЛЕВОЙ *pData* параметров для типов данных, которые поддерживаются **bcp_moretext**, **bcp_sendrow** отправляет значения типа данных, независимо от его длины. Если, однако **bcp_bind** имеет значение NULL *pData* параметр для поддерживаемых типов данных, **bcp_moretext** можно использовать для копирования данных непосредственно после успешного возвращения из **bcp_sendrow** , указывающее, что все привязанные столбцы, данные были обработаны.  
