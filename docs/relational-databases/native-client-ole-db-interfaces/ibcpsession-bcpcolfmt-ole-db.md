@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 47b274e26b3a0331dbe31464380b28cf814b382a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78d7776291a3043c18d30b694839a09f96915e33
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947369"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703665"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +47,7 @@ HRESULT BCPColFmt(
       DBORDINAL idxServerCol);  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **BCPColFmt** метод используется для создания привязки между полями файла данных BCP и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбцов. В качестве параметров он принимает длину, тип, признак конца и длину префикса столбца, а также задает каждое из этих свойств для отдельных полей.  
   
  Если пользователь работает в интерактивном режиме, этот метод вызывается дважды для каждого столбца: один раз, чтобы задать формат столбца согласно значениям по умолчанию (которые соответствуют типу столбца на сервере), а второй раз, чтобы задать формат согласно типу столбца, выбранному клиентом в интерактивном режиме.  
