@@ -1,0 +1,140 @@
+---
+title: Изменение схемы секционирования | Документация Майкрософт
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
+caps.latest.revision: 9
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 8bc8f55fbbd939964d22521948ac1132ced4c73c
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36098876"
+---
+# <a name="modify-a-partition-scheme"></a>Изменение схемы секционирования
+  Можно изменить схему секционирования в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , назначив файловую группу для размещения следующей секции, которая добавляется в секционированную таблицу, с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Это делается путем присваивания файловой группе свойства NEXT USED. Можно присвоить свойство NEXT USED пустой файловой группе или группе, уже хранящей секцию. Другими словами, файловая группа может содержать несколько секций.  
+  
+ **В этом разделе**  
+  
+-   **Перед началом работы**  
+  
+     [Ограничения](#Restrictions)  
+  
+     [безопасность](#Security)  
+  
+-   **Создание секционированной таблицы или индекса с использованием следующих средств:**  
+  
+     [Среда SQL Server Management Studio](#SSMSProcedure)  
+  
+     [Transact-SQL](#TsqlProcedure)  
+  
+##  <a name="BeforeYouBegin"></a> Перед началом  
+  
+###  <a name="Restrictions"></a> Ограничения  
+ Все файловые группы, на которые действует инструкция ALTER PARTITION SCHEME, должны быть в режиме «в сети».  
+  
+###  <a name="Security"></a> безопасность  
+  
+####  <a name="Permissions"></a> Permissions  
+ Для выполнения инструкции ALTER PARTITION SCHEME необходимы следующие разрешения.  
+  
+-   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin**.  
+  
+-   Разрешение CONTROL или ALTER на базу данных, в которой была создана схема секционирования.  
+  
+-   Разрешения CONTROL SERVER или ALTER ANY DATABASE на сервер базы данных, в которой была создана схема секционирования.  
+  
+##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+ **Изменение схемы секционирования**  
+  
+ Это действие не может быть выполнено при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Чтобы изменить схему секционирования, необходимо сначала удалить схему, после чего создать новую с нужными свойствами при помощи мастера создания секций. Дополнительные сведения см. в разделе [Создание секционированных таблиц и индексов с помощью SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) под **Создание секционированных таблиц и индексов**.  
+  
+#### <a name="to-delete-a-partition-scheme"></a>Удаление схемы секционирования  
+  
+1.  Щелкните знак «плюс», чтобы развернуть базу данных, в которой нужно удалить схему секционирования.  
+  
+2.  Чтобы развернуть папку **Хранение** , щелкните знак «плюс».  
+  
+3.  Щелкните знак «плюс», чтобы развернуть папку **Схемы секционирования** .  
+  
+4.  Щелкните правой кнопкой мыши схему секционирования, которую нужно удалить, и выберите пункт **Удалить**.  
+  
+5.  В диалоговом окне **Удаление объекта** убедитесь, что выбрана верная схема секционирования, и нажмите кнопку **ОК**.  
+  
+##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+  
+#### <a name="to-modify-a-partition-scheme"></a>Изменение схемы секционирования  
+  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  На стандартной панели выберите пункт **Создать запрос**.  
+  
+3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
+  
+    ```  
+    USE AdventureWorks2012;  
+    GO  
+    -- add five new filegroups to the AdventureWorks2012 database  
+    ALTER DATABASE AdventureWorks2012  
+    ADD FILEGROUP test1fg;  
+    GO  
+    ALTER DATABASE AdventureWorks2012  
+    ADD FILEGROUP test2fg;  
+    GO  
+    ALTER DATABASE AdventureWorks2012  
+    ADD FILEGROUP test3fg;  
+    GO  
+    ALTER DATABASE AdventureWorks2012  
+    ADD FILEGROUP test4fg;  
+    GO  
+    ALTER DATABASE AdventureWorks2012  
+    ADD FILEGROUP test5fg;  
+    GO  
+    -- if the "myRangePF1" partition function and the "myRangePS1" partition scheme exist,  
+    -- drop them from the AdventureWorks2012 database  
+    IF EXISTS (SELECT * FROM sys.partition_functions  
+        WHERE name = 'myRangePF1')  
+    DROP PARTITION FUNCTION myRangePF1;  
+    GO  
+    IF EXISTS (SELECT * FROM sys.partition_schemes  
+        WHERE name = 'myRangePS1')  
+    DROP PARTITION SCHEME myRangePS1;  
+    GO  
+    -- create the new partition function "myRangePF1" with four partition groups  
+    CREATE PARTITION FUNCTION myRangePF1 (int)  
+    AS RANGE LEFT FOR VALUES ( 1, 100, 1000 );  
+    GO  
+    -- create the new partition scheme "myRangePS1"that will use   
+    -- the "myRangePF1" partition function with five file groups.  
+    -- The last filegroup, "test5fg," will be kept empty but marked  
+    -- as the next used filegroup in the partition scheme.  
+    CREATE PARTITION SCHEME myRangePS1  
+    AS PARTITION myRangePF1  
+    TO (test1fg, test2fg, test3fg, test4fg, test5fg);  
+    GO  
+    --Split "myRangePS1" between boundary_values 100 and 1000  
+    --to create two partitions between boundary_values 100 and 500  
+    --and between boundary_values 500 and 1000.  
+    ALTER PARTITION FUNCTION myRangePF1 ()  
+    SPLIT RANGE (500);  
+    GO  
+    -- Allow the "myRangePS1" partition scheme to use the filegroup "test5fg"  
+    -- for the partition with boundary_values of 100 and 500  
+    ALTER PARTITION SCHEME myRangePS1  
+    NEXT USED test5fg;  
+    GO  
+    ```  
+  
+ Дополнительные сведения см. в разделе [ALTER PARTITION SCHEME (Transact-SQL)](/sql/t-sql/statements/alter-partition-scheme-transact-sql).  
+  
+  
