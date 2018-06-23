@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
@@ -19,12 +17,12 @@ caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ad749572b54e76c751002db3516fdf46ce31f729
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 937a8ad81b3c2b03291c8032ece6af71cb82f360
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921969"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703005"
 ---
 # <a name="clr-integration-architecture----performance"></a>Архитектура интеграции со средой CLR - производительность
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +81,7 @@ ms.locfileid: "32921969"
 ### <a name="scalable-memory-usage"></a>Масштабируемое использование памяти  
  Чтобы управляемая сборка мусора в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имела высокую производительность и хорошо масштабировалась, следует избегать выделения памяти одним большим блоком. Выделенные области памяти размером больше 88 КБ помещаются в кучу для больших объектов, для которой сборка мусора работает гораздо медленнее и хуже масштабируется, чем для небольших областей памяти. Например, если нужно выделить память для большого многомерного массива, лучше выделить память под массив массивов (разреженный массив).  
   
-## <a name="see-also"></a>См. также:  
- [Определяемые пользователем типы среды CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+## <a name="see-also"></a>См. также  
+ [Определяемые пользователем типы в CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

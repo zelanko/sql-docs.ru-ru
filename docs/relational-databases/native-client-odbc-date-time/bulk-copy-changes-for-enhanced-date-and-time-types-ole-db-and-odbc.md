@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, bulk copy operations
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de93dee05a09da895073a12a30d36d8d26e5d764
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5b0fdf58fb937c0e841b2663865cc73faaaba0b5
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947679"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695955"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Изменения массового копирования для расширенные типы даты и времени (OLE DB и ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +34,7 @@ ms.locfileid: "32947679"
   
 |Тип файла хранилища|Тип данных файла|Ответ на приглашение: «Введите тип файлового хранилища для поля < имя_поля > [\<по умолчанию >]:»|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|DateTime|SQLDATETIME|d|  
+|DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
 |Дата|SQLDATE|de|  
 |Time|SQLTIME|te|  
@@ -77,9 +75,9 @@ ms.locfileid: "32947679"
   
 |Тип файла хранилища|Объем памяти в байтах|  
 |-----------------------|---------------------------|  
-|datetime|8|  
+|DATETIME|8|  
 |smalldatetime|4|  
-|date|3|  
+|Дата|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -100,7 +98,7 @@ ms.locfileid: "32947679"
   
 |Тип файла хранилища|Тип данных файла|Введите в файле sqlncli.h для использования с IBCPSession::BCPColFmt|Значение|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|DateTime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
 |Дата|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
@@ -112,12 +110,12 @@ ms.locfileid: "32947679"
   
  **Примечание для OLE DB** IBCPSession выполняются следующие преобразования. IRowsetFastLoad использует преобразования OLE DB, как определено в [преобразования, выполняемые от клиента к серверу](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Следует заметить, что значения даты-времени округляются до 1/300 секунды, а в значениях типа smalldatetime после выполнения клиентских преобразований, описанных ниже, значение секунд становится равным нулю. Округление даты-времени распространяется на часы и минуты, но не на дату.  
   
-|Кому --><br /><br /> От|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char;|wchar|  
+|Кому --><br /><br /> От|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char;|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Дата|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Time|Недоступно|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
-|DateTime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
+|DATETIME|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
 |Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|Недоступно|Недоступно|  
@@ -146,6 +144,6 @@ ms.locfileid: "32947679"
   
 ## <a name="see-also"></a>См. также  
  [Дата и время улучшениях &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   
- [Дата и время усовершенствования & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Дата и время улучшениях &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

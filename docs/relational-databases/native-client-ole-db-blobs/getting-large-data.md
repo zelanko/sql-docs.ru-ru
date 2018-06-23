@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 313fdc999b80c8c1797f6be376836b41adc710e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f04fb06f29ed9a9e46f749804d92cb4c2fc931eb
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946369"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699515"
 ---
 # <a name="getting-large-data"></a>Возврат больших данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +40,7 @@ ms.locfileid: "32946369"
   
 -   ICommand::Execute  
   
- Если свойство DBPROP_ACCESSORDER (в группе свойств набора строк) задано значение DBPROPVAL_AO_SEQUENTIAL или DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, потребитель должен получать только одну строку данных в вызове **GetNextRows** метода, так как не помещается в буфер данные большого двоичного ОБЪЕКТА. Если значение свойства DBPROP_ACCESSORDER равно DBPROPVAL_AO_RANDOM, потребитель может получать несколько строк данных в **GetNextRows**.  
+ Если свойство DBPROP_ACCESSORDER (в группе свойств набора строк) задано значение DBPROPVAL_AO_SEQUENTIAL или DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, потребитель должен получать только одну строку данных в вызове **GetNextRows**  метод, так как не помещается в буфер данные большого двоичного ОБЪЕКТА. Если значение свойства DBPROP_ACCESSORDER равно DBPROPVAL_AO_RANDOM, потребитель может получать несколько строк данных в **GetNextRows**.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента не получает большие объемы данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до соответствующего запроса объектом-получателем. Потребитель должен связывать все короткие типы данных в методе доступа, а затем, если потребуется, использовать один или несколько временных методов доступа для получения значений больших типов данных.  
   
@@ -154,7 +152,7 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Большие двоичные объекты и объекты OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Использование типов больших значений](../../relational-databases/native-client/features/using-large-value-types.md)  
   

@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-odbc-results
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2909c4472a4ab8dee56c37da3cdf23db1ee3e512
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cb4046f669a3d35de7c99b0d1d754bd85f067f6
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946819"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695876"
 ---
 # <a name="fetching-result-data"></a>Выборка итоговых данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "32946819"
   
  Следует соблюдать осторожность при использовании SQL_C_DEFAULT для указания типа переменной C. SQL_C_DEFAULT указывает, что тип переменной C соответствует типу данных SQL столбца или параметра. Если SQL_C_DEFAULT указан для **ntext**, **nchar**, или **nvarchar** столбца, возвращает данные в Юникоде в приложение. Это может привести к возникновению различных проблем, если приложение не было настроено для обработки данных в Юникоде. Те же типы проблем могут возникать с **uniqueidentifier** тип данных (SQL_GUID).  
   
- **текст**, **ntext**, и **изображения** данные обычно слишком велик для одной программной переменной и обычно обрабатывается с **SQLGetData** вместо **SQLBindCol**. При использовании серверных курсоров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента оптимизируется для запрещения передачи данных непривязанным **текст**, **ntext**, или **изображения** столбцы в время выборки строки. **Текст**, **ntext**, или **изображения** данных не производится на сервере до проблемы с приложением **SQLGetData** для столбца.  
+ **текст**, **ntext**, и **изображения** данные обычно слишком велик для одной программной переменной и обычно обрабатывается с **SQLGetData** вместо **SQLBindCol**. При использовании серверных курсоров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента оптимизируется для запрещения передачи данных непривязанным **текст**, **ntext**, или **изображения** столбцы в время выборки строки. **Текст**, **ntext**, или **изображения** данных не производится на сервере до проблемы с приложением **SQLGetData** для столбец.  
   
  Эта оптимизация может применяться в приложениях, чтобы не **текст**, **ntext**, или **изображения** данные отображаются во время как пользователь прокручивает курсор вверх-вниз. Когда пользователь выделяет строку, приложение может вызвать **SQLGetData** для получения **текст**, **ntext**, или **изображения** данные. Это экономит передачу **текст**, **ntext**, или **изображения** данные для строк пользователь не выбрал и может сэкономить передачу очень больших объемов данных.  
   

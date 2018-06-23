@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 400097362ec6364d7a7b0d6f13cd3e62bb4d6b87
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a61a74fc85bd13e442694dde91f279704d9a12d
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948129"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701295"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,14 +33,14 @@ ms.locfileid: "32948129"
   
 ## <a name="level-1"></a>уровне 1  
   
-|Ключевое слово|Возвращает список?|Является необязательным?|Description|  
+|Ключевое слово|Возвращает список?|Является необязательным?|Описание|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|Недоступно|Нет|Имя источника данных, возвращенных **SQLDataSources**. Ключевое слово DSN нельзя использовать, если используется ключевое слово DRIVER.|  
 |DRIVER|Недоступно|Нет|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя драйвера ODBC для собственного клиента {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Ключевое слово DRIVER нельзя использовать, если используется ключевое слово DSN.|  
   
 ## <a name="level-2"></a>Уровень 2  
   
-|Ключевое слово|Возвращает список?|Является необязательным?|Description|  
+|Ключевое слово|Возвращает список?|Является необязательным?|Описание|  
 |-------------|--------------------|---------------|-----------------|  
 |SERVER|Да|Нет|Имя сервера источника данных в сети. В качестве сервера можно ввести термин «(local)»; в этом случае можно использовать локальную копию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], даже если это не сетевая версия.|  
 |UID|Нет|Да|Идентификатор входа пользователя.|  
@@ -51,7 +50,7 @@ ms.locfileid: "32948129"
   
 ## <a name="level-3"></a>Уровень 3  
   
-|Ключевое слово|Возвращает список?|Является необязательным?|Description|  
+|Ключевое слово|Возвращает список?|Является необязательным?|Описание|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|Да|Да|Имя базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |LANGUAGE|Да|Да|Национальный язык, используемый [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -60,7 +59,7 @@ ms.locfileid: "32948129"
   
  Следующие атрибуты, которые устанавливаются путем вызова [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), определяют результирующий набор, возвращенный **SQLBrowseConnect**.  
   
-|Attribute|Description|  
+|attribute|Описание|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|Если установлено значение SQL_MORE_INFO_YES, **SQLBrowseConnect** возвращает расширенную строку свойств сервера.<br /><br /> Ниже приведен пример расширенной строки, возвращенные **SQLBrowseConnect**:<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> В этой строке различные порции данных о сервере разделяются точками с запятой. Для разделения различных экземпляров сервера используйте запятые.|  
 |SQL_COPT_SS_BROWSE_SERVER|Если указано имя сервера, **SQLBrowseConnect** возвращает сведения об указанном сервере. Если для SQL_COPT_SS_BROWSE_SERVER задано значение NULL, **SQLBrowseConnect** возвращает сведения обо всех серверах в домене.<br /><br /> <br /><br /> Обратите внимание, что из-за неполадок сети, **SQLBrowseConnect** может не получить своевременный ответ от всех серверов. Поэтому возвращаемый список серверов может отличаться от запроса к запросу.|  
@@ -72,7 +71,7 @@ ms.locfileid: "32948129"
 ## <a name="sqlbrowseconnect-support-for-service-principal-names-spns"></a>Поддержка функции SQLBrowseConnect для имен участников-служб  
  При открытии соединения собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задает SQL_COPT_SS_MUTUALLY_AUTHENTICATED и SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD метод проверки подлинности, используемый для открытия соединения.  
   
- Дополнительные сведения об именах SPN см. в разделе [имена участника-службы & #40; Имена участников-служб & #41; в клиентских подключений & #40; ODBC & #41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Дополнительные сведения об именах SPN см. в разделе [имена участника-службы &#40;имена участников-служб&#41; в клиентских соединениях &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="change-history"></a>Журнал изменений  
   
@@ -80,8 +79,8 @@ ms.locfileid: "32948129"
 |---------------------|  
 |Добавлена документация по SQL_COPT_SS_BROWSE_CACHE_DATA.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция SQLBrowseConnect](http://go.microsoft.com/fwlink/?LinkId=59329)   
- [Сведения о реализации API-интерфейса ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

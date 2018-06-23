@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -36,18 +35,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e3d2cf487958f09af1825456f605a9f73a44e27e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 59beafe13efd6d4dc9064d73e4ff9924fa571815
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957499"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695975"
 ---
 # <a name="using-xml-data-types"></a>Использование типов данных XML
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]представленные **xml** тип данных, который позволяет хранить XML-документы и фрагменты в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных. **Xml** тип данных является встроенным типом данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]и в чем-то напоминающий другие встроенные типы, такие как **int** и **varchar**. Как и другие встроенные типы можно использовать **xml** как тип столбца при создании таблицы, как тип переменной, тип параметра или типа возвращаемого функцией значения; или в функциях CAST и CONVERT типа данных.  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] представленные **xml** тип данных, который позволяет хранить XML-документы и фрагменты в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных. **Xml** тип данных является встроенным типом данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]и в чем-то напоминающий другие встроенные типы, такие как **int** и **varchar**. Как и другие встроенные типы можно использовать **xml** как тип столбца при создании таблицы, как тип переменной, тип параметра или типа возвращаемого функцией значения; или в функциях CAST и CONVERT типа данных.  
   
 ## <a name="programming-considerations"></a>Замечания по программированию  
  Язык XML может описывать сам себя в том смысле, что он может по желанию включать заголовок XML, описывающий кодировку документа, например:  
@@ -74,10 +73,10 @@ ms.locfileid: "32957499"
   
  **ISequentialStream** следует использовать для извлечения больших XML-документов. При работе с типами больших значений в XML используются те же технологии, что и для работы с другими типами больших значений. Дополнительные сведения см. в разделе [с помощью типов больших значений](../../../relational-databases/native-client/features/using-large-value-types.md).  
   
- Данные, хранящиеся в столбцах типа XML в наборе строк, можно также получить, вставлены или обновлены приложением через обычные интерфейсы, такие как **IRow::GetColumns**, **IRowChange::SetColumns**, и **ICommand::Execute**. Аналогично случаю извлечения прикладной программы можно передать строку текста или **ISequentialStream** для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента.  
+ Данные, хранящиеся в столбцах типа XML в наборе строк, можно также получить, вставлены или обновлены приложением через обычные интерфейсы, такие как **IRow::GetColumns**, **IRowChange::SetColumns**и **ICommand::Execute**. Аналогично случаю извлечения прикладной программы можно передать строку текста или **ISequentialStream** для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента.  
   
 > [!NOTE]  
->  Для отправки XML-данных в строковом формате через **ISequentialStream** интерфейса, необходимо получить **ISequentialStream** , задав DBTYPE_IUNKNOWN и задать его *pObject* аргумент значение null в привязке.  
+>  Для отправки XML-данных в строковом формате через **ISequentialStream** интерфейса, необходимо получить **ISequentialStream** , задав DBTYPE_IUNKNOWN и задать его *pObject* Аргумент null в привязке.  
   
  Если полученные XML-данные усечены из-за недостаточного размера буфера потребителя, возвращаемое значение длины может быть равно 0xffffffff — это означает, что длина данных неизвестна. Это согласуется с реализацией в виде типа данных, передаваемого клиенту в потоке без пересылки информации о длине до пересылки самих данных. В некоторых случаях может возвращаться фактическую длину при помещено в буфер поставщика всего значения, такие как **IRowset::GetData** и где выполняется преобразование данных.  
   
@@ -91,15 +90,15 @@ ms.locfileid: "32957499"
 |Тип данных|На сервер<br /><br /> **XML**|На сервер<br /><br /> **Отличном от XML**|С сервера<br /><br /> **XML**|С сервера<br /><br /> **Отличном от XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|Пропуск<sup>6,7</sup>|Ошибка<sup>1</sup>|ОК<sup>11, 6</sup>|Ошибка<sup>8</sup>|  
-|DBTYPE_BYTES|Пропуск<sup>6,7</sup>|N/A<sup>2</sup>|ОК <sup>11, 6</sup>|N/A <sup>2</sup>|  
-|DBTYPE_WSTR|Пропуск<sup>6,10</sup>|N/A <sup>2</sup>|ОК<sup>4, 6, 12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_BSTR|Пропуск<sup>6,10</sup>|N/A <sup>2</sup>|OK <sup>3</sup>|N/A <sup>2</sup>|  
-|DBTYPE_STR|ОК<sup>6, 9, 10</sup>|N/A <sup>2</sup>|ОК<sup>5, 6, 12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Байтовый поток через **ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|Байтовый поток через **ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Пропуск<sup>6,7</sup>|N/A <sup>2</sup>|Недоступно|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Пропуск<sup>6,10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BYTES|Пропуск<sup>6,7</sup>|Н/Д<sup>2</sup>|ОК <sup>11, 6</sup>|Н/Д <sup>2</sup>|  
+|DBTYPE_WSTR|Пропуск<sup>6,10</sup>|Н/Д <sup>2</sup>|ОК<sup>4, 6, 12</sup>|Н/Д <sup>2</sup>|  
+|DBTYPE_BSTR|Пропуск<sup>6,10</sup>|Н/Д <sup>2</sup>|ОК <sup>3</sup>|Н/Д <sup>2</sup>|  
+|DBTYPE_STR|ОК<sup>6, 9, 10</sup>|Н/Д <sup>2</sup>|ОК<sup>5, 6, 12</sup>|Н/Д <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Байтовый поток через **ISequentialStream**<sup>7</sup>|Н/Д <sup>2</sup>|Байтовый поток через **ISequentialStream**<sup>11</sup>|Н/Д <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Пропуск<sup>6,7</sup>|Н/Д <sup>2</sup>|Недоступно|Н/Д <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Пропуск<sup>6,10</sup>|Н/Д <sup>2</sup>|ОК<sup>3</sup>|Н/Д <sup>2</sup>|  
   
- <sup>1</sup>Если сервера тип, отличный от DBTYPE_XML, указанном с помощью **ICommandWithParameters::SetParameterInfo** и типом метода доступа задан DBTYPE_XML, при выполнении инструкции возникает ошибка (DB_E_ERRORSOCCURRED, состояние параметра будет DBSTATUS_E_BADACCESSOR); в противном случае данные отправляются на сервер, но сервер возвращает ошибку, указывающую, что имеется не неявное преобразование из XML в тип данных параметра.  
+ <sup>1</sup>Если сервера тип, отличный от DBTYPE_XML, указанном с помощью **ICommandWithParameters::SetParameterInfo** и типом метода доступа задан DBTYPE_XML, при выполнении инструкции возникает ошибка (DB_E_ERRORSOCCURRED, состояние параметра — DBSTATUS_E_BADACCESSOR); в противном случае данные отправляются на сервер, но сервер возвращает ошибку, указывающую, что имеется не неявное преобразование из XML в тип данных параметра.  
   
  <sup>2</sup>выходит за рамки этой статьи.  
   
@@ -139,12 +138,12 @@ ms.locfileid: "32957499"
  Привязка DBTYPE_IUNKNOWN поддерживается, как показано в приведенной таблице, но преобразований между типами DBTYPE_XML и DBTYPE_IUNKNOWN не существует. DBTYPE_IUNKNOWN нельзя использовать с DBTYPE_BYREF.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Добавления и изменения для наборов строк OLE DB  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент добавляет новые значения или изменяет многие из основных наборов строк схемы OLE DB.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент добавляет новые значения или изменяет многие из основных наборов строк схемы OLE DB.  
   
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>Наборы строк схем COLUMNS и PROCEDURE_PARAMETERS  
  К наборам строк схем COLUMNS и PROCEDURE_PARAMETERS добавлены следующие столбцы.  
   
-|Имя столбца|Тип|Description|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Имя каталога, в котором определена коллекция схем XML. Значение NULL для столбцов, отличных от XML или нетипизированных XML-столбцов.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Имя схемы, в которой определена коллекция схем XML. Значение NULL для столбцов, отличных от XML или нетипизированных XML-столбцов.|  
@@ -156,7 +155,7 @@ ms.locfileid: "32957499"
 #### <a name="the-ssxmlschema-schema-rowset"></a>Набор строк схемы SS_XMLSCHEMA  
  Для клиентов добавлен новый набор строк схемы SS_XMLSCHEMA для получения информации о схеме XML. Набор строк SS_XMLSCHEMA содержит следующие столбцы.  
   
-|Имя столбца|Тип|Description|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Каталог, которому принадлежит коллекция XML.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Схема, которой принадлежит коллекция XML.|  
@@ -171,12 +170,12 @@ ms.locfileid: "32957499"
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>Добавления и изменения для наборов свойств OLE DB  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент добавляет новые значения или изменяет многие из основных свойств OLE DB наборов.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент добавляет новые значения или изменяет многие из основных свойств OLE DB наборов.  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>Набор свойств DBPROPSET_SQLSERVERPARAMETER  
  Чтобы обеспечить поддержку **xml** тип данных с помощью OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент реализует новый набор свойств DBPROPSET_SQLSERVERPARAMETER, который содержит следующие значения.  
   
-|Название|Тип|Description|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Имя каталога (базы данных), где определена коллекция схем XML. Часть идентификатора трехкомпонентного имени SQL.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Имя схемы XML в коллекции схемы XML. Часть идентификатора трехкомпонентного имени SQL.|  
@@ -185,7 +184,7 @@ ms.locfileid: "32957499"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>Набор свойств DBPROPSET_SQLSERVERCOLUMN  
  Для поддержки создания таблиц в **ITableDefinition** интерфейс, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент добавляет к набору свойств DBPROPSET_SQLSERVERCOLUMN три новых столбца.  
   
-|Название|Тип|Description|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Для типизированных столбцов XML данное свойство содержит строку, представляющую имя каталога, где хранится схема XML. Для других типов столбцов это свойство содержит пустую строку.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Для типизированных столбцов XML данное свойство содержит строку, представляющую имя схемы XML, задающей этот столбец.|  
@@ -194,18 +193,18 @@ ms.locfileid: "32957499"
  Подобно значениям SSPROP_PARAM, все эти свойства являются необязательными и по умолчанию пусты. SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME и SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME можно задавать только при заданном свойстве SSPROP_COL_XML_SCHEMACOLLECTIONNAME. При передаче данных в формате XML на сервер, если эти значения включены, они будут проверены на существование (допустимость) в текущей базе данных, а экземпляр данных проверяется по схеме. Во всех случаях, чтобы данные были допустимыми, эти столбцы должны быть все одновременно пусты или все одновременно заполнены.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>Добавления и изменения для интерфейсов OLE DB  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент добавляет новые значения или изменяет многие из основных интерфейсов OLE DB.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент добавляет новые значения или изменяет многие из основных интерфейсов OLE DB.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Интерфейс ISSCommandWithParameters  
- Чтобы обеспечить поддержку **xml** тип данных с помощью OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент реализует ряд изменений, включая добавление [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) интерфейса. Этот новый интерфейс наследует основной интерфейс OLE DB **ICommandWithParameters**. Помимо трех методов, наследуемых от **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, и **SetParameterInfo**; **ISSCommandWithParameters** предоставляет [GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) и [SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) методы, используемые для обработки серверных типов данных.  
+ Чтобы обеспечить поддержку **xml** тип данных с помощью OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент реализует ряд изменений, включая добавление [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) интерфейса. Этот новый интерфейс наследует основной интерфейс OLE DB **ICommandWithParameters**. Помимо трех методов, наследуемых от **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, и **SetParameterInfo**; **ISSCommandWithParameters** предоставляет [GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) и [SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) методы, используемые для обработки конкретного сервера типы данных.  
   
 > [!NOTE]  
 >  **ISSCommandWithParameters** интерфейс также позволяет использовать новые SSPARAMPROPS структуры.  
   
 #### <a name="the-icolumnsrowset-interface"></a>Интерфейс IColumnsRowset  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент добавляет следующие [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-определенные столбцы в наборе строк, возвращенных **IColumnRowset::GetColumnsRowset** метод. Эти столбцы содержат трехчастное имя коллекции схем XML. Для столбцов не в формате XML и нетипизированных столбцов XML все три данных столбца по умолчанию имеют значение NULL.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент добавляет следующие [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-определенные столбцы в наборе строк, возвращенных **IColumnRowset::GetColumnsRowset** метод. Эти столбцы содержат трехчастное имя коллекции схем XML. Для столбцов не в формате XML и нетипизированных столбцов XML все три данных столбца по умолчанию имеют значение NULL.  
   
-|Имя столбца|Тип|Description|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Каталог, которому принадлежит коллекция схем XML.<br /><br /> В противном случае — значение NULL.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Схема, которой принадлежит коллекция схем XML. В противном случае — значение NULL.|  
@@ -214,7 +213,7 @@ ms.locfileid: "32957499"
 #### <a name="the-irowset-interface"></a>Интерфейс IRowset  
  Экземпляр XML в XML-столбце извлекается с помощью **IRowset::GetData** метод. В зависимости от привязки, указанной клиентом, экземпляр XML может быть получен в виде типа DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML, DBTYPE_STR, DBTYPE_BYTES или как интерфейс через DBTYPE_IUNKNOWN. Если потребитель задает тип DBTYPE_BSTR, DBTYPE_WSTR или DBTYPE_VARIANT, поставщик преобразует экземпляр XML в запрошенный пользователем тип и помещает в местонахождение, заданное соответствующей привязкой.  
   
- Если потребитель задает DBTYPE_IUNKNOWN и задает *pObject* аргумент значение NULL или наборы *pObject* аргумент IID_ISequentialStream, поставщик возвращает **ISequentialStream** потребителю интерфейс, чтобы потребитель мог направить данные XML из столбца. **ISequentialStream** возвращает XML-данные как поток символов Юникода.  
+ Если потребитель задает DBTYPE_IUNKNOWN и задает *pObject* аргумент значение NULL или наборы *pObject* аргумент IID_ISequentialStream, поставщик возвращает **ISequentialStream**  потребителю интерфейс, чтобы потребитель мог направить данные XML из столбца. **ISequentialStream** возвращает XML-данные как поток символов Юникода.  
   
  При возврате значения XML, привязанного к DBTYPE_IUNKNOWN, поставщик передает значение размера `sizeof (IUnknown *)`. Следует заметить, что это согласуется с подходом, который используется при передаче привязанного столбца как DBTYPE_IUnknown или DBTYPE_IDISPATCH, а также при передаче в формате DBTYPE_IUNKNOWN/ISequentialStream, когда точный размер столбца установить не удается.  
   
@@ -225,7 +224,7 @@ ms.locfileid: "32957499"
   
  В случае DBTYPE_BSTR, DBTYPE_WSTR или DBTYPE_VARIANT поставщик сохраняет экземпляр XML из буфера потребителя в соответствующий столбец.  
   
- В случае DBTYPE_IUNKNOWN/ISequentialStream, если потребитель не задал объект хранилища, потребитель должен создать **ISequentialStream** заранее, привязать XML-документ с объектом и затем передать объект поставщику **IRowsetChange::SetData** метод. Потребитель может также создать хранилища объекта, установить аргумент pObject равным IID_ISequentialStream, создать **ISequentialStream** и затем передайте **ISequentialStream** объект **IRowsetChange::SetData** метод. В обоих случаях поставщик может получить объект XML через **ISequentialStream** объекта и вставить ее в нужный столбец.  
+ В случае DBTYPE_IUNKNOWN/ISequentialStream, если потребитель не задал объект хранилища, потребитель должен создать **ISequentialStream** заранее, привязать XML-документ с объектом и затем передайте этот объект поставщику **IRowsetChange::SetData** метод. Потребитель может также создать хранилища объекта, установить аргумент pObject равным IID_ISequentialStream, создать **ISequentialStream** и затем передайте **ISequentialStream** объект **IRowsetChange::SetData** метод. В обоих случаях поставщик может получить объект XML через **ISequentialStream** объекта и вставить ее в нужный столбец.  
   
 #### <a name="the-irowsetupdate-interface"></a>Интерфейс IRowsetUpdate  
  **IRowsetUpdate** интерфейс предоставляет функциональность отсроченных изменений. Данные, доступные наборам строк не предоставляются другим транзакциям пока потребитель не вызовет метод **IRowsetUpdate: Update** метод.  
@@ -276,8 +275,8 @@ ms.locfileid: "32957499"
   
  Согласно стандарту XML, XML-документы в кодировке UTF-16 должны начинаться с метки порядка следования байтов (BOM); в UTF-16 это код символа 0xFEFF. При работе с привязкой SQL_C_BINARY, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client не требует или добавить Спецификацию, как кодировка задана привязкой. Целью является предоставить возможности для наиболее простого взаимодействия с другими обработчиками XML и хранилищами данных. В этом случае в XML с кодировкой UTF-16 нужно включить метку порядка байтов, и приложение может не заботиться о том, какова на самом деле кодировка данных, потому что большинство обработчиков XML (в том числе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) выяснят кодировку по нескольким первым байтам данных. XML-данные, полученные от [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента с помощью SQL_C_BINARY привязок, всегда закодированы в UTF-16 с BOM и без внедренной декларации кодировки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

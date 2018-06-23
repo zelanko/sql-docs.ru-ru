@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -27,12 +26,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 902180da98af11feeccc65295d0f4c1dbdd28727
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 9274c4cb2b6f4381a0d4fe89ec518a9f73dcd768
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332535"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695945"
 ---
 # <a name="using-user-defined-types"></a>Использование определяемых пользователем типов данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
@@ -54,13 +53,13 @@ ms.locfileid: "34332535"
 |Тип данных|На сервер<br /><br /> **UDT**|На сервер<br /><br /> **не UDT**|С сервера<br /><br /> **UDT**|С сервера<br /><br /> **не UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|Поддерживается<sup>6</sup>|Ошибка<sup>1</sup>|Поддерживается<sup>6</sup>|Ошибка<sup>5</sup>|  
-|DBTYPE_BYTES|Поддерживается<sup>6</sup>|N/A<sup>2</sup>|Поддерживается<sup>6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_WSTR|Поддерживается<sup>3,6</sup>|N/A<sup>2</sup>|Поддерживается<sup>4,6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_BSTR|Поддерживается<sup>3,6</sup>|N/A<sup>2</sup>|Поддерживается<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_STR|Поддерживается<sup>3,6</sup>|N/A<sup>2</sup>|Поддерживается<sup>4,6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Не поддерживается|N/A<sup>2</sup>|Не поддерживается|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается<sup>6</sup>|N/A<sup>2</sup>|Поддерживается<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Поддерживается<sup>3,6</sup>|N/A<sup>2</sup>|Недоступно|N/A<sup>2</sup>|  
+|DBTYPE_BYTES|Поддерживается<sup>6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>6</sup>|Н/Д<sup>2</sup>|  
+|DBTYPE_WSTR|Поддерживается<sup>3,6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>4,6</sup>|Н/Д<sup>2</sup>|  
+|DBTYPE_BSTR|Поддерживается<sup>3,6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>4</sup>|Н/Д<sup>2</sup>|  
+|DBTYPE_STR|Поддерживается<sup>3,6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>4,6</sup>|Н/Д<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Не поддерживается|Н/Д<sup>2</sup>|Не поддерживается|Н/Д<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Поддерживается<sup>6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>4</sup>|Н/Д<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Поддерживается<sup>3,6</sup>|Н/Д<sup>2</sup>|Недоступно|Н/Д<sup>2</sup>|  
   
  <sup>1</sup>Если сервера тип, отличный от DBTYPE_UDT, указывается с **ICommandWithParameters::SetParameterInfo** и типом метода доступа является DBTYPE_UDT, при выполнении инструкции возникает ошибка (DB_E_ERRORSOCCURRED; состояние параметра — DBSTATUS_E_BADACCESSOR). В остальных случаях данные отсылаются на сервер, но сервер возвращает ошибку, указывающую на то, что нет неявного преобразования определяемого пользователем типа в тип данных параметра.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "34332535"
  Преобразование данных основными службами OLE DB (**IDataConvert**) не могут применяться к DBTYPE_UDT. Другие привязки не поддерживаются.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Добавления и изменения для наборов строк OLE DB  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент добавляет новые значения или изменяет многие из основных наборов строк схемы OLE DB.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент добавляет новые значения или изменяет многие из основных наборов строк схемы OLE DB.  
   
 #### <a name="the-procedureparameters-schema-rowset"></a>Набор строк схемы PROCEDURE_PARAMETERS  
  В набор строк схемы PROCEDURE_PARAMETERS были сделаны следующие добавления.  
@@ -141,12 +140,12 @@ ms.locfileid: "34332535"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|Полное имя типа (AQN) включает имя типа и префикс пространства имен (если оно задано).|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>Добавления и изменения для наборов свойств OLE DB  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент добавляет новые значения или изменяет многие из основных свойств OLE DB наборов.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент добавляет новые значения или изменяет многие из основных свойств OLE DB наборов.  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>Набор свойств DBPROPSET_SQLSERVERPARAMETER  
  Для поддержки определяемых пользователем типов через OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент реализует новый набор свойств DBPROPSET_SQLSERVERPARAMETER, который содержит следующие значения.  
   
-|Название|Тип|Описание|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|Идентификатор трехкомпонентного имени.<br /><br /> Для параметров определяемого пользователем типа это свойство содержит строку, представляющую имя каталога, в котором определен этот тип.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|Идентификатор трехкомпонентного имени.<br /><br /> Для параметров определяемого пользователем типа данное свойство содержит строку, представляющую имя схемы, в которой определен этот тип.|  
@@ -157,7 +156,7 @@ ms.locfileid: "34332535"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>Набор свойств DBPROPSET_SQLSERVERCOLUMN  
  Для поддержки создания таблиц в **ITableDefinition** интерфейс, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент добавляет к набору свойств DBPROPSET_SQLSERVERCOLUMN три новых столбца.  
   
-|Название|Описание|Тип|Описание|  
+|Имя|Описание|Тип|Описание|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|Для столбцов типа DBTYPE_UDT это свойство содержит строку, указывающую имя каталога, в котором определен определяемый пользователем тип.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|Для столбцов типа DBTYPE_UDT это свойство содержит строку, указывающую имя схемы, в которой определен определяемый пользователем тип.|  
@@ -177,10 +176,10 @@ ms.locfileid: "34332535"
  Если определение определяемого пользователем типа находится в другой базе данных, то должны быть указаны свойства SSPROP_COL_UDT_CATALOGNAME и SSPROP_COL_UDT_CATALOGNAME.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>Добавления и изменения для интерфейсов OLE DB  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент добавляет новые значения или изменяет многие из основных интерфейсов OLE DB.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент добавляет новые значения или изменяет многие из основных интерфейсов OLE DB.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Интерфейс ISSCommandWithParameters  
- Для поддержки определяемых пользователем типов через OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент реализует ряд изменений, включая добавление **ISSCommandWithParameters** интерфейса. Этот новый интерфейс наследует основной интерфейс OLE DB **ICommandWithParameters**. Помимо трех методов, наследуемых от **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, и **SetParameterInfo**; **ISSCommandWithParameters** предоставляет **GetParameterProperties** и **SetParameterProperties** методы, используемые для обработки серверных типов данных.  
+ Для поддержки определяемых пользователем типов через OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент реализует ряд изменений, включая добавление **ISSCommandWithParameters** интерфейса. Этот новый интерфейс наследует основной интерфейс OLE DB **ICommandWithParameters**. Помимо трех методов, наследуемых от **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, и **SetParameterInfo**; **ISSCommandWithParameters** предоставляет **GetParameterProperties** и **SetParameterProperties** методы, используемые для обработки конкретного сервера типы данных.  
   
 > [!NOTE]  
 >  **ISSCommandWithParameters** интерфейс также позволяет использовать новые SSPARAMPROPS структуры.  
@@ -215,6 +214,6 @@ ms.locfileid: "34332535"
   
 ## <a name="see-also"></a>См. также  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

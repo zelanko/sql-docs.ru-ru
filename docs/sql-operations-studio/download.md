@@ -3,7 +3,7 @@ title: Загрузите и установите Microsoft SQL Operations Studi
 description: >
   Загрузка и установка Microsoft SQL Operations Studio (Предварительная версия) для Windows, macOS или Linux
 ms.custom: tools|sos
-ms.date: 05/08/2018
+ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -14,24 +14,24 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dcf6f9d14efd903c47d4e3b059503fb77606209b
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 421b22fd1489561ff04a69e23ecac15d1d52be5a
+ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33988642"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270995"
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Загрузите и установите SQL Operations Studio (Предварительная версия)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] выполняется на Windows, macOS и Linux.
 
-Загрузить и установить последний выпуск *может общедоступной предварительной версии*:
+Загрузить и установить последний выпуск *общедоступной предварительной версии июня*:
 
 |Платформа|Загрузить|Дата выпуска| Версия |
 |:---|:---|:---|:---|
-|Windows|[Установщик](https://go.microsoft.com/fwlink/?linkid=873386)<br>[.ZIP](https://go.microsoft.com/fwlink/?linkid=873387)|7 мая 2018 |0.29.3|
-|MacOS|[.ZIP](https://go.microsoft.com/fwlink/?linkid=873388)|7 мая 2018 |0.29.3|
-|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=873391)<br>[.RPM](https://go.microsoft.com/fwlink/?linkid=873390)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)|7 мая 2018 |0.29.3|
+|Windows|[Установщик](https://go.microsoft.com/fwlink/?linkid=875602)<br>[.ZIP](https://go.microsoft.com/fwlink/?linkid=875603)|20 июня 2018 |0.30.6|
+|macOS|[.ZIP](https://go.microsoft.com/fwlink/?linkid=875604)|20 июня 2018 |0.30.6|
+|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=875607)<br>[.RPM](https://go.microsoft.com/fwlink/?linkid=875606)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=875605)|20 июня 2018 |0.30.6|
 
 Дополнительные сведения о последнем выпуске см. в разделе [заметки о выпуске](release-notes.md).
 
@@ -42,20 +42,20 @@ ms.locfileid: "33988642"
 
 **Установщик**
 
-1. Загрузите и запустите [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] установщик Windows](https://go.microsoft.com/fwlink/?linkid=873386).
+1. Загрузите и запустите [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] установщик Windows](https://go.microsoft.com/fwlink/?linkid=875602).
 1. Запуск [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] приложения.
 
 
 **ZIP-файл**
 
-1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip для Windows](https://go.microsoft.com/fwlink/?linkid=873387).
+1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip для Windows](https://go.microsoft.com/fwlink/?linkid=875603).
 2. Найдите загруженный файл и извлеките его.
 3. Выполнить `\sqlops-windows\sqlops.exe`
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>Получить для macOS SQL Operations Studio (Предварительная версия)
 
-1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] для macOS](https://go.microsoft.com/fwlink/?linkid=873388).
+1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] для macOS](https://go.microsoft.com/fwlink/?linkid=875604).
 2. Чтобы развернуть содержимое ZIP-файл, дважды щелкните его.
 3. Чтобы сделать [!INCLUDE[name-sos](../includes/name-sos-short.md)] в *запуска*, перетащите *sqlops.app* для *приложений* папки.
 
@@ -63,9 +63,9 @@ ms.locfileid: "33988642"
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Получить SQL Operations Studio (Предварительная версия) для Linux
 
 1. Загрузить [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Linux с помощью одного из установщиков или tar.gz архива:
-    - [.DEB](https://go.microsoft.com/fwlink/?linkid=873391)
-    - [.RPM](https://go.microsoft.com/fwlink/?linkid=873390)
-    - [. tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)
+    - [.DEB](https://go.microsoft.com/fwlink/?linkid=875607)
+    - [.RPM](https://go.microsoft.com/fwlink/?linkid=875606)
+    - [. tar.gz](https://go.microsoft.com/fwlink/?linkid=875605)
 1. Чтобы извлечь файл и запустите [!INCLUDE[name-sos](../includes/name-sos-short.md)], откройте новое окно терминала и введите следующие команды:
 
    **Debian установки:**
@@ -139,7 +139,7 @@ ms.locfileid: "33988642"
 - Windows Server 2012 (64-разрядная версия)
 - Windows Server 2008 R2 (64-разрядная версия)
 
-### <a name="macos"></a>MacOS
+### <a name="macos"></a>macOS
 - macOS 10.13 Сьерра высокого уровня
 - macOS 10.12 Сьерра
 
