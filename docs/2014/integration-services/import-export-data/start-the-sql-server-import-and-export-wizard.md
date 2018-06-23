@@ -1,0 +1,137 @@
+---
+title: Запуск SQL Server мастер импорта и экспорта | Документы Microsoft
+ms.custom: ''
+ms.date: 06/14/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Import and Export Wizard
+- starting SQL Server Import and Export Wizard
+- Import and Export Wizard
+- starting Import and Export Wizard
+ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
+caps.latest.revision: 67
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.openlocfilehash: 817172e78c7f7702aa4dc9d7555b25f6866a6897
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36194064"
+---
+# <a name="run-the-sql-server-import-and-export-wizard"></a>Запуск мастера импорта и экспорта SQL Server
+  Мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет самый простой способ копирования данных между источниками и создания основных пакетов. Дополнительные сведения о мастере см. в разделе [SQL Server Импорт и экспорт](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
+  
+ Видео, в котором демонстрируется использование мастера экспорта и импорта SQL Server для создания пакета, который экспортирует данные из базы данных SQL Server в электронную таблицу Microsoft Excel, в разделе [Экспорт данных SQL Server в Excel (видеоматериал SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131024).  
+  
+### <a name="to-start-the-sql-server-import-and-export-wizard"></a>Запуск мастера импорта и экспорта SQL Server  
+  
+-   На **запустить** последовательно выберите пункты **все программы**, пункты**Microsoft SQL Server** , а затем нажмите кнопку **Импорт и экспорт данных**.  
+  
+     —или—  
+  
+     В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], щелкните правой кнопкой мыши **пакетов служб SSIS** папки, а затем щелкните **SSISImport и экспорт**.  
+  
+     —или—  
+  
+     В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]на **проекта** меню, нажмите кнопку **SSISImport и экспорт**.  
+  
+     —или—  
+  
+     В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключиться к [!INCLUDE[ssDE](../../includes/ssde-md.md)] тип сервера, разверните узел базы данных, щелкните правой кнопкой мыши базу данных, укажите **задачи**и нажмите кнопку **импорта данных** или **Экспорт данных**.  
+  
+     —или—  
+  
+     В окне командной строки запустите программу DTSWizard.exe, которая находится в папке «C:\Program Files\Microsoft SQL Server\100\DTS\Binn».  
+  
+    > [!NOTE]  
+    >  На 64-разрядном компьютере службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливают 64-разрядную версию мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DTSWizard.exe). Однако некоторые источники данных, такие как Access и Excel, располагают только 32-разрядным поставщиком. Для работы с этими источниками данных необходимо установить и запустить 32-разрядную версию мастера. Чтобы установить 32-разрядной версии мастера, необходимо выбрать клиентские средства или [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] во время установки.  
+  
+### <a name="to-import-or-export-data-by-using-the-sql-server-import-and-export-wizard"></a>Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server  
+  
+1.  Запустите мастер импорта и экспорта служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+2.  На соответствующих страницах мастера выберите источник данных и целевое назначение данных.  
+  
+     Доступны такие источники данных, как поставщики данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], поставщики OLE DB, собственные клиенты-поставщики служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[vstecado](../../includes/vstecado-md.md)], Microsoft Office Excel, Microsoft Office Access, а также источник неструктурированных файлов. В зависимости от выбранного источника можно задать такие параметры, как режим проверки подлинности, имя сервера, имя базы данных и формат файла.  
+  
+    > [!NOTE]  
+    >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Поставщик OLE DB для Oracle не поддерживает типы данных Oracle BLOB, CLOB, NCLOB, BFILE и UROWID. Следовательно, источник OLE DB не может извлекать данные из таблиц, содержащих столбцы с этими типами данных.  
+  
+     Доступны такие назначения включают [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] поставщиков данных, поставщики OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, Excel, доступ и «неструктурированный файл».  
+  
+3.  Задайте параметры выбранного типа назначения.  
+  
+     Если в качестве назначения выбрана база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно задать следующие параметры.  
+  
+    -   Укажите, нужно ли создавать новую базу данных, а также укажите свойства базы данных. Следующие свойства не могут быть изменены, и мастер воспользуется указанными значениями по умолчанию.  
+  
+        |Свойство|Значение|  
+        |--------------|-----------|  
+        |Параметры сортировки|Latin1_General_CS_AS_KS_WS|  
+        |Модель восстановления|Полное|  
+        |Использовать полнотекстовое индексирование|True|  
+  
+    -   Выберите, копировать ли данные из таблиц или представлений или копировать результаты запроса.  
+  
+         Если необходимо копировать результаты запроса данных из источника, следует создать запрос Transact-SQL. Можно ввести запрос Transact-SQL вручную либо использовать запрос, сохраненный в файле. Мастер содержит функцию просмотра для поиска файла. После выбора файл будет автоматически открыт, а его содержимое будет вставлено на страницу мастера.  
+  
+         Если источником является поставщик [!INCLUDE[vstecado](../../includes/vstecado-md.md)], можно также использовать этот параметр, чтобы скопировать результаты запроса, предоставляя строку DBCommand в качестве запроса.  
+  
+         Если источник данных является представление, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастер импорта и экспорта автоматически преобразует это представление в таблицу в назначении.  
+  
+    -   Укажите, следует ли удалить и создать повторно целевую таблицу, а также разрешить ли вставку идентификаторов.  
+  
+    -   Укажите, следует ли удалять и добавлять строки в существующую целевую таблицу. Если таблица не существует, мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создаст ее автоматически.  
+  
+     Если в качестве назначения выбран неструктурированный файл, можно задать следующие параметры.  
+  
+    -   Указать разделитель строк в целевом файле.  
+  
+    -   Указать разделитель столбцов в целевом файле.  
+  
+4.  Дополнительно можно выбрать одну таблицу и изменить сопоставление исходных и целевых столбцов или изменить метаданные целевых столбцов.  
+  
+    -   Сопоставьте исходные столбцы с другими целевыми столбцами.  
+  
+    -   Измените тип данных целевого столбца.  
+  
+    -   Задайте длину столбцов символьных типов.  
+  
+    -   Задайте масштаб и точность столбцов числовых типов.  
+  
+    -   Укажите, может ли столбец содержать значения NULL.  
+  
+5.  Если необходимо выбрать несколько таблиц и обновить метаданные и параметры, которые будут применены к этим таблицам, выполните следующие действия.  
+  
+    -   Выберите существующую целевую схему или предоставьте новую схему, чтобы назначить ее таблицам.  
+  
+    -   Укажите возможность вставки столбцов идентификаторов в целевые таблицы.  
+  
+    -   Укажите возможность удаления и повторного создания целевых таблиц.  
+  
+    -   Укажите возможность усечения целевых таблиц.  
+  
+6.  Сохраните и выполните пакет.  
+  
+     Если мастер запущен из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или из командной строки, пакет может быть выполнен немедленно. При необходимости можно сохранить пакет, чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** базы данных или в файловой системе. Дополнительные сведения о **msdb** базы данных см. в разделе [пакета управления &#40;службы SSIS&#41;](../service/package-management-ssis-service.md).  
+  
+     Если пакет сохранен, то можно задать уровень защиты пакета, и если уровень защиты использует пароль, то необходимо предоставить пароль. Дополнительные сведения об уровнях защиты пакета см. в разделе [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
+  
+     Если мастер запускается из [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проекта в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], невозможно запустить пакет из мастера. Вместо этого пакет добавляется в проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], из которого был запущен мастер. Затем можно запустить пакет в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  
+    > [!NOTE]  
+    >  В [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], параметр, чтобы сохранить пакет, созданный мастером недоступен.  
+  
+## <a name="see-also"></a>См. также  
+ [Мастер экспорта и импорта SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
+ [Создание пакетов в SQL Server Data Tools](../create-packages-in-sql-server-data-tools.md)  
+  
+  

@@ -2,9 +2,10 @@
 title: ISSCommandWithParameters::GetParameterProperties (OLE DB) | Документы Microsoft
 description: ISSCommandWithParameters::GetParameterProperties (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,15 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2a8e0d02ab4aef8d9550e0ea25b6166ccbf03da5
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 9c0f35cd59a670e35db6400f681187c52e4b97ef
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305613"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689997"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Возвращает массив структур SSPARAMPROPS, представляющих собой множества свойств, по одному множеству свойств SSPARAMPROPS на каждый параметр определяемого пользователем типа или XML.  
   
@@ -45,7 +48,7 @@ HRESULT GetParameterProperties(
  Указатель на буфер, содержащий количество структур SSPARAMPROPS возвращается в *prgParamProperties*.  
   
  *prgParamProperties*[out]  
- Указатель на область памяти, в которую будет возвращен массив структур SSPARAMPROPS. Поставщик выделяет память для структур и возвращает адрес этой памяти, потребитель освобождает эту память с **IMalloc::Free** когда он больше не нужна структуры. Перед вызовом метода **IMalloc::Free** для *prgParamProperties*, пользователь должен также вызвать **VariantClear** для *vValue* свойство каждой структуры DBPROP, чтобы предотвратить утечку памяти в случаях, если вариант содержит ссылку типа, такие как BSTR. Если *pcParams* равен нулю на выходе или происходит ошибка, отличная от DB_E_ERRORSOCCURRED, поставщик не выделяет памяти и гарантирует *prgParamProperties* является указателем null на выходе.  
+ Указатель на область памяти, в которую будет возвращен массив структур SSPARAMPROPS. Поставщик выделяет память для структур и возвращает адрес этой памяти, потребитель освобождает эту память с **IMalloc::Free** когда он больше не нужна структуры. Перед вызовом метода **IMalloc::Free** для *prgParamProperties*, пользователь должен также вызвать **VariantClear** для *vValue* свойство каждой структуры DBPROP, чтобы предотвратить утечку памяти в случаях, если вариант содержит ссылку типа, такие как BSTR. Если *pcParams* равен нулю на выходе или происходит ошибка, отличная от DB_E_ERRORSOCCURRED, поставщик не выделяет памяти и гарантирует, что *prgParamProperties* является указателем null на выходе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **GetParameterProperties** метод возвращает те же коды ошибок, что и метод ядра OLE DB **ICommandProperties::GetProperties** метод, за исключением того, что DB_S_ERRORSOCCURRED или DB_E_ERRORSOCCURED не может быть создано.  
