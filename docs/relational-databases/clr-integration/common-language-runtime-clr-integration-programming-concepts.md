@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - CLR [SQL Server] See common language runtime [SQL Server]
@@ -21,12 +19,12 @@ caps.latest.revision: 59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 41c8382d933a02d26ca47bfc76acc4d2563fce62
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13eac9448c0cd0d5f5dd208b75c9fc5bed089262
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923449"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703325"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Основные понятия о программировании интеграции со средой CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +40,13 @@ ms.locfileid: "32923449"
   
  В следующей таблице приводится список подразделов данного раздела.  
   
- [Общеязыковая среда выполнения & #40; Среда CLR & #41; Общие сведения об интеграции](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [Общеязыковая среда выполнения &#40;CLR&#41; интеграции](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
  Содержит общие сведения о среде CLR и описывает способы и преимущества использования технологии в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Описывает преимущества использования среды CLR для создания объектов базы данных.  
   
  [Сборки (компонент Database Engine)](../../relational-databases/clr-integration/assemblies-database-engine.md)  
  Описывает использование в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сборок для развертывания функций, хранимых процедур, триггеров, пользовательских статистических функций и определяемых пользователем типов данных, написанных на одном из языков управляемого кода, поддерживаемых средой CLR [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, а не на языке [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- [Создание объектов базы данных с помощью среды CLR & #40; Среда CLR & #41; Интеграция](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
+ [Построение объектов базы данных с помощью среды CLR &#40;CLR&#41; интеграции](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
  Описывает виды объектов, которые можно строить с использованием среды CLR, и рассматривает требования к построению объектов баз данных CLR.  
   
  [Доступ к данным из объектов среды CLR для работы с базами данных](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
@@ -57,10 +55,10 @@ ms.locfileid: "32923449"
  [Безопасность интеграции со средой CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
  Описывает модель безопасности для средств интеграции со средой CLR.  
   
- [Отладка объектов базы данных CLR](../../relational-databases/clr-integration/debugging-clr-database-objects.md)  
+ [Отладка объектов базы данных среды CLR](../../relational-databases/clr-integration/debugging-clr-database-objects.md)  
  Описывает ограничения и требования для отладки объектов базы данных CLR.  
   
- [Развертывание объектов базы данных среды CLR](../../relational-databases/clr-integration/deploying-clr-database-objects.md)  
+ [Развертывание объектов базы данных CLR](../../relational-databases/clr-integration/deploying-clr-database-objects.md)  
  Описывает развертывание сборок на рабочих серверах.  
   
  [Управление сборками интеграции со средой CLR](../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
@@ -69,11 +67,11 @@ ms.locfileid: "32923449"
  [Мониторинг и устранение неполадок управляемых объектов базы данных](../../relational-databases/clr-integration/monitoring-and-troubleshooting-managed-database-objects.md)  
  Данный раздел содержит информацию о средствах, которые можно использовать для наблюдения и диагностики управляемых объектов базы данных и сборок, работающих в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Сценарии использования и примеры для распространенных общеязыковая среда выполнения & #40; Среда CLR & #41; Интеграция](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
+ [Сценарии использования и примеры интеграции со средой CLR](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
  Описывает сценарии использования и образцы кода, использующие объекты CLR.  
   
-## <a name="see-also"></a>См. также:  
- [Сборки & #40; компонент Database Engine & #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+## <a name="see-also"></a>См. также  
+ [Сборки &#40;компонент Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Установка .NET Framework SDK](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

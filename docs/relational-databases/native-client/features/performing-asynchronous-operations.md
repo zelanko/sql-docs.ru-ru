@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -25,11 +24,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b433851601bb3bbe1a9bd339b4af2b0835c1673
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e3880ec512f04adca7b84ec362b99d13e071cfd
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702695"
 ---
 # <a name="performing-asynchronous-operations"></a>Выполнение асинхронных операций
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="opening-and-closing-a-database-connection"></a>Открытие и закрытие подключения к базе данных  
  При использовании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента приложения, предназначенные для асинхронно инициализировать объект источника данных можно задать DBPROPVAL_ASYNCH_INITIALIZE в свойстве DBPROP_INIT_ASYNCH до вызова метода  **IDBInitialize::Initialize**. Если это свойство задано, поставщик немедленный возврат из вызова **инициализировать** с S_OK, если операция была завершена немедленно, или DB_S_ASYNCHRONOUS, если инициализация продолжена асинхронно. Приложения могут запросить **IDBAsynchStatus** или [ISSAsynchStatus](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)интерфейс для объекта источника данных, а затем вызвать **IDBAsynchStatus::GetStatus** или[ ISSAsynchStatus::WaitForAsynchCompletion](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) для получения состояния инициализации.  
   
- Кроме того, в набор свойств DBPROPSET_SQLSERVERROWSET добавлено свойство SSPROP_ISSAsynchStatus. Поставщики, поддерживающие интерфейс **ISSAsynchStatus** , должны реализовывать это свойство со значением VARIANT_TRUE.  
+ Кроме того, в набор свойств DBPROPSET_SQLSERVERROWSET добавлено свойство SSPROP_ISSAsynchStatus. Поставщики, поддерживающие **ISSAsynchStatus** интерфейса необходимо реализовать это свойство со значением VARIANT_TRUE.  
   
  **IDBAsynchStatus::Abort** или [ISSAsynchStatus::Abort](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) может вызываться для отмены асинхронного **инициализировать** вызова. Потребитель должен явно запросить асинхронную инициализацию источника данных. В противном случае **IDBInitialize::Initialize** не возвращается до полной инициализации объекта источника данных.  
   
@@ -195,6 +195,6 @@ if (hr == DB_S_ASYNCHRONOUS)
 ## <a name="see-also"></a>См. также  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Свойства и поведение наборов строк](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
- [ISSAsynchStatus & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

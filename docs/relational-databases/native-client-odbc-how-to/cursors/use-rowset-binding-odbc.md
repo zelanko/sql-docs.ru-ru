@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowset binding [ODBC]
 ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d30a61728db808a41fb4cc0c5acbcb08b334e95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ef6f3651cb1cb1c80247f5853b4d4bd05bc13fc
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943789"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694445"
 ---
 # <a name="use-rowset-binding-odbc"></a>Использование привязки наборов строк (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +36,7 @@ ms.locfileid: "32943789"
   
     -   При необходимости выделите массив из R (или больше) буферов столбцов для хранения длин данных.  
   
-    -   Вызовите [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) , чтобы связать значение данных столбца и массивы длин данных со столбцом набора строк.  
+    -   Вызовите [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) чтобы связать значение данных столбца и массивы длин данных со столбцом набора строк.  
   
 2.  Вызовите функцию [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) , чтобы задать следующие атрибуты.  
   
@@ -52,7 +50,7 @@ ms.locfileid: "32943789"
   
 3.  Выполните инструкцию.  
   
-4.  При каждом вызове функции [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) или [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) происходит получение числа строк, равного R, и передача данных в привязанные столбцы.  
+4.  Каждый вызов [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) или [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) извлекает строки R и передача данных в привязанные столбцы.  
   
 ### <a name="to-use-row-wise-binding"></a>Использование привязки на уровне строки  
   
@@ -72,15 +70,15 @@ ms.locfileid: "32943789"
   
     -   В атрибуте SQL_ATTR_PARAMS_STATUS_PTR задайте указатель на массив array[R] из переменных SQLUSSMALLINT, в котором будут храниться признаки состояния строк.  
   
-3.  Для каждого столбца из результирующего набора вызовите функцию [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) , чтобы связать значение данных и указатель на длину данных столбца с соответствующими им переменными в первом элементе массива структур, выделенных в шаге 1.  
+3.  Для каждого столбца в результирующем наборе, вызовите [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) чтобы связать значение данных и указатель на длину данных столбца с соответствующими им переменными в первом элементе массива структур, выделенных на шаге 1.  
   
 4.  Выполните инструкцию.  
   
-5.  При каждом вызове функции [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) или [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) происходит получение числа строк, равного R, и передача данных в привязанные столбцы.  
+5.  Каждый вызов [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) или [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) извлекает строки R и передача данных в привязанные столбцы.  
   
-## <a name="see-also"></a>См. также:  
- [С помощью инструкций по курсорам & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
+## <a name="see-also"></a>См. также  
+ [Использование инструкций по курсорам &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
  [Способы реализации курсоров](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
- [Использование курсоров & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
+ [Использование курсоров &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
   

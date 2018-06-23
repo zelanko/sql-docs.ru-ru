@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, statements
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 84fa75e75d21017b310fc807948bb4ed42e3d673
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7741fc9a8b4de583055a5afccb0bc31d54b50406
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943895"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698505"
 ---
 # <a name="using-statement-parameters"></a>Использование параметров инструкции
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +57,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
  Ссылка на каждый маркер параметра осуществляется по порядковому номеру; параметры нумеруются слева направо. Первый слева параметр в инструкции SQL имеет порядковый номер 1; следующий — 2 и т. д.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Привязка параметров](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   

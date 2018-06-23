@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -27,11 +26,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b7b40840f1258dfaaf1900aae4e4b891d1bf7322
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dedf0f7ff3e8f89700e35544c94232a9c49656cf
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698575"
 ---
 # <a name="working-with-query-notifications"></a>Работа с уведомлениями запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,7 +81,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>Набор свойств DBPROPSET_SQLSERVERROWSET  
  Для поддержки уведомлений о запросах через OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент добавляет в набор свойств DBPROPSET_SQLSERVERROWSET следующие новые свойства.  
   
-|Название|Тип|Описание|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|время в секундах, в течение которого уведомление запроса должно оставаться активным.<br /><br /> Значение по умолчанию — 432000 секунд (5 дней). Минимальное значение — 1 секунда, а максимальное значение — 2^31-1 секунд.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Текст сообщения уведомления. Определяется пользователем и не имеет стандартного формата.<br /><br /> По умолчанию эта строка пуста. В сообщении можно использовать от 1 до 2000 символов.|  

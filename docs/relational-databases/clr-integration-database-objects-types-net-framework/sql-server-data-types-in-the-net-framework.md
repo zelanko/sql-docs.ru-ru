@@ -3,11 +3,9 @@ title: Типы данных SQL Server в .NET Framework | Документы M
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,12 +22,12 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 58efbce895ad0e06521c59941dc49826629343b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe3a5c99e2c1e9bf569ecdbb1ab31d683d340206
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917857"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702055"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Типы данных SQL Server в платформе .NET Framework
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +41,10 @@ ms.locfileid: "32917857"
  [Параметры сортировки и типы данных интеграции со средой CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
  Описывает обработку параметров сортировки при интеграции со средой CLR.  
   
- [Обработка больших объектов & #40; LOB & #41; Параметры в среде CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
+ [Обработка больших объектов &#40;LOB&#41; параметров в среде CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
  Описывает передачу типов LOB между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и средой CLR.  
   
- [Сопоставление параметров данных среды CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  
+ [Сопоставление данных о параметрах CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  
  Описывает сопоставления типов данных между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], интеграцией со средой CLR и платформой .NET Framework.  
   
   

@@ -1,0 +1,75 @@
+---
+title: Обзор служб Master Data Services | Документы Microsoft
+ms.custom: ''
+ms.date: 06/14/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- Master Data Services, overview
+- Master Data Services
+ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
+caps.latest.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.openlocfilehash: 6ba63353b1a5fba1e5853f641cc6217002f0c805
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36193195"
+---
+# <a name="master-data-services-overview"></a>Общие сведения о службах Master Data Services
+  В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]модель является наивысшим уровнем контейнера в структуре основных данных. Можно создать модель для управления группами сходных данных, например для управления данными продуктов в сети. В модели содержится одна или несколько сущностей, а сущности содержат элементы, которые являются записями данных.  
+  
+|||  
+|-|-|  
+|![Виртуальная машина Azure](../../2014/master-data-services/media/azure-virtual-machine.png "виртуальной машины Azure")|Хотите попробовать SQL Server 2016? Зарегистрируйтесь в Microsoft Azure, а затем перейдите на **[эту страницу](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** , чтобы запустить виртуальную машину с уже установленным SQL Server 2016. По завершении вы сможете ее удалить.|  
+  
+ Модель продукта в сети может содержать сущности, такие как продукт, цвет и стиль. Сущность цвета может содержать элементы для красного, серебряного и черного цвета.  
+  
+ ![Модель продукта с сущностью цвета](../../2014/master-data-services/media/mds-colorentity-productmodel.png "модель продукта с сущностью цвета")  
+  
+ Модели также содержат атрибуты, определенные в сущностях. Атрибут содержит значения, которые помогают описывать элементы сущности. Существуют атрибуты в свободной форме и атрибуты на основе домена.  Атрибут на основе домена содержит значения, которые заполняются элементами из сущности и могут использоваться как значения атрибутов для других сущностей.  
+  
+ Например, в сущности продукта могут иметься атрибуты в свободной форме для стоимости и веса. В то же время там может быть атрибут на основе домена для цвета, значения которого заполняются элементами сущности цвета. Этот основной список цветов используется в качестве значений атрибута для сущности продукта.  
+  
+ ![Сущность продукта с атрибутом на основе домена цвета](../../2014/master-data-services/media/mds-productentity-colorattribute.png "сущности продукта с атрибутом на основе домена цвета")  
+  
+ Производные иерархии происходят от связей между сущностями в модели. Это связи атрибутов на основе домена. Например, в модели продукта можно иметь производную иерархию цвета, происходящую от связи между сущностями цвета и продукта.  
+  
+ ![](../../2014/master-data-services/media/mds-derivedhierarchy.png)  
+  
+ После определения базовой структуры данных можно начать добавление записей данных (элементов) с помощью функции импорта. Загрузите данные в промежуточные таблицы, проверьте данные с помощью бизнес-правил и загрузите данные в таблицы MDS.  Также можно использовать бизнес-правила для задания значений атрибутов.  
+  
+ В следующей таблице описываются основные задачи [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Если не указано другое, для всех следующих процедур необходимо иметь права администратора модели. Дополнительные сведения см. в статье [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+  
+> [!NOTE]  
+>  Следующие задачи можно выполнить в тестовой среде и использовать предложенные образцы данных при установке служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Дополнительные сведения см. в разделе [Развертывание моделей (службы Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md).  
+  
+|Действие|Сведения|См. также|  
+|------------|-------------|--------------------|  
+|Создание модели|При создании модели она считается версией VERSION_1.|[Модели (службы Master Data Services)](../../2014/master-data-services/models-master-data-services.md)<br /><br /> [Создать модель &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
+|Создание сущностей|Создавайте столько сущностей, сколько необходимо для хранения элементов.|[Сущности (службы Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)<br /><br /> [Создание сущности &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
+|Создание сущностей для использования в качестве атрибутов на основе домена|Чтобы создать атрибут на основе домена, сначала нужно создать сущность для заполнения списка значений атрибута.|[Атрибуты на основе домена &#40;службы Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)<br /><br /> [Создание атрибута на основе домена &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
+|Создание атрибутов для сущностей|Атрибуты создаются для описания элементов. Атрибуты Name и Code автоматически включаются в каждую сущность, и их нельзя удалить. Можно создать другие атрибуты в свободной форме для хранения текста, дат, чисел или файлов.|[Атрибуты &#40;службы Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)<br /><br /> [Создание текстового атрибута &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)<br /><br /> [Создание числового атрибута &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)<br /><br /> [Создание атрибута даты &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-date-attribute-master-data-services.md)<br /><br /> [Создание атрибута ссылки &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)<br /><br /> [Создание файлового атрибута &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
+|Создание групп атрибутов|При наличии четырех или пяти атрибутов для сущности можно создавать группы атрибутов. Эти группы представлены вкладками наверху сетки в **Обозревателе** и упрощают навигацию за счет группирования атрибутов на отдельных вкладках. \<ВСТАВИТЬ ИЗОБРАЖЕНИЕ &GT;|[Группы атрибутов &#40;службы Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)<br /><br /> [Создание группы атрибутов &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|  
+|Импорт записей данных (элементов) для поддерживающих сущностей|Данные для поддерживающих сущностей импортируются с использованием промежуточного процесса.<br /><br /> Для модели Product это может означать импорт цветов или размеров.<br /><br /> Элементы также можно создавать вручную.<br /><br /> Примечание. Пользователи могут создавать элементы в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , если у них есть как минимум разрешение на **обновление** конечного объекта модели сущности и доступ к функциональной области **Обозреватель** .|[Импорт данных &#40;службы Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)<br /><br /> [Загрузка или обновление членов в Master Data Services с помощью промежуточного процесса](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)<br /><br /> [Создание конечного элемента &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|  
+|Создание бизнес-правил, обеспечивающих высокое качество данных|Для гарантии точности данных создаются и публикуются бизнес-правила. Бизнес-правила можно использовать в следующих целях:<br /><br /> установка значений атрибута по умолчанию;<br /><br /> изменение значений атрибута;<br /><br /> отправка уведомлений по электронной почте, если данные не проходят проверку на соответствие бизнес-правилам.|[Бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)<br /><br /> [Создание и публикация бизнес-правило &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)<br /><br /> [Уведомления о &#40;службы Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)<br /><br /> [Настройка уведомлений по электронной почте &#40;службы Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)<br /><br /> [Настройка бизнес-правила для отправки уведомлений &#40;службы Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|Импорт записей данных (элементов) для основных сущностей Применить бизнес-правила|Данные для основных сущностей импортируются с использованием промежуточного процесса. По завершении импорта проверьте версию. Это действие применяет бизнес-правила ко всем элементам версии модели.<br /><br /> После этого можно исправить выявленные проблемы с проверкой соответствия бизнес-правилам.|[Проверка &#40;службы Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)<br /><br /> [Проверьте версию на соответствие бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)<br /><br /> [Хранимая процедура проверки &#40;службы Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)|  
+|Создание производных иерархий|Производные иерархии можно обновлять по мере изменения бизнес-потребностей для обеспечения учета всех элементов на соответствующем уровне.|[Производные иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)<br /><br /> [Создание производной иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|Создание явных иерархий при необходимости|При необходимости использовать иерархии, отличные от многоуровневых, которые включают элементы из одной сущности, можно создавать явные иерархии.|[Явные иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)<br /><br /> [Создание явной иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|Создание коллекций при необходимости|Если необходимо представить разные группы элементов для отчетов или анализа и не нужно создавать полную иерархию, используются коллекции.<br /><br /> Примечание. Пользователи могут создавать элементы в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , если у них есть как минимум разрешение на **обновление** объекта модели коллекции и доступ к функциональной области **Обозреватель** .|[Коллекции &#40;службы Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)<br /><br /> [Создайте коллекцию &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
+|Создание определяемых пользователем метаданных|Для описания объектов модели в модель добавляются пользовательские метаданные. Эти метаданные могут включать владельца объекта или источник данных.|[Метаданные &#40;службы Master Data Services&#41;](../../2014/master-data-services/metadata-master-data-services.md)<br /><br /> [Добавить метаданные &#40;службы Master Data Services&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)|  
+|Блокировка версии модели и назначение флага версии|Версия модели может блокироваться, чтобы запретить изменять элементы всем пользователям, кроме администраторов. После проверки данных версии на соответствие бизнес-правилам можно зафиксировать версию, чтобы запретить всем пользователям изменять элементы.<br /><br /> Создание и назначение флага версии модели. Флаги помогают пользователям и системам-подписчикам определять используемую версию модели.|[Версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)<br /><br /> [Блокировка версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)<br /><br /> [Создание флага версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
+|Создание представлений подписки|Чтобы системы подписки использовали основные данные, нужно создать представления подписки, которые создают стандартные представления в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Экспорт данных &#40;службы Master Data Services&#41;](overview-exporting-data-master-data-services.md)<br /><br /> [Создание представления подписки &#40;службы Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)|  
+|Настройка разрешений для пользователей и групп|Разрешения для пользователей и групп нельзя копировать из тестовой в рабочую среду. Однако тестовую среду можно использовать для определения уровня безопасности, который необходимо будет использовать в производственной среде.|[Безопасность (службы Master Data Services)](../../2014/master-data-services/security-master-data-services.md)<br /><br /> [Добавьте группу &#40;службы Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)<br /><br /> [Добавление пользователя &#40;службы Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)|  
+  
+ По окончании можно развернуть модель в рабочей среде с данными или без них. Дополнительные сведения см. в разделе [Развертывание моделей (службы Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md).  
+  
+  

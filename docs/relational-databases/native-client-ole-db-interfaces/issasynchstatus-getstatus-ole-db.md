@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 455707070a8ee20fd767a510a255db2bfc87d502
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ccb9d40572b24322264ffc826e79d18faade8d8a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951469"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695905"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>Функция ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,7 +113,7 @@ HRESULT GetStatus(
  E_FAIL  
  Произошла ошибка, зависящая от поставщика.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **ISSAsynchStatus::GetStatus** поведение аналогично поведению метода **IDBAsynchStatus::GetStatus** за исключением того, если объект источника данных инициализации прерывается, возвращается E_UNEXPECTED, а чем DB_E_CANCELED (хотя [ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) возвратит DB_E_CANCELED). Происходит это потому, что после прерывания объект источника данных не остается в обычном состоянии зомби. Делается этого для того, чтобы можно было попытаться выполнить последующие операции инициализации.  
   
  Если набор строк инициализируется или заполняется асинхронно, он должен поддерживать этот метод.  
@@ -132,6 +130,6 @@ HRESULT GetStatus(
   
 ## <a name="see-also"></a>См. также  
  [Выполнение асинхронных операций](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   
