@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 20a3742c9dfc956accd902539524724cac3f9b8c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c334671fb9afaa4596688658e6beadbf8c9e6cc8
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563862"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297440"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Известные проблемы в службах машин обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,6 +35,36 @@ SQL Server 2017
 ## <a name="setup-and-configuration-issues"></a>Проблемы установки и настройки
 
 Описание процессов и часто задаваемые вопросы, связанные с начальной установки и настройки см. в разделе [часто задаваемые вопросы по обновлению и установке](r/upgrade-and-installation-faq-sql-server-r-services.md). Он содержит сведения об обновлениях, -параллельную установку и установку из новых компонентов R или Python.
+
+### <a name="r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>Ошибка выполнения скрипта R (SQL Server 2017 г. CU5 CU7 Регрессия)
+
+Для SQL Server 2017 г в накопительный пакет обновления 5 по 7, имеется регрессии в **rlauncher.config** файла, где каталог temp путь к файлу содержит пробел. Это Регрессия будет устранена в CU8.
+
+Ошибки, которые отображаются при выполнении сценария R включает следующие сообщения:
+
+> *Не удалось соединиться со средой выполнения для скрипта «R». Проверьте требования среды выполнения «R».*
+>
+> Сообщения STDERR из внешнего скрипта: 
+>
+> *Неустранимая ошибка: не удается создать «R_TempDir»*
+
+**Обходное решение**
+
+Примените CU8, когда они станут доступны. Кроме того, можно повторно создать **rlauncher.config** , запустив **registerrext** с удалить или установить на командную строку с повышенными привилегиями. 
+
+```text
+<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe /uninstall /sqlbinnpath:<SQLInstanceBinnPath> /userpoolsize:0 /instance:<SQLInstanceName>
+
+<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe /install /sqlbinnpath:<SQLInstanceBinnPath> /userpoolsize:0 /instance:<SQLInstanceName>
+```
+
+В следующем примере показано команды с экземпляром по умолчанию «MSSQL14. MSSQLSERVER» установлен в «C:\Program Files\Microsoft SQL Server\":
+
+```text
+"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRext.exe" /uninstall /sqlbinnpath:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Binn" /userpoolsize:0 /instance:MSSQLSERVER
+
+"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRext.exe" /install /sqlbinnpath:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Binn" /userpoolsize:0 /instance:MSSQLSERVER
+```
 
 ### <a name="unable-to-install-sql-server-machine-learning-features-on-a-domain-controller"></a>Не удалось выполнить установку функции обучения компьютера SQL Server на контроллере домена
 
@@ -167,7 +197,7 @@ SQL Server 2016 требует, что библиотеки R на клиент�
 
 **Применяется к:** служб R SQL Server 2016, Enterprise Edition
 
-## <a name="r-issues"></a>Проблемы R
+## <a name="r-script-execution-issues"></a>Проблемы с выполнением сценария R
 
 Этот раздел содержит известные проблемы, относящиеся к выполнение R на сервере SQL Server, а также некоторые проблемы, связанные с библиотеки R и инструменты, опубликованные корпорацией Майкрософт, включая RevoScaleR.
 
@@ -371,7 +401,7 @@ R --max-ppsize=500000
 
 Упорядоченные факторы обрабатываются так же, как факторы, во всех функциях анализа RevoScaleR, за исключением `rxDTree`.
 
-## <a name="python-code-execution-or-python-package-issues"></a>Выполнение кода Python или Python проблемы пакетов
+## <a name="python-script-execution-issues"></a>Проблемы с выполнением сценария Python
 
 В этом разделе содержатся известные проблемы, относящиеся к ОС Python SQL Server, а также проблемы, связанные с пакетами Python, опубликованные корпорацией Майкрософт, включая [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) и [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
 

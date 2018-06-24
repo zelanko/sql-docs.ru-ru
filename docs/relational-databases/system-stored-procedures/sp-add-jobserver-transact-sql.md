@@ -22,12 +22,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e89ba03a88db9dd5977ace92cc498726da6b3e45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0ee7344ebe282a5cbf8baa61cfeb88175f6f235d
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237882"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262318"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,15 +55,15 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >  Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно.  
   
  [ **@server_name =** ] **'***server***'**  
- Имя сервера, на который направляется задание. *сервер* — **nvarchar(30)**, значение по умолчанию N'(LOCAL)'. *сервер*может быть либо **(LOCAL)** для локального сервера или имя существующего целевого сервера.  
+ Имя сервера, на который направляется задание. *сервер* — **nvarchar(30)**, значение по умолчанию N'(LOCAL)'. *сервер* может быть либо **(LOCAL)** для локального сервера или имя существующего целевого сервера.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **@automatic_post** существует в **sp_add_jobserver**, но отсутствует в списке аргументов. **@automatic_post** Зарезервировано для внутреннего использования.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
