@@ -1,26 +1,25 @@
 ---
 title: Рабочая роль SQL Server Integration Services (SSIS) Scale Out | Документы Майкрософт
-ms.description: This article describes the Scale Out Master component of SSIS Scale Out
-ms.custom: ''
+description: В этой статье описывается компонент "Мастер Scale Out" в SSIS Scale Out.
+ms.custom: performance
 ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 5b19aee11489551b3f06fb58cb0242b495929213
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2949f0aabaf4f59d6d2fc6635991f8eb0a921ca6
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408126"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Рабочая роль масштабного развертывания служб Integration Services (SSIS)
 
@@ -29,10 +28,10 @@ ms.lasthandoff: 05/03/2018
 ## <a name="configure-the-scale-out-worker-service"></a>Настройка службы рабочей роли Scale Out
 Службу рабочей роли Scale Out можно настроить с помощью файла ` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`. После изменения файла конфигурации следует перезапустить службу.
 
-Конфигурация  |Description  |Значение по умолчанию  
+Конфигурация  |Описание  |Значение по умолчанию  
 ---------|---------|---------
 DisplayName|Отображаемое имя рабочей роли масштабного развертывания. **НЕ ИСПОЛЬЗУЕТСЯ в [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Имя компьютера         
-Description|Описание рабочей роли масштабного развертывания. **НЕ ИСПОЛЬЗУЕТСЯ в [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Пустой         
+Описание|Описание рабочей роли масштабного развертывания. **НЕ ИСПОЛЬЗУЕТСЯ в [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Пустой         
 MasterEndpoint|Конечная точка для подключения к главной роли масштабного развертывания.|Конечная точка, заданная во время установки рабочей роли масштабного развертывания         
 MasterHttpsCertThumbprint|Отпечаток клиентского SSL-сертификата, используемый для проверки подлинности главной роли масштабного развертывания|Отпечаток клиентского сертификата, указанный во время установки рабочей роли масштабного развертывания.          
 WorkerHttpsCertThumbprint|Отпечаток сертификата для главной роли масштабного развертывания, использованный для проверки подлинности рабочей роли масштабного развертывания.|Отпечаток сертификата, созданный и установленный автоматически при установке рабочей роли масштабного развертывания          

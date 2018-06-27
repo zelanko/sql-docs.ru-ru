@@ -25,16 +25,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4a96e71ae1222951914743ad88d229d5a1ee9b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c3504238274c2aac2e9fd043068b822150f91ca
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239324"
 ---
 # <a name="collation-functions---tertiaryweights-transact-sql"></a>Функции параметров сортировки — TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Возвращает двоичную строку весовых коэффициентов для каждого символа в строке, не относящейся к Юникод и определенной в третичных параметрах сортировки SQL.
+Для каждого символа в строковом выражении не в кодировке Юникода, определенном с третичными параметрами сортировки SQL, эта функция возвращает двоичную строку весовых коэффициентов.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,10 +50,10 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 Строковое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **char**, **varchar** или **varchar(max)**, определенное в третичных параметрах сортировки SQL. Список таких параметров сортировки см. в разделе «Примечания».
   
 ## <a name="return-types"></a>Типы возвращаемых данных
-Функция TERTIARY_WEIGHTS возвращает значение типа **varbinary**, если *non_Unicode_character_string_expression* имеет тип **char** или **varchar**, и значение типа **varbinary(max)**, если *non_Unicode_character_string_expression* имеет тип **varchar(max)**.
+Функция `TERTIARY_WEIGHTS` возвращает значение типа **varbinary**, если *non_Unicode_character_string_expression* имеет тип **char** или **varchar**, и значение типа **varbinary(max)**, если *non_Unicode_character_string_expression* имеет тип **varchar(max)**.
   
 ## <a name="remarks"></a>Remarks  
-Функция TERTIARY_WEIGHTS возвращает значение NULL, если аргумент *non_Unicode_character_string_expression* не определен третичными параметрами сортировки SQL. В следующей таблице представлены третичные параметры сортировки SQL.
+Функция `TERTIARY_WEIGHTS` возвращает значение NULL, если в третичных параметрах сортировки SQL не определен аргумент *non_Unicode_character_string_expression*. В приведенной ниже таблице представлены третичные параметры сортировки SQL.
   
 |Идентификатор порядка сортировки|Параметры сортировки SQL|  
 |---|---|
@@ -89,10 +90,10 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-Функция TERTIARY_WEIGHTS предназначена для использования в определении вычисляемого столбца, который определяется по значениям столбцов типа **char**, **varchar** или **varchar(max)**. Определение индекса для вычисляемого столбца и для столбца типа **char**, **varchar** или **varchar(max)** может повысить производительность, если столбец типа **char**, **varchar** или **varchar(max)** задан в предложении ORDER BY запроса.
+Используйте функцию `TERTIARY_WEIGHTS` для определения вычисляемого столбца, который определяется по значениям столбца типа **char**, **varchar** или **varchar(max)**. Определение индекса для вычисляемого столбца и для столбца типа **char**, **varchar** или **varchar(max)** может повысить производительность, если столбец типа **char**, **varchar** или **varchar(max)** задан в предложении ORDER BY запроса.
   
 ## <a name="examples"></a>Примеры  
-Следующий пример создает вычисляемый столбец в таблице, которая применяет функцию `TERTIARY_WEIGHTS` к значениям столбца `char`.
+В приведенном ниже примере создается вычисляемый столбец в таблице, которая применяет функцию `TERTIARY_WEIGHTS` к значениям столбца `char`.
   
 ```sql
 CREATE TABLE TertColTable  

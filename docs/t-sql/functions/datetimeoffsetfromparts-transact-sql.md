@@ -23,17 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5549f258e758cc91a228d5fee707120b57963d46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09e705fd426963018eadae7351df1046d3d1ef0c
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053134"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698275"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Возвращает значение **datetimeoffset** для указанных даты и времени с указанными смещением и точностью.
+Эта функция возвращает значение **datetimeoffset** для указанных аргументов даты и времени. Точность возвращаемого значения определяется аргументом precision, а смещения определяются аргументами смещения часов и минут.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,7 +63,7 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 Целочисленное выражение, задающее секунды.
   
 *fractions*  
-Целочисленное выражение, задающее доли секунд.
+Целочисленное выражение, задающее дробное значение.
   
 *hour_offset*  
 Целочисленное выражение, задающее часть смещения часового пояса в часах.
@@ -72,21 +72,21 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 Целочисленное выражение, задающее часть смещения часового пояса в минутах.
   
 *precision*  
-Целочисленное литеральное значение, определяющее точность возвращаемого значения **datetimeoffset**.
+Целочисленное литеральное значение, которое определяет точность значения **datetimeoffset**, возвращаемого функцией `DATETIMEOFFSETFROMPARTS`.
   
 ## <a name="return-types"></a>Типы возвращаемых данных
 **datetimeoffset(** *precision* **)**
   
 ## <a name="remarks"></a>Remarks  
-**DATETIMEOFFSETFROMPARTS** возвращает полностью инициализированный тип данных **datetimeoffset**. Аргументы смещения представляют смещение часового пояса. Если аргументы смещения пропущены, то предполагается, что смещение часового пояса равно 00:00, то есть отсутствует. Если аргументы смещения указаны, то должны присутствовать оба аргумента, причем оба должны быть или положительными, или отрицательными. Если аргумент *minute_offset* указан без *hour_offset*, возникает ошибка. Если другие аргументы недопустимы, также возникает ошибка. Если требуемые аргументы имеют значение NULL, возвращается NULL. Однако если аргумент *precision* равен NULL, то возникает ошибка.
+Функция `DATETIMEOFFSETFROMPARTS` возвращает полностью инициализированный тип данных **datetimeoffset**. Для представления смещения часового пояса в функции `DATETIMEOFFSETFROMPARTS` используются аргументы смещения. Если аргументы смещения пропущены, то в функции `DATETIMEOFFSETFROMPARTS` предполагается, что смещение часового пояса равно 00:00, то есть отсутствует. Если аргументы смещения указаны, функция `DATETIMEOFFSETFROMPARTS` требует наличия значений обоих аргументов, причем оба должны быть или положительными, или отрицательными. Если аргумент *minute_offset* указан без значения *hour_offset*, функция `DATETIMEOFFSETFROMPARTS` вызывает ошибку. Если другие аргументы имеют недопустимые значения, функция `DATETIMEOFFSETFROMPARTS` вызывает ошибку. Функция `DATETIMEOFFSETFROMPARTS` возвращает NULL, если по крайней мере один обязательный аргумент имеет значение NULL. Однако если аргумент *precision* имеет значение NULL, функция `DATETIMEOFFSETFROMPARTS` вызывает ошибку.
   
-Аргумент *fractions* зависит от аргумента *precision*. Например, если значение *precision* равно 7, то каждая дробная часть представляет 100 наносекунд; если значение *precision* равно 3, то каждая дробная часть представляет миллисекунду. Если значение *precision* равно нулю, то значение *fractions* также должно быть равно нулю, иначе возникает ошибка.
-  
-Для серверов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и выше данная функция может быть удаленной. Данная функция не может быть удаленной для серверов с версией ниже [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Аргумент *fractions* зависит от аргумента *precision*. Например, если значение *precision* равно 7, то каждая дробная часть представляет 100 наносекунд; если значение *precision* равно 3, то каждая дробная часть представляет миллисекунду. Если значение *precision* равно нулю, то значение *fractions* также должно быть равно нулю. В противном случае функция `DATETIMEOFFSETFROMPARTS` вызовет ошибку.
+
+Эта функция поддерживает удаленное взаимодействие с серверами [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и более поздних версий. Она не поддерживает удаленное взаимодействие с серверами версий ниже [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-simple-example-without-fractions-of-a-second"></a>A. Простой пример без долей секунд  
+### <a name="a-an-example-without-fractions-of-a-second"></a>A. Пример без долей секунды  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Result;  
@@ -103,7 +103,7 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>Б. Пример с долями секунд  
-В приведенном ниже примере показано использование параметров *fractions* и *precision*.
+В этом примере показано использование параметров *fractions* и *precision*:
 1.   Если параметр *fractions* имеет значение 5, а параметр *precision* — значение 1, то значение параметра *fractions* представляет 5/10 секунды.  
 1.   Если параметр *fractions* имеет значение 50, а параметр *precision* — значение 2, то значение параметра *fractions* представляет 50/100 секунды.  
 1.   Если параметр *fractions* имеет значение 500, а параметр *precision* — значение 3, то значение параметра *fractions* представляет 500/1000 секунды.  

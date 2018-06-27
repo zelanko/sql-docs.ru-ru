@@ -37,18 +37,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c1af3730ecd3484728266ed7aecdfd975286461
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 119b41488f7a357d3c59e78ce7c197c0825f3238
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239334"
 ---
 # <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Возвращает текущее значение параметра [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) для сеанса.
+Эта функция возвращает текущее значение параметра [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) для определенного сеанса.
   
-Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -62,9 +63,20 @@ ms.lasthandoff: 05/03/2018
 **tinyint**
   
 ## <a name="remarks"></a>Remarks  
-Инструкция SET DATEFIRST задает первый день недели. Для языкового стандарта «Английский English» значением по умолчанию является 7 (воскресенье).
+Инструкция SET DATEFIRST *n* задает первый день недели (понедельник, вторник, среда и т. д.). Значение *n* лежит в диапазоне от 1 до 7.
+
+```sql
+SET DATEFIRST 3;
+GO  
+SELECT @@DATEFIRST; -- 3 (Wednesday)
+GO
+```  
+
+Для региональных настроек "Английский (США)" значением @@DATEFIRST по умолчанию является 7 (воскресенье).
   
-Этот языковой параметр влияет на интерпретацию символьных строк при их преобразовании в значения дат для хранения в базе данных и отображения значений дат, хранящихся в этой базе данных. Он не влияет на формат хранения данных для дат. В следующем примере язык сначала устанавливается на `Italian`. Инструкция `SELECT @@DATEFIRST;` возвращает значение `1`. Затем устанавливается `us_english` язык. Инструкция `SELECT @@DATEFIRST;` возвращает значение `7`.
+Эта языковая настройка влияет на интерпретацию символьных строк при их преобразовании сервером SQL Server в значения дат для хранения в базе данных. Она также влияет на отображение дат, хранящихся в базе данных. Она не влияет на формат хранения дат.
+
+В приведенном ниже примере сначала задается язык `Italian`. Инструкция `SELECT @@DATEFIRST;` возвращает значение `1`. Следующая инструкция задает язык `us_english`. В последней инструкции `SELECT @@DATEFIRST;` возвращает значение `7`.
   
 ```sql
 SET LANGUAGE Italian;  
@@ -77,7 +89,7 @@ SELECT @@DATEFIRST;
 ```  
   
 ## <a name="examples"></a>Примеры  
-Следующий пример устанавливает первый день недели в значение `5` (пятница) и предполагает, что текущий день `Today` — суббота. Инструкция `SELECT` возвращает значение `DATEFIRST` и номер текущего дня недели.
+В приведенном ниже примере в качестве первого дня недели задается `5` (пятница) и предполагается, что текущий день `Today` приходится на субботу. Инструкция `SELECT` возвращает значение `DATEFIRST` и номер текущего дня недели.
   
 ```sql
 SET DATEFIRST 5;  

@@ -20,19 +20,19 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 86b80d4706adbbf298df34a74d6c923bb4f56161
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: a83e36e7f62f9b8ca38c11e5113dae1c8fc4f5d3
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34586026"
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612219"
 ---
 # <a name="json-data-in-sql-server"></a>Данные JSON в SQL Server
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 JSON — это популярный формат текстовых данных, который используется для обмена данными в современных веб- и мобильных приложениях. Кроме того, JSON используется для хранения неструктурированных данных в файлах журналов или базах данных NoSQL, таких как Microsoft Azure Cosmos DB. Многие веб-службы REST возвращают результаты в формате текста JSON или принимают данные в формате JSON. Например, большинство служб Azure, таких как поиск Azure, служба хранилища Azure и Azure Cosmos DB, имеют конечные точки REST, которые возвращают или принимают JSON. JSON — это также основной формат обмена данными между веб-страницами и веб-серверами с помощью вызовов AJAX. 
 
-Функции JSON в SQL Server позволяют объединить принципы NoSQL и реляционных баз данных в одной базе данных. Теперь вы можете объединять в одной таблице классические реляционные столбцы со столбцами, которые содержат документы в формате текста JSON, анализировать и импортировать документы JSON в реляционные структуры или форматировать реляционные данные в текст JSON. Посмотрите видео, чтобы понять, как функции JSON объединяют реляционные принципы и NoSQL в SQL Server и базе данных SQL Azure:
+Функции JSON в SQL Server позволяют объединить принципы NoSQL и реляционных баз данных в одной базе данных. Теперь вы можете объединять в одной таблице классические реляционные столбцы со столбцами, которые содержат документы в формате текста JSON, анализировать и импортировать документы JSON в реляционные структуры или форматировать реляционные данные в текст JSON. Посмотрите видео, чтобы понять, как функции JSON объединяют реляционные принципы и NoSQL в SQL Server и базе данных SQL Azure:
 
 *JSON as a bridge between NoSQL and relational worlds* (JSON как мост между NoSQL и реляционными решениями)
 > [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]

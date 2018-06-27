@@ -24,11 +24,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db924e662687ab79d207fe3e1e33ccc75aecd059
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d99bf84a2b27f9d7042b28a7c8c1c99fd54f99bd
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619471"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Привязка реляционных данных внутри XML-данных
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  Нельзя использовать эти функции для создания ссылок на данные в столбцах или переменных, относящихся к типам **xml**, определяемым пользователем типам данных CLR, а также к типам данных datetime, smalldatetime, **text**, **ntext**, **sql_variant** и **image**.  
   
- Однако данная привязка доступна только для чтения, то есть нельзя записывать данные в столбцы, использующие эти функции. Например, запись sql:переменная("@x")="*некоторое выражение*" недопустима.  
+ Однако данная привязка доступна только для чтения, то есть нельзя записывать данные в столбцы, использующие эти функции. Например, запись sql:переменная("\@x")="*некоторое выражение*" недопустима.  
   
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>Пример: запрос между доменами с использованием функции sql:variable()  
  В этом примере показано, как **sql:variable()** позволяет приложению подготовить параметризованный запрос. ISBN-номер передается с помощью переменной SQL @isbn. Заменив константу функцией **sql:variable()**, можно использовать этот запрос для поиска любого ISBN-номера, а не только 0-7356-1588-2.  

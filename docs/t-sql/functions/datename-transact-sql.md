@@ -30,18 +30,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8cf093318d49fcf6d28777cf4381dead7110bcab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 74105ab4b7bc6f470175fe476a5a60b4931c5129
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239175"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Возвращает строку символов, представляющую указанную часть *datepart* заданной даты *date*.
-  
-Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Эта функция возвращает строку символов, представляющую указанную часть *datepart* заданного типа *date*.
+
+Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,7 +54,10 @@ DATENAME ( datepart , date )
   
 ## <a name="arguments"></a>Аргументы  
 *datepart*  
-Возвращаемая часть даты *date*. В приведенной ниже таблице перечислены все допустимые аргументы *datepart*. Эквивалентные переменные, определяемые пользователем, являются недопустимыми.
+Определенная часть аргумента *date*, которую вернет функция `DATENAME`. В приведенной ниже таблице перечислены все допустимые аргументы *datepart*.
+
+> [!NOTE]
+> `DATENAME` не принимает эквивалентные переменные, определяемые пользователем, для аргументов *datepart*.
   
 |*datepart*|Сокращения|  
 |---|---|
@@ -74,8 +78,17 @@ DATENAME ( datepart , date )
 |**ISO_WEEK**|**ISOWK, ISOWW**|  
   
 *date*  
-Выражение, которое можно привести к значению типа **time**, **date**, **smalldatetime**, **datetime**, **datetime2** или **datetimeoffset**. Аргумент *date* может быть выражением, выражением столбца, определяемой пользователем переменной или строковым литералом.  
-Во избежание неоднозначности используйте четырехзначную запись года. Сведения о двузначном обозначении года см. в статье [Настройка параметра конфигурации сервера two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+
+Выражение, которое может быть разрешено в один из следующих типов данных: 
+
++ **date**
++ **datetime**
++ **datetimeoffset**
++ **datetime2** 
++ **smalldatetime**
++ **time**
+
+Для *date* `DATENAME` будет принимать столбец выражения, выражение, строковый литерал или определяемую пользователем переменную. Во избежание неоднозначности используйте четырехзначную запись года. Сведения о двузначном обозначении года см. в статье [Настройка параметра конфигурации сервера two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
 **nvarchar**
@@ -84,20 +97,20 @@ DATENAME ( datepart , date )
   
 -   Каждое выражение *datepart* и его краткие формы возвращают одно и то же значение.  
   
-Возвращаемое значение зависит от языка среды, задаваемого инструкцией [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md), и от [параметра конфигурации сервера "язык по умолчанию"](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) для имени входа. Если значение *date* является строковым литералом некоторого формата, то возвращаемое значение зависит от функции [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md). Инструкция SET DATEFORMAT не влияет на возвращаемое значение, если дата представляется выражением столбца типа данных даты или времени.
+Возвращаемое значение зависит от языка среды, задаваемого инструкцией [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md), и от [параметра конфигурации сервера "язык по умолчанию"](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) для имени входа. Если значение *date* является строковым литералом некоторого формата, то возвращаемое значение зависит от функции [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md). Инструкция SET DATEFORMAT не изменяет возвращаемое значение, если дата представляется выражением столбца типа данных даты или времени.
   
 Если параметр *date* имеет аргумент типа **date**, то возвращаемое значение зависит от настроек, заданных с помощью функции [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
 ## <a name="tzoffset-datepart-argument"></a>Аргумент TZoffset функции datepart  
-Если в качестве аргумента *datepart* выступает переменная **TZoffset** (**tz**), а параметр *date* не содержит смещения часового пояса, возвращается значение 0.
+Если в качестве аргумента *datepart* выступает переменная **TZoffset** (**tz**), а аргумент *date* не содержит смещения часового пояса, функция `DATEADD` возвращает значение 0.
   
 ## <a name="smalldatetime-date-argument"></a>Аргумент даты типа smalldatetime  
-Если аргумент *date* имеет тип [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), для секунд возвращается значение 00.
+Если аргумент *date* имеет тип [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), функция `DATENAME` возвращает значение секунд 00.
   
 ## <a name="default-returned-for-a-datepart-that-is-not-in-the-date-argument"></a>Возвращается значение по умолчанию для аргумента функции datepart, который отличен от даты  
-Если тип данных аргумента *date* не содержит указанной части *datepart*, будет возвращаться значение по умолчанию для этой части *datepart*, только если для *date* указан литерал.
+Если тип данных аргумента *date* не содержит указанной части *datepart*, функция `DATENAME` вернет значение по умолчанию для этой части *datepart*, только если аргумент *date* содержит литерал.
   
-Например, значение "год-месяц-день" по умолчанию для любого типа данных **date** равно 1900-01-01. Приведенная ниже инструкция содержит аргументы компонентов даты для *datepart*, аргумент времени для *date* и возвращает `1900, January, 1, 1, Monday`.
+Например, значение "год-месяц-день" по умолчанию для любого типа данных **date** равно 1900-01-01. Приведенная ниже инструкция содержит аргументы компонентов даты для *datepart*, аргумент времени для *date*, а функция `DATENAME` возвращает `1900, January, 1, 1, Monday`.
   
 ```sql
 SELECT DATENAME(year, '12:10:30.123')  
@@ -107,7 +120,7 @@ SELECT DATENAME(year, '12:10:30.123')
     ,DATENAME(weekday, '12:10:30.123');  
 ```  
   
-Если *date* указан как переменная или столбец таблицы и тип данных переменной или столбца не содержит указанной части *datepart*, возвращается ошибка 9810. Приведенный пример кода завершается ошибкой, потому что год даты не является допустимым для типа данных **time**, объявленного для переменной *@t*.
+Если аргумент *date* указан как переменная или столбец таблицы и тип данных этой переменной или столбца не содержит указанной части *datepart*, функция `DATENAME` возвращает ошибку 9810. В этом примере переменная *@t* имеет тип данных **time**. Этот пример завершается ошибкой, потому что год даты не является допустимым для типа данных **time**:
   
 ```sql
 DECLARE @t time = '12:10:30.123';   
@@ -115,12 +128,19 @@ SELECT DATENAME(year, @t);
 ```  
   
 ## <a name="remarks"></a>Remarks  
-Функция DATENAME может использоваться в предложениях WHERE, HAVING, GROUP BY и ORDER BY, а также при составлении списка выбора.
+
+Используйте `DATENAME` в следующих предложениях.
+
++ GROUP BY
++ HAVING
++ ORDER BY
++ SELECT \<list>
++ WHERE
   
-В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] функция DATENAME неявно приводит строковые литералы к типу **datetime2**. Это означает, что DATENAME не поддерживает формат ГЧМ (год, число, месяц) при передаче даты в виде строки. Для использования формата ГЧМ (год, число, месяц) необходимо явно привести строку к типу **datetime** или **smalldatetime**.
+В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] функция DATENAME неявно приводит строковые литералы к типу **datetime2**. Иными словами, `DATENAME` не поддерживает формат ГЧМ (год, число, месяц) при передаче даты в виде строки. Для использования формата ГЧМ (год, число, месяц) необходимо явно привести строку к типу **datetime** или **smalldatetime**.
   
 ## <a name="examples"></a>Примеры  
-В следующем примере производится отображение частей указанной даты.
+В приведенном ниже примере возвращаются компоненты указанной даты. Подставьте значение *datepart* из таблицы для аргумента `datepart` в инструкции SELECT:
   
 `SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');`
   
@@ -146,7 +166,7 @@ SELECT DATENAME(year, @t);
   
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-В следующем примере производится отображение частей указанной даты.
+В приведенном ниже примере возвращаются компоненты указанной даты. Подставьте значение *datepart* из таблицы для аргумента `datepart` в инструкции SELECT:
   
 ```sql
 SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');  

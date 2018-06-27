@@ -88,12 +88,12 @@ caps.latest.revision: 255
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f0416cb5e49cb04da00d7f816d3e888e221a78
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8a2fee1a2a0c4f52138cdbeb1580926b21eae89c
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771510"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999880"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Установка SQL Server из командной строки
 
@@ -196,7 +196,7 @@ ms.locfileid: "34771510"
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на рабочий процесс операций установки.<br /><br /> Поддерживаемые значения: **Установка**.|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Требуется только в том случае, если для автоматической установки указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.|  
-|Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R|/IACCEPTPYTHONOPENLICENSETERMS <br /><br /> **Требуется только в том случае, если для автоматической установки, включающей пакет Anaconda Python, указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.| 
+|Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python|/IACCEPTPYTHONLICENSETERMS <br /><br /> **Требуется только в том случае, если для автоматической установки, включающей пакет Anaconda Python, указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.| 
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R|/IACCEPTROPENLICENSETERMS <br /><br /> **Требуется только в том случае, если для автоматической установки, включающей пакет Microsoft R Open, указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.| 
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ENU<br /><br /> **Необязательно**|Этот параметр используется для установки англоязычной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в локализованной операционной системе, если на установочном носителе доступны языковые пакеты для английского языка и языка операционной системы.|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/UpdateEnabled<br /><br /> **Необязательно**|Задает, должна ли программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаруживать и включать обновления продукта. Допустимые значения — True и False либо 1 и 0. По умолчанию программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет включать найденные обновления.|  

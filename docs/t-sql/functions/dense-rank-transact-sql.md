@@ -26,18 +26,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 54121ef549fb76639ec526b3128ffa8abfd7a849
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f63145f4a828507660b4401c3c52e79f9e49153
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239284"
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает ранг строк в секции результирующего набора без промежутков в ранжировании. Ранг строки равен количеству различных значений рангов, предшествующих строке, увеличенному на единицу.  
+Эта функция возвращает ранг каждой строки в секции результирующего набора без промежутков в значениях ранжирования. Ранг определенной строки равен количеству различных значений рангов, предшествующих строке, увеличенному на единицу.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,25 +48,25 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="arguments"></a>Аргументы  
  \<partition_by_clause>  
- Делит результирующий набор, полученный с помощью предложения [FROM](../../t-sql/queries/from-transact-sql.md), на секции, к которым применяется функция DENSE_RANK. Синтаксис PARTITION BY см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).  
+Делит результирующий набор, полученный с помощью предложения [FROM](../../t-sql/queries/from-transact-sql.md), на секции, к которым затем применяется функция `DENSE_RANK`. Синтаксис `PARTITION BY` см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  \<order_by_clause>  
- Определяет порядок, в котором функция DENSE_RANK применяется к строкам секции.  
+Определяет порядок, в котором функция `DENSE_RANK` применяется к строкам в секции.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **bigint**  
   
 ## <a name="remarks"></a>Remarks  
- Если две или более строк одной секции равны при ранжировании, каждой такой строке присваивается один и тот же ранг. Например, если двум лучшим продавцам соответствует одинаковое значение SalesYTD, им обоим присваивается ранг 1. Менеджеру по продажам со следующим по величине значением SalesYTD назначается ранг 2. Это на единицу больше, чем число разных рангов строк, расположенных перед этой строкой. Таким образом, между номерами, возвращаемыми функцией DENSE_RANK, нет промежутков, и они всегда имеют последовательные значения ранга.  
+Если две строки или несколько в одной секции имеют одинаковые значения ранга, каждой такой строке присваивается один и тот же ранг. Например, если двум лучшим менеджерам по продажам соответствует одинаковое значение SalesYTD, им обоим присваивается значение ранга 1. Менеджеру по продажам со следующим по величине значением SalesYTD присваивается значение ранга 2. Это значение превышает количество отдельных строк, предшествующих данной строке, на единицу. Таким образом, между номерами, возвращаемыми функцией `DENSE_RANK`, нет промежутков, и они всегда имеют последовательные значения ранга.  
   
- Порядок сортировки строк в результате определяется порядком сортировки результата всего запроса. Из этого следует, что строка с рангом 1 не всегда является первой строкой в секции.  
+Порядок сортировки, используемый для всего запроса, определяет порядок строк в результирующем наборе. Из этого следует, что строка с рангом 1 не всегда является первой строкой в секции.  
   
- Функция DENSE_RANK не детерминирована. Дополнительные сведения см. в разделе [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+Функция `DENSE_RANK` не детерминирована. Дополнительные сведения см. в статье [Детерминированные и недетерминированные функции](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-ranking-rows-within-a-partition"></a>A. Ранжирование строк внутри секции  
- Следующий пример ранжирует продукты по количеству в указанных местоположениях в описи. Результирующий набор секционируется по `LocationID` и логически сортируется по `Quantity`. Обратите внимание, что количество продуктов 494 и 495 совпадает. Так как они занимают одно и то же место, рейтинг обоих продуктов равен единице.  
+В приведенном ниже примере продукты ранжируются по количеству в указанных местоположениях в описи. Функция `DENSE_RANK` секционирует результирующий набор по `LocationID` и логически сортирует его по `Quantity`. Обратите внимание, что количество продуктов 494 и 495 совпадает. Так как они имеют одинаковое значение количества, им обоим присваивается значение ранга 1.  
   
 ```  
 USE AdventureWorks2012;  
@@ -102,7 +103,7 @@ ProductID   Name                               LocationID Quantity Rank
 ```  
   
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>Б. Ранжирование всех строк в результирующем наборе  
- Следующий пример возвращает список первых десяти сотрудников, отранжированных по их окладу. Поскольку предложение PARTITION BY не указывалось, функция DENSE_RANK применялась ко всем строкам результирующего набора.  
+В приведенном ниже примере возвращается список первых десяти сотрудников, ранжированных по окладу. Так как в инструкции `SELECT` предложение `PARTITION BY` не указывалось, функция `DENSE_RANK` применялась ко всем строкам результирующего набора.  
   
 ```  
 USE AdventureWorks2012;  
@@ -130,7 +131,14 @@ BusinessEntityID Rate                  RankBySalary
 ```  
   
 ## <a name="c-four-ranking-functions-used-in-the-same-query"></a>В. Использование четырех ранжирующих функций в одном запросе  
- В следующем примере показано использование четырех ранжирующих функций в одном запросе. Конкретные примеры по каждой ранжирующей функции см. в соответствующих функциях.  
+В этом примере демонстрируются четыре функции ранжирования:
+
++ [DENSE_RANK()](./dense-rank-transact-sql.md)
++ [NTILE()](./ntile-transact-sql.md)
++ [RANK()](./rank-transact-sql.md)
++ [ROW_NUMBER()](./row-number-transact-sql.md)
+
+Они используются в одном запросе. См. конкретные примеры по каждой ранжирующей функции.  
   
 ```  
 USE AdventureWorks2012;  
@@ -172,7 +180,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-ranking-rows-within-a-partition"></a>Г. Ранжирование строк внутри секции  
- В приведенном ниже примере торговые представители на каждой территории продаж ранжируются в соответствии с общим объемом продаж. Набор строк секционируется по столбцу `SalesTerritoryGroup` и сортируется по столбцу `SalesAmountQuota`.  
+В приведенном ниже примере торговые представители на каждой территории продаж ранжируются в соответствии с общим объемом продаж. Функция `DENSE_RANK` секционирует набор строк по `SalesTerritoryGroup` и логически сортирует результирующий набор по `SalesAmountQuota`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -183,7 +191,7 @@ FROM dbo.DimEmployee AS e
 INNER JOIN dbo.FactSalesQuota AS sq ON e.EmployeeKey = sq.EmployeeKey  
 INNER JOIN dbo.DimSalesTerritory AS st ON e.SalesTerritoryKey = st.SalesTerritoryKey  
 WHERE SalesPersonFlag = 1 AND SalesTerritoryGroup != N'NA'  
-GROUP BY LastName,SalesTerritoryGroup;  
+GROUP BY LastName, SalesTerritoryGroup;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

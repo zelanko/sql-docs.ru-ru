@@ -1,26 +1,25 @@
 ---
 title: Изменение учетной записи для ведения журнала служб SSIS Scale Out | Документы Майкрософт
-ms.description: This article describes how to change the user account for SSIS Scale Out logging
-ms.custom: ''
+description: В этой статье описывается, как изменять настройки учетной записи пользователя для SSIS Scale Out.
+ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: c266e716bbbaab50fa26c94cb7ee7836c010c5a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d2fa1e69ada0fe5e4ef66e01cd5322efbf38516
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406586"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Изменение учетной записи для ведения журнала служб SSIS Scale Out
 При выполнении пакетов SSIS в Scale Out сообщения о событиях записываются в базу данных SSISDB с помощью создаваемой автоматически учетной записи пользователя **##MS_SSISLogDBWorkerAgentLogin##**. Для входа этого пользователя в систему применяется проверка подлинности SQL Server.

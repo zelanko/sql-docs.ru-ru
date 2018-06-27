@@ -27,16 +27,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 68439f7a9ea22078660d6e0465961c052002e8be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a49d8e24a71b43ba2f400abfbb71f26fe51386a8
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239224"
 ---
 # <a name="errormessage-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает текст сообщения об ошибке, которая возникла в блоке CATCH конструкции TRY…CATCH при выполнении.  
+Эта функция возвращает текст сообщения об ошибке, которая вызвала выполнение блока CATCH конструкции TRY…CATCH.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,21 +51,21 @@ ERROR_MESSAGE ( )
  **nvarchar(4000)**  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- При вызове в блоке CATCH возвращает полный текст сообщения об ошибке, запустившей блок CATCH. Текст содержит значения подставляемых параметров, таких как длина, имена объектов или время.  
+При вызове в блоке CATCH функция `ERROR_MESSAGE` возвращает полный текст сообщения об ошибке, запустившей блок `CATCH`. Текст содержит значения подставляемых параметров, таких как длина, имена объектов или время.  
   
- Возвращает значение NULL в случае вызова вне блока CATCH.  
+Функция `ERROR_MESSAGE` возвращает значение NULL в случае вызова вне блока CATCH.  
   
 ## <a name="remarks"></a>Remarks  
- Функция ERROR_MESSAGE может быть вызвана в любом месте области блока CATCH.  
+Функцию `ERROR_MESSAGE` можно вызывать в любом месте области действия блока CATCH.  
   
- Функция ERROR_MESSAGE возвращает сообщение об ошибке независимо от количества ее появлений или от ее конкретного месторасположения внутри блока CATCH. В этом и заключается отличие от таких функций, как @@ERROR, которые возвращают номер ошибки в инструкции только сразу после ее обнаружения или в первой инструкции блока CATCH.  
+Функция `ERROR_MESSAGE` возвращает соответствующее сообщение об ошибке независимо от количества ее выполнений или от места ее вызова в области действия блока `CATCH`. В этом ее отличие от таких функций, как @@ERROR, которые возвращают номер ошибки только в той инструкции, которая непосредственно следует за инструкцией, вызвавшей ошибку.  
   
- Во вложенных блоках CATCH функция ERROR_MESSAGE возвращает сообщение об ошибке, соответствующее области блока CATCH, в котором она возникла. Например, блок CATCH внешней конструкции TRY...CATCH может содержать вложенную конструкцию TRY...CATCH. Внутри вложенного блока CATCH функция ERROR_MESSAGE возвращает сообщение об ошибке, вызвавшей вложенный блок CATCH. Если функция ERROR_MESSAGE выполняется во внешнем блоке CATCH, она возвращает сообщение об ошибке, вызвавшей этот блок CATCH.  
+Во вложенных блоках `CATCH` функция `ERROR_MESSAGE` возвращает сообщение об ошибке, соответствующее области действия блока `CATCH`, который ссылался на данный блок `CATCH`. Например, блок `CATCH` внешней конструкции TRY...CATCH может содержать внутреннюю конструкцию `TRY...CATCH`. Во внутреннем блоке `CATCH` функция `ERROR_MESSAGE` возвращает сообщение об ошибке, вызвавшей внутренний блок `CATCH`. Если функция `ERROR_MESSAGE` выполняется во внешнем блоке `CATCH`, она возвращает сообщение об ошибке, вызвавшей внешний блок `CATCH`.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-errormessage-in-a-catch-block"></a>A. Использование функции ERROR_MESSAGE в блоке CATCH  
- В следующем примере кода приведена инструкция `SELECT`, формирующая ошибку деления на ноль. Возвращается сообщение об ошибке.  
+В приведенном ниже примере показана инструкция `SELECT`, вызывающая ошибку деления на ноль. Блок `CATCH` возвращает сообщение об ошибке.  
   
 ```  
   
@@ -76,13 +77,23 @@ BEGIN CATCH
     SELECT ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorMessage
+----------------------------------
+Divide by zero error encountered.
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>Б. Использование функции ERROR_MESSAGE в блоке CATCH с другими средствами обработки ошибок  
- В следующем примере кода приведена инструкция `SELECT`, формирующая ошибку деления на ноль. Вместе с сообщением об ошибке возвращаются сведения, имеющие отношение к ней.  
+В приведенном ниже примере показана инструкция `SELECT`, вызывающая ошибку деления на ноль. Вместе с сообщением об ошибке блок `CATCH` возвращает сведения о ней.  
   
 ```  
-  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -97,28 +108,17 @@ BEGIN CATCH
         ,ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>В. Использование функции ERROR_MESSAGE в блоке CATCH с другими средствами обработки ошибок  
- В следующем примере кода приведена инструкция `SELECT`, формирующая ошибку деления на ноль. Вместе с сообщением об ошибке возвращаются сведения, имеющие отношение к ней.  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT  
-        ERROR_NUMBER() AS ErrorNumber  
-        ,ERROR_SEVERITY() AS ErrorSeverity  
-        ,ERROR_STATE() AS ErrorState  
-        ,ERROR_PROCEDURE() AS ErrorProcedure  
-        ,ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
-```  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine  ErrorMessage
+----------- ------------- ----------- --------------- ---------- ----------------------------------
+8134        16            1           NULL            4          Divide by zero error encountered.
+
+(1 row(s) affected)
+
+```
   
 

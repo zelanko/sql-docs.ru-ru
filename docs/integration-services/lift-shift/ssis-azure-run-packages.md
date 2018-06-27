@@ -1,28 +1,26 @@
 ---
 title: Выполнение пакетов служб SSIS в Azure | Документы Майкрософт
-ms.description: Provides an overview of the available methods for running packages deployed to Azure SQL Database.
+description: Обзор методов, которые можно использовать для запуска пакетов служб SSIS, развернутых в базе данных SQL Azure.
 ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4d733b49f8353fc430f90161ef25c352c8cac8f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2d3c70085117e7d10aac5a7e29bde2448d383efe
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34586093"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330158"
 ---
-# <a name="run-an-ssis-package-in-azure"></a>Выполнение пакета служб SSIS в Azure
+# <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Выполнение пакетов служб SQL Server Integration Services (SSIS), развернутых в Azure
 
-Для выполнения пакетов служб SSIS, развернутых в базе данных каталога SSISDB на сервере базы данных SQL Azure, можно выбрать один из вариантов, описанных в этой статье. Пакет можно выполнять напрямую или в составе конвейера фабрики данных Azure. Общие сведения о службах SSIS в Azure см. в статье [Перенос рабочих нагрузок SQL Server Integration Services в облако](ssis-azure-lift-shift-ssis-packages-overview.md).
+Для выполнения пакетов служб SSIS, развернутых в каталоге SSISDB на сервере базы данных SQL Azure, можно выбрать один из методов, описанных в этой статье. Пакет можно выполнять напрямую или в составе конвейера фабрики данных Azure. Общие сведения о службах SSIS в Azure см. в статье [Развертывание и выполнение пакетов служб SSIS в Azure](ssis-azure-lift-shift-ssis-packages-overview.md).
 
 - Выполнение пакета напрямую
 
@@ -81,4 +79,4 @@ ms.locfileid: "34586093"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Узнайте о способах планирования выполнения пакетов служб SSIS, развернутых в Azure. Дополнительные сведения см. в статье [Планирование выполнения пакета служб SSIS в Azure](ssis-azure-schedule-packages.md).
+Узнайте о способах планирования выполнения пакетов служб SSIS, развернутых в Azure. Дополнительные сведения см. в разделе [Планирование выполнения пакетов служб SSIS в Azure](ssis-azure-schedule-packages.md).

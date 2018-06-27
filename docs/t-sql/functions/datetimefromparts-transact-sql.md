@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8afd19d73538ca459d14c9964a4067619c52b84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70b225db949dec01343c56a24299d882d553e44e
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239054"
 ---
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Возвращает значение **datetime**, соответствующее указанной дате и времени.
+Эта функция возвращает значение **datetime** для указанных аргументов даты и времени.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -68,9 +69,9 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-**DATETIMEFROMPARTS** возвращает полностью инициализированное значение **datetime**. Если аргументы недопустимы, то возникает ошибка. Если требуемые аргументы имеют значение NULL, возвращается NULL.
+Функция `DATETIMEFROMPARTS` возвращает полностью инициализированное значение типа **datetime**. Функция `DATETIMEFROMPARTS` вызывает ошибку, если по крайней мере один обязательный аргумент имеет недопустимое значение. Функция `DATETIMEFROMPARTS` возвращает NULL, если по крайней мере один обязательный аргумент имеет значение NULL.
   
-Для серверов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и выше данная функция может быть удаленной. Данная функция не может быть удаленной для серверов с версией ниже [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Эта функция поддерживает удаленное взаимодействие с серверами [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и более поздних версий. Она не поддерживает удаленное взаимодействие с серверами версий ниже [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="examples"></a>Примеры  
   

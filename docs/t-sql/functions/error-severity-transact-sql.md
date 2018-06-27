@@ -27,17 +27,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d17356f6730db14e85b9ab3c8186f4b474525608
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 87e80452c46d74c819affb9e9dd2695ec2789115
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249527"
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает серьезность ошибки, вызвавшей запуск блока CATCH конструкции TRY...CATCH.  
-  
+Эта функция возвращает значение, указывающее на уровень серьезности ошибки, которая вызвала выполнение блока CATCH конструкции TRY…CATCH.  
+
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -50,22 +51,21 @@ ERROR_SEVERITY ( )
  **int**  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- При вызове в блоке CATCH возвращает серьезность сообщения об ошибке, вызвавшего запуск блока CATCH.  
-  
- Возвращает значение NULL в случае вызова вне блока CATCH.  
+При вызове в блоке CATCH, в котором произошла ошибка, функция `ERROR_SEVERITY` возвращает значение серьезности ошибки, вызвавшей выполнение блока `CATCH`.  
+
+Функция `ERROR_SEVERITY` возвращает значение NULL в случае вызова вне блока CATCH.  
   
 ## <a name="remarks"></a>Remarks  
- ERROR_SEVERITY может быть вызвана в любом месте в пределах области блока CATCH.  
+Функцию `ERROR_SEVERITY` можно вызывать в любом месте области действия блока CATCH.  
   
- ERROR_SEVERITY возвращает серьезность ошибки независимо от того, сколько раз она выполняется или где именно она выполняется в пределах области блока CATCH. Это отличается от поведения таких функций, как @@ERROR, которые возвращают номер ошибки в инструкции лишь сразу после ее возникновения или в первой инструкции блока CATCH.  
+Функция `ERROR_SEVERITY` возвращает значение серьезности ошибки независимо от количества ее выполнений или от места ее вызова в области действия блока `CATCH`. В этом ее отличие от таких функций, как @@ERROR, которые возвращают номер ошибки только в той инструкции, которая непосредственно следует за инструкцией, вызвавшей ошибку.  
   
- Во вложенных блоках CATCH функция ERROR_SEVERITY возвращает серьезность ошибки специфично для области блока CATCH, в котором она представлена. Например, блок CATCH внешней конструкции TRY...CATCH может содержать вложенную конструкцию TRY...CATCH. В пределах вложенного блока CATCH функция ERROR_SEVERITY возвращает серьезность ошибки, вызвавшей выполнение вложенного блока CATCH. Если функция ERROR_SEVERITY запускается во внешнем блоке CATCH, она возвращает серьезность ошибки, вызвавшей выполнение внешнего блока CATCH.  
+Функция `ERROR_SEVERITY`, как правило, работает во вложенном блоке `CATCH`. Функция `ERROR_SEVERITY` возвращает значение серьезности ошибки, соответствующее области действия блока `CATCH`, который ссылался на данный блок `CATCH`. Например, блок `CATCH` внешней конструкции TRY...CATCH может содержать внутреннюю конструкцию `TRY...CATCH`. Во внутреннем блоке `CATCH` функция `ERROR_SEVERITY` возвращает значение серьезности ошибки, вызвавшей внутренний блок `CATCH`. Если функция `ERROR_SEVERITY` выполняется во внешнем блоке `CATCH`, она возвращает значение серьезности ошибки, вызвавшей внешний блок `CATCH`.  
   
-## <a name="examples"></a>Примеры  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-errorseverity-in-a-catch-block"></a>A. Использование ERROR_SEVERITY в блоке CATCH  
- В следующем примере приведена инструкция `SELECT`, вызывающая ошибку деления на ноль. Возвращается серьезность ошибки.  
-  
+В приведенном ниже примере показана хранимая процедура, которая создает ошибку деления на 0. Функция `ERROR_SEVERITY` возвращает значение серьезности этой ошибки.  
 ```  
   
 BEGIN TRY  
@@ -76,11 +76,22 @@ BEGIN CATCH
     SELECT ERROR_SEVERITY() AS ErrorSeverity;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorSeverity
+-------------
+16
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>Б. Использование ERROR_SEVERITY в блоке CATCH с другими инструментами обработки ошибок  
- В следующем примере приведена инструкция `SELECT`, вызывающая ошибку деления на ноль. Вместе с серьезностью возвращаются другие сведения относительно ошибки.  
-  
+В приведенном ниже примере показана инструкция `SELECT`, вызывающая ошибку деления на ноль. Хранимая процедура возвращает сведения об этой ошибке.  
+
 ```  
   
 BEGIN TRY  
@@ -97,28 +108,17 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>В. Использование ERROR_SEVERITY в блоке CATCH с другими инструментами обработки ошибок  
- В следующем примере приведена инструкция `SELECT`, вызывающая ошибку деления на ноль. Вместе с серьезностью возвращаются другие сведения относительно ошибки.  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT  
-        ERROR_NUMBER() AS ErrorNumber,  
-        ERROR_SEVERITY() AS ErrorSeverity,  
-        ERROR_STATE() AS ErrorState,  
-        ERROR_PROCEDURE() AS ErrorProcedure,  
-        ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine   ErrorMessage
+----------- ------------- ----------- --------------- ----------- ----------------------------------
+8134        16            1           NULL            4           Divide by zero error encountered.
+
+(1 row(s) affected)
+
 ```  
   
 ## <a name="see-also"></a>См. также:  

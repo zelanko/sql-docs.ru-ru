@@ -1,26 +1,25 @@
 ---
 title: Развертывание и запуск пакета служб SSIS в Azure | Документы Майкрософт
+description: Узнайте, как развернуть проект служб SQL Server Integration Services (SSIS) в каталоге SSIS в базе данных SQL Azure и выполнить пакет.
 ms.date: 5/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d482a7e8c3cf75be0cb87b35323c5fbc472a3f7b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ac3ee68b47e3ae70c3b6d149d75b68d50b093309
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585636"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335838"
 ---
-# <a name="deploy-and-run-an-ssis-package-in-azure"></a>Развертывание и запуск пакета служб SSIS в Azure
-Этот учебник рассказывает, как развернуть проект служб SQL Server Integration Services в базе данных каталога SSISDB, расположенной в базе данных SQL Azure, запустить пакет в среде Integration Runtime для Azure-SSIS и отслеживать его выполнение.
+# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Учебник. Развертывание и выполнение пакета служб SQL Server Integration Services (SSIS) в Azure
+В этом учебнике рассказывается, как развернуть проект служб SQL Server Integration Services (SSIS) в каталоге SSISDB, расположенном в базе данных SQL Azure, запустить пакет в среде Azure-SSIS Integration Runtime и отслеживать его выполнение.
 
 ## <a name="prerequisites"></a>предварительные требования
 

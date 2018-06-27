@@ -22,12 +22,12 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d8c3441f219017125b755b498a534317a1fca01
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e8b3b6eccf11b959ae04a4d0888bd1bf76bfe869
+ms.sourcegitcommit: 73ca0313b185e730579f09f9bc32a852c9dd2ef4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550485"
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35452184"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Руководство. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +142,8 @@ ms.locfileid: "34550485"
 
 ![Кнопка "Запустить" и изменение в сообщении о состоянии, информирующее о запуске агента моментальных снимков](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-Если отображается сообщение об ошибке, ознакомьтесь с разделом [Устранение неполадок с агентом моментальных снимков](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent). 
+Если отображается сообщение об ошибке, ознакомьтесь с разделом [Устранение неполадок с агентом моментальных снимков](troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent).
+
 
   
 ### <a name="add-the-distribution-agent-login-to-the-pal"></a>Добавление имени входа агента распространения в список доступа к публикации  
@@ -239,7 +240,7 @@ ms.locfileid: "34550485"
 
 Дополнительные сведения см. в разделе: 
 - [Измерение задержки и проверка правильности соединений для репликации транзакций](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
-- [Устранение неполадок с синхронизацией при репликации транзакций](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+- [Поиск ошибок в агентах репликации транзакций](troubleshoot-tran-repl-errors.md)
 
 
 ## <a name="next-steps"></a>Следующие шаги
@@ -249,5 +250,3 @@ ms.locfileid: "34550485"
 
 > [!div class="nextstepaction"]
 > [Руководство. Настройка репликации между сервером и мобильными клиентами (репликация слиянием)](tutorial-replicating-data-with-mobile-clients.md)
-
-  

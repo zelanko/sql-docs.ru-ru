@@ -1,26 +1,26 @@
 ---
 title: Планирование выполнения пакетов MSSQL Integration Services в Azure | Документы Майкрософт
+description: Обзор методов, которые можно использовать для планирования выполнения пакетов SSIS, развернутых в базе данных SQL Azure.
 ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62980562b7f89293177307cd4c3ad02f54e977f0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 53417e2f5431bd040c7b3a6be381e93c858d128e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585846"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411586"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>Планирование выполнения пакета MSSQL Integration Services в Azure
-Для планирования выполнения пакетов служб SSIS, развернутых в базе данных каталога SSISDB на сервере базы данных SQL Azure, можно выбрать один из вариантов, описанных в этой статье. Можно запланировать прямое выполнение пакета или косвенное выполнение в составе конвейера фабрики данных Azure. Общие сведения о службах SSIS в Azure см. в статье [Перенос рабочих нагрузок SQL Server Integration Services в облако](ssis-azure-lift-shift-ssis-packages-overview.md).
+# <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Планирование выполнения пакетов служб SQL Server Integration Services (SSIS), развернутых в Azure
+
+Для планирования выполнения пакетов служб SSIS, развернутых в каталоге SSISDB на сервере базы данных SQL Azure, можно выбрать один из методов, описанных в этой статье. Можно запланировать прямое выполнение пакета или косвенное выполнение в составе конвейера фабрики данных Azure. Общие сведения о службах SSIS в Azure см. в статье [Перенос рабочих нагрузок SQL Server Integration Services в облако](ssis-azure-lift-shift-ssis-packages-overview.md).
 
 - Планирование выполнения пакета напрямую
 
@@ -35,7 +35,7 @@ ms.locfileid: "34585846"
 
 ## <a name="ssms"></a> Планирование выполнения пакета в среде SSMS
 
-В SQL Server Management Studio (SSMS) щелкните правой кнопкой мыши пакет, развернутый в базе данных каталога SSIS, SSISDB, и выберите **Расписание**, чтобы открыть диалоговое окно **Новое расписание**. Дополнительные сведения см. в статье [Планирование выполнения пакета MSSQL Integration Services в Azure в помощью SSMS](ssis-azure-schedule-packages-ssms.md).
+В SQL Server Management Studio (SSMS) щелкните правой кнопкой мыши пакет, развернутый в базе данных каталога SSIS, SSISDB, и выберите **Расписание**, чтобы открыть диалоговое окно **Новое расписание**. Дополнительные сведения см. в статье [Планирование выполнения пакетов служб SSIS в Azure с помощью SSMS](ssis-azure-schedule-packages-ssms.md).
 
 Для запуска этого компонента требуется SQL Server Management Studio версии 17.7 или более поздней. Чтобы получить последнюю версию SSMS, перейдите на страницу [скачивания SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
@@ -177,4 +177,4 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Узнайте о способах выполнения пакетов служб SSIS, развернутых в Azure. Дополнительные сведения см. в статье [Выполнение пакета служб SSIS в Azure](ssis-azure-run-packages.md).
+Узнайте о способах выполнения пакетов служб SSIS, развернутых в Azure. Дополнительные сведения см. в статье [Выполнение пакетов служб SSIS в Azure](ssis-azure-run-packages.md).

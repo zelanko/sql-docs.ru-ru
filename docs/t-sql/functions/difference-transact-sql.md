@@ -25,16 +25,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e5ab09ee3ae088382fee86a8add2aa112d9efa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 804b07e53f5aeecf6b3d0789effb2b227013b32e
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239165"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает целочисленную разницу между значениями SOUNDEX двух символьных выражений.  
+Эта функция возвращает целочисленную разницу между значениями [SOUNDEX()](./soundex-transact-sql.md) двух разных символьных выражений.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,19 +46,19 @@ DIFFERENCE ( character_expression , character_expression )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *character_expression*  
- Буквенно-цифровое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных данных. *character_expression* может быть константой, переменной или столбцом.  
+*character_expression*  
+Буквенно-цифровое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных данных. *character_expression* может быть константой, переменной или столбцом.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- **int**  
-  
+**int**  
+ 
 ## <a name="remarks"></a>Remarks  
- Возвращаемое целое число является количеством одинаковых символов в значениях SOUNDEX. Диапазон возвращаемых значений: от 0 до 4. Значение 0 указывает на слабое сходство или его отсутствие; значение 4 указывает на сильное сходство или одинаковые значения.  
+Функция `DIFFERENCE` сравнивает два разных значения `SOUNDEX` и возвращает целочисленный результат. Это значение указывает на степень сходства значений `SOUNDEX` по шкале от 0 до 4. Значение 0 указывает на слабое сходство значений SOUNDEX или его отсутствие; значение 4 указывает на сильное сходство или одинаковые значения SOUNDEX.  
   
- Функции DIFFERENCE и SOUNDEX учитывают параметры сортировки.  
+В функциях `DIFFERENCE` и `SOUNDEX` учитываются параметры сортировки.  
   
 ## <a name="examples"></a>Примеры  
- В первой части следующего примера сравниваются значения `SOUNDEX` двух очень похожих строк. Для параметров сортировки Latin1_General функция `DIFFERENCE` возвращает значение `4`. Во второй части приведенного ниже примера сравниваются значения `SOUNDEX` двух абсолютно разных строк. Для параметров сортировки Latin1_General функция `DIFFERENCE` возвращает значение `0`.  
+В первой части приведенного ниже примера сравниваются значения `SOUNDEX` двух очень похожих строк. Для параметров сортировки Latin1_General функция `DIFFERENCE` возвращает значение `4`. Во второй части примера сравниваются значения `SOUNDEX` двух сильно различающихся строк. Для параметров сортировки Latin1_General функция `DIFFERENCE` возвращает значение `0`.  
   
 ```  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  

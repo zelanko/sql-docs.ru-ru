@@ -27,16 +27,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1c2a2e92fdef5cae1b2404d18c2c5fb18b3de1ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5701576503c09275408389ae1f5259bcf7d06ce6
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239304"
 ---
 # <a name="dbname-transact-sql"></a>DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Возвращает имя базы данных.
+Эта функция возвращает имя указанной базы данных.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,21 +49,23 @@ DB_NAME ( [ database_id ] )
   
 ## <a name="arguments"></a>Аргументы  
 *database_id*  
-Идентификатор возвращаемой базы данных. Аргумент *database_id* имеет тип **int** и не имеет значения по умолчанию. Если идентификационный номер не указан, возвращается имя текущей базы данных.
+
+Идентификационный номер базы данных, имя которой вернет функция `DB_NAME`. Если в вызове `DB_NAME` аргумент *database_id* не указан, функция `DB_NAME` возвращает имя текущей базы данных.
   
 ## <a name="return-types"></a>Типы возвращаемых данных
 **nvarchar(128)**
   
 ## <a name="permissions"></a>Разрешения  
-Если участник, вызывающий **DB_NAME**, не является владельцем базы данных, а база данных не является базой данных **master** или **tempdb**, минимально необходимыми разрешениями для просмотра соответствующей строки являются разрешения уровня сервера ALTER ANY DATABASE или VIEW ANY DATABASE либо разрешение CREATE DATABASE для базы данных **master**. Узнать базу данных, к которой подключен участник, можно в представлении каталога **sys.databases**.
+
+Если участник, вызывающий `DB_NAME`, не является владельцем конкретной базы данных, отличной от базы данных **master** или **tempdb**, то минимальными разрешениями, необходимыми для просмотра соответствующей строки `DB_ID`, являются разрешения уровня сервера `ALTER ANY DATABASE` или `VIEW ANY DATABASE`. Для базы данных **master** функция `DB_ID` требует по крайней мере разрешения `CREATE DATABASE`. База данных, к которой подключается вызывающий участник, всегда отображается в представлении **sys.databases**.
   
 > [!IMPORTANT]  
->  По умолчанию общедоступная роль имеет разрешение VIEW ANY DATABASE, что позволяет всем именам для входа просматривать информацию в базе данных. Чтобы лишить имя для входа возможности обнаруживать базу данных, отзовите общедоступное разрешение VIEW ANY DATABASE с помощью инструкции REVOKE или отмените разрешение VIEW ANY DATABASE для отдельных имен для входа с помощью инструкции DENY.  
+>  По умолчанию общедоступная роль имеет разрешение `VIEW ANY DATABASE`, что позволяет всем именам для входа просматривать информацию в базе данных. Чтобы имя для входа не могло обнаруживать базу данных, отзовите общедоступное разрешение `VIEW ANY DATABASE` с помощью инструкции `REVOKE` или отмените разрешение `VIEW ANY DATABASE` для отдельных имен для входа с помощью инструкции `DENY`.
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-returning-the-current-database-name"></a>A. Возврат имени текущей базы данных  
-Следующий пример возвращает имя текущей базы данных.
+В приведенном ниже примере возвращается имя текущей базы данных.
   
 ```sql
 SELECT DB_NAME() AS [Current Database];  
@@ -70,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-database-name-of-a-specified-database-id"></a>Б. Возврат имени базы данных с указанным идентификатором базы данных  
-Следующий пример возвращает имя базы данных для идентификатора базы данных `3`.
+В приведенном ниже примере возвращается имя базы данных с идентификатором `3`.
   
 ```sql
 USE master;  
@@ -88,7 +91,7 @@ SELECT DB_NAME() AS [Current Database];
 ```  
   
 ### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>Г. Получение имени базы данных по ее идентификатору  
-В приведенном ниже примере возвращается имя и идентификатор каждой базы данных.
+В приведенном ниже примере возвращаются имя и идентификатор каждой базы данных.
   
 ```sql
 SELECT DB_NAME(database_id) AS [Database], database_id  

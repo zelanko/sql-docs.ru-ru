@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d74e96029a7f28e6547c74c34bc5de9e0b656d8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45446ffcf04092574737640fd338a35f04497181
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239034"
 ---
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Возвращает значение **date**, соответствующее указанному числу, месяцу и году.
+Эта функция возвращает значение типа **date**, соответствующее указанному числу, месяцу и году.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,7 +48,7 @@ DATEFROMPARTS ( year, month, day )
 Целочисленное выражение, задающее год.
   
 *month*  
-Целочисленное выражение от 1 до 12, задающее месяц.
+Целочисленное выражение, задающее месяц (от 1 до 12).
   
 *day*  
 Целочисленное выражение, задающее день.
@@ -56,12 +57,12 @@ DATEFROMPARTS ( year, month, day )
 **date**
   
 ## <a name="remarks"></a>Remarks  
-**DATEFROMPARTS** возвращает значение **date**, в котором часть даты установлена в указанные число, месяц и год, а часть времени установлена в значение по умолчанию. Если аргументы недопустимы, то возникает ошибка. Если требуемые аргументы имеют значение NULL, возвращается NULL.
+Функция `DATEFROMPARTS` возвращает значение **date**, в котором для компонента даты заданы указанные число, месяц и год, а компонент времени установлен в значение по умолчанию. Если аргументы имеют недопустимые значения, функция `DATEFROMPARTS` вызывает ошибку. Функция `DATEFROMPARTS` возвращает NULL, если по крайней мере один обязательный аргумент имеет значение NULL.
   
-Для серверов [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше данная функция может быть удаленной. Данная функция не может быть удаленной для серверов с версией ниже [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
+Эта функция поддерживает удаленное взаимодействие с серверами [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий. Она не поддерживает удаленное взаимодействие с серверами версий ниже [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
   
 ## <a name="examples"></a>Примеры  
-В приведенном ниже примере показано использование функции **DATEFROMPARTS**.
+В приведенном ниже примере показано, как работает функция `DATEFROMPARTS`.
   
 ```sql
 SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;  
