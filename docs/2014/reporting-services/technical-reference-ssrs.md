@@ -28,7 +28,7 @@ ms.lasthandoff: 06/19/2018
 ms.locfileid: "36191926"
 ---
 # <a name="technical-reference-ssrs"></a>Технический справочник (службы SSRS)
-  Найдите средства и справочную документацию по PowerShell для использования или администрирования служб [!INCLUDE[ssRSnoversion](../вcludes/ssrsnoversion-md.md)] в [!INCLUDE[msCoName](../вcludes/msconame-md.md)] [!INCLUDE[ssCurrent](../вcludes/sscurrent-md.md)].  
+  Найдите средства и справочную документацию по PowerShell для использования или администрирования служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **Ошибки и события**  
  [Причины ошибок служб Reporting Services и способы их устранения](troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
