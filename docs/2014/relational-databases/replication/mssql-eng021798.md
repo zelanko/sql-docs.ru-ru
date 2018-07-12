@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG021798 error
 ms.assetid: 596f5092-75ab-4a19-8582-588687c7b089
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7a6e96a8dfe1bca20b1be549a180def3e9286056
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 20ff3eda2bbb50764afa0782c31b9d90d05ee868
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221134"
 ---
 # <a name="mssqleng021798"></a>MSSQL_ENG021798
     
@@ -48,7 +48,7 @@ ms.locfileid: "36087332"
  Хранимые процедуры **sp_addlogreader_agent** и **sp_addqreader_agent** создают задание агента и позволяют задать учетную запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, под которой запускается агент. Для пользователей в роли **sysadmin** задания агентов создаются явно, если процедуры **sp_addlogreader_agent** и **sp_addqreader_agent** не выполняются. Агент запускается в контексте учетной записи службы агентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на распространителе. Несмотря на то, что процедуры **sp_addlogreader_agent** и **sp_addqreader_agent** необязательны для пользователей в роли **sysadmin** , в целях обеспечения надлежащей безопасности рекомендуется задать отдельную учетную запись для агентов. Дополнительные сведения см. в статье [Модель безопасности агента репликации](security/replication-agent-security-model.md).  
   
 ## <a name="user-action"></a>Действие пользователя  
- Убедитесь в том, что процедуры выполняются в правильном порядке. Дополнительные сведения см. в разделе [создать публикацию](publish/create-a-publication.md), обновите эти скрипты для включения хранимых процедур и параметров, требуемых [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях. Дополнительные сведения см. в статье [Обновление скриптов репликации (программирование репликации на языке Transact-SQL)](administration/upgrade-replication-scripts-replication-transact-sql-programming.md).  
+ Убедитесь в том, что процедуры выполняются в правильном порядке. Дополнительные сведения см. в разделе [создать публикацию](publish/create-a-publication.md), обновите эти скрипты для включения хранимых процедур и параметров, требуемых [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Дополнительные сведения см. в статье [Обновление скриптов репликации (программирование репликации на языке Transact-SQL)](administration/upgrade-replication-scripts-replication-transact-sql-programming.md).  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и событиям (репликация)](errors-and-events-reference-replication.md)  

@@ -28,13 +28,13 @@ ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 616cf63a80e78449b730f7d9036a3d07afd47115
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7bfcdd2bf1fd1efe17a0fba93fca3f10b04381e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087902"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162985"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>Ссылки на другие сборки в решениях со сценариями
   Библиотека классов платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предоставляет разработчику скриптов набор эффективных средств для реализации пользовательской функциональности в пакетах служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Задача «Скрипт» и компонент скрипта также могут использовать пользовательские управляемые сборки.  
@@ -69,25 +69,25 @@ ms.locfileid: "36087902"
   
 -   `System.Data` Содержит архитектуру ADO.NET.  
   
--   `System.IO` Предоставляет интерфейс для файловой системы и потоками.  
+-   `System.IO` Предоставляет интерфейс для файловой системы и файловых потоков.  
   
 -   `System.Windows.Forms` Обеспечивает создание форм.  
   
 -   `System.Text.RegularExpressions` Предоставляет классы для работы с регулярными выражениями.  
   
--   `System.Environment` Возвращает сведения о локальном компьютере, текущем пользователе и настроек компьютера и пользователя.  
+-   `System.Environment` Возвращает сведения о локальном компьютере, текущий пользователь и параметрами компьютеров и пользователей.  
   
 -   `System.Net` Обеспечивает сетевые соединения.  
   
 -   `System.DirectoryServices` Обеспечивает доступ к Active Directory.  
   
--   `System.Drawing` Предоставляет широкий изображения манипуляции библиотеки.  
+-   `System.Drawing` Предоставляет обширные манипуляции библиотеки изображениями.  
   
 -   `System.Threading` Обеспечивает возможность многопоточного программирования.  
   
  Дополнительные сведения о платформе [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в библиотеке MSDN.  
   
-![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться установка последних со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services в MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
  [Расширение пакетов с помощью сценариев](extending-packages-with-scripting.md)  

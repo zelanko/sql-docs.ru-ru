@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - relationships staging table [Master Data Services]
 - database [Master Data Services], relationships table
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c5d37385494fc4853f47ec8e1fe883d3ff00f0e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 38b92d05a119af10a3c6c2e464b745b8fb26b197
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229334"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>Промежуточная таблица связей (службы Master Data Services)
   Используйте промежуточную таблицу связей (stg.name_Relationship) в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для изменения расположения элементов в явной иерархии на основе связей между элементами.  
@@ -46,7 +46,7 @@ ms.locfileid: "36086699"
 ## <a name="see-also"></a>См. также  
  [Перемещение элементов явной иерархии с помощью промежуточного процесса &#40;службы Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
  [Импорт данных &#40;службы Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
- [Просмотр ошибок, возникших в процессе промежуточного хранения &#40;службы Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
- [Промежуточные ошибки процесса &#40;службы Master Data Services&#41;](staging-process-errors-master-data-services.md)  
+ [Просмотр ошибок, возникающих в ходе промежуточного процесса &#40;службы Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
+ [Ошибки промежуточного процесса &#40;службы Master Data Services&#41;](staging-process-errors-master-data-services.md)  
   
   

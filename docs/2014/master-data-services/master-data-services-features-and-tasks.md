@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 68e220c2f80260359234fb80869844c531744bfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f26531b3b4e783c70e1a3b060e803908cbf275b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191934"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Функции и задачи служб Master Data Services
   Сведения об использовании [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для управления основными данными организации. Сведения о создании и обработке объектов модели, которые являются контейнерами для данных. Сведения об организации и обслуживании основных данных. Сведения об импорте и экспорте основных данных, а также о совместном использовании моделей в тестовой и рабочей средах. Наконец, сведения о разработке пользовательских приложений, обращающихся к веб-службе [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -58,7 +58,7 @@ ms.locfileid: "36094821"
   
 -   [Версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
--   [Уведомления о &#40;службы Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
+-   [Уведомления &#40;службы Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
   
 -   [Безопасность (службы Master Data Services)](../../2014/master-data-services/security-master-data-services.md)  
   

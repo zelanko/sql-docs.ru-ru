@@ -5,29 +5,28 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [SQL Server], bulk importing and exporting
 - data formats [SQL Server], Unicode native
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 310234920939cfea19d6d17370bc3c427ff3fbcc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 631e857146b99ad9ae05b94b7a64adc0b27fff27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150855"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Использование собственного формата Юникода для импорта или экспорта данных (SQL Server)
   Собственный формат Юникода может быть полезен при копировании данных с одной установки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на другую. Использование собственного формата для несимвольных данных позволяет сэкономить время благодаря исключению ненужных преобразований типов данных в символьный формат и обратно. Использование символьного формата Юникода для всех символьных данных предотвращает потерю дополнительных символов в ходе массовой передачи данных между серверами, использующими различные кодовые страницы. Файл данных в собственном формате Юникода может быть считан с помощью любого метода массового импорта.  
   
- Собственный формат Юникода рекомендуется использовать для массовой передачи данных между несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью файла данных, который содержит дополнительный набор символов или символы в кодировке DBCS. В отношении несимвольных данных собственный формат Юникода использует собственные (для базы данных) типы данных. Для символьных данных таких как `char`, `nchar`, `varchar`, `nvarchar`, `text`, `varchar(max)`, `nvarchar(max)`, и `ntext`, собственный формат Юникода использует формат символьных данных Юникода.  
+ Собственный формат Юникода рекомендуется использовать для массовой передачи данных между несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью файла данных, который содержит дополнительный набор символов или символы в кодировке DBCS. В отношении несимвольных данных собственный формат Юникода использует собственные (для базы данных) типы данных. Для символьных данных таких как `char`, `nchar`, `varchar`, `nvarchar`, `text`, `varchar(max)`, `nvarchar(max)`, и `ntext`, собственный формат Юникод использует символьный формат Юникод.  
   
  Данные типа `sql_variant`, которые хранятся в виде инструкции SQLVARIANT в файле собственного формата Юникода, функционируют точно так, как в файле данных собственного формата, за исключением того, что значения типа `char` и `varchar` преобразуются в `nchar` и `nvarchar`, что требует вдвое больше места для хранения столбцов, подлежащих преобразованию. Исходные метаданные сохраняются, а значения преобразуются обратно в исходные `char` и `varchar` типа данных в процессе массового импорта в столбец таблицы.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "36095450"
   
 |Command|Параметр|Описание|  
 |-------------|------------|-----------------|  
-|**bcp**|**-N**|Вызывает **bcp** типы программы, чтобы использовать собственный формат Юникода, который использует собственные (базы данных) данных для всех несимвольных данных и формат символьных данных Юникода для всех символьных (`char`, `nchar`, `varchar`, `nvarchar`, `text`, и `ntext`) данных.|  
+|**bcp**|**-N**|Вызывает **bcp** служебной программы, чтобы использовать собственный формат Юникода, которая использует собственные (базы данных) данные типы для всех несимвольных данных и символьный формат Юникод для всех символьных (`char`, `nchar`, `varchar`, `nvarchar`, `text`, и `ntext`) данных.|  
 |BULK INSERT|DATAFILETYPE **='** widenative **'**|Собственный формат Юникода используется при массовом импорте данных.|  
   
  Дополнительные сведения см. в статьях [Программа bcp](../../tools/bcp-utility.md), [BULK INSERT (SQL Server)](/sql/t-sql/statements/bulk-insert-transact-sql) и [OPENROWSET (SQL Server)](/sql/t-sql/functions/openrowset-transact-sql).  

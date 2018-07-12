@@ -16,15 +16,15 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], removing
 ms.assetid: 2abfebfb-065f-45cc-a904-c914394cf900
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c8ad34be5d818d70b8c46d82dbf348b9d0814824
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: dd559679afa7575f285737f289f66201fd06671e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153035"
 ---
 # <a name="removing-a-rendering-extension"></a>Удаление модуля подготовки отчетов
   Чтобы удалить [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] модуль подготовки отчетов, просто удалите `Extension` элемент для модуля подготовки из файла rsreportserver.config, расположенного в **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\< Имя экземпляра > \Reporting Services\ReportServer** папки. Если выполнены записи для конструктора отчетов, а также сервер отчетов, удалите `Extension` элемент из [файл конфигурации RSReportDesigner](../../report-server/rsreportdesigner-configuration-file.md) также. После удаления сведений о конфигурации модуль подготовки отчетов становится недоступным компоненту.  

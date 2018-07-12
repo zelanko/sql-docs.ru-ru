@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - exporting data
 - bulk importing [SQL Server], about bulk importing
@@ -25,26 +24,26 @@ helpviewer_keywords:
 - importing data
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 615da1ce995a23b9518997570a9e34df71b4efb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4bfbd00c0079aec3e9bcfa67560962356be1cad4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227694"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Массовый импорт и экспорт данных (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает массовый экспорт данных (*массовых данных*) из таблиц [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и импорт массовых данных в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или несекционированное представление. Массовый импорт и массовый экспорт имеют большое значение для эффективной передачи данных между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и разнородными источниками данных. *Массовый экспорт* означает копирование данных из таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в файл данных. *Массовый импорт* означает загрузку данных из файла данных в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Например, можно экспортировать данные из приложения [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel в файл данных, а затем выполнить массовый импорт данных в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **В этом разделе.**  
   
--   [Общие сведения о массовой операции импорта и массового экспорта](#Intro)  
+-   [Общие сведения о массовом импорте данных и операции массового экспорта](#Intro)  
   
 -   [Связанные задачи](#RelatedTasks)  
   
-##  <a name="Intro"></a> Массового импорта и массового экспорта Обзор  
+##  <a name="Intro"></a> Массовый импорт и экспорт Обзор массовых операций  
  В настоящем разделе приведен перечень и дано краткое сравнение различных доступных методов массового импорта и экспорта данных. В разделе также приведены сведения о файлах форматирования.  
   
  **В этом разделе:**  
@@ -81,7 +80,7 @@ ms.locfileid: "36086684"
   
 -   [Массовый импорт и экспорт данных с помощью программы bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)  
   
--   [Импорт больших массивов данных с помощью инструкции BULK INSERT или OPENROWSET&#40;BULK... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)  
+-   [Массовый импорт данных с помощью инструкции BULK INSERT или OPENROWSET&#40;МАССОВОГО... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)  
   
 -   [Сохранение значений идентификаторов при массовом импорте данных (SQL Server)](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   

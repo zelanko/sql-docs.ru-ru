@@ -1,5 +1,5 @@
 ---
-title: Элемент ProcessingPriority (ASSL) | Документы Microsoft
+title: Элемент ProcessingPriority (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProcessingPriority element
 ms.assetid: 95d07f1c-ef8d-4e38-9682-ebb7719dbe52
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0718c0b85502a7277572a9e9ce42d8c94a244b1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5dcbf28ff2dd0fbcbbc64aba7785e41caab3905c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169665"
 ---
 # <a name="processingpriority-element-assl"></a>Элемент ProcessingPriority (ASSL)
   Определяет приоритет обработки для родительского объекта во время работы в фоновом режиме (например: отложенная статистическая обработка, индексирование или кластеризация).  

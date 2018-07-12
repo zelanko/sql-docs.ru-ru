@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 267bbd228565337594039162d7f01ec90a38d303
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26b6d45a190a188f9091360583cf3f73c3097455
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156725"
 ---
 # <a name="script-task"></a>Задача «Скрипт»
   Задача "Скрипт" представляет код для выполнения функций, недоступных в задачах и преобразованиях, предоставляемых средствами служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Задача «Скрипт» также позволяет объединять функции в одном скрипте вместо использования нескольких задач и преобразований. Задачу «Скрипт» следует использовать для выполнения операций над пакетом (или над каждым перечисленным объектом), а не над каждой строкой данных.  
@@ -72,13 +72,13 @@ ms.locfileid: "36095255"
   
 |Запись журнала|Описание|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|Сообщает о результатах выполнения операции ведения журнала в скрипте. Задача производит запись журнала для каждого вызова `Log` метод `Dts` объекта. Задача формирует эти записи в момент запуска кода. Дополнительные сведения см. в статье [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
+|`ScriptTaskLogEntry`|Сообщает о результатах выполнения операции ведения журнала в скрипте. Задача формирует запись журнала для каждого вызова `Log` метод `Dts` объекта. Задача формирует эти записи в момент запуска кода. Дополнительные сведения см. в статье [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи «скрипт» &#40;страница «Общие»&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "скрипт" &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задачи «скрипт» &#40;страница "сценарий"&#41;](../script-task-editor-script-page.md)  
+-   [Редактор задачи "скрипт" &#40;страница "сценарий"&#41;](../script-task-editor-script-page.md)  
   
 -   [Страница "Выражения"](../expressions/expressions-page.md)  
   

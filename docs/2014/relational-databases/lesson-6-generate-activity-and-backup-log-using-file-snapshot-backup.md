@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 7: Перемещение файлов данных в хранилище Windows Azure | Документы Microsoft'
+title: 'Занятие 7: Перемещение файлов данных в хранилище Windows Azure | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 014fd10ecd738f46160358506b3b165640d3fe09
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 44bc025ce3eb536e10f4c77410ea487e59f006ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162715"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>Занятие 7. Перемещение файлов данных в хранилище Windows Azure
   На этом занятии вы узнаете, как переместить файлы данных (но не экземпляр SQL Server) в хранилище Windows Azure. Для прохождения этого занятия не требуется завершать занятия 4, 5 и 6.  

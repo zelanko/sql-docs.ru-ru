@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 caps.latest.revision: 51
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 417c2a44536a4f7a1c9ed9ade7d789e20e024874
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8599cb6c4390b0e204bde2b02a36729cf3b48dcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148725"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Занятие 1. Создание проекта сервера отчетов (службы Reporting Services)
   Чтобы создать отчет в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], необходимо сначала создать проект сервера отчетов, в котором будет сохранен файл определения отчета (с расширением RDL) и другие файлы ресурсов, необходимые для отчета. Затем будет создан действительный файл определения отчета, определен источник данных для этого отчета, набор данных и макет отчета. При выполнении отчета происходит получение и объединение фактических данных с макетом, затем осуществляется его подготовка к просмотру на экране, после чего может быть выполнен их импорт, печать или сохранение.  
@@ -28,7 +28,7 @@ ms.locfileid: "36095414"
   
 ### <a name="to-create-a-report-server-project"></a>Создание проекта сервера отчетов  
   
-1.  Нажмите кнопку **запустить**, пункты **все программы**, пункты [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], а затем нажмите кнопку **SQL Server Data Tools**. Если при первом открытии [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], нажмите кнопку **параметры бизнес-аналитики** параметров среды по умолчанию.  
+1.  Нажмите кнопку **запустить**, пункты **все программы**, пункты [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], а затем нажмите кнопку **SQL Server Data Tools**. Если это первый раз вы открыли [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], нажмите кнопку **параметры бизнес-аналитики** для параметров среды по умолчанию.  
   
 2.  В меню **Файл** укажите **Создать**, затем нажмите **Проект**.  
   

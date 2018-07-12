@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], migrating files
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f04207a9f61228b48318afbc321dcc5f10358ad7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1fe047d365e3ce7b8df00307499eca50553a2c76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169105"
 ---
 # <a name="load-files-into-filetables"></a>выполнить загрузку файлов в таблицу FileTables
   Описывает процедуру загрузки или переноса файлов в таблицы FileTable.  
@@ -48,7 +47,7 @@ ms.locfileid: "36087875"
 ###  <a name="HowToMigrateFiles"></a> Пример. Перенос файлов из файловой системы в таблицу FileTable  
  В этом сценарии файлы хранятся в файловой системе, а в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеется таблица метаданных, содержащая указатели на эти файлы. Необходимо переместить файлы в таблицу FileTable, затем заменить исходный путь UNC для каждого файла в метаданных на путь UNC таблицы FileTable. Функция [GetPathLocator (Transact-SQL)](/sql/relational-databases/system-functions/getpathlocator-transact-sql) помогает добиться этой цели.  
   
- Например, предположим, что имеется существующей таблицы базы данных, `PhotoMetadata`, который содержит данные о фотографиях. Эта таблица включает столбец `UNCPath` типа `varchar`(512), содержащий фактический путь UNC к JPG-файлу.  
+ Например, предположим, что имеется существующую таблицу базы данных, `PhotoMetadata`, который содержит данные о фотографиях. Эта таблица содержит столбец `UNCPath` типа `varchar`(512) содержащий фактический путь UNC к JPG-файлу.  
   
  Чтобы перенести файлы изображений из файловой системы в таблицу FileTable, нужно выполнить следующие действия.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "36087875"
   
 2.  Для копирования JPG-файлов с их структурой каталогов в корневой каталог таблицы FileTable можно использовать программу xcopy или аналогичное средство.  
   
-3.  Исправьте метаданные в `PhotoMetadata` таблицы с помощью кода примерно следующего содержания:  
+3.  Исправьте метаданные в `PhotoMetadata` таблицы с помощью кода, аналогичную следующей:  
   
 ```tsql  
 --  Add a path locator column to the PhotoMetadata table.  

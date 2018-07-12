@@ -1,5 +1,5 @@
 ---
-title: Импорт данных (Master Data Services) | Документы Microsoft
+title: Импорт данных (Master Data Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
 - importing data [Master Data Services]
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 14
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d386070df790164e11763d0dfc459cb7de2c1a95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d1d0810c58b2dd0a899c95a358ddccac601b8380
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162835"
 ---
 # <a name="data-import-master-data-services"></a>Импорт данных (службы Master Data Services)
-  После создания модели для данных в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], можно добавлять данные и вносить изменения в данные в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базы данных.   Используются промежуточные таблицы [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , хранимые процедуры и диспетчер основных данных.  
+  После создания модели для данных в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], можно начать добавлять данные и вносить в них изменения в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базы данных.   Используются промежуточные таблицы [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , хранимые процедуры и диспетчер основных данных.  
   
- Можно также использовать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], чтобы добавить данные в репозиторий MDS ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базы данных). Дополнительные сведения см. в разделе [публикации данных &#40;надстройки MDS для Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
+ Можно также использовать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]для добавления данных в репозиторий MDS ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базы данных). Дополнительные сведения см. в разделе [публикации данных &#40;надстройки MDS для Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
   
  При добавлении или обновлении данных можно выполнять следующие действия.  
   
@@ -73,9 +73,9 @@ ms.locfileid: "36095031"
 ## <a name="staging-tables-and-stored-procedures"></a>Промежуточные таблицы и хранимые процедуры  
  База данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] включает следующие типы промежуточных таблиц, которые можно заполнять данными.  
   
--   [Конечный элемент таблицы &#40;службы Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
+-   [Промежуточная таблица конечных элементов &#40;службы Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [Объединенный элемент таблицы &#40;службы Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [Промежуточная таблица консолидированных элементов &#40;службы Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
 -   [Промежуточная таблица связей &#40;службы Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   

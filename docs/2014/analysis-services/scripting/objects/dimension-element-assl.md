@@ -1,5 +1,5 @@
 ---
-title: Измерение элемент (ASSL) | Документы Microsoft
+title: Измерение элемент (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Dimension element
 ms.assetid: 71886014-f463-4b70-a2a2-d9e5053ba4f0
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2995ceae19dc17fc6abd71cbdd102375058237be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6d8b909b6bf7018f70f381ec8d07b20f6b7d851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185247"
 ---
 # <a name="dimension-element-assl"></a>Элемент Dimension (ASSL)
   Определяет измерение.  
@@ -66,7 +66,7 @@ ms.locfileid: "36087743"
 |Предок или родитель|Тип данных|  
 |------------------------|---------------|  
 |[База данных](../data-type/dimension-data-type-assl.md)|  
-|[Агрегат](../data-type/aggregationdimension-data-type-assl.md)|  
+|[Статистической обработки](../data-type/aggregationdimension-data-type-assl.md)|  
 |[AggregationDesign](../data-type/aggregationdesigndimension-data-type-assl.md)|  
 |[AggregationInstance](../data-type/cubedimension-data-type-assl.md)|  
 |[Cube](cube-element-assl.md)|[CubeDimension](../data-type/cubedimension-data-type-assl.md)|  
@@ -81,7 +81,7 @@ ms.locfileid: "36087743"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующие элементы в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.AggregationDimension>, <xref:Microsoft.AnalysisServices.AggregationDesignDimension>, <xref:Microsoft.AnalysisServices.CubeDimension>, <xref:Microsoft.AnalysisServices.MeasureGroupDimension>, и <xref:Microsoft.AnalysisServices.PerspectiveDimension>.  
+ Соответствующие элементы в объектной модели объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.AggregationDimension>, <xref:Microsoft.AnalysisServices.AggregationDesignDimension>, <xref:Microsoft.AnalysisServices.CubeDimension>, <xref:Microsoft.AnalysisServices.MeasureGroupDimension>, и <xref:Microsoft.AnalysisServices.PerspectiveDimension>.  
   
 ## <a name="see-also"></a>См. также  
  [Объекты &#40;ASSL&#41;](objects-assl.md)  

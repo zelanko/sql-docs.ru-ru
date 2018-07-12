@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:73728
 - vdt.dlgbox.description
 ms.assetid: 1f15ef88-6f02-4cfc-8327-3408233619b1
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a4e932c4ed1d2713eb51b616862184c8ef7418e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 57e368df8fb5ef32ab7badac611054e5820fc01b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212004"
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>Диалоговое окно «Свойства описания» (визуальные инструменты для баз данных)
   Диалоговое окно **Свойства описания** предоставляет текстовое поле, в котором можно ввести подробное описание объектов базы данных — таблиц, столбцов и ограничений внешнего ключа. Это диалоговое окно можно открыть из окна "Свойства" для таких объектов, как таблицы и представления, когда они выбираются в конструкторе, из диалоговых окон для таких объектов, как индексы и проверочные ограничения, а также из вкладки **Свойства столбца** в конструкторе таблиц для столбцов таблиц. Это описание сохраняется как расширенное свойство для данного объекта.  

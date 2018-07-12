@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0c71123c2b91cd07ca8fb93faf458f7ff42cb04d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 256a7cbabc6c07bb0e1f42aeb6a3a3d77a5d93a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171145"
 ---
 # <a name="execute-package-task"></a>Задача «Выполнение пакета»
   Задача «Выполнение пакета» расширяет возможности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в рамках организации, позволяя одним пакетам выполнять другие пакеты как часть рабочего процесса.  
@@ -60,7 +60,7 @@ ms.locfileid: "36095052"
   
  С другой стороны, в некоторых задачах необходимо, чтобы родительский и дочерний пакеты прекращали свое выполнение одновременно, но иногда не имеет смысла тратить дополнительную память на другой процесс. Например, если дочерний процесс заканчивается с ошибкой, а последующая работа родительского пакета зависит от результата работы дочернего пакета, необходимо, чтобы дочерний пакет выполнялся в процессе родительского пакета.  
   
- По умолчанию ExecuteOutOfProcess задачи «Выполнение пакета» является свойство `False`, а дочерний пакет запускается в том же процессе, что и родительский пакет. Если установить свойство в значение `True`, дочерний пакет запускается в отдельном процессе. Это может замедлить запуск дочернего пакета. Кроме того, если значение свойства `True`, нельзя выполнять отладку пакета только для средств при установке. Необходимо установить [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Дополнительные сведения см. в разделе [Установка служб Integration Services](../install-windows/install-integration-services.md).  
+ По умолчанию свойство ExecuteOutOfProcess задачи «Выполнение пакета» имеет значение `False`, а дочерний пакет запускается в том же процессе, что и родительский пакет. Если установить свойство в значение `True`, дочерний пакет запускается в отдельном процессе. Это может замедлить запуск дочернего пакета. Кроме того, если задано свойство `True`, нельзя выполнять отладку пакета только для средства при установке. Необходимо установить [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Дополнительные сведения см. в разделе [Установка служб Integration Services](../install-windows/install-integration-services.md).  
   
 ## <a name="extending-transactions"></a>Расширение транзакций  
  Транзакции, используемые родительским пакетом, могут быть расширены на дочерний пакет; таким образом, работа, выполняемая обоими пакетами, может фиксироваться и откатываться. Например, вставка в базу данных, производимая родительским пакетом, может фиксироваться или откатываться в зависимости от вставки в базу данных, которую производит дочерний пакет, и наоборот. Дополнительные сведения см. в разделе [Inherited Transactions](../inherited-transactions.md).  

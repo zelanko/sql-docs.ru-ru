@@ -1,5 +1,5 @@
 ---
-title: После установки конфигурации (службы Analysis Services) | Документы Microsoft
+title: После установки конфигурации (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df6b8362ed63e5b3ec2b339478b9398fd8a65db8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c4f7dea428950957d267c929e36627f40e0b7d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151655"
 ---
 # <a name="post-install-configuration-analysis-services"></a>Настройка после установки (службы Analysis Services)
   После установки служб Analysis Services требуется дополнительная настройка, чтобы обеспечить полноценное функционирование сервера и сделать его доступным для типового пользования. В этом разделе представлены дополнительные задачи, завершающие установку. В зависимости от требований соединения можно также настроить проверку подлинности (см. раздел [Подключение к службам Analysis Services](connect-to-analysis-services.md)).  

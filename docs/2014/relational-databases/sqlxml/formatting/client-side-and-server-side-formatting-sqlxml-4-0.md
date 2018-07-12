@@ -1,5 +1,5 @@
 ---
-title: Клиентские и серверные форматирование (SQLXML 4.0) | Документы Microsoft
+title: Клиентские и серверные форматирование (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQLXML, formats
 ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f94ae31987bac5194be721b6894c093b69c00d4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 8e0fd037296160e16c1b92c44688e7ecc612eb6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164315"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>Форматирование XML-кода на клиенте и на сервере (SQLXML 4.0)
   SQLXML дает возможность форматировать XML-документы двумя способами:  

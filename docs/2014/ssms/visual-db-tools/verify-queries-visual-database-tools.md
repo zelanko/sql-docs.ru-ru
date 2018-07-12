@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:100644
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - checking queries
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6f77da9093a27456014f78ca6285a33d3c565bf2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3eec42b02744209860c19d58a6965737823ef95e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226564"
 ---
 # <a name="verify-queries-visual-database-tools"></a>Проверка запросов (визуальные инструменты для баз данных)
   Чтобы избежать проблем, можно проверить созданный запрос, чтобы гарантировать правильность его синтаксиса. Эта возможность особенно полезна при вводе инструкций на [панели SQL](visual-database-tools.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "36087042"
 -   Щелкните правой кнопкой мыши любое место на **панели SQL**и выберите из контекстного меню пункт **Проверить синтаксис SQL** .  
   
 ## <a name="see-also"></a>См. также  
- [Выполнение запросов &#40;визуальные средства базы данных&#41;](run-queries-visual-database-tools.md)   
+ [Выполнение запросов &#40;визуальных инструментах баз данных&#41;](run-queries-visual-database-tools.md)   
  [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

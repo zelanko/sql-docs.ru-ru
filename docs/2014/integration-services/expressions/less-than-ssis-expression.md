@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - less than (<)
 - < (less than operator)
@@ -16,13 +16,13 @@ ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b71a4c63dbe81184c70f18fff53c90e048d7d4c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e61faf60834ecfb312859ba80d953d49b82a477a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225654"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt; (меньше) (выражение служб SSIS)
   Выполняет сравнение с целью определения, является ли первое выражение меньше второго. Перед проведением сравнения средство оценки выражений автоматически преобразует большинство типов данных.  
@@ -104,7 +104,7 @@ ListPrice < 500
 ```  
   
 ## <a name="see-also"></a>См. также  
- [&#62;&#40;Больше&#41; &#40;выражение служб SSIS&#41;](greater-than-ssis-expression.md)   
+ [&#62;&#40;Больше, чем&#41; &#40;выражение служб SSIS&#41;](greater-than-ssis-expression.md)   
  [&#62;= (больше или равно) (выражение служб SSIS)](greater-than-or-equal-to-ssis-expression.md)   
  [&#60;= (меньше или равно) (выражение служб SSIS)](less-than-or-equal-to-ssis-expression.md)   
  [Приоритет и ассоциативность операторов](operator-precedence-and-associativity.md)   

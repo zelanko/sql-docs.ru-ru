@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4f376b2ba1e707afdba55b6fc7443d9d8be257e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 00ee8c2e88f571e3e9fcf5455a6627c0d7ff65cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204854"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Добавление в отчет параметра с несколькими значениями
   В отчет можно добавить параметр, который позволит пользователю выбирать несколько значений для этого параметра.  
   
- Можно передавать отчету несколько значений параметра в URL-адресе отчета. Пример URL-адрес содержит Многозначный параметр, см. в разделе [передачи параметра в URL-адрес отчетов](../pass-a-report-parameter-within-a-url.md).  
+ Можно передавать отчету несколько значений параметра в URL-адресе отчета. Пример URL-адреса, содержащего Многозначный параметр, см. в разделе [передать Report Parameter Within a URL](../pass-a-report-parameter-within-a-url.md).  
   
  Сведения о том, как передавать несколько значений параметра хранимой процедуре, см. в статье [Working With Multi-Select Parameters for SSRS Reports](http://go.microsoft.com/fwlink/?LinkId=321529) (Работа с многозначными параметрами для отчетов служб SSRS) на сайте mssqltips.com.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36087559"
      Дополнительные сведения см. в разделе [Добавление, изменение и удаление допустимых значений параметра отчета (построитель отчетов и службы SSRS)](add-change-or-delete-available-values-for-a-report-parameter.md).  
   
 ## <a name="see-also"></a>См. также  
- [Добавление каскадных параметров в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [Добавление, изменение или удаление параметра отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+ [Добавление каскадных параметров в отчет &#40;построитель отчетов и службы SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Добавление, изменение или удаление параметра отчета &#40;построитель отчетов и службы SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
   

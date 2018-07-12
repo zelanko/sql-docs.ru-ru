@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - equal operator (==)
 - == (equal operator)
@@ -16,13 +16,13 @@ ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0e87c5f2a718bca918b6e05e60a46ff364b7931c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a14ebea2cea05b050b2a8bca4a51d75784b05190
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158625"
 ---
 # <a name="-equal-ssis-expression"></a>== (равно) (выражение служб SSIS)
   Выполняет сравнение с целью определения равенства двух выражений. Перед проведением сравнения средство оценки выражений автоматически преобразует большинство типов данных. Дополнительные сведения см. в статье [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  

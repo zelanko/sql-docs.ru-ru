@@ -1,5 +1,5 @@
 ---
-title: Введите элемент (ClrAssemblyFile) (ASSL) | Документы Microsoft
+title: Введите элемент (ClrAssemblyFile) (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: ab9e1e2c-ab06-4cd1-b007-16d738dc5604
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c253b2975c5e4f4cbf27c5b2d655a09617d644de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02a32dffab7d0274b98a5dcae3099703446b184b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218024"
 ---
 # <a name="type-element-clrassemblyfile-assl"></a>Элемент Type (ClrAssemblyFile) (ASSL)
-  Задает тип файла одного из файлов, принадлежащих к [!INCLUDE[msCoName](../../../includes/msconame-md.md)] сборки .NET Framework.  
+  Указывает тип файла одного из файлов, принадлежащих к [!INCLUDE[msCoName](../../../includes/msconame-md.md)] сборки .NET Framework.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36087218"
   
  Перечисление, соответствующее допустимым значениям элемента `Type` в модели объектов AMO, — это <xref:Microsoft.AnalysisServices.ClrAssemblyFileType>.  
   
- Элемент, соответствующий родителю параметра `Type` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
+ Элемент, соответствующий родителю параметра `Type` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>См. также  
  [Файл элемента &#40;ASSL&#41;](../objects/file-element-assl.md)   

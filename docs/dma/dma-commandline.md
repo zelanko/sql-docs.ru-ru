@@ -1,5 +1,6 @@
 ---
-title: Запустите из командной строки (SQL Server данных помощник по миграции) | Документы Microsoft
+title: Запустите помощник по миграции данных из командной строки (SQL Server) | Документация Майкрософт
+description: Узнайте, как запустить помощник по миграции данных из командной строки для оценки базы данных SQL Server для миграции
 ms.custom: ''
 ms.date: 09/01/2017
 ms.prod: sql
@@ -17,18 +18,18 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: df58c273c67868e894b7cba38344dc43628962ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b364dc03d48cbc1c0487362712e10f7ab0b782e
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32866529"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785465"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Запустите помощник по миграции данных из командной строки
-С версии 2.1 и выше, когда вы можете установить помощник по миграции данных, она также устанавливает dmacmd.exe в *% ProgramFiles %\\Microsoft данных помощник по миграции\\*. Используйте dmacmd.exe для оценки баз данных в автоматическом режиме и вывода результатов в формате JSON или CSV-файл. Это особенно полезно при оценке несколько баз данных или большой базы данных. 
+В версии 2.1 и выше, когда установки помощника по миграции данных, также устанавливается dmacmd.exe в *% ProgramFiles %\\Microsoft Data Migration Assistant\\*. Используйте dmacmd.exe для оценки баз данных в автоматическом режиме и вывода результата JSON или CSV-файл. Этот метод особенно полезен при оценке в нескольких базах данных или огромных баз данных. 
 
 > [!NOTE]
-> Dmacmd.exe поддерживает выполнение только для оценки. В настоящее время не поддерживается миграция.
+> Dmacmd.exe поддерживает только оценки. В настоящее время не поддерживается миграция.
 
 
 ## <a name="command-line-arguments"></a>Аргументы командной строки
@@ -43,18 +44,18 @@ DmaCmd.exe /AssessmentName="string"
 ```
 
 
-|Аргумент  |Описание  | Обязательный (Y/N)
+|Аргумент  |Описание  | Требуется (Y/N)
 |---------|---------|---------------|
 | `/help or /?`     | Как использовать dmacmd.exe текст справки        | Нет
 |`/AssessmentName`     |   Имя проекта оценки   | Да
-|`/AssessmentDatabases`     | Пробелами список строк подключения. Имя базы данных (Initial Catalog) учитывается регистр символов. | Да
-|`/AssessmentTargetPlatform`     | Целевая платформа для оценки, поддерживаемые значения: SqlServer2012, SqlServer2014, SqlServer2016 и AzureSqlDatabaseV12. Значение по умолчанию — SqlServer2016   | Нет
-|`/AssessmentEvaluateFeatureParity`  | Запустите четности правила компонентов  | Нет
-|`/AssessmentEvaluateCompatibilityIssues`     | Выполнение правил совместимости  | Да <br> (AssessmentEvaluateCompatibilityIssues или AssessmentEvaluateRecommendations не требуется.)
-|`/AssessmentEvaluateRecommendations`     | Запустите функцию рекомендации        | Да <br> (AssessmentEvaluateCompatibilityIssues или AssessmentEvaluateRecommendationsis требуется)
+|`/AssessmentDatabases`     | Разделенный пробелами список строк подключения. Имя базы данных (начальный каталог) учитывается регистр. | Да
+|`/AssessmentTargetPlatform`     | Целевая платформа для оценки, поддерживаемые значения: SqlServer2012 "," SqlServer2014 "," SqlServer2016 "и" AzureSqlDatabaseV12. Значение по умолчанию — SqlServer2016   | Нет
+|`/AssessmentEvaluateFeatureParity`  | Запустить правила равенства  | Нет
+|`/AssessmentEvaluateCompatibilityIssues`     | Выполнение правил совместимости  | Да <br> (AssessmentEvaluateCompatibilityIssues или AssessmentEvaluateRecommendations является обязательным.)
+|`/AssessmentEvaluateRecommendations`     | Выполните рекомендуемые возможности        | Да <br> (AssessmentEvaluateCompatibilityIssues или AssessmentEvaluateRecommendationsis требуется)
 |`/AssessmentOverwriteResult`     | Перезаписать файл результатов    | Нет
-|`/AssessmentResultJson`     | Полный путь к файлу результатов JSON     | Да <br> (AssessmentResultJson или AssessmentResultCsv не требуется)
-|`/AssessmentResultCsv`    | Полный путь к файлу результатов CSV   | Да <br>(AssessmentResultJson или AssessmentResultCsv не требуется)
+|`/AssessmentResultJson`     | Полный путь к файлу результатов JSON     | Да <br> (AssessmentResultJson или AssessmentResultCsv является обязательным)
+|`/AssessmentResultCsv`    | Полный путь к CSV-файл результатов   | Да <br>(AssessmentResultJson или AssessmentResultCsv является обязательным)
 
 
 
@@ -65,7 +66,7 @@ DmaCmd.exe /AssessmentName="string"
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Оценки одного-базы данных, с помощью правила совместимости проверки подлинности и выполнения Windows**
+**Оценки одного-базы данных, с помощью правил совместимости проверки подлинности и выполнения Windows**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -77,7 +78,7 @@ Catalog=DatabaseName;***Integrated Security=true*"**
 
 
 
-**Оценки одного-базы данных, используя рекомендации функции проверки подлинности и выполнения SQL Server**
+**Оценки одного-базы данных, с помощью рекомендаций функции проверки подлинности и запуска SQL Server**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -88,7 +89,7 @@ Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
 ```
 
 
-**Оценки одного-базы данных для целевой платформы SQL Server 2012 и сохранить результаты в файл .json и CSV**
+**Оценки одного-базы данных для целевой платформы SQL Server 2012, сохранить результаты в файл, файл JSON и CSV-файл**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -101,7 +102,7 @@ Catalog=DatabaseName;Integrated Security=true"
 ```
 
 
-**Оценки одного-базы данных для целевой платформы базы данных SQL Azure сохранить результаты в файл .json и CSV**
+**Оценки одного-базы данных для целевой платформы базы данных SQL Azure, сохранить результаты в файл, файл JSON и CSV-файл**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -115,7 +116,7 @@ Catalog=DatabaseName;Integrated Security=true"
 ```
 
 
-**Оценка несколькими базами данных**
+**Оценка нескольких-базы данных**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -132,6 +133,6 @@ Catalog=DatabaseName3;Integrated Security=true"***
 
 
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Загрузка помощник по миграции данных](https://www.microsoft.com/download/details.aspx?id=53595)
+[Скачать помощник по миграции данных](https://www.microsoft.com/download/details.aspx?id=53595)

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 caps.latest.revision: 26
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8d423a6001888f0ec894ed2e73b715fb3c30db12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f5dc22149aab9dfd9d458ed8cd4ec958794d973b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193400"
 ---
 # <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Шаг 9. Проверка учебного пакета, созданного на занятии 1
   На этом занятии были выполнены представленные ниже задачи.  

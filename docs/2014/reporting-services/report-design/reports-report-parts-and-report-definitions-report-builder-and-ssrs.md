@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report definitions
 - reports
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 55004b30ac7f462b677875f6f8b872ccebf25be8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e06d0e989b357d939da4a024a6c904c6e1cf175c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212354"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] использует различные термины для описания отчетов в разных состояниях, включая время начального определения опубликованного отчета и отчета, просматриваемого, как оно отображается для пользователя.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] использует различные термины, описывающие отчет в разных состояниях, включая время начального определения, опубликованного отчета и отчета, просматриваемого, как оно отображается для пользователя.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,13 +64,13 @@ ms.locfileid: "36087324"
   
 -   Подпишитесь на отчет, который доставляется в папку «Входящие» электронной почты или в указанную общую папку в выбранном формате.  
   
- Подпишитесь на отчет, который доставляется в папку «Входящие» электронной почты или в указанную общую папку в выбранном формате. Формат подготовки отчетов по умолчанию — HTML 4.0. Помимо HTML, отчеты можно подготавливать к просмотру и во многих других форматах, например в форматах Excel, Word, XML, PDF, TIFF и CSV. Как и опубликованные отчеты, отчеты, готовые для просмотра, нельзя отредактировать и снова сохранить на сервере отчетов. Дополнительные сведения см. в разделе [экспорта отчетов &#40;построитель отчетов и службы SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
+ Подпишитесь на отчет, который доставляется в папку «Входящие» электронной почты или в указанную общую папку в выбранном формате. Формат подготовки отчетов по умолчанию — HTML 4.0. Помимо HTML, отчеты можно подготавливать к просмотру и во многих других форматах, например в форматах Excel, Word, XML, PDF, TIFF и CSV. Как и опубликованные отчеты, отчеты, готовые для просмотра, нельзя отредактировать и снова сохранить на сервере отчетов. Дополнительные сведения см. в разделе [экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также  
- [Основные понятия разработки отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Основные понятия разработки отчетов &#40;построитель отчетов и службы SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Построитель отчетов в SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
  [Установка, удаление и поддержка построителя отчетов](../install-uninstall-and-report-builder-support.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Экспорт отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

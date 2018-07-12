@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -18,13 +18,13 @@ ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5142c52b2a6a698e379957113d9540537282d80f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c106d3d086366146c0ed32dca78533238e81ed2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183851"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Предоставление разрешений для элементов сервера отчетов на сайте SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] предоставляют встроенные средства безопасности, которые можно использовать для предоставления права доступа к элементам сервера отчетов, к которым предоставляется доступ с сайтов и из библиотек SharePoint. Если пользователям уже назначены разрешения, они получат и доступ к элементам и операциям сервера отчетов сразу после настройки параметров интеграции служб [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] и сервера отчетов. Можно использовать имеющиеся разрешения для передачи определений отчетов и других документов, просмотра отчетов, создания подписок и управления элементами.  
@@ -33,7 +33,7 @@ ms.locfileid: "36087544"
   
 1.  Прочтите в документации по продукту [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]о настройках безопасности по умолчанию для стандартных групп SharePoint, чтобы иметь представление об управлении разрешениями и пользовательским доступом.  
   
-2.  Просмотрите список разрешений, которые влияют на доступ к элементам и операциям сервера отчетов. Дополнительные сведения см. в разделе [использования встроенных средств безопасности служб Windows SharePoint Services, для элементов сервера отчетов](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
+2.  Просмотрите список разрешений, которые влияют на доступ к элементам и операциям сервера отчетов. Дополнительные сведения см. в разделе [использование встроенных средств безопасности в Windows SharePoint Services для элементов сервера отчетов](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
   
 3.  Назначьте учетным записям пользователей и групп стандартные группы SharePoint.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36087544"
   
  Группы SharePoint имеют уровни разрешений, предоставляющие немедленный доступ ко многим операциям сервера отчетов. Если встроенные настройки безопасности не обеспечивают необходимый уровень доступа, можно создать пользовательские группы или уровни разрешений.  
   
- Дополнительные сведения о каком отчете поддерживаются операций сервера с помощью средства безопасности по умолчанию см. в разделе [использования встроенных средств безопасности служб Windows SharePoint Services, для элементов сервера отчетов](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
+ Дополнительные сведения о отчетов средствами безопасности по умолчанию по поддержке операций сервера, см. в разделе [использование встроенных средств безопасности в Windows SharePoint Services для элементов сервера отчетов](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
   
  Для использования встроенных средств безопасности необходимо назначить учетным записям пользователей или групп Windows группы SharePoint. За исключением администратора сервера и владельца сайта портала, которые имеют автоматический доступ к службам [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] после установки ПО, остальным пользователям должны быть предоставлены разрешения для доступа к серверу.  
   

@@ -1,5 +1,5 @@
 ---
-title: Изменение возвращенных файлов | Документы Microsoft
+title: Изменение возвращенных файлов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying checked-in files
 - checking in files
 ms.assetid: 560cd19f-ab22-4273-b00c-149993a630e6
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd91efe4bd802a64ced4e6f93ac65f16ed4e5a71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3e705b2b62631e0d6747c5112c0efc66f3bfddf6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165295"
 ---
 # <a name="edit-checked-in-files"></a>Изменение возвращенных файлов
   Как правило, прежде чем начать изменение файлов в системе управления версиями, их необходимо извлечь. Однако среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] можно настроить так, чтобы можно было изменять файлы без их извлечения. При этом изменения хранятся в памяти до тех пор, пока файлы не будут сохранены. Затем поступает запрос извлечь файл из системы управления версиями.  

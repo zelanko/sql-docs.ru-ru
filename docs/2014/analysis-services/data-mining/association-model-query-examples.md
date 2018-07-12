@@ -1,5 +1,5 @@
 ---
-title: Примеры запросов к модели взаимосвязей | Документы Microsoft
+title: Примеры запросов моделей взаимосвязей | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
 - association algorithms [Analysis Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1b0c7f81123188af9b929dcdcc33f6cf44ed4aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccd88cf081949cfad9c3d032598af9b96707fd0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173615"
 ---
 # <a name="association-model-query-examples"></a>Примеры запросов моделей взаимосвязей
   Создаваемый запрос к модели интеллектуального анализа данных может быть запросом содержимого. Такой запрос предоставляет подробные сведения о правилах и наборах элементов, обнаруженных в процессе анализа. Можно также создавать прогнозирующие запросы. Они используют взаимосвязи, обнаруженные в данных, для создания прогнозов. Прогнозы для моделей взаимосвязей обычно основаны на правилах, и их можно использовать для рекомендаций, в то время как запросы к содержимому обычно исследуют связи между наборами элементов. Можно также получать метаданные, описывающие модель.  

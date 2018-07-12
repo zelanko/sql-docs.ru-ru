@@ -1,5 +1,5 @@
 ---
-title: Элемент Password (ASSL) | Документы Microsoft
+title: Элемент Password (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Password element
 ms.assetid: ee756b01-fb08-4a9a-8c2a-7c04af0f8658
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e702e7307e11c506652e91ca4cdc8f02ca06318d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99d7eabdd66e6c7f036389b4825c5926873367b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197744"
 ---
 # <a name="password-element-assl"></a>Элемент Password (ASSL)
-  Содержит пароль учетной записи пользователя для [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) элемента.  
+  Содержит пароль учетной записи пользователя для [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36087447"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Значение `Password` элемент, а также значение [учетной записи](account-element-impersonationinfo-assl.md) элемент, используется для олицетворения, если значение [ImpersonationMode](impersonationmode-element-assl.md) элемента для любого элемента, производного от `ImpersonationInfo` тип данных имеет значение *ImpersonateAccount*.  
+ Значение `Password` элемент, а также значение [учетной записи](account-element-impersonationinfo-assl.md) элемент, используется для олицетворения, если значение [ImpersonationMode](impersonationmode-element-assl.md) для любого элемента, производного от `ImpersonationInfo` установлен тип данных *ImpersonateAccount*.  
   
  Пустое значение для элемента `Password` могут предоставлять только члены роли администратора сервера для экземпляра служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   

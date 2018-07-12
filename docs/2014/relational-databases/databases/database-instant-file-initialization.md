@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - initializing files [SQL Server]
 - instant file initializations [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - file initialization [SQL Server]
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0dc65b8fb0985be59fa22e7a5b4f650d5f779d12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: da60e00ce0162a553d9ecf68368edd3dde193a08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180110"
 ---
 # <a name="database-instant-file-initialization"></a>Мгновенная инициализация файлов базы данных
   Файлы данных и журналов инициализируются, чтобы перезаписать все существующие данные на диске, оставшиеся после удаленных файлов. Файлы данных и журналов сначала инициализируются с помощью заполнения нулями при выполнении одной из следующих операций.  
@@ -59,7 +59,7 @@ ms.locfileid: "36094786"
   
 4.  Щелкните кнопку **Добавить пользователя или группу** и добавьте любые учетные записи пользователя, которые использовались для резервного копирования.  
   
-5.  Нажмите кнопку **применить**и закройте все `Local Security Policy` диалоговым окнам.  
+5.  Нажмите кнопку **применить**, а затем закройте все `Local Security Policy` диалоговым окнам.  
   
 ### <a name="security-considerations"></a>Соображения безопасности  
  Поскольку удаленное содержимое диска перезаписывается только по мере записи новых данных в файлы, доступ к удаленному содержимому может получить неавторизованный участник. По мере подключения файла базы данных к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]угроза раскрытия сведений уменьшается благодаря списку управления доступом на уровне пользователей (DACL) в файле. DACL разрешает доступ к файлу только учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и локальному администратору. Однако при отсоединении файла доступ к нему может получить пользователь или служба, не обладающие правом SE_MANAGE_VOLUME_NAME. Аналогичная угроза существует при резервном копировании базы данных. Удаленное содержимое может стать доступным неавторизованному пользователю или службе, если файл резервного копирования не защищен соответствующим DACL.  

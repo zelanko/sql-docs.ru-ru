@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 31c3d3bdcfc2a986fc62ba32e2df443d74d7a8fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c35cc475af0b083ce8f4a0f6afcb0c654b9bc266
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165005"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Включение задачи «Профилирование данных» в рабочий процесс пакета
   Профилирование и очистка данных на ранних стадиях не подходят для автоматизации. В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]выходные данные задачи профилирования данных обычно требуют визуального анализа и вмешательства человека, чтобы определить, являются ли зафиксированные нарушения реальными. Для очистки данных, даже после обнаружения проблем с их качеством, нужен хорошо продуманный план.  
@@ -272,9 +272,9 @@ ms.locfileid: "36087910"
   
 -   Вызовите `LoadXml` метод `XmlDocument` вместо класса `Load` метод.  
   
--   В редакторе сценариев задач, добавьте имя переменной пакета, содержащей выход профиля в задачу `ReadOnlyVariables` списка.  
+-   В редакторе задачи скрипта, добавьте имя переменной пакета, содержащей выход профиля, в задачу `ReadOnlyVariables` списка.  
   
--   Передайте строковое значение переменной, чтобы `LoadXML` метода, как показано в следующем примере кода. (В данном примере в качестве имени переменной пакета, содержащей выход задачи профилирования, используется «ProfileOutput».)  
+-   Передайте строковое значение переменной, которую `LoadXML` метод, как показано в следующем примере кода. (В данном примере в качестве имени переменной пакета, содержащей выход задачи профилирования, используется «ProfileOutput».)  
   
     ```vb  
     Dim outputString As String  

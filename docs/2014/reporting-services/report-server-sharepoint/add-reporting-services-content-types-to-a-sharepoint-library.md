@@ -1,5 +1,5 @@
 ---
-title: Добавить веб-части средства просмотра отчетов в веб-страницы (службы Reporting Services в режиме интеграции с SharePoint) | Документы Microsoft
+title: Добавление веб-части средства просмотра отчетов на веб-страницу (службы Reporting Services в режиме интеграции с SharePoint) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1c6e7c2900595c99518f5ea43aa298a37f3bc363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c351c37c9666c3b0f5723fa8ea049efe788e6a02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172055"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>добавить на веб-страницу веб-часть средства просмотра отчетов (службы Reporting Services в режиме интеграции с SharePoint)
   Веб-часть «Средство просмотра отчетов» может применяться для просмотра отчетов, запускаемых на сервере отчетов, настроенном для работы в режиме интеграции с SharePoint. Она позволяет отображать файлы определения отчетов (RDL), созданные в построителе отчетов или конструкторе отчетов и переданные в библиотеку.  
@@ -63,6 +63,6 @@ ms.locfileid: "36094738"
  [Веб-части средства просмотра отчетов на сайте SharePoint](../report-viewer-web-part-on-a-sharepoint-site.md)   
  [Настройка веб-части средства просмотра отчетов](../customize-the-report-viewer-web-part.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Установка или удаление Reporting Services для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [Установка или удаление Reporting Services надстройки для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

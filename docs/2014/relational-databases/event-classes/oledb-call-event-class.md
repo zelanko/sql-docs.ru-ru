@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB Call event class
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98ee5b7ecc2f2705278211df9432db1020b224bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a068ccc8c24d8dc75fd0ec35b7b99adb4d6d875a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203534"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call, класс событий
   События класса событий **OLEDB Call** происходят, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запрашивает распределенные запросы и удаленные хранимые процедуры у поставщика OLE DB.  
@@ -55,7 +55,7 @@ ms.locfileid: "36087865"
 |NTUserName|`nvarchar`|Имя пользователя Windows.|6|Да|  
 |ProviderName|`nvarchar`|Имя поставщика OLE DB.|46|Да|  
 |RequestID|`Int`|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|SessionLoginName|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием имени Имя_входа1 и выполнении инструкции под именем Имя_входа2, `SessionLoginName` выводит значение Имя_входа1 и `LoginName` Имя_входа2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
+|SessionLoginName|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Имя_входа1 и выполнении инструкции под именем Имя_входа2 в столбце `SessionLoginName` выводит значение Имя_входа1 и `LoginName` Имя_входа2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|`Int`|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|`datetime`|Время начала события, если оно известно.|14|Да|  
 |TextData|`nvarchar`|Параметры, которые отправляются и принимаются в вызове OLE DB.|1|Нет|  

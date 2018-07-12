@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 на платформе .NET Framework поддержки | Документы Microsoft
+title: Поддержка SQLXML 4.0 .NET Framework | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - .NET Framework [SQLXML]
 ms.assetid: c18cf801-f893-4fbc-8e2b-c563f6108acf
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f760815c90aadd048553223b121b59ace4c8a722
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aff4606952d56a95194dd5b6076ecb877fa1253f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229654"
 ---
 # <a name="sqlxml-40-net-framework-support"></a>Поддержка SQLXML 4.0 на платформе .NET Framework
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 поддерживает функции для создания приложений, которые обращаются к XML-данным в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], переводят данные в среду [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, обрабатывают данные и отправляют обновления назад в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В данном разделе описываются функции поддержки платформы .NET Framework и приводятся примеры их использования.  

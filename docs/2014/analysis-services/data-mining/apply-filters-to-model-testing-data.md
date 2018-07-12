@@ -1,5 +1,5 @@
 ---
-title: Применение фильтров к модели проверочных данных | Документы Microsoft
+title: Применение фильтров к модели проверочных данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - input row filtering [SQL Server]
 - filtering input rows [Analysis Services]
 - Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa35fdc19ffca67cf82f2f4b2dfa468131dd97d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f81b15b5fa36913a54e6529602d903ede426addf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153285"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Применение фильтров к данным проверки модели
   Задавая внешний источник данных для использования при тестировании модели, можно при необходимости применить фильтр для ограничения входных данных. Например, необходимо проверить модель конкретно по прогнозам для клиентов с определенным уровнем дохода.  
   
- Например в AdventureWorks сценария прямой почтовой рассылки, можно создать критерий фильтра, аналогичный приведенному ниже на ProspectiveBuyer, который является таблицей, содержащей проверочных данных, и ограничить проверочные варианты по уровню дохода:  
+ Например в сценарии целевой рассылки AdventureWorks, можно создать критерий фильтра, аналогичный приведенному ниже в ProspectiveBuyer, который является таблицей с проверочными данными, и ограничить проверочные варианты по уровню дохода:  
   
  `[YearlyIncome] = '50000'`  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36095324"
   
 ## <a name="see-also"></a>См. также  
  [Выбрать и сопоставить данные проверки модели](choose-and-map-model-testing-data.md)   
- [С помощью вложенной таблицы данных в качестве входных для диаграммы точности](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [Использование данных вложенной таблицы в качестве входных данных для диаграммы точности](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [Выбор типа диаграммы точности и задание параметров диаграммы](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

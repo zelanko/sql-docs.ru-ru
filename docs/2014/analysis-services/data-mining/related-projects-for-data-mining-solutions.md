@@ -1,5 +1,5 @@
 ---
-title: Связанные проекты для решений интеллектуального анализа данных | Документы Microsoft
+title: Связанные проекты для решений интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8aff35ea528d42034a2cc48864d1b74c380ef297
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cdedfd113f3bb771ee18cc9fe3d45159e7a094df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179101"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Связанные проекты для решений интеллектуального анализа данных
   Для решения интеллектуального анализа данных требуется, как минимум, проект интеллектуального анализа данных, определяющий источники данных, представления источников данных, структуры и модели интеллектуального анализа данных. Однако, если модели интеллектуального анализа данных используются для каждодневного принятия решений, важно, чтобы интеллектуальный анализ данных интегрировался с другой частью решения для прогнозирующего анализа, включая следующие процессы и компоненты.  

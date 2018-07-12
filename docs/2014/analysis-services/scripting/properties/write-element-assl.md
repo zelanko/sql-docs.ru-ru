@@ -1,5 +1,5 @@
 ---
-title: Элемент Write (ASSL) | Документы Microsoft
+title: Элемент Write (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Write element
 ms.assetid: d8f7a367-d7bf-4b40-acb4-19c8bc8c6c20
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1fcc05df0f670deb737b70e0de276e698501c85b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0f275ecb6ca20d22cedb1aed214fb2d0f78479b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176191"
 ---
 # <a name="write-element-assl"></a>Элемент Write (ASSL)
-  Определяет, можно ли запись данных или метаданных для данного [CubeDimensionPermission](../data-type/permission-data-type-assl.md) или [разрешение](../data-type/permission-data-type-assl.md) элемента.  
+  Определяет, можно ли запись данных или метаданных для данного [CubeDimensionPermission](../data-type/permission-data-type-assl.md) или [разрешение](../data-type/permission-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -65,13 +65,13 @@ ms.locfileid: "36087936"
 |Значение|Описание|  
 |-----------|-----------------|  
 |*None*|Из родительского объекта запрещен доступ к данным и метаданным.|  
-|*Допускается*|Из родительского объекта разрешен доступ для записи данных и метаданных.|  
+|*Разрешено*|Из родительского объекта разрешен доступ для записи данных и метаданных.|  
   
 ## <a name="remarks"></a>Примечания  
- Элементы, соответствующие родителям элемента `Write` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.CubeDimensionPermission> и <xref:Microsoft.AnalysisServices.Permission>.  
+ Элементы, соответствующие родителям элемента `Write` в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.CubeDimensionPermission> и <xref:Microsoft.AnalysisServices.Permission>.  
   
 ## <a name="see-also"></a>См. также  
- [Куб элемент &#40;ASSL&#41;](../objects/cube-element-assl.md)   
+ [Элемент куба &#40;ASSL&#41;](../objects/cube-element-assl.md)   
  [Элемент измерения &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [Свойства &#40;ASSL&#41;](properties-assl.md)  
   

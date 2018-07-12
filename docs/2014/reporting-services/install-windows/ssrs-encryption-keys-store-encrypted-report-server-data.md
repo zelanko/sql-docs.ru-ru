@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - credentials [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8b3bcd87abe4efd22f8330c8b7dca7d111fb93f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58b9dbd53149ca710753e8a355d379b21e1c7b5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186081"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] хранят зашифрованные значения в базе данных сервера отчетов и в файлах конфигурации. Зашифрованные значения — это главным образом учетные данные, используемые при подключении к внешним источникам данных, содержащим данные для отчетов. В данном разделе содержатся сведения о шифруемых значениях, о возможностях шифрования в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и о других важных типах конфиденциальных данных.  
@@ -40,7 +40,7 @@ ms.locfileid: "36087328"
   
 -   Сохраненные учетные данные, используемые сервером отчетов для подключения к внешним источникам данных, предоставляющим данные для отчетов.  
   
-     Эти значения определяются во время настройки источника данных для отчета, затем сохраняются в зашифрованном виде в базе данных сервера отчетов. Для шифрования и расшифровки этих данных сервер отчетов использует симметричный ключ. Дополнительные сведения о сохраненных учетных данных см. в разделе [задание учетных данных и сведений о соединении для источников данных отчета](../../integration-services/connection-manager/data-sources.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации.  
+     Эти значения определяются во время настройки источника данных для отчета, затем сохраняются в зашифрованном виде в базе данных сервера отчетов. Для шифрования и расшифровки этих данных сервер отчетов использует симметричный ключ. Дополнительные сведения о сохраненных учетных данных см. в разделе [задание учетных данных и сведений о соединении для источников данных отчета](../../integration-services/connection-manager/data-sources.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 -   Автоматическая учетная запись, используемая сервером отчетов для подключения к другим компьютерам с целью получения файлов внешних изображений или внешних данных, используемых в отчетах.  
   

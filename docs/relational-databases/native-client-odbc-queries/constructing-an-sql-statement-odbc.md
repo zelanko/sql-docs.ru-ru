@@ -1,12 +1,12 @@
 ---
-title: Конструирование инструкций SQL (ODBC) | Документы Microsoft
+title: Конструирование инструкций SQL (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ae5e68251e9e1d0aa08576c87a7d79a49cbaf1a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8f564842584763aa7dc516ef1fe8ba9bb45e707b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698085"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412693"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>Конструирование инструкций SQL (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "35698085"
   
      Инструкции SQL, сформированные во время выполнения, дают возможность пользователю приспосабливать инструкцию, используя широко распространенные предложения, например SELECT, WHERE и ORDER BY. Это включает нерегламентированные запросы, вводимые пользователем.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC клиента выполняет синтаксический анализ инструкции SQL только для синтаксиса ODBC и ISO, не поддерживаемого непосредственно компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)], который драйвер преобразует в [!INCLUDE[tsql](../../includes/tsql-md.md)]. Весь остальной синтаксис SQL передается [!INCLUDE[ssDE](../../includes/ssde-md.md)] без изменений, где [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет его допустимость [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Такой подход имеет следующие два преимущества.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC клиента выполняет синтаксический анализ инструкции SQL только для синтаксиса ODBC и ISO, не поддерживаемого непосредственно компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)], который драйвер преобразует в [!INCLUDE[tsql](../../includes/tsql-md.md)]. Весь остальной синтаксис SQL передается [!INCLUDE[ssDE](../../includes/ssde-md.md)] без изменений, где [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определить, является ли допустимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Такой подход имеет следующие два преимущества.  
   
 -   Сокращение издержек  
   
@@ -47,7 +47,7 @@ ms.locfileid: "35698085"
   
 -   Гибкость  
   
-     Программисты могут адаптировать переносимость своих приложений. Чтобы расширить переносимость для различных баз данных, используется прежде всего синтаксис ODBC и ISO. Для расширений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется соответствующий синтаксис [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC для собственного клиента поддерживает полную [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксиса, поэтому приложения на основе ODBC могут воспользоваться преимуществами всех функций в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Программисты могут адаптировать переносимость своих приложений. Чтобы расширить переносимость для различных баз данных, используется прежде всего синтаксис ODBC и ISO. Для расширений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется соответствующий синтаксис [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC для собственного клиента поддерживает полную [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксис, поэтому приложения на основе ODBC можно воспользоваться преимуществами всех функций в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Список столбцов в инструкции SELECT должен содержать только столбцы, необходимые для выполнения текущей задачи. Это не только сокращает объем данных, отправляемых по сети, но и снижает эффект изменений в базе данных на приложение. Если приложение не ссылается на столбец в таблице, то оно не затрагивается никакими изменениями, сделанными в этом столбце.  
   

@@ -1,5 +1,5 @@
 ---
-title: Тип данных DSVTableBinding (ASSL) | Документы Microsoft
+title: Тип данных DSVTableBinding (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DSVTableBinding data type
 ms.assetid: 149e753f-6218-4805-9223-7155b6827e64
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 75a84b2709d2c85ac0dfa8ce4538406c3daa7a61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d4748adb2ca6b26c42bee9b0ba5ea502d973679
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195994"
 ---
 # <a name="dsvtablebinding-data-type-assl"></a>Тип данных DSVTableBinding (ASSL)
-  Определяет производный тип данных, представляющий привязку таблицы и [DataSourceView](../objects/datasourceview-element-assl.md) элемента.  
+  Определяет производный тип данных, представляющий привязку между таблицей и [DataSourceView](../objects/datasourceview-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -59,16 +59,16 @@ ms.locfileid: "36087949"
 |------------------|-------------|  
 |Родительские элементы|None|  
 |Дочерние элементы|[DataSourceViewID](../properties/id-element-assl.md), [TableID](../properties/tableid-element-assl.md)|  
-|Производные элементы|В разделе [привязки](binding-data-type-assl.md)|  
+|Производные элементы|См. в разделе [привязки](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о `Binding` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) `Binding` тип и иерархию наследования `Binding` типов, в разделе [привязки](binding-data-type-assl.md) элемент.  
+ Дополнительные сведения о `Binding` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) типа `Binding` тип и иерархию наследования `Binding` типов, см. в разделе [привязки](binding-data-type-assl.md) элемент.  
   
- Обзор привязок данных в ASSL см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Обзор привязки данных в языке ASSL, см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.DSVTableBinding>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.DSVTableBinding>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

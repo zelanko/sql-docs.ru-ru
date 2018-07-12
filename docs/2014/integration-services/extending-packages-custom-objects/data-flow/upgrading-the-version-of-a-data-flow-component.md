@@ -19,13 +19,13 @@ ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
 caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 59d85df4e1e9501f4d75a0c5f3fa6813b564525c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 348508258476712a1197281260db402d4412ae81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193874"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>Обновление версии компонента потока данных
   Пакеты, созданные с устаревшей версией компонента, могут содержать недопустимые метаданные, например, пользовательские свойства, применение которых было изменено в более новых версиях компонента. Можно переопределить метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> базового класса <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>, чтобы обеспечить обновление метаданных, которые были сохранены в ранее созданных пакетах, для соответствия текущим свойствам компонента.  
@@ -184,6 +184,6 @@ public class PerformUpgradeCS :
 }  
 ```  
   
-![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться установка последних со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services в MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
   

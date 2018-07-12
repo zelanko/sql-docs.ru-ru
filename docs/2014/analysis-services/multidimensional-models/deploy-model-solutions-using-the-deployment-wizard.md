@@ -1,5 +1,5 @@
 ---
-title: Развертывание решений модели с помощью мастера развертывания | Документы Microsoft
+title: Развертывание решений модели с помощью мастера развертывания | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services Deployment Wizard
 - deploying [Analysis Services], Analysis Services Deployment Wizard
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Analysis Services Deployment Wizard, about Analysis Services Deployment Wizard
 ms.assetid: ff711e8e-971c-43ba-b479-effc034af4a4
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c5540993d743282801a684c21520069a3fa4313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4c8544aaa91cb9dcfcd248e70a4debd766eb1f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192464"
 ---
 # <a name="deploy-model-solutions-using-the-deployment-wizard"></a>Развертывание решений модели с использованием мастера развертывания
   Мастер развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] использует выходные XML-файлы, создаваемые в проекте служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , в качестве входных. Эти входные файлы можно легко изменить для настройки развертывания проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Сформированный скрипт развертывания можно затем либо сразу запустить, либо сохранить и запустить позднее.  
@@ -44,7 +44,7 @@ ms.locfileid: "36094654"
 |[Основные сведения о скрипте развертывания служб Analysis Services](understanding-the-analysis-services-deployment-script.md)|Содержит описание скрипта развертывания и его выполнения.|  
   
 ## <a name="see-also"></a>См. также  
- [Развертывание решений модели с использованием XML для Аналитики](deploy-model-solutions-using-xmla.md)   
+ [Развертывание решений модели с помощью XMLA](deploy-model-solutions-using-xmla.md)   
  [Синхронизация баз данных Analysis Services](synchronize-analysis-services-databases.md)   
  [Основные сведения о входных файлах, применяемых для создания скрипта развертывания](deployment-script-files-input-used-to-create-deployment-script.md)   
  [Развертывание решений моделей с использованием программы развертывания](deploy-model-solutions-with-the-deployment-utility.md)  

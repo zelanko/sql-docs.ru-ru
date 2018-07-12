@@ -1,12 +1,12 @@
 ---
-title: Получение и обновление наборов строк (ODBC) | Документы Microsoft
+title: Выбор и обновление наборов строк (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 21332634d99b44ba974f5f70fa77d0fafb1ab68e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 364647bdd5fe1d5c28a2dce9d1a105d908470d76
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697185"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413103"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>Выбор и обновление наборов строк (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,15 +30,15 @@ ms.locfileid: "35697185"
     
 ### <a name="to-fetch-and-update-rowsets"></a>Получение и обновление наборов строк  
   
-1.  При необходимости вызовите [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) с SQL_ROW_ARRAY_SIZE, чтобы изменить число строк (R) в наборе строк.  
+1.  Можно также вызвать [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) с SQL_ROW_ARRAY_SIZE, чтобы изменить число строк (R) в наборе строк.  
   
-2.  Вызовите [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) или [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) для получения набора строк.  
+2.  Вызовите [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) или [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) Чтобы получить набор строк.  
   
 3.  Если используются связанные столбцы, используйте для набора строк значения данных и длины данных, доступные теперь в буферах связанных столбцов.  
   
      Если используются несвязанные столбцы, вызовите для каждой строки [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) с параметром SQL_POSITION, чтобы установить позицию курсора, а затем выполните следующие действия для каждого несвязанного столбца.  
   
-    -   Вызовите [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) один или несколько раз, чтобы получить данные для несвязанных столбцов после последнего связанного столбца в наборе строк. Вызовы [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) должны происходить в порядке возрастания номеров столбцов.  
+    -   Вызовите [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) один или несколько раз, чтобы получить данные для несвязанных столбцов после последнего привязанного столбца набора строк. Вызовы [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) должны происходить в порядке возрастания номеров столбцов.  
   
     -   Получение данных из столбца типа text или image производится многократным вызовом функции [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "35697185"
   
      Если для операций обновления и удаления используются текстовые столбцы или столбцы изображений, получающие данные во время выполнения, обработайте их.  
   
-6.  При необходимости выполните позиционированные инструкции UPDATE или DELETE, задав имя курсора (доступные из [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md)) и используя дескриптор другой инструкции на том же соединении.  
+6.  При необходимости выполните позиционированные инструкции UPDATE или DELETE, задав имя курсора (доступные из [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md)) и используя дескриптор другой инструкции относительно одного подключения.  
   
 ## <a name="see-also"></a>См. также  
  [Использование инструкций по курсорам &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  

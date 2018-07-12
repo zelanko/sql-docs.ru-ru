@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report server configuration
 - report servers [Reporting Services], configuring
@@ -16,13 +16,13 @@ ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0ec1501c32505b760fba2ec88e21140de1cf0211
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f7e1231111f795383748438730f2652ac8d9056
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200794"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Настройка сервера отчетов (службы Reporting Services в собственном режиме)
   В зависимости от параметров, выбранных во время установки, сервер отчетов может потребовать дополнительной настройки перед началом его использования. Как минимум настройка сервера отчетов включает следующие действия.  
@@ -56,14 +56,14 @@ ms.locfileid: "36088017"
 ## <a name="next-steps"></a>Следующие шаги  
  Чтобы завершить развертывание, необходимо настроить диспетчер отчетов или интеграцию с SharePoint. Дополнительные сведения см. в разделе [Настройка диспетчера отчетов (собственный режим)](configure-web-portal.md).  
   
- Если включен брандмауэр Windows, то порт, на который настроен сервер отчетов, скорее всего, закрыт. Одним из индикаторов того, что порт закрыт, является пустая страница при попытке открыть диспетчер отчетов с удаленного клиентского компьютера. Сведения о настройке брандмауэра см. в разделе [настроить брандмауэр для доступа к серверу отчетов](configure-a-firewall-for-report-server-access.md).  
+ Если включен брандмауэр Windows, то порт, на который настроен сервер отчетов, скорее всего, закрыт. Одним из индикаторов того, что порт закрыт, является пустая страница при попытке открыть диспетчер отчетов с удаленного клиентского компьютера. Сведения о настройке брандмауэра см. в разделе [Настройка брандмауэра для доступа к серверу отчетов](configure-a-firewall-for-report-server-access.md).  
   
  Если используется Windows Vista или Windows Server 2008, то перед локальным открытием диспетчера отчетов необходимо выполнить дополнительные шаги. Дополнительные сведения см. в статье [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
  Проверьте правильность установки, выполнив создание папки, передачу элементов и запуск отчетов. Следуйте инструкциям в [проверка установки служб Reporting Services](../install-windows/verify-a-reporting-services-installation.md) для проверки установки.  
   
 ## <a name="see-also"></a>См. также  
- [Управление сервером отчетов служб Reporting собственный режим служб](manage-a-reporting-services-native-mode-report-server.md)   
+ [Управление сервером отчетов служб собственный режим Reporting Services](manage-a-reporting-services-native-mode-report-server.md)   
  [Настройка брандмауэра для доступа к серверу отчетов](configure-a-firewall-for-report-server-access.md)   
  [Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (службы SSRS)](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
  [Настройка сервера отчетов для удаленного администрирования](configure-a-report-server-for-remote-administration.md)   

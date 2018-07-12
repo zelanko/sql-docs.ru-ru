@@ -1,12 +1,12 @@
 ---
-title: Использование привязки наборов строк (ODBC) | Документы Microsoft
+title: Использование привязки наборов строк (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ef6f3651cb1cb1c80247f5853b4d4bd05bc13fc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9e67107770c63eb1bb7ab941c3443ca5cbaa697b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694445"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415553"
 ---
 # <a name="use-rowset-binding-odbc"></a>Использование привязки наборов строк (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "35694445"
   
 3.  Выполните инструкцию.  
   
-4.  Каждый вызов [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) или [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) извлекает строки R и передача данных в привязанные столбцы.  
+4.  Каждый вызов [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) или [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) строк, равного R и передача данных в привязанные столбцы.  
   
 ### <a name="to-use-row-wise-binding"></a>Использование привязки на уровне строки  
   
@@ -74,7 +74,7 @@ ms.locfileid: "35694445"
   
 4.  Выполните инструкцию.  
   
-5.  Каждый вызов [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) или [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) извлекает строки R и передача данных в привязанные столбцы.  
+5.  Каждый вызов [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) или [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) строк, равного R и передача данных в привязанные столбцы.  
   
 ## <a name="see-also"></a>См. также  
  [Использование инструкций по курсорам &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   

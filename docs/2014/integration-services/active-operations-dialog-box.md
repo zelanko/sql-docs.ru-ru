@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно «активные операции» | Документы Microsoft
+title: Диалоговое окно «активные операции» | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isoperations.executions.f1
 - sql12.ssis.ssms.isoperations.general.f1
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: adf25cd2194e1a02877c38a15d81d8697427ad76
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b3c9105d6649443d8ec2d3425f86d609dfe6a2b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095051"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151125"
 ---
 # <a name="active-operations-dialog-box"></a>Диалоговое окно «Активные операции»
   Воспользуйтесь диалоговым окном **Активные операции** , чтобы просмотреть состояние выполняемых в настоящий момент операций [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сервере служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , таких как развертывание, проверка и выполнение пакетов. Эти данные хранятся в каталоге SSISDB.  
@@ -47,7 +47,7 @@ ms.locfileid: "36095051"
   
 ### <a name="options"></a>Параметры  
  **Тип**  
- Задает тип операции. Ниже приведены возможные значения для **тип** поля и соответствующие значения в столбце operations_type представления Transact-SQL `catalog.operations` представления.  
+ Задает тип операции. Ниже приведены возможные значения для **тип** поля и соответствующие значения в столбце operations_type Transact-SQL `catalog.operations` представления.  
   
 |||  
 |-|-|  

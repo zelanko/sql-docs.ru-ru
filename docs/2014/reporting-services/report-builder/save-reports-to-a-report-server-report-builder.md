@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 13849de66d802388d31f69e05efde2ae115b9234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a159751c90db011ef856f57c8611e121a0977d67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153855"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Сохранение отчетов на сервере отчетов (построитель отчетов)
   В построителе отчетов можно сохранить определение отчета на сервере отчетов (также называется публикацией отчета). Если отчет сохранен на сервере отчетов, его могут просматривать другие пользователи. При каждом запуске опубликованного отчета будут получены самые последние данные. Чтобы сохранить статическую копию отчета, готового к просмотру, экспортируйте отчет в другой формат файла и сохраните его или используйте функцию журнала отчета, чтобы сохранить версию отчета, готового к просмотру.  
@@ -54,7 +54,7 @@ ms.locfileid: "36095413"
   
 ## <a name="see-also"></a>См. также  
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Экспорт отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Сохранение отчетов &#40;построитель отчетов&#41;](saving-reports-report-builder.md)   
  [Экспорт отчета в файл другого типа (построитель отчетов и службы SSRS)](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   

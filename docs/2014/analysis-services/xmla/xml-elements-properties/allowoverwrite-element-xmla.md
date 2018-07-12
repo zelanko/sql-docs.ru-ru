@@ -1,5 +1,5 @@
 ---
-title: Элемент AllowOverwrite (XML для Аналитики) | Документы Microsoft
+title: Элемент AllowOverwrite (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - AllowOverwrite element
 ms.assetid: e7e92481-5f29-47f2-9efd-4e5e60c002bb
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b34b0becd78adca99e4052e142fc696c155f6e20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0ad153d33b57f7fea763666d19e8e0b44fa155c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190904"
 ---
 # <a name="allowoverwrite-element-xmla"></a>Элемент AllowOverwrite (XML для аналитики)
-  Определяет ли родительский [резервного копирования](../xml-elements-commands/backup-element-xmla.md) или [восстановить](../xml-elements-commands/restore-element-xmla.md) команда пытается перезаписывать целевой файл или базу данных.  
+  Определяет ли родительский [резервного копирования](../xml-elements-commands/backup-element-xmla.md) или [восстановить](../xml-elements-commands/restore-element-xmla.md) предпринимается попытка перезаписать целевой файл или базу данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36087737"
 ## <a name="remarks"></a>Примечания  
  Для команд `Backup` элемент `AllowOverwrite` определяет, будут ли они перезаписывать файл резервной копии, заданный в элементе `File`.  
   
- Для `Restore` элементов, `AllowOverwrite` определяет, может ли команда перезаписать [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных, указанной в `DatabaseName` элемент.  
+ Для `Restore` элементов, `AllowOverwrite` элемент определяет, может ли команда перезаписать [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных, указанной в `DatabaseName` элемент.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент DatabaseName &#40;XML для Аналитики&#41;](name-element-xmla.md)   

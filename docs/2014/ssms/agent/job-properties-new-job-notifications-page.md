@@ -1,5 +1,5 @@
 ---
-title: 'Свойства задания: Новое задание (страница «уведомления») | Документы Microsoft'
+title: 'Свойства задания: Новое задание (страница "уведомления") | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.notifications.f1
 ms.assetid: ed393cbd-4496-4399-a177-e5baa92fb689
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 39dd7fe869b89b7793e2128c619beb4ec9c36a84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 170456c9aeacb804a02d0e7450647b67453e635f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196774"
 ---
-# <a name="job-properties-new-job-notifications-page"></a>Свойства задания: Новое задание (страница «уведомления»)
+# <a name="job-properties-new-job-notifications-page"></a>Свойства задания: Новое задание (страница "уведомления")
   Используйте эту страницу для установки действий агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполняемых после завершения задания.  
   
 ## <a name="options"></a>Параметры  

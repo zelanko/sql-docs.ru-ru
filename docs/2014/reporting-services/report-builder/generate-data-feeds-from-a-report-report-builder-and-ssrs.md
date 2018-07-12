@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 62e0dead34079abbceda90dabca6f44c7dbd5126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4ee1402202e08ab4ba718238b454f5eb4e548118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210834"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Формирование веб-каналов данных из отчета (построитель отчетов и службы SSRS)
-  Можно формировать Atom совместимые потоки данных с помощью отчетов и затем использовать потоки данных в приложениях, таких как [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] клиента, потребляющего потоки данных.  
+  Можно формировать Atom совместимые потоки данных из отчетов и затем использовать эти потоки данных в приложениях, таких как [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] клиента, который может использовать потоки данных.  
   
  Модуль Atom подготовки отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] формирует сервисный документ канала Atom, в котором перечислены потоки данных, доступные в отчете. Этот документ содержит сведения по меньшей мере об одном потоке данных для каждой области данных отчета. В зависимости от типа области данных и самих данных, которые отображает эта область, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут сформировать из нее несколько потоков данных.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "36087799"
 6.  При необходимости откройте файл ATOM в браузере либо в текстовом или XML-редакторе.  
   
 ## <a name="see-also"></a>См. также  
- [Экспорт отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
+ [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   
   

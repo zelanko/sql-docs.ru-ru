@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d947f43f2f08c38a01102971dd62581affc80b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 0b96ae16398f9ed8fd3ec6c62c61451966b458f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212704"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Система отслеживания измененных данных и другие функции SQL Server
   В данном разделе описывается взаимодействие следующих функций и системы отслеживания измененных данных.  
@@ -51,7 +51,7 @@ ms.locfileid: "36087090"
  Сведения о зеркальном отображении базы данных см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 ##  <a name="TransReplication"></a> Transactional Replication  
- Система отслеживания измененных данных и репликация транзакций могут сосуществовать в одной базе данных, но если обе эти функции были включены, то заполнение таблиц изменений будет выполняться другим способом. Для считывания изменений из журнала транзакций система отслеживания измененных данных и репликация транзакций всегда используют одну и ту же процедуру [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql). При включении отслеживания измененных данных сам по себе, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вызывает задание агента `sp_replcmds`. Если обе эти функции включены в той же базе данных, агент чтения журнала вызывает `sp_replcmds`. Агент заполняет как таблицы изменений, так и таблицы базы данных распространителя. Дополнительные сведения см. в статье [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
+ Система отслеживания измененных данных и репликация транзакций могут сосуществовать в одной базе данных, но если обе эти функции были включены, то заполнение таблиц изменений будет выполняться другим способом. Для считывания изменений из журнала транзакций система отслеживания измененных данных и репликация транзакций всегда используют одну и ту же процедуру [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql). При включении отслеживания измененных данных сама по себе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вызывает задание агента `sp_replcmds`. Если в той же базе данных включены обе эти функции, агент чтения журнала вызывает `sp_replcmds`. Агент заполняет как таблицы изменений, так и таблицы базы данных распространителя. Дополнительные сведения см. в статье [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
   
  Рассмотрим случай, когда для базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] была включена система отслеживания измененных данных и две таблицы были включены для отслеживания. Для заполнения изменение таблиц, задание отслеживания вызывает `sp_replcmds`. База данных активируется для репликации транзакций, после этого создается публикация. Для базы данных создается агент чтения журнала, задание отслеживания удаляется. Агент чтения журнала продолжает просматривать журнал, начиная с последнего регистрационного номера транзакции, зафиксированного в таблице изменений. Это обеспечивает согласованность данных в таблицах изменений. Если в данной базе данных будет отключена репликация транзакций, то агент чтения журнала будет удален, а задание отслеживания будет создано повторно.  
   

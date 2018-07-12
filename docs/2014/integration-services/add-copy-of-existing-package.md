@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.addcopyexistingpackage.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 89e8479e2bb1036f4a42cec80e12912a79c61a87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22aad56f944bc0b9c605436d8d0ab5deba0a803d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156685"
 ---
 # <a name="add-copy-of-existing-package"></a>Добавление копии существующего пакета
   Используйте диалоговое окно **Добавление копии существующего пакета** для добавления копии пакета из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], файловой системы или хранилища пакетов служб SSIS к проекту служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

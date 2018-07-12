@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9096317e6ab364ae440ad921045d5bed38083af2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 616ca1e1984c36c2a20814367b3bd030825f3c0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181531"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Создание управляемой данными подписки (учебник по службам SSRS)
   Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляют управляемые данными подписки, позволяющие настроить распространение отчета на основе динамических данных подписчиков. Управляемые данными подписки предназначены для следующих типов сценариев:  
@@ -49,7 +49,7 @@ ms.locfileid: "36087562"
 ## <a name="requirements"></a>Требования  
  Управляемые данными подписки обычно создаются и поддерживаются администраторами сервера отчетов. Для создания управляемых данными подписок требуется опыт в построении запросов, знание источников данных, которые содержат данные подписчиков, а также повышенные разрешения на доступ к серверу отчетов.  
   
- Этого учебника используется отчет, созданный в учебнике [создание простого табличного отчета &#40;учебник по службам SSRS&#41; ](create-a-basic-table-report-ssrs-tutorial.md) и данные из [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
+ Учебника используется отчет, созданный в учебнике [создание простого табличного отчета &#40;учебник по службам SSRS&#41; ](create-a-basic-table-report-ssrs-tutorial.md) и данные из [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
   
  Для работы с этим учебником в системе должны быть установлены следующие компоненты:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36087562"
   
 -   Должна быть запущена служба агента SQL Server.  
   
--   Отчет, который включает параметры. Этот учебник основывается на образце отчета, `Sales Orders` создается с помощью учебника [создание простого табличного отчета &#40;учебник по службам SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
+-   Отчет, который включает параметры. Этот учебник основывается на образце отчета, `Sales Orders` создаются с помощью учебника [создание простого табличного отчета &#40;учебник по службам SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
   
 -   Образец базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)], который предоставляет данные для образца отчета.  
   

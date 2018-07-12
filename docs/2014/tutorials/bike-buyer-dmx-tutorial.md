@@ -1,5 +1,5 @@
 ---
-title: Bike Buyer расширений интеллектуального анализа данных учебника | Документы Microsoft
+title: Bike Buyer расширений интеллектуального анализа данных учебника | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
@@ -19,13 +19,13 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: fc1676f55d2d920c90d56f552973cf7e2a1d3942
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 788cdb0ccd3f8093972c45db1463412c5f41a765
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187671"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Учебник по расширениям интеллектуального анализа данных «Покупатель велосипеда»
   В этом учебнике рассматривается, как создавать, обучать и исследовать модели интеллектуального анализа данных с помощью языка запросов расширений интеллектуального анализа данных. Затем создаются прогнозы на основе моделей интеллектуального анализа данных, которые позволяют определить, купит ли заказчик велосипед.  
@@ -43,7 +43,7 @@ ms.locfileid: "36312962"
   
  Кроме того, маркетинговому отделу потребовалась возможность группировки существующих заказчиков по категориям на основе таких характеристик, как место жительства, количество детей, расстояние до работы. Возможно, эти кластеры могли бы помочь выявить особые категории заказчиков. Для этого потребуется дополнительная модель интеллектуального анализа данных.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] предоставляет несколько средств, которые можно использовать для выполнения этих задач.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] предоставляют ряд средств, которые могут использоваться для выполнения этих задач.  
   
 -   Язык DMX-запросов  
   
@@ -51,9 +51,9 @@ ms.locfileid: "36312962"
   
 -   Редактор запросов в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
   
- Расширения интеллектуального анализа данных представляют собой язык запросов, предоставляемый службами [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и используемый для создания и работы с моделями интеллектуального анализа данных. [!INCLUDE[msCoName](../includes/msconame-md.md)] Алгоритм дерева принятия решений создает модели, которые можно использовать для предсказания, купит ли кто-либо велосипед. Результирующая модель принимает в качестве входных данных отдельного заказчика или таблицу заказчиков. [!INCLUDE[msCoName](../includes/msconame-md.md)] Алгоритм кластеризации можно создать группы на основе общих характеристик заказчиков. Целью этого учебника является предоставление скриптов расширений интеллектуального анализа данных, которые используются в пользовательском приложении.   
+ Расширения интеллектуального анализа данных представляют собой язык запросов, предоставляемый службами [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и используемый для создания и работы с моделями интеллектуального анализа данных. [!INCLUDE[msCoName](../includes/msconame-md.md)] Алгоритм дерева принятия решений создает модели, которые можно использовать для предсказания, купит ли кто-либо велосипед. Результирующая модель принимает в качестве входных данных отдельного заказчика или таблицу заказчиков. [!INCLUDE[msCoName](../includes/msconame-md.md)] Алгоритм кластеризации можно создать группы заказчиков на основе общих характеристик. Целью этого учебника является предоставление скриптов расширений интеллектуального анализа данных, которые используются в пользовательском приложении.   
   
- **Дополнительные сведения:** [решения интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **Дополнительные сведения:** [решений интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>Структура и модели интеллектуального анализа данных  
  Перед созданием инструкций для расширения интеллектуального анализа данных важно понять, какие основные объекты служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] используются для создания моделей интеллектуального анализа данных. Структура интеллектуального анализа — это структура данных, определяющая домен данных, на основе которого строятся модели интеллектуального анализа. Одна структура интеллектуального анализа может содержать несколько моделей интеллектуального анализа данных, совместно использующих один домен. Модель интеллектуального анализа данных применяет алгоритм интеллектуального анализа к данным, представленным структурой интеллектуального анализа данных.  
@@ -78,7 +78,7 @@ ms.locfileid: "36312962"
   
  **Дополнительные сведения**  
   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; ссылки](/sql/dmx/data-mining-extensions-dmx-reference), [основные сведения о расширениях интеллектуального анализа данных инструкция Select](/sql/dmx/understanding-the-dmx-select-statement), [структуре и использовании прогнозирующих запросов расширений интеллектуального анализа данных](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; ссылку](/sql/dmx/data-mining-extensions-dmx-reference), [основные сведения о расширениях интеллектуального анализа данных инструкция "Select"](/sql/dmx/understanding-the-dmx-select-statement), [структура и методы использования прогнозирующих запросов расширений интеллектуального анализа данных](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>Обзор учебника  
  Учебник содержит следующие занятия:  
@@ -105,13 +105,13 @@ ms.locfileid: "36312962"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)], [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)], [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], или [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   База данных [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. В целях повышения безопасности образцы баз данных по умолчанию не установлены. Чтобы установить официальные образцы баз данных для [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], посетите [образцы баз данных SQL Microsoft](http://go.microsoft.com/fwlink/?LinkId=88417) и выберите базы данных, которые требуется установить...  
+-   База данных [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. В целях повышения безопасности образцы баз данных по умолчанию не установлены. Чтобы установить официальные образцы баз данных для [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], посетите [образцы баз данных SQL Microsoft](http://go.microsoft.com/fwlink/?LinkId=88417) странице и выбрать базы данных, которые вы хотите установить...  
   
 > [!NOTE]  
 >  При просмотре учебников рекомендуется добавить **следующий раздел** и **предыдущий раздел** кнопок панели инструментов средства просмотра документов.  
   
 ## <a name="see-also"></a>См. также  
- [Учебник расширений интеллектуального анализа данных «Потребительская корзина»](../../2014/tutorials/market-basket-dmx-tutorial.md)   
+ [Учебник расширений интеллектуального анализа данных потребительской корзины](../../2014/tutorials/market-basket-dmx-tutorial.md)   
  [Учебник по основам интеллектуального анализа данных](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
   

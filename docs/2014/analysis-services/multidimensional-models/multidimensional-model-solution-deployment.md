@@ -1,5 +1,5 @@
 ---
-title: Развертывание решений многомерных моделей | Документы Microsoft
+title: Развертывание решений многомерных моделей | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, planning
 - deploying [Analysis Services]
 - deploying [Analysis Services], planning
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc0a5ef8d41ebc37beee73b83fa27eaa5a7d6358
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 781bbeed98772266d4ea9c228c42426df424fe1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222224"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Развертывание решений многомерных моделей
   После завершения разработки проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базу данных можно развернуть на сервере служб Analysis Services. Службы Analysis Services предоставляют шесть возможных методов развертывания, которые могут быть использованы для перемещения базы данных на тестовый или рабочий сервер. Ниже эти методы перечислены в порядке приоритетности: автоматизация объектов AMO, XML для аналитики, мастер развертывания, программа развертывания, мастер синхронизации, резервное копирование и восстановление.  
@@ -55,10 +55,10 @@ ms.locfileid: "36087009"
 |Какое оборудование и программные ресурсы требуются для этого решения?|[Требования и вопросы, связанные с развертыванием служб Analysis Services](requirements-and-considerations-for-analysis-services-deployment.md)|  
 |Как вы будете развертывать дополнительные объекты, выходящие за рамки проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , такие как пакеты, отчеты и схемы реляционных баз данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ?||  
 |Как загружать и обновлять данные в развернутой базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?<br /><br /> Как вы будете обновлять метаданные (например, вычисления) в развернутой базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Методы развертывания](#bkmk_meth) в этом разделе.|  
-|Нужно ли предоставлять пользователям доступ к данным служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] через Интернет?|[Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services &#40;IIS&#41; 8.0](../instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
+|Нужно ли предоставлять пользователям доступ к данным служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] через Интернет?|[Настройка HTTP-доступа к службам Analysis Services в службах IIS &#40;IIS&#41; 8.0](../instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
 |Нужно ли предоставлять запросам возможность непрерывного доступа к данным служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Требования и вопросы, связанные с развертыванием служб Analysis Services](requirements-and-considerations-for-analysis-services-deployment.md)|  
 |Нужно ли развертывать объекты в распределенной среде при помощи связанных объектов или удаленных секций?|[Создание локальной секции и управление ею (службы Analysis Services)](create-and-manage-a-local-partition-analysis-services.md), [Создание удаленной секции и управление ею (службы Analysis Services)](create-and-manage-a-remote-partition-analysis-services.md) и [Связанные группы мер](linked-measure-groups.md).|  
-|Как вы будете обеспечивать безопасность данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Предоставление доступа к объектам и операциям &#40;служб Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)|  
+|Как вы будете обеспечивать безопасность данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Авторизация доступа к объектам и операциям &#40;служб Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)|  
   
 ##  <a name="bkmk_rel"></a> Связанные задачи  
  [Требования и вопросы, связанные с развертыванием служб Analysis Services](requirements-and-considerations-for-analysis-services-deployment.md)  

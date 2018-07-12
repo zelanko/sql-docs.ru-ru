@@ -1,5 +1,5 @@
 ---
-title: Изменение имени атрибута (Master Data Services) | Документы Microsoft
+title: Изменение имени атрибута (Master Data Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], changing name
 ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: edc6410e28410581716e8b800affc9ba39423c3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 62318949f70b65a63bb4c823903d46c740c51e48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191984"
 ---
 # <a name="change-an-attribute-name-master-data-services"></a>Изменение имени атрибута (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменять имя атрибутов.  
@@ -45,7 +45,7 @@ ms.locfileid: "36087400"
   
 5.  Щелкните **Изменить выбранную сущность**.  
   
-6.  На **изменение сущности** щелкните атрибут с именем, необходимо изменить.  
+6.  На **изменение сущности** щелкните атрибут с именем, вы хотите изменить.  
   
 7.  Нажмите кнопку **изменить выбранный атрибут**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Элемент NotificationTechnique (ASSL) | Документы Microsoft
+title: Элемент NotificationTechnique (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - NotificationTechnique element
 ms.assetid: 80c43de3-f147-4bf5-bb85-da9d182ce415
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f1216ed87ac9fd24265dbcb33d13ba831997b73c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e661b47c5344b0094daef53102aada68a6b6aad9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213914"
 ---
 # <a name="notificationtechnique-element-assl"></a>Элемент NotificationTechnique (ASSL)
   Указывает, является ли [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или внешним клиентским приложением обрабатывает уведомления.  
@@ -65,7 +65,7 @@ ms.locfileid: "36086985"
 |*Клиент*|Внешнее клиентское приложение обрабатывает уведомление.|  
 |*Server*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обрабатывает уведомление.|  
   
- Элемент, соответствующий родителю параметра `NotificationTechnique` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ProactiveCachingBinding>.  
+ Элемент, соответствующий родителю параметра `NotificationTechnique` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.ProactiveCachingBinding>.  
   
  Перечисление, соответствующее допустимым значениям элемента `NotificationTechnique` в модели объектов AMO, — это <xref:Microsoft.AnalysisServices.NotificationTechnique>.  
   

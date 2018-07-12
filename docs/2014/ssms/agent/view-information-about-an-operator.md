@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
 - viewing operators
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - displaying operators
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cdabd9ef6382066fad31154dad126e30ced0d8d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2a66bc4a276b425d8ec0ffeebf260dafcef7ff0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220803"
 ---
 # <a name="view-information-about-an-operator"></a>Просмотр сведений об операторе
   В данном подразделе описывается просмотр сведений об операторе агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -72,9 +72,9 @@ ms.locfileid: "36087756"
   
      Дополнительные сведения о доступных параметрах, содержащихся в диалоговом окне *Свойства***имя_оператора**, см. в разделе:  
   
-    -   [Свойства оператора и оператора New &#40;страница «Общие»&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Свойства оператора и оператора New &#40;страница "Общие"&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Свойства оператора: Оператор New &#40;страница «уведомления»&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [Свойства оператора: Оператор New &#40;страница "уведомления"&#41;](operator-properties-new-operator-notifications-page.md)  
   
     -   [Свойства оператора (страница "Журнал")](operator-properties-history-page.md)  
   
@@ -101,6 +101,6 @@ ms.locfileid: "36087756"
     GO  
     ```  
   
- Дополнительные сведения см. в разделе [хранимая процедура sp_help_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql).  
+ Дополнительные сведения см. в разделе [sp_help_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql).  
   
   

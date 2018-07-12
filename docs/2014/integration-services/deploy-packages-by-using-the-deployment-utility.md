@@ -1,5 +1,5 @@
 ---
-title: Развертывание пакетов с помощью программы развертывания | Документы Microsoft
+title: Развертывание пакетов с помощью программы развертывания | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], installing
 - installing packages
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deploying packages [Integration Services], installing
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
 caps.latest.revision: 56
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8674256ca22d0327987d0219141b254260173c8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78fe699eade5daa76a8d6f2a77e63a2c5019b815
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203934"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Развертывание пакетов с помощью программы развертывания
   Если сборка программы развертывания, предназначенной для установки пакетов из проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , выполнена на компьютере, отличном от того, на котором находится сам проект, прежде всего необходимо скопировать папку развертывания на целевой компьютер.  
@@ -69,6 +69,6 @@ ms.locfileid: "36086710"
 8.  Если выбрана функция проверки пакетов после установки, посмотрите результаты проверки развернутых пакетов.  
   
 ## <a name="see-also"></a>См. также  
- [Пакет развертывания &#40;служб SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+ [Развертывания пакета &#40;служб SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

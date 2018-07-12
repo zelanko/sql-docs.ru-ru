@@ -1,5 +1,5 @@
 ---
-title: Разработчик&#39;руководство (службы Integration Services) | Документы Microsoft
+title: Разработчик&#39;руководство (службы Integration Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,13 +22,13 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 caps.latest.revision: 76
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7649030fb22c9e0786d481f34a29974dcddbe863
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7989f708adf6025fddb223e6052dca8810035230
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206054"
 ---
 # <a name="developer39s-guide-integration-services"></a>Разработчик&#39;руководство (службы Integration Services)
   Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включают полностью переписанную модель объектов, которая была улучшена многими функциями, позволяющими упростить расширение и программирование пакетов и сделать их более гибкими и более мощными. Разработчики могут расширять и программировать пакеты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] почти в любом аспекте.  

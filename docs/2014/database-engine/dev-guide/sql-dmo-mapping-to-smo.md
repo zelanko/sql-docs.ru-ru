@@ -1,5 +1,5 @@
 ---
-title: Сопоставление SQL-DMO с SMO | Документы Microsoft
+title: Сопоставление SQL-DMO с SMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,18 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 590f5396-98d5-485e-9b41-728c6ed7cb9d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d99a665366fc9b5df9ff975d47cfa60dccaf4b4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 54c66973a1cc0ca7f024a696902f694b45778a9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182821"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>Сопоставление SQL-DMO с SMO
-  Объекты (SQL-DMO) больше не включены в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], приложения SQL-DMO должны быть преобразованы для использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляющих объектов (SMO). Объектная модель SMO напоминает объектную модель SQL-DMO, поэтому большинство объектов SQL-DMO сопоставляются с одноименными объектами SMO. Однако некоторые объекты SQL-DMO при переходе на SMO изменены или удалены. В следующей таблице приведены рекомендованные действия по преобразованию SQL-DMO объектов, которые не переводятся на объекты SMO непосредственно.  
+  Объекты SQL-DMO больше не включается в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], приложения SQL-DMO должны быть преобразованы для использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляющих объектов (SMO). Объектная модель SMO напоминает объектную модель SQL-DMO, поэтому большинство объектов SQL-DMO сопоставляются с одноименными объектами SMO. Однако некоторые объекты SQL-DMO при переходе на SMO изменены или удалены. В следующей таблице приведены рекомендованные действия по преобразованию SQL-DMO объектов, которые не переводятся на объекты SMO непосредственно.  
   
 |Объект SQL-DMO|Действие в объекте SMO|  
 |---------------------|-------------------|  

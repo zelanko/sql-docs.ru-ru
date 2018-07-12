@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic joins
 - self-joins
 - joins [SQL Server], self
 ms.assetid: f9ec90e8-3aad-415c-a5c4-8dfa9540e37f
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f73848107ec08829a48da0b921729ce318f3d63
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d541ce3229ee01c2fb213eafb1e8c7f55a4b984a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196554"
 ---
 # <a name="create-self-joins-automatically-visual-database-tools"></a>Автоматическое создание самосоединения (визуальные инструменты для баз данных)
   Если таблица имеет рефлексивную связь в базе данных, можно автоматически создать самосоединение.  

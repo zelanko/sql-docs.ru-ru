@@ -1,5 +1,5 @@
 ---
-title: Настройка компонента Database Engine — Filestream | Документы Microsoft
+title: Настройка компонента Database Engine — Filestream | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], about FILESTREAM
 ms.assetid: 641a10a1-ae52-4d26-8f1c-a032a4aeff02
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 99fb929a9a3fdbdb643edeaf041d4cd74d64c75c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 82bf651e6242be7e1835caac7fd7d3419b51cf31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187701"
 ---
 # <a name="database-engine-configuration---filestream"></a>Настройка компонента Database Engine — Filestream
-  Эта страница используется, чтобы включить FILESTREAM для этой установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Хранилище FILESTREAM объединяет [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с файловой системой NTFS, сохраняя `varbinary(max)` данные больших двоичных объектов (BLOB) в виде файлов в файловой системе. [!INCLUDE[tsql](../../includes/tsql-md.md)] можно вставлять, обновлять, запрашивать, искать и создавать резервные копии данных FILESTREAM. Интерфейсы файловой системы Win32 предоставляют потоковый доступ к этим данным.  
+  Эта страница используется, чтобы включить FILESTREAM для этой установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Хранилище FILESTREAM объединяет [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с помощью NTFS файловая система, сохраняя `varbinary(max)` данные больших двоичных объектов (BLOB) в файловой системе в виде файлов. [!INCLUDE[tsql](../../includes/tsql-md.md)] можно вставлять, обновлять, запрашивать, искать и создавать резервные копии данных FILESTREAM. Интерфейсы файловой системы Win32 предоставляют потоковый доступ к этим данным.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
  **Разрешить FILESTREAM при доступе через Transact-SQL**  
