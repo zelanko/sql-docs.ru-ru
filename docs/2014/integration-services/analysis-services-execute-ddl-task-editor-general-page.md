@@ -1,5 +1,5 @@
 ---
-title: Analysis Services редактор выполнение инструкции DDL задачи (страница «Общие») | Документы Microsoft
+title: Analysis Services редактор выполнение инструкции DDL задачи (страница "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asexecuteddltask.general.f1
 helpviewer_keywords:
 - Analysis Services Execute DDL Task Editor
 ms.assetid: 28788cc5-7c84-4c6f-9650-62372c519728
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cfa2d938d4883925bff53142c2dcd7444b0c451d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec1d4d46cda4359ea01cdd87fbf3846ece5f359f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188891"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Редактор задачи «Выполнение инструкции DDL служб Analysis Services» (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор задачи " Выполнение инструкции DDL служб Analysis Services"** для назначения имени и описания задания выполнения DDL служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -41,11 +41,11 @@ ms.locfileid: "36097109"
  Предоставляет описание задачи Execute DDL служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задач DDL выполнение службы анализа &#40;страница DDL&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Analysis Services редактор выполнение инструкции DDL задач &#40;страница DDL&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
  [Страница «выражения»](expressions/expressions-page.md)   
  [Поток управления](control-flow/control-flow.md)   
- [Язык ASSL &#40;ASSL&#41; ссылки](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
+ [Язык сценариев Analysis Services &#40;ASSL&#41; ссылки](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [XML для аналитики &#40;XMLA&#41; ссылки](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
   
   

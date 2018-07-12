@@ -1,5 +1,5 @@
 ---
-title: Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб SSRS) | Документы Microsoft
+title: Настройка сервера отчетов для доставки электронной почты (диспетчер конфигурации служб SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], distributing
 - report servers [Reporting Services], e-mail delivery
@@ -25,13 +25,13 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 5a8954f5ea5c2e38991868734a6347596883bd7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e189890845bad34153ebef4231465c260b538848
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179201"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)
   Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль доставки по электронной почте, позволяющий распространять отчеты с помощью электронной почты. В зависимости от того, каким образом определена электронная подписка, рассылка может включать уведомление, ссылку, вложение или внедренный отчет. Модуль доставки по электронной почте работает с существующими технологиями почтовых серверов. Почтовый сервер должен быть либо SMTP-сервером, либо перенаправителем. Сервер отчетов соединяется с SMTP-сервером через объекты данных совместной работы (библиотека cdosys.dll), предоставляемых операционной системой.  
@@ -62,22 +62,22 @@ ms.locfileid: "36096579"
   
   
   
-##  <a name="bkmk_setting_email_delivery"></a> Установка параметров конфигурации для работы с электронной почтой  
+##  <a name="bkmk_setting_email_delivery"></a> Установка параметров конфигурации для доставки электронной почты  
  Прежде чем будет можно использовать рассылку сервера отчетов по электронной почте, следует установить значения конфигурации, указывающие, какой SMTP-сервер использовать.  
   
  Для настройки сервера отчетов для доставки электронной почты выполните следующие действия:  
   
--   Воспользуйтесь диспетчером конфигурации служб Reporting Services, если вы задаете SMTP-сервер и учетную запись, имеющую разрешение на отправку сообщений электронной почты. Это минимальные установки, необходимые для настройки модуля доставки электронной почты сервера отчетов. Дополнительные сведения см. в разделе [настройки электронной почты — диспетчер конфигурации &#40;собственный режим служб SSRS&#41; ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) и [работы с электронной почтой в службах Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+-   Воспользуйтесь диспетчером конфигурации служб Reporting Services, если вы задаете SMTP-сервер и учетную запись, имеющую разрешение на отправку сообщений электронной почты. Это минимальные установки, необходимые для настройки модуля доставки электронной почты сервера отчетов. Дополнительные сведения см. в разделе [настройки электронной почты — Configuration Manager &#40;собственный режим служб SSRS&#41; ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) и [почтой в службах Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
--   С помощью текстового редактора укажите дополнительные параметры в файле конфигурации RSreportserver.config (необязательно). Этот файл содержит все параметры конфигурации доставки отчетов по электронной почте. Задание дополнительных установок в этих файлах необходимо, если используется локальный SMTP-сервер или если доставка сообщений электронной почты ограничивается определенными узлами. Дополнительные сведения о местоположении и изменении файлов конфигурации см. в разделе [изменения файла конфигурации служб Reporting Services &#40;RSreportserver.config&#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) в электронной документации по SQL Server.  
+-   С помощью текстового редактора укажите дополнительные параметры в файле конфигурации RSreportserver.config (необязательно). Этот файл содержит все параметры конфигурации доставки отчетов по электронной почте. Задание дополнительных установок в этих файлах необходимо, если используется локальный SMTP-сервер или если доставка сообщений электронной почты ограничивается определенными узлами. Дополнительные сведения о местоположении и изменении файлов конфигурации см. в разделе [изменение файла конфигурации служб Reporting Services &#40;RSreportserver.config&#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) в электронной документации по SQL Server.  
   
 > [!NOTE]  
 >  Параметры электронной почты сервера отчетов основаны на объектах CDO. Если необходимы дальнейшие подробности о конкретных параметрах, можно обратиться к документации по приложениям CDO.  
   
 
   
-##  <a name="bkmk_example_config_file"></a> Образец конфигурации электронной почты сервера отчетов  
- В следующем примере иллюстрируются параметры файла RSreportserver.config для удаленного SMTP-сервера. Параметр описания и допустимые значения в разделе [файл конфигурации RSReportServer](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации или в документации по продукту CDO.  
+##  <a name="bkmk_example_config_file"></a> Пример конфигурации электронной почты сервера отчетов  
+ В следующем примере иллюстрируются параметры файла RSreportserver.config для удаленного SMTP-сервера. Чтобы прочитать о описания параметров и их допустимых значений, см. в разделе [файл конфигурации RSReportServer](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] документации или в документации по продукту CDO.  
   
 ```  
 <RSEmailDPConfiguration>  
@@ -118,9 +118,9 @@ ms.locfileid: "36096579"
   
 1.  Откройте файл RSReportServer.config в текстовом редакторе.  
   
-2.  Задать `SendEmailToUserAlias` для `False`.  
+2.  Задайте `SendEmailToUserAlias` для `False`.  
   
-3.  Задать `DefaultHostName` имя системы доменных имен (DNS) или IP-адрес SMTP-сервера или перенаправителя.  
+3.  Задайте `DefaultHostName` имя системы доменных имен (DNS) или IP-адрес SMTP-сервера или перенаправителя.  
   
 4.  Сохраните файл.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36096579"
   
 -   `SMTPServer` Указывает удаленный сервер или перенаправитель SMTP. Это значение обязательное, если нужно использовать удаленный сервер или перенаправитель SMTP.  
   
--   `From` Задает значение, которое появляется в **из:** сообщения электронной почты. Это значение обязательное, если нужно использовать удаленный сервер или перенаправитель SMTP.  
+-   `From` Задает значение, которое появляется в **из:** строки сообщения электронной почты. Это значение обязательное, если нужно использовать удаленный сервер или перенаправитель SMTP.  
   
  Другие значения, которые используются для удаленной службы SMTP, включают следующее (обратите внимание, что указывать их необязательно, если не нужно заменять ими значения по умолчанию).  
   
@@ -146,7 +146,7 @@ ms.locfileid: "36096579"
 
   
 ##  <a name="bkmk_options_local_SMTP"></a> Параметры конфигурации для локальной службы SMTP  
- Настройка локальной службы SMTP полезна при тестировании или диагностике работы с электронной почтой сервера отчетов. Локальная служба SMTP по умолчанию отключена. Инструкции о том, как включить ее в разделе [Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб SSRS)](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) и [настройки электронной почты — диспетчер конфигурации &#40;собственный режим служб SSRS&#41; ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) .  
+ Настройка локальной службы SMTP полезна при тестировании или диагностике работы с электронной почтой сервера отчетов. Локальная служба SMTP по умолчанию отключена. Инструкции о том, как включить ее, см. в разделе [Настройка сервера отчетов для доставки электронной почты (диспетчер конфигурации служб SSRS)](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) и [настройки электронной почты — Configuration Manager &#40;собственный режим служб SSRS&#41; ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) .  
   
  Соединение между сервером отчетов и локальным сервером или перенаправителем SMTP определяется следующими параметрами конфигурации:  
   
@@ -155,13 +155,13 @@ ms.locfileid: "36096579"
 -   В качестве значения**SMTPServerPickupDirectory** указана папка на локальном жестком диске.  
   
     > [!NOTE]  
-    >  Убедитесь, что не задано `SMTPServer` Если используется локальный SMTP-сервер.  
+    >  Убедитесь, что не присвоили `SMTPServer` при использовании локального SMTP-сервера.  
   
--   `From` Задает значение, которое появляется в **из:** сообщения электронной почты. Это значение обязательно.  
+-   `From` Задает значение, которое появляется в **из:** строки сообщения электронной почты. Это значение обязательно.  
   
  
   
-##  <a name="bkmk_use_configuration_manager"></a> Настройка электронной почты сервера отчетов с помощью диспетчера конфигурации служб Reporting Services  
+##  <a name="bkmk_use_configuration_manager"></a> Настройка электронной почты сервера отчетов, с помощью диспетчера конфигурации служб Reporting Services  
   
 1.  Убедитесь, что у службы Windows сервера отчетов есть разрешения `Send As` на SMTP-сервере.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "36096579"
   
 8.  Сохраните файл.  
   
-     Сервер отчетов автоматически будет использовать новые настройки; нет необходимости перезапускать службу. Можно указать дополнительные настройки SMTP для последующей конфигурации использования SMTP-сервера для доставки электронной почты на сервер отчетов. Дополнительные сведения см. в разделе [Настройка сервера отчетов для доставки электронной почты](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) и [файл конфигурации RSReportServer](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации.  
+     Сервер отчетов автоматически будет использовать новые настройки; нет необходимости перезапускать службу. Можно указать дополнительные настройки SMTP для последующей конфигурации использования SMTP-сервера для доставки электронной почты на сервер отчетов. Дополнительные сведения см. в разделе [Настройка сервера отчетов для доставки электронной почты](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) и [файл конфигурации RSReportServer](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 
   

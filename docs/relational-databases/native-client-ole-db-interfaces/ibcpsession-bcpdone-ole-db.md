@@ -1,12 +1,12 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) | Документы Microsoft
+title: IBCPSession::BCPDone (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da9cd1408c12e055a10a208021de1e16dac9d9eb
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d57e507beb03a28f9e0f7e0b676b8393ace4a125
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694555"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421503"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Другие операции не может вызываться для [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) интерфейса после вызова **BCPDone** метод. Единственной возможностью является вызов [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) для запуска операции массового копирования. Это аналогично вызову [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) метод.  
+ Никакая другая операция не может вызываться для [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) интерфейса после вызова метода **BCPDone** метод. Единственной возможностью является вызов [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) метод для инициализации операции массового копирования. Это аналогично вызову [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) метод.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  S_OK  
@@ -69,7 +69,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Чтобы вновь добавить эти данные в таблицу, можно использовать следующую команду BCP:  
   
- **Образец bcp... fltest в файл outfile.dat - n -T -S** *сервера*  
+ **bcp master... fltest в файл outfile.dat - n -T -S** *сервера*  
   
  Во время компиляции этого образца необходимо будет указать файл sqlncli11.lib.  
   

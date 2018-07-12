@@ -1,12 +1,12 @@
 ---
-title: Выполнение команды | Документы Microsoft
+title: Выполнение команды | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dfae23f1f7493172790b026e411c99b1dd63fcd1
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 266cf6733c2a73f64dc6561e0cb0b13c6929a8b8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694465"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423953"
 ---
 # <a name="executing-a-command"></a>Выполнение команды
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "35694465"
 
   После установления соединения с источником данных потребитель вызывает метод **IDBCreateSession::CreateSession** метод для создания сеанса. Сеанс выступает в роли фабрики для команд, наборов строк и транзакций.  
   
- Для непосредственной работы с отдельными таблицами и индексами потребитель запрашивает **IOpenRowset** интерфейса. **IOpenRowset::OpenRowset** метод открывает и возвращает набор строк, содержащий все строки из одной базовой таблицы или индекса.  
+ Для работы непосредственно с отдельными таблицами и индексами, потребитель запрашивает **IOpenRowset** интерфейс. **IOpenRowset::OpenRowset** метод открывает и возвращает набор строк, содержащий все строки из одной базовой таблицы или индекса.  
   
- Для выполнения команды (например, SELECT \* FROM Authors), потребитель запрашивает **IDBCreateCommand** интерфейса. Потребитель может вызвать **IDBCreateCommand::CreateCommand** метод, чтобы создать командный объект и запросить **ICommandText** интерфейса. **ICommandText::SetCommandText** метод используется для указания команды, которое должно быть выполнено.  
+ Для выполнения команды (например, SELECT \* FROM Authors), потребитель запрашивает **IDBCreateCommand** интерфейс. Потребитель может вызвать **IDBCreateCommand::CreateCommand** метод для создания объекта команды и запроса для **ICommandText** интерфейс. **ICommandText::SetCommandText** метод используется для указания команды, которая будет выполняться.  
   
  **Execute** команда используется для выполнения команды. Командой может быть любая инструкция SQL или имя процедуры. Не все команды возвращают объект результирующего набора (набор строк). Такие команды, как SELECT * FROM Authors, возвращают результирующий набор.  
   

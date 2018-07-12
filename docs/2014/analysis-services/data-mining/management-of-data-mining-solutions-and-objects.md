@@ -1,5 +1,5 @@
 ---
-title: Управление решениями интеллектуального анализа данных и объектами | Документы Microsoft
+title: Управление решениями интеллектуального анализа данных и объектами | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6ea150e4f35eaa1e9251f17894c7f0cf665439ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f20cc2fe28f5d798f3521a36aebcfe346aa643d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218304"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Управление решениями и объектами интеллектуального анализа данных
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] содержит клиентские средства, предназначенные для управления структурами и моделями интеллектуального анализа данных. В этом разделе описаны операции управления, которые могут выполняться с помощью каждой из сред.  
@@ -32,14 +32,14 @@ ms.locfileid: "36096306"
 ## <a name="in-this-section"></a>В этом разделе  
  [Перемещение объектов интеллектуального анализа данных](moving-data-mining-objects.md)  
   
- [Требования к обработке и вопросы &#40;интеллектуального анализа данных&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Требования к обработке и рекомендации по &#40;интеллектуального анализа данных&#41;](processing-requirements-and-considerations-data-mining.md)  
   
- [С помощью приложения SQL Server Profiler, наблюдение за интеллектуальным анализом данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [С помощью SQL Server Profiler, наблюдение за интеллектуальным &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>Обнаружение объектов интеллектуального анализа данных  
  Обработанные структуры и модели интеллектуального анализа данных хранятся в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- Если создать подключение к [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных в `Immediate` режиме при разработке интеллектуального анализа данных объектов, все объекты, которые вы создаете, немедленно добавляются на сервер при работе. Однако если объекты интеллектуального анализа данных проектируются в режиме **«в сети»** , который в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]используется по умолчанию, то создаваемые объекты интеллектуального анализа данных представляют собой только контейнеры метаданных до тех пор, пока не будет выполнено их развертывание в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Поэтому после каждого изменения объекта необходимо выполнить его повторное развертывание на сервере служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения об архитектуре интеллектуального анализа данных см. в разделе [Физическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](physical-architecture-analysis-services-data-mining.md).  
+ Если создать подключение к [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных в `Immediate` режиме при разработке интеллектуального анализа данных объектов, все объекты, создаваемые немедленно добавляются на сервер во время работы. Однако если объекты интеллектуального анализа данных проектируются в режиме **«в сети»** , который в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]используется по умолчанию, то создаваемые объекты интеллектуального анализа данных представляют собой только контейнеры метаданных до тех пор, пока не будет выполнено их развертывание в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Поэтому после каждого изменения объекта необходимо выполнить его повторное развертывание на сервере служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения об архитектуре интеллектуального анализа данных см. в разделе [Физическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](physical-architecture-analysis-services-data-mining.md).  
   
 > [!NOTE]  
 >  Некоторые клиенты, например надстройки интеллектуального анализа данных для [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007, также позволяют создавать модели интеллектуального анализа данных сеанса и структуры интеллектуального анализа данных; в них используются соединения с экземплярами, но создаваемые структуры и модели интеллектуального анализа данных при этом сохраняются только на протяжении сеанса. Этими моделями можно управлять через клиент точно так же, как структурами и моделями, сохраненными в базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , но после отключения от экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]объекты удаляются.  
@@ -66,7 +66,7 @@ ms.locfileid: "36096306"
 > [!WARNING]  
 >  Все изменения структуры или модели интеллектуального анализа данных, включая изменения таких метаданных, как имена или описания, требуют повторной обработки соответствующей модели или структуры.  
   
- Если у вас файл решения, который использовался для создания проекта интеллектуального анализа данных или объектов, можно импортировать существующий проект с сервера с помощью мастера импорта служб Analysis Services, вносить изменения в объекты и затем повторно развернуть с помощью `Incremental` параметр. Дополнительные сведения см. в разделе [Импорт проекта интеллектуального анализа данных с помощью мастера импорта служб Analysis Services](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
+ Если у вас файл решения, который использовался для создания проекта интеллектуального анализа данных или объектов, можно импортировать существующий проект на сервере, с помощью мастера импорта служб Analysis Services, внести необходимые изменения в объекты и затем выполнить повторное развертывание с `Incremental` параметр. Дополнительные сведения см. в разделе [Импорт проекта интеллектуального анализа данных с помощью мастера импорта служб Analysis Services](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>Управление объектами интеллектуального анализа данных в среде SQL Server Management Studio  
  Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]позволяет создавать скрипты со структурами и моделями интеллектуального анализа данных, обрабатывать эти структуры и модели и удалять их. В обозревателе объектов можно просмотреть лишь ограниченный набор свойств, однако дополнительные метаданные о моделях интеллектуального анализа данных доступны в окне редактора **DMX-запрос** , где нужно выбрать соответствующую структуру интеллектуального анализа данных.  

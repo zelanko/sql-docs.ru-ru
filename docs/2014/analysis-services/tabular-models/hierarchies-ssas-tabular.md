@@ -1,5 +1,5 @@
 ---
-title: Иерархии (табличные службы SSAS) | Документы Microsoft
+title: Иерархии (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 196c71a5fd1202e2c9cfb28934257c847b9fd5eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b371d1baecb2e9e7dea4aa81ac2d2e716d04a651
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180961"
 ---
 # <a name="hierarchies-ssas-tabular"></a>Иерархии (табличные службы SSAS)
   В табличных моделях иерархии это метаданные, определяющие отношения между двумя или более столбцами в таблице. В списке полей клиентского средства создания отчетов иерархии могут отображаться отдельно от других столбцов, что упрощает переход по иерархиям и их включение в отчет для пользователей клиента.  

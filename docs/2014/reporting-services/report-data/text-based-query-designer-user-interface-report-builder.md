@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10010"
 helpviewer_keywords:
 - query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2996f7cfb6f7c873e57619c60f49511a62f8d533
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1c596018bcef960d176cf41a49221972d5652f20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162125"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Пользовательский интерфейс текстового конструктора запросов (построитель отчетов)
   Текстовый конструктор запросов предназначен для ввода запроса на языке запросов, поддерживаемом источником данных, его выполнения и просмотра результатов во время разработки. Можно указать несколько инструкций, запросов или команд языка [!INCLUDE[tsql](../../../includes/tsql-md.md)] для создания собственных модулей обработки данных, а также указать запросы, заданные как выражения. Поскольку текстовый конструктор запросов не выполняет предварительную обработку запроса и позволяет использовать любой синтаксис запросов, он представляет собой стандартное средство конструктора запросов для источников данных многих типов.  
@@ -60,7 +60,7 @@ ms.locfileid: "36097669"
 |Результат|Отображает результаты запроса. Чтобы выполнить запрос, щелкните правой кнопкой мыши любую область и выберите команду **Выполнить**либо нажмите кнопку **Выполнить** на панели инструментов.|  
   
 #### <a name="example"></a>Пример  
- Следующий запрос возвращает список фамилий из [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** базы данных `ContactType` таблицу для `Person` схемы.  
+ Следующий запрос возвращает список фамилий из [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** базы данных `ContactType` таблиц для `Person` схемы.  
   
 ```  
 SELECT Name FROM Person.ContactType  
@@ -102,7 +102,7 @@ uspGetWhereUsedProductID
  Если выбран **Тип команды TableDirect**, то текстовый конструктор запросов содержит две панели: панель запросов и область результатов. Если ввести имя таблицы и нажать кнопку **Выполнить** , возвращаются все столбцы этой таблицы.  
   
 #### <a name="example"></a>Пример  
- Для типа источника данных OLE DB следующий запрос набора данных возвращает результирующий набор для всех типов контактов в [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** базы данных.  
+ Для типа источника данных OLE DB, следующий запрос набора данных возвращает результирующий набор для всех типов контактов в [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** базы данных.  
   
  `Person.ContactType`  
   

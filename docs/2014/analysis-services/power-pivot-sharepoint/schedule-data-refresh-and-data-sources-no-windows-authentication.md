@@ -1,5 +1,5 @@
 ---
-title: Обновление данных расписания и источники данных, которые не поддерживают проверку подлинности Windows (PowerPivot для SharePoint) | Документы Microsoft
+title: Планирование обновления данных и источников данных, которые не поддерживают проверку подлинности Windows (PowerPivot для SharePoint) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28ab8ddcc8ef6a866992cdf7a2fabe75a5a30878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 474308339c112899787a4b6344bbe53622f4fff7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230104"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Планирование обновления данных и источники данных, которые не поддерживают проверку подлинности Windows (PowerPivot для SharePoint)
   В этом разделе рассматривается рабочий процесс планирования обновления данных PowerPivot для SharePoint, в котором могут использоваться источники данных, **НЕ** поддерживающие проверку подлинности Windows. В качестве примера можно назвать источники данных Oracle или IDM DB2. На рисунках и в процедурах, которые приведены в этом разделе, речь идет об источниках данных Oracle, но тот же рабочий процесс применим к другим источникам данных.  
@@ -104,9 +104,9 @@ ms.locfileid: "36096949"
   
 5.  Нажмите кнопку **Далее**.  
   
-6.  На **учетные данные** измените имя первого поля на `Oracle User ID` и измените **тип поля** для `User Name`.  
+6.  На **учетные данные** странице, измените имя первого поля на `Oracle User ID` и измените **тип поля** для `User Name`.  
   
-     Измените имя второго поля на `Oracle Password` и **тип поля** для `Password`.  
+     Изменить имя второго поля на `Oracle Password` и **тип поля** для `Password`.  
   
 7.  Нажмите кнопку **Далее**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36096949"
   
 11. Введите идентификатор пользователя Oracle и пароль Oracle, затем нажмите кнопку **ОК**.  
   
- Дополнительные сведения см в разделе «Создание целевого приложения для проверки подлинности SQL Server» [использование службы Secure Store с проверкой подлинности SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ Дополнительные сведения см в разделе «Создание целевого приложения для проверки подлинности SQL Server» [используйте Secure Store с помощью проверки подлинности SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>Настройка приложения службы PowerPivot  
   
@@ -128,13 +128,13 @@ ms.locfileid: "36096949"
   
 3.  Нажмите кнопку **Настройка параметров приложения службы** в разделе «Действия».  
   
-4.  В **обновления данных** установите **PowerPivot данные учетной записи автоматического обновления**для`PowerPivotDataRefresh` и нажмите кнопку **ОК**.  
+4.  В **обновления данных** задайте **PowerPivot данные учетной записи автоматического обновления**для`PowerPivotDataRefresh` и нажмите кнопку **ОК**.  
   
      ![as_powerpivot_refresh_new_refresh_acount](../media/as-powerpivot-refresh-new-refresh-acount.gif "as_powerpivot_refresh_new_refresh_acount")  
   
 ## <a name="to-configure-the-workbook"></a>Настройка книги  
   
-1.  Перейдите к книге в галерее PowerPivot и нажмите кнопку **Управление обновлением данных**![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh").  
+1.  Перейдите к своей книге в коллекции PowerPivot и нажмите кнопку **Управление обновлением данных**![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh").  
   
 2.  Если откроется страница **Журнал обновления данных** , нажмите кнопку **Настройка расписания**.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36096949"
   
 9. Выберите **Подключиться с использованием учетных данных, сохраненных в службе Secure Store (SSS) для подключения к источнику данных. Введите идентификатор, используемый для поиска учетных данных, в поле "Идентификатор SSS"**.  
   
-10. В **ID:** введите `OracleAuthentication`.  
+10. В **идентификатор:** введите `OracleAuthentication`.  
   
 11. Нажмите кнопку **ОК**.  
   

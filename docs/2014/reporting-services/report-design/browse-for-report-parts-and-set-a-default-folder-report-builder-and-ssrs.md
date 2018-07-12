@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e16f84d38d32dc5e55ce3244f09b2e9c5a28f967
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 25c367550ca7efb08bb33e99318ceda2e62b9b11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240024"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Просмотр элементов отчета и назначение папки по умолчанию (построитель отчетов и службы SSRS)
   Самым простым способом создания отчетов является добавление существующих элементов отчета, таких как таблицы и диаграммы, к отчету из галереи элементов отчетов. При добавлении элемента отчета к отчету добавляется также все, что необходимо для его выполнения. Например, все элементы отчета, используемые для отображения данных, зависят от набора данных, т. е. запроса и соединения с источником данных. После добавления элемента отчета к отчету ее можно изменить в соответствии с требованиями.  
@@ -67,10 +67,10 @@ ms.locfileid: "36087072"
  Чтобы этот параметр вступил в силу, не нужно перезапускать построитель отчетов.  
   
 ## <a name="see-also"></a>См. также  
- [Проверка наличия обновлений или отключение обновлений, &#40;отчетов построителя отчетов и службы SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [Элементы отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Снимите флажок для обновлений или отключение обновлений &#40;построитель отчетов и службы SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+ [Элементы отчета &#40;построитель отчетов и службы SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Элементы отчета и наборы данных в построителе отчетов](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [Устранение неполадок в элементах отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [Опубликовать и переиздать элементы отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
+ [Устранение неполадок в элементах отчета &#40;построитель отчетов и службы SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Опубликовать и переиздать элементы отчета &#40;построитель отчетов и службы SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

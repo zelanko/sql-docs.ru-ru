@@ -1,5 +1,5 @@
 ---
-title: Редактор назначения OLE DB (страница «сопоставления») | Документы Microsoft
+title: Редактор назначения OLE DB (страница "сопоставления") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.mappings.f1
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 8cfddd4d-f605-4913-9648-66e8e41417e1
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 03ec4fd3212f31973e2c239d7a61fa7246f6d362
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0cd5d1052a1dd971c77426bc6cf8dade516fd28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170845"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>Редактор назначения OLE DB (страница «Сопоставления»)
   Страница **Сопоставления** диалогового окна **Редактор назначения «OLE DB»** используется для сопоставления входных столбцов с целевыми.  
@@ -44,9 +44,9 @@ ms.locfileid: "36096687"
  Позволяет просмотреть каждый из доступных целевых столбцов без учета наличия или отсутствия сопоставления.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения OLE DB &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
- [Редактор назначения OLE DB &#40;страницы вывода ошибок&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
+ [Редактор назначения OLE DB &#40;странице вывода ошибок&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [Загрузка данных с помощью назначения «OLE DB»](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

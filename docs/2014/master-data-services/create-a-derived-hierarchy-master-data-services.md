@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, creating
 - creating derived hierarchies [Master Data Services]
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eed0b86271cb44565e2724cc6c961521c8d683ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 696b4bc98f4feb47ae7db6cae99d1ba9ae8a6628
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217644"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>Создание производной иерархии (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]производные иерархии создаются, если необходима многоуровневая иерархия, гарантирующая, что элементы располагаются на правильном уровне. Производные иерархии опираются на имеющиеся в модели связи атрибутов на основе домена.  
@@ -41,7 +41,7 @@ ms.locfileid: "36096197"
   
 1.  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]щелкните область **Администрирование системы**.  
   
-2.  На **представление модели** страницы, в строке меню наведите курсор на **управление** и нажмите кнопку **производные иерархии**.  
+2.  На **представление модели** страницы, на панели меню наведите указатель мыши на **управление** и нажмите кнопку **производные иерархии**.  
   
 3.  На странице **Обслуживание производной иерархии** выберите модель из списка **Модель** .  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36096197"
   
 6.  Нажмите кнопку **Сохранить производную иерархию**.  
   
-7.  На **изменить производную иерархию** страницы в **доступные сущности и иерархии** щелкните сущность или иерархию и перетащите его на **текущие уровни** области.  
+7.  На **изменить производную иерархию** странице **доступные сущности и иерархии** панели щелкните сущность или иерархию и перетащите его на значок **текущие уровни** области.  
   
 8.  Перетаскивайте сущности или иерархии, пока не завершите создание иерархии.  
   

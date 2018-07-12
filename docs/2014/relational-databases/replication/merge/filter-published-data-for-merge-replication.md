@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication [SQL Server replication], filtering published data
 - replication [SQL Server], filtering published data
 ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5558a5f3deaa0cfe7f44e8dfbbe96d5b8301442a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 55394aae11434b710903bbde7d0f64c4fdbf2955
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228820"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>Фильтрация опубликованных данных для репликации слиянием
   Кроме статических фильтров строк и фильтров столбцов, которые можно определять с другими типами репликации, репликация слиянием позволяет определять параметризованные фильтры строк и фильтры соединения. Дополнительные сведения о статических фильтрах строк и фильтрах столбцов см. в разделе [Фильтрация опубликованных данных](../publish/filter-published-data.md).  

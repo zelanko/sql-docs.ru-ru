@@ -1,12 +1,12 @@
 ---
-title: bcp_colptr | Документы Microsoft
+title: bcp_colptr | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13bc065e3b6c8373f5e0eeac70977195587cd721
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0b6a70c03e4ede2d3aa092855991bb4517f34170
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703721"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407073"
 ---
 # <a name="bcpcolptr"></a>bcp_colptr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,9 +50,9 @@ RETCODE bcp_colptr (
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
  *pData*  
- Указатель на копируемые данные. Если тип привязанных данных является типом больших значений (например SQLTEXT или SQLIMAGE), *pData* может иметь значение NULL. Значение NULL *pData* указывает значения длинные данные будут отправляться на SQL Server в виде фрагментов с помощью [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md).  
+ Указатель на копируемые данные. Если тип привязанных данных является типом больших значений (например SQLTEXT или SQLIMAGE), *pData* может иметь значение NULL. Значение NULL *pData* означает данные большого будет отправлено в SQL Server в виде фрагментов с помощью [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md).  
   
- Если *pData* имеет значение NULL, а столбец соответствующий привязанному полю не является типом больших значений **bcp_colptr** завершается ошибкой.  
+ Если *pData* имеет значение NULL и столбец соответствующий привязанному полю не является типом больших значений **bcp_colptr** завершается ошибкой.  
   
  Дополнительные сведения о типах больших значений см. в разделе [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)**.**  
   
@@ -63,11 +63,11 @@ RETCODE bcp_colptr (
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Примечания  
- **Bcp_colptr** функция позволяет изменять адрес источника данных для конкретного столбца при копировании данных в SQL Server с [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
+ **Bcp_colptr** функция позволяет изменять адрес источника данных для определенного столбца, при копировании данных в SQL Server с [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
   
- Изначально указатель на пользовательские данные устанавливается вызовом **bcp_bind**. Если адрес данных переменных программы изменяется между вызовами **bcp_sendrow**, можно вызвать **bcp_colptr** Чтобы сбросить указатель на данные. При следующем вызове **bcp_sendrow** отправляет данные при помощи вызова **bcp_colptr**.  
+ Изначально указатель на пользовательские данные устанавливается вызовом **bcp_bind**. Если адрес данных переменных программы изменяется между вызовами **bcp_sendrow**, можно вызвать **bcp_colptr** Чтобы сбросить указатель на данные. Следующий вызов **bcp_sendrow** отправляет данные путем вызова **bcp_colptr**.  
   
- Должен быть выполнен отдельный **bcp_colptr** вызова для каждого столбца в таблице, адреса данных которого нужно изменить.  
+ Должен быть отдельный **bcp_colptr** вызова для каждого столбца в таблице, адреса данных которого нужно изменить.  
   
 ## <a name="see-also"></a>См. также  
  [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], transactions
 - transactions [Integration Services], about transactions in packages
@@ -18,13 +18,13 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 880fd7d655b572f264f5120849cb5a927cdaaa59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4002487af9dba5e4466b75e3fce19ce0c9b8d531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165015"
 ---
 # <a name="integration-services-transactions"></a>Транзакции служб Integration Services
   Пакеты используют транзакции для связывания выполняемых в базе данных задачами операций в атомарные объекты, и, таким образом, сохраняют целостность данных. Все типы контейнеров служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (пакеты, контейнеры циклов по элементам и по каждому элементу, контейнеры последовательности, а также серверы задач, которые содержат каждую задачу) могут быть настроены для использования транзакций. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют три параметра для настройки транзакций: **NotSupported**, **Supported**и **Required**.  
@@ -38,7 +38,7 @@ ms.locfileid: "36097300"
  Настройка транзакций происходит с помощью свойства контейнера TransactionOption. Установить это свойство можно в окне **Свойства** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]или программным путем.  
   
 > [!NOTE]  
->  Cвойствo `TransactionOption` влияет на то, применяется ли значение свойства `IsolationLevel`, запрашиваемого контейнером. Дополнительные сведения см. в описании `IsolationLevel` свойства в разделе [Настройка свойств пакета](set-package-properties.md).  
+>  Cвойствo `TransactionOption` влияет на то, применяется ли значение свойства `IsolationLevel`, запрашиваемого контейнером. Дополнительные сведения см. в описании `IsolationLevel` свойства в разделе [Установка свойств пакета](set-package-properties.md).  
   
 ### <a name="to-configure-a-package-to-use-transactions"></a>Настройка пакета на использование транзакций  
   

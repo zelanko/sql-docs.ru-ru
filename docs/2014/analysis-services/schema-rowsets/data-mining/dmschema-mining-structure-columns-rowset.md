@@ -1,5 +1,5 @@
 ---
-title: Набор строк DMSCHEMA_MINING_STRUCTURE_COLUMNS | Документы Microsoft
+title: Набор строк DMSCHEMA_MINING_STRUCTURE_COLUMNS | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_STRUCTURE_COLUMNS rowset
 ms.assetid: 81f25502-ac90-42f1-8ddf-7b0f9752ebfd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98c8ec286e12cfe6198c36900067a26eefd5e1ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c98da6f1e843b08fac4b91baabec79ab0d9c341
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171585"
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>Набор строк DMSCHEMA_MINING_STRUCTURE_COLUMNS
-  Описывает отдельные столбцы всех структур интеллектуального анализа данных, развернутыми на сервере, на котором выполняется [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Описывает отдельные столбцы всех структур интеллектуального анализа данных, развернутых на сервере, на котором выполняется [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  `DMSCHEMA_MINING_STRUCTURE_COLUMNS` Набор строк содержит следующие столбцы.  
@@ -49,7 +49,7 @@ ms.locfileid: "36097819"
 |`IS_NULLABLE`|`DBTYPE_BOOL`||Логическое значение, показывающее, имеет ли этот столбец значение по умолчанию.<br /><br /> Значение `TRUE`, если столбец может содержать значение `NULL`; `FALSE` в противном случае.|  
 |`DATA_TYPE`|`DBTYPE_UI2`||Признак типа данных столбца. Например:<br /><br /> -   "`TABLE`" = `DBTYPE_HCHAPTER`<br />-   "`TEXT`" = `DBTYPE_WCHAR`<br />-   "`LONG`" = `DBTYPE_I8`<br />-   "`DOUBLE`" = `DBTYPE_R8`<br />-   "`DATE`" = `DBTYPE_DATE`|  
 |`TYPE_GUID`|`DBTYPE_GUID`||Идентификатор GUID для типа данных столбца. Поставщики, которые не используют идентификаторы GUID для идентификации типов данных, должны возвращать значение `NULL` в этом столбце.|  
-|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||Максимально допустимая длина значения данного столбца. Для символьных, двоичных и битовых столбцов это одно из следующих значений.<br /><br /> -Максимальная длина столбца в символы, байтах или битах соответственно, если длина определена. Например, столбец `CHAR(5)` в таблице SQL Server имеет максимальную длину в 5 символов.<br />-Максимальная длина данных, типа в символах, байтах или битах соответственно, если столбец не имеет определенной длины.<br />-Нуль (0), если определена максимальная длина столбца, ни тип данных.<br />-   `NULL` для всех других типов столбцов.|  
+|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||Максимально допустимая длина значения данного столбца. Для символьных, двоичных и битовых столбцов это одно из следующих значений.<br /><br /> -Максимальную длину столбца в символы, байтах или битах, соответственно, если длина определена. Например, столбец `CHAR(5)` в таблице SQL Server имеет максимальную длину в 5 символов.<br />-Максимальная длина данных, типа в символах, байтах или битах соответственно, если столбец не имеет определенной длины.<br />— Нуль (0), если определена максимальная длина столбца, ни тип данных.<br />-   `NULL` для всех других типов столбцов.|  
 |`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||Максимальная длина столбца в октетах (байтах), если столбец имеет символьный или двоичный тип. Нулевое значение (0) означает, что для столбца не задана максимальная длина. Значение `NULL` для всех других типов столбцов.|  
 |`NUMERIC_PRECISION`|`DBTYPE_UI2`||Максимальная точность столбца, если типом данных столбца является числовой тип данных, отличный от `VARNUMERIC`; значение `NULL`, если тип данных столбца не является числовым или представляет собой `VARNUMERIC`.<br /><br /> Точность столбцов с типом данных `DBTYPE_DECIMAL` или `DBTYPE_NUM`ERIC зависит от определения столбца.|  
 |`NUMERIC_SCALE`|`DBTYPE_I2`||Число цифр справа от десятичного разделителя, если индикатор типа столбца имеет значение `DBTYPE_DECIMAL`, `DBTYPE_NUMERIC` или `DBTYPE_VARNUMERIC`. В противном случае значение `NULL`.|  
@@ -65,7 +65,7 @@ ms.locfileid: "36097819"
 |`DOMAIN_NAME`|`DBTYPE_WSTR`||Имя домена. Значение `NULL`, если поставщик не поддерживает домены.|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||Предназначенное для человека описание столбца. Значение `NULL` при отсутствии описания, связанного со столбцом.|  
 |`DISTRIBUTION_FLAG`|`DBTYPE_WSTR`||Распределение столбца структуры интеллектуального анализа данных:<br /><br /> -   "`NORMAL`"<br />-"`LOG_NORM`AL»<br />-   "`UNIFORM`"|  
-|`CONTENT_TYPE`|`DBTYPE_WSTR`||Тип содержимого столбца структуры интеллектуального анализа данных:<br /><br /> -   "`KEY`"<br />-   "`DISCRETE`"<br />-   "`CONTINUOUS`"<br />-"`DISCRETIZED(`[аргументы]`)`»<br />-   "`ORDERED`"<br />-   "`SEQUENCE_TIME`"<br />-   "`CYCLICAL`"<br />-   "`PROBABILITY`"<br />-   "`VARIANCE`"<br />-   "`STDEV`"<br />-   "`SUPPORT`"<br />-   "`PROBABILITY_VARIANCE`"<br />-   "`PROBABILITY_STDEV`"|  
+|`CONTENT_TYPE`|`DBTYPE_WSTR`||Тип содержимого столбца структуры интеллектуального анализа данных:<br /><br /> -   "`KEY`"<br />-   "`DISCRETE`"<br />-   "`CONTINUOUS`"<br />-"`DISCRETIZED(`[аргументы]`)`"<br />-   "`ORDERED`"<br />-   "`SEQUENCE_TIME`"<br />-   "`CYCLICAL`"<br />-   "`PROBABILITY`"<br />-   "`VARIANCE`"<br />-   "`STDEV`"<br />-   "`SUPPORT`"<br />-   "`PROBABILITY_VARIANCE`"<br />-   "`PROBABILITY_STDEV`"|  
 |`MODELING_FLAG`|`DBTYPE_WSTR`||Разделенный запятыми список флагов моделирования. Единственным поддерживаемым флагом для столбца структуры является «`NOT NULL`».|  
 |`IS_RELATED_TO_KEY`|`DBTYPE_BOOL`||Логическое значение, которое указывает, связан ли этот столбец с ключом.<br /><br /> Значение `VARIANT_TRUE`, если этот столбец связан с ключом; `VARIANT_FALSE` в противном случае. Если ключ состоит из единственного столбца, поле `RELATED_ATTRIBUTE` дополнительно может содержать имя этого столбца.|  
 |`RELATED_ATTRIBUTE`|`DBTYPE_WSTR`||Имя целевого столбца, с которым связан текущий столбец (или который представляет собой специальное свойство).|  

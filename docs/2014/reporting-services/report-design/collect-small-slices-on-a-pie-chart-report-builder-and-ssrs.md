@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: af1a270524d91621cdeb15b56ace7c07ad4a4df7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 91b6e5492566c2ada0857c8708ddc786560ee387
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177191"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Сбор мелких срезов на круговой диаграмме (построитель отчетов и службы SSRS)
   Если круговая диаграмма содержит слишком много данных, она выглядит загроможденной. Чтобы исправить это, можно отобразить на круговой диаграмме все данные, находящиеся в пределах определенного значения, одним срезом.  
   
- Чтобы собрать мелкие срезы в один, сначала следует решить, как будет измеряться порог для сбора мелких срезов — в процентном отношении от круговой диаграммы или как фиксированное значение. Затем задайте свойства CollectedThreshold и CollectedThresholdUsePercent. Присвойте свойству CollectedThreshold либо значение в процентах для диаграммы (собираемые данные не будут превышать это значение), либо фактическое пороговое значение собираемых данных. Присвойте свойству CollectedThresholdUsePercent `True` для использования в процентах или `False` использовать фактическое значение.  
+ Чтобы собрать мелкие срезы в один, сначала следует решить, как будет измеряться порог для сбора мелких срезов — в процентном отношении от круговой диаграммы или как фиксированное значение. Затем задайте свойства CollectedThreshold и CollectedThresholdUsePercent. Присвойте свойству CollectedThreshold либо значение в процентах для диаграммы (собираемые данные не будут превышать это значение), либо фактическое пороговое значение собираемых данных. Присвойте свойству CollectedThresholdUsePercent `True` для использования в процентах или `False` для использования фактического значения.  
   
  Можно также собрать мелкие срезы во вторую круговую диаграмму, вызываемую из собранного среза первой диаграммы. Вторая круговая диаграмма отображается справа от исходной круговой диаграммы.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36097436"
          Присвойте свойству CollectedThreshold значение **10**.  
   
         > [!NOTE]  
-        >  Если значение CollectedStyle **SingleSlice**, CollectedThreshold больше, чем значение **100**, и CollectedThresholdUsePercent `True`, диаграмма будет вызывать исключение, поскольку он не может Вычислите проценты. Чтобы избежать этого, присвойте свойству CollectedThreshold значение меньше **100**.  
+        >  Если присвоить свойству CollectedStyle значение **SingleSlice**, свойству CollectedThreshold значение больше **100**, а свойству CollectedThresholdUsePercent — `True`, диаграммы будет выдано исключение, поскольку он не может Вычислите проценты. Чтобы избежать этого, присвойте свойству CollectedThreshold значение меньше **100**.  
   
     -   **По значению данных.** Например, можно собрать в один срез все срезы круговой диаграммы, не превышающие 5000%.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36097436"
   
 2.  Присвойте свойству CollectedStyle значение **CollectedPie**.  
   
-3.  Определите для свойства CollectedThresholdproperty значение порога, мелкие срезы со значениями ниже которого будут собираться в один срез. Если значение свойства CollectedStyle **CollectedPie**, CollectedThresholdUsePercentproperty всегда имеет значение `True`, а порог сбора всегда измеряется в процентах.  
+3.  Определите для свойства CollectedThresholdproperty значение порога, мелкие срезы со значениями ниже которого будут собираться в один срез. Если присвоить свойству CollectedStyle значение **CollectedPie**, CollectedThresholdUsePercentproperty всегда имеет значение `True`, а порог сбора всегда измеряется в процентах.  
   
 4.  (Необязательно) Присвойте значения свойствам CollectedColor, CollectedLabel, CollectedLegendText и CollectedToolTip. Все остальные свойства, в имя которых входит «Collected», не относятся к собранной диаграмме.  
   
@@ -80,9 +80,9 @@ ms.locfileid: "36097436"
 >  Форматировать вторичную круговую диаграмму нельзя. По этой причине настоятельно рекомендуется пользоваться для сбора мелких срезов круговых диаграмм первым методом.  
   
 ## <a name="see-also"></a>См. также  
- [Круговые диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Форматирование точек данных на диаграмме &#40;отчетов построителя отчетов и службы SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Метки точек данных отображаемое за пределами круговой диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Круговые диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Форматирование точек данных на диаграмме &#40;построитель отчетов и службы SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Отображение меток точек данных за пределами круговой диаграммы &#40;построитель отчетов и службы SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Отображение процентных значений на круговой диаграмме (построитель отчетов и службы SSRS)](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Добавление в диаграмму объемных эффектов (построитель отчетов и службы SSRS)](chart-effects-add-3d-effects-report-builder.md)  
   

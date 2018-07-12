@@ -1,5 +1,5 @@
 ---
-title: Объекты ASSL и характеристики объектов | Документы Microsoft
+title: Объекты ASSL и характеристики объектов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - expansion [Analysis Services Scripting Language]
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e5f98511df4b952f6598909d1cea2c373ff7476
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95e2277f9d618dfc13c4fe93ea6a565550ec1e87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277900"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Объекты ASSL и характеристики объектов
   В языке ASSL объекты следуют специальным рекомендациям в отношении групп объектов, наследования, именования, расширения и обработки.  
@@ -37,7 +37,7 @@ ms.locfileid: "36086759"
 ## <a name="object-groups"></a>Группы объектов  
  Все [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объекты имеют XML-представление. Объекты разделены на две группы.  
   
- **Основные объекты.**  
+ **Основные объекты**  
  Основные объекты можно создавать, изменять и удалять независимо. К основным объектам относятся следующие:  
   
 -   Серверы  

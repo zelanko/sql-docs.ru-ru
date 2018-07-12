@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c9be2d437953424ac256d593fb39a727ae96a5ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 124c7b2dee86e1bd42b2d5cb3f450323bad8161a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218594"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Ошибка службы Reporting Services
     
@@ -57,7 +57,7 @@ ms.locfileid: "36096079"
   
 -   Произошла ошибка при загрузке неправильно развернутой пользовательской сборки или сборки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   Параметр, который имеет свойство Nullable равно `False` было обнаружено значение null в параметре.  
+-   Параметр, свойству Nullable которого присвоено `False` было обнаружено значение null в параметре.  
   
 -   Выражение для свойства Hidden области данных содержит ошибку: ссылка на объект не указывает на экземпляр объекта.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36096079"
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Не удается обработать основной отчет с вложенным отчетом  
  Основной и вложенный отчеты должны обрабатываться одной и той же версией обработчика отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . При обновлении отчетов до текущей версии схемы определения отчетов возможно, что основной и вложенные отчеты будут обновлены одновременно. Если версии основного и вложенных отчетов не совпадают, выдается следующее сообщение: Subreport could not be processed (Не удалось обработать вложенный отчет).  
   
- Нужно изменить либо основной, либо вложенный запрос, чтобы оба они обрабатывались одной и той же версией обработчика отчетов. Сведения о том, почему отчет не удалось обновить см. в разделе [Upgrade Reports](../install-windows/upgrade-reports.md).  
+ Нужно изменить либо основной, либо вложенный запрос, чтобы оба они обрабатывались одной и той же версией обработчика отчетов. Сведения о том, почему отчет для обновления, см. в разделе [обновление отчетов](../install-windows/upgrade-reports.md).  
   
 ### <a name="verify-function-calls-are-visual-basic-and-not-sql"></a>Вызовы функций написаны на Visual Basic, а не SQL  
  В тексте запроса в реляционной базе данных можно использовать функции SQL. В тексте запросов нельзя использовать функции [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
@@ -121,7 +121,7 @@ ms.locfileid: "36096079"
   
  Для агрегатных функций, вычисляющих промежуточные итоги (`Previous`, `RunningValue` или `RowNumber`), можно задать параметр области, представляющий собой либо имя группы строк, либо имя группы столбцов, но не то и другое сразу. Это относится к следующим сообщениям:  
   
--   `Previous`, `RunningValue` или `RowNumber` агрегатные функции, используемые в ячейках данных  *\<тип отчета >* "*\<имя элемента отчета >*" ссылаются на области группирования в столбцах и строках  *\<тип отчета >*. Параметры области для всех `Previous`, `RunningValue` и `RowNumber` агрегатные функции в  *\<тип отчета >* могут ссылаться на группирования строк или столбца группирования данных, но не оба.  
+-   `Previous`, `RunningValue` или `RowNumber` агрегатные функции, используемые в ячейках данных  *\<тип элемента отчета >* "*\<имя элемента отчета >*" ссылаются на области группирования в столбцах и строках  *\<тип элемента отчета >*. Параметры области для всех `Previous`, `RunningValue` и `RowNumber` агрегатные функции в  *\<тип элемента отчета >* могут ссылаться на группирование строк или столбца группирования данных, но не оба.  
   
  Дополнительные сведения см. в разделах [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) и [Встроенные коллекции (построитель отчетов и службы SSRS)](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -130,12 +130,12 @@ ms.locfileid: "36096079"
   
 ## <a name="see-also"></a>См. также  
  [Выражения (построитель отчетов и службы SSRS)](../report-design/expressions-report-builder-and-ssrs.md)   
- [Справочник по функциям статистической обработки &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Справочник по агрегатным функциям &#40;построитель отчетов и службы SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../report-design/expression-examples-report-builder-and-ssrs.md)   
- [Добавление данных в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Часто используемые фильтры (построитель отчетов и службы SSRS)](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Ссылки на коллекцию параметров &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Ссылки на коллекцию параметров &#40;построитель отчетов и службы SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

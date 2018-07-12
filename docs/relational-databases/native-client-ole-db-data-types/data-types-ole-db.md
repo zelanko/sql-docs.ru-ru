@@ -1,12 +1,12 @@
 ---
-title: Типы данных (OLE DB) | Документы Microsoft
+title: Типы данных (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8574a80c29e0e4333edb78abd433648c51f940df
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e0ef45030e87bf59b3305607841adfb46fbc189d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703645"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424553"
 ---
 # <a name="data-types-ole-db"></a>Типы данных (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Для выполнения [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций и обработки результатов при помощи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, необходимо знать, как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maps поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных с типами данных OLE DB при привязке параметры или столбцы в наборе строк, а также при использовании **ITableDefinition** интерфейс для создания таблицы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Для выполнения [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций и обработки результатов при помощи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, необходимо знать, как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maps поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных в типы данных OLE DB при привязке параметров или столбцов в наборе строк, а также при использовании **ITableDefinition** интерфейс, чтобы создать таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>в этом разделе  
   

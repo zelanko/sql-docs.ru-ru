@@ -1,5 +1,5 @@
 ---
-title: Открытие решений и проектов из системы управления версиями | Документы Microsoft
+title: Открытие решений и проектов из системы управления версиями | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], solutions
 - source controls [SQL Server Management Studio], projects
 ms.assetid: 1c8d27f2-1741-485f-b56a-cadcb8b5493d
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 918b0f0084beae3644097fa795b1a0c9bc61471b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2f034cadd18ea0cf448a2044debe6b081c2a7e2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239414"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>Открытие решений и проектов из системы управления версиями
   Можно использовать [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для открытия решения или проекта непосредственно из системы управления версиями. Когда решение открывается из системы управления версиями, среда [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] автоматически получает последнюю версию решения и копирует ее в указанное место.  
   
- Если нет локальной копии решения, то для выполнения над ним операций управления версиями необходимо открыть его из системы управления версиями. После получения локальной копии решения, необходимо снова открыть его из системы управления версиями можно открыть локальную копию и использовать стандартные команды управления версиями, такие как **получить последнюю версию** или **извлечь**для выполнения требуемой операции.  
+ Если нет локальной копии решения, то для выполнения над ним операций управления версиями необходимо открыть его из системы управления версиями. После получения локальной копии решения, не нужно снова открыть его из системы управления версиями можно открывать локальную копию и использовать стандартные команды управления версиями, такие как **получить последнюю версию** или **извлечь**для выполнения требуемой операции.  
   
  В следующей таблице описаны подразделы, содержащиеся в этом разделе.  
   

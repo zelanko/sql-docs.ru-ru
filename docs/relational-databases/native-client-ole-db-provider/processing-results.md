@@ -1,5 +1,5 @@
 ---
-title: Обработка результатов | Документы Microsoft
+title: Обработка результатов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-ole-db-provider
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 18dddb9c3244a50a81d64b25fa200ca16e634284
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 3c8b6a1653fa089b5ef78211c4dd1ab4896dbcf6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699955"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425903"
 ---
 # <a name="processing-results"></a>Обработка результатов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "35699955"
 
   Если объект набора строк создан в результате выполнения команды или его формирования непосредственно из поставщика, то пользователю необходимо иметь возможность доступа к данным набора строк и их получения.  
   
- Наборы строк являются важными объектами, позволяющими поставщику OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивать доступ к данным в табличной форме. С концептуальной точки зрения объект набора строк — это набор строк, в котором каждая строка содержит данные столбцов. Объект набора строк предоставляет интерфейсы, такие как **IRowset** (содержит методы для последовательной выборки строк из набора строк), **IAccessor** (обеспечивает определение группы привязок столбцов, описывающий каким образом табличных данных привязана к переменным программы потребителей), **IColumnsInfo** (предоставляет сведения о столбцах в наборе строк), и **IRowsetInfo** (предоставляет сведения о наборе строк).  
+ Наборы строк являются важными объектами, позволяющими поставщику OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивать доступ к данным в табличной форме. С концептуальной точки зрения объект набора строк — это набор строк, в котором каждая строка содержит данные столбцов. Объект набора строк предоставляет интерфейсы, такие как **IRowset** (содержит методы для последовательной выборки строк из набора строк), **IAccessor** (обеспечивает определение группы привязок к столбцу описания способ табличных данных привязаны к переменным программы потребителей), **IColumnsInfo** (сведения о столбцах в наборе строк), и **IRowsetInfo** (предоставляет сведения о наборе строк).  
   
  Пользователь может вызвать **IRowset::GetData** метод для извлечения строки данных из набора строк в буфер. Прежде чем **GetData** является именем, пользователь описывает буфер с помощью набора структур DBBINDING. Каждая привязка описывает способ сохранения столбца набора строк в буфере пользователя и содержит следующее.  
   

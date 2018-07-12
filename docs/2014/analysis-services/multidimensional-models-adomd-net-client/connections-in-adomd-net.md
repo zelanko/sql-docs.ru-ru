@@ -1,5 +1,5 @@
 ---
-title: Установление соединений в ADOMD.NET | Документы Microsoft
+title: Установление соединений в ADOMD.NET | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ADOMD.NET, connections
 ms.assetid: 7b9610f5-6641-42cc-af4e-bd35771913d1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e9779ae9f6791443d06b97aaf9e56254ce1d7934
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d7bf4529df77545cf2d0acf69af5d0b570ef750
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097411"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165305"
 ---
 # <a name="establishing-connections-in-adomdnet"></a>Установление соединений в ADOMD.NET
   В ADOMD.NET, используется <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> объекта для открытия соединений с источниками аналитических данных, таких как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] баз данных. Если необходимости в соединении больше нет, его следует явно закрыть.  
@@ -54,7 +54,7 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
 ## <a name="working-with-a-connection"></a>Работа с соединением  
  Каждое открытое соединение существует в рамках сеанса, который поддерживает операции с сохранением состояния. Сеанс может совместно использоваться несколькими открытыми соединениями. Совместное использование сеанса позволяет нескольким клиентам пользоваться одним контекстом. Дополнительные сведения см. в разделе [работа с соединениями и сеансами в ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions.md).  
   
- Открытое соединение можно использовать для получения метаданных, данных и выполнения команд. Дополнительные сведения см. в разделе [получение метаданных из источника аналитических данных](retrieving-metadata-from-an-analytical-data-source.md), [получение данных из источника аналитических данных](retrieving-data-from-an-analytical-data-source.md), и [выполнение команд для аналитических данных Источник](executing-commands-against-an-analytical-data-source.md).  
+ Открытое соединение можно использовать для получения метаданных, данных и выполнения команд. Дополнительные сведения см. в разделе [получение метаданных из источника аналитических данных](retrieving-metadata-from-an-analytical-data-source.md), [извлечение данных из источника аналитических данных](retrieving-data-from-an-analytical-data-source.md), и [выполнение команды от аналитических данных Источник](executing-commands-against-an-analytical-data-source.md).  
   
  Когда соединение открыто, можно получать данные, метаданные и выполнять команды из транзакции READ-COMMITTED, в которой во время чтения данных устанавливаются совмещаемые блокировки для предотвращения чтения «грязных» данных. Данные по-прежнему можно изменять до окончания транзакции, что вызывает чтение без возможности повторения или фантомные данные. Дополнительные сведения см. в разделе [выполнение транзакций в ADOMD.NET](../../relational-databases/native-client-ole-db-transactions/transactions.md).  
   

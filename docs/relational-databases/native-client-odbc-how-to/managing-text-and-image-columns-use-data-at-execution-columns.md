@@ -1,12 +1,12 @@
 ---
-title: Использование столбцов данных времени выполнения (ODBC) | Документы Microsoft
+title: Использование столбцов данных времени выполнения (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ddb896292114ed7117771d32688fb8b7697be25
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 44cef9b4cbb31d595d5ba5ce373be77ec9bb44a3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698055"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428693"
 ---
-# <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Управление столбцами text и image - столбцов для использования данных во время выполнения
+# <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Управление столбцами text и image — использование данных во время выполнения столбцы
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -192,6 +192,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Текстовые и графические столбцы инструкции по управлению &#40;ODBC&#41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+ [Инструкции по столбцы text и image управлению &#40;ODBC&#41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

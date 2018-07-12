@@ -1,5 +1,5 @@
 ---
-title: Определение типа измерения (мастер измерений) | Документы Microsoft
+title: Определение типа измерения (мастер измерений) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
 ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a5b5d77a8f54b24488b7152bba95ac705d5196d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bdbc0375dd2f6c77d81ab4028bb5118de93a021f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185322"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Определение типа измерения (мастер измерений)
   Для определения типа измерения и добавления атрибутов специальных типов, связанных с выбранным типом измерений к измерению, используется страница **Определение типа измерения** .  
@@ -45,7 +45,7 @@ ms.locfileid: "36096944"
 |**Продукты**|Измерения продуктов представляют собой обычные измерения, в которых данные и метаданные представляют информацию о продуктах.<br /><br /> Дополнительные сведения об обычных измерениях см. в разделе [Типы измерений](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Promotion**|Измерения продвижений представляют собой обычные измерения, в которых данные и метаданные представляют информацию о маркетинговом продвижении.<br /><br /> Дополнительные сведения об обычных измерениях см. в разделе [Типы измерений](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Количественное измерение**|Количественные измерения представляют собой обычные измерения, в которых данные и метаданные представляют количественную информацию.<br /><br /> Дополнительные сведения об обычных измерениях см. в разделе [Типы измерений](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Курсы**|Курсовые измерения содержат данные и метаданные, представляющие данные о курсах обмена и конвертации валюты.|  
+|**Тарифы**|Курсовые измерения содержат данные и метаданные, представляющие данные о курсах обмена и конвертации валюты.|  
 |**Regular**|Обычные измерения являются наиболее распространенным типом измерений, используемых в службах [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].<br /><br /> Дополнительные сведения об обычных измерениях см. в разделе [Типы измерений](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Сценарий**|Измерения сценариев представляют собой обычные измерения, в которых данные и метаданные представляют информацию о планах или стратегическом анализе.<br /><br /> Дополнительные сведения об обычных измерениях см. в разделе [Типы измерений](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Time**|Измерения времени содержат данные и метаданные, ориентированные на время.<br /><br /> Дополнительные сведения об измерениях времени см. в разделе [Создание измерения типа Date](multidimensional-models/database-dimensions-create-a-date-type-dimension.md).|  

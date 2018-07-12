@@ -1,14 +1,13 @@
 ---
-title: Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server) | Документы Microsoft
+title: Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - endpoints [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], configuring
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Endpoint URLs (HADR)
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 caps.latest.revision: 19
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 8abbac1803bfb558ee3802776d00bd181f6c713d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 571ffb7537474343cd595445af77a4ecae48d3e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222624"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)
   Для размещения реплики доступности для группы доступности экземпляр сервера должен иметь конечную точку зеркального отображения базы данных. Экземпляр сервера использует эту конечную точку для прослушивания сообщений [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , получаемых от реплик доступности, размещенных на других экземплярах сервера. Чтобы определить реплику доступности для группы доступности, необходимо задать URL-адрес конечной точки экземпляра сервера, на котором размещена реплика. *URL-адрес конечной точки* определяет транспортный протокол конечной точки зеркального отображения базы данных — TCP, системный адрес экземпляра сервера и номер порта, связанный с конечной точкой.  
@@ -126,7 +125,7 @@ ms.locfileid: "36096724"
 ##  <a name="RelatedTasks"></a> Связанные задачи  
  **Настройка конечной точки зеркального отображения базы данных**  
   
--   [Создать базу данных конечной точки зеркального отображения для групп доступности AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Создание базы данных конечной точки зеркального отображения для групп доступности AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -138,7 +137,7 @@ ms.locfileid: "36096724"
   
 -   [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [Диагностика конфигурации групп доступности AlwaysOn &#40;SQL Server&#41;удалена](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [Устранение неполадок с конфигурацией групп доступности AlwaysOn &#40;SQL Server&#41;удален](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
  **Просмотр сведений о конечной точке зеркального отображения базы данных**  
   
@@ -152,7 +151,7 @@ ms.locfileid: "36096724"
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for высокого уровня доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>См. также  
  [Создание и настройка групп доступности (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)   

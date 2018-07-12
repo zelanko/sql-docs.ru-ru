@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f769ede65a47bbe3500b67ec02247ac5e3dc6f96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4f5821043d7ea8c482c1aff13c52d5e12e023da9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183841"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Экспорт в PDF-файл (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов в формате PDF создает отчет в файлах, которые можно открыть в Adobe Acrobat и других средствах просмотра PDF сторонних разработчиков, поддерживающих формат PDF 1.3. Хотя формат PDF версии 1.3 совместим с Adobe Acrobat 4.0 и более поздними версиями, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают Adobe Acrobat 6 или более поздние версии. Модуль подготовки отчетов не требует программного обеспечения Adobe для создания отчета. Однако средства просмотра PDF, например Adobe Acrobat, необходимы для просмотра или печати отчетов в формате PDF.  
   
- Модуль подготовки отчетов PDF поддерживает символы ANSI и с некоторыми ограничениями может преобразовать символы Юникода из написаний на японском, корейском, китайском — традиционное письмо, китайском — упрощенное письмо, кириллице, иврите, арабском. Дополнительные сведения об ограничениях см. в разделе [экспорта отчетов &#40;построитель отчетов и службы SSRS&#41;](export-reports-report-builder-and-ssrs.md).  
+ Модуль подготовки отчетов PDF поддерживает символы ANSI и с некоторыми ограничениями может преобразовать символы Юникода из написаний на японском, корейском, китайском — традиционное письмо, китайском — упрощенное письмо, кириллице, иврите, арабском. Дополнительные сведения об ограничениях см. в разделе [экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](export-reports-report-builder-and-ssrs.md).  
   
  Модуль подготовки отчетов PDF — это модуль подготовки отчетов с физическими страницами, поэтому разбиение на страницы в нем отличается от других модулей подготовки отчетов, например HTML и Excel. В этом разделе приведены сведения по каждому модулю подготовки отчетов PDF, а также исключения из правил.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36097440"
 ## <a name="see-also"></a>См. также  
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных модулей подготовки отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Интерактивные возможности различных модулей подготовки отчетов &#40;построитель отчетов и службы SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

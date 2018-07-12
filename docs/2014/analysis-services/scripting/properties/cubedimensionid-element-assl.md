@@ -1,5 +1,5 @@
 ---
-title: Элемент CubeDimensionID (ASSL) | Документы Microsoft
+title: Элемент CubeDimensionID (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CubeDimensionID element
 ms.assetid: d1341fb2-9afe-40f1-a704-ce548bce48fc
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 925a684b8bd05fabfda6a3e4c8461ca0b549efc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: addd969b2fe6c1014a825ba3f8413258b472b13d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196064"
 ---
 # <a name="cubedimensionid-element-assl"></a>Элемент CubeDimensionID (ASSL)
-  Идентифицирует [CubeDimension](../data-type/dimension-data-type-assl.md) элемент, связанный с родительским элементом.  
+  Идентифицирует [CubeDimension](../data-type/dimension-data-type-assl.md) элемента, связанного с родительским элементом.  
   
 ## <a name="syntax"></a>Синтаксис  
   

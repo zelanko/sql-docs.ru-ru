@@ -1,5 +1,5 @@
 ---
-title: Элемент Path (ASSL) | Документы Microsoft
+title: Элемент Path (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Path element
 ms.assetid: 0edc59ac-1671-4fe1-9b7c-6c1548df5c63
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ba53c4ee4399a39ebd8e4a1b14c9c062b3abaa7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc537a04723bb94dae76ab4bcb86e4d3d3e210f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161265"
 ---
 # <a name="path-element-assl"></a>Элемент Path (ASSL)
-  Содержит путь, предоставленный экземпляром служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], используемые отчета [ReportAction](../data-type/action-data-type-assl.md) элемента.  
+  Содержит путь, предоставленный экземпляр [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], используемые отчета [ReportAction](../data-type/action-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36097619"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `Path` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ReportAction>.  
+ Элемент, соответствующий родителю параметра `Path` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.ReportAction>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

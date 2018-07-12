@@ -1,5 +1,5 @@
 ---
-title: Извлечение файлов | Документы Microsoft
+title: Извлечение файлов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Visual Studio.SourceControl.CheckOutDialog
 helpviewer_keywords:
 - checking out files
 ms.assetid: cc033727-51bb-4b58-a12b-8977ce61ff56
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d8b36e03ff939cb7ddbc15bdec1d41532a87d9b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 319555e7a87922b65ff4846b8b5830041893d3c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167175"
 ---
 # <a name="check-out-files"></a>Извлечение файлов
   Если в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] не разрешено изменение возвращенных файлов, то перед изменением файла его необходимо извлечь. После извлечения файла его версия копируется на локальный диск, а атрибут файла «Только для чтения» снимается.  
@@ -52,10 +52,10 @@ ms.locfileid: "36098018"
      **Комментарии**  
      Задайте комментарий, связанный с операцией извлечения.  
   
-     **Не показывать извлечение-диалоговое окно при извлечении элементов**  
+     **Не окно "Показать извлечение" при извлечении элементов**  
      При выполнении операций извлечения подавить появление диалогового окна.  
   
-     **Неструктурированное представление**  
+     **Представлении без структуры**  
      Отображать отмеченные файлы в виде плоских списков под их подключением к системе управления версиями.  
   
      **Изменить**  

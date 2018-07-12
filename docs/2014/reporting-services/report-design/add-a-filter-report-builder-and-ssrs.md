@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5a4165c05755d34d8cdfd4141fbe1da43807d591
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 354c245a5261450d2817a9881fd228b66898f914
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186041"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Добавление фильтра (построитель отчетов и службы SSRS)
   Добавьте фильтр к набору данных, области данных или группе, если нужно включить или исключить определенные значения из вычислений или отображения. Фильтры применяются во время выполнения вначале для набора данных, затем для области данных и группы в нисходящем порядке для иерархий групп. В таблице, матрице и списке фильтры для групп строк, групп столбцов и смежных групп применяются независимо друг от друга. В диаграмме фильтры для групп категорий и групп рядов применяются независимо друг от друга.  
@@ -133,8 +133,8 @@ ms.locfileid: "36097868"
 ## <a name="see-also"></a>См. также  
  [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
- [Датчики &#40;отчетов построителя отчетов и службы SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [Датчики &#40;построитель отчетов и службы SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Списки &#40;построитель отчетов и службы SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
 - command prompt utilities [SQL Server], dta
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c659a1637b56015bf4642e87677529b0ea4e518b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5dcf0994c14496f32de3734d5456d462ad74fe74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200824"
 ---
 # <a name="dta-utility"></a>dta
   Программа **dta** — это версия помощника по настройке ядра СУБД для командной строки. Программа **dta** предназначена для использования функций помощника по настройке ядра СУБД в приложениях и скриптах.  
@@ -138,7 +138,7 @@ dta -d AdventureWorks2012 ...
   
  В случае указания нескольких баз данных программа **dta** возвращает ошибку. Аргумент **-d** является необязательным.  
   
- Если используется входной XML-файл, можно указать первую базу данных, к которому **dta** подключается с помощью `DatabaseToConnect` элемент, расположенный в `TuningOptions` элемент. Дополнительные сведения см. в разделе [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
+ При использовании входного XML-файл, можно указать первую базу данных, к которому **dta** подключается с помощью `DatabaseToConnect` элемент, который находится в папке `TuningOptions` элемент. Дополнительные сведения см. в разделе [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
  При настройке только одной базы данных аргумент **-d** предоставляет функциональность, аналогичную аргументу **-d** в программе **sqlcmd** , но не выполняет инструкцию USE *database_name* . Дополнительные сведения см. в статье [sqlcmd Utility](../sqlcmd-utility.md).  
   
@@ -197,7 +197,7 @@ dta -d AdventureWorks2012 ...
 |FULL|Полное секционирование (выберите для улучшения производительности)|  
 |ALIGNED|Только выровненное секционирование (выберите для улучшения возможностей управления)|  
   
- Значение ALIGNED означает, что в рекомендации, созданной программой **dta** , каждый предлагаемый индекс секционируется точно таким же образом, что и базовая таблица, для которой определяется индекс. Некластеризованные индексы в индексированном представлении выравниваются по индексированному представлению. Для этого аргумента может быть задано только одно значение. Значение по умолчанию — **-fp**`NONE`.  
+ Значение ALIGNED означает, что в рекомендации, созданной программой **dta** , каждый предлагаемый индекс секционируется точно таким же образом, что и базовая таблица, для которой определяется индекс. Некластеризованные индексы в индексированном представлении выравниваются по индексированному представлению. Для этого аргумента может быть задано только одно значение. По умолчанию используется **-fp**`NONE`.  
   
  **-fx** *drop_only_mode*  
  Указывает, что программа **dta** рассматривает только удаление существующих структур физического проектирования. Новые структуры физического проектирования не рассматриваются. При указании этого параметра программа **dta** производит оценку полезности существующих структур физического проектирования и рекомендует удалить редко используемые структуры. Этот аргумент не принимает значений. Он не может быть использован с аргументами **-fa**, **-fp**или **-fk ALL**  
@@ -393,7 +393,7 @@ dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.tx
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справка программы командной строки &#40;компонент Database Engine&#41;](../command-prompt-utility-reference-database-engine.md)   
+ [Справочник по программе командной строки &#40;компонент Database Engine&#41;](../command-prompt-utility-reference-database-engine.md)   
  [помощник по настройке ядра СУБД](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

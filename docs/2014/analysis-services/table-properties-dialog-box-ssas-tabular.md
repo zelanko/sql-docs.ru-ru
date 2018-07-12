@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно «Свойства» (SSAS — табличные) таблицы | Документы Microsoft
+title: Диалоговое окно «Свойства» (службы SSAS — табличные) таблицы | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.TableProperties.f1
 ms.assetid: 77571ccd-bdba-4e07-af55-465509dc6a33
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 572b5498e895bb14f426b4ea96d5040bdf8077cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 32603dea6e5160f2cde0f3a0326811fa3489cf53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220084"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>Диалоговое окно «Свойства таблицы» (службы SSAS — табличные модели)
   Используйте диалоговое окно **Свойства таблицы** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для просмотра свойств таблицы в базе данных с табличной моделью. Все свойства доступны только для чтения.  
@@ -38,7 +38,7 @@ ms.locfileid: "36096504"
 |**Отметка времени создания**|Отображает дату и время создания таблицы.|  
 |**Последнее обновление схемы**|Отображает дату и время последнего обновления метаданных таблицы.|  
 |**Состояние**|Отображает состояние обработки таблицы. Дополнительные сведения о значениях этого свойства см. в разделе <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
-|**Последней обработки**|Отображает дату и время последней обработки таблицы.|  
+|**Последняя обработка**|Отображает дату и время последней обработки таблицы.|  
 |**Текущий режим хранения**|Отображает текущий режим хранения для таблицы. Режим хранения устанавливается на уровне базы данных и наследуется всеми таблицами. Нельзя использовать различные режимы хранения на уровне таблицы. Допустимые значения: InMemory (по умолчанию), InMemoryWithDirectQuery, DirectQuery, DirectQueryWithinMemory.|  
   
   

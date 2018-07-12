@@ -1,12 +1,12 @@
 ---
-title: SQLFreeStmt | Документы Microsoft
+title: SQLFreeStmt | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/23/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,21 +18,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b8904256a29c7861f7d4760601c59f2b0d0d930e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: c025d526406cde4fdbbf7317afa2090576f15895
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701155"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425663"
 ---
 # <a name="sqlfreestmt"></a>Функция SQLFreeStmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Обычно   
+  Как правило   
       Не рекомендуется применять функцию**SQLFreeStmt** в ODBC 3.0 и более поздних версиях. Однако если приложению требуется повторно использовать инструкцию следует по-прежнему использовать **SQLFreeStmt** с **SQL_RESET_PARAMS** и **SQL_UNBIND** параметры). Можно также использовать [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md), [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md), [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md), [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md), и [ SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) заменить или дублируют функцию **SQLFreeStmt** и вместо него следует использовать их.  
   
- Как правило является более эффективным будет повторное использование инструкций, чем их удаление и повторное выделение. Однако в некоторых ситуациях, например повторное использование инструкций, SQLFreeStmt по-прежнему должна использоваться.  
+ Как правило более эффективным будет повторное использование инструкций, чем их удаление и выделение. Тем не менее в некоторых ситуациях, как повторное использование инструкций, SQLFreeStmt по-прежнему необходимо использовать.  
   
 ## <a name="see-also"></a>См. также  
  [SQLFreeStmt, функция](http://go.microsoft.com/fwlink/?LinkId=59346)   

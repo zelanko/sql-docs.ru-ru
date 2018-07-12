@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 3: Загрузка определения отчета с сервера отчетов | Документы Microsoft'
+title: 'Занятие 3: Загрузка определения отчета с сервера отчетов | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
 caps.latest.revision: 16
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 912a149542133a4c2bbdf4dfecde2ac0313defd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2963895811f8567f5142ed9b49137123390ec8d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149435"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Урок 3. Загрузка определения отчета с сервера отчетов
   После создания проекта и формирования классов из схемы языка определения отчетов необходимо загрузить определение отчета с сервера отчетов.  
   
 ### <a name="to-load-a-report-definition"></a>Загрузка определения отчета  
   
-1.  Добавьте закрытое поле в верхней части `ReportUpdater` класса (модуля, если вы используете [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) для `Report` класса. Это поле будет использоваться для хранения ссылки на отчет, который загружается с сервера отчетов во время выполнения приложения.  
+1.  Добавьте закрытое поле в верхней части `ReportUpdater` класс (модуля, если вы используете [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) для `Report` класса. Это поле будет использоваться для хранения ссылки на отчет, который загружается с сервера отчетов во время выполнения приложения.  
   
     ```csharp  
     private Report _report;  
@@ -101,7 +101,7 @@ ms.locfileid: "36098540"
     ```  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- На следующем занятии будет создан код для обновления определения отчета, которое было загружено с сервера отчетов. В разделе [занятие 4: обновление определения отчета программным способом](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
+ На следующем занятии будет создан код для обновления определения отчета, которое было загружено с сервера отчетов. См. в разделе [урок 4: обновление определения отчета программным способом](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
   
 ## <a name="see-also"></a>См. также  
  [Обновление отчетов с помощью классов, созданных из RDL-схемы &#40;учебник по службам SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

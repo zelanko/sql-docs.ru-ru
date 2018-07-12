@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 83d48cf33405988c9aedaceccc677ee238a7ea5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d697c1cb894028de8ccea5e3b87fc7d0cf155d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202604"
 ---
 # <a name="report-server-http-log"></a>Журнал HTTP-запросов сервера отчетов
   В файлах журнала HTTP сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] хранится информация для каждого HTTP-запроса и ответа, обработанного сервером отчетов. Сообщения об ошибках, связанных с переполнением очереди запросов и временем ожидания, не достигают сервера отчетов, поэтому не регистрируются в файле журнала.  
@@ -58,7 +58,7 @@ ms.locfileid: "36097439"
 ```  
   
 ## <a name="log-file-fields"></a>Поля файла журнала  
- В следующей таблице описаны поля, доступные в журнале. Список полей является настраиваемым; можно указать, какие поля необходимо включить `HTTPTraceSwitches` параметр конфигурации. **По умолчанию** указывает ли поля будут включены в файл журнала автоматически, если не указать `HTTPTraceSwitches`.  
+ В следующей таблице описаны поля, доступные в журнале. Настраивается список полей; можно указать, какие поля необходимо включить через `HTTPTraceSwitches` параметр конфигурации. **По умолчанию** столбца указывает ли поле будет включаться в файл журнала автоматически, если вы не укажете `HTTPTraceSwitches`.  
   
 |Поле|Описание|По умолчанию|  
 |-----------|-----------------|-------------|  

@@ -1,5 +1,5 @@
 ---
-title: Сообщения элемент (XMLA) | Документы Microsoft
+title: Сообщения, элемент (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Messages element
 ms.assetid: 719d15ff-f18b-4c56-80ba-a9114c0b7d8a
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 64895171a352fd981eb811c39be84b4268d5ed19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a0fbaba30716831ef34a40dd94c6c9b2ab507641
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176781"
 ---
 # <a name="messages-element-xmla"></a>Элемент Messages (XML для аналитики)
   Содержит коллекцию элементов [Message](message-element-xmla.md) , возвращаемую экземпляром служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] при вызове метода [Discover](../xml-elements-methods-discover.md) или [Execute](../xml-elements-methods-execute.md) .  
@@ -64,7 +64,7 @@ ms.locfileid: "36098261"
 |Дочерние элементы|[Сообщение](message-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Этот элемент используется в случаях, когда вызов метода `Discover` или отдельная команда XMLA в вызове метода `Execute` завершается успешно, но с ошибками или предупреждениями. В таких случаях `Messages` элемент будет добавлен к [корневой](root-element-xmla.md) после всех других элементов, элемент, который в свою очередь содержит один или несколько `Message` элементов. Каждый `Message` элемент представляет одно сообщение ошибку или предупреждение, которое возвращается [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра.  
+ Этот элемент используется в случаях, когда вызов метода `Discover` или отдельная команда XMLA в вызове метода `Execute` завершается успешно, но с ошибками или предупреждениями. В таких случаях `Messages` добавляется элемент [корневой](root-element-xmla.md) элемент после всех остальных элементов, который в свою очередь содержит один или несколько `Message` элементов. Каждый `Message` элемент представляет одно сообщение, ошибку или предупреждение, которое возвращается [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)  

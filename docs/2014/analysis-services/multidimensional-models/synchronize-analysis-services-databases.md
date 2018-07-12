@@ -1,5 +1,5 @@
 ---
-title: Синхронизация баз данных Analysis Services | Документы Microsoft
+title: Синхронизация баз данных Analysis Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, Synchronize Database Wizard
 - deploying [Analysis Services], Synchronize Database Wizard
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 193368b32f32941c5da99b134ce02b00b0b4c7b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b7bf8e598c6f9db0d2c0db12b63c84dad20daf2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216204"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Синхронизация баз данных служб Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] имеют функцию синхронизации баз данных, которая делает две базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] идентичными, копируя данные и метаданные из базы данных на исходном сервере в базу данных на целевом сервере. Используйте функцию синхронизации баз данных для выполнения следующих задач:  
@@ -47,11 +47,11 @@ ms.locfileid: "36096020"
 >  Следующие технические документы, написанные для предыдущих версий служб Analysis Services, продолжают действовать в отношении масштабируемых многомерных решений, построенных с помощью SQL Server 2012. Дополнительные сведения см. в разделах [Горизонтальное масштабирование запросов для служб Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253136) и [Горизонтальное масштабирование запросов для баз данных только для чтения в службах Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253137.).  
   
 ## <a name="prerequisites"></a>предварительные требования  
- На сервере назначения (или целевом сервере), с которого инициируется синхронизация баз данных, необходимо быть членом роли администратора сервера служб Analysis Services. На исходном сервере учетная запись пользователя Windows должна иметь разрешения на полный доступ в базе данных-источнике. При синхронизации базы данных в интерактивном режиме помните, что синхронизация выполняется в контексте безопасности удостоверения пользователя Windows. Если у учетной записи нет доступа к отдельным объектам, эти объекты будут исключены из операции. Дополнительные сведения о ролях администратора сервера и разрешения базы данных см. в разделе [предоставление разрешений администратора сервера &#40;служб Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) и [предоставление разрешений базы данных &#40; Службы Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
+ На сервере назначения (или целевом сервере), с которого инициируется синхронизация баз данных, необходимо быть членом роли администратора сервера служб Analysis Services. На исходном сервере учетная запись пользователя Windows должна иметь разрешения на полный доступ в базе данных-источнике. При синхронизации базы данных в интерактивном режиме помните, что синхронизация выполняется в контексте безопасности удостоверения пользователя Windows. Если у учетной записи нет доступа к отдельным объектам, эти объекты будут исключены из операции. Дополнительные сведения о ролях администратора сервера и разрешения базы данных, см. в разделе [предоставление разрешений администратора сервера &#40;служб Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) и [предоставление разрешений базы данных &#40; Службы Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
   
  Чтобы разрешить удаленные соединения между двумя экземплярами по умолчанию, TCP-порт 2383 должен быть открыт на обоих серверах. Дополнительные сведения о создании исключения в брандмауэре Windows см. в разделе [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
- Исходный и конечный серверы должны быть той же версией и пакетом обновления. Поскольку метаданные модели также синхронизированы, чтобы обеспечить совместимость сборки номер для обоих серверов должны совпадать. Выпуск каждой установки должен поддерживать синхронизацию баз данных. В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]синхронизация базы данных поддерживается в выпусках Enterprise, Developer и Business Intelligence. Дополнительные сведения о возможностях каждого выпуска см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Исходный и конечный серверы должны быть той же версией и пакетом обновления. Так как метаданные модели также синхронизируется, чтобы обеспечить совместимость сборки номер для обоих серверов должны совпадать. Выпуск каждой установки должен поддерживать синхронизацию баз данных. В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]синхронизация базы данных поддерживается в выпусках Enterprise, Developer и Business Intelligence. Дополнительные сведения о возможностях каждого выпуска, см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Режим развертывания сервера должен быть одинаковым на обоих серверах. Если синхронизируемая база данных является многомерной, то и исходный и целевой серверы должны быть настроены для работы в многомерном режиме сервера. Дополнительные сведения о режимах развертывания см. в разделе [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
@@ -192,7 +192,7 @@ ms.locfileid: "36096020"
   
 ## <a name="see-also"></a>См. также  
  [Элемент Synchronize &#40;XML для Аналитики&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)   
- [Развертывание решений модели с использованием XML для Аналитики](deploy-model-solutions-using-xmla.md)   
+ [Развертывание решений модели с помощью XMLA](deploy-model-solutions-using-xmla.md)   
  [Развертывание решений модели с использованием мастера развертывания](deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

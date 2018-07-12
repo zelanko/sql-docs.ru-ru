@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0cb5a9f08218a2533b4d1bcbcec2572b0b929dc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 931978bdad7e2e82d232af85ee253ca8cae7de91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239264"
 ---
 # <a name="transfer-database-task"></a>Задача «Передача базы данных»
   Задача «Передача базы данных» передает базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между двумя экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В отличие от других задач, передающих объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только путем копирования, задача «Передача базы данных» может копировать или перемещать базу данных. Эту задачу можно также использовать для копирования базы данных в пределах того же сервера.  
@@ -42,7 +42,7 @@ ms.locfileid: "36087177"
 ## <a name="execution-value"></a>Значение выполнения  
  Значение выполнения, заданное в свойстве `ExecutionValue` задачи, возвращает значение 1, поскольку в отличие от других задач передачи, задача «Передача базы данных» может передавать только одну базу данных.  
   
- Назначив пользовательскую переменную, чтобы `ExecValueVariable` задачи «Передача базы данных» сведения о передаче сообщений об ошибках могут быть сделаны доступными для других объектов в пакете. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md) и [Использование переменных в пакетах](../use-variables-in-packages.md).  
+ Назначив пользовательскую переменную, чтобы `ExecValueVariable` свойства задачи «Передача базы данных» сведения о передаче сообщений об ошибках можно сделать доступными другим объектам пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md) и [Использование переменных в пакетах](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Записи журнала  
  Задача «Передача базы данных» содержит следующие пользовательские записи в журнале.  
@@ -53,7 +53,7 @@ ms.locfileid: "36087177"
   
 -   SourceDB    Запись журнала содержит имя передаваемой базы данных.  
   
- Кроме того, запись журнала о `OnInformation` записывается событие при перезаписывании целевой базы данных.  
+ Кроме того, запись журнала для `OnInformation` записывается событие при перезаписывании целевой базы данных.  
   
 ## <a name="security-and-permissions"></a>Безопасность и разрешения  
  Для передачи базы данных в режиме вне сети пользователь, запускающий выполнение пакета, должен быть членом роли сервера sysadmin.  
@@ -75,9 +75,9 @@ ms.locfileid: "36087177"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи базы данных передачи &#40;страница «Общие»&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задач базы данных передача &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задачи базы данных передачи &#40;страницы базы данных&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [Редактор задач базы данных передача &#40;баз данных страницы&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [Страница "Выражения"](../expressions/expressions-page.md)  
   

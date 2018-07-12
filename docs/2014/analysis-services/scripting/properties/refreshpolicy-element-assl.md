@@ -1,5 +1,5 @@
 ---
-title: Элемент RefreshPolicy (ASSL) | Документы Microsoft
+title: Элемент RefreshPolicy (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RefreshPolicy element
 ms.assetid: f4c36280-1a39-4f1c-a3ab-fbeb81742d6d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d2dc0549eb8151f93c817e9e59bc1a8990fac87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf0aa9478a44e7479b20357ae56317b90801f77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277620"
 ---
 # <a name="refreshpolicy-element-assl"></a>Элемент RefreshPolicy (ASSL)
-  Определяет, как часто в динамической части измерения или группы мер (как указано в [сохраняемости](persistence-element-assl.md) элемент) проверяется на изменения.  
+  Определяет, как часто динамической части измерения или группы мер (как указано [сохраняемости](persistence-element-assl.md) элемент) проверки на наличие изменений.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36086731"
 |Значение|Описание|  
 |-----------|-----------------|  
 |*ByQuery*|Каждый запрос проверяет, не изменился ли источник данных.|  
-|*ByInterval*|Источник данных проверяется только для изменения в интервале, заданном элементом [RefreshInterval](refreshinterval-element-assl.md).|  
+|*ByInterval*|Источник данных проверяется только наличие изменений в интервале, заданном элементом [RefreshInterval](refreshinterval-element-assl.md).|  
   
  Перечисление, соответствующее допустимым значениям элемента `RefreshPolicy` в модели объектов AMO, — это <xref:Microsoft.AnalysisServices.RefreshPolicy>.  
   

@@ -1,5 +1,5 @@
 ---
-title: Определение типов таблиц (мастер интеллектуального анализа данных) | Документы Microsoft
+title: Определение типов таблиц (мастер интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytabletypes.f1
 ms.assetid: 8209a707-faef-4ffc-8991-6c13bb350753
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74fdca1f619b063e32e37b29f1ce721666d752d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c753554dcab61c10bacaf4c118d1781ba3d157b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159075"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>Определение типов таблиц (мастер интеллектуального анализа данных)
   Страница **Определение типов таблиц** используется для идентификации таблиц, используемых для определения структуры интеллектуального анализа данных. Если таблица не выбрана, она не будет использоваться для определения структуры интеллектуального анализа данных.  

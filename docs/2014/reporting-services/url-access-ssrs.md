@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services]
 - links [Reporting Services], URL access
@@ -20,13 +20,13 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1e969deea2a5a2ca99af25a763adf324818ce741
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11542b799e24e33fea852e8cac9e118349787a03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216474"
 ---
 # <a name="url-access-ssrs"></a>Доступ по URL-адресу (SSRS)
   Доступ по URL-адресу сервера отчетов в службах SQL Server Reporting Services (SSRS) позволяет отправлять команды серверу отчетов посредством запроса по URL-адресу. Например, можно настроить подготовку отчета на сервере отчетов, работающем в собственном режиме, или в библиотеке SharePoint. Ранее пользователи могли просматривать отчет с использованием определенного набора значений параметров отчета или просматривать только определенную представляющую интерес страницу отчета. Эти сведения можно инкапсулировать в URL адрес, используя параметры доступа по URL-адресу. Обработку отчета сервером отчетов можно настроить более подробно, внедрив параметры для форматов подготовки к просмотру или для внешнего вида обозревателя отчетов. Затем созданный URL-адрес можно непосредственно вставлять в электронное письмо или веб-страницу, чтобы дать возможность другим пользователям просматривать отчет в браузере в том же формате.  
@@ -43,7 +43,7 @@ ms.locfileid: "36096347"
   
 -   Управление сеансами отчетов  
   
- Полный список команд и параметров, доступных через URL-адрес см. в разделе [URL Access Parameter Reference](url-access-parameter-reference.md).  
+ Полный список команд и параметров, доступных через URL-адресов, см. в разделе [URL Access Parameter Reference](url-access-parameter-reference.md).  
   
 ## <a name="url-access-concepts"></a>Основные понятия доступа через URL-адрес  
  Запросы по URL-адресу к серверу отчетов содержат параметры, обрабатываемые сервером отчетов. Способ обработки сервером отчетов запросов по URL-адресу зависит от параметров, префиксов параметров и от типов элементов, включенных в URL-адрес. URL-адреса серверов отчетов соответствуют рекомендациям по форматированию URL-адресов, изложенным в проекте стандарта, разработанном совместно специалистами W3C и IETF. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] по своим функциональным возможностям совместимы с большинством Интернет-браузеров или приложений, соответствующих стандарту адресации с использованием URL.  
@@ -108,7 +108,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  Текст URL-адреса, соответствующий значению используемого параметра.  
   
- **Примечание:** список доступных параметров доступа URL-адрес см. в разделе [URL Access Parameter Reference](url-access-parameter-reference.md). Примеры передачи параметров отчета в URL-адресе см. в разделе [передачи параметра в URL-адрес отчетов](pass-a-report-parameter-within-a-url.md).  
+ **Примечание:** список доступных параметров URL-адрес для доступа, см. в разделе [URL Access Parameter Reference](url-access-parameter-reference.md). Примеры передачи параметров отчета в URL-адрес, см. в разделе [передать Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -123,7 +123,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
 |Подготовка определенного моментального снимка журнала отчета.|[Обработка моментального снимка журнала отчета с помощью URL-адресов](render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Передать параметр отчета в URL-адрес](pass-a-report-parameter-within-a-url.md)   
+ [Передача параметра отчета в URL-адрес](pass-a-report-parameter-within-a-url.md)   
  [Справочник по параметрам доступа по URL-адресу](url-access-parameter-reference.md)   
  [Интеграция служб Reporting Services с помощью доступа по URL-адресу](application-integration/integrating-reporting-services-using-url-access.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  

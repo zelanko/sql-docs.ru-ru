@@ -1,5 +1,5 @@
 ---
-title: Указание нескольких условий поиска для одного столбца (визуальные инструменты баз данных) | Документы Microsoft
+title: Указание нескольких условий поиска для одного столбца (визуальные инструменты баз данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], multiple conditions
 - multiple search conditions
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AND, Criteria pane
 ms.assetid: 2c006e36-56b1-4992-89b4-c6c0b19808f3
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b2b97488883e435bcecd754439f050c15cae0637
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7cc98916153556bb0746211f4d1f54a81afaee2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189541"
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>Указание нескольких условий поиска для одного столбца (визуальные инструменты для баз данных)
   Иногда может понадобиться сочетание нескольких условий поиска для одного столбца. Например, может понадобиться:  
@@ -87,7 +87,7 @@ WHERE (title LIKE '%Cook%') AND
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Соглашения комбинирования условия поиска на панели критериев &#40;визуальные средства базы данных&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [Обозначения для объединения условий поиска на панели критериев &#40;визуальных инструментах баз данных&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [Определение критериев поиска (визуальные инструменты для баз данных)](specify-search-criteria-visual-database-tools.md)  
   
   

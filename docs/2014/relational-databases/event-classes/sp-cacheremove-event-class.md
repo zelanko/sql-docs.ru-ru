@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:CacheRemove event class
 ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db6b0933af52271698622b86b848de16ecbd7cb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7c5e1a05ce2007c4c99a1336c997e69bbdf047dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158425"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove, класс событий
   Класс событий SP:CacheRemove указывает на то, что хранимая процедура была удалена из кэша планов.  
@@ -38,7 +38,7 @@ ms.locfileid: "36097497"
 |DatabaseName|`nvarchar`|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
 |EventClass|`int`|Тип события = 36.|27|Нет|  
 |EventSequence|`int`|Последовательность данного события в запросе.|51|Нет|  
-|EventSubClass|`int`|Тип подкласса событий:<br /><br /> 1 = Удаление из плана Compplan. Скомпилированный план запроса был удален из кэша.<br /><br /> 2 = Сброс кэша процедур. Все записи были удалены из кэша процедур.|21|Да|  
+|EventSubClass|`int`|Тип подкласса событий:<br /><br /> 1 = Удаление Compplan. Скомпилированный план запроса был удален из кэша.<br /><br /> 2 = Сброс кэша процедур. Все записи были удалены из кэша процедур.|21|Да|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IsSystem|`int`|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  

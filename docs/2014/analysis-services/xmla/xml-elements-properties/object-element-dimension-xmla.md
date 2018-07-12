@@ -1,5 +1,5 @@
 ---
-title: Объект элемента (измерение) (XMLA) | Документы Microsoft
+title: Объект элемента (измерение) (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Object element
 ms.assetid: db7feb39-7cc1-4b54-8979-77ce402ef71f
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2f0a80bcd26e5a54a0c45adff7667b4cfebdc467
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 652e5b2b42df856c7668e690b6595ecd41f8d8a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228154"
 ---
 # <a name="object-element-dimension-xmla"></a>Элемент Object (Dimension) (XMLA)
   Содержит ссылку на объект для измерения, на котором родительского [вставить](../xml-elements-commands/insert-element-xmla.md), [обновление](../xml-elements-commands/update-element-xmla.md), или [Drop](../xml-elements-commands/drop-element-xmla.md) выполняется команда.  
@@ -64,7 +64,7 @@ ms.locfileid: "36096229"
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительские элементы|[Удалить](../xml-elements-commands/drop-element-xmla.md), [вставить](../xml-elements-commands/insert-element-xmla.md), [обновления](../xml-elements-commands/update-element-xmla.md)|  
+|Родительские элементы|[DROP](../xml-elements-commands/drop-element-xmla.md), [вставить](../xml-elements-commands/insert-element-xmla.md), [обновления](../xml-elements-commands/update-element-xmla.md)|  
 |Дочерние элементы|[Куб](cube-element-xmla.md), [базы данных](database-element-xmla.md), [измерения](dimension-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  

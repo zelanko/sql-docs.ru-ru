@@ -1,25 +1,23 @@
 ---
-title: Устаревшие возможности в SQL Server 2014 средств управления | Документы Microsoft
+title: Устаревшие функции в SQL Server 2014 средств управления | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a08d1354-cc91-4ab7-a73f-3ad815af3d5a
-caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5a6b30dfb30b8515cd55083c634c1256e535bd8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0dc75044e2375bb21c0a2741f1efa499fafd7e68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203874"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>Устаревшие возможности средств управления в SQL Server 2014
   В этом разделе описаны устаревшие возможности средств управления, которые все еще доступны в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  

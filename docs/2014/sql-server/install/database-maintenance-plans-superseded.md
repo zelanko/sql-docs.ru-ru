@@ -1,5 +1,5 @@
 ---
-title: Замененный планы обслуживания базы данных | Документы Microsoft
+title: Замененные планы обслуживания базы данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - suspended database maintenance plans
 - database maintenance plans [SQL Server Agent]
 - maintenance plans [SQL Server Agent]
 ms.assetid: efac127c-6c81-4c7a-a6c4-9aae5d15545d
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f71e0cb8cb94cba893403f31cb2ffb9ee229c4ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 246c273e92a3779f74db225e5532756b475429b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151775"
 ---
 # <a name="database-maintenance-plans-superseded"></a>Планы обслуживания базы данных заменены
     
@@ -37,7 +37,7 @@ ms.locfileid: "36098342"
   
 -   доставка журналов;  
   
--   **Восстанавливать незначительные повреждения** параметр **Проверка целостности базы данных** задач  
+-   **Пытаться восстанавливать незначительные повреждения** параметр **Проверка целостности базы данных** задач  
   
 ## <a name="corrective-action"></a>Действие по исправлению  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предотвращает включение доставки журналов в план обслуживания базы данных. Дополнительные сведения см. в разделе «Доставка журналов» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

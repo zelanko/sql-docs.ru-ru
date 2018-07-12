@@ -1,5 +1,5 @@
 ---
-title: Изменение прогнозирующего запроса вручную | Документы Microsoft
+title: Изменение прогнозирующего запроса вручную | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying prediction queries
 - Mining Model Prediction [Analysis Services], modifying prediction queries
 - manual prediction query modification [Analysis Services]
 ms.assetid: 9f6a9298-49d5-4675-ad49-977a47dff5a6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fd7b2457b291aa7002c6de7ed00dda2be78b865b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9813aba9914a58d6a64266be2708d7e3d72ad543
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210444"
 ---
 # <a name="manually-edit-a-prediction-query"></a>Изменение прогнозирующего запроса вручную
   После проектирования запроса с использованием построителя прогнозирующих запросов можно изменить этот запрос, переключившись в представление «Текст запроса» на вкладке **Прогноз модели интеллектуального анализа данных** конструктора интеллектуального анализа данных. В нижней части экрана появится текстовый редактор, отображающий запрос, созданный построителем запросов.  
@@ -49,6 +49,6 @@ ms.locfileid: "36095820"
 ## <a name="see-also"></a>См. также  
  [Запросы интеллектуального анализа данных](data-mining-queries.md)   
  [Построитель прогнозирующих запросов &#40;интеллектуального анализа данных&#41;](../prediction-query-builder-data-mining.md)   
- [Урок 6: Создание прогнозов и работа с &#40;учебник по интеллектуальному анализу данных&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Занятие 6: Создание прогнозов и работа с &#40;учебник интеллектуального анализа данных&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

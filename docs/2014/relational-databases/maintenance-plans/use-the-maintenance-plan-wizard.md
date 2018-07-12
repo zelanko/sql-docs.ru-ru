@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.maintwiz.planprop.f1
 - sql12.ag.maintwiz.task.f1
@@ -35,15 +35,15 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 11706f4fb3761e20fea4c70feb431144efed0fc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6ee9a3c08fc00b5e7c6b340d3963e2003cfb0343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154495"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Использование мастера планов обслуживания
   В этом разделе описывается создание плана обслуживания одного или нескольких серверов с помощью мастера планов обслуживания в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Мастер планов обслуживания создает план обслуживания, который может регулярно выполняться агентом [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это позволяет выполнять различные задачи администрирования базы данных, включая резервное копирование, проверки целостности базы данных или обновление статистики базы данных через указанные интервалы времени.  
@@ -371,7 +371,7 @@ ms.locfileid: "36097982"
      Учетные данные SQL, используемые для проверки подлинности в хранилище Windows Azure. Если у вас нет существующих учетных данных SQL, нажмите кнопку **Создать** , чтобы создать новые учетные данные SQL.  
   
     > [!IMPORTANT]  
-    >  В диалоговом окне, которое открывается при нажатии кнопки **Создать** , необходимо ввести сертификат управления или профиль публикации подписки. Если у вас нет доступа к сертификату управления или профилю публикации, можно создать учетные данные SQL, указав имя учетной записи хранилища и сведения ключа доступа при помощи Transact-SQL или SQL Server Management Studio. Пример кода в [Создание учетных данных](../security/authentication-access/create-a-credential.md#Credential) раздела, чтобы создать учетные данные с помощью Transact-SQL. Также можно в среде SQL Server Management Studio, из экземпляра компонента database engine, щелкнуть правой кнопкой мыши **Безопасность**и выбрать пункт **Создать**, а затем **Учетные данные**. Укажите имя учетной записи хранения в поле **Идентификатор** и ключ доступа в поле **Пароль** .  
+    >  В диалоговом окне, которое открывается при нажатии кнопки **Создать** , необходимо ввести сертификат управления или профиль публикации подписки. Если у вас нет доступа к сертификату управления или профилю публикации, можно создать учетные данные SQL, указав имя учетной записи хранилища и сведения ключа доступа при помощи Transact-SQL или SQL Server Management Studio. В коде см. в разделе [Создание учетных данных](../security/authentication-access/create-a-credential.md#Credential) раздела, чтобы создать учетные данные с помощью Transact-SQL. Также можно в среде SQL Server Management Studio, из экземпляра компонента database engine, щелкнуть правой кнопкой мыши **Безопасность**и выбрать пункт **Создать**, а затем **Учетные данные**. Укажите имя учетной записи хранения в поле **Идентификатор** и ключ доступа в поле **Пароль** .  
   
      **Контейнер хранилища Azure**  
      Введите имя контейнера хранилища Windows Azure  

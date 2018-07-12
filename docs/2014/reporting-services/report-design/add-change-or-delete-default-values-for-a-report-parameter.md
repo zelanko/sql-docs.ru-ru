@@ -1,5 +1,5 @@
 ---
-title: Добавить, изменить или удалить значения по умолчанию для параметра отчета (построитель отчетов и службы SSRS) | Документы Microsoft
+title: Добавить, изменить или удалить значения по умолчанию для параметра отчета (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10460"
 - sql12.rtp.rptdesigner.reportparameters.defaultvalues.f1
 - "10072"
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2d5ccd789a763ed610df4c4782342253716119c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 448ae66acdfdbe4a0c90ff3f69e26be7cce56e12
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192884"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter-report-builder-and-ssrs"></a>Добавление, изменение или удаление значения по умолчанию для параметра отчета (построитель отчетов и службы SSRS)
   После создания параметров отчета можно предоставить список значений по умолчанию. Если все параметры имеют допустимые значения по умолчанию, отчет запускается автоматически при первом просмотре.  
@@ -33,7 +33,7 @@ ms.locfileid: "36097433"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- После публикации отчета можно изменить значения по умолчанию, определяемые в отчете с помощью средства разработки отчетов, задавая значения свойств параметров на сервере отчетов. Для параметра можно также предоставить несколько наборов значений по умолчанию, создав связанные отчеты. Дополнительные сведения см. в разделе [параметры отчета &#40;построитель отчетов и конструктора отчетов&#41;](report-parameters-report-builder-and-report-designer.md)  
+ После публикации отчета можно изменить значения по умолчанию, определяемые в отчете с помощью средства разработки отчетов, задавая значения свойств параметров на сервере отчетов. Для параметра можно также предоставить несколько наборов значений по умолчанию, создав связанные отчеты. Дополнительные сведения см. в разделе [параметры отчета &#40;построитель отчетов и конструктор отчетов&#41;](report-parameters-report-builder-and-report-designer.md)  
   
 ### <a name="to-add-or-change-the-default-values-for-a-report-parameter"></a>Добавление или изменение значений по умолчанию для параметра отчета  
   
@@ -68,12 +68,12 @@ ms.locfileid: "36097433"
   
 ## <a name="see-also"></a>См. также  
  [Параметры отчета (построитель отчетов и конструктор отчетов)](report-parameters-report-builder-and-report-designer.md)   
- [Добавление каскадных параметров в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Добавление каскадных параметров в отчет &#40;построитель отчетов и службы SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Учебник. Добавление параметра к отчету (построитель отчетов)](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Ссылки на коллекцию параметров (построитель отчетов и службы SSRS)](built-in-collections-parameters-collection-references-report-builder.md)   
- [Изменение порядка параметров отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [Добавление, изменение или удаление параметра отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Изменение порядка параметров отчета &#40;построитель отчетов и службы SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [Добавление, изменение или удаление параметра отчета &#40;построитель отчетов и службы SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)  
   
   

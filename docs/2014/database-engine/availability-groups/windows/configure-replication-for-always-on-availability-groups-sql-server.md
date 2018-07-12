@@ -5,24 +5,23 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 80edfc2a5a5d480b6d7acbc88d030881fb0e2e82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a57ba4393c23920b98a407176de51034715a54c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229604"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Настройка репликации для групп доступности AlwaysOn (SQL Server)
   Настройка репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и групп доступности AlwaysOn включает в себя семь шагов. Каждый шаг более подробно описывается в следующих разделах.  
@@ -137,7 +136,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- На каждом узле вторичной реплики настройте распространение. Укажите распространителя оригинального издателя в качестве удаленного распространителя. Используйте тот же пароль, который применялся при `sp_adddistributor` первоначально выполнялась на распространителе. Если хранимые процедуры используются для настройки распространения, *@password* параметр `sp_adddistributor` используется для указания пароля.  
+ На каждом узле вторичной реплики настройте распространение. Укажите распространителя оригинального издателя в качестве удаленного распространителя. Используйте тот же пароль, который применялся при `sp_adddistributor` первоначально выполнялась на распространителе. Если хранимые процедуры используются для настройки распространения *@password* параметр `sp_adddistributor` используется для указания пароля.  
   
 ```  
 EXEC sp_adddistributor   
@@ -145,7 +144,7 @@ EXEC sp_adddistributor
     @password = '**Strong password for distributor**';  
 ```  
   
- На каждом узле вторичной реплики убедитесь, что подписчики по запросу на публикации базы данных отображаются как связанные серверы. Если хранимые процедуры используются для настройки удаленных издателей, используйте `sp_addlinkedserver` для добавления подписчиков (если еще не установлены) в качестве связанных серверов для издателей.  
+ На каждом узле вторичной реплики убедитесь, что подписчики по запросу на публикации базы данных отображаются как связанные серверы. Если для настройки удаленных издателей используются хранимые процедуры, используйте `sp_addlinkedserver` для добавления подписчиков (если еще не установлены) в качестве связанных серверов для издателей.  
   
 ```  
 EXEC sys.sp_addlinkedserver   
@@ -177,14 +176,14 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
     @redirected_publisher = @redirected_publisher output;  
 ```  
   
- Хранимая процедура `sp_validate_replica_hosts_as_publishers` должна быть запущена от имени входа с достаточными правами авторизации на каждом узле реплики группы доступности для выполнения запроса сведений о группе доступности. В отличие от `sp_validate_redirected_publisher`, он использует учетные данные вызывающего объекта, а не имя входа в msdb.dbo.MSdistpublishers для подключения к репликам группы доступности.  
+ Хранимая процедура `sp_validate_replica_hosts_as_publishers` должна быть запущена от имени входа с достаточными правами авторизации на каждом узле реплики группы доступности для выполнения запроса сведений о группе доступности. В отличие от `sp_validate_redirected_publisher`, он использует учетные данные вызывающего объекта и не используйте имя входа, хранимое в msdb.dbo.MSdistpublishers для подключения к репликам группы доступности.  
   
 > [!NOTE]  
->  `sp_validate_replica_hosts_as_publishers` завершится ошибкой из-за ошибки при проверке узлов вторичной реплики, которые не допускают доступ для чтения, либо требуют указания намерения.  
+>  `sp_validate_replica_hosts_as_publishers` будут завершаться следующей ошибкой при проверке узлов вторичной реплики, которые не допускают доступ для чтения либо требуют указания намерения.  
 >   
 >  Сообщение 21899, уровень 11, состояние 1, процедура `sp_hadr_verify_subscribers_at_publisher`, строка 109  
 >   
->  Запрос на перенаправленном издателе «MyReplicaHostName» для определения того, имеются ли записи sysserver для подписчиков исходного издателя «MyOriginalPublisher» , завершился с ошибкой «976»; сообщение об ошибке: «Ошибка 976, уровень 14, состояние 1, сообщение: Целевая база данных «MyPublishedDB» участвует в группе доступности и в настоящее время недоступна для запросов. Либо перемещение данных приостанавливается, либо реплика доступности не разрешена для чтения. Чтобы разрешить доступ только для чтения к этой и другим базам данных в группе доступности, задайте доступ для чтения одной или нескольким вторичным репликам доступности в группе.  Дополнительные сведения см. в разделе `ALTER AVAILABILITY GROUP` инструкции в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] электронной документации. ".  
+>  Запрос на перенаправленном издателе «MyReplicaHostName» для определения того, имеются ли записи sysserver для подписчиков исходного издателя «MyOriginalPublisher» , завершился с ошибкой «976»; сообщение об ошибке: «Ошибка 976, уровень 14, состояние 1, сообщение: Целевая база данных «MyPublishedDB» участвует в группе доступности и в настоящее время недоступна для запросов. Либо перемещение данных приостанавливается, либо реплика доступности не разрешена для чтения. Чтобы разрешить доступ только для чтения к этой и другим базам данных в группе доступности, задайте доступ для чтения одной или нескольким вторичным репликам доступности в группе.  Дополнительные сведения см. в разделе `ALTER AVAILABILITY GROUP` инструкции в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online. ".  
 >   
 >  Произошла одна или несколько ошибок проверки издателя для узла реплики «MyReplicaHostName».  
   
@@ -198,7 +197,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Обслуживание базы данных публикации AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Репликация, отслеживание изменений, измененных данных и группы доступности AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
+-   [Репликация, отслеживание изменений, измененных данных и групп доступности AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [Администрирование (репликация)](../../../relational-databases/replication/administration/administration-replication.md)  
   
@@ -214,7 +213,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Создать базу данных конечной точки зеркального отображения для групп доступности AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Создание базы данных конечной точки зеркального отображения для групп доступности AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Присоединение вторичной реплики к группе доступности (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   

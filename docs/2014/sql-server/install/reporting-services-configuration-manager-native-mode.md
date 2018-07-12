@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - configuration options [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 342cca1892640e1e5c32fda049427d70c478f910
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc97beba507789ef821b8f69faa6f5db85822a00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220784"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Использование диспетчера конфигурации служб Reporting Services (собственный режим)
   Используйте диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для настройки установленных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме. Если сервер отчетов был установлен в режиме «только файлы», то перед использованием сервера необходимо воспользоваться диспетчером конфигурации. Если сервер отчетов устанавливался в режиме по умолчанию, используйте диспетчер настройки для проверки или изменения настроек, заданных во время установки. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] может использоваться для настройки экземпляра локального или удаленного сервера отчетов.  
@@ -63,12 +63,12 @@ ms.locfileid: "36096791"
  [Управление сервером отчетов Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
  Предоставляет пошаговую инструкцию по выполнению типичных задач.  
   
- [Разделы справки F1 по диспетчеру конфигурации служб Reporting Services &#40;собственный режим служб SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
+ [Разделы справки F1 диспетчера конфигурации служб Reporting Services &#40;собственный режим служб SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
  Содержит разделы справки по страницам в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] средство настройки.  
   
  **В этом разделе:**  
   
--   [Сценарии использования диспетчера конфигурации служб отчетов](#bkmk_scenarios)  
+-   [Сценарии использования диспетчера конфигурации Reporting Services](#bkmk_scenarios)  
   
 -   [Требования](#bkmk_requirements)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36096791"
   
 -   Настройка учетной записи службы сервера отчетов. Учетная запись службы сервера отчетов изначально настраивается в процессе установки, но может быть изменена с помощью программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , если требуется обновить пароль или использовать другую учетную запись.  
   
--   Создание и настройка URL-адресов. Сервер отчетов и диспетчер отчетов являются [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] приложений, доступных через URL-адреса. URL-адрес сервера отчетов обеспечивает доступ к конечным точкам SOAP сервера отчетов. URL-адрес диспетчера отчетов используется для запуска диспетчера отчетов. Для каждого приложения можно настроить один или несколько URL-адресов.  
+-   Создание и настройка URL-адресов. Сервер отчетов и диспетчер отчетов являются [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] через URL-адреса приложения. URL-адрес сервера отчетов обеспечивает доступ к конечным точкам SOAP сервера отчетов. URL-адрес диспетчера отчетов используется для запуска диспетчера отчетов. Для каждого приложения можно настроить один или несколько URL-адресов.  
   
 -   Создание и настройка базы данных сервера отчетов. Сервер отчетов представляет собой сервер без сохранения состояния, которому необходима база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве внутреннего хранилища. Программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать для создания базы данных сервера отчетов и настройки соединения с сервером отчетов. Можно также выбрать существующую базу данных сервера отчетов, содержащую нужные данные.  
   
@@ -116,9 +116,9 @@ ms.locfileid: "36096791"
   
     -   На стартовом экране Windows введите **Отчеты** и в результатах поиска выберите **Диспетчер конфигурации служб Reporting Services** .  
   
-    -   Нажмите кнопку **запустить**, пункты **все программы**, пункты [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], а затем **средства настройки**.  
+    -   Нажмите кнопку **запустить**, пункты **все программы**, пункты [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]и выберите команду **средства настройки**.  
   
-         Если необходимо настроить экземпляр сервера отчетов предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], откройте соответствующую ей папку установки. Например, пункты [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] вместо [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] чтобы открыть средства настройки для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] компонентов сервера.  
+         Если необходимо настроить экземпляр сервера отчетов предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], откройте соответствующую ей папку установки. Например, пункты [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] вместо [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] чтобы открыть средства настройки для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] серверные компоненты.  
   
          Выберите **Диспетчер конфигурации служб Reporting Services**.  
   

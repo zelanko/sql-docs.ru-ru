@@ -1,5 +1,5 @@
 ---
-title: Наборы строк схемы OLE DB | Документы Microsoft
+title: Наборы строк схемы OLE DB | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 313efc520f63240d3e9fa19584fc7f3e620fdeee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a1d03d6fd8d527d48a9a4051f201368ff870882
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161195"
 ---
 # <a name="ole-db-schema-rowsets"></a>Наборы строк схемы OLE DB
-  Поддерживаются следующие наборы строк схемы OLE DB [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) поставщика. Используйте `DISCOVER_ENUMERATORS` набора строк с [Discover](../../xmla/xml-elements-methods-discover.md) метод для проверки, поддерживает ли конкретный поставщик источника данных набор строк.  
+  Поддерживаются следующие наборы строк схемы OLE DB [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) поставщика. Используйте `DISCOVER_ENUMERATORS` набор строк с помощью [Discover](../../xmla/xml-elements-methods-discover.md) метод, чтобы проверить, поддерживает ли конкретный поставщик источника данных набор строк.  
   
- Подробные сведения об этих наборах строк также можно найти путем поиска см. в разделе «Наборы строк схемы» в части Справочник программиста OLE DB в библиотеке MSDN® на [!INCLUDE[msCoName](../../../includes/msconame-md.md)] веб-сайта.  
+ Подробные сведения об этих наборах строк также можно найти, выполнив поиск в разделе «Наборы строк схемы» в части программиста OLE DB ссылку в библиотеке MSDN® по адресу [!INCLUDE[msCoName](../../../includes/msconame-md.md)] веб-сайта.  
   
  В следующей таблице приведено описание этого набора строк схемы.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36097624"
 |`DBSCHEMA_TABLE_CONSTRAINTS`|Указывает ограничения таблицы, которые определены в каталоге и принадлежат данному пользователю.|  
 |`DBSCHEMA_TABLE_PRIVILEGES`|Указывает права доступа к таблицам, которые определены в каталоге и доступны данному пользователю или предоставлены им.|  
 |`DBSCHEMA_TABLE_STATISTICS`|Описывает доступный набор статистических данных, относящийся к таблицам в поставщике.<br /><br /> Этот набор строк не связан с набором строк `STATISTICS`.|  
-|[Набор строк DBSCHEMA_TABLES](dbschema-tables-rowset.md) <sup>1</sup>|Определяет группы мер и измерения, представленные в виде таблиц в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Набор строк DBSCHEMA_TABLES](dbschema-tables-rowset.md) <sup>1</sup>|Показывает группы мер и измерения, представленные в виде таблиц в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |`DBSCHEMA_TABLES_INFO` <sup>1</sup>|Указывает таблицы (включая представления), которые определены в каталоге и доступны данному пользователю.|  
 |`DBSCHEMA_TRANSLATIONS`|Указывает преобразования символов, которые определены в каталоге и доступны данному пользователю.|  
 |`DBSCHEMA_TRUSTEE`|Перечисляет доверенные лица для источника данных.|  

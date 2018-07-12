@@ -1,5 +1,5 @@
 ---
-title: Исходный элемент (XMLA) | Документы Microsoft
+title: Исходный элемент (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 4d4665ae-e20f-4baf-ab0f-848660caf500
 caps.latest.revision: 17
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 481b5c755b24c6bb8ae03e58b43759b4dce4e39a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 55123ac3a84cc42780550876f407e8eed11e4f18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182961"
 ---
 # <a name="source-element-xmla"></a>Элемент Source (XML для аналитики)
-  Представляет исходную секцию слиянии при [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) команды.  
+  Представляет исходную секцию для слияния во время [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) команды.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36097610"
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Целевой элемент &#40;XML для Аналитики&#41;](../xml-elements-properties/target-element-xmla.md)   
+ [Элемент target &#40;XML для Аналитики&#41;](../xml-elements-properties/target-element-xmla.md)   
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)  
   
   

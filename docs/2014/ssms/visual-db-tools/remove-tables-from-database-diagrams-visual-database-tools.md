@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting tables
 - removing tables
 - dropping tables
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7c0f7831a830623e418eba3664a913754bd5703f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a6022b56458a8bdcaade76977775d9c173dc4df8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206344"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>Удаление таблиц из диаграмм базы данных (визуальные инструменты для баз данных)
   Можно удалить таблицу из диаграммы базы данных. Удаление таблицы не изменяет базу данных. Таблица и ее связи с другими таблицами продолжают существовать в базе данных.  
@@ -43,7 +43,7 @@ ms.locfileid: "36096315"
  Таблица будет удалена из диаграммы, но она продолжит существовать в базе данных.  
   
 ## <a name="see-also"></a>См. также  
- [Работа с диаграммами базы данных &#40;визуальные средства базы данных&#41;](visual-database-tools.md)   
+ [Работа с диаграммами базы данных &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
  [Удаление таблиц (ядро СУБД)](../../relational-databases/tables/delete-tables-database-engine.md)  
   
   

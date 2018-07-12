@@ -1,5 +1,5 @@
 ---
-title: Просмотр модели в средстве просмотра кластеров (Microsoft) | Документы Microsoft
+title: Просмотр модели в средстве просмотра кластеров (Microsoft) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
 - discrimination [Analysis Services]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], clusters
 ms.assetid: 591fe30b-d88f-4a71-94d4-4a3907fc275d
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c513ddd212c8f5ab0f2b344008d36c1a2e352b57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ebba3499c092ab89bacb4011671b0f90df67eb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183571"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>Просмотр модели с помощью средства просмотра кластеров (Майкрософт)
   Средство просмотра кластеров [!INCLUDE[msCoName](../../includes/msconame-md.md)] в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, построенные с помощью алгоритма кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом сегментации, он используется для просмотра данных с целью обнаружения аномалий в данных и создания прогнозов. Дополнительные сведения об этом алгоритме см. в статье [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md).  
@@ -83,7 +83,7 @@ ms.locfileid: "36097823"
  [В начало](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм кластеризации Майкрософт](microsoft-clustering-algorithm.md)   
+ [Алгоритм кластеризации (Майкрософт)](microsoft-clustering-algorithm.md)   
  [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](mining-model-viewer-tasks-and-how-tos.md)   
  [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](mining-model-viewer-tasks-and-how-tos.md)   
  [Средства интеллектуального анализа данных](data-mining-tools.md)   

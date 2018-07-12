@@ -1,5 +1,5 @@
 ---
-title: Элемент capability (XML для Аналитики) | Документы Microsoft
+title: Элемент capability (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Capability element
 ms.assetid: 544a733e-77fc-48a0-8f92-9cd1fdbcf824
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 7fd495ff0abf921b377526f6030d5207d962e1bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a5b14b43b41f74c05d433c599b18486c5737b27c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201894"
 ---
 # <a name="capability-element-xmla"></a>Элемент Capability (XML для аналитики)
   Указывает на поддержку возможностей протокола в родительском объекте [ProtocolCapabilities](../xml-elements-headers/protocolcapabilities-element-xmla.md) элемент заголовка.  
@@ -64,7 +64,7 @@ ms.locfileid: "36098252"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- `Capability` Элемент указывает, что определенные возможности, например двоичные операции или сжатие, поддерживается любое приложение, которое включено `ProtocolCapabilities` элемент заголовка в заголовке SOAP SOAP-запроса или экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , включены `ProtocolCapabilities` элемент заголовка в заголовке SOAP SOAP-ответа. Значением элемента `Capability` является имя поддерживаемой возможности.  
+ `Capability` Элемент указывает, что определенные возможности, например двоичные операции или сжатие, поддерживаются либо приложением, которое включено `ProtocolCapabilities` элемент заголовка в заголовке SOAP SOAP-запроса или экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , включены `ProtocolCapabilities` элемент заголовка в заголовке SOAP SOAP-ответа. Значением элемента `Capability` является имя поддерживаемой возможности.  
   
  В следующей таблице перечислены возможности, поддерживаемые службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   

@@ -1,5 +1,5 @@
 ---
-title: Учебники по информационному менеджменту предприятия | Документы Microsoft
+title: Учебники по информационному менеджменту предприятия | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8bf0662a624fac18b83c1bb0d41e4c532d15ad00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2dc3dae5fa4bd7bb0186c325f65cccc2030fe7c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098076"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202114"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Учебники по информационному менеджменту предприятия
   В этом разделе содержатся учебники по управлению данными на предприятии с помощью технологий управления данными на предприятии (EIM), включенных в службы [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Технологии управления данными на предприятии (EIM) предоставляют портфель корпоративных решений, которые позволяют организациям обеспечивать надежность и согласованность своих данных, для принятия на их основе важных бизнес-решений. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] содержит следующие технологии, помогающие в реализации решений EIM на предприятии.  
@@ -36,6 +36,6 @@ ms.locfileid: "36098076"
  В этом учебнике вы научитесь совместно использовать службы SSIS, MDS и DQS для внедрения примера решения по управлению данными предприятия (EIM). Сначала службы DQS будут использованы для создания базы знаний с набором знаний о данных поставщика (метаданные), очистки данных в файле Excel путем их сравнения с базой знаний и сопоставления данных для обнаружения и удаления повторений в данных. Затем надстройка MDS для Excel будет использована для передачи очищенных и сопоставленных данных в MDS. Затем весь процесс будет автоматизирован с помощью решения служб SSIS.  
   
 ## <a name="see-also"></a>См. также  
- [Управление данными на предприятии — Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=270871)  
+ [Управление информацией на предприятии — Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=270871)  
   
   

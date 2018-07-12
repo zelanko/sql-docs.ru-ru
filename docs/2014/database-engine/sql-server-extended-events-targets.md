@@ -1,5 +1,5 @@
 ---
-title: Цели расширенных событий SQL Server | Документы Microsoft
+title: Цели расширенных событий SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - targets [SQL Server extended events]
 - extended events [SQL Server], targets
 ms.assetid: e281684c-40d1-4cf9-a0d4-7ea1ecffa384
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dbd3b218390cc1a49f7256a7f2cb79228ff8c3c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ba3ea863b35142c65b2e5f38789f888d603b6977
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160985"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Расширенные события являются потребители события. Цели могут записывать события в файл, хранить данные событий в буфере памяти и cобирать статистические данные о событиях. Цели могут обрабатывать данные в синхронном или асинхронном режиме.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Целями расширенных событий являются потребители события. Цели могут записывать события в файл, хранить данные событий в буфере памяти и cобирать статистические данные о событиях. Цели могут обрабатывать данные в синхронном или асинхронном режиме.  
   
  Структура расширенных событий гарантирует, что цели получают события единственный раз за сеанс.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36096898"
   
      Многие типы событий происходят попарно, например получение и снятие блокировки. Эта цель позволяет определить, что указанное парное событие не произошло в правильной последовательности. Это асинхронная цель.  
   
--   [Трассировка событий Windows (ETW)](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
+-   [События трассировки событий Windows (ETW)](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
   
      Предназначена для сопоставления событий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с данными событий Windows или данными событий приложений. Это синхронная цель.  
   

@@ -1,5 +1,5 @@
 ---
-title: Параметры (страница «Среда Help-Online») | Документы Microsoft
+title: Параметры (страница "среды Help-Online") | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Help.Online
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0a6be02ad438f35c145c7cadc3738525c1ea60d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2e15edf6e83edf97d39da4a20e99891c7b08a3a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204394"
 ---
 # <a name="options-environment-help-online-page"></a>Options (Environment-Help-Online Page)
   Диалоговое окно **Параметры** позволяет указать источники справки, которые используются при поиске в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , включая справку F1. В меню **Сервис** выберите **Параметры**, разверните папку **Среда** , выберите **Справка**и щелкните **Справка в сети**. Если страница **Справка в сети** отсутствует в списке, установите флажок **Показать все параметры** в диалоговом окне **Параметры** .  

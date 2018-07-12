@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b9c600939f5f3fb0a6febd76371d95e3ab91b4fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6308b2b3da495518fb2c377e7a0994a27f14dbcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206514"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Настройка нестандартной проверки подлинности или проверку подлинности с помощью форм на сервере отчетов
   Службы Reporting Services предоставляют открытую архитектуру, которая позволяет подключать нестандартные модули проверки подлинности и модули проверки подлинности с помощью форм. Можно рассмотреть возможность реализации нестандартного модуля проверки подлинности, если требования к развертыванию не включают встроенной безопасности Windows или обычную проверку подлинности. Наиболее распространенный сценарий использования нестандартной проверки подлинности — доступ к веб-приложению через Интернет или экстрасеть. Замена модуля проверки подлинности Windows по умолчанию нестандартным модулем проверки подлинности обеспечивает более широкие возможности управления предоставлением доступа к серверу отчетов внешним пользователям.  
@@ -38,7 +38,7 @@ ms.locfileid: "36096814"
   
 1.  Откройте файл конфигурации RSReportServer.config в текстовом редакторе.  
   
-2.  Найти <`Authentication`>.  
+2.  Найдите <`Authentication`>.  
   
 3.  Скопируйте следующую структуру XML:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36096814"
     </Authentication>  
     ```  
   
-4.  Вставьте его поверх существующих элементов <`Authentication`>.  
+4.  Вставьте его на место существующих элементов для <`Authentication`>.  
   
      Следует заметить, что `Custom` нельзя использовать с другими типами проверки подлинности.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36096814"
   
 6.  Откройте файл конфигурации Web.config для сервера отчетов. По умолчанию он находится в \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportServer.  
   
-7.  Найти `authentication mode` и задать для него `Forms`.  
+7.  Найти `authentication mode` и задайте для него `Forms`.  
   
     ```  
     <authentication mode = "Forms" />  
@@ -73,7 +73,7 @@ ms.locfileid: "36096814"
   
 9. Откройте файл конфигурации Web.config для диспетчера отчетов. По умолчанию она находится в каталоге «\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportManager».  
   
-10. Найти `authentication mode` и задать для него `Forms`.  
+10. Найти `authentication mode` и задайте для него `Forms`.  
   
     ```  
     <authentication mode = "Forms" />  
@@ -85,7 +85,7 @@ ms.locfileid: "36096814"
     <identity impersonate = "false" />  
     ```  
   
-12. Добавить `PassThroughCookies` структуру элемента в файле конфигурации. Дополнительные сведения см. в разделе [Настройка передачи куки-файлов для нестандартной проверки подлинности пользователя в диспетчере отчетов](configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
+12. Добавление `PassThroughCookies` структуру элементов в файле конфигурации. Дополнительные сведения см. в разделе [Настройка передачи куки-файлов для нестандартной проверки подлинности пользователя в диспетчере отчетов](configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
   
 13. Сохраните файл.  
   

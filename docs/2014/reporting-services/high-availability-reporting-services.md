@@ -1,5 +1,5 @@
 ---
-title: Высокий уровень доступности (службы Reporting Services) | Документы Microsoft
+title: Высокий уровень доступности (службы Reporting Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - high availability [SQL Server], Reporting Services
 - high availability [Reporting Services]
@@ -17,18 +17,18 @@ ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e1d11b2b53499b12a6a8a7dca262bc26ae777825
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0884a284e6d9169ce978d3c47330a683e2bb6b52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150225"
 ---
 # <a name="high-availability-reporting-services"></a>Высокий уровень доступности (службы Reporting Services)
-  Сервер отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] является сервером без сохранения состояния, на котором в двух реляционных базах данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] хранятся данные приложений, содержимое, свойства и сведения о сеансах. Таким образом, лучшим способом обеспечить доступность [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] функциональность будет делать следующее:  
+  Сервер отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] является сервером без сохранения состояния, на котором в двух реляционных базах данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] хранятся данные приложений, содержимое, свойства и сведения о сеансах. Таким образом, лучший способ обеспечить доступность [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] функциональные возможности для следующих целей:  
   
--   Используйте функции высокого уровня доступности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] чтобы максимально увеличить время работоспособности баз данных сервера отчетов. При настройке [!INCLUDE[ssDE](../includes/ssde-md.md)] экземпляра для работы в отказоустойчивом кластере, при создании базы данных сервера отчетов, можно выбрать этот экземпляр.  
+-   Используйте функцию высокого уровня доступности компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] для сокращения времени простоя баз данных сервера отчетов. Если вы настраиваете [!INCLUDE[ssDE](../includes/ssde-md.md)] экземпляра для запуска в отказоустойчивом кластере, при создании базы данных сервера отчетов, можно выбрать этот экземпляр.  
   
 -   Для баз данных [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и для источников данных по возможности используйте [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../includes/sshadr-md.md)]. Дополнительные сведения см. в статье [Службы Reporting Services с группами доступности AlwaysOn (SQL Server)](../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md).  
   

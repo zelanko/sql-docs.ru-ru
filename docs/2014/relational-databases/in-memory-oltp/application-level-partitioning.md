@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b3e1ff29abfaff5aa182019946c0a92d21395960
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 78aea34abfc3621ea7ebbd50a3236c81308f128b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152565"
 ---
 # <a name="application-level-partitioning"></a>Секционирование уровня приложения
   В этом примере демонстрируется секционирование уровня приложения, где данные хранятся в таблице, оптимизированной для памяти, или в таблице на диске в зависимости от того, был заказ сделан до или после определенной даты. Все заказы с более поздней или равной *hotDate* датой в оптимизированной для памяти таблице и все заказы до *hotDate* в таблице на диске. Предположим наличие предельной рабочей нагрузки OLTP с большим количеством параллельных транзакций. Это бизнес-правило (последние заказы находятся в оптимизированной для памяти таблице) необходимо обеспечить даже в том случае, когда несколько параллельных транзакций пытаются изменить *hotDate*.  

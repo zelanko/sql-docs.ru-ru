@@ -1,5 +1,5 @@
 ---
-title: 'Урок 6: Создание вычисляемых столбцов | Документы Microsoft'
+title: 'Занятие 6: Создание вычисляемых столбцов | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: efec616591ab3e6d85b9199a5a4706ecd740c66e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f837fd314cd8a279e03cdfa2aa420920509510a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228414"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Занятие 6. Создание вычисляемых столбцов
   На этом занятии мы создадим новые данные в модели путем добавления вычисляемых столбцов. Вычисляемый столбец основывается на данных, которые уже существуют в модели. Дополнительные сведения см. в разделе [Вычисляемые столбцы (табличные службы SSAS)](tabular-models/ssas-calculated-columns.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "36096956"
   
 2.  В конструкторе моделей щелкните таблицу (вкладку) **Дата** .  
   
-3.  Щелкните правой кнопкой мыши **Календарный квартал** , а затем выберите **вставить столбец**.  
+3.  Щелкните правой кнопкой мыши **Календарный квартал** столбец, а затем щелкните **вставить столбец**.  
   
      Новый столбец с именем **CalculatedColumn1** вставляется слева от **Календарный квартал** столбца.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36096956"
     > [!NOTE]  
     >  При получении ошибки убедитесь в том, что имена столбцов в формуле соответствуют именам столбцов, которые были изменены в ходе выполнения задания в [занятии 3: переименование столбцов](rename-columns.md).  
   
-5.  Переименовать этот столбец в `Month Calendar`.  
+5.  Переименуйте этот столбец в `Month Calendar`.  
   
  Вычисляемый столбец «Месячный календарь» содержит сортируемое имя для месяца.  
   

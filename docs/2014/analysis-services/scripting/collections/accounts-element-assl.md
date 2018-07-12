@@ -1,5 +1,5 @@
 ---
-title: Учетные записи элемент (ASSL) | Документы Microsoft
+title: Учетные записи элемент (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Accounts element
 ms.assetid: 3ec62f58-c19b-4b15-b040-8941521a389b
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 30fcd1815ac785ab71c90a935b9392ab5e85e98b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94e167c6eb804f3372fab6974403f0303f21a13a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086999"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277970"
 ---
 # <a name="accounts-element-assl"></a>Элемент Accounts (ASSL)
-  Содержит коллекцию типов учетных записей, которые определены в [базы данных](../objects/database-element-assl.md) элемента.  
+  Содержит коллекцию типов учетных записей, которые определены в [базы данных](../objects/database-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,13 +64,13 @@ ms.locfileid: "36086999"
 |Дочерние элементы|[Учетная запись](../objects/account-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Измерения, которого [тип](../properties/type-element-dimension-assl.md) задан равным *учетные записи*, могут иметь атрибут, определяющий тип учетной записи, например доходы или расходы и так далее, представленный членами в измерении. Затем используется тип учетной записи [мер](../objects/measure-element-assl.md) элементов, которого [AggregationFunction](../properties/aggregatefunction-element-assl.md) задан равным *ByAccount*, для определения статистической функции для использования при в статистической обработке элементов этого измерения. Элемент `Accounts` хранит коллекцию элементов `Account`, которые представляют типы счетов и статистическую функцию, предназначенную для использования с каждым типом счета.  
+ Измерения, которого [тип](../properties/type-element-dimension-assl.md) элементу присваивается *учетные записи*, могут иметь атрибут, указывающий тип учетной записи, например доходы или расходы и так далее, представленный членами в измерении. Затем тип счета используется элементами [мер](../objects/measure-element-assl.md) элементы, которых [AggregationFunction](../properties/aggregatefunction-element-assl.md) элементу присваивается *ByAccount*, для определения статистической функции, которые используются, когда в статистической обработке элементов этого измерения. Элемент `Accounts` хранит коллекцию элементов `Account`, которые представляют типы счетов и статистическую функцию, предназначенную для использования с каждым типом счета.  
   
- Тип учетной записи, которые должны быть перечислены, если Агрегатная функция отличается от используемого по умолчанию [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] для каждого типа счета.  
+ Тип учетной записи должна быть указана, если Агрегатная функция отличается от используемого по умолчанию [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] для каждого типа счета.  
   
  Набор допустимых типов счетов фиксирован.  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.AccountCollection>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.AccountCollection>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент AccountType &#40;ASSL&#41;](../properties/accounttype-element-assl.md)   

@@ -1,5 +1,5 @@
 ---
-title: Элемент ObjectDefinition (XML для Аналитики) | Документы Microsoft
+title: Элемент ObjectDefinition (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ObjectDefinition element
 ms.assetid: 1911868c-a018-4308-8cf9-972a57f610a1
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: be9a1f234382fff074fe3ee37ebbabf4d6f226f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3c4fe23e2f77dd28823094cf6a77067d9365e6ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190794"
 ---
 # <a name="objectdefinition-element-xmla"></a>Элемент ObjectDefinition (XML для аналитики)
   Содержит один или несколько элементов языка сценариев служб Analysis Services (ASSL), используемых для создания или изменения объектов в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -62,7 +62,7 @@ ms.locfileid: "36097340"
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительские элементы|[ALTER](../xml-elements-commands/alter-element-xmla.md), [создания](../xml-elements-commands/create-element-xmla.md)|  
+|Родительские элементы|[ALTER](../xml-elements-commands/alter-element-xmla.md), [Создание](../xml-elements-commands/create-element-xmla.md)|  
 |Дочерние элементы|Обязательные элементы ASSL. Один или несколько элементов ASSL, используемых для определения объектов служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Дополнительные сведения о ASSL см. в разделе [свойства &#40;XMLA&#41;](xml-elements-properties.md).|  
   
 ## <a name="remarks"></a>Примечания  

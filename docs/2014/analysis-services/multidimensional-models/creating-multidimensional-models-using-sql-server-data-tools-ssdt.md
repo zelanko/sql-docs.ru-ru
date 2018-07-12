@@ -1,5 +1,5 @@
 ---
-title: Создание многомерных моделей с помощью SQL Server Data Tools (SSDT) | Документы Microsoft
+title: Создание многомерных моделей с помощью SQL Server Data Tools (SSDT) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, environments
 - Analysis Services, development
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - solutions [Analysis Services]
 ms.assetid: 132ed779-3ec8-4734-9698-802116d1b017
 caps.latest.revision: 62
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8dde8c6662ce3c9b02b499ee13f7800ee80e99c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ac2314535195be0f1932e0edaaecdedfd6a99c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198454"
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>Создание многомерных моделей с помощью SQL Server Data Tools (SSDT)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предусмотрены две различные среды для построения и развертывания решений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а также для управления ими: [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Обе эти среды реализуют систему проектов. Дополнительные сведения о проектах Visual Studio см. в разделе [Проекты как контейнеры](http://go.microsoft.com/fwlink/?LinkId=63960) в библиотеке сети MSDN.  
@@ -85,7 +85,7 @@ ms.locfileid: "36096962"
   
 ## <a name="see-also"></a>См. также  
  [Создание проекта служб Analysis Services &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
- [Проекта скриптов служб Analysis Services в SQL Server Management Studio](../instances/analysis-services-scripts-project-in-sql-server-management-studio.md)   
- [Базы данных многомерной модели &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [Проект скриптов служб Analysis Services в SQL Server Management Studio](../instances/analysis-services-scripts-project-in-sql-server-management-studio.md)   
+ [Многомерный шаблон баз данных &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
   
   

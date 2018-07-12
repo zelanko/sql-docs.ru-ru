@@ -15,17 +15,17 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 caps.latest.revision: 40
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f95040735e7ec8987bfdfd194ef1d7f0933df3ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 25b6bfa824f6004fbd35b3a31e7268ff388fab6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096082"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216734"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Как: развертывание модуля обработки данных в конструкторе отчетов
+# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Практическое: развертывание модуля обработки данных в конструкторе отчетов
   Модули обработки данных используются в конструкторе отчетов для получения и обработки данных в процессе разработки отчетов. Сборка модуля обработки данных должна быть развернута в конструкторе отчетов как закрытая сборка. Необходимо также внести запись в файл конфигурации конструктора отчетов, RSReportDesigner.config.  
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>Развертывание сборки модуля обработки данных  
@@ -44,13 +44,13 @@ ms.locfileid: "36096082"
     </Extensions>  
     ```  
   
-4.  Добавьте запись для модуля обработки данных, включая **расширения** со значениями `Name`, `Type`, и `Visible` атрибуты. Эта запись должна иметь следующий вид:  
+4.  Добавьте запись для модуля обработки данных, который включает в себя **расширение** со значениями параметров `Name`, `Type`, и `Visible` атрибуты. Эта запись должна иметь следующий вид:  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     По умолчанию `Name` — уникальное имя модуля обработки данных. Значение параметра `Type` представляет собой список с разделителями-запятыми, включающий полное имя пространства имен для класса, реализующего интерфейсы <xref:Microsoft.ReportingServices.Interfaces.IExtension> и <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, а затем имя сборки поставщика (без расширения DLL). По умолчанию модули обработки данных являются видимыми. Чтобы скрыть модуль от пользовательских интерфейсов, таких как конструктор отчетов, добавьте `Visible` атрибут **расширения** элемент и присвойте ему значение `false`.  
+     По умолчанию `Name` — уникальное имя модуля обработки данных. Значение параметра `Type` представляет собой список с разделителями-запятыми, включающий полное имя пространства имен для класса, реализующего интерфейсы <xref:Microsoft.ReportingServices.Interfaces.IExtension> и <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, а затем имя сборки поставщика (без расширения DLL). По умолчанию модули обработки данных являются видимыми. Чтобы скрыть модуль от пользовательских интерфейсов, таких как конструктор отчетов, добавьте `Visible` атрибут **расширение** элемент и присвойте ему значение `false`.  
   
 5.  Наконец, добавьте для пользовательской сборки группу кода, которая предоставляет разрешение **FullTrust** для конкретного модуля. С этой целью добавьте указанную группу кода в файл rspreviewpolicy.config, который по умолчанию находится в папке C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies. Пример группы кода показан ниже.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36096082"
   
 #### <a name="to-enable-the-generic-query-designer-for-a-custom-extension"></a>Включение обычного конструктора запросов для пользовательского модуля  
   
--   Добавьте следующую запись в файл RSReportDesigner.config **конструктор** элемент, заменив `Name` атрибут с именем, которое указывалось в предыдущих элементах.  
+-   Добавьте следующую запись в файл RSReportDesigner.config в **конструктор** элемента, заменив `Name` атрибут с именем, которое указано в предыдущих записях.  
   
     ```  
     <Extension Name="ExtensionName" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  

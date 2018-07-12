@@ -1,12 +1,12 @@
 ---
-title: Использование параметров инструкции | Документы Microsoft
+title: Использование параметров инструкции | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7741fc9a8b4de583055a5afccb0bc31d54b50406
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: b2533a645d18fbcfc14408c1a22b14f32641bd4b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698505"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418823"
 ---
 # <a name="using-statement-parameters"></a>Использование параметров инструкции
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "35698505"
   
 -   Повышать степень взаимодействия с пользователем при конструировании критериев запроса.  
   
--   Управление **текст**, **ntext**, и **изображения** данных и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-определенные типы данных C.  
+-   Управление **текст**, **ntext**, и **изображение** данных и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-определенные типы данных C.  
   
- Например **частей** таблица содержит столбцы с именем **PartID**, **описание**, и **цены**. Для добавления компонента без параметров необходимо составить инструкцию SQL, например:  
+ Например **частей** таблица содержит столбцы с именем **PartID**, **описание**, и **цена**. Для добавления компонента без параметров необходимо составить инструкцию SQL, например:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  

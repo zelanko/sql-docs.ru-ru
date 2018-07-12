@@ -1,5 +1,5 @@
 ---
-title: Создание, изменение и удаление таблиц | Документы Microsoft
+title: Создание, изменение и удаление таблиц | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - tables [SMO]
 ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b1498ac39d8ebf69a406fc37d8aa41319386e8fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bb1760bb19f6f32b93e8ee1b62546d7c615ae9f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177871"
 ---
 # <a name="creating-altering-and-removing-tables"></a>Создание, изменение и удаление таблиц
   В управляющих объектах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO) таблицы представлены объектом <xref:Microsoft.SqlServer.Management.Smo.Table>. В иерархии объектов SMO объект <xref:Microsoft.SqlServer.Management.Smo.Table> расположен ниже объекта <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, необходимо выбрать среду программирования, шаблон и язык, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [создать Visual C&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, необходимо выбрать среду программирования, шаблон и язык, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>Создание, изменение и удаление таблицы на языке Visual Basic  
  В этом примере кода создается таблица с несколькими столбцами разных типов и предназначений. В этом коде также приведены примеры того, как создать поле идентификаторов, как создать первичный ключ и как изменить свойства таблицы.  

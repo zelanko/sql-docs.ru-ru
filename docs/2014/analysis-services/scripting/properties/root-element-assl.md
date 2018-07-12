@@ -1,5 +1,5 @@
 ---
-title: Корневой элемент (ASSL) | Документы Microsoft
+title: Корневой элемент (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Root element
 ms.assetid: ad3319d5-c3f0-49e3-b9c0-2fb77945c512
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b639ac3c0f6115bb0c17963d62e94eb0fa595f26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6388b3ad61f8c9dc380e0f198b25c2aab46d56c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167505"
 ---
 # <a name="root-element-assl"></a>Элемент Root (ASSL)
   Содержит данные (набор строк) для источника данных.  

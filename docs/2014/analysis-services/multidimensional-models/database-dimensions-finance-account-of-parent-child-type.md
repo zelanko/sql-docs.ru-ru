@@ -1,5 +1,5 @@
 ---
-title: Создание учетной записи Finance измерением типа родители потомки | Документы Microsoft
+title: Создание учетной записи Finance с измерением типа родители потомки | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], account
 - account dimensions [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - account intelligence [Analysis Services]
 ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 209184ce52888c65dc24c044517ccaf95d1a1a24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39c5c676cd0a07c76a06fd559b7f40f8cee4cfcb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259600"
 ---
 # <a name="create-a-finance-account-of-parent-child-type-dimension"></a>Создание учетной записи Finance с измерением типа «родитель-потомок»
   В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]измерением типа счета называют измерение, атрибуты которого представляют диаграмму счетов для целей финансовой отчетности.  
@@ -50,7 +50,7 @@ ms.locfileid: "36086749"
   
 -   атрибут имени счета применяется при построении отчетов. Чтобы определить атрибут имени счета, установите для свойства `Type` этого атрибута значение `AccountName`;  
   
--   атрибут номера счета применяется при построении отчетов. Чтобы определить атрибут номера счета, установите `Type` свойства атрибута для `AccountNumber`.  
+-   атрибут номера счета применяется при построении отчетов. Чтобы определить атрибут номера счета `Type` свойства атрибута для `AccountNumber`.  
   
  Дополнительные сведения о типах атрибутов см. в разделе [Настройка типов атрибутов](attribute-properties-configure-attribute-types.md).  
   
