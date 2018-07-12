@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: c6babd1b2e15235bd95b0233c5449e3bd88d697a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb7fad4d95dda446d63f76a059228ff575a808a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222594"
 ---
 # <a name="uninstall-reporting-services"></a>Удаление служб Reporting Services
   Удаление [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не приводит к удалению созданного содержимого или измененной конфигурации. Но если имеется содержимое, которое потребуется после завершения удаления, то рекомендуется создать копии содержимого до начала процесса удаления.  
@@ -44,7 +44,7 @@ ms.locfileid: "36095611"
 -   **База данных предупреждений сервера отчетов:** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting  
   
 ### <a name="uninstall-the-add-in-for-sharepoint-products"></a>Удаление надстройки для продуктов SharePoint.  
- При удалении надстройки с компьютера вы можете выбрать удаление только файлов или удаление и самого компонента [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из фермы. Сведения об удалении [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки для продуктов SharePoint см. в разделе [Установка или удаление надстройки служб Reporting Services для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+ При удалении надстройки с компьютера вы можете выбрать удаление только файлов или удаление и самого компонента [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из фермы. Сведения об удалении [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки для продуктов SharePoint, см. в разделе [Установка или удаление надстройки служб Reporting Services для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
   
 ## <a name="uninstall-native-mode"></a>Удаление собственного режима  
  При удалении собственного режима служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] все, что было **создано** или **изменено** после установки, будет сохранено. В качестве примера можно назвать файлы базы данных, файлы журнала, файлы конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и элементы содержимого, такие как отчеты и файлы источников данных.  
@@ -68,6 +68,6 @@ ms.locfileid: "36095611"
 ## <a name="see-also"></a>См. также  
  [Удаление существующего экземпляра SQL Server (программа установки)](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [Установка или удаление PowerPivot для SharePoint надстройка &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [Установка или удаление Reporting Services для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [Установка или удаление Reporting Services надстройки для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

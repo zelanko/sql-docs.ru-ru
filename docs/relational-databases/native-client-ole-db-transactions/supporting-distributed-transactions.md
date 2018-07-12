@@ -1,12 +1,12 @@
 ---
-title: Поддержка распределенных транзакций | Документы Microsoft
+title: Поддержка распределенных транзакций | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,31 +23,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d73e9d31027d2678f25b7bcf2224cc2fa652d612
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: bc63d3a8f7f7caf5317956a6cc007570a1291367
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700695"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409773"
 ---
 # <a name="supporting-distributed-transactions"></a>Поддержка распределенных транзакций
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Потребители поставщика собственного клиента OLE DB можно использовать **ITransactionJoin::JoinTransaction** метод участвовать в распределенной транзакции, координируемое координатор распределенных транзакций (MS DTC).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Потребители поставщика собственного клиента OLE DB можно использовать **ITransactionJoin::JoinTransaction** метод участвовать в распределенной транзакции, координируемое координатора распределенных транзакций Microsoft (MS DTC).  
   
- Службы MS DTC предоставляют доступ к COM-объектам, которые позволяют клиентам запускать и участвовать в координированных транзакциях через несколько соединений с различными хранилищами данных. Чтобы инициировать транзакцию, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] потребителем поставщика OLE DB для собственного клиента использует MS DTC **ITransactionDispenser** интерфейса. **BeginTransaction** членом **ITransactionDispenser** возвращает ссылку на объект распределенной транзакции. Эта ссылка передается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью поставщика OLE DB для собственного клиента **JoinTransaction**.  
+ Службы MS DTC предоставляют доступ к COM-объектам, которые позволяют клиентам запускать и участвовать в координированных транзакциях через несколько соединений с различными хранилищами данных. Для инициирования транзакции, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] потребителем поставщика OLE DB для собственного клиента использует MS DTC **ITransactionDispenser** интерфейс. **BeginTransaction** членом **ITransactionDispenser** возвращает ссылку на объект распределенной транзакции. Эта ссылка передается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, с помощью **JoinTransaction**.  
   
- Службы MS DTC поддерживают асинхронную фиксацию и прерывание распределенных транзакций. Для уведомления о состоянии асинхронных транзакций пользователь реализует **ITransactionOutcomeEvents** интерфейса и подключает интерфейс к объект транзакции MS DTC.  
+ Службы MS DTC поддерживают асинхронную фиксацию и прерывание распределенных транзакций. Для уведомления о состоянии асинхронных транзакций пользователь реализует **ITransactionOutcomeEvents** интерфейс и подключает интерфейс к объекту транзакции MS DTC.  
   
  Для распределенных транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализует поставщик OLE DB для собственного клиента **ITransactionJoin::JoinTransaction** параметры следующим образом.  
   
 |Параметр|Описание|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Указатель на объект транзакции MS DTC.|  
-|*IsoLevel*|Игнорировать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента. Уровень изоляции для транзакций, координируемых с использованием служб MS DTC, определяется, когда пользователь получает объект транзакции от координатора MS DTC.|  
+|*IsoLevel*|Игнорируется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента. Уровень изоляции для транзакций, координируемых с использованием служб MS DTC, определяется, когда пользователь получает объект транзакции от координатора MS DTC.|  
 |*IsoFlags*|Должно быть равно 0. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента возвращает значение XACT_E_NOISORETAIN, если указано любое другое значение объектом-получателем.|  
-|*POtherOptions*|Если значение не NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента запрашивает объект параметров от интерфейса. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента возвращает XACT_E_NOTIMEOUT, если объект параметров *ulTimeout* не равен нулю. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента не учитывает значение *szDescription* член.|  
+|*POtherOptions*|Если значение не NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента запрашивает объект параметров с помощью интерфейса. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента возвращает XACT_E_NOTIMEOUT, если объект параметров *ulTimeout* не равен нулю. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента не учитывает значение *szDescription* член.|  
   
  В этом примере осуществляется координирование транзакции с использованием координатора MS DTC.  
   

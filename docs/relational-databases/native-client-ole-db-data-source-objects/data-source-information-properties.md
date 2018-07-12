@@ -1,12 +1,12 @@
 ---
-title: Сведения о свойства источника данных | Документы Microsoft
+title: Сведения свойства источника данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1c473799ec85cd886e4331fdef20a185db7cee81
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 70ddb89ec9b19ffdecacc647bd93d5fde8a43ee4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694865"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410243"
 ---
 # <a name="data-source-information-properties"></a>Свойства сведений об источнике данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,17 +35,17 @@ ms.locfileid: "35694865"
   
 |Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
-|SSPROP_COLUMNLEVELCOLLATION|Тип: VT_BOOL<br /><br /> Чтение R Чтение и запись:<br /><br /> По умолчанию: значение VARIANT_TRUE<br /><br /> Описание: Используется для определения, поддерживается ли параметры сортировки столбца.<br /><br /> VARIANT_TRUE: Поддерживаемые параметры сортировки уровня столбцов.<br /><br /> VARIANT_FALSE: Параметры сортировки уровня столбцов не поддерживается.|  
-|SSPROP_UNICODELCID|Тип: VT_I4 R Чтение и запись: чтение<br /><br /> Описание: Юникод, идентификатор языка.<br /><br /> Это локаль, используемый для сортировки данных в Юникоде.|  
-|SSPROP_UNICODECOMPARISONSTYLE|Тип: VT_I4 R Чтение и запись: чтение<br /><br /> Описание: Стиль сравнения Юникод.<br /><br /> Параметры сортировки, используемые для сортировки данных в Юникоде.|  
+|SSPROP_COLUMNLEVELCOLLATION|Тип: VT_BOOL<br /><br /> Чтение и запись:<br /><br /> По умолчанию: значение VARIANT_TRUE<br /><br /> Описание: Используется для определения, поддерживается ли параметры сортировки столбца.<br /><br /> VARIANT_TRUE: Поддерживаемые параметры сортировки на уровне столбца.<br /><br /> VARIANT_FALSE: Параметры сортировки уровня столбцов не поддерживается.|  
+|SSPROP_UNICODELCID|Тип: Чтение и запись: VT_I4<br /><br /> Описание: Юникод, идентификатор языка.<br /><br /> Это локаль, используемый для сортировки данных в Юникоде.|  
+|SSPROP_UNICODECOMPARISONSTYLE|Тип: Чтение и запись: VT_I4<br /><br /> Описание: Стиль сравнения Юникод.<br /><br /> Параметры сортировки, используемые для сортировки данных в Юникоде.|  
   
  В специфичном для каждого поставщика множестве свойств DBPROPSET_SQLSERVERSTREAM поставщик OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет следующее дополнительное свойство.  
   
 |Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
-|SSPROP_STREAM_XMLROOT|Тип: VT_BSTR R Чтение и запись: чтение и запись<br /><br /> Описание: Результат запроса FOR XML не может быть документом правильного формата. Если это свойство задано, результат "выберите... FOR XML "запрос упаковывается в корневом теге, предоставляемые этим свойством, для возвращения документа XML с правильным форматом. Если запрос выполняется в браузере, при загрузке результата в окне браузера может быть выведена информация об ошибках средства синтаксического анализа. Для избежания этой ошибки в SQL ISAPI применяется ключевое слово ROOT. Оно соответствует свойству SSPROP_STREAM_XMLROOT.|  
+|SSPROP_STREAM_XMLROOT|Тип: VT_BSTR и запись: чтение и запись<br /><br /> Описание: Результат запроса FOR XML не может быть документом правильного формата. Если это свойство задано, результат "выберите... для XML "запрос упаковывается в корневой тег, предоставленный данным свойством, для возврата правильного формата XML-документа. Если запрос выполняется в браузере, при загрузке результата в окне браузера может быть выведена информация об ошибках средства синтаксического анализа. Для избежания этой ошибки в SQL ISAPI применяется ключевое слово ROOT. Оно соответствует свойству SSPROP_STREAM_XMLROOT.|  
   
 ## <a name="see-also"></a>См. также  
- [Объекты источников данных &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Объекты источника данных &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

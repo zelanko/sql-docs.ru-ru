@@ -1,12 +1,12 @@
 ---
-title: Присваивание больших данных | Документы Microsoft
+title: Присваивание больших данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac496025b9131e026d29920450d9ad2b45cc52be
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 09c23da09502d9b5f9b1d91cdcdb06e9c09dabc8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701465"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421973"
 ---
 # <a name="setting-large-data"></a>Присваивание больших данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  С [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента позволяет передавать данные BLOB по указателю на объект хранилища потребителя.  
+  С помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента позволяет передавать данные BLOB по указателю на объект хранилища потребителя.  
   
  Потребитель создает объект хранилища, содержащий эти данные, и передает поставщику указатель на этот объект. Поставщик считывает данные из объекта в хранилище поставщика и записывает их в столбец BLOB.  
   
@@ -48,17 +48,17 @@ ms.locfileid: "35701465"
 ## <a name="how-to-set-large-data"></a>Как сохранить большой объем данных  
  Для передачи указателя на свой собственный объект хранения потребитель создает метод доступа, который привязывает значение столбца BLOB, а затем вызывает метод **IRowsetChange::SetData** или **IRowsetChange::InsertRow** . Сохранение данных BLOB происходит следующим образом.  
   
-1.  Создайте структуру DBOBJECT, описывающую, каким образом должен производиться доступ к столбцу BLOB. Задать *dwFlag* элемент структуры DBOBJECT STGM_READ, а *iid* равным IID_ISequentialStream (интерфейс должен быть предоставлен).  
+1.  Создайте структуру DBOBJECT, описывающую, каким образом должен производиться доступ к столбцу BLOB. Задайте *dwFlag* элементом структуры DBOBJECT значение STGM_READ, а *iid* равным IID_ISequentialStream (интерфейс должен быть предоставлен).  
   
 2.  Установите свойства в группе свойств DBPROPSET_ROWSET, чтобы включить возможность обновления для набора строк.  
   
-3.  Создайте набор привязок (по одной для каждого столбца) с помощью массива структур DBBINDING. Задать *wType* элемента в структуре DBBINDING значение DBTYPE_IUNKNOWN и *pObject* элемент, чтобы она указывала на созданную структуру DBOBJECT.  
+3.  Создайте набор привязок (по одной для каждого столбца) с помощью массива структур DBBINDING. Задайте *wType* элемент структуры DBBINDING значение DBTYPE_IUNKNOWN, а *pObject* элемент, чтобы он указывал на созданную структуру DBOBJECT.  
   
 4.  Создайте метод доступа на основе сведений о привязках в массиве структур DBBINDINGS.  
   
 5.  Вызовите функцию **GetNextRows** для выборки следующих строк из набора строк. Вызовите функцию **GetData** для чтения данных набора строк.  
   
-6.  Создайте объект хранилища, содержащий данные (и признак длины), а затем вызвать **IRowsetChange::SetData** (или **IRowsetChange::InsertRow**) с методом доступа, привязывающим столбец BLOB-объект для задания данные.  
+6.  Создайте объект хранилища, содержащий данные (а также индикатор длины), а затем вызвать **IRowsetChange::SetData** (или **IRowsetChange::InsertRow**) с помощью доступа, привязывающим столбец BLOB к набору данные.  
   
 ## <a name="example"></a>Пример  
  Следующий пример показывает получение данных BLOB. В примере создается таблица, добавляется образец записи, эта запись выбирается из набора строк, а затем устанавливается значение поля BLOB.  

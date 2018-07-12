@@ -1,12 +1,12 @@
 ---
-title: 'Как: вставка строк в столбец Geography (ODBC) | Документы Microsoft'
+title: 'Практическое: вставлять строки в столбец Geography (ODBC) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 85f5f086ba32b3056017d0559bb1d5b164f63510
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: cb2de1b6b4b44fd80f50cacd2431f56fc6e1033e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697621"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416853"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Как вставлять строки в столбец Geography (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "35697621"
   
  С версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , вышедшими до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], образец работать не будет.  
   
- Дополнительные сведения о пространственном хранилище см. в разделе [пространственных данных &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
+ Дополнительные сведения о создании пространственных хранилищ см. в разделе [пространственных данных &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ## <a name="example"></a>Пример  
  Первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает таблицу, которая используется данным образцом.  

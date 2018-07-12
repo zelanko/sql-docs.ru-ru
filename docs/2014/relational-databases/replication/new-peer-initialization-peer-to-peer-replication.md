@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.init.f1
 ms.assetid: 050c00e1-78bd-4d9c-affe-40e22feb4d94
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6af86bb2ad710929035c1dd6de58f95baa10d3af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2ffd2f1ef6695c32f9b367d775bcf649ba63c63b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227194"
 ---
 # <a name="new-peer-initialization-peer-to-peer-replication"></a>Инициализация нового узла (одноранговая репликация)
   Для указания метода инициализации одноранговых баз данных служит страница **Инициализация нового узла** . (Узлы необходимо инициализировать перед завершением этого мастера). Узлы инициализируются вручную или с помощью **инициализации при помощи резервной копии** , предоставляемой репликацией транзакций. (Одноранговая репликация транзакций не поддерживает инициализацию узлов с помощью моментальных снимков). Если разные узлы необходимо инициализировать разными методами, нужно добавлять узлы по отдельности, запустив мастер несколько раз.  

@@ -1,12 +1,12 @@
 ---
-title: Команды, формирующие результаты, содержащие | Документы Microsoft
+title: Команды, формирующие результаты с несколькими наборами строк | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,25 +21,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9a62bc78f4c9d75ff0c4b179f7998f5d0cf23773
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 34c5eafbca22ba40cf1852220ab19cfad6452403
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696995"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414866"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Команды, формирующие результаты с несколькими наборами строк
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента может возвращать несколько наборов строк из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкции. Инструкции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращают результаты, содержащие несколько наборов строк, в следующих случаях.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента может возвращать несколько наборов строк из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкций. Инструкции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращают результаты, содержащие несколько наборов строк, в следующих случаях.  
   
 -   Пакетные инструкции SQL представляются как единая команда.  
   
 -   Хранимые процедуры реализуют пакет инструкций SQL.  
   
 ## <a name="batches"></a>Пакеты  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента распознает символ точки с запятой в качестве разделителя пакета инструкций SQL:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента распознает символ точки с запятой как разделитель пакета для инструкций SQL:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

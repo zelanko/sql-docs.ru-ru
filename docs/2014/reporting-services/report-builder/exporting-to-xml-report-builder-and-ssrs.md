@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bfa8b10cd2d67154946395334f8bde2b9bbd680a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 11bb46bc593a95811c56a5489fd5489ca72ca917
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223274"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Экспорт в XML (построитель отчетов и службы SSRS)
   Модуль подготовки XML-отчета возвращает отчет в XML-формате. Схема для XML-документа, используемого в отчете, создается специально для этого отчета и содержит только данные. Данные макета не обрабатываются модулем подготовки XML-отчета, и разбивка на страницы не сохраняется. XML-документ, сформированный данным модулем, можно импортировать в базу данных, использовать как сообщение XML-данных или отправить пользовательскому приложению.  
@@ -84,7 +84,7 @@ ms.locfileid: "36087572"
   
  Определения пространств имен XML и ссылочные атрибуты схемы также включаются в элементы отчета. Имена переменных выводятся полужирным шрифтом:  
   
- \<**Отчет** xmlns =»**SchemaName**» xmlns:xsi =»http://www.w3.org/2001/XMLSchema-instance"xsi:**schemaLocation**=»**SchemaNameReportURL**&amp;3aSchema rc % = true» имя = «Имя_отчета» >  
+ \<**Отчет** xmlns =»**SchemaName**"xmlns: xsi =»http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**=»**SchemaNameReportURL**&amp;rc % 3aSchema = true» Name = «ReportName» >  
   
  Переменные могут принимать следующие значения.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "36087572"
 ## <a name="see-also"></a>См. также  
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных модулей подготовки отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Интерактивные возможности различных модулей подготовки отчетов &#40;построитель отчетов и службы SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

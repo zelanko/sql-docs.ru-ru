@@ -1,5 +1,5 @@
 ---
-title: Обработка базы данных, таблицы или секции | Документы Microsoft
+title: Обработка базы данных, таблицы или секции | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8d0300249983334f0510fe94807f1dcfcb62865f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8e6bb8c09154c7136d53dbf948c0baa199077f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229714"
 ---
 # <a name="process-database-table-or-partition"></a>Обработка базы данных, таблицы или секции
-  В этом разделе описывается, как обработка базы данных табличной модели, таблицы или секций вручную с помощью **процесс \<объекта >** диалоговое окно в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  В этом разделе описывается, как обработать базу данных табличной модели, таблицы или секций вручную с помощью **процесс \<объекта >** диалогового окна в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Дополнительные сведения об обработке табличной модели см. в разделе [Обработка данных (табличные службы SSAS)](../process-data-ssas-tabular.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Куб элемент (XMLA) | Документы Microsoft
+title: Куб элемент (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Cube element
 ms.assetid: 2e8662f4-fb2e-43af-b70a-9e0b5872c9b9
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 3627c62dd8277ff0c86d66f453afd66ad01005c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e56bc3b206069265fe21329edf688dfae9254e2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228134"
 ---
 # <a name="cube-element-xmla"></a>Элемент Cube (XML для аналитики)
   Обозначает куб, который содержит измерение, представленное родительским [объекта](object-element-dimension-xmla.md) элемент.  
@@ -67,7 +67,7 @@ ms.locfileid: "36095515"
  Элемент `Cube` представляет собой идентификатор объекта, который содержит имя куба, включающего измерение, представленное элементом `Object`.  
   
 ## <a name="see-also"></a>См. также  
- [Элемент Database &#40;XML для Аналитики&#41;](database-element-xmla.md)   
+ [Элемент Database описания &#40;XML для Аналитики&#41;](database-element-xmla.md)   
  [Элемент измерения &#40;XML для Аналитики&#41;](dimension-element-xmla.md)   
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)  
   

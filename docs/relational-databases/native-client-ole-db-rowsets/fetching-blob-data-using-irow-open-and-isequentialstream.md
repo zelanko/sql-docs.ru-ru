@@ -1,12 +1,12 @@
 ---
-title: Выборка данных BLOB при помощи метода IRow::Open и интерфейса ISequentialStream | Документы Microsoft
+title: Выборка данных BLOB при помощи метода IRow::Open и интерфейса ISequentialStream | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b865e3a5d5471e1dc638c321c64636b72469f548
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: dd55cc02558987350e0a620ef0c48150465a0c47
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699485"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410293"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Выборка данных BLOB при помощи метода IRow::Open и интерфейса ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **IRow::Open** поддерживает только типа DBGUID_STREAM или DBGUID_NULL объектов должен быть открыт.  
+  **IRow::Open** поддерживает только DBGUID_STREAM или DBGUID_NULL тип объектов, которые должны быть открыты.  
   
  Следующая функция использует **IRow::Open** и **ISequentialStream** для выборки больших данных.  
   
@@ -84,7 +84,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- Большие объемы данных можно привязать или получить с помощью **ISequentialStream** интерфейса. Для привязанных столбцов флаг состояния указывает, усекаются ли данные при установке флага DBSTATUS_S_TRUNCATED.  
+ Большие объемы данных можно быть привязать или получить с помощью **ISequentialStream** интерфейс. Для привязанных столбцов флаг состояния указывает, усекаются ли данные при установке флага DBSTATUS_S_TRUNCATED.  
   
 ## <a name="see-also"></a>См. также  
  [Выборка данных большого двоичного объекта при помощи интерфейса IRow](http://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  

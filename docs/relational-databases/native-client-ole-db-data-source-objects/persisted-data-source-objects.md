@@ -1,12 +1,12 @@
 ---
-title: Материализованные данные исходного объекта | Документы Microsoft
+title: Материализованные объекты источника данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,23 +19,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2872454d8ee32514b3efd46b30b7b96c53b1e7a9
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d8fd9e0cbb3ce90e40e53965000452d8a2dca1de
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700265"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419393"
 ---
 # <a name="persisted-data-source-objects"></a>Материализованные данные исходного объекта
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента поддерживает материализованные объекты источника данных с **IPersistFile** интерфейса.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента поддерживает материализованные объекты источника данных с помощью **IPersistFile** интерфейс.  
   
 ## <a name="examples"></a>Примеры  
  **А. Сохранение инициализации источника данных:**  
   
- В данном примере показана функция, которая сохраняет свойства инициализации источника данных, определяющих сервер, базу данных и использование для соединения режима проверки подлинности Windows. Имя сервера и имя базы данных, поступившие во *pLocation* и *pDatasource* параметры функции.  
+ В данном примере показана функция, которая сохраняет свойства инициализации источника данных, определяющих сервер, базу данных и использование для соединения режима проверки подлинности Windows. Имя сервера и имя базы данных, полученных в *pLocation* и *pDatasource* параметры функции.  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -232,9 +232,9 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- **IPersistFile::Save** метод может быть вызван до или после вызова **IDBInitialize::Initialize**. Вызов метода после успешного возвращения из **IDBInitialize::Initialize** гарантирует сохраняется допустимой спецификации источника данных.  
+ **IPersistFile::Save** метод может вызываться до или после вызова метода **IDBInitialize::Initialize**. Вызов метода после успешного возвращения из **IDBInitialize::Initialize** гарантирует сохраняется допустимой спецификации источника данных.  
   
 ## <a name="see-also"></a>См. также  
- [Объекты источников данных &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Объекты источника данных &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

@@ -1,12 +1,12 @@
 ---
-title: Обработка результатов (ODBC) | Документы Microsoft
+title: Обработка результатов (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b56a6a41d18a701eb4045130d934aaeb7f173511
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 175b92969e9ce7515820a7aa3d9e4600e411bfb1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700645"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408237"
 ---
-# <a name="processing-results---process-results"></a>Результаты обработки - обработка результатов
+# <a name="processing-results---process-results"></a>Результаты обработки — обработка результатов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-Обработка результатов в приложении ODBC необходимо вначале Определение характеристик результирующего набора, а затем данные считываются в программные переменные с помощью [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) или [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) .  
+Обработка результатов в приложении ODBC включает в себя сначала Определение характеристик результирующего набора, а затем данные считываются в программные переменные либо при помощи [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) или [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) .  
   
 ### <a name="to-process-results"></a>Обработка результатов  
   
@@ -66,6 +66,6 @@ ms.locfileid: "35700645"
 >  Чтобы отменить обработку результирующего набора прежде, чем функция [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) вернет значение SQL_NO_DATA, вызовите функцию [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
 ## <a name="see-also"></a>См. также  
-[Получить сведения о результирующем наборе &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+[Получение сведений о результирующем наборе &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

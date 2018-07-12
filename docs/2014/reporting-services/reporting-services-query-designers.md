@@ -1,5 +1,5 @@
 ---
-title: Конструкторы запросов служб Reporting Services | Документы Microsoft
+title: Конструкторы запросов служб Reporting Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
 caps.latest.revision: 16
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ca805856f4cd09d6d1172b5602a7a9e54b4cc16c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aed7304b4e7e48eff1691970da5ff68b03fd0962
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222944"
 ---
 # <a name="reporting-services-query-designers"></a>Конструкторы запросов служб Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляет графический и текстовый конструкторы запросов для построения запросов для каждого типа источника данных в отчете.  

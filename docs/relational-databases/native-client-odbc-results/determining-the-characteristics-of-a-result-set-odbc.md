@@ -1,12 +1,12 @@
 ---
-title: Определение характеристик результирующего набора (ODBC) | Документы Microsoft
+title: Определение характеристик результирующего набора (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 64296aa767a8f9c9d74ee925dd26e2ce67ecaeb2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 749b699f4d3230f65fc07d92203758ccc1fe39f4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701895"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431303"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>Определение характеристик результирующего набора (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "35701895"
   
  Чтобы определить характеристики результирующего набора, приложение может вызвать следующие функции.  
   
--   [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) для определения, возвращенных запросом сколько столбцов.  
+-   [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) для определения, возвращается число столбцов в запросе.  
   
 -   [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) или [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) для описания столбца в результирующем наборе.  
   
- Хорошо спроектированные приложения пишутся с предположением, что результирующий набор неизвестен, и используют для привязки столбцов в результирующем наборе данные, возвращаемые этими функциями. Приложение может вызвать эти функции в любое время после подготовки или выполнения инструкции. Однако для достижения оптимальной производительности приложение должно вызывать **SQLColAttribute**, **SQLDescribeCol**, и **SQLNumResultCols** после выполнения инструкции.  
+ Хорошо спроектированные приложения пишутся с предположением, что результирующий набор неизвестен, и используют для привязки столбцов в результирующем наборе данные, возвращаемые этими функциями. Приложение может вызвать эти функции в любое время после подготовки или выполнения инструкции. Тем не менее, для обеспечения оптимальной производительности, приложение должно вызывать **SQLColAttribute**, **SQLDescribeCol**, и **SQLNumResultCols** после выполнения инструкции.  
   
  Можно выполнять несколько одновременных вызовов метаданных. Эти процедуры системного каталога, лежащие в основе реализаций API-интерфейса каталога ODBC, могут вызываться драйвером ODBC во время использования им статических серверных курсоров. Это позволяет приложениям одновременно обрабатывать несколько вызовов функций каталога ODBC.  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.deleteag.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], dropping
 ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
 caps.latest.revision: 46
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: fae0ec2e1aac160387ea36a9e665db82ffc06d75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b9ff8c441e73f24fee00a5c599ad3a1d8223b3fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219824"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>Удаление группы доступности (SQL Server)
   В этом разделе описывается удаление группы доступности (drop) AlwaysOn с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Если экземпляр сервера, на котором размещена одна из реплик доступности, находится в режиме «вне сети» при удалении группы доступности, то после перехода в режим «в сети» локальная реплика доступности будет удалена с экземпляра сервера. При удалении группы доступности удаляются все связанные прослушиватели группы доступности.  
@@ -118,7 +117,7 @@ ms.locfileid: "36095766"
     ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь `Get-Help` командлета в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] среде PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, используйте `Get-Help` командлет в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] среде PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   

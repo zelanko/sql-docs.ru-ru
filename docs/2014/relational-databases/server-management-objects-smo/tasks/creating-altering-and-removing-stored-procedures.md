@@ -1,5 +1,5 @@
 ---
-title: Создание, изменение и удаление хранимых процедур | Документы Microsoft
+title: Создание, изменение и удаление хранимых процедур | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - stored procedures [SMO]
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 18ab85b6ea304660e412e0e0156fcc1cc9491fc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d7e4ddf95dc9fa08e52c9a312d3cc83c3c04bd05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223185"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Создание, изменение и удаление хранимых процедур
   В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] управляющих объектов (SMO), хранимые процедуры представляются <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> объекта.  
   
- Создание <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> объектов в модели объектов SMO требует параметр <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> свойства [!INCLUDE[tsql](../../../includes/tsql-md.md)] скрипт, определяющий хранимую процедуру. Параметры требуют префикс «@» и должны создаваться отдельно путем использования объектов <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> и добавления в коллекцию <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> объекта <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
+ Создание <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> объекта в SMO требует параметр <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> свойства [!INCLUDE[tsql](../../../includes/tsql-md.md)] сценарий, который определяет хранимую процедуру. Параметры требуют префикс «@» и должны создаваться отдельно путем использования объектов <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> и добавления в коллекцию <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> объекта <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [создать Visual C&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>Создание, изменение и удаление хранимой процедуры на языке Visual Basic  
  Данный пример кода показано, как создать хранимую процедуру для [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] базы данных. По идентификатору сотрудника пример возвращает фамилию этого сотрудника. Хранимая процедура требует один входной параметр для указания идентификатора сотрудника и один выходной параметр для возвращения последнего имени сотрудника.  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.callstack
 helpviewer_keywords:
 - Call Stack Window [Transact-SQL]
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5c3ef136f5abd5f07fcc79185a80198b8069e96d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0a1812a3f332fbac3d66522a609a32f9d4c4389f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219034"
 ---
 # <a name="call-stack-window"></a>Окно стека вызовов
   В окне **Стек вызовов** отображаются модули в стеке вызова, а также типы данных и значения всех параметров, передаваемых в модули. [!INCLUDE[tsql](../../includes/tsql-md.md)] включают в себя хранимые процедуры, функции и триггеры. Чтобы отобразить стек вызова, необходимо находиться в режиме отладки.  

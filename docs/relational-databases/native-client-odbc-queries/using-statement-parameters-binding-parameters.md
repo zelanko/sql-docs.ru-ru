@@ -1,12 +1,12 @@
 ---
-title: Привязка параметров | Документы Microsoft
+title: Привязка параметров | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,14 +24,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1cba782e4bea322fdba6c06fc81ae2aa87e94a1a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 138df3eec425b0400acdcd5be538a8b490e7572b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699605"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410276"
 ---
-# <a name="using-statement-parameters---binding-parameters"></a>Использование параметров инструкции - привязка параметров
+# <a name="using-statement-parameters---binding-parameters"></a>Использование параметров инструкции — привязка параметров
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -39,21 +39,21 @@ ms.locfileid: "35699605"
   
  Маркеры параметров могут быть привязаны или повторно привязаны в любое время перед выполнением инструкции. Привязка параметра действует до тех пор, пока не происходит одно из следующих событий.  
   
--   Вызов [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) с *параметр* параметр, установленным в значение SQL_RESET_PARAMS освобождает все параметры, привязанные к дескриптору инструкции.  
+-   Вызов [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) с *параметр* параметр в значение SQL_RESET_PARAMS освобождает все параметры, привязанные к дескриптору инструкции.  
   
--   Вызов **SQLBindParameter** с *ParameterNumber* набор порядковый номер маркера параметра автоматически отменяет предыдущую привязку.  
+-   Вызов **SQLBindParameter** с *ParameterNumber* набора порядковый номер маркера параметра автоматически отменяет предыдущую привязку.  
   
  Приложение также может привязать параметры к массивам переменных программы для пакетной обработки инструкции SQL. Существует два типа привязки массивов.  
   
 -   Привязка на уровне столбца выполняется, если каждый отдельный параметр привязан к собственному массиву переменных.  
   
-     Привязка на уровне столбца указывается путем вызова [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) с *атрибута* значение SQL_ATTR_PARAM_BIND_TYPE и *ValuePtr* установленным в значение SQL_PARAM_BIND_BY_COLUMN.  
+     Привязка на уровне столбца указывается путем вызова функции [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) с *атрибут* значение SQL_ATTR_PARAM_BIND_TYPE и *ValuePtr* установленным в значение SQL_PARAM_BIND_BY_COLUMN.  
   
 -   Привязка на уровне строки выполняется, если все параметры в инструкции SQL привязаны в виде блока к массиву структур, которые содержат отдельные переменные для параметров.  
   
-     Привязка на уровне строки указывается путем вызова **SQLSetStmtAttr** с *атрибута* значение SQL_ATTR_PARAM_BIND_TYPE и *ValuePtr* равным размеру структуры хранения переменные программы.  
+     Привязка на уровне строки указывается путем вызова функции **SQLSetStmtAttr** с *атрибут* значение SQL_ATTR_PARAM_BIND_TYPE и *ValuePtr* равным размеру вместимость структуры переменные программы.  
   
- Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента отправляет символов или двоичная строка параметров на сервер, он дополняет значения до длины, указанной в **SQLBindParameter** *ColumnSize* параметра. Если указано значение приложении ODBC 2.x 0 *ColumnSize*, драйвер дополняет значение параметра точности типа данных. Точность равна 8000 при соединении с сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и 255 при соединении с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ColumnSize* указывается в байтах для столбцов типа variant.  
+ Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента отправляет символ или двоичные строковые параметры на сервер, он дополняет значения до длины, указанной в **SQLBindParameter** *ColumnSize* параметра. Если указано значение 0 в приложении ODBC 2.x *ColumnSize*, драйвер дополняет значение параметра точности типа данных. Точность равна 8000 при соединении с сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и 255 при соединении с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ColumnSize* указывается в байтах для столбцов типа variant.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает определение имен для параметров хранимых процедур. В ODBC 3.5 также появилась поддержка именованных параметров, используемых при вызове хранимых процедур [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта поддержка может использоваться для следующих действий.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "35699605"
   
 -   Указание параметров в приложении не в той последовательности, в какой они были заданы при создании хранимой процедуры.  
   
- Именованные параметры поддерживаются только при использовании [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** инструкции или escape-последовательность ODBC CALL для выполнения хранимой процедуры.  
+ Именованные параметры поддерживаются только в том случае, при использовании [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** инструкции или escape-последовательность ODBC CALL для выполнения хранимой процедуры.  
   
- Если **SQL_DESC_NAME** имеет значение для параметра хранимой процедуры, также необходимо задать все параметры хранимых процедур в запросе **SQL_DESC_NAME**.  Если используются литералы вызовов хранимых процедур, параметры которой имеют **SQL_DESC_NAME** задано, эти литералы должны иметь формат *"имя*=*значение*", где *имя* является именем параметра хранимой процедуры (например, @p1). Дополнительные сведения см. в разделе [привязка параметров по имени (именованные параметры)](http://go.microsoft.com/fwlink/?LinkId=167215).  
+ Если **SQL_DESC_NAME** имеет значение для параметра хранимой процедуры, остальные параметры хранимой процедуры в запросе также следует задать **SQL_DESC_NAME**.  Если используются литералы вызовов хранимых процедур, параметры которой имеют **SQL_DESC_NAME** задано, эти литералы должны иметь формат *"имя*=*значение*", где *имя* является именем параметра хранимой процедуры (например, @p1). Дополнительные сведения см. в разделе [привязка параметров по имени (именованные параметры)](http://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>См. также  
  [Использование параметров инструкции](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

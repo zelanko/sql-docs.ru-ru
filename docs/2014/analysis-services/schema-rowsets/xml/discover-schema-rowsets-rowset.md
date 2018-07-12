@@ -1,5 +1,5 @@
 ---
-title: Набор строк DISCOVER_SCHEMA_ROWSETS | Документы Microsoft
+title: Набор строк DISCOVER_SCHEMA_ROWSETS | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DISCOVER_SCHEMA_ROWSETS rowset
 ms.assetid: e5012aa0-6ef8-497f-96c1-2772e2394f62
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e8071da248e9c7d69a76a22f7c339fad0a217295
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa16f7ff677efd8e39367b9e618bdc95d778b405
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220244"
 ---
 # <a name="discoverschemarowsets-rowset"></a>Набор строк DISCOVER_SCHEMA_ROWSETS
-  Возвращает имена, ограничения, описание и другие сведения для всех значений перечисления и дополнительных поставщиком значений перечисления поддерживаемых [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) поставщика.  
+  Возвращает имена, ограничения, описание и другие сведения для всех значений перечисления и дополнительных поставщика значений перечисления поддерживаемых [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) поставщика.  
   
- При вызове метода [Discover](../../xmla/xml-elements-methods-discover.md) метод с `DISCOVER_SCHEMA_ROWSETS` значения перечисления в [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) элемент, `Discover` возвращает `DISCOVER_SCHEMA_ROWSETS` набора строк.  
+ При вызове метода [Discover](../../xmla/xml-elements-methods-discover.md) метод с `DISCOVER_SCHEMA_ROWSETS` значение перечисления в [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) элемент, `Discover` возвращает метод `DISCOVER_SCHEMA_ROWSETS` набора строк.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк DISCOVER_SCHEMA_ROWSETS содержит следующие столбцы.  

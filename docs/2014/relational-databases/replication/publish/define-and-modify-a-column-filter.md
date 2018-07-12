@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication], column
 - modifying filters, column
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - column filters [SQL Server replication]
 ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bc052b814eea6f8e9e8f221a0f53a5d7f3b55267
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b8f6bcd012d96afe4971bb287087a4230419e5b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221354"
 ---
 # <a name="define-and-modify-a-column-filter"></a>Определение или изменение фильтра столбцов
   В этом разделе описывается определение и изменение фильтра столбцов [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  

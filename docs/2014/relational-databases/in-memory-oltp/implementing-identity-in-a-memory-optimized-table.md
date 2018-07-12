@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 3e2eac0fd58bccad20094af9eb5956cb14cef54c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cdc1b44fda79d5b8ea8f940e18fc3b00240a6752
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229244"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>Реализация IDENTITY в таблице, оптимизированной для памяти
   IDENTITY(1, 1) поддерживается для таблицы, оптимизированной для памяти. Однако столбцы идентификаторов с определением IDENTITY(x, y), где x != 1 или y != 1 для таблиц, оптимизированных для памяти, не поддерживаются. Для обхода этой проблемы значения IDENTITY используют объект SEQUENCE ([Sequence Numbers](../sequence-numbers/sequence-numbers.md)).  

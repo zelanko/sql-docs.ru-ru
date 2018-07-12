@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - databases [SQL Server], detaching
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - databases [SQL Server], moving
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 caps.latest.revision: 96
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 421c743456b6a0a2303b2ec0407af566c77ab39e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 11f01f4fe44284d94aa0cfb4d3c008c758a930a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227744"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Присоединение и отсоединение базы данных (SQL Server)
   Файлы данных и журналов транзакций базы данных можно отсоединить, а затем снова присоединить к тому же или другому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Отсоединение и присоединение базы данных полезно, если необходимо переместить базу данных на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на том же компьютере либо перенести базу данных.  
@@ -89,7 +89,7 @@ ms.locfileid: "36087603"
 3.  Отсоедините базу данных повторно.  
   
 ##  <a name="AttachDb"></a> Присоединение базы данных  
- Можно присоединить скопированную или отсоединенную базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если при присоединении [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] экземпляре сервера, файлов каталогов выполняется из их предыдущего расположения вместе с другими файлами баз данных, так же, как в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Дополнительные сведения см. в разделе [Обновление полнотекстового поиска](../search/upgrade-full-text-search.md).  
+ Можно присоединить скопированную или отсоединенную базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При присоединении [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] экземпляре сервера, файлы каталогов присоединяются из их предыдущего расположения вместе с другими файлами баз данных, как и в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Дополнительные сведения см. в разделе [Обновление полнотекстового поиска](../search/upgrade-full-text-search.md).  
   
  При присоединении базы данных должны быть доступны все файлы данных (файлы MDF и NDF). Если у какого-либо файла данных путь отличается от того, каким он был при первом создании или последнем присоединении, необходимо указать текущий путь к файлу.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36087603"
   
      Если у базы данных, доступной для записи и чтения, только один файл журнала и для него не указано новое расположение, операция присоединения использует старое расположение файла. Если он найден, применяется старый файл журнала независимо от того, была ли база данных выключена чисто. Однако если старый файл журнала не найден и база данных была выключена чисто и не имеет активной цепочки журналов, то операция присоединения пытается построить новый файл журнала для базы данных.  
   
--   Если первичный файл данных, присоединяемый только для чтения, [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] не может обновить расположение журнала, хранящихся в первичном файле.  
+-   Если первичный файл данных присоединяемый только для чтения, [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] не удалось обновить расположение журнала, хранящихся в первичном файле.  
   
   
   
