@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: acd78f2c8f785c1ed336c5ec0471dbd8ec58c20d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd3111f268d4d44a506254e01557b430fdf970e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156795"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Конструктор системы отслеживания измененных данных для Oracle компании Attunity
   Консоль конструктора CDC служит для разработки и обслуживания экземпляров Oracle CDC. Консоль конструктора CDC ― это надстройка консоли управления (MMC), состоящая из следующих элементов.  

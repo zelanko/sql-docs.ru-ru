@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3c379a43-c497-47dd-8e7d-2b015c068bb7
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 7316d93d197a64b7b9f7a7f6675e92c7cc5be613
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 17424e5a629a4161760c35d5dcc24b80aaf9c2bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205844"
 ---
 # <a name="database-engine-powershell-reference"></a>Справочник по PowerShell для ядра СУБД
   В состав [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] включен набор командлетов Windows PowerShell 2.0 для выполнения обычных действий в компоненте [!INCLUDE[ssDE](../includes/ssde-md.md)]. Кроме того, выражения запросов и универсальные имена ресурса (URN) можно преобразовать в пути SQL Server PowerShell либо использовать для указания одного или нескольких объектов в компоненте [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "36095267"
   
 |Описание|Командлет|  
 |-----------------|------------|  
-|Выполняет скрипты Transact-SQL и XQuery, например скрипты, которые можно выполнить с помощью `sqlcmd` программы.|[Командлет Invoke-Sqlcmd](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
+|Выполняет скрипты Transact-SQL и XQuery, например скрипты, которые могут выполняться с помощью `sqlcmd` служебной программы.|[Командлет Invoke-Sqlcmd](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
 |Определяет, соответствует ли объект компонента Database Engine политике управления на основе политик.|[Invoke-PolicyEvaluation, командлет](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
   
 ### <a name="information-about-other-cmdlets"></a>Сведения о других командлетах  

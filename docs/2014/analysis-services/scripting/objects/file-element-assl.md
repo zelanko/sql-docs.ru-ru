@@ -1,5 +1,5 @@
 ---
-title: Файл элемента (ASSL) | Документы Microsoft
+title: Файл элемента (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - File element
 ms.assetid: 21c70707-d2f8-4040-9acb-cbce23076bcc
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 645882666ba82f965fddff9e1c886e97ff092a90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03b78545b1df04192a69dffa1a49733509b99700
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097137"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155356"
 ---
 # <a name="file-element-assl"></a>Элемент File (ASSL)
-  Определяет один из файлов, составляющих [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] [ClrAssembly](../data-type/assembly-data-type-assl.md) элемента.  
+  Определяет один из файлов, составляющих [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] [ClrAssembly](../data-type/assembly-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -60,11 +60,11 @@ ms.locfileid: "36097137"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `Files` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
+ Элемент, соответствующий родителю параметра `Files` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент Server &#40;ASSL&#41;](server-element-assl.md)   
- [Элемент Database &#40;ASSL&#41;](database-element-assl.md)   
+ [Элемент Database описания &#40;ASSL&#41;](database-element-assl.md)   
  [Элемент Assemblies &#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
  [Элемент Assembly &#40;ASSL&#41;](assembly-element-assl.md)   
  [Тип данных ClrAssembly &#40;ASSL&#41;](../data-type/assembly-data-type-assl.md)   

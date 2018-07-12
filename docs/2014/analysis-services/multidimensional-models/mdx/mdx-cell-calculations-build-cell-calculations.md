@@ -1,5 +1,5 @@
 ---
-title: Построение вычислений значений ячеек в Многомерном выражении | Документы Microsoft
+title: Построение вычислений значений ячеек в многомерных Выражениях (многомерные Выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - calculated cells [MDX]
 - queries [MDX], cell calculations
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], cell calculations
 ms.assetid: 068aea63-d419-4791-a960-3d74e76f808e
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d9d00541e51cb25c939f881a8b531892c1bf64d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b0a689858d4012f360e7f3893cfa844f3ecbdcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161355"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>Построение вычислений значений ячеек в многомерном выражении
   Многомерные выражения предоставляют целый ряд инструментов для формирования вычисляемых значений, таких как вычисляемые элементы, пользовательские свертки и пользовательские элементы.  Однако по этой причине применить эти средства так, чтобы повлиять только на часть ячеек или на одну ячейку, будет трудно.  
@@ -38,7 +38,7 @@ ms.locfileid: "36096271"
   
  При создании вычисляемые ячейки похожи как на именованные наборы, так и на вычисляемые элементы тем, что вычисляемые ячейки можно временно создать на время жизни одного сеанса или отдельного запроса; и они становятся глобально доступными как часть куба:  
   
--   **Область — запрос** . Для создания вычисляемой ячейки, которая определена как часть запроса многомерных выражений (поэтому ее область ограничена этим запросом), надо применить ключевое слово WITH. Затем можно использовать эту вычисляемую ячейку в операторе MDX SELECT. При таком подходе вычисляемую ячейку, созданные с помощью `WITH` ключевое слово можно изменить, не нарушая инструкцию SELECT.  
+-   **Область — запрос** . Для создания вычисляемой ячейки, которая определена как часть запроса многомерных выражений (поэтому ее область ограничена этим запросом), надо применить ключевое слово WITH. Затем можно использовать эту вычисляемую ячейку в операторе MDX SELECT. При таком подходе вычисляемую ячейку, созданных с помощью `WITH` ключевое слово можно изменить, не нарушая инструкцию SELECT.  
   
      Дополнительные сведения о создании вычисляемых элементов с помощью ключевого слова WITH см. в разделе [Creating Query-Scoped Cell Calculations &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Создать модель с помощью диспетчера отчетов | Документы Microsoft
+title: Создание модели с помощью диспетчера отчетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report models [Reporting Services], creating
 - Report Manager [Reporting Services], model creation
@@ -16,13 +16,13 @@ ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9f4de8368cadbc56819cd22c65892cbf143ae02c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a4f951a901361e47e1582146d306955da0e9bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095424"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175093"
 ---
 # <a name="create-a-model-using-report-manager"></a>Создание модели с помощью диспетчера отчетов
   С помощью диспетчера отчетов можно создавать модели на основе куба служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или базы данных Oracle. Модели отчета создаются на основе общих источников данных, опубликованных на сервере отчетов. Если еще не создано ни одного общего источника данных, то его необходимо создать.  
@@ -30,7 +30,7 @@ ms.locfileid: "36095424"
  Создаваемая модель отчета полностью основана на схеме общего источника данных. Пользователь не может выбирать, какие части источника данных включать в модель, и не может редактировать правила или метаданные создаваемой модели. Тем не менее после создания модели можно установить ее свойства и определить назначения ролей, которые ограничивают доступ к модели или ее частям.  
   
 > [!NOTE]  
->  Модель на основе Oracle, созданная с помощью диспетчера отчетов или [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] будет включать объекты базы данных, которые являются частью схемы для учетной записи пользователя, используемая для подключения к источнику данных Oracle. Имя учетной записи пользователя указывается в учетных данных свойств источника данных.  
+>  Модель на основе Oracle, созданная с помощью диспетчера отчетов или [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] будет включать объекты базы данных, которые являются частью схемы для учетной записи пользователя, используемый для подключения к источнику данных Oracle. Имя учетной записи пользователя указывается в учетных данных свойств источника данных.  
   
 ### <a name="to-create-a-new-data-source-for-a-report-model-using-report-manager"></a>Создание нового источника данных для модели отчета с помощью диспетчера отчетов  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36095424"
   
     -   Проверка подлинности Windows: выберите этот параметр, если проверку подлинности пользователей [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] должна проводить операционная система. Этот параметр позволяет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] применять для проверки подлинности пользователей функции безопасности Windows, такие как шифрование паролей. Настоятельно рекомендуется выбрать этот параметр.  
   
-    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Проверка подлинности: Выберите этот параметр, если нужно, чтобы пользователям использовать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] созданной учетной записи входа. Пользователи должны вводить допустимые имена входа пользователей и пароли [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Проверка подлинности: Выберите этот параметр, если пользователи должны использовать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] созданной вами учетной записи входа. Пользователи должны вводить допустимые имена входа пользователей и пароли [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
         > [!CAUTION]  
         >  При возможности используйте проверку подлинности Windows.  

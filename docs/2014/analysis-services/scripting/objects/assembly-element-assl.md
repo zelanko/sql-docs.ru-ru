@@ -1,5 +1,5 @@
 ---
-title: Элемент ASSEMBLY (ASSL) | Документы Microsoft
+title: Элемент ASSEMBLY (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Assembly element [ASSL]
 ms.assetid: 1910ccb0-7da0-4ee1-9548-ad6e0068d23d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 02bc362fd633a7c3cf9fcd4936d2a0580753c01b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38c14744eaebba8e618c7c200341c447393ce773
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151445"
 ---
 # <a name="assembly-element-assl"></a>Элемент Assembly (ASSL)
-  Представляет [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] сборку или библиотеку динамической компоновки COM (DLL), связанную с [сервера](server-element-assl.md) элемент или [базы данных](database-element-assl.md) элемента.  
+  Представляет [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] сборку или библиотеку динамической компоновки COM (DLL), связанную с [Server](server-element-assl.md) элемент или [базы данных](database-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,11 +62,11 @@ ms.locfileid: "36095793"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.Assembly>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.Assembly>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент Server &#40;ASSL&#41;](server-element-assl.md)   
- [Элемент Database &#40;ASSL&#41;](database-element-assl.md)   
+ [Элемент Database описания &#40;ASSL&#41;](database-element-assl.md)   
  [Объекты &#40;ASSL&#41;](objects-assl.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Элемент IntermediateCubeDimensionID (ASSL) | Документы Microsoft
+title: Элемент IntermediateCubeDimensionID (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IntermediateCubeDimensionID element
 ms.assetid: 305c0a91-7bc2-4268-ba94-8f19d8c22ca3
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 46b57b224d4c9e69b285491b2df316f84e0f38d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8945791ccb2b09faf3d42821a847b2a822bceda6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204026"
 ---
 # <a name="intermediatecubedimensionid-element-assl"></a>Элемент IntermediateCubeDimensionID (ASSL)
   Содержит идентификатор измерения, которое связывает ссылочное измерение с группой мер.  
@@ -62,7 +62,7 @@ ms.locfileid: "36095789"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `IntermediateCubeDimensionID` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
+ Элемент, соответствующий родителю параметра `IntermediateCubeDimensionID` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

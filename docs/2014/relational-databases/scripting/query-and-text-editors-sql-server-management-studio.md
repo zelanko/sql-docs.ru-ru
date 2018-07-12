@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TextEditor
 helpviewer_keywords:
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - queries [SQL Server], SQL Server Management Studio
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d706156b277b9dbad083ada16be2d671b07dc1d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3d424201b35b7082c6e81536c611978b8bcaebf0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179721"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Редакторы запросов и текста (среда SQL Server Management Studio)
   Для интерактивного изменения и проверки скриптов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , многомерных выражений, расширений интеллектуального анализа данных или XML/A либо изменения простого текстового файла или XML-файла можно использовать один из редакторов среды [!INCLUDE[tsql](../../includes/tsql-md.md)]. В каждом редакторе поддерживается выделение цветом ключевых слов и проверка ошибок синтаксиса и применения для конкретного языка. В редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] есть отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] , с помощью которого можно находить и исправлять ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

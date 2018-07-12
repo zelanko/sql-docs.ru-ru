@@ -1,14 +1,13 @@
 ---
-title: Репликация, отслеживание изменений, измененных данных и группы доступности AlwaysOn (SQL Server) | Документы Microsoft
+title: Репликация, отслеживание изменений, измененных данных и групп доступности AlwaysOn (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
 - change data capture [SQL Server], AlwaysOn Availability Groups
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 caps.latest.revision: 31
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 0afd1136c2426b749beaff5c713f6c5e77671940
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1519ac814a1f8a55333af5050eab8f5fcbc1b022
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204034"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Репликация, отслеживание изменений, изменение данных и группы доступности AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Репликация, отслеживание измененных данных (CDC) и отслеживание изменений (CT) поддерживаются в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] помогает обеспечивать высокий уровень доступности и дополнительные возможности восстановления баз данных.  
@@ -43,7 +42,7 @@ ms.locfileid: "36096246"
 > [!NOTE]  
 >  После отработки отказа на вторичной реплике монитор репликации не сможет изменить имя экземпляра публикации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и будет продолжать отображать сведения о репликации по имени исходного первичного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. После отработки отказа нельзя ввести трассировочный токен с помощью монитора репликации, но трассировочный токен, введенный в новый издатель с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)], отображается в мониторе репликации.  
   
-###  <a name="Changes"></a> Общие изменения в агентах репликации для поддержки групп доступности AlwaysOn  
+###  <a name="Changes"></a> Основные изменения в агентах репликации для поддержки групп доступности AlwaysOn  
  Для поддержки [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]были внесены изменения в три агента репликации. Агенты средства чтения журналов, моментального снимка и слияния теперь опрашивают базу данных распространителя на наличие перенаправленного издателя и используют возвращенное имя прослушивателя группы доступности, если был объявлен перенаправленный издатель, для соединения с издателем базы данных.  
   
  Если по умолчанию агенты направляют запрос к распространителю, чтобы определить, был ли перенаправлен исходный издатель, то соответствие текущей цели или перенаправления будет проверено до возврата перенаправленного сервера агенту. Рекомендуется пользоваться этим режимом. Но если запуск агента происходит слишком часто, то нагрузка, связанная с хранимой процедурой проверки, может занимать слишком много ресурсов. В агенты чтения журнала, моментальных снимков и слияния был добавлен новый параметр командной строки *BypassPublisherValidation*. Если указан этот параметр, то перенаправляемый издатель сразу возвращается агенту, при этом хранимая процедура проверки не выполняется.  
@@ -115,7 +114,7 @@ ms.locfileid: "36096246"
     > [!NOTE]  
     >  Рекомендуется создавать задания для всех возможных целей отработки отказа и отключить их, пока одна из реплик доступности на узле не станет новой первичной репликой. Задания CDC, запущенные в старой базе данных-источнике, также должны быть отключены, когда локальная база данных становится базой данных-получателем. Для включения и отключения заданий используйте параметр *@enabled* процедуры [sp_update_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Дополнительные сведения о создании заданий CDC см. в разделе [sys.sp_cdc_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql).  
   
--   **Добавление ролей CDC для первичной базы данных реплики AlwaysOn**  
+-   **Добавление ролей CDC для AlwaysOn первичной реплики базы данных**  
   
      Если для CDC включена таблица, то можно связать роль базы данных с экземпляром отслеживания. Если указана роль, то пользователь, который будет использовать функции с табличным значением CDC для доступа к изменениям, должен иметь не только права доступа к столбцам отслеживаемой таблицы, но и быть членом именованной роли. Если указанная роль еще не существует, то она будет создана. Если роли баз данных автоматически добавляются в базу данных-источник AlwaysOn, то роли также добавляются в базы данных -получатели группы доступности.  
   
@@ -160,7 +159,7 @@ ms.locfileid: "36096246"
   
      Для поиска вторичной реплики можно использовать имя прослушивателя группы доступности или явное имя узла. Если используется имя прослушивателя группы доступности, то доступ будет перенаправлен любой подходящей вторичной реплике.  
   
-     Когда `sp_addlinkedserver` используется для создания связанного сервера для доступа к получателю, *@datasrc* параметр используется имя прослушивателя группы доступности или явное имя сервера и *@provstr* параметр используется для указания намерение только для чтения.  
+     Когда `sp_addlinkedserver` используется для создания связанного сервера для доступа к получателю, *@datasrc* параметр используется для имени прослушивателя группы доступности или явное имя сервера и *@provstr* параметр используется для указания намерение только для чтения.  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -214,11 +213,11 @@ ms.locfileid: "36096246"
 |**Объединить**|Да|Нет|Да<sup>2</sup>|  
 |**Моментальный снимок**|Да|Нет|Да<sup>2</sup>|  
   
- <sup>1</sup> не включает поддержку двунаправленной и возвратной репликации транзакций.  
+ <sup>1</sup> не включает поддержку двунаправленной и Возвратно репликации транзакций.  
   
- <sup>2</sup> перехода на другой ресурс реплики базы данных выполняется вручную. Автоматический переход на другой ресурс не предоставляется.  
+ <sup>2</sup> отработки отказа для реплики базы данных — это Ручная процедура. Автоматический переход на другой ресурс не предоставляется.  
   
- <sup>3</sup> база данных распространителя не поддерживается для использования с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] или зеркального отображения базы данных.  
+ <sup>3</sup> база данных распространителя не поддерживается для использования с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] или зеркальное отображение базы данных.  
   
 ### <a name="considerations"></a>Замечания  
   
@@ -231,7 +230,7 @@ ms.locfileid: "36096246"
 ##  <a name="RelatedTasks"></a> Связанные задачи  
  **Репликация**  
   
--   [Настройка репликации для группы доступности AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)  
+-   [Настройка репликации для групп доступности AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)  
   
 -   [Обслуживание базы данных публикации AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
@@ -257,7 +256,7 @@ ms.locfileid: "36096246"
  [Подписчики репликации и группы доступности AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Группы доступности AlwaysOn: Взаимодействие (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ экземпляров отказоустойчивого кластера AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
+ [Группы доступности AlwaysOn: Взаимодействие (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ экземпляры отказоустойчивого кластера AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [Об отслеживании измененных данных (SQL Server)](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Об отслеживании изменений (SQL Server)](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Репликация SQL Server](../../../relational-databases/replication/sql-server-replication.md)   

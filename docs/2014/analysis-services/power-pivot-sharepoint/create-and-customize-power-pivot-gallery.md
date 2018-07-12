@@ -1,5 +1,5 @@
 ---
-title: Создать и настроить галерею PowerPivot | Документы Microsoft
+title: Создание и настройка галереи PowerPivot | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 039c5b834287d17480c9031f17ab2fed25c641fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d2e5434ae7f306b3f4a8de1d1c7356beb989b82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181013"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>создать и настроить галерею PowerPivot
   Коллекция PowerPivot —это специальная библиотека документов SharePoint, которая предоставляет широкие возможности просмотра и управления документами для опубликованных книг Excel и отчетов служб Reporting Services, содержащих данные PowerPivot.  
@@ -30,7 +30,7 @@ ms.locfileid: "36096273"
   
 -   [Обзор](#overview)  
   
--   [Создание коллекции PowerPivot](#createlib)  
+-   [Создает коллекцию PowerPivot](#createlib)  
   
 -   [Настройка библиотеки коллекции PowerPivot](#customize)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36096273"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] не может находиться на ограниченном сайте. Родительский сайт, который содержит галерею [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , должен быть добавлен либо в перечень доверенных сайтов, либо в зону "Местная интрасеть".  
   
--   Для приложения необходимо развернуть решение веб-приложения [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и активировать функцию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для семейства веб-сайтов. Дополнительные сведения см. в разделе [развертывание решений PowerPivot для SharePoint](deploy-power-pivot-solutions-to-sharepoint.md) и[активировать интеграцию компонента PowerPivot для семейств веб-сайтов в центре администрирования](activate-power-pivot-integration-for-site-collections-in-ca.md).  
+-   Для приложения необходимо развернуть решение веб-приложения [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и активировать функцию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для семейства веб-сайтов. Дополнительные сведения см. в разделе [развертывание решений PowerPivot в SharePoint](deploy-power-pivot-solutions-to-sharepoint.md) и[активировать интеграцию компонента PowerPivot для семейств веб-сайтов в центре администрирования](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 -   Для просмотра или создания отчета Reporting Services, созданного на основе книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , книга и отчет должны находиться в одной библиотеке галереи [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Используемая в отчете книга [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] должна содержать внедренные данные или не более одного внешнего источника данных, представляющего собой книгу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36096273"
   
  Обновление данных книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] из внешних источников данных полностью поддерживается в коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , однако требует дополнительной настройки. Администратор фермы или службы обязан добавить коллекцию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в качестве доверенного расположения служб Excel. Дополнительные сведения см. в разделе [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
-##  <a name="createlib"></a> Создание коллекции PowerPivot  
+##  <a name="createlib"></a> Создает коллекцию PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] создается при установке [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] с параметром «Новый сервер». При добавлении [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] к существующей ферме или в случае, если необходима новая библиотека, можно создать ее для приложения или сайта.  
   
 1.  1.  **SharePoint 2010**: щелкните **Действия сайта** в левом верхнем углу на домашней странице сайта.  
@@ -74,7 +74,7 @@ ms.locfileid: "36096273"
   
     3.  Выберите пункт **Коллекция PowerPivot**в списке «Библиотеки».  
   
-    1.  **SharePoint 2013**: щелкните значок параметров ![параметры SharePoint](../media/as-sharepoint2013-settings-gear.gif "параметры SharePoint"). Щелкните **Содержание сайта**.  
+    1.  **SharePoint 2013**: щелкните значок "Параметры" ![параметры SharePoint](../media/as-sharepoint2013-settings-gear.gif "параметры SharePoint"). Щелкните **Содержание сайта**.  
   
     2.  Щелкните **Добавить приложение**.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "36096273"
 3.  В области "Управление представлениями" текущего представления выберите желаемое представление в списке. В число стандартных представлений входят «Галерея», «Театр» и «Карусель». Либо можно выбрать параметр «Все документы», если нужно перемещать, удалять документы или управлять документами в библиотеке.  
   
 ## <a name="see-also"></a>См. также  
- [Устранение неполадок PowerPivot для SharePoint](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
+ [Устранение неполадок с PowerPivot для SharePoint](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
  [Использование коллекции PowerPivot](use-power-pivot-gallery.md)   
  [Создание надежного расположения для сайтов PowerPivot в центре администрирования](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Удаление галереи PowerPivot](delete-power-pivot-gallery.md)  

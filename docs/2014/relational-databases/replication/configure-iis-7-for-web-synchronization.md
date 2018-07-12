@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
 - Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ecd40b90af7ecff8e3b249957cce6b90589acefd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b4766702bb0e9dd82c5e74bc1018894ab90b63a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158285"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Настройка сервера IIS 7 для веб-синхронизации
   В этой статье описывается процесс настройки вручную служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) версии 7 и более поздней, которые будут использоваться при веб-синхронизации для репликации слиянием. 
@@ -82,7 +82,7 @@ ms.locfileid: "36097488"
   
     3.  На панели **Действия** выберите **Добавить сопоставление модуля**.  
   
-    4.  Для **запроса** путь, введите `replisapi.dll`.  
+    4.  Для **запроса** пути, введите `replisapi.dll`.  
   
     5.  В раскрывающемся списке **Модуль** выберите **IsapiModule**.  
   

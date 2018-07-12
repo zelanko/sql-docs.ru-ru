@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], about monitoring replication
 - transactional replication, monitoring
@@ -21,20 +21,20 @@ ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 caps.latest.revision: 38
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7434a211de780ab5a363aeec97b8914bb587f5a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1276429c773656e04a3ce15f277d08c3b3e52f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162305"
 ---
 # <a name="monitoring-replication"></a>Наблюдение (репликация)
   Наблюдение за топологией репликации является важным аспектом развертывания репликации. Так как активность репликации является распределенной, важно отслеживать активность и состояние всех компьютеров, участвующих в репликации. Для наблюдения за репликацией можно использовать следующие средства:  
   
 -   Монитор репликации[!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]   
   
-     Монитор репликации является самым важным средством наблюдения за репликацией, представляющим ориентированное на издателя представление всех действий, связанных с репликацией. Дополнительные сведения см. в разделе [монитор репликации](monitor/monitoring-replication-overview.md).  
+     Монитор репликации является самым важным средством наблюдения за репликацией, представляющим ориентированное на издателя представление всех действий, связанных с репликацией. Дополнительные сведения см. в разделе [наблюдение за репликацией](monitor/monitoring-replication-overview.md).  
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   

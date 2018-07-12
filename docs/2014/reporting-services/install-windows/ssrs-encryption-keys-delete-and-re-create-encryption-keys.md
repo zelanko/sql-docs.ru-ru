@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - re-creating encryption keys
 - encryption keys [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 4d13e42913481fa0470078a26615ab9139447b9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 710ccc6a332e040989142eb9e9252b660982b044
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193004"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Удаление и повторное создание ключей шифрования (диспетчер конфигурации служб SSRS)
   Удаление и повторное создание ключей шифрования — действия, которые выходят за пределы обычного обслуживания ключа шифрования. Эти задачи выполняются в ответ на определенную угрозу серверу отчетов или как последнее средство спасения, когда больше нельзя получить доступ к базе данных сервера отчетов.  
@@ -52,7 +52,7 @@ ms.locfileid: "36095875"
   
     2.  Откройте файл rsreportserver.config.  
   
-    3.  Для `IsWebServiceEnabled` свойство, укажите `False`и сохраните изменения.  
+    3.  Для `IsWebServiceEnabled` свойство, укажите `False`, а затем сохраните изменения.  
   
 2.  Запустите программу настройки служб Reporting Services и подключитесь к экземпляру сервера отчетов, который нужно настроить.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36095875"
   
 1.  Для каждого общего источника данных необходимо повторно ввести строку соединения.  
   
-2.  Для каждого отчета и общего источника данных, который использует сохраненные учетные данные, необходимо заново ввести имя пользователя и пароль, затем сохранить. Дополнительные сведения см. в разделе [задание учетных данных и сведений о соединении для источников данных отчета](../../integration-services/connection-manager/data-sources.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации.  
+2.  Для каждого отчета и общего источника данных, который использует сохраненные учетные данные, необходимо заново ввести имя пользователя и пароль, затем сохранить. Дополнительные сведения см. в разделе [задание учетных данных и сведений о соединении для источников данных отчета](../../integration-services/connection-manager/data-sources.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 3.  Откройте каждую управляемую данными подписку и заново введите учетные данные для базы данных подписки.  
   
@@ -121,6 +121,6 @@ ms.locfileid: "36095875"
   
 ## <a name="see-also"></a>См. также  
  [Настройка и управление ключами шифрования &#40;диспетчер конфигурации служб SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Хранить зашифрованных данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Store зашифрованных данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

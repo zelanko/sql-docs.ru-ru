@@ -1,5 +1,5 @@
 ---
-title: Свойства (табличные службы SSAS) таблицы | Документы Microsoft
+title: Свойства (табличные службы SSAS) таблицы | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tableprop.f1
 ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 85a29563b6e0e0b78c63c771547a57473e3c9f52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c94cb6ed1092944fd19683e57d3f7b9265f495c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183361"
 ---
 # <a name="table-properties-ssas-tabular"></a>Свойства таблицы (табличные службы SSAS)
   В этом разделе описаны свойства табличной модели. Описанные здесь свойства отличаются от свойств таблицы в диалоговом окне «Изменение свойств таблицы», которые определяют, какие столбцы из источника нужно импортировать.  
@@ -30,7 +30,7 @@ ms.locfileid: "36095526"
   
 -   [Свойства таблицы](#bkmk_properties)  
   
--   [Настройка параметров свойств таблицы](#bkmk_config_prop)  
+-   [Настройка параметров для табличных свойств](#bkmk_config_prop)  
   
 ##  <a name="bkmk_properties"></a> Свойства таблицы  
  **Basic**  
@@ -53,7 +53,7 @@ ms.locfileid: "36095526"
 |**Набор полей по умолчанию**|||  
 |Поведение таблиц|||  
   
-###  <a name="bkmk_config_prop"></a> Настройка параметров свойств таблицы  
+###  <a name="bkmk_config_prop"></a> Настройка параметров для табличных свойств  
   
 1.  В конструкторе моделей в представлении диаграмм щелкните таблицу (вкладку) или в представлении диаграмм щелкните заголовок таблицы.  
   

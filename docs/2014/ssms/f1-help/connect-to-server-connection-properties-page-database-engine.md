@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttosqlserver.connectionproperties.f1
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f79ba89862334e19c3e50b347588de4e4183afaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 738bae73382d71a3cd0458a35002068c56817d70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198604"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Соединение с сервером (страница "Свойства подключения") ядра СУБД
   Данная вкладка позволяет просмотреть или указать параметры при соединении с экземпляром компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] или регистрации компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в списке **Зарегистрированные серверы**. Кнопки**Соединить** и **Параметры** появляются в этом диалоговом окне только при соединении с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Кнопки**Проверить** и **Сохранить** появляются в этом диалоговом окне только при регистрации компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="options"></a>Параметры  
  **Подключиться к базе данных**  
- Выберите базу данных для подключения из списка. При выборе  **\<по умолчанию >**, вам будет подключена к базе данных по умолчанию для сервера. При выборе  **\<Обзор сервера >**, можно найти на сервере базы данных, к которому выполняется подключение.  
+ Выберите базу данных для подключения из списка. При выборе  **\<по умолчанию >**, вы будете подключены к базе данных по умолчанию для сервера. При выборе  **\<Обзор сервера >**, можно найти на сервере базы данных, к которому осуществляется подключение.  
   
  При соединении с экземпляром ядра СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]необходимо использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указать базу данных в диалоговом окне **Соединение с сервером** на вкладке **Свойства соединения** . Обязательно установите флажок **Шифрование соединения** .  
   

@@ -1,5 +1,5 @@
 ---
-title: Добавление и удаление ключей шифрования для масштабного развертывания (диспетчер конфигурации служб SSRS) | Документы Microsoft
+title: Добавление и удаление ключей шифрования для масштабного развертывания (диспетчер конфигурации служб SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
 - deleting encryption keys
@@ -20,13 +20,13 @@ ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8a8b5ef42a5a235080e229c1072ad03d8dc1d677
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d253287d8eb5b774794114003682151ecd00c4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170275"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment-ssrs-configuration-manager"></a>Добавление и удаление ключей шифрования для масштабного развертывания (диспетчер конфигурации служб SSRS)
   Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут работать в модели масштабного развертывания, где несколько серверов отчетов настроены на использование общей базы данных. Членство в масштабном развертывании основано на том, хранит ли сервер отчетов ключ шифрования в базе данных сервера отчетов. Этим членством можно управлять за счет добавления и удаления ключей шифрования для конкретных экземпляров серверов отчетов. При удалении узлов из конфигурации развертывания их можно удалять в любом порядке. Если добавляются узлы к конфигурации, необходимо подключать все новые экземпляры с сервера отчетов, который уже входит в конфигурацию.  

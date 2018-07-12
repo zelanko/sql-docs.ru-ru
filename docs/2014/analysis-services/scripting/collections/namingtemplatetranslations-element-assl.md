@@ -1,5 +1,5 @@
 ---
-title: Элемент NamingTemplateTranslations (ASSL) | Документы Microsoft
+title: Элемент NamingTemplateTranslations (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NamingTemplateTranslations element
 ms.assetid: fde65778-1fa3-490a-9874-8bf2052ef25c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e22eaea2ab6d19bf1da5620321f0d2002ed382d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2965971734625c4d0c553f652160e1044eb48546
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204404"
 ---
 # <a name="namingtemplatetranslations-element-assl"></a>Элемент NamingTemplateTranslations (ASSL)
   Предоставляет коллекцию локализованных переводов для элемента [NamingTemplate](../properties/namingtemplate-element-assl.md) , являющегося дочерним для элемента [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md).  
@@ -64,9 +64,9 @@ ms.locfileid: "36096530"
 |Дочерние элементы|[NamingTemplateTranslation](../objects/translation-element-assl.md) с типом данных [Translation](translations-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Значение `NamingTemplateTranslation` элемент используется только родительскими атрибутами (другими словами, значение [использование](../properties/usage-element-dimensionattribute-assl.md) родителя `DimensionAttribute` равно *родительского*.)  
+ Значение `NamingTemplateTranslation` элемент используется только родительскими атрибутами (другими словами, значение [использования](../properties/usage-element-dimensionattribute-assl.md) родителя `DimensionAttribute` присваивается *родительского*.)  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>См. также  
  [Коллекции &#40;ASSL&#41;](collections-assl.md)  

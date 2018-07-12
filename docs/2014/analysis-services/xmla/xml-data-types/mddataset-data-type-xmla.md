@@ -1,5 +1,5 @@
 ---
-title: Тип данных MDDataSet (XML для Аналитики) | Документы Microsoft
+title: Тип данных MDDataSet (XML для Аналитики) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - MDDataSet data type
 ms.assetid: 1a7e0092-f9f0-4ae5-ba27-ad1d8ebe8cb9
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 098a123c28e4a449ad6425d1a74ff8355d074e08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c1580365cc6c7949c552333728b5083b96f7ef9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165325"
 ---
 # <a name="mddataset-data-type-xmla"></a>Тип данных MDDataSet (XML для аналитики)
   Определяет производный тип данных, представляющий многомерные данные, возвращаемые [Execute](../xml-elements-methods-execute.md) метод.  
@@ -68,9 +68,9 @@ ms.locfileid: "36095283"
 |Производные элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Тип данных `MDDataSet` позволяет получить набор строк (или набор данных), предназначенный для использования в среде OLAP, который требуется для представления данных OLAP на языке XML. Содержимое этого набора строк может изменяться в зависимости от значения `Content` и `Format` свойства в [свойства](../xml-elements-properties/properties-element-xmla.md) коллекцию `Execute` метод. Дополнительные сведения о `Content` и `Format` свойствах см. [поддерживаемые свойства XMLA &#40;XMLA&#41;](../xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
+ Тип данных `MDDataSet` позволяет получить набор строк (или набор данных), предназначенный для использования в среде OLAP, который требуется для представления данных OLAP на языке XML. Содержимое этого набора строк может изменяться в зависимости от значения `Content` и `Format` свойства в [свойства](../xml-elements-properties/properties-element-xmla.md) коллекцию `Execute` метод. Дополнительные сведения о `Content` и `Format` свойства, см. в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41;](../xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
- Для получения основных сведений о структурах наборов данных OLE DB для OLAP см. раздел «Сопоставление типов данных MDDataSet для OLE DB» в спецификации «XML для аналитики 1.1». Пример полного схемы XML определения языка XSD `MDDataSet` тип данных, содержатся в разделе «Приложение D: MDDataSet пример» XML для аналитики 1.1 спецификации.  
+ Для получения основных сведений о структурах наборов данных OLE DB для OLAP см. раздел «Сопоставление типов данных MDDataSet для OLE DB» в спецификации «XML для аналитики 1.1». Полный XML-схемы определения языка XSD образец `MDDataSet` тип данных, см. «Приложение D: MDDataSet пример» XML для аналитики 1.1.  
   
 ## <a name="see-also"></a>См. также  
  [Типы данных XML &#40;XML для Аналитики&#41;](xml-data-types-xmla.md)  

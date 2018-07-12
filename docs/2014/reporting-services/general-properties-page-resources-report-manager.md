@@ -1,5 +1,5 @@
 ---
-title: Страница «Общие свойства», ресурсы (диспетчер отчетов) | Документы Microsoft
+title: Страница «Общие свойства», ресурсы (диспетчер отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: aff68336e0ca68a315d8b2cdab6bd783c87c5f7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 269cd82820bb8e07ec1ac66ccc8d3e8b8ceeb43a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164188"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Страница свойств «Общие», ресурсы (диспетчер отчетов)
   Страница свойств «Общие» для ресурсов служит для переименования, удаления, перемещения и замены ресурсов. В верхней части страницы отображаются сведения о том, кто добавил ресурс или изменил его свойства.  
@@ -64,7 +64,7 @@ ms.locfileid: "36095627"
   
 ## <a name="see-also"></a>См. также  
  [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Страница «Просмотр», ресурсы &#40;диспетчера отчетов&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
+ [Просмотр страницы, ресурсы &#40;диспетчера отчетов&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
  [Страница "Свойства безопасности", элементы (диспетчер отчетов)](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   

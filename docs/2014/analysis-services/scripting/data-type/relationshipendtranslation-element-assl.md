@@ -1,5 +1,5 @@
 ---
-title: Элемент RelationshipEndTranslation (ASSL) | Документы Microsoft
+title: Элемент RelationshipEndTranslation (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 04e09370-fdfe-4051-9998-4a6859ce8c54
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb93b3cdaf3eda1b8be15679b0736e626a802cf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 62c779e29ce721289b364599063e1a1de747eb1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153025"
 ---
 # <a name="relationshipendtranslation-element-assl"></a>Элемент RelationshipEndTranslation (язык ASSL)
   Определяет примитивный тип данных, представляющий локализованный перевод для элемента [RelationshipEnd](relationshipend-data-type-assl.md) .  
@@ -54,9 +54,9 @@ ms.locfileid: "36096754"
 |Дочерние элементы|[Заметки](../collections/annotations-element-assl.md), [Подпись](../properties/caption-element-assl.md), [CollectionCaption](../properties/caption-element-assl.md), [Описание](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [Язык](../properties/language-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.Translation>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.Translation>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

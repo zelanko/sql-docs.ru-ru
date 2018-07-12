@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], other SQL Server features and
 - FILESTREAM [SQL Server], limitations
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: be0912f1da8e17d5fbd1723595e845393e94cf41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1fce4632ddcee1ed29ce8a06ee5efc631f8ce1f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175787"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Совместимость FILESTREAM с другими компонентами SQL Server
   Поскольку данные FILESTREAM находятся в файловой системе, в данном разделе приводятся основные сведения, рекомендации и ограничения по использованию FILESTREAM со следующими компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -70,7 +69,7 @@ ms.locfileid: "36095980"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="Replication"></a> Replication  
- Столбец `varbinary(max)`, атрибут FILESTREAM которого включен на издателе, может быть реплицирован на подписчик с атрибутом FILESTREAM или без него. Чтобы указать способ репликации этого столбца, используйте диалоговое окно **Свойства статьи — \<статья>** либо параметр @schema_option процедуры [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) или [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Данные, реплицированные в столбец типа `varbinary(max)` без атрибута FILESTREAM, не должны превышать установленный в 2 ГБ предел для данного типа данных; в противном случае формируется ошибка выполнения. Рекомендуется выполнять репликацию атрибута FILESTREAM, если выполняется репликация данных [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] подписчиков не поддерживается, независимо от того, указан параметр схемы.  
+ Столбец `varbinary(max)`, атрибут FILESTREAM которого включен на издателе, может быть реплицирован на подписчик с атрибутом FILESTREAM или без него. Чтобы указать способ репликации этого столбца, используйте диалоговое окно **Свойства статьи — \<статья>** либо параметр @schema_option процедуры [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) или [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Данные, реплицированные в столбец типа `varbinary(max)` без атрибута FILESTREAM, не должны превышать установленный в 2 ГБ предел для данного типа данных; в противном случае формируется ошибка выполнения. Рекомендуется выполнять репликацию атрибута FILESTREAM, если выполняется репликация данных [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] подписчиков не поддерживается, независимо от установленного параметра схемы.  
   
 > [!NOTE]  
 >  Репликация больших значений данных с подписчиков [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ограничена максимальным значением 256 МБ значений данных. Дополнительные сведения см. в разделе [Maximum Capacity Specifications](http://go.microsoft.com/fwlink/?LinkId=103810).  
@@ -82,7 +81,7 @@ ms.locfileid: "36095980"
   
 -   Параметр max text repl size задает максимально допустимый объем данных, добавляемых в опубликованный для репликации столбец. Этот параметр позволяет управлять размером реплицируемых данных FILESTREAM.  
   
--   Если указан параметр схемы для репликации атрибута FILESTREAM, но нужно отфильтровать `uniqueidentifier` столбца, FILESTREAM требуется, или вы не задана репликация ограничения UNIQUE для столбца, репликация не будет FILESTREAM атрибут. Столбец будет реплицирован только как столбец типа `varbinary(max)`.  
+-   Если указан параметр схемы для репликации атрибута FILESTREAM, но нужно отфильтровать `uniqueidentifier` столбец, который требует FILESTREAM или вы не задана репликация ограничения UNIQUE для столбца, репликация не FILESTREAM атрибут. Столбец будет реплицирован только как столбец типа `varbinary(max)`.  
   
 ### <a name="considerations-for-merge-replication"></a>Общие вопросы репликации слиянием  
  При использовании столбцов FILESTREAM в таблицах, опубликованных для репликации слиянием, обратите внимание на следующие положения.  
@@ -93,7 +92,7 @@ ms.locfileid: "36095980"
   
          Если ограничение UNIQUE добавляется вручную согласно описанию и репликацию слиянием требуется удалить, то сначала необходимо удалить ограничение UNIQUE, иначе удаление репликации завершится неуспешно.  
   
-    -   По умолчанию в репликации слиянием используется значение NEWSEQUENTIALID(), поскольку, по сравнению с NEWID(), оно обеспечивает лучшую производительность. При добавлении `uniqueidentifier` столбца к таблице, будут опубликованы для репликации слиянием, следует указать NEWSEQUENTIALID() по умолчанию.  
+    -   По умолчанию в репликации слиянием используется значение NEWSEQUENTIALID(), поскольку, по сравнению с NEWID(), оно обеспечивает лучшую производительность. Если вы добавите `uniqueidentifier` столбца к таблице, уже опубликованной для репликации слиянием, следует указать NEWSEQUENTIALID() по умолчанию.  
   
 -   Репликация слиянием включает в себя оптимизацию репликации типов больших объектов. Оптимизация управляется при помощи параметра @stream_blob_columns хранимой процедуры [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Если параметр схемы настроен на репликацию атрибута FILESTREAM, параметру @stream_blob_columns присваивается значение `true`. Эта оптимизация может быть переопределена с помощью хранимой процедуры [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Эта хранимая процедура позволяет задать параметру @stream_blob_columns значение `false`. При добавлении столбца FILESTREAM в таблицу, уже опубликованную для репликации слиянием, значение `true` рекомендуется присвоить параметру при помощи хранимой процедуры sp_changemergearticle.  
   
@@ -108,7 +107,7 @@ ms.locfileid: "36095980"
  Зеркальное отображение базы данных не поддерживает FILESTREAM. Создание файловой группы FILESTREAM на основном сервере невозможно. Настройка зеркального отображения для базы данных, содержащей файловые группы FILESTREAM, невозможна.  
   
 ##  <a name="FullText"></a> Полнотекстовое индексирование  
- [Полнотекстовое индексирование](../indexes/indexes.md) обрабатывает столбцы FILESTREAM таким же образом, как и `varbinary(max)` столбца. В таблице FILESTREAM должен присутствовать столбец, в котором содержится расширение имени файла для каждого блока больших двоичных объектов (BLOB) FILESTREAM. Дополнительные сведения см. в статьях [Запрос с полнотекстовым поиском](../search/query-with-full-text-search.md), [Настройка и управление фильтрами для поиска](../search/configure-and-manage-filters-for-search.md) и [sys.fulltext_document_types (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
+ [Полнотекстовое индексирование](../indexes/indexes.md) обрабатывает столбцы FILESTREAM так же, как `varbinary(max)` столбца. В таблице FILESTREAM должен присутствовать столбец, в котором содержится расширение имени файла для каждого блока больших двоичных объектов (BLOB) FILESTREAM. Дополнительные сведения см. в статьях [Запрос с полнотекстовым поиском](../search/query-with-full-text-search.md), [Настройка и управление фильтрами для поиска](../search/configure-and-manage-filters-for-search.md) и [sys.fulltext_document_types (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
  Полнотекстовый поиск индексирует содержимое блоков больших двоичных объектов (BLOB) FILESTREAM. Индексирование таких файлов, как изображения, может оказаться нецелесообразным. При обновлении блоков больших двоичных объектов (BLOB) FILESTREAM выполняется их повторное индексирование.  
   

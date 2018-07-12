@@ -1,5 +1,5 @@
 ---
-title: Измерения элемента (XMLA) | Документы Microsoft
+title: Измерение элемент (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Dimension element
 ms.assetid: 85093468-e971-4b8e-9ee4-7b264ad01711
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f9684a8629a03bc2f0d328152b7f9f6daff1e7ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0c416afd86a698358693937e35717c08009be75f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192524"
 ---
 # <a name="dimension-element-xmla"></a>Элемент Dimension (XML для аналитики)
   Определяет измерение куба, представленного родительским [объекта](object-element-dimension-xmla.md) элемент.  
@@ -67,8 +67,8 @@ ms.locfileid: "36095987"
  Элемент `Dimension` — это идентификатор объекта, содержащий имя измерения куба, представленного элементом `Object`.  
   
 ## <a name="see-also"></a>См. также  
- [Элемент Database &#40;XML для Аналитики&#41;](database-element-xmla.md)   
- [Элемент Dimension (XML для Аналитики)](dimension-element-xmla.md)   
+ [Элемент Database описания &#40;XML для Аналитики&#41;](database-element-xmla.md)   
+ [Элемент Dimension (XMLA)](dimension-element-xmla.md)   
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)  
   
   

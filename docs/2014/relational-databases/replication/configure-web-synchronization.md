@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1
 - SQL10.REP.CONFIGWEBSYNCWIZARD.CLIENTAUTH.F1
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Web synchronization, configuring
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 caps.latest.revision: 73
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3d2baa3c79d4d3915ad3cae1032c7c7df94a7ccd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0f1e6f26bd99827a79140cfb0a14ed9049b82ab7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184161"
 ---
 # <a name="configure-web-synchronization"></a>Настроить веб-синхронизацию
   Поддержка веб-синхронизации для репликации слиянием [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет производить репликацию данных по протоколу HTTPS через Интернет. Чтобы использовать веб-синхронизацию, сначала необходимо выполнить следующие действия.  
@@ -128,7 +128,7 @@ ms.locfileid: "36095909"
   
 -   в случае репликации больших объемов данных может возникнуть необходимость в корректировке размера пакета агента слияния.  
   
- Размер пакета для репликации слиянием измеряется в *поколениях*, которые представляют собой коллекции изменений для статьи. Число поколений в пакете указана с помощью —`DownloadGenerationsPerBatch` и –`UploadGenerationsPerBatch` параметров агента слияния. Дополнительные сведения см. в статье [Replication Merge Agent](agents/replication-merge-agent.md).  
+ Размер пакета для репликации слиянием измеряется в *поколениях*, которые представляют собой коллекции изменений для статьи. Число поколений в пакете указывается с помощью –`DownloadGenerationsPerBatch` и –`UploadGenerationsPerBatch` параметров агента слияния. Дополнительные сведения см. в статье [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  При работе с большими объемами данных рекомендуется указывать небольшие значения для этих параметров пакетов. Рекомендуем начинать со значения, равного 10, и затем корректировать его с учетом потребностей приложений, а также производительности. Обычно эти параметры задаются в профиле агента. Дополнительные сведения о профилях см. в разделе [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   

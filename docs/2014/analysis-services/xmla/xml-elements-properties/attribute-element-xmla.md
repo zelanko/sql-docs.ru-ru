@@ -1,5 +1,5 @@
 ---
-title: Атрибут элемента (XMLA) | Документы Microsoft
+title: Атрибут элемента (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Attribute element
 ms.assetid: 0df9cf44-dc5f-4234-8a5a-daac8aabc0d6
 caps.latest.revision: 17
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 665626323e435eeed50b73f4d94de4506dba4f19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 262114f7bbd9200bfab3a74bb14e8cea08400f5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096505"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185121"
 ---
 # <a name="attribute-element-xmla"></a>Элемент Attribute (XML для аналитики)
   Определяет или фильтрует элемент атрибута, на котором родительского [вставить](../xml-elements-commands/insert-element-xmla.md), [обновление](../xml-elements-commands/update-element-xmla.md), или [Drop](../xml-elements-commands/drop-element-xmla.md) выполняет команду.  
@@ -77,11 +77,11 @@ ms.locfileid: "36096505"
 |||  
 |-|-|  
 |**Предок или родитель**|**Дочерний элемент**|  
-|[Удалить](../xml-elements-commands/drop-element-xmla.md), [где](name-element-xmla.md), [ключей](keys-element-xmla.md)|  
-|[Вставить](../xml-elements-commands/insert-element-xmla.md), [обновления](../xml-elements-commands/update-element-xmla.md)|[AttributeName](name-element-xmla.md), [CustomRollup](customrollup-element-xmla.md), [CustomRollupProperties](properties-element-xmla.md), [ключей](keys-element-xmla.md), [имя](name-element-xmla.md), [ SkippedLevels](skippedlevels-element-xmla.md), [переводы](translations-element-xmla.md), [UnaryOperator](unaryoperator-element-xmla.md)|  
+|[DROP](../xml-elements-commands/drop-element-xmla.md), [где](name-element-xmla.md), [ключи](keys-element-xmla.md)|  
+|[Вставить](../xml-elements-commands/insert-element-xmla.md), [обновления](../xml-elements-commands/update-element-xmla.md)|[AttributeName](name-element-xmla.md), [CustomRollup](customrollup-element-xmla.md), [CustomRollupProperties](properties-element-xmla.md), [ключи](keys-element-xmla.md), [имя](name-element-xmla.md), [ SkippedLevels](skippedlevels-element-xmla.md), [переводы](translations-element-xmla.md), [UnaryOperator](unaryoperator-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- `Attribute` Определяет элемент атрибута, который вставлен, обновлен или удален, соответственно, `Insert`, `Update`, или `Drop` команды. Как эти команды могут работать только с одним элемент атрибута одновременно, [атрибуты](attributes-element-xmla.md) коллекцию `Insert`, `Update`, и `Drop` команды может содержать только один `Attribute` элемента. Однако коллекция `Attributes` элемента `Where` для команд `Drop` и `Update` может содержать более одного элемента `Attribute`, таким образом возможна фильтрация атрибутов для удаления или обновления в доступном для записи измерении.  
+ `Attribute` Элемент определяет элемент атрибута, который вставлен, обновлен или удален, соответственно, `Insert`, `Update`, или `Drop` команды. Так как эти команды могут работать только с одним элемент атрибута одновременно, [атрибуты](attributes-element-xmla.md) коллекцию `Insert`, `Update`, и `Drop` команды может содержать только один `Attribute` элемент. Однако коллекция `Attributes` элемента `Where` для команд `Drop` и `Update` может содержать более одного элемента `Attribute`, таким образом возможна фильтрация атрибутов для удаления или обновления в доступном для записи измерении.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)   

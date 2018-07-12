@@ -1,5 +1,5 @@
 ---
-title: Создание нового проекта табличной модели (табличные службы SSAS) | Документы Microsoft
+title: Создание нового проекта табличной модели (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d889e25351e3a944409e62a682072a8845a2c13f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 402d53f58e1d23667e181849dc5e23276bb663b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178461"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>Создание нового проекта табличной модели (табличные службы SSAS)
   В этом разделе описано, как создать новый пустой проект табличной модели в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Создав пустой проект, можно перейти к разработке модели путем импорта данных из источников данных.  
@@ -36,6 +36,6 @@ ms.locfileid: "36096000"
   
 ## <a name="see-also"></a>См. также  
  [Свойства проекта &#40;табличные службы SSAS&#41;](properties-ssas-tabular.md)   
- [Свойства модели &#40;табличные службы SSAS&#41;](model-properties-ssas-tabular.md)  
+ [Свойств модели &#40;табличные службы SSAS&#41;](model-properties-ssas-tabular.md)  
   
   

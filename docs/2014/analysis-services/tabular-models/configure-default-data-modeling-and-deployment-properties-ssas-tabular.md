@@ -1,5 +1,5 @@
 ---
-title: Настройка моделирования данных по умолчанию и свойств развертывания (табличные службы SSAS) | Документы Microsoft
+title: Настройка моделирования данных по умолчанию и свойств развертывания (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deployment.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING
@@ -16,15 +16,15 @@ f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a38556f1c6b9d93f844441327a5ea8fe5f9ae9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13c674a47f074adaad3e4dbeff41797018bb0dbd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171475"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Настройка моделирования данных по умолчанию и свойств развертывания (табличные службы SSAS)
   В этом разделе описано, как настроить свойство уровня совместимости по умолчанию, свойства базы данных развертывания и рабочей области, для которых можно указать предопределенные значения во всех новых проектах табличных моделей, создаваемых в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. После создания нового проекта эти свойства в конкретной модели по-прежнему можно изменить в зависимости от определенных требований.  
@@ -76,7 +76,7 @@ ms.locfileid: "36096010"
   
 ## <a name="see-also"></a>См. также  
  [Свойства проекта &#40;табличные службы SSAS&#41;](properties-ssas-tabular.md)   
- [Свойства модели &#40;табличные службы SSAS&#41;](model-properties-ssas-tabular.md)   
+ [Свойств модели &#40;табличные службы SSAS&#41;](model-properties-ssas-tabular.md)   
  [Уровень совместимости &#40;SP1 табличные службы SSAS&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

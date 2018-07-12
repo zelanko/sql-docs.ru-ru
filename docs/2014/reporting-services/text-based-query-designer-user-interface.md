@@ -1,5 +1,5 @@
 ---
-title: Пользовательский интерфейс конструктора запросов на основе текста | Документы Microsoft
+title: Пользовательский интерфейс конструктора запросов на основе текста | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10010"
 - sql12.rtp.rptdesigner.dataview.genericquerydesigner.f1
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - query designers [Reporting Services], text-based
 ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
 caps.latest.revision: 25
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e7fa6d6f2d3ae55d6a01ffdfcaa541e1d29e34c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e24396a7b851bf3e210bd31318f52b757f15a46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177091"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Пользовательский интерфейс текстового конструктора запросов
   Текстовый конструктор запросов предназначен для ввода запроса на языке запросов, поддерживаемом источником данных, его выполнения и просмотра результатов во время разработки. Можно указать несколько инструкций, запросов или команд языка [!INCLUDE[tsql](../includes/tsql-md.md)] для создания собственных модулей обработки данных, а также указать запросы, заданные как выражения. Поскольку текстовый конструктор запросов не выполняет предварительную обработку запроса и позволяет использовать любой синтаксис запросов, он представляет собой стандартное средство конструктора запросов для источников данных многих типов.  
@@ -44,7 +44,7 @@ ms.locfileid: "36096351"
 |**Редактировать как текст**|Переключиться из текстового конструктора запросов в графический и обратно. Не все источники данных поддерживают графические конструкторы запросов.|  
 |**Импорт**|Импорт существующего запроса из файла или отчета. Поддерживаются только SQL и RDL-файлы. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Выполнить запрос](../analysis-services/media/rsqdicon-run.gif "Выполнить запрос")|Выполнить запрос и показать результирующий набор в панели результатов.|  
-|**Тип команды**|Выберите **Text**, **StoredProcedure**или **TableDirect**. Если хранимая процедура имеет параметры, при нажатии на панели инструментов кнопки **Выполнить** появится диалоговое окно **Определение параметров запроса** , в котором можно ввести значения параметров. Обратите внимание, что хранимая процедура возвращает более одного результирующего набора, только первый результирующий набор используется для заполнения набора данных.<br /><br /> Поддержка типов команд зависит от типа источника данных. Например, **TableDirect**поддерживают только OLE DB и ODBC.|  
+|**Тип команды**|Выберите **Text**, **StoredProcedure**или **TableDirect**. Если хранимая процедура имеет параметры, при нажатии на панели инструментов кнопки **Выполнить** появится диалоговое окно **Определение параметров запроса** , в котором можно ввести значения параметров. Обратите внимание на то, что хранимая процедура возвращает более одного результирующего набора, только первый результирующий набор используется для заполнения набора данных.<br /><br /> Поддержка типов команд зависит от типа источника данных. Например, **TableDirect**поддерживают только OLE DB и ODBC.|  
   
 ### <a name="command-type-text"></a>Тип команды Text  
  Если создается набор данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], конструктор отчетов по умолчанию отображает графический конструктор запросов. Чтобы переключиться в текстовый конструктор запросов, нажмите кнопку переключателя **Редактировать как текст** на панели инструментов. В окне текстового конструктора запросов отображаются две панели: панель запросов и область результатов. На следующем рисунке показана каждая панель.  
@@ -65,7 +65,7 @@ ms.locfileid: "36096351"
 SELECT LastName FROM Person.Person;  
 ```  
   
- Для типа команды Text можно использовать любую инструкцию [!INCLUDE[tsql](../includes/tsql-md.md)], включая инструкции `EXEC`. Следующий запрос вызывает [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] хранимой процедуры `uspGetEmployeeManagers` и возвращает цепочки команды применительно к служащему с идентификационным номером 1.  
+ Для типа команды Text можно использовать любую инструкцию [!INCLUDE[tsql](../includes/tsql-md.md)], включая инструкции `EXEC`. Следующий запрос вызывает [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] хранимой процедуры `uspGetEmployeeManagers` и возвращает цепочки команд применительно к служащему с идентификационным номером 1.  
   
 ```  
 EXEC uspGetEmployeeManagers 1;  
@@ -91,10 +91,10 @@ uspGetEmployeeManagers;
   
  `Sales.Customer`  
   
- При вводе имени таблицы Sales.Customer эквивалентен создания [!INCLUDE[tsql](../includes/tsql-md.md)] инструкции `SELECT * FROM Sales.Customer;`.  
+ При вводе имени таблицы Sales.Customer эквивалентен созданию [!INCLUDE[tsql](../includes/tsql-md.md)] инструкции `SELECT * FROM Sales.Customer;`.  
   
 ## <a name="see-also"></a>См. также  
- [Средства разработки в отчет конструктора SQL Server Data Tools запросов &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [Средства проектирования в отчет конструктора SQL Server Data Tools запросов &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Тип соединения SQL Server (службы SSRS)](report-data/sql-server-connection-type-ssrs.md)   
  [Тип подключения OLE DB &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md)   

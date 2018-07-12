@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a4c7665e301797481c2af9866e3c6f7d24374d02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c050d048d6d0f6439eac7fb9f3fb42d85d1dc4d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193934"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Служба системы отслеживания измененных данных для Oracle компании Attunity
   Служба CDC Service для Oracle ― это служба Windows, которая просматривает журналы транзакций Oracle и регистрирует изменения выбранных таблиц Oracle в таблицах изменений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Таблицы изменений SQL, где хранятся отслеженные изменения из базы данных Oracle, принадлежат к тому же типу, что и таблицы изменений, используемые в собственной системе отслеживания изменений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поэтому использовать эти изменения так же легко, как и изменения баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -29,7 +29,7 @@ ms.locfileid: "36095498"
   
  Установка службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC Service для Oracle помещает в выбранном месте графический интерфейс пользователя для настройки службы и служебную программу. Служба CDC Service для Oracle настраивается отдельно с помощью консоли конфигурации службы Oracle CDC. Дополнительные сведения о настройке службы Oracle CDC Service см. в разделе [Справка F1 по службе системы отслеживания информации об изменениях данных для Oracle компании Attunity](change-data-capture-service-for-oracle-by-attunity-f1-help.md).  
   
- Чтобы установить службу CDC Service для Oracle, вручную запустите файл **AttunityOracleCdcDesigner.msi** с установочного носителя SQL Server. Установочные пакеты для x86- и x64 расположены в **.\Tools\AttunityCDCOracle\\**  на установочном носителе SQL Server.  
+ Чтобы установить службу CDC Service для Oracle, вручную запустите файл **AttunityOracleCdcDesigner.msi** с установочного носителя SQL Server. Установочные пакеты для x86 и x64 расположены в **.\Tools\AttunityCDCOracle\\**  на установочном носителе SQL Server.  
   
  Службу CDC Service для Oracle можно установить на любой поддерживаемый компьютер с ОС Windows, на котором установлен собственный клиент Native Client [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ; он не обязательно должен быть установлен на том же компьютере, что и целевая база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

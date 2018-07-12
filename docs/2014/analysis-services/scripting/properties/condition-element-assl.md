@@ -1,5 +1,5 @@
 ---
-title: Условие элемент (ASSL) | Документы Microsoft
+title: Условие элемент (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Condition element
 ms.assetid: 9c3cb31c-4aa1-49e4-aeb2-6cab54db0be3
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2edc8a241e92987c4cde54c58576c60abb257c3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0b4b15f7b354b858ba1dfd91fff18963b288615
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212334"
 ---
 # <a name="condition-element-assl"></a>Элемент Condition (ASSL)
-  Содержит выражение многомерных выражений (MDX), которое определяет, является ли [действия](../objects/action-element-assl.md) родительского элемента применяется к цели.  
+  Содержит выражение многомерных выражений (MDX), определяет ли [действие](../objects/action-element-assl.md) область применения родительского элемента к целевому объекту.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36094848"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент `Condition` содержит многомерное выражение, результатом которого является логическое значение. Если выражение возвращает `True`, то `Action` применяется к цели, указанной в [целевой](target-element-assl.md) элемента. В противном случае действие `Action` не применяется.  
+ Элемент `Condition` содержит многомерное выражение, результатом которого является логическое значение. Если выражение возвращает `True`, а затем `Action` применяется к цели, указанной в [целевой](target-element-assl.md) элемент. В противном случае действие `Action` не применяется.  
   
- Элемент, соответствующий родителю параметра `Condition` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Action>.  
+ Элемент, соответствующий родителю параметра `Condition` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e2377a270850540f137bb0a53a9d4c8016c8a398
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c9b2832e59db33e645847e7787e80e467c285454
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188131"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Управление заголовками строк и столбцов (построитель отчетов и службы SSRS)
   Табличная область данных, матричная область данных или область списка данных может занимать несколько страниц по горизонтали или по вертикали. Можно указать, нужно ли повторять заголовки строк и столбцов на каждой странице. В интерактивном модуле подготовки отчетов, таком как диспетчер отчетов, или при предварительном просмотре отчета также можно указать, нужно ли закреплять заголовки строк и столбцов, чтобы они оставались видимыми во время прокрутки отчета. В таблице или матрице первая строка обычно содержит заголовки столбцов с метками для данных в каждом столбце, а первый столбец обычно содержит заголовки строк с метками для данных в каждой строке. Для вложенных групп может понадобиться повторить первоначальный набор заголовков строк и столбцов, которые содержат метки групп. По умолчанию в область данных списка заголовки не включаются.  
@@ -168,6 +168,6 @@ ms.locfileid: "36096589"
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Списки &#40;построитель отчетов и службы SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Экспорт отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

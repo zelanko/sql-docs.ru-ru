@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0fdbe801bc58296f0cbfa116056615c341ec3e1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: beeecbb80ff375bdb13f2a91bff84dbb34a9a4f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181645"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Спарклайны и гистограммы (построитель отчетов и службы SSRS)
   Sparkline-графики и гистограммы — это небольшие простые диаграммы, которые содержат много сведений в небольшом пространстве и часто бывают встроены в текст. Sparkline-графики и гистограммы часто используются в таблицах и матрицах. Их преимуществом является возможность просматривать большое их количество одновременно и быстро сравнивать их друг с другом, без необходимости просматривать каждое изображение отдельно. На них удобно смотреть выбросы, строки, отличающиеся от других. Хотя они небольшие, каждый спарклайн часто представляет множественные точки данных, часто во времени. Гистограммы могут представлять несколько точек данных, но, как правило, иллюстрируют только одну. Каждый спарклайн обычно представляет отдельный ряд. Спарклайн нельзя добавить к группе сведений в таблице. Sparkline-графики отображают статистические данные, поэтому должны входить в ячейку, которая связана с группой. Sparkline-графики и гистограммы данных имеют одни и те же основные элементы диаграммы категорий, рядов и значений, но не содержат какие-либо условные обозначения, линии осей, метки или деления.  
@@ -88,28 +88,28 @@ ms.locfileid: "36095866"
  ![Значок стрелки, используемый для ссылки возврата в начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый для ссылки возврата в начало") [В начало](#BackToTop)  
   
 ##  <a name="HowTo"></a> Инструкции  
- [Добавление спарклайнов и гистограмм &#40;отчетов построителя отчетов и службы SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
+ [Добавление спарклайнов и гистограмм &#40;построитель отчетов и службы SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
- [Выравнивание данных в диаграмме в таблице или матрице &#40;отчетов построителя отчетов и службы SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [Выравнивание данных в диаграмме в таблице или матрице &#40;построитель отчетов и службы SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
 ### <a name="other-how-to-topics-for-charts"></a>Другие инструкции для диаграмм  
  Поскольку sparkline-графики или гистограммы являются разновидностью диаграмм, следующие инструкции могут оказаться полезными при работе с ними.  
   
- [Добавление диаграммы в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [Добавление диаграммы в отчет &#40;построитель отчетов и службы SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
- [Добавление пустых точек на диаграмму &#40;отчетов построителя отчетов и службы SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
+ [Добавление пустых точек на диаграмму &#40;построитель отчетов и службы SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   
- [Добавление или удаление полей из диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Добавление или удаление полей из диаграммы &#40;построитель отчетов и службы SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [Изменение типа диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
+ [Изменение типа диаграммы &#40;построитель отчетов и службы SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
   
- [Задание цветов диаграммы с помощью палитры &#40;отчетов построителя отчетов и службы SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
+ [Задание цветов диаграммы с помощью палитры &#40;построитель отчетов и службы SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
  [Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
- [Задание логарифмической шкалы &#40;отчетов построителя отчетов и службы SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
+ [Задание логарифмической шкалы &#40;построитель отчетов и службы SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
- [Задание интервала оси &#40;отчетов построителя отчетов и службы SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [Задание интервала оси &#40;построитель отчетов и службы SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
  [Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS)](shape-charts-report-builder-and-ssrs.md)  
   
@@ -117,6 +117,6 @@ ms.locfileid: "36095866"
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Учебник: Добавление спарклайна в отчет &#40;построитель отчетов&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md)   
  [Спарклайны, линейчатые диаграммы и индикаторы в построителе отчетов (видео)](http://technet.microsoft.com/bi/video/ff877165)   
- [Как: создать спарклайн в таблице (видеоролик)](http://go.microsoft.com/fwlink/?LinkId=197092)  
+ [Практическое: создать спарклайн в таблице (видеоролик)](http://go.microsoft.com/fwlink/?LinkId=197092)  
   
   

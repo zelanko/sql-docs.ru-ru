@@ -1,5 +1,5 @@
 ---
-title: Установка быстрого анализа | Документы Microsoft
+title: Установка быстрого анализа | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dcd1dc09-6eaf-440b-9ce6-fef779ff794f
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 94f4fe123cb37e60e175ad39b932e61376e217b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79307cdd25f15f34eaaf3be084a3d46045ee7d8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162845"
 ---
 # <a name="set-fast-parse"></a>Установка быстрого анализа
   Свойство быстрого анализа необходимо установить для каждого столбца источника или преобразования, использующего этот анализ. Для установки этого свойства используется расширенный редактор источника «Неструктурированный файл» и преобразование «Преобразование данных».  
@@ -32,7 +32,7 @@ ms.locfileid: "36096454"
   
 3.  На панели **Входы и выходы** щелкните столбец, для которого нужно включить быстрый анализ.  
   
-4.  В окне «Свойства» разверните **Custom Properties** узел, а затем задайте `FastParse` свойства `True`.  
+4.  В окне «Свойства» разверните **пользовательские свойства** узел, а затем задайте `FastParse` свойства `True`.  
   
 5.  Нажмите кнопку **ОК**.  
   

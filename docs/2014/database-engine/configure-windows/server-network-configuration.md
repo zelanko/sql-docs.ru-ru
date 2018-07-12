@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
 - connections [SQL Server], server network configuration
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 619f8faae3d57cc7ec28a427d7f29bacab4b62ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 798ba8646da29796e11f6391a3132afc22c99732
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167235"
 ---
 # <a name="server-network-configuration"></a>Сетевая конфигурация сервера
   Задачи сетевой конфигурации сервера включают активацию протоколов, изменение порта или канала, используемого протоколом, настройку шифрования, настройку службы браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , отображение или скрытие компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в сети и регистрацию имени участника-службы сервера. Обычно изменять сетевую конфигурацию сервера не требуется. Проводить перенастройку сетевых протоколов сервера следует только в случае особых требований сети.  

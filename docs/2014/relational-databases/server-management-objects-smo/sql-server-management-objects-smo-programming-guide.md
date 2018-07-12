@@ -1,5 +1,5 @@
 ---
-title: Руководство по программированию (SMO) объекты управления SQL Server | Документы Microsoft
+title: Управляющих объектов SQL Server (SMO) руководство по программированию | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - programming [SMO]
 ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d747c0562ba0bc41f7f29378f5a44516afb6a016
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 737acb943974dd8657998b73b61efb92e256b5cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189921"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>Учебник по программированию управляющих объектов SQL Server (SMO)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Объекты управления (SMO) — это совокупность объектов, которые предназначены для программирования всех аспектов управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RMO — это набор объектов, который инкапсулирует управление репликацией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Управляющие объекты (SMO) — это коллекция объектов, которые предназначены для программирования всех аспектов управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RMO — это набор объектов, который инкапсулирует управление репликацией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Раздел|Описание|  
 |-----------|-----------------|  

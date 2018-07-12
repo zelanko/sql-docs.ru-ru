@@ -1,5 +1,5 @@
 ---
-title: Целевой элемент (ASSL) | Документы Microsoft
+title: Целевой элемент (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Target element
 ms.assetid: 08ce0441-94b6-4f1d-acba-f31c8212cb79
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 65150d66769a2ebdb67609989efbc1a7f81e9f89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec2f4a43b8b03e2f28d4bd8c61a9c6e4a9d20eb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180771"
 ---
 # <a name="target-element-assl"></a>Элемент Target (ASSL)
-  Определяет цель элемента [действия](../objects/action-element-assl.md) элемента.  
+  Определяет цель элемента [действие](../objects/action-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -68,13 +68,13 @@ ms.locfileid: "36095294"
 |----------------------|--------------------|  
 |*Cube*|Имя куба.|  
 |*Ячейки*|Выражение вложенного куба.|  
-|*набор*|Выражение набора или имя именованного набора. **Примечание:** инструкции подзапроса выборки не может использоваться.|  
+|*Набор*|Выражение набора или имя именованного набора. **Примечание:** нельзя использовать инструкцию подзапроса выборки.|  
 |*Иерархия, HierarchyMembers*|Имя иерархии.|  
 |*Измерение, DimensionMembers*|Имя измерения.|  
-|*Уровень LevelMembers*|Имя уровня.|  
-|*Атрибут AttributeMembers*|Имя атрибута.|  
+|*Уровень, LevelMembers*|Имя уровня.|  
+|*Атрибут, AttributeMembers*|Имя атрибута.|  
   
- Элемент, соответствующий родителю параметра `Target` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Action>.  
+ Элемент, соответствующий родителю параметра `Target` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

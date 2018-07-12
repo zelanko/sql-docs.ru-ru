@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 95056bd4c6902f8f727af2cd77958e461bdbcb75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd49900daf397575c90be86d0370f47824cc4d8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095408"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150525"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Настройка соединений SSL для сервера отчетов, работающего в собственном режиме
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] В собственном режиме используется HTTP-служба протокола SSL для установления зашифрованного соединения с сервером отчетов. Если в локальном хранилище сертификатов на компьютере сервера отчетов установлен CER-файл сертификата, можно связать его с резервированием URL-адресов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для поддержки соединений сервера отчетов через зашифрованный канал.  

@@ -1,5 +1,5 @@
 ---
-title: Пример конфигурации минимальными правами PowerPivot для SharePoint 2013 | Документы Microsoft
+title: Пример конфигурации с минимальными правами PowerPivot для SharePoint 2013 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 caps.latest.revision: 7
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2bc19d704534c36aebcef3618a2c6fc8dfe7ab04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ec782dab7b86b17f06a22bebf2e8549a08a55085
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200344"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Пример конфигурации PowerPivot для SharePoint 2013 с минимальными правами
   В этом разделе описывается пример настройки PowerPivot для SharePoint 2013 с минимальными правами доступа. В конфигурации используется отдельная учетная запись для каждого из трех компонентов и каждая учетная запись имеет минимальный уровень прав доступа.  
   
 ## <a name="summary-of-accounts"></a>Сводка учетных записей  
- PowerPivot для SharePoint 2013 позволяет использовать учетную запись сетевой службы для учетной записи служб Analysis Services. Учетная запись сетевой службы не поддерживается в SharePoint 2010. Дополнительные сведения об учетных записях служб см. в разделе [Настройка учетных записей службы Windows и разрешений](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ PowerPivot для SharePoint 2013 позволяет использовать учетную запись сетевой службы для учетной записи служб Analysis Services. Учетная запись сетевой службы не поддерживается в SharePoint 2010. Дополнительные сведения об учетных записях службы см. в разделе [Настройка учетных записей службы Windows и разрешений](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
   
  В следующей таблице представлены три учетные записи, используемые в данном примере конфигурации с минимальными правами доступа.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36095586"
 |Учетная запись службы Analysis Services|**SPsvc**|  
   
 ### <a name="the-sharepoint-administrator-account-spadmin"></a>Учетная запись администратора SharePoint (SpAdmin)  
- **SPAdmin** — учетная запись домена, используемая для установки и настройки фермы. Это учетная запись, используемая для запуска мастера настройки SharePoint и средства настройки PowerPivot для SharePoint 2013 **SPAdmin** учетная запись — единственная запись, которая требует прав локального администратора. Перед запуском средства настройки PowerPivot Предоставьте **SPAdmin** учетной записи права доступа к экземпляру базы данных SQL Server, где SharePoint формирует базы данных содержимого и конфигурации. Чтобы можно было настроить учетную запись SPAdmin с минимальными правами доступа, она должна быть членом ролей **securityadmin** и **dbcreator**.  
+ **SPAdmin** — учетная запись домена, используемая для установки и настройки фермы. Это учетная запись, используемая для запуска мастера настройки SharePoint и средства настройки PowerPivot для SharePoint 2013. учетная **SPAdmin** — единственная запись, которая требует прав локального администратора. Прежде чем запустить средство настройки PowerPivot, предоставить **SPAdmin** учетной записи права доступа к экземпляру базы данных SQL Server, где SharePoint формирует базы данных содержимого и конфигурации. Чтобы можно было настроить учетную запись SPAdmin с минимальными правами доступа, она должна быть членом ролей **securityadmin** и **dbcreator**.  
   
 ### <a name="the-farm-account-spfarm"></a>Учетная запись фермы (SPFarm)  
  **SPFarm** — учетная запись домена, используемая службой таймера SharePoint и веб-приложением для центра администрирования служб, чтобы получить доступ к базе данных содержимого SharePoint. Эта учетная запись не обязательно должна быть локальным администратором. Мастер настройки SharePoint предоставляет необходимые минимальные права доступа к внутренней базе данных SQL Server. Конфигурация SQL Server с минимальными правами доступа — членство в ролях **securityadmin** и **dbcreator**.  

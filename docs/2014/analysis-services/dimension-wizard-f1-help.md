@@ -1,5 +1,5 @@
 ---
-title: Справка F1 мастера измерений | Документы Microsoft
+title: Справка F1 мастера измерений | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Dimension Wizard
 ms.assetid: 82c406ce-9e92-40c7-8374-cdbaf8b63d8f
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1ec7bcbe9ab41d78b701ee792169f3363105e6f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: ee5540e7421893a5e4639025704b0a636dc791cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153395"
 ---
 # <a name="dimension-wizard-f1-help"></a>Справка F1 мастера измерений
   Мастер измерений в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] используется для создания измерения базы данных в проекте служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . После создания измерения базы данных можно использовать конструктор измерений, чтобы изменить его свойства. Дополнительные сведения о конструкторе измерений см. в разделе [Конструктор измерений (службы Analysis Services — многомерные данные)](dimension-designer-analysis-services-multidimensional-data.md).  

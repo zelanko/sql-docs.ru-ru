@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, generating XML from rowsets
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 163b33618f6d303d3ab08e078ee2b06096dc2ad8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 75446ba8c61f03c46c4000793d7ca75f1dc8cb85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201114"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Использование предложения XML FOR для создания XML на основе набора строк
-  Можно создать `xml` экземпляр типа данных из набора строк с помощью FOR XML с новой **тип** директивы.  
+  Вы можете создать `xml` экземпляр типа данных из набора строк с помощью FOR XML с новым **тип** директива.  
   
  Результат может быть назначен `xml` столбцу, переменной или параметру типа данных. Кроме того, инструкции FOR XML могут быть вложены друг в друга, создавая произвольные иерархические структуры. Благодаря этому создавать вложенные инструкции FOR XML намного проще, чем FOR XML EXPLICIT, но при большой глубине иерархии они могут оказаться менее эффективными. Предложение FOR XML поддерживает также новый режим PATH. Этот режим определяет в дереве XML путь к значению столбца.  
   
@@ -40,7 +40,7 @@ FROM   T
 FOR XML AUTO, TYPE  
 ```  
   
- Представление V содержит единственную строку с единственным столбцом xmlVal XML-типа`.` могут запрашиваться как обычный `xml` экземпляр типа данных. Например, следующий запрос возвращает сведения об авторе по имени «David»:  
+ Представление V содержит единственную строку с единственным столбцом xmlVal XML типа`.` может запрашиваться как обычный `xml` экземпляр типа данных. Например, следующий запрос возвращает сведения об авторе по имени «David»:  
   
 ```  
 SELECT xmlVal.query('//author[first-name = "David"]')  

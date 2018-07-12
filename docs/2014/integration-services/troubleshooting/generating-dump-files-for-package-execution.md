@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 771ae5285f38b89336fa1f62b71ab033a54b3e8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b750ea3f8586b874a78251790bd0d46e18680a2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158975"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Создание файлов дампа для выполнения пакетов
   Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]позволяют создавать отладочные файлы дампа с информацией о выполнении пакета. Данные, содержащиеся в этих файлах, могут помочь при устранении неполадок при выполнении пакетов.  
@@ -37,7 +37,7 @@ ms.locfileid: "36097098"
   
      Вызовите эту хранимую процедуру для приостановки выполняемого пакета и создания файла дампа.  
   
- Если вы развертываете пакеты с использованием модели развертывания пакетов, для указания параметра отладочного дампа в командной строке создаются отладочные файлы дампа с помощью служебной программы **dtexec** или **dtutil**. Дополнительные сведения см. в статьях [Программа dtexec](../packages/dtexec-utility.md) и [Программа dtutil](../dtutil-utility.md). Дополнительные сведения о модели развертывания пакетов см. в разделе [развертывания проектов и пакетов](../packages/deploy-integration-services-ssis-projects-and-packages.md) и [развертывание пакета &#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md).  
+ Если вы развертываете пакеты с использованием модели развертывания пакетов, для указания параметра отладочного дампа в командной строке создаются отладочные файлы дампа с помощью служебной программы **dtexec** или **dtutil**. Дополнительные сведения см. в статьях [Программа dtexec](../packages/dtexec-utility.md) и [Программа dtutil](../dtutil-utility.md). Дополнительные сведения о модели развертывания пакетов, см. в разделе [развертывание проектов и пакетов](../packages/deploy-integration-services-ssis-projects-and-packages.md) и [развертывания пакета &#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="debug-dump-file-format"></a>Формат отладочного файла дампа  
  Если указывается параметр создания дампа отладки, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создают следующие отладочные файлы дампа:  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services]
 - collections [Master Data Services], about collections
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 89f5f5b51bbba9ae7629d5c6dd889ad8ac8bf81b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 09f40b94ef25384fb36223964d77afacf98ea9ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184694"
 ---
 # <a name="collections-master-data-services"></a>Коллекции (службы основных данных)
   Коллекция — это группа конечных или консолидированных элементов из одной сущности. Коллекции используются, когда нет необходимости в полной иерархии и нужно просмотреть разные группы элементов для отчетов или анализа или когда необходимо создать классификацию.  
@@ -49,7 +49,7 @@ ms.locfileid: "36096677"
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |Включение сущности для явных иерархий и коллекций.|[Активация сущности для явных иерархий и коллекций &#40;службы Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|Создание новой коллекции.|[Создайте коллекцию &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
+|Создание новой коллекции.|[Создание коллекции &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
 |Добавление элементов в существующую коллекцию.|[Добавление элементов в коллекцию &#40;службы Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  

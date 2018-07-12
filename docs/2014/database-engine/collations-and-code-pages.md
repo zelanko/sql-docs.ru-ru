@@ -1,5 +1,5 @@
 ---
-title: Параметры сортировки и кодовые страницы | Документы Microsoft
+title: Параметры сортировки и кодовые страницы | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: da33b883499f9119c7c23f3c203aca6add6c4d3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0632bb70a18930e71319554bba99b0660e986483
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182904"
 ---
 # <a name="collations-and-code-pages"></a>Параметры сортировки и кодовые страницы
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] имеет ограничения на поддерживаемые кодовые страницы для столбцов (var)char в оптимизированных для памяти таблицах и на параметры сортировки, используемые в индексах и скомпилированные в собственном коде в хранимых процедурах.  

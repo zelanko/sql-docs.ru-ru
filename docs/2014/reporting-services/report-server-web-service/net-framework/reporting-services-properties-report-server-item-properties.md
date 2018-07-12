@@ -17,15 +17,15 @@ helpviewer_keywords:
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 caps.latest.revision: 44
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1f4d96b577c82797d408813a90b8b9a8e7dd7455
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6f4c94f85e4dad79f03963a300ada3fabd8a9cfb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190021"
 ---
 # <a name="report-server-item-properties"></a>Свойства элемента сервера отчетов
   Свойства элементов являются свойствами, зависящими от элементов в базе данных сервера отчетов. Такие элементы включают отчеты, связанные отчеты, папки, ресурсы, модели и источники данных.  

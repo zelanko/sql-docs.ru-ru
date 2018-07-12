@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.admin.config.rds.f1
 - sql12.dqs.administration.rdsconfiguration.f1
@@ -17,13 +17,13 @@ ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fd697cfac2d83747813c8c3f65478763b8a1d549
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a7e2624248380059027db83d7f0342e64ca28dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161105"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Настройка служб DQS для использования справочных данных
   В этом разделе описывается настройка служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) на использование ссылочных данных для очистки данных. Можно использовать ссылочные данные как из Windows Azure Marketplace, так и непосредственно от сторонних поставщиков ссылочных данных в сети.  
@@ -81,6 +81,6 @@ ms.locfileid: "36095280"
  Теперь службы ссылочных данных из настроенного стороннего поставщика служб ссылочных данных с непосредственным подключением по сети можно использовать в DQS.  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После настройки служб DQS на использование ссылочных данных  
- Теперь необходимо сопоставить требуемые домены базы знаний со ссылочными данными, доступными в только что настроенных поставщиках данных. Чтобы сделать это, в разделе [Добавление домена или составного домена к ссылочным данным](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
+ Теперь необходимо сопоставить требуемые домены базы знаний со ссылочными данными, доступными в только что настроенных поставщиках данных. Чтобы сделать это, см. в разделе [Добавление домена или составного домена к ссылочным данным](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9e83b4a29d1fae74c5b20f3290be8431045f1f38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3aef5a22131fd26d72ccbe569a2adb73d045dfa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200034"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Установка SQL Server с общей папкой SMB в качестве хранилища
-  Запуск [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], системные базы данных (Master, модели, MSDB и TempDB), и [!INCLUDE[ssDE](../../includes/ssde-md.md)] пользовательских баз данных может быть установлен с файлового сервера Server Message Block (SMB) в качестве хранилища. Это относится как к изолированному варианту установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и к установке кластеров отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Запуск [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], системные базы данных (Master, Model, MSDB и TempDB), и [!INCLUDE[ssDE](../../includes/ssde-md.md)] пользовательских баз данных может быть установлен с файлового сервера Server Message Block (SMB), использовать как хранилище. Это относится как к изолированному варианту установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и к установке кластеров отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Файловый поток в настоящее время не поддерживается в общей папке SMB.  
@@ -36,7 +36,7 @@ ms.locfileid: "36095081"
   
 -   \\\имя_сервера\имя_папки  
   
- Дополнительные сведения о формате UNC см. в разделе [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534).  
+ Дополнительные сведения о формате UNC, см. в разделе [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534).  
   
  Путь UNC замыкания на себя (путь UNC, где именем сервера является localhost, 127.0.0.1 или имя локального компьютера) не поддерживается. В качестве особого случая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием кластера файлового сервера, размещенного на том же узле [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , также не поддерживается. Чтобы предотвратить возникновение этой ситуации, рекомендуется создавать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и кластер файлового сервера на отдельных кластерах Windows.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36095081"
     setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="\\FileServer\Share1\" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-     Дополнительные сведения об использовании различных параметров командной строки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], в разделе [Установка SQL Server 2014 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+     Дополнительные сведения об использовании различных параметров командной строки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], см. в разделе [Установка SQL Server 2014 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Рекомендации по операционным системам (сравнение протокола SMB и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  В различных операционных системах Windows используются разные версии протокола SMB. Версия протокола SMB прозрачна для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно выяснить информацию о преимуществах разных версий SMB в отношении [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -102,7 +102,7 @@ ms.locfileid: "36095081"
     > [!NOTE]  
     >  Полный доступ для общих папок и разрешения NTFS для общих папок SMB должны действовать только для учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , учетной записи службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пользователей Windows, которым назначена роль администратора сервера.  
   
-     В качестве учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется использовать учетную запись домена. Если системная учетная запись используется в качестве учетной записи службы, предоставьте разрешения учетной записи компьютера в формате: * < имя_домена >***\\***< имя_компьютера > ***$**.  
+     В качестве учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется использовать учетную запись домена. Если в качестве учетной записи службы используется учетная запись системы, предоставьте разрешения для учетной записи компьютера в формате: * < имя_домена >***\\***< имя_компьютера > ***$**.  
   
     > [!NOTE]  
     >  -   Если в качестве хранилища задана общая папка SMB, во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве учетной записи службы необходимо задать учетную запись домена. При использовании общей папки SMB учетную запись системы можно задать в качестве учетной записи службы только после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -117,8 +117,8 @@ ms.locfileid: "36095081"
 -   После отсоединения базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , которая находится в хранилище, подключенном к сети, при попытке повторного присоединения базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возможны проблемы с разрешением доступа к базе данных. Эта проблема описывается в [этой статье базы знаний](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321). Информацию о решении этой проблемы см. в разделе **Дополнительные сведения** статьи из базы знаний.  
   
 -   Некоторые решения сторонних разработчиков, например устройство NetApp, не поддерживают все вызовы API SQL Server. С этими может появиться:   
-    2015-06-04 ситуациях spid9s ошибка: 17053. серьезность: 16, состояние: 1.  
-    2015-06-04 ситуациях spid9s DoDevIoCtlOut() GetOverlappedResult(): произошла ошибка операционной системы 1 (Неправильная функция.).  
+    2015-06-04 отображаться spid9s ошибка: 17053, серьезность: 16, состояние: 1.  
+    2015-06-04 отображаться spid9s DoDevIoCtlOut() GetOverlappedResult(): произошла ошибка операционной системы 1 (Неправильная функция.).  
   
      Для файловой системы NTFS эта ошибка неопасна,  но в случае с ReFS она может привести к существенному снижению производительности.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows application logs [Reporting Services]
 - logs [Reporting Services], Windows application logs
@@ -17,13 +17,13 @@ ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c8fab15175eddb015bac7bd96d97bceba1fbd076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5cc0848226b80c2c77345ed737f8acff68eba5bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150065"
 ---
 # <a name="windows-application-log"></a>Журнал приложений Windows
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] записывают сообщения о событиях в журнал приложений Windows. Эти сообщения в журнале приложений можно использовать для определения событий, вызванных приложениями сервера отчетов, запущенными в локальной системе.  

@@ -1,5 +1,5 @@
 ---
-title: Набор строк DISCOVER_DATASOURCES | Документы Microsoft
+title: Набор строк DISCOVER_DATASOURCES | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,25 +18,25 @@ helpviewer_keywords:
 - DISCOVER_DATASOURCES rowset
 ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32e7aa7327cce301cc8415f45635fda651d861f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e319b05d1d9aec74b01b73b671f613a2703d900f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185261"
 ---
 # <a name="discoverdatasources-rowset"></a>Набор строк DISCOVER_DATASOURCES
   Возвращает список источников данных поставщика XML для аналитики, которые доступны на сервере или в веб-службе. Для возврата источников опубликованных данных применяется URL-адрес веб-сервера приложения. Клиент может подключиться к одному из источников данных в этом списке.  
   
- При вызове метода [Discover](../../xmla/xml-elements-methods-discover.md) метод с `DISCOVER_DATASOURCES` значения перечисления в [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) элемент, `Discover` возвращает `DISCOVER_DATASOURCES` набора строк.  
+ При вызове метода [Discover](../../xmla/xml-elements-methods-discover.md) метод с `DISCOVER_DATASOURCES` значение перечисления в [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) элемент, `Discover` возвращает метод `DISCOVER_DATASOURCES` набора строк.  
   
  **Область применения:** табличные модели, многомерные модели  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
- Клиент выбирает источник данных, задав `DataSourceInfo` свойство в [свойства](../../xmla/xml-elements-properties/properties-element-xmla.md) элемент, который отправляется вместе с [команда](../../xmla/xml-elements-properties/command-element-xmla.md) элемента по [Execute](../../xmla/xml-elements-methods-execute.md) метод. В клиенте не следует создавать содержимое свойства `DataSourceInfo` для отправки на сервер. Вместо этого в клиенте необходимо использовать метод `Discover` для поиска источников данных, поддерживаемых поставщиком. Затем клиент отправляет обратно то же значение для свойства `DataSourceInfo`, которое было им получено из набора строк `DISCOVER_DATASOURCES`.  
+ Клиент выбирает источник данных, задав `DataSourceInfo` свойство в [свойства](../../xmla/xml-elements-properties/properties-element-xmla.md) элемент, который отправляется вместе с [команда](../../xmla/xml-elements-properties/command-element-xmla.md) элемент [Execute](../../xmla/xml-elements-methods-execute.md) метод. В клиенте не следует создавать содержимое свойства `DataSourceInfo` для отправки на сервер. Вместо этого в клиенте необходимо использовать метод `Discover` для поиска источников данных, поддерживаемых поставщиком. Затем клиент отправляет обратно то же значение для свойства `DataSourceInfo`, которое было им получено из набора строк `DISCOVER_DATASOURCES`.  
   
  `DISCOVER_DATASOURCES` Набор строк содержит следующие столбцы.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36095115"
 |`DataSourceInfo`|`DBTYPE_WSTR`||Строка, которая содержит любые дополнительные сведения, необходимые для подключения к источнику данных.<br /><br /> Может возвращать значение `NULL`.|  
 |`ProviderName`|`DBTYPE_WSTR`|Да|Имя поставщика для источника данных.<br /><br /> Пример: `"MSOLAP"`<br /><br /> Может возвращать значение `NULL`.|  
 |`ProviderType`|`DBTYPE_WSTR`|Да|Типы данных, поддерживаемые поставщиком. Этот массив может включать один или несколько следующих типов:<br /><br /> `MDP`. Поставщик многомерных данных.<br /><br /> `TDP`. Поставщик табличных данных.<br /><br /> `DMP`. Поставщик интеллектуального анализа данных (реализовывает технологию OLE для DB применительно к спецификации интеллектуального анализа данных).|  
-|`AuthenticationMode`|`DBTYPE_WSTR`|Да|Спецификация, определяющая тип режима безопасности, используемого в источнике данных. Значением может быть одно из следующих.<br /><br /> `Unauthenticated`. Не требуется отправка какого-либо идентификатора пользователя или пароля.<br /><br /> `Authenticated`. Идентификатор пользователя и пароль должны входить в состав сведений, необходимых для подключения к источнику данных.<br /><br /> `Integrated`: В источнике данных используются базовые средства безопасности для определения авторизации, такие как встроенная безопасность, обеспечиваемая [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS).|  
+|`AuthenticationMode`|`DBTYPE_WSTR`|Да|Спецификация, определяющая тип режима безопасности, используемого в источнике данных. Значением может быть одно из следующих.<br /><br /> `Unauthenticated`. Не требуется отправка какого-либо идентификатора пользователя или пароля.<br /><br /> `Authenticated`. Идентификатор пользователя и пароль должны входить в состав сведений, необходимых для подключения к источнику данных.<br /><br /> `Integrated`: В источнике данных используются базовые средства обеспечения безопасности для определения авторизации, такие как встроенная безопасность, предоставляемые [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS).|  
   
  Этот набор строк схемы не отсортирован.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing subscriptions
 - push subscriptions [SQL Server replication], deleting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], push
 ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6ba955bddebbcf950e8559f9b35bcdd64b8fa275
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9c1f8f2dd21d385207164d520a108a2ef6621e53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094573"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212824"
 ---
 # <a name="delete-a-push-subscription"></a>Удаление принудительной подписки
   В данном разделе описывается удаление принудительной подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
@@ -101,7 +101,7 @@ ms.locfileid: "36094573"
   
 4.  Задайте соединение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> с шага 1 для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> , чтобы убедиться, что подписка существует. Если значение этого свойства равно `false`, были неправильно заданы свойства подписки на шаге 2, либо подписка не существует.  
+5.  Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> , чтобы убедиться, что подписка существует. Если значение этого свойства равно `false`, либо на подписку на шаге 2 были неверно определены свойства, либо подписка не существует.  
   
 6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A> .  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36094573"
   
 4.  Задайте соединение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> с шага 1 для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> , чтобы убедиться, что подписка существует. Если значение этого свойства равно `false`, были неправильно заданы свойства подписки на шаге 2, либо подписка не существует.  
+5.  Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> , чтобы убедиться, что подписка существует. Если значение этого свойства равно `false`, либо на подписку на шаге 2 были неверно определены свойства, либо подписка не существует.  
   
 6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A> .  
   

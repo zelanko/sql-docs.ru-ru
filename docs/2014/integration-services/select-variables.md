@@ -1,5 +1,5 @@
 ---
-title: Выбор переменных | Документы Microsoft
+title: Выбор переменных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.selectvariables.f1
 helpviewer_keywords:
 - Select Variables dialog box
 ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
 caps.latest.revision: 14
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f833d901a54770c2d4f52aad74a4138a0edb5b66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97bebe59b2f7a0f3487b9cd32f473bdbd63c1812
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182941"
 ---
 # <a name="select-variables"></a>Выбор переменных
   Используйте диалоговое окно **Выбор переменных** для указания переменных, которые следует использовать при выполнении операции отправки сообщения в задаче «Очередь сообщений». Список **Доступные переменные** включает системные и пользовательские переменные, находящиеся в области действия задачи "Очередь сообщений" или ее родительского контейнера. Задача использует переменные, перечисленные в списке **Выбранные переменные** .  

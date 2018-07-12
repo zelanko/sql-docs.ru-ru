@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows Firewall ports
 - WMI firewall ports
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 67bf7427229a117ff541ae353c222839e27a8aab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 142606e6d344fc1431bc287771fc429d6e05e056
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198836"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   Системы брандмауэров предотвращают несанкционированный доступ к ресурсам компьютера. Если брандмауэр включен, но настроен неправильно, попытка соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может оказаться заблокированной.  
@@ -95,7 +95,7 @@ ms.locfileid: "36094589"
   
     -   Задание некоторых ограничений области действия.  
   
-     Элемент **Брандмауэр Windows** на панели управления лучше всего подходит пользователям, которые не имеют опыта в настройке конфигурации брандмауэра, если необходимо настроить основные параметры брандмауэра для стационарного компьютера. Можно также открыть **брандмауэра Windows** элемента панели управления из `run` , используя следующую процедуру:  
+     Элемент **Брандмауэр Windows** на панели управления лучше всего подходит пользователям, которые не имеют опыта в настройке конфигурации брандмауэра, если необходимо настроить основные параметры брандмауэра для стационарного компьютера. Можно также открыть **брандмауэра Windows** панели управления из `run` команду, используя следующую процедуру:  
   
     #### <a name="to-open-the-windows-firewall-item"></a>Открытие элемента «Брандмауэр Windows»  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36094589"
   
 1.  На вкладке **Исключения** элемента **Брандмауэр Windows** на панели управления нажмите кнопку **Добавить программу**.  
   
-2.  Перейдите к нужному экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которую требуется открыть доступ через брандмауэр, например **C:\Program Files\Microsoft SQL Server\MSSQL12. < имя_экземпляра > \MSSQL\Binn**выберите  **sqlservr.exe**, а затем нажмите кнопку **откройте**.  
+2.  Перейдите в расположение экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо открыть доступ через брандмауэр, например **C:\Program Files\Microsoft SQL Server\MSSQL12. < имя_экземпляра > \MSSQL\Binn**выберите  **sqlservr.exe**, а затем нажмите кнопку **откройте**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

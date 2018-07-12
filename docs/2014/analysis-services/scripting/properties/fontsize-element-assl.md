@@ -1,5 +1,5 @@
 ---
-title: (Элемент FontSize ASSL) | Документы Microsoft
+title: Элемент FontSize (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FontSize element
 ms.assetid: 49f66a73-946a-4fbd-9749-a3ca1b717ff3
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1eaf29caf869de81e397b92f9953d9b673d17019
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f6b5ba39d52cb96061fe4d19208e6e343bab5f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167535"
 ---
 # <a name="fontsize-element-assl"></a>Элемент FontSize ASSL)
-  Описывает характеристики отображения шрифта [CalculationProperty](../objects/calculationproperty-element-assl.md) или [мер](../objects/measure-element-assl.md) родительского элемента.  
+  Описывает характеристики отображения, связанные со шрифтами [CalculationProperty](../objects/calculationproperty-element-assl.md) или [мер](../objects/measure-element-assl.md) родительского элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,14 +62,14 @@ ms.locfileid: "36095770"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- `FontSize` Свойство содержит выражение многомерных выражений (MDX) и применяется к `CalculationProperty` элементы, которые имеют [CalculationType](calculationtype-element-assl.md) из *член* или *ячеек* .  
+ `FontSize` Содержит выражение многомерных выражений (MDX) и применяется к `CalculationProperty` элементов, которые имеют [CalculationType](calculationtype-element-assl.md) из *член* или *ячеек* .  
   
- Элементы, соответствующие родителям элемента `FontSize` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.CalculationProperty> и <xref:Microsoft.AnalysisServices.Measure>.  
+ Элементы, соответствующие родителям элемента `FontSize` в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.CalculationProperty> и <xref:Microsoft.AnalysisServices.Measure>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент CalculationProperties &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   
  [Элемент MdxScript &#40;ASSL&#41;](../objects/mdxscript-element-assl.md)   
- [Элемент MdxScript &#40;ASSL&#41;](../collections/mdxscripts-element-assl.md)   
+ [Элемент MdxScripts &#40;ASSL&#41;](../collections/mdxscripts-element-assl.md)   
  [Свойства &#40;ASSL&#41;](properties-assl.md)  
   
   

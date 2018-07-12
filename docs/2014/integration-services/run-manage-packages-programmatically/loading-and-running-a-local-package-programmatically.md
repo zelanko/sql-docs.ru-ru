@@ -24,13 +24,13 @@ ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9b2255f8f2d710e5b78c58b0912a331b91e631cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 003a19e948a7b0dba2c4b9d1f251c9de78d9067a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184791"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Программная загрузка и запуск локального пакета
   Пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно выполнять по мере необходимости или в заранее определенное время с помощью методов, описанных в разделе [Выполнение пакетов](../packages/run-integration-services-ssis-packages.md). Однако с помощью всего нескольких строк кода можно выполнить пакет из пользовательского приложения, такого как приложение Windows Forms, приложение командной строки, веб-форма ASP.NET, веб-служба или служба Windows.  
@@ -64,7 +64,7 @@ ms.locfileid: "36095465"
   
 2.  В меню **Проект** выберите пункт **Добавить ссылку** и добавьте ссылку на **Microsoft.SqlServer.ManagedDTS.dll**. Нажмите кнопку **ОК**.  
   
-3.  В Visual Basic использовать `Imports` инструкции или C# `using` инструкцию, чтобы импортировать **Microsoft.SqlServer.Dts.Runtime** пространства имен.  
+3.  Использование Visual Basic `Imports` инструкции или C# `using` оператора импорта **Microsoft.SqlServer.Dts.Runtime** пространства имен.  
   
 4.  Добавьте следующий код в подпрограмму main. В следующем примере представлено полное консольное приложения.  
   
@@ -228,7 +228,7 @@ namespace RunFromClientAppWithEventsCS
 }  
 ```  
   
-![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться установка последних со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services в MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
  [Основные сведения об отличиях между локальным и удаленным выполнением](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

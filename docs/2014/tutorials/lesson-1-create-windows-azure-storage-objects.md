@@ -1,5 +1,5 @@
 ---
-title: 'Урок 1: Создание объектов хранения Windows Azure | Документы Microsoft'
+title: 'Занятие 1: Создание объектов хранения Windows Azure | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 916139aa9f5e30581abc29421cafb2bb5eb06ee7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: dca19f18df157756625b2335b2e38439c34d4f5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157395"
 ---
 # <a name="lesson-1-create-windows-azure-storage-objects"></a>Урок 1. Создание объектов хранения Windows Azure
   Перед созданием резервных копий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в облачном хранилище сначала необходимо создать учетную запись хранилища, а затем контейнер больших двоичных объектов. На занятии 1 рассматриваются регистрация на портале управления Windows Azure, а также создание учетной записи хранилища и контейнера больших двоичных объектов.  
@@ -35,7 +35,7 @@ ms.locfileid: "36096983"
   
 3.  Просмотрите учетную запись хранилища, созданную на предыдущем шаге. В центре нижней части веб-страницы нажмите кнопку **УПРАВЛЕНИЕ КЛЮЧАМИ**. Отобразятся сведения об учетной записи. Скопируйте имя учетной записи хранилища и ключи доступа. Эти сведения понадобятся для создания сохраненных учетных данных SQL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует данную информацию для получения доступа к учетной записи хранилища и создания резервных копий.  
   
-     ![Ключи учетной записи хранилища Windows Azure снимок экрана](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "снимок ключи учетной записи хранилища Windows Azure")  
+     ![Снимок экрана из ключей учетной записи хранения Windows Azure](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "снимок экрана из ключей учетной записи хранения Windows Azure")  
   
     > [!NOTE]  
     >  Можно также создать учетную запись хранилища программным образом с помощью API-интерфейсов REST. Дополнительные сведения см. в разделе [Создание учетной записи хранилища](http://go.microsoft.com/fwlink/?LinkId=271928).  
@@ -47,13 +47,13 @@ ms.locfileid: "36096983"
   
 1.  Выберите учетную запись хранилища, перейдите на вкладку **КОНТЕЙНЕРЫ** и нажмите кнопку **ДОБАВИТЬ КОНТЕЙНЕР** в нижней части экрана. Откроется новое диалоговое окно.  
   
-     ![Создание контейнера в портале управления](../../2014/tutorials/media/backuptocloud.gif "Создание контейнера в портале управления")  
+     ![Создание контейнера на портале управления](../../2014/tutorials/media/backuptocloud.gif "Создание контейнера на портале управления")  
   
 2.  Введите имя контейнера. Запишите указанное имя контейнера. Эти сведения используются в URL-адресе (пути к файлу резервной копии) в инструкциях T-SQL на занятиях 3 и 4.  
   
 3.  Для **Типа доступа**выберите «Частный». Рекомендуется создавать частные контейнеры для защиты файлов резервной копии.  
   
-     ![Создание нового контейнера больших двоичных объектов](../../2014/tutorials/media/backuptocloud-newblobcontainer.gif "Создание нового контейнера больших двоичных объектов")  
+     ![Создав новый контейнер больших двоичных объектов](../../2014/tutorials/media/backuptocloud-newblobcontainer.gif "создания нового контейнера больших двоичных объектов")  
   
     > [!NOTE]  
     >  Для резервного копирования и восстановления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] проводится проверка подлинности учетной записи хранилища даже при создании открытого контейнера.  

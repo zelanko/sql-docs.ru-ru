@@ -1,5 +1,5 @@
 ---
-title: Типы данных (интеллектуальный анализ данных) | Документы Microsoft
+title: Типы данных (интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [data mining]
 - columns [data mining], data types
 - data mining [Analysis Services], data types
 ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
 caps.latest.revision: 46
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2aab17ed95f87fd64b1bb55ee9ec26ffdfb002ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e13002a2cd4fd8cd0690968733eacffa74020cab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191184"
 ---
 # <a name="data-types-data-mining"></a>Типы данных (интеллектуальный анализ данных)
   При создании модели или структуры интеллектуального анализа данных в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]необходимо указать типы данных для каждого столбца в структуре интеллектуального анализа. Тип данных сообщает модулю интеллектуального анализа, является ли источник данных числовым или текстовым и каким образом следует обрабатывать данные. Например, если исходные данные числовые, можно указать, должны числа обрабатываться как целые или содержать десятичные разряды.  

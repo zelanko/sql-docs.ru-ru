@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 635632db245b37e068b7d9f16a1b352be1cc1d4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e83826d17c1e7ac7ad5840626d3d61aa5224a60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192614"
 ---
 # <a name="data-quality-projects-dqs"></a>Проекты служб Data Quality Services (DQS)
   Проект служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) предназначен для использования базы знаний для повышения качества источника данных путем выполнения операций *очистки данных* и *сопоставления данных* с последующим экспортом результирующих данных в базу данных SQL Server или файл .csv. Вы можете создать проект служб DQS как проект очистки или проект сопоставления для выполнения соответствующих операций. Проекты очистки и сопоставления вы можете выполнять с использованием одной базы знаний, так как знания для очистки и сопоставления данных могут быть встроены в ту же базу знаний.  

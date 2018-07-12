@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.defrag.f1
 helpviewer_keywords:
 - Reorganize Index Task dialog box
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a40c60191c417f9231063066360ac7ef08c2ef10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: aba2815d7524369dc0da87988cc96dffc213ddb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203274"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>Задача «Реорганизация индекса» (план обслуживания)
   Используйте диалоговое окно **Задача ReorganizeIndex** для изменения порядка страниц индекса в целях повышения эффективности поиска. Эта задача использует инструкцию `ALTER INDEX REORGANIZE` с базами данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  

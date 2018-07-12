@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML input files [Database Engine Tuning Advisor]
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7dd0170481a3894334dc01b2974a27ace6b736b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7ca9a22a2f6f4732a97387778484aae261fc0848
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183491"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>Справочник по входным XML-файлам (помощник по настройке ядра СУБД)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] может настраивать базу данных с помощью входного файла XML-данных. Этот XML-файл определяет, какие базы данных, таблицы, файлы или таблицы рабочей нагрузки и параметры настройки должны быть использованы для сеанса настройки. Его можно также использовать в качестве пользовательской конфигурации для выполнения анализа вариантов.  
@@ -58,7 +58,7 @@ ms.locfileid: "36096554"
   
 ## <a name="server-elements"></a>Элементы для описания сервера  
   
--   [Имя элемента для сервера &#40;DTA&#41;](name-element-for-server-dta.md)  
+-   [Элемент Name для Server &#40;DTA&#41;](name-element-for-server-dta.md)  
   
 -   [Элемент Database описания сервера &#40;DTA&#41;](database-element-for-server-dta.md)  
   
@@ -116,9 +116,9 @@ ms.locfileid: "36096554"
   
 -   [Элемент schema описания базы данных &#40;DTA&#41;](schema-element-for-database-dta.md)  
   
--   [Элемент Name описания схемы &#40;DTA&#41;](name-element-for-schema-dta.md)  
+-   [Элемент Name для схемы &#40;DTA&#41;](name-element-for-schema-dta.md)  
   
--   [Элемент таблицы схемы &#40;DTA&#41;](table-element-for-schema-dta.md)  
+-   [Элемент таблицы для схемы &#40;DTA&#41;](table-element-for-schema-dta.md)  
   
 -   [Элемент Name для таблицы &#40;DTA&#41;](name-element-for-table-dta.md)  
   

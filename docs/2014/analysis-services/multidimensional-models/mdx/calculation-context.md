@@ -1,5 +1,5 @@
 ---
-title: Контекст вычисления | Документы Microsoft
+title: Контекст вычисления | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2e0837a34f8e54e9d6042e5b0dcc10b84c3084e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 854e53962dcc1b206d20b441b56b7746650aaf94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202144"
 ---
 # <a name="calculation-context"></a>Контекст вычисления
   Контекстом вычисления является известное подпространство куба, где оценивается выражение, а все координаты либо известны, либо могут получены с помощью выражения.  

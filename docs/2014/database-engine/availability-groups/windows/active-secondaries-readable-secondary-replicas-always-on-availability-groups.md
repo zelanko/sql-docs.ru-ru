@@ -1,14 +1,13 @@
 ---
-title: 'Активные вторичные реплики: Вторичные реплики для чтения (для групп доступности AlwaysOn) | Документы Microsoft'
+title: 'Активные вторичные реплики: Вторичные реплики для чтения (группы доступности AlwaysOn) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
 - Availability Groups [SQL Server], availability replicas
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 caps.latest.revision: 75
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: bb88bd5c239be09d17abf5bfeb3553ce958be542
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7c483e09f0136ec85ef9a5355a31b0fab733d1af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176551"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)
   Возможности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] по активному доступу к вторичным репликам включают поддержку доступа только для чтения к одной или нескольким вторичным репликам (*доступным для чтения вторичным репликам*). Доступная для чтения вторичная реплика разрешает доступ только для чтения ко всем своим базам данных-получателям. Однако доступные для чтения базы данных-получатели не переводятся в режим доступа только для чтения. Они являются динамическими. Определенная база данных-получатель изменяется по мере того, как к ней применяются изменения, вносимые в данные базы данных-источника. Для большинства вторичных реплик данные, в том числе оптимизированные для памяти устойчивые таблицы, вносятся во вторичную базу данных почти в реальном времени. Более того, полнотекстовые индексы синхронизируются с базами данных-получателями. Во многих случаях задержка данных между базой данных-источником и соответствующей базой данных-получателем находится в пределах нескольких секунд.  
@@ -296,7 +295,7 @@ GO
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Блог SQL Server AlwaysOn: Официальный блог SQL Server AlwaysOn](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Блог группы AlwaysOn SQL Server: Официальный блог SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>См. также  
  [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Учебник по службам SSIS: Развертывание пакетов | Документы Microsoft'
+title: 'Учебник по службам SSIS: Развертывание пакетов | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
 - deploying packages [Integration Services]
@@ -23,15 +23,15 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f01cb3f126267a5ebef2cf0d4862440732bb1766
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68a9e0c00bc51d7bee4c083a8ccc4f65b85d4880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213434"
 ---
-# <a name="ssis-tutorial-deploying-packages"></a>Учебника по службам SSIS: Развертывание пакетов
+# <a name="ssis-tutorial-deploying-packages"></a>Учебник по службам SSIS: Развертывание пакетов
   Службы[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] содержат средства, облегчающие развертывание пакетов на другом компьютере. Средства развертывания управляют любыми зависимостями, такими как конфигурации или требуемые пакету файлы. В данном учебнике демонстрируется, как с помощью этих средств устанавливать пакеты и их зависимости на целевом компьютере.  
   
  Сначала требуется выполнить задачи для подготовки к развертыванию. Необходимо создать новый проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] и добавить в проект существующие пакеты и файлы данных. Не нужно создавать никакие пакеты; вместо этого работа ведется только с завершенными пакетами, созданными при выполнении заданий этого учебника. Функциональность пакетов из данного учебника менять не придется, тем не менее, может оказаться полезным после добавления пакетов в проект открыть их в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и просмотреть содержимое каждого пакета. Содержимое пакетов показывает их зависимости, такие как файлы журнала, а также другие интересные особенности пакетов.  
@@ -50,7 +50,7 @@ ms.locfileid: "36094610"
  Новые средства, элементы управления и возможности служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] лучше всего изучать на практике. С помощью данного учебника шаг за шагом создается проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , куда затем добавляются пакеты и другие необходимые файлы. Когда проект полностью завершен, пользователь создает комплект развертывания и копирует его на целевой компьютер, куда затем устанавливаются пакеты.  
   
 ## <a name="requirements"></a>Требования  
- Этот учебник предназначен для пользователей, знакомых с основными операциями файловой системы, но имеющих ограниченное представление о новых возможностях служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Для лучшего понимания основных [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] основные понятия, с которыми знакомит данный учебник, может оказаться полезным предварительное изучение следующих [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] учебники: [запустить мастер экспорта и импорта SQL Server](import-export-data/start-the-sql-server-import-and-export-wizard.md) и [ Учебник по службам SSIS: Создание простого ETL-пакета](../integration-services/ssis-how-to-create-an-etl-package.md).  
+ Этот учебник предназначен для пользователей, знакомых с основными операциями файловой системы, но имеющих ограниченное представление о новых возможностях служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Для лучшего понимания основных [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] концепции, которыми знакомит данный учебник, вы может пригодиться предварительное изучение следующих [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] учебники: [запустить мастер экспорта и импорта SQL Server](import-export-data/start-the-sql-server-import-and-export-wizard.md) и [ Учебник по службам SSIS: Создание простого ETL-пакета](../integration-services/ssis-how-to-create-an-etl-package.md).  
   
  **Компьютер-источник.** На компьютере, где создается пакет развертывания, должны быть установлены следующие компоненты:  
   
@@ -88,6 +88,6 @@ ms.locfileid: "36094610"
  [Занятие 3. Установка пакетов](../integration-services/lesson-3-install-ssis-package.md)  
  На этом занятии требуется скопировать пакет развертывания на целевой компьютер, установить пакеты и запустить их.  
   
-![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться установка последних со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services в MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
   

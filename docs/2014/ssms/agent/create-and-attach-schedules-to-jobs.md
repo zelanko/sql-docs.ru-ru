@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server]
 - scheduling jobs [SQL Server]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - idle time [SQL Server]
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 77f1f09ddb3d978d1308d4c7ec70bf5d8d177812
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f85e651f67b6553f597fab920bde7cc05ca37167
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192874"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Создание и присоединение расписаний к заданиям
   Планирование заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предполагает определение условия или условий, при которых выполнение задания должно начаться без вмешательства пользователя. Можно запланировать автоматическое выполнение задания, создав новое расписание для задания или присоединив к нему существующее расписание.  
@@ -86,7 +86,7 @@ ms.locfileid: "36094941"
   
  Прежде чем определить задания для выполнения во время простоя ЦП, определите загрузку ЦП во время нормальной обработки. Чтобы сделать это, используйте приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] или системный монитор для контроля над рабочей нагрузкой сервера и сбора статистики. Затем можно использовать собранные сведения, чтобы установить процентную долю и продолжительность времени простоя ЦП.  
   
- Определите условие простоя ЦП как процентную долю, ниже которой использование ЦП должно оставаться в течение указанного времени. Затем установите количество времени. Когда использование ЦП окажется ниже указанной процентной доли в течение указанного количества времени, агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускает выполнение всех заданий, имеющих расписание для времени простоя ЦП. Дополнительные сведения об использовании [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] или монитор производительности для отслеживания использования ресурсов ЦП см. раздел [наблюдение за использованием ЦП](../../relational-databases/performance-monitor/monitor-cpu-usage.md).  
+ Определите условие простоя ЦП как процентную долю, ниже которой использование ЦП должно оставаться в течение указанного времени. Затем установите количество времени. Когда использование ЦП окажется ниже указанной процентной доли в течение указанного количества времени, агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускает выполнение всех заданий, имеющих расписание для времени простоя ЦП. Дополнительные сведения об использовании [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] или системного монитора для наблюдения за использованием ЦП см. в разделе [наблюдение за использованием ЦП](../../relational-databases/performance-monitor/monitor-cpu-usage.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

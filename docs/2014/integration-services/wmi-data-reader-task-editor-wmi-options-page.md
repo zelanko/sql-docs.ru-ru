@@ -1,5 +1,5 @@
 ---
-title: Редактор задач модуль чтения данных WMI (страница «Параметры WMI») | Документы Microsoft
+title: Редактор задач модуль чтения данных WMI (страница «Параметры WMI») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.wmiquery.f1
 helpviewer_keywords:
 - WMI Data Reader Task Editor
 ms.assetid: 4b8d4716-882d-41b0-b77e-e0e2741a2cd5
 caps.latest.revision: 39
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0dac4449f451fa2429e68ac4a87cc71c414e5fc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c4af6d3458cba6e622c117ace4add62127670f13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152415"
 ---
 # <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Редактор задачи «Модуль чтения данных WMI» (страница «Параметры инструментария WMI»)
   Страница **Параметры инструментария WMI** в диалоговом окне **Редактор задачи "Модуль чтения данных WMI"** используется для указания источника запроса WQL (Windows Management Instrumentation Query Language) и назначения результатов запроса.  
@@ -92,8 +92,8 @@ ms.locfileid: "36096890"
  **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), [Добавление переменной](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи Модуль чтения данных WMI &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задач модуль чтения данных WMI &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Страница «выражения»](expressions/expressions-page.md)   
  [Задача «Отслеживание событий WMI»](control-flow/wmi-event-watcher-task.md)  
   

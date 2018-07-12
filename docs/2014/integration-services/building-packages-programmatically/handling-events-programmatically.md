@@ -28,13 +28,13 @@ ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5d3253edf3649c7a9e530a68b7830b2b843b2b11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 818e202333a807b457e20b4372d10d2f57b909fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095741"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195654"
 ---
 # <a name="handling-events-programmatically"></a>Программная обработка событий
   В среде выполнения служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] имеется коллекция событий, возникающих до, во время и после проверки и выполнения пакета. Эти события можно зафиксировать двумя способами. Первый метод включает реализацию интерфейса <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> в классе и указание класса в качестве параметра для методов `Execute` и `Validate` пакета. Второй метод включает создание объектов <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>, которые могут содержать другие объекты служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], например задачи и циклы, выполняемые при возникновении события <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. В данном разделе описаны эти два метода и приведены примеры кода, иллюстрирующие их использование.  
@@ -44,7 +44,7 @@ ms.locfileid: "36095741"
   
  Класс <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> — это класс, в котором уже реализован интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. Поэтому другой альтернативой прямой реализации <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> является создание производного от <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> класса и переопределение событий, требующих отклика. Затем этот класс указывается в качестве параметра для методов `Validate` и `Execute` класса <xref:Microsoft.SqlServer.Dts.Runtime.Package> для получения обратных вызовов событий.  
   
- В следующем образце кода показан класс, производный от <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>, переопределяющий метод <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A>. Затем класс предоставляется как aparameter для `Validate` и `Execute` методы пакета.  
+ В следующем образце кода показан класс, производный от <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>, переопределяющий метод <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A>. Затем класс указывается как этот для `Validate` и `Execute` методы пакета.  
   
 ```csharp  
 using System;  
@@ -252,7 +252,7 @@ Module Module1
 End Module  
 ```  
   
-![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться установка последних со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services в MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
  [Обработчики событий в службах Integration Services (SSIS)](../integration-services-ssis-event-handlers.md)   

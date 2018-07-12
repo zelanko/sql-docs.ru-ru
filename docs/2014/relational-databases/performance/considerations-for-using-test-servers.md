@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
 - tuning overhead [SQL Server]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - offload tuning overhead [SQL Server]
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 810ad8d5d3d977d49469e441efff0b5189c0e4f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a22c2d234ca855d7de9f9dad81d0be4c6b014199
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096143"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177739"
 ---
 # <a name="considerations-for-using-test-servers"></a>Вопросы использования тестовых серверов
   Одним из важных преимуществ помощника по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] является возможность использовать тестовый сервер для настройки базы данных на рабочем сервере. Благодаря этому можно перенаправить работу по настройке базы данных на тестовый сервер, не копируя на него данные с рабочего сервера.  
@@ -42,7 +42,7 @@ ms.locfileid: "36096143"
   
 -   Пользователь, в контексте которого на тестовом сервере будет настраиваться база данных с рабочего сервера, должен существовать на обоих серверах.  
   
--   Настроить базу данных с рабочего сервера на тестовом сервере можно только в том случае, если активирована расширенная хранимая процедура **xp_msver**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Помощник по настройке компонента использует эту расширенную хранимую процедуру при настройке тестового сервера для выборки числа процессоров и доступной памяти рабочего сервера. Если процедура **xp_msver** не активирована, помощник по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] подразумевает, что характеристики оборудования те же, что и на компьютере, на котором запущен помощник по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Если характеристики оборудования того компьютера, на котором выполняется помощник по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] , недоступны, то предполагается наличие одного процессора и 1024 МБ оперативной памяти. Эта расширенная хранимая процедура включается по умолчанию при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Настройка контактной зоны](../security/surface-area-configuration.md) и [xp_msver &#40;Transact-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
+-   Настроить базу данных с рабочего сервера на тестовом сервере можно только в том случае, если активирована расширенная хранимая процедура **xp_msver**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Помощник по настройке компонента использует эту расширенную хранимую процедуру при настройке тестового сервера для выборки числа процессоров и доступной памяти рабочего сервера. Если процедура **xp_msver** не активирована, помощник по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] подразумевает, что характеристики оборудования те же, что и на компьютере, на котором запущен помощник по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Если характеристики оборудования того компьютера, на котором выполняется помощник по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] , недоступны, то предполагается наличие одного процессора и 1024 МБ оперативной памяти. Эта расширенная хранимая процедура включается по умолчанию при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [настройки контактной зоны](../security/surface-area-configuration.md) и [xp_msver &#40;Transact-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] Помощник по настройке предполагает, что выпуски [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на тестовом и рабочем сервере совпадают. Если это два разных выпуска, приоритет получает выпуск на тестовом сервере. Например, если тестовый сервер работает под управлением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition, помощник по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] не включает в свои рекомендации индексированные представления, секционирование и операции, выполняющиеся в режиме «в сети», даже если рабочий сервер работает под управлением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition.  
   

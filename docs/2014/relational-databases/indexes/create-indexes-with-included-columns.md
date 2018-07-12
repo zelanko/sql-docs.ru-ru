@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index size [SQL Server]
 - index keys [SQL Server]
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8c05f2575c1c3d49c76024e50e6defdff12185b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b36575e6dbd197db0617ba258e93ae337027db2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197244"
 ---
 # <a name="create-indexes-with-included-columns"></a>Создание индексов с включенными столбцами
   В этой теме описывается добавление невключенных или неключевых столбцов, чтобы расширить функциональные возможности некластеризованных индексов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Добавление неключевых столбцов позволяет создавать некластеризованные индексы, покрывающие больше запросов. Это обусловлено следующими преимуществами неключевых столбцов.  
@@ -83,7 +82,7 @@ ms.locfileid: "36095456"
   
     -   изменение поведения столбца в отношении значения NULL с NOT NULL на NULL;  
   
-    -   Увеличение длины `varchar`, `nvarchar`, или `varbinary` столбцов.  
+    -   Увеличьте длину `varchar`, `nvarchar`, или `varbinary` столбцов.  
   
 ###  <a name="Security"></a> безопасность  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 93626d4db9c82360369e0f94bd91574e77274c4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d0248cb60068c86c641046b4d80deda1b78f95da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168225"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Формирование одноуровневых элементов с помощью вложенного запроса в режиме AUTO
   В следующем примере показано, как создавать элементы с общим родителем при помощи вложенного запроса в режиме AUTO. Единственный способ создать такой XML — использовать режим EXPLICIT. Однако пользоваться этим способом не всегда удобно.  
@@ -70,7 +70,7 @@ FOR XML AUTO, TYPE
   
 -   Запрашивает набор строк `SalesOrder`, указанный в предложении `FROM`. Результат — XML с одним или несколькими элементами <`SalesOrder`>.  
   
--   Указывает режим `AUTO` и директиву `TYPE` . `AUTO` результат запроса преобразуется в формат XML и `TYPE` директива возвращает результат в виде `xml` типа.  
+-   Указывает режим `AUTO` и директиву `TYPE` . `AUTO` результат запроса преобразуется в XML и `TYPE` директива возвращает результат в виде `xml` типа.  
   
 -   Содержит две вложенные инструкции `SELECT` , разделенные запятой. Первая вложенная инструкция `SELECT` получает сведения о заказе на продажу, заголовок и дополнительные сведения, а вторая инструкция `SELECT` получает сведения о менеджере по продажам.  
   
@@ -148,7 +148,7 @@ FOR XML AUTO, TYPE
   
 -   Предшествующий запрос добавлен в предложении `FROM` . Результат запроса возвращается в виде таблицы. Следует обратить внимание, что добавлен псевдоним `XmlCol` .  
   
--   Предложение `SELECT` определяет запрос XQuery к `XmlCol` , возвращаемому в предложении `FROM` . `query()` Метод `xml` указания запроса XQuery используется тип данных. Дополнительные сведения см. в разделе [Метод query&#40;&#41;&#40;тип данных xml&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
+-   Предложение `SELECT` определяет запрос XQuery к `XmlCol` , возвращаемому в предложении `FROM` . `query()` Метод `xml` определения запроса XQuery используется тип данных. Дополнительные сведения см. в разделе [Метод query&#40;&#41;&#40;тип данных xml&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - choosing search criteria
 - search conditions [SQL Server], specifying
 - search criteria [SQL Server], specifying conditions
 ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f912c7998bf2922ad2967376ba51b752d012bfb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 13936176974b38e9a69da0bf6a38c95b81700bc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202074"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>Указание условий поиска (визуальные инструменты для баз данных)
   Можно указать строки данных, которые появятся в результате запроса, задав условия поиска. Например, при выполнении запроса к таблице `employee` можно указать, что хотите найти только работников, которые работают в определенной области.  
@@ -51,7 +51,7 @@ ms.locfileid: "36095346"
  Конструктор запросов и представлений обновляет инструкцию SQL на [панели SQL](sql-pane-visual-database-tools.md) , добавляя или изменяя предложение WHERE.  
   
 ## <a name="see-also"></a>См. также  
- [Правила ввода для поиска значений &#40;визуальные средства базы данных&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [Правила ввода для поиска значения &#40;визуальных инструментах баз данных&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [Определение критериев поиска (визуальные инструменты для баз данных)](specify-search-criteria-visual-database-tools.md)  
   
   

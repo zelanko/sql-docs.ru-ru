@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 72b2400e8a953490d1650a8e435c6b353c660445
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb61470789fb7474216b1a4da1364305c4cd9f8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153005"
 ---
 # <a name="managing-a-domain"></a>Управление доменом
   В этом разделе описывается использование доменов в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Домен содержит семантическое представление данных из одного поля в анализируемом источнике данных. Домен является частью базы знаний, которая создается для источника данных, и набор знаний, которые создаются путем анализа образца источника данных или импорта данных, добавляются в домены, определенные в базе знаний. Набор знаний в этих доменах затем используется для выполнения очистки и сопоставления в проекте служб DQS. Домены являются основой всех операций служб Data Quality Services.  

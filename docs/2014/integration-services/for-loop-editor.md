@@ -1,5 +1,5 @@
 ---
-title: Редактор циклов по элементам | Документы Microsoft
+title: Редактор циклов по элементам | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainer.f1
 ms.assetid: c4db9df6-d2f4-44da-9f4d-628893e86956
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 270c14a32d86286b02dbeb89767c609b92a2e431
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af80869fbba015492b469af030d5cc297e7127e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205824"
 ---
 # <a name="for-loop-editor"></a>Редактор циклов по элементам
   На странице **Цикл по элементам** диалогового окна **Редактор циклов по элементам** можно настроить цикл, в котором рабочий процесс будет повторяться до тех пор, пока заданное условие не примет значение False.  
@@ -48,7 +48,7 @@ ms.locfileid: "36095468"
  Описание контейнера «цикл по элементам».  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Страница «выражения»](expressions/expressions-page.md)   
  [Контейнер "Цикл по каждому элементу"](control-flow/foreach-loop-container.md)   
  [Настройка контейнера "цикл по элементам"](../../2014/integration-services/configure-a-for-loop-container.md)  

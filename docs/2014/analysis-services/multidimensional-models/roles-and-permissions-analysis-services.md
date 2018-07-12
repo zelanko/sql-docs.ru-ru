@@ -1,5 +1,5 @@
 ---
-title: Роли и разрешения (службы Analysis Services) | Документы Microsoft
+title: Роли и разрешения (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services], about security
 - security [Analysis Services - multidimensional data], about security
 ms.assetid: bb885447-868b-4686-853c-8241f63d4370
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 253cd429c1a5fc5ac231173c88e6ee91b852625a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 506babae85a4b1a04efa7f12b8b40c2527e2e094
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159405"
 ---
 # <a name="roles-and-permissions-analysis-services"></a>Роли и разрешения (службы Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] включает ролевую модель авторизации, которая предоставляет доступ к операциям, объектам и данным. Все пользователи получают доступ к экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или базе данных в контексте некоторой роли.  
@@ -33,14 +33,14 @@ ms.locfileid: "36096268"
   
  Распространенной практикой является разделение операций по созданию ролей и назначению членства. Часто разработчик моделей добавляет роли на этапе проектирования. Таким образом, все определения ролей отражаются в файлах проекта, определяющих модели. Членство в ролях обычно определяется позднее, когда база данных переносится в рабочую среду. Обычно членство назначают администраторы базы данных, которые создают скрипты для разработки, тестирования и выполнения в качестве независимой операции.  
   
- Вся авторизация выполняется по допустимому удостоверению пользователя Windows. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют для проверки подлинности удостоверений пользователей исключительно проверку подлинности Windows. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет метод проверки подлинности. В разделе [методики проверки подлинности, поддерживаемые службами Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md).  
+ Вся авторизация выполняется по допустимому удостоверению пользователя Windows. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют для проверки подлинности удостоверений пользователей исключительно проверку подлинности Windows. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет метод не собственные механизмы проверки подлинности. См. в разделе [методики проверки подлинности, поддерживаемые службами Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md).  
   
 > [!IMPORTANT]  
 >  Разрешения являются аддитивными для каждого пользователя или группы Windows, по всем ролям базы данных. Если одна роль запрещает пользователю или группе выполнять определенные задачи или просматривать определенные данные, а другая роль предоставляет такое разрешение указанному пользователю или группе, то этому пользователю или группе будет разрешено выполнять упомянутые задачи или просматривать упомянутые данные.  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
--   [Предоставление доступа к объектам и операциям &#40;служб Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Авторизация доступа к объектам и операциям &#40;служб Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 -   [Предоставление разрешений базы данных &#40;служб Analysis Services&#41;](grant-database-permissions-analysis-services.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36096268"
   
 -   [Предоставление разрешений на объект источника данных &#40;служб Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
--   [Предоставление разрешений на структуры интеллектуального анализа данных и моделей &#40;служб Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
+-   [Предоставление разрешений на структур интеллектуального анализа данных и моделей &#40;служб Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
   
 -   [Предоставление разрешений на измерение &#40;служб Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)  
   

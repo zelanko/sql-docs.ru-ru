@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], connections
 - connections [Reporting Services], report server
@@ -18,13 +18,13 @@ ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 34145968707e6ccc2a531fdddead84ba805aadb5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49c367adde71d1d42a0052e6029ab2fa6d015d9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172161"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Подключение к серверу отчетов в среде Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] предоставляет обозреватель объектов, позволяющий подключиться к любому серверу семейства [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и просматривать его содержимое в графическом виде. Применительно к службам Reporting Services, обозреватель объектов можно использовать для следующих операций.  
@@ -63,7 +63,7 @@ ms.locfileid: "36096355"
   
 2.  Щелкните Подключиться, чтобы открыть список типов серверов, и выберите **Службы Reporting Services**.  
   
-3.  В диалоговом окне **Соединение с сервером** введите URL-адрес сайт SharePoint. Следующий пример иллюстрирует синтаксис: http://\<веб-сервера > /sites/\<сайта >.  
+3.  В диалоговом окне **Соединение с сервером** введите URL-адрес сайт SharePoint. Следующий пример иллюстрирует синтаксис: http://\<веб-сервер > /сайты/\<сайта >.  
   
 4.  Выберите тип проверки подлинности. В режиме проверки подлинности Windows необходимо подключаться с использованием своих учетных данных. Если выбрана обычная проверка подлинности или проверка подлинности с помощью форм, введите учетную запись и пароль.  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], multuser database changes
 - database evolution [SQL Server]
 ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0ec32d850a2daa689fbd28a24e8609a362d9520a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dcfafbe237f58d6e53cdc64642f5090b9139731e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161585"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>Проблемы развития базы данных (визуальные инструменты для баз данных)
   При изменении структуры развернутой базы данных необходимо следить, чтобы изменения были совместимы с существующими данными и структурой базы данных. Возможно, необходимо будет принять особые меры при выполнении следующих изменений:  
@@ -38,7 +38,7 @@ ms.locfileid: "36095136"
  При любых изменениях структуры базы данных необходимо сохранять журнал изменений. Одним из подходов является сохранение скриптов всех изменений, когда-либо сделанных в производственной базе данных.  
   
 ## <a name="see-also"></a>См. также  
- [Ограничения UNIQUE и CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+ [Ограничения уникальности и проверочные ограничения](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [Многопользовательские среды (визуальные инструменты для баз данных)](multiuser-environments-visual-database-tools.md)  
   
   

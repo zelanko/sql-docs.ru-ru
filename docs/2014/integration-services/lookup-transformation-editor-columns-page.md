@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразования уточняющего запроса (страница «столбцы») | Документы Microsoft
+title: Редактор преобразования Уточняющий запрос (страница "столбцы") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.columns.f1
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: 690ffef5-fd59-4e95-a27d-4fcf0d6b1c0b
 caps.latest.revision: 38
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 64b1138d88cf6a247902eedf3903dc2221221e0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 118d3a51afe868f1fa6449290a820e9b1b479867
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199634"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>Редактор преобразования «Уточняющий запрос» (страница «Столбцы»)
   Используйте страницу **Столбцы** диалогового окна **Редактор преобразования «Уточняющий запрос»** , чтобы указать соединение между исходной и ссылочной таблицами и выбрать уточняющие столбцы из ссылочной таблицы.  
@@ -57,10 +57,10 @@ ms.locfileid: "36095237"
  Введите псевдоним выхода для каждого уточняющего столбца. По умолчанию используется имя уточняющего столбца, однако можно выбрать любое уникальное описательное имя.  
   
 ## <a name="see-also"></a>См. также  
- [Уточняющий &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
- [Уточняющий &#40;страница «соединение»&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
- [Уточняющий &#40;страница «Дополнительно»&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [Уточняющий &#40;страницы вывода ошибок&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+ [Уточняющий &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
+ [Уточняющий &#40;страница "подключения"&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
+ [Уточняющий &#40;страница "Дополнительно"&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [Уточняющий &#40;странице вывода ошибок&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [Преобразование "Нечеткий уточняющий запрос"](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

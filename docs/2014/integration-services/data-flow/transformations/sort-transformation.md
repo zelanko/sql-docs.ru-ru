@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sorttrans.f1
 helpviewer_keywords:
@@ -22,13 +22,13 @@ ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5dedec0b22dabe6ecb41c25e0b6fbc4c9c8ea7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5155e1bc61e5a02d29420d20b1e2970693dda1da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150725"
 ---
 # <a name="sort-transformation"></a>преобразование «Сортировка»
   Это преобразование сортирует входные данные по возрастанию или убыванию и копирует отсортированные данные на выход преобразования. К входным данным можно применять несколько сортировок, при этом каждая сортировка будет иметь свой номер, определяющий ее последовательность. Данные будут сначала упорядочены по столбцу с наименьшим номером, затем по столбцу со следующим наименьшим номером и т. д. Например, если у столбца **Страна** номер сортировки 1, а у столбца **Город** номер сортировки 2, выходные данные будут отсортированы сначала по названиям стран, а затем по названиям городов. Положительный номер сортировки означает, что данные будут упорядочены по возрастанию, а отрицательный — по убыванию. У столбцов, по которым сортировка производиться не будет, номер сортировки равен 0. Такие столбцы автоматически копируются на выход преобразования вместе с отсортированными столбцами.  

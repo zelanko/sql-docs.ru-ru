@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - locales [Reporting Services]
 ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d2fdbe4d44dd16d4f3094725c7032379ab163902
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e58d21c2dd26e26e9389829d92cc70aed0a5a4ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192856"
 ---
 # <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>Задание локали для отчета или текстового поля (службы Reporting Services)
   Свойство **Язык** отчета или текстового поля содержит параметр локали, определяющий форматы по умолчанию для отображения данных отчета, зависящих от языка и региона, например даты, валюты или числовых значений. Свойство **Язык** текстового поля переопределяет свойство **Язык** отчета. Если для свойства **Язык**не указано значения, то службы Reporting Services используют языковой стандарт операционной системы сервера отчетов для опубликованных отчетов и локаль компьютера, на котором создается отчет, при предварительном просмотре отчета.  
@@ -55,6 +55,6 @@ ms.locfileid: "36096077"
     -   Для свойства **UnicodeBiDi** выберите уровень внедрения разнонаправленного текста в текстовом поле.  
   
 ## <a name="see-also"></a>См. также  
- [Выражения используются в отчетах &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

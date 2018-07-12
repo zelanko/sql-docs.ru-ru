@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], Criteria pane
 - View Designer, Criteria pane
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - adding query options into grid
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b690cc4fd041673e0d46ecfc4afe123063305c45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d14127f643e1e5bf496fd012ca58290e7671e2cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177111"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Панель критериев (визуальные инструменты для баз данных)
   Вводя значения в табличную сетку, на панели критериев можно указывать параметры запроса, например: какие из столбцов данных следует отображать, как упорядочивать результаты, какие строки выделить. На панели критериев можно указать:  
@@ -74,11 +74,11 @@ ms.locfileid: "36095826"
 |Новое значение|UPDATE, INSERT INTO|Определяет значение, вставляемое в соответствующий столбец. Введите значение литерала или выражение.|  
   
 ## <a name="see-also"></a>См. также  
- [Проектировать запросы и представления инструкции &#40;визуальные средства базы данных&#41;](visual-database-tools.md)   
- [Панель диаграмм &#40;визуальные средства базы данных&#41;](diagram-pane-visual-database-tools.md)   
- [Правила ввода для поиска значений &#40;визуальные средства базы данных&#41;](rules-for-entering-search-values-visual-database-tools.md)   
- [Сортировать и группировать результаты запроса &#40;визуальные средства базы данных&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [Область «Результаты» &#40;визуальные средства базы данных&#41;](results-pane-visual-database-tools.md)   
+ [Проектирование запросов и представлений инструкции &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
+ [Панель диаграмм &#40;визуальных инструментах баз данных&#41;](diagram-pane-visual-database-tools.md)   
+ [Правила ввода для поиска значения &#40;визуальных инструментах баз данных&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [Результаты запросов сортировки и группирования &#40;визуальных инструментах баз данных&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [Панель результатов &#40;визуальных инструментах баз данных&#41;](results-pane-visual-database-tools.md)   
  [Панель SQL (визуальные инструменты для баз данных)](sql-pane-visual-database-tools.md)  
   
   
