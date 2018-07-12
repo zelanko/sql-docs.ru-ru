@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразования Уточняющий запрос термина (Справочник по вкладка «таблица») | Документы Microsoft
+title: Редактор преобразования Уточняющий запрос термина (вкладка "ссылочная таблица") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookup.referencetable.f1
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 66e69e9bbdefb40773a56b5dff974c5a7406aad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e0870761f4281b6897fb9cc9395d9f7720c865f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176081"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>Редактор преобразования «Уточняющий запрос терминов» (вкладка «Ссылочная таблица»)
   Вкладка **Ссылочная таблица** диалогового окна **Редактор преобразования "Уточняющий запрос термина"** используется для установки соединения со ссылочной таблицей (таблицей уточняющих запросов).  
@@ -44,9 +44,9 @@ ms.locfileid: "36086694"
  Используйте диалоговое окно [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) для указания параметров обработки ошибок для строк, вызвавших ошибку.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор преобразования Уточняющий запрос термина &#40;вкладка Уточняющий запрос термина&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
- [Редактор преобразования Уточняющий запрос термина &#40;вкладка «Дополнительно»&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор преобразования Уточняющий запрос термина &#40;вкладке Уточняющий запрос термина&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
+ [Редактор преобразования Уточняющий запрос термина &#40;вкладка "Дополнительно"&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
  [Преобразование "Извлечение терминов"](data-flow/transformations/term-extraction-transformation.md)  
   
   

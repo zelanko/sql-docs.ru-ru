@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b20cdba15d9b7b98e6fe3592fce350edece600be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9105abf7bc25b4327d1c3d75a214cb667850a7eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179231"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>Задание и настройка единиц измерения (построитель отчетов и службы SSRS)
   Индикаторы могут иметь два вида единиц измерения: процентные и числовые. По умолчанию в качестве единиц измерения у индикаторов настроены процентные показатели. Таким образом, значения индикаторов, назначаемые для каждого значка в наборе индикаторов, определяются процентным диапазоном. Диапазоны в процентах равномерно разделяются по значкам в наборе индикаторов. Каждый значок отображает состояние индикатора. Процентные показатели для каждого значка в наборе индикаторов можно изменять, задавая различные начальные и конечные процентные значения. Индикаторы могут также автоматически определять минимальное и максимальное значения данных.  

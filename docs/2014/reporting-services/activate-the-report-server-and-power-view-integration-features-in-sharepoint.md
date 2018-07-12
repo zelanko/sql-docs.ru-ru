@@ -1,5 +1,5 @@
 ---
-title: Активируйте сервер отчетов и Power View Integration Features in SharePoint | Документы Microsoft
+title: Активация функций интеграции Power View в SharePoint и сервера отчетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7f64a54-c555-4d31-bf99-3abe57dc8626
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3f9d0adde23d8340bd5e10ed2a9c22c8aa425b52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45266427e7946e62a758ce994531126324dca39d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155855"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Активация функций интеграции семейства веб-сайтов с сервером отчетов и Power View в SharePoint
   Функции семейства веб-сайтов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] обычно активируются по умолчанию после установки надстройки служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] для продуктов SharePoint. В некоторых ситуациях эти функции требуется активировать вручную.  
   
- При установке надстройки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для продуктов SharePoint 2010 после установки продукта SharePoint функции интеграции с сервером отчетов и с Power View будут активированы только для корневых семейств веб-сайтов. Для других семейств веб-сайтов потребуется активировать эти функции вручную. Например, если имеется семейство веб **http://[my имя сервера] /sites/ [имя сайта коллекции]** вам потребуется вручную активировать [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] компоненты коллекции сайтов.  
+ При установке надстройки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для продуктов SharePoint 2010 после установки продукта SharePoint функции интеграции с сервером отчетов и с Power View будут активированы только для корневых семейств веб-сайтов. Для других семейств веб-сайтов потребуется активировать эти функции вручную. Например, если имеется семейство **http://[my имя сервера] веб [узел]** необходимо будет вручную активировать [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] возможности семейства узлов.  
   
- При наличии нет корневого семейства сайтов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] добавьте занесет в журнал сообщение, подобное приведенному ниже.  
+ Если нет корневого семейства веб-сайтов, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] надстройка будет регистрировать сообщение следующего вида.  
   
  «Веб-приложение SharePoint 80 не содержит корневого семейства веб-сайтов»  
   
@@ -74,6 +74,6 @@ ms.locfileid: "36087323"
  После активации компонента можно продолжить интеграцию сервера.  
   
 ## <a name="see-also"></a>См. также  
- [Установка или удаление Reporting Services для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [Установка или удаление Reporting Services надстройки для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

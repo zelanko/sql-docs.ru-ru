@@ -1,5 +1,5 @@
 ---
-title: Элемент DatabaseID (ASSL) | Документы Microsoft
+title: Элемент DatabaseID (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - DatabaseID element
 ms.assetid: 6bcf2bd5-b037-4964-bc72-42e0c89f9716
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c74e39a1a5696576b77ff9a2eb74e062cb2f3475
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec07be8832ef048ac6ddc2b6cc92a945ba9e2c2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161135"
 ---
 # <a name="databaseid-element-assl"></a>Элемент DatabaseID (ASSL)
-  Идентифицирует [базы данных](../objects/database-element-assl.md) элемента, связанного с вне строки [привязки](../data-type/binding-data-type-assl.md) элемента.  
+  Идентифицирует [базы данных](../objects/database-element-assl.md) элемент, связанный с вне строки [привязки](../data-type/binding-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36087225"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о ожидания привязок см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Дополнительные сведения о привязках вне строки, см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

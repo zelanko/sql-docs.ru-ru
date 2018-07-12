@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - affinity I/O mask option
 - processor affinity [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - CPU affinity mask option
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e3581012106e10eeac623028f2785205838f5f96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 905421043a2d595d08bc1780213f91811f5c0960
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159045"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>Параметр конфигурации сервера "affinity Input-Output mask"
   Для одновременного выполнения множества задач операционные системы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 и Windows Server 2003 иногда распределяют потоки обработки задач по различным процессорам. Хотя с точки зрения операционной системы эти действия эффективны, они могут снизить производительность [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при больших системных нагрузках, так как данные кэша каждого процессора будут постоянно обновляться. В этих условиях назначение определенного потока задач процессору может улучшить производительность, поскольку количество перезагрузок процессора будет снижено; такая связь между определенным потоком задач и процессором называется соответствием процессоров.  
@@ -62,7 +62,7 @@ ms.locfileid: "36086953"
   
 -   0 в параметре **affinity I/O mask** и 1 в параметре **affinity mask** .  
   
- Параметр **affinity I/O mask** является дополнительным параметром. При использовании `sp_configure` системную хранимую процедуру, чтобы изменить этот параметр, вы можете изменить **маска схожести ввода-вывода** только если **Показывать дополнительные параметры** имеет значение 1. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]для изменения параметра **affinity I/O mask** требуется перезапуск экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Параметр **affinity I/O mask** является дополнительным параметром. Если вы используете `sp_configure` системную хранимую процедуру, чтобы изменить этот параметр, вы можете изменить **affinity I/O mask** только тогда, когда **Показать расширенные параметры** имеет значение 1. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]для изменения параметра **affinity I/O mask** требуется перезапуск экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!CAUTION]  
 >  Не используйте маску привязки процессоров в операционной системе Windows и маску привязки в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]одновременно. Эти настройки предназначены для достижения одного результата, и если их значения будут несогласованными, результат может быть непредсказуем. Привязка ЦП [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] лучше всего настраивается с использованием параметра `sp_configure` в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

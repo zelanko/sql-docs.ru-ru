@@ -1,5 +1,5 @@
 ---
-title: Выбор измерения исходного куба (мастер интеллектуального анализа данных) | Документы Microsoft
+title: Выбор измерения исходного куба (мастер интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectsourcecube.f1
 ms.assetid: 556e216b-5e21-4160-967d-4c57591fbab4
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ddd4affa954cf080cec3ad1ca37df82d494221e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 613847dca4d6113a8acfc8079ebc1e7a97ef3311
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192486"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>Выбор измерения исходного куба (мастер интеллектуального анализа данных)
   Используйте страницу **Выбор измерения исходного куба** для выбора измерения из куба, содержащего параметры, которые нужно проанализировать. Например, если пользователь строит модель, которая анализирует поведение клиентов в процессе покупки на основе демографических данных, можно выбрать измерение «Клиент», которое обычно содержит уникальную запись для каждого клиента и различные атрибуты, представляющие демографические данные, например пол, место жительства или доход. В ходе работы мастера можно будет добавить таблицу, связанную с данной таблицей вариантов, например: можно добавить вложенную таблицу, в которой будет показано, какие товары клиент уже купил.  
@@ -45,6 +45,6 @@ ms.locfileid: "36086747"
 ## <a name="see-also"></a>См. также  
  [Справка F1 мастера интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Создание структуры интеллектуального анализа данных &#40;мастер интеллектуального анализа данных&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
- [Выберите ключ варианта &#40;мастер интеллектуального анализа данных&#41;](select-the-case-key-data-mining-wizard.md)  
+ [Выбор ключа варианта &#40;мастер интеллектуального анализа данных&#41;](select-the-case-key-data-mining-wizard.md)  
   
   

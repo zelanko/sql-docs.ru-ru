@@ -1,5 +1,5 @@
 ---
-title: (Страница «Дополнительно») Редактор назначения обработки секций | Документы Microsoft
+title: Редактор назначения обработки секций, в (страница "Дополнительно") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partprocessingtransformation.advanced.f1
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
 caps.latest.revision: 32
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7f81cc34213d2288512a8d063b1e11e4dfd49d53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 996373337fe9c54218350cb23ca4f12f8d5869c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164965"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>Редактор назначения обработки секций (страница «Дополнительно»)
   Страница **Дополнительно** диалогового окна **Редактор назначения обработки секций** позволяет настроить обработку ошибок.  
@@ -105,7 +105,7 @@ ms.locfileid: "36087667"
  Укажите путь к журналу ошибок.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения обработки секций &#40;страница «сопоставления»&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
   
   

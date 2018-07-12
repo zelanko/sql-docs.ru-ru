@@ -1,5 +1,5 @@
 ---
-title: Базы данных (табличное) | Документы Microsoft
+title: Базы данных (табличное) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 653395b2733fc6af8df7b19a746bb04edc3d7f53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e288ccfb3cee35ef1506fe46d2128dd6ab43480a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197777"
 ---
 # <a name="database-representationtabular"></a>Представление базы данных (табличное)
   В табличном режиме база данных является контейнером для всех объектов табличной модели.  
@@ -91,6 +91,6 @@ catch (Exception createDBxc)
   
 ```  
   
- Чтобы получить практический опыт по использованию объектов AMO для создания и обработки представлений базы данных см. исходный код в образце Tabular AMO 2012; в частности, проверьте следующий исходный код: Database.cs. Образец кода приведен только для иллюстрации описываемых здесь логических концепций и не должен использоваться в рабочей среде.  
+ Практические лучше понять, о том, как использовать объекты AMO для создания и обработки представлений базы данных, см. в статье исходный код в образце Tabular AMO 2012; частности, обратите внимание на следующий файл: Database.cs. Образец кода приведен только для иллюстрации описываемых здесь логических концепций и не должен использоваться в рабочей среде.  
   
   

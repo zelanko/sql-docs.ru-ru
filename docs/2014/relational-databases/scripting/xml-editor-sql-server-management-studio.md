@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.editorxml.f1
 - sql12.swb.xmleditor.f1
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e204ee307da1b727485b969853ef879f81c32ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a4d6fedddf4b99d2f8ef068cc1212972b6a25fe2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160345"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Редактор XML (среда SQL Server Management Studio)
   Предоставляет набор визуальных средств для работы с XML-схемами, наборами данных ADO.NET и XML-документами. Конструктор XML поддерживает язык определения схем XML (XSD), определенный консорциумом World Wide Web (WC3). Этот конструктор не поддерживает определения DTD (определения типов файлов) или другие языки XML-схем, например XDR (XML-Data Reduced).  
@@ -99,7 +99,7 @@ ms.locfileid: "36086667"
 -   формировать XML-схемы из XML-документа.  
   
 ## <a name="xml-view"></a>Представление XML  
- Представление XML — это редактор для работы с кодом XML, обеспечивающий технологию IntelliSense и выделение кода цветом. Завершение операторов доступно при работе с файлами XSD и XML, для которых есть соответствующие схемы. Тип \< для начала тег и откроется список элементов, которые являются допустимыми в этом расположении. После ввода элемента и нажатия клавиши ПРОБЕЛ программа выводит список атрибутов, поддерживаемых данным элементом.  
+ Представление XML — это редактор для работы с кодом XML, обеспечивающий технологию IntelliSense и выделение кода цветом. Завершение операторов доступно при работе с файлами XSD и XML, для которых есть соответствующие схемы. Тип \< инициировать тег и откроется список элементов, которые являются допустимыми в этом расположении. После ввода элемента и нажатия клавиши ПРОБЕЛ программа выводит список атрибутов, поддерживаемых данным элементом.  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] недоступны на панели инструментов. Для доступа к этим параметрам в XML-редакторе в меню **Правка** выберите пункт **технология IntelliSense**.  

@@ -1,5 +1,5 @@
 ---
-title: Измерения элемента (ASSL) | Документы Microsoft
+title: Измерить элемент (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Measure element
 ms.assetid: 4c2c2ed1-7f78-4564-982a-132f13bea36f
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da78700e32c81dab11d6609ca4aa12efd2204bcb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80d59a5356bf1c0b5712e729f230fff9383603cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159335"
 ---
 # <a name="measure-element-assl"></a>Элемент Measure (ASSL)
   Определяет меру.  
@@ -79,7 +79,7 @@ ms.locfileid: "36087228"
 |------------------------|---------------|  
 |[AggregationInstance](../data-type/binding-data-type-assl.md)|  
 |[Группа мер](group-element-assl.md)|None|  
-|[MeasureGroupBinding (вне строки.)](../data-type/measurebinding-data-type-assl.md)|  
+|[MeasureGroupBinding (вне строки)](../data-type/measurebinding-data-type-assl.md)|  
 |[PerspectiveMeasureGroup](../data-type/perspectivemeasure-data-type-assl.md)|  
   
 ## <a name="element-relationships"></a>Связи элемента  
@@ -90,7 +90,7 @@ ms.locfileid: "36087228"
   
 |Предок или родитель|Дочерние элементы|  
 |------------------------|--------------------|  
-|[MeasureGroup](../properties/aggregatefunction-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [BackColor](../properties/backcolor-element-assl.md), [DataType](../properties/datatype-element-assl.md), [Description](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md), [FontName](../properties/name-element-assl.md), [FontSize](../properties/fontsize-element-assl.md), [ForeColor](../properties/forecolor-element-assl.md), [FormatString](../properties/formatstring-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureExpression](../properties/expression-element-assl.md), [Name](../properties/name-element-assl.md), [Source](../properties/source-element-measure-assl.md), [Translations](../collections/translations-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
+|[MeasureGroup](../properties/aggregatefunction-element-assl.md), [заметки](../collections/annotations-element-assl.md), [BackColor](../properties/backcolor-element-assl.md), [DataType](../properties/datatype-element-assl.md), [описание](../properties/description-element-assl.md), [DisplayFolder ](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md), [FontName](../properties/name-element-assl.md), [FontSize](../properties/fontsize-element-assl.md), [ForeColor](../properties/forecolor-element-assl.md), [FormatString ](../properties/formatstring-element-assl.md), [Идентификатор](../properties/id-element-assl.md), [MeasureExpression](../properties/expression-element-assl.md), [имя](../properties/name-element-assl.md), [источника](../properties/source-element-measure-assl.md), [переводы](../collections/translations-element-assl.md), [Видимым](../properties/visible-element-assl.md)|  
 |Все остальные|None|  
   
 ## <a name="remarks"></a>Примечания  
@@ -102,7 +102,7 @@ ms.locfileid: "36087228"
   
 -   Одно имя папки означает, что мера должна обрабатываться как принадлежащая папке с таким же именем.  
   
--   Несколько имен папок, разделенных обратной косой черты (\\), обозначающий иерархию вложенных папок.  
+-   Несколько имен папок, разделенных обратной косой черты (\\), обозначающая иерархию вложенных папок.  
   
  Свойство `DisplayFolder` применяется также для вычисляемых мер и иерархий.  
   

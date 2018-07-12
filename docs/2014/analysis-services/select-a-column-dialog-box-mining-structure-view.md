@@ -1,5 +1,5 @@
 ---
-title: Выберите столбец диалоговое окно «» (представление структуры интеллектуального анализа данных) | Документы Microsoft
+title: Выбор столбцов-диалоговое окно (представление структуры интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.addacolumn.f1
 helpviewer_keywords:
 - Select a Column dialog box
 ms.assetid: 6f73a7dc-5401-40c3-8f1d-b41fc1dd91c2
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ccbdf038a3d371e5c633f0c3ad5673d9823d29c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf8c7b80e1eb97d66c1fd4a73b0b1124f62b4223
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159375"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>Диалоговое окно «Выбор столбца» (представление структуры интеллектуального анализа данных)
   Используйте диалоговое окно **Выбор столбца** , чтобы добавить столбцы к структуре интеллектуального анализа данных. Диалоговое окно содержит различные параметры в зависимости от того, работает ли пользователь с моделью интеллектуального анализа данных OLAP или с реляционной моделью интеллектуального анализа данных.  
@@ -50,7 +50,7 @@ ms.locfileid: "36086973"
  Этот параметр используется только для моделей интеллектуального анализа данных OLAP.  
   
 ## <a name="see-also"></a>См. также  
- [Представление структуры интеллектуального анализа данных &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [Представление структуры интеллектуального &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Добавление столбцов к структуре интеллектуального анализа данных](data-mining/add-columns-to-a-mining-structure.md)  
   
   

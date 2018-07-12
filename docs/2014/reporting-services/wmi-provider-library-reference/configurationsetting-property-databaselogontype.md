@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - DatabaseLogonType
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DatabaseLogonType property
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 caps.latest.revision: 24
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 30c6961f915789c358ba8d38ad0d18e164e072cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 001eee372f6c35a6938f3e5c99b9e82524285d25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166135"
 ---
 # <a name="databaselogontype-property-wmi-msreportserverconfigurationsetting"></a>Свойство DatabaseLogonType (WMI MSReportServer_ConfigurationSetting)
   Определяет, какая учетная запись используется для доступа к базе данных сервера отчетов: учетная запись службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, учетная запись пользователя Windows, либо имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Только для чтения.  
@@ -57,9 +57,9 @@ public int DatabaseLogonType;
   
 -   2 для входа в качестве службы  
   
- Если указано значение 0 (Windows), необходимо задать значение в [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) соответствующую действительной учетной записи Windows.  
+ Если указать значение 0 (Windows), необходимо задать значение в [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) свойство с соответствующим действительной учетной записи Windows.  
   
- Если указать 1 (SQL Server), убедитесь, что значение [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) допустимое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа.  
+ Если указать 1 (SQL Server), убедитесь, что значение [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) допустимое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа.  
   
  Если указывается значение 2 (служба Windows), сервер отчетов использует для доступа к своей базе данных учетную запись [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] и учетную запись службы Windows. Свойство DatabaseLogonAccount игнорируется.  
   

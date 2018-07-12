@@ -1,5 +1,5 @@
 ---
-title: Редактор назначения обработки секций (страница «Диспетчер соединений») | Документы Microsoft
+title: Редактор назначения обработки секций (страница «Диспетчер соединений») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partprocessingtransformation.connection.f1
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cf99c71785b362f185b5ce4b6b317fb7369a3666
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 383b28d86ca87457d26446e1bc881ddcda1084f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162975"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>Редактор назначения обработки секций (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор назначения обработки секций** , чтобы определить соединение с проектом служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или экземпляром служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -53,8 +53,8 @@ ms.locfileid: "36087417"
 |Только данные|Выполнить обработку обновления секции.|  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения обработки секций &#40;страница «сопоставления»&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
- [Редактор назначения обработки секций &#40;страница «Дополнительно»&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [Редактор назначения обработки секций &#40;страница "Дополнительно"&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

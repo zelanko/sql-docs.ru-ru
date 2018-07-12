@@ -1,5 +1,5 @@
 ---
-title: Тип данных ResultSet (XML для Аналитики) | Документы Microsoft
+title: Тип данных ResultSet (XML для Аналитики) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Resultset data type
 ms.assetid: 45e7d7d6-1f89-4dc8-b39d-9270ea2db541
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8a571012c82c9e4d26d9f586cf67344f19258a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d4e95d3e2b85971271cff4b1365b44e5a30ba0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155075"
 ---
 # <a name="resultset-data-type-xmla"></a>Тип данных Resultset (XML для аналитики)
   Определяет абстрактный примитивный тип данных, представляющий данные, возвращенные из [Discover](../xml-elements-methods-discover.md) или [Execute](../xml-elements-methods-execute.md) вызова метода.  
@@ -61,7 +61,7 @@ ms.locfileid: "36087942"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|None|  
-|Дочерние элементы|[Исключение](../xml-elements-properties/exception-element-xmla.md), [сообщения](../xml-elements-properties/messages-element-xmla.md)|  
+|Дочерние элементы|[Исключение](../xml-elements-properties/exception-element-xmla.md), [сообщений](../xml-elements-properties/messages-element-xmla.md)|  
 |Производные элементы|None|  
   
 ## <a name="remarks"></a>Примечания  

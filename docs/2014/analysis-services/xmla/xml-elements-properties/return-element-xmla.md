@@ -1,5 +1,5 @@
 ---
-title: возвращать Element (XMLA) | Документы Microsoft
+title: Элемент Return (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - return element
 ms.assetid: 3cfe8b74-fec3-4987-a74a-5f731444e024
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1a4468ce3d4b14ff9cd9db7c9373083aad75d3eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 4808372fbf80b2b3a79bc11e3f2423511eb717be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192412"
 ---
 # <a name="return-element-xmla"></a>Элемент return (XML для аналитики)
-  Содержит данные, возвращенные [DiscoverResponse](../xml-elements-objects-discoverresponse.md) в ответ на [Discover](../xml-elements-methods-discover.md) вызова метода или [ExecuteResponse](../xml-elements-objects-executeresponse.md) в ответ на [Execute](../xml-elements-methods-execute.md) вызова метода.  
+  Содержит данные, возвращенные [DiscoverResponse](../xml-elements-objects-discoverresponse.md) элемента в ответ на [Discover](../xml-elements-methods-discover.md) вызов метода или [ExecuteResponse](../xml-elements-objects-executeresponse.md) элемента в ответ на [Execute](../xml-elements-methods-execute.md) вызова метода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,8 +63,8 @@ ms.locfileid: "36086728"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[DiscoverResponse](../xml-elements-objects-discoverresponse.md), [ExecuteResponse](../xml-elements-objects-executeresponse.md)|  
-|Предок:[DiscoverResponse](../xml-elements-objects-discoverresponse.md)|Дочерние: <br />                        [корень](root-element-xmla.md)|  
-|Предка: <br />                        [ExecuteResponse](../xml-elements-objects-executeresponse.md)|Дочерние: [корневой](root-element-xmla.md) или [результатов](results-element-xmla.md)|  
+|Предок:[DiscoverResponse](../xml-elements-objects-discoverresponse.md)|Дочерние: <br />                        [корневой](root-element-xmla.md)|  
+|Предка: <br />                        [ExecuteResponse](../xml-elements-objects-executeresponse.md)|Дочерние: [корневой](root-element-xmla.md) или [результаты](results-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
  Элемент `return` содержит данные, возвращенные методами `Discover` и `Execute`. Как правило, элемент `return` содержит единственный элемент `root`, который включает данные, возвращенные в результате успешного вызова метода `Discover` или `Execute`, или исключение XMLA, возвращенное в результате неудачного вызова метода. Если метод `Execute` содержит команду `Batch`, которая выполняет несколько операций, то элемент `return` содержит элемент `results`, который, в свою очередь, включает по одному элементу `root` для каждой команды, выполненной командой `Batch` успешно или неудачно.  

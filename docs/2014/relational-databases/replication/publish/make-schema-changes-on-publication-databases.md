@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
 - snapshot replication [SQL Server], replicating schema changes
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: 71
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c5fdf15e3038f865bb123f3dd79321d036813281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4c84487775fb5eb3839910fd800489927edcc77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172735"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Внесение изменений в схемы баз данных публикации
   Репликация поддерживает широкий диапазон изменений схем для опубликованных объектов. Когда вы вносите любое из следующих изменений схемы в соответствующий опубликованный объект в издателе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], это изменение распространяется по умолчанию на всех подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
@@ -152,7 +152,7 @@ ms.locfileid: "36086677"
         |`filestream`|Разрешить изменения|Блокировать изменения|Блокировать изменения|  
         |`date`, `time`, `datetime2` и `datetimeoffset`|Разрешить изменения|Разрешить изменение<sup>1</sup>|Блокировать изменения|  
   
-         <sup>1</sup> подписчиков SQL Server Compact преобразуют эти типы данных на подписчике.  
+         <sup>1</sup> подписчики SQL Server Compact преобразуют эти типы данных на подписчике.  
   
 -   Если при применении изменения схемы возникает ошибка (например, ошибка по причине добавления внешнего ключа, ссылающегося на таблицу, которая недоступна на подписчике), синхронизация завершается ошибкой, и подписка должна быть инициализирована повторно.  
   

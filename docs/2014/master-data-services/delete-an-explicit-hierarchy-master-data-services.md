@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, deleting
 - deleting explicit hierarchies [Master Data Services]
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 08770818215b1055f2f5a015a696979bcea74f69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f2080fedb589f5155dd6885949b5980c04b7c288
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155125"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>Удаление явной иерархии (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]явные иерархии удаляются тогда, когда в них отпадает необходимость.  
@@ -49,7 +49,7 @@ ms.locfileid: "36086917"
   
 5.  Щелкните **Изменить выбранную сущность**.  
   
-6.  На **изменение сущности** страницы в **явные иерархии** области, выберите удаляемую явную иерархию, который требуется удалить.  
+6.  На **изменение сущности** странице **явных иерархий** области, выберите удаляемую явную иерархию.  
   
 7.  Нажмите кнопку **удалить выбранную иерархию**.  
   

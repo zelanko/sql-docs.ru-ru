@@ -17,15 +17,15 @@ helpviewer_keywords:
 - methods [Reporting Services]
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7b88c3693de9a0d2318094cd01d3e27044a697eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 982dabf5a880459e785033411ead754f81dbce4b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155625"
 ---
 # <a name="report-server-namespace-management-methods"></a>Методы управления пространством имен сервера отчетов
   Веб-служба управления сервером отчетов содержит методы, которые можно использовать для управления отчетами, папками и ресурсами в базе данных сервера отчетов.  
@@ -34,7 +34,7 @@ ms.locfileid: "36087545"
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|Отменяет выполнение задания.|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|Добавляет папку в базу данных сервера отчетов или в библиотеку SharePoint.|  
-|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|Добавляет новый элемент в базу данных сервера отчетов или в библиотеку SharePoint Этот метод применим к `Report`, `Model`, `Dataset`, `Component`, `Resource`, и `DataSource` типов элементов.|  
+|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|Добавляет новый элемент в базу данных сервера отчетов или в библиотеку SharePoint Этот метод применим к `Report`, `Model`, `Dataset`, `Component`, `Resource`, и `DataSource` типы элементов.|  
 |M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String,System.String,System.Byte[],ReportService2010.Warning[]@)|Создает новый сеанс изменения отчета.|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|Удаляет элемент из базы данных сервера отчетов или из библиотеки SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|Возвращает элементы базы данных сервера отчетов или библиотеки SharePoint, которые соответствуют указанным условиям поиска.|  
@@ -42,7 +42,7 @@ ms.locfileid: "36087545"
 |<xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>|Возвращает список параметров для данного расширения.|  
 |<xref:ReportService2010.ReportingService2010.GetItemType%2A>|Получает тип элемента в базе данных сервера отчетов или в библиотеке SharePoint, если элемент существует.|  
 |<xref:ReportService2010.ReportingService2010.GetProperties%2A>|Возвращает значения одного или нескольких свойств элемента в базе данных сервера отчетов или в библиотеке SharePoint.|  
-|<xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>|Получает определение или содержимое элемента. Этот метод применим к `Report`, `Model`, `Dataset`, `Component`, `Resource`, и `DataSource` типов элементов.|  
+|<xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>|Получает определение или содержимое элемента. Этот метод применим к `Report`, `Model`, `Dataset`, `Component`, `Resource`, и `DataSource` типы элементов.|  
 |<xref:ReportService2010.ReportingService2010.GetItemReferences%2A>|Возвращает список ссылок элементов каталога, связанных с элементом.|  
 |<xref:ReportService2010.ReportingService2010.GetReportServerConfigInfo%2A>|Возвращает сведения о подключенном экземпляре сервера отчетов или обо всех экземплярах сервера отчетов в масштабном развертывании.|  
 |<xref:ReportService2010.ReportingService2010.GetSystemProperties%2A>|Возвращает одно или несколько системных свойств.|  
@@ -63,7 +63,7 @@ ms.locfileid: "36087545"
 |<xref:ReportService2010.ReportingService2010.SetItemReferences%2A>|Задает элементы каталога, связанные с элементом.|  
 |<xref:ReportService2010.ReportingService2010.MoveItem%2A>|Перемещает или переименовывает элемент.|  
 |<xref:ReportService2010.ReportingService2010.SetProperties%2A>|Задает одно или несколько свойств элемента.|  
-|<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|Задает определение или содержимое указанного элемента. Этот метод применим к `Report`, `Model`, `Dataset`, `Component`, `Resource`, и `DataSource` типов элементов.|  
+|<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|Задает определение или содержимое указанного элемента. Этот метод применим к `Report`, `Model`, `Dataset`, `Component`, `Resource`, и `DataSource` типы элементов.|  
 |<xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>|Задает одно или несколько системных свойств элемента в базе данных сервера отчетов или ферме SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|Проверяет параметры модулей служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
   

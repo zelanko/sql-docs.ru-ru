@@ -1,28 +1,29 @@
 ---
-title: Функция Switch (система платформы аналитики)
+title: Функция Switch (Analytics Platform System)
 description: Отображает сведения о параметрах две функции, представленные в AU7 системы платформы аналитики.
 author: mzaman1
 manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/24/2018
+ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e384a252584fed0e7543a7a4000fc9a70f6533e7
-ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
+monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
+ms.openlocfilehash: b06c715549cd1c9cf464a13b03790764ebf40b97
+ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34550917"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37107182"
 ---
-#<a name="appliance-feature-switch"></a>Переключение функции устройства
-**Переключение функции** странице отображаются сведения о параметрах две функции, представленные в AU7 системы платформы аналитики. Эта страница служит для обновления или включение или отключение компонентов и параметров в Analytics Platform System. Для изменения значения компонента коммутатора требуется перезапуск службы.
+#<a name="appliance-feature-switch"></a>Коммутатор функций устройства
+**Переключатель** странице отображаются сведения о параметры двух функций, представленных в платформе аналитики System 2016-AU7. Эта страница позволяет обновить или включение или отключение функциях и параметрах в Analytics Platform System. Изменение значения параметра компонента потребуется перезапустить службу.
 
-![Переключение функции устройства DWConig](media/feature-switch/SQL_Server_PDW_DWConfig_feature_switch.png "DWConig переключение функции устройства") 
+![Параметр компонента устройства DWConig](media/feature-switch/SQL_Server_PDW_DWConfig_feature_switch.png "DWConig устройства функция Switch") 
 
 ##<a name="autostatsenabled-switch"></a>Коммутатор AutoStatsEnabled
-Определяет функцию автоматического статистики. Этот компонент переключатель установлен в положение true по умолчанию после обновления до AU7. Любой базы данных, созданные после обновления будут наследовать автоматического создания и асинхронного обновления статистики. Для существующих баз данных, администраторы базы данных можно включить автоматическое статистики с [инструкции alter database] (/ sql/t-sql/statements/alter-database-parallel-data-warehouse). Дополнительные сведения о статистике см. в разделе [статистики](../relational-databases/statistics/statistics.md).
+Определяет функцию автоматического статистики. Этот компонент переключатель установлен в значение true, по умолчанию после обновления до AU7. Любой базы данных, созданные после обновления будут наследовать автоматическое создание и асинхронного обновления статистики. Для существующих баз данных, администраторы баз данных можно включить автоматическое статистики с [alter database] (/ sql/t-sql/statements/alter-database-parallel-data-warehouse). Дополнительные сведения о статистике см. в разделе [статистики](../relational-databases/statistics/statistics.md).
 
 ##<a name="dmsprocessstopmessagetimeoutinseconds-switch"></a>Коммутатор DmsProcessStopMessageTimeoutInSeconds
-Определяет время ожидания службы перемещения данных (DMS) для синхронизации данных на загруженной системе после отмены запрос, включающий перемещения данных. Обновление до AU7 это значение устанавливается равным 900 секунд (15 минут) по умолчанию. Допустимый диапазон: от 0 до 3600 секунд.
+Определяет время ожидания службы перемещения данных (DMS) для синхронизации на занятой системе, когда отменяется запрос, включающий перемещения данных. По умолчанию обновление до AU7 задает это значение 900 секунд (15 минут). Допустимый диапазон: 0 – 3600 секунд.

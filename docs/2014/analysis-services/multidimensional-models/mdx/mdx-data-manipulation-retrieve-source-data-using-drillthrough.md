@@ -1,5 +1,5 @@
 ---
-title: Использование ДЕТАЛИЗАЦИИ для извлечения исходных данных (многомерные Выражения) | Документы Microsoft
+title: С помощью функции DRILLTHROUGH извлечение данных из источника (многомерные Выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DRILLTHROUGH statement
 - retrieving data
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data retrieval [MDX]
 ms.assetid: fe0ab170-25a9-45a8-a377-f71a67f77018
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9869be182f398df326c0c81b7e00e869f0b3eae6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b98ebd1516d2aa26fa1e3a66edebdaf99f0f181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204424"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>Извлечение данных из источника с помощью функции DRILLTHROUGH (многомерные выражения)
   В языке многомерных выражений для извлечения набора строк из источника данных для ячейки куба используется инструкция [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough).  
@@ -41,7 +41,7 @@ ms.locfileid: "36086758"
    <Return_Columns> ::= RETURN <member or attribute> [, <member or attribute>]  
 ```  
   
- `SELECT` Предложение определяет ячейку куба, содержащую извлекаемые исходные данные. Это предложение `SELECT` эквивалентно обычной инструкции многомерных выражений `SELECT`, за исключением того, что в предложении `SELECT` на каждой оси можно указывать только один элемент. Если на оси указано несколько элементов, возникает ошибка.  
+ `SELECT` Предложение определяет ячейку куба, содержащую исходные данные должны быть получены. Это предложение `SELECT` эквивалентно обычной инструкции многомерных выражений `SELECT`, за исключением того, что в предложении `SELECT` на каждой оси можно указывать только один элемент. Если на оси указано несколько элементов, возникает ошибка.  
   
  Синтаксическая конструкция `<Max_Rows>` задает максимальное количество строк в каждом возвращаемом наборе строк. Если поставщик OLE DB, используемый для соединения с источником данных, не поддерживает параметр `DBPROP_MAXROWS`, аргумент `<Max_Rows>` не учитывается.  
   
@@ -60,6 +60,6 @@ RETURN [Department MeasureGroup].[Department Id], [Employee].[First Name]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Манипулирование данными &#40;многомерных Выражений&#41;](mdx-data-manipulation-manipulating-data.md)  
+ [Обработка данных &#40;многомерных Выражений&#41;](mdx-data-manipulation-manipulating-data.md)  
   
   

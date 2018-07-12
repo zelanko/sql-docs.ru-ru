@@ -1,5 +1,5 @@
 ---
-title: Управление транзакциями (XMLA) | Документы Microsoft
+title: Управление транзакциями (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - starting transactions
 ms.assetid: f5112e01-82f8-4870-bfb7-caa00182c999
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 84ec16569d7e4118c159b7a611cba9d711b9d761
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fefda354d9f596c92a06673e7692bb840f582071
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167615"
 ---
 # <a name="managing-transactions-xmla"></a>Управление транзакциями (XMLA)
-  Каждый XML для аналитики (XMLA) команду, отправленную экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняется в контексте транзакции в рамках текущего явного или неявного сеанса. Для управления каждой из этих транзакций используется [BeginTransaction](../xmla/xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../xmla/xml-elements-commands/committransaction-element-xmla.md), и [RollbackTransaction](../xmla/xml-elements-commands/rollbacktransaction-element-xmla.md) команд. При помощи этих команд можно создавать явные или неявные транзакции, изменять счетчик ссылок транзакции, а также запускать, фиксировать или выполнять откат транзакций.  
+  Каждый XML для аналитики (XMLA) команды, отправляемые экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняется в контексте транзакции в рамках текущего явного или неявного сеанса. Для управления каждой из этих транзакций используйте [BeginTransaction](../xmla/xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../xmla/xml-elements-commands/committransaction-element-xmla.md), и [RollbackTransaction](../xmla/xml-elements-commands/rollbacktransaction-element-xmla.md) команды. При помощи этих команд можно создавать явные или неявные транзакции, изменять счетчик ссылок транзакции, а также запускать, фиксировать или выполнять откат транзакций.  
   
 ## <a name="implicit-and-explicit-transactions"></a>Явные и неявные транзакции  
  Транзакция является либо неявной, либо явной.  
@@ -42,7 +42,7 @@ ms.locfileid: "36086769"
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Создает *неявное* транзакцию для XML для Аналитики команды, если `BeginTransaction` команда не указывает начало транзакции. Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] всегда фиксируют неявную транзакцию, если команда будет выполнена успешно, и откатывают неявную транзакцию при сбое команды.  
   
  **Явная транзакция**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Создает *явных* транзакции если `BeginTransaction` команда запускает транзакцию. При этом службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] фиксируют явную транзакцию, только если отправлена команда `CommitTransaction`, и выполняют ее откат, если отправлена команда `RollbackTransaction`.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Создает *явные* транзакции если `BeginTransaction` команда запускает транзакцию. При этом службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] фиксируют явную транзакцию, только если отправлена команда `CommitTransaction`, и выполняют ее откат, если отправлена команда `RollbackTransaction`.  
   
  Кроме того, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняют откат и неявных, и явных транзакций, если текущий сеанс завершается до выполнения активной транзакции.  
   

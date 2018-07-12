@@ -1,5 +1,5 @@
 ---
-title: Другие проблемы обновления Database Engine | Документы Microsoft
+title: Другие проблемы обновления Database Engine | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], upgrading
 ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b1c74bf4ffd8cf0eba5cb853cccda80cc0b5d662
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1fda230ed04ddcac6d4c7c8bb52b73762c23b90f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150005"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Другие проблемы обновления компонента Database Engine
   Текущая версия помощника по обновлению не может обнаружить следующие проблемы, возникающие при обновлении. Ознакомьтесь с нижеприведенным списком проблем, чтобы оценить потенциальные последствия для систем.  
@@ -76,9 +76,9 @@ ms.locfileid: "36087291"
  MERGE теперь является полностью зарезервированным ключевым словом. Поэтому в приложениях не должно быть объектов (таблиц, столбцов и пр.) с именем MERGE.  
   
 ## <a name="rename-cdc-schema"></a>Переименование схемы CDC  
- Существует имя схемы CDC. Это имя схемы нельзя использовать, если **измененных данных** включен для базы данных.  
+ Существует имя схемы CDC. Это имя схемы нельзя использовать, если **Change Data Capture** включен для базы данных.  
   
- Необходимо удалить схему CDC, прежде чем включать **измененных данных** для базы данных. Это можно сделать до обновления или после. Удаление схемы производится следующим образом.  
+ Необходимо удалить схему CDC, прежде чем включать **Change Data Capture** для базы данных. Это можно сделать до обновления или после. Удаление схемы производится следующим образом.  
   
 1.  Передайте объекты из схемы CDC в новую схему с помощью инструкции ALTER SCHEMA.  
   
@@ -89,6 +89,6 @@ ms.locfileid: "36087291"
 4.  Удалите схему CDC с помощью инструкции DROP SCHEMA.  
   
 ## <a name="see-also"></a>См. также  
- [Проблемы обновления компонента Database Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
+ [Проблемы обновления ядра СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

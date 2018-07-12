@@ -18,15 +18,15 @@ helpviewer_keywords:
 - report definition files [Reporting Services]
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
 caps.latest.revision: 35
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 129e8d896dac89451af46873f97bcdc6074d016f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 29e2a4698ef09627b4098ab5e28ecbe096d6af30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153975"
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>Ссылки на сборки в RDL-файле
   Для поддержки использования сборок с пользовательским кодом в файлах определения отчета в спецификацию языка определения отчетов были включены два элемента: **CodeModules** и **Classes**.  

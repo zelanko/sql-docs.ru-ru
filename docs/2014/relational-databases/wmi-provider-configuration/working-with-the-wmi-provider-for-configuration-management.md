@@ -1,5 +1,5 @@
 ---
-title: Работа с поставщиком WMI для управления конфигурацией | Документы Microsoft
+title: Работа с поставщиком WMI для управления конфигурацией | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - binding [WMI]
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 757c5bf468ff1c9fb2b5d493121a9e4b7daab144
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: e10e77b15dc7641f03f3579db1ef28880ae7ec09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175391"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Работа с поставщиком WMI для управления конфигурацией
   Перед тем как приступить к программированию с помощью поставщика WMI для управления компьютером, примите во внимание следующие сведения.  
@@ -48,7 +48,7 @@ ms.locfileid: "36086869"
   
  где `instance_name` в установке по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет значение по умолчанию `MSSQLSERVER`.  
   
- **Примечание:** при подключении через брандмауэр Windows, необходимо убедиться, что компьютеры настроены правильно. См. в статье «Подключение через брандмауэр Windows» документации инструментария управления Windows на [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [веб-сайт](http://go.microsoft.com/fwlink/?linkid=15426).  
+ **Примечание:** при подключении через брандмауэр Windows, необходимо будет убедитесь, что компьютеры настроены правильно. См. в статье «Подключение через Windows Firewall» в документации по инструментарию управления Windows на [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [веб-сайт](http://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="permissions-and-server-authentication"></a>Разрешения и проверка подлинности сервера  
  Чтобы получить доступ к поставщику WMI для управления конфигурацией, скрипт управления WMI клиента должен выполняться на целевом компьютере в контексте администратора. Необходимо членство в локальной группе администраторов Windows на компьютере, которым требуется управлять.  
