@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [SQL Server replication]
 - walkthroughs [SQL Server replication]
 - replication [SQL Server], tutorials
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 976f1ee9539731da6036990da754dc1f894ced8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8d489965584903f10b613a40a073357c51b1b9aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217364"
 ---
 # <a name="replication-tutorials"></a>Учебники по репликации
   Репликация включает учебники, которые могут быть использованы для изучения установки и запуска топологии репликации при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -31,7 +31,7 @@ ms.locfileid: "36099744"
  В учебниках по репликации «Издатель» означает сервер, который содержит реплицируемые данные источника, а «Подписчик» — целевой сервер. Издатель и подписчик могут совместно использовать один и тот же экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но это не является обязательным. Дополнительные сведения см. в разделе [Обзор модели публикации репликации](publish/replication-publishing-model-overview.md).  
   
 > [!NOTE]  
->  Большинство задач, представленных в этих учебниках, могут выполняться программным способом. Дополнительные сведения см. в разделе [руководство разработчика &#40;репликации&#41;](concepts/replication-developer-documentation.md).  
+>  Большинство задач, представленных в этих учебниках, могут выполняться программным способом. Дополнительные сведения см. в разделе [Developer's Guide &#40;репликации&#41;](concepts/replication-developer-documentation.md).  
   
 ## <a name="replication-tutorials"></a>Учебники по репликации  
  [Подготовка сервера к репликации](tutorial-preparing-the-server-for-replication.md)  

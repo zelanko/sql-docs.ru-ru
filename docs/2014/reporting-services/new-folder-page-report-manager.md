@@ -1,5 +1,5 @@
 ---
-title: Новая страница папки (диспетчер отчетов) | Документы Microsoft
+title: Новая страница папки (диспетчер отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5ec855928ab92734695594a79ed23e917b3bb8d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3464ba51b74343fdb7349b7622f08a68b3f25611
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162295"
 ---
 # <a name="new-folder-page-report-manager"></a>Страница «Создать папку» (диспетчер отчетов)
   На странице «Создание папки» можно создать новую папку в иерархии папок сервера отчетов. Создается виртуальная папка, сохраняемая в базу данных сервера отчетов. а в файловой системе компьютера папки не создается.  
@@ -45,7 +45,7 @@ ms.locfileid: "36100155"
  Введите описание содержимого папки. Описание появится на странице «Содержимое» у тех пользователей, которые имеют доступ к папке.  
   
 ## <a name="see-also"></a>См. также  
- [Создать, удалить или изменить папку &#40;диспетчера отчетов&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
+ [Создание, удаление и изменение папки &#40;диспетчера отчетов&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
  [Страница «Общие свойства», папки &#40;диспетчера отчетов&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Содержимое страницы &#40;диспетчера отчетов&#41;](../../2014/reporting-services/contents-page-report-manager.md)   

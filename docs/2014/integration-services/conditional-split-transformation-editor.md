@@ -1,5 +1,5 @@
 ---
-title: Conditional Split Transformation Editor | Документы Microsoft
+title: Conditional Split Transformation Editor | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.conditionalsplittransformation.f1
 helpviewer_keywords:
 - Conditional Split Transformation Editor
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
 caps.latest.revision: 32
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: be0e756eaaf0a97dd041d94f254fd7bf80854b23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c2d37db0ef10e8bae5e6fded476ca43e50c61bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164785"
 ---
 # <a name="conditional-split-transformation-editor"></a>редактор преобразования «Условное разбиение»
   Диалоговое окно **Редактор преобразования «Условное разбиение»** используется для создания выражений, определения порядка, в котором производится вычисление выражений, а также для именования выходных данных условных разбиений. В этом диалоговом окне вызываются математические, строковые функции, функции даты и времени, а также операторы, которые можно использовать при построении выражений. Первое условие, значение которого вычисляется как TRUE, определяет вывод, на который направляется строка.  
@@ -54,7 +54,7 @@ ms.locfileid: "36100246"
  Укажите способ обработки ошибок в диалоговом окне [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) .  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Разбиение набора данных с помощью преобразования "Условное разбиение"](data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

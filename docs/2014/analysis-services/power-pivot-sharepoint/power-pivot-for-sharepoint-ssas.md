@@ -1,5 +1,5 @@
 ---
-title: PowerPivot для SharePoint (службы SSAS) | Документы Microsoft
+title: PowerPivot для SharePoint (службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1caed8888e1307950971914f48887facac409741
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11ee7e6690c0937477374337d80a4b239bdb7f3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224854"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot для SharePoint (SSAS)
   PowerPivot для SharePoint — это сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], исполняемый в режиме интеграции с SharePoint. PowerPivot для SharePoint предусматривает размещение данных PowerPivot на сервере в ферме SharePoint. Данные PowerPivot представляют собой модель аналитических данных, которая создается в одной из следующих программ:  
@@ -39,7 +39,7 @@ ms.locfileid: "36100714"
   
  Развернув надстройку PowerPivot для SharePoint 2013, можно полностью задействовать функциональность и компоненты PowerPivot в ферме SharePoint. Дополнительные возможности включают коллекцию PowerPivot, обновления данных расписания и панели управления PowerPivot.  
   
- ![Развертывание сервера в режиме PowerPivot 2 SSAS](../media/as-powerpivot-mode-2server-deployment.gif "развертывания сервера службы SSAS режиме PowerPivot 2")  
+ ![Развертывание сервера в режиме PowerPivot 2 SSAS](../media/as-powerpivot-mode-2server-deployment.gif "развертывание сервера в режиме PowerPivot 2 SSAS")  
   
 ## <a name="powerpivot-for-sharepoint-2010"></a>PowerPivot для SharePoint 2010  
  PowerPivot для SharePoint 2010 предусматривает размещение данных PowerPivot на сервере в ферме SharePoint 2010. Данные PowerPivot представляют собой модель аналитических данных, которая создается в Excel с помощью надстройки «PowerPivot для Excel». Для размещения этих данных на сервере требуются SharePoint 2010, службы Excel и компонент PowerPivot для SharePoint. Данные загружаются в экземпляры PowerPivot для SharePoint в ферме, где их можно обновлять с запланированными интервалами с помощью функции обновления данных PowerPivot, предоставляемой сервером.  
@@ -66,11 +66,11 @@ ms.locfileid: "36100714"
   
  [Проверка подлинности и авторизация PowerPivot](power-pivot-authentication-and-authorization.md)  
   
- [Настройка правил определения исправности PowerPivot-](configure-power-pivot-health-rules.md)  
+ [Настройка правил определения работоспособности PowerPivot-](configure-power-pivot-health-rules.md)  
   
  [Панель мониторинга управления PowerPivot и данные об использовании](power-pivot-management-dashboard-and-usage-data.md)  
   
- [Галерея PowerPivot](../../2014-toc/books-online-for-sql-server-2014.md)  
+ [Библиотека PowerPivot Gallery](../../2014-toc/books-online-for-sql-server-2014.md)  
   
  [Доступ к данным PowerPivot](power-pivot-data-access.md)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36100714"
   
  [Веб-каналы данных PowerPivot](power-pivot-data-feeds.md)  
   
- [Соединение семантической модели бизнес-Аналитики PowerPivot &#40;bism-файл&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
+ [Соединение семантической модели бизнес-Аналитики PowerPivot &#40;bism-файлы&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
   
  **В других разделах**  
   

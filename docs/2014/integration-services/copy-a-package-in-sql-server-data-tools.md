@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], copying
 - copying packages
@@ -18,13 +18,13 @@ ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a49f678866fca7cbf5836ba240025e6022d5ba12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e315d008ec7e17672c831172add10e5c32a6152b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229384"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Копирование пакета с помощью SQL Server Data Tools
   В этом разделе описывается, как создать новый пакет служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] копированием существующего пакета и как обновить свойства `Name` и `GUID` нового пакета.  
@@ -48,7 +48,7 @@ ms.locfileid: "36100461"
   
 7.  Нажмите кнопку **Сохранить**.  
   
-8.  Выберите, обновлять ли имя объекта пакета, чтобы оно соответствовало имени файла. Если щелкнуть **Да**, `Name` обновить свойства пакета. Новый пакет будет добавлен к проекту служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и открыт в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+8.  Выберите, обновлять ли имя объекта пакета, чтобы оно соответствовало имени файла. Если щелкнуть **Да**, `Name` обновляется свойство пакета. Новый пакет будет добавлен к проекту служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и открыт в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 9. При необходимости перейдите на вкладку **Поток управления** и выберите **Свойства**.  
   

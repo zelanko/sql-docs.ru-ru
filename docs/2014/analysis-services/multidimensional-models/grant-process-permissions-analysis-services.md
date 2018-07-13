@@ -1,5 +1,5 @@
 ---
-title: Предоставление разрешений на обработку (службы Analysis Services) | Документы Microsoft
+title: Предоставление разрешений на обработку (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], process
 - process permissions [Analysis Services]
 ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1024a8dfbd7bd84db7e452018829b506565badf2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b718fab80ad85ee52cadcc9547c11848de0ee9a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187291"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Предоставление разрешений доступа (службы Analysis Services)
   В качестве администратора вы можете создать роль, предназначенную для осуществления операций обработки службы Analysis Services, которая позволит вам делегировать это отдельное задание другим пользователям или приложениям, которые используются для автоматической обработки по расписанию. Разрешения на обработку могут быть предоставлены на уровнях базы данных, куба, измерения и структуры интеллектуального анализа данных. Пока вы не работаете с очень большим кубом или табличной базой данных, мы рекомендуем вам предоставить права на обработку на уровне базы данных, включающие все объекты, включая те, которые зависят друг от друга.  
@@ -32,7 +32,7 @@ ms.locfileid: "36100105"
 > [!IMPORTANT]  
 >  Пользователь, чья роль обладает лишь разрешениями на Обработку, не будет способен использовать службу [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или службу [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для подключения к службе [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и обработки объектов. Данные средства требуют `Read Definition` разрешение на доступ к метаданным объекта. Без возможности использовать оба средства, сценарий XMLA должен быть использован для выполнения операции обработки.   
 >   
->  Мы советуем вам также предоставить `Read Definition` разрешения для тестирования. Пользователь обладает и разрешением `Read Definition` и `Process Database` объекты могут обрабатываться разрешения [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], в интерактивном режиме. Дополнительные сведения см. в разделе [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) .  
+>  Мы советуем вам также предоставить `Read Definition` разрешения для целей тестирования. Пользователь, который обладает оба `Read Definition` и `Process Database` объекты могут обрабатываться разрешения [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], в интерактивном режиме. Дополнительные сведения см. в разделе [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) .  
   
 ## <a name="set-processing-permissions-at-the-database-level"></a>Установка разрешений на обработку на уровне базы данных  
  Данный раздел предоставляет информацию о том, как активировать обработку для всех кубов, измерений, интеллектуальных анализов или моделей интеллектуального анализа в базе данных пользователю без прав администратора.  
@@ -41,7 +41,7 @@ ms.locfileid: "36100105"
   
 2.  Щелкните правой кнопкой мыши **Роли** | **Создать роль**. Введите название и описание.  
   
-3.  В **Общие** выберите `Process Database` флажок. Кроме того, выбрать `Read Definition` для активации интерактивной обработки посредством одного из средств SQL Server, такие как [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+3.  В **Общие** области выберите `Process Database` "флажок". Кроме того, выберите `Read Definition` для активации интерактивной обработки посредством одного из средств SQL Server, такие как [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 4.  На вкладке **Членство** добавьте учетные записи пользователя и группы Windows, у которых есть разрешение на обработку любого объекта в данной базе данных.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "36100105"
   
 2.  Щелкните правой кнопкой мыши **Роли** | **Создать роль**. Введите название и описание.  
   
-3.  В **Общие** снимите `Process Database` флажок. Разрешения базы данных переопределяют возможность установки разрешений на объекты более низкого уровня, обесцвечивая параметры роли или делая их невыбираемыми.  
+3.  В **Общие** снимите `Process Database` "флажок". Разрешения базы данных переопределяют возможность установки разрешений на объекты более низкого уровня, обесцвечивая параметры роли или делая их невыбираемыми.  
   
-     Технически, разрешения базы данных не нужны для целевой обработки ролей. Но без `Read Definition` на уровне базы данных, не могут просматривать базу в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], что затруднит проведение проверки.  
+     Технически, разрешения базы данных не нужны для целевой обработки ролей. Но без `Read Definition` на уровне базы данных, вы не можете просмотреть базы данных в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], что затруднит проведение проверки.  
   
 4.  Выбор индивидуальных объектов для обработки:  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36100105"
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>Установка разрешений на обработку на интеллектуальный анализ данных  
  Вы можете создать роль, передав разрешение на обработку интеллектуального анализа данных. В том числе на обработку всех моделей интеллектуального анализа данных.  
   
- **Детализация** и `Read Definition` разрешения, используемые для обзора модели интеллектуального анализа данных и структуры являются атомарными и можно добавлять к той же роли, или выделены в другую роль.  
+ **Детализация** и `Read Definition` разрешения, используемые для просмотра модели интеллектуального анализа данных и структуры являются атомарными и можно добавлять к той же роли, или выделены в отдельную роль.  
   
 1.  В службе [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключитесь к экземпляру службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], откройте папку Базы данных и выберите базу данных.  
   

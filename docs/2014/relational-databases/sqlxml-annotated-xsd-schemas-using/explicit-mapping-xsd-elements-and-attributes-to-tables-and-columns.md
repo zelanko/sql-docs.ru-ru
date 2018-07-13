@@ -1,5 +1,5 @@
 ---
-title: Явное сопоставление элементов и атрибутов с таблицами и столбцами (SQLXML 4.0) XSD | Документы Microsoft
+title: Явное сопоставление элементов и атрибутов с таблицами и столбцами (SQLXML 4.0) XSD | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -30,15 +30,15 @@ helpviewer_keywords:
 - element/attribute mapping [SQLXML]
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba2b9df8e9104afe0dc7c1645cc4cc64dd01d2ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1bbc0a7243252a657011e6d9814f9d070fa7ea52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221037"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Явное сопоставление элементов и атрибутов XSD с таблицами и столбцами (SQLXML 4.0)
   При использовании схемы XSD для представления реляционных баз данных в виде XML элементы и атрибуты схемы должны быть сопоставлены с таблицами и столбцами базы данных. Строки таблицы или представления базы данных будут сопоставлены с элементами в XML-документе. Значения столбцов базы данных сопоставляются с атрибутами и элементами.  
@@ -50,7 +50,7 @@ ms.locfileid: "36099742"
   
  Если для элемента задана заметка `sql:relation`, ее область действия охватывает все атрибуты и дочерние элементы, описанные в определении сложного типа этого элемента, сокращая, таким образом, усилия по написанию заметок.  
   
- `sql:relation` Заметка также полезна, когда идентификаторы, допустимые в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не являются допустимыми в XML. Например, «Order Details» — допустимое имя таблицы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но не в XML. В этих случаях заметка `sql:relation` может использоваться для указания сопоставления, например следующим образом.  
+ `sql:relation` Заметки также полезен, когда идентификаторы, допустимые в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не являются допустимыми в XML. Например, «Order Details» — допустимое имя таблицы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но не в XML. В этих случаях заметка `sql:relation` может использоваться для указания сопоставления, например следующим образом.  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
@@ -60,12 +60,12 @@ ms.locfileid: "36099742"
  Заметка `sql-field` сопоставляет атрибут или элемент столбцу базы данных. Заметка `sql:field` добавляется для сопоставления узла XML в схеме и столбца базы данных. Нельзя задавать заметку `sql:field` на элементе с пустым содержимым.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для выполнения примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Задание заметок sql:relation и sql:field  
  В этом примере схема XSD состоит из  **\<контакт >** элемент сложного типа с  **\<FName >** и  **\<LName >** дочерние элементы и **ContactID** атрибута.  
   
- `sql:relation` Maps заметки  **\<контакт >** элемент с таблицей Person.Contact в базе данных AdventureWorks. `sql:field` Maps заметки  **\<FName >** элемента для столбца FirstName и  **\<LName >** элемент к столбцу LastName.  
+ `sql:relation` Карты заметки  **\<контакт >** элемент с таблицей Person.Contact в базе данных AdventureWorks. `sql:field` Карты заметки  **\<FName >** элемента для столбца FirstName и  **\<LName >** элемент к столбцу LastName.  
   
  Не задано заметок для **ContactID** атрибута. Поэтому атрибут по умолчанию сопоставляется со столбцом с тем же именем.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36099742"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Частичный результирующий набор:  
   

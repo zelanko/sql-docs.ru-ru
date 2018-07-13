@@ -1,5 +1,5 @@
 ---
-title: Параметры (текстовый редактор - XML - страница прочие) | Документы Microsoft
+title: Параметры (текстовый редактор - "XML" — Страница "Разное") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c11ecb4c3a46aa008600eee89ffb528fd66dcc68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa8fa16d849c7d0bac76953b0d3da8787eb78b58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259160"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Параметры ("Текстовый редактор" — "XML" — страница "Разное")
   Диалоговое окно **Параметры** позволяет изменять параметры автозаполнения и схемы для редактора XML. Для доступа к этим параметрам в меню **Сервис** щелкните пункт **Параметры**, разверните папку **Редактор текстов** , щелкните пункт **XML** , затем — пункт **Разное** .  
@@ -44,7 +44,7 @@ ms.locfileid: "36097325"
  Схемы и определения типов документов (DTD) автоматически загружаются с адресов HTTP. Эта функция использует System.Net в режиме автоматического определения прокси-сервера. Этот флажок выбран по умолчанию.  
   
 ## <a name="outlining"></a>Структура  
- **Включать режим создания структуры при открытии файлов**  
+ **Переходить в режим структурирования после открытия файлов**  
  Включает функцию структурирования при открытии файла. Этот флажок выбран по умолчанию.  
   
 ## <a name="caching"></a>Caching  

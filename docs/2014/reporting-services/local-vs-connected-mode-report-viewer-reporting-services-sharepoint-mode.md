@@ -1,5 +1,5 @@
 ---
-title: Локальный режим и Подключение отчетов в режиме в средстве просмотра отчетов (службы Reporting Services в режиме интеграции с SharePoint) | Документы Microsoft
+title: Локальный режим и Подключенном режиме в средстве просмотра отчетов (службы Reporting Services в режиме интеграции с SharePoint) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a230a9bb-6046-401f-b5e5-53ff6edf2264
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b971bd46283911b81449565e5ad9410912ed456a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1094375d1c911934255878b0e8af6eb7174a761
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157805"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer-reporting-services-in-sharepoint-mode"></a>Локальный режим и Отчеты, созданные в локальном и подключенном режиме в средстве просмотра отчетов (службы Reporting Services в режиме SharePoint)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] отчеты можно настроить для запуска либо в *локальный режим* или *в подключенном режиме*, который использует [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сервера отчетов. Вместо этого можно использовать средство просмотра отчетов для подготовки отчетов напрямую из SharePoint, если модуль обработки данных поддерживает локальный режим составления отчетов. Такой подход называется *локальным режимом*. В предыдущих версиях [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], ферма серверов SharePoint требовала должны быть подключены к [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] отчета, сервер настроен в режиме интеграции с SharePoint таким образом элемент управления просмотром отчетов мог. Данный подход называется *удаленным режимом* или *режимом соединения*.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] отчеты можно настроить для запуска либо в *локальном режиме* или *в подключенном режиме*, который использует [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сервера отчетов. Вместо этого можно использовать средство просмотра отчетов для подготовки отчетов напрямую из SharePoint, если модуль обработки данных поддерживает локальный режим составления отчетов. Такой подход называется *локальным режимом*. В предыдущих версиях [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], на ферме SharePoint требовалось должен быть подключен к [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] просмотром отчетов мог отчета, сервер настроен в режиме интеграции с SharePoint таким образом элемент управления средства просмотра отчетов. Данный подход называется *удаленным режимом* или *режимом соединения*.  
   
- В *локальный режим* имеется не [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сервера отчетов. Необходимо установить [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] надстройки для продуктов SharePoint, но это не [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сервера отчетов является обязательным. В локальном режиме пользователи могут просматривать отчеты, но не имеют доступа к функциям на стороне сервера, например подпискам и предупреждениям об изменении данных.  
+ В *локальном режиме* есть не [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сервера отчетов. Необходимо установить [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] надстройка для продуктов SharePoint, но не [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сервера отчетов является обязательным. В локальном режиме пользователи могут просматривать отчеты, но не имеют доступа к функциям на стороне сервера, например подпискам и предупреждениям об изменении данных.  
   
 ||  
 |-|  
@@ -39,13 +39,13 @@ ms.locfileid: "36101247"
 -   [Настройка локального режима отчетности в SharePoint 2010](#bkmk_local_mode_sharepoint2010)  
   
 ##  <a name="bkmk_local_vs_connected"></a> Сравнение локального режима и режима соединения, поддерживаемые расширения  
- **Локальный режим.** Если у вас есть расширение данных, которое поддерживает локальный режим, средство просмотра отчетов напрямую создает отчеты в SharePoint. В *локальный режим* имеется не [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сервера отчетов. Необходимо установить [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] надстройки для продуктов SharePoint, но это не [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сервера отчетов является обязательным. В локальном режиме пользователи могут просматривать отчеты, но **не** имеют доступа к функциям на стороне сервера, например подпискам и предупреждениям об изменении данных.  
+ **Локальный режим.** Если у вас есть расширение данных, которое поддерживает локальный режим, средство просмотра отчетов напрямую создает отчеты в SharePoint. В *локальном режиме* есть не [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сервера отчетов. Необходимо установить [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] надстройка для продуктов SharePoint, но не [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сервера отчетов является обязательным. В локальном режиме пользователи могут просматривать отчеты, но **не** имеют доступа к функциям на стороне сервера, например подпискам и предупреждениям об изменении данных.  
   
- **Подключенный режим**, который также называется *удаленный режим* требует [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сервера отчетов в режиме интеграции с SharePoint, подключен к ферме SharePoint, чтобы элемент управления просмотром отчетов мог...  
+ **В подключенном режиме**, называемой *удаленном режиме* требует [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сервера отчетов в режиме интеграции с SharePoint, подключен к ферме SharePoint, чтобы элемент управления Report Viewer просмотром отчетов мог...  
   
  Ниже приведен список модулей обработки данных, поддерживающих локальный режим составления отчетов.  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] Модуль составления отчетов Access 2010. Дополнительные сведения о службах доступа см. в статье [Использование служб доступа со службами SQL Reporting Services: установка надстройки SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686).  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Расширение отчетов Access 2010. Дополнительные сведения о службах доступа см. в статье [Использование служб доступа со службами SQL Reporting Services: установка надстройки SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686).  
   
 -   Модуль обработки данных списка служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint. Дополнительные сведения о модуле обработки данных списка SharePoint см. в разделе [источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36101247"
  Дополнительные сведения см. в статьях [Использование служб доступа со службами SQL Reporting Services: установка надстройки SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686) и [Enable-SPSessionStateService](http://technet.microsoft.com/library/ff607857\(v=office.15\).aspx).  
   
 ## <a name="connected-mode"></a>режиме соединения  
- Для получения последних сведений об использовании расширения ADS [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] режиме соединения см. в разделе [отчет служб Access на сайте SharePoint показана ошибка в данных расширения «ADS»](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
+ Последние сведения об использовании расширения ADS в [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] подключенном режиме см. в разделе [отчет служб Access на сайте SharePoint выводит ошибку в данных расширения «ADS»](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
 ## <a name="see-also"></a>См. также  
  [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  

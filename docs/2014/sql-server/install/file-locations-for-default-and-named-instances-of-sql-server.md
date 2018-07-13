@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0b20fee2459dfb9273abe4e43b79ff76fdfe2dfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8e9d6e3ae9596ff87a5d07f4b60dfcc2e7b658ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175439"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server
   Установка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] состоит из одного или нескольких отдельных экземпляров. Как экземпляр по умолчанию, так и именованный экземпляр имеет собственный набор программных файлов и файлов данных, а также набор общих файлов, используемых всеми экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленными на компьютере.  
@@ -95,12 +95,12 @@ ms.locfileid: "36101006"
   
 |Компонент|Путь по умолчанию<sup>1, 2</sup>|Можно настроить<sup>3</sup> или фиксированный путь|  
 |---------------|---------------------------------|--------------------------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] компоненты сервера|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< Идентификатор экземпляра >\|можно настроить|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] файлы данных|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< Идентификатор экземпляра >\|можно настроить|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] сервер|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< Идентификатор экземпляра >\|можно настроить|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] файлы данных|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< Идентификатор экземпляра >\|можно настроить|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сервер отчетов|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS12.\< Идентификатор экземпляра > \Reporting Services\ReportServer\Bin\|можно настроить|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] диспетчер отчетов|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS12.\< Идентификатор экземпляра > \Reporting Services\ReportManager\|фиксированный путь|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] компоненты сервера|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< InstanceID >\|можно настроить|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] файлы данных|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< InstanceID >\|можно настроить|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] сервер|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID >\|можно настроить|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] файлы данных|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID >\|можно настроить|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сервер отчетов|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS12.\< InstanceID > \Reporting Services\ReportServer\Bin\|можно настроить|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] диспетчер отчетов|\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS12.\< InstanceID > \Reporting Services\ReportManager\|фиксированный путь|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Каталог установки > \120\DTS\|можно настроить<sup>4</sup>|  
 |Клиентские компоненты (за исключением bcp.exe и sqlcmd.exe)|\<Каталог установки > \120\Tools\|можно настроить<sup>4</sup>|  
 |Клиентские компоненты (bcp.exe и sqlcmd.exe)|\<Каталог установки>\Client SDK\ODBC\110\Tools\Binn|Фиксированный путь|  
@@ -111,13 +111,13 @@ ms.locfileid: "36101006"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поставщики инструментария WMI|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Общие\|фиксированный путь|  
 |Компоненты, которые разделены между всеми экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Общие\|фиксированный путь|  
   
- <sup>1</sup>убедитесь, что \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ папка защищена ограниченными разрешениями.  
+ <sup>1</sup>убедитесь, что \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ папка была защищена ограниченными разрешениями.  
   
  <sup>2</sup>диском по умолчанию для этих путей является *systemdrive*, обычно диск C.  
   
- <sup>3</sup>пути установки для вложенных компонентов определяются путем установки родительского компонента.  
+ <sup>3</sup>пути установки вложенных компонентов определяются путем установки родительского компонента.  
   
- <sup>4</sup>совместно путь установки [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и клиентских компонентов. Изменение пути установки для одного компонента влечет изменение пути для других компонентов. При последующих установках компоненты устанавливаются в расположение исходной установки.  
+ <sup>4</sup>совместно используется путь установки [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и клиентские компоненты. Изменение пути установки для одного компонента влечет изменение пути для других компонентов. При последующих установках компоненты устанавливаются в расположение исходной установки.  
   
  <sup>5</sup>этот каталог используется всеми экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере. При применении обновления к любому из экземпляров на компьютере все файловые изменения коснутся каждого из них. При добавлении компонентов в существующую конфигурацию невозможно ни изменить расположение ранее установленного компонента, ни указать расположение нового. Необходимо либо установить дополнительные компоненты в каталоги, созданные программой установки, либо удалить продукт и установить его заново.  
   
@@ -126,12 +126,12 @@ ms.locfileid: "36101006"
   
  При задании пути установки во время установки компонентов сервера или файлов данных программа установки использует идентификатор экземпляра в дополнение к заданному положению для программ и файлов данных. Программа установки не пользуется идентификаторами экземпляров для средств и других общих файлов. Идентификатор экземпляра также не используется для программ и файлов данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , но используется для репозитория служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- При указании пути установки для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует этот путь в качестве корневого каталога этой установки для всех папок, относящихся к экземпляру, включая файлы данных SQL. В данном случае, если значение корня «C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< InstanceName > \MSSQL\\«, каталоги, относящиеся к экземпляру, добавляются в конец этого пути.  
+ При указании пути установки для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует этот путь в качестве корневого каталога этой установки для всех папок, относящихся к экземпляру, включая файлы данных SQL. В данном случае, если в качестве корневого «C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< Имя_экземпляра > \MSSQL\\«, относящиеся к экземпляру каталоги добавляются в конец этого пути.  
   
  Поэтому при использовании функции обновления USESYSDB в мастере установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (режим установки с пользовательским интерфейсом) можно попасть в ситуацию, когда продукт окажется установленным в рекурсивной структуре папок. Например \< *SQLProgramFiles*> \MSSQL12\MSSQL\MSSQL10_50\MSSQL\Data\\. Поэтому при использовании функции USESYSDB вместо компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] необходимо указывать путь установки файлов данных SQL.  
   
 > [!NOTE]  
->  Обычно файлы данных можно найти в дочернем каталоге с именем Data. Например, задайте C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< Имя_экземпляра > \ при обновлении указать корневой путь к каталогу данных системных баз данных, тогда файлы данных будут расположены в C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< Имя_экземпляра > \MSSQL\Data.  
+>  Обычно файлы данных можно найти в дочернем каталоге с именем Data. Например, задайте C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< InstanceName > \ при обновлении указать корневой путь к каталогу данных системных баз данных, тогда файлы данных будут расположены в C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< Имя_экземпляра > \MSSQL\Data.  
   
 ## <a name="see-also"></a>См. также  
  [Настройка ядра СУБД — каталоги данных](../../../2014/sql-server/install/database-engine-configuration-data-directories.md)   

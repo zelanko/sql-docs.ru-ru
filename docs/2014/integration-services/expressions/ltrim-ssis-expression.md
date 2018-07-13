@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - leading blanks
 - LTRIM function
@@ -16,13 +16,13 @@ ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1176a60550edc22385e8518ab33e6a1f53e38180
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57270915299162ce45558dda7f8c44d56520082e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205734"
 ---
 # <a name="ltrim-ssis-expression"></a>LTRIM (выражение служб SSIS)
   Возвращает символьное выражение после удаления начальных пробелов.  

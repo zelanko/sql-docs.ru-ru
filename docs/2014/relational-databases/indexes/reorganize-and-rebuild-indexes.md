@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.indexproperties.fragmentation.f1
 - sql12.swb.index.reorg.f1
@@ -31,15 +30,15 @@ helpviewer_keywords:
 - clustered indexes, defragmenting
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 caps.latest.revision: 64
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 169062c76f7b0f557542ce54a64468931b1ca0a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 739d358cf237ea2158c20951255476680a799d4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168745"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Реорганизация и перестроение индексов
   В этом разделе описывается реорганизация или перестроение фрагментированного индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] автоматически поддерживает состояние индексов при выполнении операций вставки, обновления или удаления в отношении базовых данных. Со временем эти изменения могут привести к тому, что данные в индексе окажутся разбросанными по базе данных (фрагментированными). Фрагментация имеет место в тех случаях, когда в индексах содержатся страницы, для которых логический порядок, основанный на значении ключа, не совпадает с физическим порядком в файле данных. Значительно фрагментированные индексы могут серьезно снижать производительность запросов и служить причиной замедления откликов приложения.  

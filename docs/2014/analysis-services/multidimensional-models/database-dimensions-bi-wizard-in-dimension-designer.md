@@ -1,5 +1,5 @@
 ---
-title: Запуск мастера бизнес-аналитики в конструкторе измерений | Документы Microsoft
+title: Запуск мастера бизнес-аналитики в конструкторе измерений | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Wizard
 ms.assetid: d765c89e-9512-40fb-984a-8200c2541df6
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d1c4f381882bd1d4cdb3457208a0ca6fe02eb35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb479f01c315a4e8fd6d83ae687610566147b444
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163555"
 ---
 # <a name="start-the-business-intelligence-wizard-in-dimension-designer"></a>Запуск мастера бизнес-аналитики в конструкторе измерений
   В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создаются операторы пользовательской свертки и нестандартные формулы элементов, а также настраиваются измерения для обратной записи с использованием мастера бизнес-аналитики или конструктора измерений. Мастер бизнес-аналитики можно запустить из обозревателя решений или из конструктора кубов в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Доступ к конструктору измерений можно получить из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

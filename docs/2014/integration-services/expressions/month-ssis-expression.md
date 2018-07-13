@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], MONTH
 - MONTH function
@@ -16,13 +16,13 @@ ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3208fbea606a066d5f1a2e9fdf566cb907267200
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ac7362079175711c7027919abccf246670497545
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173085"
 ---
 # <a name="month-ssis-expression"></a>MONTH (выражение служб SSIS)
   Возвращает целое число, представляющее месяц указанной даты.  
@@ -71,8 +71,8 @@ MONTH(GETDATE())
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Функция DATEADD &#40;выражение служб SSIS&#41;](dateadd-ssis-expression.md)   
- [Функция DATEDIFF &#40;выражение служб SSIS&#41;](datediff-ssis-expression.md)   
+ [DATEADD &#40;выражение служб SSIS&#41;](dateadd-ssis-expression.md)   
+ [DATEDIFF &#40;выражение служб SSIS&#41;](datediff-ssis-expression.md)   
  [DATEPART (выражение служб SSIS)](datepart-ssis-expression.md)   
  [DAY (выражение служб SSIS)](day-ssis-expression.md)   
  [YEAR (выражение служб SSIS)](year-ssis-expression.md)   

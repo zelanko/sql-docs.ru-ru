@@ -1,5 +1,5 @@
 ---
-title: Изменить элемент (XMLA) | Документы Microsoft
+title: Изменить элемент (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Alter command
 ms.assetid: 84e58385-c9ba-48fa-a867-94d35b777a56
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5ea2c3ed3105c66b0c0848138acb5941978dd9bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e13819d301af842eb2094d7b6ad3367cde424c72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192418"
 ---
 # <a name="alter-element-xmla"></a>Элемент Alter (XML для аналитики)
   Содержит элементы языка сценариев служб Analysis Services (ASSL), используемые методом [Execute](../xml-elements-methods-execute.md) для изменения объектов в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -69,11 +69,11 @@ ms.locfileid: "36100704"
 |attribute|Описание|  
 |---------------|-----------------|  
 |AllowCreate|Необязательный атрибут типа `Boolean`. Показывает, необходимо ли создавать объекты, определенные в команде `Alter`, если их не существует.<br /><br /> Если установлено значение true, то объекты, определенные в элементе `ObjectDefinition`, будут созданы экземпляром служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] (в том случае, если они не существуют). Другими словами, если в экземпляре не существует нужных объектов, команда `Alter` обрабатывается точно так же, как и команда `Create`. <br /><br /> Если для этого атрибута не было задано значение или было задано значение `false`, то в том случае, если объектов не существует, будет возвращена ошибка.|  
-|ObjectExpansion|Необязательный атрибут типа `Enum`. Определяет масштаб изменений, которые будут произведены методом `Execute`.<br /><br /> Если значение *ObjectProperties*, `ObjectDefinition` должен содержать только полное описание основной объект должен быть изменен, включающее подчиненных ему второстепенных объектов. Подчиненные главные объекты изменяемого объекта затронуты не будут. **Примечание:** при использовании *ObjectProperties* с [ClrAssembly](../../scripting/data-type/assembly-data-type-assl.md) тип данных [данные](../../scripting/objects/data-element-assl.md) элемент связанного [ ClrAssemblyFile](../../scripting/data-type/clrassemblyfile-data-type-assl.md) необходимо указать типы данных. Если параметр не указан, то `ClrAssembly` использует существующие файлы. <br /><br /> Если значение *ExpandFull*, `ObjectDefinition` должен содержать не только определение объекта должен быть изменен, но также определения всех главных объектов, являющихся его потомками объекта должен быть изменен. **Примечание:** *ExpandFull* параметр не может использоваться с [сервера](../../scripting/objects/server-element-assl.md) элемента.|  
+|ObjectExpansion|Необязательный атрибут типа `Enum`. Определяет масштаб изменений, которые будут произведены методом `Execute`.<br /><br /> Если значение *ObjectProperties*, `ObjectDefinition` элемент должен содержать только полное описание основного объекта, который должен быть изменен, включая подчиненные второстепенных объектов. Подчиненные главные объекты изменяемого объекта затронуты не будут. **Примечание:** при использовании *ObjectProperties* параметра [ClrAssembly](../../scripting/data-type/assembly-data-type-assl.md) тип данных, [данных](../../scripting/objects/data-element-assl.md) элемент связанного [ ClrAssemblyFile](../../scripting/data-type/clrassemblyfile-data-type-assl.md) необходимо указать типы данных. Если параметр не указан, то `ClrAssembly` использует существующие файлы. <br /><br /> Если значение *ExpandFull*, `ObjectDefinition` элемент должен содержать не только определение изменяемого объекта, который должен быть изменен, но и определения всех главных объектов, являющихся его потомками объекта, который должен быть изменен. **Примечание:** *ExpandFull* нельзя использовать с [Server](../../scripting/objects/server-element-assl.md) элемент.|  
 |Область действия|Необязательный атрибут типа `Enum`. Определяет срок жизни объектов, определенных в элементе `ObjectDefinition`.<br /><br /> Если значение *сеанса*, объекты, определенные в `ObjectDefinition` элемент существует только в течение сеанса XMLA. **Примечание:** при использовании *сеанса* параметр `ObjectDefinition` элемент может содержать только [измерения](../../scripting/objects/dimension-element-assl.md), [куба](../../scripting/objects/cube-element-assl.md), или [MiningModel ](../../scripting/objects/miningmodel-element-assl.md) Элементы языка ASSL. <br /><br /> Если этот атрибут опускается, объекты, определенные в элементе `ObjectDefinition`, сохраняются в экземпляре служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
   
 ## <a name="remarks"></a>Примечания  
- Каждый `Alter` команда изменяет определение одного главного объекта в родительский объект, определяемый [ParentObject](../xml-elements-properties/parentobject-element-xmla.md) элемента.  
+ Каждый `Alter` команда изменяет определение одного главного объекта, подчиняющегося родительскому объекту, заданному по [ParentObject](../xml-elements-properties/parentobject-element-xmla.md) элемент.  
   
 ## <a name="see-also"></a>См. также  
  [Команды &#40;XML для Аналитики&#41;](xml-elements-commands.md)  

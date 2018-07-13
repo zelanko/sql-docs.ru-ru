@@ -1,5 +1,5 @@
 ---
-title: Элемент DataSourceView (XML для Аналитики) | Документы Microsoft
+title: Элемент DataSourceView (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DataSourceView element
 ms.assetid: c4a4360f-7342-484b-bac1-0a247e8f279d
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2492232f892dd9f02b84bb50f5ddb7a4415c60e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 7f230cf653a6435c7f9bb541c6e3cb39615efe42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100278"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211814"
 ---
 # <a name="datasourceview-element-xmla"></a>Элемент DataSourceView (XML для аналитики)
-  Содержит представление источника данных вне строки, которые привязки для родительского [пакета](../xml-elements-commands/batch-element-xmla.md) или [процесс](../xml-elements-commands/process-element-xmla.md) элемента.  
+  Содержит привязку для родительского элемента к представлению источника данных вне строки [пакета](../xml-elements-commands/batch-element-xmla.md) или [процесс](../xml-elements-commands/process-element-xmla.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -67,9 +67,9 @@ ms.locfileid: "36100278"
 |Дочерние элементы|[DatabaseID](id-element-xmla.md), [DataSourceViewID](../../scripting/properties/id-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- `DataSourceView` Элемент представляет привязку вне строки в представлении источника данных, используемые `Batch` или `Process` для временного переопределения привязки для представления источника данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объектов обрабатываемых командой.  
+ `DataSourceView` Представляет собой вне строки привязку к представлению источника данных, используемые `Batch` или `Process` для временного переопределения привязки для представления источников данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объектов обрабатываемых командой.  
   
- Дополнительные сведения о ожидания привязок см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Дополнительные сведения о привязках вне строки, см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)  

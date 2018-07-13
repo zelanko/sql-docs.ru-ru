@@ -1,5 +1,5 @@
 ---
-title: Изображение диалогового окна свойств размера (построитель отчетов и службы SSRS) | Документы Microsoft
+title: Изображение диалоговое окно «Свойства», размер (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10054"
 - sql12.rtp.rptdesigner.pictureproperties.size.f1
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ff908363c05e9e2ccdcc5da6595f5b962540417e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20e2ee2d9669202a946fb0711b17c5f5f27cf492
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179591"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Диалоговое окно «Свойства изображения» — «Размер» (построитель отчетов и SSRS)
   Выберите вкладку **Размер** в диалоговом окне **Свойства изображения** , чтобы отформатировать размер изображений, отображаемых в поле или в области конструирования, либо откорректировать величину дополнительного пространства между границей ячейки или текстового поля и рисунком или значением, содержащимися в ячейке или текстовом поле.  
@@ -37,7 +37,7 @@ ms.locfileid: "36099732"
  **Пропорционально**  
  Изменяет размер изображения пропорционально высоте и ширине ячейки или текстового поля.  
   
- **Клип**  
+ **Клипов**  
  Выводит изображение, начиная от верхнего левого угла изображения и заканчивая высотой и шириной ячейки или текстового поля. Границы изображения могут сжиматься или расширяться в целях подгонки к изображению. Если изображение крупнее, чем размер ячейки или текстового поля, будет показана только часть изображения.  
   
  **Слева**  
@@ -49,13 +49,13 @@ ms.locfileid: "36099732"
  **Top**  
  Укажите размер внутреннего отступа (промежутка) между значением, отображаемым в ячейке, и ее правым краем.  
   
- **Вниз**  
+ **Снизу**  
  Укажите размер внутреннего отступа (промежутка) между значением, отображаемым в ячейке, и ее правым краем.  
   
 ## <a name="see-also"></a>См. также  
- [Изображение диалогового окна свойств Общие &#40;отчетов построителя отчетов и службы SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [Изображение диалогового окна «Общие» свойства &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Образы &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [Справка построителя отчетов по диалоговым окнам, панелей и мастеров](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Образы &#40;построитель отчетов и службы SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

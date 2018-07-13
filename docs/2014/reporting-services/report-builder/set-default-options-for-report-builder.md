@@ -1,5 +1,5 @@
 ---
-title: Построитель отчетов параметры диалогового окна, параметры (построитель отчетов) | Документы Microsoft
+title: Построитель отчетов параметры в диалоговом окне параметров (построитель отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7ae2490cf5dcdc241120c683994e7f46bcf0b6c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 49449391408701c16b7b6da9106913a24d084d66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218844"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Диалоговое окно «Параметры построителя отчетов» — «Настройки» (построитель отчетов)
-  Нажмите кнопку **построитель** и щелкните **параметры** задание параметров для отображения последних файлов и подключений. Можно также изменить сервер отчетов по умолчанию или добавить его, если сервер по умолчанию не задан.  
+  Нажмите кнопку **построитель отчетов** а затем нажмите кнопку **параметры** для задания параметров для отображения последних файлов и подключений. Можно также изменить сервер отчетов по умолчанию или добавить его, если сервер по умолчанию не задан.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
  **По умолчанию использовать этот сервер отчетов или сайт SharePoint**  
@@ -50,6 +50,6 @@ ms.locfileid: "36099947"
  Позволяет очистить текущие списки последних сайтов и серверов, общих наборов данных, соединений с общими источниками данных и документов.  
   
 ## <a name="see-also"></a>См. также  
- [Справка построителя отчетов по диалоговым окнам, панелей и мастеров](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

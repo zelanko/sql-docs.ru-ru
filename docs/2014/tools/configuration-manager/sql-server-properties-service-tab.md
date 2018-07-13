@@ -1,5 +1,5 @@
 ---
-title: Свойства SQL Server (вкладка «службы») | Документы Microsoft
+title: Свойства SQL Server (вкладка «службы») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6aa300ef61dcfaca44ea8012395e6b4e2e020069
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4d0bc655df6b1c822245a1b4daeb68184a9f3658
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149055"
 ---
 # <a name="sql-server-properties-service-tab"></a>Свойства SQL Server (вкладка «Службы»)
   Используйте вкладку **Службы**в диалоговом окне **Свойства MSSQLSERVER** , чтобы просмотреть или указать следующие параметры.  

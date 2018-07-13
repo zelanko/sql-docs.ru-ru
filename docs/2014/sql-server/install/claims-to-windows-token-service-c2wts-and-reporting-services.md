@@ -1,5 +1,5 @@
 ---
-title: Служба claims to Windows Token Service (C2WTS) и службы Reporting Services | Документы Microsoft
+title: Служба claims to Windows Token Service (C2WTS) и службы Reporting Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - c2wts.exe.config
 - SharePoint mode
@@ -18,16 +18,16 @@ ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 479be89681f7c34558c5a7e89d54023feb110d60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a44f0beff9bd3351265caca0ee9490a7c6aeeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278190"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Служба Claims to Windows Token Service (C2WTS) и службы Reporting Services
-  Служба SharePoint Claims to Windows Token Service (c2WTS) является обязательным при использовании [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режиме SharePoint, если вы хотите использовать проверку подлинности windows для источников данных, которые находятся за пределами фермы SharePoint. Это верно, даже если пользователь получает доступ к источникам данных с использованием проверки подлинности Windows, поскольку для связи между клиентским веб-интерфейсом и общей службой [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] всегда используется проверка подлинности Claims.  
+  SharePoint Claims to Windows Token Service (c2WTS) является обязательным при использовании [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режима SharePoint, если вы хотите использовать проверку подлинности windows для источников данных, которые находятся за пределами фермы SharePoint. Это верно, даже если пользователь получает доступ к источникам данных с использованием проверки подлинности Windows, поскольку для связи между клиентским веб-интерфейсом и общей службой [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] всегда используется проверка подлинности Claims.  
   
  Служба c2WTS необходима, даже если источники данных находятся на одном компьютере с общей службой. Однако в этом случае ограниченное делегирование не требуется.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36096346"
   
     -   Вход в систему в качестве службы.  
   
-     Учетную запись, используемую для службы c2WTS, также должна быть настроена для ограниченного делегирования с переводом протоколов и требуются разрешения на делегирование для служб, он необходим для взаимодействия с (т. е. ядро SQL Server, SQL Server Analysis Services). Для настройки делегирования можно использовать оснастку «Active Directory-пользователи и компьютеры».  
+     Учетной записи, используемой для службы c2WTS, также должна быть настроена для ограниченного делегирования с переводом протоколов и требуются разрешения на делегирование службам, он необходим для взаимодействия с (т. е. ядро SQL Server, SQL Server Analysis Services). Для настройки делегирования можно использовать оснастку «Active Directory-пользователи и компьютеры».  
   
     1.  Щелкните правой кнопкой мыши каждую учетную запись службы и откройте диалоговое окно свойств. В диалоговом окне перейдите на вкладку **Делегирование** .  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36096346"
   
 2.  Настройка параметра AllowedCallers службы c2WTS.  
   
-     службы c2WTS требуется удостоверения «вызывающим объектам», явно перечисленные в файле конфигурации **c2wtshost.exe.config**. c2WTS принимает запросы от всех пользователей, прошедших проверку подлинности в системе только если она настроена для этого. В этом случае вызывающим является группа Windows WSS_WPG. Файл c2wtshost.exe.confi хранится в следующем расположении:  
+     службы c2WTS требуется удостоверения «вызывающим объектам», явно перечисленные в файле конфигурации **c2wtshost.exe.config**. c2WTS принимает запросы от всех пользователей, прошедших проверку подлинности в системе только если он настроен для этого. В этом случае вызывающим является группа Windows WSS_WPG. Файл c2wtshost.exe.confi хранится в следующем расположении:  
   
      **Foundation\v3.5\c2wtshost.exe.config \Program Files\Windows удостоверений**  
   
@@ -104,6 +104,6 @@ ms.locfileid: "36096346"
   
 ## <a name="see-also"></a>См. также  
  [Утверждения to Windows Token Service (c2WTS) (Обзорhttp://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
- [Общий обзор проверки подлинности Kerberos для продуктов Microsoft SharePoint 2010)http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)  
+ [Обзор проверки подлинности Kerberos для продуктов Microsoft SharePoint 2010)http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)  
   
   

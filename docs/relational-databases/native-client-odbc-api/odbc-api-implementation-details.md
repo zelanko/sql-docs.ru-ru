@@ -1,12 +1,12 @@
 ---
-title: Сведения о реализации API ODBC | Документы Microsoft
+title: Сведения о реализации API ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 19fa15ac8d92d701bb6558e48d5052f671c2eae0
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0f544a1a3f94c567d374418b077136f92f57a32d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696495"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429603"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35696495"
   
  Справочник по драйверу ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не содержит описания всех вызовов функций ODBC. Обсуждаются только те функции, параметры которых специфичны для драйвера или для поведения при использовании с драйвером ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует требованиям спецификации ODBC 3.51. Для получения полной справки по ODBC 3.51 необходимо загрузить Microsoft SDK компонентов доступа к данных из [Центр разработчиков хранилищ и доступа к данным](http://go.microsoft.com/fwlink?linkid=4173), или просмотреть [справочнике программиста ODBC](http://go.microsoft.com/fwlink/?LinkId=45250) online.  
+ Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует требованиям спецификации ODBC 3.51. Для получения полной справки по ODBC 3.51 необходимо загрузить Microsoft Data Access компоненты SDK из [Центр разработчиков хранилищ и доступа к данным](http://go.microsoft.com/fwlink?linkid=4173), или просмотреть [Справочник по программированию ODBC](http://go.microsoft.com/fwlink/?LinkId=45250) online.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   

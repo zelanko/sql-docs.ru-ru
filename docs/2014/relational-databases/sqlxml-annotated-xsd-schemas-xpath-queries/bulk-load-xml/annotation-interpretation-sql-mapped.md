@@ -1,5 +1,5 @@
 ---
-title: 'SQL: mapped (SQLXML 4.0) | Документы Microsoft'
+title: 'SQL: mapped (SQLXML 4.0) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 820e30a4ac82cb54bd76d29dd689f5ddb86a58b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: dfac8ddb86223ea64bcc812323170e9a02339ee5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177861"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped, заметка (SQLXML 4.0)
-  Массовая загрузка XML обрабатывает `sql:mapped` заметки в схеме XSD должным образом — то есть, если схема сопоставления указывает `sql:mapped="false"` для любого элемента или атрибута, Массовая загрузка XML не пытается сохранить связанные данные в соответствующем столбце.  
+  Массовая загрузка XML обрабатывает `sql:mapped` заметки в схеме XSD должным образом — то есть, если схема сопоставления задает `sql:mapped="false"` для любого элемента или атрибута, Массовая загрузка XML не пытается сохранить связанные данные в соответствующем столбце.  
   
  Операция массовой загрузки XML пропускает несопоставляемые элементы и атрибуты (потому что они не описаны в схеме или помечены в схеме XSD заметкой `sql:mapped="false"`). Все несопоставляемые данные сохраняются в столбце переполнения, если он указан с помощью элемента `sql:overflow-field`.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36099955"
 </xsd:schema>  
 ```  
   
- Поскольку **HomePhone** атрибут задает `sql:mapped="false"`, Массовая загрузка XML не сопоставляет этот атрибут в соответствующий столбец. Схема XSD определяется столбец переполнения (**OverflowColumn**) в который Массовая загрузка сохраняет невостребованные данные.  
+ Так как **HomePhone** атрибут задает `sql:mapped="false"`, Массовая загрузка XML не сопоставляет этот атрибут в соответствующий столбец. В схеме XSD определяется столбец переполнения (**OverflowColumn**) в который Массовая загрузка сохраняет невостребованные данные.  
   
 ### <a name="to-test-a-working-sample"></a>Проверка рабочего образца  
   

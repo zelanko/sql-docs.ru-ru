@@ -1,5 +1,5 @@
 ---
-title: Свойства TCP-IP (вкладка IP адресов) | Документы Microsoft
+title: Свойства TCP-IP (IP-адрес вкладка "адреса") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8325999f00f7b5b84bc01d1de188802c27dba7b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cb09573cd77f74044647925bd43310223c4ce67e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187599"
 ---
-# <a name="tcp-ip-properties-ip-addresses-tab"></a>Свойства TCP-IP (вкладка IP адресов)
+# <a name="tcp-ip-properties-ip-addresses-tab"></a>Свойства TCP-IP (IP-адрес вкладка "адреса")
   Чтобы настроить параметры протокола TCP/IP для определенного IP-адреса, используйте диалоговое окно **Свойства TCP/IP (вкладка "IP-адреса")** . Для всех адресов одновременно посредством выбора пункта **Все IP** можно настроить только **Динамические TCP-порты** и **TCP-порт**.  
   
  Изменения вступят в силу после перезапуска [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сведения о запуске и остановке службы «SQL Server, браузер» см. в разделе «Как запустить и остановить службу "SQL Server, браузер"» электронной документации по SQL Server.  
@@ -58,7 +58,7 @@ ms.locfileid: "36099919"
  Для настройки прослушивания нескольких портов на одном IP-адресе параметру **Прослушивать все** должно быть присвоено значение **Нет**на вкладке **Протокол** диалогового окна **Свойства TCP/IP** . Дополнительные сведения см. в разделе «Как настроить компонент Database Engine на прослушивание нескольких TCP-портов» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Добавление или удаление IP-адресов  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager отображает IP-адресов, которые были доступны во время [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был установлен. Доступные IP-адреса могут измениться при добавлении или удалении сетевых адаптеров, после истечения срока действия динамически назначаемых IP-адресов, при перестройке сетевой структуры или при изменении физического местоположения компьютера, например в случае, когда переносной компьютер подключается к сети в другом здании. Для изменения IP-адреса необходимо изменить поле **IP-адрес** и перезапустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager отображает IP-адреса, которые были доступны во время [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был установлен. Доступные IP-адреса могут измениться при добавлении или удалении сетевых адаптеров, после истечения срока действия динамически назначаемых IP-адресов, при перестройке сетевой структуры или при изменении физического местоположения компьютера, например в случае, когда переносной компьютер подключается к сети в другом здании. Для изменения IP-адреса необходимо изменить поле **IP-адрес** и перезапустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также  
  [Выбор сетевого протокола](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   

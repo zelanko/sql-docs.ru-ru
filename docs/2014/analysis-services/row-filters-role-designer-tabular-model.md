@@ -1,5 +1,5 @@
 ---
-title: Фильтры строк (роль конструктора)(Tabular Model) | Документы Microsoft
+title: Фильтры строк (роль конструктора)(Tabular Model) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.roledesignerdialog.rowfilters.imbi.f1
 ms.assetid: 7f7a6759-82b8-44d9-9cca-a61ba214eb22
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3535382298512d9feca59af13518838188abad59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 269ad2f2983db72aa49d5617466ae54884ec26b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155321"
 ---
 # <a name="row-filters-role-designertabular-model"></a>Фильтры строк (конструктор ролей, табличная модель)
   На странице **Фильтры строк** конструктора ролей можно определить фильтры уровня строк для соответствующей роли. Фильтры строк можно определять только для ролей с разрешениями на чтение, а также на чтение и обработку.  
@@ -36,7 +36,7 @@ ms.locfileid: "36101614"
  **DAX-фильтр**  
  DAX-формула, значением которой является логическое условие.  
   
- **DAX-фильтр — \<tablename >**  
+ **DAX-фильтр — \<имя_таблицы >**  
  Введите DAX-формулу, значением которой является логическое условие.  
   
 ## <a name="see-also"></a>См. также  

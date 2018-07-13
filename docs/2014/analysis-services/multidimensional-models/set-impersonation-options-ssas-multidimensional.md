@@ -1,5 +1,5 @@
 ---
-title: Задание параметров олицетворения (службы SSAS — многомерные) | Документы Microsoft
+title: Задание параметров олицетворения (службы SSAS — многомерные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.impersonationinfo.f1
 helpviewer_keywords:
 - Impersonation Information dialog box
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58fa3381106f354d810ccbf6b6253ebb20bb55bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c41bd2f5f17ac90053f397b6bfd73cf4b346fd6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176991"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Задание параметров олицетворения (службы SSAS — многомерные)
   При создании объекта `data source` в модели служб Analysis Services одним из параметров, которые необходимо настроить, является параметр олицетворения. Этот параметр определяет, действуют ли службы Analysis Services под удостоверением определенной учетной записи пользователя Windows при выполнении локальных операций, связанных с соединением, например загрузки поставщика данных OLE DB или разрешения данных профиля пользователя в средах, поддерживающих перемещаемые профили.  
@@ -53,7 +53,7 @@ ms.locfileid: "36100717"
  Все параметры доступны в диалоговом окне, но не обязательно используются для каждого сценария. Следующие сведения помогут определить наиболее подходящий вариант для вашего сценария.  
   
  **Использовать указанные имя пользователя и пароль**  
- Выберите этот параметр, чтобы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объект использовать учетные данные учетной записи пользователя Windows, заданные в следующем формате:  *\<имя домена >***\\***\<пользователя Имя учетной записи >*.  
+ Выберите этот параметр, чтобы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объект использовать учетные данные учетной записи пользователя Windows, заданные в следующем формате:  *\<доменное имя >***\\***\<пользователя Имя учетной записи >*.  
   
  Выберите этот параметр, чтобы использовать выделенное удостоверение пользователя Windows с наименьшими правами доступа, созданное специально для обеспечения доступа к данным. Например, если необходимо регулярно создавать учетную запись общего назначения для получения данных из отчетов, можно указать эту учетную запись здесь.  
   

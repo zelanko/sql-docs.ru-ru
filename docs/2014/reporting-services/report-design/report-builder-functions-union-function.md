@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 46d0ee10acb57e4553c176be34572fc7f6dd02d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 954da454e2953f14cf61f1d49794829c385a6df3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206694"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Функция Union (построитель отчетов и службы SSRS)
   Возвращает объединение всех числовых значений, отличных от NULL, заданных выражением, вычисляемым для данной области.  
@@ -36,7 +36,7 @@ Union(expression, scope, recursive)
   
 #### <a name="parameters"></a>Параметры  
  *expression*  
- (`SqlGeometry` или `SqlGeography`) выражение, к которому применяется статистическая обработка.  
+ (`SqlGeometry` или `SqlGeography`) выражение, к которому статистическая обработка.  
   
  *область*  
  (`String`) Необязательно. Имя набора данных, группы или области данных, содержащих элементы отчета, к которым применяется агрегатная функция. Если аргумент *scope* не задан, используется текущая область.  
@@ -45,7 +45,7 @@ Union(expression, scope, recursive)
  (**Перечислимый тип**) Необязательно. `Simple` (по умолчанию) или `RdlRecursive`. Указывает, нужно ли выполнять статистическую обработку рекурсивно.  
   
 ## <a name="return"></a>Возвращает  
- Возвращает пространственный объект, или `SqlGeometry`, или `SqlGeography`, в зависимости от типа выражения. Дополнительные сведения о `SqlGeometry` и `SqlGeography` пространственных типов данных, в разделе [Общие сведения о типах пространственных данных](../../relational-databases/spatial/spatial-data-types-overview.md).  
+ Возвращает пространственный объект, или `SqlGeometry`, или `SqlGeography`, в зависимости от типа выражения. Дополнительные сведения о `SqlGeometry` и `SqlGeography` пространственных типов данных, см. в разделе [Общие сведения о типах пространственных данных](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
 ## <a name="remarks"></a>Примечания  
  Данные в наборе, указанном в выражении, должны иметь один и тот же тип.  
@@ -58,7 +58,7 @@ Union(expression, scope, recursive)
   
 -   Параметр*Scope* для вложенных агрегатов не может быть именем набора данных.  
   
--   *Выражение* не должны содержать `First`, `Last`, `Previous`, или `RunningValue` функции.  
+-   *Выражение* не может содержать `First`, `Last`, `Previous`, или `RunningValue` функции.  
   
 -   *Expression* не может содержать вложенные агрегаты, в которых указан параметр *recursive*.  
   
@@ -67,7 +67,7 @@ Union(expression, scope, recursive)
  Дополнительные сведения о рекурсивных агрегатах см. в разделе [Создание групп рекурсивной иерархии (построитель отчетов и службы SSRS)](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 ## <a name="example"></a>Пример  
- В следующей таблице показаны примеры `SqlGeometry` выражения и `Union` результирующих выражений в формате WKT (Well Known Text) для пространственных данных.  
+ Ниже приведены примеры `SqlGeometry` выражения и `Union` результирующего выражения в формате WKT (Well Known Text) для пространственных данных.  
   
 |Поле с пространственными данными|Пример|Результат Union|  
 |-----------------------------|-------------|------------------|  
@@ -82,9 +82,9 @@ Union(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Выражения используются в отчетах &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
- [Область выражения для итогов, статистических функций и встроенных коллекций &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

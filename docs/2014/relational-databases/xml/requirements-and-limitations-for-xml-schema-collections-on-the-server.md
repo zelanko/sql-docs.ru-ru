@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - identifiers [XML schema collections]
 - XML schema collections [SQL Server], limitations
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 caps.latest.revision: 83
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2dbe95deb602de17ccc43b55bcda438a61db8973
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 9840028891ce520dbaa873d517228eb4147d5ad2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278880"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Требования и ограничения для коллекций XML-схем на сервере
-  Проверка (XSD) языка определения схемы XML имеет некоторые ограничения, касающиеся столбцов SQL, использующих `xml` тип данных. В следующей таблице содержатся подробные сведения об этих ограничениях и рекомендации по изменению XSD-схемы, таким образом, чтобы обеспечить возможность работы с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Темы данного раздела содержат дополнительные сведения об определенных ограничениях и рекомендации по работе с ними.  
+  Проверка языка определения схемы XML имеет некоторые ограничения правильности столбцов SQL, использующих `xml` тип данных. В следующей таблице содержатся подробные сведения об этих ограничениях и рекомендации по изменению XSD-схемы, таким образом, чтобы обеспечить возможность работы с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Темы данного раздела содержат дополнительные сведения об определенных ограничениях и рекомендации по работе с ними.  
   
 |Элемент|Ограничение|  
 |----------|----------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "36097461"
 |Условия исчерпания памяти|В работе с большими коллекциями XML-схем может наступить условие исчерпания памяти. Решения этой проблемы см. в разделе [Большие коллекции XML-схем и условия нехватки памяти](large-xml-schema-collections-and-out-of-memory-conditions.md).|  
 |Повторяющиеся значения|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отклоняет схемы, атрибуты block или final которых содержат повторяющиеся значения, например "restriction restriction" и "extension extension".|  
 |Идентификаторы компонента схемы|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ограничивает идентификаторы компонентов схемы до максимальной длины в 1000 символов Юникода. Кроме того, в идентификаторах не поддерживаются суррогатные пары символов.|  
-|Сведения часового пояса|В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях, сведения о часовом поясе полностью поддерживаются для `xs:date`, `xs:time`, и `xs:dateTime` значения для проверки схемы XML. В режиме обратной совместимости с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] сведения о часовом поясе всегда приводятся в формат UTC (время по Гринвичу). Для элементов типа `dateTime` сервер преобразует и вернет указанное время во время по Гринвичу, используя величину смещения (-05:00).|  
+|Сведения часового пояса|В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий, сведения о часовом поясе полностью поддерживаются для `xs:date`, `xs:time`, и `xs:dateTime` значения для проверки схемы XML. В режиме обратной совместимости с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] сведения о часовом поясе всегда приводятся в формат UTC (время по Гринвичу). Для элементов типа `dateTime` сервер преобразует и вернет указанное время во время по Гринвичу, используя величину смещения (-05:00).|  
 |Типы объединения|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает ограничения от типов объединений.|  
 |Десятичные числа переменной точности|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает десятичные числа переменной точности. Тип **xs:decimal** представляет десятичные числа произвольной точности. Обработчики XML, соответствующие минимальным требованиям, должны поддерживать десятичные числа как минимум `totalDigits=18`знаков. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает количество знаков `totalDigits=38,` , но ограничивает число знаков после запятой десятью. Все экземпляры значений **xs:decimal** внутренне представляются сервером в виде числового типа SQL (38, 10).|  
   

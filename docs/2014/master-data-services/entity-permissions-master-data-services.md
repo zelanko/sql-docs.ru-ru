@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], permissions
 - permissions [Master Data Services], entities
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c27e757bc7e24434611b809ae884f9a243d83c2a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9ae8d8a9784beb5169305837e657eaa7956aa9d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160975"
 ---
 # <a name="entity-permissions-master-data-services"></a>Разрешения сущности (службы Master Data Services)
   Разрешения сущности применяются:  
@@ -45,7 +45,7 @@ ms.locfileid: "36100223"
 |**Запретить**|Сущность не отображается.|  
   
 ## <a name="see-also"></a>См. также  
- [Назначение разрешения объекта модели &#40;службы Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
+ [Назначение разрешений объекта модели &#40;службы Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
  [Разрешения объекта модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Сущности (службы Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)  
   

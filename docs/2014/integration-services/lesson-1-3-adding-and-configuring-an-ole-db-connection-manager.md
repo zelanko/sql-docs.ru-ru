@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 caps.latest.revision: 19
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4246a4ae586ad6fc526ef618e0a249706d0baa3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ee2567823ff401df3d1b0b9c64af88d8d5435da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240924"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>Шаг 3. Добавление и настройка диспетчера соединений OLE DB
   После добавления диспетчера соединений с неструктурированными файлами для подключения к источникам данных предстоит добавить диспетчер соединений OLE DB для соединения с назначением. Диспетчер соединений OLE DB позволяет пакету получать данные из любого источника данных, совместимого с OLE DB, а также загружать данные в такой источник данных. Используя диспетчер соединений OLE DB, можно указать для соединения сервер, метод проверки подлинности и базу данных по умолчанию.  
@@ -38,7 +38,7 @@ ms.locfileid: "36096888"
   
 4.  Убедитесь, что в группе **Вход на сервер** выбран вариант **Использовать проверку подлинности Windows** .  
   
-5.  В **подключение к базе данных** в **выберите или введите имя базы данных** введите или выберите `AdventureWorksDW2012`.  
+5.  В **соединение с базой данных** в группе **выберите или введите имя базы данных** введите или выберите `AdventureWorksDW2012`.  
   
 6.  Нажмите кнопку **Проверить соединение** , чтобы убедиться, что параметры соединения указаны правильно.  
   

@@ -5,23 +5,21 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ole
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE Automation [SQL Server], examples
 ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
-caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 147df3898c87abb02b2fedcb14caad3db07fc55b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 66cdc46e024655dbb7c4409368fbb91763f5f945
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086868"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413793"
 ---
 # <a name="ole-automation-sample-script"></a>Пример скрипта OLE-автоматизации
   В этом разделе содержится пример пакета инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , который использует хранимые процедуры OLE-автоматизации для создания и использования объекта SQLServer языка SQL-DMO в логическом экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Части приведенного кода используются в качестве примеров в разделах справки по системным хранимым процедурам OLE-автоматизации.  

@@ -1,5 +1,5 @@
 ---
-title: Соединение с файлом Microsoft Excel (SSAS) | Документы Microsoft
+title: Соединение с файлом Microsoft Excel (SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connexcelfile.f1
 ms.assetid: 126f7d6b-d270-40e7-b23e-8d114f87065b
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48de9fd006c3918a23227a097743a95e138b577e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 022bdfa3e94aa2bd94c8f1806391b877a9c500bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155485"
 ---
 # <a name="connect-to-a-microsoft-excel-file-ssas"></a>Соединение с файлом Microsoft Excel (SSAS)
   Эта страница **мастера импорта таблиц** используется для соединения с файлом Microsoft Excel, который хранится на локальном компьютере. Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  

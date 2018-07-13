@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], establishing
 - database mirroring [SQL Server], witness
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 595d2f77ae254702fef3cca6d0f4a6f275a653a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0960274d83f50bfe1781bdfb72e5a482dcfef9c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200144"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Добавление или замена следящего сервера зеркального отображения базы данных (среда SQL Server Management Studio)
   Если конечные точки зеркального отображения базы данных используют проверку подлинности Windows, для добавления или замены следящего сервера можно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Добавление следящего сервера в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] изменяет текущий режим работы на режим высокого уровня безопасности с автоматической отработкой отказа.  

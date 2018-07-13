@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DATEDIFF statement
 - dates [Integration Services], DATEDIFF
@@ -16,13 +16,13 @@ ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14ef1c8dce4ce1ed22f8067a5409ec8394bcb66d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03334b761d9c5e9fa479fd939f06089e7aae8c6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162777"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (выражение служб SSIS)
   Возвращает числовое значение границ дат или времени между двумя указанными датами. Параметр *datepart* указывает границы даты и времени, которые необходимо сравнить.  
@@ -92,7 +92,7 @@ DATEDIFF("Week", ModifiedDate,@YearEndDate)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Функция DATEADD &#40;выражение служб SSIS&#41;](dateadd-ssis-expression.md)   
+ [DATEADD &#40;выражение служб SSIS&#41;](dateadd-ssis-expression.md)   
  [DATEPART (выражение служб SSIS)](datepart-ssis-expression.md)   
  [DAY (выражение служб SSIS)](day-ssis-expression.md)   
  [MONTH (выражение служб SSIS)](month-ssis-expression.md)   

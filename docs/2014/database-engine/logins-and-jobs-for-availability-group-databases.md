@@ -1,14 +1,13 @@
 ---
-title: Управление именами входа и заданиями для баз данных группы доступности (SQL Server) | Документы Microsoft
+title: Управление именами входа и заданиями для баз данных группы доступности (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], failover
@@ -17,13 +16,13 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 caps.latest.revision: 14
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 0a1229f999cc4fc5a1b4ffa1426e2c4f3597674c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63e50f50613f8be8ddbf3969d538521f3aa3b126
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196084"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Управление именами входа и заданиями для баз данных группы доступности (SQL Server)
   Необходимо постоянно поддерживать одинаковый набор имен входа пользователей и заданий агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в каждой базе данных-источнике группы доступности AlwaysOn и соответствующих баз данных-получателей. Имена входа и задания необходимо воспроизвести на каждом экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , на котором размещается реплика доступности для группы доступности.  

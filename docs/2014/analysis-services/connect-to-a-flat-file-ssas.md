@@ -1,5 +1,5 @@
 ---
-title: Подключение к неструктурированному файлу (SSAS) | Документы Microsoft
+title: Подключение к неструктурированному файлу (SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connflatfile.f1
 ms.assetid: a365991e-eded-4cd8-89c0-0daf6d658d15
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 288130652e609b65a4bbdaae8dea1f2647771aad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19f315644a829f543a88bdb135dcf25d4d8b5b15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201984"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>Подключение к неструктурированному файлу (SSAS)
   Эта страница **мастера импорта таблиц** используется для соединения с неструктурированным файлом (TXT), файлом с разделителями в виде символов табуляции (TAB) или файлом с разделителями-запятыми (CSV). Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  

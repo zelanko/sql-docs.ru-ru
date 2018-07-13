@@ -1,5 +1,5 @@
 ---
-title: Элемент MasterDatasourceID (ASSL) | Документы Microsoft
+title: Элемент MasterDatasourceID (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MasterDatasourceID element
 ms.assetid: a9cbd3a9-581f-4a08-93d8-e1eea8757ce9
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa35f3090a10dd175d507dec4a109f04d36644cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 70258c84b128c879406a8c0cdda837d9f0475789
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228464"
 ---
 # <a name="masterdatasourceid-element-assl"></a>Элемент MasterDatasourceID (ASSL)
-  Содержит идентификатор основного источника данных (ID) для [базы данных](../objects/database-element-assl.md) элемента.  
+  Содержит идентификатор основного источника данных (идентификатор) для [базы данных](../objects/database-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36100090"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Для баз данных на удаленных экземпляров [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , содержащих удаленные секции `MasterDatasourceID` элемент содержит источник данных, идентификатор источника данных, используемый для идентификации главного экземпляра [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , управляющий удаленные секции.  
+ Для баз данных в удаленных экземплярах служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , содержащих удаленные секции `MasterDatasourceID` элемент содержит источник данных, идентификатор источника данных, используемый для идентификации главного экземпляра служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , управляющий удаленные секции.  
   
- Элемент, соответствующий родителю параметра `MasterDatasourceID` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Database>.  
+ Элемент, соответствующий родителю параметра `MasterDatasourceID` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Database>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

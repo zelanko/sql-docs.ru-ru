@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
 - jobs [SQL Server Agent], categories
 - categories [SQL Server Agent jobs]
 ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d4ab1a7fdd56bf4586d3009c9c45bb29ecac0497
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4a855a78a6c37fa2327a88e0a052adbbc4ce85b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179111"
 ---
 # <a name="create-a-job-category"></a>Создание категории заданий
   В данном разделе описывается процесс создания категории заданий в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или управляющих объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -62,7 +62,7 @@ ms.locfileid: "36099927"
   
 8.  В диалоговом окне **Управление категориями заданий***имя_сервера* нажмите кнопку **Обновить**, чтобы убедиться в активности новой категории заданий. Если все выглядит так, как нужно, закройте это диалоговое окно.  
   
- Дополнительные сведения по этим диалоговым окнам см. в разделе [категории заданий: Управление категориями заданий](job-categories-manage-job-categories.md) и [свойства категории заданий и новой категории заданий](job-categories-properties-new-job-category.md).  
+ Дополнительные сведения об этих диалоговых окон, см. в разделе [категории заданий: Управление категориями заданий](job-categories-manage-job-categories.md) и [свойства категории заданий и Создание категории заданий](job-categories-properties-new-job-category.md).  
   
  
   

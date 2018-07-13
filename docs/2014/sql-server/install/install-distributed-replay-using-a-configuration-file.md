@@ -1,5 +1,5 @@
 ---
-title: Установка распределенного воспроизведения с помощью файла конфигурации | Документы Microsoft
+title: Установка распределенного воспроизведения с помощью файла конфигурации | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3259232c-6963-4c9c-9d10-ae42aa262eef
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 357e4a9fd289d4c90f19456c7828e6941d00d6f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4167456a5d1b59dd44451dda26f3ccb56e417a56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155695"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>Установка компонентов распределенного воспроизведения с помощью файла конфигурации
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] дает возможность создать файл конфигурации на основе данных пользователя и значений системы по умолчанию. Если необходимо установить средства управления, можно использовать файл конфигурации для развертывания трех компонентов распределенного воспроизведения (средство администрирования, контроллер распределенного воспроизведения и клиент распределенного воспроизведения). Поддерживает установку, восстановление и удаление компонентов распределенного воспроизведения.  

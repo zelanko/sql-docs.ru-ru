@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50cd29264368990d972c88843a9de89754689671
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df5fd8b0d0583bcc9626032db226efa860c95f8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221824"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Параметры запроса профиля распределения значений в столбцах (задача «Профилирование данных»)
   Для установки параметров **запроса профиля распределения значений столбцов** , выделенного на панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль распределения значений столбцов описывает все различные значения в выделенном столбце и указывает выраженную в процентах долю строк таблицы, представляемых каждым значением. Этот профиль может также указывать значения, превышающие указанную процентную долю строк в таблице. Этот профиль поможет выявить проблемы в данных, например неверное число уникальных значений в столбце. Например, при профилировании столбца штатов США можно обнаружить более 50 различных значений.  
@@ -106,7 +106,7 @@ ms.locfileid: "36100052"
  Укажите пороговое значение (между 0 и 1), при превышении которого необходимо сообщать о значении столбца. Этот параметр отключен, если в качестве значения **ValueDistributionOption** выбрано **AllValues**. Значение этого параметра по умолчанию равно 0,001.  
   
 ## <a name="see-also"></a>См. также  
- [Редактор задачи «профилирование данных» &#40;страница «Общие»&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "профилирование данных" &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)   
  [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](single-table-quick-profile-form-data-profiling-task.md)  
   
   

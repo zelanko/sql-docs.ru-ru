@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.systemroleproperties.f1
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1dce716a55830afa2d7e3bc38d87d9ea407ce95c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bdd6160bb68497ae250057213cba31d195655adc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148705"
 ---
 # <a name="system-role-properties-management-studio"></a>Свойства системной роли (среда Management Studio)
   Страница «Системные роли» используется для просмотра определений системных ролей, определенных в настоящее время для сервера отчетов. Определение системной роли содержит именованную коллекцию задач, которые выполняются применительно ко всему сайту, а не к отдельному объекту. Определения ролей присваиваются пользователям или группам для создания назначения ролей. Задачи в определении ролей задают, какие действия может выполнять пользователь или группа.  

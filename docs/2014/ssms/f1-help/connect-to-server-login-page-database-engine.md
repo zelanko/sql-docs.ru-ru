@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttosqlserver.login.f1
 ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5febecdb07be72a154605b7e66bce8f4d9ad87f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b7f8c761a052bc3c82789087bb955c760e9a1b49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181241"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>Соединение с сервером (страница "Вход") ядра СУБД
   Используйте эту вкладку для просмотра или задания параметров при соединении с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 > [!NOTE]  
->  Для подключения с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть сконфигурирован в режиме проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows. Дополнительные сведения о том, как определить режим проверки подлинности и изменить режим проверки подлинности см. в разделе [изменить режим проверки подлинности сервера](../../database-engine/configure-windows/change-server-authentication-mode.md).  
+>  Для подключения с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть сконфигурирован в режиме проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows. Дополнительные сведения о том, как определить режим проверки подлинности и режим проверки подлинности, см. в разделе [изменение режима проверки подлинности сервера](../../database-engine/configure-windows/change-server-authentication-mode.md).  
   
 ## <a name="options"></a>Параметры  
  **Тип сервера**  

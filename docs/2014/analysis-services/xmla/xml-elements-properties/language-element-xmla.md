@@ -1,5 +1,5 @@
 ---
-title: Элемент языка (XMLA) | Документы Microsoft
+title: Элемент Language (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Language element
 ms.assetid: cd998202-e43f-4c6c-8727-a15a76a520ea
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5ea8c37369c45d35a8fe3c7366c2d5293e0c48a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d247e81c19c3394ac46274ba775c1695741e00ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205854"
 ---
 # <a name="language-element-xmla"></a>Элемент Language (XML для аналитики)
-  Содержит идентификатор языка (LCID) для родительского [перевода](translation-element-xmla.md) элемента.  
+  Содержит идентификатор языка (LCID) для родительского [перевода](translation-element-xmla.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -67,8 +67,8 @@ ms.locfileid: "36099864"
  Элемент `Language` указывает код языка, используемый родительским элементом `Translation` для назначения элемента `Name` родительского элемента `Translation` на указанном языке элементу атрибута во время выполнения команды `Insert` или `Update`.  
   
 ## <a name="see-also"></a>См. также  
- [Элемент INSERT &#40;XML для Аналитики&#41;](../xml-elements-commands/insert-element-xmla.md)   
- [Элемент Name &#40;XML для Аналитики&#41;](name-element-xmla.md)   
+ [Вставка элемента &#40;XML для Аналитики&#41;](../xml-elements-commands/insert-element-xmla.md)   
+ [Назовите элемент &#40;XML для Аналитики&#41;](name-element-xmla.md)   
  [Элемент Update &#40;XML для Аналитики&#41;](../xml-elements-commands/update-element-xmla.md)   
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)  
   

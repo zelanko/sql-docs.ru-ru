@@ -1,32 +1,30 @@
 ---
-title: Использование некластеризованных индексов Columnstore | Документы Microsoft
+title: Использование некластеризованных индексов Columnstore | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4c341fb8-7cb1-4cab-921b-e80b751d6c19
-caps.latest.revision: 7
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: fd711b644c551da7a658eff7ede74007d69a2286
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f32acde4b49b8b4b91c087fb66e41d4c2cf276ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157025"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Использование некластеризованных индексов columnstore
   Описывает основные задачи при использовании некластеризованного индекса columnstore в таблице [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- Общие сведения об индексах columnstore см. в разделе [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
+ Общие сведения об индексах columnstore см. в разделе [индексам ColumnStore](../relational-databases/indexes/columnstore-indexes-described.md).  
   
- Сведения о кластеризованных индексах columnstore см. в разделе [с помощью кластеризованные индексы Columnstore](../relational-databases/indexes/indexes.md).  
+ Сведения о кластеризованных индексах columnstore см. в разделе [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
 ## <a name="contents"></a>Содержание  
   
@@ -35,7 +33,7 @@ ms.locfileid: "36100908"
 -   [Изменение данных в некластеризованном индексе Columnstore](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)  
   
 ##  <a name="load"></a> Создание некластеризованного индекса Columnstore  
- Для загрузки данных в некластеризованный индекс columnstore, данные сначала загружаются в стандартную таблицу rowstore сохраненную в виде кучи или кластеризованного индекса и воспользуйтесь [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) для создания Индекс ColumnStore.  
+ Чтобы загрузить данные в некластеризованный индекс columnstore, сначала данные загружаются в стандартную таблицу rowstore сохраненную в виде кучи или кластеризованного индекса и воспользуйтесь [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) для создания Индекс ColumnStore.  
   
  ![Загрузка данных в индекс columnstore](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "загрузка данных в индекс columnstore")  
   
@@ -50,7 +48,7 @@ ms.locfileid: "36100908"
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
     ```  
   
--   Удалите индекс columnstore, обновить таблицу и затем повторно создать индекс columnstore с CREATE COLUMNSTORE INDEX. Например:  
+-   Удалите индекс columnstore, обновить таблицу и затем заново создайте индекс columnstore с CREATE COLUMNSTORE INDEX. Например:  
   
     ```  
     DROP INDEX mycolumnstoreindex ON mytable  

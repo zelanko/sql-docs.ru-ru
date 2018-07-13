@@ -1,5 +1,5 @@
 ---
-title: Архитектура интеграции со средой CLR | Документы Microsoft
+title: Архитектура интеграции со средой CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - architecture [CLR integration]
 ms.assetid: 05e4b872-3d21-46de-b4d5-739b5f2a0cf9
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b408bcb655329c85bc39dea2c4ccfde68ac753db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c4ecea20b8ec2cb42d6945e14ea0777166a37d9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100269"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196054"
 ---
 # <a name="architecture-of-clr-integration"></a>Архитектура интеграции со средой CLR
   Интеграция [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] со средой CLR платформы .NET Framework позволяет программистам работать с базами данных, используя такие языки, как Visual C#, Visual Basic .NET, Visual C++. С помощью этих языков программисты могут создавать различные объекты бизнес-логики, например: функции, хранимые процедуры, триггеры, типы данных и агрегаты.  

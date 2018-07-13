@@ -1,12 +1,12 @@
 ---
-title: SQLGetDiagField | Документы Microsoft
+title: SQLGetDiagField | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,24 +18,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 43afb9ba50d67d35eb9dabb5542a20f0b847ae88
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1064c0142ddb3162ed58b228308c702360c099d8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703805"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432753"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента определяет следующие дополнительные поля для **SQLGetDiagField**. Эти поля поддерживают множество отчетов об ошибках для приложений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и доступны во всех диагностических записях, созданных дескрипторами соединения ODBC и дескрипторами инструкций ODBC. Эти поля определены в файле sqlncli.h.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента заданы следующие дополнительные поля для **SQLGetDiagField**. Эти поля поддерживают множество отчетов об ошибках для приложений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и доступны во всех диагностических записях, созданных дескрипторами соединения ODBC и дескрипторами инструкций ODBC. Эти поля определены в файле sqlncli.h.  
   
 |Поля диагностических записей|Описание|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Сообщает номер строки хранимой процедуры, на которой произошла ошибка. Значение SQL_DIAG_SS_LINE значимо, только если SQL_DIAG_SS_PROCNAME возвращает значение. Значение возвращается как 16-разрядное целое число без знака.|  
-|SQL_DIAG_SS_MSGSTATE|Состояние сообщения об ошибке. Сведения о состоянии сообщения об ошибке см. в разделе [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). Значение возвращается как 32-разрядное целое число со знаком.|  
-|SQL_DIAG_SS_PROCNAME|Имя хранимой процедуры, в которой возникла ошибка, если это имеет смысл. Значение возвращается как символьная строка. Максимальная длина строки (в символах) зависит от версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Его можно определить путем вызова [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) запрашивает значение SQL_MAX_PROCEDURE_NAME_LEN.|  
+|SQL_DIAG_SS_MSGSTATE|Состояние сообщения об ошибке. Сведения о состоянии сообщения об ошибке, см. в разделе [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). Значение возвращается как 32-разрядное целое число со знаком.|  
+|SQL_DIAG_SS_PROCNAME|Имя хранимой процедуры, в которой возникла ошибка, если это имеет смысл. Значение возвращается как символьная строка. Максимальная длина строки (в символах) зависит от версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ее можно определить путем вызова [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) запрашивая значение sql_max_procedure_name_len.|  
 |SQL_DIAG_SS_SEVERITY|Степень серьезности связанного сообщения об ошибке. Значение возвращается как 32-разрядное целое число со знаком.|  
 |SQL_DIAG_SS_SRVNAME|Имя сервера, на котором произошла ошибка. Значение возвращается как символьная строка. Длина строки (в символах) задается макросом SQL_MAX_SQLSERVERNAME в файле sqlncli.h.|  
   
@@ -67,7 +67,7 @@ ms.locfileid: "35703805"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|Инструкция DROP TRIGGER|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|Инструкция BACKUP или DUMP DATABASE|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|Инструкция DUMP TABLE|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Инструкция BACKUP или DUMP TRANSACTION. Также возвращается для инструкции CHECKPOINT, если **trunc. журнала на контрольной точке.** базы данных включен.|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Инструкция BACKUP или DUMP TRANSACTION. Также возвращается для инструкции CHECKPOINT, если **trunc. log на контрольной точке.** базы данных включен.|  
 |SQL_DIAG_DFC_SS_GOTO|Инструкция управления потоком GOTO|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|Инструкция INSERT BULK|  
 |SQL_DIAG_DFC_SS_KILL|Инструкция KILL|  
@@ -104,7 +104,7 @@ ms.locfileid: "35703805"
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>Функция SQLGetDiagField и возвращающие табличное значение параметры  
  SQLGetDiagField может использоваться для получения двух диагностических полей: SQL_DIAG_SS_TABLE_COLUMN_NUMBER и SQL_DIAG_SS_TABLE_ROW_NUMBER. Эти поля помогают определить, какое значение вызвало ошибку или предупреждение, связанные с диагностической записью.  
   
- Дополнительные сведения о возвращающих табличные значения параметров см. в разделе [табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Дополнительные сведения о возвращающих табличные значения параметров, см. в разделе [возвращающего табличное значение параметров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>См. также  
  [Функция SQLGetDiagField](http://go.microsoft.com/fwlink/?LinkId=59352)   

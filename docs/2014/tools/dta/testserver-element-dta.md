@@ -1,5 +1,5 @@
 ---
-title: Элемент TestServer (DTA) | Документы Microsoft
+title: Элемент TestServer (DTA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - TestServer element
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5eced520aee906a2b56abfa5034196add27bfe7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 574f391a94df9881bdec346635197fd273bc836f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194424"
 ---
 # <a name="testserver-element-dta"></a>Элемент TestServer (DTA)
   Указывает, какой тестовый сервер нужно использовать при настройке рабочего сервера.  
@@ -44,7 +44,7 @@ ms.locfileid: "36099707"
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Необязательный параметр. Может использоваться один раз для каждого `TuningOptions` элемента.|  
+|**Наличие**|Необязательный параметр. Может использоваться один раз для каждого `TuningOptions` элемент.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   

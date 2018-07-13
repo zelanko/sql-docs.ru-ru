@@ -1,5 +1,5 @@
 ---
-title: Интеллектуального анализа данных, задачи и инструкции моделей | Документы Microsoft
+title: Интеллектуального анализа данных, задачи и инструкции моделей | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], models
 - mining models [Analysis Services], how-to topics
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1ce8f3b6441c7b1ac09a2c4e5de9b151a14112c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80f6f7d87f1e7ae3ffaf9fc7b17254a42675b192
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178921"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Задачи и инструкции по модели интеллектуального анализа данных
   Используйте вкладку **Модели интеллектуального анализа данных** конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для управления и обработки моделей в структуре интеллектуального анализа данных.  
@@ -60,7 +60,7 @@ ms.locfileid: "36101179"
 -   [Создание измерения интеллектуального анализа данных](create-a-data-mining-dimension.md)  
   
 ## <a name="see-also"></a>См. также  
- [Интеллектуального анализа данных структуры задачи и инструкции](mining-structure-tasks-and-how-tos.md)   
+ [Задачи интеллектуального анализа данных структуры и инструкции по](mining-structure-tasks-and-how-tos.md)   
  [Модели интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-models-analysis-services-data-mining.md)   
  [Основные понятия интеллектуального анализа данных](data-mining-concepts.md)  
   

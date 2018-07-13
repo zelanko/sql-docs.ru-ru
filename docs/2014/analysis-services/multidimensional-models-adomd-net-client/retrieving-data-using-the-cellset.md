@@ -1,5 +1,5 @@
 ---
-title: Получение данных с помощью набора ячеек | Документы Microsoft
+title: Получение данных с помощью объекта CellSet | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], CellSet object
 ms.assetid: 77e4ee58-882d-4012-91a3-0565f18a4882
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cda35dc6151d17e1dad2d341337d67ef39d9f839
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69e53cab56cf22d6627fd8039e6a46735d934ca7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178901"
 ---
 # <a name="retrieving-data-using-the-cellset"></a>Получение данных с помощью объекта CellSet
   Объект <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> является наиболее интерактивным и гибким, если требуется извлечение аналитических данных. Объект <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> является расположенным в памяти кэшем иерархических данных и метаданных, сохраняющим исходную размерность данных. Объект <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> можно также просматривать в состоянии с установленным или отключенным соединением. Благодаря возможности работать в состоянии с отключенным соединением, объект <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> можно использовать для просмотра данных и метаданных в любом порядке, кроме того, он предоставляет наиболее полную модель объектов для получения данных. Из-за возможности работать в состоянии с отключенным соединением использование объекта <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> ведет к наибольшим издержкам, поэтому он является наиболее медленной моделью объектов для получения данных в ADOMD.NET.  

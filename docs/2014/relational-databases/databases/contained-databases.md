@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database
 - database_uncontained_usage event
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 622a67f232bb24af9efe9c621e86f1415866dc6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8c584cbb736a494ab071dbc570cfcc67bd2e5e32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098676"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223674"
 ---
 # <a name="contained-databases"></a>Автономные базы данных
   *Автономная база данных* — это база данных, изолированная от других баз данных и от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена эта база данных.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] помогает пользователю изолировать свою базу данных от экземпляра четырьмя способами.  
@@ -163,7 +163,7 @@ ms.locfileid: "36098676"
  Это событие XEvent возникает, когда во время выполнения обнаруживается любая фактически неавтономная сущность. Учитываются и сущности, формируемые в клиентском коде. Это событие XEvent возникает только для фактически неавтономных сущностей. Однако это событие происходит только во время выполнения. Поэтому любые неавтономные пользовательские сущности, которые не будут запущены, не обнаруживаются данным событием Xevent.  
   
 ## <a name="related-content"></a>См. также  
- [Изменить компоненты &#40;автономной базы данных&#41;](modified-features-contained-database.md)  
+ [Измененные функции &#40;Автономная база данных&#41;](modified-features-contained-database.md)  
   
  [Параметры сортировки автономной базы данных](contained-database-collations.md)  
   

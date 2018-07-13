@@ -1,5 +1,5 @@
 ---
-title: Изменить дискретизацию столбца в модели интеллектуального анализа данных | Документы Microsoft
+title: Изменение дискретизации столбца в модели интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
 - mining structures [Analysis Services], how-to topics
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - bucketing problems [Analysis Services]
 ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc0352074e37bf284bd4ea033bae759638e040a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af80e187acceb9565e939dbb3699c98b827cf648
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202174"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>изменить дискретизацию столбца в модели интеллектуального анализа данных
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] автоматически дискретизируют значения, то есть сегментируют данные в цифровом столбце. Например, если в данных содержатся непрерывные числовые данные и создается модель дерева принятия решений, каждый столбец непрерывных данных автоматически будет сегментирован (в зависимости от распределения данных). Если вам необходимо управлять процессом дискретизации данных, измените свойства столбца структуры интеллектуального анализа данных, управляющие использованием данных в модели.  
@@ -43,14 +43,14 @@ ms.locfileid: "36099906"
   
 ### <a name="to-change-the-discretization-method"></a>Изменение метода дискретизации  
   
-1.  В **свойства интеллектуального анализа данных** щелкните по текстовому полю в **содержимого**и выберите `Discretized` из раскрывающегося списка.  
+1.  В **свойства интеллектуального анализа данных** окно, щелкните текстовое поле рядом с полем **содержимого**и выберите `Discretized` из раскрывающегося списка.  
   
      В окне <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> и <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> включены.  
   
-2.  В **свойства** щелкните по текстовому полю в <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> и выберите один из следующих значений: `Automatic`, `EqualAreas`, или `Cluster`.  
+2.  В **свойства** окно, щелкните текстовое поле рядом с полем <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> и выберите один из следующих значений: `Automatic`, `EqualAreas`, или `Cluster`.  
   
     > [!NOTE]  
-    >  Если использование столбца установлено в значение `Ignore`, **свойства** для столбца будет пустым.  
+    >  Если использование столбца установлено в значение `Ignore`, **свойства** пустое окно для столбца.  
   
      Новое значение вступает в силу после выбора другого элемента в конструкторе.  
   

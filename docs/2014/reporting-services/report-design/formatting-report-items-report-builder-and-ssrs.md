@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: da8b4e9e642fcaa7585041102422f05832e6ded3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f0443443f4863ed788aa22a4aeb1ca717ee891d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200744"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Форматирование элементов отчета (построитель отчетов и службы SSRS)
   Форматирование элементов отчета делает отчет более привлекательным и упрощает его восприятие. В режиме конструктора отчетов можно форматировать текстовые поля и отдельные элементы в их составе, изображения, выражения и данные.  
@@ -42,22 +42,22 @@ ms.locfileid: "36099518"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Форматирование текста и заполнителей &#40;отчетов построителя отчетов и службы SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Форматирование текста и заполнителей &#40;построитель отчетов и службы SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  Описывает форматирование текста и настройки параметров форматирования для различных блоков текста в пределах одного текстового поля.  
   
- [Импорт HTML в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [Импорт HTML в отчет &#40;построитель отчетов и службы SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
  Описывает вставку и использование HTML в отчетах.  
   
- [Форматирование чисел и дат &#40;отчетов построителя отчетов и службы SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [Форматирование чисел и дат &#40;построитель отчетов и службы SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
  Описывает использование стандартных и пользовательских строк форматирования, поддерживаемых службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Форматирование линий, цветов и изображений &#40;отчетов построителя отчетов и службы SSRS&#41;](images-report-builder-and-ssrs.md)  
+ [Форматирование линий, цветов и изображений &#40;построитель отчетов и службы SSRS&#41;](images-report-builder-and-ssrs.md)  
  Описывает форматирование линий, сетки, цветов и изображений в элементах отчета и областях данных.  
   
  [Задание локали для отчета или текстового поля &#40;службы Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Описывает, как изменить настройки для форматов отображения данных, зависящих от языка и региона, таких как дата, валюта и числовые значения.  
   
 ## <a name="see-also"></a>См. также  
- [Форматирование диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [Форматирование диаграммы &#40;построитель отчетов и службы SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

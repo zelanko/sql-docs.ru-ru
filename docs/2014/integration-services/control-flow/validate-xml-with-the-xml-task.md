@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML validation
 - XML, validating
@@ -16,27 +16,27 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b66fe56d1309f3ebe0e16177ff1372ea0fa1692f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ea74ad195b97541147c3d1b19dc01c5033b962c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182832"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
-  Проверка XML-документов и получить подробные результаты, включив `ValidationDetails` свойства задачи «XML».  
+  Проверка XML-документов и настроить вывод подробных сведений об ошибках, включив `ValidationDetails` свойства задачи «XML».  
   
  На следующем снимке экрана показано окно **редактора задачи XML** с необходимыми параметрами для проверки XML, позволяющими настроить вывод подробных сведений об ошибках.  
   
  ![Свойства задачи "XML" в редакторе задачи "XML"](../media/xmltaskproperties.jpg "Свойства задачи \"XML\" в редакторе задачи \"XML\"")  
   
- Прежде чем `ValidationDetails` было предусмотрено, проверка XML в задачах XML возвращаются только true или false, без информации об ошибках и их расположении. Теперь, если для свойства `ValidationDetails` значение true, выходной файл содержит подробные сведения обо всех ошибках, включая номер строки и позиции. Эти сведения можно использовать для анализа, поиска и исправления ошибок в XML-документах.  
+ Прежде чем `ValidationDetails` был предусмотрен, проверка XML в задачах XML возвращаются только true или false, без сведений об ошибках и их расположении. Теперь, если для свойства `ValidationDetails` в значение true, выходной файл содержит подробные сведения обо всех ошибках, включая номер строки и позиции. Эти сведения можно использовать для анализа, поиска и исправления ошибок в XML-документах.  
   
  Функция проверки XML легко масштабируется в соответствии с размером XML-документов и количеством ошибок. Так как выходной файл имеет формат XML, можно запрашивать и анализировать содержащиеся в нем данные. Например, если выходные данные содержат большое количество ошибок, их можно сгруппировать, используя запрос [!INCLUDE[tsql](../../../includes/tsql-md.md)] , как описано в этом разделе.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) появился `ValidationDetails` свойство в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 2. Также это свойство доступно в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и в SQL Server 2016.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) появился `ValidationDetails` свойство в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 2. Свойство также доступно в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и в SQL Server 2016.  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>Пример выходных данных в допустимом XML-файле  
  Ниже приведен пример допустимого выходного XML-файла с результатами проверки.  
@@ -124,6 +124,6 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
 ## <a name="see-also"></a>См. также  
  [Задача «XML»](xml-task.md)   
- [Редактор задачи XML &#40;страница «Общие»&#41;](../xml-task-editor-general-page.md)  
+ [Редактор задачи XML &#40;страница "Общие"&#41;](../xml-task-editor-general-page.md)  
   
   

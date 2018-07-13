@@ -1,13 +1,11 @@
 ---
-title: Выполнение хранимой процедуры (с использованием синтаксиса ODBC CALL) и Обработка кодов возврата и выходных параметров (OLE DB) | Документы Microsoft
+title: Выполнение хранимой процедуры (с использованием синтаксиса ODBC CALL) и Обработка кодов возврата и выходных параметров (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,21 +13,21 @@ helpviewer_keywords:
 - ODBC CALL syntax
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1fec95005c65b07cfda5a33b6bfc149268550608
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fd78694e110c6eed5c84cd1d3d945fa9c33f0083
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097283"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409631"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Выполнение хранимой процедуры (с использованием синтаксиса ODBC CALL) и обработка кодов возврата и выходных параметров (OLE DB)
   Хранимые процедуры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут иметь целочисленные коды возврата и выходные параметры. Коды возврата и выходные параметры передаются с сервера в последнем пакете и потому недоступны приложению до полного освобождения набора строк. Если команда возвращает несколько результатов, то данные выходного параметра будут доступны тогда, когда метод `IMultipleResults::GetResult` вернул значение DB_S_NORESULT или при полном освобождении интерфейса `IMultipleResults` (в зависимости от того, что произошло раньше).  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с [Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Обработка кодов возврата и выходных параметров  
   
@@ -54,7 +52,7 @@ ms.locfileid: "36097283"
   
  Выполните первый листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]), чтобы создать хранимую процедуру, используемую приложением.  
   
- Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните второй листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы соединиться с именованным экземпляром, измените строку подключения из L"(local)» для L"(local)\\\name», где имя является именем экземпляра. По умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
+ Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните второй листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы подключиться к именованному экземпляру, измените строку подключения из L"(local)» для L"(local)\\\name», где имя — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
  Выполните третий листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]), чтобы удалить хранимую процедуру, используемую приложением.  
   

@@ -1,5 +1,5 @@
 ---
-title: Алгоритма Байеса (Майкрософт) | Документы Microsoft
+title: Алгоритм Байеса (Майкрософт) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Bayesian classifiers
 - algorithms [data mining]
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 caps.latest.revision: 55
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43d3851c5a3acd6a33d051eb743797220d06cb7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9abc422430a70a8a4386b55ca0d8d4eb4fb3017b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196614"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Упрощенный алгоритм Байеса является алгоритмом классификации, на основании теоремы Байеса и предоставляемые [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для использования в прогнозирующем моделировании. Слово «упрощенный» в его названии указывает на то, что алгоритм использует методы Байеса, но не учитывает возможные зависимости.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Упрощенный алгоритм Байеса является алгоритмом классификации, основанного на теоремах Байеса и предоставляемые [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для использования в прогнозирующем моделировании. Слово «упрощенный» в его названии указывает на то, что алгоритм использует методы Байеса, но не учитывает возможные зависимости.  
   
  Данный алгоритм требует меньшего количества вычислений, чем другие алгоритмы [!INCLUDE[msCoName](../../includes/msconame-md.md)] , и может применяться для быстрого формирования моделей интеллектуального анализа данных для обнаружения отношений между входными и прогнозируемыми столбцами. Этот алгоритм можно использовать для первоначального исследования данных, а затем применить результаты для создания дополнительных моделей интеллектуального анализа с другими алгоритмами, требующими большего количества вычислений и являющимися более точными.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36100112"
   
  Разобраться в работе этого метода можно с помощью средства просмотра упрощенного алгоритма Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] (см. рисунок). Оно позволяет в наглядном режиме исследовать, как происходит распределение состояний в рамках этого алгоритма.  
   
- ![Упрощенный алгоритм Байеса распределения состояний](../media/naive-bayes.gif "упрощенного алгоритма Байеса распределения состояний")  
+ ![Упрощенный алгоритм Байеса распределения состояний](../media/naive-bayes.gif "упрощенный алгоритм Байеса распределения состояний")  
   
  Здесь средство просмотра упрощенного алгоритма Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] содержит список всех входных столбцов в наборе данных и показывает, как распределяются состояния каждого из столбцов при каждом из состояний прогнозируемого столбца.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36100112"
   
 -   **Единичный ключевой столбец** Каждая модель должна содержать один числовой или текстовый столбец, который уникальным образом определяет каждую запись. Применение составных ключей не допускается.  
   
--   **Входные столбцы** модели в упрощенного алгоритма Байеса все столбцы должны быть либо дискретных или дискретизированных столбцов. Сведения о дискретизации столбцов см. в разделе [методы дискретизации &#40;интеллектуального анализа данных&#41;](discretization-methods-data-mining.md).  
+-   **Входные столбцы** модели в Байеса все столбцы должны быть дискретными или дискретизированными столбцов. Сведения о дискретизации столбцов см. в разделе [методы дискретизации &#40;интеллектуального анализа данных&#41;](discretization-methods-data-mining.md).  
   
      Для модели упрощенного алгоритма Байеса также важно обеспечить независимость входных атрибутов друг от друга. Это особенно важно, когда модель используется для прогнозирования.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36100112"
 ## <a name="see-also"></a>См. также  
  [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Выбор компонентов &#40;интеллектуального анализа данных&#41;](feature-selection-data-mining.md)   
- [Примеры запросов к модели упрощенного алгоритма Байеса](naive-bayes-model-query-examples.md)   
+ [Примеры запросов к упрощенной модели Байеса](naive-bayes-model-query-examples.md)   
  [Модель интеллектуального анализа данных для моделей упрощенного алгоритма Байеса &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Технический справочник по упрощенному алгоритму Байеса (Майкрософт)](microsoft-naive-bayes-algorithm-technical-reference.md)  
   

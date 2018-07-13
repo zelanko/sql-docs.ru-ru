@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - grouping containers
 - tasks [Integration Services], grouping
@@ -18,13 +18,13 @@ ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cd7feaf302c920d34180246d45224b344642d765
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cece9e943ad2c551b60f4a468a3ce0b89d85059f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227784"
 ---
 # <a name="group-or-ungroup-components"></a>Группирование и разгруппирование компонентов
   Вкладки **Поток управления**, **Поток данных**и **Обработчики событий** в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] поддерживают сворачиваемое группирование. Если пакет содержит много компонентов, то вкладки могут оказаться перегруженными информацией и будет сложно сразу просматривать все компоненты и находить элемент, необходимый для работы. Функция сворачиваемого группирования экономит рабочее пространство и упрощает работу с большими пакетами.  

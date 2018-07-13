@@ -1,5 +1,5 @@
 ---
-title: Действия в многомерных моделях | Документы Microsoft
+title: Действия в многомерных моделях | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services], creating
 - report actions [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: adf4fe01f2bf85bf4cf13e828f62eced3696a4ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6576d805e7352133bffb97ad4612cc5114764ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196544"
 ---
 # <a name="actions-in-multidimensional-models"></a>Действия в многомерных моделях
   Действие представляет собой инициированную пользователем операцию для выбранного куба или его части. Эта операция может запускать приложение, для которого в качестве параметра используется выбранный элемент, или получать сведения о выбранном элементе. Дополнительные сведения о действиях см. в разделе [Действия (службы Analysis Services — многомерные данные)](actions-analysis-services-multidimensional-data.md).  

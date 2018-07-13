@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 caps.latest.revision: 9
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 58837a63969baff47ff79bcebb78b6dd24deb31e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ff2df6e300c3c422215f459cf258225632bd87eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182758"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Использование Windows PowerShell в шагах агента SQL Server
   Агент SQL Server применяется для запуска скриптов SQL Server PowerShell в запланированное время.  

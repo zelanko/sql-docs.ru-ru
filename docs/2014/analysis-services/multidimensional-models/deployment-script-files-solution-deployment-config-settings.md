@@ -1,5 +1,5 @@
 ---
-title: Задание параметров конфигурации для развертывания решения | Документы Microsoft
+title: Указание настроек конфигурации для развертывания решения | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services Deployment Wizard, configuration settings
 - input files [Analysis Services]
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - deploying [Analysis Services], configuration settings
 ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c69729aea8ae3fac9cbac17c9da7bde98401ea73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b87007b98d8e67125d6173b47c4936b3087d251
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222254"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>Указание настроек конфигурации для развертывания решения
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Мастер развертывания служб считывает секций и ролей варианты развертывания, которые можно использовать в скрипте развертывания, из \< *имя проекта*> .configsettings файла. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] создает этот файл при построении проекта служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует настройки конфигурации текущего проекта для создания \< *имя проекта*> .configsettings файла.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Мастер развертывания служб считывает секций и ролей варианты развертывания, используемые в скрипте развертывания, из \< *имя_проекта*> .configsettings файл. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] создает этот файл при построении проекта служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует настройки конфигурации текущего проекта для создания \< *имя_проекта*> .configsettings файл.  
   
 ## <a name="reviewing-the-configuration-settings-for-deployment"></a>Просмотр настроек конфигурации для развертывания  
- Ниже приведены настройки конфигурации, хранящиеся в \< *имя проекта*> .configsettings файла:  
+ Ниже приведены настройки конфигурации, хранящиеся в \< *имя_проекта*> .configsettings файла:  
   
 -   **Data Source Connection Strings** . Это строки подключений для каждого источника данных, основанные на значениях, заданных в проекте служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Идентификатор пользователя и пароль всегда удаляются из строки соединения до того, как оставшаяся часть строки сохраняется в этом файле. Однако если мастер развертывания выполняет развертывание непосредственно в экземпляре служб Analysis Services, можно ввести нужный идентификатор пользователя и пароль в мастере, что обеспечит успешную обработку развертываемой базы данных. Эти сведения о соединении не сохраняются в самом скрипте развертывания, если он сохраняется мастером развертывания.  
   
@@ -44,12 +44,12 @@ ms.locfileid: "36099606"
 -   **Report Server** . Этот параметр задает сервер отчетов и местоположение папки для каждого действия отчета, определенного в каждом кубе в базе данных.  
   
 ## <a name="modifying-the-configuration-settings-for-deployment"></a>Изменение настроек конфигурации для развертывания  
- В некоторых случаях может потребоваться развернуть [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта, используя другие настройки конфигурации вместо тех, которые хранятся в \< *имя проекта*> .configsettings файла. Например, может быть необходимо изменить строку соединения с одним или несколькими источниками данных или задать места хранения для конкретных секций или групп мер.  
+ В некоторых случаях может потребоваться развернуть [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проект, используя другие настройки конфигурации вместо тех, которые хранятся в \< *имя_проекта*> .configsettings файл. Например, может быть необходимо изменить строку соединения с одним или несколькими источниками данных или задать места хранения для конкретных секций или групп мер.  
   
- Чтобы изменить развертывание секций и ролей в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта, необходимо изменить эти данные в \< *имя проекта*> .configsettings файла, как описано в следующей процедуре. Невозможно изменить настройки секций и ролей в самом проекте, так как  *\<имя проекта >* **страницы свойств** диалоговое окно в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] эти параметры не отображаются.  
+ Чтобы изменить развертывание секций и ролей в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта, необходимо изменить эти данные в \< *имя_проекта*> файл .configsettings, как описано в следующей процедуре. Невозможно изменить настройки секций и ролей в проекте, так как  *\<имя проекта >* **страницы свойств** диалогового окна в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] эти параметры не отображаются.  
   
 > [!NOTE]  
->  Настройки конфигурации могут применяться ко всем объектам или только ко вновь созданным объектам. Применяйте параметры конфигурации ко вновь созданным объектам только при развертывании дополнительных объектов в ранее развернутой базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , если не нужно перезаписывать существующие объекты. Чтобы указать ли параметры конфигурации применяются ко всем объектам или только ко вновь созданным объектам, установите этот параметр \< *имя проекта*> .deploymentoptions файла. Дополнительные сведения см. в статье [Указание параметров развертывания секций и ролей](deployment-script-files-partition-and-role-deployment-options.md).  
+>  Настройки конфигурации могут применяться ко всем объектам или только ко вновь созданным объектам. Применяйте параметры конфигурации ко вновь созданным объектам только при развертывании дополнительных объектов в ранее развернутой базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , если не нужно перезаписывать существующие объекты. Чтобы указать, параметры конфигурации применяются ко всем объектам или только ко вновь созданным объектам, установите этот параметр в \< *имя_проекта*> .deploymentoptions файл. Дополнительные сведения см. в статье [Указание параметров развертывания секций и ролей](deployment-script-files-partition-and-role-deployment-options.md).  
   
 #### <a name="to-change-configuration-settings-after-the-input-files-have-been-generated"></a>Изменение настройки конфигурации после формирования входных файлов  
   
@@ -61,11 +61,11 @@ ms.locfileid: "36099606"
   
      —или—  
   
--   Изменить \< *имя проекта*> .configsettings файл, используя любой текстовый редактор.  
+-   Изменить \< *имя_проекта*> .configsettings файл, используя любой текстовый редактор.  
   
 ## <a name="see-also"></a>См. также  
  [Указание целевого объекта установки](deployment-script-files-specifying-the-installation-target.md)   
- [Указание параметров развертывания ролей и секций](deployment-script-files-partition-and-role-deployment-options.md)   
+ [Указание секций и параметров развертывания ролей](deployment-script-files-partition-and-role-deployment-options.md)   
  [Указание параметров обработки](deployment-script-files-specifying-processing-options.md)  
   
   

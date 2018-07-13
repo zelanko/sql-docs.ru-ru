@@ -1,5 +1,5 @@
 ---
-title: Системы управления версиями в обозревателе решений | Документы Microsoft
+title: Обозреватель решений системы управления версиями | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual SourceSafe
 - SQL Server Management Studio [SQL Server], source control services
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - VSS [Visual SourceSafe]
 ms.assetid: 6373adb8-3d81-4945-a9fc-1d0d5799d29a
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7165143ad238bbbeda14ac91f214f1410082beb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3975c43263e8ad7dc19c5bd8b01c1f32badea35c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213704"
 ---
 # <a name="solution-explorer-source-control"></a>Обозреватель решений системы управления версиями
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Обозреватель решений можно интегрировать в отдельную систему управления версиями. После того как решение или проект будет интегрированы в систему управления версиями, появится возможность управлять доступом к файлам и версиями скриптов и запросов в проекте.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Обозреватель решений может быть интегрирован в отдельную систему управления версиями. После того как решение или проект будет интегрированы в систему управления версиями, появится возможность управлять доступом к файлам и версиями скриптов и запросов в проекте.  
   
 ## <a name="solution-and-project-source-control"></a>Система управления версиями решений и проектов  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36099579"
   
 2.  В среде [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]в меню **Сервис** выберите **Параметры**.  
   
-3.  В **параметры** диалогового окна разверните **системы управления версиями**, а затем нажмите кнопку **Выбор подключаемых модулей** страницы.  
+3.  В **параметры** диалогового окна последовательно раскройте элементы **системы управления версиями**, а затем нажмите кнопку **Выбор подключаемых модулей** страницы.  
   
 4.  В **текущий модуль управления версиями** выберите подключаемый модуль системы управления версиями.  
   

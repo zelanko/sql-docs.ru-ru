@@ -1,5 +1,5 @@
 ---
-title: Уровень и элементы (вкладка «браузер», конструктор измерений) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Уровень и элементы (вкладка «браузер», конструктор измерений) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsertab.levelsandmembers.f1
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb9a6361159c67c24b8254939f3353a2a0063c04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e30aae23fda8e929b3348ef09d20265ae1d9784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193974"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Уровень и элементы (вкладка «Браузер» конструктора измерений) (службы Analysis Services — многомерные данные)
   Данная панель используется для просмотра элементов выбранных в настоящий момент иерархии и языка. Чтобы выбрать иерархию или язык для просмотра, используйте параметры **Иерархия** и **Язык** на **Панели инструментов** . Дополнительные сведения об этой панели инструментов см. в разделе [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="writeback-mode"></a>Режим обратной записи  
- При включении режима обратной записи функциональность данной панели изменяется. Выбранное измерение должно быть доступным для записи (другими словами, `WriteEnabled` измерения необходимо задать значение true) и измерения должны быть развернуты в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] экземпляра, чтобы включить режим обратной записи.  
+ При включении режима обратной записи функциональность данной панели изменяется. Выбранного измерения должна быть возможность записи (другими словами, `WriteEnabled` свойства измерения необходимо указать значение true) и измерения должны быть развернуты в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] экземпляра, чтобы включить режим обратной записи.  
   
  Для включения режима обратной записи можно либо выбрать элемент **Обратная запись** в области **Панель инструментов** , либо щелкнуть правой кнопкой мыши панель **Уровень и элементы** и выбрать пункт **Обратная запись** из контекстного меню.  
   
@@ -128,6 +128,6 @@ ms.locfileid: "36100964"
   
 ## <a name="see-also"></a>См. также  
  [Панель инструментов &#40;вкладка «браузер», конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
- [Обозреватель &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Браузер &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

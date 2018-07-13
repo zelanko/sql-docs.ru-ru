@@ -1,5 +1,5 @@
 ---
-title: Обработать диалоговое окно хода выполнения (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Обработать диалоговое окно хода выполнения (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.processprogress.f1
 ms.assetid: f3bd5278-3a83-4fd9-9903-e81bdd4b6892
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 80bbb03d206bc3b87e27043de0ad29bb258a624d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f7ac5f499c857fda608fd9f6e66e9aa20f145312
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189231"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Ход обработки» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Развитие процесса** в средах [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для отслеживания состояния обработки в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Диалоговое окно **Ход обработки** появляется при начале обработки объекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -36,7 +36,7 @@ ms.locfileid: "36099600"
  **Остановить**  
  Нажмите «Остановить», чтобы прервать операцию.  
   
- **Выполнить повторную обработку**  
+ **Повторная обработка**  
  Нажмите для повторения операции обработки, которую отображало диалоговое окно **Ход обработки** .  
   
  **Просмотр сведений**  

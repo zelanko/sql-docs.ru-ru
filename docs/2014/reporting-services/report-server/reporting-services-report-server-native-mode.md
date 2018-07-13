@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
 - administering [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9673fbd613b927a16b4d5a66ee49ac74c158ca87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e2710dae03006cf5f2b762c09aab55bf6663261
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157785"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Сервер отчетов служб Reporting Services (собственный режим)
   Сервер отчетов, настроенный для работы в основном режиме, выполняется как сервер приложений, обеспечивающий все функции обработки и управления исключительно через компоненты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -63,7 +63,7 @@ ms.locfileid: "36100153"
  В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]управление содержимым подразумевает управление отчетами, моделями, папками, ресурсами и общими источниками данных. Всеми этими элементами можно управлять независимо друг от друга посредством свойств и настроек безопасности. Любой элемент можно переместить в другое место в пространстве имен папок сервера отчетов. Для эффективного управления элементами необходимо знать, какие задачи выполняет диспетчер содержимого.  
   
 > [!NOTE]  
->  Управление содержимым отличается от администрирования сервера отчетов. Дополнительные сведения об управлении средой, в которой работает сервер отчетов см. в разделе [Администрирование (службы Reporting Services)](reporting-services-report-server-native-mode.md).  
+>  Управление содержимым отличается от администрирования сервера отчетов. Дополнительные сведения о том, как управлять средой, в которой работает сервер отчетов, см. в разделе [администрирования (службы Reporting Services)](reporting-services-report-server-native-mode.md).  
   
  Управление содержимым включает следующие задачи.  
   

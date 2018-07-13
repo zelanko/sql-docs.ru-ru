@@ -1,5 +1,5 @@
 ---
-title: Содержимое модели интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+title: Содержимое модели интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - nearest neighbor [Data Mining]
 - clustering [Data Mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 19b4b4192fd38fe4e3bab142c6a327e4c2510d5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc2d9ce1c0581d067b8a0a9be0ad52643ee6287a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101644"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153315"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)
   В этом разделе приведено описание содержимого модели интеллектуального анализа данных, характерного для моделей, в которых используется алгоритм кластеризации (Майкрософт). Общее описание содержимого модели интеллектуального анализа данных для всех типов моделей см. в разделе [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "36101644"
 ## <a name="understanding-the-structure-of-a-clustering-model"></a>Основные сведения о структуре модели кластеризации  
  Модель кластеризации имеет простую структуру. Каждая модель имеет единственный родительский узел, который представляет модель и ее метаданные, а каждый родительский узел содержит плоский список кластеров (NODE_TYPE = 5). Эта организация показана на следующем рисунке.  
   
- ![Структура содержимого моделей кластеризации](../media/modelcontentstructure-clust.gif "структура содержимого для кластеризации")  
+ ![Структура содержимого моделей для кластеризации](../media/modelcontentstructure-clust.gif "структура содержимого моделей для кластеризации")  
   
  Каждый дочерний узел представляет отдельный кластер и содержит подробные статистические данные об атрибутах вариантов в этом кластере. К ним относятся количество вариантов в кластере и распределение значений, по которым данный кластер отличается от других кластеров.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36101644"
 > [!NOTE]  
 >  В качестве дисперсии представлена общая дисперсия для кластера. Если значение дисперсии является небольшим, это указывает на то, что большинство значений в столбце довольно близки к среднему. Чтобы получить стандартное отклонение, вычислите квадратный корень дисперсии.  
   
- Обратите внимание, что для каждого из атрибутов `Missing` типа, которое указывает, сколько вариантов отсутствуют данные для этого атрибута значения. Недостающие данные могут оказаться значительными и по-разному повлиять на вычисления, в зависимости от типа данных. Дополнительные сведения см. в разделе [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
+ Обратите внимание, что для каждого из атрибутов имеется `Missing` типа, которое указывает, сколько вариантов нет данных для этого атрибута значения. Недостающие данные могут оказаться значительными и по-разному повлиять на вычисления, в зависимости от типа данных. Дополнительные сведения см. в разделе [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
 ## <a name="model-content-for-a-clustering-model"></a>Содержимое модели для модели кластеризации  
  В этом разделе предоставлены подробные сведения и примеры, относящиеся только к тем столбцам в содержимом модели интеллектуального анализа данных, которые являются значимыми для моделей кластеризации.  
@@ -165,7 +165,7 @@ ms.locfileid: "36101644"
 ## <a name="see-also"></a>См. также  
  [Содержимое модели интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining-model-viewers.md)   
- [Алгоритм кластеризации Майкрософт](microsoft-clustering-algorithm.md)   
+ [Алгоритм кластеризации (Майкрософт)](microsoft-clustering-algorithm.md)   
  [Запросы интеллектуального анализа данных](data-mining-queries.md)  
   
   

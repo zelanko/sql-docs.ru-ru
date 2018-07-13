@@ -1,5 +1,5 @@
 ---
-title: Изменение целевых серверов, связанных с заданием агента главного сервера SQL | Документы Microsoft
+title: Изменение целевых серверов, связанных с заданием агента главного сервера SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 176e73b6-08aa-48ec-b349-e84b431e65cc
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9f4999c835d85dd06cab2e6ac3f3bef64ed12231
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b6ac1737f7fe4bb4ac7706c5ff83b3ba84b65cfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206524"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modify the Target Server(s) Associated with a SQL Server Agent Master Job
   В этом разделе описывается, как изменить целевые серверы, связанные с главным заданием агента SQL Server, в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -60,7 +60,7 @@ ms.locfileid: "36099445"
   
 4.  Щелкните правой кнопкой мыши задание, для которого требуется изменить целевой сервер, и выберите пункт **Свойства**.  
   
-5.  В диалоговом окне **Свойства задания —***имя_задания* в разделе **Выберите страницу** выберите пункт **Цели**. Дополнительные сведения о параметрах, доступных на этой странице см. в разделе [свойства задания: новое задание &#40;страница «цели»&#41;](job-properties-new-job-targets-page.md).  
+5.  В диалоговом окне **Свойства задания —***имя_задания* в разделе **Выберите страницу** выберите пункт **Цели**. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [свойства задания: новое задание &#40;страница "цели"&#41;](job-properties-new-job-targets-page.md).  
   
 6.  После завершения нажмите кнопку **ОК**.  
   

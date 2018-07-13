@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 22f525a1eed94e3125dab5cdc3930dc6bc20ec91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 763a1eb2db612eff3e1d6a895e91fb0878d465e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159135"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Присоединение и отсоединение баз данных DQS
   В этом разделе описывается, как отсоединять и присоединять базы данных DQS.  
@@ -46,7 +46,7 @@ ms.locfileid: "36100933"
 -   Для завершения любых выполняемых операций или остановки каких-либо процессов в службах DQS необходимо быть членом роли dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="Detach"></a> Отсоединение баз данных DQS  
- При отсоединении базы данных DQS с помощью среды SQL Server Management Studio отсоединенные файлы остаются на компьютере, их можно повторно присоединить к этому же экземпляру SQL Server либо они могу быть перемещены на другой сервер и присоединены там. Файлы баз данных DQS обычно находятся в папке на компьютере служб Data Quality Services: C:\Program Files\Microsoft SQL Server\MSSQL12. *< Имя_экземпляра >* \MSSQL\DATA.  
+ При отсоединении базы данных DQS с помощью среды SQL Server Management Studio отсоединенные файлы остаются на компьютере, их можно повторно присоединить к этому же экземпляру SQL Server либо они могу быть перемещены на другой сервер и присоединены там. Файлы баз данных DQS обычно находятся в следующем расположении на компьютере служб Data Quality Services: C:\Program Files\Microsoft SQL Server\MSSQL12. *< Имя_экземпляра >* \MSSQL\DATA.  
   
 1.  Запустите среду Microsoft SQL Server Management Studio и подключитесь к соответствующему экземпляру SQL Server.  
   

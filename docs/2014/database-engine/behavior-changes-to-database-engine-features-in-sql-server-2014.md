@@ -1,5 +1,5 @@
 ---
-title: Изменения в работе базы данных подсистемы функции в SQL Server 2014 | Документы Microsoft
+title: Поведение изменения в ядра СУБД в SQL Server 2014 | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - behavior changes [SQL Server]
 - Database Engine [SQL Server], what's new
 - Transact-SQL behavior changes
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 caps.latest.revision: 134
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b91a84ac2973ee5569ff9a9f4b3fa54737492068
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d83d502ec6b384a7c3e6a5f4ee2f4e7787ead4da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193964"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Изменения в работе функций компонента Database Engine в SQL Server 2014
   В этом разделе описаны изменения в компоненте [!INCLUDE[ssDE](../includes/ssde-md.md)]. Изменения в работе оказывают влияние на способ выполнения функций или взаимодействие между ними в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] по сравнению с предыдущими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -34,12 +34,12 @@ ms.locfileid: "36099853"
 ## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>Изменения в поведении [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>Обнаружение метаданных  
- Улучшения в [!INCLUDE[ssDE](../includes/ssde-md.md)] начиная с версии [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] разрешить SQLDescribeCol получить более точные описания ожидаемых результатов, чем, возвращенные в предыдущих версиях SQLDescribeCol [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [обнаружение метаданных](../relational-databases/native-client/features/metadata-discovery.md).  
+ Улучшения в [!INCLUDE[ssDE](../includes/ssde-md.md)] начиная с версии [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] разрешить SQLDescribeCol получать более точные описания ожидаемых результатов, чем возвращаемыми SQLDescribeCol в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [обнаружение метаданных](../relational-databases/native-client/features/metadata-discovery.md).  
   
- The [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) option for determining the format of a response without actually running the query is replaced with [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), and [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
+ [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) параметр для определения формата ответа без фактического выполнения запроса заменен [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), и [sys.dm_ exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>Изменения в работе скриптов для задач агента SQL Server  
- В [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] при создании нового задания путем копирования скрипта из существующего задания новое задание может непреднамеренно повлиять на существующее. Чтобы создать новое задание с помощью скрипта из существующего задания, вручную удалите параметр *@schedule_uid* которой обычно является последнего параметра в разделе, где создается расписание для существующего задания. При этом для нового задания будет создано независимое расписание, которое не окажет влияния на существующие задания.  
+ В [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] при создании нового задания путем копирования скрипта из существующего задания новое задание может непреднамеренно повлиять на существующее. Чтобы создать новое задание с помощью скрипта из существующего задания, вручную удалите параметр *@schedule_uid* которой обычно является последним параметром в разделе, где создается расписание для существующего задания. При этом для нового задания будет создано независимое расписание, которое не окажет влияния на существующие задания.  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>Свертка констант для определяемых пользователем функций и методов среды CLR  
  В [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] теперь можно сворачивать следующие определяемые пользователем объекты среды CLR:  
@@ -78,7 +78,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  Чтобы определить, является ли пространственный объект пустым, вызовите [STIsEmpty &#40;тип данных geometry&#41; ](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type) метод.  
   
 ### <a name="log-function-has-new-optional-parameter"></a>Новый необязательный параметр функции LOG  
- `LOG` Функции теперь имеет необязательный *базового* параметра. Дополнительные сведения см. в разделе [ЖУРНАЛА &#40;Transact-SQL&#41;](/sql/t-sql/functions/log-transact-sql).  
+ `LOG` Функция теперь имеет необязательный *базового* параметра. Дополнительные сведения см. в разделе [ЖУРНАЛА &#40;Transact-SQL&#41;](/sql/t-sql/functions/log-transact-sql).  
   
 ### <a name="statistics-computation-during-partitioned-index-operations-has-changed"></a>Изменение статистических вычислений во время операций с секционированным индексом  
  Статистические данные в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] не создаются путем сканирования всех строк таблицы при создании или перестроении секционированного индекса. Вместо этого оптимизатор запросов использует для создания статистики алгоритм выборки по умолчанию. После обновления базы данных с секционированными индексами можно заметить разницу в гистограммах для этих индексов. Это изменение в поведении может не влиять на время выполнения запросов. Для получения статистики по секционированным индексам путем сканирования всех строк таблицы используйте инструкции CREATE STATISTICS или UPDATE STATISTICS с предложением FULLSCAN.  
@@ -105,9 +105,9 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  Изменилась работа программы sqlcmd.exe в режиме XML (команда :XML ON) при выполнении инструкций SELECT * from T FOR XML…  
   
 ### <a name="dbcc-checkident-revised-message"></a>Измененное сообщение DBCC CHECKIDENT  
- В [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], сообщение, возвращаемое командой DBCC CHECKIDENT изменилось только при использовании вместе с RESEED *new_reseed_value* изменение текущего значения идентификатора. Новое сообщение «Проверка идентификационных данных: текущее значение идентификатора "\<текущее значение идентификатора >". Выполнение инструкции DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору».  
+ В [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], сообщение, возвращаемое командой DBCC CHECKIDENT изменилось только при использовании вместе с RESEED *new_reseed_value* для изменения текущего значения идентификатора. Новое сообщение выглядит «Проверка идентификационных данных: текущее значение идентификатора "\<текущее значение идентификатора >". Выполнение инструкции DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору».  
   
- В более ранних версиях сообщение: «Проверка идентификационных данных: текущее значение идентификатора "\<текущее значение идентификатора >", текущее значение столбца "\<текущее значение столбца >". Выполнение инструкции DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору». Это сообщение не меняется, если команда DBCC CHECKIDENT указана вместе с NORESEED, без второго параметра или без значения для повторного заполнения. Дополнительные сведения см. в разделе [DBCC CHECKIDENT (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
+ В более ранних версиях — сообщение «Проверка идентификационных данных: текущее значение идентификатора "\<текущее значение идентификатора >", текущее значение столбца "\<текущее значение столбца >". Выполнение инструкции DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору». Это сообщение не меняется, если команда DBCC CHECKIDENT указана вместе с NORESEED, без второго параметра или без значения для повторного заполнения. Дополнительные сведения см. в разделе [DBCC CHECKIDENT (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>Изменилась работа функции exist() типа данных XML  
  Поведение **exist()** функции был изменен при сравнении типа данных XML со значением null, 0 (ноль). Рассмотрим следующий пример:  
@@ -132,7 +132,7 @@ SELECT COUNT(1) WHERE @test.exist('/dogs') IS NULL; -- 1 expected, 1 returned
 ## <a name="see-also"></a>См. также  
  [Критические изменения в функциях ядра СУБД в SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md)   
  [Нерекомендуемые функции ядра СУБД в SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   
- [Нерекомендуемые функции ядра СУБД в SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Неподдерживаемые функции ядра СУБД в SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [Уровень совместимости инструкции ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   
   

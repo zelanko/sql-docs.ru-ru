@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
 - modifying operators
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - operators (users) [Database Engine], modifying with Management Studio
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8aa1fbe6495aa7fc4ee81d6a8f93775f311b9e87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a6ec4ffcad8d88a14ee9fdaeed9fd286195a16a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149815"
 ---
 # <a name="edit-an-operator"></a>Изменение оператора
   В этом разделе описано, как изменить доступность операторов к получению уведомлений, а также для них адрес электронной почты, номер пейджера и адрес net send в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -72,9 +72,9 @@ ms.locfileid: "36101004"
   
      Дополнительные сведения о доступных параметрах, содержащихся в диалоговом окне *Свойства***имя_оператора**, см. в разделе:  
   
-    -   [Свойства оператора и оператора New &#40;страница «Общие»&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Свойства оператора и оператора New &#40;страница "Общие"&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Свойства оператора: Оператор New &#40;страница «уведомления»&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [Свойства оператора: Оператор New &#40;страница "уведомления"&#41;](operator-properties-new-operator-notifications-page.md)  
   
     -   [Свойства оператора (страница "Журнал")](operator-properties-history-page.md)  
   

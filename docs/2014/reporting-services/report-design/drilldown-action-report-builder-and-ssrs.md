@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10249"
 - "10186"
@@ -41,15 +41,15 @@ f1_keywords:
 - "10053"
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fc5cb7a7636f41f2d687040989065cbd20a46a31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3ced409b97287910cdcea28e7723e027fc3e9bb7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166201"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Действие детализации (построитель отчетов и службы SSRS)
   Размещение значков плюса и минуса в текстовом поле позволяет пользователям интерактивно скрывать и отображать элементы. Это действие называется *углубленной детализацией* . Для таблицы или матрицы можно показывать или скрывать статические строки и столбцы или строки и столбцы, связанные с группами.  
@@ -89,7 +89,7 @@ ms.locfileid: "36100146"
  Дополнительные сведения см. в разделе [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](rendering-behaviors-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также  
- [Детализация, Углубленная детализация, вложенные отчеты и вложенные области данных &#40;отчетов построителя отчетов и службы SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)   
+ [Детализация, Углубленная детализация, вложенные отчеты и вложенные области данных &#40;построитель отчетов и службы SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)   
  [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)  
   

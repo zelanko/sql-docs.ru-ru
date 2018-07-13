@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.checkconstraint
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a3dc13f77788f46796c274d43d5dea920167033f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e4908c1ea2bb110c176e07e5fe8a0ffc8a0ad496
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202254"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Диалоговое окно «Проверочное ограничение» (визуальные инструменты для баз данных)
   Это диалоговое окно выводится, если в конструкторе таблиц щелкнуть правой кнопкой мыши сетку определения таблицы и выбрать пункт **Проверочные ограничения**. Диалоговое окно содержит набор свойств для ограничений, отличных от ограничений уникальности, присоединенных к таблицам базы данных. Свойства, применяемые к ограничениям уникальности, отображаются в диалоговом окне **Индексы/Ключи** .  
@@ -67,7 +67,7 @@ ms.locfileid: "36100128"
  Показывает, действует ли ограничение, когда агент репликации производит вставку или изменение в этой таблице.  
   
 ## <a name="see-also"></a>См. также  
- [Ограничения UNIQUE и CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
- [Индексы и ключи диалоговое окно &#40;визуальные средства базы данных&#41;](visual-database-tools.md)  
+ [Ограничения уникальности и проверочные ограничения](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+ [Индексы и ключи диалоговое окно &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)  
   
   

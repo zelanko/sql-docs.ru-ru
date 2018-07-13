@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data [SQL Server]
 - change data capture [SQL Server], query function scenarios
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], query functions
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ff879a145b56f9bc46a95f7669ee4e81812dec6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: df86d149bcdf6d9e1619499edf2bc41137433392
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153995"
 ---
 # <a name="work-with-change-data-sql-server"></a>Работа с информацией об изменениях (SQL Server)
   Информация об изменениях сделана доступной для клиентов системы отслеживания измененных данных через функции с табличным значением. Всем запросам этих функций требуются два параметра для определения диапазона регистрационных номеров транзакций в журнале, которые нужно учитывать при разработке возвращаемого результирующего набора. Необходимо рассмотреть как верхнее, так и нижнее значения номеров LSN, ограничивающие этот интервал.  
@@ -40,7 +40,7 @@ ms.locfileid: "36101964"
   
  `An insufficient number of arguments were supplied for the procedure or function cdc.fn_cdc_get_all_changes_ ...`  
   
- Ошибка возвращается для `net changes` запроса является следующее:  
+ Ошибка возвращается для `net changes` запроса представляет собой следующее:  
   
  `Msg 313, Level 16, State 3, Line 1`  
   

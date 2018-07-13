@@ -1,32 +1,31 @@
 ---
-title: Создание полнотекстового каталога (страница «Общие») | Документы Microsoft
+title: Создание полнотекстового каталога (страница "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalog.general.f1
 ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
 caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 92272cb7d631265a868a79ae3bbdcdc9944a2bf1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72ef177888c7eb646cebed8d7a74195f809cdd28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228324"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Создать полнотекстовый каталог (страница «Общие»)
   С помощью этого диалогового окна можно создать новый полнотекстовый каталог.  
   
- **Использование среды SQL Server Management Studio для создания полнотекстового каталога**  
+ **Использование SQL Server Management Studio для создания полнотекстового каталога**  
   
 -   [Создание полнотекстовых каталогов и управление ими](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   

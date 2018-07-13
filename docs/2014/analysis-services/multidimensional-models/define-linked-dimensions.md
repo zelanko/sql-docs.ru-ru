@@ -1,5 +1,5 @@
 ---
-title: Определите связанные измерения | Документы Microsoft
+title: Определение связанных измерений | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b4ddd7a9c833346956e3c5ccdde93873028f663
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 263d51971081fec9570c1e6787169c1b9ec50b42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155365"
 ---
 # <a name="define-linked-dimensions"></a>Определите связанные измерения
   Связанное измерение основано на измерении, созданном и хранящемся в другой базе данных служб Analysis Services с той же версией и уровнем совместимости. С помощью связанного измерения можно создавать, хранить и поддерживать измерения в одной базе данных, при этом данное измерение будет доступно для пользователей нескольких баз данных. Для пользователей связанное измерение ничем не отличается от других измерений.  
@@ -66,7 +66,7 @@ ms.locfileid: "36101860"
   
 2.  В диспетчере соединений проверьте, что установлен поставщик **Собственный поставщик OLE DB\Поставщик OLE DB для служб Analysis Services 11.0 (Майкрософт)**.  
   
-3.  Введите имя сервера (используйте *servername*\\*instancename* для именованного экземпляра)<sup>1</sup> или тип **localhost** для подключиться к серверу служб Analysis Services, на котором выполняется на том же компьютере.  
+3.  Введите имя сервера (использовать *servername*\\*instancename* для именованного экземпляра)<sup>1</sup> или тип **localhost** для Подключитесь к серверу служб Analysis Services, на котором выполняется на одном компьютере.  
   
 4.  Используйте проверку подлинности Windows для соединения.  
   

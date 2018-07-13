@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], agents and profiles
 - replication agent profiles [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - profiles [SQL Server], replication agents
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: deb2e3e2ea03429e2d37288e85592d54e1512af3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ccbb2f6a8912a68573b9e3d67d677e7a92c7e1f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152465"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Работа с профилями агента репликации
   В данном разделе описывается работа с профилями агента репликации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO. Поведение каждого агента репликации контролируется набором параметров, который может устанавливаться через профили агента. У каждого агента имеются профили по умолчанию, а некоторые агенты имеют дополнительные предопределенные профили. В каждый момент времени активен только один профиль.  
@@ -219,11 +219,11 @@ ms.locfileid: "36101091"
   
     -   **9** - [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
   
-     Будут получены все профили для указанного типа агента. Обратите внимание на значение `profile_name` в результирующем наборе для профиля для использования.  
+     Будут получены все профили для указанного типа агента. Обратите внимание на значение `profile_name` в результирующем наборе для профиля, который должен использоваться.  
   
-2.  Если агент запускается из задания агента, измените шаг задания, который запускается агент, чтобы указать значение `profile_name` из шага 1 после **- ProfileName** параметр командной строки. Дополнительные сведения см. в статье [View and Modify Replication Agent Command Prompt Parameters](view-and-modify-replication-agent-command-prompt-parameters.md) (Просмотр и изменение параметров командной строки агента репликации).  
+2.  Если агент запускается из задания агента, измените шаг задания, который запускается агент, чтобы указать значение `profile_name` из шага 1 после **- ProfileName** параметра командной строки. Дополнительные сведения см. в статье [View and Modify Replication Agent Command Prompt Parameters](view-and-modify-replication-agent-command-prompt-parameters.md) (Просмотр и изменение параметров командной строки агента репликации).  
   
-3.  Если агент запускается из командной строки, укажите значение `profile_name` из шага 1 после **- ProfileName** параметр командной строки.  
+3.  Если агент запускается из командной строки, укажите значение `profile_name` из шага 1 после **- ProfileName** параметра командной строки.  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере создается пользовательский профиль для агента слияния с именем **custom_merge**, меняется значение параметра **-UploadReadChangesPerBatch** , добавляется новый параметр **-ExchangeType** и выводятся сведения о созданном профиле.  
@@ -248,7 +248,7 @@ ms.locfileid: "36101091"
   
     -   <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> – описание профиля (необязательно).  
   
-    -   (Необязательно) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> -присвойте этому свойству значение `true` при всех заданиях агентов для данного <xref:Microsoft.SqlServer.Replication.AgentType> этот профиль будет использоваться по умолчанию.  
+    -   (Необязательно) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> -присвойте этому свойству значение `true` Если всех заданиях агентов для данного <xref:Microsoft.SqlServer.Replication.AgentType> этот профиль будет использоваться по умолчанию.  
   
 4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> для создания профиля на этом сервере.  
   
@@ -282,7 +282,7 @@ ms.locfileid: "36101091"
   
 2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.AgentProfile> . Присвойте имя профиля свойству <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> и значение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , полученное на шаге 1, свойству <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, либо имя указанного неверно или профиль не существует на сервере.  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, либо указанное имя неверно или профиль не существует на сервере.  
   
 4.  Удостоверьтесь в том, что свойству <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> присвоено значение <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>, указывающее на клиентский профиль. Не следует удалять профиль, имеющий значение <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> в свойстве <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>.  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linked reports [Reporting Services], creating
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 87e95389a4571162e07efce30c4bcd933309bef7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 971f07256e5f8b678d62f3a9b75e13299fad3ed3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191334"
 ---
 # <a name="create-a-linked-report"></a>Создание связанного отчета
   Связанный отчет является элементом сервера отчетов, обеспечивающим точку доступа к существующему отчету. Концептуально связанный отчет можно сравнить с ярлыком, который используется для запуска программы или открытия файла.  
@@ -38,7 +38,7 @@ ms.locfileid: "36100348"
   
 2.  Введите имя нового связанного отчета. При необходимости введите также описание.  
   
-3.  Чтобы выбрать иную папку для отчета, щелкните **Изменить местоположение**. Щелкните папку, которую нужно использовать, или введите имя папки в поле **Местоположение** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Если не выбрать другую папку, связанный отчет создается в текущей папке (где хранится отчет, который основан на).  
+3.  Чтобы выбрать иную папку для отчета, щелкните **Изменить местоположение**. Щелкните папку, которую нужно использовать, или введите имя папки в поле **Местоположение** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Если не выбрать другую папку, связанный отчет создается в текущей папке (где хранится отчет, который он основан на).  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Откроется связанный отчет.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36100348"
      ![Значок "Связанный отчет"](../media/hlp-16linked.gif "Значок \"Связанный отчет\"")  
   
 ## <a name="see-also"></a>См. также  
- [Открыть и закрыть отчет &#40;диспетчера отчетов&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [Открытие и закрытие отчетов &#40;диспетчера отчетов&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [Страница "Создание связанного отчета" (диспетчер отчетов)](../new-linked-report-page-report-manager.md)   
  [Страница "Выбор расположения элементов" (диспетчер отчетов)](../choose-item-location-page-report-manager.md)   
  [Страница "Общие свойства", "Отчеты" (диспетчер отчетов)](../general-properties-page-reports-report-manager.md)   

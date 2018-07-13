@@ -1,5 +1,5 @@
 ---
-title: Представление (вкладка «Структура куба», конструктор кубов) источника данных (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Представление (вкладка «Структура куба», конструктор кубов) источника данных (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.datasourcepane.f1
 ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5d1f33aab84cab344ba83478045d1b4bd4962c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0025792747cf0cea5fffd7b0a1a35c5efc7ea759
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185311"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Представление источника данных (вкладка «Структура куба» конструктора кубов) (службы Analysis Services — многомерные данные)
   Панель **Представление источника данных** позволяет просматривать таблицы и столбцы из представления источников данных, связанного с данным кубом. Эта панель позволяет создавать группы мер и меры путем перетаскивания столбцов из панели **Представление источника данных** в панель **Меры** .  
@@ -95,7 +95,7 @@ ms.locfileid: "36100745"
 ## <a name="table-context-menu"></a>Контекстное меню таблицы  
  Следующие пункты доступны в контекстном меню, которое выводится, если щелкнуть правой кнопкой мыши имя таблицы или представление на панели **Представление источника данных** :  
   
- **Показать связанные таблицы**  
+ **Показывать связанные таблицы**  
  Отображает на панели таблицы, связанные с таблицей, выбранной в представлении источника данных.  
   
  **Скрыть таблицу**  
@@ -141,9 +141,9 @@ ms.locfileid: "36100745"
  Отображает окно **Свойства** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для выбранной связи.  
   
 ## <a name="see-also"></a>См. также  
- [Панель инструментов &#40;вкладка «Структура куба», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Меры &#40;вкладка «Структура куба», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Измерения &#40;вкладка «Структура куба», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Панель инструментов &#40;вкладка «Структура куба» конструктора кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Меры &#40;вкладка «Структура куба» конструктора кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Измерения &#40;вкладка «Структура куба» конструктора кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [Структура куба &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
   
   

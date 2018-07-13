@@ -1,5 +1,5 @@
 ---
-title: Наборы строк схемы анализа XML для | Документы Microsoft
+title: XML для анализа наборов строк схемы | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 391f3ab14aef3680b9590e73c5bc94cc2e13b3a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c8125b3543e6f3c088ad8b7ae7dd5952d52df26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159275"
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
   Поставщик [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) содержит наборы строк схемы, которые возвращают метаданные о состоянии, активности и объектах сервера. Получение метаданных необходимо, когда идет разработка клиентского приложения, подключающегося к модели служб Analysis Services, обладающей переменной структурой и характеристиками.  
@@ -75,11 +75,11 @@ ms.locfileid: "36100955"
 |[Набор строк DISCOVER_TRANSACTIONS](discover-transactions-rowset.md)|Возвращает текущий набор ожидающих транзакций в системе.|  
 |[Набор строк DISCOVER_XML_METADATA](discover-xml-metadata-rowset.md)|Возвращает XML-документ с описанием запрошенного объекта.|  
   
- <sup>1</sup> все наборы строк схемы, приведенные здесь поддерживаются поставщиком источника данных MSOLAP для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] поставщика XML для Аналитики.  
+ <sup>1</sup> все наборы строк схемы, перечисленные здесь поддерживаются поставщиком источника данных MSOLAP для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] поставщика XML для Аналитики.  
   
 ## <a name="see-also"></a>См. также  
- [Разработка с использованием XML для Аналитики в службах Analysis Services](../../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [Используйте динамические административные представления &#40;динамических административных представлений&#41; для наблюдения за Analysis Services](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
+ [Разработка с использованием XMLA в службах Analysis Services](../../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
+ [Используйте динамические административные представления &#40;динамические административные представления&#41; мониторинг Analysis Services](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
  [Получение метаданных из источника аналитических данных](../../multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   

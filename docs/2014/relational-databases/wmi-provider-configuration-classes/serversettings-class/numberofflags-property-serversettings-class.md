@@ -1,5 +1,5 @@
 ---
-title: Свойство NumberOfFlags (класс ServerSettings) | Документы Microsoft
+title: Свойство NumberOfFlags (класс ServerSettings) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - NumerOfFlags property
 ms.assetid: d720f093-0d67-4e6c-8231-78d9ab853a8f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7da483780c64d2bd34a31b5ed2f25bb61faa5b88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: eb170abe87778dd7266fc074310d1135545c750c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166335"
 ---
 # <a name="numberofflags-property-serversettings-class"></a>Свойство NumberOfFlags (класс ServerSettings)
-  Возвращает число общих флагов, связанных с экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Получает число общих флагов, связанных с экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   

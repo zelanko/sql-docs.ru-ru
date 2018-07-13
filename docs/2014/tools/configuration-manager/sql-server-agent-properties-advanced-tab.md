@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 592db4fd54c7d94eecfdc46cfc130c2cc693d4d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 63d4a112c9a7fe1e98b95ee79cd2200bbe860025
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157435"
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>Свойства агента SQL Server (вкладка «Дополнительно»)
   По умолчанию на вкладке **Дополнительно** присутствуют пять свойств. Если определены пользовательские свойства, они также отображаются на этой вкладке вместе со значениями.  

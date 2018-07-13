@@ -1,5 +1,5 @@
 ---
-title: Редактор назначения OLE DB (страница «Вывод ошибок») | Документы Microsoft
+title: Редактор назначения OLE DB (страница "Вывод ошибок") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.errorhandling.f1
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 684c16cfa2456d811f1866d2c6e2b805e30362b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ac164885aaa3e5d96716946bda912a48181d52d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190724"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>Редактор назначения «OLE DB» (страница «Вывод ошибок»)
   Страница **Вывод ошибок** диалогового окна **Редактор назначения «OLE DB»** используется для задания параметров обработки ошибок.  
@@ -55,7 +55,7 @@ ms.locfileid: "36100650"
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения OLE DB &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
  [Редактор назначения OLE DB &#40;страница «сопоставления»&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [Загрузка данных с помощью назначения «OLE DB»](data-flow/load-data-by-using-the-ole-db-destination.md)  

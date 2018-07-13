@@ -1,5 +1,5 @@
 ---
-title: результаты Element (XMLA) | Документы Microsoft
+title: результаты Element (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - results element
 ms.assetid: 3249a17a-7bfa-4753-b605-8f611ba7ae2b
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 203ad5a79938c80e2bfccc798ff5f9551ac66d8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1e42f6aa620b57630df690ee92bdbbd849ab100b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165235"
 ---
 # <a name="results-element-xmla"></a>Элемент results (XML для аналитики)
   Содержит коллекцию элементов [root](root-element-xmla.md) , возвращаемых методом [Execute](../xml-elements-methods-execute.md) с использованием команды [Batch](../xml-elements-commands/batch-element-xmla.md) .  
@@ -62,8 +62,8 @@ ms.locfileid: "36100077"
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительские элементы|[Возврат](return-element-xmla.md)|  
-|Дочерние элементы|[корень](root-element-xmla.md)|  
+|Родительские элементы|[вернуть](return-element-xmla.md)|  
+|Дочерние элементы|[корневой](root-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
  Если команда `Batch` выполняется методом `Execute`, то элемент `return` содержит единственный элемент `results`, а не единственный элемент `root`. Содержимое элемента `results` зависит от параметров, используемых для выполнения команды `Batch`.  

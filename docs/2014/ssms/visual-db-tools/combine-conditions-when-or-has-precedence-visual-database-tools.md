@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], combining
 - precedence [SQL Server], Criteria pane
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OR operator
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 580b0331e59aef1b4c33d75084490e0a8be65147
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c7d5b7e62e3bfc42870fb5c6a6c853dd43a04778
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183521"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>Соединение условий, если приоритет имеет оператор OR (визуальные инструменты для баз данных)
   Чтобы связать условия, оператором OR и дать им приоритет над условиями, связанными оператором AND, необходимо повторить условие, связанное оператором AND, для каждого условия, связанного оператором OR.  
@@ -75,7 +75,7 @@ WHERE (job_lvl = 100 OR status = 'R') AND
 >  Если ввести условия поиска в формате, представленном выше, в [панель SQL](sql-pane-visual-database-tools.md), но потом изменить запрос на панели диаграмм или панели критериев, то конструктор запросов и представлений заново создает инструкцию SQL, так чтобы она соответствовала форме с условием AND, явно распространенным на оба условия, связанные оператором OR.  
   
 ## <a name="see-also"></a>См. также  
- [Соглашения комбинирования условия поиска на панели критериев &#40;визуальные средства базы данных&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [Обозначения для объединения условий поиска на панели критериев &#40;визуальных инструментах баз данных&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [Определение критериев поиска (визуальные инструменты для баз данных)](specify-search-criteria-visual-database-tools.md)  
   
   

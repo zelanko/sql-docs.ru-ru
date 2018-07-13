@@ -1,5 +1,5 @@
 ---
-title: Заголовок элемента (ASSL) | Документы Microsoft
+title: Заголовок элемента (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Caption element
 ms.assetid: ed2be851-0ddc-4fa5-8aee-b2acb2e6d25e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28a773a4a601ecd4a6a7a98ccc7273fed0d4e1b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 283e7f84373d5f36431ba1b706b4d27e23cb876f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167705"
 ---
 # <a name="caption-element-assl"></a>Элемент Caption (ASSL)
   Содержит заголовок для связанного родительского элемента.  
@@ -62,7 +62,7 @@ ms.locfileid: "36099880"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элементы, соответствующие родителям элемента `Caption` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Action> и <xref:Microsoft.AnalysisServices.Translation>.  
+ Элементы, соответствующие родителям элемента `Caption` в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.Action> и <xref:Microsoft.AnalysisServices.Translation>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

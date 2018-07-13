@@ -1,5 +1,5 @@
 ---
-title: Модель вкладку (средства просмотра моделей интеллектуального анализа данных) | Документы Microsoft
+title: Модель вкладку (средства просмотра моделей интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.decisiontree.f1
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 932874065a56b98f8eb532f62206430152c794ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ffed64e129b7c3a94e337ab7a749b6950cdae4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278470"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Вкладка «Модель» (средства просмотра модели интеллектуального анализа)
   Вкладка **Модель** средства просмотра временных рядов (Майкрософт) отображает представление временных рядов как узла диаграммы аналогично используемым в моделях диаграммы дерева принятия решений.  
@@ -43,7 +43,7 @@ ms.locfileid: "36096017"
  **Увеличить масштаб**  
  Позволяет увеличить масштаб диаграммы.  
   
- **Уменьшение масштаба**  
+ **Уменьшить масштаб**  
  Позволяет уменьшить масштаб диаграммы.  
   
  **Копировать представление диаграммы**  

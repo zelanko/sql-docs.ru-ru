@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f1feb8292020b61d00705e662bda80d2b3af4eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ecbf266c87e5aebe47f0f7af9c7a244c0e8dfb20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171437"
 ---
 # <a name="upgrade-data-quality-services"></a>Обновление служб Data Quality Services
   Этот раздел предоставляет сведения о том, как обновить существующую установку служб Data Quality Services (DQS) в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] версии CTP2. В процессе обновления сервера служб DQS в службах DQS в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], необходимо обновить схему базы данных служб DQS.  
@@ -27,7 +27,7 @@ ms.locfileid: "36099828"
 > [!IMPORTANT]  
 >  -   Необходимо создать резервную копию баз данных DQS, прежде чем обновлять DQS, чтобы предотвратить любую случайную потерю данных при обновлении схемы. Дополнительные сведения о создании резервной копии баз данных DQS см. в разделе [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   Для выполнения задач по обеспечению качества данных вы можете подключиться к версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] сервера DQS, используя текущую или более раннюю версию клиента DQS или [преобразование "Очистка DQS"](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) в службах Integration Services.  
-> -   Можно продолжить использование надстройки служб Master Data Services для Excel версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) после обновления служб Data Quality Services и Master Data Services до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Однако любая более ранняя версия надстройки служб Master Data Services для Excel перестанет работать после обновления до версии SQL Server 2014 CTP2. Вы можете загрузить [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-версию основных данных службы надстройки для Excel из [здесь](http://go.microsoft.com/fwlink/?LinkId=328664).  
+> -   Можно продолжить использование надстройки служб Master Data Services для Excel версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) после обновления служб Data Quality Services и Master Data Services до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Однако любая более ранняя версия надстройки служб Master Data Services для Excel перестанет работать после обновления до версии SQL Server 2014 CTP2. Вы можете скачать [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] версии с пакетом обновления 1 из образца данных службы надстройки для Excel из [здесь](http://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ##  <a name="Prerequisites"></a> Предварительные требования  
   

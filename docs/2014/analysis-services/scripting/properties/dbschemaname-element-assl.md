@@ -1,5 +1,5 @@
 ---
-title: Элемент DbSchemaName (ASSL) | Документы Microsoft
+title: Элемент DbSchemaName (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DbSchemaName element
 ms.assetid: ae0f0edd-7b76-400d-a288-39a36d2a746b
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0f55d446f8816ac140896dfb43b0e163f3f61314
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc5b1eda981bcd19f4f916ddb60dd511264075a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099423"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220054"
 ---
 # <a name="dbschemaname-element-assl"></a>Элемент DbSchemaName (ASSL)
-  Содержит имя схемы, используемой родительским элементом в таблице, указанной [DbTableName](name-element-assl.md) элемента.  
+  Содержит имя схемы, используемой родительским элементом в таблицу, определяемую [DbTableName](name-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36099423"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элементы, соответствующие родителям элемента `DbSchemaName` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.TableBinding> и <xref:Microsoft.AnalysisServices.TableNotification>.  
+ Элементы, соответствующие родителям элемента `DbSchemaName` в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.TableBinding> и <xref:Microsoft.AnalysisServices.TableNotification>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

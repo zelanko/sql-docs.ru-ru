@@ -1,5 +1,5 @@
 ---
-title: Построение проектов служб Analysis Services (SSDT) | Документы Microsoft
+title: Построение проектов служб Analysis Services (SSDT) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Analysis Services], building
 - Business Intelligence Development Studio, project building [Analysis Services]
 ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 697a550dccaf5e89414825efaa137ce146d52cf0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85e3b552234ff34333b8566bdb741b28f2e56d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196174"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Построение проектов служб Analysis Services (среда SSDT)
   Построение проекта служб [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]в среде [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] похоже на создание программного проекта в среде Visual Studio. При создании проекта, в выходном каталоге создается набор XML-файлов. Эти XML-файлы используют язык сценария служб анализа данных (ASSL), который представляет собой XML-диалект клиентских приложений, включающий использование [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для взаимодействия с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в целях создания или изменения объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Эти XML-файлы используются для развертывания определений объекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в проекте служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на конкретном экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -57,12 +57,12 @@ ms.locfileid: "36099607"
 |-----------------------------|-----------------|  
 |\<Имя конфигурации > \LastBuilt.xml|Содержит временную метку и хэш-код, идентифицирующие время последней сборки проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
- Эти XML-файлы не содержат \<Create > и \<Alter > тегов, которые создаются во время развертывания.  
+ Эти XML-файлы не содержат \<Create > и \<Alter > теги, которые формируются при развертывании.  
   
  Связанные сборки (за исключением стандартной системной сборки и сборки служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) также копируются в выходной каталог. При наличии связей с другими проектами решения, эти проекты сначала собираются, используя соответствующую конфигурацию проекта и зависимости построения, заданные связями проекта, а затем копируются в выходную папку проекта.  
   
 ## <a name="see-also"></a>См. также  
- [Язык ASSL &#40;ASSL&#41; ссылки](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
+ [Язык сценариев Analysis Services &#40;ASSL&#41; ссылки](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Развертывание проектов служб Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

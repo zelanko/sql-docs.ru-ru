@@ -1,5 +1,5 @@
 ---
-title: Определение связей атрибутов в определенной пользователем иерархии | Документы Microsoft
+title: Определение связей атрибутов в пользовательской иерархии | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 0c17514fda839a155dbe2f58f1e6b8c653b65ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cae7505f4ff135b9b1939dba39359feaed9458b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204634"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Определение связей атрибутов в определенной пользователем иерархии
   Как уже было рассмотрено в этом учебнике, иерархии атрибутов внутри пользовательских иерархий можно упорядочивать по уровням, чтобы предоставлять пользователям пути перемещения в кубе. Пользовательская иерархия может отражать естественную иерархию, такую как города, область и страна, или просто путь перемещения,например фамилию сотрудника, его должность и название отдела. Для пользователя, перемещающегося по иерархии, нет разницы между этими двумя типами пользовательских иерархий.  

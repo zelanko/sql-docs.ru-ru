@@ -1,5 +1,5 @@
 ---
-title: Проект скриптов в SQL Server Management Studio для служб Analysis Services | Документы Microsoft
+title: Проект скриптов в SQL Server Management Studio для служб Analysis Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Analysis Services]
 - scripts [Analysis Services], projects
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - items [Analysis Services]
 ms.assetid: c4f5a06b-e2e4-4660-a3a8-6fd356742c02
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2fb85f3620a24b75d25b4e44f36b8385fcc1c12e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8aac556b6547656303d4baefb591c2e9f3f13fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216414"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>Проект скриптов служб Analysis Services в среде SQL Server Management Studio
   В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]вы можете создать проект скриптов для служб Analysis Server в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , чтобы сгруппировать связанные скрипты для совместной разработки, управления и контроля версий. Если в настоящий момент в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]не загружен проект, то при создании нового проекта сценария сервера анализа данных будет автоматически создано новое решение. В противном случае новый проект сценария сервера анализа данных может быть создан в новом решении или добавлен к нему.  
@@ -64,7 +64,7 @@ ms.locfileid: "36099428"
  [Создание многомерных моделей с помощью SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Многомерные выражения &#40;многомерных Выражений&#41; ссылки](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; ссылки](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Язык ASSL &#40;ASSL&#41; ссылки](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Язык ASSL &#40;ASSL&#41; ссылки](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Язык сценариев Analysis Services &#40;ASSL&#41; ссылки](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
+ [Язык сценариев Analysis Services &#40;ASSL&#41; ссылки](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Алгоритм взаимосвязей Майкрософт | Документы Microsoft
+title: Алгоритм взаимосвязей (Майкрософт) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MinimumProbability property
 - itemsets [Analysis Services]
@@ -31,18 +31,18 @@ helpviewer_keywords:
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 caps.latest.revision: 53
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4dfed3abb4cff8826c42770996a2ea78ab4b324a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fffd2e560cc8b9aaace349fefbcc4da1fe3fb0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100741"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165675"
 ---
 # <a name="microsoft-association-algorithm"></a>Алгоритм взаимосвязей (Майкрософт)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм взаимосвязей Майкрософт является алгоритмом взаимосвязей, предоставляемым службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] этот алгоритм полезен для механизмов выработки рекомендаций. Ядро рекомендаций рекомендует программы пользователям на основе элементов, которые они уже купили, или к которым проявили интерес. Алгоритм взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] удобно использовать для анализа потребительской корзины. Пример анализа «Потребительская корзина» см. в разделе [занятия 3: построение сценария потребительской корзины &#40;промежуточного Data Mining Tutorial&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) в учебника по интеллектуальному анализу данных.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм взаимосвязей Майкрософт является алгоритмом взаимосвязей, предоставляемые [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] это полезно для механизмов выработки рекомендаций. Ядро рекомендаций рекомендует программы пользователям на основе элементов, которые они уже купили, или к которым проявили интерес. Алгоритм взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] удобно использовать для анализа потребительской корзины. Пример анализа потребительской корзины, см. в разделе [занятия 3: построение сценария потребительской корзины &#40;данных учебник по интеллектуальному анализу&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) в учебнике по интеллектуальному данных.  
   
  Модели взаимосвязей построены на наборах данных, содержащих идентификаторы для отдельных вариантов и элементов этих вариантов. Группа элементов в варианте называется *набор элементов*. Модель взаимосвязей состоит из рядов наборов элементов и правил, описывающих, как эти элементы группируются в вариантах. Правила, определяемые алгоритмом, могут использоваться для прогнозирования вероятных будущих покупок покупателей на основе элементов, уже имеющихся в корзине покупателя. На следующей диаграмме представлен ряд правил в наборе элементов.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36100741"
  Дополнительные сведения о создании запроса к модели интеллектуального анализа данных см. в разделе [Запросы интеллектуального анализа данных](data-mining-queries.md).  
   
 ## <a name="performance"></a>Производительность  
- Процесс создания наборов элементов и расчета значений корреляции может потребовать много времени. Несмотря на то что [!INCLUDE[msCoName](../../includes/msconame-md.md)] алгоритм правил взаимосвязей Майкрософт используются методы оптимизации для экономии памяти и ускорения обработки, имейте в виду, что могут возникнуть проблемы с производительностью в условиях примерно следующего вида:  
+ Процесс создания наборов элементов и расчета значений корреляции может потребовать много времени. Несмотря на то что [!INCLUDE[msCoName](../../includes/msconame-md.md)] алгоритм правил взаимосвязей Майкрософт используются методы оптимизации для экономии памяти и ускорения обработки, следует знать, что могут возникнуть проблемы производительности в условиях следующего вида:  
   
 -   Применяется крупный набор данных, состоящий из большого количества отдельных элементов.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36100741"
   
 ## <a name="see-also"></a>См. также  
  [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Просмотр модели с помощью средства просмотра правил взаимосвязи (Microsoft)](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Просмотр модели с помощью средства просмотра правил взаимосвязей (Майкрософт)](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
  [Модель интеллектуального анализа данных для моделей взаимосвязей &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Технический справочник по алгоритму взаимосвязей (Майкрософт)](microsoft-association-algorithm-technical-reference.md)   
  [Примеры запросов моделей взаимосвязей](association-model-query-examples.md)  

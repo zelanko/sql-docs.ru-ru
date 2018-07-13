@@ -1,5 +1,5 @@
 ---
-title: Введите элемент (XMLA) | Документы Microsoft
+title: Введите элемент (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 5d898123-a635-402a-be86-8249d7304fa4
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 38b4442afe95f06d9a6f437e906c01b7386d91ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 336266b8290f1a4eb10d200d8c1c31bf00f96879
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193784"
 ---
 # <a name="type-element-xmla"></a>Элемент Type (XML для аналитики)
-  Определяет тип обработки, выполняемой по [процесс](../xml-elements-commands/process-element-xmla.md) элемента.  
+  Определяет тип обработки, которые будут произведены методом [процесс](../xml-elements-commands/process-element-xmla.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36100699"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о параметрах обработки, доступных для объектов в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], в разделе [многомерной модели обработки объекта](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Дополнительные сведения о параметрах обработки, доступных для объектов в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], см. в разделе [обработку объекта многомерных моделей](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  Значением элемента `Type` может быть только одна из строк в следующей таблице.  
   

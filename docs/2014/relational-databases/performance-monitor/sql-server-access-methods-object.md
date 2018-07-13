@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Access Methods object
 - SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b0c0381c5155e2cb019a3b936ca4b65dc1e53d93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b15cba7c4da79d1b50aaf3340f31a3638eddc411
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179751"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, объект Access Methods
   Объект **Access Methods** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики, помогающие следить за доступом к логическим данным в рамках базы данных. Физический доступ к страницам базы данных на диске контролируется при помощи счетчиков **диспетчера буферов** . Наблюдение за методами доступа к данным в базе данных помогает определить, можно ли увеличить производительность запросов путем добавления или изменения индексов, добавления или перемещения секций, добавления файлов или групп файлов, дефрагментации индексов или изменения текста запросов. Кроме того, при помощи счетчиков объекта **Access Methods** можно следить за размером данных, индексов и свободного пространства в базе данных, контролируя объем и фрагментацию для каждого экземпляра сервера. Чрезмерная фрагментация индексов может значительно снизить производительность.  

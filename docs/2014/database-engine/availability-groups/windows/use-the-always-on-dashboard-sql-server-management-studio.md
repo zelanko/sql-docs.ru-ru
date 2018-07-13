@@ -1,14 +1,13 @@
 ---
-title: Использование панели мониторинга AlwaysOn (SQL Server Management Studio) | Документы Microsoft
+title: Использование панели мониторинга AlwaysOn (SQL Server Management Studio) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.agdashboard.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 28
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 60d75f53c84d652b0d719ba73980cfbff6d08424
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 207f67602fd55e5186a64ba9b30df7230a35d1b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163525"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)
   Администраторы баз данных используют панель мониторинга AlwaysOn, чтобы быстро определять исправность группы доступности AlwaysOn, а также ее реплик доступности и баз данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Далее приведены некоторые стандартные варианты использования панели мониторинга AlwaysOn.  
@@ -97,7 +96,7 @@ ms.locfileid: "36099046"
 -   **Вручную**. Указывает, что ни одна из реплик не работает в режиме автоматического перехода на другой ресурс.  
   
  **Проблемы**  
- Щелкните ссылку **Проблемы** , чтобы открыть документацию по поиску и устранению данной неисправности. Список всех проблем политики AlwaysOn см. в разделе [политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Щелкните ссылку **Проблемы** , чтобы открыть документацию по поиску и устранению данной неисправности. Список всех проблем с политикой AlwaysOn, см. в разделе [политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!TIP]  
 >  Чтобы выполнить сортировку сведений о группе доступности по имени группы доступности, основной реплике, режиму отработки отказа или проблеме, щелкайте заголовки столбцов.  
@@ -152,7 +151,7 @@ ms.locfileid: "36099046"
 -   **NULL**. Неизвестное состояние. Это значение возникает, когда экземпляр локального сервера не может обмениваться данными с отказоустойчивым кластером WSFC (то есть этот локальный узел не принадлежит кворуму отказоустойчивого кластера WSFC).  
   
  **Проблемы**  
- Содержит имя проблемы. Это значение отображается по умолчанию. Список всех проблем политики AlwaysOn см. в разделе [политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Содержит имя проблемы. Это значение отображается по умолчанию. Список всех проблем с политикой AlwaysOn, см. в разделе [политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Режим доступности**  
  Указывает свойство реплики, установленное пользователем отдельно для каждой реплики доступности. Это значение по умолчанию скрыто. Возможные значения:  
@@ -281,7 +280,7 @@ ms.locfileid: "36099046"
   
 -   **Критическое**. Щелкните для отображения критических проблем.  
   
- Список всех проблем политики AlwaysOn см. в разделе [политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Список всех проблем с политикой AlwaysOn, см. в разделе [политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Приостановлена**  
  Указывает, что работа базы данных **Приостановлена** или **Возобновлена**. Это значение по умолчанию скрыто.  

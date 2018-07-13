@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3a2113a46869312d1954115c60723dcb51c1d262
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 099d9f8ccb24e2675f61c89f277d82984901cd4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168155"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>Ссылки на коллекции DataSources и DataSets (построитель отчетов и службы SSRS)
   Коллекция `DataSources` представляет все источники данных, используемые в отчете. Аналогичным образом `DataSets` коллекции представляет все наборы данных для всех источников данных в отчете. Для иерархического просмотра наборов данных отчета, организованных в источнике данных, на который они ссылаются, используйте область **Данные отчета** . Если в эти коллекции включаются ссылки, то при предварительном просмотре отчета значения не будут видимыми. Эти коллекции доступны только после публикации отчета на сервере отчетов.  

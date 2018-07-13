@@ -1,5 +1,5 @@
 ---
-title: Атрибут профили вкладка (средство просмотра моделей интеллектуального анализа данных) | Документы Microsoft
+title: Атрибут профили вкладку (средство просмотра моделей интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.profiles.f1
 ms.assetid: 17c7e7ae-273c-4a6b-9a35-e8b9b8e65999
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6c9c5e0dfee13c8c0bd08ad5d1c6433d16ca7df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cdfd3f5d3e9fbf433f4c041a156adb31a4264fc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191264"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>Вкладка «Профили атрибутов» (средство просмотра моделей интеллектуального анализа данных)
   Вкладка **Профили атрибутов** показывает, как распределение входных значений в состоянии модели упрощенного алгоритма Байеса влияет на каждое состояние атрибута результата. Распределение значений показано в виде цветной гистограммы, все распределения представлены в табличном формате, чтобы упростить сравнение значений.  

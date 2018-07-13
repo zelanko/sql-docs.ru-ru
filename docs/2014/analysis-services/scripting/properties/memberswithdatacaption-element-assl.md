@@ -1,5 +1,5 @@
 ---
-title: Элемент MembersWithDataCaption (ASSL) | Документы Microsoft
+title: Элемент MembersWithDataCaption (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MembersWithDataCaption element
 ms.assetid: a5d59efd-5d67-485b-a360-67d54a1fe394
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ef845a4c77a66ad1c59a0bdad527856a86849de9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd8884d67717267e44751841203ce2f73d07ecfb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202304"
 ---
 # <a name="memberswithdatacaption-element-assl"></a>Элемент MembersWithDataCaption (ASSL)
   Задает шаблонную строку, применяемую при создании заголовков для сформированных системой элементов данных.  
@@ -62,9 +62,9 @@ ms.locfileid: "36100708"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Значение `MembersWithDataCaption` элемент используется только родительскими атрибутами (другими словами, значение [использование](usage-element-dimensionattribute-assl.md) элемент `DimensionAttribute` родительского элемента имеет значение *родительского*) для определения заголовка элементов данных в родительском атрибуте. Дополнительные сведения об элементах данных см. в разделе [Атрибуты в иерархиях типа "родители-потомки"](../../multidimensional-models/parent-child-dimension-attributes.md).  
+ Значение `MembersWithDataCaption` элемент используется только родительскими атрибутами (другими словами, значение [использования](usage-element-dimensionattribute-assl.md) элемент `DimensionAttribute` родительского элемента имеет значение *родительского*) для определения заголовка элементов данных в родительском атрибуте. Дополнительные сведения об элементах данных см. в разделе [Атрибуты в иерархиях типа "родители-потомки"](../../multidimensional-models/parent-child-dimension-attributes.md).  
   
- Элементы, соответствующие родителям элемента `MembersWithDataCaption` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.AttributeTranslation> и <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ Элементы, соответствующие родителям элемента `MembersWithDataCaption` в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.AttributeTranslation> и <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент MembersWithData &#40;ASSL&#41;](../objects/data-element-assl.md)   

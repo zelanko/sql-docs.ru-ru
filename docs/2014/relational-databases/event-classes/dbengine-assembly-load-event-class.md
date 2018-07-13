@@ -1,5 +1,5 @@
 ---
-title: Класс событий Assembly Load | Документы Microsoft
+title: Класс событий Assembly Load | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 09089787cf369b18c54f9e0c4afabc5d22bed61d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c242f305b5a51458b1f18c52af9a82b3a378bee5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227434"
 ---
 # <a name="assembly-load-event-class"></a>Класс событий Assembly Load
-  В разделе [-нагрузки — класс событий assembly](../../database-engine/assembly-load-event-class.md).  
+  См. в разделе [-нагрузки — класс событий assembly](../../database-engine/assembly-load-event-class.md).  

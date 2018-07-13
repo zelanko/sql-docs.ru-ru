@@ -1,5 +1,5 @@
 ---
-title: Тестирование и проверка (интеллектуальный анализ данных) | Документы Microsoft
+title: Тестирование и проверка (интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - comparing mining models
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 caps.latest.revision: 60
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e83f8e0ad6227444f4dbc0962a83e1aedd8a5f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3fb68f21136da8236c653aaae71c9a9e461b432
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230160"
 ---
 # <a name="testing-and-validation-data-mining"></a>Тестирование и проверка (интеллектуальный анализ данных)
   Проверка представляет собой процесс оценки соответствия моделей интеллектуального анализа данных фактическим данным. Важно выяснить качество и характеристики моделей интеллектуального анализа данных до их развертывания в рабочей среде.  

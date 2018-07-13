@@ -1,5 +1,5 @@
 ---
-title: Тип данных DimensionPermission (ASSL) | Документы Microsoft
+title: Тип данных DimensionPermission (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DimensionPermission data type
 ms.assetid: 066405ff-903f-467a-b0d5-e58653952c52
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c614d2fd30f7bd3b831c571cc4d3de0cf26e365
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 740479b334195b36ac7f8d04446575917da04d02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178841"
 ---
 # <a name="dimensionpermission-data-type-assl"></a>Тип данных DimensionPermission (ASSL)
   Определяет производный тип данных, представляющий разрешения, назначенные измерению базы данных.  
@@ -68,9 +68,9 @@ ms.locfileid: "36100711"
   
 -   Атрибут*AllowedRowsExpression* должен быть пустым, иначе возникает ошибка.  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.DimensionPermission>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.DimensionPermission>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

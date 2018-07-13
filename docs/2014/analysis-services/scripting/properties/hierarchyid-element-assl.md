@@ -1,5 +1,5 @@
 ---
-title: Элемент HierarchyID (ASSL) | Документы Microsoft
+title: Элемент HierarchyID (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - HierarchyID element
 ms.assetid: 6effe47d-e598-41f8-993a-b2bce49fd7dd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 96fd95f6853f5edd7f7eaa5d6aa9627cc322a1bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c10b01b17c8ceb6cb3e550d07fe78d6469526fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220014"
 ---
 # <a name="hierarchyid-element-assl"></a>Элемент HierarchyID (ASSL)
-  Содержит идентификатор (ID) для [CubeHierarchy](../data-type/hierarchy-data-type-assl.md), [MeasureGroupHierarchy](../data-type/measuregrouphierarchy-data-type-assl.md), или [PerspectiveHierarchy](../data-type/perspectivehierarchy-data-type-assl.md) элемента.  
+  Содержит идентификатор (ID) для [CubeHierarchy](../data-type/hierarchy-data-type-assl.md), [MeasureGroupHierarchy](../data-type/measuregrouphierarchy-data-type-assl.md), или [PerspectiveHierarchy](../data-type/perspectivehierarchy-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36098975"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элементы, соответствующие родителям элемента `HierarchyID` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.CubeHierarchy> и <xref:Microsoft.AnalysisServices.PerspectiveHierarchy>.  
+ Элементы, соответствующие родителям элемента `HierarchyID` в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.CubeHierarchy> и <xref:Microsoft.AnalysisServices.PerspectiveHierarchy>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

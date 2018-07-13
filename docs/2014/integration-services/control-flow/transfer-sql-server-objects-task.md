@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjectstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2fcff2e593b3b1eb5f235f56b398294b0bf2edf7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7122dbdf0f99e7bf490487cd98abb3f4d4e7c81a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184741"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Задача «Передача объектов SQL Server»
   Задача передачи объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] производит перемещение одного или нескольких типов объектов базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Например, с помощью этой задачи можно выполнить копирование таблиц и хранимых процедур. В зависимости от версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , являющейся источником копирования, можно копировать различные типы объектов. Например, схемы и пользовательские статистические функции содержатся только в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -83,7 +83,7 @@ ms.locfileid: "36099581"
  Задача передачи объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не сообщает о ходе выполнения передачи, сигнализируя только о 0 % и 100 % готовности.  
   
 ## <a name="execution-value"></a>Значение выполнения  
- Значение выполнения, хранящиеся в `ExecutionValue` свойство задачи, возвращает количество переданных объектов. При присвоении свойству `ExecValueVariable` задачи «Передача объектов SQL Server» пользовательской переменной сведения о передаче объектов можно сделать доступными другим объектам пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md) и [Использование переменных в пакетах](../use-variables-in-packages.md).  
+ Значение выполнения, определяемое `ExecutionValue` свойство задачи, возвращает число перенесенных объектов. При присвоении свойству `ExecValueVariable` задачи «Передача объектов SQL Server» пользовательской переменной сведения о передаче объектов можно сделать доступными другим объектам пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md) и [Использование переменных в пакетах](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Записи журнала  
  Задача «Передача объектов SQL Server» включает следующие записи журнала:  
@@ -92,7 +92,7 @@ ms.locfileid: "36099581"
   
 -   TransferSqlServerObjectsTaskStarTransferringObjects. Эта запись журнала указывает на завершение передачи данных. В записях журнала указывается время завершения.  
   
- Кроме того, запись журнала для события `OnInformation` указывает, сколько объектов определенных типов были выбраны для передачи, сколько объектов было передано, а также, сколько произведено усечений таблиц при передаче таблиц с данными. Запись журнала для `OnWarning` записано событие для каждого объекта, перезаписываются на сервере назначения.  
+ Кроме того, запись журнала для события `OnInformation` указывает, сколько объектов определенных типов были выбраны для передачи, сколько объектов было передано, а также, сколько произведено усечений таблиц при передаче таблиц с данными. Запись журнала для `OnWarning` каждой перезаписи целевого объекта записывается событие.  
   
 ## <a name="security-and-permissions"></a>Безопасность и разрешения  
  Пользователь должен иметь разрешения на просмотр объектов на исходном сервере, а также разрешения на удаление и создание объектов на целевом сервере; кроме того, он должен иметь доступ к указанной базе данных и объектам в ней.  
@@ -110,7 +110,7 @@ ms.locfileid: "36099581"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Передача редактор задач объектов SQL Server &#40;страница «Общие»&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Передача редактор задач объектов SQL Server &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Передача редактор задач объектов SQL Server &#40;объектов страницы&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
   
