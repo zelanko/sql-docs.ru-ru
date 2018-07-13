@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
 - performance counters [SQL Server], deprecated features
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e093deb7505ecd6bf7b5afd0b66da2791f34cc51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f0a511e928fdd4d010bba5d756ef92b569295301
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227414"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, объект Deprecated Features
   Объект SQLServer:Deprecated Features в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчик для наблюдения за функциями, обозначенными как устаревшие. В каждом случае этот счетчик использования подсчитывает, сколько раз обнаружены устаревшие функции с момента последнего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "36189028"
 |Символы «#» и «##» в качестве имен временных таблиц и хранимых процедур|Обнаружен идентификатор, не содержащий других символов, кроме #. Используйте по крайней мере один дополнительный символ. Происходит один раз на каждую компиляцию.|  
 |синтаксис вызова функции «::»|Синтаксис вызова функции :: был использован для функции с табличным значением. Замените `SELECT column_list FROM`  *\< имя_функции >*`()`. Например, замените `SELECT * FROM ::fn_virtualfilestats(2,1)`на `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Происходит один раз на каждую компиляцию.|  
 |«@» и имена, начинающиеся с «@@» в качестве идентификаторов [!INCLUDE[tsql](../../includes/tsql-md.md)] .|Обнаружен идентификатор, начинающийся с символов @ или @@. Не используйте в качестве идентификаторов @, @@ или имена, начинающиеся символами @@. Происходит один раз на каждую компиляцию.|  
-|ADDING TAPE DEVICE|Нерекомендуемая функция sp_addumpdevice'`tape`' обнаружена. Используйте процедуру sp_addumpdevice'`disk`"вместо этого. Происходит один раз на каждое выполнение.|  
+|ADDING TAPE DEVICE|Нерекомендуемая функция sp_addumpdevice'`tape`"была обнаружена. Используйте процедуру sp_addumpdevice'`disk`' вместо этого. Происходит один раз на каждое выполнение.|  
 |Разрешение ALL.|Число раз, когда был обнаружен синтаксис GRANT ALL, DENY ALL или REVOKE ALL. Измените синтаксис, чтобы запретить конкретные разрешения. Происходит один раз для каждого запроса.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Общее число использований устаревшего параметра TORN_PAGE_DETECTION инструкции ALTER DATABASE с момента последнего запуска экземпляра сервера. Вместо этого параметра используйте синтаксис PAGE_VERIFY. Происходит один раз для каждой инструкции DDL.|  
 |ALTER LOGIN WITH SET CREDENTIAL|Обнаружен устаревший синтаксис ALTER LOGIN WITH SET CREDENTIAL или ALTER LOGIN WITH NO CREDENTIAL. Вместо него используйте синтаксис ADD или DROP CREDENTIAL. Происходит один раз на каждую компиляцию.|  
@@ -165,7 +165,7 @@ ms.locfileid: "36189028"
 |sp_configure 'set working set size'|Обнаружен параметр «set working set size» хранимой процедуры sp_configure. Размер рабочего множества больше не настраивается. Не используйте. Происходит один раз для каждого запроса.|  
 |sp_control_dbmasterkey_password|Хранимая процедура sp_control_dbmasterkey_password не проверяет наличие главного ключа. Это разрешено для обратной совместимости, но при этом отображается предупреждение. Такое поведение является устаревшим. В следующем выпуске главный ключ должен существовать, а пароль из хранимой процедуры sp_control_dbmasterkey_password должен совпадать с одним из паролей, которые используются для шифрования главного ключа базы данных.|  
 |sp_create_removable|Обнаружена хранимая процедура sp_create_removable. Вместо нее используйте инструкцию CREATE DATABASE. Происходит один раз для каждого запроса.|  
-|sp_db_vardecimal_storage_format|Использование `vardecimal` обнаружена формат хранения. Используйте вместо него сжатие данных.|  
+|sp_db_vardecimal_storage_format|Использование `vardecimal` формат хранения. Используйте вместо него сжатие данных.|  
 |sp_dbcmptlevel|Обнаружена хранимая процедура sp_dbcmptlevel. Вместо этого используйте синтаксис ALTER DATABASE … SET COMPATIBILITY_LEVEL. Происходит один раз для каждого запроса.|  
 |sp_dbfixedrolepermission|Обнаружена хранимая процедура sp_dbfixedrolepermission. Не используйте. Происходит один раз для каждого запроса.|  
 |sp_dboption|Обнаружена хранимая процедура sp_dboption. Вместо этого следует использовать инструкции ALTER DATABASE и DATABASEPROPERTYEX. Происходит один раз на каждую компиляцию.|  
@@ -183,7 +183,7 @@ ms.locfileid: "36189028"
 |sp_droprole|Обнаружена хранимая процедура sp_droprole. Вместо нее используйте инструкцию DROP ROLE. Происходит один раз для каждого запроса.|  
 |хранимая процедура sp_droptype|Обнаружена хранимая процедура sp_droptype. Вместо нее используйте инструкцию DROP TYPE.|  
 |sp_dropuser|Обнаружена хранимая процедура sp_dropuser. Используйте вместо нее инструкцию DROP USER. Происходит один раз для каждого запроса.|  
-|sp_estimated_rowsize_reduction_for_vardecimal|Использование `vardecimal` обнаружена формат хранения. Используйте сжатие данных и хранимую процедуру sp_estimate_data_compression_savings.|  
+|sp_estimated_rowsize_reduction_for_vardecimal|Использование `vardecimal` формат хранения. Используйте сжатие данных и хранимую процедуру sp_estimate_data_compression_savings.|  
 |sp_fulltext_catalog|Обнаружена хранимая процедура sp_fulltext_catalog. Вместо нее используйте инструкцию CREATE/ALTER/DROP FULLTEXT CATALOG. Происходит один раз на каждую компиляцию.|  
 |sp_fulltext_column|Обнаружена хранимая процедура sp_fulltext_column. Используйте вместо нее инструкцию ALTER FULLTEXT INDEX. Происходит один раз на каждую компиляцию.|  
 |sp_fulltext_database, хранимая процедура|Обнаружена хранимая процедура sp_fulltext_database. Используйте вместо нее инструкцию ALTER DATABASE. Происходит один раз на каждую компиляцию.|  
@@ -255,11 +255,11 @@ ms.locfileid: "36189028"
 |Параметр таблицы «text in row»|Обнаружены ссылки на параметр таблицы «text in row». Вместо этого используйте параметр хранимой процедуры sp_tableoption «large value types out of row». Происходит один раз для каждого запроса.|  
 |TEXTPTR|Обнаружены ссылки на функцию TEXTPTR. Перепишите приложения, чтобы использовать `varchar(max)` тип данных и удалить `text`, `ntext`, и `image` синтаксис типа данных. Происходит один раз для каждого запроса.|  
 |TEXTVALID|Обнаружены ссылки на функцию TEXTVALID. Перепишите приложения, чтобы использовать `varchar(max)` тип данных и удалить `text`, `ntext`, и `image` синтаксис типа данных. Происходит один раз для каждого запроса.|  
-|timestamp|Общее число вхождений устаревшего `timestamp` обнаружен тип данных в инструкции DDL. Используйте `rowversion` типа данных.|  
+|timestamp|Общее число вхождений устаревшего `timestamp` обнаружен тип данных в инструкции DDL. Используйте `rowversion` вместо этого тип данных.|  
 |UPDATETEXT или WRITETEXT|Обнаружена инструкция UPDATETEXT или WRITETEXT. Перепишите приложения, чтобы использовать `varchar(max)` тип данных и удалить `text`, `ntext`, и `image` синтаксис типа данных. Происходит один раз для каждого запроса.|  
 |USER_ID|Обнаружены ссылки на функцию USER_ID. Вместо этого используйте функцию DATABASE_PRINCIPAL_ID. Происходит один раз на каждую компиляцию.|  
 |Использование OLEDB для связанных серверов||  
-|Формат хранения vardecimal|Использование `vardecimal` обнаружена формат хранения. Используйте вместо него сжатие данных.|  
+|Формат хранения vardecimal|Использование `vardecimal` формат хранения. Используйте вместо него сжатие данных.|  
 |XMLDATA|Обнаружен синтаксис FOR XML. Используйте создание схем XSD для режимов RAW и AUTO. Для явного режима нет замены. Происходит один раз на каждую компиляцию.|  
 |XP_API|Обнаружена инструкция расширенной хранимой процедуры. Не используйте.|  
 |xp_grantlogin|Обнаружена процедура xp_grantlogin. Используйте вместо нее инструкцию CREATE LOGIN. Происходит один раз на каждую компиляцию.|  
@@ -268,10 +268,10 @@ ms.locfileid: "36189028"
   
 ## <a name="see-also"></a>См. также  
  [Нерекомендуемые функции ядра СУБД в SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [Full-Text Search, устаревшие функции в SQL Server 2014](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
+ [Функции устаревшие Full-Text Search в SQL Server 2014](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Класс событий Deprecation Announcement](../event-classes/deprecation-announcement-event-class.md)   
  [Класс событий Deprecation Final Support](../event-classes/deprecation-final-support-event-class.md)   
- [Нерекомендуемые функции ядра СУБД в SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Неподдерживаемые функции ядра СУБД в SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [Неподдерживаемые функции полнотекстового поиска в SQL Server 2014](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
  [Использование объектов SQL Server](use-sql-server-objects.md)  
   

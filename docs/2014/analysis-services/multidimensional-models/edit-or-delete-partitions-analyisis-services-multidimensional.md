@@ -1,5 +1,5 @@
 ---
-title: Изменение и удаление секций (Analysis Services — многомерные) | Документы Microsoft
+title: Изменение и удаление секций (Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying partitions
 - partitions [Analysis Services], modifying
 ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 693550400db63b73b29d01a7a9d198d5924893dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 333caebbfff1870341696ee9d5a6d215288459bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180931"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>Изменение и удаление секций (Analysis Services — многомерные данные)
   Секции куба редактируются с помощью вкладки **Секции** в конструкторе кубов в [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]. На вкладке **Секции** перечислены секции для всех групп мер в кубе. А также секции обратной записи с включенной функцией обратной записи.  
@@ -51,8 +51,8 @@ ms.locfileid: "36187827"
  Хранилище можно настроить отдельно для каждой секции каждой группы мер в кубе. Также можно установить настройки хранилища по умолчанию для куба или группы мер. Хранилище настраивается на вкладке **Секции** мастера кубов.  
   
 ## <a name="see-also"></a>См. также  
- [Создание и управление локальной секции &#40;служб Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [Создание и управление ими локальной секции &#40;служб Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
  [Проектирование агрегатов &#40;службы Analysis Services — многомерные&#41;](designing-aggregations-analysis-services-multidimensional.md)   
- [Слияние секций в службах Analysis Services &#40;SSAS — многомерные данные&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Слияние секций в службах Analysis Services &#40;службы SSAS — многомерные&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

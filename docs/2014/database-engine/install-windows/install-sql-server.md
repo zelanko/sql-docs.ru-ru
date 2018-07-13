@@ -1,5 +1,5 @@
 ---
-title: Установка SQL Server 2014 | Документы Microsoft
+title: Установка SQL Server 2014 | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, preparing to install
 - installation [SQL Server]
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bf415bef00710562247bcfd9fa310e2c0728497f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7f03f01be41395cea94acdc40acd582a6fb78772
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157015"
 ---
 # <a name="install-sql-server-2014"></a>Установка SQL Server 2014
-## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ Загрузите SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
-  **Благодарим вас к [Скотт Хансельман](http://www.hanselman.com/) для сбора всех ссылок пакета установщика в одном месте.**
+## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ Скачивание SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+  **Выражаем благодарность [(Scott hanselman)](http://www.hanselman.com/) для сбора всех ссылок пакета установщика в одном месте.**
   
- В этом разделе представлены общие сведения о разных параметрах установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения о различных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компоненты, которые могут быть установлены и процесс установки. в разделе [установки для SQL Server 2014](installation-for-sql-server.md).  
-> **Примечание:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступна в 32-разрядных и 64-разрядных версиях. Установка 64-разрядной и 32-разрядной версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может производиться либо с помощью мастера установки, либо из командной строки. Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компоненты, в разделе [выпуски и компоненты SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) и [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ В этом разделе представлены общие сведения о разных параметрах установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения о различных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компоненты, которые могут быть установлены и процесс установки, см. в разделе [установки для SQL Server 2014](installation-for-sql-server.md).  
+> **Примечание:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступен в 32-разрядных и 64-разрядных выпусках. Установка 64-разрядной и 32-разрядной версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может производиться либо с помощью мастера установки, либо из командной строки. Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компоненты, см. в разделе [выпуски и компоненты SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) и [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  По умолчанию при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] образцы баз данных и образцы кода не устанавливаются. Чтобы установить образцы баз данных и образцы кода для выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кроме выпуска Express, посетите [веб-сайт CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843). Сведения о поддержке образцов баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и образцы кода для [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]см. в разделе [Обзор баз данных и образцов](http://go.microsoft.com/fwlink/?LinkId=110391).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36189864"
 |[Установка базовой версии средств управления SQL Server](../../sql-server/install/install-sql-server-management-tools.md)|Описывает, как установить и настроить средства управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Установка компонентов SQL Server PowerShell](install-sql-server-powershell.md)|Описывает соображения относительно установки компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell.|  
   
-## <a name="how-to-install-includesscurrentincludessscurrent-mdmd"></a>Установка [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="how-to-install-includesscurrentincludessscurrent-mdmd"></a>Как установить [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 |Title|Описание|  
 |-----------|-----------------|  

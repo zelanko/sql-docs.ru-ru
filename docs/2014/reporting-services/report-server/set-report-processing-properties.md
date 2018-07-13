@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - on-demand reports
 - report processing [Reporting Services], execution properties
@@ -20,18 +20,18 @@ ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 375b691b1e0e1202bfa16f6b4919ff454fe65da3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d3ffb241dd28b0abff718f742ba9020df98195f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153595"
 ---
 # <a name="set-report-processing-properties"></a>Установка свойств обработки отчетов
   Свойства выполнения отчета определяют, как отчет обрабатывается. Свойства выполнения должны быть установлены для каждого отчета отдельно.  
   
- Чтобы настроить свойства выполнения отчета, откройте отчет в диспетчере отчетов, а затем перейдите к странице свойств «Выполнение». Можно также задавать свойства с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Дополнительные сведения см. в статье [Страница "Обработка свойств параметров" (диспетчер отчетов)](../processing-options-properties-page-report-manager.md).  
+ Чтобы настроить свойства выполнения отчета, откройте отчет в диспетчере отчетов, а затем перейдите к странице свойств «Выполнение». Можно также задавать свойства [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Дополнительные сведения см. в статье [Страница "Обработка свойств параметров" (диспетчер отчетов)](../processing-options-properties-page-report-manager.md).  
   
 ## <a name="report-execution-modes"></a>Режимы выполнения отчета  
  Отчет можно запустить либо по требованию, либо как моментальный снимок. Далее описываются оба этих подхода.  
@@ -60,7 +60,7 @@ ms.locfileid: "36190152"
  Если выполняется это условие, сервер отчетов отключит подписку в следующий раз, когда она должна выполняться по расписанию. Для повторного включения подписки откройте, а затем сохраните ее. При открытии подписки сервер отчетов обновляет значения параметров подписки теми, что указаны для моментального снимка. Дополнительные сведения о подписках см. в разделе [Подписки и доставка (службы Reporting Services)](../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также  
- [Задание параметров обработки &#40;режим интеграции служб Reporting Services в SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Установка параметров обработки &#40;режим интеграции служб Reporting Services в SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Настройка свойств выполнения для отчета &#40;диспетчера отчетов&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Основные понятия служб Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)   
  [Добавление моментального снимка в журнал отчета](add-a-snapshot-to-report-history-report-manager.md)   

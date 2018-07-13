@@ -1,5 +1,5 @@
 ---
-title: Элемент detach | Документы Microsoft
+title: Элемент detach | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - Detach command
 ms.assetid: adbc7920-2a4a-4842-9e6f-37006fa19ff8
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e63bad3a6bbedc847307530cfa7a7afcd4138263
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 4da654dd7b6af196f8ca2ac9c3efeb6e0b23ed45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217954"
 ---
 # <a name="detach-element"></a>Элемент Detach
-  Отсоединяет [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных в текущем экземпляре сервера.  
+  Отсоединяет [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных из текущего экземпляра сервера.  
   
 ## <a name="syntax"></a>Синтаксис  
   

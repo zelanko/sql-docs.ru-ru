@@ -1,5 +1,5 @@
 ---
-title: Отчет диалогового окна свойств кода (построитель отчетов) | Документы Microsoft
+title: Сообщить о диалоговое окно «Свойства», код (построитель отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10081"
 ms.assetid: 24a479e4-3084-4442-8692-889895f111ad
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4fddd5933314b22fecbfe3791af209f40c3e02d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 457eb70ec1ce9883a5de4c2032fae60ec664703b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220764"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>Диалоговое окно «Свойства отчета» — «Код» (построитель отчетов)
   Выберите **Код** в диалоговом окне **Свойства отчета** , чтобы определить пользовательский код, используемый выражениями в отчете.  

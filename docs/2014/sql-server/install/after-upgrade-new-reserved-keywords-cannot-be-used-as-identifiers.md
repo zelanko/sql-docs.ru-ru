@@ -1,5 +1,5 @@
 ---
-title: После обновления новые зарезервированные ключевые слова нельзя использовать в качестве идентификаторов | Документы Microsoft
+title: После обновления новые зарезервированные ключевые слова нельзя использовать в качестве идентификаторов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - keywords [SQL Server], after upgrade
 - keywords [SQL Server], reserved
 - keywords [SQL Server]
 ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 177c36aaeca8e6cc9d84aae21e1f99fe0bb96867
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bc7569837d0442b23e16c365ea1076b734f23892
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172125"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>После обновления новые зарезервированные ключевые слова не могут быть использованы в качестве идентификаторов
   Советник по переходу обнаружил использование слов, зарезервированных в качестве ключевых. Зарезервированное ключевое слово нельзя использовать в качестве идентификатора или имени объекта, если только имя не заключено в разделители.  
@@ -53,7 +53,7 @@ ms.locfileid: "36190140"
   
 -   Сохраните уровень совместимости 90 или ниже.  
   
--   Для ссылок на объект пользуйтесь идентификаторами с разделителями. Например, инструкция `CREATE TABLE [MERGE] ([MERGE] int);` использует квадратные скобки для разделения имя объекта MERGE.  
+-   Для ссылок на объект пользуйтесь идентификаторами с разделителями. Например, оператор `CREATE TABLE [MERGE] ([MERGE] int);` используются скобки для выделения имени объекта MERGE.  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
  [Зарезервированные ключевые слова &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  

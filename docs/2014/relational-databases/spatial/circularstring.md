@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8f8d6b042c1284dc0a0b716524f381017320306e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1baa6e59d017df6a0491d4359a8e445fea83d722
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155825"
 ---
 # <a name="circularstring"></a>CircularString
-  Объект `CircularString` — это коллекция из нуля или более непрерывных круговых сегментов дуги. Сегмент дуги — это сегмент кривой, определяемый тремя точками на двумерной плоскости; первая точка не может совпадать с третьей. Если все три точки сегмента дуги лежат на одной прямой, сегмент дуги считается линейным сегментом.  
+  Объект `CircularString` является коллекцией из нуля или более непрерывных круговых сегментов дуги. Сегмент дуги — это сегмент кривой, определяемый тремя точками на двумерной плоскости; первая точка не может совпадать с третьей. Если все три точки сегмента дуги лежат на одной прямой, сегмент дуги считается линейным сегментом.  
   
 > [!IMPORTANT]  
->  Подробное описание и примеры использования новых пространственных возможностей, представленных в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], в том числе `CircularString` подтипа, загрузив Технический документ [новые функции обработки пространственных данных в SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Подробное описание и примеры использования новых функций обработки, представленные в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], в том числе `CircularString` подтипа, загрузив Технический документ, [новые функции обработки пространственных в SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ## <a name="circularstring-instances"></a>Экземпляры CircularString  
  На следующем рисунке показаны допустимые `CircularString` экземпляров:  
@@ -33,7 +33,7 @@ ms.locfileid: "36189945"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>Правильные экземпляры  
- Объект `CircularString` экземпляр принимается, если он пуст или содержит нечетное количество точек, n, где n > 1. Следующие `CircularString` экземпляры допустимы.  
+ Объект `CircularString` принимается, если он пуст или содержит нечетное количество точек, n, где n > 1. Следующие `CircularString` принимаются экземпляров.  
   
 ```  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  

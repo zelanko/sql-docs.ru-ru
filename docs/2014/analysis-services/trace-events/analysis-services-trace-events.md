@@ -1,5 +1,5 @@
 ---
-title: События трассировки служб Analysis Services | Документы Microsoft
+title: События трассировки служб Analysis Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c400772f757dcd852ddfd2cf696a966261c60c30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4c4631e20227cb1d3aeba34337d7b36c8a84c62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163446"
 ---
 # <a name="analysis-services-trace-events"></a>События трассировки служб Analysis Services
   За активностью экземпляра Microsoft SQL Server Analysis Services (SSAS) можно наблюдать путем отслеживания и анализа событий трассировки, создаваемых экземпляром.  События трассировки сгруппированы для облегчения поиска связанных событий трассировки.  Каждое событие трассировки содержит набор данных, имеющих отношение к событию; не все фрагменты данных имеют отношение к событиям.  
   
- События трассировки можно запустить и отследить с помощью **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**, в разделе [использование SQL Server Profiler для мониторинга служб Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md), или может быть запущен из команды XML для Аналитики, как **SQL Server Расширенные события** и позже проанализировать, в разделе [использование SQL Server Extended Events &#40;XEvents&#41; для мониторинга служб Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
+ События трассировки можно запустить и отследить с помощью **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**, см. в разделе [использования SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md), или можно запустить из команды XMLA как **SQL Server Расширенные события** и позже проанализировать, см. в разделе [использования SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
     
  В следующих таблицах приводятся описания каждой категории и событий в этих категориях.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36189353"
 |36|Начало распознавания|Начало запроса распознавания.|  
 |38|Завершение распознавания|Завершение запроса распознавания.|  
   
- **[Категория события состояния сервера обнаружения](discover-server-state-event-category.md)**  
+ **[Категория событий состояния сервера обнаружения](discover-server-state-event-category.md)**  
   
  Коллекция событий для определения состояния сервера.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36189353"
 |34|Данные определения состояния сервера|Содержимое ответа обнаружения состояния сервера.|  
 |35|Окончание определения состояния сервера|Окончание определения состояния сервера.|  
   
- **[Ошибки и предупреждения Категория событий](errors-and-warnings-event-category.md)**  
+ **[Категория ошибки и предупреждения событий](errors-and-warnings-event-category.md)**  
   
  Коллекция событий для ошибок сервера.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36189353"
 |------------------|--------------------|---------------------------|  
 |17|Ошибка|Ошибка сервера.|  
   
- **[Категория событий и сохранение файлов загрузки](file-load-and-save-event-category.md)**  
+ **[Категория событий и сохранение файлов нагрузки](file-load-and-save-event-category.md)**  
   
  Коллекция событий для отчетов по операциям загрузки и сохранения файлов.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36189353"
 |9|Начало запроса|Начало запроса.|  
 |10|Окончание запроса|Окончание запроса.|  
   
- **[Категория событий обработки запросов](query-processing-events-category.md)**  
+ **[Категория событий «обработка запросов»](query-processing-events-category.md)**  
   
  Коллекция ключевых событий в ходе выполнения запроса.  
   
@@ -191,4 +191,4 @@ ms.locfileid: "36189353"
 |43|Инициализация сеанса|Инициализация сеанса.|  
   
 ## <a name="see-also"></a>См. также  
-[Использование приложения SQL Server Profiler для мониторинга служб Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)
+[Использование SQL Server Profiler для мониторинга служб Analysis Service](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)

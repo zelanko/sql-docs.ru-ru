@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3646edb01f7bf6e45bbe20c1e6f821b41e9b5969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: aebaa04b6bdf4657f081b6a99b6cb158c144c8d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194864"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)
   В веб-средах можно добавлять множество функций, обеспечивающих взаимодействие пользователей с отчетами. Пользователи могут изменять порядок сортировки значений в отчете, показывать или скрывать элементы отчета, а также щелкать ссылки для перехода к другим отчетам или веб-страницам. Также можно добавить оглавление или схему документа. Пользователи отчета могут переходить к различным областям отчета, щелкая элементы в оглавлении или схеме документа.  
@@ -41,19 +41,19 @@ ms.locfileid: "36189182"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Интерактивная сортировка &#40;отчетов построителя отчетов и службы SSRS&#41;](interactive-sort-report-builder-and-ssrs.md)  
+ [Интерактивная сортировка &#40;построитель отчетов и службы SSRS&#41;](interactive-sort-report-builder-and-ssrs.md)  
  Содержит описание способов добавления кнопки интерактивной сортировки к заголовкам столбцов.  
   
  [Создание схемы документа (построитель отчетов и службы SSRS)](create-a-document-map-report-builder-and-ssrs.md)  
  Объясняет, как добавить оглавление для перемещения по большим отчетам.  
   
- [Добавить закладку в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
+ [Добавить закладку в отчет &#40;построитель отчетов и службы SSRS&#41;](add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  Объясняет, как добавить закладки, чтобы создать ссылки внутри отчета.  
   
- [Добавление гиперссылки на URL-адрес &#40;отчетов построителя отчетов и службы SSRS&#41;](add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [Добавление гиперссылки на URL-адрес &#40;построитель отчетов и службы SSRS&#41;](add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  Объясняет, как добавить в отчет ссылки на URL-адрес.  
   
 ## <a name="see-also"></a>См. также  
- [Детализация, Углубленная детализация, вложенные отчеты и вложенные области данных &#40;отчетов построителя отчетов и службы SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Детализация, Углубленная детализация, вложенные отчеты и вложенные области данных &#40;построитель отчетов и службы SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

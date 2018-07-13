@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c3c3cf457cf85f4e29074e5ed6cbba7f5f87ead3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 37fa2a790e5eeeabd621cd6581848d913f178138
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182891"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Параметры запроса профиля соотношения значений NULL в столбцах (задача «Профилирование данных»)
   При помощи панели **Свойства запроса** страницы **Запросы профиля** можно задать параметры для варианта **Запрос соотношения значений NULL в столбцах** , выбранного на панели запросов. Профиль «Соотношение значений NULL в столбцах» сообщает процент значений NULL в выбранном столбце. Этот профиль поможет выявить проблемы в данных, например появление непредвиденно высокого процента значений NULL в некотором столбце. Например, с помощью профиля «Соотношение значений NULL в столбцах» можно профилировать столбец «Почтовый индекс» и обнаружить неприемлемо высокий процент отсутствующих почтовых индексов.  
@@ -74,7 +74,7 @@ ms.locfileid: "36188300"
  Введите описательное имя для этого запроса профиля. Обычно не нужно менять автоматически сформированное значение.  
   
 ## <a name="see-also"></a>См. также  
- [Редактор задачи «профилирование данных» &#40;страница «Общие»&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "профилирование данных" &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)   
  [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](single-table-quick-profile-form-data-profiling-task.md)  
   
   

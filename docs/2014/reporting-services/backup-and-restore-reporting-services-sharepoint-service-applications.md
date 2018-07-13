@@ -1,5 +1,5 @@
 ---
-title: Резервное копирование и восстановление приложения службы SharePoint служб отчетов | Документы Microsoft
+title: Резервное копирование и восстановление приложения службы SharePoint служб создания отчетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 504afebfbe59ef6717bb60e8220600256419f785
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ad72399371d662ee8842dd7f9bf72ce5a72b6b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212574"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Резервное копирование и восстановление Служебного приложения SharePoint службы Reporting Services
   В этом разделе описывается резервное копирование и восстановление приложения служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] с использованием центра администрирования SharePoint или PowerShell. В этом разделе содержится следующее.  
@@ -41,7 +41,7 @@ ms.locfileid: "36110113"
   
 -   Создайте резервную копию ключей шифрования перед началом резервного копирования SharePoint. Если резервная копия ключей шифрования не была создана, то после восстановления приложения службы будет невозможно осуществлять доступ к зашифрованным данным. Зашифрованные данные будет необходимо удалить.  
   
--   Проверьте, если ваш [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] приложение службы использует учетную запись автоматического Выполнения или проверка подлинности Windows для доступа к базе данных. Если используется одна из вышеупомянутых возможностей, следует узнать, какие учетные данные являются допустимыми, чтобы в последствии, после завершения процесса восстановления, было возможно правильно настроить приложение службы.  
+-   Проверить, если ваш [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] приложение службы использует проверку подлинности СЛУЖБ или Windows для доступа к базе данных. Если используется одна из вышеупомянутых возможностей, следует узнать, какие учетные данные являются допустимыми, чтобы в последствии, после завершения процесса восстановления, было возможно правильно настроить приложение службы.  
   
 -   Проверьте журнал резервного копирования SharePoint созданный в той же папке, что и файл резервной копии. Этот файл обычно имеет имя **spbackup.log**  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36110113"
  [Восстановление приложения службы (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx).  
   
 ### <a name="restore-the-encryption-keys-using-central-administration"></a>Восстановление ключей шифрования с помощью центра администрирования  
- Сведения о восстановлении [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ключей шифрования, в разделе «Ключи шифрования» [управление приложения SharePoint службы Reporting Services](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
+ Дополнительные сведения о восстановлении [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ключи шифрования, см. в разделе «Ключи шифрования» [управление приложения SharePoint службы Reporting Services](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ### <a name="configure-the-execution-account-and-database-authentication"></a>Настройка учетной записи выполнения и проверки подлинности базы данных  
  **Учетная запись выполнения.** Если в приложении службы использовалась учетная запись выполнения, выполните следующие шаги для ее настройки.  

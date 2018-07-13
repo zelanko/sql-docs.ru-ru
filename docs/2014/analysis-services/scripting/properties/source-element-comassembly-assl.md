@@ -1,5 +1,5 @@
 ---
-title: Исходный элемент (ComAssembly) (ASSL) | Документы Microsoft
+title: Исходный элемент (ComAssembly) (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 5c9209e8-ace6-4688-a64d-4987a7648ab9
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae014f12e15dd27957ab77eb03720457f3c99b28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 81076927595714ae4e0c98847d99f2d246660cf9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152975"
 ---
 # <a name="source-element-comassembly-assl"></a>Элемент Source (ComAssembly) (ASSL)
   Содержит имя файла или программный идентификатор (ProgID) для COM-компонента.  
@@ -62,13 +62,13 @@ ms.locfileid: "36189134"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `Source` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ComAssembly>.  
+ Элемент, соответствующий родителю параметра `Source` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.ComAssembly>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент Assembly &#40;ASSL&#41;](../objects/assembly-element-assl.md)   
  [Тип данных ClrAssembly &#40;ASSL&#41;](../data-type/clrassembly-data-type-assl.md)   
  [Элемент Assemblies &#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
- [Элемент Database &#40;ASSL&#41;](../objects/database-element-assl.md)   
+ [Элемент Database описания &#40;ASSL&#41;](../objects/database-element-assl.md)   
  [Элемент Server &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [Свойства &#40;ASSL&#41;](properties-assl.md)  
   

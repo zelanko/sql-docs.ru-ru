@@ -1,5 +1,5 @@
 ---
-title: Ключевые показатели эффективности (конструктор кубов) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Ключевые показатели эффективности (конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpisview.f1
 ms.assetid: 3cd99acc-368d-4e21-ad18-298fff056acd
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6fcfa1911804a74719a9cbaa84c92b3f30536d0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a1e1ebf0f90e0266061ff60e6aed6cbf8111bcb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192511"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>Ключевые показатели эффективности (конструктор кубов) (службы Analysis Services — многомерные данные)
   Вкладка **Ключевые показатели эффективности** в конструкторе кубов используется для просмотра и редактирования ключевых показателей эффективности для выбранного куба.  
@@ -49,7 +49,7 @@ ms.locfileid: "36187871"
   
 ## <a name="see-also"></a>См. также  
  [Ключевые показатели эффективности &#40;ключевые показатели эффективности&#41; в многомерных моделях](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)   
- [Основные понятия о сценариях многомерных Выражений &#40;служб Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Основные принципы создания скриптов многомерных Выражений &#40;служб Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Конструктор кубов &#40;службы Analysis Services — многомерные данные&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Проверить наличие обновлений или отключение обновлений (построитель отчетов и службы SSRS) | Документы Microsoft
+title: Проверка наличия обновлений или отключение обновлений (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9c69792d-d7c4-453b-ae2f-6d2d071d8606
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c355099f67128f90a958d59f91de5f0d21c68a19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e88dda740e842ad4b7a96d1e1b73dd9bf7b14844
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201224"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>Проверка наличия обновлений или отключение обновлений (построитель отчетов и службы SSRS)
   При каждом открытии отчета построитель отчетов проверяет, не вносились ли на сервере или на сайте SharePoint, объединенном с сервером отчетов, изменения в опубликованные экземпляры элементов отчета в данном отчете. Построитель отчетов также проверяет элементы, зависящие от элементов отчетов, например наборы данных и параметры. При обновлении элементов отчетов или их зависимостей на сайте или сервере в информационной панели отчета отображается количество обновленных элементов. Можно просмотреть и принять или отклонить изменения или отключить информационную панель.  
@@ -30,20 +30,20 @@ ms.locfileid: "36188641"
   
 1.  Нажмите кнопку «Построитель отчетов» и нажмите кнопку **параметры**.  
   
-2.  В **параметры** диалогового **ресурсов** установите или снимите **Показать обновления элементов отчетов в моих отчетах** флажок.  
+2.  В **параметры** диалоговом окне **ресурсы** установите или снимите **Показать обновления элементов отчетов в моих отчетах** "флажок".  
   
 > [!NOTE]  
 >  Это пользовательский параметр. Он будет отключен для всех отчетов, открываемых пользователем.  
   
 ### <a name="to-check-for-updates"></a>Проверка обновлений  
   
--   Щелкните правой кнопкой мыши область конструктора отчетов за пределами отчета или в теле отчета, а затем нажмите кнопку **проверять наличие обновлений**.  
+-   Щелкните правой кнопкой мыши в области конструктора за пределами отчета или в тексте отчета, а затем нажмите кнопку **проверять наличие обновлений**.  
   
 ## <a name="see-also"></a>См. также  
- [Элементы отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
- [Опубликовать и переиздать элементы отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
- [Просмотр элементов отчета и назначение папки по умолчанию &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
- [Устранение неполадок в элементах отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Элементы отчета &#40;построитель отчетов и службы SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [Опубликовать и переиздать элементы отчета &#40;построитель отчетов и службы SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
+ [Просмотр элементов отчета и назначение папки по умолчанию &#40;построитель отчетов и службы SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
+ [Устранение неполадок в элементах отчета &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Элементы отчета и наборы данных в построителе отчетов](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   

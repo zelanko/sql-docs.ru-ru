@@ -1,5 +1,5 @@
 ---
-title: 'Урок 1: Создание нового проекта табличной модели | Документы Microsoft'
+title: 'Занятие 1: Создание нового проекта табличной модели | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 6a5f5c938289963373d09891f20c3a87495a33a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ffb0804ab6edd3afbbf3a3e618ca7c417744b21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226634"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Занятие 1. Создание нового проекта табличной модели
   На этом занятии будет создан новый пустой проект табличной модели в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. После создания нового проекта можно начать добавлять данные с помощью мастера импорта таблиц. Помимо создания нового проекта, это занятие также содержит краткий обзор среды создания табличных моделей в [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
- Дополнительные сведения о различных типах проектов табличных моделей см. в разделе [Проекты табличной модели (табличные службы SSAS)](tabular-models/tabular-model-projects-ssas-tabular.md). Дополнительные сведения о среде создания табличных моделей см. в разделе [конструктор табличных моделей &#40;табличные службы SSAS&#41;](tabular-model-designer-ssas-tabular.md).  
+ Дополнительные сведения о различных типах проектов табличных моделей см. в разделе [Проекты табличной модели (табличные службы SSAS)](tabular-models/tabular-model-projects-ssas-tabular.md). Дополнительные сведения о среде создания табличных моделей, см. в разделе [конструктор табличных моделей &#40;табличные службы SSAS&#41;](tabular-model-designer-ssas-tabular.md).  
   
  Предполагаемое время выполнения данного занятия: **10 минут.**  
   
@@ -37,9 +37,9 @@ ms.locfileid: "36188125"
   
 1.  В среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]в меню **Файл** выберите пункт **Создать**, а затем выберите пункт **Проект**.  
   
-2.  В **новый проект** диалогового **установленные шаблоны**, нажмите кнопку **бизнес-аналитики**, нажмите кнопку **служб Analysis Services**, и Нажмите кнопку **табличный проект служб Analysis Services**.  
+2.  В **новый проект** диалогового **установленные шаблоны**, нажмите кнопку **бизнес-аналитики**, затем нажмите кнопку **служб Analysis Services**, и Нажмите кнопку **табличный проект служб Analysis Services**.  
   
-3.  В **имя**, тип `AW Internet Sales Tabular Model`, затем укажите расположение для файлов проекта.  
+3.  В **имя**, тип `AW Internet Sales Tabular Model`, и укажите расположение файлов проекта.  
   
      По умолчанию **Имя решения** будет таким же, что и имя проекта, однако можно ввести другое имя решения.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36188125"
 ## <a name="understanding-the-sql-server-data-tools-tabular-model-authoring-environment"></a>Основные сведения о среде разработки табличных моделей SQL Server Database Tools  
  Теперь, когда новый проект табличной модели создан, давайте познакомимся со средой для создания табличных моделей в [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (Visual Studio 2010 и более поздние версии).  
   
- После создания проект открывается в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Пустая модель открывается в конструкторе моделей, а в окне **обозревателя решений** будет выбран файл **Model.bim** . При добавлении данных в конструкторе будут появляться таблицы и столбцы. Если вы не видите конструктора (пустое окно с вкладкой Model.bim) в **обозревателе решений**в разделе `AW Internet Sales Tabular Model`, дважды щелкните **Model.bim** файла.  
+ После создания проект открывается в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Пустая модель открывается в конструкторе моделей, а в окне **обозревателя решений** будет выбран файл **Model.bim** . При добавлении данных в конструкторе будут появляться таблицы и столбцы. Если вы не видите конструктора (пустое окно с вкладкой Model.bim), в **обозревателе решений**в разделе `AW Internet Sales Tabular Model`, дважды щелкните **Model.bim** файла.  
   
  Базовые свойства проекта можно увидеть в окне **Свойства** . В **обозревателе решений**, нажмите кнопку `AW Internet Sales Tabular Model`. В окне **Свойства** в строке **Файл проекта**появится запись **AW Internet Sales Tabular Model.smproj**. Это имя файла проекта, а расположение файла проекта указано в строке **Папка проекта**.  
   

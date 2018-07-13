@@ -1,5 +1,5 @@
 ---
-title: Реализация инструкции CASE | Документы Microsoft
+title: Реализация инструкции CASE | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
 caps.latest.revision: 5
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a9b86900b434e3272a375fcc5585749aa044ebfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 7398cf89c650921df8189ac5b597340ec315461c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184267"
 ---
 # <a name="implementing-a-case-statement"></a>Реализация инструкции CASE
   Инструкции CASE не поддерживаются в скомпилированных в собственном коде хранимых процедурах. В следующем примере показан способ реализации функциональности инструкции CASE в скомпилированной в собственном коде хранимой процедуре.  

@@ -1,5 +1,5 @@
 ---
-title: Элемент AttributePermission (ASSL) | Документы Microsoft
+title: Элемент AttributePermission (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AttributePermission element
 ms.assetid: efc8aa63-3959-4b2e-98f8-2a9c424298c2
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ee5d846cdf849959bc1a916dd82fd95de60e6e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c39047b1f63f0abbab109e2d1e8f82ca2a4c863
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277880"
 ---
 # <a name="attributepermission-element-assl"></a>Элемент AttributePermission (ASSL)
-  Определяет разрешения членов элемента [роли](role-element-assl.md) элемент имеет атрибуты отдельного измерения в [куба](cube-element-assl.md) элемента.  
+  Определяет разрешения членов элемента [роли](role-element-assl.md) элемент имеет атрибуты отдельного измерения в [куба](cube-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36100953"
 |Дочерние элементы|[AllowedSet](../properties/allowedset-element-assl.md), [заметки](../collections/annotations-element-assl.md), [AttributeID](../properties/id-element-assl.md), [DefaultMember](member-element-assl.md), [DeniedSet](../properties/deniedset-element-assl.md), [описание ](../properties/description-element-assl.md), [VisualTotals](../properties/visualtotals-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.AttributePermission>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.AttributePermission>.  
   
 ## <a name="see-also"></a>См. также  
  [Тип данных CubeDimensionPermission &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   

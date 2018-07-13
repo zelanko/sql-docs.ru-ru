@@ -1,5 +1,5 @@
 ---
-title: Набор строк DBSCHEMA_TABLES | Документы Microsoft
+title: Набор строк DBSCHEMA_TABLES | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - DBSCHEMA_TABLES rowset
 ms.assetid: 14c16e6b-0aff-4ad1-b98f-cdb7df0f8d73
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9033dc2f48b74bc13268d06f66a084f4ada22cfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83537dc9159331342ae344e5003d9c04fd8980eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211834"
 ---
 # <a name="dbschematables-rowset"></a>Набор строк DBSCHEMA_TABLES
-  Определяет группы мер и измерения, представленные в виде таблиц в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Показывает группы мер и измерения, представленные в виде таблиц в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  `DBSCHEMA_TABLES` Набор строк содержит следующие столбцы.  
@@ -45,7 +45,7 @@ ms.locfileid: "36110243"
 |`TABLE_PROPID`|`DBTYPE_UI4`||Не поддерживается.|  
 |`DATE_CREATED`|`DBTYPE_DBTIMESTAMP`||Не поддерживается.|  
 |`DATE_MODIFIED`|`DBTYPE_DBTIMESTAMP`||Дата последнего изменения объекта.|  
-|`TABLE_OLAP_TYPE`|`DBTYPE_WSTR`||Тип OLAP объекта.<br /><br /> **MEASURE_GROUP** указывает объект группы мер.<br /><br /> Параметр `CUBE_DIMENSION` указывает, что объект является измерением.|  
+|`TABLE_OLAP_TYPE`|`DBTYPE_WSTR`||Тип OLAP объекта.<br /><br /> **MEASURE_GROUP** указывает, является объект группы мер.<br /><br /> Параметр `CUBE_DIMENSION` указывает, что объект является измерением.|  
   
  Набор строк отсортирован по `TABLE_TYPE`, `TABLE_CATALOG`, `TABLE_SCHEMA` и `TABLE_NAME`.  
   

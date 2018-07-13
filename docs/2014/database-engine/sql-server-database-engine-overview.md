@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server]
 - SQL Server Database Engine
 ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8f2ae4ca9ee0dd5c6ac905259581f91b6536ae10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 72b82411378ab2d47b9a9d94c0aad0fe0b8e3f72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190814"
 ---
 # <a name="sql-server-database-engine"></a>Компонент SQL Server Database Engine
   [!INCLUDE[ssDE](../includes/ssde-md.md)] — основная служба для хранения, обработки и защиты данных. Компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] обеспечивает управляемый доступ и быструю обработку транзакций, достаточную даже для самых требовательных к предоставляемым данным приложений.  
@@ -32,11 +32,11 @@ ms.locfileid: "36189807"
  **Просмотр содержимого по области**  
  ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") [новые возможности (ядро СУБД)](whats-new-in-sql-server-2016.md)  
   
- ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") [SQL Server Database Engine, обратная совместимость](sql-server-database-engine-backward-compatibility.md)  
+ ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") [SQL Server Database Engine Backward Compatibility](sql-server-database-engine-backward-compatibility.md)  
   
  ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") [обратная совместимость средств управления SQL Server](../../2014/database-engine/sql-server-management-tools-backward-compatibility.md)  
   
- ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") [базы данных функции и задачи](../../2014/database-engine/database-engine-features-and-tasks.md)  
+ ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") [базы данных, функции и задачи](../../2014/database-engine/database-engine-features-and-tasks.md)  
   
  ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") [Технический справочник](../../2014/database-engine/technical-reference-database-engine.md)  
   

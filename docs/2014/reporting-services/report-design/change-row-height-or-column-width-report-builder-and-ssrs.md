@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5d56262f6ea03782f3e739b4b81d4070b9987f74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 56d77bdcfe43fd793cf81a91bad007cc300eb7ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227044"
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Изменение высоты строки или ширины столбца (построитель отчетов и службы SSRS)
   При установке высоты строк указывается максимальная высота строки в готовом для просмотра отчете. Но по умолчанию текстовые поля в строке расширяются в вертикальном направлении, чтобы вместить все данные во время выполнения отчета, поэтому строка может расширяться по высоте за заданные пределы. Чтобы установить фиксированную высоту строки, необходимо изменить свойства текстового поля так, чтобы они не расширялись автоматически.  

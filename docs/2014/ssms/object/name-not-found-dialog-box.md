@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.namenotfound.f1
 helpviewer_keywords:
 - Name Not Found dialog box
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 301b8c74d225c72a4c9869b7b410f9617458a8fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5311f3c6c21452fef492895d0c93e0c8f4d4d0e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260050"
 ---
 # <a name="name-not-found-dialog-box"></a>Диалоговое окно «Имя не найдено»
   Одно или несколько имен объектов в диалоговом окне не были найдены. Выберите параметр для продолжения.  
@@ -41,7 +41,7 @@ ms.locfileid: "36102562"
  **Введите имя объекта**  
  Содержит имя объекта, который не был найден. Исправьте имя объекта или введите новое имя объекта.  
   
- **Удалить***\<имя объекта >***из выделенной области**   
+ **Удалить***\<имя объекта >***из выделения**   
  Выберите, чтобы закрыть диалоговое окно **Имя не найдено** и удалить элемент из диалогового окна **Выбор объектов** .  
   
   

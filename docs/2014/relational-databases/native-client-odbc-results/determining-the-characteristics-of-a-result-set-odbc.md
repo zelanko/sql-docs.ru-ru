@@ -1,13 +1,11 @@
 ---
-title: Определение характеристик результирующего набора (ODBC) | Документы Microsoft
+title: Определение характеристик результирующего набора (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - SQLNumResultCols function
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ddc884930f52a4b1067a516301d9821346705383
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fcf7c7fb126149de1e8e0355ac698eef1c95d36f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096398"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431583"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>Определение характеристик результирующего набора (ODBC)
   Метаданные — это данные, описывающие другие данные. Например, метаданные результирующего набора описывают такие характеристики результирующего набора, как количество столбцов, типы данных в этих столбцах, их имена, точность и допустимость значений NULL.  
@@ -43,11 +41,11 @@ ms.locfileid: "36096398"
   
  Чтобы определить характеристики результирующего набора, приложение может вызвать следующие функции.  
   
--   [SQLNumResultCols](../native-client-odbc-api/sqlnumresultcols.md) для определения, возвращенных запросом сколько столбцов.  
+-   [SQLNumResultCols](../native-client-odbc-api/sqlnumresultcols.md) для определения, возвращается число столбцов в запросе.  
   
 -   [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) или [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) для описания столбца в результирующем наборе.  
   
- Хорошо спроектированные приложения пишутся с предположением, что результирующий набор неизвестен, и используют для привязки столбцов в результирующем наборе данные, возвращаемые этими функциями. Приложение может вызвать эти функции в любое время после подготовки или выполнения инструкции. Однако для достижения оптимальной производительности приложение должно вызывать **SQLColAttribute**, **SQLDescribeCol**, и **SQLNumResultCols** после выполнения инструкции.  
+ Хорошо спроектированные приложения пишутся с предположением, что результирующий набор неизвестен, и используют для привязки столбцов в результирующем наборе данные, возвращаемые этими функциями. Приложение может вызвать эти функции в любое время после подготовки или выполнения инструкции. Тем не менее, для обеспечения оптимальной производительности, приложение должно вызывать **SQLColAttribute**, **SQLDescribeCol**, и **SQLNumResultCols** после выполнения инструкции.  
   
  Можно выполнять несколько одновременных вызовов метаданных. Эти процедуры системного каталога, лежащие в основе реализаций API-интерфейса каталога ODBC, могут вызываться драйвером ODBC во время использования им статических серверных курсоров. Это позволяет приложениям одновременно обрабатывать несколько вызовов функций каталога ODBC.  
   

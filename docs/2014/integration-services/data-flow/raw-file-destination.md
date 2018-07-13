@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledest.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc290b7be9c9b97d06432d677b2337cc855389a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8898d3932b809596bbbc0aa415c34bfdb4200c72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239284"
 ---
 # <a name="raw-file-destination"></a>назначение «Необработанный файл»
   Назначение «Необработанный файл» записывает необработанные данные в файл. Так как формат данных является собственным для назначения, данные не требуют перевода и нуждаются лишь в небольшом анализе. Это значит, что назначение «Необработанный файл» может записывать данные быстрее, чем другие назначения, такие как «Неструктурированный файл» или «OLE DB».  
@@ -117,7 +117,7 @@ ms.locfileid: "36100462"
   
 1.  Установите для свойства WriteOption значение **CreateOnce** или **CreateAlways**и запустите одну итерацию цикла. Файл будет создан. Это будет гарантией того, что добавляемые метаданные и файл будут соответствовать друг другу.  
   
-2.  Сбросить свойства WriteOption значение **Append** и установите свойство ValidateExternalMetadata `False`.  
+2.  Сбросьте свойство WriteOption для **Append** и задайте для свойства ValidateExternalMetadata значение `False`.  
   
  Если используется параметр **TruncateAppend** вместо параметра **Append** , то строки, которые были добавлены в любой предыдущей итерации, будут усечены, и только затем будет добавлена новая строка. Использование параметра **TruncateAppend** также требует, чтобы данные соответствовали формату файла.  
   

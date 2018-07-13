@@ -1,5 +1,5 @@
 ---
-title: Элемент NamingTemplateTranslation (ASSL) | Документы Microsoft
+title: Элемент NamingTemplateTranslation (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NamingTemplateTranslation element
 ms.assetid: 4a97a31d-23bc-4afd-a4dc-bc0ad7121f08
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dc6c6689f4028c0983267a38435c76e7258768a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a2832ae5ffe9d5b834fc03f84154fa398b7a19fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167555"
 ---
 # <a name="namingtemplatetranslation-element-assl"></a>Элемент NamingTemplateTranslation (ASSL)
   Предоставляет локализованный перевод элемента [NamingTemplate](../properties/namingtemplate-element-assl.md) для родительского [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) тип данных.  
@@ -60,9 +60,9 @@ ms.locfileid: "36188776"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Значение `NamingTemplateTranslation` элемент используется только родительскими атрибутами (другими словами, значение [использование](../properties/usage-element-dimensionattribute-assl.md) элемент `DimensionAttribute` имеет значение родительского *родительского*) для хранения локализации Перевод `NamingTemplate` значение для данного языка.  
+ Значение `NamingTemplateTranslation` элемент используется только родительскими атрибутами (другими словами, значение [использования](../properties/usage-element-dimensionattribute-assl.md) элемент `DimensionAttribute` присваивается *родительского*) для хранения локализованного Перевод `NamingTemplate` значение для данного языка.  
   
- Элемент, соответствующий родителю параметра `NamingTemplateTranslations` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ Элемент, соответствующий родителю параметра `NamingTemplateTranslations` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент NamingTemplate &#40;ASSL&#41;](../properties/namingtemplate-element-assl.md)   

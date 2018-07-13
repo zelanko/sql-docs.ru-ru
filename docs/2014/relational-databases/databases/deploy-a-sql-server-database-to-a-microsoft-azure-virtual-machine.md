@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploymentwizard.deploymentsettings.f1
 - sql12.swb.deploymentwizard.progress.f1
@@ -43,15 +43,15 @@ helpviewer_keywords:
 - Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 976bd24095536f6ae13cf40fab8129154b14864b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dc5399a395a53f2e37103b5516b0e707eb8c0335
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158515"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Развертывание базы данных SQL Server в виртуальной машине Microsoft Azure
   Используйте мастер **развертывания базы данных SQL Server на виртуальной машине Windows Azure** для развертывания базы данных из экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)] на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виртуальной машине (ВМ) Windows Azure. Мастер использует операцию полного резервного копирования базы данных, поэтому он всегда копирует всю схему базы данных и данные из пользовательской базы данных SQL Server. Мастер также выполняет всю настройку ВМ Azure, поэтому дополнительные действия для задания параметров ВМ не требуются.  
@@ -175,7 +175,7 @@ ms.locfileid: "36190458"
 ###  <a name="permissions"></a> Разрешения  
  Развертываемая база данных должна находиться в нормальном состоянии, база данных должна быть доступна для учетной записи пользователя, запустившего мастер, и учетная запись должна иметь разрешения для выполнения операции резервного копирования.  
   
-##  <a name="launch_wizard"></a> С помощью Windows Azure VM мастер развертывания базы данных  
+##  <a name="launch_wizard"></a> С помощью развертывания базы данных мастер создания виртуальной Машины Azure Windows  
  **Для запуска мастера выполните следующие действия.**  
   
 1.  Использование среды SQL Server Management Studio для подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с базой данных, развертывание которой требуется выполнить.  
@@ -210,7 +210,7 @@ ms.locfileid: "36190458"
   
 -   В поле **Другие параметры** укажите общую папку, которая будет доступна службе виртуальной машины Windows Azure.  
   
-##  <a name="Azure_sign-in"></a> Windows Azure вход  
+##  <a name="Azure_sign-in"></a> Windows вход в Azure  
  Эта страница используется для подключения к Windows Azure и для предоставления сведений о сертификате управления или профиле публикации.  
   
  **Параметры**  

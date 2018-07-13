@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SetServiceState method
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7fdcc309eca07c8fc29fa80934e6929054a59b44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f154e0eb7666fd4c8534e701f42a521b4fb70ff8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222534"
 ---
 # <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>Метод SetServiceState (WMI MSReportServer_ConfigurationSetting)
   Включает и выключает службу Windows и веб-службу сервера отчетов.  
@@ -47,7 +47,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
   
 ## <a name="parameters"></a>Параметры  
  *EnableWindowsService*  
- Объект `Boolean` значение, указывающее состояние службы Windows. Значение `true` запускает Windows сервера отчетов в службе; значение `false` останавливает службу Windows.  
+ Объект `Boolean` значение, указывающее состояние службы Windows. Значение `true` запускает Windows сервера отчетов службы; значение `false` останавливает службу Windows.  
   
  *EnableWebService*  
  Объект `Boolean` значение, указывающее состояние [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] веб-службы. Значение `true` запускает веб-службу сервера отчетов; значение `false` останавливает веб-службу.  

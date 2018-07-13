@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 61106ce6c6eca051f6ad762577d0b4ea72d021a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a541988192c0233426a8f08a79743b822d3f3709
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223766"
 ---
 # <a name="sap-bw-connection-manager"></a>Диспетчер соединений SAP BW
   Диспетчер соединений SAP BW — это компонент диспетчера соединений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW. Таким образом, диспетчер соединений SAP BW обеспечивает подключение к системе SAP Netweaver BW версии 7, необходимое компонентам источника и назначения [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW. (Источник и назначение SAP BW, входящие в состав пакета [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW, являются единственными компонентами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , которые используют диспетчер соединений SAP BW.)  
@@ -27,7 +27,7 @@ ms.locfileid: "36109994"
 > [!IMPORTANT]  
 >  Документация по Microsoft Connector 1.1 для SAP BW предполагает, что читатель знаком со средой SAP Netweaver BW. Дополнительные сведения о SAP Netweaver BW или сведения о настройке объектов и процессов SAP Netweaver BW см. в документации SAP.  
   
- При добавлении диспетчера соединений SAP BW в пакет `ConnectionManagerType` диспетчера соединений задано значение `SAPBI`.  
+ При добавлении к пакету диспетчер соединений SAP BW `ConnectionManagerType` свойства диспетчера соединений присваивается `SAPBI`.  
   
 ## <a name="configuring-the-sap-bw-connection-manager"></a>Настройка диспетчера соединений SAP BW  
  Диспетчер соединений SAP BW можно настроить следующими способами.  

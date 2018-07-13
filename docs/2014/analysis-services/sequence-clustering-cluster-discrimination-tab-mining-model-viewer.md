@@ -1,5 +1,5 @@
 ---
-title: Вкладка «сравнения кластеров» (средство просмотра моделей интеллектуального анализа данных) кластеризации последовательностей | Документы Microsoft
+title: Вкладка «сравнения кластеров» (средство просмотра моделей интеллектуального анализа данных) кластеризации последовательностей | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.discrimination.f1
 ms.assetid: 7dd16479-2633-4f4b-83bf-cf55972a2241
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34ae165b87eed53b68ae4e1bd5264f1b500d0f73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4debc43286ffb3fe4f87115ed15e9b4c3f74b06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187151"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>Вкладка «Сравнение кластеров при кластеризации последовательностей» (средство просмотра моделей интеллектуального анализа данных)
   Вкладка  **Сравнения кластеров** в **средстве просмотра кластеризации последовательностей (Майкрософт)** сравнивает выбранные кластеры из модели кластеризации последовательностей.  
@@ -57,7 +57,7 @@ ms.locfileid: "36188101"
 |-----------|-----------------|  
 |**Переменные**|Атрибут модели интеллектуального анализа данных.|  
 |**Значения**|Состояние атрибута, включенного в список **Переменные**.|  
-|**Отдает приоритет \<кластера 1 >**|Содержит полосу с заливкой, обозначающую, насколько близко атрибут и состояние, указанные в полях **Переменные** и **Значение** , подходят кластеру, выбранному в **кластере 1**.|  
+|**Подходит к \<кластера 1 >**|Содержит полосу с заливкой, обозначающую, насколько близко атрибут и состояние, указанные в полях **Переменные** и **Значение** , подходят кластеру, выбранному в **кластере 1**.|  
   
 ## <a name="see-also"></a>См. также  
  [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

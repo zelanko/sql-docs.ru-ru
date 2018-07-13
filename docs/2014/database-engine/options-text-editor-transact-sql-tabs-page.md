@@ -1,5 +1,5 @@
 ---
-title: Параметры (текстовый редактор - Transact-SQL — страница "Табуляция") | Документы Microsoft
+title: Параметры (текстовый редактор-Transact SQL — страница "Табуляция") | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.Tabs
 dev_langs:
@@ -17,15 +17,15 @@ ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
 caps.latest.revision: 10
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c070024769f59516f57d89a4c76b97ceb9b775f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c97c95ec2dff4d96f37eb274ee6ec98af117f89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152645"
 ---
-# <a name="options-text-editor---transact-sql---tabs-page"></a>Параметры (текстовый редактор - Transact-SQL — страница «Табуляция»)
+# <a name="options-text-editor---transact-sql---tabs-page"></a>Параметры (текстовый редактор-Transact SQL — страница "вкладки")
   Используйте это диалоговое окно, чтобы изменить действия редактора запросов компонента [!INCLUDE[ssDE](../includes/ssde-md.md)], который используется для скриптов программы [!INCLUDE[tsql](../includes/tsql-md.md)], при нажатии клавиши TAB. Для вывода этих параметров выберите пункт **Параметры** в меню **Сервис**, раскройте узел **Текстовый редактор**, раскройте вложенную папку **Transact-SQL** и щелкните **Вкладки**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Настройка параметров в нескольких местах  
@@ -35,7 +35,7 @@ ms.locfileid: "36190592"
  **None**  
  Если данный параметр выбран, при нажатии клавиши ВВОД отступ у новой строки создаваться не будет. Курсор помещается в первый столбец новой строки.  
   
- **блок**  
+ **Блок**  
  Если выбран данный режим, то новая строка, создаваемая при нажатии клавиши ВВОД, будет автоматически перемещена на такое же расстояние, что и предыдущая.  
   
  **Смарт-**  

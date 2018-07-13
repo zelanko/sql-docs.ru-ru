@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
 - max server memory option
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 caps.latest.revision: 76
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5ddbf4ccd432a7ba7ff9f4d946572dfcc6500dbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4ae726d4a8706b5fbb04c8d10c8a14c3aeeb0790
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160965"
 ---
 # <a name="server-memory-server-configuration-options"></a>Параметры конфигурации сервера «Server Memory»
   Два параметра памяти сервера, **min server memory** и **max server memory**, используются для изменения в конфигурации объема памяти (в мегабайтах), управляемой диспетчером памяти SQL Server для процесса SQL Server, применяемого экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -87,12 +87,12 @@ ms.locfileid: "36188754"
 3.  Если выбран параметр **макс. пропускная способность для сетевых приложений** , выберите любой другой параметр, нажмите кнопку **ОК**и закройте остальные диалоговые окна.  
   
 ## <a name="lock-pages-in-memory"></a>Блокировка страниц в памяти  
- Эта политика Windows определяет, какие учетные записи могут использовать процесс для сохранения данных в физической памяти, чтобы система не отправляла страницы данных в виртуальную память на диске. Блокировка страниц в памяти может обеспечивать отклик сервера, когда содержимое памяти заносится в файл подкачки. SQL Server **блокировка страниц в памяти** был установлен в ON в 32-разрядных и 64-разрядные экземпляры [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition и выше, если учетной записи с привилегией на выполнение sqlservr.exe предоставлено Windows «блокировка страниц в Право пользователя памяти» (LPIM). В более ранних версиях SQL Server задание параметра блокировки страниц для 32-разрядного экземпляра SQL Server требовало, чтобы учетная запись с правами запуска sqlservr.exe имела права пользователя LPIM и параметр конфигурации «awe_enabled» был установлен равным ON.  
+ Эта политика Windows определяет, какие учетные записи могут использовать процесс для сохранения данных в физической памяти, чтобы система не отправляла страницы данных в виртуальную память на диске. Блокировка страниц в памяти может обеспечивать отклик сервера, когда содержимое памяти заносится в файл подкачки. SQL Server **блокировка страниц в памяти** был установлен в ON в 32-разрядных и 64-разрядных экземпляров [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition и выше, если учетной записи с привилегией на выполнение sqlservr.exe предоставлено Windows «блокировка страниц в Право пользователя памяти» (LPIM). В более ранних версиях SQL Server задание параметра блокировки страниц для 32-разрядного экземпляра SQL Server требовало, чтобы учетная запись с правами запуска sqlservr.exe имела права пользователя LPIM и параметр конфигурации «awe_enabled» был установлен равным ON.  
   
  Чтобы отключить параметр **Блокировка страниц в памяти** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], удалите право пользователя "Блокировка страниц в памяти" для стартовой учетной записи SQL Server.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>Отключение блокировки страниц в памяти  
- **Отключение блокировки страниц в памяти:**  
+ **Отключение параметра блокировки страниц в памяти:**  
   
 1.  В меню **Пуск** выберите команду **Выполнить**. В **откройте** введите `gpedit.msc`.  
   
@@ -136,11 +136,11 @@ ms.locfileid: "36188754"
   
 ||32-разрядная версия|64-разрядная версия|  
 |-|-------------|-------------|  
-|Обычная память|Не более ограничения виртуального адресного пространства процесса во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 2 GB<br /><br /> 3 ГБ с **/3 gb** загрузки параметр *<br /><br /> 4 ГБ на WOW64\*\*|Не более ограничения виртуального адресного пространства процесса во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 8 ТБ для архитектуры x64|  
+|Обычная память|Не более ограничения виртуального адресного пространства процесса во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 2 GB<br /><br /> 3 ГБ с **/3 gb** загрузки параметра *<br /><br /> 4 ГБ на WOW64\*\*|Не более ограничения виртуального адресного пространства процесса во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 8 ТБ для архитектуры x64|  
   
  ***/3gb** — параметр загрузки операционной системы. Дополнительные сведения см. в [библиотеке MSDN](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- ** WOW64 (Windows on Windows 64) — режим, в которых 32-разрядных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется на 64-разрядной операционной системе. Дополнительные сведения см. в [библиотеке MSDN](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ ** WOW64 (Windows on Windows 64) — режим, в котором 32-разрядная версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется в 64-разрядной операционной системе. Дополнительные сведения см. в [библиотеке MSDN](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## <a name="examples"></a>Примеры  
   

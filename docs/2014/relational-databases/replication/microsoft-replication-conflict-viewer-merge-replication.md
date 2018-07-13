@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replconflictviewer.cvmerge.f1
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5b5019b40dd6897094a1dbb8e0549659a6aa5308
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e627b0cec731afa34d12397c90d13fe0ddabdd33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211004"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Средство просмотра конфликтов репликации Microsoft (репликация слиянием)
   Средство просмотра конфликтов репликации позволяет просматривать любые конфликты, возникшие в процессе синхронизации репликации. Конфликты возникают, когда одни и те же данные изменяются на двух отдельных серверах, например на издателе и подписчике, или на двух различных подписчиках. Репликация автоматически разрешает конфликты, используя сопоставитель конфликтов, выбранный при создании статьи публикации. Однако данное средство просмотра конфликтов репликации позволяет выбрать иное решение конфликта, если это необходимо. Могут возникнуть следующие конфликты.  

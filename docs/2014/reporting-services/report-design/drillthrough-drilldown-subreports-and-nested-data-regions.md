@@ -1,5 +1,5 @@
 ---
-title: Детализация, Углубленная детализация, вложенные отчеты и вложенные области данных (построитель отчетов и службы SSRS) | Документы Microsoft
+title: Детализация, Углубленная детализация, вложенные отчеты и вложенные области данных (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 67d8ad863c6af2737aef283424a5c8f1cc469f50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4a951ab61a50ddf9983678a50989e5560d40f85e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228834"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>Детализация, углубленная детализация, вложенные отчеты и вложенные области данных (построитель отчетов и службы SSRS)
   Данные можно организовать различными способами, чтобы показать отношение общего к частному.  Можно вложить все данные в отчет, но скрыть их до тех пор, пока пользователь не раскроет подробное представление; это действие называется *углубленной детализацией* . Можно отобразить данные в области данных, например таблице или диаграмме, которая *вложена* в другую область данных, например таблицу или матрицу. Можно отобразить данные во *вложенном отчете* , который содержится полностью в основном отчете. Либо можно вложить подробные данные в отчеты с *углубленной детализацией* , то есть отдельные отчеты, которые отображаются при нажатии пользователем ссылки.  
@@ -86,19 +86,19 @@ ms.locfileid: "36180205"
 
   
 ##  <a name="InThisSection"></a> в этом разделе  
- [Детализированные отчеты &#40;отчетов построителя отчетов и службы SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
+ [Детализированные отчеты &#40;построитель отчетов и службы SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
  Объясняет отчеты, которые открываются при нажатии пользователем ссылки в основном отчете.  
   
- [Вложенные отчеты &#40;отчетов построителя отчетов и службы SSRS&#41;](subreports-report-builder-and-ssrs.md)  
+ [Вложенные отчеты &#40;построитель отчетов и службы SSRS&#41;](subreports-report-builder-and-ssrs.md)  
  Объясняет отчеты, отображаемые в тексте основного отчета.  
   
- [Вложенные области данных &#40;отчетов построителя отчетов и службы SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
+ [Вложенные области данных &#40;построитель отчетов и службы SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
  Объясняет вложение областей данных друг в друга, например вложение диаграммы в матрицу.  
   
- [Действие углубленной детализации &#40;отчетов построителя отчетов и службы SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)  
+ [Действие детализации &#40;построитель отчетов и службы SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)  
  Объясняет использование действия углубленной детализации для скрытия и отображения элементов отчета.  
   
- [Указание путей к внешним элементам &#40;отчетов построителя отчетов и службы SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [Указание путей к внешним элементам &#40;построитель отчетов и службы SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  Объясняет создание ссылок на элементы, которые являются внешними по отношению к файлу определения отчета.  
   
 ## <a name="see-also"></a>См. также  

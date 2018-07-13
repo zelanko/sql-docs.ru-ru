@@ -1,13 +1,11 @@
 ---
-title: Определяемые пользователем типы больших значений CLR (ODBC) | Документы Microsoft
+title: Определяемые пользователем типы больших значений CLR (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,22 +13,22 @@ helpviewer_keywords:
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98cb3dadf5b0009d4c1ce8cddb3a6cb21d1c4c2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e7e17bf897c91021a06ebb5605b072f27aa624d3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098886"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422363"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Определяемые пользователем типы данных больших значений CLR (ODBC)
   В этом разделе обсуждаются изменения ODBC в собственном клиенте SQL Server для поддержки определяемых пользователем типов данных CLR.  
   
- Пример, демонстрирующий поддержку ODBC для больших определяемых пользователем типов CLR см. в разделе [поддержка больших определяемых пользователем типов](../../native-client-odbc-how-to/support-for-large-udts.md).  
+ Пример, демонстрирующий поддержку ODBC для больших определяемых пользователем типов CLR, см. в разделе [поддержка больших определяемых пользователем типов](../../native-client-odbc-how-to/support-for-large-udts.md).  
   
- Дополнительные сведения о поддержке больших определяемых пользователем типов CLR в собственном клиенте SQL Server см. в разделе [Large CLR User-Defined типов](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+ Дополнительные сведения о поддержке больших определяемых пользователем типов CLR в SQL Server Native Client см. в разделе [Large CLR User-Defined типы](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 ## <a name="data-format"></a>Формат данных  
  Собственный клиент SQL Server использует значение SQL_SS_LENGTH_UNLIMITED для обозначения того, что размер столбца больше чем 8000 байт для типов больших объектов. Начиная с SQL Server 2008, при размере столбца больше 8000 байт для определяемых пользователем типов данных больших значений CLR используется такое же значение.  
@@ -72,7 +70,7 @@ ms.locfileid: "36098886"
 |SQL_CA_SS_UDT_TYPE_NAME|Имя определяемого пользователем типа.|Имя определяемого пользователем типа.|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|Полное имя определяемого пользователем типа.|Полное имя определяемого пользователем типа.|  
   
- Для параметров UDT SQL_CA_SS_UDT_TYPE_NAME всегда должны быть заданы через **SQLSetDescField**. Значения SQL_CA_SS_UDT_CATALOG_NAME и SQL_CA_SS_UDT_SCHEMA_NAME не обязательны.  
+ Для параметров определяемого пользователем ТИПА, SQL_CA_SS_UDT_TYPE_NAME всегда должны быть установлены с помощью **SQLSetDescField**. Значения SQL_CA_SS_UDT_CATALOG_NAME и SQL_CA_SS_UDT_SCHEMA_NAME не обязательны.  
   
  Если определяемый пользователем тип и таблица определяются в одной базе данных, но с разными схемами, необходимо установить SQL_CA_SS_UDT_SCHEMA_NAME.  
   

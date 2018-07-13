@@ -1,5 +1,5 @@
 ---
-title: Элемент MiningModelPermissions (ASSL) | Документы Microsoft
+title: Элемент MiningModelPermissions (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MiningModelPermissions element
 ms.assetid: 6cbcf029-9627-4839-9fc5-15e58e1ba0c3
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 701a5e139f3a5f2f98799be7dfc5f6dec1db3ced
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eefb1f5c951f765efab04c182117fb736a7b350a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153175"
 ---
 # <a name="miningmodelpermissions-element-assl"></a>Элемент MiningModelPermissions (ASSL)
-  Содержит коллекцию разрешений для [MiningModel](../objects/miningmodel-element-assl.md) элемента.  
+  Содержит коллекцию разрешений для [MiningModel](../objects/miningmodel-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -61,10 +61,10 @@ ms.locfileid: "36190084"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[MiningModel](../objects/miningmodel-element-assl.md)|  
-|Дочерние элементы|[MiningModelPermission](../objects/miningmodelpermission-element-assl.md) типа [разрешения](../data-type/permission-data-type-assl.md)|  
+|Дочерние элементы|[MiningModelPermission](../objects/miningmodelpermission-element-assl.md) типа [разрешение](../data-type/permission-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.MiningModelPermissionCollection>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.MiningModelPermissionCollection>.  
   
 ## <a name="see-also"></a>См. также  
  [Тип данных Permission &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   

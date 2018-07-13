@@ -5,26 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - logon triggers
 - login triggers
 helpviewer_keywords:
 - triggers [SQL Server], logon
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
-caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4467b8146a3842daaef11c5c9a67040b881c9f79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b42fdfa556a2e7a26a04dd85fd7740ca23d36967
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095883"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427203"
 ---
 # <a name="logon-triggers"></a>Триггеры входа
   Триггеры входа вызывают срабатывание хранимых процедур в ответ на событие LOGON. Это событие вызывается при установке пользовательского сеанса с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Триггеры входа срабатывают после завершения этапа проверки подлинности при входе, но перед тем, как пользовательский сеанс реально устанавливается. Следовательно, все сообщения, которые возникают внутри триггера и обычно достигают пользователя, такие как сообщения об ошибках и сообщения от инструкции PRINT, перенаправляются в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если проверка подлинности завершается сбоем, триггеры входа не срабатывают.  

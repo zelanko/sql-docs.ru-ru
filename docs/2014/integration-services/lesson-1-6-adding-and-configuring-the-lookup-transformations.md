@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 caps.latest.revision: 38
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a670980605130532d5a93c17dd6827343dd68d59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 405f70f2063ea9930c31b1c8a8cf60085c31889f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109539"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240965"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Шаг 6. Добавление и настройка преобразований «Уточняющий запрос»
   После того как источник неструктурированных файлов настроен для извлечения данных из файла источника, следует определить преобразования «Уточняющий запрос», необходимые для получения значений **CurrencyKey** и **DateKey**. Преобразование «Уточняющий запрос» выполняет поиск, соединяя данные указанного входного столбца со столбцом эталонного набора данных. Эталонным набором данных может быть таблица или представление, новая таблица или результат инструкции SQL. В этом учебнике преобразование «Уточняющий запрос» использует диспетчер соединений OLE DB, чтобы подключиться к базе данных, содержащей данные, служащие источником для эталонного набора данных.  
@@ -98,7 +98,7 @@ ms.locfileid: "36109539"
   
 9. Щелкните правой кнопкой мыши преобразование "Уточняющий запрос ключа валюты" и выберите пункт **Свойства**.  
   
-10. В окне «Свойства» убедитесь, что `LocaleID` свойству **английский (США)** и **DefaultCodePage** свойству **1252**.  
+10. В окне «Свойства» убедитесь, что `LocaleID` свойству **русский (Россия)** и **DefaultCodePage** свойству **1252**.  
   
 ### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>Добавление и настройка преобразования «Уточняющий запрос ключа даты»  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36109539"
   
 11. Щелкните правой кнопкой мыши преобразование "Уточняющий запрос ключа даты" и выберите пункт **Свойства**.  
   
-12. В окне «Свойства» убедитесь, что `LocaleID` свойству **английский (США)** и **DefaultCodePage** свойству **1252**.  
+12. В окне «Свойства» убедитесь, что `LocaleID` свойству **русский (Россия)** и **DefaultCodePage** свойству **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Шаг 7. Добавление и настройка назначения OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  

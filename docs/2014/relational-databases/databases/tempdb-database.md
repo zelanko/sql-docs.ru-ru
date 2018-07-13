@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
 - tempdb database [SQL Server], about tempdb
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 048386695f2b3d3736ce2b399caa9fa286e0d80c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 251ca5f656425a3a77952b4bfdb6e0b79ee8367d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154335"
 ---
 # <a name="tempdb-database"></a>База данных tempdb
   Системная база данных **tempdb** — это глобальный ресурс, доступный всем пользователям, подключенным к данному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в котором хранятся следующие объекты:  
@@ -47,7 +47,7 @@ ms.locfileid: "36189009"
 |Первичные данные|tempdev|tempdb.mdf|Автоувеличение на 10 % до заполнения диска.|  
 |Журнал|templog|templog.ldf|Автоувеличение на 10 % до максимального размера в 2 ТБ.|  
   
- Размер **tempdb** может повлиять на производительность системы. Например если **tempdb** размер слишком мал, система может быть слишком занята автоматическим увеличением базы данных для обеспечения требований рабочей нагрузки при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этих затрат можно избежать, увеличив размер **tempdb**.  
+ Размер **tempdb** может повлиять на производительность системы. Например если **tempdb** размер слишком мал, система может быть слишком занята автоматическим увеличением базы данных для поддержки требований рабочей нагрузки при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этих затрат можно избежать, увеличив размер **tempdb**.  
   
 ## <a name="performance-improvements-in-tempdb"></a>Увеличение производительности базы данных tempdb  
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]производительность базы данных **tempdb** увеличена следующими способами.  

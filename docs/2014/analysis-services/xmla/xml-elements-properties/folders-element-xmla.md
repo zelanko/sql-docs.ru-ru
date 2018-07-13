@@ -1,5 +1,5 @@
 ---
-title: Элемент Folders (XML для Аналитики) | Документы Microsoft
+title: Элемент Folders (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Folders element
 ms.assetid: fefb0469-22ea-4804-8dc3-9c49825b32f1
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c9042b2960a6efcce592779f5f17fd58fd98d693
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 00d90fd45456a0b672c12cdd44706e63011cbb28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190269"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148535"
 ---
 # <a name="folders-element-xmla"></a>Элемент Folders (XML для аналитики)
   Содержит коллекцию элементов [Folder](folder-element-xmla.md) , которая используется родительским элементом [Location](location-element-xmla.md) при выполнении команды [Restore](../xml-elements-commands/restore-element-xmla.md) или [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) .  

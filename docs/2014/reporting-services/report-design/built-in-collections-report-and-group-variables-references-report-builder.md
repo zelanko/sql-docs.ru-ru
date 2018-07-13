@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10404"
 - sql12.rtp.rptdesigner.categorygroupproperties.variables.f1
@@ -20,15 +20,15 @@ f1_keywords:
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a4a03cad2b19cc853c48a1614daea34cb2fb43ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5385940ba528d0bdd9acf7f784d78832f1fdaa6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148495"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Ссылки на коллекции переменных отчета и группы (построитель отчетов и службы SSRS)
   При сложном вычислении, которое используется несколько раз в выражениях отчета, может потребоваться создание переменной. Можно создать переменную отчета или переменную группы. В отчете имена переменных должны быть уникальными.  
@@ -51,7 +51,7 @@ ms.locfileid: "36188413"
   
 -   **Использование для чтения и записи** . Задайте значение единожды и сериализуйте его в ходе сеанса работы с отчетом. Вариант с чтением и записью для переменных представляет собой лучшую альтернативу по сравнению с использованием статической переменной в блоке «Код» определения отчета.  
   
-     При удалении **только для чтения** для переменной задано значение для переменной, доступный для записи свойства параметра `true`. Чтобы обновить значение этой переменной с помощью выражения, используйте метод SetValue, например `=Variables!MyVariable.SetValue("123")`.  
+     При удалении **только для чтения** параметр для переменной, то свойство Writable для переменной присваивается `true`. Чтобы обновить значение этой переменной с помощью выражения, используйте метод SetValue, например `=Variables!MyVariable.SetValue("123")`.  
   
     > [!NOTE]  
     >  Нельзя управлять инициализацией переменной или вычислением выражения, которое обновляет значение переменной, в обработчике отчетов. Порядок выполнения при инициализации переменной не определен.  
@@ -77,7 +77,7 @@ ms.locfileid: "36188413"
   
 ## <a name="see-also"></a>См. также  
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Встроенные коллекции в выражениях &#40;отчетов построителя отчетов и службы SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
+ [Встроенные коллекции в выражениях &#40;построитель отчетов и службы SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)  
   
   

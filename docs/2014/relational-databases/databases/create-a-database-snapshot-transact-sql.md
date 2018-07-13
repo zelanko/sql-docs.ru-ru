@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], creating
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95c50d2f0859b6da42788d53493c1d49f7900a13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 97b460cf5508c1b95c9d9acedd02d68e5e0acd79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191944"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>создать моментальный снимок базы данных (Transact-SQL)
   Единственный способ создания моментального снимка базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] состоит в использовании [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не поддерживает создание моментальных снимков базы данных.  
@@ -34,18 +34,18 @@ ms.locfileid: "36189534"
   
      [Рекомендации. Присвоение имен моментальным снимкам базы данных](#Naming)  
   
--   **Для создания моментального снимка, с помощью базы данных:**[Transact-SQL  ](#TsqlProcedure)  
+-   **Чтобы создать моментальный снимок, с помощью базы данных:**[Transact-SQL  ](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="Prerequisites"></a> Предварительные требования  
  База данных-источник, в которой может применяться любая модель восстановления, должна соответствовать следующим предварительным требованиям.  
   
--   На экземпляре сервера должен быть запущен выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который поддерживает моментальные снимки баз данных. Дополнительные сведения о поддержке моментальных снимков базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], в разделе [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   На экземпляре сервера должен быть запущен выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который поддерживает моментальные снимки баз данных. Сведения о поддержке моментальных снимков базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   База данных-источник должна быть в режиме в сети, если база данных не является зеркальной в сеансе зеркального отображения базы данных.  
   
--   Для создания моментального снимка в зеркальной базе данных, база данных должна быть в синхронизированном[состояние зеркального отображения](../../database-engine/database-mirroring/mirroring-states-sql-server.md).  
+-   Для создания моментального снимка в зеркальной базе данных, базы данных должен быть в синхронизированном[состояние зеркального отображения](../../database-engine/database-mirroring/mirroring-states-sql-server.md).  
   
 -   База данных-источник не может быть настроена в качестве масштабируемой общей базы данных.  
   
@@ -154,7 +154,7 @@ GO
 ```  
   
 ####  <a name="Creating_on_Sales"></a> Б. Создание моментального снимка по базе данных Sales  
- Этот пример создает моментальный снимок `sales_snapshot1200`базы данных `Sales` . Эта база данных создана в примере «Создание базы данных, которая содержит файловые группы» в [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
+ Этот пример создает моментальный снимок `sales_snapshot1200`базы данных `Sales` . Эта база данных создана в примере «Создание базы данных, которая содержит файловые группы,» в [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  

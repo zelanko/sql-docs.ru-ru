@@ -1,5 +1,5 @@
 ---
-title: Модель интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+title: Модель интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
 - Bayesian classifiers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5b6c53452892eb928267b3f04078633274905633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14aa876539bafb265ddac5514d25519b003e646d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216124"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — интеллектуальный анализ данных)
   В этом разделе описано содержимое модели интеллектуального анализа данных, характерное для моделей, в которых используется упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Объяснение способов интерпретации статистики и описание структуры, общей для всех типов моделей, а также общие определения терминов, связанных с содержимым моделей интеллектуального анализа данных, см. в разделе [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "36187927"
 > [!NOTE]  
 >  Поскольку модель упрощенного алгоритма Байеса не поддерживает непрерывные типы данных, все значения входных столбцов считаются дискретными или дискретизированными. Можно задать способ дискретизации значения. Дополнительные сведения см. в разделе [Изменение дискретизации столбца в модели интеллектуального анализа данных](change-the-discretization-of-a-column-in-a-mining-model.md).  
   
- ![Структура содержимого модели для упрощенного алгоритма Байеса](../media/modelcontentstructure-nb.gif "структура содержимого модели для упрощенного алгоритма Байеса")  
+ ![Структура содержимого моделей для упрощенного алгоритма Байеса](../media/modelcontentstructure-nb.gif "структура содержимого моделей для упрощенного алгоритма Байеса")  
   
 ## <a name="model-content-for-a-naive-bayes-model"></a>Содержимое модели упрощенного алгоритма Байеса  
  В этом разделе представлено подробное описание с примерами только для тех столбцов модели интеллектуального анализа данных, которые имеют отношение к моделям упрощенного алгоритма Байеса.  
@@ -289,7 +289,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  В модели упрощенного алгоритма Байеса не могут присутствовать непрерывные атрибуты, и поэтому все числовые данные представляются как дискретные (VALUE_TYPE = 4) либо дискретизированные (VALUE_TYPE = 5).  
   
- Объект `Missing` значение (VALUE_TYPE = 1) добавляется в каждый атрибут входным и выходным, представляя возможные значения, которые не присутствовали в обучающих данных. Будьте внимательны, чтобы различать «отсутствует», как строка и значение по умолчанию `Missing` значение. Дополнительные сведения см. в разделе [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
+ Объект `Missing` значение (VALUE_TYPE = 1) добавляется к каждому атрибуту ввода-вывода, представляя возможные значения, которые не присутствовали в обучающих данных. Будьте внимательны, чтобы провести различие между «отсутствует», как строка и значение по умолчанию `Missing` значение. Дополнительные сведения см. в разделе [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>См. также  
  [Содержимое модели интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-analysis-services-data-mining.md)   

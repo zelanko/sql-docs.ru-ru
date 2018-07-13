@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 21898 (Database Engine error)
 ms.assetid: 02405b21-3d4e-4c2d-b4b3-d7b1ec05edb4
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2a33000c20c7c8c1399f8f6db653d60841bb7de2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 551b199b6c4c97b58eca822e1372d3b51af31585
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096174"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423463"
 ---
 # <a name="mssqlserver21898"></a>MSSQLSERVER_21898
     
@@ -37,7 +36,7 @@ ms.locfileid: "36096174"
 |Текст сообщения|Издатель «%s» использует базу данных распространителя «%s», а не «%s», которая необходима для размещения базы данных публикации «%s». Запустите `sp_changedistpublisher` на распространителе «%s», чтобы сменить базу данных распространителя, используемую издателем для «%s».|  
   
 ## <a name="explanation"></a>Объяснение  
- `sp_validate_redirected_publisher` msdb.dbo.MSdistpublishers запросы на локальном распространителе для проверки базы данных распространителя, используемой в новый издатель таким же, как базы данных распространителя первоначального издателя. Эта ошибка возвращается, если эти базы данных различаются, в результате издатель становится непригодным для размещения базы данных издателя.  
+ `sp_validate_redirected_publisher` запросы к msdb.dbo.MSdistpublishers на локальном распространителе, чтобы убедиться в базе данных распространителя на издателе новый так же, как базы данных распространителя первоначального издателя. Эта ошибка возвращается, если эти базы данных различаются, в результате издатель становится непригодным для размещения базы данных издателя.  
   
 ## <a name="user-action"></a>Действие пользователя  
  Выполните хранимую процедуру `sp_changedistpublisher`, чтобы изменить базу данных распространителя для нового издателя на базу данных, которая использовалась первоначальным издателем.  

@@ -1,31 +1,29 @@
 ---
-title: Разделы руководства по OLE DB | Документы Microsoft
+title: Инструкции по OLE DB | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, how-to topics
 ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e783c7774d2f38ef3751a6bf164951136e8f5dd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2fe08c6f0a0d95a3f4ed1568614d090b5ed3e05d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097980"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411743"
 ---
 # <a name="ole-db-how-to-topics"></a>Инструкции по OLE DB
-  Для использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, необходимо понять, как создать подключение к серверу и выполните команду обработки результатов.  
+  Чтобы использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, необходимо понять, как создать подключение к серверу и выполнить команду обработки результатов.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
@@ -41,13 +39,13 @@ ms.locfileid: "36097980"
   
 -   [Получение строк с помощью закладок &#40;OLE DB&#41;](retrieve-rows-using-bookmarks-ole-db.md)  
   
--   [Выборка столбцов с помощью IRow::GetColumns &#40;или IRow::Open&#41; и ISequentialStream](fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
+-   [Выбор столбцов с помощью метода IRow::GetColumns &#40;или IRow::Open&#41; и интерфейса ISequentialStream](fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
   
--   [Выборка столбцов с помощью IRow::GetColumns &#40;OLE DB&#41;](fetch-columns-using-irow-getcolumns-ole-db.md)  
+-   [Выбор столбцов с помощью метода IRow::GetColumns &#40;OLE DB&#41;](fetch-columns-using-irow-getcolumns-ole-db.md)  
   
--   [Изменение пароля пользователя проверки подлинности SQL Server &#40;OLE DB&#41;](change-a-sql-server-authentication-user-password-ole-db.md)  
+-   [Изменение пароля проверки подлинности пользователя SQL Server &#40;OLE DB&#41;](change-a-sql-server-authentication-user-password-ole-db.md)  
   
--   [Использовать расширенный функций даты и времени &#40;OLE DB&#41;](use-enhanced-date-and-time-features-ole-db.md)  
+-   [Используйте улучшенные функции даты и времени &#40;OLE DB&#41;](use-enhanced-date-and-time-features-ole-db.md)  
   
 -   [Filestream и OLE DB](filestream/filestream-and-ole-db.md)  
   

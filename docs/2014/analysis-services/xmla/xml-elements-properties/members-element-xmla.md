@@ -1,5 +1,5 @@
 ---
-title: Элемент Members (XMLA) | Документы Microsoft
+title: Элемент Members (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Members element
 ms.assetid: 55f9ec3a-5a41-4b3a-acd6-c07598868c46
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5d812d0eea48c4f2b54352f61a176462b280071a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 37eb0532f56fd4aff8ca760b843697f30f3c9585
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201964"
 ---
 # <a name="members-element-xmla"></a>Элемент Members (XML для аналитики)
-  Содержит коллекцию [член](member-element-xmla.md) элементов, содержащихся в родительском [CrossProduct](crossproduct-element-xmla.md) элемента.  
+  Содержит коллекцию [член](member-element-xmla.md) элементов, содержащихся в родительском [CrossProduct](crossproduct-element-xmla.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -71,10 +71,10 @@ ms.locfileid: "36188320"
 |Иерархия|Требуется `String` атрибута. Имя иерархии, которой принадлежат элементы, содержащиеся в элементе `Members`.|  
   
 ## <a name="remarks"></a>Примечания  
- Когда клиентское приложение задает `AxisFormat` свойства *ClusterFormat*, элементы на каждой оси разделяются на кластеры, в которых каждый кластер представляет перекрестное произведение упорядоченных множеств элементов из каждой иерархии. Каждый элемент `Axis` состоит из одного или нескольких элементов `CrossProduct`. Каждый элемент `CrossProduct` содержит элемент `Members` из каждой иерархии на оси. В элементе `Members`, в свою очередь, содержится по одному элементу `Member` для каждого элемента указанной иерархии, включенной в перекрестное произведение.  
+ Когда клиентское приложение устанавливает `AxisFormat` свойства *ClusterFormat*, элементы на каждой оси разделяются на кластеры, в которых каждый кластер представляет перекрестное произведение упорядоченных множеств элементов из каждой иерархии. Каждый элемент `Axis` состоит из одного или нескольких элементов `CrossProduct`. Каждый элемент `CrossProduct` содержит элемент `Members` из каждой иерархии на оси. В элементе `Members`, в свою очередь, содержится по одному элементу `Member` для каждого элемента указанной иерархии, включенной в перекрестное произведение.  
   
 ## <a name="example"></a>Пример  
- Следующий пример иллюстрирует структуру `Members` элемент, если клиент указывает *ClusterFormat* для `AxisFormat` свойства XMLA на оси имеются следующие члены:  
+ Следующий пример иллюстрирует структуру `Members` элемент, если клиент указывает *ClusterFormat* для `AxisFormat` XMLA-свойства, на оси имеются следующие члены:  
   
 ||||||  
 |-|-|-|-|-|  

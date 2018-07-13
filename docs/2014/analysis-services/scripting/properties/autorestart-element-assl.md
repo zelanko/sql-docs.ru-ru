@@ -1,5 +1,5 @@
 ---
-title: Элемент AutoRestart (ASSL) | Документы Microsoft
+title: Элемент AutoRestart (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AutoRestart element
 ms.assetid: 4c6a0e40-8e13-4d63-bf98-9470ffe95d02
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b8b7a7eb4540b327e96d8730f12f87e077b241a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ecb6893c7c3e87c9e96890a917bbe8aad540433d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159105"
 ---
 # <a name="autorestart-element-assl"></a>Элемент AutoRestart (ASSL)
-  Определяет, является ли [трассировки](../objects/trace-element-assl.md) элемент должен автоматически перезапускаться в случае [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] остановки и перезапуска службы.  
+  Определяет ли [трассировки](../objects/trace-element-assl.md) элемент должен автоматически перезапускаться в случае [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] остановки и перезапуска службы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,10 +62,10 @@ ms.locfileid: "36188537"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `AutoRestart` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Trace>.  
+ Элемент, соответствующий родителю параметра `AutoRestart` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>См. также  
- [Отслеживает элемент &#40;ASSL&#41;](../collections/traces-element-assl.md)   
+ [Выполняет трассировку элемент &#40;ASSL&#41;](../collections/traces-element-assl.md)   
  [Свойства &#40;ASSL&#41;](properties-assl.md)  
   
   

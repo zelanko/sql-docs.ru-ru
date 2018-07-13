@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 5: Публикация определения отчета на сервере отчетов | Документы Microsoft'
+title: 'Занятие 5: Публикация определения отчета на сервере отчетов | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 57fab70f-4a72-4413-a0ad-d0525caca3f7
 caps.latest.revision: 17
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c7fa1c983ae58fd56450e6182499b105b68a322f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2cf3003b45c30fe785d8e0f2e5cc2562cc35726
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206244"
 ---
 # <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Занятие 5. Публикация определения отчета на сервере отчетов
   Последним шагом обновления определения отчета является его публикация на сервере отчетов.  
   
 ### <a name="to-publish-the-report-to-the-report-catalog"></a>Публикация отчета в каталоге отчетов  
   
-1.  Замените код для `PublishReportDefinition()` метод в файле Program.cs (Module1.vb для [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) следующим кодом:  
+1.  Замените код `PublishReportDefinition()` метод в файле Program.cs (Module1.vb для [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) следующим кодом:  
   
     ```csharp  
     private void PublishReportDefinition()  
@@ -81,7 +81,7 @@ ms.locfileid: "36180390"
     ```  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- На следующем занятии будет выполняться компиляция и запуск `SampleRDLSchema` приложения. В разделе [занятие 6: выполнение приложения RDL-схемы &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
+ В следующем занятии будет скомпилировать и запустить `SampleRDLSchema` приложения. См. в разделе [Урок 6: выполнение приложения схемы языка определения Отчетов &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
   
 ## <a name="see-also"></a>См. также  
  [Обновление отчетов с помощью классов, созданных из RDL-схемы &#40;учебник по службам SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

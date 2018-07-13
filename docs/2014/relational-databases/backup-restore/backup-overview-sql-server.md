@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], backing up data
 - backups [SQL Server]
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: 81
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7df7b8c35327d097e7bbc92bfb1e5cf99c4f4ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b48f8c9bbcb39f68aa0e86957c8713b6044216e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163035"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   В этом разделе представлены сведения о компоненте резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Резервное копирование базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет важное значение для защиты данных. Здесь представлено описание типов резервных копий и ограничений резервного копирования. В рамках данной темы также рассмотрены устройства резервного копирования и носители данных резервных копий в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -61,7 +60,7 @@ ms.locfileid: "36188709"
   
  **Типы резервных копий**  
   
- [резервная копия только для копирования](copy-only-backups-sql-server.md)  
+ [резервное копирование только для копирования](copy-only-backups-sql-server.md)  
  Специальная резервная копия, независимая от обычной последовательности резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  резервное копирование данных  
@@ -89,7 +88,7 @@ ms.locfileid: "36188709"
   
  **Носитель резервной копии термины и определения**  
   
- [устройства резервного копирования](backup-devices-sql-server.md)  
+ [устройство резервного копирования](backup-devices-sql-server.md)  
  Диск или ленточное устройство, на которые записываются резервные копии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для последующего восстановления. Резервные копии SQL Server можно также записать в службу хранилища больших двоичных объектов Windows Azure, а формат **URL** используется, чтобы указать назначение и имя файла резервной копии. Дополнительные сведения см. в разделе [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [носитель данных резервной копии](media-sets-media-families-and-backup-sets-sql-server.md)  

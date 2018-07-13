@@ -1,5 +1,5 @@
 ---
-title: Элемент Schema (ASSL) | Документы Microsoft
+title: Элемент Schema (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Schema element
 ms.assetid: 4b6375fb-7ad8-4d5f-88b1-abd3da2654db
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 130d1363a007fb51db3bc7b39efcae4d9140c368
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3bcf275eafb8a982fa2ddf9d5ecb82d45e435fa5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200044"
 ---
 # <a name="schema-element-assl"></a>Элемент Schema (ASSL)
   Содержит схему представления источников данных.  
@@ -64,7 +64,7 @@ ms.locfileid: "36110043"
 ## <a name="remarks"></a>Примечания  
  Элемент `Schema` представлен в формате языка XSD наборов данных в платформе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, с учетом некоторых расширений для наборов данных и других объектов в рамках языка DDL. Наборы данных определяют гибкое сопоставление между определением XSD и реляционной схемой, а затем возвращают определение XSD в более канонической форме. Только эта каноническая форма является допустимой для использования в источниках данных.  
   
- Элемент, соответствующий родителю параметра `Schema` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.DataSourceView>.  
+ Элемент, соответствующий родителю параметра `Schema` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.DataSourceView>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserting values
 - queries [SQL Server], types
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - table values [SQL Server]
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fdca52b519f60fddbd1f42a9e44e08f85a5879b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9501d3d35f35195112c328af22daf4948d115966
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157615"
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>Создание запросов на вставку значений (визуальные инструменты для баз данных)
   Добавить новую строку в текущую таблицу можно с помощью запроса «Вставка значений». При создании запроса «Вставка значений» необходимо указать:  
@@ -71,8 +71,8 @@ VALUES   ('BU9876', 'Creating Web Pages', 'business', '1389', '29.99')
  При выполнении запроса "вставка значений" панель [Результаты](results-pane-visual-database-tools.md)не отображает никаких сообщений. Вместо этого появляется сообщение о том, сколько строк было изменено.  
   
 ## <a name="see-also"></a>См. также  
- [Поддерживаемые типы запросов &#40;визуальные средства базы данных&#41;](supported-query-types-visual-database-tools.md)   
- [Проектировать запросы и представления инструкции &#40;визуальные средства базы данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Поддерживаемые типы запросов &#40;визуальных инструментах баз данных&#41;](supported-query-types-visual-database-tools.md)   
+ [Проектирование запросов и представлений инструкции &#40;визуальных инструментах баз данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

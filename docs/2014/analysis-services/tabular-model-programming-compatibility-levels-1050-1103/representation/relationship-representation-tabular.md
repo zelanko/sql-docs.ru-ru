@@ -1,5 +1,5 @@
 ---
-title: Представление связи (табличное) | Документы Microsoft
+title: Представление связи (табличное) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b42c3737ce2369fa6e2e349e377efecc462d0280
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 122c09c71985e00792efece956955cd5469562c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187071"
 ---
 # <a name="relationship-representation-tabular"></a>Представление связи (табличное)
   Связь — это соединение между двумя таблицами данных. Связь определяет, как должны соотноситься данные в двух таблицах.  
   
- В разделе [представление связи (табличные данные)](relationship-representation-tabular.md) подробные пояснения о том, как создать и управлять ею представление связи.  
+ См. в разделе [Relationship Representation (Tabular)](relationship-representation-tabular.md) Дополнительные сведения о способах создания и управления им представления связи.  
   
 ## <a name="relationship-representation"></a>Представление связи  
  В табличных моделях между двумя таблицами можно определить несколько связей. Если между двумя таблицами определено несколько связей, то в качестве связи по умолчанию для модели можно определить только одну из них. Она называется активной связью, а все остальные — неактивными.  

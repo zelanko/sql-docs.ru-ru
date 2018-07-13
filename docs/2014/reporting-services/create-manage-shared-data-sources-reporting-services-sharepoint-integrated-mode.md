@@ -1,5 +1,5 @@
 ---
-title: Создавать и управлять общими источниками данных (службы Reporting Services в режиме интеграции с SharePoint) | Документы Microsoft
+title: Создавать и управлять общими источниками данных (службы Reporting Services в режиме интеграции с SharePoint) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - shared data sources [Reporting Services]
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cab3d9ce31bff00af668a5a10567919bdd106b36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d75ac29d1136106d88022bb8c5e3fd66e62124c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194782"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>Создание общих источников данных и управление ими (службы Reporting Services в режиме интеграции с SharePoint)
   При запуске отчета из библиотеки SharePoint сведения о соединении могут определяться внутри отчета или во внешнем файле, связанном с отчетом. Если сведения о соединении внедряются в отчет, то источник данных называется пользовательским. Если сведения о соединении определены во внешнем файле, то источник данных называется общим. Внешний файл может являться RSDS-файлом источника данных сервера отчетов или ODC-файлом подключения к данным Office.  

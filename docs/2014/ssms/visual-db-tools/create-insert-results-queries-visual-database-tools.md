@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
 - result sets [SQL Server], queries
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 033e1e1f49a8d08b782e1a349ea43e388b9073b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 34e1fb7b3744cd07f58f47dd68b8055908bdeb3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216494"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Создание запросов на вставку результатов (визуальные инструменты для баз данных)
   Запрос вставки результатов позволяет копировать строки внутри таблицы или из одной таблицы в другую. Например, с помощью запроса вставки результатов можно скопировать сведения о названиях книг некоторого издателя из таблицы `titles` в другую таблицу, которая будет ему доступна. Запрос вставки результатов похож на запрос создания таблицы, но копирует строки в уже существующую таблицу.  
@@ -100,7 +100,7 @@ WHERE (pub_id = '0766')
  При выполнении запроса "вставка результатов" панель [Результаты](results-pane-visual-database-tools.md) не отображает никаких сообщений. Вместо этого появляется сообщение о количестве скопированных строк.  
   
 ## <a name="see-also"></a>См. также  
- [Типы запросов &#40;визуальные средства базы данных&#41;](types-of-queries-visual-database-tools.md)   
+ [Типы запросов &#40;визуальных инструментах баз данных&#41;](types-of-queries-visual-database-tools.md)   
  [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

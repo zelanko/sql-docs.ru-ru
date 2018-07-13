@@ -1,5 +1,5 @@
 ---
-title: В службах Integration Services (SSIS) проекты | Документы Microsoft
+title: (SSIS) проекты служб Integration Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
 - folders [Integration Services], projects
@@ -19,18 +19,18 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c012e6802465df8db1060bebc47920e834620d40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6777494c1d1c204fcef589eda42357fd0d50a9bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158965"
 ---
 # <a name="integration-services-ssis-projects"></a>Проекты служб Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] включает среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , предназначенную для разработки пакетов [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
- При развертывании пакетов в базу данных [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или хранилище пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] для управления пакетами используются службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] доступна только в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Дополнительные сведения о службе см. в разделе [Службы Integration Services (SSIS)](service/integration-services-service-ssis-service.md). Дополнительные сведения о развертывании пакетов см. в разделе [развертывание пакета &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+ При развертывании пакетов в базу данных [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или хранилище пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] для управления пакетами используются службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] доступна только в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Дополнительные сведения о службе см. в разделе [Службы Integration Services (SSIS)](service/integration-services-service-ssis-service.md). Дополнительные сведения о развертывании пакетов см. в разделе [развертывания пакета &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
   
  При развертывании проектов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сервер [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для управления проектами используются представления и хранимые процедуры Transact-SQL в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Дополнительные сведения о развертывании проектов см. в разделе [Развертывание проектов и пакетов](packages/deploy-integration-services-ssis-projects-and-packages.md). Дополнительные сведения о сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] см. в разделе [Службы Integration Services (SSIS)](catalog/integration-services-ssis-server-and-catalog.md).  
   

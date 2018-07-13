@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - CursorPrepare event class
 ms.assetid: 990e50fb-b3ee-4366-8613-2c40d4a456f7
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e569b789782d73129624423972da73d1cf8bf683
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0fd67318165bbbabab52ea9028b3267b406c4211
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160385"
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare, класс событий
   Класс событий **CursorPrepare** описывает события подготовки курсора, имеющие место с курсорами прикладного интерфейса программирования (API). Событие подготовки курсора наступает, когда компонент [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] компилирует связанную с курсором инструкцию SELECT в план выполнения, но не создает курсор.  

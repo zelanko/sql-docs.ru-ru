@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - recursive DML triggers [SQL Server]
 - DML triggers, nested
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - indirect recursion [SQL Server]
 - nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
-caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a4eee22f6afd19ecec7f782936db07e70a226f4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 5c063df615f5023c71cbff8700cfddb67aa60b57
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097457"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420763"
 ---
 # <a name="create-nested-triggers"></a>Создание вложенных триггеров
   При выполнении триггером действия, инициирующего другой триггер, триггеры DML и DDL становятся вложенными. Эти действия могут инициировать другие триггеры и т.д. Вложенность триггеров DML и DDL может составлять до 32 уровней. Можно разрешать или запрещать вложенность триггеров AFTER с помощью параметра конфигурации сервера **nested triggers** . Вложенность триггеров INSTEAD OF (только триггеры DML могут быть триггерами INSTEAD OF) не зависит от этого параметра.  

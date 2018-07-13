@@ -1,13 +1,11 @@
 ---
-title: DateTime преобразования типа данных (ODBC) | Документы Microsoft
+title: Данные преобразования типа DateTime (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - ODBC, bindings and conversions
 ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 922328981884624c0bfdc9650ba4ece2766912db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: eb600fd98f6741084d725140bd6f9b326e4cf250
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096395"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431693"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>Преобразования типа данных datetime (ODBC)
   Следующие привязки либо уже определены в ODBC, либо являются согласованными с расширением ODBC. Преобразования, поддерживаемые каждым поставщиком, определяются сообществом, обслуживаемым поставщиком; в результате — часто возникают несоответствия между поставщиками. Значения в квадратных скобках необязательны.  
@@ -35,7 +33,7 @@ ms.locfileid: "36096395"
   
 -   Формат строк типа date — «гггг-мм-дд».  
   
- Преобразования из строк обеспечивают гибкость в отношении пробелов и ширины полей. Дополнительные сведения см. раздел «Данных форматов: строки и литералы» [поддержка типов данных для ODBC Дата и время улучшениях](data-type-support-for-odbc-date-and-time-improvements.md).  
+ Преобразования из строк обеспечивают гибкость в отношении пробелов и ширины полей. Дополнительные сведения см. в разделе «Данные форматы: строки и литералы» [поддержка типов данных ODBC Дата и время улучшениях](data-type-support-for-odbc-date-and-time-improvements.md).  
   
  Далее приведены общие правила преобразования.  
   
@@ -63,6 +61,6 @@ ms.locfileid: "36096395"
  Перечисляет проблемы, которые необходимо решить при преобразовании типов даты и времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в типы C.  
   
 ## <a name="see-also"></a>См. также  
- [Дата и время улучшениях &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Дата и время улучшения &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

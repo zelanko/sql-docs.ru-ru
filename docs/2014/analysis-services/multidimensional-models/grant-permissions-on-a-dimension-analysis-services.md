@@ -1,5 +1,5 @@
 ---
-title: Предоставление разрешений измерению (службы Analysis Services) | Документы Microsoft
+title: Предоставление разрешений измерению (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensions.f1
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - permissions [Analysis Services], dimensions
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 212f89372b510b7a3a1d73702ee231d641fd465b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 553416d7dd8395e53ca5bbf4be5cdfa9b9d2fc5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177051"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Предоставление разрешений измерению (службы Analysis Services
   Настройка безопасности измерения используется для установки разрешений на объект измерения, а не на его данные. Обычно, при предоставлении или ограничении доступа к операциям обработки является основной целью при установке разрешений на измерение.  
@@ -55,7 +55,7 @@ ms.locfileid: "36187829"
   
      По умолчанию разрешения установлены на **Чтение**.  
   
-     Хотя разрешение **Чтение/Запись** доступно, мы не рекомендуем его применять. Разрешение**Чтение и запись** используется для сценариев обратной записи измерений, которые считаются устаревшими. В разделе [устаревшие служб Analysis Services функции в SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md).  
+     Хотя разрешение **Чтение/Запись** доступно, мы не рекомендуем его применять. Разрешение**Чтение и запись** используется для сценариев обратной записи измерений, которые считаются устаревшими. См. в разделе [нерекомендуемые служб Analysis Services в SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md).  
   
      При необходимости вы можете установить разрешения **Чтение Описания** и **Обработка** на индивидуальные объекты измерения, при условии, что эти разрешения еще не установлены на уровне базы данных. Дополнительные сведения см. в разделах [Предоставление разрешений на обработку (службы Analysis Services)](grant-process-permissions-analysis-services.md) и [Предоставление разрешений на чтение описания метаданным объекта (службы Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36187829"
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]соединитесь с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **Роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую).  
   
-2.  В **измерения** измените настройку измерения на \<имя куба > **измерения**.  
+2.  В **измерения** измените настройку измерения на \<Имя_куба > **измерения куба**.  
   
      По умолчанию разрешения наследуются от соответствующего измерения базы данных. Снимите флажок **Наследование** для изменения разрешений с **Чтение** на **Чтение/Запись**. Перед использованием разрешения **Чтение/Запись**убедитесь, что вы прочли примечание в предыдущем разделе.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36187829"
 ## <a name="see-also"></a>См. также  
  [Роли и разрешения &#40;служб Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
  [Предоставление разрешений кубу или модели &#40;служб Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Предоставление разрешений на структуры интеллектуального анализа данных и моделей &#40;служб Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Предоставление разрешений на структур интеллектуального анализа данных и моделей &#40;служб Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [Предоставление настраиваемого доступа к данным измерения &#40;служб Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
  [Предоставление настраиваемого доступа к данным ячейки &#40;служб Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   

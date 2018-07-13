@@ -1,5 +1,5 @@
 ---
-title: Тип данных связи (ASSL) | Документы Microsoft
+title: Тип данных связи (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 73d7c48d-d8e0-4119-849d-b5f912d449e4
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81421605828b064644f0b9a0cfae2a7ed1b301a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4c5be48e7a5d4c5913a4bc881b6bd5b5c58ec57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224044"
 ---
 # <a name="relationship-data-type-assl"></a>Тип данных связи (язык ASSL)
   Определяет примитивный тип данных, представляющий связь в пределах измерения.  
@@ -53,9 +53,9 @@ ms.locfileid: "36188779"
 |Производные элементы||  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.Relationship>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.Relationship>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

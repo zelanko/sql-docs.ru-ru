@@ -1,5 +1,5 @@
 ---
-title: Запрос наборов строк схемы интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+title: Запрос наборы строк схемы интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schema rowsets [Analysis Services], data mining
 - data mining [Analysis Services], queries
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data mining [Analysis Services], troubleshooting
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5f794266fa1a4658199e617333ae7c6ae280bb79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 410c9a657bfd639650d1b2deee3253356ea62060
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148645"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>Запрос наборов строк схемы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]многие существующие наборы строк схемы интеллектуального анализа данных OLE DB доступны в виде набора системных таблиц, к которым можно выполнять запросы с помощью инструкций расширений интеллектуального анализа данных. Путем создания запросов к наборам строк схемы интеллектуального анализа данных можно определить доступные службы, получить последние сведения о состоянии моделей и структур и выяснить подробности о содержимом или параметрах модели. Описание наборов строк схемы интеллектуального анализа данных см. в разделе [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  

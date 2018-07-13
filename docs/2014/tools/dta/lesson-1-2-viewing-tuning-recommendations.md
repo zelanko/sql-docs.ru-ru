@@ -1,5 +1,5 @@
 ---
-title: Просмотр рекомендаций по настройке | Документы Microsoft
+title: Просмотр рекомендаций по настройке | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3152ba823577308d846bfe5862af16681008f64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f21cb4a4e5142cd0410153daf37b05ef181be9d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157715"
 ---
 # <a name="viewing-tuning-recommendations"></a>Просмотр рекомендаций по настройке
   В этой задаче используется сеанс настройки, который был создан в разделе [Tuning a Workload](lesson-1-1-tuning-a-workload.md). После завершения настройки базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] с использованием скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] с именем MyScript.sql помощник по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] отобразит результаты настройки на вкладке **Рекомендации** . В следующей задаче рассматривается назначение вкладки **Рекомендации** графического пользовательского интерфейса по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и работа с предоставляемыми сведениями о результатах сеанса настройки.  
@@ -38,7 +38,7 @@ ms.locfileid: "36190335"
   
 4.  Щелкните правой кнопкой мыши сетку на панели **Рекомендации по индексам** . В появившемся контекстном меню можно выбрать рекомендации или отменить сделанный выбор. Здесь также можно менять шрифт текста сетки.  
   
-5.  В меню **Действия** выберите команду **Сохранить рекомендации** , чтобы сохранить все рекомендации в одном скрипте [!INCLUDE[tsql](../../includes/tsql-md.md)] . Имя сценария `MySessionRecommendations.sql`.  
+5.  В меню **Действия** выберите команду **Сохранить рекомендации** , чтобы сохранить все рекомендации в одном скрипте [!INCLUDE[tsql](../../includes/tsql-md.md)] . Назовите сценарий `MySessionRecommendations.sql`.  
   
      Чтобы просмотреть скрипт MySessionRecommendations.sql, откройте его в редакторе запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Можно применить эти рекомендации к образцу базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , выполнив скрипт в редакторе запросов, но делать этого не следует. Закройте скрипт в редакторе запросов, не запуская его.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36190335"
   
 7.  В меню **Действия** выберите команду **Оценить рекомендации**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] создаст новый сеанс настройки, в котором можно провести оценку набора исходных рекомендаций из сеанса настройки MySession.  
   
-8.  Тип `EvaluateMySession` для нового **имя сеанса**и нажмите кнопку **начать анализ** на панели инструментов. Можно повторить шаги 2 и 3 для этого нового сеанса настройки, чтобы просмотреть его рекомендации.  
+8.  Тип `EvaluateMySession` нового **имя сеанса**и нажмите кнопку **начать анализ** на панели инструментов. Можно повторить шаги 2 и 3 для этого нового сеанса настройки, чтобы просмотреть его рекомендации.  
   
 ## <a name="summary"></a>Сводка  
  Просмотрено содержимое вкладки **Рекомендации** для сеанса настройки MySession и проведена оценка набора его рекомендаций в новом сеансе настройки EvaluateMySession.  
