@@ -1,5 +1,5 @@
 ---
-title: Зависимые элементы страницы (диспетчер отчетов) | Документы Microsoft
+title: Страница зависимые элементы (диспетчер отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0496334695c72a78afe3fedb87763cfaacd66e35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e483d24a2b7e9463c5fb43b9bc2f00fd41a3a070
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164115"
 ---
 # <a name="dependent-items-page-report-manager"></a>Страница «Зависимые элементы» (диспетчер отчетов)
   Страница «Зависимые элементы» позволяет просмотреть список отчетов и моделей, ссылающихся на общий источник данных. Значок типа элемента показывает, отчет это или модель. Данную страницу можно просматривать в режиме списка или подробных сведений. Режим подробных сведений позволяет отображать больше данных об элементе. Также в нем доступны дополнительные параметры страницы. Для помощи в управлении общим источником данных на этой странице содержатся ссылки на отчеты и модели, использующие источник данных, данные о последнем запуске или последних изменениях отчета или модели, а также кнопки «Удалить» и «Переместить», которые позволяют удалить неиспользуемые отчеты и модели либо переместить их в другое расположение на время, пока определяется потребность в них.  

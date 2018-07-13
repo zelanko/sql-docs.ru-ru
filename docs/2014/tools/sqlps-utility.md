@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 caps.latest.revision: 20
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: b49895ee08de2a9f08d263c92f5372c6b22ec604
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1082bd587d9c3455733d611a676d901b62741859
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161605"
 ---
 # <a name="sqlps-utility"></a>программа sqlps
   Программа `sqlps` запускает сеанс Windows PowerShell 2.0 с помощью поставщика [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell, а также загруженных и зарегистрированных командлетов. Можно вводить команды или скрипты PowerShell, в которых используются компоненты [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell для работы с экземплярами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и их объектами.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте модуль `sqlps` PowerShell. Дополнительные сведения о `sqlps` модуля, в разделе [импорта модуля SQLPS](../database-engine/import-the-sqlps-module.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте модуль `sqlps` PowerShell. Дополнительные сведения о `sqlps` модуля, см. в разделе [импорта модуля SQLPS](../database-engine/import-the-sqlps-module.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -58,19 +58,19 @@ ms.locfileid: "36097663"
  Указывает программе `sqlps` не загружать профиль пользователя. В профилях пользователей записываются часто используемые псевдонимы, функции и переменные для использования в различных сеансах PowerShell.  
   
  **-OutPutFormat** { **Text** | **XML** }  
- Указывает, что `sqlps` выходные данные программы отформатированы в виде текстовых строк (**текст**), либо в сериализованном формате CLIXML (**XML**).  
+ Указывает, что `sqlps` программа выходные данные отформатированы в виде текстовых строк (**текст**) или в сериализованном формате CLIXML (**XML**).  
   
  **-InPutFormat** { **Text** | **XML** }  
- Указывает, что вход `sqlps` программа форматируется в виде текстовых строк (**текст**), либо в сериализованном формате CLIXML (**XML**).  
+ Указывает, что входные данные `sqlps` программа форматируется в виде текстовых строк (**текст**) или в сериализованном формате CLIXML (**XML**).  
   
  **-Command**  
  Указывает команду для запуска программой `sqlps`. `sqlps` Служебная программа запускает команду, а затем завершает работу, если не **- NoExit** также указан. После параметра **-Command**не следует указывать какие-либо иные параметры, так как они будут интерпретироваться как параметры команды.  
   
  **-**  
- **-Команда -** указывает, что `sqlps` программа считывает входные данные из стандартного ввода.  
+ **-Команда -** указывает, что `sqlps` служебная программа считывает входные данные из стандартного ввода.  
   
  *блок_сценария* [ **-args***массив_аргументов* ]  
- Указывает блок команд PowerShell для выполнения, который должен быть заключен в фигурные скобки: {}. *Блок_скрипта* можно указывать только в случае `sqlps` вызова служебной программы из любой **PowerShell** или другой `sqlps` сеанса служебной программы. Параметр *массив_аргументов* представляет собой массив переменных PowerShell, содержащий аргументы для команд PowerShell из параметра *блок_скрипта*.  
+ Указывает блок команд PowerShell для выполнения, который должен быть заключен в фигурные скобки: {}. *Блок_скрипта* можно указывать только в случае `sqlps` служебная программа вызывается из либо **PowerShell** или другой `sqlps` сеанса служебной программы. Параметр *массив_аргументов* представляет собой массив переменных PowerShell, содержащий аргументы для команд PowerShell из параметра *блок_скрипта*.  
   
  *string* [ *параметры_команды* ]  
  Указывает строку, содержащую команды PowerShell для запуска. Используйте формат **«& {*`command`*}»**. Кавычки определяют строку, а оператор вызова (&) указывает программе `sqlps` запустить команду.  
@@ -79,7 +79,7 @@ ms.locfileid: "36097663"
  Показывает синтаксис параметров программы `sqlps`.  
   
 ## <a name="remarks"></a>Примечания  
- `sqlps` Запускает среду PowerShell (PowerShell.exe) и загружает [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] модуля PowerShell. Модуль, также именуемый `sqlps`, загружает и регистрирует следующие [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] оснастки PowerShell:  
+ `sqlps` Служебная программа запускает среду PowerShell (PowerShell.exe) и загружает [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] модуля PowerShell. Модуль, также именуемый `sqlps`, загружает и регистрирует следующие [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] оснастки PowerShell:  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36097663"
   
  По умолчанию `sqlps` программа запускается с политикой выполнения сценариев **Restricted**. Это предотвращает запуск любых скриптов PowerShell. Командлет **Set-ExecutionPolicy** обеспечивает возможность запуска как подписанных, так и любых других скриптов. Запускать следует только скрипты из надежных источников, а также рекомендуется защитить все входные и выходные файлы соответствующими разрешениями NTFS. Дополнительные сведения о включении скриптов PowerShell см. в разделе [Запуск скриптов Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=103166).  
   
- Версия `sqlps` служебной программы в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] была реализована как мини-оболочка Windows PowerShell 1.0. Мини-оболочки имеют определенные ограничения, такие как запрет на загрузку пользователями других оснасток, помимо загруженных мини-оболочкой. Эти ограничения не относятся к [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] и более поздним версиям программы, где изменилось использование модуля `sqlps`.  
+ Версия `sqlps` служебной программы в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] была реализована как мини-оболочкой Windows PowerShell 1.0. Мини-оболочки имеют определенные ограничения, такие как запрет на загрузку пользователями других оснасток, помимо загруженных мини-оболочкой. Эти ограничения не относятся к [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] и более поздним версиям программы, где изменилось использование модуля `sqlps`.  
   
 ## <a name="examples"></a>Примеры  
  **А. Запуск служебной программы sqlps в режиме по умолчанию (интерактивном) без баннера со сведениями об авторских правах**  

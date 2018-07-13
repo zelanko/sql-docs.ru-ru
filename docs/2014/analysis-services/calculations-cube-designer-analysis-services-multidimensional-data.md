@@ -1,5 +1,5 @@
 ---
-title: Вычисления (конструктор кубов) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Вычисления (конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.f1
 ms.assetid: 46e2fbe2-bb41-4eaa-91f8-eb2bd3b8d00d
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f4f44529300b0152ef6f89ff2021d8827049e203
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f26be233fc8a3e9b4bcc1aa5267619b839a02ae1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094913"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239944"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>Вычисления (конструктор кубов) (службы Analysis Services — многомерные данные)
   Вкладка **Вычисления** в конструкторе кубов используется для просмотра и изменения вычислений, включая вычисляемые элементы, именованные наборы и команды скриптов многомерных выражений для выбранного куба.  
@@ -59,7 +59,7 @@ ms.locfileid: "36094913"
 ## <a name="see-also"></a>См. также  
  [Объекты куба &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Вычисления](multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [Основные понятия о сценариях многомерных Выражений &#40;служб Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Основные принципы создания скриптов многомерных Выражений &#40;служб Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Конструктор кубов &#40;службы Analysis Services — многомерные данные&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Создание именованных наборов](multidimensional-models/create-named-sets.md)  
   

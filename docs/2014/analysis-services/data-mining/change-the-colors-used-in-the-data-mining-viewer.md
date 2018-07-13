@@ -1,5 +1,5 @@
 ---
-title: Изменить цвета, используемые в средстве просмотра интеллектуального анализа данных | Документы Microsoft
+title: Изменить цвета, используемые в средстве просмотра интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS
 ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4909ee57e27caeda0835f366337695300c163ad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 000f5b89eb918654f740e2c34eb60be484d3073c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194434"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>изменить цвета, используемые в средстве просмотра интеллектуального анализа данных
   Можно изменить цвета, используемые в средствах просмотра интеллектуального анализа данных, для отображения рядов данных, узлов или кластеров. Данная операция выполняется путем настройки параметров в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. После изменения параметров выбранные цвета применяются ко всем моделям, просматриваемым с помощью среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Однако для отображения новых цветов необходимо закрыть среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и снова открыть модель в средстве просмотра.  

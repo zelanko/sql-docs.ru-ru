@@ -1,5 +1,5 @@
 ---
-title: Вкладка «Переход кластера» (средство просмотра моделей интеллектуального анализа данных) кластеризации последовательностей | Документы Microsoft
+title: Вкладка «Переход кластера» (средство просмотра моделей интеллектуального анализа данных) кластеризации последовательностей | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.transition.f1
 ms.assetid: 40aef457-d69f-4905-a2d3-924c37bd3d97
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d9895e00405c4ebe6bc684c3c2b3acc4e2704478
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 307f14f06354195147f32cbcf338d4b04e852b9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099339"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156885"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>Вкладка «Переход в кластере кластеризации последовательностей» (средство просмотра моделей интеллектуального анализа данных)
   Вкладка **Переходы состояния** в **средстве просмотра кластеризации последовательностей (Майкрософт)** обеспечивает более подробное представление о переходах между парами "атрибут-значение" или состояниями в выбранном кластере.  
@@ -43,7 +43,7 @@ ms.locfileid: "36099339"
  **Увеличить масштаб**  
  Увеличить масштаб диаграммы, чтобы лучше видеть состояния.  
   
- **Уменьшение масштаба**  
+ **Уменьшить масштаб**  
  Уменьшить диаграмму для получения общего представления о состоянии кластера.  
   
  **Копировать представление диаграммы**  

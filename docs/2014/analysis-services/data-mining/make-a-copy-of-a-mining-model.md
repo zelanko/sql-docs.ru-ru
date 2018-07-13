@@ -1,5 +1,5 @@
 ---
-title: Создать копию модели интеллектуального анализа данных | Документы Microsoft
+title: Создать копию модели интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], copying
 - mining models [Analysis Services], creating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - copying mining models
 ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da23bba72674c1f9ca4dd80bab01dd9d8e8e35cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 456150a7d7ba6759de20557a273875d95540f77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187781"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>создать копию модели интеллектуального анализа данных
   Создание копии модели интеллектуального анализа полезно, если необходимо быстро создать несколько моделей интеллектуального анализа данных на основе одних и тех же данных. После копирования модели новую копию можно редактировать путем изменения параметров или добавления фильтра.  
@@ -57,13 +57,13 @@ ms.locfileid: "36099009"
   
      Дополнительные сведения об использовании диалоговых окон редактора фильтров см. в разделе [Применение фильтра к модели интеллектуального анализа данных](apply-a-filter-to-a-mining-model.md).  
   
-4.  В **свойства** окна в `AlgorithmParameters` текстовое поле, нажмите кнопку **Setalgorithm параметры**и при необходимости изменить параметры алгоритма.  
+4.  В **свойства** окно в `AlgorithmParameters` текстовое поле, нажмите кнопку **задать параметры**и при необходимости измените параметры алгоритма.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Фильтры для моделей интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-models-analysis-services-data-mining.md)   
- [Задачи модели интеллектуального анализа данных и инструкции](mining-model-tasks-and-how-tos.md)   
+ [Задачи модели интеллектуального анализа данных и инструкции по](mining-model-tasks-and-how-tos.md)   
  [Удаление фильтра из модели интеллектуального анализа данных](delete-a-filter-from-a-mining-model.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SendUsingSMTPServer
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SendUsingSMTPServer property
 ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
 caps.latest.revision: 18
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f38cd078ad299cb94e21f227465887caffb81011
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 29d9af567f1b3fe9e57671731fc622735ce77e4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222794"
 ---
 # <a name="sendusingsmtpserver-property-wmi-msreportserverconfigurationsetting"></a>Свойство SendUsingSMTPServer (WMI MSReportServer_ConfigurationSetting)
   Указывает, присваивается ли элементу `SendUsing` в конфигурации электронной почты для сервера отчетов значение `true`.  
@@ -43,7 +43,7 @@ public Boolean SendUsingSMTPServer;
 ```  
   
 ## <a name="property-values"></a>Значения свойств  
- Только для чтения `Boolean` объекта.  
+ Доступное только для чтения `Boolean` объекта.  
   
 ## <a name="example-code"></a>Пример кода  
  [Класс MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  

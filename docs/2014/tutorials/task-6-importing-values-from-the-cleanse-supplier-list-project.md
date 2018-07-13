@@ -1,5 +1,5 @@
 ---
-title: 'Задача 6: Импорт значений из проекта очистки списка поставщиков | Документы Microsoft'
+title: 'Задача 6: Импорт значений из проекта очистки списка поставщиков | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7a915013d779392d585bd5609384fab7bffd2800
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 240ae9701aa48f393c77dd27aafcd350bdd89d51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220532"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Задача 6. Импорт значений из проекта очистки списка поставщиков
   В этой задаче вы импортируете наборы знаний служб DQS, полученные в процессе очистки. Дополнительные сведения см. в разделе [Импорт значений проекта очистки в домен](http://msdn.microsoft.com/library/hh479581.aspx) . Вы также экспортируете базу знаний в файл служб DQS перед публикацией обновленной базы знаний **Поставщики** .  
@@ -32,7 +32,7 @@ ms.locfileid: "36096768"
   
 3.  Щелкните **стрелку вниз** рядом со значком **Импортировать значения** на панели инструментов и выберите команду **Импорт значений проекта**.  
   
-     ![Импорт проекта значения кнопки панели инструментов](../../2014/tutorials/media/et-importingvaluesfromthecslistproject-01.jpg "импорта кнопки панели инструментов значения проекта")  
+     ![Импорт проекта значения кнопки на панели инструментов](../../2014/tutorials/media/et-importingvaluesfromthecslistproject-01.jpg "импорта кнопки панели инструментов значения проекта")  
   
 4.  В диалоговом окне **Импорт значений проекта** выберите проект **Очистка списка поставщиков** и нажмите кнопку **ОК**.  
   

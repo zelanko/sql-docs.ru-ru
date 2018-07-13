@@ -1,5 +1,5 @@
 ---
-title: Требования к запуску примеров SQLXML | Документы Microsoft
+title: Требования к запуску примеров SQLXML | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - examples [SQLXML], requirements
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a0accbe193a3402e7935914a3a91a91a54f6bc15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 567abfcd0ed51fafb16f7152d505b2f9afd6b454
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191624"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>Требования к запуску примеров SQLXML
-  [Программирование для SQLXML 4.0](sqlxml-4-0-programming-concepts.md) содержит многочисленные примеры. Далее перечисляются требования для создания работающих образцов из этих примеров.  
+  [Программирование для SQLXML 4.0](sqlxml-4-0-programming-concepts.md) раздел содержит многочисленные примеры. Далее перечисляются требования для создания работающих образцов из этих примеров.  
   
  Чтобы создать рабочие образцы на основе примеров SQLXML 4.0, должны быть установлены следующие компоненты:  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 12: Создание роли | Документы Microsoft'
+title: 'Занятие 12: Создание ролей | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 7c3b98fbbcbedca2a8bcdbefcd8e41e5d3d5c60b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 598491865120b2d401b0ca2447701cbebc12ce8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278510"
 ---
 # <a name="lesson-12-create-roles"></a>Занятие 12. Создание ролей
   На этом занятии мы создадим роли. Роли обеспечивают безопасность данных и объектов базы данных модели, разрешая доступ только тем пользователям Windows, которые являются членами роли. Каждая роль определяется с помощью одного разрешения: нет, чтение, чтение и обработка, обработка или администратор. Роли могут определяться во время разработки моделей с помощью диалогового окна «Диспетчер ролей» в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. После развертывания модели ролями можно управлять с помощью среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Роли (табличные службы SSAS)](tabular-models/roles-ssas-tabular.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "36095128"
   
      В список будет добавлена новая роль с разрешением «Нет».  
   
-3.  Щелкните новую роль, а затем в **имя** столбца, переименуйте роль в `Internet Sales Manager`.  
+3.  Щелкните новую роль затем **имя** столбец, переименуйте роль в `Internet Sales Manager`.  
   
 4.  В столбце **Разрешения** щелкните раскрывающийся список и выберите разрешение **Чтение** .  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36095128"
   
      В список будет добавлена новая роль с разрешением «Нет».  
   
-3.  Щелкните новую роль, а затем в **имя** столбца, переименуйте роль в `Internet Sales US`.  
+3.  Щелкните новую роль затем **имя** столбец, переименуйте роль в `Internet Sales US`.  
   
 4.  В столбце **Разрешения** щелкните раскрывающийся список и выберите разрешение **Чтение** .  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36095128"
   
 1.  В диалоговом окне **Диспетчер ролей** выберите **Создать**.  
   
-2.  Щелкните новую роль, а затем в **имя** столбца, переименуйте роль в `Internet Sales Administrator`.  
+2.  Щелкните новую роль затем **имя** столбец, переименуйте роль в `Internet Sales Administrator`.  
   
 3.  В столбце **Разрешения** щелкните раскрывающийся список и выберите разрешение **Администратор** .  
   

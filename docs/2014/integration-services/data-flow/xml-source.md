@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsource.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6dbda4a8b745e0745ff13d641a93c3350c8af20e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6aafcdccb92c093b6ff0e8c2a4a163cc6878b21e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217734"
 ---
 # <a name="xml-source"></a>XML-источник
   XML-источник считывает файл XML-данных и заполняет данными столбцы в выходе источника.  
@@ -69,7 +69,7 @@ ms.locfileid: "36097595"
 ## <a name="configuration-of-the-xml-source"></a>Конфигурация XML-источника  
  XML-источник поддерживает три разных способа доступа к данным. Можно указать расположение файла XML-данных, переменную, содержащую расположение этого файла, или же переменную с данными в формате XML.  
   
- XML-источник содержит `XMLData` и `XMLSchemaDefinition` пользовательские свойства, которые могут быть обновлены выражениями свойств, при загрузке пакета. Дополнительные сведения см. в разделах [Выражения служб Integration Services (SSIS)](../expressions/integration-services-ssis-expressions.md), [Использование выражений свойств в пакетах](../expressions/use-property-expressions-in-packages.md) и [Пользовательские свойства источника "XML"](xml-source-custom-properties.md).  
+ XML-источник содержит `XMLData` и `XMLSchemaDefinition` пользовательские свойства, которые могут обновляться через выражения свойств, при загрузке пакета. Дополнительные сведения см. в разделах [Выражения служб Integration Services (SSIS)](../expressions/integration-services-ssis-expressions.md), [Использование выражений свойств в пакетах](../expressions/use-property-expressions-in-packages.md) и [Пользовательские свойства источника "XML"](xml-source-custom-properties.md).  
   
  XML-источник поддерживает несколько обычных выходов и несколько выходов ошибок.  
   

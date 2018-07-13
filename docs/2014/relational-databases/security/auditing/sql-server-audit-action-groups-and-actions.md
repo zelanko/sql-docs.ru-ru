@@ -5,10 +5,9 @@ ms.date: 10/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - audit
 helpviewer_keywords:
@@ -22,15 +21,15 @@ helpviewer_keywords:
 - audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 77435fe5d7eba76fd56371d344078420020190e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: b8dd9598fa04b51f250daacaab010739b3855341
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225284"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Действия и группы действий подсистемы аудита SQL Server
   Подсистема аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет производить аудит групп событий или отдельных событий на уровне сервера или базы данных. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](sql-server-audit-database-engine.md).  
@@ -84,7 +83,7 @@ ms.locfileid: "36097473"
 |DATABASE_CHANGE_GROUP|Это событие вызывается при создании, изменении или удалении базы данных. Это событие возникает при создании, изменении или удалении любой базы данных. Эквивалентно [Audit Database Management Event Class](../../event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Это событие возникает при выходе пользователя автономной базы данных из базы данных. Эквивалентно классу событий Audit Database Logout.|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Это событие вызывается для составления отчета о сообщениях аудита, связанных с механизмом обеспечения безопасности транспорта зеркального отображения базы данных. Эквивалентно [Audit Database Mirroring Login Event Class](../../event-classes/audit-database-mirroring-login-event-class.md).|  
-|DATABASE_OBJECT_ACCESS_GROUP|Это событие вызывается каждый раз при обращении к типам сообщений, сборкам и контрактам.<br /><br /> Это событие возникает при любом доступе к любой базе данных. **Примечание:** это может привести к большого количества записей аудита. <br /><br /> Эквивалентно [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md).|  
+|DATABASE_OBJECT_ACCESS_GROUP|Это событие вызывается каждый раз при обращении к типам сообщений, сборкам и контрактам.<br /><br /> Это событие возникает при любом доступе к любой базе данных. **Примечание:** это потенциально может привести к большого количества записей аудита. <br /><br /> Эквивалентно [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|Это событие вызывается в тот момент, когда для объекта базы данных (например, для схемы) выполняется инструкция CREATE, ALTER или DROP. Это событие возникает при создании, изменении или удалении любого объекта базы данных. **Примечание:** это может привести к очень большому количеству записей аудита. <br /><br /> Эквивалентно [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Это событие возникает при изменении владельца объекта в области базы данных. Это событие возникает при любом изменении владельца объекта в любой базе данных на сервере. Эквивалентно [Audit Database Object Take Ownership Event Class](../../event-classes/audit-database-object-take-ownership-event-class.md).|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|Это событие возникает в тот момент, когда для объекта базы данных (например, сборки или схемы) выполняется инструкция GRANT, REVOKE или DENY. Это событие возникает при любом изменении разрешения на объект для любой базы данных на сервере. Эквивалентно [Audit Database Object GDR Event Class](../../event-classes/audit-database-object-gdr-event-class.md).|  
@@ -109,7 +108,7 @@ ms.locfileid: "36097473"
 |SERVER_OBJECT_PERMISSION_CHANGE_GROUP|Это событие возникает в случае, когда инструкции GRANT, REVOKE или DENY выдаются для разрешений на объекты сервера любым участником [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Эквивалентно [Audit Server Object GDR Event Class](../../event-classes/audit-server-object-gdr-event-class.md).|  
 |SERVER_OPERATION_GROUP|Это событие возникает при использовании таких операций аудита безопасности, как изменение параметров, ресурсов, внешнего доступа или авторизации. Эквивалентно [Audit Server Operation Event Class](../../event-classes/audit-server-operation-event-class.md).|  
 |SERVER_PERMISSION_CHANGE_GROUP|Это событие возникает в случае, когда инструкции GRANT, REVOKE или DENY выдаются для разрешений в области действия сервера, например для создания имени входа. Эквивалентно [Audit Server Scope GDR Event Class](../../event-classes/audit-server-scope-gdr-event-class.md).|  
-|SERVER_PRINCIPAL_CHANGE_GROUP|Это событие возникает при создании, изменении и удалении участников на уровне сервера. Эквивалентно [Audit Server Principal Management Event Class](../../event-classes/audit-server-principal-management-event-class.md).<br /><br /> Это событие возникает при вызове участником хранимых процедур sp_defaultdb или sp_defaultlanguage или инструкций ALTER LOGIN. Эквивалентно [Audit Addlogin Event Class](../../event-classes/audit-addlogin-event-class.md).<br /><br /> Это событие вызывается хранимыми процедурами sp_addlogin и sp_droplogin. Также эквивалентно [Audit Login Change Property Event Class](../../event-classes/audit-login-change-property-event-class.md).<br /><br /> Это событие вызывается для sp_grantlogin или sp_revokelogin хранимых процедур. Эквивалентно [Audit Login GDR Event Class](../../event-classes/audit-login-gdr-event-class.md).|  
+|SERVER_PRINCIPAL_CHANGE_GROUP|Это событие возникает при создании, изменении и удалении участников на уровне сервера. Эквивалентно [Audit Server Principal Management Event Class](../../event-classes/audit-server-principal-management-event-class.md).<br /><br /> Это событие возникает при вызове участником хранимых процедур sp_defaultdb или sp_defaultlanguage или инструкций ALTER LOGIN. Эквивалентно [Audit Addlogin Event Class](../../event-classes/audit-addlogin-event-class.md).<br /><br /> Это событие вызывается хранимыми процедурами sp_addlogin и sp_droplogin. Также эквивалентно [Audit Login Change Property Event Class](../../event-classes/audit-login-change-property-event-class.md).<br /><br /> Это событие возникает sp_grantlogin или sp_revokelogin хранимых процедур. Эквивалентно [Audit Login GDR Event Class](../../event-classes/audit-login-gdr-event-class.md).|  
 |SERVER_PRINCIPAL_IMPERSONATION_GROUP|Это событие возникает при использовании в области действия сервера олицетворения, например команды EXECUTE AS \<имя_для_входа>. Эквивалентно [Audit Server Principal Impersonation Event Class](../../event-classes/audit-server-principal-impersonation-event-class.md).|  
 |SERVER_ROLE_MEMBER_CHANGE_GROUP|Это событие появляется при добавлении или удалении имени входа из предопределенной роли сервера. Это событие вызывается хранимыми процедурами sp_addsrvrolemember и sp_dropsrvrolemember. Эквивалентно [Класс событий Audit Add Login to Server Role](../../event-classes/audit-add-login-to-server-role-event-class.md).|  
 |SERVER_STATE_CHANGE_GROUP|Это событие возникает при изменении состояния службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Эквивалентно [Audit Server Starts and Stops Event Class](../../event-classes/audit-server-starts-and-stops-event-class.md).|  
@@ -181,7 +180,7 @@ ms.locfileid: "36097473"
   
 |Имя группы действий|Описание|  
 |-----------------------|-----------------|  
-|AUDIT_ CHANGE_GROUP|Это событие возникает при вызове одной из следующих команд:<br /><br /> -СОЗДАНИЕ АУДИТА СЕРВЕРА<br />-ALTER SERVER AUDIT<br />-УДАЛИТЬ АУДИТ СЕРВЕРА<br />-СОЗДАНИЕ СПЕЦИФИКАЦИИ АУДИТА СЕРВЕРА<br />-ALTER СПЕЦИФИКАЦИИ АУДИТА СЕРВЕРА<br />-УДАЛИТЬ СПЕЦИФИКАЦИЮ АУДИТА СЕРВЕРА<br />-СОЗДАТЬ СПЕЦИФИКАЦИЮ АУДИТА БАЗЫ ДАННЫХ<br />-СПЕЦИФИКАЦИЯ АУДИТА БАЗЫ ДАННЫХ ALTER<br />-УДАЛИТЬ СПЕЦИФИКАЦИЮ АУДИТА БАЗЫ ДАННЫХ|  
+|AUDIT_ CHANGE_GROUP|Это событие возникает при вызове одной из следующих команд:<br /><br /> -СОЗДАНИЕ АУДИТА СЕРВЕРА<br />-ИНСТРУКЦИИ ALTER SERVER AUDIT<br />-DROP SERVER AUDIT<br />-СОЗДАТЬ СПЕЦИФИКАЦИЮ АУДИТА СЕРВЕРА<br />-ALTER SERVER AUDIT SPECIFICATION<br />-УДАЛИТЬ СПЕЦИФИКАЦИЮ АУДИТА СЕРВЕРА<br />-СОЗДАТЬ СПЕЦИФИКАЦИЮ АУДИТА БАЗЫ ДАННЫХ<br />-СПЕЦИФИКАЦИИ АУДИТА БАЗЫ ДАННЫХ ALTER<br />-УДАЛИТЬ СПЕЦИФИКАЦИЮ АУДИТА БАЗЫ ДАННЫХ|  
   
 ## <a name="related-content"></a>См. также  
  [Создание аудита сервера и спецификации аудита сервера](create-a-server-audit-and-server-audit-specification.md)  

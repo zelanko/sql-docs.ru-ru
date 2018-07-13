@@ -1,5 +1,5 @@
 ---
-title: Текстовое поле диалогового окна свойств выравнивание (построитель отчетов и службы SSRS) | Документы Microsoft
+title: Текстовое поле свойства, выравнивание (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.alignment.f1
 - "10125"
 ms.assetid: 12a18ad3-a578-4ec2-813b-841b96c327b0
 caps.latest.revision: 9
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bf6aec0a4375c495f49d4ad0484c1893ef4ccdc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c981605bf2f7473fdd24ba10e167f970c1aac8b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214654"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>Текстовое поле «Свойства текстового поля» — «Выравнивание» (построитель отчетов и службы SSRS)
   Используйте вкладку **Выравнивание** диалогового окна **Свойства текстового поля** , чтобы изменить расположение значений в выбранной ячейке или области данных.  
   
 ## <a name="options"></a>Параметры  
- **Горизонтальная**  
+ **По горизонтали**  
  Укажите, как расположены значения по горизонтали в выбранной ячейке или области данных. По умолчанию выбрано значение **По умолчанию** . Значение для параметра «По умолчанию» — **Стандартное**. Дополнительные сведения о вычислении общего выравнивания текста см. в разделе [Форматирование текста и заполнителей (построитель отчетов и службы SSRS)](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md). Чтобы изменить выражение, нажмите кнопку **Выражение** (*fx*).  
   
  **По вертикали**  
@@ -43,7 +43,7 @@ ms.locfileid: "36098353"
  **Top**  
  Укажите величину внутреннего отступа или пробела между верхним краем ячейки и значением, отображаемым в ячейке. По умолчанию 2 пункта. Чтобы изменить выражение, нажмите кнопку **Выражение** (*fx*).  
   
- **Вниз**  
+ **Снизу**  
  Укажите величину внутреннего отступа или пробела между нижним краем ячейки и значением, отображаемым в ячейке. По умолчанию 2 пункта. Чтобы изменить выражение, нажмите кнопку **Выражение** (*fx*).  
   
 ## <a name="see-also"></a>См. также  

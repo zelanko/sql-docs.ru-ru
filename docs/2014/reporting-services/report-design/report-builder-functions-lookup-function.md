@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e2617d9704db585e4f8ac3558941a957876fc05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 41a75e8559738294986bc5fb203b1b0469305f57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222914"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Функция подстановки (построитель отчетов и службы SSRS)
   Возвращает первое совпадающее значение для заданного имени из набора данных, содержащего пары «имя-значение».  
@@ -42,7 +42,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  (`Variant`) Выражение, вычисляемое для каждой строки в наборе данных и указывающее имя или ключ для сопоставления. Например, `=Fields!ProductID.Value`.  
   
  *result_expression*  
- (`Variant`) Выражение, вычисляемое для строки в наборе данных где *source_expression* = *destination_expression*, и указывающее извлекаемого значения. Например, `=Fields!ProductName.Value`.  
+ (`Variant`) Выражение, вычисляемое для строки в наборе данных где *source_expression* = *destination_expression*, и указывает извлекаемого значения. Например, `=Fields!ProductName.Value`.  
   
  *набор данных*  
  Константа, задающая имя набора данных в отчете. Например, «Продукты».  
@@ -51,9 +51,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  Возвращает `Variant`, или `Nothing` Если совпадения нет.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте `Lookup` для извлечения значения из указанного набора данных для пары «имя значение», где связь «один к одному». Например, для поля ID в таблице функция `Lookup` может быть использована для поиска соответствующего поля Name в наборе данных, не привязанном к области данных.  
+ Используйте `Lookup` для извлечения значения из указанного набора данных для пары "имя значение" связью «один-к одному». Например, для поля ID в таблице функция `Lookup` может быть использована для поиска соответствующего поля Name в наборе данных, не привязанном к области данных.  
   
- `Lookup` выполняет следующие задачи.  
+ `Lookup` выполняет следующие функции:  
   
 -   Вычисляет исходное выражение в текущей области.  
   
@@ -101,9 +101,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Выражения используются в отчетах &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
- [Область выражения для итогов, статистических функций и встроенных коллекций &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

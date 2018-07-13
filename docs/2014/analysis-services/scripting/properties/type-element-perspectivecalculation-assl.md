@@ -1,5 +1,5 @@
 ---
-title: Введите элемент (PerspectiveCalculation) (ASSL) | Документы Microsoft
+title: Введите элемент (PerspectiveCalculation) (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: d7b87aea-3265-4f3c-a7ee-4f3e90f9a0b7
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 242d4d779da87c155371047fd2bb21128da51abf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d95f248e6991b8386ce9f6b4a2c012057c42ef4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229574"
 ---
 # <a name="type-element-perspectivecalculation-assl"></a>Type, элемент (PerspectiveCalculation) (ASSL)
-  Указывает тип [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) элемента.  
+  Указывает тип [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -67,11 +67,11 @@ ms.locfileid: "36098496"
 |Значение|Описание|  
 |-----------|-----------------|  
 |*Член*|вычисляемый элемент|  
-|*набор*|Именованный набор|  
+|*Набор*|Именованный набор|  
   
  Перечисление, соответствующее допустимым значениям элемента `Type` в модели объектов AMO, — это <xref:Microsoft.AnalysisServices.PerspectiveCalculationType>.  
   
- Элемент, соответствующий родителю параметра `Type` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
+ Элемент, соответствующий родителю параметра `Type` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

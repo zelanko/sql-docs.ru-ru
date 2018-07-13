@@ -1,5 +1,5 @@
 ---
-title: Разработчик&#39;руководство (службы Analysis Services) | Документы Microsoft
+title: Разработчик&#39;руководство (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f18e3283284688a89772f7b305fecf84ce824e27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9fcba17c91cca47b6d73baab9d5e508a6a0f5c63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180871"
 ---
 # <a name="developer39s-guide-analysis-services"></a>Разработчик&#39;руководство (службы Analysis Services)
     
@@ -40,7 +40,7 @@ ms.locfileid: "36098302"
  [Наборы строк схемы служб Analysis Services](schema-rowsets/analysis-services-schema-rowsets.md)  
  Описывает наборы строк схемы, в которых предоставляются сведения о состоянии сервера, операциях сервера и объектах базы данных.  
   
- [Язык ASSL &#40;ASSL&#41; ссылки](scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Язык сценариев Analysis Services &#40;ASSL&#41; ссылки](scripting/analysis-services-scripting-language-assl-for-xmla.md)  
  Описывает расширения языка ASSL для XMLA. Язык ASSL — это язык для определения и работы с данными для многомерных моделей служб Analysis Services, дополняющий спецификацию XMLA.  
   
  [XML для аналитики &#40;XMLA&#41; ссылки](xmla/xml-for-analysis-xmla-reference.md)  

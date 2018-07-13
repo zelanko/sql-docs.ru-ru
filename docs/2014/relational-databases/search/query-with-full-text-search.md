@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [full-text search], about full-text queries
 - queries [full-text search], predicates
@@ -18,20 +17,20 @@ helpviewer_keywords:
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2edf2a5fbafb99287503d4b7ebe5475bd5604985
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 78351b4f710d84d6d8cb7f29d1de89d05ee763b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097693"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229014"
 ---
 # <a name="query-with-full-text-search"></a>Запрос с полнотекстовым поиском
   Для определения полнотекстового поиска в полнотекстовых запросах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используются полнотекстовые предикаты (CONTAINS и FREETEXT) и функции (CONTAINSTABLE и FREETEXTTABLE). Эти предикаты и функции поддерживают расширенный синтаксис [!INCLUDE[tsql](../../includes/tsql-md.md)] , который поддерживает разнообразные формы выражений запроса. Для создания полнотекстовых запросов нужно знать, когда и как использовать полнотекстовые предикаты и функции.  
   
-##  <a name="OV_ft_predicates"></a> Общие сведения о полнотекстовом предикатах (CONTAINS и FREETEXT)  
+##  <a name="OV_ft_predicates"></a> Общие сведения о полнотекстовые предикаты (CONTAINS и FREETEXT)  
  Предикаты CONTAINS и FREETEXT возвращают значение TRUE или FALSE. С их помощью можно задавать критерии выбора, чтобы определить, соответствует ли данная строка полнотекстовому запросу. Совпадающие строки возвращаются в результирующем наборе. Предикаты CONTAINS и FREETEXT задаются в предложении WHERE или HAVING инструкции SELECT. Они могут быть объединены с любым из других предикатов [!INCLUDE[tsql](../../includes/tsql-md.md)] , например LIKE и BETWEEN.  
   
 > [!NOTE]  
@@ -169,7 +168,7 @@ GO
   
  
   
-##  <a name="Using_Boolean_Operators"></a> Использование условных операторов AND, OR и NOT — в CONTAINS и CONTAINSTABLE  
+##  <a name="Using_Boolean_Operators"></a> Использование условных операторов AND, OR, а не — в CONTAINS и CONTAINSTABLE  
  Функция CONTAINSTABLE и предикат CONTAINS используют одинаковые условия поиска. Они поддерживают объединение нескольких искомых терминов (с помощью логических операторов AND, OR, AND NOT) для выполнения логических операций. Например, оператор AND можно использовать для поиска строк, содержащих и «латте», и «пирожное с кремом». Например, с помощью оператора AND NOT можно находить строки, которые содержат слово «бублик», но не содержат «мак».  
   
 > [!NOTE]  
@@ -193,7 +192,7 @@ GO
   
  
   
-##  <a name="Additional_Considerations"></a> Дополнительные соображения по полнотекстовых запросов  
+##  <a name="Additional_Considerations"></a> Дополнительные замечания по полнотекстовых запросов  
  При написании полнотекстовых запросов необходимо учитывать следующее.  
   
 -   Параметр LANGUAGE  
@@ -218,10 +217,10 @@ GO
  Если для столбца типа `varbinary(max)`, `varbinary` или `xml` создан полнотекстовый индекс, то обращаться к нему с запросами можно при использовании полнотекстовых предикатов (CONTAINS и FREETEXT) и функций (CONTAINSTABLE и FREETEXTTABLE), как и к любым другим столбцам с полнотекстовым индексом.  
   
 > [!IMPORTANT]  
->  Полнотекстовый поиск работает также со столбцами типа image. Тем не менее `image` тип данных будет исключена в будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого типа данных в новых разработках и предусмотрите изменение приложений, использующих этот тип в настоящий момент. Используйте `varbinary(max)` типа данных.  
+>  Полнотекстовый поиск работает также со столбцами типа image. Тем не менее `image` тип данных будет исключена в будущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого типа данных в новых разработках и предусмотрите изменение приложений, использующих этот тип в настоящий момент. Используйте `varbinary(max)` вместо этого тип данных.  
   
 ### <a name="varbinarymax-or-varbinary-data"></a>данные типа varbinary(max) и varbinary  
- Один `varbinary(max)` или `varbinary` столбца можно хранить документы различных типов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает любые типы документов, для которых в операционной системе доступен установленный фильтр. Тип каждого документа определяется по расширению имени файла этого документа. Например, при работе с DOC-файлом при полнотекстовом поиске будет использоваться фильтр, который поддерживает документы Microsoft Word. Чтобы получить список доступных типов документов, выполните запрос к представлению каталога [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
+ Один `varbinary(max)` или `varbinary` можно сохранять в столбце документы различных типов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает любые типы документов, для которых в операционной системе доступен установленный фильтр. Тип каждого документа определяется по расширению имени файла этого документа. Например, при работе с DOC-файлом при полнотекстовом поиске будет использоваться фильтр, который поддерживает документы Microsoft Word. Чтобы получить список доступных типов документов, выполните запрос к представлению каталога [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
   
  Учтите, что средство полнотекстового поиска может использовать имеющиеся фильтры, которые установлены в операционной системе. Перед использованием фильтров операционной системы, средств разбиения по словам и парадигматических модулей их необходимо загрузить на экземпляр сервера следующим образом.  
   
@@ -234,9 +233,9 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
  
   
 ### <a name="xml-data"></a>XML-данные  
- `xml` Столбец типа хранит только документы и фрагменты XML, и для таких документов используется только фильтр XML. Поэтому столбец типов не требуется. На `xml` столбцов в полнотекстовый индекс индексирует содержимое XML-элементов, но игнорирующие XML-разметку. К значениям атрибута, если они не являются числовыми значениями, применяется полнотекстовый индекс. Теги элементов используются в качестве границ токенов. Поддерживаются XML- или HTML-документы и фрагменты правильного формата, содержащие несколько языков.  
+ `xml` Столбец типа хранит только документы и фрагменты XML, и для документов используется только фильтр XML. Поэтому столбец типов не требуется. На `xml` столбцы, полнотекстовый индекс индексирует содержимое XML-элементов, но пропускает XML-разметку. К значениям атрибута, если они не являются числовыми значениями, применяется полнотекстовый индекс. Теги элементов используются в качестве границ токенов. Поддерживаются XML- или HTML-документы и фрагменты правильного формата, содержащие несколько языков.  
   
- Дополнительные сведения о создании запросов к `xml` столбец, в разделе [использовать полнотекстовый поиск в XML-столбцах](../xml/use-full-text-search-with-xml-columns.md).  
+ Дополнительные сведения о создании запросов к `xml` столбца, см. в разделе [используйте полнотекстовый поиск в XML-столбцах](../xml/use-full-text-search-with-xml-columns.md).  
   
  
   
@@ -258,7 +257,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 
   
 ###  <a name="Simple_Term"></a> Поиск конкретного слова или фразы (простое выражение)  
- Для поиска конкретной фразы в таблице можно использовать запросы [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)или [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) . Например, если требуется выполнить поиск `ProductReview` в таблицу [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] базы данных для всех комментариев о продукции, содержащих фразу «learning curve», можно использовать предикат CONTAINS следующим образом:  
+ Для поиска конкретной фразы в таблице можно использовать запросы [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)или [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) . Например, если требуется выполнить поиск `ProductReview` в таблицу [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] базы данных всех комментариев о продукции, содержащих фразу «learning curve», можно использовать предикат CONTAINS следующим образом:  
   
 ```  
 USE AdventureWorks2012  
@@ -274,7 +273,7 @@ GO
   
  
   
-###  <a name="Prefix_Term"></a> Выполняет поиск префикса (префиксное выражение)  
+###  <a name="Prefix_Term"></a> Поиск префиксных (префиксное выражение)  
  Для поиска слов и фраз с указанным префиксом можно использовать функции [CONTAINS](/sql/t-sql/queries/contains-transact-sql) или [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) . Будут возвращены все записи в столбце, содержащие текст, который начинается с заданного префикса. Например, чтобы найти все строки, содержащие префикс `top`-, как в `top``ple`, `top``ping`и `top`. Запрос выглядит следующим образом:  
   
 ```  
@@ -293,7 +292,7 @@ GO
   
  
   
-###  <a name="Inflectional_Generation_Term"></a> Поиск словоформ конкретного слова (производного терма)  
+###  <a name="Inflectional_Generation_Term"></a> Поиск словоформ конкретного слова (производное выражение)  
  С помощью функций [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)или [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) можно найти все грамматические формы глаголов и существительных (поиск словоформ) или синонимы указанного слова (поиск по тезаурусу).  
   
  В следующем примере выполняется поиск любых форм слова «foot» («foot», «feet» и т. д.) в столбце `Comments` таблицы `ProductReview` в базе данных `AdventureWorks` .  
@@ -337,7 +336,7 @@ GO
   
 
   
-##  <a name="tokens"></a> Просмотр итогового результата разметки сочетания средства разбиения по словам, тезауруса и списка стоп-слов  
+##  <a name="tokens"></a> Просмотр итогового результата разметки средство разбиения по словам, тезауруса и списка стоп-слов сочетания  
  После применения сочетания данного средства разбиения текста на слова, тезауруса и списка стоп-слов к строковым входным данным запроса итоговый результат разметки можно просмотреть с помощью динамического административного представления **sys.dm_fts_parser**. Дополнительные сведения см. в разделе [sys.dm_fts_parser (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql).  
   
  

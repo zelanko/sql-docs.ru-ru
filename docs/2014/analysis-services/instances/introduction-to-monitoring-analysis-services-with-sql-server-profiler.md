@@ -1,5 +1,5 @@
 ---
-title: Введение в мониторинг служб Analysis Services в SQL Server Profiler | Документы Microsoft
+title: Введение в мониторинг служб Analysis Services с SQL Server Profiler | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17aafb1d81085cd01159b5ac85a588d733dc0fe3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1097e4558e336dd10bbd5750f9e1331a8a1016d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161505"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>Введение в мониторинг служб Analysis Services при помощи приложения SQL Server Profiler
   Приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] можно использовать для мониторинга событий, формируемых экземпляром служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. С помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]можно выполнять следующее:  
@@ -64,6 +64,6 @@ ms.locfileid: "36098303"
   
 ## <a name="see-also"></a>См. также  
  [События трассировки служб Analysis Services](../trace-events/analysis-services-trace-events.md)   
- [Создание трассировки приложения Profiler для воспроизведения &#40;служб Analysis Services&#41;](create-profiler-traces-for-replay-analysis-services.md)  
+ [Создание трассировок Profiler для воспроизведения &#40;служб Analysis Services&#41;](create-profiler-traces-for-replay-analysis-services.md)  
   
   

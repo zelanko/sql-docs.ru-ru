@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10148"
 - sql12.rtp.rptdesigner.calculatedseriesproperties.axeschartareas.f1
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e33900e5dbc81d65d6304e82ba87f56cbcdcc89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 66ea4ea030bc3c80d9155a25737ec1828c97982c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181701"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)
   Диаграммы, основанные на системе координат (гистограммы, линейчатые диаграммы, диаграммы с областями, точечные, графики, диаграммы диапазонов), имеют две оси, использующиеся для классификации и отображения связей между данными. Для каждой оси применимы свои виды форматирования.  
@@ -116,18 +116,18 @@ ms.locfileid: "36099256"
 -   В диалоговом окне **Свойства ряда** выберите поле или введите выражение для параметра **Поле категории** . Диаграмма добавит интервалы оси для всех значений указанного поля категории.  
   
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>Добавление или удаление боковых полей с оси категорий  
- В линейчатой диаграмме, гистограмме и точечной диаграмме боковые поля автоматически добавляются по краям оси X. Размер поля изменить нельзя. Для всех остальных диаграмм боковые поля не добавляются. Дополнительные сведения см. в разделе [добавить или удалить поля из диаграммы &#40;построитель отчетов и службы SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
+ В линейчатой диаграмме, гистограмме и точечной диаграмме боковые поля автоматически добавляются по краям оси X. Размер поля изменить нельзя. Для всех остальных диаграмм боковые поля не добавляются. Дополнительные сведения см. в разделе [Добавление или удаление полей из диаграммы &#40;построитель отчетов и службы SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Форматировать метки оси как значения даты или валюты &#40;отчетов построителя отчетов и службы SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
+ [Форматирование меток оси в виде значений даты или валюты &#40;построитель отчетов и службы SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
- [Положение меток на диаграмме &#40;отчетов построителя отчетов и службы SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
+ [Размещение меток на диаграмме &#40;построитель отчетов и службы SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
- [Задание интервала оси &#40;отчетов построителя отчетов и службы SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [Задание интервала оси &#40;построитель отчетов и службы SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
- [Добавление или удаление полей из диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Добавление или удаление полей из диаграммы &#40;построитель отчетов и службы SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [Задание логарифмической шкалы &#40;отчетов построителя отчетов и службы SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
+ [Задание логарифмической шкалы &#40;построитель отчетов и службы SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>См. также  
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   

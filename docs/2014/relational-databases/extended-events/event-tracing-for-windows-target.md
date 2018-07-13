@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event tracing for windows target
 - ETW target
 - targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1ab809f5f3c271faa37129aa55cbf44b0cb70c87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2f768030b110a85d9c2c230bc06d2c9e42e85aa6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097269"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212914"
 ---
 # <a name="event-tracing-for-windows-target"></a>Цель «Средство трассировки событий для Windows»
   Прежде чем использовать средство трассировки событий для Windows (ETW) в качестве назначения, рекомендуется сначала попрактиковаться в работе с данным средством. Трассировка событий Windows используется совместно с расширенными событиями или в качестве потребителя расширенных событий. Следующие внешние ссылки помогут получить начальные сведения о трассировке событий Windows.  
@@ -48,7 +48,7 @@ ms.locfileid: "36097269"
  Назначение трассировки событий Windows не может управляться внешними контроллерами трассировки событий Windows, например Logman.exe. Для трассировки событий Windows нужно создать сеанс события с назначением трассировки событий Windows. Дополнительные сведения см. в разделе [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql).  
   
 > [!NOTE]  
->  При включении назначения ETW создается сеанс ETW с именем XE_DEFAULT_ETW_SESSION. Если сеанс с именем XE_DEFAULT_ETW_SESSION уже существует, то он используется как есть, без изменения свойств. Сеанс XE_DEFAULT_ETW_SESSION используется совместно всеми экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После запуска сеанса XE_DEFAULT_ETW_SESSION необходимо остановить его с помощью контроллера ETW, например инструмента Logman. Например, выполните команду в командной строке: `logman stop XE_DEFAULT_ETW_SESSION -ets`.  
+>  При включении назначения ETW создается сеанс ETW с именем XE_DEFAULT_ETW_SESSION. Если сеанс с именем XE_DEFAULT_ETW_SESSION уже существует, то он используется как есть, без изменения свойств. Сеанс XE_DEFAULT_ETW_SESSION используется совместно всеми экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После запуска сеанса XE_DEFAULT_ETW_SESSION необходимо остановить его с помощью контроллера ETW, например инструмента Logman. Например, можно выполните следующую команду в командной строке: `logman stop XE_DEFAULT_ETW_SESSION -ets`.  
   
  В следующей таблице описаны доступные параметры для настройки назначения ETW.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
 - xml_schema_namespace function
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 707cb288e9c0ba85454493024350e378ae66e1b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 05b266a67aaff2a381e181ca85290c45af177225
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221094"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Коллекции XML-схем (SQL Server)
-  Как описано в разделе [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server естественным образом поддерживает хранение XML-данных в `xml` тип данных. XSD-схем можно связать с переменной или столбцом `xml` типа с помощью коллекции XML-схем. Коллекция XML-схем хранит импортированные XML-схемы и используется для решения следующих задач:  
+  Как описано в разделе [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server предоставляет собственное хранилище XML-данных через `xml` тип данных. XSD-схем можно связать с переменной или столбцом типа `xml` тип с помощью коллекции XML-схем. Коллекция XML-схем хранит импортированные XML-схемы и используется для решения следующих задач:  
   
 -   проверка экземпляров XML;  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36097899"
  Кроме того, можно использовать коллекцию схем XML для типизации переменных, параметров и столбцов типа XML.  
   
 ##  <a name="ddl"></a> DDL для управления коллекциями схем  
- Можно создавать коллекции XML-схем в базе данных и связывать их с переменными и столбцами типа `xml` типа. Для управления коллекциями схем в базе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предусмотрены следующие инструкции DDL:  
+ Можно создавать коллекции схем XML в базе данных и связывать их с переменными и столбцами типа `xml` типа. Для управления коллекциями схем в базе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предусмотрены следующие инструкции DDL:  
   
 -   [CREATE XML SCHEMA COLLECTION (Transact-SQL)](/sql/t-sql/statements/create-xml-schema-collection-transact-sql) импортирует компоненты схемы в базу данных.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36097899"
   
 -   [DROP XML SCHEMA COLLECTION (Transact-SQL)](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) полностью удаляет коллекцию схем XML и все ее компоненты.  
   
- Чтобы использовать коллекцию XML-схем и содержащиеся в ней схемы, следует сначала создать коллекцию и схемы с помощью инструкции CREATE XML SCHEMA COLLECTION. После создания коллекции схем, затем можно создать переменные и столбцы типа `xml` и связать с ними коллекцию схем. Обратите внимание, что после создания коллекции различные компоненты схем будут храниться в метаданных. Кроме того, добавлять большие компоненты в существующие схемы или новые схемы в существующую коллекцию можно с помощью инструкции ALTER XML SCHEMA COLLECTION.  
+ Чтобы использовать коллекцию XML-схем и содержащиеся в ней схемы, следует сначала создать коллекцию и схемы с помощью инструкции CREATE XML SCHEMA COLLECTION. После создания коллекции схемы затем можно создать переменные и столбцы типа `xml` и связать с ними коллекцию схем. Обратите внимание, что после создания коллекции различные компоненты схем будут храниться в метаданных. Кроме того, добавлять большие компоненты в существующие схемы или новые схемы в существующую коллекцию можно с помощью инструкции ALTER XML SCHEMA COLLECTION.  
   
  Удалить коллекцию схем можно с помощью инструкции DROP XML SCHEMA COLLECTION. При этом удаляются все схемы в коллекции и сам объект коллекции. Обратите внимание, что для удаления коллекции схем должны выполняться условия, описанные в разделе [DROP XML SCHEMA COLLECTION (Transact-SQL)](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql).  
   

@@ -1,5 +1,5 @@
 ---
-title: Завершение работы мастера (мастер оптимизации с учетом использования) | Документы Microsoft
+title: Завершение работы мастера (мастер оптимизации с учетом использования) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.finish.f1
 ms.assetid: 7393f846-7195-4cd3-95cd-83d102841e2e
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24a18018d6ac3a1ec7c493f49bef6f261f353492
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45f284fd0c7d6aecbe3a07bb4694164192ff8289
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187631"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>Завершение работы мастера (мастер оптимизации на основе использования)
   Страница **Завершение работы мастера** позволяет сохранить статистическую схему и присвоить ее выбранным секциям. Также можно дополнительно обработать выбранные секции после того, как мастер оптимизации на основе использования завершит проектирование и сохранение статистических схем.  
@@ -30,7 +30,7 @@ ms.locfileid: "36098300"
  **Создать новую статистическую схему**  
  Позволяет создать новую статистическую схему и ввести ее имя.  
   
- **Слияние с существующей статистической схемы**  
+ **Слияние с существующей статистической схемой**  
  Позволяет осуществить слияние с существующей статистической схемой. Выберите из списка существующую статистическую схему.  
   
  **Будут изменены следующие секции**  

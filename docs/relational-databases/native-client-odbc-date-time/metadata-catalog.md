@@ -1,12 +1,12 @@
 ---
-title: Метаданные каталога | Документы Microsoft
+title: Метаданные каталога | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,21 +17,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cd2567eac8a3bc7624af9b980c76eb2b7c6720bc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 457f25d5429eccf2c253bb6b39fbae40b43d100a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700385"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420383"
 ---
-# <a name="metadata---catalog"></a>Метаданные — каталога
+# <a name="metadata---catalog"></a>Метаданные — каталог
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  В этом разделе описаны метаданные столбцов, возвращенных **SQLColumns** и **SQLProcedureColumns**, и тип метаданных, возвращаемых данных **SQLGetTypeInfo**.  
+  В этом разделе описаны метаданные столбцов, возвращаемые функциями **SQLColumns** и **SQLProcedureColumns**, и тип данных метаданные, возвращаемые функциями **SQLGetTypeInfo**.  
   
 ## <a name="remarks"></a>Примечания  
- Для типов данных даты времени возвращаются значения следующих столбцов **SQLColumns** и **SQLProcedureColumns**.  
+ Для типов данных даты времени возвращаются следующие значения столбцов **SQLColumns** и **SQLProcedureColumns**.  
   
 |Тип параметра|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "35700385"
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
   
- Для типов данных даты времени возвращаются значения следующих столбцов **SQLGetTypeInfo**:  
+ Для типов данных даты времени возвращаются следующие значения столбцов **SQLGetTypeInfo**:  
   
 |Тип параметра|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], opening
 - opening database diagrams
 - diagrams [SQL Server], opening
 ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9306aa2a1df51b88d0bdbd5fac35351f7407a7d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bd31ee9eece672e2499bac5988a8c37481fbe005
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198324"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>Открытие диаграммы базы данных (визуальные инструменты для баз данных)
   Можно открыть диаграммы базы данных, чтобы просмотреть или изменить структуру схемы.  
@@ -44,7 +44,7 @@ ms.locfileid: "36099227"
 >  Только владелец диаграммы или член роли базы данных db_owner может открыть диаграмму.  
   
 ## <a name="see-also"></a>См. также  
- [Работа с диаграммами базы данных &#40;визуальные средства базы данных&#41;](visual-database-tools.md)   
+ [Работа с диаграммами базы данных &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
  [Основные сведения о владении диаграммами баз данных (визуальные инструменты для баз данных)](understand-database-diagram-ownership-visual-database-tools.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7051dfeda3af9e4bc8de42eaee7f1b52c92589d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f4e61e4ce1c3db29354657f4eb6e3e6c746d7f3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214504"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Учебник. Добавление спарклайна в отчет (построитель отчетов)
   Этот учебник помогает создать простой табличный отчет на основе образцов данных продаж и добавить спарклайн-график в ячейку таблицы.  
@@ -44,7 +44,7 @@ ms.locfileid: "36097002"
 ### <a name="other-optional-steps"></a>Другие дополнительные шаги  
  5. [Форматирование данных в денежном формате](#FormatCurrency)  
   
- 6. [Формат данных в формат даты](#FormatDates)  
+ 6. [Форматирование данных в формат даты](#FormatDates)  
   
  7. [Изменение ширины столбцов](#Width)  
   
@@ -85,9 +85,9 @@ ms.locfileid: "36097002"
   
 8.  В поле **Строка подключения**введите следующий текст:  
   
-     **Источник данных =\<имя_сервера >**  
+     **Источник данных =\<servername >**  
   
-     Выражение \<servername >, для примера Report001, указывает компьютер, на котором установлен экземпляр SQL Server Database Engine. Поскольку данные отчета не извлекаются из базы данных SQL Server, не нужно указывать имя базы данных. Для синтаксического анализа запроса используется база данных по умолчанию на указанном сервере.  
+     Выражение \<servername >, например Report001, указывает компьютер, на котором установлен экземпляр SQL Server Database Engine. Поскольку данные отчета не извлекаются из базы данных SQL Server, не нужно указывать имя базы данных. Для синтаксического анализа запроса используется база данных по умолчанию на указанном сервере.  
   
 9. Нажмите кнопку **Учетные данные**. Введите учетные данные, необходимые для доступа к внешнему источнику данных.  
   

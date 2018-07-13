@@ -1,5 +1,5 @@
 ---
-title: Редактор формы ключевого показателя Эффективности (вкладка «Ключевые показатели эффективности», конструктор кубов) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Редактор формы ключевого показателя Эффективности (KPIs Tab, конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpidefinitionpane.f1
 ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: af159d0cdc724af8f0b7e768146527588b4e16fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 284ccc63f98624e1a64b114d31b69215d8e6b1be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224844"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Редактор формы ключевого показателя эффективности (вкладка «Ключевые показатели эффективности», конструктор кубов) (службы Analysis Services — многомерные данные)
   Панель **Редактор формы ключевого показателя эффективности** на вкладке **Ключевые показатели эффективности** в конструкторе кубов используется для создания или изменения выбранного ключевого показателя эффективности.  

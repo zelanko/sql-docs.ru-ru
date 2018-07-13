@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd219231d2c3933ac480f2a5fb3a56207db61eed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 523538e5c77ba71bce5a15966bc1b4dd93ee5513
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225594"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>Шаг 1. Построение программы развертывания
   В этой задаче будет настроена и построена программа развертывания для проекта «Учебник по развертыванию».  
@@ -38,7 +38,7 @@ ms.locfileid: "36097087"
   
 4.  В диалоговом окне **Страницы свойств учебника по развертыванию** разверните узел "Свойства конфигурации" и выберите "Программа развертывания".  
   
-5.  В правой части **страницы свойств учебника по развертыванию** диалогового окна убедитесь, что `AllowConfigurationChanges` равно `true`, задайте `CreateDeploymentUtility` для `true`и при необходимости обновите значение по умолчанию `DeploymentOutputPath`.  
+5.  В правой области **страницы свойств учебника по развертыванию** диалогового окна убедитесь, что `AllowConfigurationChanges` присваивается `true`, задайте `CreateDeploymentUtility` для `true`и при необходимости измените значение по умолчанию `DeploymentOutputPath`.  
   
 6.  Нажмите кнопку **ОК**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36097087"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Шаг 2. Проверка пакета развертывания](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться установка последних со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services в MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
  [Создание программы развертывания](../../2014/integration-services/create-a-deployment-utility.md)  

@@ -1,5 +1,5 @@
 ---
-title: Элемент CrossProduct (XML для Аналитики) | Документы Microsoft
+title: Элемент CrossProduct (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CrossProduct element
 ms.assetid: a9a1584e-d2dd-45db-a918-d694c20d8189
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1324a3c9449383301242ab6d0e76f94c636d9b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a0d76cc463d39a3b33de41f1c342f5d9f8f800bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278249"
 ---
 # <a name="crossproduct-element-xmla"></a>Элемент CrossProduct (XML для аналитики)
-  Содержит перекрестное произведение упорядоченных множеств элементов из каждой иерархии для [оси](axis-element-xmla.md) элемент, который использует [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) тип данных, возвращенных [Execute](../xml-elements-methods-execute.md) метод.  
+  Содержит перекрестное произведение упорядоченных множеств элементов из каждой иерархии для [оси](axis-element-xmla.md) элемент, использующий [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) тип данных, возвращенных [Execute](../xml-elements-methods-execute.md) метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -72,10 +72,10 @@ ms.locfileid: "36095795"
 |Размер|Требуется `Integer` атрибута. Определяет число кортежей, содержащихся в векторном произведении, представленном элементом `CrossProduct`.|  
   
 ## <a name="remarks"></a>Примечания  
- Когда клиентское приложение задает `AxisFormat` свойства *ClusterFormat*, элементы на каждой оси разделяются на кластеры, в которых каждый кластер представляет перекрестное произведение упорядоченных множеств элементов из каждой иерархии. Каждый кластер представляется элементом `CrossProduct`. Каждый элемент `CrossProduct` содержит элемент `Members` из каждой иерархии на оси. Элемент `CrossProduct` может содержать элементы из одной иерархии.  
+ Когда клиентское приложение устанавливает `AxisFormat` свойства *ClusterFormat*, элементы на каждой оси разделяются на кластеры, в которых каждый кластер представляет перекрестное произведение упорядоченных множеств элементов из каждой иерархии. Каждый кластер представляется элементом `CrossProduct`. Каждый элемент `CrossProduct` содержит элемент `Members` из каждой иерархии на оси. Элемент `CrossProduct` может содержать элементы из одной иерархии.  
   
 ## <a name="example"></a>Пример  
- Следующий пример иллюстрирует структуру `CrossProduct` элемент, если клиент указывает *ClusterFormat* для `AxisFormat` свойства XMLA на оси имеются следующие члены:  
+ Следующий пример иллюстрирует структуру `CrossProduct` элемент, если клиент указывает *ClusterFormat* для `AxisFormat` XMLA-свойства, на оси имеются следующие члены:  
   
 ||||||  
 |-|-|-|-|-|  

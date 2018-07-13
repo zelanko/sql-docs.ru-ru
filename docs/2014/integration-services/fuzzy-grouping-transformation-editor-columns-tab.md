@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразования Нечеткое группирование (вкладка «столбцы») | Документы Microsoft
+title: Редактор преобразования Нечеткое группирование (вкладка "столбцы") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtransformation.columns.f1
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b9557b9e2b4da35540fad923152532c506513f69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b393e0a2807a002f1805b5c2664f9ae2b3e527a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172995"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Редактор преобразования «Нечеткое группирование» (вкладка «Столбцы»)
   Используйте вкладку **Столбцы** диалогового окна **Редактор преобразования «Нечеткое группирование»** для задания столбцов, используемых при группировке строк с повторяющимися значениями.  
@@ -72,7 +72,7 @@ ms.locfileid: "36098686"
  Дополнительные сведения о параметрах сравнения строк см. в разделе [Сравнение строковых данных](data-flow/comparing-string-data.md).  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Определение подобных строк данных с помощью преобразования "Нечеткое группирование"](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
   

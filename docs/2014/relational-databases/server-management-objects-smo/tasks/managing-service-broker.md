@@ -1,5 +1,5 @@
 ---
-title: Управление компонентом Service Broker | Документы Microsoft
+title: Управление компонентом Service Broker | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Service Broker [SMO]
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e3817dd285accefacf9341567fd834c134a4e27f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5aac2ad5d164757a330bb5a5784bb6c99fb48fb1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210864"
 ---
 # <a name="managing-service-broker"></a>Управление компонентом Service Broker
   В объектах SMO объекты компонента [!INCLUDE[ssSB](../../../includes/sssb-md.md)] находятся в пространстве имен `Microsoft.SqlServer.Management.Smo.Broker`, которое требует ссылки на сборку Microsoft.SqlServer.Smo.dll. Кроме того, необходима ссылка на сборку Microsoft.SqlServer.ServiceBrokerEnum.dll для поддержки сведений о классах.  

@@ -1,5 +1,5 @@
 ---
-title: Базы данных табличной модели (табличные службы SSAS) | Документы Microsoft
+title: Базы данных табличной модели (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0952d613290da279c5e044085ed79f415181bb9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1d74fe1e59121466acf3671e3ce036a6b3e4e89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259420"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Базы данных табличной модели (табличные службы SSAS)
   База данных табличной модели — это база данных служб Analysis Services, которая создается в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с помощью шаблона проекта табличной модели служб Analysis Services, где таблицы и связи являются основными структурами для представления данных.  
@@ -41,7 +41,7 @@ ms.locfileid: "36094639"
   
  [Настройка доступа в памяти или доступа DirectQuery для базы данных табличной модели](enable-directquery-mode-in-ssms.md)  
   
- [Соединиться с базой данных табличной модели &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
+ [Соединение с базой данных табличной модели &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   
  [Восстановление из PowerPivot](restore-from-power-pivot.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Пример топологий и стоимости лицензирования для самостоятельной бизнес-аналитики SQL Server 2014 | Документы Microsoft
+title: Пример топологий и стоимости лицензирования для самостоятельной бизнес-аналитики SQL Server 2014 | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 682b8711-407a-48d1-9807-415d4c24dad6
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 5939b834b50161e31cbbbf3290ab2342bcda59fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4672647d8e9caae94e3b64fc43c3b687aa010920
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185807"
 ---
 # <a name="example-license-topologies-and-costs--for-sql-server-2014-self-service-business-intelligence"></a>Примеры топологий и стоимости лицензирования для самостоятельной бизнес-аналитики SQL Server 2014
   В этом разделе описаны рекомендации по выбору [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence edition или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. В данный раздел включено несколько примеров локальных топологий самостоятельной бизнес-аналитики (BI) Майкрософт. Примеры содержат выпуски и лицензии, которые можно использовать для оптимизации баланса между производительностью и ценой. Топологии, количество серверов и стоимость лицензирования приведены **только в качестве примеров**. В Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и Microsoft SharePoint 2013 внесены несколько изменений лицензирования, которые предоставляют дополнительные возможности для лицензирования серверов, пользователей и устройств. Лицензии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживают те же сценарии использования, связанные с бизнес-аналитикой.  
@@ -38,7 +38,7 @@ ms.locfileid: "36098569"
   
 -   [Компоненты SQL Server Business Intelligence](#bkmk_bi_components)  
   
--   [Список лицензий SQL Server 2014](#bkmk_sql_server_license)  
+-   [Сводка лицензирования SQL Server 2014](#bkmk_sql_server_license)  
   
 -   [Сводная информация по лицензированию SharePoint 2013](#bkmk_sharepoint_license)  
   
@@ -55,20 +55,20 @@ ms.locfileid: "36098569"
   
 -   интерактивные книги PowerPivot в браузере;  
   
--   Интерактивный [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] отчеты в SharePoint.  
+-   Интерактивные [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] отчетов в SharePoint.  
   
 -   Коллекция [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], обновление данных по расписанию, панель управления.  
   
 -   службы Reporting Services в режиме интеграции с SharePoint, включая предупреждения об изменении данных.  
   
- Дополнительные сведения см. в таблице функции в [установить SQL Server компонентов бизнес-Аналитики с SharePoint &#40;PowerPivot и служб Reporting Services&#41;](../../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md).  
+ Дополнительные сведения см. в таблице возможностях [Установка компонентов SQL Server BI с SharePoint &#40;PowerPivot и служб Reporting Services&#41;](../../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md).  
   
 ## <a name="license-summary"></a>Сводные данные о лицензировании  
  В этом разделе представлена сводная информация о требованиях лицензирования для SQL Server и SharePoint. Это информация высокого уровня, охватывающая только сценарии, используемые в диаграммах топологии и примерах, приведенных в данном документе. Для получения дополнительных сведений ознакомьтесь с представленными ссылками. Цены в примерах основаны на ценах программы Microsoft Open License Program (MOLP).  
   
  Распространенной практикой является использование **Enterprise Edition** для серверов, на которых запущен компонент SQL Server Database Engine, и **Business Intelligence** для серверов, на которых работают службы Reporting Services или надстройка PowerPivot для SharePoint. Однако **число пользователей** и **количество ядер ЦП сервера** в развертывании влияют на затраты и решение о выборе выпуска, который нужно использовать.  
   
-###  <a name="bkmk_sql_server_license"></a> Список лицензий SQL Server 2014  
+###  <a name="bkmk_sql_server_license"></a> Сводка лицензирования SQL Server 2014  
   
 -   Для SQL Server Enterprise Edition используется лицензирование «на ядро». Лицензии «на ядро» продаются в пакетах на **два ядра** .  
   
@@ -86,11 +86,11 @@ ms.locfileid: "36098569"
 |Business Intelligence|**(Да)** $8592 + $199 на CAL|Неприменимо|  
 |Standard|**(Да)**|**(Да)**|  
   
- Дополнительные сведения об образце [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] цен лицензий см. в разделе:  
+ Дополнительные сведения об образце [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] цен лицензий, см. в разделе:  
   
--   [Лицензирование виртуальных сред](http://www.microsoft.com/licensing/about-licensing/virtualization.aspx) (http://www.microsoft.com/licensing/about-licensing/virtualization.aspx).  
+-   [Лицензирование для виртуальных сред](http://www.microsoft.com/licensing/about-licensing/virtualization.aspx) (http://www.microsoft.com/licensing/about-licensing/virtualization.aspx).  
   
--   [SQL Server 2014 таблица лицензирования — Домашняя страница Microsoft](http://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf) (http://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf).  
+-   [SQL Server 2014 таблица лицензирования — Главная страница Microsoft](http://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf) (http://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf).  
   
 -   [Выпуски SQL server 2014 и лицензирование](http://www.microsoft.com/licensing/about-licensing/sql2014.aspx#tab=2)  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36098569"
   
 2.  В диаграммах в данном разделе используется выпуск SQL Server Enterprise Edition для серверов базы данных, поэтому доступен полный набор функций высокой доступности, например группы доступности AlwaysOn. Дополнительные сведения см. в разделе [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-3.  Все серверы в этом примере оснащены двумя 6-ядерными процессорами Intel Xeon, поэтому при вычислении стоимости лицензии применяется **коэффициент ядра SQL Server** , равный **1** . Дополнительные сведения об основных факторах и стоимости лицензирования см. в разделе [таблица коэффициента Ядерности SQL Server](http://download.microsoft.com/download/9/B/F/9BF63163-D8F9-4339-90AA-EBC9AAFC49AD/SQL2012_CoreFactorTable_Mar2012.pdf) (http://download.microsoft.com/download/0/C/8/0C85665B-11EA-4FF5-B37C-8CC21CF95AC4/BizTalk%202013_CoreFactorTable_**3.19.2013**. v4.pdf).  
+3.  Все серверы в этом примере оснащены двумя 6-ядерными процессорами Intel Xeon, поэтому при вычислении стоимости лицензии применяется **коэффициент ядра SQL Server** , равный **1** . Дополнительные сведения об основных факторах и стоимости лицензирования см. в разделе [таблица основных факторов SQL Server](http://download.microsoft.com/download/9/B/F/9BF63163-D8F9-4339-90AA-EBC9AAFC49AD/SQL2012_CoreFactorTable_Mar2012.pdf) (http://download.microsoft.com/download/0/C/8/0C85665B-11EA-4FF5-B37C-8CC21CF95AC4/BizTalk%202013_CoreFactorTable_**3.19.2013**. v4.pdf).  
   
 ###  <a name="bkmk_sharepoint_license"></a> Сводная информация по лицензированию SharePoint 2013  
  В следующем списке представлена сводка по модели лицензирования, используемой для проектирования развертывания и оценки стоимости лицензирования. Цены показаны только в качестве примера.  
@@ -140,7 +140,7 @@ ms.locfileid: "36098569"
   
      Базы данных приложения службы SharePoint расположены на серверах роли базы данных (4).  
   
--   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint выполняется на отдельных серверах (3). [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013 работает за пределами фермы SharePoint и может устанавливаться на серверы, которые не включают установку SharePoint, повышение производительности.  
+-   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint выполняется на отдельных серверах (3). [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013 работает за пределами фермы SharePoint и может устанавливаться на серверах, которые не включают установку SharePoint, повышая производительность.  
   
 -   Роль базы данных (4) использует SQL Server Enterprise, поэтому группы доступности AlwaysOn, компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], доступны.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "36098569"
   
 -   В этом примере представлено развертывание в интрасети, поэтому для SharePoint 2013 требуются клиентские лицензии.  
   
--   Службы Analysis Services в режиме PowerPivot (2) работают за пределами фермы, но PowerPivot работает **на тех же физических** серверами в другой роли приложения.  
+-   Службы Analysis Services в режиме PowerPivot (2) работают за пределами фермы, но PowerPivot работает **на тех же физических** серверах в другой роли приложения.  
   
 -   Роль базы данных (3) использует SQL Server Enterprise, чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функция групп доступности AlwaysOn доступна.  
   
@@ -188,9 +188,9 @@ ms.locfileid: "36098569"
   
 ### <a name="license-tools"></a>Средства лицензирования  
   
--   [Помощник по лицензии Microsoft](http://mla.microsoft.com/default.aspx) (http://mla.microsoft.com/default.aspx).  
+-   [Microsoft License Advisor](http://mla.microsoft.com/default.aspx) (http://mla.microsoft.com/default.aspx).  
   
--   [Средство Client Access License (CAL) Decision Tool](http://www.microsoft.com/licensing/CalTool/) (http://www.microsoft.com/licensing/CalTool/).  
+-   [Клиент средство Access License (CAL) Decision](http://www.microsoft.com/licensing/CalTool/) (http://www.microsoft.com/licensing/CalTool/).  
   
 -   [Microsoft Business Hub: Инструкции по покупке](http://www.microsoftbusinesshub.com/How_To_Buy#) (http://www.microsoftbusinesshub.com/How_To_Buy#).  
   
@@ -200,7 +200,7 @@ ms.locfileid: "36098569"
   
 -   [О лицензировании: Поиск лицензий продуктов](http://www.microsoftvolumelicensing.com/default.aspx) (http://www.microsoftvolumelicensing.com/default.aspx).  
   
--   [Корпоративное лицензирование: цены и инструкции по покупке](http://www.microsoft.com/licensing/how-to-buy/how-to-buy.aspx) (http://www.microsoft.com/licensing/how-to-buy/how-to-buy.aspx).  
+-   [Корпоративного лицензирования: цены и инструкции по покупке](http://www.microsoft.com/licensing/how-to-buy/how-to-buy.aspx) (http://www.microsoft.com/licensing/how-to-buy/how-to-buy.aspx).  
   
 ### <a name="community-content"></a>Содержимое сообщества  
   
@@ -208,9 +208,9 @@ ms.locfileid: "36098569"
   
 -   [Изменения лицензирования SQL Server 2014](http://www.brentozar.com/archive/2014/04/sql-server-2014-licensing-changes)(http://www.brentozar.com/archive/2014/04/sql-server-2014-licensing-changes).  
   
--   [Изменения в SQL Server 2014 лицензировании](https://www.directionsonmicrosoft.com/sites/default/files/PDFs/Licensing_Changes_for_SQL_Server_2014.pdf)(https://www.directionsonmicrosoft.com/sites/default/files/PDFs/Licensing_Changes_for_SQL_Server_2014.pdf).  
+-   [Изменения в лицензировании SQL Server 2014](https://www.directionsonmicrosoft.com/sites/default/files/PDFs/Licensing_Changes_for_SQL_Server_2014.pdf)(https://www.directionsonmicrosoft.com/sites/default/files/PDFs/Licensing_Changes_for_SQL_Server_2014.pdf).  
   
--   [Оценка затрат на лицензирование SharePoint 2013](http://www.degdigital.com/blog/sharepoint-2013-licensing-for-dummies/) (http://www.degdigital.com/blog/sharepoint-2013-licensing-for-dummies/).  
+-   [Оценка SharePoint 2013, затраты на Лицензирование](http://www.degdigital.com/blog/sharepoint-2013-licensing-for-dummies/) (http://www.degdigital.com/blog/sharepoint-2013-licensing-for-dummies/).  
   
 -   [Microsoft сообщество клиентов корпоративного лицензирования](http://www.microsoft.com/licensing/existing-customers/community.aspx) (http://www.microsoft.com/licensing/existing-customers/community.aspx).  
   

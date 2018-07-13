@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 2: Добавление данных | Документы Microsoft'
+title: 'Занятие 2: Добавление данных | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 697c483d784f4d15682c9690c0c392268ad5b356
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e16182c535fe22a1efe631a42b68c038db365ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165515"
 ---
 # <a name="lesson-2-add-data"></a>Занятие 2. Добавление данных
   На этом занятии будет использован мастер импорта таблиц в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] для подключения к базе данных SQL AdventureWorksDW, выбора данных, предварительного просмотра и фильтрации данных и последующего импорта данных в рабочую область модели.  
@@ -43,7 +43,7 @@ ms.locfileid: "36098529"
   
 2.  В **Мастере импорта таблиц**под вкладкой **Реляционные базы данных**щелкните **Microsoft SQL Server**и затем щелкните **Далее**.  
   
-3.  В **подключение к базе данных Microsoft SQL Server** страницы в **понятное имя подключения**, тип `Adventure Works DB from SQL`.  
+3.  В **соединение с базой данных Microsoft SQL Server** странице **понятное имя подключения**, тип `Adventure Works DB from SQL`.  
   
 4.  В поле **Имя сервера**введите имя сервера, на котором установлена база данных AdventureWorksDW.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36098529"
   
  После предварительного просмотра и фильтрации ненужных данных можно выполнить импорт данных. Перейдите к следующему разделу **Импорт данных выбранных таблиц и столбцов**.  
   
-##  <a name="Import"></a> Импорт выбранных таблиц и столбцов данных  
+##  <a name="Import"></a> Импортировать выбранные таблицы и столбца данных  
  Теперь можно импортировать выбранные данные. Мастер импортирует данные таблицы вместе со всеми связями между таблицами. Новые таблицы и столбцы создаются в модели с использованием указанных понятных имен; отфильтрованные ранее данные не будут импортированы.  
   
 #### <a name="to-import-the-selected-tables-and-column-data"></a>Импорт данных выбранных таблиц и столбцов  

@@ -1,5 +1,5 @@
 ---
-title: Условные обозначения свойства диалогового окна «Общие» (построитель отчетов и службы SSRS) | Документы Microsoft
+title: Диалоговое окно Свойства условных обозначений «Общие» (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.legendproperties.general.f1
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8614201ccb9c4fa496602a1ea8f6ea5e984b4d39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 172fc72cd09356281ddf10f2e048a2a81684c29a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087785"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230684"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Диалоговое окно «Свойства условных обозначений» — «Общие» (построитель отчетов и службы SSRS)
   Используйте диалоговое окно **Условные обозначения** , чтобы определить внешний вид и макет условных обозначений на диаграмме. Дополнительные сведения см. в разделе [форматирование условных обозначений на диаграмме &#40;построитель отчетов и службы SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  
@@ -53,11 +53,11 @@ ms.locfileid: "36087785"
 ## <a name="see-also"></a>См. также  
  [Диаграммы (построитель отчетов и службы SSRS)](report-design/charts-report-builder-and-ssrs.md)   
  [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Форматирование условных обозначений на диаграмме &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [Форматирование условных обозначений на диаграмме &#40;построитель отчетов и службы SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Задание цветов диаграммы с помощью палитры &#40;построитель отчетов и службы SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [Построение данных на вспомогательной оси &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [Форматирование условных обозначений на диаграмме &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
- [Добавление скользящего среднего в диаграмму &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Построение данных на вспомогательной оси &#40;построитель отчетов и службы SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
+ [Форматирование условных обозначений на диаграмме &#40;построитель отчетов и службы SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [Добавление скользящего среднего в диаграмму &#40;построитель отчетов и службы SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], reports in SharePoint integrated mode
 - SharePoint integration [Reporting Services], publishing to a library
@@ -17,13 +17,13 @@ ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d19618eaa7997444e661ca9213a72f75bf1b3910
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb7689da40d81d716b9564c11f230f22ea4638bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150015"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>опубликовать отчет в библиотеке SharePoint
   Чтобы опубликовать отчет на сайте SharePoint, настроенном для интеграции с SharePoint, необходимо задать свойства проекта в конструкторе отчетов. В свойствах проекта все ссылки на серверы, отчеты и общие источники данных следует указывать в виде полных URL-адресов. В определении отчета все ссылки на вложенные отчеты, детализированные отчеты и такие ресурсы, как изображения, расположенные в Интернете, должны представлять собой полные URL-адреса.  
@@ -54,7 +54,7 @@ ms.locfileid: "36099942"
   
 ## <a name="see-also"></a>См. также  
  [Диалоговое окно страниц свойств проекта](../tools/project-property-pages-dialog-box.md)   
- [Задание свойства развертывания &#40;службы Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
+ [Задание свойств развертывания &#40;службы Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [Публикация отчетов на сервере отчетов](publishing-reports-to-a-report-server.md)   
  [Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint &#40;службы SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [Использование подключения к данным Office &#40;.odc&#41; с отчетами &#40;режим интеграции служб Reporting Services в SharePoint&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  

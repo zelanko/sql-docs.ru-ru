@@ -1,5 +1,5 @@
 ---
-title: Настройка свойств проекта служб Analysis Services (SSDT) | Документы Microsoft
+title: Настройка свойств проекта служб Analysis Services (SSDT) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL
 helpviewer_keywords:
 - projects [Analysis Services], properties
 ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1b5c6062d07c10b171da7b3bc534836ddfe7752b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d75eff8c794c18a296a9d26850af87618af028a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167725"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Настройка свойств проекта служб Analysis Services (среда SSDT)
   В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]проект [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] определяется с некоторыми свойствами по умолчанию, которые влияют на сборку и развертывание проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

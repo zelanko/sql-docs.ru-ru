@@ -1,5 +1,5 @@
 ---
-title: Использование In-Memory OLTP в Виртуализированной среде | Документы Microsoft
+title: Использование In-Memory OLTP в среде виртуальной Машины | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ac5bae341711dc0ded20efdf57fe1ac776ec208b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e048f54a3ba3824981c1561c7f2308571e72c450
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180321"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>Использование In-Memory OLTP в среде ВМ
   Виртуализация серверов позволяет не только снизить расходы на приобретение и эксплуатацию, но и добиться большей эффективности ИТ-процессов благодаря оптимизации подготовки, обслуживания, доступности и операций резервного копирования или восстановления приложений. В результате недавних успехов в развитии технологий стало проще консолидировать сложные рабочие нагрузки базы данных с применением виртуализации. В этой статье приведены рекомендации по использованию [!INCLUDE[hek_1](../includes/hek-1-md.md)] в виртуализированной среде.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], Excel
 - Excel [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9e0c80441798259750c9c24bc8062d7f8637cc37
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: df6de3a81b8ebd1f9ca23ffa1b004c4180c26e81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158995"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Просмотр файлов и таблиц Excel с помощью контейнера "Цикл по каждому элементу"
   Процедуры в этом разделе описывают, как выполнить цикл по книгам Excel в папке или цикл по таблицам в книге Excel с помощью контейнера «цикл по каждому элементу» с соответствующим перечислителем.  
@@ -49,7 +49,7 @@ ms.locfileid: "36324658"
     > [!IMPORTANT]  
     >  Чтобы избежать ошибок проверки после настройки задач и компонентов потоков данных, которые используют этот диспетчер подключений Excel, выберите существующую книгу Excel в окне **Редакторе диспетчера соединений Excel**. Диспетчер соединений не будет использовать эту книгу в процессе выполнения, если настроить выражение для свойства `ConnectionString`, как показано ниже. После создания и настройки пакета можно очистить значение свойства `ConnectionString` в окне свойств. Однако если очистить это значение, свойство строки соединения диспетчера соединений Excel не будет действительно до запуска контейнера «цикл по каждому элементу». Следовательно, необходимо присвоить свойству `DelayValidation` значение `True` в задачах, где используется диспетчер соединений, или в пакете, чтобы избежать ошибок проверки.  
     >   
-    >  Кроме того, необходимо использовать значение по умолчанию `False` для `RetainSameConnection` свойства диспетчера соединений Excel. При изменении этого значения на `True` каждая итерация цикла будет по-прежнему открывать первую книгу Excel.  
+    >  Необходимо также использовать значение по умолчанию `False` для `RetainSameConnection` свойство диспетчера соединений Excel. При изменении этого значения на `True` каждая итерация цикла будет по-прежнему открывать первую книгу Excel.  
   
 8.  Выберите новый диспетчер подключений Excel, щелкните свойство **Выражения** в окне свойств и нажмите кнопку с многоточием.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36324658"
 9. Создайте задачи в контейнере «цикл по каждому элементу», которые используют диспетчер соединений Excel для выполнения одинаковых операций для каждой таблицы Excel в заданной книге. Если задача "Скрипт" используется для анализа имени перечисляемой таблицы или работы с каждой таблицей, не забудьте добавить строковую переменную к свойству ReadOnlyVariables задачи "Скрипт".  
   
 ## <a name="see-also"></a>См. также  
- [Импорт данных из Excel или экспорта данных в Excel с SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [настроить контейнер цикла Foreach](foreach-loop-container.md)   
+ [Импорт данных из Excel или экспортировать данные в Excel с помощью SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [настроить контейнер цикла Foreach](foreach-loop-container.md)   
  [Добавление или изменение выражение свойства](../expressions/add-or-change-a-property-expression.md)   
  [Диспетчер подключений Excel](../connection-manager/excel-connection-manager.md)   
  [Источник Excel](../data-flow/excel-source.md)   

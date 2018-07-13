@@ -1,5 +1,5 @@
 ---
-title: Элемент SourceAttributeID (ASSL) | Документы Microsoft
+title: Элемент SourceAttributeID (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SourceAttributeID element
 ms.assetid: 8973eb62-6142-4ce2-ad42-c8be2b43c04f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 06da8df2a164ee903b59dc2a154bca926c1b82f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d30b6a54f90437baad822ba285bf0fc56a6a891d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157085"
 ---
 # <a name="sourceattributeid-element-assl"></a>Элемент SourceAttributeID (ASSL)
   Содержит идентификатор (ID) исходного атрибута, на котором [уровень](../objects/level-element-assl.md) основан элемент.  
@@ -62,7 +62,7 @@ ms.locfileid: "36100493"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родительский `SourceAttributeID` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Level>.  
+ Элемент, соответствующий родителю параметра `SourceAttributeID` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Level>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

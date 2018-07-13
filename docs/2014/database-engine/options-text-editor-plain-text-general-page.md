@@ -1,5 +1,5 @@
 ---
-title: Параметры (текстовый редактор - обычный текст — Главная страница) | Документы Microsoft
+title: Параметры (текстовый редактор - обычный текст - "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.General
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 caps.latest.revision: 22
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e46857d3ea3078847e2c540999f37cef79d05091
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b66c8286d3ae062307175e689f222f33ea3be6a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100060"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150995"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Options (Text Editor - Plain Text - General Page)
   Используйте это диалоговое окно для смены режима изменения текстового редактора, который используется для редактирования документа, не связанного с определенным языком разработки. Для отображения этих настроек выберите пункт **Параметры** в меню **Сервис** , раскройте узел **Текстовый редактор**, щелкните **Неформатированный текст** , а затем выберите **Общие**.  
@@ -40,7 +40,7 @@ ms.locfileid: "36100060"
  Редактор обычного текста не поддерживает эту возможность.  
   
 ## <a name="settings"></a>Настройки  
- **Разрешить виртуальные пробелы**  
+ **Разрешить виртуальное пространство**  
  Вставьте пробелы в конце каждой строки текста. Установите этот флажок для размещения комментариев в постоянном положении относительно текста.  
   
  **Перенос по словам**  
@@ -68,7 +68,7 @@ ms.locfileid: "36100060"
 > [!NOTE]  
 >  Номера строк не добавляются в текст и не печатаются. Они предназначены только для уведомления.  
   
- **Включение навигации URL одним щелчком**  
+ **Включить URL-адреса однократным щелчком**  
  Измените курсор на указывающую руку при его проходе над URL-адресом в редакторе. Можно щелкнуть URL-адрес для отображения указанной страницы в браузере.  
   
  **Панель навигации**  

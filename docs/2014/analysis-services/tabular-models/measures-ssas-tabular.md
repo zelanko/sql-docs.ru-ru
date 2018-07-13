@@ -1,5 +1,5 @@
 ---
-title: Меры (табличные службы SSAS) | Документы Microsoft
+title: Меры (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9d5690f488c5cb0119c62be819e1cfece41d2fda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9715d64ea8d2df1747a26fc15cf830bab3d5efd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218004"
 ---
 # <a name="measures-ssas-tabular"></a>Меры (табличные службы SSAS)
   В табличных моделях мера представляет собой вычисление, созданное при помощи формулы DAX, специально созданной для использования в клиенте отчетов. Меры оцениваются на основании полей, фильтров и срезов, которые пользователи выбирают в клиентском приложении создания отчетов.  
@@ -106,7 +106,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 ## <a name="see-also"></a>См. также  
  [Ключевые показатели эффективности &#40;табличные службы SSAS&#41;](kpis-ssas-tabular.md)   
- [Создание и управление ими ключевые показатели эффективности &#40;табличные службы SSAS&#41;](create-and-manage-kpis-ssas-tabular.md)   
+ [Создание и управление ключевыми показателями эффективности &#40;табличные службы SSAS&#41;](create-and-manage-kpis-ssas-tabular.md)   
  [Вычисляемые столбцы &#40;табличные службы SSAS&#41;](ssas-calculated-columns.md)  
   
   

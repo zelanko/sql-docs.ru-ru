@@ -1,5 +1,5 @@
 ---
-title: Элемент Exception (XML для Аналитики) | Документы Microsoft
+title: Элемент Exception (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Exception element
 ms.assetid: 0be4cc2f-c03e-490a-a6f7-8b1ede5d09ba
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 824743a3e8aeb7d735d6844dd1b025de06e09e9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 33af06aa3243b0860bca6d9ae8ff15595ae1ad4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156815"
 ---
 # <a name="exception-element-xmla"></a>Элемент Exception (XML для аналитики)
-  Указывает, что исключение было вернуть из [Discover](../xml-elements-methods-discover.md) или [Execute](../xml-elements-methods-execute.md) вызова метода.  
+  Указывает, что исключение было возвращено из [Discover](../xml-elements-methods-discover.md) или [Execute](../xml-elements-methods-execute.md) вызова метода.  
   
  **Пространство имен** http://schemas.microsoft.com/analysisservices/2003/exception  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36099593"
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительские элементы|[корень](root-element-xmla.md)|  
+|Родительские элементы|[корневой](root-element-xmla.md)|  
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  

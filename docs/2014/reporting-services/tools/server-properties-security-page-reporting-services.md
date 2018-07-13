@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.security.f1
 ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 722a2b825b0ec56b7932de29a74faf74627834f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cefcaaf281cf8b3981fec2383fd004ad8bd8f967
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153685"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>Свойства сервера (страница «Безопасность») — службы Reporting Services
   Эта страница используется для отключения функций, которые могут нарушить безопасность сервера отчетов. Отключение этих функций ограничивает некоторые возможности, но повышает общую безопасность сервера отчетов, устраняя определенные угрозы.  
@@ -39,11 +39,11 @@ ms.locfileid: "36098812"
   
  Этот параметр определяет, какое значение присваивается свойству `EnableLoadReportDefinition` сервера отчетов — `True` или `False`. Если этот флажок снят, свойству будет присвоено `False` и сервер не будет формировать отчеты с дополнительной информацией, которые создаются во время просмотра данных отчета. Все вызовы метода `LoadReportDefinition` будут блокированы.  
   
- Отключение этого параметра снижает угрозу, при котором злоумышленник использует атаки отказа в обслуживании, перегружая сервер отчетов с `LoadReportDefinition` запросов.  
+ Отключение этого параметра снижает угрозу, при котором злоумышленники запускают отказ в обслуживании, перегружая сервер отчетов с `LoadReportDefinition` запросов.  
   
 ## <a name="see-also"></a>См. также  
  [Установка свойств сервера отчетов (среда Management Studio)](set-report-server-properties-management-studio.md)   
  [Подключение к серверу отчетов в среде Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Укажите учетные данные и сведения о соединении для источников данных отчетов] (.. /Report-Data/Specify-Credential-and-Connection-Information-for-Report-Data-Sources.md [отчетов сервера в Справка F1 среды Management Studio](report-server-in-management-studio-f1-help.md)  
+ [Укажите учетные данные и сведения о соединении для источников данных отчета] (.. /Report-Data/Specify-Credential-and-Connection-Information-for-Report-Data-Sources.md [сервером отчетов в среде Management Studio Справка F1 по](report-server-in-management-studio-f1-help.md)  
   
   

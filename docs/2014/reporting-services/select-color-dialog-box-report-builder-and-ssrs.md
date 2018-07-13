@@ -1,5 +1,5 @@
 ---
-title: Выберите цвет диалоговое окно «» (построитель отчетов и службы SSRS) | Документы Microsoft
+title: Выберите цвет диалоговое окно (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.selectcolor.f1
 - "10090"
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1829f9d5b598f42b54be3d6d08cb7a78ea5e11f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2b14615cb231f6df5385306ded4257a86998a56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185783"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Диалоговое окно «Выбор цвета» (построитель отчетов и службы SSRS)
   Используйте диалоговое окно **Выбор цвета** , чтобы указать параметры цвета для фона одной или нескольких ячеек в области данных или текстовом поле либо для всей диаграммы.  
@@ -66,7 +66,7 @@ ms.locfileid: "36099238"
  **Синий**  
  Десятичное значение для синего компонента цвета RGB. Введите или задайте с помощью счетчика значение в диапазоне от 0 до 255.  
   
- **Альфа-канал**  
+ **Альфа-канала**  
  Десятичное значение для компонента цвета, определяющего коэффициент альфа или прозрачность. Если применение этого значения разрешено, можно использовать переключатель в виде ползунка для настройки требуемой степени прозрачности.  
   
  **Оттенок**  
@@ -83,6 +83,6 @@ ms.locfileid: "36099238"
   
 ## <a name="see-also"></a>См. также  
  [Форматирование элементов отчета (построитель отчетов и службы SSRS)](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Форматирование текста и заполнителей &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Форматирование текста и заполнителей &#40;построитель отчетов и службы SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

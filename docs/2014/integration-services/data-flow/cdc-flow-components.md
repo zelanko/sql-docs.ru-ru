@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7d1719e8f1f8e9c8ff5c61fe1c561299b09213e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c825f11187fceb63373cb053ffd2f650b25834f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152945"
 ---
 # <a name="cdc-flow-components"></a>Компоненты потока CDC
   Компоненты отслеживания измененных данных Attunity для служб Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] позволяют разработчикам служб SSIS работать с CDC и уменьшают сложность пакетов CDC.  
@@ -74,7 +74,7 @@ ms.locfileid: "36099832"
  Если вы используете [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] для разработки пакетов, убедитесь, что [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] закрыта перед запуском мастера удаления.  
   
 ## <a name="benefits"></a>Преимущества  
- Компоненты CDC для [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] компоненты позволяют разработчикам служб SSIS легко создавать пакеты служб SSIS, обрабатывающие измененных данных. Эти компоненты расширяют возможности разработчиков служб SSIS по работе с CDC и уменьшают сложность пакетов CDC.  
+ Компоненты CDC для [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] компоненты позволяют разработчикам служб SSIS с легкостью создавать пакеты служб SSIS, обрабатывающие информации об изменениях. Эти компоненты расширяют возможности разработчиков служб SSIS по работе с CDC и уменьшают сложность пакетов CDC.  
   
  Компоненты CDC служб SSIS предоставляют информацию об изменениях в виде, удобном для дальнейшей обработки с целью репликации, загрузки хранилища данных, обновления медленно изменяющихся измерений для OLAP, аудита изменений и других сценариев применения. Тип дальнейшей обработки определяется разработчиком служб SSIS.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36099832"
   
  ![Поток управления пакета для обработки тонкого канала](../media/tricklefeedprocessing.gif "Поток управления пакета для обработки тонкого канала")  
   
- Это [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] поток управления содержит две задачи управления CDC и задачу потока данных. Первая задача, которая называется **Получить диапазон обработки CDC** , устанавливает диапазон номеров LSN для изменений, которые обрабатываются в задаче потока данных, которая называется **Обработка изменений**. Этот диапазон определяется на основании данных, обработанных при последнем выполнении пакета и сохраненных в постоянном хранилище.  
+ Это [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] содержит две задачи управления CDC и задачу потока данных. Первая задача, которая называется **Получить диапазон обработки CDC** , устанавливает диапазон номеров LSN для изменений, которые обрабатываются в задаче потока данных, которая называется **Обработка изменений**. Этот диапазон определяется на основании данных, обработанных при последнем выполнении пакета и сохраненных в постоянном хранилище.  
   
  Дополнительные сведения об использовании задачи «Управление CDC» см. в разделах [CDC Control Task](../control-flow/cdc-control-task.md) и [CDC Control Task Editor](../cdc-control-task-editor.md).  
   
@@ -107,9 +107,9 @@ ms.locfileid: "36099832"
   
  [Редактор источника CDC &#40;страницы диспетчера соединений&#41;](../cdc-source-editor-connection-manager-page.md)  
   
- [Редактор источника CDC &#40;страница «столбцы»&#41;](../cdc-source-editor-columns-page.md)  
+ [Редактор источника CDC &#40;страница "столбцы"&#41;](../cdc-source-editor-columns-page.md)  
   
- [Редактор источника CDC &#40;страницы вывода ошибок&#41;](../cdc-source-editor-error-output-page.md)  
+ [Редактор источника CDC &#40;странице вывода ошибок&#41;](../cdc-source-editor-error-output-page.md)  
   
  Дополнительные сведения о разделителе CDC см. в разделе  
   

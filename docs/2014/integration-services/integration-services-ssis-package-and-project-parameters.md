@@ -1,5 +1,5 @@
 ---
-title: В службах Integration Services (SSIS) параметры | Документы Microsoft
+title: В службах Integration Services (SSIS) параметры | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d477f12cdce1063f765c9b6be2f39ba1fe30a505
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cd87c7c7b64b9adda2a49bf892004502d951665
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172955"
 ---
 # <a name="integration-services-ssis-parameters"></a>Параметры служб Integration Services (SSIS)
   Параметры служб[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) могут быть использованы для присвоения значений свойствам внутри пакетов во время выполнения пакетов. Можно создать *параметры проекта* на уровне проекта и *параметры пакета* на уровне пакета. Параметры проекта используются для предоставления любых внешних данных, получаемых проектом, одному пакету в проекте или более. Параметры пакета позволяют изменить выполнение пакета. При этом изменять пакет и развертывать его повторно не придется.  
   
- В службах [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] можно создавать, изменять и удалять параметры проекта в окне **Project.params** . Создавать, изменять, удалять и параметров пакета можно с помощью вкладки **Параметры** в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Диалоговое окно **Параметризация** позволяет связать новый или существующий параметр со свойством задачи. Дополнительные сведения об использовании **Project.params** окна и **параметры** см. в разделе [параметры создания](create-parameters.md). Дополнительные сведения о **параметризация** диалоговое окно, в разделе [Parameterize Dialog Box](parameterize-dialog-box.md).  
+ В службах [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] можно создавать, изменять и удалять параметры проекта в окне **Project.params** . Создавать, изменять, удалять и параметров пакета можно с помощью вкладки **Параметры** в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Диалоговое окно **Параметризация** позволяет связать новый или существующий параметр со свойством задачи. Дополнительные сведения об использовании **Project.params** окна и **параметры** вкладке, см. в разделе [Create Parameters](create-parameters.md). Дополнительные сведения о **параметризация** диалоговом окне см. в разделе [Parameterize Dialog Box](parameterize-dialog-box.md).  
   
 ## <a name="parameters-and-package-deployment-model"></a>Параметры и модель развертывания пакета  
  Как правило, при развертывании пакета с использованием устаревшей модели развертывания пакетов необходимо использовать конфигурации вместо параметров.  
@@ -86,7 +86,7 @@ ms.locfileid: "36098438"
   
  Можно также использовать диалоговое окно **Выполнить пакет** в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы изменить значение параметра. Дополнительные сведения см. в разделе [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md).  
   
- Можно также использовать параметр dtexec `/Parameter` возможность изменить значение параметра. Дополнительные сведения см. в статье [dtexec Utility](packages/dtexec-utility.md).  
+ Можно также использовать dtexec `/Parameter` параметр, чтобы изменить значение параметра. Дополнительные сведения см. в статье [dtexec Utility](packages/dtexec-utility.md).  
   
 ### <a name="parameter-validation"></a>Проверка параметров  
  Если значения параметров не могут быть разрешены, выполнение соответствующего пакета завершится с ошибкой. Чтобы избежать ошибок, можно выполнить проверку проектов и пакетов с помощью диалогового окна **Проверка** в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Проверка позволяет установить, имеют ли все параметры необходимые значения и могут ли необходимые значения быть разрешены с помощью определенных ссылок среды. Также проверка устанавливает наличие других часто встречающихся проблем пакетов.  

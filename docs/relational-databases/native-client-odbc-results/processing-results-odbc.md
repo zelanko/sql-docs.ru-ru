@@ -1,12 +1,12 @@
 ---
-title: Обработка результатов (ODBC) | Документы Microsoft
+title: Обработка результатов (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 08a76e5a2c7a69fa2c333f1848698e008b4f1eb9
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d3b7ee0b89be4fc55eac3d14b7c85ce70476ce5e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701915"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423963"
 ---
 # <a name="processing-results-odbc"></a>Обработка результатов (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "35701915"
 
   После передачи приложением инструкции SQL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает все данные результата в виде одного или нескольких результирующих наборов. Результирующий набор — это набор строк и столбцов, соответствующих критерию запроса. Инструкции SELECT, функции работы с каталогами и некоторые хранимые процедуры создают результирующий набор, доступный для приложения в табличной форме. Если выполняемая инструкция SQL является хранимой процедурой, пакетом из нескольких команд либо инструкцией SELECT, содержащей ключевые слова, то необходимо выполнять обработку нескольких результирующих наборов.  
   
- Функции ODBC для работы с каталогами также могут получать данные. Например [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md) получает данные о столбцах в источнике данных. Эти результирующие наборы могут содержать нуль или более строк.  
+ Функции ODBC для работы с каталогами также могут получать данные. Например [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md) извлекает данные о столбцах в источнике данных. Эти результирующие наборы могут содержать нуль или более строк.  
   
  Некоторые инструкции SQL, например GRANT или REVOKE, не возвращают результирующие наборы. Для этих инструкций, код возврата **SQLExecute** или **SQLExecDirect** обычно является указывать только инструкция выполнена успешно.  
   
- Каждая из инструкций INSERT, UPDATE и DELETE возвращает результирующий набор, содержащий только количество строк, затронутых изменением. Это число становится доступен при вызове [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md). ODBC 3. *x* приложений должен либо вызвать метод **SQLRowCount** для получения результирующего набора или [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) отменить его. Если приложение выполняет пакет или хранимую процедуру, содержащую несколько инструкций INSERT, UPDATE или DELETE, результирующий набор каждой инструкции изменения должны быть обработаны с помощью **SQLRowCount** или было отменено с помощью **SQLMoreResults**. Эти счетчики можно сбросить, включив в пакет или хранимую процедуру инструкцию SET NOCOUNT ON.  
+ Каждая из инструкций INSERT, UPDATE и DELETE возвращает результирующий набор, содержащий только количество строк, затронутых изменением. Это число становится доступен при вызове [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md). ODBC 3. *x* приложений должен либо вызвать метод **SQLRowCount** для получения результирующего набора или [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) отмените его. Когда приложение выполняет пакет или хранимую процедуру, содержащую несколько инструкций INSERT, UPDATE или DELETE, результирующий набор каждой инструкции изменения должны быть обработаны с помощью **SQLRowCount** или отменено с помощью **SQLMoreResults**. Эти счетчики можно сбросить, включив в пакет или хранимую процедуру инструкцию SET NOCOUNT ON.  
   
- Transact-SQL включает инструкцию SET NOCOUNT. При включении параметр NOCOUNT SQL Server не возвращает число строк, затронутых инструкцией и **SQLRowCount** возвращает 0. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Версия драйвера ODBC для собственного клиента содержит специфические для драйвера [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) параметр SQL_SOPT_SS_NOCOUNT_STATUS, для того, является ли параметр NOCOUNT или отключить сообщения. В любое время **SQLRowCount** возвращает 0, то приложение должно проверить SQL_SOPT_SS_NOCOUNT_STATUS. Если возвращается sql_nc_on, значение 0 от **SQLRowCount** определяет только то, что SQL Server не вернул количество строк. Если возвращается sql_nc_off, это означает, что NOCOUNT отключен и значение 0 от **SQLRowCount** указывает, что инструкция не обработала все строки. Приложения не должны отображать значение **SQLRowCount** когда sql_sopt_ss_nocount_status установлен в значение SQL_NC_OFF. Большие пакеты или хранимые процедуры могут содержать несколько инструкций SET NOCOUNT, следовательно, программисты не должны предполагать, что параметр SQL_SOPT_SS_NOCOUNT_STATUS останется неизменным. Параметр необходимо проверять каждый раз **SQLRowCount** возвращает 0.  
+ Transact-SQL включает инструкцию SET NOCOUNT. Если параметр NOCOUNT включен, SQL Server не возвращает количество строк, затронутых инструкцией и **SQLRowCount** возвращает 0. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Версии драйвера ODBC для собственного клиента предоставляет зависящий от драйвера [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) параметр SQL_SOPT_SS_NOCOUNT_STATUS, сообщить о того, является ли параметр NOCOUNT или отключить. В любое время **SQLRowCount** возвращает 0, то приложение должно проверить SQL_SOPT_SS_NOCOUNT_STATUS. Если возвращается sql_nc_on, значение 0 от **SQLRowCount** определяет только то, что SQL Server не вернул количество строк. Если возвращается SQL_NC_OFF, это означает, что NOCOUNT отключен и значение 0 от **SQLRowCount** указывает, что инструкция не обработала все строки. Приложения не должны отображать значение **SQLRowCount** когда SQL_SOPT_SS_NOCOUNT_STATUS установлен в значение SQL_NC_OFF. Большие пакеты или хранимые процедуры могут содержать несколько инструкций SET NOCOUNT, следовательно, программисты не должны предполагать, что параметр SQL_SOPT_SS_NOCOUNT_STATUS останется неизменным. Параметр необходимо проверять каждый раз **SQLRowCount** возвращает 0.  
   
  Несколько других инструкций Transact-SQL возвращают данные в сообщениях, а не в результирующих наборах. Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента получает эти сообщения, он возвращает значение SQL_SUCCESS_WITH_INFO для уведомления приложения о том, что информационные сообщения доступны. Затем приложение может вызвать **SQLGetDiagRec** для получения этих сообщений. Инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], работающие таким способом, перечислены ниже.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "35701915"
   
 -   RAISERROR  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента возвращает значение SQL_ERROR для инструкции RAISERROR с уровнем серьезности 11 и выше. При уровне серьезности RAISERROR от 19 и выше соединение отключается.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC для собственного клиента возвращает ошибку SQL_ERROR для инструкции RAISERROR с уровнем серьезности 11 и выше. При уровне серьезности RAISERROR от 19 и выше соединение отключается.  
   
  Чтобы обработать результирующие наборы инструкции SQL, приложение выполняет следующие действия.  
   

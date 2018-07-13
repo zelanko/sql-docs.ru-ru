@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 763df160d03f3f26824559b2068e3e241bb66d23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: fe42fc3dd5e1398cc0e66ad2c37cd14a3fedd67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202814"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Учебник. Создание отчета в свободной форме (построитель отчетов)
   В этом учебнике объясняется, как создать отчет SQL Server Reporting Services произвольной формы в виде стандартного письма. Вы можете упорядочить элементы отчета, чтобы создать форму с текстовыми полями, изображениями и другими областями данных.  
@@ -80,7 +80,7 @@ ms.locfileid: "36098365"
   
 4.  Убедитесь в том, что выбран тип соединения Microsoft SQL Server, а затем в поле **Строка подключения** введите **Data Source = \<имя_сервера>**.  
   
-     \<имя_сервера >, для примера Report001, указывает компьютер, на котором установлен экземпляр SQL Server Database Engine. Поскольку данные отчета не извлекаются из базы данных SQL Server, не нужно указывать имя базы данных. Для синтаксического анализа запроса используется база данных по умолчанию на указанном сервере.  
+     \<ServerName >, например Report001, указывает компьютер, на котором установлен экземпляр SQL Server Database Engine. Поскольку данные отчета не извлекаются из базы данных SQL Server, не нужно указывать имя базы данных. Для синтаксического анализа запроса используется база данных по умолчанию на указанном сервере.  
   
 5.  Нажмите **Учетные данные**и введите учетные данные, необходимые для подключения к экземпляру ядра СУБД SQL Server.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "36098365"
   
 1.  На панели "Группы строк" щелкните правой кнопкой мыши группу подробностей, выберите пункт **Добавить группу**, а затем пункт **Родительская группа**.  
   
-     ![Команда родительской группы](../../2014/tutorials/media/tutorial-parentgroupcommand.png "команда родительской группы")  
+     ![Родительская группа команды](../../2014/tutorials/media/tutorial-parentgroupcommand.png "команда родительской группы")  
   
 2.  В раскрывающемся списке выберите `[Territory].`  
   
@@ -183,7 +183,7 @@ ms.locfileid: "36098365"
   
 4.  Щелкните правой кнопкой мыши столбец "Территория" в списке и выберите команду **Удалить столбцы**.  
   
-     ![Удаление столбцов](../../2014/tutorials/media/tutorial-deletecolumnscommand.png "удаление столбцов")  
+     ![Удалить столбцы](../../2014/tutorials/media/tutorial-deletecolumnscommand.png "удалить столбцы")  
   
 5.  Выберите **Удалить только столбцы**.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "36098365"
   
 4.  В раскрывающемся списке **Цвет заливки** нажмите **Другие цвета**и выберите **темно-серый** цвет.  
   
-     ![Выберите цвет заливки](../../2014/tutorials/media/tutorial-selectfillcolorwithnumbers.png "выбора цвета")  
+     ![Выберите цвет заливки](../../2014/tutorials/media/tutorial-selectfillcolorwithnumbers.png "цвет заливки Select")  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -236,7 +236,7 @@ ms.locfileid: "36098365"
   
 4.  Перетащите поле Territory в текстовое поле и поместите его после текста, введенного в шаге 3.  
   
-     ![Добавить поля "Территория"](../../2014/tutorials/media/tutorial-addterritorialfield.png "добавьте территориальных поля")  
+     ![Добавить поля "Территория"](../../2014/tutorials/media/tutorial-addterritorialfield.png "поля \"Территория\" Добавить")  
   
 5.  Выделите весь текст, щелкните его правой кнопкой мыши и выберите пункт **Свойства текста**.  
   
@@ -299,7 +299,7 @@ ms.locfileid: "36098365"
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     ![Добавить выражение в поле продаж](../../2014/tutorials/media/tutorial-addexpressiontosalesfield.png "добавить выражение в поле «продажи»")  
+     ![Добавить выражение в поле продаж](../../2014/tutorials/media/tutorial-addexpressiontosalesfield.png "добавить выражение в поле продаж")  
   
 25. Выделите текст, добавленный в шагах с 20 по 23, щелкните правой кнопкой мыши, а затем выберите **Свойства текста**.  
   
@@ -311,7 +311,7 @@ ms.locfileid: "36098365"
   
 29. Выберите `[Sum(Sales)]` и на вкладке **Главная** , в группе **Число** нажмите кнопку **Валюта** .  
   
-     ![Добавление символа валюты](../../2014/tutorials/media/tutorial-addcurrencysymbol.png "добавить обозначение денежной единицы")  
+     ![Добавить символ валюты](../../2014/tutorials/media/tutorial-addcurrencysymbol.png "добавить символ валюты")  
   
 30. Щелкните правой кнопкой текстовое поле с текстом "Щелкните, чтобы добавить заголовок", а затем нажмите кнопку **Удалить**.  
   
@@ -374,7 +374,7 @@ ms.locfileid: "36098365"
   
 2.  Выберите ячейки таблицы, которые содержат `[Sum(SalesSales)]` , и на вкладке **Главная** в группе **Число** нажмите кнопку **Валюта** .  
   
-     ![Добавление символа валюты в сумму продаж](../../2014/tutorials/media/tutorial-sumsales-currencysymbol.png "добавить символ валюты в сумму продаж")  
+     ![Добавить символ валюты в сумму продаж](../../2014/tutorials/media/tutorial-sumsales-currencysymbol.png "добавить символ валюты в сумму продаж")  
   
 3.  Щелкните ячейку, содержащую `[SalesDate]` , и в группе **Число** выберите **Дата**из раскрывающегося списка.  
   
@@ -432,7 +432,7 @@ ms.locfileid: "36098365"
   
 6.  В области **Контур** выберите ширину **4,5** пт, цвет выберите **Красный**.  
   
-     ![Добавление линии в отчет](../../2014/tutorials/media/tutorial-reportwithline.png "добавьте строку в отчет")  
+     ![Добавление линии в отчет](../../2014/tutorials/media/tutorial-reportwithline.png "Добавление линии в отчет")  
   
 ##  <a name="Visualization"></a> 9. Добавление отображения сводных данных (необязательно)  
  С помощью прямоугольников можно управлять подготовкой отчетов к просмотру. Поместите круговую диаграмму и гистограмму в прямоугольник, чтобы отчет был правильно подготовлен к просмотру.  
@@ -483,7 +483,7 @@ ms.locfileid: "36098365"
   
 3.  Выберите **Столбец**, а затем нажмите кнопку **Далее**.  
   
-4.  На странице расположение полей диаграммы перетащите поле Product на **категории**.  
+4.  На странице «размещение полей диаграммы» перетащите поле Product **категории**.  
   
 5.  Перетащите поле Sales в **Значения** , а затем нажмите кнопку **Далее**.  
   
@@ -499,7 +499,7 @@ ms.locfileid: "36098365"
   
 9. Перетащите диаграмму внутрь прямоугольника ниже круговой диаграммы.  
   
-     ![Добавить гистограмму](../../2014/tutorials/media/tutorial-addcolumnchart.png "добавить гистограмму")  
+     ![Добавить столбец диаграммы](../../2014/tutorials/media/tutorial-addcolumnchart.png "добавить столбец диаграммы")  
   
 10. Правой кнопкой мыши щелкните заголовок диаграммы, затем нажмите **Свойства заголовка**.  
   
@@ -530,7 +530,7 @@ ms.locfileid: "36098365"
   
 3.  В **свойства** области, убедитесь, что `Parent` свойство содержит имя прямоугольника.  
   
-     ![Свойство для круговой диаграммы Parent](../../2014/tutorials/media/tutorial-piechart-parentproperty.png "родительского свойства для круговой диаграммы")  
+     ![Родительского свойства для круговой диаграммы](../../2014/tutorials/media/tutorial-piechart-parentproperty.png "родительского свойства для круговой диаграммы")  
   
 4.  Нажмите гистограмму и повторите пункты 2 и 3.  
   
@@ -552,10 +552,10 @@ ms.locfileid: "36098365"
   
  Теперь отчет содержит сводные данные о продажах в круговых диаграммах и гистограммах.  
   
- ![Учебник, в свободной форме отчетов SSRS](../../2014/tutorials/media/tutorial-reportfinal.png "SSRS «учебник», отчет произвольной формы")  
+ ![Руководства, отчета в свободной форме SSRS](../../2014/tutorials/media/tutorial-reportfinal.png "SSRS учебника, отчета в свободной форме")  
   
 ## <a name="more-information"></a>Дополнительные сведения  
- Дополнительные сведения о списках см. в разделе [таблицы, матрицы и списки &#40;построитель отчетов и службы SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md), [перечислены &#40;построитель отчетов и службы SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [область данных Табликса Области &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), и [ячейки области данных Табликса, строк и столбцов &#40;построитель отчетов&#41; и службы SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Дополнительные сведения о списках см. в разделе [таблицы, матрицы и списки &#40;построитель отчетов и службы SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md), [перечислены &#40;построитель отчетов и службы SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [области данных Табликса Области &#40;построитель отчетов и службы SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), и [ячейки области данных Табликса, строк и столбцов &#40;построитель отчетов&#41; и службы SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
  Дополнительные сведения о конструкторах запросов см. в разделах [Конструкторы запросов (построитель отчетов)](../../2014/reporting-services/query-designers-report-builder.md) и [Пользовательский интерфейс текстового конструктора запросов (построитель отчетов)](report-data/text-based-query-designer-user-interface-report-builder.md).  
   

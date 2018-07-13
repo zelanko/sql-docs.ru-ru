@@ -25,13 +25,13 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 caps.latest.revision: 80
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6552bc54d8da9475adaa35b86b697c1dbdf3f437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f651eee3c926db0f808a673d7555d02f3fe07d83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099307"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184721"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Написание кода и отладка задачи «Скрипт»
   После настройки задачи "Скрипт" в окне **Редактор задачи "Скрипт"** нужно создать пользовательский код в среде разработки задачи "Скрипт".  
@@ -54,7 +54,7 @@ ms.locfileid: "36099307"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>Элементы и классы проекта в проекте задачи «Скрипт»  
  По умолчанию проект задачи «Скрипт», отображаемый в окне обозревателя проекта VSTA, содержит один элемент `ScriptMain`. В свою очередь, элемент `ScriptMain` содержит один класс, именуемый `ScriptMain`. Элементы кода в классе изменяются в зависимости от языка программирования, выбранного для задачи «Скрипт».  
   
--   После настройки задачи «скрипт» для [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] языке программирования `ScriptMain` класс имеет открытую подпрограмму `Main`. Подпрограмма `ScriptMain.Main` является методом, который вызывается во время выполнения задачи «Скрипт».  
+-   После настройки задачи «скрипт» для [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] языка программирования, `ScriptMain` класс содержит открытую подпрограмму, `Main`. Подпрограмма `ScriptMain.Main` является методом, который вызывается во время выполнения задачи «Скрипт».  
   
      По умолчанию единственным кодом в подпрограмме `Main` нового скрипта является строка `Dts.TaskResult = ScriptResults.Success`. Эта строка извещает среду выполнения об успешной работе задачи. `Dts.TaskResult` Свойство рассматривается в [возврат результатов из задачи «скрипт»](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
@@ -250,7 +250,7 @@ To open Help, press F1.
   
 -   Запись в блоге [Затруднения при установке и настройке VSTA для установок SSIS 2008 и R2](http://go.microsoft.com/fwlink/?LinkId=215661) на сайте blogs.msdn.com.  
   
-![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться установка последних со службами Integration Services** <br /> Загрузить последнюю документацию, статьи, примеры и видео из [!INCLUDE[msCoName](../../../includes/msconame-md.md)], также лучшие решения участников сообщества, посетите [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services в MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Загрузить последнюю документацию, статьи, примеры и видео с сайта [!INCLUDE[msCoName](../../../includes/msconame-md.md)], а также лучшие решения участников сообщества, посетите [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на портале MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
  [Ссылки на другие сборки в решениях со скриптами](../referencing-other-assemblies-in-scripting-solutions.md)   

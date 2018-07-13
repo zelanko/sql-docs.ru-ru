@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing subscriptions
 - deleting subscriptions
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], pull
 ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 59925598a5a1038cee0d99d80476a894826ce575
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6fe35faf0b633e5fe7525371713dff189ac559b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150865"
 ---
 # <a name="delete-a-pull-subscription"></a>Удаление подписки по запросу
   В данном разделе описывается удаление подписки по запросу в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
@@ -101,7 +101,7 @@ ms.locfileid: "36098628"
   
 2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPullSubscription> и задайте свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>и <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> . Чтобы установить свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> , используется соединение подписчика из шага 1.  
   
-3.  Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> , чтобы убедиться, что подписка существует. Если значение этого свойства равно `false`, были неправильно заданы свойства подписки на шаге 2, либо подписка не существует.  
+3.  Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> , чтобы убедиться, что подписка существует. Если значение этого свойства равно `false`, либо на подписку на шаге 2 были неверно определены свойства, либо подписка не существует.  
   
 4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A> .  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36098628"
   
 2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePullSubscription> и задайте свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>и <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> . Чтобы установить свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> , используется соединение из шага 1.  
   
-3.  Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> , чтобы убедиться, что подписка существует. Если значение этого свойства равно `false`, были неправильно заданы свойства подписки на шаге 2, либо подписка не существует.  
+3.  Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> , чтобы убедиться, что подписка существует. Если значение этого свойства равно `false`, либо на подписку на шаге 2 были неверно определены свойства, либо подписка не существует.  
   
 4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A> .  
   

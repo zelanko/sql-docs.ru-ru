@@ -1,5 +1,5 @@
 ---
-title: Массовое копирование из переменных программы | Документы Microsoft
+title: Массовое копирование из переменных программы | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-odbc-bulk-copy-operations
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,40 +24,40 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5e0bcb033e4e99bdba8dc7167d3823e103c9cfd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 253123cc62751c39c39e9f5ab9282e2b1e6a3c10
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948359"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420023"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Массовое копирование из переменных приложения
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Массовое копирование можно производить напрямую из переменных программы. После распределения переменных для хранения данных для строки и вызова функции [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) для запуска массового копирования, вызовите [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) для каждого столбца указать расположение и формат переменной программы, необходимо сопоставить со столбцом. Заполните каждую переменную с данными, затем вызовите [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) для отправки одну строку данных на сервер. Повторяйте процесс заполнения переменных и вызова **bcp_sendrow** до всех строк, отправленных на сервер, затем вызовите [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) для указания, что операция завершена.  
+  Массовое копирование можно производить напрямую из переменных программы. После распределения переменных для хранения данных для строки и вызова функции [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) для запуска массового копирования, вызовите [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) для каждого столбца указать расположение и формат переменной программы, необходимо сопоставить со столбцом. Заполните каждую переменную с данными, затем вызвать [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) отправлять одну строку данных на сервер. Повторяйте процесс заполнения переменных и вызова **bcp_sendrow** пока все строки уже переданы на сервер, затем вызвать [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) для указания, что операция завершена.  
   
- **Bcp_bind *** pData* содержит адрес переменной, привязанной к столбцу. Данные каждого столбца можно сохранить двумя способами:  
+ **Bcp_bind *** pData* параметр содержит адрес переменной, привязанной к столбцу. Данные каждого столбца можно сохранить двумя способами:  
   
 -   выделить одну переменную для хранения данных;  
   
 -   выделить переменную признака, сопровождаемую переменной данных.  
   
- Переменная признака определяет длину данных столбцов переменной длины, а также значения типа NULL, если они разрешены столбцом. При использовании переменной данных только затем адрес этой переменной хранится в **bcp_bind *** pData* параметра. При использовании переменной признака адрес этой переменной хранится в **bcp_bind *** pData* параметра. Функции массового копирования вычисляют расположение переменной данных путем добавления **bcp_bind *** cbIndicator* и *pData* параметров.  
+ Переменная признака определяет длину данных столбцов переменной длины, а также значения типа NULL, если они разрешены столбцом. Если переменной данных используется, только затем адрес этой переменной хранится в **bcp_bind *** pData* параметра. Если используется переменная индикатора, адрес переменной индикатор хранится в **bcp_bind *** pData* параметра. Функции массового копирования вычисляют расположение переменной данных путем добавления **bcp_bind *** cbIndicator* и *pData* параметров.  
   
- **bcp_bind** поддерживает три метода для обработки данных с переменной длиной:  
+ **bcp_bind** поддерживает три метода работы с данными переменной длины:  
   
--   Используйте *cbData* с переменной данных. Поместите длину данных в *cbData*. Каждый раз, длина данных для массового копирования, вызовите [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)Сброс *cbData*. Если один из двух других методов используется, укажите значение SQL_VARLEN_DATA для *cbData*. Если все значения, указанное для столбца значение NULL, укажите SQL_NULL_DATA для *cbData*.  
+-   Используйте *cbData* с переменной данных. Поместите длину данных в *cbData*. Каждый раз, когда длина данных в ходе операции массового копирования изменений, вызовите [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)сбросить *cbData*. Если используется один из двух других методов, укажите значение SQL_VARLEN_DATA для *cbData*. Если все значения данных, указанное для столбца значение NULL, укажите значение SQL_NULL_DATA для *cbData*.  
   
--   Используйте переменные признака. При каждом перемещении нового значения в переменную данных следует сохранять длину значения в переменной признака. Если один из двух других методов используется, укажите значение 0 для *cbIndicator*.  
+-   Используйте переменные признака. При каждом перемещении нового значения в переменную данных следует сохранять длину значения в переменной признака. Если используется один из двух других методов, укажите значение 0 для *cbIndicator*.  
   
--   Используйте указатели признака конца. Загрузка **bcp_bind *** pTerm* с адресом битового шаблона, который прерывает данные. Если один из двух других методов используется, укажите значение NULL для *pTerm*.  
+-   Используйте указатели признака конца. Нагрузки **bcp_bind *** pTerm* с адресом битового шаблона, который прерывает данные. Если используется один из двух других методов, укажите значение NULL для *pTerm*.  
   
- Все три из этих методов можно использовать на том же **bcp_bind** вызова, в этом случае используется спецификация, приводит к минимальный объем копируемых данных.  
+ Все три из этих методов можно использовать на том же **bcp_bind** вызвать, в этом случае используется спецификация, которая приводит к минимальный объем копируемых данных.  
   
- **Bcp_bind *** тип* DB-Library использует идентификаторы типа данных, не идентификаторы типа данных ODBC. Идентификаторы типа данных DB-Library определяются в файле sqlncli.h для использования с функцией ODBC **bcp_bind** функции.  
+ **Bcp_bind *** тип* идентификаторы типа данных DB-Library используется параметр, не идентификаторы типа данных ODBC. Идентификаторы типа данных DB-Library определяются в файле sqlncli.h для использования с ODBC **bcp_bind** функции.  
   
- Функции массового копирования данных поддерживают не все типы данных ODBC C. Например, функции массового копирования не поддерживают структуру ODBC SQL_C_TYPE_TIMESTAMP, поэтому следует использовать [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) или [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) для преобразования данных ODBC SQL_TYPE_TIMESTAMP в переменную SQL_C_CHAR. При использовании **bcp_bind** с *тип* параметра равным SQLCHARACTER, для привязки переменной к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** преобразование столбца, функции массового копирования предложение escape отметки времени внутри символьной переменной в правильный формат datetime.  
+ Функции массового копирования данных поддерживают не все типы данных ODBC C. Например, функции массового копирования не поддерживают структуру ODBC SQL_C_TYPE_TIMESTAMP, поэтому используйте [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) или [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) для преобразования данных ODBC SQL_TYPE_TIMESTAMP в переменную SQL_C_CHAR. При использовании **bcp_bind** с *тип* параметра равным SQLCHARACTER, для привязки переменной к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** преобразование столбца, функции массового копирования предложение экранирования отметки времени внутри символьной переменной в правильный формат datetime.  
   
  В следующей таблице перечислены типы данных, рекомендуемые для использования в сопоставлении с типом данных ODBC SQL для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "32948359"
 |SQL_WLONGVARCHAR|SQL_C_WCHAR|SQLNTEXT|**ntext**|  
 |SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **dec**<br /><br /> **money**<br /><br /> **smallmoney**|  
 |SQL_NUMERIC|SQL_C_NUMERIC|SQLNUMERICN|**numeric**|  
-|SQL_BIT|SQL_C_BIT|SQLBIT|**бит**|  
+|SQL_BIT|SQL_C_BIT|SQLBIT|**bit**|  
 |SQL_TINYINT (подписанный)|SQL_C_SSHORT|SQLINT2|**smallint**|  
 |SQL_TINYINT (неподписанный)|SQL_C_UTINYINT|SQLINT1|**tinyint**|  
 |SQL_SMALL_INT (подписанный)|SQL_C_SSHORT|SQLINT2|**smallint**|  
@@ -83,7 +83,7 @@ ms.locfileid: "32948359"
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **timestamp**|  
-|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **Двоичный переменной**|  
+|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **двоичный varying**|  
 |SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**image**|  
 |SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
@@ -91,7 +91,7 @@ ms.locfileid: "32948359"
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Нет знакового **tinyint**без знака, **smallint**, или без знака **int** типов данных. Для предотвращения потери значений данных при миграции этих типов данных, создайте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицу со следующим наибольшим типом данных integer. Для предотвращения последующего добавления пользователями значений, находящихся за пределами диапазона, разрешенного исходными типом данных, примените к столбцу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] правило ограничения разрешенных значений до диапазона, поддерживаемого типом данных в исходном источнике:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Нет знакового **tinyint**без знака **smallint**, или без знака **int** типов данных. Чтобы предотвратить потерю данных при миграции этих типов данных, создайте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы с помощью следующего наибольшего целочисленного типа данных. Для предотвращения последующего добавления пользователями значений, находящихся за пределами диапазона, разрешенного исходными типом данных, примените к столбцу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] правило ограничения разрешенных значений до диапазона, поддерживаемого типом данных в исходном источнике:  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -111,13 +111,13 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] непосредственно не поддерживает типы данных интервала. Приложение тем не менее, может сохранять управляющие последовательности интервала в виде символьных строк в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] символьный столбец. Приложение может считывать их для дальнейшего использования, но они не могут использоваться в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] непосредственно не поддерживает типы данных интервала. Приложения тем не менее, может сохранять управляющие последовательности интервала в виде символьных строк в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] символьный столбец. Приложение может считывать их для дальнейшего использования, но они не могут использоваться в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- Функции массового копирования могут использоваться для быстрой загрузки данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , был считан из источника данных ODBC. Используйте [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) для привязки столбцов результирующего набора с переменными программы, затем с помощью **bcp_bind** для привязки тех же переменных программы к операции массового копирования. Вызов [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) или **SQLFetch** производит выборку строк данных из источника данных ODBC в переменные программы, а вызов метода [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) выполняет массовое копирование данных из переменных программы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Функции массового копирования может использоваться для быстрой загрузки данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , считанное из источника данных ODBC. Используйте [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) для привязки столбцов результирующего набора к переменным программы, затем с помощью **bcp_bind** для привязки тех же переменных программы к операции массового копирования. Вызов [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) или **SQLFetch** производит выборку строк данных из источника данных ODBC в переменные программы, а затем вызвав [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) выполняет массовое копирование данных из переменных программы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Приложение может использовать [bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) функцию для изменения адреса переменной данных, первоначально указанной в **bcp_bind** *pData* параметра. Приложение может использовать [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) функцию для изменения длины данных, первоначально указанной в **bcp_bind *** cbData* параметра.  
+ Приложение может использовать [bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) функцию для изменения адреса переменной данных, первоначально заданное в **bcp_bind** *pData* параметра. Приложение может использовать [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) функции каждый раз, когда ему необходимо изменить длину данных, изначально указанный в **bcp_bind *** cbData* параметра.  
   
- Не удается прочитать данные из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в переменные программы с помощью операции массового копирования нет ничего функцию «bcp_readrow». Отправлять данные можно только от приложения на сервер.  
+ Нельзя считать данные из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в переменные программы, с помощью операции массового копирования имеется похожа на функцию «bcp_readrow». Отправлять данные можно только от приложения на сервер.  
   
 ## <a name="see-also"></a>См. также  
  [Выполнение операций массового копирования &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  

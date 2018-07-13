@@ -1,5 +1,5 @@
 ---
-title: Технический справочник по заметки бизнес-Аналитики для языка CSDL | Документы Microsoft
+title: Технический справочник по аннотациям бизнес-Аналитики для языка CSDL | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 63b3e069-6ba5-474e-b769-47b7cc87b7dd
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 27ed1339d64dd3c4035288a96b31ae163a304733
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 78300a412d7db986edd76172c7cf49e6c86aaec9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192394"
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>Технический справочник по аннотациям бизнес-аналитики для языка CSDL
   В этом разделе приведен список элементов, атрибутов и свойств, используемых в CSDL, которые представляют табличные модели [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Некоторые элементы новые; другие помечены или расширены для поддержки построения моделей бизнес-аналитики.  
   
- Обзор табличной модели и как сущности, связи и формулы представлены на языке CSDL см. в разделе [заметки языка CSDL для бизнес-аналитики &#40;CSDLBI&#41;](../csdl-annotations-for-business-intelligence-csdlbi.md).  
+ Общие сведения о табличных моделях и как сущности, связи и формулы представлены на языке CSDL, см. в разделе [заметки языка CSDL для бизнес-аналитики &#40;CSDLBI&#41;](../csdl-annotations-for-business-intelligence-csdlbi.md).  
   
 ## <a name="extended-csdl-elements-complex-types"></a>Расширенные элементы языка CSDL: Сложные типы  
  Следующие элементы языка CSDL добавлены или расширены для поддержки моделей данных бизнес-аналитики, как табличных, так и многомерных.  
@@ -62,7 +62,7 @@ ms.locfileid: "36097807"
   
 -   [Элемент NavigationProperty &#40;CSDLBI&#41;](navigationproperty-element-csdlbi.md)  
   
--   [Элемент свойства &#40;CSDLBI&#41;](property-element-csdlbi.md)  
+-   [Элемент Property &#40;CSDLBI&#41;](property-element-csdlbi.md)  
   
 -   [Элемент PropertyRef &#40;CSDLBI&#41;](propertyref-element-csdlbi.md)  
   
@@ -75,14 +75,14 @@ ms.locfileid: "36097807"
 |CompareOptions|[Элемент EntityContainer &#40;CSDLBI&#41;](entitycontainer-element-csdlbi.md)|  
 |Содержание|[Элемент EntityType &#40;CSDLBI&#41;](entitytype-element-csdlbi.md)|  
 |ContextualNameRule|[Элемент member &#40;CSDLBI&#41;](member-element-csdlbi.md)|  
-|DefaultAggregationFunction|[Элемент свойства &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
+|DefaultAggregationFunction|[Элемент Property &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
 |DirectQueryMode|[Элемент EntityContainer &#40;CSDLBI&#41;](entitycontainer-element-csdlbi.md)|  
-|GroupingBehavior|[Элемент свойства &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
+|GroupingBehavior|[Элемент Property &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
 |MemberRefs|[Элемент MemberRef &#40;CSDLBI&#41;](memberref-element-csdlbi.md)|  
 |PropertyRefs|[Элемент PropertyRef &#40;CSDLBI&#41;](propertyref-element-csdlbi.md)|  
 |SortDirection|[Элемент BaseProperty &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
 |Состояние|[Элемент AssociationSet &#40;CSDLBI&#41;](associationset-element-csdlbi.md)|  
-|Стабильность|[Элемент свойства &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
+|Стабильность|[Элемент Property &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
 |SortDirection|[Элемент BaseProperty &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
   
 ## <a name="see-also"></a>См. также  

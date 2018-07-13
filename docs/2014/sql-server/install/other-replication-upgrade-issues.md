@@ -1,5 +1,5 @@
 ---
-title: Другие проблемы обновления репликации | Документы Microsoft
+title: Другие проблемы обновления репликации | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system tables [SQL Server], replication
 - passwords [SQL Server replication]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ActiveX controls [SQL Server replication]
 ms.assetid: 8a5e74be-4992-4f17-b20c-c3dce8f49329
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1710220edea8623b0e1cb9ca61cd179461b14423
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1aa132e53e3d3328863c8f30fc86277fc6b394ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200684"
 ---
 # <a name="other-replication-upgrade-issues"></a>Другие проблемы при обновлении репликации
   В данном разделе описываются некоторые проблемы, которые могут возникнуть при обновлении, но не затронуты помощником по обновлению.  
@@ -53,11 +53,11 @@ ms.locfileid: "36098792"
   
 -   Все элементы управления ActiveX помечаются как небезопасные для выполнения скриптов и инициализации.  
   
--   Удален элемент управления ActiveX моментальными снимками SQL. Создавать и управлять моментальными снимками можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или программно посредством хранимых процедур репликации. Дополнительные сведения см. в разделах «как: Создание и применение исходного моментального снимка ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])» и «как: создать исходный моментальный снимок (Программирование репликации Transact-SQL)» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации.  
+-   Удален элемент управления ActiveX моментальными снимками SQL. Создавать и управлять моментальными снимками можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или программно посредством хранимых процедур репликации. Дополнительные сведения см. в разделах «как: Создание и применение исходного моментального снимка ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])» и «как: Создание исходного моментального снимка (Программирование репликации Transact-SQL)» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 -   Элементы управления ActiveX распространителя и слияния стали устаревшими. Аналогичная функциональность обеспечивается для приложений с управляемым кодом с помощью объектов RMO. Дополнительные сведения см. в разделе «Синхронизация подписок (программирование объектов RMO)» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также  
- [Проблемы обновления репликации](../../../2014/sql-server/install/replication-upgrade-issues.md)  
+ [Проблемы репликации при обновлении](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
   

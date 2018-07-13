@@ -1,5 +1,5 @@
 ---
-title: Блокирует элемент (ASSL) | Документы Microsoft
+title: Блокирует элемент (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Blocks element
 ms.assetid: d6fd4e6b-b5bd-43cd-9c28-48af57cf977c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf944cc053e7a8c32efec50d10f6cc176942cce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2776ea261c26bd8c53d3f78ba29231823bb659d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161325"
 ---
 # <a name="blocks-element-assl"></a>Элемент Blocks (ASSL)
-  Содержит коллекцию блоков двоичных данных, которые представляют двоичное содержимое [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) элемента.  
+  Содержит коллекцию блоков двоичных данных, которые представляют двоичное содержимое [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -61,10 +61,10 @@ ms.locfileid: "36098987"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[Данные](../objects/data-element-assl.md) типа [DataBlock](../data-type/datablock-data-type-assl.md)|  
-|Дочерние элементы|[блок](../objects/block-element-assl.md)|  
+|Дочерние элементы|[Блок](../objects/block-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `Blocks` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
+ Элемент, соответствующий родителю параметра `Blocks` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент Assembly &#40;ASSL&#41;](../objects/assembly-element-assl.md)   

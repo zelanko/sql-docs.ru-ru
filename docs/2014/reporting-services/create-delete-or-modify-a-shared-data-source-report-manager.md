@@ -1,5 +1,5 @@
 ---
-title: Создать, удалить или изменить общий источник данных (диспетчер отчетов) | Документы Microsoft
+title: Создание, удаление и изменение общего источника данных (диспетчер отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
 - removing shared data sources
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
 caps.latest.revision: 47
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0f5f9b5397d1f50e460f4f8f483daa7a9b3ef23f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e48edf78d8b0a73c01871b47ac24fa1f0bf8babb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202694"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Создание, удаление или изменение общего источника данных (диспетчер отчетов)
   Общий источник данных определяет свойства соединения с источником данных. Если имеется источник данных, который используется многими отчетами, моделями или управляемыми данными подписками, можно создать общий источник данных, чтобы исключить дополнительные затраты на обслуживание одних и тех же сведений о соединении в разных местах.  
@@ -51,7 +51,7 @@ ms.locfileid: "36098351"
   
 7.  В поле **Строка подключения**укажите строку соединения, которую сервер отчетов будет использовать для подключения к источнику данных. Не рекомендуется указывать в строке соединения учетные данные.  
   
-     В следующем примере строки подключения для подключения к локальной [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных:  
+     Следующий пример иллюстрирует строку подключения для подключения к локальной [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  

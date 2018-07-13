@@ -1,5 +1,5 @@
 ---
-title: Тип данных ReportAction (ASSL) | Документы Microsoft
+title: Тип данных ReportAction (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReportAction data type
 ms.assetid: b22f0d52-ed3a-4239-840e-0eaf172d7276
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c2c5140f3d2723f0456b007bc9228c5f87bbaa6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bacb34e6a57126048253a5292fe19627838d21e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176401"
 ---
 # <a name="reportaction-data-type-assl"></a>Тип данных ReportAction (ASSL)
   Определяет производный тип данных, представляющий действие, создающее [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] отчета.  
@@ -66,9 +66,9 @@ ms.locfileid: "36098982"
 ## <a name="remarks"></a>Примечания  
  Сервер отчетов отвечает на запросы с URL-адресами для отчетов. Действие по созданию отчета определяется с типом *Report*. Ресурсы и параметры отправляются на сервер при создании действия. Сервер представляет действие как действие типа «набор строк».  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.ReportAction>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.ReportAction>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

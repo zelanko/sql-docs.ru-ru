@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.newaglistener.general.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 caps.latest.revision: 50
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 2594ecdb53df53413f3851203ae110c1de754dd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ae14ea283a7558b854481f435d6c9a62e5b51e52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225904"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Создание или настройка прослушивателя группы доступности (SQL Server)
   В этом разделе описывается создание или настройка одного *прослушивателя группы доступности* для группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -164,7 +163,7 @@ ms.locfileid: "36098267"
      `New-SqlAvailabilityGroupListener`  
      Создает прослушиватель группы доступности и привязывает его к существующей группе доступности.  
   
-     Например, следующая `New-SqlAvailabilityGroupListener` команда создает прослушиватель группы доступности с именем `MyListener` для группы доступности `MyAg`. Этот прослушиватель будет использовать адрес IPv4, переданный `-StaticIp` параметра, как его виртуальный IP-адрес.  
+     Например, следующая `New-SqlAvailabilityGroupListener` команда создает прослушиватель группы доступности с именем `MyListener` для группы доступности `MyAg`. Этот прослушиватель будет использовать адрес IPv4, переданный в `-StaticIp` параметра его виртуального IP-адреса.  
   
     ```  
     New-SqlAvailabilityGroupListener -Name MyListener `   
@@ -207,14 +206,14 @@ ms.locfileid: "36098267"
 ###  <a name="ADQuotas"></a> Ошибка создания нового прослушивателя группы доступности из-за квот Active Directory  
  Создание нового прослушивателя группы доступности может завершиться неудачей в случае превышения квоты Active Directory для учетной записи участвующего узла кластера.  Дополнительные сведения см. в следующих статьях:  
   
--   [Гиперссылка "http://support.microsoft.com/kb/307532" Устранение неполадок с учетной записью службы кластеров, если она изменяет объекты компьютеров](http://support.microsoft.com/kb/307532)  
+-   [HYPERLINK "http://support.microsoft.com/kb/307532" Устранение неполадок с учетной записью службы кластеров, если она изменяет объекты компьютеров](http://support.microsoft.com/kb/307532)  
   
--   [Гиперссылка "http://technet.microsoft.com/library/cc904295(WS.10).aspx" квоты Active Directory](http://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
+-   [HYPERLINK "http://technet.microsoft.com/library/cc904295(WS.10).aspx" квоты Active Directory](http://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. Действия после создания прослушивателя группы доступности  
   
 ###  <a name="MultiSubnetFailover"></a> Ключевое слово и связанные функции MultiSubnetFailover  
- `MultiSubnetFailover` новое ключевое слово строки подключения, используется для включения ускоренную отработку отказа группы доступности AlwaysOn и экземпляров отказоустойчивых кластеров AlwaysOn в SQL Server 2012. Если в строке подключения задано условие `MultiSubnetFailover=True` , то включаются следующие три дополнительные функции.  
+ `MultiSubnetFailover` новое ключевое слово строки подключения используется отработку отказа для группы доступности AlwaysOn и экземпляров отказоустойчивых кластеров AlwaysOn в SQL Server 2012. Если в строке подключения задано условие `MultiSubnetFailover=True` , то включаются следующие три дополнительные функции.  
   
 -   Ускоренная отработка отказа для нескольких подсетей с прослушивателем для группы доступности AlwaysOn или экземпляров отказоустойчивых кластеров.  
   
@@ -242,10 +241,10 @@ ms.locfileid: "36098267"
   
      **Преимущества** . Не потребуется увеличивать значение времени ожидания подключения клиента.  
   
-     **Недостатки:** в случае отработки отказа между подсетями восстановление клиента может уйти 15 минут или больше, в зависимости от вашей `HostRecordTTL` параметра и параметра графика междоменной репликации DNS/AD.  
+     **Недостатки:** при переходе между подсетями, восстановление клиента может уйти 15 минут или более в зависимости от вашей `HostRecordTTL` параметре и параметре графика репликации DNS/AD между сайтами.  
   
 ###  <a name="RegisterAllProvidersIP"></a> Параметр RegisterAllProvidersIP  
- При использовании [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], или PowerShell для создания прослушивателя группы доступности точки доступа клиента создается в WSFC с `RegisterAllProvidersIP` которого задано значение 1 (true). Действие этого значения свойства зависит от строки подключения клиента следующим образом.  
+ При использовании [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], или PowerShell для создания прослушивателя группы доступности, точку доступа клиента создается в WSFC с `RegisterAllProvidersIP` свойство, значение 1 (true). Действие этого значения свойства зависит от строки подключения клиента следующим образом.  
   
 -   Строки подключения, устанавливающие свойство `MultiSubnetFailover` в значение true.  
   
@@ -268,7 +267,7 @@ ms.locfileid: "36098267"
     >  При создании прослушивателя группы доступности через кластер WSFC (графический Интерфейс диспетчера отказоустойчивого кластера), `RegisterAllProvidersIP` будет иметь значение 0 (false) по умолчанию.  
   
 ###  <a name="HostRecordTTL"></a> Установка значения HostRecordTTL  
- По умолчанию клиенты кэшируют DNS-записи кластера на 20 минут.  За счет уменьшения `HostRecordTTL`, время жизни (TTL), для кэшированной записи старые клиенты могут подключиться быстрее.  Однако уменьшение `HostRecordTTL` установка может также результат увеличить объем трафика на серверы DN.  
+ По умолчанию клиенты кэшируют DNS-записи кластера на 20 минут.  За счет сокращения `HostRecordTTL`, время жизни (TTL), для кэшированной записи, старые клиенты могут подключиться быстрее.  Однако уменьшение `HostRecordTTL` параметр может также результат увеличить объем трафика на серверы DN.  
   
 ###  <a name="SampleScript"></a> Образец скрипта PowerShell для отключения RegisterAllProvidersIP и сокращения TTL  
  В следующем примере PowerShell показано, как настроить `RegisterAllProvidersIP` и `HostRecordTTL` параметры для ресурса прослушивателя кластера.  Записи DNS будут кэшироваться на 5 минут вместо 20 минут по умолчанию.  Изменение обоих параметров кластера может сократить время подключения к правильному IP-адресу после отработки отказа для клиентов предыдущих версий, которые не могут использовать параметр `MultiSubnetFailover`.  Замените `yourListenerName` на имя изменяемого прослушивателя.  
@@ -331,7 +330,7 @@ Start-ClusterResource yourAGResource
   
 -   [Способ создания нескольких прослушивателей для одной группы доступности](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx)  
   
--   [Блог SQL Server AlwaysOn: Официальный SQL Server AlwaysOn блог](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Блог группы AlwaysOn SQL Server: Официальный SQL Server AlwaysOn блог по](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>См. также  
  [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
