@@ -1,13 +1,11 @@
 ---
-title: bcp_colptr | Документы Microsoft
+title: bcp_colptr | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_colptr function
 ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c0fa867ec82520f1dcc0def040d7a8edf8a2a713
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c0c548a1decd7410cd1cbc8df3ee68126e62ca25
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190434"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413573"
 ---
 # <a name="bcpcolptr"></a>bcp_colptr
   Устанавливает адрес данных переменных программы для текущей копии в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -55,9 +53,9 @@ idxServerCol
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
  *pData*  
- Указатель на копируемые данные. Если тип привязанных данных является типом больших значений (например SQLTEXT или SQLIMAGE), *pData* может иметь значение NULL. Значение NULL *pData* указывает значения длинные данные будут отправляться на SQL Server в виде фрагментов с помощью [bcp_moretext](bcp-moretext.md).  
+ Указатель на копируемые данные. Если тип привязанных данных является типом больших значений (например SQLTEXT или SQLIMAGE), *pData* может иметь значение NULL. Значение NULL *pData* означает данные большого будет отправлено в SQL Server в виде фрагментов с помощью [bcp_moretext](bcp-moretext.md).  
   
- Если *pData* имеет значение NULL, а столбец соответствующий привязанному полю не является типом больших значений **bcp_colptr** завершается ошибкой.  
+ Если *pData* имеет значение NULL и столбец соответствующий привязанному полю не является типом больших значений **bcp_colptr** завершается ошибкой.  
   
  Дополнительные сведения о типах больших значений см. в разделе [bcp_bind](bcp-bind.md)**.**  
   
@@ -68,11 +66,11 @@ idxServerCol
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Примечания  
- **Bcp_colptr** функция позволяет изменять адрес источника данных для конкретного столбца при копировании данных в SQL Server с [bcp_sendrow](bcp-sendrow.md).  
+ **Bcp_colptr** функция позволяет изменять адрес источника данных для определенного столбца, при копировании данных в SQL Server с [bcp_sendrow](bcp-sendrow.md).  
   
- Изначально указатель на пользовательские данные устанавливается вызовом **bcp_bind**. Если адрес данных переменных программы изменяется между вызовами **bcp_sendrow**, можно вызвать **bcp_colptr** Чтобы сбросить указатель на данные. При следующем вызове **bcp_sendrow** отправляет данные при помощи вызова **bcp_colptr**.  
+ Изначально указатель на пользовательские данные устанавливается вызовом **bcp_bind**. Если адрес данных переменных программы изменяется между вызовами **bcp_sendrow**, можно вызвать **bcp_colptr** Чтобы сбросить указатель на данные. Следующий вызов **bcp_sendrow** отправляет данные путем вызова **bcp_colptr**.  
   
- Должен быть выполнен отдельный **bcp_colptr** вызова для каждого столбца в таблице, адреса данных которого нужно изменить.  
+ Должен быть отдельный **bcp_colptr** вызова для каждого столбца в таблице, адреса данных которого нужно изменить.  
   
 ## <a name="see-also"></a>См. также  
  [Функции массового копирования](sql-server-driver-extensions-bulk-copy-functions.md)  

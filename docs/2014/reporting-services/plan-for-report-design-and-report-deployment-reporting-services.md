@@ -1,5 +1,5 @@
 ---
-title: Планирование создания отчетов и развертывания отчетов (Reporting Services 2014) | Документы Microsoft
+title: Планирование создания отчетов и развертывания отчетов (Reporting Services 2014) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 42d95afee84fa57c6ad4cb9562be44820b228814
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5bd53bceaae8b1a898aecf94cc05818653498904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194854"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Запланируйте создание и развертывание отчетов (службы Reporting Services 2014)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляет несколько подходов для разработки и развертывания отчетов. Используйте приведенную в этом разделе информацию для планирования среды создания отчетов и сервера отчетов, которые будут работать вместе. В этом разделе приводятся общие сведения о поддержке определения отчетов компонентами служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Определение отчета — это XML-файл, написанный на языке определения отчетов (RDL) или на языке определения отчетов для клиентов (RDLC). Каждое определение отчета соответствует определенной версии схемы, указанной в начале файла.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] обеспечивают несколько способов разработки и развертывания отчетов. Используйте приведенную в этом разделе информацию для планирования среды создания отчетов и сервера отчетов, которые будут работать вместе. В этом разделе приводятся общие сведения о поддержке определения отчетов компонентами служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Определение отчета — это XML-файл, написанный на языке определения отчетов (RDL) или на языке определения отчетов для клиентов (RDLC). Каждое определение отчета соответствует определенной версии схемы, указанной в начале файла.  
   
  RDL-файлы разрабатываются в конструкторе отчетов среды [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] и в построителе отчетов 3.0. RDLC-файлы разрабатываются с использованием элементов управления, включенных в среду [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
  В этом разделе:  
   
--   [Версия схемы языка определения Отчетов](#bkmk_rdl_schema_versions)  
+-   [Версии RDL-схем](#bkmk_rdl_schema_versions)  
   
 -   [Сервер отчетов и поддержка RDL-схемы](#bkmk_report_server_rdl_schema_support)  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36191574"
 -   [Добавление и настройка элементов управления ReportViewer](http://msdn.microsoft.com/library/ms252104.aspx)  
   
 ## <a name="see-also"></a>См. также  
- [Отчеты, элементы отчета и определений отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Отчеты, элементы отчетов и определения отчетов &#40;построитель отчетов и службы SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Инструментальные средства служб Reporting Services](tools/reporting-services-tools.md)   
  [Язык определения отчетов (службы SSRS)](reports/report-definition-language-ssrs.md)  
   

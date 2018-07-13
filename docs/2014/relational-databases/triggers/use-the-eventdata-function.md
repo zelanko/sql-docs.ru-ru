@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ddl
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 610822ec0eb896180ebfffa40d53198749df0428
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: e45ee2308f7f399c08053f8ff4cd6b862b3978df
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180004"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427603"
 ---
 # <a name="use-the-eventdata-function"></a>Использование функции EVENTDATA
   Функция EVENTDATA позволяет получить сведения о событии, которое привело к срабатыванию триггера DDL. Эта функция возвращает значение типа `xml`. XML-схема содержит следующие сведения:  
@@ -53,7 +51,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- Инструкция `EVENTDATA()` в триггере DDL захватывает текст инструкции `CREATE TABLE` , что является недопустимым. Это достигается путем выполнения запроса XQuery к `xml` данных, сформированных функцией EVENTDATA и получения \<CommandText > элемент. Дополнительные сведения см. в статье [Справочник по языку XQuery (SQL Server)](/sql/xquery/xquery-language-reference-sql-server).  
+ Инструкция `EVENTDATA()` в триггере DDL захватывает текст инструкции `CREATE TABLE` , что является недопустимым. Это достигается с помощью инструкции XQuery, применяемой `xml` , порожденным функцией EVENTDATA и получения \<CommandText > элемента. Дополнительные сведения см. в статье [Справочник по языку XQuery (SQL Server)](/sql/xquery/xquery-language-reference-sql-server).  
   
 > [!CAUTION]  
 >  Функция EVENTDATA захватывает данные событий CREATE_SCHEMA, а также элемента <schema_element> соответствующего определения CREATE SCHEMA, если таковые существуют. Кроме этого, функция EVENTDATA распознает определение <schema_element> как отдельное событие. Таким образом, триггер DDL, созданный для события CREATE_SCHEMA и для события, представленного данными <schema_element> определения CREATE SCHEMA, может дважды вернуть одни и те же сведения о событии (например, данные `TSQLCommand`). Допустим, для событий CREATE_SCHEMA и CREATE_TABLE создан триггер DDL и выполняется следующий пакет:  
@@ -99,7 +97,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
 -   инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] , вызвавшая данное событие.  
   
- Опять же, двух последних элементах регистрируются путем выполнения запроса XQuery для `xml` данных, сформированных функцией EVENTDATA.  
+ Опять же, двух последних элементах регистрируются путем выполнения запроса XQuery к `xml` , порожденным функцией EVENTDATA.  
   
 ```  
 USE AdventureWorks2012;  
@@ -129,7 +127,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Для получения сведения о событиях в запросе XQuery вместо метода `value()` рекомендуется использовать метод `query()`. `query()` Метод возвращает XML-данные, содержащие символ возврата каретки и перевода строки (CRLF) экземпляров в выходных данных, пока `value()` метод отображает эти СИМВОЛЫ в выходных данных.  
+>  Для получения сведения о событиях в запросе XQuery вместо метода `value()` рекомендуется использовать метод `query()`. `query()` Метод возвращает XML и экранируются символы возврата каретки и перевода строки (CRLF) экземпляров в выходных данных, хотя `value()` метод отображает эти СИМВОЛЫ в выходных данных.  
   
  Аналогичный пример триггера DDL предоставляется вместе с образцом базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Для его получения перейдите в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в папку с триггерами базы данных, Эта папка находится в папке **Programmability** базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Щелкните правой кнопкой мыши элемент **ddlDatabseTriggerLog** и выберите команду **Создать скрипт для триггера базы данных**. По умолчанию DDL-триггер **ddlDatabseTriggerLog** заблокирован.  
   

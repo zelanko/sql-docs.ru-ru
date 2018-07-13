@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], null values
 - bulk importing [SQL Server], default values
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7840877066f5f941050d96c3274ab7bf6698326c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f99b040dc2a2caa0b7df7847760e978fef010fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258780"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)
   При импорте данных в таблицу команда **bcp** и инструкция BULK INSERT используют значения по умолчанию, которые определены для столбцов таблицы. Например, если поле в файле данных имеет значение NULL, вместо него загружается значение по умолчанию соответствующего столбца. И команда **bcp**, и инструкция BULK INSERT позволяют пользователю указать, следует ли оставлять значения NULL.  
@@ -86,7 +85,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |**bcp**|`-k`|Параметр|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|Аргумент|  
   
- <sup>1</sup> для инструкции BULK INSERT, если значения по умолчанию недоступны, столбец таблицы должен быть определен допустимы значения null.  
+ <sup>1</sup> для инструкции BULK INSERT, если значения по умолчанию могут быть недоступны, столбец в таблице должен быть определен допустимы значения null.  
   
 > [!NOTE]  
 >  Эти квалификаторы отключают проверку определений DEFAULT для таблицы командами массового импорта. Однако для одновременно выполняемых инструкций INSERT определения DEFAULT требуются.  
@@ -103,7 +102,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- Для вставки»`NULL`«вместо «»`Default value of Col2`«, необходимо использовать `-k` или параметр KEEPNULL, как показано в следующем **bcp** и примеры инструкции BULK INSERT.  
+ Для вставки "`NULL`«вместо «»`Default value of Col2`«, необходимо использовать `-k` или параметр KEEPNULL, как показано в следующем **bcp** и примеры BULK INSERT.  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>Сохранение значений NULL при работе с командой bcp  
  Следующий пример демонстрирует, как сохранить значения NULL при использовании команды **bcp**. Команда **bcp** поддерживает следующие параметры.  

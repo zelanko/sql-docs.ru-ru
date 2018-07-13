@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4b72bc48b6e9a4a7b7e52215ed9ef9b7b5ca2c2b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4bb8b841b4835d74eb37ff531f21b4942cc32738
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278480"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>Установка минимума и максимума на датчике (построитель отчетов и службы SSRS)
   В отличие от диаграммы, где определяется несколько групп, датчик выводит только одно значение. Поскольку построитель отчетов и конструктор отчетов определяют контекст или относительную значимость значения, отображаемого на датчике, необходимо определить минимум и максимум шкалы. Например, если значения данных располагаются в диапазоне от 0 до 10, в качестве минимума нужно установить 0, а в качестве максимума — 10. Значения интервала вычисляются автоматически на основе минимального и максимального значений. По умолчанию значением минимума является 0, а значением максимума — 100, но это произвольное значение, которое нужно изменить. Приложение не вычисляет значения в виде процентов.  

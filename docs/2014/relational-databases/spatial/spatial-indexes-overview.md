@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 99c12dce1bcab99ae5e4d65bf3ccc6d637b8154c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e21d0142212541ff41bef6ba76f8e274235b86a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194974"
 ---
 # <a name="spatial-indexes-overview"></a>Общие сведения о пространственных индексах
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает пространственные данные и пространственные индексы. *Пространственный индекс* представляет собой тип расширенного индекса, позволяющий индексировать пространственные столбцы. Пространственный столбец представляет собой столбец таблицы, в котором содержатся данные пространственного типа, например `geometry` или `geography`.  
@@ -103,7 +103,7 @@ ms.locfileid: "36194237"
   
  Например, рассмотрим предыдущий рисунок, где восьмиугольник полностью помещается в ячейку 15 сетки уровня 1. На этом рисунке для ячейки 15 была проведена тесселяция, которая разбила восьмиугольник на девять ячеек уровня 2. На рисунке предполагается, что ограничение ячеек на объект равно 9 или больше. Однако, если бы ограничение ячеек на объект равнялось 8 или меньше, то для ячейки 15 тесселяция бы не проводилась и для объекта считалась бы только ячейка 15.  
   
- По умолчанию ограничение ячеек на объект равно 16, что обеспечивает разумный компромисс между охватом и точностью для большинства пространственных индексов. Тем не менее [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкция поддерживает CELLS_PER_OBJECT`=`*n* предложение, которое позволяет указывать ограничение ячеек на объект от 1 до 8192 включительно.  
+ По умолчанию ограничение ячеек на объект равно 16, что обеспечивает разумный компромисс между охватом и точностью для большинства пространственных индексов. Тем не менее [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкция поддерживает CELLS_PER_OBJECT`=`*n* предложение, которое позволяет ограничить количество ячеек на объект от 1 до 8192 включительно.  
   
 > [!NOTE]  
 >  Параметр **cells_per_object** пространственного индекса можно найти в представлении каталога [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) .  
@@ -120,7 +120,7 @@ ms.locfileid: "36194237"
   
 -   *Тесселяции сетки геометрических объектов*, который представляет собой схему для `geometry` тип данных.  
   
--   *Тесселяция сетки географических объектов*, который применяется к столбцам `geography` тип данных.  
+-   *Тесселяция сетки географических объектов*, которая применяется к столбцам из `geography` тип данных.  
   
 > [!NOTE]  
 >  Параметр **tessellation_scheme** пространственного индекса можно найти в представлении каталога [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) .  
@@ -226,7 +226,7 @@ ms.locfileid: "36194237"
 -   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *номер*  
   
 ### <a name="queries-that-use-spatial-indexes"></a>Запросы, использующие пространственные индексы  
- Пространственные индексы поддерживаются только в запросах, содержащих оператор пространственного индекса в `WHERE` предложения. Пример синтаксиса.  
+ Пространственные индексы поддерживаются только в запросах, содержащих оператор пространственного индекса в `WHERE` предложение. Пример синтаксиса.  
   
 ```  
 [spatial object].SpatialMethod([reference spatial object]) [ = | < ] [const literal or variable]  

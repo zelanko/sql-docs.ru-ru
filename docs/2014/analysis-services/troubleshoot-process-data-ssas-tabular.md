@@ -1,5 +1,5 @@
 ---
-title: Устранение неполадок в данных процесса (табличные службы SSAS) | Документы Microsoft
+title: Устранение неполадок обработки данных (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8ddebb4bb6a2e1c3e3d4bc53052ff207d7bb1d40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d066eaa1702d096e7e1d0919c988e6ea6e6bdbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239504"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Устранение неполадок в данных процесса (табличные службы SSAS)
   В этом разделе содержатся сведения об обработке (обновлении) данных модели при создании модели с помощью [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. В этом разделе не представлены сведения об обработке данных в моделях, развернутых на экземпляре сервера служб Analysis Services. Дополнительные сведения см. в статье [Создание скриптов для административных задач в службах Analysis Services](script-administrative-tasks-in-analysis-services.md).  

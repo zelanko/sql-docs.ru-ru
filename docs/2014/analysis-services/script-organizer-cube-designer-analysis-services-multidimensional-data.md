@@ -1,5 +1,5 @@
 ---
-title: Организатор скриптов (вкладка «вычисления», конструктор кубов) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Скрипт Организатор (вкладка «вычисления», конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.scriptorganizerpane.f1
 ms.assetid: 92624ca4-de67-4ebd-aab2-8adb527d327e
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d079ca2d921000390f1d0f66265474febe1f1988
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 82bde6a6773306fb0e90617d82c9198606c3c202
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216114"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Организатор скриптов (вкладка «Вычисления», конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте панель **Организатор скриптов** на вкладке **Вычисления** конструктора кубов, чтобы получить доступ к вычисляемым элементам, именованным наборам и командам скриптов, содержащимся в скрипте куба для определенного куба, а также реорганизовать их.  
@@ -60,8 +60,8 @@ ms.locfileid: "36190304"
  [Панель инструментов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Средства вычисления &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
  [Редактор форм вычисляемых элементов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Редактор формы именованных наборов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Редактор сценариев &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Редактор формы именованного набора &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Редактор скриптов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)   
  [Вычисления &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

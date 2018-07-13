@@ -1,5 +1,5 @@
 ---
-title: Поддерживаемые типы данных | Документы Microsoft
+title: Поддерживаемые типы данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 93c6555c1a8400306d40b2d3a719f280104ef582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3f967b7cf4c20492f7e7d46ad9b8f9a2556042e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195315"
 ---
 # <a name="supported-data-types"></a>Поддерживаемые типы данных
   Следующие типы данных **поддерживаются** для оптимизированных для памяти таблиц и хранимых процедур, скомпилированных в собственном коде.  
@@ -39,7 +39,7 @@ ms.locfileid: "36190758"
 |money|[Типы money и smallmoney (Transact-SQL)](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
 |SMALLMONEY|[Типы money и smallmoney (Transact-SQL)](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
   
- **Строковые типы данных**  
+ **Строковыми типами данных**  
   
 |Тип данных|Дополнительные сведения|  
 |---------------|--------------------------|  
@@ -49,9 +49,9 @@ ms.locfileid: "36190758"
 |nvarchar(n) <sup>1</sup>|[nchar и nvarchar (Transact-SQL)](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
 |sysname|[nchar и nvarchar (Transact-SQL)](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
   
- <sup>1</sup> ограничение равно 8060 байт на строку в целом подсчет (n) в типах переменной длины.  
+ <sup>1</sup> ограничение равно 8060 байт на строку в целом с учетом (n) в типах переменной длины.  
   
- Сведения о поддерживаемых параметрах сортировки см. в разделе [параметры сортировки и кодовые страницы](../../database-engine/collations-and-code-pages.md).  
+ Сведения о поддерживаемых параметрах сортировки см. в разделе [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).  
   
  **Типы данных даты и времени**  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36190758"
 |binary(n)|[binary и varbinary (Transact-SQL)](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
 |varbinary(n) <sup>1</sup>|[binary и varbinary (Transact-SQL)](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
   
- <sup>1</sup> ограничение равно 8060 байт на строку в целом подсчет (n) в типах переменной длины.  
+ <sup>1</sup> ограничение равно 8060 байт на строку в целом с учетом (n) в типах переменной длины.  
   
  **Другие типы данных**  
   

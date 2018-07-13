@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], readable secondary replicas
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: 14
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: ec36639f591beaa3094855d8f42d2bcca3d3073e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f0582293082f6c1ec5b2333575431d2887929afe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228514"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Сведения о доступе клиентского подключения к репликам доступности (SQL Server)
   В группе доступности AlwaysOn можно настроить одну или несколько реплик доступности, подключения к которой могут выполняться в режиме только для чтения, когда они являются вторичными (то есть при работе в качестве вторичной реплики). Каждую реплику доступности можно также настроить так, чтобы она разрешала или исключала соединения только для чтения во время работы под первичной ролью (т. е. во время работы в качестве первичной реплики).  
@@ -57,7 +56,7 @@ ms.locfileid: "36190841"
  Пользовательские соединения не разрешены. Базы данных-получатели недоступны для доступа в режиме чтения. Это поведение по умолчанию во вторичной роли.  
   
  Соединение с намерением только чтения  
- Базы данных-получатели доступны только для соединений, для которых `Application Intent` соединения свойству `ReadOnly` (*соединения с намерением чтения*).  
+ Базы данных-получатели доступны только для соединений, для которых `Application Intent` свойство подключения имеет значение `ReadOnly` (*соединения с намерением чтения*).  
   
  Дополнительные сведения об этом свойстве соединения см. в разделе [Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
@@ -73,7 +72,7 @@ ms.locfileid: "36190841"
  К базам данных-источникам разрешено как соединение в режиме «чтение-запись», так и соединение в режиме «только чтение». Это поведение по умолчанию для первичной роли.  
   
  Разрешены только соединения в режиме «чтение-запись»  
- Когда `Application Intent` соединения свойству **ReadWrite** или не задано, то соединение разрешено. Соединения, для которых `Application Intent` ключевое слово строки подключения имеет значение `ReadOnly` не допускаются. Разрешая соединения только в режиме «чтение-запись», можно предотвратить случаи, когда клиенты по ошибке подключают к первичной реплике рабочую нагрузку с намерением чтения.  
+ Когда `Application Intent` свойство подключения имеет значение **ReadWrite** либо не задано, то соединение разрешено. Соединения, для которых `Application Intent` ключевое слово строки подключения имеет значение `ReadOnly` не допускаются. Разрешая соединения только в режиме «чтение-запись», можно предотвратить случаи, когда клиенты по ошибке подключают к первичной реплике рабочую нагрузку с намерением чтения.  
   
  Дополнительные сведения об этом свойстве соединения см. в разделе [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -122,9 +121,9 @@ ms.locfileid: "36190841"
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for высокого уровня доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Блог SQL Server AlwaysOn: Официальный блог SQL Server AlwaysOn](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Блог группы AlwaysOn SQL Server: Официальный блог SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>См. также  
  [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

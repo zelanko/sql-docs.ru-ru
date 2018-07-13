@@ -1,5 +1,5 @@
 ---
-title: Редактор диспетчера соединений с кэшем | Документы Microsoft
+title: Редактор диспетчера соединений с кэшем | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7ec4524cebca8f60b64ee97124b5ad7524b4a47d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c777c26de51c9e66244ce9be1931ea40da33a29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241134"
 ---
 # <a name="cache-connection-manager-editor"></a>Редактор диспетчера соединений с кэшем
   Диспетчер соединений с кэшем читает эталонный набор данных из преобразования кэша или из файла кэша (CAW) и может сохранить эти данные в файле кэша. Данные всегда сохраняются в памяти.  
@@ -35,7 +35,7 @@ ms.locfileid: "36188731"
   
 -   [Вкладка "Общие"](#generaltab)  
   
--   [Вкладка «столбцы»](#columnstab)  
+-   [Вкладка "столбцы"](#columnstab)  
   
  Дополнительные сведения о диспетчере соединений с кэшем см. в разделе [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
@@ -91,16 +91,16 @@ ms.locfileid: "36188731"
  Задает тип данных столбца.  
   
  `Length`  
- Указывает тип данных столбца. Если применим к типу данных, можно обновить `Length`.  
+ Указывает тип данных столбца. Применимо к типу данных, можно изменить, если `Length`.  
   
  `Precision`  
- Задает точность для определенных типов данных столбца. Точность представляет собой количество цифр в числе. Если применим к типу данных, можно обновить `Precision`.  
+ Задает точность для определенных типов данных столбца. Точность представляет собой количество цифр в числе. Применимо к типу данных, можно изменить, если `Precision`.  
   
  `Scale`  
- Задает масштаб для определенных типов данных столбца. Масштаб представляет собой количество цифр справа от десятичной запятой в числе. Если применим к типу данных, можно обновить `Scale`.  
+ Задает масштаб для определенных типов данных столбца. Масштаб представляет собой количество цифр справа от десятичной запятой в числе. Применимо к типу данных, можно изменить, если `Scale`.  
   
  `Code Page`  
- Задает кодовую страницу для столбца этого типа. Если применим к типу данных, можно обновить `Code Page`.  
+ Задает кодовую страницу для столбца этого типа. Применимо к типу данных, можно изменить, если `Code Page`.  
   
 ## <a name="see-also"></a>См. также  
  [Преобразование "Уточняющий запрос"](data-flow/transformations/lookup-transformation.md)  

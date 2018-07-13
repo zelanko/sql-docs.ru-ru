@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразования «скрипт» (страница «скрипт») | Документы Microsoft
+title: Редактор преобразования скриптов (страница «скрипт») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.script.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a2f5e41abd5d54aa54a2fbff0bcd8e57720a163e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f620afb4ab4e32776d36ad5a1f37fd6ad28f3644
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217654"
 ---
 # <a name="script-transformation-editor-script-page"></a>Редактор преобразования «Скрипт» (страница «Скрипт»)
   Используйте вкладку **Скрипт** в диалоговом окне **Редактор преобразования «Скрипт»** для указания скрипта и связанных с ним свойств.  
@@ -49,11 +49,11 @@ ms.locfileid: "36189832"
  Чтобы создать или изменить скрипт, воспользуйтесь набором средств [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] для работы с приложениями.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Выбор типа компонента скрипта](../../2014/integration-services/select-script-component-type.md)   
- [Редактор преобразования «скрипт» &#40;ввода страница «столбцы»&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [Редактор преобразования «скрипт» &#40;получает на входе и выводит страницу&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [Редактор преобразования «скрипт» &#40;страница «Диспетчеры соединений»&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [Редактор преобразования "скрипт" &#40;ввода страница "столбцы"&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [Редактор преобразования "скрипт" &#40;входных и выходных данных страницы&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Редактор преобразования "скрипт" &#40;страница «Диспетчеры соединений»&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [Дополнительные примеры компонента скрипта](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

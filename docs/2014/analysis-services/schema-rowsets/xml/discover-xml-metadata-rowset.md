@@ -1,5 +1,5 @@
 ---
-title: Набор строк DISCOVER_XML_METADATA | Документы Microsoft
+title: Набор строк DISCOVER_XML_METADATA | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DISCOVER_XML_METADATA rowset
 ms.assetid: 0befd026-db1b-43ac-b0e6-734abb56a4b1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4452408b36fe50300277d0d0f8e076357403539f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 616e7c06087fff3d2c2e0388ba44a3e30b200e5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214014"
 ---
 # <a name="discoverxmlmetadata-rowset"></a>Набор строк DISCOVER_XML_METADATA
   Возвращает XML-документ с описанием запрошенного объекта. Возвращаемый набор строк всегда состоит из одной строки и одного столбца.  
   
- При вызове метода [Discover](../../xmla/xml-elements-methods-discover.md) метод с `DISCOVER_XML_METATDATA` значения перечисления в [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) элемент, `Discover` возвращает `DISCOVER_XML_METATDATA` набора строк.  
+ При вызове метода [Discover](../../xmla/xml-elements-methods-discover.md) метод с `DISCOVER_XML_METATDATA` значение перечисления в [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) элемент, `Discover` возвращает метод `DISCOVER_XML_METATDATA` набора строк.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк `DISCOVER_XML_METADATA` содержит следующие столбцы.  
@@ -73,7 +73,7 @@ ms.locfileid: "36193461"
 |`DataSourcePermissionID`|`DBTYPE_WSTR`|Необязательный параметр.|  
 |`ObjectExpansion`|`DBTYPE_WSTR`|Необязательный параметр.|  
   
- Ограничения, `ObjectExpansion`, доступных для каждого основного объекта служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. В клиенте ограничения обычно используются для описания объектов OLAP, для которых должен быть возвращен код на языке DDL, а ограничение `ObjectExpansion` служит для определения степени развертывания в возвращаемом коде на языке DDL. Следующая таблица указывает, может ли значение перечисления для [Alter элемент &#40;XMLA&#41; ](../../xmla/xml-elements-commands/alter-element-xmla.md) команд.  
+ Ограничение `ObjectExpansion`, доступна для каждого основного объекта служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. В клиенте ограничения обычно используются для описания объектов OLAP, для которых должен быть возвращен код на языке DDL, а ограничение `ObjectExpansion` служит для определения степени развертывания в возвращаемом коде на языке DDL. Следующая таблица указывает, может ли значение перечисления для [Alter элемент &#40;XMLA&#41; ](../../xmla/xml-elements-commands/alter-element-xmla.md) команды.  
   
 |Значение перечисления|Описание|  
 |-----------------------|-----------------|  

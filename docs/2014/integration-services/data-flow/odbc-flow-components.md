@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aa28260303bc7be87ac166ce3e22aa55c32a2a0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e13fa57378ac9dac263cb89d48da84b94739a2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213674"
 ---
 # <a name="odbc-flow-components"></a>Компоненты потока ODBC
   Этот раздел содержит описание основных понятий, необходимых для создания потока данных ODBC с использованием [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
@@ -114,8 +114,8 @@ ms.locfileid: "36190580"
 |SQL_DOUBLE|DT_R8|  
 |SQL_FLOAT|DT_R8|  
 |SQL_REAL|DT_R4|  
-|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Числовой тип данных сопоставляется с DT_NUMERIC, если P больше или равно 38 и S больше или равно 0 и S меньше или равно P. Числовой тип данных сопоставляется с DT_R8, если верно хотя бы одно из следующих:<br /><br />Точность больше 38<br /><br />Масштаб меньше нуля<br /><br />Масштаб больше 38<br /><br />Масштаб больше точности<br /><br /><br /><br />Обратите внимание, что числовой тип данных сопоставляется с DT_CY, если он объявлен как тип данных money.|  
-|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Тип данных decimal сопоставляется с DT_NUMERIC, если P больше или равно 38 и S больше или равно 0 и S меньше или равно P. Тип данных decimal сопоставляется с DT_R8, если верно хотя бы одно из следующих:<br /><br />Точность больше 38<br /><br />Масштаб меньше нуля<br /><br />Масштаб больше 38<br /><br />Масштаб больше точности<br /><br />Обратите внимание, что тип данных decimal сопоставляется с DT_CY, если он объявлен как тип данных money.|  
+|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Числовой тип данных сопоставляется DT_NUMERIC, если P больше или равно 38 а S больше или равно 0 и S меньше или равно P. Числовой тип данных сопоставляется DT_R8, если верно хотя бы одно из следующих:<br /><br />Точность больше 38<br /><br />Масштаб меньше нуля<br /><br />Масштаб больше 38<br /><br />Масштаб больше точности<br /><br /><br /><br />Обратите внимание на то, что числовой тип данных сопоставляется DT_CY если он объявлен как тип данных money.|  
+|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Тип данных decimal сопоставляется DT_NUMERIC, если P больше или равно 38 а S больше или равно 0 и S меньше или равно P. Тип данных decimal сопоставляется DT_R8, если верно хотя бы одно из следующих:<br /><br />Точность больше 38<br /><br />Масштаб меньше нуля<br /><br />Масштаб больше 38<br /><br />Масштаб больше точности<br /><br />Обратите внимание на то, что тип данных decimal сопоставляется DT_CY если он объявлен как тип данных money.|  
 |SQL_DATE<br /><br />SQL_TYPE_DATE|DT_DBDATE|  
 |SQL_TIME<br /><br />SQL_TYPE_TIME|DT_DBTIME|  
 |SQL_TIMESTAMP<br /><br />SQL_TYPE_TIMESTAMP|DT_DBTIMESTAMP<br /><br />DT_DBTIMESTAMP2|Типы данных SQL_TIMESTAMP сопоставляются с DT_DBTIMESTAMP2, если масштаб больше 3. Во всех прочих случаях они сопоставляются с DT_DBTIMESTAMP.|  

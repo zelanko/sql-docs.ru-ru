@@ -1,5 +1,5 @@
 ---
-title: Использование определяемых пользователем таблиц | Документы Microsoft
+title: Использование определяемых пользователем таблиц | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - user-defined tables [SQL Server]
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 261414ecd50306f687abcc88963658aec2f124fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 611985a99822321092942c1e9de806e24c57f09b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192420"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206794"
 ---
 # <a name="using-user-defined-tables"></a>Использование определяемых пользователем таблиц
   В определяемых пользователем таблицах представлены табличные данные. Они используются в качестве параметров при передаче табличных данных в хранимые процедуры или определяемые пользователем функции. Определяемые пользователем таблицы нельзя использовать для представления столбцов в таблице базы данных.  
   
- Объект <xref:Microsoft.SqlServer.Management.Smo.Database> содержит свойство <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>, которое ссылается на объект <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Каждый <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> объекта в этой коллекции есть **столбцы** свойство, которое ссылается на коллекцию <xref:Microsoft.SqlServer.Management.Smo.Column> объекты, которые перечисляются столбцы в определяемой пользователем таблицей. Для добавления столбцов в определяемую пользователем таблицу используется метод Add.  
+ Объект <xref:Microsoft.SqlServer.Management.Smo.Database> содержит свойство <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>, которое ссылается на объект <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Каждый <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> объекта в этой коллекции есть **столбцы** свойство, которое ссылается на коллекцию <xref:Microsoft.SqlServer.Management.Smo.Column> объектов, в которых перечислены столбцы в определяемой пользователем таблицей. Для добавления столбцов в определяемую пользователем таблицу используется метод Add.  
   
  При определении новой определяемой пользователем таблицы с помощью объекта <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> необходимо предоставить столбцы и первичный ключ, основанный на одном из столбцов.  
   

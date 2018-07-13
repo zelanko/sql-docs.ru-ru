@@ -1,5 +1,5 @@
 ---
-title: Тип данных RelationshipEnd (ASSL) | Документы Microsoft
+title: Тип данных RelationshipEnd (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3a974dd4-e1d6-45b2-b8c8-1a914bc13a02
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0f201bd910b9fd7f07b04a9b9f30da659dd32f29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e5afa4e39aef28fec96f473bcbf17b34099a4c57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213964"
 ---
 # <a name="relationshipend-data-type-assl"></a>Тип данных RelationshipEnd (язык ASSL)
   Определяет примитивный тип данных, который представляет элемент связи в связи.  
@@ -55,9 +55,9 @@ ms.locfileid: "36190622"
 |Производные элементы||  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.RelationshipEnd>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.RelationshipEnd>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

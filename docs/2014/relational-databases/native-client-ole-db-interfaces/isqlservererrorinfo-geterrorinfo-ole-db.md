@@ -1,13 +1,11 @@
 ---
-title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Документы Microsoft
+title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - GetErrorInfo method
 ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: eb6b9a2967ac5a0a8ecef4c0fca7cdaea831957f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f33c66d8e521339573e56b78407f0bab67b4b43e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101742"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430103"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
   Возвращает указатель на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSERRORINFO поставщика OLE DB для собственного клиента структуру, содержащую [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения об ошибке.  
@@ -45,20 +43,20 @@ OLECHAR**ppErrorStrings);
  Указатель на структуру SSERRORINFO. Если происходит сбой метода или не [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения, связанные с ошибкой, поставщик не выделяет памяти и гарантирует, что *ppSSErrorInfo* аргумент — указатель null на выходе.  
   
  *ppErrorStrings*[out]  
- Указатель на Юникод-указатель символьной строки. Если происходит сбой метода или не [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения, связанные с ошибкой, поставщик не выделяет памяти и гарантирует, что *ppErrorStrings* аргумент — указатель null на выходе. Освобождение *ppErrorStrings* аргумент с **IMalloc::Free** высвобождаются три отдельных строковых члена возвращенной структуры SSERRORINFO, как память выделяется в блоке.  
+ Указатель на Юникод-указатель символьной строки. Если происходит сбой метода или не [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения, связанные с ошибкой, поставщик не выделяет памяти и гарантирует, что *ppErrorStrings* аргумент — указатель null на выходе. Освобождение *ppErrorStrings* аргумент с **IMalloc::Free** метод освобождает три отдельных строковых члены возвращаемой структуры SSERRORINFO, поскольку память выделяется в блоке.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  S_OK  
  Метод выполнен успешно.  
   
  E_INVALIDARG  
- Либо *ppSSErrorInfo* или *ppErrorStrings* аргумент имеет значение NULL.  
+ Либо *ppSSErrorInfo* или *ppErrorStrings* аргумент имел значение NULL.  
   
  E_OUTOFMEMORY  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента не удалось выделить достаточно памяти для выполнения запроса.  
   
 ## <a name="remarks"></a>Примечания  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента выделяет память для строк SSERRORINFO и olechar, КОТОРЫЕ возвращаются переданными пользователем указателями. Потребитель должен освободить эту память с помощью **IMalloc::Free** метод, когда он больше не требуется доступ к данным ошибки.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента выделяет память для строк SSERRORINFO и olechar, которые ВОЗВРАЩАЮТСЯ переданными пользователем указателями. Потребитель должен освободить эту память с помощью **IMalloc::Free** метод, если он больше не требуется доступ к данным ошибки.  
   
  Структура SSERRORINFO определена следующим образом.  
   
@@ -81,12 +79,12 @@ SSERRORINFO;
 |*pwszMessage*|Сообщение об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это сообщение возвращается через **IErrorInfo::GetDescription** метод.|  
 |*pwszServer*|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], где произошла ошибка.|  
 |*pwszProcedure*|Имя сформировавшей ошибку хранимой процедуры, если эта ошибка произошла в хранимой процедуре; иначе пустая строка.|  
-|*lNative*|Номер ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Номер ошибки идентичен возвращается в *plNativeError* параметр **ISQLErrorInfo::GetSQLInfo** метод.|  
+|*lNative*|Номер ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Номер ошибки идентичен, возвращаемых в *plNativeError* параметр **ISQLErrorInfo::GetSQLInfo** метод.|  
 |*bState*|Состояние ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*bClass*|Степень серьезности ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*wLineNumber*|Если это применимо, строка хранимой процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая сформировала сообщение об ошибке. Если ошибка не связана с процедурой, значение по умолчанию составляет 1.|  
   
- Указатели в структуре ссылаться адреса в строке, возвращенной в *ppErrorStrings* аргумент.  
+ Указатели в структуре ссылаются на адреса в строке, возвращаемой *ppErrorStrings* аргумент.  
   
 ## <a name="see-also"></a>См. также  
  [ISQLServerErrorInfo &#40;OLE DB&#41;](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)   

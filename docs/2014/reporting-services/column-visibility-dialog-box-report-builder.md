@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно «видимость столбца» (построитель отчетов) | Документы Microsoft
+title: Диалоговое окно «видимость столбцов» (построитель отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10127"
 ms.assetid: 0c030cab-6087-45a5-99f0-c7bd693f20a1
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b5fbdc627473f449007af6dadcc73fcc69efc46f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a91788f90fc5fb4e6afddf5a7b7e60c49cbfb49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205024"
 ---
 # <a name="column-visibility-dialog-box-report-builder"></a>Диалоговое окно «Видимость столбцов» (построитель отчетов)
   Используйте диалоговое окно **Видимость столбца** , чтобы отобразить или скрыть выбранный столбец при первом запуске отчета либо назначить другой элемент отчета для переключения видимости столбца.  
@@ -39,7 +39,7 @@ ms.locfileid: "36190161"
  **Отображать или скрывать в зависимости от выражения**  
  Этот параметр используется для изменения исходной видимости с помощью выражения.  
   
- Введите выражение, результатом которого является `Boolean` значение `True` для скрытия элемента и `False` для отображения элемента. Чтобы изменить выражение, нажмите кнопку "Выражение" (*fx*).  
+ Введите выражение, результатом которого является `Boolean` значение `True` элемент скрыт, и `False` для отображения элемента. Чтобы изменить выражение, нажмите кнопку "Выражение" (*fx*).  
   
  **Отображение может переключаться этим элементом отчета**  
  Выберите данный параметр для вывода изображения переключателя, который позволяет пользователю отображать или скрывать данный столбец в средстве просмотра отчетов в формате HTML.  
@@ -49,7 +49,7 @@ ms.locfileid: "36190161"
 ## <a name="see-also"></a>См. также  
  [Примеры выражений (построитель отчетов и службы SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Добавление действия "Развернуть" или "Свернуть" к элементу (построитель отчетов и службы SSRS)](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Образы &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Образы &#40;построитель отчетов и службы SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Диалоговое окно "Свойства изображения" — "Общие" (построитель отчетов и службы SSRS)](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Отчет «журнал» (диспетчер отчетов) | Документы Microsoft
+title: Сообщить о страница "Журнал" (диспетчер отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
 caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c9a696c8b095281633e0d3b631aa773dad9fdb77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e0a3cc0ce4cb29b34ac67d3becfc966217dfb1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196744"
 ---
 # <a name="report-history-page-report-manager"></a>Страница «Журнал отчета» (диспетчер отчетов)
   Используйте страницу «Журнал отчета» для просмотра моментальных снимков ранее сформированных и сохраненных отчетов. В зависимости от параметров, заданных на сервере отчетов, в журнале отчетов могут содержаться только последние моментальные снимки.  
@@ -59,9 +59,9 @@ ms.locfileid: "36190358"
   
 ## <a name="see-also"></a>См. также  
  [Просмотр или удаление журнала отчета &#40;диспетчера отчетов&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
- [Добавить моментальный снимок к журналу отчета &#40;диспетчера отчетов&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Добавление моментального снимка к журналу отчета &#40;диспетчера отчетов&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Страница "Общие свойства", "Отчеты" (диспетчер отчетов)](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
- [Страницы свойства параметров моментального снимка &#40;диспетчера отчетов&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
+ [Страница Свойства параметров моментального снимка &#40;диспетчера отчетов&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
   
   

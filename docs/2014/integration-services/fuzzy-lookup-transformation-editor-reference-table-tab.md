@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразования Нечеткий уточняющий запрос (ссылка вкладка «таблица») | Документы Microsoft
+title: Редактор преобразования Нечеткий уточняющий запрос (вкладка "ссылочная таблица") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptransformation.referencetable.f1
 helpviewer_keywords:
 - Fuzzy Lookup Transformation Editor
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
 caps.latest.revision: 35
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e1ee024a1237916346e6a64dbd21aba208e34deb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78b04c27986224f1974dc35c3a60e02adcbe5483
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217624"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Редактор преобразования «Нечеткий уточняющий запрос» (вкладка «Ссылочная таблица»)
   Вкладка **Ссылочная таблица** в диалоговом окне **Редактор преобразования «Нечеткий уточняющий запрос»** позволяет указать исходную таблицу и индекс поиска. Эталонный источник данных должен быть таблицей в базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -32,7 +32,7 @@ ms.locfileid: "36190279"
 >  Преобразование «Нечеткий уточняющий запрос» создает рабочую копию ссылочной таблицы. В этой рабочей таблице описанные ниже индексы создаются с помощью специальной таблицы, а не обычных индексов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Преобразование не изменяет существующие исходные таблицы, если не выбран параметр **Поддерживать хранимый индекс**. Если параметр выбран, в таблице ссылок создается триггер, который обновляет рабочую таблицу и таблицу индекса уточняющего запроса при изменениях в ссылочной таблице.  
   
 > [!NOTE]  
->  `Exhaustive` И `MaxMemoryUsage` свойства преобразования «Нечеткий уточняющий запрос» недоступны в **Нечеткий уточняющий**, но может быть задано с помощью **расширенный редактор**. Кроме того, значение больше 100 для `MaxOutputMatchesPerInput` могут быть заданы только в **расширенный редактор**. Дополнительные сведения об этих свойствах см. в подразделе «Преобразование "Нечеткий уточняющий запрос"» раздела [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  `Exhaustive` И `MaxMemoryUsage` свойства преобразования «Нечеткий уточняющий запрос» недоступны в **Нечеткий уточняющий**, однако его можно установить с помощью **расширенный редактор**. Кроме того, значение больше 100 для `MaxOutputMatchesPerInput` могут быть заданы только в **расширенный редактор**. Дополнительные сведения об этих свойствах см. в подразделе «Преобразование "Нечеткий уточняющий запрос"» раздела [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Дополнительные сведения о преобразовании «Нечеткий уточняющий запрос» см. в разделе [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
@@ -70,8 +70,8 @@ ms.locfileid: "36190279"
  Выберите из списка ранее созданный индекс уточняющего запроса.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор преобразования "Нечеткий уточняющий запрос" (вкладка "Столбцы")](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [Нечеткий уточняющий &#40;вкладка «Дополнительно»&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
+ [Нечеткий уточняющий &#40;вкладка "Дополнительно"&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

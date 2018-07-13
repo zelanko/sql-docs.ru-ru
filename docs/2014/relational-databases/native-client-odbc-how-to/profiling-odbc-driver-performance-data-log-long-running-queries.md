@@ -1,28 +1,26 @@
 ---
-title: Журнал долго выполняющихся запросов (ODBC) | Документы Microsoft
+title: Журнал длительных запросов (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d4a4867a657773f93c746ccf89a03089cb27ee69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 89e4e854233e0d5b34ea1e4547ae4ade24394619
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101977"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431143"
 ---
 # <a name="log-long-running-queries-odbc"></a>Ведение журналов длительных запросов (ODBC)
   В этом образце демонстрируются параметры ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], относящиеся к драйверу, для долго выполняемых запросов. При запуске этот образец создает файл журнала Odbcqry.log, содержащий список запросов, время выполнения которых превысило интервал, установленный приложением. Этот образец не поддерживается на архитектуре IA64. Этот образец разработан для ODBC версии 3.0 или более поздней.  
@@ -42,13 +40,13 @@ ms.locfileid: "36101977"
   
 5.  В Microsoft SQL Server DSN мастер настройки, перейдите на страницу с **сохранять длительные запросы в файл журнала**.  
   
-6.  Выберите **сохранять длительные запросы в файл журнала**. В текстовое поле введите имя файла журнала для запросов длительного выполнения. При необходимости щелкните **Обзор** для просмотра файловой системы для журнала запросов.  
+6.  Выберите **сохранять длительные запросы в файл журнала**. В текстовое поле введите имя файла журнала для запросов длительного выполнения. При необходимости щелкните **Обзор** чтобы просматривать файловую систему для журнала запросов.  
   
-7.  Задать интервал времени ожидания запроса, в миллисекундах, в **длительность запроса (в миллисекундах)** поле.  
+7.  Задайте интервал времени ожидания запроса, в миллисекундах, в **длительность запроса (в миллисекундах)** поле.  
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Ведение журнала длительно выполняющихся запросов программным образом  
   
-1.  Вызовите [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG и полный путь и имя файла журнала долго выполняющихся запросов. Например:  
+1.  Вызовите [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG и полный путь и имя файла журнала долго выполняющегося запроса. Например:  
   
     ```  
     C:\\Odbcqry.log  
@@ -56,7 +54,7 @@ ms.locfileid: "36101977"
   
 2.  Вызовите [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) с параметром SQL_COPT_SS_PERF_QUERY_INTERVAL и задайте интервал времени ожидания в миллисекундах.  
   
-3.  Вызовите [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) с параметрами SQL_COPT_SS_PERF_QUERY и SQL_PERF_START для начала ведения журнала для длительных запросов.  
+3.  Вызовите [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) с параметрами SQL_COPT_SS_PERF_QUERY и SQL_PERF_START для начала ведения журнала долго выполняющихся запросов.  
   
 4.  Вызовите [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) с параметрами SQL_COPT_SS_PERF_QUERY и SQL_PERF_STOP, чтобы остановить запись в журнал долго выполняющихся запросов.  
   
@@ -221,6 +219,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Разделы руководства по производительности драйвера ODBC профилирование &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
+ [Профилирование разделы руководства по производительности драйвера ODBC &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
   
   

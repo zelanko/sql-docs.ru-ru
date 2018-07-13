@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
 - OPENXML statement, about OPENXML statement
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 166680207dba3a8cb0172d5af59e462d6ac4ab24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a41c723b75d2170c0e991536bda48157c9915425
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228854"
 ---
 # <a name="openxml-sql-server"></a>Инструкция OPENXML (SQL Server)
   Ключевое слово OPENXML языка [!INCLUDE[tsql](../../includes/tsql-md.md)] предоставляет набор строк по XML-документам в памяти, подобный таблице или представлению. OPENXML позволяет получить доступ к XML-данным так, как если бы это был реляционный набор строк. Это делается при помощи представления внутреннего отображения XML-документа в виде набора строк. Записи в наборе строк могут храниться в таблицах базы данных.  
@@ -42,7 +42,7 @@ ms.locfileid: "36190379"
  Чтобы писать запросы к XML-документа с помощью инструкции OPENXML, необходимо сначала вызвать `sp_xml_preparedocument`. Таким образом производится синтаксический анализ XML-документа и возвращается дескриптор для проанализированного документа, готового к использованию. Проанализированный документ является представлением дерева объектной модели документа (DOM) различных узлов в XML-документе. Дескриптор документа передается OPENXML. Затем инструкция OPENXML выдает представление документа в виде набора строк, основываясь на переданных ей аргументах.  
   
 > [!NOTE]  
->  `sp_xml_preparedocument` использует SQL обновленную версию средства синтаксического анализа MSXML, Msxmlsql.dll. Эта версия средства синтаксического анализа MSXML разработана для поддержки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и остается обратно совместимой с версией MSXML 2.6.  
+>  `sp_xml_preparedocument` использует SQL обновленную версию средство синтаксического анализа MSXML, Msxmlsql.dll. Эта версия средства синтаксического анализа MSXML разработана для поддержки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и остается обратно совместимой с версией MSXML 2.6.  
   
  Внутреннее представление XML-документа должно быть удалено из памяти посредством вызова системной хранимой процедуры **sp_xml_removedocument** для освобождения памяти.  
   

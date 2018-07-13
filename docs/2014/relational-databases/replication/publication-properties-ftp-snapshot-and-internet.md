@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.internetsynchronization.f1
 ms.assetid: 8e0198c3-5e4e-418c-9920-78ccbbfc1323
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 994f77e71e3630537021a293a33e79ff3795aa7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 759bce5473161cb2b9c53e17d644ddf0e19e06b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197134"
 ---
 # <a name="publication-properties-ftp-snapshot-and-internet"></a>Свойства публикации, страница «Моментальный снимок — FTP и Интернет»
   Эта страница позволяет:  
   
--   Устанавливать свойства доставки моментального снимка по протоколу FTP. Дополнительные сведения см. в разделе [передачи моментальные снимки через FTP](transfer-snapshots-through-ftp.md) Дополнительные сведения в документации Windows.  
+-   Устанавливать свойства доставки моментального снимка по протоколу FTP. Дополнительные сведения см. в разделе [передачи моментальных снимков через FTP](transfer-snapshots-through-ftp.md) документации Windows.  
   
     > [!NOTE]  
     >  Изменения любых настроек FTP требуют создания нового моментального снимка.  

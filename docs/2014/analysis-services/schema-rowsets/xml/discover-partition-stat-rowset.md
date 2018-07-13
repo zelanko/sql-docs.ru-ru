@@ -1,5 +1,5 @@
 ---
-title: Набор строк DISCOVER_PARTITION_STAT | Документы Microsoft
+title: Набор строк DISCOVER_PARTITION_STAT | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 20d339e2-f47f-437f-94d5-5b00b400356a
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98db8d43f86cc9acaf612da8180498d22e01d037
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6711aa9d7a98fa635694cc76e98cc89507d524ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197814"
 ---
 # <a name="discoverpartitionstat-rowset"></a>Набор строк DISCOVER_PARTITION_STAT
   Возвращает статистику по агрегатам в заданной секции.  

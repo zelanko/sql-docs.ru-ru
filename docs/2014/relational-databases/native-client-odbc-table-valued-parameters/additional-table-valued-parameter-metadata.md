@@ -1,13 +1,11 @@
 ---
-title: Дополнительный параметр табличные метаданные | Документы Microsoft
+title: Дополнительный параметр Table-Valued метаданных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), metadata
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4dbb77a586a08d0a8284a1c79f5ea8a2ef904c4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f28c5baf528a975b987c68e81543932b63dc5761
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101058"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419753"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Дополнительные метаданные возвращающего табличное значение параметра
-  Для получения метаданных возвращающего табличное значение параметра, приложение вызывает SQLProcedureColumns. Для возвращающего табличное значение параметра SQLProcedureColumns возвращает одну строку. Два дополнительных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-определенных столбцов, SS_TYPE_CATALOG_NAME и SS_TYPE_SCHEMA_NAME, были добавлены для предоставления сведений о схеме и каталоге для табличных типов, связанных с параметрами, возвращающих табличные значения. В соответствии со спецификацией ODBC столбцы SS_TYPE_CATALOG_NAME и SS_TYPE_SCHEMA_NAME находятся перед столбцами, зависящими от драйвера, добавленными в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и после всех столбцов, обязательных для ODBC.  
+  Чтобы получить метаданные для возвращающих табличные значения параметра, приложение вызывает SQLProcedureColumns. Для возвращающих табличные значения параметра SQLProcedureColumns возвращает одну строку. Два дополнительных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-определенные столбцы, столбцы SS_TYPE_CATALOG_NAME и SS_TYPE_SCHEMA_NAME, были добавлены для предоставления сведений о схеме и каталоге для табличных типов, связанных с возвращающих табличное значение параметрами. В соответствии со спецификацией ODBC столбцы SS_TYPE_CATALOG_NAME и SS_TYPE_SCHEMA_NAME находятся перед столбцами, зависящими от драйвера, добавленными в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и после всех столбцов, обязательных для ODBC.  
   
  В следующей таблице приводится список столбцов, имеющих отношение к возвращаемым табличное значение параметрам.  
   
@@ -51,9 +49,9 @@ ms.locfileid: "36101058"
   
  Столбцы типа WVarchar в спецификации ODBC определяются как тип Varchar, но в действительности во всех последних драйверах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC возвращаются как WVarchar. Это изменение было сделано, когда к спецификации ODBC 3.5 была добавлена поддержка Юникода, но оно не описано.  
   
- Чтобы получить дополнительные метаданные для возвращающих табличные значения параметров, приложение использует функции каталога SQLColumns и SQLPrimaryKeys. Перед вызовом этих функций для возвращающих табличное значение параметров приложение должно присвоить атрибуту инструкции SQL_SOPT_SS_NAME_SCOPE значение SQL_SS_NAME_SCOPE_TABLE_TYPE. Оно указывает, что приложению требуются метаданные возвращающего табличное значение типа, а не таблицы. Затем приложение передает TYPE_NAME табличное значение параметра как *TableName* параметра. SS_TYPE_CATALOG_NAME и SS_TYPE_SCHEMA_NAME используются с *CatalogName* и *SchemaName* параметров, соответственно, для определения каталога и схемы для возвращающих табличные значения параметра. Когда приложение закончит получать метаданные для возвращающего табличное значение параметра, оно должно вновь присвоить SQL_SOPT_SS_NAME_SCOPE значение по умолчанию SQL_SS_NAME_SCOPE_TABLE.  
+ Чтобы получить дополнительные метаданные для возвращающих табличные значения параметров, приложение использует функции каталога SQLColumns и SQLPrimaryKeys. Перед вызовом этих функций для возвращающих табличное значение параметров приложение должно присвоить атрибуту инструкции SQL_SOPT_SS_NAME_SCOPE значение SQL_SS_NAME_SCOPE_TABLE_TYPE. Оно указывает, что приложению требуются метаданные возвращающего табличное значение типа, а не таблицы. Затем приложение передает TYPE_NAME, возвращающих табличные значения параметра, как *TableName* параметра. Столбцы SS_TYPE_CATALOG_NAME и SS_TYPE_SCHEMA_NAME используются с *CatalogName* и *SchemaName* параметров, соответственно, для определения каталога и схемы для возвращающих табличные значения параметра. Когда приложение закончит получать метаданные для возвращающего табличное значение параметра, оно должно вновь присвоить SQL_SOPT_SS_NAME_SCOPE значение по умолчанию SQL_SS_NAME_SCOPE_TABLE.  
   
- Если SQL_SOPT_SS_NAME_SCOPE имеет значение SQL_SS_NAME_SCOPE_TABLE, то запросы к связанным серверам завершаются ошибкой. Вызовы SQLColumns или SQLPrimaryKeys с каталогом, содержащим компонент сервера завершится ошибкой.  
+ Если SQL_SOPT_SS_NAME_SCOPE имеет значение SQL_SS_NAME_SCOPE_TABLE, то запросы к связанным серверам завершаются ошибкой. Вызов SQLColumns или SQLPrimaryKeys с каталог, содержащий серверный компонент завершается с ошибкой.  
   
 ## <a name="see-also"></a>См. также  
  [Возвращающие табличные значения параметров &#40;ODBC&#41;](table-valued-parameters-odbc.md)  

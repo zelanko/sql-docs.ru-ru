@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 caps.latest.revision: 62
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 62cc927e4beb15666940f30cd063d5618fd2a038
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c21569df7269e7037befbe8fe190c9c84079e51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190573"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209854"
 ---
 # <a name="bulk-insert-task"></a>задача «Массовая вставка»
   Задача «Массовая вставка» обеспечивает наиболее эффективный способ копирования больших объемов данных в таблицу или представление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Предположим, что компания хранит список продуктов объемом в миллион строк в головном компьютере, но система электронной коммерции компании использует для заполнения веб-страниц сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Необходимо обновлять таблицу продуктов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по ночам в соответствии с главным списком продуктов, хранящимся в головном компьютере. Для обновления таблицы список продуктов сохраняется в формате с символами табуляции в качестве разделителей и используется задача «Массовая вставка» для копирования данных напрямую в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -93,11 +93,11 @@ ms.locfileid: "36190573"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Массовая вставка редактор задачи &#40;страница «Общие»&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Массовая вставка редактор задачи &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Массовая вставка редактор задачи &#40;страница «соединение»&#41;](../bulk-insert-task-editor-connection-page.md)  
+-   [Массовая вставка редактор задачи &#40;страница "подключения"&#41;](../bulk-insert-task-editor-connection-page.md)  
   
--   [Массовая вставка редактор задачи &#40;страница «Параметры»&#41;](../bulk-insert-task-editor-options-page.md)  
+-   [Массовая вставка редактор задачи &#40;страница параметров&#41;](../bulk-insert-task-editor-options-page.md)  
   
 -   [Страница "Выражения"](../expressions/expressions-page.md)  
   

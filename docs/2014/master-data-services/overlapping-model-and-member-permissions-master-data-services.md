@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], effective permissions
 - permissions [Master Data Services], model and member overlaps
 - members [Master Data Services], effective permissions
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd9706ee95376500993089a496f216c2fe113b27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 468d23a4bddd0df301d263e6c2fd6e22a167ef27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219684"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Перекрытие разрешений моделей и элементов (службы основных данных)
   Разрешение для элемента может переопределять разрешение для объекта модели. При возникновении перекрытия действует более жесткое разрешение.  
@@ -32,7 +32,7 @@ ms.locfileid: "36192250"
   
 -   **Запретить** переопределяет все остальные разрешения.  
   
--   **Только для чтения** переопределяет **обновление**.  
+-   **Только для чтения** переопределяет **обновления**.  
   
  На следующем рисунке показано, какие разрешения влияют на отдельное значение атрибута, если разрешения для атрибутов отличаются от разрешений для элементов.  
   
@@ -54,20 +54,20 @@ ms.locfileid: "36192250"
   
  На вкладке **Модели** для атрибута Subcategory назначено разрешение **Обновление** .  
   
- На **элементы иерархии** вкладке подкатегории Mountain Bikes в производной иерархии явно назначено **только для чтения** разрешение.  
+ На **элементы иерархии** вкладке узлу подкатегории Mountain Bikes в производной иерархии явно назначается **только для чтения** разрешение.  
   
- Результат: В **Explorer**, у пользователя есть **только для чтения** разрешения для значений атрибута Subcategory всех элементов узла Mountain Bikes. Все остальные элементы и их атрибуты скрыты.  
+ Результат: В **Explorer**, у пользователя есть **только для чтения** разрешение для значений атрибута SubCategory всех элементов узла Mountain Bikes. Все остальные элементы и их атрибуты скрыты.  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
 ## <a name="example-3"></a>Пример 3  
  ![mds_conc_overlap_model_3](../../2014/master-data-services/media/mds-conc-overlap-model-3.gif "mds_conc_overlap_model_3")  
   
- На **моделей** , атрибут «Подкатегория» имеет **только для чтения** назначено разрешение.  
+ На **моделей** вкладке атрибут «Подкатегория» имеет **только для чтения** назначено разрешение.  
   
  На вкладке **Элементы иерархии** узлу подкатегории Mountain Bikes в порожденной иерархии явно назначено разрешение **Обновление** .  
   
- Результат: В **Explorer**, у пользователя есть **только для чтения** разрешения для значений атрибутов. Все остальные элементы и их атрибуты скрыты.  
+ Результат: В **Explorer**, у пользователя есть **только для чтения** разрешение для значений атрибута. Все остальные элементы и их атрибуты скрыты.  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   

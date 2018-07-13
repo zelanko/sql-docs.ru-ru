@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1dfc6b5c-0a93-450f-b5b3-34ae0ca79717
-caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: be4bf5f5887a4cd955513f5e5d717235c96270c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ab13696e7449f4f7b257aa2af6a76ef40492a921
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210434"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>Выбор схемы сочетаний клавиш
   Вместо стандартной схемы сочетаний клавиш среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно настроить [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] на использование схемы сочетаний клавиш, совместимой с [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  
@@ -40,7 +38,7 @@ ms.locfileid: "36190114"
  [Настройка параметров запуска](lesson-1-7-set-the-startup-options.md)  
   
 ## <a name="see-also"></a>См. также  
- [Сочетания клавиш SQL Server Management Studio](../sql-server-management-studio-keyboard-shortcuts.md)   
+ [SQL Server Management Studio сочетания клавиш](../sql-server-management-studio-keyboard-shortcuts.md)   
  [Настройка меню и сочетаний клавиш](../customize-menus-and-shortcut-keys.md)  
   
   

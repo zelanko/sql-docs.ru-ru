@@ -1,5 +1,5 @@
 ---
-title: Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме интеграции с SharePoint (SSRS) | Документы Microsoft
+title: Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме интеграции с SharePoint (SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bd98a2e64ca72e0e9b39328620b88732606e98af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ce1e34688069063cde47849d00497a056c964431
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214734"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint (SSRS)
   Чтобы опубликовать отчеты и связанные с ними элементы в библиотеке SharePoint, можно опубликовать содержимое с помощью таких средств разработки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , как конструктор отчетов, или передать содержимое средствами сайта SharePoint.  
@@ -123,7 +123,7 @@ ms.locfileid: "36190682"
 ### <a name="file-names"></a>Имена файлов  
  Имя файла в URL-адресе элементов отчета должно включать расширение, определяющее тип файла. При публикации элементов отчета из средства разработки отчетов расширение имени файла добавляется автоматически. Если элемент отчета передается в библиотеку SharePoint, необходимо указать расширение файла.  
   
- Если не указать расширение файла для элементов, передаваемых на сайт SharePoint, возникнет ошибка `rsInvalidDataSourceReference`. Имена файлов не могут содержать символы, которые воспринимаются приложениями SharePoint как недопустимые в именах файлов. Не включать следующие символы: # % & *: \< >? / { | }.  
+ Если не указать расширение файла для элементов, передаваемых на сайт SharePoint, возникнет ошибка `rsInvalidDataSourceReference`. Имена файлов не могут содержать символы, которые воспринимаются приложениями SharePoint как недопустимые в именах файлов. Не используйте следующие символы: # % & *: \< >? / { | }.  
   
 ## <a name="differences-between-uploading-and-publishing"></a>Различия между передачей и публикацией  
  Если отчеты и связанные файлы публикуются с помощью конструктора отчетов или построителя отчетов, все файлы перед добавлением проверяются. При передаче отчетов и связанных файлов с помощью действия **Передача** из библиотеки SharePoint никакая проверка не проводится. Является ли файл допустимым, будет неизвестно до тех пор, пока к отчету не будет осуществлен доступ для управления, изменения или запуска.  

@@ -1,13 +1,11 @@
 ---
-title: ISSAbort::Abort (OLE DB) | Документы Microsoft
+title: ISSAbort::Abort (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - Abort method
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0729183a2e5be91d3cdb30eae3ae5990f8398103
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 05673bb90cd0958344a6a12550f15c122489219a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180256"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416293"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
   Отменяет текущий набор строк и любые пакетные команды, ассоциированные с текущей командой.  
@@ -44,7 +42,7 @@ HRESULT Abort(void);
  После того как метод **ISSAbort::Abort** вернет результат S_OK, связанный с ним интерфейс **IMultipleResults** становится непригодным к использованию и вплоть до освобождения в ответ на любые вызовы методов возвращает результат DB_E_CANCELED (кроме методов, определенных для интерфейса **IUnknown** ). Если из интерфейса **IMultipleResults** до вызова метода **Abort** был получен интерфейс **IRowset**, он также входит в непригодное к использованию состояние и в ответ на любые вызовы методов возвращает результат DB_E_CANCELED (кроме методов, определенных для интерфейсов **IUnknown** и **IRowset::ReleaseRows**), пока не будет освобожден успешным вызовом метода **ISSAbort::Abort**.  
   
 > [!NOTE]  
->  Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], если параметр сервера XACT_ABORT имеет значение ON, выполнение **ISSAbort::Abort** завершить работу и откат текущей неявные или явные транзакции, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Более ранние версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прекратят текущих транзакций.  
+>  Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], если сервера XACT_ABORT имеет значение ON, **ISSAbort::Abort** завершит и выполнить откат текущего явного или неявного транзакции при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Более ранние версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прекратят текущих транзакций.  
   
 ## <a name="arguments"></a>Аргументы  
  Нет.  
@@ -60,7 +58,7 @@ HRESULT Abort(void);
  Выполнение пакета не было прервано.  
   
  E_FAIL  
- Произошла ошибка поставщика; Дополнительные сведения, используйте [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) интерфейса.  
+ Произошла ошибка поставщика; Подробные сведения, используйте [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) интерфейс.  
   
  E_UNEXPECTED  
  Непредвиденный вызов метода. Например, объект находится в состоянии зомби, потому что метод **ISSAbort::Abort** уже был вызван.  

@@ -1,5 +1,5 @@
 ---
-title: Элемент MemberUniqueNameStyle (ASSL) | Документы Microsoft
+title: Элемент MemberUniqueNameStyle (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - MemberUniqueNameStyle element
 ms.assetid: f0771c81-0127-4203-9501-ae4f864730fa
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca327bceaddce4c0f7ac1b7a726d321a02cdffc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2448f2f45f76610e9d7298c855086cc74ab0611e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226364"
 ---
 # <a name="memberuniquenamestyle-element-assl"></a>Элемент MemberUniqueNameStyle (ASSL)
-  Определяет уникальных имен для элементов иерархий, содержащихся в создаются [CubeDimension](../data-type/dimension-data-type-assl.md) элемента.  
+  Определяет, как уникальные имена создаются для элементов иерархий, содержащихся в [CubeDimension](../data-type/dimension-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -68,10 +68,10 @@ ms.locfileid: "36191297"
 |*NamePath*|Экземпляр формирует составное имя, содержащее каждый уровень и заголовок элемента.|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `MemberUniqueNameStyle` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.CubeDimension>.  
+ Элемент, соответствующий родителю параметра `MemberUniqueNameStyle` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.CubeDimension>.  
   
 ## <a name="see-also"></a>См. также  
- [Куб элемент &#40;ASSL&#41;](../objects/cube-element-assl.md)   
+ [Элемент куба &#40;ASSL&#41;](../objects/cube-element-assl.md)   
  [Элемент измерения &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [Тип данных CubeDimension &#40;ASSL&#41;](../data-type/dimension-data-type-assl.md)  
   

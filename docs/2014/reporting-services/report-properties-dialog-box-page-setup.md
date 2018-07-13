@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно «Свойства», параметры страницы отчета | Документы Microsoft
+title: Диалоговое окно «Свойства», параметры страницы отчета | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10500"
 - sql12.rtp.rptdesigner.reportproperties.pagesetup.f1
 ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
 caps.latest.revision: 38
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3377c1d0384bb15cd131c041abe32590767fd8f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e9881b5016e4d2c8dbf9e69cb5a3fad6d24ed44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194414"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>Диалоговое окно «Свойства отчета» — «Параметры страницы»
   Выберите вкладку **Параметры страницы** в диалоговом окне **Свойства отчета**, чтобы настроить параметры страницы для всего отчета.  
@@ -52,7 +52,7 @@ ms.locfileid: "36192381"
  **Top**  
  Устанавливает расстояние между верхней границей отчета и верхней кромкой первой строки отчета.  
   
- **Вниз**  
+ **Снизу**  
  Устанавливает расстояние между нижней границей отчета и нижней кромкой его последней строки.  
   
  **Слева**  

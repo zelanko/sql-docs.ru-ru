@@ -1,5 +1,5 @@
 ---
-title: Элемент Action (ASSL) | Документы Microsoft
+title: Элемент Action (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Action element
 ms.assetid: aaee06a2-91c6-4007-b787-79cb08d63c77
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7dcabe0b31b44b293fe54e24699d25dc340e3302
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfc51d797852e80cf7bf501cf3f1d93f2f52c9d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196014"
 ---
 # <a name="action-element-assl"></a>Элемент Action (ASSL)
-  Содержит сведения о действии, доступном в [куба](cube-element-assl.md) элемент или [перспективы](perspective-element-assl.md) элемента.  
+  Содержит сведения о действии, доступном в [куба](cube-element-assl.md) элемент или [перспективы](perspective-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -68,10 +68,10 @@ ms.locfileid: "36192768"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.Action>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>См. также  
- [Куб элемент &#40;ASSL&#41;](cube-element-assl.md)   
+ [Элемент куба &#40;ASSL&#41;](cube-element-assl.md)   
  [Элемент perspective &#40;ASSL&#41;](perspective-element-assl.md)   
  [Тип данных PerspectiveAction &#40;ASSL&#41;](../data-type/perspectiveaction-data-type-assl.md)   
  [Объекты &#40;ASSL&#41;](objects-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Просмотр модели с помощью средства просмотра нейронных сетей Майкрософт | Документы Microsoft
+title: Просмотр модели с помощью средства просмотра нейронных сетей Майкрософт | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, viewing
 - classification mining model [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - neural network model [Analysis Services]
 ms.assetid: 2343d746-c4f4-499b-9d3c-17d63310a9a3
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f577d98082953bc565a6c14fc8fdafce2a6711fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45561d4e2b5463e6525d9def3cf0d508fddd592f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196674"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Просмотр модели с помощью средства просмотра нейронных сетей (Майкрософт)
   Средство просмотра нейронных сетей ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, построенные с помощью алгоритма нейронной сети ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Алгоритм нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] создает классификационные и регрессивные модели интеллектуального анализа данных, с помощью которых можно выполнять анализ из нескольких входящих и исходящих источников. Это делает его полезным при выполнении различных видов открытого анализа и изучения. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md).  
@@ -80,7 +80,7 @@ ms.locfileid: "36194376"
  [В начало](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм нейронной сети Майкрософт](microsoft-neural-network-algorithm.md)   
+ [Алгоритм нейронной сети (Майкрософт)](microsoft-neural-network-algorithm.md)   
  [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](mining-model-viewer-tasks-and-how-tos.md)   
  [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](mining-model-viewer-tasks-and-how-tos.md)   
  [Средства интеллектуального анализа данных](data-mining-tools.md)   

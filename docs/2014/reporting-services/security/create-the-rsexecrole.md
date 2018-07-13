@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b683b9778275f07b791df1881da6d7213e1d1d26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 560b889359a428625131ff69d8aab5589834a39e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225294"
 ---
 # <a name="create-the-rsexecrole"></a>Создание роли RSExecRole
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] использует стандартную роль базы данных называется `RSExecRole` чтобы предоставить серверу отчетов разрешения на базу данных сервера отчетов. Роль `RSExecRole` создается автоматически с базой данных сервера отчетов. Как правило, никогда не следует изменять ее или назначать другим пользователям. Однако при перемещении базы данных сервера отчетов на новый или иной компонент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] необходимо создать повторно эту роль в системных базах данных master и msdb.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] использует стандартную роль базы данных называется `RSExecRole` чтобы предоставить серверу отчетов разрешения в базу данных сервера отчетов. Роль `RSExecRole` создается автоматически с базой данных сервера отчетов. Как правило, никогда не следует изменять ее или назначать другим пользователям. Однако при перемещении базы данных сервера отчетов на новый или иной компонент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] необходимо создать повторно эту роль в системных базах данных master и msdb.  
   
  С помощью следующих инструкций выполняются следующие шаги.  
   
@@ -37,9 +37,9 @@ ms.locfileid: "36189183"
   
 ## <a name="before-you-start"></a>Перед началом  
   
--   Создайте резервную копию ключей шифрования, чтобы их можно было восстановить после перемещения базы данных. Этот шаг влияет напрямую возможность создавать и подготавливать `RSExecRole`, но должен иметь резервную копию ключей, чтобы проверить работу. Дополнительные сведения см. в разделе [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
+-   Создайте резервную копию ключей шифрования, чтобы их можно было восстановить после перемещения базы данных. Этот шаг влияет напрямую возможности для создания и подготовки `RSExecRole`, но необходимо иметь резервную копию ключей, чтобы проверить работу. Дополнительные сведения см. в разделе [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
--   Убедитесь, вы вошли как учетную запись пользователя, имеющую `sysadmin` разрешения на [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляра.  
+-   Проверьте, вошли как учетную запись пользователя, имеющую `sysadmin` разрешения на [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляра.  
   
 -   Проверьте, что служба агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] установлена и работает на экземпляре компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)], который планируется использовать.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36189183"
   
 #### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Создание роли RSExecRole в системной базе данных master с помощью среды Management Studio  
   
-1.  Запуск [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и подключитесь к [!INCLUDE[ssDE](../../../includes/ssde-md.md)] экземпляр, на котором размещены базы данных сервера отчетов.  
+1.  Запуск [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и подключитесь к [!INCLUDE[ssDE](../../../includes/ssde-md.md)] экземпляр, на котором размещена база данных сервера отчетов.  
   
 2.  Откройте узел **Базы данных**.  
   
@@ -232,7 +232,7 @@ ms.locfileid: "36189183"
 15. Щелкните ссылку, чтобы открыть диспетчер отчетов. Будут отображены элементы сервера отчетов из базы данных сервера отчетов.  
   
 ## <a name="see-also"></a>См. также  
- [Перемещение базы данных сервера отчетов на другой компьютер &#40;собственный режим служб SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
+ [Перемещение баз данных сервера отчетов на другой компьютер &#40;собственный режим служб SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
  [Диспетчер конфигурации служб Reporting Services &#40;собственный режим&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Создание базы данных сервера отчетов собственный режим &#40;диспетчер конфигурации служб SSRS&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  

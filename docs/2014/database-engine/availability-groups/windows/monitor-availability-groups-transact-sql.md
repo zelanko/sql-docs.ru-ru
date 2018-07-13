@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - dynamic management views [SQL Server], AlwaysOn Availability Groups
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - catalog views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 caps.latest.revision: 48
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 7ad2fed0ddfe6b06b66567dd86d0c343e6cdbff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 666b6487673c5a64ccdf955a4344e61717d9038b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239494"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Отслеживание групп доступности (Transact-SQL)
   Для мониторинга групп доступности и реплик доступности, а также связанных баз данных с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)]в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] предусмотрен набор представлений каталога, динамических административных представлений и свойств сервера. С помощью инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT можно использовать представления для отслеживания групп доступности, их реплик и баз данных. Сведения, возвращаемые по данной группе доступности, зависят от наличия подключения к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещена первичная или вторичная реплика.  
@@ -84,7 +83,7 @@ ms.locfileid: "36189600"
 > [!NOTE]  
 >  См. также описание команд **sys.dm_hadr_availability_replica_cluster_nodes** и **sys.dm_hadr_availability_replica_cluster_states** в разделе [Мониторинг реплик доступности](#AvReplicas) и описание команд **sys.availability_databases_cluster** и **sys.dm_hadr_database_replica_cluster_states** в разделе [Мониторинг баз данных доступности](#AvDbs) далее в этой статье.  
   
- Для сведения о кластерах WSFC и [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], в разделе [отказоустойчивой кластеризации Windows Server &#40;WSFC&#41; с SQL Server] ((.. /.. /.. / sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) и [отказоустойчивая кластеризация и группы доступности AlwaysOn &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md).  
+ Для сведения о кластерах WSFC и [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], см. в разделе [отказоустойчивой кластеризации Windows Server &#40;WSFC&#41; с SQL Server] ((.. /.. /.. / sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) и [отказоустойчивая кластеризация и группы доступности AlwaysOn &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="AvGroups"></a> Мониторинг групп доступности  
  Для мониторинга групп доступности, для которых на экземпляре сервера размещена реплика доступности, используются следующие представления.  
@@ -208,7 +207,7 @@ ms.locfileid: "36189600"
   
 -   [Просмотр свойств прослушивателя группы доступности (SQL Server)](view-availability-group-listener-properties-sql-server.md)  
   
- **Справочник (Transact-SQL) по мониторингу групп доступности AlwaysOn:**  
+ **Группы доступности AlwaysOn (Transact-SQL) Справочник по мониторингу:**  
   
 -   [SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql)  
   
@@ -270,7 +269,7 @@ ms.locfileid: "36189600"
   
 -   [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
   
- **Управление на основе политики для группы доступности AlwaysOn**  
+ **Управление на основе политик для групп доступности AlwaysOn**  
   
 -   [Использование политик AlwaysOn для определения работоспособности группы доступности &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Работа с типами данных | Документы Microsoft
+title: Работа с типами данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - SMO [SQL Server], data types
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b92c749f6992ee32e57c74a912c5d1dbaaf13cfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 306b227a4b193811c7207f111fc35a48148e4bbf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228924"
 ---
 # <a name="working-with-data-types"></a>Работа с типами данных
-  Данные поступают в виде различных типов и размеров, таких как строка определенной длины, число с конкретной точностью или определяемый пользователем тип, представляющий собой другой объект, со своим набором правил. <xref:Microsoft.SqlServer.Management.Smo.DataType> Классифицирует типы данных, чтобы оно может обрабатываться правильно [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Объект <xref:Microsoft.SqlServer.Management.Smo.DataType> связан с объектами, принимающими данные. Следующие [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] управляющих объектов (SMO) принимают данные, которые должны быть определены с <xref:Microsoft.SqlServer.Management.Smo.DataType> свойство объекта:  
+  Данные поступают в виде различных типов и размеров, таких как строка определенной длины, число с конкретной точностью или определяемый пользователем тип, представляющий собой другой объект, со своим набором правил. <xref:Microsoft.SqlServer.Management.Smo.DataType> Классифицирует типы данных, чтобы оно могло быть обработано правильно по [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Объект <xref:Microsoft.SqlServer.Management.Smo.DataType> связан с объектами, принимающими данные. Следующие [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] управляющих объектов (SMO) принимают данные, которые должны быть определены по <xref:Microsoft.SqlServer.Management.Smo.DataType> свойство объекта:  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Column>  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36189951"
   
  Свойство `DataType` для объектов, принимающих данные, можно задать несколькими способами.  
   
--   Использовать конструктор по умолчанию и указать <xref:Microsoft.SqlServer.Management.Smo.DataType> свойства объекта явно  
+-   Использовать конструктор по умолчанию и указать <xref:Microsoft.SqlServer.Management.Smo.DataType> явным образом свойства объекта  
   
 -   Применение перегруженного конструктора и укажите <xref:Microsoft.SqlServer.Management.Smo.DataType> свойств в виде параметров.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36189951"
   
  После установления типа данных необходимо задать для данных конкретные свойства. Например, если это тип `nchar`, необходимо задать в свойстве `Length` длину строковых данных. Тоже относится к числовым значениям, для которых необходимо задать точность и масштаб.  
   
- Типы данных <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> и <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType> относятся к объектам, содержащим определение типа данных, созданного пользователем. Определяемый пользователем тип данных <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> основан на типах данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из перечисления <xref:Microsoft.SqlServer.Management.Smo.SqlDataType>. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType> На основе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] типы данных .NET. Обычно эти данные представляют собой данные конкретного типа, часто используемые повторно в базе данных, поскольку этого требуют бизнес-правила, определяемые организацией. Например, компания, которая проводит сделки с использованием нескольких валют, может использовать тип данных, предусматривающий хранение денежной суммы и кода валюты.  
+ Типы данных <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> и <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType> относятся к объектам, содержащим определение типа данных, созданного пользователем. Определяемый пользователем тип данных <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> основан на типах данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из перечисления <xref:Microsoft.SqlServer.Management.Smo.SqlDataType>. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType> Основан на [!INCLUDE[msCoName](../../../includes/msconame-md.md)] типы данных .NET. Обычно эти данные представляют собой данные конкретного типа, часто используемые повторно в базе данных, поскольку этого требуют бизнес-правила, определяемые организацией. Например, компания, которая проводит сделки с использованием нескольких валют, может использовать тип данных, предусматривающий хранение денежной суммы и кода валюты.  
   
  <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> Перечисление содержит список всех [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-поддерживаемые типы данных.  
   

@@ -1,5 +1,5 @@
 ---
-title: Создание проекта Visual Basic SMO в Visual Studio .NET | Документы Microsoft
+title: Создание проекта SMO на Visual Basic в Visual Studio .NET | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Visual Basic [SMO]
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a3f3db2487a60c80d9fdb933298784b69db8718
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a3cacc04d8ce4afd863c7ef3cc8d21e1446c319
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213794"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Создание проекта SMO на языке Visual Basic в среде Visual Studio .NET
   В данном разделе описывается, как построить простое консольное приложение командной строки SMO.  
@@ -37,11 +37,11 @@ ms.locfileid: "36192291"
   
 2.  В меню **Файл** выберите пункт **Создать проект**. Откроется диалоговое окно **Создание проекта** .  
   
-3.  В **типы проектов** выберите **Visual Basic**, а затем выберите **Windows**. В [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] выберите установленные шаблоны **консольного приложения.**  
+3.  В **типы проектов** выберите **Visual Basic**, а затем выберите **Windows**. В [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] выберите установленные шаблоны **консольное приложение.**  
   
 4.  (Необязательно) В **имя** введите имя нового приложения.  
   
-5.  Нажмите кнопку **ОК** для загрузки [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] шаблон консольного приложения.  
+5.  Нажмите кнопку **ОК** загрузить [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] шаблон консольного приложения.  
   
 6.  В меню **Проект** выберите пункт **Добавить ссылку**. Откроется диалоговое окно **Добавление ссылки**.  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36192291"
   
 9. Нажмите кнопку **Открыть**.  
   
-10. На **представление** меню, нажмите кнопку **кода**. - или - выберите окно Module1.vb, чтобы открыть окно с кодом.  
+10. На **представление** меню, щелкните **кода**. - или - выберите окно Module1.vb, чтобы открыть окно с кодом.  
   
-11. В коде перед декларациями введите следующие **Imports** инструкции для определения типов в пространстве имен SMO.  
+11. В коде перед всеми декларациями введите следующие **Imports** инструкции, чтобы уточнить типы в пространстве имен объектов SMO.  
   
     ```  
     Imports Microsoft.SqlServer.Management.Smo  

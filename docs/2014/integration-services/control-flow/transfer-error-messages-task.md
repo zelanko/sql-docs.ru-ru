@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6d8bc72c3c713dc1a113490431f4dba81c2a11a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d7a40c86c0dba2a4b2db08305f7fea379a97b1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201854"
 ---
 # <a name="transfer-error-messages-task"></a>Задача «Передача сообщений об ошибках»
   Задача "Передача сообщений об ошибках" передает одно или несколько пользовательских сообщений об ошибках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Пользовательские сообщения имеют идентификатор, больший или равный 50000. Сообщения с идентификаторами, меньшими 50000, являются системными и не могут передаваться с помощью задачи «Передача сообщений об ошибках».  
@@ -50,7 +50,7 @@ ms.locfileid: "36180325"
  В ходе выполнения задачи «Передача сообщений об ошибках» сведения о состоянии передачи не отображаются, появляются только сообщения о 0% и 100% выполнении.  
   
 ## <a name="execution-value"></a>Значение выполнения  
- Значение выполнения, определенное свойством задачи `ExecutionValue`, возвращает количество переданных сообщений об ошибках. Назначив пользовательскую переменную, чтобы `ExecValueVariable` задачи «Передача сообщений об ошибках» сведения о передаче сообщений об ошибках могут быть сделаны доступными для других объектов в пакете. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md) и [Использование переменных в пакетах](../use-variables-in-packages.md).  
+ Значение выполнения, определенное свойством задачи `ExecutionValue`, возвращает количество переданных сообщений об ошибках. Назначив пользовательскую переменную, чтобы `ExecValueVariable` свойства задачи «Передача сообщений об ошибках» сведения о передаче сообщений об ошибках могут быть доступными другим объектам в пакете. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md) и [Использование переменных в пакетах](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Записи журнала  
  Задача «Передача сообщений об ошибках» включает в себя следующие пользовательские записи журнала.  
@@ -59,7 +59,7 @@ ms.locfileid: "36180325"
   
 -   TransferErrorMessagesTaskFinishedTransferringObjects. Это запись журнала об окончании передачи. В записях журнала указывается время завершения.  
   
- Кроме того, запись журнала для `OnInformation` событие сообщает число сообщений об ошибках, которые были перемещены, а запись журнала о `OnWarning event` записывается для каждого сообщения об ошибке, перезаписывается на сервере назначения.  
+ Кроме того, запись журнала для `OnInformation` событие сообщает число сообщений об ошибках, которые были перемещены, а запись журнала для `OnWarning event` записывается для каждого сообщения об ошибке, перезаписывается на сервере назначения.  
   
 ## <a name="security-and-permissions"></a>Безопасность и разрешения  
  Чтобы создать новое сообщение об ошибке, пользователь, запускающий пакет, должен являться членом роли сервера sysadmin или serveradmin на целевом сервере.  
@@ -69,9 +69,9 @@ ms.locfileid: "36180325"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задач сообщений об ошибках передачи &#40;страница «Общие»&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор передача сообщений об задач &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задач сообщений об ошибках передачи &#40;сообщений страницы&#41;](../transfer-error-messages-task-editor-messages-page.md)  
+-   [Редактор передача сообщений об задач &#40;сообщений страницы&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   
 -   [Страница "Выражения"](../expressions/expressions-page.md)  
   

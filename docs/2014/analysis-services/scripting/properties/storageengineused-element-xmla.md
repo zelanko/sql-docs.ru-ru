@@ -1,5 +1,5 @@
 ---
-title: Элемент StorageEngineUsed (XMLA) | Документы Microsoft
+title: Элемент StorageEngineUsed (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 608ebcbb1252b4fafa44bf242a83418cc6b3d053
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6c8f7cdca7fb8134a27c8d1319385861294893a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203965"
 ---
 # <a name="storageengineused-element-xmla"></a>Элемент StorageEngineUsed (XMLA)
   Содержит значение, доступное только для чтения, описывающее тип текущей базы данных.  
@@ -87,7 +87,7 @@ ms.locfileid: "36193671"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*Традиционные*|База данных model соответствует режиму хранения MOLAP, ROLAP или HOLAP.|  
+|*Традиционный*|База данных model соответствует режиму хранения MOLAP, ROLAP или HOLAP.|  
 |*InMemory*|База данных model соответствует режиму хранения IMBI.|  
 |*Смешанный*|База данных model сочетает режимы хранения IMBI и MOLAP, ROLAP или HOLAP.|  
   

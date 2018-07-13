@@ -1,5 +1,5 @@
 ---
-title: Набор строк DMSCHEMA_MINING_SERVICE_PARAMETERS | Документы Microsoft
+title: Набор строк DMSCHEMA_MINING_SERVICE_PARAMETERS | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_SERVICE_PARAMETERS rowset
 ms.assetid: 5994e66b-84d0-4279-9f50-d92fd829dd83
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9079be52d50da3a400496dc602166c857f2b1691
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7203b2f717ec7605fcc52c1387472779488ae4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224474"
 ---
 # <a name="dmschemaminingserviceparameters-rowset"></a>Набор строк DMSCHEMA_MINING_SERVICE_PARAMETERS
   Описывает параметры для алгоритмов на сервере.  
@@ -40,7 +40,7 @@ ms.locfileid: "36189617"
 |`PARAMETER_NAME`|`DBTYPE_WSTR`||Имя параметра.|  
 |`PARAMETER_TYPE`|`DBTYPE_WSTR`||Тип параметра.|  
 |`IS_REQUIRED`|`DBTYPE_BOOL`||Логическое значение, которое возвращает `TRUE`, если параметр является обязательным.|  
-|`PARAMETER_FLAGS`|`DBTYPE_UI4`||Битовая маска, которая описывает характеристики параметра:<br /><br /> -   `DM_PARAMETER_TRAINING` (`0x0000001`) указывает параметр используется для обучения<br />-   `DM_PARAMETER_PREDICTION` (`0x00000002`) указывает параметр используется для прогнозирования<br />-   `DM_PARAMETER_CONTENT` (`0x00000003`) указывает параметр используется для ограничения содержимого|  
+|`PARAMETER_FLAGS`|`DBTYPE_UI4`||Битовая маска, которая описывает характеристики параметра:<br /><br /> -   `DM_PARAMETER_TRAINING` (`0x0000001`) указывает параметр используется для обучения<br />-   `DM_PARAMETER_PREDICTION` (`0x00000002`) указывает, что параметр используется для прогнозирования<br />-   `DM_PARAMETER_CONTENT` (`0x00000003`) указывает, что параметр используется для ограничения содержимого|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||Понятное описание параметра.|  
 |`DEFAULT_VALUE`|`DBTYPE_WSTR`||Значение параметра по умолчанию. Возвращает значение `NULL`, если значением по умолчанию не является простой тип данных.|  
 |`VALUE_ENUMERATION`|`DBTYPE_WSTR`||Перечислитель возможных значений для параметра.|  

@@ -1,13 +1,11 @@
 ---
-title: Структура SSVARIANT | Документы Microsoft
+title: Структура SSVARIANT | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
@@ -16,20 +14,20 @@ helpviewer_keywords:
 - SSVARIANT struct
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c8d98a54155179fe481fc0a7202a07e6cbf2aff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 52ea23ff970d094330aaf046f9ebdd843c8b4956
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189309"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429043"
 ---
 # <a name="ssvariant-structure"></a>Структура SSVARIANT
   Структура `SSVARIANT`, определяемая в файле sqlncli.h, соответствует значению DBTYPE_SQLVARIANT в поставщике OLEDB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- `SSVARIANT` представляет собой избирательное соединение. В зависимости от значения элемента vt потребитель может определить, какой элемент следует считывать. значения VT соответствуют [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных. Таким образом, структура `SSVARIANT` может содержать любой тип SQL Server. Дополнительные сведения о структуре данных для стандартных типов OLE DB см. в разделе [индикаторов типа](http://go.microsoft.com/fwlink/?LinkId=122171).  
+ `SSVARIANT` представляет собой избирательное соединение. В зависимости от значения элемента vt потребитель может определить, какой элемент следует считывать. значения VT соответствуют [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных. Таким образом, структура `SSVARIANT` может содержать любой тип SQL Server. Дополнительные сведения о структуре данных для стандартных типов OLE DB, см. в разделе [индикаторов типа](http://go.microsoft.com/fwlink/?LinkId=122171).  
   
 ## <a name="remarks"></a>Примечания  
  Если DataTypeCompat==80, несколько подтипов `SSVARIANT` становятся строками. Например, следующие значения vt будут представлены в `SSVARIANT` в виде VT_SS_WVARSTRING:  
@@ -44,7 +42,7 @@ ms.locfileid: "36189309"
   
  Если DateTypeCompat == 0, то эти типы будут представлены в собственном формате.  
   
- Дополнительные сведения о SSPROP_INIT_DATATYPECOMPATIBILITY см. в разделе [с помощью ключевых слов строки подключения с собственным клиентом SQL Server](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Дополнительные сведения о SSPROP_INIT_DATATYPECOMPATIBILITY см. в разделе [Using Connection String Keywords with SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  Файл sqlncli.h содержит макросы для доступа к значениям variant, которые упрощают разыменование типов, входящих в структуру `SSVARIANT`. В качестве примера можно рассмотреть макрос V_SS_DATETIMEOFFSET, который можно использовать следующим образом:  
   
@@ -75,9 +73,9 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |Time2Val|DBTYPE_DBTIME2|`DBTIME2`|`VT_SS_TIME2`|Поддерживает `time` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.<br /><br /> Содержит следующие элементы:<br /><br /> *tTime2Val* (`DBTIME2`)<br /><br /> *bScale* (`BYTE`) Задает масштаб для *tTime2Val* значение.|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|`DBTIMESTAMP`|`VT_SS_DATETIME2`|Поддерживает `datetime2` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.<br /><br /> Содержит следующие элементы:<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (`BYTE`) Задает масштаб для *tsDataTimeVal* значение.|  
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|`DBTIMESTAMPOFFSET`|`VT_SS_DATETIMEOFFSET`|Поддерживает `datetimeoffset` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.<br /><br /> Содержит следующие элементы:<br /><br /> *tsoDateTimeOffsetVal* (`DBTIMESTAMPOFFSET`)<br /><br /> *bScale* (`BYTE`) Задает масштаб для *tsoDateTimeOffsetVal* значение.|  
-|NCharVal|Отсутствует соответствующий индикатор типа OLE DB.|`struct _NCharVal`|`VT_SS_WVARSTRING,`<br /><br /> `VT_SS_WSTRING`|Поддерживает `nchar` и **nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных.<br /><br /> Содержит следующие элементы:<br /><br /> *sActualLength* (`SHORT`) указывает фактическую длину строки, на которой *pwchNCharVal* точек. Не содержит завершающего нуля.<br /><br /> *sMaxLength* (`SHORT`) указывает максимальную длину строки, на которой *pwchNCharVal* точек.<br /><br /> *pwchNCharVal* (`WCHAR` \*) указатель на строку.<br /><br /> Неиспользуемые элементы: *rgbReserved*, *dwReserved*, и *pwchReserved*.|  
-|CharVal|Отсутствует соответствующий индикатор типа OLE DB.|`struct _CharVal`|`VT_SS_STRING,`<br /><br /> `VT_SS_VARSTRING`|Поддерживает `char` и **varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных.<br /><br /> Содержит следующие элементы:<br /><br /> *sActualLength* (`SHORT`) указывает фактическую длину строки, на которой *pchCharVal* точек. Не содержит завершающего нуля.<br /><br /> *sMaxLength* (`SHORT`) указывает максимальную длину строки, на которой *pchCharVal* точек.<br /><br /> *pchCharVal* (`CHAR` \*) указатель на строку.<br /><br /> Неиспользуемые элементы:<br /><br /> *rgbReserved*, *dwReserved*, и *pwchReserved*.|  
-|BinaryVal|Отсутствует соответствующий индикатор типа OLE DB.|`struct _BinaryVal`|`VT_SS_VARBINARY,`<br /><br /> `VT_SS_BINARY`|Поддерживает `binary` и **varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных.<br /><br /> Содержит следующие элементы:<br /><br /> *sActualLength* (`SHORT`) указывает фактическую длину данных, к которому *prgbBinaryVal* точек.<br /><br /> *sMaxLength* (`SHORT`) указывает максимальную длину данных, к которому *prgbBinaryVal* точек.<br /><br /> *prgbBinaryVal* (`BYTE` \*) указатель на двоичные данные.<br /><br /> Неиспользуемый элемент: *dwReserved*.|  
+|NCharVal|Отсутствует соответствующий индикатор типа OLE DB.|`struct _NCharVal`|`VT_SS_WVARSTRING,`<br /><br /> `VT_SS_WSTRING`|Поддерживает `nchar` и **nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных.<br /><br /> Содержит следующие элементы:<br /><br /> *sActualLength* (`SHORT`) указывает фактическую длину для строки, на которую *pwchNCharVal* точек. Не содержит завершающего нуля.<br /><br /> *sMaxLength* (`SHORT`) указывает максимальную длину для строки, на которую *pwchNCharVal* точек.<br /><br /> *pwchNCharVal* (`WCHAR` \*) указатель на строку.<br /><br /> Неиспользуемые элементы: *rgbReserved*, *dwReserved*, и *pwchReserved*.|  
+|CharVal|Отсутствует соответствующий индикатор типа OLE DB.|`struct _CharVal`|`VT_SS_STRING,`<br /><br /> `VT_SS_VARSTRING`|Поддерживает `char` и **varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных.<br /><br /> Содержит следующие элементы:<br /><br /> *sActualLength* (`SHORT`) указывает фактическую длину строки, на которую *pchCharVal* точек. Не содержит завершающего нуля.<br /><br /> *sMaxLength* (`SHORT`) указывает максимальную длину для строки, на которую *pchCharVal* точек.<br /><br /> *pchCharVal* (`CHAR` \*) указатель на строку.<br /><br /> Неиспользуемые элементы:<br /><br /> *rgbReserved*, *dwReserved*, и *pwchReserved*.|  
+|BinaryVal|Отсутствует соответствующий индикатор типа OLE DB.|`struct _BinaryVal`|`VT_SS_VARBINARY,`<br /><br /> `VT_SS_BINARY`|Поддерживает `binary` и **varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных.<br /><br /> Содержит следующие элементы:<br /><br /> *sActualLength* (`SHORT`) указывает фактическую длину данных, на которые *prgbBinaryVal* точек.<br /><br /> *sMaxLength* (`SHORT`) указывает максимальную длину данных, на которые *prgbBinaryVal* точек.<br /><br /> *prgbBinaryVal* (`BYTE` \*) указатель на двоичные данные.<br /><br /> Неиспользуемый элемент: *dwReserved*.|  
 |UnknownType|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|  
 |BLOBType|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|  
   

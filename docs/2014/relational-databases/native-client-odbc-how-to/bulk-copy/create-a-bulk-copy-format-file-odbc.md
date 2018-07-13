@@ -1,13 +1,11 @@
 ---
-title: Создание файла форматирования массового копирования (ODBC) | Документы Microsoft
+title: Создание файла формата массового копирования (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 03ab22f08f4364bf3cd4852f960d861c9dcdad7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9ccdf90bedcafb36676c8e727f2ee98b818e2f1a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101750"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414183"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Создание файла форматирования массового копирования (ODBC)
   В этом образце показано использование функций массового копирования для создания как файла данных, так и файла форматирования. Этот образец разработан для ODBC версии 3.0 или более поздней.  
@@ -39,7 +37,7 @@ ms.locfileid: "36101750"
   
 3.  Соединитесь с SQL Server.  
   
-4.  Вызовите [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) следующие сведения:  
+4.  Вызовите [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) задать следующие сведения:  
   
     -   Имя таблицы или представления, из которого или в которое будет производиться массовое копирование.  
   
@@ -47,13 +45,13 @@ ms.locfileid: "36101750"
   
     -   Имя файла данных, в который сохраняются все сообщения об ошибках массового копирования (укажите значение NULL, если файл для сообщений не требуется).  
   
-    -   Направление копирования: DB_OUT файла из таблицы или представления.  
+    -   Направление копирования: db_out — в файл из таблицы или представления.  
   
-5.  Вызовите [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) задаваемое число столбцов.  
+5.  Вызовите [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) задать число столбцов.  
   
 6.  Вызовите [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) для каждого столбца определить его характеристики в файле данных.  
   
-7.  Вызовите [bcp_writefmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) для создания файла форматирования, описывающий файл данных, которая будет создана при операции массового копирования.  
+7.  Вызовите [bcp_writefmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) для создания файла форматирования, описывающий файл данных, создаваемая операция массового копирования.  
   
 8.  Вызовите [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) для выполнения операции массового копирования.  
   
@@ -217,7 +215,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Массовое копирование с помощью инструкции SQL Server ODBC Driver &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Массовое копирование с помощью инструкции SQL Server ODBC драйвер &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Использование файлов данных и файлов форматирования](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Примеры запросов к модели упрощенного алгоритма Байеса | Документы Microsoft
+title: Примеры запросов к упрощенной модели Байеса | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
 - naive bayes algorithms [Analysis Services]
 - content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 29267826bd90ef82cdf28ffb99e265ec135d37cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a2fb2a44ff12ef938abc09f7e307841a1b057be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224694"
 ---
 # <a name="naive-bayes-model-query-examples"></a>Примеры запросов к модели упрощенного алгоритма Байеса
   К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения о закономерностях, обнаруженных при анализе, и прогнозирующие запросы, использующие закономерности, содержащиеся в модели, для прогнозирования новых данных. Получение метаданных модели интеллектуального анализа данных выполняется с помощью запроса к набору строк схемы интеллектуального анализа данных. В этом разделе описывается процесс создания запросов к моделям, основанным на упрощенном алгоритме Байеса (Майкрософт).  
@@ -249,7 +249,7 @@ AS t
 |-|-|  
 |прогнозирующую функцию|Использование|  
 |[IsDescendant &#40;расширений интеллектуального анализа данных&#41;](/sql/dmx/isdescendant-dmx)|Определяет, является ли узел дочерним для другого узла модели.|  
-|[Прогноз &#40;расширений интеллектуального анализа данных&#41;](/sql/dmx/predict-dmx)|Возвращает прогнозируемое значение или набор значений для указанного столбца.|  
+|[Прогнозирование &#40;расширений интеллектуального анализа данных&#41;](/sql/dmx/predict-dmx)|Возвращает прогнозируемое значение или набор значений для указанного столбца.|  
 |[PredictAdjustedProbability &#40;расширений интеллектуального анализа данных&#41;](/sql/dmx/predictadjustedprobability-dmx)|Возвращает взвешенную вероятность.|  
 |[PredictAssociation &#40;расширений интеллектуального анализа данных&#41;](/sql/dmx/predictassociation-dmx)|Прогнозирует вхождение в ассоциативном наборе данных.|  
 |[PredictNodeId &#40;расширений интеллектуального анализа данных&#41;](/sql/dmx/predictnodeid-dmx)|Возвращает параметр Node_ID для каждого случая.|  
@@ -259,8 +259,8 @@ AS t
  Синтаксис специальных функций см. в разделе [Справочник по функциям расширений интеллектуального анализа данных](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>См. также  
- [Технический справочник Майкрософт упрощенный алгоритм Байеса](microsoft-naive-bayes-algorithm-technical-reference.md)   
- [Алгоритма Байеса (Майкрософт)](microsoft-naive-bayes-algorithm.md)   
+ [Технический справочник по алгоритму Байеса (Майкрософт)](microsoft-naive-bayes-algorithm-technical-reference.md)   
+ [Алгоритм Байеса (Майкрософт)](microsoft-naive-bayes-algorithm.md)   
  [Модель интеллектуального анализа данных для моделей упрощенного алгоритма Байеса &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

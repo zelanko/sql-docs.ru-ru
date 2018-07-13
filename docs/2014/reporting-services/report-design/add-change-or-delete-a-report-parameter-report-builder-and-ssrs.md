@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a0deaffca9298b29ceb3d22c85bd199fcfc55ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9844fbe92d37a440bda6a165481e00de5a72c2d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212534"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>Добавление, изменение или удаление параметра отчета (построитель отчетов и службы SSRS)
   Параметры отчета позволяют выбирать данные отчета, соединять связанные отчеты и изменять представление отчета. Можно предоставить значения по умолчанию и список доступных значений, чтобы пользователи могли их изменять.  
   
- После публикации отчета на сервере отчетов можно изменить значения по умолчанию, доступные значения и другие свойства параметров отчета. Для параметра можно предоставить несколько наборов значений по умолчанию, создав связанные отчеты. Дополнительные сведения см. в разделе «Настройка параметров свойства для опубликованного отчета» в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] документации в [электронной документации по SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+ После публикации отчета на сервере отчетов можно изменить значения по умолчанию, доступные значения и другие свойства параметров отчета. Для параметра можно предоставить несколько наборов значений по умолчанию, создав связанные отчеты. Дополнительные сведения см. в разделе «Настройка параметров свойства для опубликованного отчета» в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] документации в [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -62,12 +62,12 @@ ms.locfileid: "36190352"
 2.  Щелкните правой кнопкой мыши параметр отчета и выберите команду **Удалить**.  
   
 ## <a name="see-also"></a>См. также  
- [Добавить, изменить или удалить допустимые значения для параметра отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
+ [Добавление, изменение или удаление допустимых значений параметра отчета &#40;построитель отчетов и службы SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
  [Добавление, изменение или удаление значения по умолчанию для параметра отчета (построитель отчетов и службы SSRS)](add-change-or-delete-default-values-for-a-report-parameter.md)   
- [Изменение порядка параметров отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [Изменение порядка параметров отчета &#40;построитель отчетов и службы SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
  [Параметры отчета (построитель отчетов и конструктор отчетов)](report-parameters-report-builder-and-report-designer.md)   
  [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Добавление каскадных параметров в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Добавление каскадных параметров в отчет &#40;построитель отчетов и службы SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Учебник. Добавление параметра к отчету (построитель отчетов)](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Учебники по &#40;построитель отчетов&#41;](../report-builder-tutorials.md)   
  [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   

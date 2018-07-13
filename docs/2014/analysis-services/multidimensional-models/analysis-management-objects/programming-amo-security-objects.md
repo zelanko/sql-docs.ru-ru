@@ -1,5 +1,5 @@
 ---
-title: Программирование объектов безопасности AMO | Документы Microsoft
+title: Программирование объектов безопасности AMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - AMO, security
 ms.assetid: 5d963721-6e6e-46eb-bc9b-18724dd0b751
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 660afdf9a8c6c51c1dc97b8ee8de22ba6853708d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e110e71630a43d30f29be89cd56197ab8f18fd7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190644"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197954"
 ---
 # <a name="programming-amo-security-objects"></a>Программирование объектов безопасности AMO
-  В [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], программирования объектов безопасности или выполнения программ, в которых используются объекты безопасности AMO, необходимо быть членом группы администраторов сервера или администраторов базы данных. Администратор сервера или администратор базы данных — доступа предоставляемые уровни [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  В [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], программирования объектов безопасности или выполнения приложения, использующие объекты безопасности AMO, необходимо быть членом группы администраторов сервера или администраторов базы данных. Администратор сервера или администратор базы данных — доступа предоставляемые уровни [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- В службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] пользователь получает доступ к объекту через сочетание ролей и разрешений, назначенных этому объекту. Дополнительные сведения см. в разделе [классы безопасности AMO](amo-security-classes.md).  
+ В службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] пользователь получает доступ к объекту через сочетание ролей и разрешений, назначенных этому объекту. Дополнительные сведения см. в разделе [классы безопасности объектов AMO](amo-security-classes.md).  
   
 ## <a name="role-and-permission-objects"></a>Объекты ролей и разрешений  
  Роли сервера содержат в коллекции одну и только одну роль, роль администратора. Новые роли в коллекцию ролей сервера добавлять нельзя. Членство в роли администратора дает полный доступ ко всем объектам на сервере.  
@@ -145,7 +145,7 @@ static public void CreateRolesAndPermissions(Database db, Cube cube)
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices>   
- [Знакомство с классами объектов AMO](amo-classes-introduction.md)   
+ [Введение в классы объектов AMO](amo-classes-introduction.md)   
  [Программирование объектов безопасности AMO](programming-amo-security-objects.md)   
  [Разрешения и права доступа &#40;службы Analysis Services — многомерные данные&#41;](https://msdn.microsoft.com/library/ms174786(v=sql.120).aspx)   
  [Обеспечение безопасности экземпляра служб Analysis Services](https://technet.microsoft.com/library/ms175663\(v=sql.110\).aspx)   

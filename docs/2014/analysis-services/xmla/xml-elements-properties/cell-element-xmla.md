@@ -1,5 +1,5 @@
 ---
-title: Ячейки элемент (XMLA) | Документы Microsoft
+title: Ячейки элемент (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Cell element
 ms.assetid: 88daba54-89e9-423f-8d12-8de80cf52d6b
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: be00f4ae61817143cc986e69d543eaf4201bbe87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 18110400e76f10e9e8ac90fc2793a7a90f25d4de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188538"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241235"
 ---
 # <a name="cell-element-xmla"></a>Элемент Cell (XML для аналитики)
   Содержит сведения о ячейке, которая будет обновлена командой [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md) .  

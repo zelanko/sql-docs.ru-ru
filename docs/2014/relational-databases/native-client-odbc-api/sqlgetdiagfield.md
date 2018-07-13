@@ -1,13 +1,11 @@
 ---
-title: SQLGetDiagField | Документы Microsoft
+title: SQLGetDiagField | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,24 +14,24 @@ helpviewer_keywords:
 - SQLGetDiagField function
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d10a9383294f02b26bd15113d17f6d6bd0e182c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8fcb95ada7482f48f9316d02553bba9aab4867fc
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101062"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421893"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента определяет следующие дополнительные поля для `SQLGetDiagField`. Эти поля поддерживают множество отчетов об ошибках для приложений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и доступны во всех диагностических записях, созданных дескрипторами соединения ODBC и дескрипторами инструкций ODBC. Эти поля определены в файле sqlncli.h.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента заданы следующие дополнительные поля для `SQLGetDiagField`. Эти поля поддерживают множество отчетов об ошибках для приложений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и доступны во всех диагностических записях, созданных дескрипторами соединения ODBC и дескрипторами инструкций ODBC. Эти поля определены в файле sqlncli.h.  
   
 |Поля диагностических записей|Описание|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Сообщает номер строки хранимой процедуры, на которой произошла ошибка. Значение SQL_DIAG_SS_LINE значимо, только если SQL_DIAG_SS_PROCNAME возвращает значение. Значение возвращается как 16-разрядное целое число без знака.|  
-|SQL_DIAG_SS_MSGSTATE|Состояние сообщения об ошибке. Сведения о состоянии сообщения об ошибке см. в разделе [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql). Значение возвращается как 32-разрядное целое число со знаком.|  
-|SQL_DIAG_SS_PROCNAME|Имя хранимой процедуры, в которой возникла ошибка, если это имеет смысл. Значение возвращается как символьная строка. Максимальная длина строки (в символах) зависит от версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Его можно определить путем вызова [SQLGetInfo](sqlgetinfo.md) запрашивает значение SQL_MAX_PROCEDURE_NAME_LEN.|  
+|SQL_DIAG_SS_MSGSTATE|Состояние сообщения об ошибке. Сведения о состоянии сообщения об ошибке, см. в разделе [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql). Значение возвращается как 32-разрядное целое число со знаком.|  
+|SQL_DIAG_SS_PROCNAME|Имя хранимой процедуры, в которой возникла ошибка, если это имеет смысл. Значение возвращается как символьная строка. Максимальная длина строки (в символах) зависит от версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ее можно определить путем вызова [SQLGetInfo](sqlgetinfo.md) запрашивая значение sql_max_procedure_name_len.|  
 |SQL_DIAG_SS_SEVERITY|Степень серьезности связанного сообщения об ошибке. Значение возвращается как 32-разрядное целое число со знаком.|  
 |SQL_DIAG_SS_SRVNAME|Имя сервера, на котором произошла ошибка. Значение возвращается как символьная строка. Длина строки (в символах) задается макросом SQL_MAX_SQLSERVERNAME в файле sqlncli.h.|  
   
@@ -65,7 +63,7 @@ ms.locfileid: "36101062"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|Инструкция DROP TRIGGER|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|Инструкция BACKUP или DUMP DATABASE|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|Инструкция DUMP TABLE|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Инструкция BACKUP или DUMP TRANSACTION. Также возвращается для инструкции CHECKPOINT, если **trunc. журнала на контрольной точке.** базы данных включен.|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Инструкция BACKUP или DUMP TRANSACTION. Также возвращается для инструкции CHECKPOINT, если **trunc. log на контрольной точке.** базы данных включен.|  
 |SQL_DIAG_DFC_SS_GOTO|Инструкция управления потоком GOTO|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|Инструкция INSERT BULK|  
 |SQL_DIAG_DFC_SS_KILL|Инструкция KILL|  
@@ -102,7 +100,7 @@ ms.locfileid: "36101062"
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>Функция SQLGetDiagField и возвращающие табличное значение параметры  
  SQLGetDiagField может использоваться для получения двух диагностических полей: SQL_DIAG_SS_TABLE_COLUMN_NUMBER и SQL_DIAG_SS_TABLE_ROW_NUMBER. Эти поля помогают определить, какое значение вызвало ошибку или предупреждение, связанные с диагностической записью.  
   
- Дополнительные сведения о возвращающих табличные значения параметров см. в разделе [табличное значение параметры &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Дополнительные сведения о возвращающих табличные значения параметров, см. в разделе [возвращающего табличное значение параметров &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>См. также  
  [Функция SQLGetDiagField](http://go.microsoft.com/fwlink/?LinkId=59352)   

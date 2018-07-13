@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schedules [Reporting Services]
 - schedules [Reporting Services], about schedules
@@ -20,28 +20,28 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 800dce34cebf45e3962b5226929267afe1fc727f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b673c1dfe86caab3feeeae6bdbdfda853bd2a5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278420"
 ---
 # <a name="schedules"></a>Расписания
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Предоставляет общие расписания и расписания отчетов помогут управлять обработкой и распространением отчетов. Различие между двумя типами расписаний состоит в том, как они определяются, хранятся и управляются. Внутреннее строение обоих типов расписаний одинаково. В каждом расписании указывается тип повторения: ежемесячно, еженедельно или ежедневно. В пределах одного типа повторений можно указать интервалы и диапазон, определяющий частоту повторения события. Шаблон типа повторения и способ его задания одинаков при создании как общих расписаний, так и расписаний для отчетов.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Предоставляет общие расписания и расписания отчетов, которые помогут управлять обработкой и распространением отчетов. Различие между двумя типами расписаний состоит в том, как они определяются, хранятся и управляются. Внутреннее строение обоих типов расписаний одинаково. В каждом расписании указывается тип повторения: ежемесячно, еженедельно или ежедневно. В пределах одного типа повторений можно указать интервалы и диапазон, определяющий частоту повторения события. Шаблон типа повторения и способ его задания одинаков при создании как общих расписаний, так и расписаний для отчетов.  
   
  В этом разделе:  
   
--   [Действия с расписаниями](#bkmk_whatyoucando)  
+-   [Что делать с расписаниями](#bkmk_whatyoucando)  
   
 -   [Сравнение общих расписаний отчетов и расписаний](#bkmk_compare)  
   
 -   [Настройка источников данных](#bkmk_configuredatasources)  
   
--   [Хранить учетные данные и обработка учетных записей](#bkmk_credentials)  
+-   [Store учетных данных и обработка учетных записей](#bkmk_credentials)  
   
--   [Способ планирования и доставки работы обработчика](#bkmk_how_scheduling_works)  
+-   [Планирования и доставки принцип работы обработчика](#bkmk_how_scheduling_works)  
   
 -   [Серверные зависимости](#bkmk_serverdependencies)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36188970"
   
  При создании расписания отчет сохраняет информацию в базе данных сервера отчетов или в режиме интеграции с SharePoint в базе данных приложения службы. Сервер отчетов также создает задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которое используется для запуска расписания. Расписания обрабатываются на основе местного времени сервера отчетов, на котором они содержатся. Формат времени соответствует стандарту операционной системы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- Дополнительные сведения о том, как создавать расписания и управлять ими в разделе [создание, изменение и удаление расписаний](create-modify-and-delete-schedules.md).  
+ Дополнительные сведения о том, как создавать расписания и управлять ими, см. в разделе [создание, изменение и удаление расписаний](create-modify-and-delete-schedules.md).  
   
 > [!NOTE]  
 >  Операции планирования доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о функциях, поддерживаемых выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
@@ -104,7 +104,7 @@ ms.locfileid: "36188970"
 |Создать, изменить или удалить расписание отчета в пользовательской подписке|Управление отдельными подписками|браузер, построитель отчетов, «Мои отчеты», диспетчер содержимого|Посетители, участники|  
 |Создать, изменить или удалить расписание отчета для всех остальных отложенных операций|Управление журналом отчета, управление всеми подписками, управление отчетами|Диспетчер содержимого|Владельцы|  
   
- Дополнительные сведения о безопасности в собственном режиме [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], в разделе [стандартные роли](../security/role-definitions-predefined-roles.md), [предоставление разрешений на сервер отчетов в собственном режиме](../security/granting-permissions-on-a-native-mode-report-server.md) и [задачи и разрешения](../security/tasks-and-permissions.md). Описание режима интеграции с SharePoint см. в разделе [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ Дополнительные сведения о безопасности в собственном режиме [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], см. в разделе [стандартные роли](../security/role-definitions-predefined-roles.md), [предоставление разрешений на сервер отчетов в собственном режиме](../security/granting-permissions-on-a-native-mode-report-server.md) и [задачи и разрешения](../security/tasks-and-permissions.md). Описание режима интеграции с SharePoint см. в разделе [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
 ##  <a name="bkmk_how_scheduling_works"></a> Принцип работы обработчика планирования и доставки  
  Обработчик планирования и доставки выполняет следующие функции.  
@@ -132,7 +132,7 @@ ms.locfileid: "36188970"
  Службы Reporting Services поддерживают очередь событий для всех запланированных операций. Через регулярные интервалы времени производится опрос очереди для обнаружения новых событий. По умолчанию очередь просматривается с интервалом в 10 секунд. Интервал можно изменить, изменив `PollingInterval`, `IsNotificationService`, и `IsEventService` параметры конфигурации в файле RSReportServer.config. В режиме интеграции с SharePoint файл RSreporserver.config также используется для этих параметров, а значения применяются ко всем приложениям службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в статье [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
 ##  <a name="bkmk_serverdependencies"></a> Серверные зависимости  
- Обработчик планирования и доставки требует, чтобы была запущена служба сервера отчетов и агент SQL Server. Функции обработчика расписания и доставки должны быть активированы через `ScheduleEventsAndReportDeliveryEnabled` свойство **Настройка контактной зоны для служб Reporting Services** аспекта в управлении на основе политик. Для формирования запланированных действий должны быть запущены как агент SQL Server, так и служба сервера отчетов.  
+ Обработчик планирования и доставки требует, чтобы была запущена служба сервера отчетов и агент SQL Server. Функции обработчика расписания и доставки должны быть активированы через `ScheduleEventsAndReportDeliveryEnabled` свойство **настройки контактной зоны для служб Reporting Services** аспекта в управлении на основе политики. Для формирования запланированных действий должны быть запущены как агент SQL Server, так и служба сервера отчетов.  
   
 > [!NOTE]  
 >  Для временной или полной остановки формирования запланированных действий можно использовать аспект **Настройка контактной зоны для служб Reporting Services** . Можно создать и развернуть пользовательские модули доставки, но сам обработчик планирования и доставки не является расширяемым. Нельзя изменить его способ управления событиями и уведомлениями. Дополнительные сведения об отключении функций см. в подразделе **Запланированные события и доставка** раздела [Turn Reporting Services Features On or Off](../report-server/turn-reporting-services-features-on-or-off.md).  
@@ -152,6 +152,6 @@ ms.locfileid: "36188970"
  [Управляемые данными подписки](data-driven-subscriptions.md)   
  [Кэширование отчетов (службы SSRS)](../report-server/caching-reports-ssrs.md)   
  [Управление содержимым сервера отчетов &#40;собственный режим служб SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Общие наборы данных в кэше &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)  
+ [Кэширование общих наборов данных &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)  
   
   

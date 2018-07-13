@@ -1,13 +1,11 @@
 ---
-title: Поддержка распределенных запросов в наборах строк схемы | Документы Microsoft
+title: Поддержка распределенных запросов в наборах строк схемы | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,20 +17,20 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7f7c5746a34ca40d567886cce6bce4b9b8aceb76
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b640761d4c88f5a6a93772e12a2249f9f88f28f5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189513"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419763"
 ---
 # <a name="distributed-query-support-in-schema-rowsets"></a>Поддержка распределенных запросов в наборах строк схемы
   Для поддержки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] распределенные запросы, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента **IDBSchemaRowset** интерфейс возвращает метаданные связанных серверов.  
   
- Если свойство SSPROP_QUOTEDCATALOGNAMES набора свойств DBPROPSET_SQLSERVERSESSION имеет значение VARIANT_TRUE, можно указать заключенный в кавычки идентификатор имени каталога (например, "my.catalog"). При ограничении вывода набора строк схемы по каталогу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента распознает двухкомпонентное имя, содержащее имя связанного сервера и каталога. Наборы строк схемы в таблице ниже, для указания каталога двухкомпонентное имя в качестве *связанный_сервер ***.*** каталог* ограничивает выходные данные подходящим каталогом именованного связанного сервера.  
+ Если свойство SSPROP_QUOTEDCATALOGNAMES набора свойств DBPROPSET_SQLSERVERSESSION имеет значение VARIANT_TRUE, можно указать заключенный в кавычки идентификатор имени каталога (например, "my.catalog"). При ограничении вывода набора строк схемы по каталогу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента распознает двухкомпонентное имя, содержащее имя связанного сервера и каталога. Для наборов строк схемы в таблице ниже, указав в качестве каталога двухкомпонентное имя *связанный_сервер ***.*** каталог* ограничивает выходные данные подходящим каталогом именованного связанного сервера.  
   
 |Набор строк схемы|Ограничение каталога|  
 |-------------------|-------------------------|  
@@ -51,7 +49,7 @@ ms.locfileid: "36189513"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента определяет набор строк схемы LINKEDSERVERS, который возвращает список источников данных OLE DB, зарегистрированные как связанные серверы.  
   
 ## <a name="see-also"></a>См. также  
- [Поддержка наборов строк схемы &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)   
+ [Поддержка набора строк схемы &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)   
  [Набор строк LINKEDSERVERS &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
   
   

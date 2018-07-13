@@ -1,5 +1,5 @@
 ---
-title: Редактор формы действия (вкладка «действия», конструктор кубов) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Редактор формы действия (вкладка «действия», конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.action.f1
 ms.assetid: c363a29b-6099-473c-9625-460cc15b3d95
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7ce8acc1630b9944b2ac858ba27a1f515bb19adc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f51a23b7dddddc0365809fd6bc92c922fdd402fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239964"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Редактор формы действия (вкладка «Действия», конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте панель «Редактор формы действия» на вкладке **Действия** конструктора кубов для создания и модификации стандартных действий.  
@@ -118,6 +118,6 @@ ms.locfileid: "36189388"
  [Организатор действий &#40;вкладка «действия», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [Средства вычисления &#40;вкладка «действия», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Редактор форм действий детализации &#40;вкладка «действия», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Редактор формы действий отчета &#40;вкладка «действия», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
+ [Редактор форм действий отчетов &#40;вкладка «действия», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
   
   

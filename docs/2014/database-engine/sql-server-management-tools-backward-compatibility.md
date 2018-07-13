@@ -1,25 +1,23 @@
 ---
-title: Обратная совместимость средств управления SQL Server | Документы Microsoft
+title: Обратная совместимость средств управления SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a57b4666-2177-419c-b9b6-28be93485b0f
-caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d9d98eea07e8f9a062ae4a5be168e831589ae729
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b7a7cea6026f043f42c0af433d41dd982e3bc747
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195674"
 ---
 # <a name="sql-server-management-tools-backward-compatibility"></a>Обратная совместимость средств управления SQL Server
   В подразделах раздела об обратной совместимости описаны отличия в поведении для разных версий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

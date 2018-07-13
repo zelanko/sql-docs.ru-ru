@@ -1,13 +1,11 @@
 ---
-title: Обработка кодов возврата и выходных параметров (ODBC) | Документы Microsoft
+title: Обработка кодов возврата и выходных параметров (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1303c15f94dc32e69378c38e5353f8e82bf1214a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d8f5eab232d9651375ea9cd2857a8b8bb9129e88
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099548"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422533"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>Обработка кодов возврата и выходных параметров (ODBC)
-  Хранимые процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут иметь целочисленные коды возврата и выходные параметры. Коды возврата и выходные параметры передаются в последнем пакете от сервера и не доступны приложению, пока [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) не вернет значение SQL_NO_DATA. Если хранимая процедура возвращает ошибку, вызовите SQLMoreResults для перехода к следующему результату, пока не будет возвращено значение SQL_NO_DATA.  
+  Хранимые процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут иметь целочисленные коды возврата и выходные параметры. Коды возврата и выходные параметры пересылаются в последнем пакете от сервера и не доступны приложению, пока [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) не вернет значение SQL_NO_DATA. Если ошибка возвращается из хранимой процедуры, вызовите SQLMoreResults, чтобы перейти к следующему результату, пока не будет возвращено значение SQL_NO_DATA.  
   
 > [!IMPORTANT]  
 >  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -35,7 +33,7 @@ ms.locfileid: "36099548"
   
 1.  Сконструируйте инструкцию SQL, использующую escape-последовательность ODBC CALL. Инструкция должна использовать маркеры параметров для каждого параметра входа, входа-выхода и выхода, а также для возвращаемого процедурой значения (если оно имеется).  
   
-2.  Вызовите [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) для каждого входного потока ввода вывода и выходного параметра и для возвращаемого процедурой значения (если таковые имеются).  
+2.  Вызовите [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) для каждого набора входных данных ввода вывода, выходного параметра и для возвращаемого процедурой значения (если таковые имеются).  
   
 3.  Выполните инструкцию с помощью `SQLExecDirect`.  
   
@@ -194,6 +192,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Выполнение хранимых процедур инструкции &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+ [Выполнение разделы руководства, посвященные хранимых процедур &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
   

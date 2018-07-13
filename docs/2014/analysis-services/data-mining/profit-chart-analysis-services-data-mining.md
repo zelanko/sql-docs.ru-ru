@@ -1,5 +1,5 @@
 ---
-title: Диаграмма роста прибыли (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+title: Диаграмма роста прибыли (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy, charting
 - revenue, estimating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 68a78acb38762075dba4bd3a6350c68f729f4716
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 898f0d6fe8dacfb2ec2a8148297d7bd5c0eeb949
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239934"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Диаграмма роста прибыли (службы Analysis Services — интеллектуальный анализ данных)
   В диаграмме роста прибыли отображается теоретический прирост прибыли, связанный с использованием модели интеллектуального анализа данных. Предположим, что модель прогнозирует, с какими клиентами компании следует связаться в определенном бизнес-сценарии. В этом случае следует добавить в диаграмму роста прибыли данные о стоимости проведения кампании целевой рассылки. И тогда в готовой диаграмме вы увидите сравнение прибыли при правильном выборе целевых клиентов и при обращении к клиентам случайным образом.  
@@ -95,13 +95,13 @@ ms.locfileid: "36191108"
   
 |Подраздел|Ссылки|  
 |------------|-----------|  
-|Объясняет, как создать диаграмму точности прогнозов для модели целевой рассылки.|[Учебник по основам интеллектуального анализа данных](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Проверка точности при помощи диаграммы точности прогнозов &#40;учебник по интеллектуальному анализу данных&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Объясняет, как создать диаграмму точности прогнозов для модели целевой рассылки.|[Учебник по основам интеллектуального анализа данных](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Проверка точности при помощи диаграммы точности прогнозов &#40;учебник интеллектуального анализа данных&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
 |Объясняет типы соответствующих диаграмм.|[Диаграмма точности прогнозов &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Матрица классификации &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Точечная диаграмма &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](scatter-plot-analysis-services-data-mining.md)|  
 |Описывает перекрестную проверку для моделей интеллектуального анализа данных и структур интеллектуального анализа данных.|[Перекрестная проверка &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](cross-validation-analysis-services-data-mining.md)|  
 |Описывает шаги для создания диаграммы точности прогнозов и других диаграмм точности.|[Тестирование и проверка задачи и инструкции по &#40;интеллектуального анализа данных&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>См. также  
  [Тестирование и проверка &#40;интеллектуального анализа данных&#41;](testing-and-validation-data-mining.md)   
- [Проверка точности при помощи диаграммы точности прогнозов &#40;учебник по интеллектуальному анализу данных&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Проверка точности при помощи диаграммы точности прогнозов &#40;учебник интеллектуального анализа данных&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Создание, изменение и удаление внешних ключей | Документы Microsoft
+title: Создание, изменение и удаление внешних ключей | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,25 +14,25 @@ helpviewer_keywords:
 - foreign keys [SMO]
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e4523fc03ea6b0749c8818671c26403eeef243a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 173383d491d80bfe6f685f2ed6ea7ca83027fe77
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197254"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Создание, изменение и удаление внешних ключей
   В иерархии управляющих объектов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO) внешние ключи представлены объектом <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>.  
   
- Чтобы создать в SMO внешний ключ, необходимо указать таблицу, в которой внешний ключ определен в конструкторе <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> объекта. В этой таблице надо выбрать хотя бы один столбец, который будет внешним ключом. Для этого создайте объектную переменную <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> и укажите имя столбца, который станет внешним ключом. Теперь укажите таблицу и столбец, на которые будут выполняться ссылки. Используйте <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> метод, чтобы добавить столбец `Columns` свойство объекта.  
+ Чтобы создать в SMO внешний ключ, необходимо указать таблицу, в которой внешний ключ определен в конструкторе класса <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> объекта. В этой таблице надо выбрать хотя бы один столбец, который будет внешним ключом. Для этого создайте объектную переменную <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> и укажите имя столбца, который станет внешним ключом. Теперь укажите таблицу и столбец, на которые будут выполняться ссылки. Используйте <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> метод для добавления столбца `Columns` свойство объекта.  
   
- Столбцы, представляющие внешний ключ, перечислены в свойстве `Columns` объекта <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. Первичный ключ, на который ссылается внешний ключ, представленного <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> свойство, которое находится в таблице, указанной в <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> свойство.  
+ Столбцы, представляющие внешний ключ, перечислены в свойстве `Columns` объекта <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. Первичный ключ, на который ссылается внешний ключ представленного <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> свойство, которое находится в таблице, указанной в <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> свойство.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [создать Visual C&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Создание, изменение и удаление внешнего ключа на языке Visual Basic  
  Этот пример кода показывает, как создать связь по внешнему ключу между одним или несколькими столбцами одной таблицы и первичным ключевым столбцом другой таблицы.  

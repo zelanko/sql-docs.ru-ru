@@ -1,26 +1,24 @@
 ---
-title: Получить взаимной проверки подлинности Kerberos | Документы Microsoft
+title: Взаимной проверки подлинности Kerberos | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4a6feeb04fcb807b6b32168b8ea285240d08ccfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c0622e1ebac261085b341056e6178e72d02d66d0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110145"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426323"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Выполнение взаимной проверки подлинности Kerberos
   Этот образец показывает, как выполнить взаимную проверку подлинности Kerberos с использованием ODBC в собственном клиенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -1,5 +1,5 @@
 ---
-title: Свойство ProtocolName (класс ClientNetworkProtocolProperty) | Документы Microsoft
+title: Свойство ProtocolName (класс ClientNetworkProtocolProperty) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 77c53201-4fab-481e-9b3b-57d0b8b83113
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2ae734d16b0fc4202add1865d8c43407f8312b3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7abe2c5768d998fa43d505dad8ca9c3905b1629f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212634"
 ---
 # <a name="protocolname-property-clientnetworkprotocolproperty-class"></a>Свойство ProtocolName (класс ClientNetworkProtocolProperty)
   Возвращает имя протокола, владеющего текущим свойством, на которое ссылается значение свойства [PropertyIdx (класс ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) .  

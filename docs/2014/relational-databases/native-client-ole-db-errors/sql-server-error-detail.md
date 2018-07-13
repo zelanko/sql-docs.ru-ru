@@ -1,13 +1,11 @@
 ---
-title: Подробные сведения об ошибках SQL Server | Документы Microsoft
+title: Сведения об ошибке SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,22 +17,22 @@ helpviewer_keywords:
 - ISQLServerErrorInfo interface
 ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbbf2365603998edabe58a01de840f2969a8c263
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2b937fda454ae08549917cdf3682ef20c76373a6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189753"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408993"
 ---
 # <a name="sql-server-error-detail"></a>Подробные сведения об ошибках SQL Server
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента определяет интерфейс, ошибка поставщика [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md). Интерфейс возвращает более подробные сведения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и полезен, если выполнение команды или операции работы с наборами строк завершились с ошибкой.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента определяет интерфейс поставщика ошибка [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md). Интерфейс возвращает более подробные сведения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и полезен, если выполнение команды или операции работы с наборами строк завершились с ошибкой.  
   
- Существует два способа для получения доступа к **ISQLServerErrorInfo** интерфейса.  
+ Существует два способа получить доступ к **ISQLServerErrorInfo** интерфейс.  
   
- Потребитель может вызвать **IErrorRecords::GetCustomerErrorObject** для получения **ISQLServerErrorInfo** указателя, как показано в следующем образце кода. (Нет необходимости для получения **ISQLErrorInfo.**) Оба **ISQLErrorInfo** и **ISQLServerErrorInfo** , пользовательские объекты ошибок OLE DB с **ISQLServerErrorInfo** является интерфейсом для получения сведений из ошибки сервера, включая такие данные, как процедуры имени и номера строк.  
+ Потребитель может вызвать **IErrorRecords::GetCustomerErrorObject** для получения **ISQLServerErrorInfo** указателя, как показано в следующем образце кода. (Нет необходимости для получения **ISQLErrorInfo.**) Оба **ISQLErrorInfo** и **ISQLServerErrorInfo** являются пользовательские объекты ошибок OLE DB, с помощью **ISQLServerErrorInfo** является интерфейсом для получения сведений из ошибки на сервере, включая такие данные, как процедура имени и номера строк.  
   
 ```  
 // Get the SQL Server custom error object.  
@@ -43,7 +41,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
    (IUnknown**)&pISQLServerErrorErrorInfo)))  
 ```  
   
- Еще одним способом извлечения **ISQLServerErrorInfo** указатель является вызов **QueryInterface** метод уже получен **ISQLErrorInfo** указателя. Обратите внимание, что поскольку **ISQLServerErrorInfo** содержит надмножество информации, доступной из **ISQLErrorInfo**, имеет смысл перейти непосредственно на **ISQLServerErrorInfo**через **GetCustomerErrorObject**.  
+ Еще один способ получения **ISQLServerErrorInfo** указатель является вызов **QueryInterface** метод уже получал **ISQLErrorInfo** указатель. Обратите внимание, что поскольку **ISQLServerErrorInfo** содержит надмножество информации, доступной из **ISQLErrorInfo**, имеет смысл перейти непосредственно на **ISQLServerErrorInfo**через **GetCustomerErrorObject**.  
   
  **ISQLServerErrorInfo** интерфейс предоставляет одну функцию-член [ISQLServerErrorInfo::GetErrorInfo](../native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md). Функция возвращает указатель на структуру SSERRORINFO и указатель на буфер строк. Оба указателя ссылаются на память, потребитель должен освободить с помощью **IMalloc::Free** метод.  
   
@@ -51,7 +49,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
 |Член|Описание|  
 |------------|-----------------|  
-|*pwszMessage*|Сообщение об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Идентично строке, возвращенной в **IErrorInfo::GetDescription**.|  
+|*pwszMessage*|Сообщение об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Идентично строке, возвращаемой **IErrorInfo::GetDescription**.|  
 |*pwszServer*|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для сеанса.|  
 |*pwszProcedure*|При необходимости, имя процедуры, в которой произошла ошибка. Пустая строка в противном случае.|  
 |*lNative*|Номер собственной ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Идентичен значению, возвращенному в *plNativeError* параметр **ISQLErrorInfo::GetSQLInfo**.|  

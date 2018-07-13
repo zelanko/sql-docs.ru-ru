@@ -1,5 +1,5 @@
 ---
-title: Элемент StorageBoundInMB (DTA) | Документы Microsoft
+title: Элемент StorageBoundInMB (DTA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3c2a7b28ef7f6c5f6853d8b5fad0fb4a5706face
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 20e289a5920dba9ab2567a07841010ceaeaa2666
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218384"
 ---
 # <a name="storageboundinmb-element-dta"></a>Элемент StorageBoundInMB (DTA)
   Определяет максимальный размер в мегабайтах, который может быть использован в рекомендациях по настройке помощника по настройке ядра СУБД (для набора индексов и секционирования).  
@@ -62,7 +62,7 @@ ms.locfileid: "36188582"
   
  В размере хранилища по умолчанию не учитываются некластеризованные индексы и индексированные представления.  
   
- Если значение, указанное для `StorageBoundInMB` превышает реальное свободное место, помощник по настройке ядра СУБД возвращает ошибку, но продолжает настройку. После завершения настройки можно увеличить место на диске, чтобы реализовать рекомендацию.  
+ Если значение, заданное для `StorageBoundInMB` элемента превышает фактическое место на диске, помощник по настройке ядра СУБД возвращает ошибку, но продолжает настройку. После завершения настройки можно увеличить место на диске, чтобы реализовать рекомендацию.  
   
 ## <a name="example"></a>Пример  
   

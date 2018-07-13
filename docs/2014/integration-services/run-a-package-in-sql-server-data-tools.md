@@ -1,5 +1,5 @@
 ---
-title: Запуск пакета в SQL Server Data Tools | Документы Microsoft
+title: Запустить пакет в SQL Server Data Tools | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, running
 - SSIS packages, running
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, running
 ms.assetid: 318e6beb-5540-4101-82a5-18c9d47f0570
 caps.latest.revision: 56
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23fd9f18468fa084ed526ab93f993a545749b2e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c49b831eefc250762673ec240c60766c6259ac38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197454"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>Запуск пакета с помощью SQL Server Data Tools
   Обычно пакеты исполняются в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] во время разработки, отладки и тестирования пакетов. Когда пакет запускается из конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , его запуск происходит немедленно.  

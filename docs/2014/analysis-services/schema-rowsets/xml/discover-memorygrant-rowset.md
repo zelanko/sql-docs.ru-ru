@@ -1,5 +1,5 @@
 ---
-title: Набор строк DISCOVER_MEMORYGRANT | Документы Microsoft
+title: Набор строк DISCOVER_MEMORYGRANT | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d254e42d-9918-47ce-b6df-47f1f0b432dd
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3066a924b572324fcf70dbec7aa726b9ba05f846
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cae85df7e3c76afd9243771032f21f8f91861f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229994"
 ---
 # <a name="discovermemorygrant-rowset"></a>Набор строк DISCOVER_MEMORYGRANT
   Возвращает список предоставленных квот внутренней памяти, занятых заданиями, которые сейчас выполняются на сервере. Чтобы узнать, работает ли задание на сервере, используйте `Select * from $System.Discover_Jobs`.  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - secondary servers [SQL Server]
 - log shipping [SQL Server], jobs
@@ -26,15 +25,15 @@ helpviewer_keywords:
 - primary servers [SQL Server]
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 caps.latest.revision: 63
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 23330dfd6f87ec70e7a8f7af5fb298202eb30bc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4c9ed199bc82b6e24f8ab78c19b5d3529a0af802
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195704"
 ---
 # <a name="about-log-shipping-sql-server"></a>Сведения о доставке журналов (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет автоматически отправлять резервные копии журналов транзакций из *базы данных-источника* экземпляра *сервера-источника* в одну или более *баз данных-получателей* других экземпляров *сервера-получателя* . Резервные копии журналов транзакций применяются к каждой из баз данных-получателей индивидуально. Необязательный третий экземпляр сервера, известный как *сервер мониторинга*, ведет журнал и отслеживает состояние операций резервного копирования и восстановления и при необходимости выдает предупреждение, если в этих запланированных операциях происходит сбой.  
@@ -132,7 +131,7 @@ ms.locfileid: "36190835"
 ##  <a name="Interoperability"></a> Совместимость  
  Доставка журналов может использоваться вместе со следующими функциями и компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   [Необходимые условия для перехода от использования доставки журналов в группы доступности AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+-   [Необходимые условия для перехода от использования доставки журналов для групп доступности AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
 -   [Зеркальное отображение баз данных и доставка журналов (SQL Server)](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   

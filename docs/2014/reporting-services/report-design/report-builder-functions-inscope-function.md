@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e677c9e02f452a486b9168f15c662362640ea86e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ebf90710587c73206408dfda1429a90b58f39621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228844"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>Функция InScope (построитель отчетов и службы SSRS)
   Указывает, входит ли текущий экземпляр элемента в указанную область.  
@@ -45,7 +45,7 @@ InScope(scope)
   
  Значением*Scope* не может быть выражение.  
   
- Правило, используется `InScope` функция применяется в областях данных с динамическим определением области действия. Например `InScope` может использоваться для предоставления другого отчета имя и другие наборы параметров в зависимости от выбранной ячейки в ссылке детализации в ячейках области данных. Далее приведен пример.  
+ Правило, используется `InScope` функция применяется в областях данных с динамическим определением области действия. Например `InScope` может использоваться в ссылке детализации в ячейках области данных для предоставления различных отчетов, имя и другие наборы параметров в зависимости от выбранной ячейки. Далее приведен пример.  
   
 -   Следующее выражение, используемое в качестве названия отчета в ссылке детализации, открывает отчет `ProductDetail` , если выбранная ячейка находится в группе `Month` , и отчет `ProductSummary` — в противном случае.  
   
@@ -69,9 +69,9 @@ InScope(scope)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Выражения используются в отчетах &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
- [Область выражения для итогов, статистических функций и встроенных коллекций &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

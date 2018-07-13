@@ -1,5 +1,5 @@
 ---
-title: Элемент NotifyTableChange (XML для Аналитики) | Документы Microsoft
+title: Элемент NotifyTableChange (XML для Аналитики) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - NotifyTableChange command
 ms.assetid: b76898eb-20d3-48c8-9eb8-1fd5df638bcc
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 64779ceab6d83365755ed212a93685ee3f31837f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 612738591115a2e7af964ba4ee5d9950587e45bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190060"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203904"
 ---
 # <a name="notifytablechange-element-xmla"></a>Элемент NotifyTableChange (XML для аналитики)
-  Уведомляет экземпляр служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , что произошло изменение таблицы в источнике данных.  
+  Уведомляет экземпляр служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] изменения, произведенного в таблицах указанного источника данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   

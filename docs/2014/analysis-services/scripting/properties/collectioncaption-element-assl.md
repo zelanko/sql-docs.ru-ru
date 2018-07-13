@@ -1,5 +1,5 @@
 ---
-title: Элемент CollectionCaption (ASSL) | Документы Microsoft
+title: Элемент CollectionCaption (язык ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 33929373-11df-4f89-8d2e-d63923c44f53
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bba7c2ab2cffb2287b1eff84c5e9fc9f385119cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 336c87e48d2e65e7aa9bfd858ff07e2fc2436f34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209964"
 ---
 # <a name="collectioncaption-element-assl"></a>Элемент CollectionCaption (язык ASSL)
   Содержит имя родительского элемента во множественном числе.  
@@ -50,6 +50,6 @@ ms.locfileid: "36189611"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю элемента `CollectionCaption` в объекте Analysis Management объекты AMO модели: t:Microsoft.AnalysisServices.relationshipendtranslation.  
+ Элемент, соответствующий родителю параметра `CollectionCaption` в объекте объекты управления Analysis AMO модели: t:Microsoft.AnalysisServices.relationshipendtranslation.  
   
   

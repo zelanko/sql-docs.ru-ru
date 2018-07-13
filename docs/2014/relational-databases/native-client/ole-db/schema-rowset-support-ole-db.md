@@ -1,13 +1,11 @@
 ---
-title: Поддержка наборов строк схемы (OLE DB) | Документы Microsoft
+title: Поддержка набора строк схемы (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d556174bdd307c09861a2e86a1df5bee9ea9ec45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f37a7e25bf720ffa20e29b005e6022115583ac7f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102413"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413323"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Поддержка набора строк схемы (OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента также поддерживает возвращение информации схемы со связанного сервера при обработке [!INCLUDE[tsql](../../../includes/tsql-md.md)] распределенных запросов.  
@@ -40,7 +38,7 @@ ms.locfileid: "36102413"
 |-------------------|-------------------------|  
 |DBSCHEMA_CATALOGS|CATALOG_NAME|  
 |DBSCHEMA_COLUMN_PRIVILEGES|Поддерживаются все ограничения.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
-|DBSCHEMA_COLUMNS|Поддерживаются все ограничения.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> Следующие столбцы являются специфичными для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> -COLUMN_LCID, который является Идентификатором параметров сортировки. Значение COLUMN_LCID совпадает со значением кода языка Windows.<br />-COLUMN_COMPFLAGS определяет, какие сравнения поддерживаются для параметров сортировки. Формат данных совпадает с форматом DBPROB_FINDCOMPAREOPS.<br />-COLUMN_SORTID, представляющий собой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сортировки стиль для параметров сортировки.<br />-COLUMN_TDSCOLLATION, представляющий собой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] параметров сортировки для столбца.<br />-IS_COMPUTED, который имеет значение VARIANT_TRUE, если столбец является вычисляемым столбцом, либо значение VARIANT_FALSE в противном случае.|  
+|DBSCHEMA_COLUMNS|Поддерживаются все ограничения.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> Следующие столбцы являются специфичными для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> -COLUMN_LCID, который является Идентификатором параметров сортировки. Значение COLUMN_LCID совпадает со значением кода языка Windows.<br />-COLUMN_COMPFLAGS определяет, какие сравнения поддерживаются для параметров сортировки. Формат данных совпадает с форматом DBPROB_FINDCOMPAREOPS.<br />-COLUMN_SORTID, представляющий собой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сортировки стиля для параметров сортировки.<br />-COLUMN_TDSCOLLATION, который является [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] параметры сортировки для столбца.<br />-IS_COMPUTED, имеющий значение VARIANT_TRUE, если столбец является вычисляемым столбцом, либо значение VARIANT_FALSE в противном случае.|  
 |DBSCHEMA_FOREIGN_KEYS|Поддерживаются все ограничения.<br /><br /> PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |DBSCHEMA_INDEXES|Поддерживаются ограничения 1, 2, 3 и 5.<br /><br /> TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TABLE_NAME|  
 |DBSCHEMA_PRIMARY_KEYS|Поддерживаются все ограничения.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
