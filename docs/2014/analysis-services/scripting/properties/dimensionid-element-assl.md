@@ -1,5 +1,5 @@
 ---
-title: Элемент DimensionID (ASSL) | Документы Microsoft
+title: Элемент DimensionID (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DimensionID element
 ms.assetid: 00262781-4216-4a19-8bdc-d46647f42165
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24b65d34bfd1e16e464c1469a6c90058f4c100ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c211ed3b218a89bf02e29793573fe0915191641
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259490"
 ---
 # <a name="dimensionid-element-assl"></a>Элемент DimensionID (ASSL)
   Содержит идентификатор измерения.  
@@ -62,7 +62,7 @@ ms.locfileid: "36102521"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элементы, соответствующие родителям элемента `DimensionID` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.CubeDimension> и <xref:Microsoft.AnalysisServices.DimensionBinding>.  
+ Элементы, соответствующие родителям элемента `DimensionID` в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.CubeDimension> и <xref:Microsoft.AnalysisServices.DimensionBinding>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

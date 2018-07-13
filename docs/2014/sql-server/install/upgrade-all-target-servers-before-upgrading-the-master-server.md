@@ -1,5 +1,5 @@
 ---
-title: Обновите все целевые серверы перед обновлением главного сервера | Документы Microsoft
+title: Обновить все целевые серверы перед обновлением главного сервера | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TSX [SQL Server Agent]
 - target servers [SQL Server Agent]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - master servers [SQL Server Agent]
 ms.assetid: 2c231793-3878-4a5e-a425-1fa0d787ba84
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fdd218b1d5bfaacaffbd50c50d55dd47d613d207
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d0df73fdfa1ebbaa84b0fb11519698351a78ffdc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218674"
 ---
 # <a name="upgrade-all-target-servers-before-upgrading-the-master-server"></a>Обновите все целевые серверы перед обновлением главного сервера
   Перед обновлением главного сервера обновите все компьютеры, на которых работают серверы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настроенные в качестве целевых серверов.  
@@ -43,7 +43,7 @@ ms.locfileid: "36188954"
  Дополнительные сведения об определении выполняемых задач см. в разделах «Автоматизация администрирования в масштабах предприятия», «Как отключить целевой сервер от главного сервера» и «Как прикрепить целевой сервер к главному серверу» в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>См. также  
- [Проблемы обновления агента SQL Server](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)   
+ [Проблемы при обновлении агента SQL Server](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)   
  [Проблемы обновления агента SQL Server](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
   

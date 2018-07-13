@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ListIPAddresses method
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e698d54c28c50fe9132f3db9fe2f3d518592fdee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 048d654b94d537aa5e6209d0012105ddaef127cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166175"
 ---
 # <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>Метод ListIPAddresses (WMI MSReportServer_ConfigurationSetting)
   Список IP-адресов для компьютера, на котором размещен сервер отчетов.  
@@ -62,7 +62,7 @@ public void ListIPAddresses (out string[] IPAddress,
 ## <a name="remarks"></a>Примечания  
  Строки*IPVersion* имеют значения V4 и V6.  
   
- Если *IsDhcpEnabled* — `True`, *IP-адрес* является динамическим. Его не следует использовать для привязок SSL.  
+ Если *IsDhcpEnabled* — `True`, *IPAddress* является динамическим. Его не следует использовать для привязок SSL.  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

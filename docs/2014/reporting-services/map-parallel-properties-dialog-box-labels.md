@@ -1,5 +1,5 @@
 ---
-title: Сопоставьте параллельных диалогового окна свойств метки | Документы Microsoft
+title: Сопоставить параллельных диалоговом окне Свойства метки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapparallelproperties.labels.f1
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bf650bd0fa1f87ef7dd3916a24923335420851b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 107da5c6037988987beed9794ee1ef172ed17e4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258123"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>Диалоговое окно «Свойства параллелей карты», вкладка «Метки»
-  Используйте **MapParallel свойства** диалоговое окно «» позволяет изменить параметры меток горизонтальной сетки в окне просмотра карты. Параллель представляет одно из следующих значений в зависимости от выбранной системы координат области просмотра.  
+  Используйте **MapParallel свойства** диалоговое окно, чтобы изменить параметры меток горизонтальной сетки в окне просмотра карты. Параллель представляет одно из следующих значений в зависимости от выбранной системы координат области просмотра.  
   
--   **Планарные координаты.** Координата X.  
+-   **Плоская.** Координата X.  
   
--   **Географические координаты.** Широта в текущей проекции.  
+-   **Географические.** Широта в текущей проекции.  
   
  Нажмите кнопку **Выражение** (*fx*), чтобы изменить выражение, задающее значение параметра.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "36100795"
  **Интервал**  
  Введите целое значение в градусах, задающее интервал между параллелями. По умолчанию выбрано значение **Авто** . Если значение этого параметра равно **Авто**, оно определяется данными из набора данных карты.  
   
- **Показывать метки**  
+ **Показать метки**  
  Выберите этот параметр для отображения меток параллелей.  
   
  **Размещение**  
@@ -55,6 +55,6 @@ ms.locfileid: "36100795"
   
 ## <a name="see-also"></a>См. также  
  [Карты (построитель отчетов и службы SSRS)](report-design/maps-report-builder-and-ssrs.md)   
- [Изменить условные обозначения, цветовая шкала и связанные правила &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Изменить условные обозначения, цветовая шкала и связанные правила &#40;построитель отчетов и службы SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 65f8f0bdc7db2e58efd27522a93e4edf6c4e0bf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 95a2dfb8ef3ac1420f243355f732daa246d81d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198544"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Функция Previous (построитель отчетов и службы SSRS)
   Возвращает значение или значение статистического выражения для предыдущего экземпляра элемента внутри заданной области.  
@@ -47,16 +47,16 @@ Previous(expression, scope)
 ## <a name="remarks"></a>Примечания  
  Функция `Previous` возвращает предыдущее значение для выражения, которое вычисляется в указанной области после применения всех операций сортировки и фильтрации.  
   
- Если *выражение* не содержит статистической функции, `Previous` по умолчанию относится к текущей области элемента отчета.  
+ Если *выражение* не содержит статистической функции, `Previous` функции значения по умолчанию для текущей области элемента отчета.  
   
  В группе подробностей используйте `Previous` для указания значения ссылки на поле в предыдущем экземпляре строки детализации.  
   
 > [!NOTE]  
 >  `Previous` Функция поддерживает только ссылки на поля в группе подробностей. Например, для текстового поля в группе подробностей выражение `=Previous(Fields!Quantity.Value)` возвращает данные для поля `Quantity` из предыдущей строки. Это выражение в первой строке возвращает значение NULL (`Nothing` в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]).  
   
- Если *выражение* содержит агрегатную функцию, использующую область по умолчанию, `Previous` статистических выражений в пределах предыдущего экземпляра области данных, указанной в агрегатной функции.  
+ Если *выражение* содержит агрегатную функцию, использующую область по умолчанию, `Previous` агрегатов данных в пределах предыдущего экземпляра области, указанной в вызове агрегатной функции.  
   
- Если *выражение* содержит агрегатную функцию, задающую область, по умолчанию *область* параметр `Previous` функции должен включать область для области, указанной в вызов агрегатной функции.  
+ Если *выражение* содержит агрегатную функцию, задающую область, отличную от по умолчанию, *область* параметр `Previous` функции должен включать область для области, указанной в вызов агрегатной функции.  
   
  Функции `Level`, `InScope`, `Aggregate` и `Previous` не может использоваться в *выражение*параметра. Параметр *recursive* для агрегатных функций не поддерживается.  
   
@@ -85,9 +85,9 @@ Previous(expression, scope)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Выражения используются в отчетах &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
- [Область выражения для итогов, статистических функций и встроенных коллекций &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

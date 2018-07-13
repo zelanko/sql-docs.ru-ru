@@ -1,5 +1,5 @@
 ---
-title: Срез элемент (ASSL) | Документы Microsoft
+title: Выполните срез элемент (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Slice element
 ms.assetid: 2c8c4107-c641-4724-bfa5-0c47e0ec8888
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3b1f693eddeebc0b4ad88e629eeeac9f76ca1083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 299f84167ec64c4bdd795c56a608e76f61d348b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178891"
 ---
 # <a name="slice-element-assl"></a>Элемент Slice (ASSL)
   Содержит многомерное выражение, которое определяет срез, содержащийся в секции.  
@@ -62,9 +62,9 @@ ms.locfileid: "36189606"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент `Slice` содержит многомерное выражение кортежа или выражение набора, обозначающее ту часть куба, информация для которой хранится в секции. Многомерное выражение аналогично [StrToSet](/sql/mdx/strtoset-mdx) MDX-функцию с ключевым словом CONSTRAINED тем, что выражение не может содержать многомерных Выражений или определяемые пользователем функции.  
+ Элемент `Slice` содержит многомерное выражение кортежа или выражение набора, обозначающее ту часть куба, информация для которой хранится в секции. Многомерное выражение аналогично [StrToSet](/sql/mdx/strtoset-mdx) MDX-функцию с ключевым словом CONSTRAINED тем, что выражение не может включать Многомерные или определяемые пользователем функции.  
   
- Элемент, соответствующий родителю параметра `Slice` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Partition>.  
+ Элемент, соответствующий родителю параметра `Slice` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

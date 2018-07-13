@@ -1,5 +1,5 @@
 ---
-title: Элемент AllowDuplicateNames (ASSL) | Документы Microsoft
+title: Элемент AllowDuplicateNames (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllowDuplicateNames element
 ms.assetid: d0a80040-115f-4490-926f-4d64d8977e67
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e6fe55bdf9dde0906a43fa46745e22179dba9e74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9358092125e5be7c7c0ec555cb29db4d7f714c99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180130"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180901"
 ---
 # <a name="allowduplicatenames-element-assl"></a>Элемент AllowDuplicateNames (ASSL)
-  Определяет, допустимы ли повторяющиеся имена в [иерархии](../objects/hierarchy-element-assl.md) элемента.  
+  Определяет, допустимы ли повторяющиеся имена в [иерархии](../objects/hierarchy-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36180130"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `AllowDuplicateNames` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Hierarchy>.  
+ Элемент, соответствующий родителю параметра `AllowDuplicateNames` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Hierarchy>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

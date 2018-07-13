@@ -1,5 +1,5 @@
 ---
-title: Тип данных Action (ASSL) | Документы Microsoft
+title: Тип данных Action (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Action data type
 ms.assetid: 8c4d2ff7-17e1-4e74-bec7-637e0b191acf
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 18047bc8a33c92e6bcd434e1a472917c269272e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77b4ef3f8507d67090b78c00807278d0d7dc6348
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154975"
 ---
 # <a name="action-data-type-assl"></a>Тип данных Action (язык ASSL)
-  Определяет абстрактный примитивный тип данных, представляющий действие в [куба](../objects/cube-element-assl.md) элемент или [перспективы](../objects/perspective-element-assl.md) элемента.  
+  Определяет абстрактный примитивный тип данных, представляющий действие в [куба](../objects/cube-element-assl.md) элемент или [перспективы](../objects/perspective-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -66,18 +66,18 @@ ms.locfileid: "36188554"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[Действия](../collections/actions-element-assl.md)|  
-|Дочерние элементы|[Annotations](../collections/annotations-element-assl.md), [Application](../properties/application-element-assl.md), [Caption](../properties/caption-element-assl.md), [CaptionIsMdx](../properties/captionismdx-element-assl.md), [Condition](../properties/condition-element-assl.md), [Description](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [Invocation](../properties/invocation-element-assl.md), [Name](../properties/name-element-assl.md), [Target](../properties/target-element-assl.md), [TargetType](../properties/targettype-element-assl.md), [Translations](../collections/translations-element-assl.md), [Type](../properties/type-element-action-assl.md)|  
+|Дочерние элементы|[Заметки](../collections/annotations-element-assl.md), [приложения](../properties/application-element-assl.md), [заголовок](../properties/caption-element-assl.md), [CaptionIsMdx](../properties/captionismdx-element-assl.md), [условие](../properties/condition-element-assl.md), [описание ](../properties/description-element-assl.md), [Идентификатор](../properties/id-element-assl.md), [вызова](../properties/invocation-element-assl.md), [имя](../properties/name-element-assl.md), [целевой](../properties/target-element-assl.md), [TargetType](../properties/targettype-element-assl.md), [Переводы](../collections/translations-element-assl.md), [типа](../properties/type-element-action-assl.md)|  
 |Производные элементы|[DrillThroughAction](action-data-type-assl.md), [ReportAction](reportaction-data-type-assl.md), [StandardAction](standardaction-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения о действиях см. в разделе [Действия (службы Analysis Services — многомерные данные)](../../multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.Action>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>См. также  
- [Куб элемент &#40;ASSL&#41;](../objects/cube-element-assl.md)   
+ [Элемент куба &#40;ASSL&#41;](../objects/cube-element-assl.md)   
  [Элемент perspective &#40;ASSL&#41;](../objects/perspective-element-assl.md)   
  [Тип данных PerspectiveAction &#40;ASSL&#41;](perspectiveaction-data-type-assl.md)   
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

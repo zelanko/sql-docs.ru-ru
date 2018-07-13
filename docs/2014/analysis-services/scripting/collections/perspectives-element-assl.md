@@ -1,5 +1,5 @@
 ---
-title: Элемент Perspectives (ASSL) | Документы Microsoft
+title: Элемент Perspectives (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Perspectives element
 ms.assetid: d071acc3-469b-44f3-b724-423a48da2d41
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8df6386c14d3c7219826e7df156b6343a92fc1f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35a1667a7df5f33bd4d6b3aa4f0621882b8819f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224116"
 ---
 # <a name="perspectives-element-assl"></a>Элемент Perspectives (ASSL)
-  Содержит коллекцию элементов [перспективы](../objects/perspective-element-assl.md) элементы, связанные с [куба](../objects/cube-element-assl.md) элемента.  
+  Содержит коллекцию элементов [перспективы](../objects/perspective-element-assl.md) элементы, связанные с [куба](../objects/cube-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36180360"
 |Дочерние элементы|[Перспективы](../objects/perspective-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.PerspectiveCollection>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.PerspectiveCollection>.  
   
 ## <a name="see-also"></a>См. также  
  [Коллекции &#40;ASSL&#41;](collections-assl.md)  

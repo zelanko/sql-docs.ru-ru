@@ -1,5 +1,5 @@
 ---
-title: Элемент MeasureQualificaton (ASSL) | Документы Microsoft
+title: Элемент MeasureQualificaton (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MeasureQualification element
 ms.assetid: 754a037c-f20b-4717-a6e8-12f495e8e3b4
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 795e2b7b10f9d7e9988747025c322b25ffa0af47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb84c39d7d7a3b69ea3c13e43dfda0b331c548e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188551"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149505"
 ---
 # <a name="measurequalificaton-element-assl"></a>Элемент MeasureQualificaton (ASSL)
   Определяет, применяется ли префикс к мерам в [MeasureGroup](../objects/group-element-assl.md).  
@@ -68,10 +68,10 @@ ms.locfileid: "36188551"
 |*PrefixMeasureGroup*|К уникальному имени и заголовку каждой меры в этой группе мер добавляется префикс, состоящий из имени группы мер и одного пробела.|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `MeasureQualification` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.MeasureGroup>.  
+ Элемент, соответствующий родителю параметра `MeasureQualification` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ## <a name="see-also"></a>См. также  
- [Куб элемент &#40;ASSL&#41;](../objects/cube-element-assl.md)   
+ [Элемент куба &#40;ASSL&#41;](../objects/cube-element-assl.md)   
  [Элемент измерения &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [Элемент MeasureGroup &#40;ASSL&#41;](../objects/group-element-assl.md)   
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

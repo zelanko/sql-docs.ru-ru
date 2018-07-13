@@ -1,5 +1,5 @@
 ---
-title: Замена таблицы другой таблицы – диалоговое | Документы Microsoft
+title: Замена таблицы другой таблицу-диалоговое окно | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.replacetable.f1
 helpviewer_keywords:
 - Replace Table with Other Table dialog box
 ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a2738bec003a9b94ef90554a5c21b605436d72b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e442c06763be7c357835a1f82148cbbb61095725
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214034"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Диалоговое окно «Замена таблицы другой таблицей»
   Используйте диалоговое окно **Замена таблицы другой таблицей** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для замены существующей таблицы в представлении источника данных на таблицу базового источника данных, еще не включенную в представление источника данных. Диалоговое окно **Замена таблицы другой таблицей** отображается после щелчка правой кнопкой мыши по имени таблицы на панели **Диаграмма** или **Таблицы** окна **Конструктор представлений источников данных** и выбора пункта **Другой таблицей** в меню **Заменить таблицу**.  

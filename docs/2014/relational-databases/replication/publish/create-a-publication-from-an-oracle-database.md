@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], Oracle databases
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b989637b5c16d57aaf6d33fc033229fd08028dc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2bd46103f4810564317c5072be78b297150c1f17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190061"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Создание публикации из базы данных Oracle
   В данном разделе описывается процесс создания публикации из базы данных Oracle в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -118,7 +118,7 @@ ms.locfileid: "36187759"
   
 2.  Если удаленный распространитель не существует, настройте удаленный распространитель. Дополнительные сведения см. в статье [Configure Publishing and Distribution](../configure-publishing-and-distribution.md).  
   
-3.  На удаленном распространителе, который будет использовать издатель Oracle, выполните хранимую процедуру [sp_adddistpublisher (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql). Укажите имя экземпляра базы данных Oracle для подложки TNS (Transparent Network) **@publisher** и значение `ORACLE` или `ORACLE GATEWAY` для **@publisher_type**. `Specify` режим безопасности, используемый при соединении с издателем Oracle к удаленному распределителю [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] одним из следующих способов:  
+3.  На удаленном распространителе, который будет использовать издатель Oracle, выполните хранимую процедуру [sp_adddistpublisher (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql). Укажите имя экземпляра базы данных Oracle для прозрачного Network Substrate (TNS) **@publisher** и значение `ORACLE` или `ORACLE GATEWAY` для **@publisher_type**. `Specify` режим безопасности, используемый при соединении с издателем Oracle к удаленному распределителю [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] одним из следующих способов:  
   
     -   Чтобы по умолчанию использовать стандартную проверку подлинности Oracle, укажите значение **0** для **@security_mode**, имя входа административной схемы пользователей репликации, созданной во время настройки издателя Oracle, в параметре **@login**и пароль в параметре **@password**.  
   

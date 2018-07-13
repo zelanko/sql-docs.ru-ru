@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Execution Warnings event class
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0a4db504829c3d59a8b6919923bc44096a16ce8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3197040119e6409d9ad471bceff7719d156e0c26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258710"
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings, класс событий
   События класса событий Execution Warnings сообщают о предупреждениях, связанных с выделением памяти при выполнении инструкции или хранимой процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . События этого класса можно отслеживать, чтобы определить, сколько времени запрос ожидал выделения памяти и завершилась ли неудачей попытка выделения памяти. Сведения о задержках могут помочь в обнаружении конфликтов, связанных с попытками одновременной передачи данных, которые могут повлиять на производительность.  

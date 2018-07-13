@@ -1,5 +1,5 @@
 ---
-title: Обновить диалоговое окно представления источника данных | Документы Microsoft
+title: Обновить диалоговое окно представления источника данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.refreshdsv.f1
 helpviewer_keywords:
 - Refresh Data Source View dialog box
 ms.assetid: 56bac170-6777-472a-8a09-549b2ee0d909
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7f585623e7b8de7ac802612fd3c861819a2bb58e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d93a157fa80754d58be242c4fdbe759176cb6f0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204604"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Диалоговое окно «Обновление представления источников данных»
   Используйте диалоговое окно **Обновление представления источников данных** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для подтверждения или отмены изменений, которые произойдут в результате обновления представления источников данных. Это диалоговое окно отображает изменения, которые произойдут в представлении источника данных в результате изменений, произошедших в источнике данных. Нажмите кнопку **ОК** чтобы принять изменения и обновить представления источников данных, или кнопку **Отмена** чтобы проигнорировать изменения и не менять представление источника данных. Диалоговое окно **Обновление представления источников данных** можно отобразить следующим образом:  
@@ -33,7 +33,7 @@ ms.locfileid: "36188566"
 -   Щелкнув правой кнопкой мыши панель **Диаграмма** конструктора представлений источников данных и выбрав пункт **Обновить**.  
   
 ## <a name="options"></a>Параметры  
- **Будут произведены следующие изменения**  
+ **Будут внесены следующие изменения**  
  Позволяет отобразить изменения (обновления, добавления и удаления), которые будут внесены в представление источника данных при нажатии кнопки **ОК**.  
   
  **Сохранение отчета**  

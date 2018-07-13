@@ -1,5 +1,5 @@
 ---
-title: Импорт политик в один экземпляр | Документы Microsoft
+title: Импортировать политики на одном экземпляре | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 945cd03bb574bc180af5567888a6d171966bccf6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 4c45508880948c3ce1cb4814eca918278a66aacb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189391"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177151"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>Импорт политик в один экземпляр
   При выполнении этой задачи будет осуществляться импорт рекомендованных политик в состав средств управления на основе политик на одном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

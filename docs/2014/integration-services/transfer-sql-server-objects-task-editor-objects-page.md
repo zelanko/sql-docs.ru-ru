@@ -1,5 +1,5 @@
 ---
-title: Передача редактор задач объектов SQL Server (страница «объекты») | Документы Microsoft
+title: Передача редактор задач объектов SQL Server (страница "объекты") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjects.objects.f1
 helpviewer_keywords:
 - Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bbab3d5615a725d18f1d074969144a08abb6ce52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 189da98d8c0fd6f9a114ea6213185db363539117
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219634"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Редактор задачи «Передача объектов SQL Server» (страница «Объекты» )
   Страница **Объекты** диалогового окна **Редактор задачи «Передача объектов SQL Server»** используется для задания свойств копирования одного или нескольких объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из одного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на другой. Примерами объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , которые можно копировать, являются таблицы, представления, хранимые процедуры и функции, определяемые пользователем. Дополнительные сведения об этой задаче см. в разделе [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  
@@ -213,7 +213,7 @@ ms.locfileid: "36187791"
  Выберите этот пункт, чтобы открыть диалоговое окно **Выбрать коллекции XML-схем** .  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи служб Integration Services](control-flow/integration-services-tasks.md)   
  [Редактор задачи "Передача объектов SQL Server" (страница "Общие")](general-page-of-integration-services-designers-options.md)   
  [Страница «выражения»](expressions/expressions-page.md)   

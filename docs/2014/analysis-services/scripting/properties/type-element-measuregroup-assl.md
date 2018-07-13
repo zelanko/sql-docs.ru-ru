@@ -1,5 +1,5 @@
 ---
-title: Введите элемент (MeasureGroup) (ASSL) | Документы Microsoft
+title: Введите элемент (MeasureGroup) (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 3a584baf-36bb-4e1d-9128-c4758c0b8f06
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f1e583e8debf2f8416ac46574e8c4f5dbc8d4453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8e8bab8b822ccb4cf8a17fe4759519eeefb974a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226374"
 ---
 # <a name="type-element-measuregroup-assl"></a>Элемент Type (MeasureGroup) (ASSL)
   Указывает тип [MeasureGroup](../objects/group-element-assl.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "36187818"
 |Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
-|Значение по умолчанию|*Обычный*|  
+|Значение по умолчанию|*Регулярные*|  
 |Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
@@ -66,17 +66,17 @@ ms.locfileid: "36187818"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*Обычный*|Содержит регулярные меры.|  
+|*Регулярные*|Содержит регулярные меры.|  
 |*ExchangeRate*|Содержит меры курсов иностранных валют.|  
 |*Продажи*|Содержит меры продаж.|  
-|*Бюджета*|Содержит меры бюджета.|  
+|*Бюджет*|Содержит меры бюджета.|  
 |*FinancialReporting*|Содержит меры финансовых отчетов.|  
 |*Маркетинг*|Содержит меры маркетинга.|  
-|*Инвентаризации*|Содержит меры товаров.|  
+|*Инвентаризация*|Содержит меры товаров.|  
   
  Перечисление, соответствующее допустимым значениям элемента `Type` в модели объектов AMO, — это <xref:Microsoft.AnalysisServices.MeasureGroupType>.  
   
- Элемент, соответствующий родителю параметра `Type` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.MeasureGroup>.  
+ Элемент, соответствующий родителю параметра `Type` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Элемент Actions (ASSL) | Документы Microsoft
+title: Элемент Actions (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Actions element
 ms.assetid: 100a4209-2c22-4902-a8ca-f2bd99bf8fbb
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 109a6ea97218a75d64a0b9e84371e8e3667134ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 583f265b0fb45b22cd0f6b3d20b577276d70ae92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183231"
 ---
 # <a name="actions-element-assl"></a>Элемент Actions (ASSL)
-  Содержит коллекцию действий для [куба](../objects/cube-element-assl.md) или [перспективы](../objects/perspective-element-assl.md) элемента.  
+  Содержит коллекцию действий для [куба](../objects/cube-element-assl.md) или [перспективы](../objects/perspective-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   

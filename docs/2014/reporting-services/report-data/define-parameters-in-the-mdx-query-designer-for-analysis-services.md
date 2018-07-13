@@ -1,5 +1,5 @@
 ---
-title: Определение параметров в конструкторе запросов многомерных Выражений для служб Analysis Services (построитель отчетов и службы SSRS) | Документы Microsoft
+title: Определение параметров в конструкторе запросов многомерных Выражений для служб Analysis Services (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], MDX
 - Multidimensional Expressions [Reporting Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0ed9044a9d9719ec67cff1f79d21882a7578129f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c46a722ce7f06e816a6625297ab35c9f5548c236
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179581"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services (построитель отчетов и службы SSRS)
   Чтобы параметризовать запрос многомерных выражений для источника данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , необходимо добавить параметр запроса к этому запросу. В конструкторе запросов многомерных выражений параметр запроса можно добавить как в режиме конструктора, так и в режиме запроса, настроив фильтр. После определения запроса с параметром запроса, службы Reporting Services автоматически создают параметр отчета и набор данных, чтобы предоставить список допустимых значений. Это позволяет пользователю указать значение, которое передается непосредственно запросу.  
@@ -35,7 +35,7 @@ ms.locfileid: "36188406"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>Определение параметра запроса в многомерном выражении в режиме конструктора  
   
-1.  В области данных отчета щелкните правой кнопкой мыши набор данных, созданные на основе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] тип источника данных и нажмите кнопку **запроса**. Конструктор запросов многомерных выражений открывается в режиме конструктора.  
+1.  В области данных отчета щелкните правой кнопкой мыши на поле набора данных, созданного из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] тип источника данных и нажмите кнопку **запроса**. Конструктор запросов многомерных выражений открывается в режиме конструктора.  
   
 2.  Перетащите измерение в область фильтра в первую ячейку в столбце **Измерение** .  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36188406"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>Определение параметра запроса в многомерном выражении в режиме запроса  
   
-1.  В области данных отчета щелкните правой кнопкой мыши набор данных, созданные на основе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] тип источника данных и нажмите кнопку **запроса**. Конструктор запросов многомерных выражений открывается в режиме конструктора.  
+1.  В области данных отчета щелкните правой кнопкой мыши на поле набора данных, созданного из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] тип источника данных и нажмите кнопку **запроса**. Конструктор запросов многомерных выражений открывается в режиме конструктора.  
   
 2.  На панели инструментов нажмите кнопку **Конструктор** , чтобы переключиться в режим запроса.  
   

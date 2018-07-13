@@ -1,5 +1,5 @@
 ---
-title: Элемент CellPermissions (ASSL) | Документы Microsoft
+title: Элемент CellPermissions (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CellPermissions element
 ms.assetid: 4a604f2f-f4c3-42bd-a42b-951263942cc6
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe89d1e2de728773d9eaae32023e801676a02bb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dafcaf786d58fd8c1441c0f1df50aa5a7d47be31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176461"
 ---
 # <a name="cellpermissions-element-assl"></a>Элемент CellPermissions (ASSL)
-  Содержит коллекцию разрешений для ячеек в связанном [куба](../objects/cube-element-assl.md) элемента.  
+  Содержит коллекцию разрешений для ячеек в связанном [куба](../objects/cube-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36189369"
 |Дочерние элементы|[CellPermission](../objects/cellpermission-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Коллекция может содержать больше одного `CellPermission` объекта для каждого допустимого значения [доступа](../properties/access-element-assl.md) элемента.  
+ Коллекция может содержать не больше одного `CellPermission` объекта для каждого допустимого значения из [доступа](../properties/access-element-assl.md) элемент.  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.CellPermissionCollection>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.CellPermissionCollection>.  
   
 ## <a name="see-also"></a>См. также  
  [Тип данных Permission &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   

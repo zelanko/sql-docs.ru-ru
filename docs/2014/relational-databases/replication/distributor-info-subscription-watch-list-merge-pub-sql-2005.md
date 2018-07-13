@@ -1,5 +1,5 @@
 ---
-title: Сведения о распространителе, подписка просмотрите список (публикация слиянием, SQL Server 2005 и более поздние версии) | Документы Microsoft
+title: Сведения о распространителе, список просмотра подписок (публикация слиянием, SQL Server 2005 и более поздние версии) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.Distributor.SubscriptionSummary.merge.f1
 ms.assetid: 0308bbd2-03ce-4f03-974d-e54ebd6c7f58
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 24262bf26942fee26af8cc7bff4a1d29bbc2ebb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 43bcbf5402086a71bfb38052c6296c9d7f556145
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172565"
 ---
 # <a name="distributor-information-subscription-watch-list-merge-publication-sql-server-2005-and-later"></a>Сведения о распространителе, список просмотра подписок (публикация слиянием, SQL Server 2005 и более поздние версии)
   Сведения для подписок на публикации слиянием содержат имя издателя. В остальном функциональные возможности и сведения в этом диалоговом окне такие же, как в представлении Publisher. Дополнительные сведения о том, как использовать это диалоговое окно, вы найдете в статье [Сведения об издателе, список просмотра подписок (публикация слиянием в SQL Server 2005 и более поздних версиях)](publisher-information-subscription-watch-list-merge-publication.md).  

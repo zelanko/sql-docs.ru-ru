@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 14: Развертывание | Документы Microsoft'
+title: '— Занятие 14: Развертывание | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 2b9bf4afde77cc0438e097c14f6b3743c7da427d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2973afd208039534048908ca1403fc8154898fc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189377"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181041"
 ---
 # <a name="lesson-14-deploy"></a>Занятие 14. Развертывание
   На этом занятии мы выполним настройку свойства развертывания, указав экземпляр сервера развертывания служб Analysis Services в табличном режиме и имя развертываемой модели. Затем мы выполним развертывание модели на указанном экземпляре. После развертывания пользователи смогут подключаться к модели с помощью клиентского приложения создания отчетов. Дополнительные сведения см. в разделе [Развертывание решений табличной модели (табличные службы SSAS)](tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36189377"
     > [!IMPORTANT]  
     >  Для развертывания модели необходимо разрешение администратора на удаленном экземпляре служб Analysis Services.  
   
-3.  Проверьте **режим запроса** свойству **в памяти**.  
+3.  Проверьте **режим запроса** свойству **In-Memory**.  
   
     > [!NOTE]  
     >  Модель, созданная с помощью этого учебника, не будет поддерживаться в режиме DirectQuery.  

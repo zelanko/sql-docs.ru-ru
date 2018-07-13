@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - disk space [SQL Server], indexes
 - estimating heap size
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - heaps
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 49e8f426443784cd84a226fd1bce79f9042b87ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cd6d7c46c1f1aed62f0196640175bb566bca7471
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203340"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Оценка размера кучи
   Для оценки размера пространства, требуемого для хранения данных в куче, можно использовать следующую процедуру.  
@@ -61,7 +61,7 @@ ms.locfileid: "36110180"
      Добавленные к значению ***Max_Var_Size*** байты необходимы для отслеживания каждого столбца переменной длины. Эта формула исходит из предположения, что все столбцы переменной длины заполнены на 100 %. Если предполагается, что будет использовано меньше места для хранения столбца изменяемой длины, можно изменить значение ***Max_Var_Size*** в процентах от общей изменяемой длины для более точного подсчета общего размера таблицы.  
   
     > [!NOTE]  
-    >  Можно объединять `varchar`, `nvarchar`, `varbinary`, или `sql_variant` , вызывающие общая определенная ширина таблицы может превышать 8 060 байт. Длина каждого из этих столбцов должна быть в пределах 8 000 байт для `varchar`, `nvarchar,``varbinary`, или `sql_variant` столбца. Тем не менее их общая ширина в таблице может превышать предел в 8 060 байт.  
+    >  Вы можете объединить `varchar`, `nvarchar`, `varbinary`, или `sql_variant` , вызывающие общая определенная ширина таблицы может превышать 8 060 байт. Длина каждого из этих столбцов должна быть в пределах 8 000 байт для `varchar`, `nvarchar,``varbinary`, или `sql_variant` столбца. Тем не менее их общая ширина в таблице может превышать предел в 8 060 байт.  
   
      Если в таблице нет столбцов переменной ширины, присвойте параметру ***Variable_Data_Size*** значение 0.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36110180"
   
 -   Значения LOB  
   
-     Алгоритм определения точности объем места, используемого для хранения типов данных LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, **ntextxml**, и `image` сложен. Достаточно просто прибавить ожидаемую среднюю величину значений LOB к общему размеру кучи.  
+     Алгоритм определения точно объем пространства, используемого для хранения данных типа LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, **ntextxml**, и `image` значения является сложным. Достаточно просто прибавить ожидаемую среднюю величину значений LOB к общему размеру кучи.  
   
 -   Сжатие  
   

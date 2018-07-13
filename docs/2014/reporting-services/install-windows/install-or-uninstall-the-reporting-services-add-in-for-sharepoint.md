@@ -1,5 +1,5 @@
 ---
-title: Установка или удаление Reporting Services для SharePoint (SharePoint 2010 и SharePoint 2013) | Документы Microsoft
+title: Установка или удаление Reporting Services надстройки для SharePoint (SharePoint 2010 и SharePoint 2013) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: b1f412ef2d381a7ef005f56172e902fa63c5527b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb82a321cc6110211a0c4e5f84fd049323b3aa7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224874"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>Установка и удаление надстройки служб Reporting Services для SharePoint (SharePoint 2010 и SharePoint 2013)
   Запустите пакет установки надстройки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint (rsSharePoint.msi) на серверах SharePoint, чтобы включить функции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в составе развертывания SharePoint. К этим компонентам относится Power View, веб-часть средства просмотра отчетов, конечная точка прокси для URL-адреса, типы содержимого и страницы приложений, которые позволяют создавать и просматривать отчеты, модели отчетов, источники данных и другое содержимое сервера отчетов на сайте SharePoint, а также управлять всем этим. Для сервера отчетов, работающего в режиме интеграции с SharePoint, надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint является обязательным компонентом. Надстройку можно установить с помощью мастера установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или загрузить файл rsSharePoint.msi из пакета дополнительных компонентов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Список версий надстройки и страницы загрузки приведены в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36109880"
   
     -   [Установка только файлов](#bkmk_files_only_installation)  
   
--   [Удаление отчетов служб надстройки](#bkmk_remove_addin)  
+-   [Надстройку служб удаление Reporting Services](#bkmk_remove_addin)  
   
 -   [Восстановление rssharepoint.msi из командной строки](#bkmk_repair)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36109880"
 -   [RsCustomAction.exe](#bkmk_rscustomaction)  
   
 ##  <a name="bkmk_prereq"></a> Предварительные требования  
- Установка надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] является одним из обязательных шагов интеграции сервера отчетов с экземпляром продукта SharePoint. Дополнительные сведения о полном наборе предварительных требований для использования в режиме интеграции с SharePoint см. в разделе [оборудованию и программному обеспечению для служб Reporting Services в режиме интеграции с SharePoint](../../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md). Дополнительные сведения об установке и настройке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], в разделе [установить службы Reporting Services в режиме SharePoint для SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).  
+ Установка надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] является одним из обязательных шагов интеграции сервера отчетов с экземпляром продукта SharePoint. Дополнительные сведения о полном наборе предварительных требований для использования в режиме интеграции с SharePoint см. в разделе [оборудованию и программному обеспечению для служб Reporting Services в режиме интеграции с SharePoint](../../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md). Дополнительные сведения об установке и настройке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], см. в разделе [Install Reporting Services SharePoint Mode for SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).  
   
 -   При интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с фермой SharePoint, содержащей несколько приложений клиентского веб-интерфейса, установите надстройку на каждый компьютер фермы с сервером клиентского веб-интерфейса. Это необходимо сделать только для веб-серверов, обслуживающих клиентские запросы, которые будут производить доступ к содержимому сервера отчетов.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36109880"
   
 -   Чтобы активировать функции интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , необходимо быть администратором семейства веб-сайтов.  
   
--   Диаграммы примеров развертываний с надстройкой см. в разделе [топологии развертывания для компонентов бизнес-Аналитики SQL Server в SharePoint](../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
+-   Диаграммы примеров развертываний с помощью надстройки, см. в разделе [топологии развертывания для компонентов бизнес-Аналитики SQL Server в SharePoint](../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
   
 ##  <a name="bkmk_whatinstalled"></a> Что устанавливает эта надстройка?  
  Процесс установки надстройки состоит из двух фаз, при этом обе они выполняются автоматически при стандартной установке.  
@@ -80,20 +80,20 @@ ms.locfileid: "36109880"
   
 -   Средство подготовки продуктов SharePoint 2010 устанавливает версию [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] надстройки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] содержит новую версию надстроек, необходимых для функций [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-     При запуске средства подготовки продуктов SharePoint все равно необходимо установить [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки.  
+     Если вы запустите средство подготовки продуктов SharePoint, необходимо по-прежнему установить [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки.  
   
--   Если установить [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки сначала, то при запуске средства подготовки продуктов SharePoint, вы увидите следующее диалоговое окно, показывающее, средство подготовки не установить более раннюю версию надстройки более новым Обнаружена версия. Такое поведение является стандартным.  
+-   При установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройку во-первых, то при запуске средства подготовки продуктов SharePoint, вы увидите следующее диалоговое окно, показывающее, средство подготовки не устанавливайте старую версию надстройки более новым Обнаружена версия. Такое поведение является стандартным.  
   
      ![Надстройка SSRS уже установлена. ] (../../../2014/sql-server/install/media/rs-sharepointprereq-complete.gif "Надстройка SSRS уже установлена.")  
   
  **SharePoint 2013**  
   
- Средство подготовки продуктов SharePoint 2013 выполняет **не** установить [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки для продуктов SharePoint.  
+ Средство подготовки продуктов SharePoint 20103 выполняет **не** установить [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки для продуктов SharePoint.  
   
 ##  <a name="bkmk_3ways_to_install"></a> Общие сведения о методах установки  
  Надстройку служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint можно установить одним из двух способов.  
   
--   **Мастер установки:** ![Примечание](../../../2014/reporting-services/media/rs-fyinote.png "Примечание")New с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], надстройку можно установить с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастера установки. Выберите **надстройку служб Reporting Services для продуктов SharePoint** на странице мастера **Выбор компонентов** .  
+-   **Мастер установки:** ![Примечание](../../../2014/reporting-services/media/rs-fyinote.png "Примечание")New with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], надстройки могут устанавливаться [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастера установки. Выберите **надстройку служб Reporting Services для продуктов SharePoint** на странице мастера **Выбор компонентов** .  
   
 -   **rsSharepoint.msi** . Надстройку можно установить напрямую с установочного носителя или скачать и установить. Файл rsSharepoint.msi поддерживает как графический пользовательский интерфейс, так и установку из командной строки. Файл MSI необходимо запустить с правами администратора, сначала открыв окно командной строки с повышенными разрешениями, затем запустить файл rsSharepoint.msi из командной строки. Дополнительные сведения о скачивании надстройки см. в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
@@ -111,7 +111,7 @@ Rssharepoint.msi /?
   
 1.  Загрузите программу установки (`rsSharepoint.msi`) для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки. Дополнительные сведения о скачивании надстройки см. в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
-2.  С правами администратора, запустите `rsSharepoint.msi` для запуска мастера установки. Мастер отобразит страницу приветствия, условия лицензионного соглашения на использование программного обеспечения и регистрационные сведения. Программа установки создаст папки по следующему пути и скопирует туда файлы:  
+2.  Будучи администратором, запустите `rsSharepoint.msi` для запуска мастера установки. Мастер отобразит страницу приветствия, условия лицензионного соглашения на использование программного обеспечения и регистрационные сведения. Программа установки создаст папки по следующему пути и скопирует туда файлы:  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\14\`  
   
@@ -119,7 +119,7 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\`  
   
-3.  Настройте параметры сервера отчетов и включите нужные компоненты в центре администрирования SharePoint. , и делает это по-другому. Дополнительные сведения об установке и настройке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режиме интеграции с SharePoint в разделе [установить службы Reporting Services в режиме SharePoint для SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
+3.  Настройте параметры сервера отчетов и включите нужные компоненты в центре администрирования SharePoint. , и делает это по-другому. Дополнительные сведения об установке и настройке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режиме интеграции с SharePoint см. в разделе [установить службы Reporting Services в режиме SharePoint для SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
 ###  <a name="bkmk_files_only_installation"></a> Установка только файлов  
  Чтобы установить файлы и пропустить этап пользовательских действий, запустите файл rssharepoint.msi из командной строки с параметром SKIPCA.  
@@ -141,7 +141,7 @@ Rssharepoint.msi /?
   
 2.  Запустите исполняемый файл пользовательских действий.  
   
-    1.  Перейдите в папку, содержащую файл `rsCustomAction.exe`. Этот файл копируется на компьютер программой установки надстройки, которая устанавливает только файлы. `rsCustomAction.exe` расположен в **% Temp %** каталога. Для перехода к файлу введите в командной строке следующую команду:  
+    1.  Перейдите к папке, содержащей файл `rsCustomAction.exe`. Этот файл копируется на компьютер программой установки надстройки, которая устанавливает только файлы. `rsCustomAction.exe` расположен в **% Temp %** каталога. Для перехода к файлу введите в командной строке следующую команду:  
   
          **CD %temp%**.  
   
@@ -180,7 +180,7 @@ Rssharepoint.msi /?
   
  При удалении надстройки будут удалены функции интеграции сервера, используемые для обработки отчетов на сервере отчетов. Также будут удалены страницы служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из центра администрирования SharePoint и другие пользовательские страницы служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . При необходимости также удалите все отчеты и другие элементы сервера отчетов, которые больше не используются на затронутых сайтах SharePoint. Их запуск будет невозможен после удаления надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Чтобы удалить [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройку, необходимо иметь [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] установки все еще выполняется. После удаления SharePoint 2010, вы должны установить заново для удаления [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки.  
+ Чтобы удалить [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройку, необходимо иметь [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] работающий экземпляр. После удаления SharePoint 2010, вы должны установить заново для удаления [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки.  
   
  Удаление надстройки выполняется одинаково для изолированных серверов и для ферм серверов. С помощью программы установки удаляются программные файлы и настройки конфигурации, добавленные во время установки.  
   
@@ -307,7 +307,7 @@ Rssharepoint.msi /?
 |t|Только SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 2005. Переключение проверяет, имеет ли сервер отчетов рабочее соединение с базой данных сервера отчетов.|  
   
 ## <a name="configuring-reporting-services"></a>Настройка служб Reporting Services  
- После установки надстройки на все нужные компьютеры настройте сервер отчетов с помощью центра администрирования SharePoint. Необходимые действия зависят от порядка установки разных технологий. Дополнительные сведения см. в разделе [установить службы Reporting Services в режиме SharePoint для SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) и [сервера отчетов служб Reporting Services &#40;режиме интеграции с SharePoint&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)  
+ После установки надстройки на все нужные компьютеры настройте сервер отчетов с помощью центра администрирования SharePoint. Необходимые действия зависят от порядка установки разных технологий. Дополнительные сведения см. в разделе [установить службы Reporting Services в режиме SharePoint для SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) и [сервер отчетов служб Reporting Services &#40;режиме интеграции с SharePoint&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)  
   
 ## <a name="see-also"></a>См. также  
  [Установка Reporting Services в режиме SharePoint для SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)   

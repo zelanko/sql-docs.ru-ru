@@ -1,5 +1,5 @@
 ---
-title: Редактор диспетчера подключения файлов (страница «столбцы») с плоскими | Документы Microsoft
+title: Редактор диспетчера соединений с файлами (страница "столбцы") с неструктурированными | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.columns.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5592f71b5373c6bfab1f59e797b19363a344e929
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 166393522090c1d5c0455104c0d046319741f2b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240960"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>Редактор диспетчера соединений с неструктурированными файлами (страница «Столбцы»)
   Страница **Столбцы** диалогового окна **Редактор диспетчера соединений с неструктурированными файлами** используется для задания данных о строках и столбцах и для предварительного просмотра файла.  
@@ -119,9 +119,9 @@ ms.locfileid: "36099806"
  При нажатии кнопки **Сбросить столбцы**удаляются все столбцы, кроме исходных.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор диспетчера подключения файлов с плоскими &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
- [Редактор диспетчера подключения файлов с плоскими &#40;страница «Дополнительно»&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор диспетчера соединений с неструктурированными &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
+ [Редактор диспетчера соединений с неструктурированными &#40;страница "Дополнительно"&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
  [Редактор диспетчера подключений к неструктурированным файлам (страница "Предварительный просмотр")](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   
   

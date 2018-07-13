@@ -1,5 +1,5 @@
 ---
-title: Экспорт отчета в файл другого типа (построитель отчетов и службы SSRS) | Документы Microsoft
+title: Экспорт отчета в файл другого типа (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
 caps.latest.revision: 9
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8f37c659b224c2428b99d1f74b3b64c46f5c5cd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88d0969efabebe3da05ebfce8d666eb78ff4ba2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166205"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Экспорт отчета в файл другого типа (построитель отчетов и службы SSRS)
   Во время предварительного просмотра отчета с помощью построителя отчетов или конструктора отчетов можно выполнить подготовку отчета в другом формате, например CSV, Image, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)] или [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]. Это можно сделать и при просмотре отчета на сервере отчетов. Подготовка отчета в определенном формате удобна в тех случаях, когда требуется сохранить отчет в файле другого типа сразу, не выполняя перед этим публикацию на сервере отчетов. Также это может понадобиться, если нужно проверить, как будет выглядеть отчет в том или ином формате после доставки получателям. Подготовка отчета на сервере отчетов может быть полезной, если необходимо настроить подписки или доставить отчеты по электронной почте, а также в случае, если необходимо сохранить отчет, доступный на сервере отчетов. Дополнительные сведения см. в разделе [Подписки и доставка (службы Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md).  
@@ -89,8 +89,8 @@ ms.locfileid: "36189479"
      **Примечание.** Если открыть отчет в выбранном формате не удается из-за того, что с этим типом файла не связана ни одна программа, будет предложено сохранить отчет или найти в сети программу для его открытия.  
   
 ## <a name="see-also"></a>См. также  
- [Экспорт отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных модулей подготовки отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
+ [Интерактивные возможности различных модулей подготовки отчетов &#40;построитель отчетов и службы SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
   
   

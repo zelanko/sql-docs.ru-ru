@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7f33036175d395359efbdb5708a422b27bf711db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6539627f9b1fc5fc41b9cc535efd5cb4c5949ecc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153875"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Управление Служебным приложением SharePoint службы Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Управление приложениями службы из центра администрирования SharePoint. Страницы управления и свойств позволяют обновлять конфигурацию приложения службы, а также выполнять типовые административные задачи.  
@@ -157,7 +157,7 @@ ms.locfileid: "36188188"
 Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
 ```  
   
- Дополнительные сведения см. в разделе [командлеты PowerShell для режима SharePoint службы Reporting Services](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+ Дополнительные сведения см. в разделе [командлеты PowerShell для режима SharePoint служб Reporting Services](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ### <a name="options"></a>Параметры  
  **Задание учетной записи выполнения**  

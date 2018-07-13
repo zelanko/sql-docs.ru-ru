@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Unprepare SQL event class
 ms.assetid: cfcbdd9d-d83b-46ae-9caa-d1833b5913f4
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2c1a38d5042f4236b04772dfe99bb8c272c5797d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a84f7d017b8a0737eaedcdcb7fa9babd7a7fb5f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193324"
 ---
 # <a name="unprepare-sql-event-class"></a>Unprepare SQL, класс событий
   Событие класса событий Unprepare SQL указывает, что приложение, использующее технологии SqlClient, ODBC, OLE DB или DB-Library, аннулировало (удалило) подготовленную инструкцию или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

@@ -1,5 +1,5 @@
 ---
-title: Элемент aggregations (ASSL) | Документы Microsoft
+title: Элемент aggregations (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Aggregations element
 ms.assetid: 79b7de7a-53b2-4202-bc0f-de1daaf1b179
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6a81b8107738121797d06c185b6043ca81a90c50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c94129a76064bbbc98f300a855e77826ec57794
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189201"
 ---
 # <a name="aggregations-element-assl"></a>Элемент Aggregations (ASSL)
-  Содержит коллекцию агрегатов, определенных для [AggregationDesign](../objects/aggregationdesign-element-assl.md) элемента.  
+  Содержит коллекцию агрегатов, определенных для [AggregationDesign](../objects/aggregationdesign-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -61,10 +61,10 @@ ms.locfileid: "36190523"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительский элемент|[AggregationDesign](../objects/aggregationdesign-element-assl.md)|  
-|Дочерние элементы|[Агрегат](../objects/aggregation-element-assl.md)|  
+|Дочерние элементы|[Статистической обработки](../objects/aggregation-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.AggregationCollection>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.AggregationCollection>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент MeasureGroup &#40;ASSL&#41;](../objects/group-element-assl.md)   

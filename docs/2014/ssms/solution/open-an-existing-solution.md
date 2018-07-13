@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - opening solutions
 - solutions [SQL Server Management Studio], opening
 ms.assetid: 6cffd5ec-239a-4b21-a14c-15899ada3d27
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 281cb29dc1308d785c88ecdf2e68726eb7b029b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: aed2c806c47e9cc232edd8331c54cedd907f8173
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185711"
 ---
 # <a name="open-an-existing-solution"></a>Открытие существующего решения
   В обозревателе решений одновременно может быть открыто только одно решение.  

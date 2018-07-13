@@ -1,5 +1,5 @@
 ---
-title: Многомерное моделирование (службы SSAS) | Документы Microsoft
+title: Многомерное моделирование (службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9300e8e8aefbe436ca3acba141f8800779e6e637
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 078ed4d8a791aba089255c725ddbedaa313920ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171675"
 ---
 # <a name="multidimensional-modeling-ssas"></a>Многомерное моделирование (службы SSAS)
   Многомерное решение служб Analysis Services использует структуры кубов для анализа бизнес-данных по нескольким измерениям. Многомерный режим является режимом сервера по умолчанию для служб Analysis Services. Он включает подсистему запросов и вычислений для данных OLAP с режимами хранения HOLAP, MOLAP и ROLAP, сочетающий производительность с требованиями к масштабируемости данных. Ядро OLAP служб Analysis Services является лучшим в отрасли сервером OLAP, хорошо работающим с широким диапазоном средств бизнес-аналитики. В большинстве случаев службы Analysis Services устанавливаются как обычные серверы OLAP.  
@@ -32,7 +32,7 @@ ms.locfileid: "36189367"
 ## <a name="in-this-section"></a>в этом разделе  
  [Решения многомерной модели &#40;SSAS&#41;](multidimensional-model-solutions-ssas.md)  
   
- [Базы данных многомерной модели &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [Многомерный шаблон баз данных &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
   
  [Обработка объектов многомерной модели](processing-a-multidimensional-model-analysis-services.md)  
   

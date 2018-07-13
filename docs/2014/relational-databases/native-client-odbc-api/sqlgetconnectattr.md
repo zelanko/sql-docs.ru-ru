@@ -1,13 +1,11 @@
 ---
-title: SQLGetConnectAttr | Документы Microsoft
+title: SQLGetConnectAttr | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,20 +14,20 @@ helpviewer_keywords:
 - SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7db4e37d5fa06373bdb60ea9c2288ff7808ec70d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b31b14603777a98a623dbd80144d400a069a2136
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098893"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415673"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-  Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет характерные для драйвера атрибуты соединения. Некоторые атрибуты доступны для `SQLGetConnectAttr`, и эта функция используется для определения их текущих значений. Значение, указанное для этих атрибутов не гарантируется до, после установки соединения или атрибут значение [SQLSetConnectAttr](sqlsetconnectattr.md).  
+  Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет характерные для драйвера атрибуты соединения. Некоторые из этих атрибутов доступны для `SQLGetConnectAttr`, и функция используется для определения их текущих значений. Отображаются значения для этих атрибутов не гарантируется до, после подключения или атрибут установлен [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
- В этом разделе приведены атрибуты режима только для чтения. Сведения о других [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] атрибуты подключения драйвера ODBC для собственного клиента, в разделе [SQLSetConnectAttr](sqlsetconnectattr.md).  
+ В этом разделе приведены атрибуты режима только для чтения. Сведения о других [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] атрибуты соединения специфические для драйвера ODBC для собственного клиента, см. в разделе [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
 ## <a name="sqlcoptssconnectiondead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  Атрибут SQL_COPT_SS_CONNECTION_DEAD сообщает серверу данные о состоянии соединения. Для определения текущего состояния соединения драйвер запрашивает сеть.  
@@ -51,7 +49,7 @@ ms.locfileid: "36098893"
   
 -   Диагностические сведения в журналах отслеживания доступа к данным, если они включены.  
   
- Дополнительные сведения см. в разделе [доступ к диагностической информации в журнале расширенных событий](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ Дополнительные сведения см. в разделе [доступ к диагностическим сведениям в журнале расширенных событий](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -59,7 +57,7 @@ ms.locfileid: "36098893"
 |SQL_SUCCESS|Подключение выполнено успешно. Идентификатор соединения клиента будет находиться в выходном буфере.|  
   
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
- Атрибут SQL_COPT_SS_PERF_DATA возвращает указатель на структуру SQLPERF, содержащую текущую статистику производительности драйвера. `SQLGetConnectAttr` Возвращает значение NULL, если не включено ведение журнала производительности. Драйвер не обновляет статистику в структуре SQLPERF динамически. Вызовите `SQLGetConnectAttr` каждый раз, необходимо обновить статистику производительности.  
+ Атрибут SQL_COPT_SS_PERF_DATA возвращает указатель на структуру SQLPERF, содержащую текущую статистику производительности драйвера. `SQLGetConnectAttr` Возвращает значение NULL, если ведение журнала производительности не включено. Драйвер не обновляет статистику в структуре SQLPERF динамически. Вызовите `SQLGetConnectAttr` каждый раз, необходимо обновить статистику производительности.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -84,14 +82,14 @@ ms.locfileid: "36098893"
   
  Если атрибут SQL_COPT_SS_SERVER_SPN или SQL_COPT_SS_FAILOVER_PARTNER еще не задан, возвращается значение по умолчанию (пустая строка).  
   
- Дополнительные сведения об именах SPN см. в разделе [имена участника-службы &#40;имена участников-служб&#41; в клиентских соединениях &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Дополнительные сведения об именах SPN см. в разделе [имена участников-служб &#40;имена участников-служб&#41; в клиентских соединениях &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="see-also"></a>См. также  
  [Функция SQLGetConnectAttr](http://go.microsoft.com/fwlink/?LinkId=59347)   
- [Сведения о реализации API-интерфейса ODBC](odbc-api-implementation-details.md)   
+ [Сведения о реализации API ODBC](odbc-api-implementation-details.md)   
  [SET QUOTED_IDENTIFIER (Transact-SQL)](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
  [SET ANSI_NULLS (Transact-SQL)](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING (Transact-SQL)](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
- [Параметр SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)  
+ [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)  
   
   

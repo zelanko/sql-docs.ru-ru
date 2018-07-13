@@ -5,31 +5,30 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], filters
 - filters [full-text search]
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ccafb0bccab01286534a0c5499fe474da1262d5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7b19f9141df65be952551dbb899b6cb30544e9a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278930"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Настройка поисковых фильтров и управление ими
-  Индексирование документа в `varbinary`, `varbinary(max)`, `image`, или `xml` столбец типа данных требует дополнительной обработки. Такая обработка должна выполняться фильтром. Фильтр извлекает из документа текстовые данные (устранение форматирования). Затем фильтр отправляет текст в компонент средства разбиения по словам для языка, связанного со столбцом таблицы.  
+  Индексирование документа в `varbinary`, `varbinary(max)`, `image`, или `xml` столбце с типом данных требует дополнительной обработки. Такая обработка должна выполняться фильтром. Фильтр извлекает из документа текстовые данные (устранение форматирования). Затем фильтр отправляет текст в компонент средства разбиения по словам для языка, связанного со столбцом таблицы.  
   
  Данный фильтр зависит от типа данных документа (DOC, PDF, XLS, XML и т. д.). Такие фильтры реализуют интерфейс IFilter. Для получения дополнительных сведений об этих типах документов выполните запрос к представлению каталога [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
   
- Двоичные документы можно хранить в одном столбце `varbinary(max)` или `image`. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выбирает для каждого документа правильный фильтр в соответствии с расширением файла. Так как расширение файла не отображается при этот файл хранится в `varbinary(max)` или `image` столбца, расширение файла (doc, XLS, .pdf и т. д.), которые должны храниться в отдельном столбце таблицы, который называется столбцом типов. Столбец типов может иметь любой символьный тип данных и содержит расширение файла документа (например, DOC в случае документа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word). В **документа** в таблицу [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], **документа** столбец имеет тип `varbinary(max)`, а столбец, **FileExtension**, имеет тип `nvarchar(8)`.  
+ Двоичные документы можно хранить в одном столбце `varbinary(max)` или `image`. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выбирает для каждого документа правильный фильтр в соответствии с расширением файла. Поскольку расширение файла не отображается при сохранении файла в `varbinary(max)` или `image` столбца, расширение файла (doc, XLS, .pdf и т. д.) должны храниться в отдельном столбце таблицы, который называется столбцом типов. Столбец типов может иметь любой символьный тип данных и содержит расширение файла документа (например, DOC в случае документа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word). В **документа** в таблицу [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], **документа** столбец имеет тип `varbinary(max)`, а столбец, **FileExtension**, имеет тип `nvarchar(8)`.  
   
 > [!NOTE]  
 >  Фильтр может быть способен обрабатывать объекты, внедренные в родительский объект, в зависимости от его реализации. Однако в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] фильтры не настроены на переход по ссылкам на другие объекты.  

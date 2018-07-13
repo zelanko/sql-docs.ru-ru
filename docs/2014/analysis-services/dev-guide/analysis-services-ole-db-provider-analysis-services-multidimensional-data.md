@@ -1,5 +1,5 @@
 ---
-title: Службы Analysis Services поставщика OLE DB (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Поставщик OLE DB (службы Analysis Services — многомерные данные) служб Analysis Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - Analysis Services OLE DB Provider
 ms.assetid: cdeecd50-1d91-4162-a4a2-01c7799b02a8
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32c717ef25e95192bceaa7084f3c8de63600f834
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 037d81293836bb771fd28033e86d340fcc067e29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200354"
 ---
 # <a name="analysis-services-ole-db-provider-analysis-services---multidimensional-data"></a>Поставщик OLE DB служб Analysis Services (службы Analysis Services — многомерные данные)
-  Поставщик Analysis Services OLE DB является интерфейсом для приложений, взаимодействующих с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Используется для построения клиентских приложений, взаимодействующих с многомерными данными. Этот поставщик также предоставляет методы для интеллектуального анализа многомерных данных и реляционных данных как в сети, так и вне сети. Поставляется в составе служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Его можно распространять в сторонних клиентских приложениях.  
+  Поставщик Analysis Services OLE DB — интерфейс для приложения, взаимодействующие с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Используется для построения клиентских приложений, взаимодействующих с многомерными данными. Этот поставщик также предоставляет методы для интеллектуального анализа многомерных данных и реляционных данных как в сети, так и вне сети. Поставляется в составе служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Его можно распространять в сторонних клиентских приложениях.  
   
  Поставщик OLE DB служб Analysis Services — это основной метод взаимодействия со службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для выполнения таких задач, как соединение с кубом или моделью интеллектуального анализа данных, направление запросов к кубу или модели интеллектуального анализа данных и получение сведений о схеме.  
   

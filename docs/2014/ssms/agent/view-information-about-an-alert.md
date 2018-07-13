@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
 - viewing alerts
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - status information [SQL Server], alerts
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9324249df2f96bf7ddf2a94b199cdfcfe003cb55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 862613ec00fb0274c5c227ab9903568b31969dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187751"
 ---
 # <a name="view-information-about-an-alert"></a>Просмотр сведений о предупреждении
   В этом разделе описывается, как просмотреть сведения о предупреждениях агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -63,11 +63,11 @@ ms.locfileid: "36190118"
   
      Для получения дополнительных сведений о допустимых параметрах, содержащихся в диалоговом окне *Свойства предупреждения***имя_предупреждения**, см. следующие разделы:  
   
-    -   [Свойства нового оповещения на предупреждения &#40;страница «Общие»&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Предупреждение свойства нового оповещения &#40;страница "Общие"&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Свойства нового оповещения на предупреждения &#40;страницу "ответ"&#41;](alert-properties-new-alert-response-page.md)  
+    -   [Предупреждение свойства нового оповещения &#40;страница "ответ"&#41;](alert-properties-new-alert-response-page.md)  
   
-    -   [Свойства предупреждения: Новое предупреждение &#40;страница «Параметры»&#41;](alert-properties-new-alert-options-page.md)  
+    -   [Свойства предупреждения: Новое предупреждение &#40;страница параметров&#41;](alert-properties-new-alert-options-page.md)  
   
     -   [Свойства предупреждения (страница "Журнал")](alert-properties-history-page.md)  
   

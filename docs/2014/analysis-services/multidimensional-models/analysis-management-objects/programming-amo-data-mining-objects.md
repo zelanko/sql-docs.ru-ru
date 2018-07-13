@@ -1,5 +1,5 @@
 ---
-title: Программирование объектов интеллектуального анализа данных объектов AMO | Документы Microsoft
+title: Программирование объектов интеллектуального анализа данных AMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - Analysis Management Objects, data mining
 ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 62ef444d7fa112267a4a272553834e24fe5b0df9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 340030bcc2acdc220f6aff4634c6926163862c6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176951"
 ---
 # <a name="programming-amo-data-mining-objects"></a>Программирование объектов интеллектуального анализа данных AMO
   Программирование объектов интеллектуального анализа данных при помощи объектов AMO осуществляется просто и понятно. Первый шаг заключается в создании модели структуры данных для поддержки проекта интеллектуального анализа. Затем создается модель интеллектуального анализа данных, поддерживающая алгоритм интеллектуального анализа, который будет использоваться для прогнозирования или поиска невидимых связей, лежащих в основе данных. Создав проект интеллектуального анализа данных (в том числе структуру и алгоритмы), можно приступить к обработке моделей интеллектуального анализа данных для получения обученных моделей, которые впоследствии будут использоваться при выполнении запросов и прогнозировании из клиентского приложения.  
   
- Следует, однако, помнить, что объекты AMO не предназначены для запросов; объекты AMO используются для управления и администрирования структур и моделей интеллектуального анализа данных. Чтобы запрашивать данные, используйте [разработка с использованием ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
+ Следует, однако, помнить, что объекты AMO не предназначены для запросов; объекты AMO используются для управления и администрирования структур и моделей интеллектуального анализа данных. Для запроса данных, используйте [разработка с использованием ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
   
  Этот раздел состоит из следующих подразделов.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36189634"
   
      Структуры интеллектуального анализа данных можно обрабатывать, а после их обработки может производиться обработка или повторное обучение дочерних моделей интеллектуального анализа.  
   
- В следующем образце кода создается структура интеллектуального анализа данных для прогнозирования объема продаж во временных рядах. Перед выполнением этого образца кода, убедитесь, что базы данных *db*, переданное в качестве параметра для `CreateSalesForecastingMiningStructure`, содержится в `db.DataSourceViews[0]` ссылку на созданное представление *dbo.vTimeSeries* в [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]образца базы данных.  
+ В следующем образце кода создается структура интеллектуального анализа данных для прогнозирования объема продаж во временных рядах. Прежде чем запустить пример кода, убедитесь, что базы данных *db*, переданное в качестве параметра для `CreateSalesForecastingMiningStructure`, содержит в `db.DataSourceViews[0]` ссылку на представление *dbo.vTimeSeries* в [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]образца базы данных.  
   
 ```  
 public static MiningStructure CreateSalesForecastingMiningStructure(Database db)  
@@ -144,7 +144,7 @@ public static MiningModel CreateSalesForecastingMiningModel(MiningStructure ms)
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices>   
  [Основные классы объектов AMO](amo-fundamental-classes.md)   
- [Знакомство с классами объектов AMO](amo-classes-introduction.md)   
+ [Введение в классы объектов AMO](amo-classes-introduction.md)   
  [Классы интеллектуального анализа данных объектов AMO](amo-data-mining-classes.md)   
  [Логическая архитектура &#40;службы Analysis Services — многомерные данные&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Объекты базы данных &#40;службы Analysis Services — многомерные данные&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  

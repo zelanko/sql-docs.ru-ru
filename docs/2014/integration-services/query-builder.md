@@ -1,5 +1,5 @@
 ---
-title: Построитель запросов | Документы Microsoft
+title: Построитель запросов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.querybuilder.f1
 helpviewer_keywords:
 - Query Builder dialog box
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8ae61c3f17ba0ad85e6f32aa9ae1f5389114e3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc765cfceb8e52d3fbb578e3c3b6f212f28a3291
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156325"
 ---
 # <a name="query-builder"></a>Построитель запросов
   Используйте диалоговое окно **Построитель запросов** , чтобы создать запрос для использования в задаче «Выполнение SQL», в источнике и цели OLE DB, а также в преобразовании «Уточняющий запрос».  

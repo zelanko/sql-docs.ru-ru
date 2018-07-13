@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 02942c1f5e223cdf996cb691a4e7d42cc95c1b81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 0dd6a74e002a6eb8dcb266d2ede766becc89813b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184259"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Соединение с компонентом Database Engine
   Набор средств, устанавливаемых с компонентом [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], зависит от выпуска и от параметров, заданных при установке. На этом уроке рассматриваются важнейшие средства, а также показываются способы подключения и выполнения одной из базовых функций (разрешение входа дополнительным пользователям).  
@@ -31,7 +31,7 @@ ms.locfileid: "36188495"
   
 ### <a name="basic-tools"></a>Основные средства  
   
--   Среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] является основным средством администрирования компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] и написания исходного кода на языке [!INCLUDE[tsql](../includes/tsql-md.md)]. Она расположена в оболочке [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Он не включен в [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , но доступна как отдельный загружаемый из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkId=144346).  
+-   Среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] является основным средством администрирования компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] и написания исходного кода на языке [!INCLUDE[tsql](../includes/tsql-md.md)]. Она расположена в оболочке [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Он не включен в [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , но доступен как отдельный загружаемый из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkId=144346).  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Диспетчер конфигурации устанавливается с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и с клиентскими средствами. Он позволяет включать серверные протоколы, настраивать параметры протокола, например порты TCP, настраивать автоматический запуск служб сервера и настраивать соединение клиентских компьютеров. Это средство может настроить дополнительные параметры соединения, но не активирует возможности.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36188495"
   
 -   В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Средства настройки**и щелкните **Диспетчер конфигурации SQL Server**.  
   
-##  <a name="connect"></a> Соединение с помощью среды Management Studio  
+##  <a name="connect"></a> Соединение с помощью Management Studio  
  Если известно имя экземпляра или подключение выполняется членом группы «Администраторы», соединиться с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)] с помощью средств, выполняемых на этом же компьютере, не составляет труда. Следующие процедуры должны исполняться на том же компьютере, на котором находится [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>Определение имени экземпляра компонента Database Engine  
@@ -54,7 +54,7 @@ ms.locfileid: "36188495"
 1.  Войдите в Windows как член группы «Администраторы» и откройте среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
     > [!IMPORTANT]  
-    >  Если вы подключаетесь к [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] на [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] или [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] (или более поздней), может потребоваться щелкните правой кнопкой мыши [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] и нажмите кнопку **Запуск от имени администратора** для подключения с помощью к администратору учетные данные. Начиная с версии [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], при установке выбранные имена входа добавляются к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], так что учетные данные администратора не требуются.  
+    >  Если вы подключаетесь к [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] на [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] или [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] (или более поздних версий), щелкните правой кнопкой мыши может потребоваться [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] и нажмите кнопку **Запуск от имени администратора** для подключения с помощью к администратору учетные данные. Начиная с версии [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], при установке выбранные имена входа добавляются к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], так что учетные данные администратора не требуются.  
   
 2.  В диалоговом окне **Соединения с сервером** нажмите кнопку **Отмена**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36188495"
   
      Откроется диалоговое окно **Создание имени входа** .  
   
-2.  На **Общие** страницы в **имя входа** введите имя входа Windows в формате  *\<домена >\\< имя входа\>*.  
+2.  На **Общие** странице **имя входа** введите имя входа Windows в формате  *\<домена >\\< входа\>*.  
   
 3.  В поле **База данных по умолчанию** выберите [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , если она доступна. В противном случае выберите базу данных **master**.  
   

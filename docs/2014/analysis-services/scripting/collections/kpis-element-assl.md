@@ -1,5 +1,5 @@
 ---
-title: Элемент KPIs (ASSL) | Документы Microsoft
+title: Элемент KPIs (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Kpis element
 ms.assetid: da4e32a0-1416-4d32-8b7f-7d74be23c9d4
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 892e5997802b2d24d23ac9cb7e3be4ecb1b401c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0947535590d2484ac8022a3fa845dc4b85c96d4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197784"
 ---
 # <a name="kpis-element-assl"></a>Элемент Kpis (ASSL)
-  Содержит коллекцию ключевых показателей эффективности ([ключевого показателя эффективности](../objects/kpi-element-assl.md) элементы) связанный с родительским элементом.  
+  Содержит коллекцию ключевых показателей эффективности ([ключевого показателя эффективности](../objects/kpi-element-assl.md) элементы) связанных с родительским элементом.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36188361"
 |[Перспективы](../objects/perspective-element-assl.md)|[Ключевой показатель эффективности](../objects/kpi-element-assl.md) типа [PerspectiveKpi](../data-type/perspectivekpi-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.KpiCollection>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.KpiCollection>.  
   
 ## <a name="see-also"></a>См. также  
  [Коллекции &#40;ASSL&#41;](collections-assl.md)  

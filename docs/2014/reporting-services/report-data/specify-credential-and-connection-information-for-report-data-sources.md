@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
 - impersonation [Reporting Services]
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 caps.latest.revision: 59
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3e3dc577cf7b0db69fbcc8140996ce33a4802040
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cb7ef033bc481772f0acbb524988fc8e85a2e91d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210744"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Задание учетных данных и сведениях о соединении для источников данных отчета
   Сервер отчетов использует учетные данные для подключения к внешним источникам данных, предоставляющих содержимое для отчетов или сведения о получателе для подписок, управляемых данными. Можно задать учетные данные, использующие проверку подлинности Windows, проверку подлинности базы данных, нестандартную проверку подлинности, или учетные данные, не использующие проверку подлинности. При отправке по сети запроса на соединение сервер отчетов олицетворяет или учетную запись пользователя, или учетную запись автоматического выполнения. Дополнительные сведения о контексте безопасности, в котором выполняется запрос соединения, см. в подразделе [Настройка источника данных и сетевые подключения](#DataSourceConfigurationConnections) далее в этом разделе.  
@@ -45,7 +45,7 @@ ms.locfileid: "36188972"
 > [!NOTE]  
 >  Учетные данные также используются для авторизации пользователей, имеющих доступ к серверу отчетов. Сведения об авторизации пользователей на сервере отчетов содержатся в другом разделе.  
   
- Соединение с внешним источником данных определяется при создании отчета. Им можно управлять отдельно после публикации отчета. Можно указать статическую строку соединения или выражение, которые позволяют пользователям выбрать источник данных из динамического списка. Дополнительные сведения о способах указания данных источника и строку соединения см. в разделе [подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ Соединение с внешним источником данных определяется при создании отчета. Им можно управлять отдельно после публикации отчета. Можно указать статическую строку соединения или выражение, которые позволяют пользователям выбрать источник данных из динамического списка. Дополнительные сведения о способах указания данных источника и строку соединения, см. в разделе [подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
 ## <a name="using-remote-data-sources"></a>Использование удаленных источников данных  
  Если отчет получает данные с удаленного сервера базы данных, проверьте следующее.  
@@ -148,7 +148,7 @@ ms.locfileid: "36188972"
  [Подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Управление источниками данных отчета](../../integration-services/connection-manager/data-sources.md)   
  [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Создать, удалить или изменить общий источник данных &#40;диспетчера отчетов&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Создание, удаление и изменение общего источника данных &#40;диспетчера отчетов&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Настройка свойств источника данных для отчета &#40;диспетчера отчетов&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

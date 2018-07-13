@@ -1,5 +1,5 @@
 ---
-title: Обработка объектов многомерной модели | Документы Microsoft
+title: Обработка объектов многомерной модели | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online mode [Analysis Services]
 - processing objects [Analysis Services]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b933c003e840d0ef145159f278b9054b1637956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9f95df4ac7d0bd9e0dd93c1a55189e9e46f747c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180981"
 ---
 # <a name="multidimensional-model-object-processing"></a>Обработка объектов многомерной модели
   Обработка ― это шаг или последовательность шагов, в которых службы Analysis Services загружают данные из реляционного источника данных в многомерную модель. Для объектов, использующих режим хранения MOLAP, данные сохраняются на диске в папке файла базы данных. Для режима хранения ROLAP обработка происходит по запросу, в ответ на запрос многомерных выражений к объекту. Для объектов, использующих режим хранения ROLAP, обработка относится к обновлению кэш-памяти до возврата результатов запроса.  
@@ -49,7 +49,7 @@ ms.locfileid: "36188340"
   
 ##  <a name="bkmk_prereq"></a> Предварительные требования  
   
--   Процесс обработки требует административных разрешений для экземпляра служб Analysis Services. При обработке в интерактивном режиме из среды [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] или [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]необходимо быть членом роли администратора сервера для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Для обработки, которая выполняется автоматически, например при использовании пакета служб SSIS, который указан в расписании с помощью агента SQL Server, учетная запись для запуска пакета должна быть членом роли администратора сервера. Дополнительные сведения об установке разрешений администратора см. в разделе [предоставление разрешений администратора сервера &#40;служб Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+-   Процесс обработки требует административных разрешений для экземпляра служб Analysis Services. При обработке в интерактивном режиме из среды [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] или [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]необходимо быть членом роли администратора сервера для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Для обработки, которая выполняется автоматически, например при использовании пакета служб SSIS, который указан в расписании с помощью агента SQL Server, учетная запись для запуска пакета должна быть членом роли администратора сервера. Дополнительные сведения о настройке разрешений администратора, см. в разделе [предоставление разрешений администратора сервера &#40;служб Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
 -   Учетная запись, используемая для получения данных, указывается в объекте источника данных либо в качестве параметра олицетворения при использовании проверки подлинности Windows, либо в качестве идентификатора в строке подключения, если используется проверка подлинности базы данных. Учетная запись должна иметь разрешения на чтение данных из реляционных источников данных, используемых в модели.  
   

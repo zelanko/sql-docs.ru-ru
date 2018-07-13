@@ -8,35 +8,35 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 caps.latest.revision: 61
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4f8b3f60d82a94fa7289054d0028ab539abade64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a5c3560a7aafd3fcf53f9b10d606e1f999bbf063
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196814"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Создание простого табличного отчета (учебник по службам SSRS)
   Этот учебник предназначен для создания простой табличный отчет на основе [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных с помощью конструктора отчетов. Для создания отчетов также можно использовать построитель отчетов и мастер отчетов. В этом учебнике требуется создать проект отчета, указать сведения о соединении, определить запрос, добавить область данных таблицы и выполнить предварительный просмотр отчета.  
   
 > [!NOTE]  
->  Для работы с этим учебником необходимо переключить службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в собственный режим. Если службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] работают в режиме интеграции с SharePoint, то шаги, в которых используются URL-адреса сервера отчетов, неприменимы. Дополнительные сведения о [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] режимы, в разделе [сервера отчетов служб Reporting Services](reporting-services-report-server.md).  
+>  Для работы с этим учебником необходимо переключить службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в собственный режим. Если службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] работают в режиме интеграции с SharePoint, то шаги, в которых используются URL-адреса сервера отчетов, неприменимы. Дополнительные сведения о [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] режимы, см. в разделе [сервер отчетов служб Reporting Services](reporting-services-report-server.md).  
   
 ## <a name="requirements"></a>Требования  
  Для работы с этим учебником в системе должны быть установлены следующие компоненты:  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Компонент Database Engine  
   
--   База данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  Дополнительные сведения см. в разделе [Adventure Works для SQL Server 2012 (Adventure Works для SQL Server 2012)](http://go.microsoft.com/fwlink/?LinkId=245471) (http://go.microsoft.com/fwlink/?LinkId=245471).. Дополнительные сведения о поддержке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] образцы баз данных и образцы кода для [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], в разделе [Обзор образцов баз данных и](http://go.microsoft.com/fwlink/?LinkId=110391) на сайте CodePlex.  
+-   База данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  Дополнительные сведения см. в разделе [Adventure Works для SQL Server 2012 (Adventure Works для SQL Server 2012)](http://go.microsoft.com/fwlink/?LinkId=245471) (http://go.microsoft.com/fwlink/?LinkId=245471).. Дополнительные сведения о поддержке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] образцы баз данных и образцы кода для [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], см. в разделе [баз данных и общие сведения об образцах](http://go.microsoft.com/fwlink/?LinkId=110391) на сайте CodePlex.  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
@@ -45,20 +45,20 @@ ms.locfileid: "36109889"
     > [!NOTE]  
     >  [!INCLUDE[ssNote64Samp](../includes/ssnote64samp-md.md)]  
   
- Также необходимо иметь разрешения только для чтения для извлечения данных из [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных.  
+ Также необходимо иметь разрешения только для чтения для получения данных из [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных.  
   
 ## <a name="tasks"></a>Задания  
  [Урок 1: Создание проекта сервера отчетов &#40;службы Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)  
   
- [Занятие 2: Указание сведений о соединении &#40;службы Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)  
+ [Занятие 2: Задание информации о соединении &#40;службы Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)  
   
- [Занятие 3: Определение набора данных отчета таблицы &#40;службы Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
+ [Занятие 3: Определение набора данных для табличного отчета &#40;службы Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
   
- [Урок 4: Добавление таблицы в отчет &#40;службы Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)  
+ [Занятие 4: Добавление таблицы в отчет &#40;службы Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)  
   
  [Занятие 5: Форматирование отчета &#40;службы Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)  
   
- [Урок 6: Добавление группирования и итогов &#40;службы Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
+ [Занятие 6: Добавление группирования и итогов &#40;службы Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
 >  При просмотре учебников рекомендуется добавить **Далее** и **Назад** кнопок панели инструментов средства просмотра документов. Дополнительные сведения см. в разделе  

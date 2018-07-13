@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], assigning functional area permissions
 - functional area permissions [Master Data Services], assigning
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b227b205323bbea9d3ca8f36d50c0c0a8f986b39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d7641a7576f85895c7b3106d4906889a5fec30c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160625"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Назначение разрешений для функциональной области (службы Master Data Services)
   Разрешения для функциональной области назначаются, чтобы предоставить пользователям или группам доступ к функциональным областям [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
@@ -50,7 +50,7 @@ ms.locfileid: "36180308"
   
 ## <a name="next-steps"></a>Следующие шаги  
   
--   [Назначение разрешения объекта модели &#40;службы Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)  
+-   [Назначение разрешений объекта модели &#40;службы Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также  
  [Создание администратора модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)   

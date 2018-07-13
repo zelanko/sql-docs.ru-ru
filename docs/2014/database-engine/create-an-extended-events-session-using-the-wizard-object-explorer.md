@@ -1,5 +1,5 @@
 ---
-title: Создание сеанса расширенных событий с помощью мастера (обозреватель объектов) | Документы Microsoft
+title: Создание сеанса расширенных событий с помощью мастера (обозреватель объектов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.ssms.XeWizard.Summary.f1
 - Sql12.ssms.XeWizard.SetSessionProperties.f1
@@ -32,15 +32,15 @@ helpviewer_keywords:
 - Sql11.ssms.XeWizard.SelectEvents.f1
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69a63b1b360a1ba1c0e9a106dbb78f215f9eca71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dc5a2f60cfeff0289bb0a16476fb2506c3beda6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155235"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>создать сеанс расширенных событий с помощью пользовательского интерфейса нового сеанса (обозреватель объектов)
   Для повышения удобства выбора и отслеживания событий на сервере в расширенных событиях предусмотрен мастер создания сеансов, который помогает создавать сеансы расширенных событий. Мастер создания сеанса предоставляет доступ к большинству функций для обработки расширенных событий. В диалоговом окне [Создание сеанса](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) также можно задать сеанс расширенных событий, в ходе которого будет выполняться сбор, отображение и анализ данных. Диалоговое окно «Создание сеанса» включает все функции расширенных событий.  
@@ -61,7 +61,7 @@ ms.locfileid: "36188313"
   
 -   [Выбор событий для отслеживания](#BKMK_SelectEventsToCapture)  
   
--   [Отслеживание глобальных полей](#BKMK_CaptureGlobalFields)  
+-   [Захват глобальных полей](#BKMK_CaptureGlobalFields)  
   
 -   [Настройка фильтров событий сеанса](#BKMK_SetSessionEventFilters)  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36188313"
     > [!NOTE]  
     >  События из канала **Debug** скрыты по умолчанию. Чтобы просмотреть события отладки, выберите **Отладка** в раскрывающемся списке **Каналы** .  
   
-##  <a name="BKMK_CaptureGlobalFields"></a> Отслеживание глобальных полей  
+##  <a name="BKMK_CaptureGlobalFields"></a> Захват глобальных полей  
  Глобальные поля (также называемые действиями) можно использовать для связывания одного или нескольких действий с выбранными событиями. Если выбран шаблон на странице **Выбор шаблона** , то все глобальные поля, определенные в шаблоне, отображаются на этой странице.  
   
  На странице **Выбор глобальных полей** выполните следующие действия:  

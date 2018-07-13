@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], embedded
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 61c928862ea4ea46b8422f820addf1c31ef868d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3cd47633f58369b7cb432fbe28382ac93c4fbec7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109867"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230614"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>Настройка свойств источника данных для отчета (диспетчер отчетов)
   При запуске отчета сервер отчетов получает сведения о свойствах для определения способа подключения к источнику данных. На странице свойств «Источник данных» опубликованного отчета указываются тип источника данных, строка соединения и сведения об учетных данных. Можно установить эти свойства, чтобы они отличались от исходных значений, заданных при создании отчета.  
@@ -67,7 +67,7 @@ ms.locfileid: "36109867"
  [Страница "Создание источника данных" (диспетчер отчетов)](../new-data-source-page-report-manager.md)   
  [Создание, изменение и удаление общих источников данных &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Управление источниками данных отчета](manage-report-data-sources.md)   
- [Создать, удалить или изменить общий источник данных &#40;диспетчера отчетов&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Создание, удаление и изменение общего источника данных &#40;диспетчера отчетов&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Страница "Свойства источников данных" (диспетчер отчетов)](../data-sources-properties-page-report-manager.md)  
   
   

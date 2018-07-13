@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.advancedtuningoptions.f1
 - sql12.dta.general.f1
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a64863d6d36d7eb5d934b08db7c7ed8fdb2638e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 536c0a6a1a730fcf74d084fbef2d9f1debb347a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182081"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Запуск и использование помощника по настройке ядра СУБД
   В этом разделе описано, как запускать и использовать помощник по настройке ядра СУБД в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения о просмотре и работе с результатами после настройки базы данных см. в статье [Просмотр и работа с выходными данными помощника по настройке ядра СУБД](database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Инициализация помощника по настройке ядра СУБД  
- При первом использовании помощника по настройке ядра СУБД его должен инициализировать пользователь, имеющий предопределенную роль сервера **sysadmin** . Это, поскольку несколько системных таблиц должны быть созданы в `msdb` базы данных для поддержки операций настройки. Инициализация также помогает пользователям, являющимся членами предопределенной роли базы данных **db_owner** , настраивать рабочие нагрузки для таблиц в принадлежащих им базах данных.  
+ При первом использовании помощника по настройке ядра СУБД его должен инициализировать пользователь, имеющий предопределенную роль сервера **sysadmin** . Это обусловлено тем, необходимо создать несколько системных таблиц в `msdb` базы данных для поддержки операций настройки. Инициализация также помогает пользователям, являющимся членами предопределенной роли базы данных **db_owner** , настраивать рабочие нагрузки для таблиц в принадлежащих им базах данных.  
   
  Пользователь с разрешениями системного администратора должен выполнить одно из следующих действий.  
   

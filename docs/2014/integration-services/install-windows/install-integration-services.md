@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, installing
 - SSIS, installing
@@ -21,20 +21,20 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 caps.latest.revision: 100
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7e495ce5090ad33f6584250db739898ab3ca6dda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd10fc638ed7a1d9c42b926190eebc0df5dd37b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156542"
 ---
 # <a name="install-integration-services"></a>Установка служб Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет единую программу установки для всех компонентов, включая службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Она позволяет на одном компьютере устанавливать службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] как вместе с другими компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и отдельно от них.  
   
  Этот раздел обращает внимание на важные моменты, которые следует рассмотреть перед началом установки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Сведения, содержащиеся в этом разделе, помогут правильно подобрать параметры установки, сделать правильный выбор и успешно осуществить установку.  
   
- Этот раздел не содержит инструкций по запуску программы установки, ее выполнению из командной строки и использованию мастера установки. Пошаговые инструкции по запуску программы установки и выберите компоненты для установки см. в разделе [Быстрая установка SQL Server 2014](../../getting-started/quick-start-installation-of-sql-server-2014.md). Дополнительные сведения о параметрах командной строки для установки [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], в разделе [Установка SQL Server 2014 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+ Этот раздел не содержит инструкций по запуску программы установки, ее выполнению из командной строки и использованию мастера установки. Пошаговые инструкции по запуску программы установки и выберите компоненты для установки, см. в разделе [Быстрая установка SQL Server 2014](../../getting-started/quick-start-installation-of-sql-server-2014.md). Сведения о параметрах командной строки для установки [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], см. в разделе [Установка SQL Server 2014 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="preparing-to-install-integration-services"></a>Подготовка к установке служб Integration Services  
  Прежде чем приступить к установке служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ознакомьтесь со следующими требованиями:  
@@ -64,7 +64,7 @@ ms.locfileid: "36189854"
 >   
 >  Инструкции о том, как предоставлять разрешения, см. в статье [Предоставление разрешений службам Integration Services](../grant-permissions-to-integration-services-service.md).  
   
- Если службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]устанавливаются с помощью мастера установки, выбор компонентов и параметров производится с помощью последовательности страниц. Ниже приведены страницы в мастере установки, где выбранных параметров влияют на установку [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] выбора рекомендации:  
+ Если службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]устанавливаются с помощью мастера установки, выбор компонентов и параметров производится с помощью последовательности страниц. Ниже приведены страницы в мастере установки, где выбранных параметров влияет на установку [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] выбора рекомендации:  
   
 -   **Выбор компонентов**  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36189854"
   
      **Установка на 64-разрядный компьютер.** На 64-разрядном компьютере при выборе компонента **Службы Integration Services** устанавливаются только 64-разрядные версии средств и среды выполнения. Если требуется выполнять пакеты в 32-разрядном режиме, нужно также выбрать дополнительный параметр, чтобы установить 32-разрядные версии средств и среды выполнения.  
   
-    -   Если 64-разрядном компьютере запущена x86 операционной системы, выберите **SQL Server Data Tools** или **средства управления — полный**.  
+    -   Если 64-разрядном компьютере запущена операционная система x86, выберите **SQL Server Data Tools** или **средства управления — полный**.  
   
     -   Если работает под управлением 64-разрядном компьютере [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] операционной системе, выберите **средства управления — полный**.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36189854"
   
      Просмотрите настройки службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на вкладке **Учетные записи службы** страницы **Конфигурация сервера** .  
   
-     Если установлены Windows 7 или Windows Server 2008 R2, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] службы регистрируется для запуска под виртуальной учетной NT Services\MsDtsServer120 и **тип запуска** — **автоматического**.  Для виртуальной учетной записи не обязательно вводить пароль. Если на компьютере установлены Microsoft Vista или Windows Server 2008, то служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] регистрируется для запуска под встроенной учетной записью "Network Service", а **Тип запуска** определяется как **Автоматический**. Для работы под встроенной учетной записью Network Service пароль вводить не нужно.  
+     Если установлены Windows 7 или Windows Server 2008 R2, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] служба регистрируется для запуска под виртуальной учетной NT Services\MsDtsServer120 и **тип запуска** — **автоматического**.  Для виртуальной учетной записи не обязательно вводить пароль. Если на компьютере установлены Microsoft Vista или Windows Server 2008, то служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] регистрируется для запуска под встроенной учетной записью "Network Service", а **Тип запуска** определяется как **Автоматический**. Для работы под встроенной учетной записью Network Service пароль вводить не нужно.  
   
  По умолчанию в новой установке службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] настроены таким образом, чтобы не заносить в журнал событий приложений события, связанные с запуском пакетов. Это позволяет избежать слишком большого количества записей в журнале событий при использовании компонента сборщика данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. События, которые не заносятся в журнал: EventID 12288, "Package started" и EventID 12289, "Package finished successfully." Чтобы эти события заносились в журнал событий приложений, откройте реестр для изменения. Затем найдите в реестре узел HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS и измените значение DWORD для параметра LogPackageExecutionToEventLog с 0 на 1.  
   

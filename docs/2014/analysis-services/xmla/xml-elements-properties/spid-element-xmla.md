@@ -1,5 +1,5 @@
 ---
-title: Элемент SPID (XML для Аналитики) | Документы Microsoft
+title: Элемент SPID (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - SPID element
 ms.assetid: c4a54dcb-a0cd-4255-9e0f-a34eb990854f
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d203225045314115604a8b99d82ab291c5960376
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 27244dab841ac4793d66c6b177d5382ca7cdc7a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167025"
 ---
 # <a name="spid-element-xmla"></a>Элемент SPID (XML для аналитики)
-  Определяет активный идентификатор серверного процесса (SPID), на котором выполняется родительский [отменить](../xml-elements-commands/cancel-element-xmla.md) элемента.  
+  Определяет активный идентификатор серверного процесса (SPID), в котором должен выполняться родительский [отменить](../xml-elements-commands/cancel-element-xmla.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36180341"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- `SPID` Элемент представляет процесс сервера идентификатор (SPID) для конкретного сеанса в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ `SPID` Элемент представляет процесс сервера идентификатор (SPID), используемый в данном сеансе в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также  
  [Элемент CancelAssociated &#40;XML для Аналитики&#41;](cancelassociated-element-xmla.md)   

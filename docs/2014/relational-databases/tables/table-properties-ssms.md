@@ -1,5 +1,5 @@
 ---
-title: Свойства таблицы | Документы Microsoft
+title: Свойства таблицы | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tableproperties.storage.f1
 - sql12.SWB.SELECTCOLUMNS.F1
@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.swb.tableproperties.changetracking.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e5b9ecfeafbb989f5baae832225475e65137a9ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 858be4ef2443a92f2a2999535714084fe60a67f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181771"
 ---
 # <a name="table-properties"></a>Свойства таблицы
   Данный раздел описывает свойства таблицы, отображаемые в диалоговом окне «Свойства таблицы» в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения по отображению этих свойств см. в разделе [Просмотр определения таблицы](view-the-table-definition.md).  
@@ -85,7 +85,7 @@ ms.locfileid: "36190382"
  В большинстве случаев предотвращает укрупнение блокировки. Блокировки уровня таблицы запрещены не полностью. Например, при сканировании таблицы, которая не имеет кластеризованного индекса на уровне изоляции SERIALIZABLE, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен установить блокировку таблицы для защиты целостности данных.  
   
  **Таблица реплицирована**  
- Указывает на то, что таблица реплицирована в другую базу данных при помощи репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Возможными значениями являются `True` или `False`.  
+ Указывает на то, что таблица реплицирована в другую базу данных при помощи репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Возможные значения: `True` или `False`.  
   
 ##  <a name="ChangeTracking"></a> Страница отслеживания изменений  
  **Отслеживание изменений**  
@@ -139,13 +139,13 @@ ms.locfileid: "36190382"
  Возможные значения: `True` и `False`.  
   
  **Файловая группа файлового потока**  
- Укажите имя файловой группы данных FILESTREAM, если таблица имеет `varbinary(max)` столбец, имеющий атрибут FILESTREAM. Значение по умолчанию — файловая группа данных FILESTREAM.  
+ Укажите имя файловой группы данных FILESTREAM, если таблица имеет `varbinary(max)` столбец, в котором есть атрибут FILESTREAM. Значение по умолчанию — файловая группа данных FILESTREAM.  
   
  Если таблица не содержит данных FILESTREAM, то это поле пусто.  
   
 ### <a name="general"></a>Общие  
  **Включен формат хранения Vardecimal**  
- Когда `True`, это значение только для чтения указывает, что `decimal` и `numeric` типов данных, хранятся с использованием формата хранения vardecimal. Чтобы изменить этот параметр, используйте `vardecimal storage format` параметр [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Формат хранения Vardecimal устарел. Вместо этого используйте сжатие ROW.  
+ Когда `True`, это доступное только для чтения значение указывает, что `decimal` и `numeric` типы данных сохраняются с помощью формата хранения vardecimal. Чтобы изменить этот параметр, используйте `vardecimal storage format` параметр [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Формат хранения Vardecimal устарел. Вместо этого используйте сжатие ROW.  
   
  **Место, занимаемое индексом**  
  Объем свободного места в мегабайтах, занимаемого индексами в таблице. Это значение не включает занимаемое XML-индексом пространство для таблицы. Если XML-индексы относятся к таблице, используйте вместо этого процедуру [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) .  

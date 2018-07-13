@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 caps.latest.revision: 30
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 6cd514ae1b9581a52e7dfdb382bc8fded757fb47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d975ed562e5343ceeb921358160309c20ff0bb4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260080"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Настройка параметров свойства HealthCheckTimeout
-  Параметр HealthCheckTimeout используется для задания интервала времени, в миллисекундах, ожидания Библиотекой ресурсов SQL Server сведения, возвращенные [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) хранимой процедуры перед созданием отчета Отработка отказа экземпляра кластера AlwaysOn (FCI) не отвечает. Изменения, внесенные в параметры времени ожидания, вступают в силу немедленно и не требуют перезапуска ресурса SQL Server.  
+  Параметр HealthCheckTimeout используется для указания продолжительность времени, в миллисекундах, ожидания Библиотекой ресурсов SQL Server сведения, возвращаемые [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) хранимой процедуры до появления Отработка отказа экземпляра кластера AlwaysOn (FCI) не отвечает. Изменения, внесенные в параметры времени ожидания, вступают в силу немедленно и не требуют перезапуска ресурса SQL Server.  
   
 -   **Перед началом:**  [Ограничения](#Limits), [Безопасность](#Security)  
   
@@ -46,7 +45,7 @@ ms.locfileid: "36101000"
   
 2.  Импортируйте модуль `FailoverClusters` для включения командлетов кластера.  
   
-3.  Используйте `Get-ClusterResource` командлет, чтобы найти [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ресурса, затем с помощью `Set-ClusterParameter` командлету задать **HealthCheckTimeout** свойство для экземпляра отказоустойчивого кластера.  
+3.  Используйте `Get-ClusterResource` найдите [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ресурса, затем с помощью `Set-ClusterParameter` командлет, чтобы задать **HealthCheckTimeout** свойство для экземпляра отказоустойчивого кластера.  
   
 > [!TIP]  
 >  Каждый раз при открытии нового окна PowerShell, необходимо импортировать `FailoverClusters` модуля.  

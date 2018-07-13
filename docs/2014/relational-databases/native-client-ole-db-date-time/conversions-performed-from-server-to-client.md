@@ -1,43 +1,41 @@
 ---
-title: Преобразования, выполняемые с сервера клиенту | Документы Microsoft
+title: Преобразования, выполняемые с сервера клиенту | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9898b4d4bfd811076ca8eb93aba1679ed3c96140
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 28d992cdc8536fc0c8e8b93322de191c614b7c51
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096856"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430863"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Преобразования, выполняемые при передаче от сервера к клиенту
   В данном разделе описываются преобразования даты и времени, выполняемые между [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версией) и клиентским приложением, написанным с использованием OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="conversions"></a>Преобразования  
- В следующей таблице описываются преобразования между типом, возвращенным клиенту, и типом в привязке. Для выходных параметров, если был вызван ICommandWithParameters::SetParameterInfo и тип, указанный в *pwszDataSourceType* не соответствует фактическому типу на сервере, неявное преобразование выполняется на сервере , и тип, возвращаемый клиенту будет совпадать с типом, заданным с помощью ICommandWithParameters::SetParameterInfo. Это может привести к непредвиденным результатам преобразования, если правила преобразования сервера отличаются от описанных в данном разделе. Например, когда требуется предоставить дату по умолчанию, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует значение 1900-1-1, а не 1899-12-30.  
+ В следующей таблице описываются преобразования между типом, возвращенным клиенту, и типом в привязке. Для выходных параметров, если был вызван ICommandWithParameters::SetParameterInfo и тип, указанный в *pwszDataSourceType* не соответствует фактическому типу на сервере, неявное преобразование будет выполняться на сервере , и тип, возвращаемый клиенту будет совпадать с типом, заданные с помощью ICommandWithParameters::SetParameterInfo. Это может привести к непредвиденным результатам преобразования, если правила преобразования сервера отличаются от описанных в данном разделе. Например, когда требуется предоставить дату по умолчанию, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует значение 1900-1-1, а не 1899-12-30.  
   
 |В -><br /><br /> От|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|Дата|1,7|OK|-|-|1|1,3|1,7|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Time|5,6,7|-|9|OK|6|3,6|5,6|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Дата|1,7|OK|-|-|1|1,3|1,7|-|ОК (VT_BSTR)|OK|OK|4|4|  
+|Time|5,6,7|-|9|OK|6|3,6|5,6|-|ОК (VT_BSTR)|OK|OK|4|4|  
 |Smalldatetime|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
 |DATETIME|5,7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
-|Datetime2|5,7|8|9,10|10|7|3|5,7|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|OK|5,7,11|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Datetime2|5,7|8|9,10|10|7|3|5,7|-|ОК (VT_BSTR)|OK|OK|4|4|  
+|Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|OK|5,7,11|-|ОК (VT_BSTR)|OK|OK|4|4|  
 |Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12,9|12|12|12|7,13|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
@@ -51,7 +49,7 @@ ms.locfileid: "36096856"
 |Символ|Значение|  
 |------------|-------------|  
 |OK|Никаких преобразований не требуется.|  
-|-|Преобразование не поддерживается. Если привязка выполняется проверка при вызове IAccessor::CreateAccessor, возвращается значение DBBINDSTATUS_UPSUPPORTEDCONVERSION в *rgStatus*. Если проверка метода доступа является отложенной, то устанавливается значение DBSTATUS_E_BADACCESSOR.|  
+|-|Преобразование не поддерживается. Если привязка выполняется проверка, когда вызывается IAccessor::CreateAccessor, возвращается значение DBBINDSTATUS_UPSUPPORTEDCONVERSION в *rgStatus*. Если проверка метода доступа является отложенной, то устанавливается значение DBSTATUS_E_BADACCESSOR.|  
 |1|Поля времени установлены в нуль.|  
 |2|Установлено значение DBSTATUS_E_CANTCONVERTVALUE.|  
 |3|Часовой пояс установлен в нуль.|  

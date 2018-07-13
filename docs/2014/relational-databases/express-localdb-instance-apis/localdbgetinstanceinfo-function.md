@@ -1,5 +1,5 @@
 ---
-title: Функция LocalDBGetInstanceInfo | Документы Microsoft
+title: Функция LocalDBGetInstanceInfo | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ topic_type:
 - apiref
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1f85efa89aae3df4a8875c865d9e83f2d4d9b91d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 8fe636ca60998baa75b71a6d179d20630bac2f8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205314"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Функция LocalDBGetInstanceInfo
   Возвращает сведения об указанном экземпляре среды выполнения экземпляра SQL Server Express LocalDB, в частности существует ли этот экземпляр, версия используемой им LocalDB, запущен ли экземпляр и т. п.  
   
- Сведения, возвращаемые в `struct` с именем **LocalDBInstanceInfo**, который имеет следующее определение.  
+ Сведения возвращаются в `struct` с именем **LocalDBInstanceInfo**, который имеет следующее определение.  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -132,9 +132,9 @@ HRESULT LocalDBGetInstanceInfo(
  Произошла непредвиденная ошибка. Подробные сведения см. в журнале событий.  
   
 ## <a name="details"></a>Сведения  
- Обоснование появлением `struct` аргумент размера (*lpInstanceInfoSize*) — научить API для возврата разных версий **LocalDBInstanceInfostruct**, эффективно Включение прямой и обратной совместимости.  
+ Обоснование появлением `struct` аргумент размера (*lpInstanceInfoSize*) является возможность API мог возвращать различные версии структуры **LocalDBInstanceInfostruct**, эффективно Включение прямой и обратной совместимости.  
   
- Если `struct` аргумент размера (*lpInstanceInfoSize*) соответствует размеру известной версии **LocalDBInstanceInfostruct**, соответствующей версии `struct` возвращается. В противном случае возвращается значение LOCALDB_ERROR_INVALID_PARAMETER.  
+ Если `struct` аргумент размера (*lpInstanceInfoSize*) соответствует размеру известной версии **LocalDBInstanceInfostruct**, эту версию `struct` возвращается. В противном случае возвращается значение LOCALDB_ERROR_INVALID_PARAMETER.  
   
  Типичным примером **LocalDBGetInstanceInfo** использование API выглядит следующим образом:  
   

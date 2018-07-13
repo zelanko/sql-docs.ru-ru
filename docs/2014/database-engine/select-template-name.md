@@ -1,5 +1,5 @@
 ---
-title: Выбор имени шаблона | Документы Microsoft
+title: Выберите имя шаблона | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.f1
 helpviewer_keywords:
 - Select Template Name dialog box
 ms.assetid: 30ac38b8-0c14-474c-b245-d2b8393d2f36
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 08a22aa4b3877cc338197e2d21e8d20d0eda0120
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b703b2a02146ab66ee3e0dee98dc920a70ef4a45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241184"
 ---
 # <a name="select-template-name"></a>Выберите имя шаблона
   Диалоговое окно **Выбор имени шаблона** позволяет выбрать существующий шаблон трассировки приложения [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] для экспорта в один из файлов в операционной системе. Это диалоговое окно позволяет также выбрать или ввести другое имя, чтобы сохранить шаблон трассировки, как при редактировании существующего шаблона трассировки. Чтобы открыть это диалоговое окно при экспорте шаблона, в меню приложения [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Файл** укажите курсор на пункт **Шаблоны**и выберите команду **Экспорт шаблона**. Чтобы получить доступ к этому диалоговому окну при изменении имени шаблона, в меню **Файл** укажите курсор на пункт **Шаблоны**, затем на пункт **Изменить шаблон**и после выберите команду **Сохранить как**.  

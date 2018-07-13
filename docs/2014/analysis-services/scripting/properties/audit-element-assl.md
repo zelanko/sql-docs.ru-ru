@@ -1,5 +1,5 @@
 ---
-title: Аудит элемент (ASSL) | Документы Microsoft
+title: Аудит элемент (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Audit element
 ms.assetid: 26488119-6490-426d-a4e4-274b5bdffbc2
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc059cfde938bebe2503108faf835271786c3150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d87e0c58dd944c140e57f89894cb98a32d9230d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163325"
 ---
 # <a name="audit-element-assl"></a>Элемент Audit (ASSL)
-  Указывает, что [трассировки](../objects/trace-element-assl.md) элемент не может удалять любые события, даже если это приводит к снижению производительности сервера.  
+  Указывает, что [трассировки](../objects/trace-element-assl.md) элемент не может удалять любые события, даже если это приводит к снижению производительности на сервере.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,10 +62,10 @@ ms.locfileid: "36188107"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `Audit` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Trace>.  
+ Элемент, соответствующий родителю параметра `Audit` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>См. также  
- [Отслеживает элемент &#40;ASSL&#41;](../collections/traces-element-assl.md)   
+ [Выполняет трассировку элемент &#40;ASSL&#41;](../collections/traces-element-assl.md)   
  [Свойства &#40;ASSL&#41;](properties-assl.md)  
   
   

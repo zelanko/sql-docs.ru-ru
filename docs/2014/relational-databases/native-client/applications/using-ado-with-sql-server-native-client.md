@@ -1,13 +1,11 @@
 ---
-title: Использование ADO с собственным клиентом SQL Server | Документы Microsoft
+title: Использование ADO с SQL Server Native Client | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,39 +15,39 @@ helpviewer_keywords:
 - SQLNCLI, ADO
 ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d292a0b39de8820fdb58d6c95d7925048d7eb8bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 62c8430e36fe0982d4dc8e9ec56e14d124ccd106
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096634"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431823"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>Использование ADO с собственным клиентом SQL Server
-  Чтобы воспользоваться преимуществами новых возможностей, представленных в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] как несколько активных результирующих наборов (MARS), уведомления о запросах, определяемых пользователем типов (UDT) или новый **xml** тип данных, существующих приложений, использующих ActiveX Data Objects (ADO) следует использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента в качестве поставщика доступа к данным.  
+  Чтобы воспользоваться преимуществами новых возможностей, представленных в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] несколько активных результирующих наборов (MARS), уведомления о запросах, определяемые пользователем типы (UDT) или новый **xml** тип данных, существующие приложения, использующие ActiveX Data Objects (ADO) следует использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента в качестве поставщика доступа к данным.  
   
  Если применение новых функций [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] не требуется, то можно не использовать поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а продолжать работу с текущим поставщиком доступа к данным (обычно это SQLOLEDB). Если производится улучшение существующего приложения и необходимо задействовать новые функции [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], следует использовать поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Если проектируется новое приложение, рекомендуется использовать ADO.NET и поставщик данных .NET Framework для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] вместо собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для доступа ко всем новым функциям последних версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения о поставщике данных .NET Framework для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] см. в документации по пакету SDK платформы .NET Framework для ADO.NET.  
   
- Чтобы позволить ADO использовать новые возможности последних версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], были внесены некоторые улучшения в поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], расширяющие базовую функциональность OLE DB. Эти улучшения позволяют приложениям ADO использовать новые [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] функции и использовать два типа данных, введенных в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** и **определяемого пользователем типа**. Эти улучшения также используют усовершенствования **varchar**, **nvarchar**, и **varbinary** типов данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент добавляет свойство инициализации SSPROP_INIT_DATATYPECOMPATIBILITY к набору свойств DBPROPSET_SQLSERVERDBINIT для использования приложениями ADO, чтобы новые типы данных, предоставляются способом, совместимым с ADO. Кроме того [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента также определяет новое ключевое слово строки подключения с именем `DataTypeCompatibility` , задается в строке подключения.  
+ Чтобы позволить ADO использовать новые возможности последних версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], были внесены некоторые улучшения в поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], расширяющие базовую функциональность OLE DB. Эти улучшения позволяют приложениям ADO использовать новые [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] функции и использовать два типа данных, введенных в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** и **определяемого пользователем типа**. Эти улучшения также используют усовершенствования **varchar**, **nvarchar**, и **varbinary** типов данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент добавляет свойство инициализации SSPROP_INIT_DATATYPECOMPATIBILITY к набору свойств DBPROPSET_SQLSERVERDBINIT для использования приложениями ADO, чтобы новые типы данных представлены в совместимым с ADO образом. Кроме того [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента также определяет новое ключевое слово строки подключения с именем `DataTypeCompatibility` , задается в строке подключения.  
   
 > [!NOTE]  
->  Существующие приложения ADO могут обращаться к полям XML определяемых пользователем типов, текстовым полям больших значений и полям двоичных значений, а также обновлять их значения с помощью поставщика SQLOLEDB. Новый больше **varchar(max)**, **nvarchar(max)**, и **varbinary(max)** типы данных, возвращаются как типы ADO **adLongVarChar**, **adLongVarWChar** и **adLongVarBinary** соответственно. XML-столбцы возвращаются в виде **adLongVarChar**, а столбцы определяемых пользователем ТИПОВ возвращаются как **adVarBinary**. Однако при использовании поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SQLNCLI11) вместо SQLOLEDB обязательно следует установить для ключевого слова `DataTypeCompatibility` значение «80», чтобы новые типы данных правильно сопоставлялись с типами данных ADO.  
+>  Существующие приложения ADO могут обращаться к полям XML определяемых пользователем типов, текстовым полям больших значений и полям двоичных значений, а также обновлять их значения с помощью поставщика SQLOLEDB. Новый большего размера **varchar(max)**, **nvarchar(max)**, и **varbinary(max)** типы данных возвращаются как типы ADO **adLongVarChar**, **adLongVarWChar** и **adLongVarBinary** соответственно. XML-столбцы возвращаются в виде **adLongVarChar**, а столбцы определяемых пользователем ТИПОВ возвращаются как **adVarBinary**. Однако при использовании поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SQLNCLI11) вместо SQLOLEDB обязательно следует установить для ключевого слова `DataTypeCompatibility` значение «80», чтобы новые типы данных правильно сопоставлялись с типами данных ADO.  
   
 ## <a name="enabling-sql-server-native-client-from-ado"></a>Включение собственного клиента SQL Server из ADO  
- Чтобы включить использование [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента приложения ADO должны реализовать следующие ключевые слова в строке соединения:  
+ Чтобы включить использование [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, приложения ADO должны реализовать следующие ключевые слова в строке подключения:  
   
 -   `Provider=SQLNCLI11`  
   
 -   `DataTypeCompatibility=80`  
   
- Дополнительные сведения о ADO поддерживается в ключевых словах строк соединений [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client см. в разделе [с помощью ключевых слов строки подключения с собственным клиентом SQL Server](using-connection-string-keywords-with-sql-server-native-client.md).  
+ Дополнительные сведения о ADO поддерживается в ключевых словах строк соединений [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, см. в разделе [Using Connection String Keywords with SQL Server Native Client](using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Ниже приведен пример создания строки соединения ADO, полностью включены для работы с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, в том числе включение функции MARS:  
+ Ниже приведен пример создания строки соединения ADO, полностью обеспечивающей работу с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, в том числе включающей поддержку функциональности MARS:  
   
 ```  
 Dim con As New ADODB.Connection  
@@ -67,7 +65,7 @@ con.Open
  В следующих разделах приведены примеры того, как можно использовать ADO с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента.  
   
 ### <a name="retrieving-xml-column-data"></a>Получение данных XML-столбца  
- В этом примере набор записей используется для извлечения и отображения данных из XML-столбец [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **AdventureWorks** образца базы данных.  
+ В этом примере набор записей используется для получения и отображения данных из XML-столбец [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **AdventureWorks** образца базы данных.  
   
 ```  
 Dim con As New ADODB.Connection  
@@ -103,7 +101,7 @@ Set con = Nothing
 >  Фильтрация наборов записей для XML-столбцов не поддерживается. При попытке ее использования возвращается ошибка.  
   
 ### <a name="retrieving-udt-column-data"></a>Получение данных столбца определяемого пользователем типа  
- В этом примере **команда** объект используется для выполнения запроса SQL, который возвращает определяемый пользователем тип, определяемый пользователем тип данных обновляется и затем новые данные вставляются в базу данных. В этом примере предполагается, что **точки** определяемый пользователем тип уже был зарегистрирован в базе данных.  
+ В этом примере **команда** объект используется для выполнения SQL-запрос, возвращающий определяемого пользователем ТИПА, определяемого пользователем ТИПА данных обновляется и затем новые данные вставляются в базе данных. В этом примере предполагается, что **точки** определяемого пользователем ТИПА уже зарегистрирован в базе данных.  
   
 ```  
 Dim con As New ADODB.Connection  
@@ -146,7 +144,7 @@ Set con = Nothing
 ```  
   
 ### <a name="enabling-and-using-mars"></a>Включение и использование режима MARS  
- В этом примере создается строка подключения, чтобы включить режим MARS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента и затем два объекта набора записей создаются для выполнения в том же соединении.  
+ В этом примере строка соединения составляется Чтобы включить режим MARS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента и затем два объекта набора записей создаются для выполнения, в том же соединении.  
   
 ```  
 Dim con As New ADODB.Connection  
@@ -170,7 +168,7 @@ con.Close
 Set con = Nothing  
 ```  
   
- В предыдущих версиях поставщика OLE DB этот код вызвал бы создание неявного соединения при втором выполнении, так как в одном соединении можно было открыть только один активный набор результатов. Поскольку неявное соединение не включалось в пул соединений OLE DB, это вызывало дополнительные издержки. С помощью функции MARS предоставляемые [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, вы получаете несколько активных наборов результатов одно подключение.  
+ В предыдущих версиях поставщика OLE DB этот код вызвал бы создание неявного соединения при втором выполнении, так как в одном соединении можно было открыть только один активный набор результатов. Поскольку неявное соединение не включалось в пул соединений OLE DB, это вызывало дополнительные издержки. С помощью функции MARS предоставляемые [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, вы получаете несколько активных наборов результатов в одном соединении.  
   
 ## <a name="see-also"></a>См. также  
  [Построение приложений с использованием SQL Server Native Client](building-applications-with-sql-server-native-client.md)  

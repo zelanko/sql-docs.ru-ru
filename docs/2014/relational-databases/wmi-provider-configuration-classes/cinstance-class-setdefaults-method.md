@@ -1,5 +1,5 @@
 ---
-title: Метод SetDefaults (класс Cinstance) | Документы Microsoft
+title: Метод SetDefaults (класс CInstance) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetDefaults method
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba36da4d47b8c9c9a2aa973e143bb44f00b9da43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: c17a12c4fa35594482599491071f8342c2118ccf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157995"
 ---
 # <a name="setdefaults-method-cinstance-class"></a>Метод SetDefaults (класс CInstance)
   Задает все значения по умолчанию для экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиента с параметром перезаписи существующих данных.  

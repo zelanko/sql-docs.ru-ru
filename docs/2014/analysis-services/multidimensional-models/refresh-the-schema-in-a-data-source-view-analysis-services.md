@@ -1,5 +1,5 @@
 ---
-title: Обновление схемы в представлении источника данных (службы Analysis Services) | Документы Microsoft
+title: Обновление схемы в представлении источника данных (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], schema updates
 - refreshing data source views
 - data source views [Analysis Services], refreshing
 ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 517c3e9c0c608a0e38d79fd6aff8147a68403671
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06859536c3f63e35bca7ab43593eac44b3bba22a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101859"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239774"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Обновление схемы в представлении источника данных (службы Analysis Services)
   После определения представления источников данных в проекте или базе данных [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] можно изменить схему базового источника данных. Эти изменения не определяются и не обновляются автоматически в проекте разработки. Более того, при развертывании проекта на сервере будут возникать ошибки обработки, если службы Analysis Services не смогут подключиться к внешнему источнику данных.  
@@ -52,7 +52,7 @@ ms.locfileid: "36101859"
   
  При этом службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] запрашивают реляционный источник данных и выявляют изменения в соответствующих таблицах или представлениях. Если не удается установить соединения со всеми базовыми источниками данных, но в них существуют изменения, то они будут отображены в диалоговом окне **Обновление представления источников данных** .  
   
- ![Обновить представление источника данных-диалоговое окно](../media/ssas-olapdsv-refresh.gif "диалоговое окно «Обновление представления источника данных»")  
+ ![Обновить представление источника данных-диалоговое окно](../media/ssas-olapdsv-refresh.gif "диалоговое окно «Обновление представления источников данных»")  
   
  В диалоговом окне перечисляются таблицы, столбцы, ограничения и связи, которые будут удалены или добавлены в представление источника данных. В отчете также указывается любой именованный запрос или вычисление, которые не могут быть успешно подготовлены. Объекты, на которые оказывается влияние, представлены в древовидном представлении, в котором столбцы и связи расположены под таблицами, а для каждого объекта обозначается тип изменения (удаления или добавления). Стандартные значки объектов представления источников данных обозначают тип объекта, на который оказывается влияние.  
   

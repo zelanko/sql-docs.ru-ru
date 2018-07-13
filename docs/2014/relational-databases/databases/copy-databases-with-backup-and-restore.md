@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
 - restoring databases [SQL Server], previous SQL Server versions
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5901a8fcdd3a2d24b84fe43d5af1fb2b46d56b39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 551677d78685c5e491d5f1c2dd347bc77f37a437
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164895"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Копирование баз данных путем создания и восстановления резервных копий
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]можно создать новую базу данных, восстановив резервную копию пользовательской базы данных, созданной в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии. Однако резервные копии баз данных **master**, **model** и **msdb** , созданных в более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , восстановить на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]невозможно. Кроме того, резервные копии, созданные в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , невозможно восстановить в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "36109957"
   
 1.  Создайте резервную копию базы данных-источника, которая может находиться на экземпляре [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии. Компьютер, на котором запущен этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , называется *компьютером-источником*.  
   
-2.  На компьютере, к которому вы хотите скопировать базу данных ( *конечный компьютер*), подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором вы планируете восстановить базу данных. При необходимости создайте те же устройства резервного копирования на целевом экземпляре сервера, что использовались для резервного копирования баз данных-источников.  
+2.  На компьютере, к которому требуется скопировать базу данных ( *конечный компьютер*), подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на которой вы планируете восстановить базу данных. При необходимости создайте те же устройства резервного копирования на целевом экземпляре сервера, что использовались для резервного копирования баз данных-источников.  
   
 3.  Восстановите резервную копию базы данных-источника на целевом компьютере. При восстановлении базы данных автоматически создаются все ее файлы.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36109957"
   
     -   Если существующий файл не может быть перезаписан, возникнет ошибка восстановления.  
   
- Чтобы избежать ошибок и непредвиденных последствий перед операцией восстановления можно использовать [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) таблицы журнала, чтобы найти в резервной копии, которую планируется восстановить файлы базы данных и журнала.  
+ Чтобы избежать ошибок и непредвиденных последствий перед операцией восстановления, можно использовать [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) таблицы журнала, чтобы найти файлы базы данных и журнала в резервной копии, которые планируется восстановить.  
   
 ## <a name="moving-the-database-files"></a>Перемещение файлов баз данных  
  Если файлы резервной копии базы данных нельзя восстановить на целевом компьютере по причинам, перечисленным выше, необходимо переместить файлы в новое место назначения, где они могут быть восстановлены. Например:  
@@ -102,7 +102,7 @@ ms.locfileid: "36109957"
   
 -   [RESTORE FILELISTONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)  
   
- **Восстановление файлов и файловых групп в новое место**  
+ **Восстановление файлов и файловых групп в новое расположение**  
   
 -   [Восстановление файлов в новое место (SQL Server)](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36109957"
   
 -   [sp_changedbowner (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
- **Копирование базы данных с помощью управляющих объектов SQL Server (SMO)**  
+ **Копирование базы данных с помощью объектов управления SQL Server (SMO)**  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A>  
   

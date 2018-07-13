@@ -1,5 +1,5 @@
 ---
-title: Типы измерений | Документы Microsoft
+title: Типы измерений | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -29,23 +29,23 @@ helpviewer_keywords:
 - Type property
 ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1fe0311a992f0f8c067ba6e7096698f96f8bc4bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6fe72ba73f73d2c2d87672642e403c5ed0e4f541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189051"
 ---
 # <a name="dimension-types"></a>Типы измерений
-  Настройка свойства `Type` предоставляет данные о содержимом измерения серверу и клиентским приложениям. В некоторых случаях настройка `Type` предоставляет клиентским приложениям только справочные сведения и является необязательной. В других случаях, например для измерений `Accounts` или `Time`, настройка свойства `Type` для измерения и его атрибутов определяет конкретные режимы, относящиеся к серверу, и может быть необходимой для реализации определенных режимов куба. Например, для свойства `Type` измерения можно установить значение `Accounts`, тем самым указывая клиентским приложениям, что в стандартном измерении содержатся атрибуты счетов.  Дополнительные сведения о времени, счетов и измерение валюты см. в разделе [Создание измерения типа Date](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [создания учетной записи Finance измерением типа родители потомки](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), и [создать валюты Тип измерения](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
+  Настройка свойства `Type` предоставляет данные о содержимом измерения серверу и клиентским приложениям. В некоторых случаях настройка `Type` предоставляет клиентским приложениям только справочные сведения и является необязательной. В других случаях, например для измерений `Accounts` или `Time`, настройка свойства `Type` для измерения и его атрибутов определяет конкретные режимы, относящиеся к серверу, и может быть необходимой для реализации определенных режимов куба. Например, для свойства `Type` измерения можно установить значение `Accounts`, тем самым указывая клиентским приложениям, что в стандартном измерении содержатся атрибуты счетов.  Дополнительные сведения о времени, счетов и измерениях валют см. в разделе [Создание измерения типа Date](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [Создание учетной записи Finance с измерением типа родители потомки](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), и [Создание валюты Введите измерения](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
   
  Настройка по умолчанию для типа измерения равна `Regular`, при этом не делаются никакие предположения в отношении содержимого измерения. Эта настройка применяется по умолчанию для всех измерений при первоначальном определении измерения, если только при определении измерения с помощью мастера измерений не указывается измерение `Time`. Необходимо также оставить `Regular` как тип измерения, если мастер измерений не предоставляет список соответствующих типов для типов измерения.  
   
 ## <a name="available-dimension-types"></a>Доступные типы измерений  
- В следующей таблице описаны типы измерения, доступные в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ В следующей таблице описаны типы измерений, доступных в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 |Тип измерения|Описание|  
 |--------------------|-----------------|  
@@ -66,7 +66,7 @@ ms.locfileid: "36180148"
 |Promotion|Измерение, атрибуты которого представляют сведения об акциях по продвижению.|  
   
 ## <a name="see-also"></a>См. также  
- [Создать измерение с помощью существующей таблицы](../multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
+ [Создание измерения с помощью существующей таблицы](../multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
  [Измерения &#40;службы Analysis Services — многомерные данные&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

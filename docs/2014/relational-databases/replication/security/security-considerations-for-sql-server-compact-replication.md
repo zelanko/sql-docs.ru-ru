@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], SQL Server Compact
 ms.assetid: 09f591a1-cfae-4a08-b04d-50bd02e7b71a
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6b324052c02ae62b8289f5b997bcf6521dc2b2e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a82f6d779b98e192060594a6b23ed08e6c477907
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240554"
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>Рекомендации по безопасности для репликации баз данных выпуска SQL Server Compact
   Для обеспечения безопасности соединения между экземпляром компонента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Engine и [!INCLUDE[ssEW](../../../includes/ssew-md.md)] необходимо правильно настроить параметры безопасности как для служб Microsoft Internet Information Services (IIS), так и для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

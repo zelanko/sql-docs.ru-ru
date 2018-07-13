@@ -1,5 +1,5 @@
 ---
-title: Панель (представление прогноза модели интеллектуального анализа данных) запросов | Документы Microsoft
+title: Запрос области (представление прогноза модели интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.query.f1
 ms.assetid: fdeec72e-d0bd-4453-9eaa-46436e4d6edc
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a0f0105796bd4a4903a12dbad0b87b76919ce8b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ede17228e9dc21a170815ecc46900fd38ab7d978
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211784"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>Панель запросов (представление прогноза модели интеллектуального анализа данных)
   Панель **Запрос** отображает инструкции выражений интеллектуального анализа данных, созданные в построителе прогнозирующих запросов. Можно изменить инструкции и затем нажать кнопку **Переключиться в режим просмотра результата запроса** для возврата результатов. Если переключиться обратно на представление **Проект** , то любые произведенные изменения инструкций будут потеряны.  
@@ -29,7 +29,7 @@ ms.locfileid: "36109807"
  **Дополнительные сведения:** [Инструкции управления данными расширений интеллектуального анализа данных](/sql/dmx/dmx-statements-data-manipulation), [Создание DMX-запроса в среде SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="options"></a>Параметры  
- **Переключитесь в режим просмотра результата запроса**  
+ **Переключиться в режим просмотра результата запроса**  
  Для переключения между панелями щелкните **Проект**, **Запрос**и **Результат** . При переключении на панель **Результат** происходит выполнение запроса.  
   
  **Сохранить результат запроса**  

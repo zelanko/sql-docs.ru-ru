@@ -1,5 +1,5 @@
 ---
-title: Тип данных CubeHierarchy (ASSL) | Документы Microsoft
+title: Тип данных CubeHierarchy (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CubeHierarchy data type
 ms.assetid: cd633409-0c14-4dd9-97cc-3d30e25df24f
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48176b4096b7fa7ba8e1847750410be0f65da552
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d719b6c841b27df473599514dc12c4e90644610
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180137"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176201"
 ---
 # <a name="cubehierarchy-data-type-assl"></a>Тип данных CubeHierarchy (язык ASSL)
-  Определяет тип-примитив, представляющий сведения об [иерархии](../objects/hierarchy-element-assl.md) элемент в [куба](../objects/cube-element-assl.md) элемента.  
+  Определяет тип-примитив, представляющий сведения об [иерархии](../objects/hierarchy-element-assl.md) элемент в [куба](../objects/cube-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36180137"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|None|  
-|Дочерние элементы|[Заметки](../collections/annotations-element-assl.md), [включен](../properties/enabled-element-assl.md), [HierarchyID](../properties/id-element-assl.md), [имя](../properties/name-element-assl.md), [OptimizedState](../properties/state-element-assl.md), [видимыми](../properties/visible-element-assl.md)|  
+|Дочерние элементы|[Заметки](../collections/annotations-element-assl.md), [включена](../properties/enabled-element-assl.md), [HierarchyID](../properties/id-element-assl.md), [имя](../properties/name-element-assl.md), [OptimizedState](../properties/state-element-assl.md), [видимым](../properties/visible-element-assl.md)|  
 |Производные элементы|[Иерархия](../objects/hierarchy-element-assl.md) ([иерархий](../collections/hierarchies-element-assl.md) коллекцию [CubeDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Примечания  
@@ -61,10 +61,10 @@ ms.locfileid: "36180137"
   
  В [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)], *включено* не может быть присвоено свойству `False` для *CubeHierarchy*.  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.CubeHierarchy>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.CubeHierarchy>.  
   
 ## <a name="see-also"></a>См. также  
  [Метод Discover &#40;XML для Аналитики&#41;](../../xmla/xml-elements-methods-discover.md)   
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

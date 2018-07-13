@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geometry data type [SQL Server], understanding
 - geography data type [SQL Server], spatial data
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e328be1225999a629d93ab16c55b2bc4b7f15d5c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d6dbc52caa183352376ae04887ec02088e8459ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162185"
 ---
 # <a name="spatial-data-types-overview"></a>Основные сведения о типах пространственных данных
   Существует два типа пространственных данных. Тип данных `geometry` поддерживает планарные или эвклидовы данные (система координат для плоской Земли). Тип данных `geometry` соответствует спецификации «Simple Features for SQL» консорциума OGC версии 1.1.0 и стандарту SQL MM (стандарт ISO).  
   
- Кроме того [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает `geography` тип данных, который хранит эллипсоидальные (сферические) данные, такие как Координаты широты и долготы GPS.  
+ Кроме того [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает `geography` тип данных, который хранит эллипсоидальные (сферические) данные, такие как координаты широты и долготы GPS.  
   
 > [!IMPORTANT]  
 >  Подробное описание и примеры использования функций обработки пространственных данных, реализованные в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], в том числе улучшения пространственных типов данных, можно получить, загрузив технический документ [Новые функции обработки пространственных данных в SQL Server с рабочим названием "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407).  
@@ -37,11 +37,11 @@ ms.locfileid: "36187747"
 ##  <a name="objects"></a> Объекты пространственных данных  
  Типы данных `geometry` и `geography` поддерживают шестнадцать объектов пространственных данных или типов экземпляров. Однако только одиннадцать из этих типов экземпляров являются *материализуемыми*. Такие экземпляры можно создавать в базе данных и работать с ними. Эти экземпляры наследуют некоторые свойства от родительских типов данных, которые разделяют их на `Points`, **LineStrings, CircularStrings**, `CompoundCurves`, `Polygons`, `CurvePolygons` или как несколько `geometry`или `geography` экземпляров в `GeometryCollection`. Тип `Geography` имеет дополнительный тип экземпляра `FullGlobe`.  
   
- На рисунке ниже изображена `geometry` иерархии, на которой `geometry` и `geography` основаны типы данных. Инстанциируемые типы `geometry` и `geography` выделены синим.  
+ На рисунке ниже изображена `geometry` иерархии, на котором `geometry` и `geography` основаны типы данных. Инстанциируемые типы `geometry` и `geography` выделены синим.  
   
  ![Иерархия типа geometry](../../database-engine/media/geom-hierarchy.gif "иерархия типа geometry")  
   
- Как на рисунке, десятью материализуемыми типами `geometry` и `geography` типами данных являются `Point`, `MultiPoint`, `LineString`, `CircularString`, `MultiLineString`, `CompoundCurve`, `Polygon`, `CurvePolygon`, `MultiPolygon`, и `GeometryCollection`. Есть один дополнительный материализуемый тип для типа данных geography: `FullGlobe`. `geometry` И `geography` типов могут распознавать определенный экземпляр, пока он имеет правильный формат, даже если он не был определен явно. Например, если определить `Point` явно с помощью метода STPointFromText() `geometry` и `geography` распознавать экземпляр как `Point`, при условии, что входные данные метода правильного формата. Если определить такой же экземпляр с помощью метода `STGeomFromText()`, то оба типа данных `geometry` и `geography` будут распознавать экземпляр как `Point`.  
+ Как показано на рисунке, десятью материализуемыми типами `geometry` и `geography` типами данных являются `Point`, `MultiPoint`, `LineString`, `CircularString`, `MultiLineString`, `CompoundCurve`, `Polygon`, `CurvePolygon`, `MultiPolygon`, и `GeometryCollection`. Есть один дополнительный материализуемый тип для типа данных geography: `FullGlobe`. `geometry` И `geography` типы могут распознавать определенный экземпляр, пока он имеет правильный формат, даже если он не определен явно. Например, если вы определите `Point` явно с помощью метода STPointFromText(), `geometry` и `geography` распознавать экземпляр как `Point`, при условии, что входные данные метода имеет правильный формат. Если определить такой же экземпляр с помощью метода `STGeomFromText()`, то оба типа данных `geometry` и `geography` будут распознавать экземпляр как `Point`.  
   
  Подтипы для типов geometry и geography делятся на простые типы и типы-коллекции.  Некоторые методы, например `STNumCurves()` , работают только с простыми типами.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36187747"
  В [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] тип `FullGlobe` представляет разновидность Polygon, охватывающую весь земной шар. Объект `FullGlobe` имеет площадь, но не имеет границ и вершин.  
   
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Для типа данных geography внешнее и внутреннее кольца не важны.  
- Простой Features for SQL спецификации консорциума OGC обсуждаются внешние и внутренние кольца, но их различие не имеет особого значения [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography` типа данных; любое кольцо многоугольника можно считать внешним кольцом.  
+ Простой Features for SQL спецификации консорциума OGC обсуждаются внешние и внутренние кольца, но их различие не имеет особого [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography` типа данных; любое кольцо многоугольника можно предпринять для считать внешним кольцом.  
   
  Дополнительные сведения о спецификациях OGC см. в одном из следующих источников:  
   
@@ -126,7 +126,7 @@ ms.locfileid: "36187747"
   
  ![](../../database-engine/media/7e382f76-59da-4b62-80dc-caf93e637c14.png "7e382f76-59da-4b62-80dc-caf93e637c14")  
   
- В этом примере показано, как сохранить использование обеих равнобедренные треугольники `LineString` экземпляра и `CircularString` экземпляр:  
+ В этом примере показано сохранение выше равнобедренные треугольники с помощью `LineString` экземпляра и `CircularString` экземпляр:  
   
 ```tsql  
 DECLARE @g1 geometry;  
@@ -157,14 +157,14 @@ LS LengthCS Length
 5.65685…6.28318…  
 ```  
   
- На следующем рисунке показано, каким образом сохраняется каждый тип (красная линия обозначает `LineString``@g1`, а синяя линия — `CircularString``@g2`):  
+ На следующем рисунке показано, каким образом сохраняется каждый тип (красная линия обозначает `LineString``@g1`, а синяя линия `CircularString``@g2`):  
   
  ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")  
   
- Как на рисунке выше показано `CircularString` используют меньшее число точек для хранения границ кривой и обеспечивают большую точность, чем `LineString` экземпляров. Объекты `CircularString` полезны для хранения круговых границ, например область поиска радиусом в двадцать миль от указанной точки. Объекты `LineString` хорошо подходят для хранения линейных границ, например городского квартала.  
+ Как показано на рисунке выше `CircularString` экземпляры используют меньшее число точек для хранения границ кривой и обеспечивают большую точность, чем `LineString` экземпляров. Объекты `CircularString` полезны для хранения круговых границ, например область поиска радиусом в двадцать миль от указанной точки. Объекты `LineString` хорошо подходят для хранения линейных границ, например городского квартала.  
   
 ### <a name="linestring-and-compoundcurve-comparison"></a>Сравнение типов LineString и CompoundCurve  
- В следующем примере кода показано, как хранить же фигура сохраняется с помощью `LineString` и `CompoundCurve` экземпляров:  
+ В следующих примерах кода показано, как для хранения в том же рисунке с помощью `LineString` и `CompoundCurve` экземпляров:  
   
 ```tsql  
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');  
@@ -174,7 +174,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
   
  или диспетчер конфигурации служб  
   
- В этих примерах, либо `LineString` экземпляра или `CompoundCurve` фигура может храниться экземпляр.  В следующем примере использует `CompoundCurve` для хранения среза круговой диаграммы:  
+ В примерах выше, либо `LineString` экземпляра или `CompoundCurve` фигура может храниться экземпляр.  В следующем примере использует `CompoundCurve` для хранения среза круговой диаграммы:  
   
 ```tsql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
@@ -197,7 +197,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
- `CompoundCurve` экземпляры позволяют `LineString` и `CircularString` компонентов, чтобы только две точки сегментов линии среза круговой диаграммы необходимо знать.  Данный пример кода показывает, как использовать `CompoundCurve` для хранения той же фигуры:  
+ `CompoundCurve` экземпляры позволяют `LineString` и `CircularString` компоненты, чтобы только две точки сегментов линии среза круговой диаграммы должны быть известны.  Данный пример кода показывает, как использовать `CompoundCurve` для хранения той же фигуры:  
   
 ```tsql  
 DECLARE @g geometry;  
@@ -206,7 +206,7 @@ SELECT @g.ToString(), @g.STLength();
 ```  
   
 ### <a name="polygon-and-curvepolygon-comparison"></a>Сравнение типов Polygon и CurvePolygon  
- `CurvePolygon` экземпляры могут использовать `CircularString` и `CompoundCurve` экземпляров при определении их внешние и внутренние кольца.  `Polygon` экземпляры нельзя использовать типы сегментов дуги: `CircularString` и `CompoundCurve`.  
+ `CurvePolygon` экземпляры могут использовать `CircularString` и `CompoundCurve` при определении их внешние и внутренние кольца.  `Polygon` экземпляры нельзя использовать типы сегментов дуги: `CircularString` и `CompoundCurve`.  
   
   
 ## <a name="see-also"></a>См. также  

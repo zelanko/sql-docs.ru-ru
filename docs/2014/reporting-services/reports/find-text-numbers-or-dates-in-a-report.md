@@ -1,5 +1,5 @@
 ---
-title: Поиск текста, чисел и дат в отчете (службы Reporting Services в режиме интеграции с SharePoint) | Документы Microsoft
+title: Поиск текста, чисел и дат в отчете (службы Reporting Services в режиме интеграции с SharePoint) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - searching reports
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6fe713a9ef49efdf6cb1a04da094f877fc614582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e1f744568bcce20528df364ca2faf638eb677784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278285"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>Поиск текста, чисел и дат в отчете (службы Reporting Services в режиме интеграции с SharePoint)
   Можно искать содержимое в отчете, введя слово или фразу, которую нужно найти (максимальная длина искомого термина составляет 256 знаков). Поиск является техникой навигации, которая ищет совпадающее значение и устанавливает фокус на часть отчета, содержащую это значение.  
@@ -47,6 +47,6 @@ ms.locfileid: "36101954"
 4.  Для поиска следующих вхождений того же значения нажмите кнопку **Далее**.  
   
 ## <a name="see-also"></a>См. также  
- [Добавить веб-части средства просмотра отчетов на веб-страницу &#40;режим интеграции служб Reporting Services в SharePoint&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Добавление веб-части средства просмотра отчетов на веб-страницу &#40;режим интеграции служб Reporting Services в SharePoint&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

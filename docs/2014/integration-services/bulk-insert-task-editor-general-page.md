@@ -1,5 +1,5 @@
 ---
-title: Массовая вставка редактор задачи (страница «Общие») | Документы Microsoft
+title: Массовой вставки редактор задачи (страница "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.general.f1
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d70cc6a4745e2965dcf28ea97bcc52ccfdc66133
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8debd4ea8acc8e27dde18970110b6792ee7a9109
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158845"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>Редактор задачи «Массовая вставка» (страница «Общие»)
   Страница **Общие** диалогового окна **Редактор задачи «Массовая вставка»** используется для наименования и описания задачи «Массовая вставка».  
@@ -41,9 +41,9 @@ ms.locfileid: "36189814"
  Введите описание задачи «Массовая вставка».  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Массовая вставка редактор задачи &#40;страница «соединение»&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [Массовая вставка редактор задачи &#40;страница «Параметры»&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Массовая вставка редактор задачи &#40;страница "подключения"&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [Массовая вставка редактор задачи &#40;страница параметров&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
  [Страница «выражения»](expressions/expressions-page.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [Поток управления](control-flow/control-flow.md)  

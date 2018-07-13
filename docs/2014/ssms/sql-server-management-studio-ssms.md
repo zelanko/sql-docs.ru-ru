@@ -1,5 +1,5 @@
 ---
-title: SQL Server Management Studio | Документы Microsoft
+title: SQL Server Management Studio | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e6bb90d0f5aa4c92ac8b92898e65361d745418f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 893b4c108feb62f6cd076090bf4f0506765df819
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178999"
 ---
 # <a name="sql-server-management-studio"></a>Среда SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] — это интегрированная среда для управления инфраструктурой SQL Server. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] предоставляет средства для настройки, наблюдения и администрирования экземпляров SQL Server. Она также предоставляет средства для развертывания, наблюдения и обновления компонентов уровня данных, например баз данных и хранилищ данных, используемых приложениями, а также для построения запросов и скриптов.  
   
 ## <a name="benefits-of-sql-server-management-studio"></a>Преимущества среды SQL Server Management Studio  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] является полнофункциональной программой для управления SQL Server, объекты, объединяющей графический интерфейс для использования с широкими возможностями написания сценариев. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] можно использовать для управления [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], и [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] является полнофункциональной программой для управления SQL Server объектами, объединяющей простой в использовании графический интерфейс и богатые возможности для создания скриптов. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] можно использовать для управления [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], и [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ## <a name="sql-server-management-studio-components"></a>Компоненты среды SQL Server Management Studio  
   

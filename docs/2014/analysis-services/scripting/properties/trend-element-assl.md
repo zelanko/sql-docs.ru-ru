@@ -1,5 +1,5 @@
 ---
-title: Тренд элемент (ASSL) | Документы Microsoft
+title: Тренд элемент (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Trend element
 ms.assetid: d1d92d10-a181-4402-aacb-c0b2adc96bba
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac6d8e30d9ff52ded2708f668c8ab4fc05434225
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63bf8353e2ba801fc743fd4d645316c1e8f51eda
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171185"
 ---
 # <a name="trend-element-assl"></a>Элемент Trend (ASSL)
-  Содержит выражение многомерных выражений (MDX), возвращающее Признак тренда [ключевого показателя эффективности](../objects/kpi-element-assl.md) элемента.  
+  Содержит выражение многомерных выражений (MDX), возвращающее индикатор тренда для [ключевого показателя эффективности](../objects/kpi-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36188548"
 ## <a name="remarks"></a>Примечания  
  Элемент `Trend` содержит многомерное выражение, результатом вычисления которого является число от -1 до 1.  
   
- Элемент, соответствующий родителю параметра `Trend` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Kpi>.  
+ Элемент, соответствующий родителю параметра `Trend` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Kpi>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

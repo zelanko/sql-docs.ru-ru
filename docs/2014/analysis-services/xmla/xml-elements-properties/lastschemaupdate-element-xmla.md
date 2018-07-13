@@ -1,5 +1,5 @@
 ---
-title: Элемент LastSchemaUpdate (XML для Аналитики) | Документы Microsoft
+title: Элемент LastSchemaUpdate (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - LastSchemaUpdate element
 ms.assetid: 2109955c-2817-413e-93aa-95d9910e8b24
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 88bd4b0a271b8fd59538211ae3bc22519c7052d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ebdd4048e8e22aee422f3bee315776dbaed66873
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152735"
 ---
 # <a name="lastschemaupdate-element-xmla"></a>Элемент LastSchemaUpdate (XML для аналитики)
   Содержит дату и время, которые указывают, когда произошло последнее обновление метаданных куба, представленных родительским элементом [Cube](cube-element-olapinfo-xmla.md) .  

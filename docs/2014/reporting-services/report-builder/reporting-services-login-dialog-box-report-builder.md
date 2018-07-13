@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10059"
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a36e0597ca34ed17d2ecf6bed6c0c7e0a0923229
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 76c6a0b6266871b74fbeb15169df34e89507cbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168058"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Диалоговое окно «Имя входа служб Reporting Services» (построитель отчетов)
   В диалоговом окне **Имя входа служб Reporting Services** задаются учетные данные для публикации отчетов на сервере отчетов. За помощью при возникновении проблем с этими учетными данными обратитесь к администратору сервера отчетов.  
@@ -37,6 +37,6 @@ ms.locfileid: "36188968"
  Введите пароль для входа в данную веб-службу.  
   
 ## <a name="see-also"></a>См. также  
- [Справка построителя отчетов по диалоговым окнам, панелей и мастеров](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   
