@@ -1,11 +1,11 @@
 ---
 title: Импорт из Excel или экспорт в Excel с помощью SSIS | Документы Майкрософт
-description: Узнайте, как для импорта или экспорта данных Excel с SQL Server Integration Services (SSIS), а также условия, ограничения и известные проблемы.
+description: Сведения о том, как импортировать или экспортировать данные Excel с помощью служб SQL Server Integration Services (SSIS), а также о необходимых компонентах, известных проблемах и ограничениях.
 ms.date: 04/10/2018
-ms.prod: sql
+ms.prod: sql-server-2014
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
+ms.suite: ''
 ms.custom: ''
 ms.technology: integration-services
 ms.tgt_pltfrm: ''
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d028e3aa679e91ca15f3a738f948b127517c112f
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.openlocfilehash: 88615f87b31b1c95cd9afc9dc8d915df2995267c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197534"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Импорт данных из Excel или экспорт данных в Excel с помощью служб SQL Server Integration Services (SSIS)
 

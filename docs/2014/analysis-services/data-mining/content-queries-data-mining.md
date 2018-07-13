@@ -1,5 +1,5 @@
 ---
-title: Запросы (интеллектуальный анализ данных) содержимого | Документы Microsoft
+title: Запросы (интеллектуальный анализ данных) содержимого | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5371a5a0198c6f5f2f77fa6891875712f1814cbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 441ad05289df13e34954553db27810406341d77d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222604"
 ---
 # <a name="content-queries-data-mining"></a>Запросы содержимого (интеллектуальный анализ данных)
   Запрос содержимого позволяет извлечь сведения о внутренней статистике и структуре модели интеллектуального анализа данных. Иногда запрос содержимого может предоставить информацию, которую не удается получить с помощью средства просмотра. Результаты запроса содержимого можно также использовать для извлечения информации программным образом с целью ее последующего использования.  
@@ -200,7 +200,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
  Дополнительные сведения о работе с иерархическими наборами строк см. в спецификации OLEDB на сайте MSDN.  
   
 ## <a name="see-also"></a>См. также  
- [Основные сведения об инструкции расширений интеллектуального анализа данных Select](/sql/dmx/understanding-the-dmx-select-statement)   
+ [Основные сведения об инструкции расширения интеллектуального анализа данных Select](/sql/dmx/understanding-the-dmx-select-statement)   
  [Запросы интеллектуального анализа данных](data-mining-queries.md)  
   
   

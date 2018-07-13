@@ -1,5 +1,5 @@
 ---
-title: Статистическая обработка преобразования редактор (вкладка «агрегаты») | Документы Microsoft
+title: Статистическая обработка преобразования редактор (вкладка "агрегаты") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.aggregations.f1
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4aba29b60491e5f16bf262f2ae7fc5616c827ecd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4383522d6dd3f829222b0edf119e53bfd298ac43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221854"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Редактор преобразования «Статистическая обработка» (вкладка «Агрегаты»)
   На вкладке **Агрегаты** диалогового окна **Редактор преобразования «Статистическая обработка»** можно указать столбцы для статистической обработки и свойства статистических выражений. Можно применять одновременно нескольких агрегатов. Это преобразование не приводит к формированию вывода ошибок.  
@@ -97,8 +97,8 @@ ms.locfileid: "36195226"
  При необходимости можно указать точное количество различающихся значений, которое может записывать агрегат. Если оба `CountDistinctScale` и **CountDistinctKeys** указаны, **CountDistinctKeys** имеет более высокий приоритет.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор преобразования статистической обработки &#40;вкладка «Дополнительно»&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Статистическая обработка редактор преобразования &#40;вкладка "Дополнительно"&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
  [Статистическая обработка значений в наборе данных с помощью преобразования "Статистическая обработка"](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

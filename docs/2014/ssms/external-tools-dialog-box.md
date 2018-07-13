@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding external tools
 - external tools [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], external tools
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 15d26c23413cc3f47cba2cce5d7d7ce9efab9a66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 60e6ba4d3c9997eaa9052b5d88bf1e2ed625f548
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226644"
 ---
 # <a name="external-tools-dialog-box"></a>Диалоговое окно «Внешние средства»
   Используйте диалоговое окно **Внешние инструменты** для добавления внешних инструментов, например SQLCMD или приложения "Блокнот", в меню **Сервис**. Добавление внешних инструментов позволяет запускать другие приложения во время работы в среде [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . При запуске средств можно указать аргументы и рабочий каталог. Кроме того, результаты работы некоторых средств могут отображаться в окне **Вывод** . Диалоговое окно **Внешние инструменты** доступно в меню **Сервис** .  
