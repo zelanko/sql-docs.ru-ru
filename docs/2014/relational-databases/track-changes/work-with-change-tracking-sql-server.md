@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], making changes
 - change tracking [SQL Server], troubleshooting
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - change tracking [SQL Server], handling changes
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 39a289fc60bec996e9ed52a8a44f2cf9928ad2f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 35d04b48abdb2085e0428bc4116359128661a19f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229204"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Работа с отслеживанием изменений (SQL Server)
   Приложения, в которых используется отслеживание изменений, должны иметь возможность получать отслеженные изменения, применять эти изменения к другому хранилищу данных и обновлять базу данных-источник. В этом разделе описаны способы выполнения этих задач и роль отслеживания изменений в случае отработки отказа и необходимостью восстановить базу данных из резервной копии.  

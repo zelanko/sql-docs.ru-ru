@@ -1,5 +1,5 @@
 ---
-title: Редактор формы действия детализации (вкладка «действия», конструктор кубов) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Редактор формы действия детализации (вкладка «действия», конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.drillthroughaction.f1
 ms.assetid: 225fd818-b5ea-494f-b67b-66e09798274a
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81b7cde92983bf16f37b586389c059dfbff639d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6c310afd3535c1e5a7da5bd9f7784bec2a235ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220484"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Редактор формы действия детализации (вкладка «Действия» конструктора кубов) (службы Analysis Services — многомерные данные)
   Панель **Редактор форм действия детализации** на вкладке **Действия** конструктора кубов предназначена для изменения действия детализации, выбранного на панели **Организатор действий** . Дополнительные сведения о действиях детализации см. в разделе [Действия (службы Analysis Services — многомерные данные)](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "36194379"
  **Default**  
  Выберите **True** , если хотите включить действие в список действий детализации по умолчанию, в противном случае выберите **False**.  
   
- Если `RETURN` пропущено предложение многомерных Выражений `DRILLTHROUGH` клиентским приложением, выполненной инструкции [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] экземпляр оценивает все действия детализации по умолчанию и запускает первый детализации по умолчанию действие, возвращающее непустой набор. Дополнительные сведения о многомерных Выражениях `DRILLTHROUGH` инструкции в разделе [инструкция DRILLTHROUGH &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-manipulation-drillthrough).  
+ Если `RETURN` предложение опущено многомерных выражений `DRILLTHROUGH` инструкцией, выполненной с клиентским приложением, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] экземпляр оценивает все действия детализации по умолчанию и запускает первый детализации по умолчанию действие, возвращающее непустой набор. Дополнительные сведения о многомерных Выражений `DRILLTHROUGH` инструкции, см. в разделе [инструкция DRILLTHROUGH &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-manipulation-drillthrough).  
   
 > [!NOTE]  
 >  Данный параметр обеспечивает обратную совместимость.  
@@ -113,6 +113,6 @@ ms.locfileid: "36194379"
  [Организатор действий &#40;вкладка «действия», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [Средства вычисления &#40;вкладка «действия», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Редактор формы действия &#40;вкладка «действия», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Редактор формы действий отчета &#40;вкладка «действия», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
+ [Редактор форм действий отчетов &#40;вкладка «действия», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
   
   

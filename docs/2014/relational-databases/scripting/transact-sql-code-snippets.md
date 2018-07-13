@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 caps.latest.revision: 4
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 914a9b9d74c360e466919770b2b749a0f0c00920
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a1d2a85cc2409820165b151542dc1152eda83e44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166805"
 ---
 # <a name="transact-sql-code-snippets"></a>Фрагменты кода [Transact-SQL]
   Фрагмент кода [!INCLUDE[tsql](../../includes/tsql-md.md)]представляет собой шаблон, содержащий инструкцию или блок [!INCLUDE[tsql](../../includes/tsql-md.md)] в базовом виде. Фрагменты можно использовать в качестве начальной точки при написании новых инструкций в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Можно вставлять предварительно определенные фрагменты, входящие в комплект поставки SQL Server, или добавлять свои собственные фрагменты.  

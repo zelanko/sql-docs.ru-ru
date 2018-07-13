@@ -1,26 +1,24 @@
 ---
-title: Вызов SQLColumns для таблиц с разреженными столбцами | Документы Microsoft
+title: Вызов SQLColumns для таблиц с разреженными столбцами | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22722cb697861bbf5b7b23e3e0d26fa65f5d7dc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2fb641967c2bceae2e46429b99532b6ee69891b9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191604"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428623"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Вызов SQLColumns для таблиц с разреженными столбцами
   В этом образце показывается, как вызвать функцию SQLColumns для таблицы с разреженными столбцами, определенными с помощью ODBC в собственном клиенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server event classes
 ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0afc75d01e181c4b91e19e38a446d925299b7651
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: aea5b9aaed8d44162fb9f63474751de47a81e2bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154595"
 ---
 # <a name="sql-server-event-class-reference"></a>Руководство по классам событий SQL Server
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] позволяет записывать события, происходящие в экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Записанные события являются экземплярами классов событий в определении трассировки. В приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]классы событий и категории их событий можно найти на вкладке **Выбор событий** окна **Свойства файла трассировки** .  
@@ -41,7 +41,7 @@ ms.locfileid: "36194998"
 |[Категория событий среды CLR](clr-event-category.md) включает классы событий, созданные в результате выполнения объектов среды .NET CLR.|[Класс событий Assembly Load](../../database-engine/assembly-load-event-class.md)|  
 |К категории [Database Event Category](database-event-category.md) относятся классы событий, созданные при автоматическом разрастании или сжатии данных или файлов журналов.|[Класс событий Data File Auto Grow](data-file-auto-grow-event-class.md)<br /><br /> [Класс событий Data File Auto Shrink](data-file-auto-shrink-event-class.md)<br /><br /> [Класс событий Database Mirroring State Change](database-mirroring-state-change-event-class.md)<br /><br /> [Класс событий Log File Auto Grow](log-file-auto-grow-event-class.md)<br /><br /> [Класс событий Log File Auto Shrink](log-file-auto-shrink-event-class.md)|  
 |К категории [Deprecation Event Category](deprecation-event-category.md) относятся события, связанные с устареванием.|[Класс событий Deprecation Announcement](deprecation-announcement-event-class.md)<br /><br /> [Класс событий Deprecation Final Support](deprecation-final-support-event-class.md)|  
-|[Ошибки и предупреждения категории событий &#40;СУБД&#41; ](errors-and-warnings-event-category-database-engine.md) включает классы событий, которые создаются, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Класс событий Attention](attention-event-class.md)<br /><br /> [Класс событий Background Job Error](background-job-error-event-class.md)<br /><br /> [Класс событий Blocked Process Report](blocked-process-report-event-class.md)<br /><br /> [класс событий CPU Threshold Exceeded](cpu-threshold-exceeded-event-class.md)<br /><br /> [Класс событий ErrorLog](errorlog-event-class.md)<br /><br /> [Класс событий EventLog](eventlog-event-class.md)<br /><br /> [Класс событий Exception](exception-event-class.md)<br /><br /> [Класс событий Exchange Spill](exchange-spill-event-class.md)<br /><br /> [Класс событий Execution Warnings](execution-warnings-event-class.md)<br /><br /> [Класс событий Hash Warning](hash-warning-event-class.md)<br /><br /> [Класс событий Missing Column Statistics](missing-column-statistics-event-class.md)<br /><br /> [Класс событий Missing Join Predicate](missing-join-predicate-event-class.md)<br /><br /> [Класс событий Sort Warnings](sort-warnings-event-class.md)<br /><br /> [Класс событий User Error Message](user-error-message-event-class.md)|  
+|[Категория ошибки и предупреждения событий &#40;СУБД&#41; ](errors-and-warnings-event-category-database-engine.md) включает классы событий, которые создаются, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Класс событий Attention](attention-event-class.md)<br /><br /> [Класс событий Background Job Error](background-job-error-event-class.md)<br /><br /> [Класс событий Blocked Process Report](blocked-process-report-event-class.md)<br /><br /> [класс событий CPU Threshold Exceeded](cpu-threshold-exceeded-event-class.md)<br /><br /> [Класс событий ErrorLog](errorlog-event-class.md)<br /><br /> [Класс событий EventLog](eventlog-event-class.md)<br /><br /> [Класс событий Exception](exception-event-class.md)<br /><br /> [Класс событий Exchange Spill](exchange-spill-event-class.md)<br /><br /> [Класс событий Execution Warnings](execution-warnings-event-class.md)<br /><br /> [Класс событий Hash Warning](hash-warning-event-class.md)<br /><br /> [Класс событий Missing Column Statistics](missing-column-statistics-event-class.md)<br /><br /> [Класс событий Missing Join Predicate](missing-join-predicate-event-class.md)<br /><br /> [Класс событий Sort Warnings](sort-warnings-event-class.md)<br /><br /> [Класс событий User Error Message](user-error-message-event-class.md)|  
 |[Категория событий Full Text](full-text-event-category.md) включает классы событий, которые возникают при запуске, прерывании или остановке полнотекстового поиска.|[Класс событий FT:Crawl Aborted](ft-crawl-aborted-event-class.md)<br /><br /> [Класс событий FT:Crawl Started](ft-crawl-started-event-class.md)<br /><br /> [Класс событий FT:Crawl Stopped](ft-crawl-stopped-event-class.md)|  
 |К категории [Locks Event Category](locks-event-category.md) относятся классы событий, созданные при установке, отмене, отключении блокировки, а также при других действиях с блокировкой.|[Класс событий Deadlock Graph](deadlock-graph-event-class.md)<br /><br /> [Класс событий Lock:Acquired](lock-acquired-event-class.md)<br /><br /> [Класс событий Lock:Cancel](lock-cancel-event-class.md)<br /><br /> [Класс событий Lock:Deadlock Chain](lock-deadlock-chain-event-class.md)<br /><br /> [Класс событий Lock:Deadlock](lock-deadlock-event-class.md)<br /><br /> [Класс событий Lock:Escalation](lock-escalation-event-class.md)<br /><br /> [Класс событий Lock:Released](lock-released-event-class.md)<br /><br /> [Класс событий Lock:Timeout (timeout &#62; 0)](lock-timeout-timeout-0-event-class.md)<br /><br /> [Класс событий Lock:Timeout](lock-timeout-event-class.md)|  
 |К категории [Objects Event Category](objects-event-category.md) относятся классы событий, созданные при создании, открытии, закрытии, очистке и удалении объектов баз данных.|[Класс событий Auto Stats](auto-stats-event-class.md)<br /><br /> [Класс событий Object:Altered](object-altered-event-class.md)<br /><br /> [Класс событий Object:Created](object-created-event-class.md)<br /><br /> [Класс событий Object:Deleted](object-deleted-event-class.md)|  

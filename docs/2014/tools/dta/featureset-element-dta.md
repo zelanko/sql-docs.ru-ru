@@ -1,5 +1,5 @@
 ---
-title: Элемент FeatureSet (DTA) | Документы Microsoft
+title: Элемент FeatureSet (DTA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - FeatureSet element
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1a3da0184ab2cbb6c94d94429dc4e9640a597fe3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fb596ca38310bce4b9be6f1061952ebc2756fc73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226514"
 ---
 # <a name="featureset-element-dta"></a>Элемент FeatureSet (DTA)
   Содержит структуры физического проектирования (индексы или индексированные представления), которые помощник по настройке ядра СУБД должен использовать во время анализа.  
@@ -45,7 +45,7 @@ ms.locfileid: "36194166"
 |**Тип данных и длина**|`string`, без ограничения длины|  
 |**Допустимые значения**|**IDX_IV**<br /> Индексы и индексированные представления.<br /><br /> **IDX**<br /> Только индексы.<br /><br /> **IV**<br /> Только индексированные представления.<br /><br /> **NCL_IDX**<br /> Только некластеризованные индексы.<br /><br /> Используйте с данным элементом одно из этих значений.|  
 |**Значение по умолчанию**|**IDX**|  
-|**Наличие**|Требуется для каждого элемента `TuningOptions`, если не используется элемент `DropOnlyMode`. Если `DropOnlyMode` — используется, нельзя использовать `FeatureSet`. Эти элементы являются взаимоисключающими.|  
+|**Наличие**|Требуется для каждого элемента `TuningOptions`, если не используется элемент `DropOnlyMode`. Если `DropOnlyMode` — используется, вы не можете использовать `FeatureSet`. Эти элементы являются взаимоисключающими.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   

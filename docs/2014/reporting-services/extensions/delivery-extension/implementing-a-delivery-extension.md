@@ -17,15 +17,15 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services]
 ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
 caps.latest.revision: 31
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aa4c6da130cf1e616a3d1cb43aa8c0aea863384d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 0c024b792e946fb3e7325bc21c84f13c3cc32533
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198904"
 ---
 # <a name="implementing-a-delivery-extension"></a>Реализация модуля доставки
   Службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют пользователям создавать и публиковать отчеты, которые затем могут доставляться в различные места. Кроме того, службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] содержат несколько модулей доставки и API-интерфейс доставки, который позволяет разработчикам создавать дополнительные модули доставки, расширяя возможности доставки в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "36195755"
  Образец реализации модуля доставки см. в разделе [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Общие сведения о модулях доставки] доставки расширений overview.md)  
+ [Общие сведения о модулях доставки] доставки расширения overview.md)  
  Введение в процесс написания пользовательского модуля доставки для служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  [Подготовка к реализации модуля доставки](preparing-to-implement-a-delivery-extension.md)  

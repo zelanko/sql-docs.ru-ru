@@ -1,5 +1,5 @@
 ---
-title: Элемент Name описания столбца (DTA) | Документы Microsoft
+title: Элемент Name для столбца (DTA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 88402e29f5a4cc9f92039ec8a474b2507cf037e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8aa08083be9101359645cc015bc4bdd7c735fa3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224604"
 ---
 # <a name="name-element-for-column-dta"></a>Элемент Name описания столбца (DTA)
   Задает имя для столбца индекса в пользовательской конфигурации.  
@@ -43,7 +43,7 @@ ms.locfileid: "36191342"
 |--------------------|-----------------|  
 |**Тип данных и длина**|`string`, неограниченная длина.|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Требуется один раз для каждого `Column` элемента.|  
+|**Наличие**|Требуется один раз для каждого `Column` элемент.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   

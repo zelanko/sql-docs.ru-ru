@@ -1,13 +1,11 @@
 ---
-title: bcp_writefmt | Документы Microsoft
+title: bcp_writefmt | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_writefmt function
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1fe386d49ea68e8b6f33048f246c3a3afd037b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4f82c05a8d605b056619e22f7f711762b1555ac7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194018"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427883"
 ---
 # <a name="bcpwritefmt"></a>Функция bcp_writefmt
   Создает файл форматирования, содержащий описание формата текущего файла данных массового копирования.  
@@ -60,12 +58,12 @@ szFormatFile
 ## <a name="remarks"></a>Примечания  
  Файл форматирования определяет формат данных, содержащихся в файле данных, создаваемом при массовом копировании. Вызовы [bcp_columns](bcp-columns.md) и [bcp_colfmt](bcp-colfmt.md) определяют формат файла данных. Функция**bcp_writefmt** сохраняет это определение в файле, на который ссылается аргумент *szFormatFile*. Дополнительные сведения см. в разделе [bcp_init](bcp-init.md).  
   
- Дополнительные сведения о структуре **bcp** файлов форматирования данных, в разделе [массовый импорт и экспорт данных с помощью программы bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
+ Дополнительные сведения о структуре **bcp** файлов форматирования данных, см. в разделе [массовый импорт и экспорт данных с помощью программы bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
- Для загрузки сохраненного файла форматирования, используйте [bcp_readfmt](bcp-readfmt.md).  
+ Для загрузки сохраненного файла форматирования используется [bcp_readfmt](bcp-readfmt.md).  
   
 > [!NOTE]  
->  Созданный файл форматирования **bcp_writefmt** поддерживается только в версиях **bcp** программа поставляется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0 и более поздних версий.  
+>  Файлы форматирования, созданные **bcp_writefmt** поддерживается только в версиях **bcp** поставки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0 и более поздних версий.  
   
 ## <a name="example"></a>Пример  
   

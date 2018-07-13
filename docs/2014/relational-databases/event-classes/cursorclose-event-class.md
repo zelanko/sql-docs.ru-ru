@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - CursorClose event class
 ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bcc5c8556875491776eb63179be3df3b1c1f5295
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bb7968cd33f2930e25e1e6a504ed9a4f17865ba4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201554"
 ---
 # <a name="cursorclose-event-class"></a>CursorClose, класс событий
   События класса Cursor Close возникают, когда компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] закрывает и освобождает курсор. Класс событий **CursorClose** описывает события закрытия курсора, которые возникают в интерфейсе прикладных программ (API) курсоров. События этого класса возникают при закрытии инструкции курсора [!INCLUDE[tsql](../../includes/tsql-md.md)] через интерфейсы ODBC, OLE DB или DB-Library.  

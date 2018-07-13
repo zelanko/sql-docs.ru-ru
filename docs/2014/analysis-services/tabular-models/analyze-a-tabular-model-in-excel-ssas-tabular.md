@@ -1,5 +1,5 @@
 ---
-title: Анализ табличной модели в Excel (табличные службы SSAS) | Документы Microsoft
+title: Анализ табличной модели в Excel (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.chooseperspect.f1
 ms.assetid: 47fa45fc-60ab-41a1-bde3-5781c8462889
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ea5288c3f70bbcb8ce2b44a78348283284a7aeb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d838dbf683746b212967f2775c6c943310ce6cb6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204014"
 ---
 # <a name="analyze-a-tabular-model-in-excel-ssas-tabular"></a>Анализ табличной модели в Excel (табличные службы SSAS)
   Функция анализа в Excel в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] открывает Microsoft Excel, создает соединение с источником данных, в качестве которого выступает база данных рабочей области модели, а затем добавляет сводную таблицу на рабочий лист. Объекты модели (таблицы, столбцы, меры, иерархии и ключевые показатели эффективности) включаются в качестве полей в список полей сводной таблицы.  

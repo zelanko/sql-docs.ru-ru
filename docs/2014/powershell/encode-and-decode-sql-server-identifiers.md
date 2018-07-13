@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: f7651c43569003862f41a62f5e2a9917f3d534a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c2a997ec2df79b600b73be0bd5a33f7144fe119
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195364"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Шифрование и расшифровка идентификаторов SQL Server
   Идентификаторы SQL Server с разделителями иногда содержат символы, не поддерживаемые в путях Windows PowerShell. Эти символы можно задавать путем кодирования их шестнадцатеричных значений.  
@@ -66,7 +66,7 @@ Set-Location (Encode-SqlName "Table:Test")
 ##  <a name="DecodeIdent"></a> декодирование идентификатора  
  **Декодирование идентификатора SQL Server из пути PowerShell**  
   
- Используйте `Decode-Sqlname` для замены шестнадцатеричных кодов символами, представленными этими кодами.  
+ Используйте `Decode-Sqlname` командлет для замены шестнадцатеричных кодов символами, представленными этими кодами.  
   
 ### <a name="examples-decoding"></a>Примеры (декодирование)  
  В этом примере происходит возврат строки «Table:Test»:  

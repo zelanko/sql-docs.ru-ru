@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
 - SQL Server Agent, accounts
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - security [SQL Server], SQL Server Agent
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab05d53c3c9f989252ab248305f000033ff54ccf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d82cf9589289c9646950174081a19f3449accb46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210484"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Выбор учетной записи для службы агента SQL Server
   Стартовая учетная запись службы определяет учетную запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которой запускается агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также его сетевые разрешения. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется как заданная учетная запись пользователя. Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет выбрать учетную запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из следующих вариантов:  
@@ -87,13 +87,13 @@ ms.locfileid: "36195296"
 |Учетная запись Local System (NT AUTHORITY\System)|Поддерживается<sup>2</sup>|Не поддерживается|Поддерживается<sup>2</sup>|  
 |Учетная запись локальной службы (NT AUTHORITY\NetworkService)|Не поддерживается|Не поддерживается|Не поддерживается|  
   
- <sup>1</sup> см.  
+ <sup>1</sup> см. ограничение № 1 ниже.  
   
- <sup>2</sup> ограничение 2 ниже в разделе.  
+ <sup>2</sup> см. ограничение № 2 ниже.  
   
- <sup>3</sup> ограничение 3 ниже в разделе.  
+ <sup>3</sup> см. ограничение № 3 ниже.  
   
- <sup>4</sup> ограничение 4 ниже в разделе.  
+ <sup>4</sup> см. следующее ограничение № 4.  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Ограничение 1. Использование неадминистративных учетных записей для администрирования нескольких серверов  
  Прикрепление целевого сервера к главному серверу может завершиться ошибкой, после чего появляется следующее сообщение: "Не удалось выполнить операцию прикрепления".  

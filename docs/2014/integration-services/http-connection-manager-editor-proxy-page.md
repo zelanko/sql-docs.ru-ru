@@ -1,5 +1,5 @@
 ---
-title: Редактор диспетчера HTTP-сеансов (страница «прокси-сервер») | Документы Microsoft
+title: Редактор диспетчера HTTP-соединений (страница "прокси-сервер") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.httpconnection.proxy.f1
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 726133083a8cd0f5be2bb6d20740c80c79c3fe75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 65eb54a5db89a535497c4aed32214b9cef006d23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190720"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>Редактор диспетчера HTTP-соединений (страница «Прокси-сервер»)
   Используйте вкладку **Прокси-сервер** диалогового окна **Редактор диспетчера HTTP-соединений** , чтобы настроить диспетчер HTTP-соединений для работы с прокси-сервером. HTTP-соединение позволяет пакету получить доступ к веб-серверу через протокол HTTP, чтобы передавать или принимать файлы.  
@@ -62,7 +62,7 @@ ms.locfileid: "36194527"
  Выберите адрес и затем удалите его, нажав кнопку **Удалить**.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор диспетчера HTTP-соединений &#40;страница сервера&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
   

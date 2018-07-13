@@ -5,25 +5,23 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - triggers [SQL Server], about triggers
 - DML triggers, about DML triggers
 - triggers [SQL Server]
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
-caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b13c888a8f3a388d6e1b8d1b2763714c9558004a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 20b01c270ee9ac74ff1b76cf32df21ace98d51d8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195756"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415053"
 ---
 # <a name="dml-triggers"></a>Триггеры DML
   Триггеры DML — это хранимые процедуры особого типа, автоматически вступающие в силу, если происходит событие языка обработки данных DML, которое затрагивает таблицу или представление, определенное в триггере. События DML включают инструкции INSERT, UPDATE или DELETE. Триггеры DML могут использоваться для предписания бизнес-правил и правил целостности данных, выполнения запросов к другим таблицам и включения сложных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Триггер и инструкция, при выполнении которой он срабатывает, считаются одной транзакцией, которую можно откатить назад внутри триггера. При обнаружении серьезной ошибки (например, нехватки места на диске) вся транзакция автоматически откатывается назад.  
@@ -65,8 +63,8 @@ ms.locfileid: "36195756"
 |Каскадные ссылки|Нет ограничений.|Триггеры INSTEAD OF UPDATE и DELETE нельзя определять для таблиц, на которые распространяются каскадные ограничения ссылочной целостности.|  
 |Выполнение|После следующих операций.<br /><br /> Обработка ограничений.<br />Декларативные ссылочные действия.<br />Создание таблиц**inserted** и **deleted** .<br />Действие, запускающее триггер.|До: обработка ограничений<br /><br /> Вместо: действие, запускающее триггер<br /><br /> После: создание таблиц  **inserted** и **deleted**|  
 |Порядок выполнения|Можно задать выполнение в первую и в последнюю очередь.|Неприменимо|  
-|`varchar(max)`, `nvarchar(max)`, и `varbinary(max)` ссылки на столбцы в **вставлены** и **удалены** таблиц|Разрешено|Разрешено|  
-|`text`, `ntext`, и `image` ссылки на столбцы в **вставлены** и **удалены** таблиц|Не допускается|Разрешено|  
+|`varchar(max)`, `nvarchar(max)`, и `varbinary(max)` ссылок на столбцы **вставлены** и **удалены** таблиц|Разрешено|Разрешено|  
+|`text`, `ntext`, и `image` ссылок на столбцы **вставлены** и **удалены** таблиц|Не допускается|Разрешено|  
   
  Триггеры CLR  
  Триггер CLR может быть либо триггером AFTER, либо триггером INSTEAD OF. Триггер CLR может также являться триггером DDL. Вместо вызова хранимой процедуры на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] триггер CLR вызывает один или несколько методов управляемого кода, являющихся членами сборки, созданной с помощью среды .NET Framework и загружены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

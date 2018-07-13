@@ -1,5 +1,5 @@
 ---
-title: Функция Localdbgetversionsinfo | Документы Microsoft
+title: Функция Localdbgetversionsinfo | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 03e8e4a07dfed1dc2430f020ad221bfb494eb41f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: dc8b45c449a8bea7ca25e2f75fd0e21432838af1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186542"
 ---
 # <a name="localdbgetversioninfo-function"></a>Функция LocalDBGetVersionsInfo
   Возвращает сведения для указанной версии SQL Server Express LocalDB — факт ее существования и полный номер версии LocalDB (включая номер сборки и номер выпуска).  
@@ -90,9 +90,9 @@ HRESULT LocalDBGetVersionInfo(
  Произошла непредвиденная ошибка. Подробные сведения см. в журнале событий.  
   
 ## <a name="details"></a>Сведения  
- Обоснование появлением `struct` аргумент размера (*lpVersionInfoSize*) — научить API для возврата разных версий **LocalDBVersionInfostruct**, эффективно Включение прямой и обратной совместимости.  
+ Обоснование появлением `struct` аргумент размера (*lpVersionInfoSize*) является возможность API мог возвращать различные версии структуры **LocalDBVersionInfostruct**, эффективно Включение прямой и обратной совместимости.  
   
- Если `struct` аргумент размера (*lpVersionInfoSize*) соответствует размеру известной версии **LocalDBVersionInfostruct**, соответствующей версии `struct` возвращается. В противном случае возвращается значение LOCALDB_ERROR_INVALID_PARAMETER.  
+ Если `struct` аргумент размера (*lpVersionInfoSize*) соответствует размеру известной версии **LocalDBVersionInfostruct**, эту версию `struct` возвращается. В противном случае возвращается значение LOCALDB_ERROR_INVALID_PARAMETER.  
   
  Типичным примером **LocalDBGetVersionInfo** использование API выглядит следующим образом:  
   

@@ -1,13 +1,11 @@
 ---
-title: Выборка данных BLOB при помощи метода IRow::GetColumns и интерфейса ISequentialStream | Документы Microsoft
+title: Выборка данных BLOB при помощи метода IRow::GetColumns и интерфейса ISequentialStream | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - BLOBs, fetching
 ms.assetid: b57decda-b0c1-4ef6-8c81-491956de2890
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0d8070fc761db5c56582bf40bbd1f80e263d00c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 566b843be0535cca2c5623cf23cb6595c030c155
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193093"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409033"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>Выборка данных BLOB при помощи метода IRow::GetColumns и интерфейса ISequentialStream
   Следующая функция использует **IRow::GetColumns** и **ISequentialStream** для выборки больших данных:  

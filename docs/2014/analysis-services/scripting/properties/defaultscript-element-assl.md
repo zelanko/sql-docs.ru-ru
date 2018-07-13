@@ -1,5 +1,5 @@
 ---
-title: Элемент DefaultScript (ASSL) | Документы Microsoft
+title: Элемент DefaultScript (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DefaultScript element
 ms.assetid: 60716e63-2d64-4774-9ac9-253efe612fa5
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b0a26b8b703636aebb6d3701c5c7c99d24a25ade
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5de4eca3e226e6eddbe811af5dc089b1965cbd08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200064"
 ---
 # <a name="defaultscript-element-assl"></a>Элемент DefaultScript (ASSL)
   Определяет значение по умолчанию [MdxScript](../objects/mdxscript-element-assl.md) элемент в [MdxScripts](../collections/mdxscripts-element-assl.md) коллекции.  
@@ -64,7 +64,7 @@ ms.locfileid: "36195469"
 ## <a name="remarks"></a>Примечания  
  Присвоение элементу `DefaultScript` значения `True` для одного скрипта приводит к присвоению элементу `DefaultScript` значения `False` для всех остальных элементов `MdxScript` в коллекции `MdxScripts`.  
   
- Элемент, соответствующий родителю параметра `DefaultScript` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.MdxScript>.  
+ Элемент, соответствующий родителю параметра `DefaultScript` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.MdxScript>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

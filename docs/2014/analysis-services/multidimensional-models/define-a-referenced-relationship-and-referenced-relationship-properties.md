@@ -1,5 +1,5 @@
 ---
-title: Определение ссылочной связи и свойств ссылочной связи | Документы Microsoft
+title: Определение ссылочной связи и свойств ссылочной связи | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - referenced dimension relationship
 - relationships [Analysis Services], referenced dimensions
 ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 845ec8020ece6d253d4c025b960081a801123a0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 131479d064f911f7574de3a7dc113d0ed313601c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191260"
 ---
 # <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>Определение ссылочной связи и свойств ссылочной связи
   Связь ссылочного измерения определяется на вкладке **Использование измерений** конструктора кубов. Связь ссылочного измерения определяется путем указания следующих параметров.  

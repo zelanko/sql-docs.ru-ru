@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: db481a9a35cd55ecef08cf86802196d2a1c94b45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 19e238919a00bf022cd924be7a66a4d990d8f7c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227102"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
   После добавления области данных и нескольких полей к отчету «Заказы на продажу» можно отформатировать поля дат и валют, а затем и заголовки столбцов.  
@@ -81,7 +81,7 @@ ms.locfileid: "36193954"
   
 1.  Щелкните таблицу, чтобы сбоку и сверху от нее появились маркеры строк и столбцов.  
   
-     ![Конструктор, таблица со строкой заголовка и строку подробностей](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "проектирования, таблица со строкой заголовка и строку подробностей")  
+     ![Конструктор, таблица со строкой заголовка и строку детализации](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "конструктор, таблица со строкой заголовка и строку детализации")  
   
      Серые линии, расположенные вдоль верха и стороны таблицы, — это маркеры столбцов и строк.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36193954"
  Заголовки столбцов, а также значения дат и денежные значения успешно отформатированы. Далее предстоит добавить в этот отчет группирование и итоги. См. раздел [Занятие 6. Добавление группирования и итогов (службы Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также  
- [Форматирование чисел и дат &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Форматирование чисел и дат &#40;построитель отчетов и службы SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

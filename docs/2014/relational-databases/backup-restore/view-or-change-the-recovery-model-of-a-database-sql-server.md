@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database backups [SQL Server], recovery models
 - recovery [SQL Server], recovery model
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - modifying database recovery models
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 142fa3d4dcdfabac8f8c2f3c0a7576e2046f814b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: aeddab237776e94c2d954d3019beac5b52726723
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156265"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Просмотр или изменение модели восстановления базы данных (SQL Server)
   В этом разделе описан порядок просмотра и изменения модели восстановления базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Модель восстановления* — это свойство базы данных, которое управляет процессом регистрации транзакций, определяет, требуется ли для журнала транзакций резервное копирование, а также определяет, какие типы операций восстановления доступны. Существует три модели восстановления: простая модель восстановления, модель полного восстановления и модель восстановления с неполным протоколированием. Обычно в базе данных используется модель полного восстановления или простая модель восстановления. Базу данных можно в любой момент переключить на использование другой модели восстановления. База данных **model** задает модель восстановления по умолчанию для новых баз данных.  
@@ -121,7 +120,7 @@ USE master ;
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Выполните рекомендуемые действия: После изменения модели восстановления  
+##  <a name="FollowUp"></a> Дальнейшие действия рекомендаций: После изменения модели восстановления  
   
 -   **После переключения с модели полного восстановления на модель восстановления с неполным протоколированием**  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - relationships [SQL Server], many-to-many
 - junction tables [SQL Server]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], relationships
 ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4dd38759ccd32621f31da1c0e078a4cf5c344c2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e93eecef54eb5910287a2693311539f5c2fb898e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202414"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>Построение связи «многие ко многим» (визуальные инструменты для баз данных)
   Отношения «многие ко многим» позволяют связать каждую строку одной таблицы с несколькими строками другой таблицы и наоборот. Например, отношение «многие ко многим» можно создать для таблиц `authors` и `titles` , чтобы связать каждого автора с его книгами и сопоставить каждой книге ее автора. Если создать связь «один ко многим» в любой таблице, получится, что каждая книга сможет иметь только одного автора или каждый автор — только одну книгу.  
@@ -42,9 +42,9 @@ ms.locfileid: "36194404"
   
 4.  Скопируйте первичные ключевые столбцы обеих таблиц в связующую таблицу. В эту таблицу можно добавить другие столбцы, как в любую другую таблицу.  
   
-5.  Создайте первичный ключ в связующей таблице так, чтобы он содержал все первичные ключевые столбцы исходных таблиц. Дополнительные сведения см. в разделе [Создать первичные ключи](../../relational-databases/tables/create-primary-keys.md).  
+5.  Создайте первичный ключ в связующей таблице так, чтобы он содержал все первичные ключевые столбцы исходных таблиц. Дополнительные сведения см. в разделе [создание первичных ключей](../../relational-databases/tables/create-primary-keys.md).  
   
-6.  Определите отношение «один ко многим» между каждой из первоначальных таблиц и связующей таблицей. Связующая таблица должна находиться на стороне «многих» обоих отношений. Дополнительные сведения см. в разделе [Создание связей внешнего ключа](../../relational-databases/tables/create-foreign-key-relationships.md).  
+6.  Определите отношение «один ко многим» между каждой из первоначальных таблиц и связующей таблицей. Связующая таблица должна находиться на стороне «многих» обоих отношений. Дополнительные сведения см. в разделе [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md).  
   
     > [!NOTE]  
     >  Создание связующей таблицы в диаграмме базы данных не подразумевает ее заполнение данными из связанных таблиц. Дополнительные сведения о вставке данных в эту таблицу см. в разделе [Создание запросов вставки результатов (визуальные инструменты для баз данных)](visual-database-tools.md).  

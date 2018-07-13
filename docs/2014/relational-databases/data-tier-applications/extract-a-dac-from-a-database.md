@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.extractdacwizard.buildandsave.f1
 - sql12.swb.extractdacwizard.setdacproperties.f1
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0da72e16f77d6f3c850a41f85caa453123afc802
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9eb33630708143700d7f5ce6749cf720c71a65fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211504"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Извлечение приложения уровня данных из базы данных
   Извлечение пакета приложения уровня данных из существующей базы данных SQL Server можно с помощью **мастера извлечения приложения уровня данных** или скрипта Windows PowerShell. В результате извлечения будет создан файл пакета DAC, содержащий определения объектов базы данных и связанные элементы уровня экземпляра. Например, файл пакета DAC содержит все таблицы базы данных, хранимые процедуры, представления, пользователей и имена входа, сопоставленные с пользователями базы данных.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Для извлечения приложения уровня данных, используя:**[извлечения мастера приложений уровня данных](#UsingDACExtractWizard), [PowerShell  ](#ExtractDACPowerShell)  
+-   **Для извлечения DAC, с помощью:**[извлечения Data-tier Application Wizard](#UsingDACExtractWizard), [PowerShell  ](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Перед началом  
  Предусмотрена возможность извлечения приложения уровня данных из баз данных, находящихся на экземплярах [!INCLUDE[ssSDS](../../includes/sssds-md.md)]или [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] с пакетом обновления 4 (SP4) или более поздних версий. Если процесс извлечения запущен для базы данных, которая была развернута из приложения уровня данных, то происходит извлечение только определений объектов в базе данных. Этот процесс не ссылается на DAC, зарегистрированный в `msdb` (**master** в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). Процесс извлечения не регистрирует определение приложения уровня данных в текущем экземпляре компонента Database Engine. Дополнительные сведения о регистрации приложения уровня данных см. в разделе [Register a Database As a DAC](register-a-database-as-a-dac.md).  
@@ -127,7 +127,7 @@ ms.locfileid: "36191485"
   
  **Готово** — закрыть мастер после завершения обработки или возникновения ошибки.  
   
-##  <a name="ExtractDACPowerShell"></a> Извлечение приложения уровня данных, с помощью PowerShell  
+##  <a name="ExtractDACPowerShell"></a> Извлечение пакета DAC с помощью PowerShell  
  **Извлечение приложения уровня данных из базы данных с помощью метода Extract() в скрипте PowerShell**  
   
 1.  Создайте объект SMO для сервера и присвойте ему экземпляр, где находится база данных, из которой должно быть извлечено приложение уровня данных.  

@@ -1,38 +1,36 @@
 ---
-title: Получить данные из столбца FILESTREAM с помощью интерфейса ISequentialStream (OLE DB) | Документы Microsoft
+title: Извлечение данных из столбца FILESTREAM с помощью интерфейса ISequentialStream (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9ed7b28aab8e9e9323d904791581485217557a0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: af1fdbad51d7d6ae1c6c2320a6ac05d103123324
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194696"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424863"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Извлечение данных из столбца FILESTREAM с помощью интерфейса ISequentialStream (OLE DB)
   В этом образце используется интерфейс ISequentialStream в интерфейсе ICommandText, чтобы получить одну запись из столбца FILESTREAM.  
   
- Дополнительные сведения о функции filestream см. в разделе [поддержка FILESTREAM &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
+ Дополнительные сведения о функции filestream, см. в разделе [поддержка FILESTREAM &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Пример  
  Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
  С помощью одного из следующих образцов создайте таблицу, из которой образец считывает данные.  
   
--   [Отправлять данные в столбец FILESTREAM с использованием ISequentialStream с привязкой к параметру ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Отправлять данные в столбец файлового ПОТОКА, с помощью интерфейса ISequentialStream с привязкой к параметру ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
 -   [Отправлять данные в столбец FILESTREAM с использованием интерфейса IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   

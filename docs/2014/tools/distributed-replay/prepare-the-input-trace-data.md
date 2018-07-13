@@ -1,5 +1,5 @@
 ---
-title: Подготовка входных данных трассировки | Документы Microsoft
+title: Подготовка входных данных трассировки | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 30b9108a8586e56f7a96695be513e6e33fe39c85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7da90e14d33fb19b421e0cd5a9219ac356952e83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196724"
 ---
 # <a name="prepare-the-input-trace-data"></a>Подготовка входных данных трассировки
   Прежде чем начинать распределенное воспроизведение с помощью функции распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо подготовить входные данные трассировки, а для этого инициировать стадию предварительной подготовки с помощью средства администрирования распределенного воспроизведения. На стадии предварительной обработки контроллер распределенного воспроизведения обрабатывает данные трассировки и формирует промежуточный файл:  

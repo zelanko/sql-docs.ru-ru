@@ -1,5 +1,5 @@
 ---
-title: Элемент BackupRemotePartitions (XML для Аналитики) | Документы Microsoft
+title: Элемент BackupRemotePartitions (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - BackupRemotePartitions element
 ms.assetid: bd68bcf9-b324-4fa8-b6e5-1f5531f9992c
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c32fd50514e96fee8de289666d8e559a78fe985b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d7cc7ccb441995d1c4aa3b22cccefcdc5224e486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194570"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200074"
 ---
 # <a name="backupremotepartitions-element-xmla"></a>Элемент BackupRemotePartitions (XML для аналитики)
-  Определяет, является ли родительский [резервного копирования](../xml-elements-commands/backup-element-xmla.md) команда создает резервную копию удаленных секций, связанных с объектом.  
+  Определяет ли родительский [резервного копирования](../xml-elements-commands/backup-element-xmla.md) команда создает резервные копии удаленных секций, связанных с объектом.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36194570"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Если элемент `BackupRemotePartitions` имеет значение `True`, в команду `Locations` должен включаться элемент `Location`, содержащий один или несколько элементов `Backup`, иначе возникает ошибка. Дополнительные сведения о резервном копировании и восстановлении удаленных секций см. в разделе [резервное копирование, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Если элемент `BackupRemotePartitions` имеет значение `True`, в команду `Locations` должен включаться элемент `Location`, содержащий один или несколько элементов `Backup`, иначе возникает ошибка. Дополнительные сведения о резервном копировании и восстановлении удаленных секций, см. в разделе [резервного копирования, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>См. также  
  [Элемент Locations &#40;XML для Аналитики&#41;](locations-element-xmla.md)   

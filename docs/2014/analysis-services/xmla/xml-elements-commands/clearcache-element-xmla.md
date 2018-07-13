@@ -1,5 +1,5 @@
 ---
-title: Элемент ClearCache (XML для Аналитики) | Документы Microsoft
+title: Элемент ClearCache (XML для Аналитики) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ClearCache command
 ms.assetid: e154b489-e443-469a-9490-43c62da62e11
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: abf566bd7be4f1a0aaba504acc299d266f3fe2ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 37b43439705b3288530a919f77da7b0ead461b35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188971"
 ---
 # <a name="clearcache-element-xmla"></a>Элемент ClearCache (XML для аналитики)
   Очищает кэш памяти для заданного объекта в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра.  
@@ -64,7 +64,7 @@ ms.locfileid: "36192755"
 |Дочерние элементы|[Объект](../xml-elements-properties/object-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- `ClearCache` Команда очищает кэш для указанной базы данных, измерения, куба, группы мер или секции на [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра. Если в элементе `Object` задан объект, не являющийся базой данных, измерением, кубом, группой мер или секцией, возвращается ошибка.  
+ `ClearCache` Команда очищает кэш для указанной базы данных, измерения, куба, группы мер или секции в [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра. Если в элементе `Object` задан объект, не являющийся базой данных, измерением, кубом, группой мер или секцией, возвращается ошибка.  
   
 ## <a name="see-also"></a>См. также  
  [Команды &#40;XML для Аналитики&#41;](xml-elements-commands.md)  

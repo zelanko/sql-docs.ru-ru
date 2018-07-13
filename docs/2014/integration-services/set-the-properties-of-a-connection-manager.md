@@ -1,5 +1,5 @@
 ---
-title: Задание свойств диспетчера соединений с | Документы Microsoft
+title: Задание свойств диспетчера соединений | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], modifying
 - modifying connection managers
 ms.assetid: 54793114-2198-4d80-8091-e241d5a5d13c
 caps.latest.revision: 35
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 558616f859f89c5bc6220f8e84124001bc4c8796
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 42e6f4473e9589ce861c22d6e85d83502e6329b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190614"
 ---
 # <a name="set-the-properties-of-a-connection-manager"></a>Задание свойств диспетчера соединений
   Все диспетчеры соединений могут быть настроены в окне **Свойства** .  
@@ -64,7 +64,7 @@ ms.locfileid: "36195195"
     |[Диспетчер подключений файлов](connection-manager/file-connection-manager.md)|[Редактор диспетчера подключений файлов](../../2014/integration-services/file-connection-manager-editor.md)|  
     |[Диспетчер подключений нескольких файлов](connection-manager/multiple-files-connection-manager.md)|[Справочник по пользовательскому интерфейсу: диалоговое окно "Добавление диспетчера подключений файлов"](connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[Диспетчер подключений неструктурированных файлов](connection-manager/flat-file-connection-manager.md)|[Редактор диспетчера подключений к неструктурированным файлам (страница "Общие")](general-page-of-integration-services-designers-options.md)<br /><br /> [Редактор диспетчера подключений к неструктурированным файлам (страница "Столбцы")](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [Редактор диспетчера подключений к неструктурированным файлам (страница "Дополнительно")](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [Редактор диспетчера подключений к неструктурированным файлам (страница "Предварительный просмотр")](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
-    |[Диспетчер подключений нескольких неструктурированных файлов](connection-manager/multiple-flat-files-connection-manager.md)|[Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;страница «Общие»&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;страница «столбцы»&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;страница «Дополнительно»&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;Предварительный просмотр страницы&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
+    |[Диспетчер подключений нескольких неструктурированных файлов](connection-manager/multiple-flat-files-connection-manager.md)|[Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;страница "Общие"&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;страница "столбцы"&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;страница "Дополнительно"&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;Предварительный просмотр страницы&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
     |[Диспетчер FTP-подключений](connection-manager/ftp-connection-manager.md)|[Редактор диспетчера FTP-подключений](../../2014/integration-services/ftp-connection-manager-editor.md)|  
     |[Диспетчер HTTP-подключений](connection-manager/http-connection-manager.md)|[Редактор диспетчера HTTP-соединений &#40;страница сервера&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [Редактор диспетчера HTTP-соединений &#40;страницы прокси-сервера&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
     |[Диспетчер подключений MSMQ](connection-manager/msmq-connection-manager.md)|[Редактор диспетчера подключений MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)|  
@@ -72,7 +72,7 @@ ms.locfileid: "36195195"
     |[Диспетчер подключений OLE DB](connection-manager/ole-db-connection-manager.md)|[Настройка диспетчера подключений OLE DB](configure-ole-db-connection-manager.md)|  
     |[Диспетчер подключений управляющих объектов SQL Server](connection-manager/smo-connection-manager.md)|[Редактор диспетчера подключений SMO](../../2014/integration-services/smo-connection-manager-editor.md)|  
     |[Диспетчер SMTP-подключений](connection-manager/smtp-connection-manager.md)|[Редактор диспетчера SMTP-подключений](../../2014/integration-services/smtp-connection-manager-editor.md)|  
-    |[Диспетчер подключений SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact редактор диспетчера соединений Edition &#40;страница «соединение»&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact редактор диспетчера соединений Edition &#40;страница «все»&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
+    |[Диспетчер подключений SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact редактор диспетчера соединений Edition &#40;страница "подключения"&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact редактор диспетчера соединений Edition &#40;странице "все"&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
     |[Диспетчер WMI-подключений](connection-manager/wmi-connection-manager.md)|[Редактор диспетчера WMI-подключений](../../2014/integration-services/wmi-connection-manager-editor.md)|  
   
 5.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  

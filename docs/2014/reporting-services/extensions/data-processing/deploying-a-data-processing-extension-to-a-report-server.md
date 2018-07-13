@@ -15,17 +15,17 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 caps.latest.revision: 44
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 87409bbf8d057e30b458f79b4746e7048e51f363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 47092d05e9908e68722dbebea88e110f58170000
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160075"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Как: развертывание модуля обработки данных на сервере отчетов
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Практическое: развертывание модуля обработки данных на сервере отчетов
   Серверы отчетов используют модули обработки данных для получения и обработки данных в отчетах, готовых для просмотра. Сборка модуля обработки данных развертывается на сервере отчетов как закрытая сборка. Нужно также внести запись в файл конфигурации сервера отчетов RSReportServer.config.  
   
 ## <a name="procedures"></a>Процедуры  

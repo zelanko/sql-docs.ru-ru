@@ -1,5 +1,5 @@
 ---
-title: Элемент UnknownMemberTranslation (ASSL) | Документы Microsoft
+title: Элемент UnknownMemberTranslation (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - UnknownElementTranslation element
 ms.assetid: a4b8cdac-b065-4a44-b251-c5ac1cfe5e6f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 38b04dad97f6c61a884d4ba4234083bbc60bc260
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68270cff61daace55131454b549f12880f3b5e6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220304"
 ---
 # <a name="unknownmembertranslation-element-assl"></a>Элемент UnknownMemberTranslation (ASSL)
-  Содержит перевод заголовка элемента [UnknownMember](member-element-assl.md) элемент для [измерения](dimension-element-assl.md) элемента.  
+  Содержит перевод заголовка элемента [UnknownMember](member-element-assl.md) элемент для [измерения](dimension-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36192106"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `UnknownMemberTranslation` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Dimension>.  
+ Элемент, соответствующий родителю параметра `UnknownMemberTranslation` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент Translation &#40;ASSL&#41;](translation-element-assl.md)   

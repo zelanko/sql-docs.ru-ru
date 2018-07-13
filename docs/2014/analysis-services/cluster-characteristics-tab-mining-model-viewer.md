@@ -1,5 +1,5 @@
 ---
-title: Вкладка «характеристики» (средство просмотра моделей интеллектуального анализа данных) кластера | Документы Microsoft
+title: Кластер вкладка «характеристики» (средство просмотра моделей интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.characteristics.f1
 ms.assetid: 8e33ed1d-1ce4-405d-895b-7e995b2c910d
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4e5dcac98dd53edbd5e894c639c067106288e7e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f3b5076884e44926457437ef1c31fd595418edd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172085"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>Вкладка «Характеристики кластеров» (средство просмотра моделей интеллектуального анализа данных)
   На вкладке **Характеристики кластера** можно рассмотреть характеристики кластера в модели кластеризации или набор всех вариантов в модели. На диаграмме показана важность каждой пары «атрибут-значение» как характеристики, определяющей кластер, в сравнении с другими кластерами.  

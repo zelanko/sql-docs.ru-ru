@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row removal [SQL Server], Delete query
 - Delete query
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - deleting data
 ms.assetid: 0db3af43-1ec4-48c8-b769-2bb9c76d3434
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b96039bb192985375a2261ac339a3d9eaba01f6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 792cf742948dba7768ad467d6cdf597d9bda802f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198504"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>Создание запросов на удаление (визуальные инструменты для баз данных)
   С помощью запроса на удаление можно удалить все строки таблицы.  
@@ -52,7 +52,7 @@ ms.locfileid: "36195716"
  При выполнении запроса на удаление в [панели результатов](results-pane-visual-database-tools.md)не выводятся никакие результаты. Вместо этого отображается сообщение о том, сколько строк было удалено.  
   
 ## <a name="see-also"></a>См. также  
- [Поддерживаемые типы запросов &#40;визуальные средства базы данных&#41;](supported-query-types-visual-database-tools.md)   
+ [Поддерживаемые типы запросов &#40;визуальных инструментах баз данных&#41;](supported-query-types-visual-database-tools.md)   
  [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

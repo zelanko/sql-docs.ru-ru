@@ -1,5 +1,5 @@
 ---
-title: Ключевое слово EXISTING (многомерные Выражения) | Документы Microsoft
+title: Ключевое слово EXISTING (многомерные Выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - EXISTING
 helpviewer_keywords:
 - Existing keyword
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d7205cad36bbeb5adee16ca10bd881280b59d98f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a781fb58f45c478b6a3611132a210b14012ffb72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228394"
 ---
 # <a name="existing-keyword-mdx"></a>Ключевое слово EXISTING (многомерные выражения)
   Указывает, что заданный набор должен вычисляться принудительно в текущем контексте.  
@@ -43,7 +43,7 @@ Existing Set_Expression
  По умолчанию наборы вычисляются в контексте куба, который содержит их элементы. `Existing` Ключевое слово принудительно заданный набор должен вычисляться в текущем контексте.  
   
 ## <a name="example"></a>Пример  
- В следующем примере возвращается количество посредников, продажи которых снизились по сравнению с предыдущим периодом, на основании выбранных пользователем значений элемента State-Province, вычисленных с помощью функции `Aggregate`. Ключевое слово [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) и [DrilldownLevel (многомерные выражения)](/sql/mdx/drilldownlevel-mdx) используются для возвращения показателей падения продаж для категорий продуктов в измерении Product. `Existing` Силы ключевое слово set в `Filter` функции должен вычисляться в текущем контексте, то есть для элементов иерархии атрибута State-Province Вашингтон и Орегон.  
+ В следующем примере возвращается количество посредников, продажи которых снизились по сравнению с предыдущим периодом, на основании выбранных пользователем значений элемента State-Province, вычисленных с помощью функции `Aggregate`. Ключевое слово [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) и [DrilldownLevel (многомерные выражения)](/sql/mdx/drilldownlevel-mdx) используются для возвращения показателей падения продаж для категорий продуктов в измерении Product. `Existing` Силы ключевое слово set в `Filter` функции, который будет вычисляться в текущем контексте, то есть для Вашингтона и Орегона элементы иерархии атрибута State-Province.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  

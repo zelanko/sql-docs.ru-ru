@@ -1,26 +1,24 @@
 ---
-title: Поддержка собственного клиента SQL Server для высокого уровня доступности и аварийного восстановления | Документы Microsoft
+title: Поддержка собственного клиента SQL Server для обеспечения высокой доступности, аварийного восстановления | Документация Майкрософт
 ms.custom: ''
 ms.date: 2016-08-31
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0fc26bfb2fc61cebd781c04b200f5e285b25666f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 72fb6497563e4f1d15e9470eb6d60743d67f83a5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192452"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427493"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server
   В этом разделе описывается поддержка Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Дополнительные сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделах [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/listeners-client-connectivity-application-failover.md), [Создание и настройка групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) и [Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
@@ -39,7 +37,7 @@ ms.locfileid: "36192452"
   
  Дополнительные сведения о ключевых словах строки подключения см. в статье [Использование ключевых слов строки подключения с SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Указание `MultiSubnetFailover=Yes` при соединении с объектом, кроме прослушивателя группы доступности или экземпляра отказоустойчивого кластера может привести к отрицательно влияет на производительность и не поддерживается.  
+ Указание `MultiSubnetFailover=Yes` при соединении с что-то отличное от прослушивателя группы доступности или экземпляра отказоустойчивого кластера может привести к снижению производительности и не поддерживается.  
   
  Следуйте приведенным ниже рекомендациям для подключения к серверу в группе доступности или экземпляру отказоустойчивого кластера.  
   
@@ -61,7 +59,7 @@ ms.locfileid: "36192452"
   
 2.  Если приложение использует свойство `ApplicationIntent=ReadWrite` (которое обсуждается ниже) и местоположение дополнительных реплик настроено для доступа только для чтения.  
   
- Соединение завершится ошибкой, если первичная реплика настроена на отклонение рабочих нагрузок только для чтения, и строка подключения содержит `ApplicationIntent=ReadOnly`.  
+ Соединение завершится ошибкой, если первичная реплика настроена на отклонение рабочих нагрузок только для чтения, а строка подключения содержит `ApplicationIntent=ReadOnly`.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Переход с зеркального отображения базы данных на использование кластеров с несколькими подсетями  
  Если в строке подключения содержатся ключевые слова `MultiSubnetFailover` и `Failover_Partner`, то при соединении произойдет ошибка. Ошибка возникает также в том случае, если используется `MultiSubnetFailover` и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] возвращает ответ партнер по обеспечению отработки отказа, указывающего на то, что он является частью пары зеркального отображения базы данных.  
@@ -75,7 +73,7 @@ ms.locfileid: "36192452"
   
  `ApplicationIntent` Ключевое слово не работает с базами данных прежних версий, только для чтения.  
   
- База данных может допускать или не допускать рабочую нагрузку чтения для целевой базы данных AlwaysOn. (Это делается с `ALLOW_CONNECTIONS` предложения `PRIMARY_ROLE` и `SECONDARY_ROLE` [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкции.)  
+ База данных может допускать или не допускать рабочую нагрузку чтения для целевой базы данных AlwaysOn. (Это делается с помощью `ALLOW_CONNECTIONS` предложении `PRIMARY_ROLE` и `SECONDARY_ROLE` [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкций.)  
   
  `ApplicationIntent` Ключевое слово используется для включения маршрутизации только для чтения.  
   

@@ -1,5 +1,5 @@
 ---
-title: Задачи средства просмотра модели и практические руководства интеллектуального анализа данных | Документы Microsoft
+title: Задачи средства просмотра модели и инструкции интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], viewing
 - displaying mining models
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services]
 ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6249d4a1c63b58135a1b7585c706496712bf80e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2b463cd9a5cb58c1286d66ce88ab749e408d852
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200394"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Задачи и инструкции средства просмотра моделей интеллектуального анализа данных
   Конструктор интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] содержит несколько средств, которые можно использовать для просмотра моделей интеллектуального анализа данных. Следующие разделы содержат пошаговые инструкции по выполнению задач, для которых характерно использование вкладки конструктора **Средство просмотра моделей интеллектуального анализа данных** .  
@@ -50,7 +50,7 @@ ms.locfileid: "36193704"
 -   [Изменение цветов, используемых в средстве просмотра интеллектуального анализа данных](change-the-colors-used-in-the-data-mining-viewer.md)  
   
 ## <a name="see-also"></a>См. также  
- [Учебник по интеллектуальному анализу данных](../../tutorials/basic-data-mining-tutorial.md)   
+ [Учебник интеллектуального анализа данных](../../tutorials/basic-data-mining-tutorial.md)   
  [Просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   
   

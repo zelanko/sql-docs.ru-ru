@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразования «Сортировка» | Документы Microsoft
+title: Редактор преобразования «Сортировка» | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sorttransformation.f1
 helpviewer_keywords:
 - Sort Transformation Editor
 ms.assetid: 8ae23970-49a9-4d6d-9f15-c7074783347c
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b4dc4369d766a0a656cd0af32331a00c11e961b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 818625c2d43080560fee3fc87879f96acad20c0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240946"
 ---
 # <a name="sort-transformation-editor"></a>редактор преобразования «Сортировка»
   Диалоговое окно **Редактор преобразования «Сортировка»** используется для выбора сортируемых столбцов, установки порядка сортировки, а также позволяет указать, следует ли удалять дубликаты.  

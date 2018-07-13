@@ -1,31 +1,29 @@
 ---
-title: SQLCancel | Документы Microsoft
+title: SQLCancel | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLCancel function
 ms.assetid: d4c965ae-c1ac-4e9d-b4b9-32b561401106
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6aff7aea0040e2fd7f86a3ad668b4e4438148497
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ed3bdb4cc5c2508435bff011545b5b9113d7aeac
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193363"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424393"
 ---
 # <a name="sqlcancel"></a>SQLCancel
-  [SQLCancel](http://go.microsoft.com/fwlink/?LinkId=203516) раздел о том, что в ODBC 2.x, если приложение вызывает `SQLCancel` Если обработка не выполняется в операторе `SQLCancel` действует так же, как `SQLFreeStmt` с `SQL_CLOSE` параметр; это поведение определяется только для полноты и приложения должны вызывать метод `SQLFreeStmt` или `SQLCloseCursor` закрытия курсора. Но даже если приложение собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет версию ODBC API 3.5.x или более позднюю, функция `SQLCancel` будет использовать поведение ODBC 2.x.  
+  [SQLCancel](http://go.microsoft.com/fwlink/?LinkId=203516) разделе говорится, что в ODBC 2.x, если приложение вызывает `SQLCancel` когда обработка не выполняется в операторе, `SQLCancel` имеет тот же эффект, что `SQLFreeStmt` с `SQL_CLOSE` параметр; это поведение определяется только для полноты информации, и приложение должно вызывать `SQLFreeStmt` или `SQLCloseCursor` закрытия курсора. Но даже если приложение собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет версию ODBC API 3.5.x или более позднюю, функция `SQLCancel` будет использовать поведение ODBC 2.x.  
   
 ## <a name="see-also"></a>См. также  
  [SQLCancel](http://go.microsoft.com/fwlink/?LinkId=203516)   

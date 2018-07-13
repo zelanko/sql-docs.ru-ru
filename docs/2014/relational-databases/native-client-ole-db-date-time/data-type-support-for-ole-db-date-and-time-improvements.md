@@ -1,13 +1,11 @@
 ---
-title: Поддержка типов данных даты OLE DB и улучшения времени | Документы Microsoft
+title: Поддержка типов данных OLE DB дату и время улучшениях | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,17 +13,17 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3c543de3b8062dba9090b405156d492f7b4ab3e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 915a86b1170809bf1508f0214060fea9e0cf8a79
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191481"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427056"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Поддержка типов данных даты OLE DB и улучшения времени
+# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Поддержка типов данных даты OLE DB и улучшениях времени
   В этом разделе содержатся сведения о типах OLE DB (собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), которые поддерживают типы данных даты-времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Сопоставление типов данных в наборах строк и параметрах  
@@ -173,18 +171,18 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Сопоставление типов данных в методе ITableDefinition::CreateTable  
- Следующее сопоставление типов используется со структурами DBCOLUMNDESC ITableDefinition::CreateTable:  
+ Следующее сопоставление типов используется со структурами DBCOLUMNDESC в МЕТОДЕ, ITableDefinition::CreateTable:  
   
 |Тип данных OLE DB (*wType*)|Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Примечания|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|Дата||  
-|DBTYPE_DBTIMESTAMP|`datetime2`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента проверяет элемент DBCOLUMDESC *bScale* участнику, чтобы определить точность в долях секунды.|  
-|DBTYPE_DBTIME2|`time`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента проверяет элемент DBCOLUMDESC *bScale* участнику, чтобы определить точность в долях секунды.|  
-|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента проверяет элемент DBCOLUMDESC *bScale* участнику, чтобы определить точность в долях секунды.|  
+|DBTYPE_DBTIMESTAMP|`datetime2`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента проверяет элемент DBCOLUMDESC *bScale* пытаясь определить точность в долях секунды.|  
+|DBTYPE_DBTIME2|`time`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента проверяет элемент DBCOLUMDESC *bScale* пытаясь определить точность в долях секунды.|  
+|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента проверяет элемент DBCOLUMDESC *bScale* пытаясь определить точность в долях секунды.|  
   
- Если приложение задает DBTYPE_DBTIMESTAMP в *wType*, оно может заменить сопоставление с `datetime2` , предоставив имя типа в *pwszTypeName*. Если `datetime` указано, *bScale* должно быть 3. Если `smalldatetime` указано, *bScale* должно быть равно 0. Если *bScale* не согласуется с *wType* и *pwszTypeName*, возвращается значение db_e_badscale.  
+ Если приложение задает DBTYPE_DBTIMESTAMP в *wType*, его можно переопределить сопоставление `datetime2` , указав имя типа в *pwszTypeName*. Если `datetime` указано, *bScale* должно быть 3. Если `smalldatetime` указано, *bScale* должно быть равно 0. Если *bScale* не согласуется с *wType* и *pwszTypeName*, возвращается значение db_e_badscale.  
   
 ## <a name="see-also"></a>См. также  
- [Дата и время улучшениях &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Дата и время улучшения &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

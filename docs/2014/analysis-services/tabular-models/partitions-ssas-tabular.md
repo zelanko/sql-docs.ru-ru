@@ -1,5 +1,5 @@
 ---
-title: Секции (табличные службы SSAS) | Документы Microsoft
+title: Секции (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 09af0cce9aa8058ea02b597236b48fc0fd58b190
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0797d22b66a40c0cf13fcd9c394d0072827b8e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239704"
 ---
 # <a name="partitions-ssas-tabular"></a>Секции (табличные службы SSAS)
   Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Секции, созданные с помощью диалогового окна «Секции» в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] во время создания модели, применяются к базе данных рабочей области модели. При развертывании модели секции, определенные для базы данных рабочей области модели, дублируются в развернутом шаблоне базы данных. После этого можно создавать секции и управлять ими для развернутой модели базы данных с помощью диалогового окна «Секции» [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  Приведенные в этом разделе сведения касаются секций, сформированных во время создания модели с помощью диалогового окна «Диспетчер секций» в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Для получения дополнительных сведений о создании секций и управлении ими для развернутой модели см. [Создание секций табличной модели и управление ими (табличные службы SSAS)](create-and-manage-tabular-model-partitions-ssas-tabular.md).  
@@ -57,6 +57,6 @@ ms.locfileid: "36192526"
   
 ## <a name="see-also"></a>См. также  
  [Режим DirectQuery (табличные службы SSAS)](directquery-mode-ssas-tabular.md)   
- [Обрабатывать данные &#40;табличные службы SSAS&#41;](../process-data-ssas-tabular.md)  
+ [Обработка данных &#40;табличные службы SSAS&#41;](../process-data-ssas-tabular.md)  
   
   

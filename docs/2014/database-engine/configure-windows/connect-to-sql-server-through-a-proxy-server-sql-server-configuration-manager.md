@@ -1,5 +1,5 @@
 ---
-title: Подключение к SQL Server через прокси-сервер (диспетчер конфигурации SQL Server) | Документы Microsoft
+title: Подключение к SQL Server через прокси-сервер (диспетчер конфигурации SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Remote WinSock
 - RWS
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - local address tables [SQL Server]
 ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1eb07c9e7b17caa4498ab8ddbc70388ae8a8cebc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8f42b0eb461036acaecaa7e18cbab02346502f54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151146"
 ---
 # <a name="connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager"></a>Подключение к SQL Server через прокси-сервер (диспетчер конфигурации SQL Server)
   В этом разделе описано, как в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] установить соединение с SQL Server через прокси-сервер с помощью диспетчера конфигурации SQL Server. Для удаленного прослушивания прокси-сервером Remote WinSock (RWS) определите таблицу локальных адресов (LAT) для прокси-сервера таким образом, чтобы адрес прослушивающего узла находился вне диапазона записей LAT.  

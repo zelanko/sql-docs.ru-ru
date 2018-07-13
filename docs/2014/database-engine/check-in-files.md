@@ -1,5 +1,5 @@
 ---
-title: Возврат файлов | Документы Microsoft
+title: Возврат файлов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.CheckInDialog
 helpviewer_keywords:
 - checking in files
 ms.assetid: 0657a387-8411-4406-bef9-d262a5bfa269
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cf955c5a2101ba6ffa582601cd587b27a63c1621
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b657d02a06d76645fce350e1f6ba82523e69ff37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222654"
 ---
 # <a name="check-in-files"></a>Возврат файлов
   Чтобы изменения в файлах стали доступны другим пользователям, файлы нужно вернуть системе управления версиями. При возврате файла данная его версия сохраняется поставщиком управления версиями и становится последней версией файла.  
@@ -48,7 +48,7 @@ ms.locfileid: "36194559"
      **Во время возврата элементов не показывать флажок в диалоговом окне**  
      Подавлять во время выполнения операций возврата диалоговое окно.  
   
-     **Неструктурированное представление**  
+     **Представлении без структуры**  
      Отображать возвращаемые файлы в виде плоских списков под их соединением с системой управления версиями.  
   
      **Название**  

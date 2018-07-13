@@ -1,5 +1,5 @@
 ---
-title: 'Урок 4: Выполнение приложения (VB-VC #) | Документы Microsoft'
+title: 'Занятие 4: Выполнение приложения (VB-VC #) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 ms.assetid: b65c74b6-889b-4323-9240-90827a70ab0e
 caps.latest.revision: 33
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a92d624b12fdf9efd0c0479554ac7aa4946055ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63dbefcdf84ee0245ec6adffb46d4d3d859c1dbe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183581"
 ---
-# <a name="lesson-4-running-the-application-vb-vc"></a>Урок 4: Выполнение приложения (VB-VC #)
+# <a name="lesson-4-running-the-application-vb-vc"></a>Занятие 4: Выполнение приложения (VB-VC #)
   В среде [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] доступно несколько способов построения и запуска приложений командной строки в интегрированной среде разработки, например:  
   
 -   запустить (с отладкой);  
@@ -49,6 +49,6 @@ ms.locfileid: "36195286"
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.SqlServer.ReportingServices2005.ReportingService2005.GetProperties%2A>   
- [Доступ к веб-службы сервера отчетов, с помощью Visual Basic или Visual C&#35; &#40;учебник по службам SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Доступ к веб-службы сервера отчетов, с помощью Visual Basic или Visual c#&#35; &#40;учебник по службам SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

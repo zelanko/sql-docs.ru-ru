@@ -1,5 +1,5 @@
 ---
-title: Обработка секций в базе данных рабочей области (табличные службы SSAS) | Документы Microsoft
+title: Обработка секций в базе данных рабочей области (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3a369705-43fa-4961-9045-32e06fbdde33
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7341335847d28c8940d361632afaa94d42e21d36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c838f3cac0c9fb1f665abd696c4881202a5aab4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194573"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195444"
 ---
 # <a name="process-partitions-in-the-workspace-databse-ssas-tabular"></a>Обработка секций в базе данных рабочей области (табличные службы SSAS)
   Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Приведенные в этом разделе задачи описывают обработку секций в базе данных рабочей области модели с помощью диалогового окна **Обработка секций** в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FTP connection manager
 - connections [Integration Services], FTP
@@ -17,20 +17,20 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5e96a1a11651106cd0534ec20a3a35b79a9f1e7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b22fbb63dda4b6e3211a5bb53cfd70e243e6960f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193614"
 ---
 # <a name="ftp-connection-manager"></a>диспетчер FTP-соединений
   Диспетчер FTP-соединений позволяет пакету подключаться к серверу, использующему протокол передачи файлов (FTP). Задача «FTP», включенная в комплект служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , использует этот диспетчер соединений.  
   
  При добавлении в пакет диспетчера FTP-сеансов службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создают диспетчер соединений, обеспечивающий соединение с FTP во время выполнения, устанавливают свойства диспетчера соединений и добавляют диспетчер соединений в коллекцию `Connections` данного пакета.  
   
- `ConnectionManagerType` Диспетчера соединений задано значение `FTP`.  
+ `ConnectionManagerType` Свойства диспетчера соединений присваивается `FTP`.  
   
  Диспетчер FTP-сеансов может быть настроен следующим образом.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36193219"
  Сведения о программной настройке диспетчера соединений см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>См. также  
- [Задача «FTP»](../control-flow/ftp-task.md)   
+ [Задача "FTP"](../control-flow/ftp-task.md)   
  [Службы Integration Services &#40;SSIS&#41; подключений](integration-services-ssis-connections.md)  
   
   

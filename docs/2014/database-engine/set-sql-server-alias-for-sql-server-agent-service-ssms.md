@@ -1,5 +1,5 @@
 ---
-title: Настройка псевдонима SQL Server для службы агента SQL Server (SQL Server Management Studio) | Документы Microsoft
+title: Настройка псевдонима SQL Server для службы агента SQL Server (SQL Server Management Studio) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - aliases [SQL Server], creating
 - SQL Server Agent, aliases
 ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8fc41f1f9916f13a2edc5c2327e9d9ad65bef210
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f86e776b891514e69aaffbc630debdc5f1a940a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229624"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
   В этом разделе описано, как задать псевдоним [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для использования при соединении с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)] в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. По умолчанию служба агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] соединяется с экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] через именованные каналы по динамическим именам серверов, которые не требуют дополнительной настройки клиента. Необходимо настроить только псевдоним соединения сервера, если не используется установленный по умолчанию сетевой механизм передачи данных или если происходит подключение к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , прослушивающему по альтернативному именованному каналу.  
@@ -58,7 +58,7 @@ ms.locfileid: "36195004"
   
 -   Назначение квот памяти процессам (SeIncreaseQuotaPrivilege)  
   
- Дополнительные сведения о разрешениях Windows, необходимых для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] учетная запись службы агента. в разделе [выберите учетную запись для службы агента SQL Server](../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) и [Настройка учетных записей службы Windows и Разрешения](configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Дополнительные сведения о разрешениях Windows, необходимых для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] учетная запись службы агента, см. в разделе [выберите учетную запись для службы агента SQL Server](../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) и [Настройка учетных записей службы Windows и Разрешения](configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   

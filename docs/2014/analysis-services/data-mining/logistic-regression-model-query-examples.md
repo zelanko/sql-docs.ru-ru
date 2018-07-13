@@ -1,5 +1,5 @@
 ---
-title: Примеры запросов модели логистической регрессии | Документы Microsoft
+title: Примеры запросов модели логистической регрессии | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b079609e6d2df8d104b3430488ae37ac0e9ea179
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f908b029074e58866f51dbd7deff571763e11b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189601"
 ---
 # <a name="logistic-regression-model-query-examples"></a>Примеры запросов модели логистической регрессии
   К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения о закономерностях, обнаруженных при анализе, и прогнозирующие запросы, в которых используются закономерности, содержащиеся в модели, для прогнозирования на основе новых данных.  
@@ -129,7 +129,7 @@ NATURAL PREDICTION JOIN
   
  Образец результатов.  
   
- **Прогноз уровень обслуживания**: 0.102601830123659  
+ **Предсказать уровень обслуживания**: 0.102601830123659  
   
  **Результаты**  
   
@@ -161,7 +161,7 @@ NATURAL PREDICTION JOIN
   
 6.  На вкладке **Структура интеллектуального анализа данных** щелкните правой кнопкой мыши столбец Service Grade и выберите пункт **Свойства**.  
   
-7.  Изменение `Content` свойство из **Continuous** для **Discretized**. Изменение `DiscretizationMethod` свойства **кластеры**. Для свойства Discretization BucketCount введите значение **3**.  
+7.  Изменение `Content` свойства из **Continuous** для **Discretized**. Изменение `DiscretizationMethod` свойства **кластеров**. Для свойства Discretization BucketCount введите значение **3**.  
   
     > [!NOTE]  
     >  Эти параметры служат лишь для иллюстрации процесса, они не гарантируют получения верной модели.  
@@ -213,9 +213,9 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>См. также  
  [Запросы интеллектуального анализа данных](data-mining-queries.md)   
- [Алгоритм логистической регрессии Майкрософт](microsoft-logistic-regression-algorithm.md)   
+ [Алгоритм логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm.md)   
  [Технический справочник по алгоритму логистической регрессии Майкрософт](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Модель интеллектуального анализа данных для моделей логистической регрессии &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-logistic-regression-models.md)   
- [Занятие 5: Построение моделей логистической регрессии нейронной сети и &#40;промежуточного учебник по интеллектуальному анализу данных&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Занятие 5: Построение моделей логистической регрессии нейронной сети и &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

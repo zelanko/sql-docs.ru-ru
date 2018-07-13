@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database attaching [SQL Server]
 - moving databases [SQL Server]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efd99fbc8c1b9b477ac778c3d71fbab19a413fbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a0f6c25060fa70c1b269f884a3c33ba86b3b115f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192688"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160525"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Перенос базы данных путем отсоединения и присоединения (язык Transact-SQL)
   В этом разделе описывается перемещение отсоединенной базы данных в другое местоположение и ее повторное присоединение к тому же или другому экземпляру сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Однако рекомендуется переносить базы данных с помощью процедуры запланированного переноса ALTER DATABASE, а не путем отсоединения и присоединения. Дополнительные сведения см. в статье [Move User Databases](move-user-databases.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "36192688"
 3.  Присоединение скопированных файлов. Дополнительные сведения см. в статье [Attach a Database](attach-a-database.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается копия [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] операторы выполняются в окне редактора запросов, подключенном к экземпляру сервера, к которому присоединен.  
+ В следующем примере создается копия [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] операторы выполняются в окне редактора запросов, который подключен к экземпляру сервера, к которому присоединен.  
   
 1.  Отсоединение [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] инструкции:  
   

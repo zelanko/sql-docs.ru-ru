@@ -1,5 +1,5 @@
 ---
-title: Просмотр формулы для временного ряда модели (интеллектуальный анализ данных) | Документы Microsoft
+title: Просмотр формулы для временного ряда модели (интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
 - ARTXP
@@ -18,24 +18,24 @@ helpviewer_keywords:
 - Time Series Viewer [Analysis Services]
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 11427eb72ea27bd93e8cb360afcf1221ab19b05a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbdd4788ed35f38790c0e038acb15d0342c0bcc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163455"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Просмотр формулы для модели временных рядов (интеллектуальный анализ данных)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] InData средство просмотра временных рядов конструктора интеллектуального анализа данных предоставляет удобный способ просмотра уравнения регрессии, используемых в модели временных рядов.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] InData средства просмотра временных рядов конструктора интеллектуального анализа данных предоставляет удобный способ просмотра уравнения регрессии, используемых в модели временных рядов.  
   
- Формулу регрессии для модели временных рядов можно получить с помощью запроса к содержимому модели. Однако для просмотра полной формулы дерева или ВЕТВИ ARTXP, рекомендуется использовать **обозначения интеллектуального анализа данных** из [средство просмотра временных рядов Майкрософт](browse-a-model-using-the-microsoft-time-series-viewer.md), которое представляет все константы в удобном для чтения формате.  
+ Формулу регрессии для модели временных рядов можно получить с помощью запроса к содержимому модели. Тем не менее, для просмотра полной формулы дерева или ВЕТВИ ARTXP, мы рекомендуем использовать **обозначения интеллектуального анализа данных** из [средство просмотра временных рядов Майкрософт](browse-a-model-using-the-microsoft-time-series-viewer.md), которое представляет все константы в удобном для чтения формате.  
   
  Если создать модель смешанного типа, в модели будут два отдельных дерева: одно для алгоритма ARIMA и одно для ARTXP. При этом они будут объединены в корневом узле, представляющем модель. Структуры деревьев ARIMA и ARTXP сильно отличаются друг от друга. Например, дерево ARTXP на самом деле является структурой дерева как дерева принятия решений, в то время как дерево ARIMA представляет собой последовательность скользящих средних значений. Поэтому, даже если в одной модели для удобства используются два типа представления данных, с ними следует работать так, как если бы это были две независимые модели. Уравнения также коренным образом отличаются; их нельзя скомбинировать или сравнить.  
   
- Можно также просматривать модели временных рядов с помощью [Microsoft просмотра деревьев содержимого общего](../microsoft-generic-content-tree-viewer-data-mining.md). Дополнительные сведения о содержимом модели временных рядов см. в разделе [содержимое модели интеллектуального анализа данных для модели временных рядов &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Можно также просмотреть модели временных рядов с помощью [Microsoft просмотра деревьев общего содержимого](../microsoft-generic-content-tree-viewer-data-mining.md). Дополнительные сведения о содержимом модели временных рядов см. в разделе [содержимое модели интеллектуального анализа данных для моделей временных рядов &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>Просмотр формулы регрессии ARTXP для модели временных рядов  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36194607"
   
 ## <a name="see-also"></a>См. также  
  [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](mining-model-viewer-tasks-and-how-tos.md)   
- [Просмотр модели в средство просмотра временных рядов](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Просмотр модели в средстве просмотра временных рядов](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Примеры запросов моделей временных рядов](time-series-model-query-examples.md)  
   
   

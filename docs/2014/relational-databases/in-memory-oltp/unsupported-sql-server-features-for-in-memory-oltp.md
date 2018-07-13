@@ -1,5 +1,5 @@
 ---
-title: Поддерживаемые функции SQL Server | Документы Microsoft
+title: Поддерживаемые функции SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 caps.latest.revision: 48
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5233c8ab4eaa9926fe8c058c3f6d410d536306da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 038b429200532796e0fd5a373208af81e2aa82f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205384"
 ---
 # <a name="supported-sql-server-features"></a>Поддерживаемые возможности SQL Server
   В этом разделе описаны возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые поддерживаются и не поддерживаются для использования с оптимизированными для памяти объектами.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Возможности, поддерживаемые для OLTP в памяти  
+## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Функции, поддерживаемые для OLTP в памяти  
  Следующие возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются для баз данных, которые содержат оптимизированные для памяти объекты, в том числе файловую группу, оптимизированную для памяти.  
   
  Сведения о поддерживаемых типах данных см. в разделе [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "36191483"
   
 -   Несколько контейнеров в оптимизированной для памяти файловой группе для хранения объектов OLTP в памяти и сокращения целевого времени восстановления (RTO).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] блоки журнала транзакций вычисляют контрольную сумму и проверки.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] блоки журнала транзакций вычисляют контрольную сумму и выполняют проверку.  
   
 -   Новая табличная подсказка SNAPSHOT. Дополнительные сведения см. в разделе [Табличные указания (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table).  
   

@@ -1,5 +1,5 @@
 ---
-title: Редактор форм вычисляемых элементов (вкладка «вычисления», конструктор кубов) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Редактор форм вычисляемых элементов (вкладка «вычисления», конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.calculatedmember.f1
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a697e65ae650726e59a2ddb515746f5ef1ebb63e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b49b060b8c02219e9f1b8448700ce7f9b065bd5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192130"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218374"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Редактор форм вычисляемых элементов (вкладка «Вычисления», конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте панель **Редактор форм вычисляемых элементов** на вкладке **Вычисления** в конструкторе кубов для создания или изменения вычисляемого элемента.  
@@ -32,7 +32,7 @@ ms.locfileid: "36192130"
  **Название**  
  Введите имя вычисляемого элемента.  
   
- **Свойства родительской**  
+ **Свойства родителя**  
  Разверните параметры **Родительская иерархия**, **Родительский элемент**и **Изменить** .  
   
  **Родительская иерархия**  
@@ -69,12 +69,12 @@ ms.locfileid: "36192130"
  Выберите имя меры, используемого для разрешения запросов NON EMPTY в многомерных выражениях для вычисляемого элемента. Если свойство **Установленное поведение** пусто, вычисляемые элементы должны быть повторно получены для определения того, что элемент пуст. Если свойство **Установленное поведение** содержит имя меры, вычисляемый элемент обрабатывается как пустой, если данное измерение пусто.  
   
 > [!WARNING]  
->  Это свойство является устаревшим. Не задавайте его. В разделе [рекомендуется к использованию функций служб Analysis Services в SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) подробные сведения.  
+>  Это свойство является устаревшим. Не задавайте его. См. в разделе [нерекомендуемые функции служб Analysis Services в SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) подробные сведения.  
   
  **Выражения цвета**  
  Развернуть для просмотра параметров **Цвет текста** и **Цвет фона** .  
   
- **Цвет текста**  
+ **Цвет переднего плана**  
  Введите многомерное выражение, которое отражает цвет переднего плана для вычисляемого элемента.  
   
  Перетащите выбранные элементы с панели **Средства вычисления** в данный параметр, чтобы присоединить синтаксическую структуру многомерного выражения для выбранного элемента.  
@@ -120,7 +120,7 @@ ms.locfileid: "36192130"
  [Панель инструментов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Организатор скриптов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [Средства вычисления &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
- [Редактор формы именованных наборов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Редактор сценариев &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [Редактор формы именованного набора &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Редактор скриптов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

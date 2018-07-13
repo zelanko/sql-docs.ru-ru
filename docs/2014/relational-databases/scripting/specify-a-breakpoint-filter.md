@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.contraints
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8a55eb14c606348a63072d669db98fe3cae6b3f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9bf7e4f7a162bf172812ed555463c061611237e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191784"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Задание фильтра точек останова
   Фильтр для точек останова ограничивает действие точки останова определенными компьютерами, процессами операционной системы и потоками. Фильтры точек останова обычно используются при отладке параллельных приложений.  
@@ -43,9 +43,9 @@ ms.locfileid: "36194456"
   
     -   `MachineName` — это компьютер, на котором запущен экземпляр Database Engine.  
   
-    -   `ProcessID`, а `ProcessName` — это процесс операционной системы, выполняющего экземпляр компонента Database Engine.  
+    -   `ProcessID`, и `ProcessName` — процесс операционной системы, на котором запущен экземпляр компонента Database Engine.  
   
-    -   `ThreadID` и `ThreadName` — это поток операционной системы под управлением [!INCLUDE[tsql](../../includes/tsql-md.md)] пакет, процедуру или функцию в экземпляре компонента Database Engine.  
+    -   `ThreadID` и `ThreadName` — поток операционной системы, в котором выполняется [!INCLUDE[tsql](../../includes/tsql-md.md)] пакет, процедура или функция в экземпляре компонента Database Engine.  
   
 3.  Нажмите кнопку **ОК** , чтобы внести изменения, либо кнопку **Отмена** , чтобы выйти без их применения.  
   

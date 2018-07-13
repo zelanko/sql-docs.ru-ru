@@ -1,5 +1,5 @@
 ---
-title: Модель интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+title: Модель интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - mining model content, linear regression models
 - regression algorithms [Analysis Services]
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 09285ab4c675417c2d00be13cfee771bd31d8faa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 289c9a68e6abce019324945cafd9baed544802a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198254"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)
   В этом разделе описано содержимое модели интеллектуального анализа данных, характерное для моделей, в которых используется алгоритм линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Общее описание содержимого модели интеллектуального анализа данных для всех типов моделей см. в разделе [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "36195502"
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>Основные сведения о структуре модели линейной регрессии  
  Модель линейной регрессии имеет чрезвычайно простую структуру. Каждая модель имеет единственный родительский узел, который представляет модель и ее метаданные, и узел дерева регрессии (NODE_TYPE = 25), который содержит формулу регрессии для каждого прогнозируемого атрибута.  
   
- ![Структура модели для линейной регрессии](../media/modelcontentstructure-linreg.gif "структуры модели для линейной регрессии")  
+ ![Структура модели для линейной регрессии](../media/modelcontentstructure-linreg.gif "структура модели для линейной регрессии")  
   
  Модели линейной регрессии используют тот же алгоритм, что и деревья принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] , но для определения границ дерева используются другие параметры, а в качестве входных данных принимаются только непрерывные атрибуты. Однако модели линейной регрессии основаны на алгоритме дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] , и поэтому модели линейной регрессии отображаются с помощью средства просмотра для деревьев принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Дополнительные сведения см. в разделе [Просмотр модели с помощью средства просмотра деревьев (Майкрософт)](browse-a-model-using-the-microsoft-tree-viewer.md).  
   
@@ -192,7 +192,7 @@ ms.locfileid: "36195502"
   
 ## <a name="see-also"></a>См. также  
  [Содержимое модели интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Алгоритм линейной регрессии Майкрософт](microsoft-linear-regression-algorithm.md)   
+ [Алгоритм линейной регрессии (Майкрософт)](microsoft-linear-regression-algorithm.md)   
  [Технический справочник по алгоритму линейной регрессии Майкрософт](microsoft-linear-regression-algorithm-technical-reference.md)   
  [Примеры запросов модели линейной регрессии](linear-regression-model-query-examples.md)  
   

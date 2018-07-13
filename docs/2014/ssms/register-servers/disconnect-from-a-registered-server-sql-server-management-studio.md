@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Registered Servers [SQL Server], connections
 - connections [SQL Server], registered servers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - disconnecting registered servers [SQL Server]
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e28a5802aaed96675c86953c1e4d1db56528b5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3ccd9ab4d481ce0d0270fa2efe72a3a03638a58e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161675"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>Отключение от зарегистрированного сервера (среда SQL Server Management Studio)
   В этом разделе описывается, как отключить обозреватель объектов от сервера в любое время в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Это не приведет к отключению других компонентов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , например редактора SQL.  

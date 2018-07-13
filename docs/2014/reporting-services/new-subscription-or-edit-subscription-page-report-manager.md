@@ -1,5 +1,5 @@
 ---
-title: Новую подписку или изменить страницу подписки (диспетчер отчетов) | Документы Microsoft
+title: Новую подписку или подписку страницы редактирования (диспетчер отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e02d6529-ce67-4305-b7f0-433997e99c21
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: af32c10bd6c18a4cafc46ccba36859413942c98d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4cbed3ea7bb8d96f82ae7ef14294d1f5f02c3d5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212594"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>Страница "Создание подписки" или "Изменение подписки" (диспетчер отчетов)
   На странице «Создание подписки» / «Изменение подписки» можно создать новую или изменить существующую подписку на отчет. Параметры на этой странице изменяются в зависимости от назначения ролей. Пользователям с расширенными разрешениями доступно большее число параметров.  

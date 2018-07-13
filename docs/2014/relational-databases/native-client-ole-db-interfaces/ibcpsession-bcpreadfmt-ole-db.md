@@ -1,13 +1,11 @@
 ---
-title: Метод IBCPSession::BCPReadFmt (OLE DB) | Документы Microsoft
+title: IBCPSession::BCPReadFmt (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - BCPReadFmt method
 ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f47369cb66f6695ca7a235beb72536ce34495bb5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: aa0f1501955db61889bb437e545cda95dfe8b31f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195383"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428263"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>Метод IBCPSession::BCPReadFmt (OLE DB)
   Считывает сведения о формате для каждого столбца из файла форматирования.  
@@ -57,7 +55,7 @@ const wchar_t *pwszFormatFile);
  Метод выполнен успешно.  
   
  E_FAIL  
- Произошла ошибка поставщика, для использования подробных сведений [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) интерфейса.  
+ Произошла ошибка поставщика, для использования подробных сведений [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) интерфейс.  
   
  E_OUTOFMEMORY  
  Ошибка, связанная с нехваткой памяти.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -20,13 +20,13 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cd1a3a39045330283b12aa74acbce64b1420c6ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52729044444db0668870cc9878ee3184f17b49b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163045"
 ---
 # <a name="precedence-constraints"></a>Управление очередностью
   Элементы управления очередностью связывает исполняемые объекты, контейнеры и задачи в пакетах в поток управления и задают условия, которые определяют, выполняются ли исполняемые объекты. В качестве исполняемого объекта могут быть контейнеры «цикл по элементам» и «цикл по каждому элементу», контейнеры последовательности, задача или обработчик события. Обработчики событий также используют управление очередностью для связывания своих исполняемых объектов в поток управления.  
@@ -64,7 +64,7 @@ ms.locfileid: "36195211"
   
 -   Выражение или ограничение, использующие результаты выполнения ограничивающего исполняемого объекта или результаты, возвращаемые после оценки выражения.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Конструктор использует цвет для определения типа элементов управления очередностью. Успешное ограничение отмечается зеленым, неуспешное — красным, завершенное — синим. Для отображения текстовых меток в конструкторе служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , обозначающих тип ограничения, необходимо настроить специальные возможности конструктора служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] .  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Использует цвет для определения типа элементов управления очередностью. Успешное ограничение отмечается зеленым, неуспешное — красным, завершенное — синим. Для отображения текстовых меток в конструкторе служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , обозначающих тип ограничения, необходимо настроить специальные возможности конструктора служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] .  
   
  Выражение должно быть действительным выражением служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , оно может содержать функции, операторы, а также системные и пользовательские переменные. Дополнительные сведения см. в разделах [Выражения в службах Integration Services (SSIS)](../expressions/integration-services-ssis-expressions.md) и [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md).  
   

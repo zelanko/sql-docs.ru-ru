@@ -3,25 +3,23 @@ title: Схема FileTable | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: filestream
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], table schema
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8515d78ddab2dd39e223087a44b0e021a5aca439
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 67578dadba93af562732a6e0152e13a3c180195d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195615"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425033"
 ---
 # <a name="filetable-schema"></a>Схема FileTable
   Описывает стандартные и фиксированные схемы таблицы FileTable.  
@@ -29,7 +27,7 @@ ms.locfileid: "36195615"
 |Имя атрибута файла|Тип|Размер|По умолчанию|Описание|Доступность файловой системы|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|`hierarchyid`|переменная|Объект `hierarchyid` , указывающее расположение этого элемента.|Положение этого узла в иерархии FileNamespace.<br /><br /> Первичный ключ для таблицы.|Может быть создан и изменен с помощью задания значения пути Windows.|  
-|**stream_id**|**[uniqueidentifier] rowguidcol**||Значение, возвращаемое `NEWID()` функции.|Уникальный идентификатор для данных FILESTREAM.|Неприменимо.|  
+|**stream_id**|**[uniqueidentifier] rowguidcol**||Значение, возвращенное `NEWID()` функции.|Уникальный идентификатор для данных FILESTREAM.|Неприменимо.|  
 |**file_stream**|`varbinary(max)`<br /><br /> `filestream`|переменная|NULL|Содержит данные FILESTREAM.|Неприменимо.|  
 |**file_type**|`nvarchar(255)`|переменная|NULL.<br /><br /> Операция создания или переименования в файловой системе заполняет значение расширения файла на основе имени.|Представляет тип файла.<br /><br /> Этот столбец может использоваться для создания полнотекстовых индексов в качестве `TYPE COLUMN`.<br /><br /> **file_type** — это материализованный вычисляемый столбец.|Рассчитывается автоматически. Не может быть задано.|  
 |**Название**|`nvarchar(255)`|переменная|Значение GUID.|Имя файла или каталога.|Может быть создано или изменено с помощью API-интерфейсов Windows.|  

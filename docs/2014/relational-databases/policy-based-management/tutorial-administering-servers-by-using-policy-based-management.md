@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Policy-Based Management]
 - Policy-Based Management, tutorials
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a865b9d6bb7c3aeb2d6936240ca781bd20629a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ce7892944d32d49721143faa7056e890d3f579e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194913"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179791"
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Учебник. Администрирование серверов с помощью управления на основе политик
   Добро пожаловать в учебник по администрированию серверов с помощью политик управления на основе политик. Этот учебник предназначен для пользователей, знакомых с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но новичков в управлении на основе политик.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
 - designing databases [SQL Server], replication performance
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8c16d70220050578fc810735f76465806a895d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 71afdf1b34056089c767ed021c0e14006f400850
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172875"
 ---
 # <a name="enhance-general-replication-performance"></a>Повышение общей производительности репликации
   Используя рекомендации, приведенные в этом разделе, можно повысить общую производительность всех типов репликации, выполняющихся в приложении и сети.  
@@ -84,7 +84,7 @@ ms.locfileid: "36194250"
   
 -   Ограничьте использование типов данных больших объектов.  
   
-     По сравнению с другими типами данных столбцов для хранения и обработки типа данных больших объектов требуется больше места и времени. Эти столбцы следует включать в статьи только в том случае, если они необходимы для работы приложения. Типы данных `text`, `ntext`, и `image` являются устаревшими. При включении больших объектов, рекомендуется использовать типы данных `varchar(max)`, `nvarchar(max)`, `varbinary(max)`соответственно.  
+     По сравнению с другими типами данных столбцов для хранения и обработки типа данных больших объектов требуется больше места и времени. Эти столбцы следует включать в статьи только в том случае, если они необходимы для работы приложения. Типы данных `text`, `ntext`, и `image` являются устаревшими. При включении больших объектов, мы рекомендуем использовать типы данных `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, соответственно.  
   
      Для репликации транзакций рассмотрите возможность использования профиля агента распространителя, именуемого **Профиль распространения для потока OLEDB**. Дополнительные сведения см. в разделе [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   

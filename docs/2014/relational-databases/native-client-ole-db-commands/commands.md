@@ -1,13 +1,11 @@
 ---
-title: Команды | Документы Microsoft
+title: Команды | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - commands [OLE DB]
 ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0ee374b2270dad3c27c53fb6ae1fc9f7fcf318c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 663480de04b5e5cf69f6ef7c228cda7c43037bc3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194243"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413693"
 ---
 # <a name="commands"></a>Команды
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента предоставляет **ICommand** интерфейс и объекты команд, которые описаны в этом разделе:  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента предоставляет **ICommand** интерфейса и объекты команд, которые описаны в этом разделе:  
   
 -   [Синтаксис команд](command-syntax.md)  
   

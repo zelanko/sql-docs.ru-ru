@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f17620dc2fc58b033bef928035b4f5f40816214e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 37bbe195179a13d00961f3f33149e3d25b9476e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188041"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)
   От разбиения на страницы зависит количество страниц в отчете и размещение элементов отчета на этих страницах. Разбиение на страницы в [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] изменяется в зависимости от модуля подготовки отчетов, можно использовать для просмотра и доставки отчета. Если отчет выполняется на сервере отчетов, отчет использует модуль подготовки отчетов в формате HTML. Код HTML следует конкретному набору правил разбиения на страницы. Например, если тот же отчет экспортируется в документ PDF, то используется модуль подготовки отчетов PDF и применяется другой набор правил, поэтому разбиение отчета на страницы происходит по-другому. Чтобы успешно спроектировать удобный для чтения отчет для пользователей, оптимизированный для модуля подготовки отчетов, который планируется использовать для доставки отчета, необходимо понимать правила, используемые для управления разбиением на страницы в [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -87,6 +87,6 @@ ms.locfileid: "36193044"
  Дополнительные сведения об использовании этих свойств при экспорте отчетов в Excel см. в разделе [Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также  
- [Макет страницы и Подготовка к просмотру &#40;отчетов построителя отчетов и службы SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Макет страницы и отрисовка &#40;построитель отчетов и службы SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

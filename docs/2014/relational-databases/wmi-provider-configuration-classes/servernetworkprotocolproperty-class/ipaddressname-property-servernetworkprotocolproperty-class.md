@@ -1,5 +1,5 @@
 ---
-title: Свойство IPAddressName (класс ServerNetworkProtocolProperty) | Документы Microsoft
+title: Свойство IPAddressName (класс ServerNetworkProtocolProperty) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - IpAddressName property
 ms.assetid: b27ea0fa-ab31-424b-80cf-aad1e87f3816
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 102b661217e008db39cfaf5b3320350f292bbde7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a1a70b4d86d0e956720a979cf241be967f425d61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216744"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolproperty-class"></a>Свойство IPAddressName (класс ServerNetworkProtocolProperty)
   Возвращает имя IP-адреса.  

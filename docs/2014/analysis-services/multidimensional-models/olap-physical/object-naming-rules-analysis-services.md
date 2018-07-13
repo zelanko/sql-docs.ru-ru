@@ -1,5 +1,5 @@
 ---
-title: Правила именования (службы Analysis Services) объектов | Документы Microsoft
+title: Объект правила именования (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - objects [Analysis Services], naming
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 029d851c7ad8048fab574cc6ae3122719d857378
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c59c295c627c311aaec574ecd04b153004c3c926
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202084"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Правила именования объектов (службы Analysis Services)
   В этом разделе описываются соглашения об именовании объектов. В нем также приведены зарезервированные слова и символы, которые нельзя использовать в именах объектов, в коде или в скриптах в службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -74,7 +74,7 @@ ms.locfileid: "36193873"
 |Объект|Недопустимые символы|  
 |------------|------------------------|  
 |`Server`|При именовании серверных объектов следуйте соглашению об именах для сервера Windows. Дополнительные сведения см. в разделе [Соглашения об именах (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) .|  
-|`DataSource`|: / \ * &#124; ? «[] () {} <>|  
+|`DataSource`|: / \ * &#124; ? "[] () {} <>|  
 |`Level` или `Attribute`|, и делает это по-другому. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
 |`Dimension` или `Hierarchy`|, и делает это по-другому. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} \<, >|  
 |Все прочие объекты|, и делает это по-другому. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
@@ -93,8 +93,8 @@ ms.locfileid: "36193873"
  Базы данных могут иметь ModelType по умолчанию. Типом по умолчанию является многомерная база данных, в связи с чем использование зарезервированных символов в именах столбцов не поддерживается.  
   
 ## <a name="see-also"></a>См. также  
- [Многомерные Выражения зарезервированные слова](/sql/mdx/mdx-reserved-words)   
+ [Зарезервированные слова многомерных Выражений](/sql/mdx/mdx-reserved-words)   
  [Переводы &#40;служб Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
- [XML для аналитики соответствия &#40;XML для Аналитики&#41;](../../xmla/xml-for-analysis-compliance-xmla.md)  
+ [XML для анализа соответствия &#40;XML для Аналитики&#41;](../../xmla/xml-for-analysis-compliance-xmla.md)  
   
   

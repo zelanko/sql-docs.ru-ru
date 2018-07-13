@@ -1,13 +1,11 @@
 ---
-title: bcp_readfmt | Документы Microsoft
+title: bcp_readfmt | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_readfmt function
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3d700f752a3194821065dc21ddd6ab96fa6a8f26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: dbf545e694ac6d5368a4abf23aba6ca0a6d32119
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191961"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428733"
 ---
 # <a name="bcpreadfmt"></a>bcp_readfmt
   Считывает определение формата файла данных из указанного файла форматирования.  
@@ -62,7 +60,7 @@ szFormatFile
   
  Чтобы сохранить файл форматирования, вызовите [bcp_writefmt](bcp-writefmt.md). Вызовы `bcp_readfmt` можно ссылаться на сохраненные форматы. Дополнительные сведения см. в разделе [bcp_init](bcp-init.md).  
   
- Кроме того, программа массового копирования (**bcp**) может сохранять форматы определяемых пользователем данных в файлах, которые могут ссылаться `bcp_readfmt`. Дополнительные сведения о **bcp** программы и структура **bcp** файлов форматирования данных, в разделе [массового импорта и экспорта данных &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
+ Кроме того, программа массового копирования (**bcp**) может сохранять определяемые пользователем форматы данных в файлы, которые могут ссылаться `bcp_readfmt`. Дополнительные сведения о **bcp** служебной программы и структура **bcp** файлов форматирования данных, см. в разделе [массовый импорт и экспорт данных &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
   
  `BCPDELAYREADFMT` Значение *eOption* параметр [bcp_control](bcp-control.md) изменяет поведение bcp_readfmt.  
   

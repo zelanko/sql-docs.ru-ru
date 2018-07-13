@@ -1,42 +1,40 @@
 ---
-title: Получение и обновление наборов строк (ODBC) | Документы Microsoft
+title: Выбор и обновление наборов строк (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [ODBC]
 ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 740b549021c4ef5fc9253b8e774b3d5e38323b2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d41ba76ceaa157070fc2584c5ebd6d080f415420
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193359"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419473"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>Выбор и обновление наборов строк (ODBC)
     
 ### <a name="to-fetch-and-update-rowsets"></a>Получение и обновление наборов строк  
   
-1.  При необходимости вызовите [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) с SQL_ROW_ARRAY_SIZE, чтобы изменить число строк (R) в наборе строк.  
+1.  Можно также вызвать [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) с SQL_ROW_ARRAY_SIZE, чтобы изменить число строк (R) в наборе строк.  
   
-2.  Вызовите [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) или [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) для получения набора строк.  
+2.  Вызовите [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) или [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) Чтобы получить набор строк.  
   
 3.  Если используются связанные столбцы, используйте для набора строк значения данных и длины данных, доступные теперь в буферах связанных столбцов.  
   
      Если используются несвязанные столбцы, вызовите для каждой строки [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) с параметром SQL_POSITION, чтобы установить позицию курсора, а затем выполните следующие действия для каждого несвязанного столбца.  
   
-    -   Вызовите [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) один или несколько раз, чтобы получить данные для несвязанных столбцов после последнего связанного столбца в наборе строк. Вызовы [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) должны происходить в порядке возрастания номеров столбцов.  
+    -   Вызовите [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) один или несколько раз, чтобы получить данные для несвязанных столбцов после последнего привязанного столбца набора строк. Вызовы [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) должны происходить в порядке возрастания номеров столбцов.  
   
     -   Получение данных из столбца типа text или image производится многократным вызовом функции [SQLGetData](../../native-client-odbc-api/sqlgetdata.md).  
   
@@ -46,7 +44,7 @@ ms.locfileid: "36193359"
   
      Если для операций обновления и удаления используются текстовые столбцы или столбцы изображений, получающие данные во время выполнения, обработайте их.  
   
-6.  При необходимости выполните позиционированные инструкции UPDATE или DELETE, задав имя курсора (доступные из [SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md)) и используя дескриптор другой инструкции на том же соединении.  
+6.  При необходимости выполните позиционированные инструкции UPDATE или DELETE, задав имя курсора (доступные из [SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md)) и используя дескриптор другой инструкции относительно одного подключения.  
   
 ## <a name="see-also"></a>См. также  
  [Использование инструкций по курсорам &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  

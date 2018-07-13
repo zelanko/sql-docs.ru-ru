@@ -1,13 +1,11 @@
 ---
-title: Подготовка и выполнение инструкции (ODBC) | Документы Microsoft
+title: Подготовка и выполнение инструкции (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 58a3ecf2419f0b3e3b74ba6e3b1a6293d928d550
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3d7520d040f55962821b3c0e863400c68f5fd35d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189772"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420363"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Подготовка и выполнение инструкцию (ODBC)
     
@@ -35,7 +33,7 @@ ms.locfileid: "36189772"
   
 3.  Выполните следующие действия для каждого параметра подготовленной инструкции (не обязательно).  
   
-    -   Вызовите [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) для получения сведений о параметрах.  
+    -   Вызовите [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) для получения сведений о параметре.  
   
     -   Привяжите каждый параметр к переменной программы с помощью [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md). Присвойте значения всем параметрам времени выполнения.  
   
@@ -59,7 +57,7 @@ ms.locfileid: "36189772"
   
     -   Задайте значение SQL_ATTR_PARAMS_STATUS_PTR, которое указывает на массив [S] переменных SQLUSSMALLINT, предназначенный для сохранения признаков состояния параметра.  
   
-2.  Вызов SQLPrepare, чтобы подготовить инструкцию.  
+2.  Вызовите SQLPrepare, чтобы подготовить инструкцию.  
   
 3.  Можно также вызвать метод [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) , чтобы определить количество параметров в подготовленной инструкции.  
   
@@ -71,7 +69,7 @@ ms.locfileid: "36189772"
   
     -   Выделите массив из S буферов параметра для сохранения длин данных.  
   
-    -   Вызов SQLBindParameter для привязки параметра значение и массивы длин данных с параметром инструкции.  
+    -   Вызовите SQLBindParameter для привязки к параметру инструкции значение и длина массивы данных.  
   
     -   Если параметр использует данные времени выполнения типов text или image, присвойте ему значение.  
   
@@ -83,7 +81,7 @@ ms.locfileid: "36189772"
   
     -   Вызовите SQLExecute, чтобы выполнить подготовленную инструкцию.  
   
-    -   Если используются входные параметры данных времени выполнения, SQLExecute возвращает SQL_NEED_DATA. Отправляет данные в виде фрагментов с помощью методов SQLParamData и SQLPutData.  
+    -   Если при использовании входных параметров данных времени выполнения, SQLExecute возвращает SQL_NEED_DATA. Отправьте данные в виде фрагментов с помощью методов SQLParamData и SQLPutData.  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>Подготовка инструкции с привязкой параметра на уровне строки  
   
@@ -103,7 +101,7 @@ ms.locfileid: "36189772"
   
     -   Задайте значение SQL_ATTR_PARAMS_STATUS_PTR, которое указывает на массив [S] переменных SQLUSSMALLINT, предназначенный для сохранения признаков состояния параметра.  
   
-3.  Вызов SQLPrepare, чтобы подготовить инструкцию.  
+3.  Вызовите SQLPrepare, чтобы подготовить инструкцию.  
   
 4.  Для каждого маркера параметра вызовите SQLBindParameter для указания параметра значение и указатель на длину данных с соответствующими им переменными в первом элементе массива структур, выделенных на шаге 1. Если параметр использует данные времени выполнения, присвойте ему значение.  
   
@@ -113,9 +111,9 @@ ms.locfileid: "36189772"
   
     -   Вызовите SQLExecute, чтобы выполнить подготовленную инструкцию. Драйвер эффективно выполнит инструкцию SQL S раз, по одному разу для каждого набора параметров.  
   
-    -   Если используются входные параметры данных времени выполнения, SQLExecute возвращает SQL_NEED_DATA. Отправляет данные в виде фрагментов с помощью методов SQLParamData и SQLPutData.  
+    -   Если при использовании входных параметров данных времени выполнения, SQLExecute возвращает SQL_NEED_DATA. Отправьте данные в виде фрагментов с помощью методов SQLParamData и SQLPutData.  
   
 ## <a name="see-also"></a>См. также  
- [Выполнение запросов инструкции &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+ [Выполнении запросов разделы руководства, посвященные &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   

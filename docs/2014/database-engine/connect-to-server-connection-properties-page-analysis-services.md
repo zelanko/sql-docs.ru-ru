@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttoas.connectionproperties.f1
 ms.assetid: 26cf53e3-3bcb-4697-8a88-53e93bc68b56
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1a757ba43fe2a90f532fde71c9bbc0bbf0e902ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a50e63ecd929581f9ae9c185c714fd21dc171c6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225864"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>Соединение с сервером (страница "Свойства соединения") служб Analysis Services
   Используйте эту вкладку для просмотра или указания параметров при соединении с [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или при регистрации служб [!INCLUDE[ssAS](../includes/ssas-md.md)] в списке **Зарегистрированные серверы**. Кнопки**Соединить** и **Параметры** появляются в этом диалоговом окне только при соединении. Кнопки**Проверить** и **Сохранить** появляются в этом диалоговом окне только при регистрации компонента [!INCLUDE[ssAS](../includes/ssas-md.md)].  
   
 ## <a name="options"></a>Параметры  
  **Подключиться к базе данных**  
- Выберите базу данных для подключения из списка. При выборе  **\<по умолчанию >**, вам будет подключена к базе данных по умолчанию для сервера. При выборе  **\<Обзор сервера >**, можно найти на сервере базы данных, которые вы хотите подключиться.  
+ Выберите базу данных для подключения из списка. При выборе  **\<по умолчанию >**, вы будете подключены к базе данных по умолчанию для сервера. При выборе  **\<Обзор сервера >**, можно найти на сервере вы хотите подключиться к базе данных.  
   
  **Время ожидания соединения**  
  Укажите в секундах время ожидания установки соединения. Значение по умолчанию — 15 секунд.  

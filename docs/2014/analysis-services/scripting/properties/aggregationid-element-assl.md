@@ -1,5 +1,5 @@
 ---
-title: Элемент AggregationID (ASSL) | Документы Microsoft
+title: Элемент AggregationID (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - AggregationID element
 ms.assetid: 6056da1d-b6b4-4074-84db-45be719df49a
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cc757076c638075466cd0d49ad4340c983a8294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fadf9884d769402e962c64ec00d86338a71328a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277820"
 ---
 # <a name="aggregationid-element-assl"></a>Элемент AggregationID (ASSL)
-  Идентифицирует определение агрегата из [AggregationDesign](../objects/aggregationdesign-element-assl.md) элемент, используемый для создания экземпляра агрегата.  
+  Указывает на определение агрегата из [AggregationDesign](../objects/aggregationdesign-element-assl.md) элемент, используемый для создания экземпляра агрегата.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36192313"
 ## <a name="remarks"></a>Примечания  
  Если данный элемент отсутствует или содержит пустую строку, то элемент `AggregationInstance` представляет пользовательский агрегат.  
   
- Элемент, соответствующий родителю параметра `AggregationID` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.AggregationInstance>.  
+ Элемент, соответствующий родителю параметра `AggregationID` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.AggregationInstance>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

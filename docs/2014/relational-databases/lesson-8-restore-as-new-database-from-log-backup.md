@@ -1,5 +1,5 @@
 ---
-title: Занятие 9. Восстановление базы данных из хранилища Windows Azure | Документы Microsoft
+title: Занятие 9. Восстановление базы данных из хранилища Windows Azure | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b8ff5ec90f80262aae76abfb01ef6c737d13369c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 380ceeabb5a91dffafe0624e073856a837a99f14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175921"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>Занятие 9. Восстановление базы данных из хранилища Windows Azure
   На этом занятии вы узнаете, как восстановить файл резервной копии базы данных из хранилища Windows Azure в базу данных, которая находится на локальном компьютере или на виртуальной машине в Windows Azure. Для прохождения этого занятия не требуется завершать занятия 4, 5, 6, 7 и 8.  
@@ -28,7 +28,7 @@ ms.locfileid: "36195166"
   
 -   Создали базу данных на исходном компьютере.  
   
--   Создания резервной копии базы данных (BAK-файл) в хранилище Windows Azure с помощью [SQL Server Backup and Restore with Windows Azure Blob Storage Service](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) компонентов. Обратите внимание, что на этом шаге потребуется создать еще одни учетные данные SQL Server. Эти учетные данные используют ключи учетной записи хранения.  
+-   Вы создали резервную копию базы данных (BAK-файл) в хранилище Windows Azure с помощью [SQL Server Backup and Restore with Windows Azure Blob Storage Service](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) функции. Обратите внимание, что на этом шаге потребуется создать еще одни учетные данные SQL Server. Эти учетные данные используют ключи учетной записи хранения.  
   
 -   Получили учетную запись хранения Windows Azure.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36195166"
   
 3.  Скопируйте и вставьте следующий полный скрипт в окно запроса. При необходимости измените скрипт.  
   
-     **Примечание:** запуском `RESTORE` инструкции для восстановления резервной копии базы данных (BAK) в хранилище Windows Azure в экземпляр базы данных на другом компьютере.  
+     **Примечание:** запуском `RESTORE` инструкцию для восстановления резервной копии базы данных (BAK-файл) в хранилище Windows Azure в экземпляр базы данных на другом компьютере.  
   
     ```tsql  
   

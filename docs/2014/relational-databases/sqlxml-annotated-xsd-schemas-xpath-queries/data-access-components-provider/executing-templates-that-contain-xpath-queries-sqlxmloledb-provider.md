@@ -1,5 +1,5 @@
 ---
-title: Выполнение шаблонов, содержащих запросы XPath (поставщик SQLXMLOLEDB) | Документы Microsoft
+title: Выполнение шаблонов, содержащих запросы XPath (поставщик SQLXMLOLEDB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XML templates [SQLXML]
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c51d8b0480a7a6dc86e1b878fef153604405266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: eef3ff7d70d3287d70becd45d73b24d715440c14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202834"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Выполнение шаблонов, содержащих запросы XPath (поставщик SQLXMLOLEDB)
   В этом примере показано, как использовать следующие свойства, определяемые поставщиком SQLXMLOLEDB.  
@@ -39,9 +39,9 @@ ms.locfileid: "36195554"
   
 -   Схема сопоставления  
   
- В этом образце приложения ADO XML-шаблон, состоящий из запроса XPath (корневой) задается для схемы сопоставления XSD (MySchema.xml), описанного в [выполнение запросов XPath &#40;поставщик SQLXMLOLEDB&#41; ](executing-xpath-queries-sqlxmloledb-provider.md).  
+ В этом образце приложения ADO, XML-шаблон, состоящий из запроса XPath (корневой) задается для схемы сопоставления XSD (MySchema.xml), описанного в [выполнение запросов XPath &#40;поставщик SQLXMLOLEDB&#41; ](executing-xpath-queries-sqlxmloledb-provider.md).  
   
- Свойство схемы сопоставления предоставляет схему сопоставления XSD, по которой выполняется запрос XPath. Свойство Path базы предоставляет путь к схеме сопоставления.  
+ Свойство схемы сопоставления предоставляет схему сопоставления XSD, по которой выполняется запрос XPath. Свойство базового пути содержит путь к схеме сопоставления.  
   
  ClientSideXML, свойство имеет значение True. Поэтому XML-документ формируется на клиенте.  
   

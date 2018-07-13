@@ -5,23 +5,21 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Transact-SQL
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
-caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e0247063d6885706c5f7a7206be64b9fc7c7e8d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f28e4d17ca71432f8d3908c58ce6b689dc868acb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189820"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412703"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Доступ к данным FILESTREAM с помощью Transact-SQL
   В этом разделе описаны способы использования инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT, UPDATE и DELETE для управления данными FILESTREAM.  
@@ -30,7 +28,7 @@ ms.locfileid: "36189820"
 >  Для примеров в этом разделе требуется база данных с поддержкой FILESTREAM и таблица, которая создана в разделе [Создание базы данных с поддержкой FILESTREAM](create-a-filestream-enabled-database.md) и [Создание таблицы для хранения данных FILESTREAM](create-a-table-for-storing-filestream-data.md).  
   
 ##  <a name="ins"></a> Вставка строки, содержащей данные FILESTREAM  
- Чтобы вставить строку в таблицу, которая поддерживает данные FILESTREAM, используйте инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT. При вставке данных в столбец FILESTREAM можно вставить значение NULL или `varbinary(max)` значение.  
+ Чтобы вставить строку в таблицу, которая поддерживает данные FILESTREAM, используйте инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT. При вставке данных в столбец FILESTREAM, можно вставить значение NULL или `varbinary(max)` значение.  
   
 ### <a name="inserting-null"></a>Вставка значения NULL  
  Следующий пример иллюстрирует порядок вставки значения `NULL`. Если значение FILESTREAM равно `NULL`, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не создает файл в файловой системе.  

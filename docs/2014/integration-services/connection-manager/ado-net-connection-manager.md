@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], ADO.NET
 - ADO.NET connection manager [Integration Services]
@@ -17,20 +17,20 @@ ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 44b07e26877a4d53d87cabb2ce48894f067a2802
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a94c611a8c200f5b7b8211b6a1d69b3f147b7a37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195664"
 ---
 # <a name="adonet-connection-manager"></a>Диспетчер соединений ADO.NET
   Диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] позволяет пакету обращаться к источникам данных с помощью поставщика .NET. Чаще всего этот диспетчер используется для доступа к таким источникам данных, как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также к источникам данных, предоставляемым посредством OLE DB и XML в пользовательских задачах, написанных на управляемом коде, например коде языка C#.  
   
- При добавлении [!INCLUDE[vstecado](../../includes/vstecado-md.md)] диспетчера соединений в пакет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создает соединение диспетчер, который разрешается как [!INCLUDE[vstecado](../../includes/vstecado-md.md)] подключения во время выполнения, устанавливает свойства диспетчера соединений и добавляет диспетчер соединений `Connections` коллекцию пакета.  
+ При добавлении [!INCLUDE[vstecado](../../includes/vstecado-md.md)] диспетчер соединений к пакету, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создает подключение диспетчер, который разрешается как [!INCLUDE[vstecado](../../includes/vstecado-md.md)] соединение во время выполнения, устанавливает свойства диспетчера соединений и добавляет диспетчер соединений `Connections` пакета.  
   
- `ConnectionManagerType` Диспетчера соединений задано значение `ADO.NET`. Значение `ConnectionManagerType` является полное имя поставщика .NET, который использует диспетчер соединений.  
+ `ConnectionManagerType` Свойства диспетчера соединений присваивается `ADO.NET`. Значение `ConnectionManagerType` является полное имя поставщика .NET, который использует диспетчер соединений.  
   
 ## <a name="adonet-connection-manager-troubleshooting"></a>Устранение неполадок, связанных с диспетчером соединений ADO.NET  
  В журнал можно записывать вызовы, сделанные диспетчером соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] к внешним источникам данных. Эта возможность протоколирования может быть использована для устранения неполадок соединений, которые устанавливаются диспетчером соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] с внешними источниками данных. Чтобы протоколировать вызовы, которые диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] совершает к внешним поставщикам данных, необходимо разрешить ведение журнала пакета и выбрать событие **Диагностика** на уровне пакета. Дополнительные сведения см. в разделе [Инструменты устранения неполадок при выполнении пакетов](../troubleshooting/troubleshooting-tools-for-package-execution.md).  

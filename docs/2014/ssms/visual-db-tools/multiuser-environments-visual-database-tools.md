@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - users [SQL Server], multiuser environments
 - conflict resolution [Visual Database Tools]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], multiuser environments
 ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 53b8335617a012c136a243d7b1063dac406195ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f3da5b458f358ba8823eaf65a00991291a71709c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183511"
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>Многопользовательские среды (визуальные инструменты для баз данных)
   Многопользовательской называется такая среда, в которой к базе данных, с которой работает пользователь, могут подключаться и другие пользователи, которые, кроме того, могут вносить в нее изменения. В результате с некоторыми объектами базы данных могут работать одновременно несколько пользователей. Таким образом, в многопользовательской среде при внесении изменений в базу данных могут отражаться и изменения, сделанные другими пользователями.  

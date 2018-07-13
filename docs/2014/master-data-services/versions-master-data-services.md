@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], about version flags
 - versions [Master Data Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2777ef1871da042c18459ac33c93e71844b89838
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 40d1a247b8d6efeb39b0c0f311a014ef76b55db4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217684"
 ---
 # <a name="versions-master-data-services"></a>Версии (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно создать несколько версий основных данных в модели. Версии могут быть заблокированы до проведения проверки данных и будут зафиксированы после проверки данных. Зафиксированные версии образуют запись аудита об изменениях. Каждая созданная версия содержит все элементы, значения атрибутов, элементы иерархии, отношения в иерархии и коллекции для модели.  
@@ -75,7 +75,7 @@ ms.locfileid: "36194522"
 |----------------------|-----------|  
 |Изменение имени существующей версии.|[Изменение имени версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
 |Блокирование версии, чтобы изменять ее данные могли только администраторы.|[Блокировка версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
-|Разблокирование версии, чтобы изменять ее данные могли пользователи.|[Разблокирование версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
+|Разблокирование версии, чтобы изменять ее данные могли пользователи.|[Разблокировка версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
 |Фиксирование версии после проверки всех данных.|[Фиксация версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
 |Создание нового флага для обозначения версии.|[Создание флага версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
 |Изменение имени для существующего флага версии.|[Изменение имени флага версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
@@ -87,7 +87,7 @@ ms.locfileid: "36194522"
   
 -   [Отмена транзакции &#40;службы Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [Уведомления о &#40;службы Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
+-   [Уведомления &#40;службы Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
   
 -   [Бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   

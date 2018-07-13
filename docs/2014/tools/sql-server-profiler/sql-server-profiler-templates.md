@@ -1,5 +1,5 @@
 ---
-title: Шаблоны приложения SQL Server Profiler | Документы Microsoft
+title: Шаблоны SQL Server Profiler | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default SQL Server Profiler templates
 - templates [SQL Server], SQL Server Profiler
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 380d73cf217d8ee006daadc0d05b826c45bccc1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9772140475683ed1c98dc228318d213c10f36ba4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228684"
 ---
 # <a name="sql-server-profiler-templates"></a>Шаблоны приложения SQL Server Profiler
   Можно использовать приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для создания шаблонов, определяющих классы событий и столбцы данных с целью включения в трассировку. После определения и сохранения шаблона можно запустить трассировку, которая будет записывать данные для каждого выбранного класса событий. Шаблоны можно использовать для многих трассировок; сам шаблон не выполняется.  

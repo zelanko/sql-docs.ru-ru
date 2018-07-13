@@ -23,15 +23,15 @@ helpviewer_keywords:
 - named permission sets [Reporting Services]
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
 caps.latest.revision: 31
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2249598ffc44050b69021b31abfd48e6996f205c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: de381c37c5ee461c3e7a813c524e317b3d93e348
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188081"
 ---
 # <a name="understanding-security-policies"></a>Основные сведения о политиках безопасности
   Любой код, выполняемый сервером отчетов, должен быть частью конкретной политики управления доступом для кода. Такие политики безопасности состоят из групп кода, которые сопоставляют свидетельство с множеством именованных наборов разрешений. Группы кода часто бывают связаны с именованным набором разрешений, который задает допустимые разрешения для кода в этой группе. Во время выполнения используется удостоверение, предоставленное доверенным узлом или загрузчиком, для определения того, к какой группе принадлежит код и какие разрешения с учетом этого должны быть предоставлены коду. Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] придерживаются этой архитектуры политики безопасности, определенной средой CLR платформы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. В следующих разделах приведено описание различных типов кода в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и связанных с ними правил политики.  

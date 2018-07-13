@@ -1,13 +1,11 @@
 ---
-title: Использование шифрования без проверки | Документы Microsoft
+title: Использование шифрования без проверки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,26 +16,26 @@ helpviewer_keywords:
 - SQL Server Native Client, encryption
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: eda7a4e7ac9d6558301affc7d2b027c55bc1f7e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e3349bd91f4e0e4e3db252b6406dc58cdbe6179b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191606"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430323"
 ---
 # <a name="using-encryption-without-validation"></a>Использование шифрования без проверки
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] всегда шифрует сетевые пакеты, связанные со входом в систему. Если сертификат не был предоставлен на сервере при запуске, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] создает самозаверенный сертификат, который используется для шифрования пакетов входа.  
   
- Приложения могут также запрашивать шифрование всего сетевого трафика путем использования ключевых слов строк соединения или свойств соединения. Ключевые слова являются «Encrypt» для ODBC и OLE DB, при использовании строки поставщика с **IDbInitialize::Initialize**, или «Use Encryption for Data» для ADO и OLE DB при использовании строки инициализации с **IDataInitialize** . Это также может быть настроен по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager с помощью **принудительное шифрование протокола** параметр. По умолчанию для шифрования всего сетевого трафика соединения требуется, чтобы сертификат присутствовал на сервере.  
+ Приложения могут также запрашивать шифрование всего сетевого трафика путем использования ключевых слов строк соединения или свойств соединения. Ключевые слова являются «Encrypt» для ODBC и OLE DB, при использовании строки поставщика с **IDbInitialize::Initialize**, или «Use Encryption for Data» для ADO и OLE DB при использовании строки инициализации с **IDataInitialize** . Это также можно настроить с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager с помощью **принудительное шифрование протокола** параметр. По умолчанию для шифрования всего сетевого трафика соединения требуется, чтобы сертификат присутствовал на сервере.  
   
- Сведения о ключевых словах строки соединения см. в разделе [с помощью ключевых слов строки подключения с собственным клиентом SQL Server](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Сведения о ключевых словах строки подключения, см. в разделе [Using Connection String Keywords with SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Чтобы включить шифрование для использования, если сертификат не был предоставлен на сервере, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager может использоваться для установки как **принудительное шифрование протокола** и **доверять сертификату сервера**  параметры. В этом случае шифрование будет использовать самозаверяющий сертификат сервера, не проверяя наличия подтверждаемого сертификата сервера.  
+ Чтобы включить шифрование для использования в том случае, если сертификат не была настроена на сервере, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager можно использовать для того, и **принудительное шифрование протокола** и **доверять сертификату сервера**  параметры. В этом случае шифрование будет использовать самозаверяющий сертификат сервера, не проверяя наличия подтверждаемого сертификата сервера.  
   
- Приложения могут также использовать ключевое слово «TrustServerCertificate» или его атрибут связанного соединения, чтобы гарантировать применение шифрования. Параметры приложения никогда не снижают уровень безопасности, установленный клиентским диспетчером конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], но могут повысить его. Например если **принудительное шифрование протокола** не задано для клиента, приложение может само запросить шифрование. Чтобы гарантировать применение шифрования, даже если сертификат сервера не был предоставлен, приложение может запросить шифрование и ключевое слово «TrustServerCertificate». Однако если ключевое слово «TrustServerCertificate» не включено в конфигурации клиента, предоставление сертификата сервера по-прежнему необходимо. В следующей таблице описываются все случаи:  
+ Приложения могут также использовать ключевое слово «TrustServerCertificate» или его атрибут связанного соединения, чтобы гарантировать применение шифрования. Параметры приложения никогда не снижают уровень безопасности, установленный клиентским диспетчером конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], но могут повысить его. Например если **принудительное шифрование протокола** не установлен клиент, приложение может само запросить шифрование. Чтобы гарантировать применение шифрования, даже если сертификат сервера не был предоставлен, приложение может запросить шифрование и ключевое слово «TrustServerCertificate». Однако если ключевое слово «TrustServerCertificate» не включено в конфигурации клиента, предоставление сертификата сервера по-прежнему необходимо. В следующей таблице описываются все случаи:  
   
 |Параметр «Принудительное шифрование протокола» на клиенте|Параметр «Доверять сертификату сервера» на клиенте|Строка соединения или атрибут соединения «Шифрование/использовать шифрование для данных»|Строка соединения или атрибут соединения «Надежный сертификат сервера»|Результат|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
@@ -50,12 +48,12 @@ ms.locfileid: "36191606"
 |Да|Да|Да|Да|Шифрование производится всегда, однако при этом может быть использован самозаверяющий сертификат сервера.|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Поставщик OLE DB для собственного клиента SQL Server  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента поддерживает шифрование без проверки путем добавления SSPROP_INIT_TRUST_SERVER_CERTIFICATE свойство инициализации источника данных, которая реализована в свойство DBPROPSET_SQLSERVERDBINIT набор. Кроме того, добавлено новое ключевое слово строки соединения «TrustServerCertificate». Оно принимает значения «yes» и «no», значение по умолчанию — «no». При использовании компонентов службы оно принимает значения true и false, значение по умолчанию — false.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента поддерживает шифрование без проверки путем добавления SSPROP_INIT_TRUST_SERVER_CERTIFICATE данных свойства инициализации источника, которое реализовано в наборе свойств DBPROPSET_SQLSERVERDBINIT набор. Кроме того, добавлено новое ключевое слово строки соединения «TrustServerCertificate». Оно принимает значения «yes» и «no», значение по умолчанию — «no». При использовании компонентов службы оно принимает значения true и false, значение по умолчанию — false.  
   
- Дополнительные сведения об улучшениях, появившихся в наборе свойств dbpropset_sqlserverdbinit см. в разделе [свойства инициализации и авторизации](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Дополнительные сведения о усовершенствования, внесенные в наборе свойств DBPROPSET_SQLSERVERDBINIT, см. в разделе [свойства инициализации и авторизации](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Драйвер ODBC для собственного клиента SQL Server  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента поддерживает шифрование без проверки путем добавления к [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) и [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) функции. Добавлен параметр SQL_COPT_SS_TRUST_SERVER_CERTIFICATE, который может принимать значения SQL_TRUST_SERVER_CERTIFICATE_YES или SQL_TRUST_SERVER_CERTIFICATE_NO, где SQL_TRUST_SERVER_CERTIFICATE_NO является значением по умолчанию. Кроме того, добавлено новое ключевое слово строки соединения «TrustServerCertificate». Оно принимает значения «yes» и «no», значение по умолчанию — «no».  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента поддерживает шифрование без проверки с помощью расширения [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) и [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) функции. Добавлен параметр SQL_COPT_SS_TRUST_SERVER_CERTIFICATE, который может принимать значения SQL_TRUST_SERVER_CERTIFICATE_YES или SQL_TRUST_SERVER_CERTIFICATE_NO, где SQL_TRUST_SERVER_CERTIFICATE_NO является значением по умолчанию. Кроме того, добавлено новое ключевое слово строки соединения «TrustServerCertificate». Оно принимает значения «yes» и «no», значение по умолчанию — «no».  
   
 ## <a name="see-also"></a>См. также  
  [Компоненты SQL Server Native Client](sql-server-native-client-features.md)  

@@ -1,5 +1,5 @@
 ---
-title: Сопоставление типов данных XSD в типы данных XPath (SQLXML 4.0) | Документы Microsoft
+title: Сопоставление типов данных XSD с типами данных XPath (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3e816206ff21e0e68ded7eecc2d353b9e8972c41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4dd0adee47ebebfdebadc00c2afcc17f6aa7382b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170167"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>Сопоставление типов данных XSD с типами данных XPath (SQLXML 4.0)
   Если запрос XPath выполняется для схемы XSD, а тип XSD задан в атрибуте `xsd:type`, то XPath использует заданный тип данных при обработке запроса.  

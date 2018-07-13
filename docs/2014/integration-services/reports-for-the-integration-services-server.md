@@ -1,5 +1,5 @@
 ---
-title: Отчеты для сервера служб Integration Services | Документы Microsoft
+title: Отчеты для сервера служб Integration Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 caps.latest.revision: 14
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9809de19a363c94365c0da88655d4e54b81b80cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c035c2d8dacf29f8ca4d81b13c0ace5500a2dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180301"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Отчеты для сервера служб Integration Services
-  В текущем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], доступны стандартные отчеты в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] позволяют осуществлять мониторинг [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проекты, которые были развернуты для [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] сервера. Эти отчеты позволяют просмотреть состояние пакета и журнал, а также, если необходимо, определить причину сбоев при выполнении пакетов.  
+  В текущем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], стандартные отчеты, доступные в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для наблюдения за [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проекты, которые были развернуты [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] сервера. Эти отчеты позволяют просмотреть состояние пакета и журнал, а также, если необходимо, определить причину сбоев при выполнении пакетов.  
   
  На любой странице отчета в верхней части имеется значок возврата на предыдущую страницу, значок обновления сведений, отображаемых на странице, и значок печати, который позволяет распечатать текущую страницу.  
   

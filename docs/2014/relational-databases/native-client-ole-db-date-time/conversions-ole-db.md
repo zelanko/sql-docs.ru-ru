@@ -1,13 +1,11 @@
 ---
-title: Привязки и преобразования (OLE DB) | Документы Microsoft
+title: Привязки и преобразования (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 086ea20b3ebf2f83d7ef139ec261298e895d591b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 709fb4abec2e8de8aa845aaddb1418f5c9d957e3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193562"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407994"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Привязки и преобразования (OLE DB)
   В этом разделе описано преобразование между типами `datetime` и `datetimeoffset`. Преобразования, описанные в этом разделе, либо уже предоставлены OLE DB, либо являются согласованным расширением OLE DB.  
@@ -46,7 +44,7 @@ ms.locfileid: "36193562"
 > [!NOTE]  
 >  Предыдущие версии собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и SQLOLEDB реализовали преобразования OLE в случаях, когда стандартные преобразования возвращали ошибку. В результате некоторые преобразования, проводимые собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 10.0 и более поздних версий, отличаются от спецификации OLE DB.  
   
- Преобразования из строк обеспечивают гибкость в отношении пробелов и ширины полей. Дополнительные сведения см. в разделе «Данные форматы: строки и литералы» раздела [поддержка типов данных даты OLE DB и улучшения времени](data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Преобразования из строк обеспечивают гибкость в отношении пробелов и ширины полей. Дополнительные сведения см. в разделе «Данные форматы: строки и литералы» в [поддержки типов данных даты OLE DB и ускорение](data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  Далее приведены общие правила преобразования.  
   
@@ -74,6 +72,6 @@ ms.locfileid: "36193562"
  Описывает преобразования даты-времени, проводимые между [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версией) и клиентским приложением, написанным с помощью собственного клиента OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также  
- [Дата и время улучшениях &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Дата и время улучшения &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

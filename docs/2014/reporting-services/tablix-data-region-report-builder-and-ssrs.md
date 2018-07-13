@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
 caps.latest.revision: 5
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 861c78b6424878d09dd4afa23fc9248cff14e731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97336e053f4c0a9d2cd36bf381bc16f3fd28d919
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191377"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218664"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Область данных табликса (построитель отчетов и службы SSRS)
   Область данных табликса представляет собой обобщенный элемент макета отчета, в котором данные отчета отображаются в ячейках, упорядоченных в виде столбцов и строк. Данные отчета могут быть как подробными данными в том виде, в котором они были получены из источника данных, так и статистическими подробными данными, организованными в определенные группы. Каждая ячейка табликса может содержать любой элемент отчета, включая текстовое поле, изображение или другую область данных (например, область табликса, диаграмму или датчик). Чтобы добавить в ячейку несколько элементов отчета, сначала необходимо добавить прямоугольник, который будет выполнять роль контейнера. Затем в прямоугольник можно добавить элементы отчета.  

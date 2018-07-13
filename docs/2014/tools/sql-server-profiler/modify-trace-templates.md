@@ -1,5 +1,5 @@
 ---
-title: Изменение шаблонов трассировки | Документы Microsoft
+title: Изменение шаблонов трассировки | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Profiler
 - Profiler [SQL Server Profiler], templates
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Profiler, templates
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 08c08bd8838380ce1054e13697aa6873a8e98860
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 131c10dde4557fd7f462a1dd2324819c58bbf1d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200654"
 ---
 # <a name="modify-trace-templates"></a>Изменение шаблонов трассировки
   Можно изменить шаблоны, сохраняемые в файле на локальном компьютере, на котором выполняется [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Можно также изменить шаблоны, производные от этих файлов. При изменении существующих шаблонов выполняется редактирование таких свойств шаблонов, как классы событий и столбцы данных в том же порядке, в котором эти свойства были установлены первоначально, на вкладке **Выбор событий** диалогового окна **Свойства трассировки** . Классы событий и столбцы данных можно добавлять и удалять, а фильтры изменять. После изменения шаблона создается пользовательский шаблон и исходный системный шаблон остается без изменений. Дополнительные сведения см. в разделе [Сохранение трассировок и шаблонов трассировок](save-traces-and-trace-templates.md).  
@@ -42,13 +42,13 @@ ms.locfileid: "36195712"
   
  **Изменение шаблона трассировки**  
   
- [С помощью приложения SQL Server Profiler](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
+ [С помощью SQL Server Profiler](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
   
  [Использование Transact-SQL](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
   
  **Добавление и удаление событий из шаблона трассировки или файла трассировки**  
   
- [С помощью приложения SQL Server Profiler](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+ [С помощью SQL Server Profiler](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
  [Использование Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

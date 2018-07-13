@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], performance tuning
 ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 523d1f40d27778b8aaa45f6b71873cf3cb69cc34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6325010f13ee758532729ea67d88760073f38e18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150735"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Настройка производительности для издателей Oracle
   Архитектура публикации Oracle аналогична архитектуре публикации [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , поэтому первый шаг в настройке производительности репликации Oracle состоит в выполнении следующих общих рекомендаций по настройке, описанных в статье [Enhance General Replication Performance](../administration/enhance-general-replication-performance.md).  

@@ -1,13 +1,11 @@
 ---
-title: Возвращающие табличные значения параметров (OLE DB) | Документы Microsoft
+title: Возвращающие табличные значения параметров (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB)
 ms.assetid: 4298b73d-615b-4d28-9843-03b4d5fc489e
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1a3a4e683887022c905fd2faf45cf5ff36b57a3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ebc5cdc62ba75183fcfc074fb0fd5fec5202709f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192867"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432573"
 ---
 # <a name="table-valued-parameters-ole-db"></a>Возвращающие табличное значение параметры (OLE DB)
-  В этом разделе описывается поддержка возвращающих табличное значение параметров в поставщике OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [табличное значение параметры &#40;собственный клиент SQL Server&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md). Пример см. в разделе [использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md).  
+  В этом разделе описывается поддержка возвращающих табличное значение параметров в поставщике OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [возвращающего табличное значение параметров &#40;собственный клиент SQL Server&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md). Пример, см. в разделе [параметров, возвращающих &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md).  
   
 ## <a name="remarks"></a>Примечания  
  В настоящее время можно отправить многострочные данные на сервер как параметры для процедуры с наборами параметров (параметр DBPARAMS метода `ICommand::Execute`). При использовании набора параметров каждый элемент набора должен быть отправлен на сервер в отдельном запросе удаленного вызова процедур (RPC). Возвращающие табличное значение параметры обеспечивают похожую функциональность, но лучше интегрированы с сервером. При этом уменьшается число запросов RPC, а на сервере возможны операции, основанные на наборах.  

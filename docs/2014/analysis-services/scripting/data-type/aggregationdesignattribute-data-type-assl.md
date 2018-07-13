@@ -1,5 +1,5 @@
 ---
-title: Тип данных AggregationDesignAttribute (ASSL) | Документы Microsoft
+title: Тип данных AggregationDesignAttribute (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AggregationDesignAttribute data type
 ms.assetid: 03d29d76-e4bd-4035-92cc-35149d83fbf9
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6d65f5cbd6173218b4d33448ec442002290aad6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d723011d0342923e4020ab8655f45abb9a764396
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188921"
 ---
 # <a name="aggregationdesignattribute-data-type-assl"></a>Тип данных AggregationDesignAttribute (ASSL)
-  Определяет тип-примитив, представляющий взаимосвязь между атрибутом и [AggregationDesignDimension](dimension-data-type-assl.md) элемента.  
+  Определяет тип-примитив, представляющий взаимосвязь между атрибутом и [AggregationDesignDimension](dimension-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -61,10 +61,10 @@ ms.locfileid: "36195258"
 |Производные элементы|[Атрибут](../objects/attribute-element-assl.md) ([атрибуты](../collections/attributes-element-assl.md) коллекцию [AggregationDesignDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.AggregationDesignAttribute>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.AggregationDesignAttribute>.  
   
 ## <a name="see-also"></a>См. также  
  [Тип данных AggregationDesignDimension &#40;ASSL&#41;](dimension-data-type-assl.md)   
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

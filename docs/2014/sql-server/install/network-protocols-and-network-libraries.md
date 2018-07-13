@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server]
 - configuration options [SQL Server], protocols
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c2ebd92a3ac467880ee1c3ae6185718ab315c7b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65ae022fe3445663837b1aaf01204a382ddcdc72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175113"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Сетевые протоколы и библиотеки
   Сервер может одновременно прослушивать или отслеживать работу нескольких сетевых протоколов. Однако каждый из этих протоколов должен быть настроен. Если какой-нибудь из протоколов не настроен, сервер не сможет его прослушивать. После установки можно изменить конфигурации протоколов при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

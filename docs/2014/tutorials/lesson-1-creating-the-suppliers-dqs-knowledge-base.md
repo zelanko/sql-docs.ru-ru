@@ -1,5 +1,5 @@
 ---
-title: 'Урок 1: Создание базы знаний DQS поставщиков | Документы Microsoft'
+title: 'Занятие 1: Создание базы знаний Suppliers DQS | Документация Майкрософт'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 78825ccb-30fc-463c-8140-435532e2ecd2
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 58f787d1204cde60dee3a10fdaf587b52cf6dfa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 744658b00253b96bf6110f4382a7a6a8a8d7abfc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151865"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Урок 1. Создание базы знаний поставщиков в службах DQS
   На этом занятии создается база знаний служб DQS **Поставщики** с набором знаний (метаданные) о данных поставщика. База знаний используется для выполнения очистки и действий сопоставления над входными данными о поставщиках. Действие очистки определяет неверные или недопустимые данные, исправляет неверные данные, предлагает исправления и рекомендации, унифицирует данные и вводит в данные дополнительные сведения. Действие сопоставления сравнивает данные и определяет в данных подобные записи (но немного различающиеся), что позволяет удалять повторения из данных.  

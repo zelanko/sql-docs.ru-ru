@@ -1,31 +1,28 @@
 ---
-title: Что&#39;новые возможности собственного клиента SQL Server | Документы Microsoft
+title: Что&#39;возможности в SQL Server Native Client | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
-caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e7ad76095925236f13c1f8da549e05e05f74390
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 16d5ad4f1f60978cedf380cbc17d6e3f09f1cb09
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192855"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426703"
 ---
-# <a name="what39s-new-in-sql-server-native-client"></a>Что&#39;новые возможности собственного клиента SQL Server
+# <a name="what39s-new-in-sql-server-native-client"></a>Что&#39;возможности в SQL Server Native Client
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] устанавливает [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client. Не существует собственного клиента [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
- Других обновлений для драйвера ODBC в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client не будет. Преемник драйвера ODBC в клиенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, называемый драйвером [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Windows, устанавливается вместе с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Дополнительные сведения о [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Windows, в разделе [Microsoft ODBC Driver 11 for SQL Server — Windows](http://www.microsoft.com/download/details.aspx?id=36434).  
+ Других обновлений для драйвера ODBC в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client не будет. Преемник драйвера ODBC в клиенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, называемый драйвером [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Windows, устанавливается вместе с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Дополнительные сведения о [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на Windows, см. в разделе [Microsoft ODBC Driver 11 for SQL Server — Windows](http://www.microsoft.com/download/details.aspx?id=36434).  
   
  Поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в последний раз был обновлен в собственном клиенте [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Разработчики, желающие использовать поставщик OLE DB для подключения к последней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должны будут применять поставщик OLE DB из состава [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client.  
   
@@ -47,7 +44,7 @@ ms.locfileid: "36192855"
   
 -   Возможность расширения типа данных C. Дополнительные сведения о типах данных см. в разделе [Типы данных C в ODBC](http://go.microsoft.com/fwlink/?LinkID=191495).  
   
-     Для поддержки этой возможности в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client может возвращать SQLGetDescField `SQL_C_SS_TIME2` (для `time` типов) или `SQL_C_SS_TIMESTAMPOFFSET` (для `datetimeoffset`) вместо `SQL_C_BINARY`, если приложение использует ODBC 3.8. Дополнительные сведения см. в разделе [поддержка типов данных для ODBC Дата и время улучшениях](features/date-and-time-improvements.md).  
+     Для поддержки этой возможности в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client может возвращать SQLGetDescField `SQL_C_SS_TIME2` (для `time` типов) или `SQL_C_SS_TIMESTAMPOFFSET` (для `datetimeoffset`) вместо `SQL_C_BINARY`, если приложение использует ODBC 3.8. Дополнительные сведения см. в разделе [поддержка типов данных ODBC Дата и время улучшениях](features/date-and-time-improvements.md).  
   
 -   Многократный вызов метода `SQLGetData` с небольшим буфером для получения значения параметра большого объема. Дополнительные сведения см. в разделе [Получение выходных параметров с помощью метода SQLGetData](http://go.microsoft.com/fwlink/?LinkID=191494).  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined types [SQL Server replication]
 - articles [SQL Server replication], dropping
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 caps.latest.revision: 83
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dfce55b3732c2e6715ad84e079c7c0707a243929
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a7513569ed762aaad446b726ce1a6ac58ac5a59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154085"
 ---
 # <a name="publish-data-and-database-objects"></a>Публикация данных и объектов базы данных
   При создании публикации можно выбрать таблицы и другие объекты базы данных, которые необходимо опубликовать. Используя репликацию, можно опубликовать следующие объекты базы данных.  

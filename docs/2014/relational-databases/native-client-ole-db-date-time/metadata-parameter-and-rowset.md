@@ -1,28 +1,26 @@
 ---
-title: Набор строк метаданные параметров и | Документы Microsoft
+title: Набор строк метаданные параметров и | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a8b3365cdf3a2773b6627dfd49edd20b839ef9a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d2f6d55777a6f11e968a75be0f3d5509294c484d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195792"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427863"
 ---
 # <a name="parameter-and-rowset-metadata"></a>Метаданные параметров и наборов строк
   В этом разделе приведены сведения о следующем типе и элементах типа, связанных с усовершенствованиями даты и времени OLE DB.  
@@ -51,7 +49,7 @@ ms.locfileid: "36195792"
   
  Обратите внимание, что в некоторых случаях диапазоны значений не являются непрерывными. Это следствие добавления десятичной запятой, когда точность в долях секунды выше нуля.  
   
- Параметр DBPARAMFLAGS_SS_ISVARIABLESCALE допустим только при подключении к [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версии) сервера. DBPARAMFLAGS_SS_ISVARIABLESCALE никогда не указывайте при соединении с серверами низкого уровня.  
+ Параметр DBPARAMFLAGS_SS_ISVARIABLESCALE допустим только при подключении к [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версии) сервера. DBPARAMFLAGS_SS_ISVARIABLESCALE никогда не задается при соединении с серверами низкого уровня.  
   
 ## <a name="icommandwithparameterssetparameterinfo-and-implied-parameter-types"></a>Метод ICommandWithParameters::SetParameterInfo и неявные типы параметров  
  Сведения, предоставленные в структуре DBPARAMBINDINFO, должны соответствовать следующим требованиям.  
@@ -69,9 +67,9 @@ ms.locfileid: "36195792"
   
  *BPrecision* параметр учитывается.  
   
- Значение «DBPARAMFLAGS_SS_ISVARIABLESCALE» не учитывается при отправке данных на сервер. Приложения могут принудительно использовать унаследованные типы потоков табличных данных за счет применения имен типов «`datetime`» и «`smalldatetime`», характерных для поставщика. При подключении к [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версии) серверов, "`datetime2`«будет использоваться формат и неявное преобразование сервера, при необходимости происходит, когда тип имеет имя»`datetime2`» или «DBTYPE_DBTIMESTAMP». *bScale* учитывается, если имена типов, характерные для поставщика "`datetime`«или»`smalldatetime`" используются. В противном случае приложения должны убедиться, что *bScale* задано правильно. Приложения, обновленные с компонентами MDAC и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от собственного клиента [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , использующих «DBTYPE_DBTIMESTAMP» завершится ошибкой, если они не заданы *bScale* правильно. При соединении с экземплярами сервера более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], *bScale* значение, отличное от 0 или 3 с именем «DBTYPE_DBTIMESTAMP» является ошибкой и будет возвращено E_FAIL.  
+ Значение «DBPARAMFLAGS_SS_ISVARIABLESCALE» не учитывается при отправке данных на сервер. Приложения могут принудительно использовать унаследованные типы потоков табличных данных за счет применения имен типов «`datetime`» и «`smalldatetime`», характерных для поставщика. При подключении к [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версии) серверов, "`datetime2`«будет использоваться формат и неявное преобразование сервера, при необходимости происходит, когда тип имеет имя»`datetime2`» или «DBTYPE_DBTIMESTAMP». *bScale* учитывается, если имена типов характерные для поставщика "`datetime`«или»`smalldatetime`" используются. В противном случае приложения должны убедиться, что *bScale* имеет правильное значение. Приложения, обновленные с компонентами MDAC и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , использующие «DBTYPE_DBTIMESTAMP» завершится ошибкой, если они не заданы *bScale* правильно. При соединении с экземплярами сервера более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], *bScale* значение, отличное от 0 или 3 с именем «DBTYPE_DBTIMESTAMP» является ошибкой и будет возвращено E_FAIL.  
   
- Когда ICommandWithParameters::SetParameterInfo не вызывается, поставщик определяет сервер из тип тип привязки, как указано в IAccessor::CreateAccessor следующим образом:  
+ Когда ICommandWithParameters::SetParameterInfo не вызывается, поставщик тип сервера, исходя из типа привязки, как указано в IAccessor::CreateAccessor следующим образом:  
   
 |Тип привязки|*pwszDataSourceType*<br /><br /> (зависит от поставщика)|  
 |------------------|----------------------------------------------------|  
@@ -144,7 +142,7 @@ ms.locfileid: "36195792"
   
  Остальные флаги (DBCOLUMNFLAGS_ISNULLABLE, DBCOLUMNFLAGS_MAYBENULL, DBCOLUMNFLAGS_WRITE и DBCOLUMNFLAGS_WRITEUNKNOWN) можно задавать.  
   
- Новый флаг dbcolumnflags_ss_isvariablescale внедрен в *dwFlags* чтобы приложения могли определять тип сервера столбцов, где *wType* является DBTYPE_DBTIMESTAMP. *bScale* также должен использоваться для определения типа сервера.  
+ Новый флаг dbcolumnflags_ss_isvariablescale внедрен в *dwFlags* чтобы приложения могли определять тип сервера столбцов, где *wType* является DBTYPE_DBTIMESTAMP. *bScale* также должен использоваться для указания типа сервера.  
   
 ## <a name="see-also"></a>См. также  
  [Метаданные &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  

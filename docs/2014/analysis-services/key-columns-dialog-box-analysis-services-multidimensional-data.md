@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно «столбцы» (службы Analysis Services — многомерные данные) ключа | Документы Microsoft
+title: Диалоговое окно «столбцы» (службы Analysis Services — многомерные данные) ключа | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.dataitemCollection.f1
 helpviewer_keywords:
 - DataItem Collection dialog box
 ms.assetid: 585f27f2-d5eb-4516-b29a-2084010b7d51
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1bdfbda7088df7953df18ee796f6e41057eb090b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3fbd5ef14875e11cef4144286d82c2b733f4fa2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220574"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Ключевые столбцы» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Ключевые столбцы** , чтобы изменить свойство **KeyColumns** атрибута. Дополнительные сведения см. в разделе [Изменение свойства KeyColumn атрибута](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
   
- **Чтобы отобразить диалоговое окно «ключевые столбцы»**  
+ **Чтобы отобразить диалоговое окно ключевые столбцы**  
   
 -   В среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] или [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]выберите атрибут, а затем в окне **Свойства** нажмите кнопку с многоточием (**...**), связанную со свойством **KeyColumns** этого атрибута.  
   

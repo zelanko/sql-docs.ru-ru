@@ -1,5 +1,5 @@
 ---
-title: Установка PowerPivot для SharePoint 2013 | Документы Microsoft
+title: Установка PowerPivot для SharePoint 2013 | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 caps.latest.revision: 28
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: ef3e20cee4efd786e111a3c5a3e0f4864875e861
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d5eafcfacf8aa39cd100ed767232becd474bacd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210254"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>Установка PowerPivot для SharePoint 2013
-  В этом разделе описываются процедуры установки одиночного сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме развертывания SharePoint. Эти шаги охватывают запуск мастера установки SQL Server, а также выполнение дополнительных задач по настройке с использованием центра администрирования SharePoint 2013.  
+  В этом разделе описываются процедуры установки одиночного сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] сервера в режиме развертывания SharePoint. Эти шаги охватывают запуск мастера установки SQL Server, а также выполнение дополнительных задач по настройке с использованием центра администрирования SharePoint 2013.  
   
  **[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 201  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36192997"
   
      В установку при необходимости можно добавить экземпляр компонента Database Engine. Можно добавить ядро СУБД при настройке новой фермы, если для работы баз данных конфигурации и содержимого фермы нужен сервер баз данных. В таком случае также устанавливается компонент [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-     Если добавлен компонент ядра СУБД, то он устанавливается как именованный экземпляр **PowerPivot** . При указании подключение к этому экземпляру введите имя базы данных в следующем формате: [`servername`] \PowerPivot.  
+     Если добавлен компонент ядра СУБД, то он устанавливается как именованный экземпляр **PowerPivot** . Указывая подключение к этому экземпляру, каждый раз вводите имя базы данных в следующем формате: [`servername`] \PowerPivot.  
   
      Нажмите кнопку **Далее**.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36192997"
   
      ![Настройка SSAS Server](../../../sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "Настройка SSAS Server")  
   
-14. При установке компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)]откроется страница **Настройки ядра СУБД** . В [!INCLUDE[ssDE](../../../includes/ssde-md.md)] конфигурации, нажмите кнопку **добавить текущего пользователя** для предоставления пользователю разрешения учетной записи администратора для экземпляра ядра СУБД.  
+14. При установке компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)]откроется страница **Настройки ядра СУБД** . В [!INCLUDE[ssDE](../../../includes/ssde-md.md)] конфигурации, щелкните **добавить текущего пользователя** для предоставления пользователю разрешений учетной записи администратора на экземпляре ядра СУБД.  
   
      Нажмите кнопку **Далее**.  
   
@@ -247,13 +247,13 @@ ms.locfileid: "36192997"
 18. Щелкните название книги для ее просмотра в SharePoint и выберите срез или измените ранее добавленный фильтр. Если произойдет обновление данных, то это означает, что службы Analysis Services установлены и доступны для служб Excel. При открытии книги в Excel будет использоваться кэшированная копия, а не версия с сервера служб Analysis Services.  
   
 ##  <a name="bkmk_firewall"></a> Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services  
- Используйте сведения в разделе [Configure Windows Firewall to Allow Analysis Services Access](../configure-the-windows-firewall-to-allow-analysis-services-access.md) для определения, следует ли разблокировать порты брандмауэра для доступа к службам Analysis Services или PowerPivot для SharePoint. Выполнив шаги, приведенные в этом разделе, можно настроить параметры порта и брандмауэра. На практике, чтобы разрешить доступ к серверу служб Analysis Services, необходимо выполнять эти шаги вместе.  
+ Используйте сведения в разделе [Настройка брандмауэра Windows на разрешение доступа к Analysis Services](../configure-the-windows-firewall-to-allow-analysis-services-access.md) для определения, требуется ли разблокировать порты брандмауэра для доступа к службам Analysis Services или PowerPivot для SharePoint. Выполнив шаги, приведенные в этом разделе, можно настроить параметры порта и брандмауэра. На практике, чтобы разрешить доступ к серверу служб Analysis Services, необходимо выполнять эти шаги вместе.  
   
 ##  <a name="bkmk_upgrade_workbook"></a> Обновление книг и создание расписания обновления данных  
  Шаги, необходимые для обновления книг, созданных в предыдущих версиях PowerPivot, зависят от того, в какой версии PowerPivot создана книга. Дополнительные сведения см. в статье [Обновление книг и запланированное обновление данных (SharePoint 2013 )](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_multiple_servers"></a> После установки одного сервера — PowerPivot для Microsoft SharePoint  
- **Веб-интерфейс (WFE)** или **среднего уровня:**: использование [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] сервера в режиме интеграции с SharePoint в более крупной ферме SharePoint и установки дополнительных средств PowerPivot в ферме, запустите пакет установщика **spPowerPivot.msi** на каждом из серверов SharePoint. Пакет spPowerPivot.msi устанавливает необходимые поставщики данных и средство настройки служб PowerPivot для SharePoint 2013.  
+ **Веб-интерфейс (WFE)** или **среднего уровня:**: использование [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] сервера в режиме интеграции с SharePoint в более крупной ферме SharePoint и установки дополнительных средств PowerPivot в ферме запустите пакет установщика **spPowerPivot.msi** на каждом из серверов SharePoint. Пакет spPowerPivot.msi устанавливает необходимые поставщики данных и средство настройки служб PowerPivot для SharePoint 2013.  
   
  Дополнительные сведения об установке и настройке среднего уровня см. в следующем документе:  
   
@@ -265,11 +265,11 @@ ms.locfileid: "36192997"
   
  **Избыточность и загрузка сервера:** установка двух или более [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] серверов в режиме интеграции с SharePoint обеспечивает избыточность [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] функциональные возможности сервера. Ввод в действие дополнительных серверов приводит к дальнейшему распределению нагрузки между серверами. Дополнительные сведения см. в следующих разделах:  
   
--   [Настройка служб Analysis Services для обработки моделей данных в службах Excel](http://technet.microsoft.com/library/jj614437\(v=office.15\)) (http://technet.microsoft.com/library/jj614437(v=office.15)).  
+-   [Настройка служб Analysis Services для обработки модели данных в службах Excel](http://technet.microsoft.com/library/jj614437\(v=office.15\)) (http://technet.microsoft.com/library/jj614437(v=office.15)).  
   
 -   [Управление параметрами модели данных служб Excel (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\)) (http://technet.microsoft.com/library/jj219780(v=office.15)).  
   
- ![Параметры SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "параметры SharePoint") [отправки отзывов и контактных данных через Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![Параметры SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "параметры SharePoint") [отправить отзыв и контактные данные через Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
 ## <a name="see-also"></a>См. также  
  [Перенос PowerPivot в SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   

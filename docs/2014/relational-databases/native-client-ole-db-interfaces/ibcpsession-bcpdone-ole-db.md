@@ -1,13 +1,11 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) | Документы Microsoft
+title: IBCPSession::BCPDone (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - BCPDone method
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 099618fccdf11dba2acb56303e2fec2d7a496ab0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 50f7fe4d747692ff11ffa130bf48b88d3252c994
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192440"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420713"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
   Фиксирует оставшиеся строки для отправки в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -39,7 +37,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Другие операции не может вызываться для [IBCPSession](ibcpsession-ole-db.md) интерфейса после вызова **BCPDone** метод. Единственной возможностью является вызов [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) для запуска операции массового копирования. Это аналогично вызову [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) метод.  
+ Никакая другая операция не может вызываться для [IBCPSession](ibcpsession-ole-db.md) интерфейса после вызова метода **BCPDone** метод. Единственной возможностью является вызов [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) метод для инициализации операции массового копирования. Это аналогично вызову [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) метод.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  S_OK  
@@ -67,7 +65,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Чтобы вновь добавить эти данные в таблицу, можно использовать следующую команду BCP:  
   
- **Образец bcp... fltest в файл outfile.dat - n -T -S** *сервера*  
+ **bcp master... fltest в файл outfile.dat - n -T -S** *сервера*  
   
  Во время компиляции этого образца необходимо будет указать файл sqlncli11.lib.  
   

@@ -1,5 +1,5 @@
 ---
-title: Элемент Translation (ASSL) | Документы Microsoft
+title: Элемент Translation (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Translation element
 ms.assetid: fe715bab-050d-49e6-8ba6-801d0fa379a4
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 67d8e5fbf2182abea4dda5bd5aaf5ebb30ba1273
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4214f0fc64e121cecf40f4723d95e8c53d1e38bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204114"
 ---
 # <a name="translation-element-assl"></a>Элемент Translation (ASSL)
   Предоставляет перевод для родительского элемента коллекции [Translations](../collections/translations-element-assl.md) .  
@@ -62,7 +62,7 @@ ms.locfileid: "36195465"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.Translation>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.Translation>.  
   
 ## <a name="see-also"></a>См. также  
  [Объекты &#40;ASSL&#41;](objects-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Свойство InstanceName (класс SInstance) | Документы Microsoft
+title: Свойство InstanceName (класс SInstance) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - InstanceName property
 ms.assetid: e6472fae-870d-4fb3-84d0-0c8f6599d1d2
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5be520899f35f4fd2c21ebcf6c4c30ab9da4aa45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 8de6e723d64d97352110c0508b52847050dcbf79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193034"
 ---
 # <a name="instancename-property-sinstance-class"></a>Свойство InstanceName (класс SInstance)
   Возвращает имя экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>Компоненты  
  *object*  
- [Класс SInstance](sinstance-class.md) , представляющий экземпляр сервера.  
+ [Класс SInstance](sinstance-class.md) объект, представляющий экземпляр сервера.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, указывающее имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

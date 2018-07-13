@@ -1,13 +1,11 @@
 ---
-title: SQLMoreResults | Документы Microsoft
+title: SQLMoreResults | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - SQLMoreResults function
 ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a882abd409468bdd9a52a8affcdca13b3bc93bd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: aed3bff56fcb794f50958f96ffe14df83205bb07
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190436"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410483"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
   Функция**SQLMoreResults** позволяет приложению получать несколько наборов результирующих строк. Если в инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT содержится предложение COMPUTE или отправленный пакет инструкций ODBC или [!INCLUDE[tsql](../../includes/tsql-md.md)] , это это приведет к тому, что драйвер поставщика ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создаст несколько результирующих наборов. В любом из случаев [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не допускает создания серверного курсора для обработки результатов. Таким образом, разработчик должен убедиться, что инструкция ODBC блокируется. Он должен исчерпать все возвращенные данные или отменить инструкцию ODBC до обработки данных от других активных инструкций соединения.  

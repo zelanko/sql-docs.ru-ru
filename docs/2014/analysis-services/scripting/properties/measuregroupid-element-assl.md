@@ -1,5 +1,5 @@
 ---
-title: Элемент MeasureGroupID (ASSL) | Документы Microsoft
+title: Элемент MeasureGroupID (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MeasureGroupID element
 ms.assetid: 3b075f86-dbbc-4285-8d2d-61fa722181c7
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a6ab3a46de67deb375f74b30a0e802680a9d7ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45ec91eee187e7ea0264eded7c92954822b49810
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239644"
 ---
 # <a name="measuregroupid-element-assl"></a>Элемент MeasureGroupID (ASSL)
-  Связывает [MeasureGroup](../objects/group-element-assl.md) с родительским элементом, привязка или привязка вне строки.  
+  Связывает [MeasureGroup](../objects/group-element-assl.md) с родительским элементом, привязкой или привязки вне строки.  
   
 ## <a name="syntax"></a>Синтаксис  
   

@@ -1,5 +1,5 @@
 ---
-title: Мастера (многомерные данные) служб Analysis Services | Документы Microsoft
+title: Мастера (многомерные данные) служб Analysis Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services wizards
 ms.assetid: 4814b8f6-1717-4b03-835b-15fcaa79a287
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa03a40457db856c3c53a3db1412d0c9b95e7864
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2316c7ab9f0d06930ba5346f51e28d7670dca8f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161535"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Мастера служб Analysis Services (многомерные данные)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] предоставляет мастеры для использования в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. В следующей таблице описаны доступные мастера.  

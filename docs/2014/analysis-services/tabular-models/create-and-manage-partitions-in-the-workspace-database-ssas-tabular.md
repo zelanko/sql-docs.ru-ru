@@ -1,5 +1,5 @@
 ---
-title: Создание и управление секциями в базе данных рабочей области (табличные службы SSAS) | Документы Microsoft
+title: Создание и управление секциями в базе данных рабочей области (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.partitionmgr.f1
 ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12655b79c40b71540f314e4f525e7581feac8cc6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ad3a73c669068129cb372144e008a484d784186
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193644"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151365"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Создание и управление секциями в базе данных рабочей области (табличные службы SSAS)
   Секции разделяют таблицу на логические части. Все секции можно обработать (обновить) независимо или параллельно с другими секциями. Использование секций позволяет улучшить масштабируемость и управление базами данных большого размера. По умолчанию все таблицы содержат одну секцию, включающую все столбцы. Задачи в этом разделе демонстрируют создание секций и управление ими в базе данных рабочей области модели с помощью диалогового окна **Диспетчер секций** в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  

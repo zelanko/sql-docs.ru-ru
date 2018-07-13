@@ -1,5 +1,5 @@
 ---
-title: С помощью запросов XPath в SQLXML 4.0 | Документы Microsoft
+title: Использование запросов XPath в SQLXML 4.0 | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - XML views [SQLXML]
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b0fe87e704a04c402e58079d5a6f087015f658c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 50586aca145c18a29cb260c71de578a060f08f36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217034"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Использование запросов XPath в SQLXML 4.0
   Поддержка Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аннотированных схем XSD позволяет создавать XML-представления реляционных данных, хранящихся в базе данных. Можно использовать подмножество языка XPath для запроса XML-представлений, созданных аннотированными схемами XSD.  
   
 > [!NOTE]  
->  Чтобы получить представление о запросах XPath в SQLXML 4.0, необходим опыт работы с XML-представлениями и другими связанными основными понятиями — шаблонами и схемами сопоставления. Дополнительные сведения см. в разделе [введение в схемы XSD с заметками &#40;SQLXML 4.0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Дополнительные сведения о XPath см. в стандарте XPath определен консорциумом World Wide Web (W3C) в http://www.w3.org/TR/xpath.  
+>  Чтобы получить представление о запросах XPath в SQLXML 4.0, необходим опыт работы с XML-представлениями и другими связанными основными понятиями — шаблонами и схемами сопоставления. Дополнительные сведения см. в разделе [введение в схемы XSD с заметками &#40;SQLXML 4.0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Дополнительные сведения о XPath см. в стандарте XPath, определенном консорциумом World Wide Web Consortium (W3C) адресу http://www.w3.org/TR/xpath.  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения об использовании запросов XPath &#40;SQLXML 4.0&#41;](introduction-to-using-xpath-queries-sqlxml-4-0.md)  

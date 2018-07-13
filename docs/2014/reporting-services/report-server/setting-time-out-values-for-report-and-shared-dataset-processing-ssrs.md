@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time-outs [Reporting Services]
 - query time-outs [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9066dbbc02149913959c9c1e16ee044f5f3b7a31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4794c4a2b6c9207cb48573bb481499fa402f3b29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214574"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Задание значений времени ожидания при обработке отчетов и общих наборов данных (SSRS)
   Можно указать значения времени ожидания, чтобы ограничить использование системных ресурсов. Сервер отчетов поддерживает два значения времени ожидания:  
@@ -45,7 +45,7 @@ ms.locfileid: "36194873"
  Можно также определить значение времени ожидания запроса для управляемых данными подписок. Значение времени ожидания запроса указано на страницах «Управляемая данными подписка». Определяемое значение устанавливает время ожидания сервером отчетов обработки запроса для завершения извлечения данных из источника данных подписчика.  
   
 ## <a name="setting-a-query-time-out-for-a-shared-dataset"></a>Настройка времени ожидания запроса для общего набора данных  
- Значения времени ожидания запроса указывается на сервере отчетов в секундах при создании или управлении общим набором данных. По умолчанию это значение равно 0 секунд, что эквивалентно отсутствию времени ожидания. Дополнительные сведения см. в разделе [управление общие наборы данных](../report-data/manage-shared-datasets.md).  
+ Значения времени ожидания запроса указывается на сервере отчетов в секундах при создании или управлении общим набором данных. По умолчанию это значение равно 0 секунд, что эквивалентно отсутствию времени ожидания. Дополнительные сведения см. в разделе [Управление общими наборами данных](../report-data/manage-shared-datasets.md).  
   
 ## <a name="setting-a-report-execution-time-out"></a>Установка времени ожидания выполнения отчета  
  Можно установить ограниченное значение времени ожидания выполнения отчета, в рамках времени, используемого сервером отчетов для обработки отчета. Значения времени ожидания выполнения отчета могут быть указаны и в диспетчере отчетов. Можно установить значение по умолчанию для всех отчетов на странице «Настройки сайта» и затем переопределить это значение на странице «Свойства выполнения» определенного отчета. По умолчанию значение равно 1 800 секунд. Дополнительные сведения см. в разделе [Установка свойств обработки отчетов](set-report-processing-properties.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "36194873"
 >  Можно установить значение `RunningRequestsDbCycle` в файле RSReportServer.config для изменения периодичности оценки заданий.  
   
 ## <a name="see-also"></a>См. также  
- [Задание параметров обработки &#40;режим интеграции служб Reporting Services в SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Установка параметров обработки &#40;режим интеграции служб Reporting Services в SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Сервер отчетов служб Reporting Services (основной режим)](reporting-services-report-server-native-mode.md)   
  [Управление запущенным процессом](../subscriptions/manage-a-running-process.md)   
  [Диспетчер отчетов (службы SSRS в собственном режиме)](../report-manager-ssrs-native-mode.md)  

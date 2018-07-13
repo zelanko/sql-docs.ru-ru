@@ -1,26 +1,24 @@
 ---
-title: Политики поддержки для собственного клиента SQL Server | Документы Microsoft
+title: Политики поддержки для собственного клиента SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b43170693e9d757b64711b7564cb954e45d80ab8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 14b75dc088ea1542038151377d6c8339b72870e9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195566"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426295"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>Политики поддержки собственного клиента SQL Server
   В этом разделе рассматриваются способы использования различных компонентов доступа к данным с собственным клиентом Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -33,15 +31,15 @@ ms.locfileid: "36195566"
   
 |Версия собственного клиента SQL Server|Поддерживаемые операционные системы|  
 |--------------------------------------|---------------------------------|  
-|Собственный клиент SQL Server (SQL Server 2005)|-Пакет обновления 4 для Microsoft Windows 2000 или более поздней версии<br />-Microsoft Windows Server 2003 или более поздней версии<br />-Пакет обновления 1 для Microsoft Windows XP или более поздней версии<br />-Microsoft Windows Vista (требуется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пакет обновления 2 или более поздней версии)<br />-Microsoft Windows Server 2008 (требуется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пакет обновления 2 или более поздней версии)|  
-|Собственный клиент SQL Server версии 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])|-Microsoft Windows Server 2003 Service Pack 2, или более поздней версии<br />— Microsoft Windows XP с пакетом обновления 2, или более поздней версии<br />-Microsoft Windows Vista<br />-Microsoft Windows Server 2008|  
-|Собственный клиент SQL Server 10.5 ([!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)])|-Microsoft Windows Server 2003 Service Pack 2, или более поздней версии<br />-Пакет обновления 2 для Microsoft Windows XP или более поздней версии<br />-Microsoft Windows Vista<br />-Microsoft Windows Server 2008<br />-Microsoft Windows 7|  
+|Собственный клиент SQL Server (SQL Server 2005)|-Microsoft Windows 2000 с пакетом обновления 4 или более поздней версии<br />-Microsoft Windows Server 2003 или более поздней версии<br />-Пакет обновления 1 для Microsoft Windows XP или более поздней версии<br />-Microsoft Windows Vista (требуется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пакет обновления 2 или более поздней версии)<br />-Microsoft Windows Server 2008 (требуется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пакет обновления 2 или более поздней версии)|  
+|SQL Server Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])|— Microsoft Windows Server 2003 Service Pack 2, или более поздней версии<br />— Microsoft Windows XP Service Pack 2 или более поздней версии<br />-Microsoft Windows Vista<br />-Microsoft Windows Server 2008|  
+|Собственный клиент SQL Server 10.5 ([!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)])|— Microsoft Windows Server 2003 Service Pack 2, или более поздней версии<br />— Microsoft Windows XP с пакетом обновления 2 или более поздней версии<br />-Microsoft Windows Vista<br />-Microsoft Windows Server 2008<br />-Microsoft Windows 7|  
 |Клиент SQL Server Native Client 11.0 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)])|-Microsoft Windows Vista<br />-Microsoft Windows Server 2008<br />-Microsoft Windows 7<br />-Microsoft Windows 8<br />-Microsoft Windows Server 2012|  
   
 ## <a name="ado-support-policies"></a>Политика поддержки ADO  
  Приложение ADO может пользоваться поставщиком OLE DB SQLOLEDB, который входит в состав Windows, если ему не требуются функции [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] или более поздней версии.  
   
- Приложения ADO могут использовать версию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client включены в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Приложения ADO могут также пользоваться собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 11.0 (в составе [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]), но в этом случае необходимо указать `DataTypeCompatibility=80` в строке соединения. Только функции [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] будут доступны, если в строке соединения указано значение `DataTypeCompatibility=80`.  
+ Приложения ADO могут использовать версию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент включен в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Приложения ADO могут также пользоваться собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 11.0 (в составе [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]), но в этом случае необходимо указать `DataTypeCompatibility=80` в строке соединения. Только функции [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] будут доступны, если в строке соединения указано значение `DataTypeCompatibility=80`.  
   
 ## <a name="bcp-support-policies"></a>Политика поддержки BCP  
  Начиная с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], программа bcp.exe поддерживает файлы данных, которые не более чем на три версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] старше версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], с которой поставляется экземпляр bcp.exe.  

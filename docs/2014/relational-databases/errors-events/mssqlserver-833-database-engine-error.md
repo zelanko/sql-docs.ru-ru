@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 833 (Database Engine error)
 ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 53f86ad23c967f573e66251430579475e64a0714
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e3e9519dce24bbe29f9cf30f89706fff9b42f9c7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195593"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428683"
 ---
 # <a name="mssqlserver833"></a>MSSQLSERVER_833
     
@@ -34,7 +33,7 @@ ms.locfileid: "36195593"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|BUF_LONG_IO|  
-|Текст сообщения|SQL Server обнаружил %d запросов ввода-вывода, занявших более %d секунд для завершения обработки файла [%ls] в базе данных`[%ls] (%d)`.  Дескриптором файла ОС является 0x%p.  Смещение последней длительной операции ввода-вывода: %#016I64x.|  
+|Текст сообщения|SQL Server обнаружил %d экземпляров, сброшенных запросов ввода-вывода, занявший более %d секунд для завершения обработки файла [%ls] в базе данных`[%ls] (%d)`.  Дескриптором файла ОС является 0x%p.  Смещение последней длительной операции ввода-вывода: %#016I64x.|  
   
 ## <a name="explanation"></a>Объяснение  
  Это сообщение указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издал запрос чтения или записи на диск, и выполнение запроса заняло более 15 секунд. Данная ошибка возвращается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и говорит о проблеме с подсистемой ввода-вывода.  

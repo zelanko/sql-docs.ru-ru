@@ -1,31 +1,29 @@
 ---
-title: Использование возвращающих табличные значения параметров (ODBC) | Документы Microsoft
+title: Использование возвращающих табличные значения параметров (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9fc29ab49b9a79b96cbef837182fa1a4ccfd39ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 13cf47c37cf2b7936ed2e6be5d3aaa27eb74fdb0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193187"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417123"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Использование возвращающих табличные значения параметров (ODBC)
   В нем демонстрируется вставка нескольких строк с несколькими столбцами за одно обращение к серверу при помощи возвращающего табличное значение параметра.  
   
- Дополнительные сведения о возвращающих табличные значения параметров см. в разделе [табличное значение параметры &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Дополнительные примеры, использование возвращающих табличные значения параметров, в разделе [примеры программирования параметров ODBC Table-Valued](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md).  
+ Дополнительные сведения о возвращающих табличные значения параметров, см. в разделе [возвращающего табличное значение параметров &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Дополнительные образцы использования возвращающих табличные значения параметров см. в разделе [ODBC Table-valued Parameter Programming Examples](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md).  
   
 ## <a name="example"></a>Пример  
  Кроме того, потребуется источник данных ODBC с именем TVPDemo. По умолчанию в качестве базы данных для источника данных TVPDemo может быть указана любая тестовая база данных на компьютере. Этот источник данных должен быть основан на драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

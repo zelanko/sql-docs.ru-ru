@@ -1,5 +1,5 @@
 ---
-title: Тип данных TableBinding (ASSL) | Документы Microsoft
+title: Тип данных TableBinding (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TableBinding data type
 ms.assetid: 3195dca4-82bf-46b7-a31f-5383586e3573
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0790fe5d8567c8ab23e3aaf39430d46675dcbdc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 475044a0bcad3c90ffaffa71eeeb6735a37f96c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220254"
 ---
 # <a name="tablebinding-data-type-assl"></a>Тип данных TableBinding (ASSL)
   Определяет производный тип данных, представляющий привязку к таблице.  
@@ -60,7 +60,7 @@ ms.locfileid: "36195249"
 |------------------|-------------|  
 |Родительские элементы|None|  
 |Дочерние элементы|[DataSourceID](../properties/id-element-assl.md), [DbSchemaName](../properties/name-element-assl.md), [DbTableName](../properties/dbtablename-element-assl.md)|  
-|Производные элементы|В разделе [привязки](binding-data-type-assl.md)|  
+|Производные элементы|См. в разделе [привязки](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
  Следует учитывать, что применение ссылок на другие таблицы в выражении фильтра, включенном в подзапрос выборки, может привести к снижению производительности доступа к некоторым источникам данных. Но конструктор может получить полный контроль над выражением SQL, определив именованный запрос в представлении источника данных, а затем ссылаясь на него.  
@@ -77,17 +77,17 @@ SELECT Date, Product ID, Qty, Price, Qty * Price AS Amount
    WHERE Year(Sales.Date) = 97  
 ```  
   
- Расчетное выражение все еще применяется, даже если в выражении используются уточненные имена таблиц (например Sales.Qty). То же самое происходит, если вместо таблицы были заменяется некоторым запросом «SELECT...» Предложение FROM выше стал бы «FROM SELECT... As Sales».  
+ Расчетное выражение все еще применяется, даже если в выражении используются уточненные имена таблиц (например Sales.Qty). То же остается верным, если вместо этого таблица заменяется некоторым запросом «SELECT…». Приведенное выше предложение FROM принимает вид «FROM SELECT... As Sales».  
   
- Дополнительные сведения о `Binding` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) типа `Binding` и иерархию наследования `Binding` типов, в разделе [тип привязки данных &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Дополнительные сведения о `Binding` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) типа `Binding` и иерархию наследования `Binding` типов, см. в разделе [типа привязки данных &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- Обзор привязок данных в ASSL см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Обзор привязки данных в языке ASSL, см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.TableBinding>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.TableBinding>.  
   
 ## <a name="see-also"></a>См. также  
  [Тип данных Binding &#40;ASSL&#41;](binding-data-type-assl.md)   
  [Источники данных и привязки &#40;многомерные службы SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)   
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

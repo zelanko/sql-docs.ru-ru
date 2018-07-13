@@ -1,28 +1,26 @@
 ---
-title: Перечисление источников данных OLE DB (OLE DB) | Документы Microsoft
+title: Перечисление источников данных OLE DB (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [OLE DB]
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c989dbd2dd929fc8e971b6cd182a379950a2b2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8a694707cb44c9cf26da6a1a747ad3096fbb9bec
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190742"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420903"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Перечисление источников данных OLE DB (OLE DB)
   В этом образце показано, как использовать объект перечислителя для построения списка доступных источников данных.  
@@ -53,7 +51,7 @@ ms.locfileid: "36190742"
 6.  Получите данные из копии строки, находящейся в наборе строк, путем вызова метода `IRowset::GetData` и обработайте их.  
   
 ## <a name="example"></a>Пример  
- Скомпилируйте с библиотекой ole32.lib и выполните следующий листинг кода C++. Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы соединиться с именованным экземпляром, измените строку подключения из L"(local)» для L"(local)\\\name», где имя является именем экземпляра. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
+ Скомпилируйте с библиотекой ole32.lib и выполните следующий листинг кода C++. Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы подключиться к именованному экземпляру, измените строку подключения из L"(local)» для L"(local)\\\name», где имя — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
 ```  
 // compile with: ole32.lib  

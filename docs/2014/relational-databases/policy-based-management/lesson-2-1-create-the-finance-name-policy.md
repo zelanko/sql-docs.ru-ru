@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 417bb9c891d4fec3393f94cf9ccbdda0bf9d4bbe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b16fd6b9ce9d89a730f64c5cadd7a67553cb6dd1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166915"
 ---
 # <a name="create-the-finance-name-policy"></a>Создание политики имен финансов
   В этой задаче создается база данных с именем Finance, а затем формируется условие, требующее, чтобы все таблицы начинались с букв **fintbl**. После этого создается политика и категория политики по обеспечению стандарта именования таблиц в базе данных Finance.  
@@ -78,7 +78,7 @@ ms.locfileid: "36192650"
   
 1.  В обозревателе объектов разверните узел **Управление**, щелкните правой кнопкой мыши узел **Управление политиками**и выберите пункт **Управление категориями**.  
   
-2.  В **Управление категориями политик** диалогового **имя**, тип `Finance` в пустое поле и снимите **обязательные подписки базы данных**. Параметр**Сделать подписки базы данных обязательными** принудительно подписывает каждую базу данных в экземпляре на политики, которые относятся к данной категории политик. В рамках этого занятия только база данных Finance должна быть подписана на политику "Finance Name".  
+2.  В **Управление категориями политик** диалогового **имя**, тип `Finance` в пустое поле, а затем снимите **обязательные подписки базы данных**. Параметр**Сделать подписки базы данных обязательными** принудительно подписывает каждую базу данных в экземпляре на политики, которые относятся к данной категории политик. В рамках этого занятия только база данных Finance должна быть подписана на политику "Finance Name".  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

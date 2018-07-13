@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pull subscriptions [SQL Server replication], synchronizing
 - synchronization [SQL Server replication], pull subscriptions
 - subscriptions [SQL Server replication], pull
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6e48ccd3d01d24ca84db923f3c56593621960105
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9143c943f18c793ce7b89be8891025b20be2e092
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160365"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Синхронизация подписки по запросу
   В данном разделе описывается синхронизация подписки по запросу в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [агентов репликации](agents/replication-agents-overview.md)или объектов RMO.  
@@ -176,7 +176,7 @@ ms.locfileid: "36195563"
     -   Получите экземпляр класса <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> из свойства <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> и вызовите метод <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> . Этот метод запускает агент синхронно, и управление не возвращается приложению до тех пор, пока выполнение задания агента не будет завершено. При синхронном выполнении в процессе работы агента можно обрабатывать событие <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> .  
   
         > [!NOTE]  
-        >  Если указано значение `false` для <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (по умолчанию) при создании подписки по запросу необходимо указать <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A>и при необходимости <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> и <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A> так, как связанные задание агента метаданные для этой подписки недоступна в [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql).  
+        >  Если указано значение `false` для <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (по умолчанию) при создании подписки по запросу, необходимо также указать <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A>и при необходимости <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> и <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A> так, как задание агента, связанных с метаданные для этой подписки недоступна в [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql).  
   
 #### <a name="to-synchronize-a-pull-subscription-to-a-merge-publication"></a>Синхронизация подписки по запросу на публикацию слиянием  
   
@@ -203,7 +203,7 @@ ms.locfileid: "36195563"
     -   Получите экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> из свойства <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> и вызовите метод <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> . Этот метод запускает агент слияния синхронно, и управление не возвращается приложению до тех пор, пока не будет закончено выполнение задания агента. При синхронном выполнении в процессе работы агента можно обрабатывать событие <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> .  
   
         > [!NOTE]  
-        >  Если указано значение `false` для <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (по умолчанию) при создании подписки по запросу необходимо указать <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>, и При необходимости <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>, и <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> так, как заданию агента, связанные с ними метаданные подписки недоступна в [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql).  
+        >  Если указано значение `false` для <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (по умолчанию) при создании подписки по запросу, необходимо также указать <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>, и При необходимости <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>, и <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> так, как заданию агента, связанные с ними метаданные подписки недоступна в [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql).  
   
 ###  <a name="PShellExample"></a> Примеры (объекты RMO)  
  В следующем примере синхронизируется подписка по запросу на публикацию транзакций, в которой агент запускается асинхронно через задание агента.  

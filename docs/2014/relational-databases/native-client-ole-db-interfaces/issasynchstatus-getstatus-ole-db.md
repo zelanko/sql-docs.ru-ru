@@ -1,13 +1,11 @@
 ---
-title: Функция ISSAsynchStatus::GetStatus (OLE DB) | Документы Microsoft
+title: ISSAsynchStatus::GetStatus (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - GetStatus method
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: baf7204719e865b93b7037e76f7b493e841644c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c9b12653f05171514c3a311edd42b2a3af9f58da
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193782"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413133"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>Функция ISSAsynchStatus::GetStatus (OLE DB)
   Возвращает состояние операции асинхронного выполнения.  
@@ -112,7 +110,7 @@ HRESULT GetStatus(
  Произошла ошибка, зависящая от поставщика.  
   
 ## <a name="remarks"></a>Примечания  
- **ISSAsynchStatus::GetStatus** поведение аналогично поведению метода **IDBAsynchStatus::GetStatus** за исключением того, если объект источника данных инициализации прерывается, возвращается E_UNEXPECTED, а чем DB_E_CANCELED (хотя [ISSAsynchStatus::WaitForAsynchCompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) возвратит DB_E_CANCELED). Происходит это потому, что после прерывания объект источника данных не остается в обычном состоянии зомби. Делается этого для того, чтобы можно было попытаться выполнить последующие операции инициализации.  
+ **ISSAsynchStatus::GetStatus** поведение аналогично поведению метода **IDBAsynchStatus::GetStatus** метода, за исключением случаев, если объект источника инициализации данных прервана, возвращается E_UNEXPECTED, а чем DB_E_CANCELED (хотя [ISSAsynchStatus::WaitForAsynchCompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) возвратит DB_E_CANCELED). Происходит это потому, что после прерывания объект источника данных не остается в обычном состоянии зомби. Делается этого для того, чтобы можно было попытаться выполнить последующие операции инициализации.  
   
  Если набор строк инициализируется или заполняется асинхронно, он должен поддерживать этот метод.  
   

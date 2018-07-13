@@ -1,5 +1,5 @@
 ---
-title: Обработка событий SMO | Документы Microsoft
+title: Обработка событий SMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - events [SMO], about events
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 34d447d0fca75012d786bd7de5911c2846dd76c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e74a05e025f474737130f1faeb61f2647d8e69bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212994"
 ---
 # <a name="handling-smo-events"></a>Обработка событий SMO
   На некоторые типы событий сервера можно подписаться с помощью обработчика событий и объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
@@ -40,9 +40,9 @@ ms.locfileid: "36191163"
 ## <a name="event-subscription"></a>Подписка на событие  
  Для обработки некоторого события пишется класс обработчика этого события, создается его экземпляр, этот обработчик события назначается родительскому объекту, затем производится подписка на данное событие.  
   
- Для обработки событий необходимо написать класс обработчика события. Класс обработчика события может содержать более одной функции обработки события, и его надо установить для обрабатываемых событий. Функции обработчика события получают сведения о событии из *ServerEventNotificatificationArgs* параметр, который можно использовать для предоставления сведений о событии.  
+ Для обработки событий необходимо написать класс обработчика события. Класс обработчика события может содержать более одной функции обработки события, и его надо установить для обрабатываемых событий. Функции обработчика события получают информацию о событии из *ServerEventNotificatificationArgs* параметр, который может использоваться для передачи сведений о событии.  
   
- Типы событий сервера и базы данных, которые можно обрабатывать, перечислены в <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> класса и <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>класса.  
+ Типы событий базы данных и сервера, которые могут быть обработаны, перечислены в <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> класс и <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>класса.  
   
 ## <a name="example"></a>Пример  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

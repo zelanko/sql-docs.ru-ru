@@ -1,5 +1,5 @@
 ---
-title: Установка SQL Server 2014 с помощью SysPrep | Документы Microsoft
+title: Установка SQL Server 2014 с помощью SysPrep | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2534337a9b1d4d244ade4f76c9bb08b6af1c573a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7be73952adef9269f9cf3811c8c4aa6fe3696403
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239754"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Установка SQL Server 2014 с помощью SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, доступны в центре установки. На странице **Дополнительно** **центра установки** имеется два параметра: **Подготовка образа изолированного экземпляра[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** и **Завершение образа подготовленного изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. В разделах [Подготовка](#prepare) и [Завершение](#complete) подробно описывается процесс установки. Дополнительные сведения см. в разделе [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "36195024"
 ## <a name="prerequisites"></a>предварительные требования  
  Перед установкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]изучите разделы в статье [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
- Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпусков и требования к оборудованию и программному обеспечению см. [оборудованию и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпусков и требования к оборудованию и программному обеспечению, см. в разделе [оборудованию и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep не поддерживает следующие компоненты.  
@@ -210,9 +210,9 @@ ms.locfileid: "36195024"
   
     -   Режим безопасности — выберите для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]режим проверки подлинности: «Проверка подлинности Windows» или «Смешанный режим». Если выбран смешанный режим проверки подлинности, необходимо задать надежный пароль для встроенной учетной записи системного администратора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-         После удачного соединения устройства с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в режиме проверки подлинности Windows и смешанном режиме начинает действовать один механизм безопасности. Дополнительные сведения см. в разделе [конфигурация ядра СУБД — Провизионирование учетных записей](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
+         После удачного соединения устройства с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в режиме проверки подлинности Windows и смешанном режиме начинает действовать один механизм безопасности. Дополнительные сведения см. в разделе [Настройка компонента Database Engine - Провизионирование учетных записей](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы добавить учетную запись, с которой выполняется программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить или удалить учетные записи из списка системных администраторов, нажмите кнопку **Добавить** или **Удалить**и затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [конфигурация ядра СУБД — Провизионирование учетных записей](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы добавить учетную запись, с которой выполняется программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить или удалить учетные записи из списка системных администраторов, нажмите кнопку **Добавить** или **Удалить**и затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Настройка компонента Database Engine - Провизионирование учетных записей](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
      После изменения списка нажмите кнопку **ОК**. Проверьте список администраторов в диалоговом окне конфигурации. После завершения работы со списком нажмите кнопку **Далее**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Обработка результатов инструкции (ODBC) | Документы Microsoft
+title: Результаты инструкции (ODBC) по обработке | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - ODBC, results processing
 ms.assetid: 772d9064-c91d-4cac-8b60-fcc16bf76e10
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a35789c6d4a93a4199948035fc79aefd520173de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 704339552a2b5d6b8a58bedfa39081c5bd0bcdea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193864"
 ---
 # <a name="processing-results-how-to-topics-odbc"></a>Инструкции по обработке результатов (ODBC)
-  Обработка результатов в приложении ODBC необходимо вначале Определение характеристик результирующего набора, а затем данные считываются в программные переменные с помощью [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) или [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) .  
+  Обработка результатов в приложении ODBC включает в себя сначала Определение характеристик результирующего набора, а затем данные считываются в программные переменные либо при помощи [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) или [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) .  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Получить сведения о результирующем наборе &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)  
+-   [Получение сведений о результирующем наборе &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)  
   
 -   [Обработка результатов &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)  
   

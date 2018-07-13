@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 caps.latest.revision: 15
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 399c6743f302bd616fe0a232527fcb5fc0af62ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 874a47c99ff422484a25be756d65f4b6cbf7e051
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199674"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Создание пакета развертывания модели при помощи MDSModelDeploy
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]для создания пакетов используется средство MDSModelDeploy. В зависимости от указанных команд, пакет может содержать:  
@@ -30,7 +30,7 @@ ms.locfileid: "36192910"
   
  Если необходимо развернуть пакет, содержащий только объекты модели, можно воспользоваться мастером развертывания моделей в веб-приложении [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Дополнительные сведения см. в разделе [Создание пакета развертывания модели с помощью мастера](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
 > [!NOTE]  
-> Эта версия средства MDSModelDeploy не может использовать несколько гигабайт (ГБ) памяти. При создании или развертывании большие модели с помощью **модели объектов и данных** параметр «Out of Memory» или «Поток был слишком длинным» ошибки могут возникнуть. Чтобы устранить эту проблему, используйте MDS промежуточного хранения для развертывания данных; или выполните обновление до MDS 2016 или более поздней версии, которая включает обновленную версию средства MDSModelDeploy.
+> Эта версия средства MDSModelDeploy не может использовать несколько гигабайт (ГБ) памяти. При создании или развертывании большие модели с помощью **модель объектов и данных** параметр «Out of Memory» или «Stream слишком длинна» ошибки могут возникнуть. Чтобы устранить эту проблему, используйте MDS, промежуточного хранения для развертывания данных; или обновите экземпляр до MDS 2016 или более поздней версии, который включает обновленную версию средства MDSModelDeploy.
 ## <a name="prerequisites"></a>предварительные требования  
  Для выполнения этой процедуры:  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36192910"
   
 2.  Перейдите к расположению файла MDSModelDeploy.exe.  
   
-    -   Если службы MDS установлены в расположение по умолчанию, что файл находится в *диск*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
+    -   Если службы MDS установлены в папку по умолчанию, файл находится в *диск*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
   
     -   Если службы MDS установлены не в папку по умолчанию, найдите файл MDSModelDeploy.exe на локальном компьютере.  
   

@@ -1,5 +1,5 @@
 ---
-title: Трассировка и воспроизведение событий | Документы Microsoft
+title: Трассировка и воспроизведение событий | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - events [SMO], tracing
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 41de47825af581e0584b8a58254e485691da1420
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: eb1d3f67ef90dcadfeb0dc976672af615b4efbba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230694"
 ---
 # <a name="tracing-and-replaying-events"></a>Трассировка и воспроизведение событий
   В SMO объекты `Trace` и `Replay` в пространстве имен <xref:Microsoft.SqlServer.Management.Trace> обеспечивают программный доступ к функциональности приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], которая используется для наблюдения за экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Приложение позволяет собирать и сохранять данные о каждом событии в файле или в таблице для последующего анализа. Например, с помощью приложения можно наблюдать за рабочей средой, чтобы определить, какие процедуры сказываются на производительности из-за того, что выполняются слишком медленно.  

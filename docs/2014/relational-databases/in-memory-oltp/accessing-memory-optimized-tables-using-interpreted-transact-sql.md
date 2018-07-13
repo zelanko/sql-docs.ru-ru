@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 030b8563ac272b0594697048169ade487c2321bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: afcc00e0f6bcc3341f7aafc23aeddfee5e8e8dff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170765"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Доступ к таблицам, оптимизированным для памяти, с помощью интерпретируемых инструкций Transact-SQL
   Лишь за некоторыми исключениями, можно получить доступ к оптимизированным для памяти таблицам с помощью любого запроса [!INCLUDE[tsql](../../includes/tsql-md.md)] или операции DML (SELECT, INSERT, UPDATE или DELETE), нерегламентированных пакетов и модулей SQL, таких как хранимые процедуры, функции, возвращающие табличное значение, триггеры и представления.  
@@ -57,7 +57,7 @@ ms.locfileid: "36193578"
 |READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *целое число*|TABLOCK|  
 |TABLOCKXX|UPDLOCK|XLOCK||  
   
- При обращении к таблице, оптимизированной для памяти, из явной или неявной транзакции с использованием интерпретируемых [!INCLUDE[tsql](../../includes/tsql-md.md)] необходимо включить табличное указание уровня изоляции, например SNAPSHOT, REPEATABLEREAD или SERIALIZABLE либо использовать параметр MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT. Дополнительные сведения см. в разделе [рекомендации для уровней изоляции транзакций с таблицами, оптимизированными для памяти](memory-optimized-tables.md) и [параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+ При обращении к таблице, оптимизированной для памяти, из явной или неявной транзакции с использованием интерпретируемых [!INCLUDE[tsql](../../includes/tsql-md.md)] необходимо включить табличное указание уровня изоляции, например SNAPSHOT, REPEATABLEREAD или SERIALIZABLE либо использовать параметр MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT. Дополнительные сведения см. в разделе [уровни изоляции транзакций с таблицами, оптимизированными для памяти, касающиеся](memory-optimized-tables.md) и [параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
 > [!NOTE]  
 >  Табличное указание уровня изоляции не требуется для обращения к таблицам, оптимизированным для памяти, с помощью запросов с автоматической фиксацией.  

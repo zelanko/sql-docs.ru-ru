@@ -1,13 +1,11 @@
 ---
-title: Профилирование производительности драйвера ODBC | Документы Microsoft
+title: Профилирование производительности драйвера ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 71db4f4331a71927b54131d1ddd8d984e507091d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: dc80bf8e33d07abb487700989ce124442d17446d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191196"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409983"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Создание профилей производительности драйвера ODBC
   Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет при профилировании два типа данных о производительности.  
@@ -46,7 +44,7 @@ ms.locfileid: "36191196"
   
 -   Соединение с источником данных, настроенным для ведения журнала.  
   
--   Вызов [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) для задания атрибутов драйвера, управляющих профилированием.  
+-   Вызов [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) для задания собственных атрибутов драйвера, управляющих профилированием.  
   
  Каждый процесс приложения получает отдельную копию драйвера ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а профилирование является глобальным для сочетания копии драйвера и процесса приложения. Если какое-либо действие приложения включает профилирование, записываются сведения для всех активных соединений с драйвером из этого приложения. Включаются даже соединения, которые сами не определяли профилирование.  
   
@@ -87,7 +85,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Количество инструкций SELECT, обработанных после SQL_PERF_START.|  
 |SQLSelectRows|Количество строк, выбранных после SQL_PERF_START.|  
 |Transactions|Количество пользовательских транзакций после SQL_PERF_START, включая откаты. Если приложение ODBC запущено с параметром SQL_AUTOCOMMIT_ON, каждая команда считается транзакцией.|  
-|SQLPrepares|Число [SQLPrepare, функция](http://go.microsoft.com/fwlink/?LinkId=59360) вызовы после SQL_PERF_START.|  
+|SQLPrepares|Число [функция SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360) вызовы после SQL_PERF_START.|  
 |ExecDirects|Число **SQLExecDirect** вызовы после SQL_PERF_START.|  
 |SQLExecutes|Число **SQLExecute** вызовы после SQL_PERF_START.|  
 |CursorOpens|Количество открытий драйвером серверного курсора после SQL_PERF_START.|  
@@ -102,7 +100,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |CurrentStmtCount|Количество дескрипторов инструкций, открытых в настоящее время для всех открытых в драйвере соединений.|  
 |MaxOpenStmt|Максимальное количество одновременно открытых дескрипторов инструкций после SQL_PERF_START.|  
 |SumOpenStmt|Количество дескрипторов инструкций, открытых после SQL_PERF_START.|  
-|**Статистика соединений**||  
+|**Статистика подключений:**||  
 |CurrentConnectionCount|Текущее количество активных дескрипторов соединений, открытых приложением для сервера.|  
 |MaxConnectionsOpened|Максимальное количество одновременно открытых дескрипторов соединений после SQL_PERF_START.|  
 |SumConnectionsOpened|Общее количество дескрипторов соединений, открытых после SQL_PERF_START.|  
@@ -124,6 +122,6 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ## <a name="see-also"></a>См. также  
  [Собственный клиент SQL Server &#40;ODBC&#41;](sql-server-native-client-odbc.md)   
- [Разделы руководства по производительности драйвера ODBC профилирование &#40;ODBC&#41;](../../native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [Профилирование разделы руководства по производительности драйвера ODBC &#40;ODBC&#41;](../../native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

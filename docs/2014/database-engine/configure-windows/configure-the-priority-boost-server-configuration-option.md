@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - priority boost option
 ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 331e6b781bdce06e8a856af9ee630525f8207f7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9d322af3b867b4b76a555674e18aca3e1d8822b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277420"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>Настройка параметра конфигурации сервера priority boost
   В этом разделе описывается настройка параметра конфигурации сервера **priority boost** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. С помощью параметра **priority boost** задается, должен ли [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняться с большим приоритетом в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 или Windows 2008 R2 по сравнению с остальными процессами на том же компьютере. Если установить этот параметр в значение 1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется в планировщике Windows 2008 или Windows Server 2008 R2 с базовым приоритетом 13. Значением по умолчанию является 0, что соответствует базовому значению приоритета 7.  

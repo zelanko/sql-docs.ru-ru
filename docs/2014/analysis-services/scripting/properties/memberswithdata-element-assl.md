@@ -1,5 +1,5 @@
 ---
-title: Элемент MembersWithData (ASSL) | Документы Microsoft
+title: Элемент MembersWithData (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MembersWithData element
 ms.assetid: 845087a2-b12d-4344-a8be-85ca61155296
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5c0311a774b225234aeb63d4d67680e12b693b0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0c2e35549f4db2de489916ad1760954d4f6dfd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218234"
 ---
 # <a name="memberswithdata-element-assl"></a>Элемент MembersWithData (ASSL)
   Определяет, следует ли отображать элементы данных для неконечных элементов в родительском атрибуте.  
@@ -62,7 +62,7 @@ ms.locfileid: "36192308"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Значение `MembersWithData` элемент используется только родительскими атрибутами (другими словами, значение [использование](usage-element-dimensionattribute-assl.md) элемент `DimensionAttribute` родительского элемента имеет значение *родительского*) для определения ли для отображения элементов данных для неконечных элементов в родительском атрибуте. Дополнительные сведения об элементах данных см. в разделе [Атрибуты в иерархиях типа "родители-потомки"](../../multidimensional-models/parent-child-dimension-attributes.md).  
+ Значение `MembersWithData` элемент используется только родительскими атрибутами (другими словами, значение [использования](usage-element-dimensionattribute-assl.md) элемент `DimensionAttribute` родительского элемента имеет значение *родительского*) для определения ли Отображать элементы данных для неконечных элементов в родительском атрибуте. Дополнительные сведения об элементах данных см. в разделе [Атрибуты в иерархиях типа "родители-потомки"](../../multidimensional-models/parent-child-dimension-attributes.md).  
   
  Значением этого элемента может быть только одна из строк в следующей таблице.  
   

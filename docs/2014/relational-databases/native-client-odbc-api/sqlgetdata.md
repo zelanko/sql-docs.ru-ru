@@ -1,13 +1,11 @@
 ---
-title: SQLGetData | Документы Microsoft
+title: SQLGetData | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,35 +14,35 @@ helpviewer_keywords:
 - SQLGetData function
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 370f018ad22dcdcfa1229a9a5b89fd2e2b9b27df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a64b07754533a5916fbf3a4e860d9cbcfceee721
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188468"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419783"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
-  **SQLGetData** используется для получения данных результирующего набора без привязки значений столбцов. **SQLGetData** можно вызывать повторно для одного столбца для извлечения больших объемов данных из столбца с **текст**, **ntext**, или **изображения** тип данных.  
+  **SQLGetData** используется для получения данных результирующего набора без привязки значений столбцов. **SQLGetData** вызывается последовательно для одного столбца для извлечения больших объемов данных из столбца с **текст**, **ntext**, или **изображение** тип данных.  
   
- В приложении не обязательно выполнять привязку данных для получения данных результирующего набора. Данные каждого столбца, можно получить из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента с помощью **SQLGetData**.  
+ В приложении не обязательно выполнять привязку данных для получения данных результирующего набора. Данные любого столбца могут быть получены из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента с помощью **SQLGetData**.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента не поддерживает использование **SQLGetData** для получения данных в порядке произвольного столбца. Все непривязанные столбцы, обрабатываемые с **SQLGetData** должен иметь высокий порядковые номера столбцов, чем привязанные столбцы в результирующем наборе. Приложение обрабатывает данные непривязанных столбцов (начиная со столбца с наименьшим порядковым номером и заканчивая столбцом с наибольшим порядковым номером). Попытка получить данные из столбца с более низким порядковым номером приведет к ошибке. Если в приложении используются серверные курсоры для формирования сообщений о строках результирующего набора, то приложение может повторно получить текущую строку, а затем получить значение столбца. Если инструкция выполняется только для чтения, однопроходный курсор по умолчанию, необходимо повторно выполнить инструкцию для резервного копирования **SQLGetData**.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента точно сообщает длину **текст**, **ntext**, и **изображения** данные, полученные с помощью **SQLGetData** . Приложение может работать при *StrLen_or_IndPtr* параметр возврата данных.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента точно сообщает длину **текст**, **ntext**, и **изображение** данные, полученные с помощью **SQLGetData** . Приложение может работать при *StrLen_or_IndPtr* параметр возврата быстро получении данных большой длины.  
   
 > [!NOTE]  
 >  Для типов больших значений *StrLen_or_IndPtr* возвращает значение SQL_NO_TOTAL в случае усечения данных.  
   
 ## <a name="sqlgetdata-support-for-enhanced-date-and-time-features"></a>Поддержка методом SQLGetData улучшенных функций даты и времени  
- Значения результирующих столбцов типов даты времени преобразуются, как описано в [преобразования из SQL в C](../native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md).  
+ Значения результирующих столбцов типов даты времени преобразуются, как описано в разделе [преобразования из SQL в C](../native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md).  
   
- Дополнительные сведения см. в разделе [даты и времени усовершенствования &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Дополнительные сведения см. в разделе [время улучшения функций даты и &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlgetdata-support-for-large-clr-udts"></a>Поддержка методом SQLGetData больших определяемых пользователем типов (UDT) в среде CLR  
- **SQLGetData** поддерживает большие определяемые пользователем типы (UDT). Дополнительные сведения см. в разделе [Large CLR User-Defined типы &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLGetData** поддерживает большие определяемые пользователем типы CLR (UDT). Дополнительные сведения см. в разделе [Large CLR User-Defined типы &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="example"></a>Пример  
   

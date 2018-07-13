@@ -1,5 +1,5 @@
 ---
-title: Тип данных Hierarchy (ASSL) | Документы Microsoft
+title: Тип данных Hierarchy (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Hierarchy data type
 ms.assetid: 2e05917e-7e5d-4dd1-817b-4ff5647747ff
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14354458e3441c6f8f2691350e9236f2aecb6cdd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b20bed156e97c33a1c9f9df02677ef403767e472
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230014"
 ---
 # <a name="hierarchy-data-type-assl"></a>Тип данных Hierarchy (ASSL)
   Определяет примитивный тип данных, представляющий иерархию в измерении.  
@@ -74,9 +74,9 @@ ms.locfileid: "36194834"
   
  Элемент *AllowDuplicateNames* не поддерживается в режимах DevelopmentMode 1 или 2, для режима сервера SharePoint и табличного соответственно.  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.Hierarchy>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.Hierarchy>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

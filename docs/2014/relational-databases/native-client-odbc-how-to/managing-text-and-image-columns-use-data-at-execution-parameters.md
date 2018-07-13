@@ -1,28 +1,26 @@
 ---
-title: Использование параметров данных времени выполнения (ODBC) | Документы Microsoft
+title: Использование параметров данных времени выполнения (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55216e04305194bf16be23b33122b5433a84c43f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 338d43146b1f782695025bb14470af58539b4bea
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190202"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409583"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>Использование параметров с данными времени выполнения (ODBC)
     
@@ -30,7 +28,7 @@ ms.locfileid: "36190202"
   
 1.  При вызове метода [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md), чтобы привязать программный буфер к параметру инструкции:  
   
-    -   Для последнего параметра передавайте значение SQL_LEN_DATA_AT_EXEC (*длина*) где *длина* — общая длина `text`, `ntext`, или `image` данных параметра в байтах.  
+    -   Для последнего параметра используйте значение SQL_LEN_DATA_AT_EXEC (*длина*) где *длина* — это общая длина `text`, `ntext`, или `image` данных параметра в байтах.  
   
     -   Используйте параметр `rgbValue` (восьмой параметр) определяемого программой идентификатора параметра.  
   
@@ -227,6 +225,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Текстовые и графические столбцы инструкции по управлению &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
+ [Инструкции по столбцы text и image управлению &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
   

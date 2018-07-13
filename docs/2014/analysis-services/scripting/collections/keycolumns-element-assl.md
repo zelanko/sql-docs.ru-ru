@@ -1,5 +1,5 @@
 ---
-title: Элемент KeyColumns (ASSL) | Документы Microsoft
+title: Элемент KeyColumns (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyColumns element
 ms.assetid: 03f3ad21-25cb-4afd-9287-cbf942ac1ad9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 537667650495082dce004a6fffb6699e3533e38d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88df5fa8590bf3f049632abb8137e62e959a67fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151615"
 ---
 # <a name="keycolumns-element-assl"></a>Элемент KeyColumns (ASSL)
   Содержит коллекцию элементов [KeyColumn](../objects/column-element-assl.md) определений элементов для родительского объекта.  
@@ -61,7 +61,7 @@ ms.locfileid: "36194588"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[AggregationInstanceAttribute](../data-type/aggregationinstanceattribute-data-type-assl.md), [AggregationInstanceCubeDimension](../data-type/dimension-data-type-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md), [ ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
-|Дочерние элементы|[Столбец KeyColumn](../objects/column-element-assl.md) типа [DataItem](../data-type/dataitem-data-type-assl.md)|  
+|Дочерние элементы|[KeyColumn](../objects/column-element-assl.md) типа [DataItem](../data-type/dataitem-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
  Коллекция `KeyColumns` может содержать множество элементов `KeyColumn`, представляющих многокомпонентный ключ для атрибута или столбца структуры интеллектуального анализа данных.  

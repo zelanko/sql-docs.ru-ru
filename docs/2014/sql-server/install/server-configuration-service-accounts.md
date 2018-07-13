@@ -1,5 +1,5 @@
 ---
-title: Настройка сервера — учетные записи служб | Документы Microsoft
+title: Конфигурация сервера — учетные записи служб | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - service account configuration, SQL Server
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e390c18563b092fd0460da5b9aed90828921d10b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2debf9c1754b81741e25f535b1cf05dce2ce2233
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212374"
 ---
 # <a name="server-configuration---service-accounts"></a>Настройка сервера — учетные записи служб
   На странице «Настройка сервера» мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно задать учетные записи входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Службы, которые можно настраивать на этой странице, зависят от того, какие компоненты были выбраны во время установки.  
   
- Стартовые учетные записи, используемые для запуска и выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут быть учетными записями пользователей домена HYPERLINK «ms-help://SQL11_I1033/s11sq_GetStart_I/html/309b9dac-0b3a-4617-85ef-c4519ce9d014.htm» \l «Domain_User», учетные записи локальных пользователей, управляемые учетные записи служб, виртуальные учетные записи или встроенные системные учетные записи.  
+ Стартовые учетные записи, используемые для запуска и выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут быть учетные записи пользователей домена HYPERLINK «ms-help://SQL11_I1033/s11sq_GetStart_I/html/309b9dac-0b3a-4617-85ef-c4519ce9d014.htm» \l «Domain_User», локальные учетные записи пользователей, управляемые учетные записи служб, виртуальные учетные записи или встроенные системные учетные записи.  
   
 ## <a name="options"></a>Параметры  
  Можно назначить одну учетную запись входа всем службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или настроить учетные записи служб индивидуально. Можно также указать, будут службы запускаться автоматически или вручную либо будут отключены. В большинстве установок рекомендуется использовать учетную запись по умолчанию.  
@@ -50,7 +50,7 @@ ms.locfileid: "36193036"
 |Клиент распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Учетная запись службы, используемая для службы клиента распределенного воспроизведения.<br /><br /> Укажите учетную запись, под которой будет запускаться служба клиента распределенного воспроизведения. Эта учетная запись должна отличаться от той, которая используется для службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Тип запуска по умолчанию — «Вручную».|  
 |Контроллер распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Учетная запись, используемая для службы контроллера распределенного воспроизведения.<br /><br /> Укажите учетную запись, под которой будет запускаться служба контроллера распределенного воспроизведения. Эта учетная запись должна отличаться от той, которая используется для службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Тип запуска по умолчанию — «Вручную».|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] средство запуска управляющей программы полнотекстовой фильтрации|Служба, которая создает процессы fdhost.exe. Она необходима для размещения средств разбиений по словам и фильтров, которые обрабатывают текстовые данные для полнотекстового индексирования.<br /><br /> Если для запуска службы FDHOST Launcher указывается учетная запись домена, настоятельно рекомендуется использовать учетную запись с низкими правами доступа. Эта учетная запись должна отличаться от той, которая используется для службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|Браузер[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Представляет службу разрешения имен, который предоставляет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения о подключении к клиентским компьютерам. Эта служба совместно используется множеством экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Учетная запись входа по умолчанию — NT Authority\Local Service, и она не может быть изменена в ходе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Учетную запись можно изменить после завершения установки. Если во время установки не указан тип запуска, он определяется следующим образом.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Браузер настроен автоматический запуск и работает в описанных ниже сценариях установки:<br />-<br />                            Экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br />-<br />                            Именованный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если включен протокол TCP или NP.<br />-<br />                            Некластеризованный, именованный экземпляр сервера анализа данных.<br /><br /> Если ни один из указанных выше сценариев не применим и браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уже установлен, будет поддерживаться текущее состояние браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Задается тип запуска «Отключено» и служба останавливается, если до установки не существовало экземпляра более старой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|Браузер[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Браузер — служба разрешения имен, предоставляющий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения о подключении к клиентским компьютерам. Эта служба совместно используется множеством экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Учетная запись входа по умолчанию — NT Authority\Local Service, и она не может быть изменена в ходе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Учетную запись можно изменить после завершения установки. Если во время установки не указан тип запуска, он определяется следующим образом.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Браузер настроен автоматический запуск и работает в описанных ниже сценариях установки:<br />-<br />                            Экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br />-<br />                            Именованный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если включен протокол TCP или NP.<br />-<br />                            Некластеризованный, именованный экземпляр сервера анализа данных.<br /><br /> Если ни один из указанных выше сценариев не применим и браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уже установлен, будет поддерживаться текущее состояние браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Задается тип запуска «Отключено» и служба останавливается, если до установки не существовало экземпляра более старой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>См. также  
  [Вопросы безопасности при установке SQL Server](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  

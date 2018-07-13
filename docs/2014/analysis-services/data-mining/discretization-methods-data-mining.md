@@ -1,5 +1,5 @@
 ---
-title: Методы дискретизации (интеллектуальный анализ данных) | Документы Microsoft
+title: Методы дискретизации (интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
 - discretization [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2cedf4996536560ff415746c7948cc62a86de77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29ef2a25704911e1feb31f20a048952d45966925
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206254"
 ---
 # <a name="discretization-methods-data-mining"></a>Методы дискретизации (Интеллектуальный анализ данных)
   Некоторые алгоритмы, используемые для создания моделей интеллектуального анализа данных в службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , для своей работы требуют наличия специальных типов содержимого. Например, упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] не может использовать непрерывные столбцы на входе и прогнозировать непрерывные значения. Кроме того, некоторые столбцы могут содержать так много значений, что алгоритм будет не в состоянии легко выявить содержательные закономерности в данных, из которых создается модель.  
@@ -54,11 +54,11 @@ ms.locfileid: "36192994"
   
 ## <a name="remarks"></a>Примечания  
   
--   Можно использовать `EQUAL_AREAS` метода для дискретизации строк.  
+-   Можно использовать `EQUAL_AREAS` метод дискретизации строк.  
   
 -   `CLUSTERS` Метод использует случайную выборку из 1 000 записей для дискретизации данных. Используйте метод `EQUAL_AREAS`, если не нужно, чтобы алгоритм отбирал данные.  
   
--   В учебнике по модели интеллектуального анализа данных нейронной сети приводится пример пользовательской настройки дискретизации. Дополнительные сведения см. в разделе [занятия 5: построение нейронной сети и модели логистической регрессии &#40;промежуточного Data Mining Tutorial&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
+-   В учебнике по модели интеллектуального анализа данных нейронной сети приводится пример пользовательской настройки дискретизации. Дополнительные сведения см. в разделе [занятия 5: создание нейронной сети и моделей логистической регрессии &#40;данных учебник по интеллектуальному анализу&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>См. также  
  [Типы содержимого &#40;интеллектуального анализа данных&#41;](content-types-data-mining.md)   

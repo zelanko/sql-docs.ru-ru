@@ -1,5 +1,5 @@
 ---
-title: Основные сведения о добавочном создании | Документы Microsoft
+title: Основные сведения о добавочном создании | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental generation [Analysis Services]
 - Schema Generation Wizard, incremental generation
 - relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 38116af87dc9fe02232994aac7085945ce695215
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a22eb09d21e1ef63a52ae7248fd6fa2a54832c15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177071"
 ---
 # <a name="understanding-incremental-generation"></a>Основные сведения о добавочном создании
   После первоначального формирования схемы при помощи среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно изменить определения куба и измерений, а затем вновь запустить мастер формирования схем. Мастер обновляет схему в базе данных предметной области и в соответствующем представлении источника данных для отражения изменений при сохранении данных, присутствующих в текущий момент в таблицах, подлежащих повторному формированию. При изменении таблиц после первоначального формирования мастер формирования схем по возможности сохраняет эти изменения, используя следующие правила.  
@@ -88,7 +88,7 @@ ms.locfileid: "36193696"
  С другой стороны, при изменении строки соединения с источником данных на другую базу данных по сравнению с предыдущим формированием не возникает ошибки. Используется эта новая база данных, а в предыдущую базу данных не вносятся никакие изменения.  
   
 ## <a name="see-also"></a>См. также  
- [Управление изменениями для представления источников данных и источники данных](manage-changes-to-data-source-views-and-data-sources.md)   
+ [Управление изменениями в источниках данных и представлениях источников данных](manage-changes-to-data-source-views-and-data-sources.md)   
  [Мастер формирования схем &#40;служб Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

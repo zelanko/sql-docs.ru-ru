@@ -5,30 +5,28 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ole
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - return codes [SQL Server]
 - OLE Automation [SQL Server], return codes
 - OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
-caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 782655aa435ba69a38f4de1d854c1ff9837a6778
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 57614db23c50236c6af783d7f913c897fda3e8df
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194448"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414023"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Коды возврата и сведения об ошибках OLE-автоматизации
-  OLE-автоматизации системные хранимые процедуры возвращают `int` код возврата, представляет собой значение HRESULT, возвращенное базовой операцией OLE-автоматизации. Значение HRESULT, равное 0, свидетельствует об успешном завершении операции. Ненулевое значение HRESULT является кодом ошибки OLE в шестнадцатеричной форме 0x800*nnnnn*, но, когда данные возвращаются в виде `int` значение кода возврата хранимой процедуры, HRESULT имеет в форме 214*nnnnnnn*.  
+  OLE-автоматизации системные хранимые процедуры возвращают `int` возвращают код, значение HRESULT, возвращенное базовой операцией OLE-автоматизации. Значение HRESULT, равное 0, свидетельствует об успешном завершении операции. Ненулевое значение HRESULT является кодом ошибки OLE в шестнадцатеричной форме 0x800*nnnnn*, однако при возврате `int` значение в код возврата хранимой процедуры, HRESULT имеет форме 214*nnnnnnn*.  
   
- Например если передать недопустимое имя объекта (SQLDMO. (Xyzzy) для sp_OACreate вызывает процедуры возвращают `int` значение HRESULT, равное 2147221005, что эквивалентно шестнадцатеричному 0x800401f3.  
+ Например если передать недопустимое имя объекта (SQLDMO. (Xyzzy) для sp_OACreate приводит процедуры для возврата `int` значение HRESULT, равное 2147221005, что эквивалентно шестнадцатеричному 0x800401f3.  
   
  Процедуру `CONVERT(binary(4), @hresult)` можно использовать для преобразования значения HRESULT с типом `int` в значение с типом `binary`. Однако в результате вызова `CONVERT(char(10), CONVERT(binary(4), @hresult))` будет получена нечитаемая строка, потому что каждый байт значения HRESULT будет преобразован в один символ ASCII. Для преобразования можно использовать следующий образец хранимой процедуры HexToChar `int` HRESULT `char` значение, содержащее читаемую шестнадцатеричную строку.  
   

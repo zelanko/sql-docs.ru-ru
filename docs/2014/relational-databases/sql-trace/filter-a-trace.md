@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], events
 - events [SQL Server], filters
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 23d93e00dde20ef9d97fd707dbb938907e9ef7a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 367a9669c11cb1841a4af3801abb98e385571388
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212834"
 ---
 # <a name="filter-a-trace"></a>Фильтрация трассировки
   Фильтры ограничивают накопление событий в трассировке. Если фильтр не установлен, то на выход трассировки возвращаются все события выбранных классов событий. Например, ограничение в трассировке по отслеживанию только имен определенных пользователей Windows сокращает объем выходных данных до объема данных только для этих пользователей.  
@@ -141,7 +141,7 @@ ms.locfileid: "36190964"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup> Если события трассируются из **osql** программы или **sqlcmd** программы, всегда добавляйте **%** к фильтрам для **TextData**  столбец данных.  
+ <sup>1</sup> Если события трассируются из **osql** служебная программа или **sqlcmd** служебной программы, всегда добавляйте **%** к фильтрам для **TextData**  столбец данных.  
   
  В целях предосторожности трассировка SQL автоматически исключает из трассировки любые сведения о хранимых процедурах безопасности, затрагивающих пароли. Этот механизм безопасности работает всегда и его нельзя настроить. Он предотвращает перехват паролей пользователями, получившими другим способом доступ к трассировке работы всех служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

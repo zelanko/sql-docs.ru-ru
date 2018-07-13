@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication], join
 - publications [SQL Server replication], join filters
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - join filters
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 074bf96a622cab73f8a5de2349833a7137979851
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 14a87090d28b91744fcfb9328045d8aa00c1022c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154485"
 ---
 # <a name="join-filters"></a>фильтры соединения
   Фильтр соединения позволяет фильтровать таблицу на основе фильтрации связанной таблицы в публикации. Родительская таблица, как правило, фильтруется параметризованным фильтром. Затем определяется один или несколько фильтров соединения практически таким же способом, что и соединение таблиц. Фильтры соединения расширяют параметризованные фильтры таким образом, чтобы данные в связанных таблицах реплицировались только в том случае, если они соответствуют предложению фильтра соединения.  

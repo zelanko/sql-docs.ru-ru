@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 27830819baa6b5381b8e9b9c41a62067e66f65e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1d8b8569a35a67d2700c0ce48c9c1cd4b29da7e1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187957"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427473"
 ---
 # <a name="user-defined-functions"></a>Определяемые пользователем функции
   Аналогично функциям в языках программирования,  определяемые пользователем функции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представляют собой подпрограммы, которые принимают параметры, выполняют действие, например, сложные вычисления, и возвращают результат этого действия в виде значения. Возвращаемое значение может быть либо единичным скалярным значением, либо результирующим набором.  
@@ -65,10 +63,10 @@ ms.locfileid: "36187957"
   
 ##  <a name="FunctionTypes"></a> Типы функций  
  Скалярная функция  
- Пользовательские скалярные функции возвращают одно значение типа данных, заданного в предложении RETURNS. Встроенная скалярная функция не имеет тела, скалярное значение является результатом одной инструкции. Скалярная функция из нескольких инструкций имеет текст, ограниченное блоком BEGIN...END, и содержит последовательность инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , возвращающих одно значение. Тип возвращаемого значения может быть любого типа данных, за исключением `text`, `ntext`, `image`, `cursor`, и `timestamp`.  
+ Пользовательские скалярные функции возвращают одно значение типа данных, заданного в предложении RETURNS. Встроенная скалярная функция не имеет тела, скалярное значение является результатом одной инструкции. Скалярная функция из нескольких инструкций имеет текст, ограниченное блоком BEGIN...END, и содержит последовательность инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , возвращающих одно значение. Тип возвращаемого значения может быть любым типом данных, за исключением `text`, `ntext`, `image`, `cursor`, и `timestamp`.  
   
  Функции с табличными значениями  
- Определяемые пользователем табличные функции возвращают `table` тип данных. Встроенная функция с табличным значением не имеет текста, таблица является результирующим набором одной инструкции.  
+ Определяемые пользователем возвращающие табличные значения функции возвращают `table` тип данных. Встроенная функция с табличным значением не имеет текста, таблица является результирующим набором одной инструкции.  
   
  Системные функции  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет множество системных функций для выполнения различных операций. Их нельзя изменить. Дополнительные сведения см. в разделах [Встроенные функции (Transact-SQL)](/sql/t-sql/functions/functions), [Системные хранимые функции (Transact-SQL)](/sql/relational-databases/system-functions/system-functions-for-transact-sql) и [Динамические административные представления и функции (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views).  

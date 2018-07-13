@@ -1,5 +1,5 @@
 ---
-title: Управление кэшами (XMLA) | Документы Microsoft
+title: Управление кэшами (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - cache [Analysis Services]
 ms.assetid: afad5c39-d4c3-4307-b3b9-a06617da0028
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b40efd25088e90b3761d3532188d5bdadce7630c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da13c86e86a2f51719a9d4f0aedfda33935766ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180821"
 ---
 # <a name="managing-caches-xmla"></a>Управление кэшами (XMLA)
-  Можно использовать [ClearCache](../xmla/xml-elements-commands/clearcache-element-xmla.md) в XML для аналитики (XMLA) для очистки кэша указанного измерения или секции. Очистка кэша вынуждает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] перестроение кэша для этого объекта.  
+  Можно использовать [ClearCache](../xmla/xml-elements-commands/clearcache-element-xmla.md) в XML для аналитики (XMLA) для очистки кэша указанного измерения или секции. Очистка кэша вынуждает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] перестроить кэш для этого объекта.  
   
 ## <a name="specifying-objects"></a>Указание объектов  
- [Объекта](../xmla/xml-elements-properties/object-element-xmla.md) свойство `ClearCache` команды может содержать ссылку объекта только для одного из следующих объектов. Если ссылка объекта указывает на объект, отличный от объекта из следующего списка, возникает ошибка:  
+ [Объект](../xmla/xml-elements-properties/object-element-xmla.md) свойство `ClearCache` команда может содержать ссылку на объект только для одного из следующих объектов. Если ссылка объекта указывает на объект, отличный от объекта из следующего списка, возникает ошибка:  
   
  База данных  
  Очищает кэш для всех измерений и секций, содержащихся в базе данных.  

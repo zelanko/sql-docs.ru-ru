@@ -1,5 +1,5 @@
 ---
-title: Поддерживается многомерных Выражений (MDX) | Документы Microsoft
+title: Поддерживается многомерных Выражений (многомерные Выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], statements
 - MDX [Analysis Services], functions
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0db1a0ef59eafcf20e240aa863ba7ce61edfad55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3301717dda71b51283f971fa1a21dbca1c228781
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191170"
 ---
 # <a name="supported-mdx-mdx"></a>Поддержка многомерных выражений (многомерные выражения)
   В скриптах многомерных выражений поддерживаются следующие инструкции и функции:  
@@ -57,7 +57,7 @@ ms.locfileid: "36195029"
  [Это &#40;многомерных Выражений&#41;](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
->  В многомерных Выражениях поддерживается присваивание значений следующим свойствам ячеек: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME`, и `FONT_SIZE`. Дополнительные сведения см. в разделе [Использование свойств ячеек (многомерные выражения)](mdx-cell-properties-using-cell-properties.md). Также в многомерных Выражениях поддерживается присваивание `NON_EMPTY_BEHAVIOR` свойство [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) инструкции.  
+>  Многомерных Выражениях поддерживается присваивание значений следующим свойствам ячеек: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME`, и `FONT_SIZE`. Дополнительные сведения см. в разделе [Использование свойств ячеек (многомерные выражения)](mdx-cell-properties-using-cell-properties.md). Также в многомерных Выражениях поддерживается присваивание `NON_EMPTY_BEHAVIOR` свойство [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) инструкции.  
   
  [Инструкция SCOPE &#40;многомерных Выражений&#41;](/sql/mdx/mdx-scripting-scope)  
   

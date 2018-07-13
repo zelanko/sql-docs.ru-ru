@@ -1,30 +1,28 @@
 ---
-title: Дата и время и наборы строк схемы | Документы Microsoft
+title: Даты и времени и наборы строк схемы | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9faf2104ffb2f49281fe677d8e7ff4f23887338d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8a87b2ecdcce3b50eaebcc73471b44f6db48f04b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193100"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431683"
 ---
-# <a name="date-and-time-and-schema-rowsets"></a>Дата и время и наборы строк схемы
+# <a name="date-and-time-and-schema-rowsets"></a>Даты и времени и наборы строк схемы
   В этом разделе содержатся сведения о наборе строк COLUMNS и о наборе строк PROCEDURE_PARAMETERS. Эти сведения относятся к усовершенствованиям даты и времени поставщика OLE DB, реализованного в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="columns-rowset"></a>COLUMNS, набор строк  
@@ -90,7 +88,7 @@ ms.locfileid: "36193100"
 |TYPELIB|NULL|NULL|NULL|NULL|NULL|NULL|  
 |VERSION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_LONG|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE, если только не выполняется одно из следующих условий.<br /><br /> — Это клиент подключен к серверу низкого уровня.<br />-Данные свойство совместимости типов соединения указывает уровень совместимости, который имеет значение 80.|VARIANT_TRUE, если только не выполняется одно из следующих условий.<br /><br /> — Это клиент подключен к серверу низкого уровня.<br />-Данные свойство совместимости типов соединения указывает уровень совместимости, который имеет значение 80.|VARIANT_TRUE|  
+|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE, если только не выполняется одно из следующих условий.<br /><br /> -— Клиент, соединение с сервером низкого уровня.<br />-Тип совместимости свойство подключения к данным указывает уровень совместимости, который имеет значение 80.|VARIANT_TRUE, если только не выполняется одно из следующих условий.<br /><br /> -— Клиент, соединение с сервером низкого уровня.<br />-Тип совместимости свойство подключения к данным указывает уровень совместимости, который имеет значение 80.|VARIANT_TRUE|  
 |IS_FIXEDLENGTH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
   
  В OLE DB для числовых и десятичных типов определяются только значения MINIMUM_SCALE и MAXIMUM_SCALE, поэтому использование этих столбцов собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для типов time, datetime2 и datetimeoffset является нестандартным.  

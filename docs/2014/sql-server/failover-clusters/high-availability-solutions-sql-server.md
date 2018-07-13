@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - high availability [SQL Server], solutions
 - Database Engine [SQL Server], availability
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - server availability [SQL Server]
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 caps.latest.revision: 80
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 061606f86a28216e78409e6521c78cc301d4c738
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9a6e16e57cf7d196f4210ea7a1624e5501f84523
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260030"
 ---
 # <a name="high-availability-solutions-sql-server"></a>Решения высокого уровня доступности (SQL Server)
   В данном разделе представлены некоторые решения высокой доступности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , позволяющие повысить уровень доступности серверов или баз данных. Решения по повышению уровня доступности защищают от последствий ошибок в программах и сбоев оборудования, помогая сохранить доступность приложений, и предельно сокращают для пользователей время простоя.  

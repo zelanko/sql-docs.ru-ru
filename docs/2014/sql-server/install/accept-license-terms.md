@@ -1,5 +1,5 @@
 ---
-title: Принять условия лицензионного соглашения | Документы Microsoft
+title: Примите условия лицензионного соглашения | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - license terms
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Registration Information page
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55d500b13cc3ab3c859474bb3050e29a7487f4a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b060499f9b3a008e0106455afde5f1a7691d90f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260100"
 ---
 # <a name="accept-license-terms"></a>Принятие условий лицензионного соглашения
   На странице **Принять условия лицензии** мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] примите условия лицензии для этого выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "36195072"
   
  Применительно ко всем прочим компонентам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сбор сведений производится всего один раз в день по всем разрешенным экземплярам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию сбор запланирован на полночь, что позволяет свести к минимуму нагрузку на сервер. Если необходимо изменить время сбора данных, можно вручную отредактировать раздел реестра, управляющий этим временем. Каждый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует собственный раздел реестра:  
   
- HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< Идентификатор ЭКЗЕМПЛЯРА > \CPE\TimeofReporting  
+ HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< ИДЕНТИФИКАТОР_ЭКЗЕМПЛЯРА > \CPE\TimeofReporting  
   
  Значение этого раздела реестра содержит время сбора данных как число минут с 00:00 (полуночи) до времени запуска. Например, значение, равное 60, запустит сбор данных в 1:00, значение 1200 — в 20:00, и так далее.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36195072"
   
 -   данные из памяти или файлов процесса, вызвавшего ошибку.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] не собирает преднамеренно файлы, имя, адрес, адрес электронной почты или в любой другой форме личных сведений. Однако в отчет об ошибке из памяти или файлов процесса, вызвавшего ошибку, могут попасть персональные данные. Хотя потенциально эти сведения можно использовать, чтобы идентифицировать пользователя, [!INCLUDE[msCoName](../../includes/msconame-md.md)] не использует их с этой целью.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] не собирает преднамеренно файлы, имя, адрес, адрес электронной почты или любые другие формы персональных данных. Однако в отчет об ошибке из памяти или файлов процесса, вызвавшего ошибку, могут попасть персональные данные. Хотя потенциально эти сведения можно использовать, чтобы идентифицировать пользователя, [!INCLUDE[msCoName](../../includes/msconame-md.md)] не использует их с этой целью.  
   
  Дополнительные сведения о правилах сбора данных и обращения с личными сведениями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Заявление о конфиденциальности Microsoft SQL Server](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md).  
   

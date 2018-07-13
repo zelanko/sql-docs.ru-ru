@@ -1,5 +1,5 @@
 ---
-title: Общие сведения о безопасности (интеллектуальный анализ данных) | Документы Microsoft
+title: Общие сведения о безопасности (интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a20982584b08256cf02d0ca1bb6a3fb3012190b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d7432450357e77875695983f65661f0e645c7a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193005"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177021"
 ---
 # <a name="security-overview-data-mining"></a>Общие сведения о безопасности (интеллектуальный анализ данных)
   Защита служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняется на нескольких уровнях. Необходимо защитить каждый экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и его источники данных, чтобы убедиться, что только авторизованные пользователи имеют разрешения на чтение или на чтение и запись в выбранных измерениях, моделях интеллектуального анализа данных и источниках данных. Необходимо также обезопасить базовые источники данных, чтобы предотвратить несанкционированный доступ к конфиденциальным бизнес-данным. Процесс защиты экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] описывается в следующих разделах.  
@@ -35,7 +35,7 @@ ms.locfileid: "36193005"
   
 -   [Настройка учетных записей служб &#40;служб Analysis Services&#41;](../instances/configure-service-accounts-analysis-services.md)  
   
--   [Предоставление доступа к объектам и операциям &#40;служб Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Авторизация доступа к объектам и операциям &#40;служб Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_Logon"></a> Настройка учетной записи входа для служб Analysis Services  
  Необходимо выбрать подходящую учетную запись входа для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и указать для нее разрешения. Следует убедиться, что учетная запись входа служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] обладает только теми разрешениями, которые необходимы для выполнения требуемых задач, включая соответствующие разрешения на доступ к базовым источникам данных.  

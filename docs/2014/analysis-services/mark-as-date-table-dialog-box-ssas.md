@@ -1,5 +1,5 @@
 ---
-title: Пометить как таблицу дат-диалоговое окно (службы SSAS) | Документы Microsoft
+title: Пометить как дата таблицу-диалоговое окно (службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.createdatetable.f1
 ms.assetid: 698b5ef1-b79b-4d76-9847-39669b4f5bb9
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 88cac2df0119fe432eeebd0f970bb1c2b6899973
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59a0483b697132c2da56d4b2c937bf942d9792ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194137"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210264"
 ---
 # <a name="mark-as-date-table-dialog-box-ssas"></a>Диалоговое окно «Пометить как таблицу дат» (службы SSAS)
   Для открытия диалогового окна **Пометить как таблицу дат** выберите меню **Таблица** , затем **Дата**и установите флажок **Пометить как таблицу дат**. Таблицы дат используются в логике операций со временем. Для создания связи с таблицей дат необходимо указать столбец с уникальными значениями, который будет служить уникальным идентификатором для таблицы.  

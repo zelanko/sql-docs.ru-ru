@@ -1,13 +1,11 @@
 ---
-title: С помощью заголовка собственного клиента SQL Server и файлы библиотек | Документы Microsoft
+title: С помощью SQL Server Native Client файлов заголовков и библиотек | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,18 +22,18 @@ helpviewer_keywords:
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 caps.latest.revision: 63
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f10805d7a28fbeb291244913ae602055f16a1462
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cf209f7897aed59e32d648e0305f9c7ba0e119a9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195151"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415079"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Использование файлов заголовков и библиотек собственного клиента SQL Server
-  Файлы заголовка и библиотеки собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливаются с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. При разработке приложения важно скопировать и установить все требуемые файлы для работы среды разработки. Дополнительные сведения об установке и распространении [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client см. в разделе [Установка собственного клиента SQL Server](installing-sql-server-native-client.md).  
+  Файлы заголовка и библиотеки собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливаются с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. При разработке приложения важно скопировать и установить все требуемые файлы для работы среды разработки. Дополнительные сведения об установке и распространении [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, см. в разделе [Установка SQL Server Native Client](installing-sql-server-native-client.md).  
   
  Файлы заголовка и библиотеки собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливаются в следующий каталог.  
   
@@ -85,9 +83,9 @@ include "sqlncli.h";
   
 ## <a name="component-names-and-properties-by-version"></a>Имена и свойства компонентов в зависимости от версии  
   
-|Свойство|собственный клиент SQL Server<br /><br /> SQL Server 2005|Собственный клиент SQL Server 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
+|Свойство|собственный клиент SQL Server<br /><br /> SQL Server 2005|SQL Server Native Client 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
 |--------------|--------------------------------------------------|-------------------------------------------------------|---------------------------------------------------------------|----------|  
-|Имя драйвера ODBC|Собственный клиент SQL|Собственный клиент SQL Server 10.0|SQL Server Native Client 11.0|SQL Server|  
+|Имя драйвера ODBC|Собственный клиент SQL|SQL Server Native Client 10.0|SQL Server Native Client 11.0|SQL Server|  
 |Имя файла заголовка ODBC|Sqlncli.h|Sqlncli.h|Sqlncli.h|Odbcss.h|  
 |DLL-библиотека драйвера ODBC|Sqlncli.dll|Sqlncl10.dll|Sqlncl11.dll|sqlsrv32.dll|  
 |Библиотека ODBC для API-интерфейсов программы BCP|Sqlncli.lib|Sqlncli10.lib|Sqlncli11.lib|Odbcbcp.lib|  

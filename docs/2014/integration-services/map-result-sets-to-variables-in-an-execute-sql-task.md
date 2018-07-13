@@ -1,5 +1,5 @@
 ---
-title: Сопоставление результирующих наборов с переменными в задача «Выполнение SQL» | Документы Microsoft
+title: Сопоставление результирующих наборов с переменными в «выполнение SQL» | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - mapping result sets to variables [Integration Services]
 - variables [Integration Services], mapping result sets to
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 62dab9509a080e00edc4d990cd3f23fa67c93113
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cdd76b3f0b1665fa6336e82536ca474c0b5e1fab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277380"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Сопоставление результирующих наборов с переменными в задаче "Выполнение SQL"
   В этом разделе описывается создание сопоставления между результирующими наборами и переменной в задаче «Выполнение SQL». Сопоставление между результирующим набором и переменной делает результирующий набор доступным для других элементов пакета. Например, скрипт в задаче «Скрипт» может считать переменную, а потом использовать значения из результирующего набора, или источник XML может использовать результирующий набор, сохраненный в переменной. Если результирующий набор создан родительским пакетом, его можно сделать доступным дочернему пакету, вызываемому задачей «Выполнение пакета», сопоставив результирующий набор с переменной в родительском пакете, а затем для хранения значения родительской переменной создав конфигурацию переменных родительского пакета в дочернем пакете.  
@@ -65,11 +65,11 @@ ms.locfileid: "36194972"
   
 ## <a name="see-also"></a>См. также  
  [Задача "Выполнение SQL"](control-flow/execute-sql-task.md)   
- [Результирующие наборы в задача «Выполнение SQL»](result-sets-in-the-execute-sql-task.md)   
- [Задача «Выполнение пакета»](control-flow/execute-package-task.md)   
- [Конфигурации пакета](../../2014/integration-services/package-configurations.md)   
- [Создать конфигурации пакетов](../../2014/integration-services/create-package-configurations.md)   
- [Использовать значения переменных и параметров в дочернем пакете](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
+ [Результирующие наборы «Выполнение SQL»](result-sets-in-the-execute-sql-task.md)   
+ [«Выполнение пакета»](control-flow/execute-package-task.md)   
+ [Конфигурации пакетов](../../2014/integration-services/package-configurations.md)   
+ [Создание конфигурации пакетов](../../2014/integration-services/create-package-configurations.md)   
+ [Используйте значения переменных и параметров в дочернем пакете](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
  [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md)  
   
   

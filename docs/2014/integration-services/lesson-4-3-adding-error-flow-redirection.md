@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 caps.latest.revision: 39
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 70f554444431c06d14d67bf7e39d46240581b23a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3e56757b73f01709bca2a989f2610269a5c2556
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178107"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Шаг 3. Добавление перенаправления потока ошибок
   Как было рассмотрено в предыдущей задаче, преобразование «Поиск ключа валюты» при попытке обработать поврежденный образец неструктурированного файла не может сформировать соответствие. Вместо этого формируется ошибка. Поскольку преобразование использует установки по умолчанию для вывода ошибки, любая возникшая ошибка приводит к неудачному завершению преобразования. При неудачном завершении преобразования выполнение пакета также завершается с ошибкой.  
@@ -54,7 +54,7 @@ ms.locfileid: "36195419"
   
 9. В `Name` введите **ErrorDescription** и задайте `DataType` свойства **строка в Юникоде [DT_WSTR]**.  
   
-10. На **сценарий** убедитесь, что `LocaleID` свойству **английского языка (Соединенные Штаты.**  
+10. На **сценарий** странице, убедитесь, что `LocaleID` свойству **английский (Соединенные Штаты Америки.**  
   
 11. Нажмите кнопку **Изменить скрипт** , чтобы открыть среду [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). В методе `Input0_ProcessInputRow` введите или вставьте следующий код:  
   
@@ -100,6 +100,6 @@ ms.locfileid: "36195419"
 13. Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно **Редактор преобразования «Скрипт»** .  
   
 ## <a name="next-steps"></a>Следующие шаги  
- [Шаг 4: Добавление назначения «неструктурированный файл»] (lesson-4-4-adding-a-flat-file-destination.md  
+ [Шаг 4: Добавление назначения неструктурированных файлов] (lesson-4-4-adding-a-flat-file-destination.md  
   
   

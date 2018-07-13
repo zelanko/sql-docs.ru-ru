@@ -1,5 +1,5 @@
 ---
-title: Элемент Translations (XML для Аналитики) | Документы Microsoft
+title: Элемент Translations (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Translations element
 ms.assetid: 86fd2119-9bea-4306-829e-cc439da05566
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 180a570d7b466a33c0c057066d88b1bd28d00d27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 64dcf6e45cd70270ca0a5160b777044082c1c27d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205654"
 ---
 # <a name="translations-element-xmla"></a>Элемент Translations (XML для аналитики)
   Содержит коллекцию элементов [Translation](translation-element-xmla.md) , которые используются для идентификации ключей элементов, принадлежащих элементу атрибута, представленного родительским элементом [Attribute](attribute-element-xmla.md) .  
@@ -68,7 +68,7 @@ ms.locfileid: "36191063"
 ## <a name="remarks"></a>Примечания  
   
 ## <a name="see-also"></a>См. также  
- [Элемент INSERT &#40;XML для Аналитики&#41;](../xml-elements-commands/insert-element-xmla.md)   
+ [Вставка элемента &#40;XML для Аналитики&#41;](../xml-elements-commands/insert-element-xmla.md)   
  [Элемент Update &#40;XML для Аналитики&#41;](../xml-elements-commands/update-element-xmla.md)   
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Сведения о публикации, трассировочные маркеры (публикация транзакций, SQL Server 2005 и более поздние версии) | Документы Microsoft
+title: Сведения о публикации, трассировочные токены (публикация транзакций, SQL Server 2005 и более поздние версии) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.tracertokens.f1
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c5a8c3c56f1552e0106f10e357306034d42b25e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ea4849d69bc1552141709180f00d38f1efb72549
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278920"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>Сведения о публикации, трассировочные токены (публикация транзакций, SQL Server 2005 и более поздние версии)
   На вкладке **Трассировочные токены** можно проверить соединения и измерить задержку той системы, где используется репликация транзакций. Токен (небольшой объем данных) записывается в журнал транзакций базы данных публикации и помечается так, как если бы он был обычной реплицируемой транзакцией, а затем проходит по системе, позволяя вычислить следующие характеристики:  

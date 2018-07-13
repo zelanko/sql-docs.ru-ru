@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserted tables
 - UPDATE statement [SQL Server], DML triggers
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 11e879ddc8687bb7daeb7e20158bd4d65fcd0d60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f5a195b0cd15716b87f050db5dd835c602303a2f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190393"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427643"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Использование таблиц inserted и deleted
   Инструкции триггеров DML используют две особые таблицы: deleted и inserted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически создает эти таблицы и управляет ими. Эти временные таблицы, находящиеся в оперативной памяти, используются для проверки результатов изменений данных и для установки условий срабатывания триггеров DML. Нельзя в этих таблицах изменять данные напрямую или выполнять над ними операции языка описания данных DDL, например инструкцию CREATE INDEX.  
@@ -74,7 +72,7 @@ ms.locfileid: "36190393"
   
 -   Инструкции INSERT должны определять значения для всех столбцов со свойством NOT NULL, не имеющих ограничений DEFAULT.  
   
--   Для любого столбца, кроме вычисляемых, удостоверение или `timestamp` столбцы, значения являются необязательными для любого столбца, который допускает значения NULL, или любой NOT NULL столбца, который обладает определением DEFAULT.  
+-   Для всех столбцов, за исключением вычисляемого identity или `timestamp` столбцов, значения являются необязательными для любого столбца, допускающего значения NULL, или любых не NULL, столбец, который обладает определением DEFAULT.  
   
  Если инструкция INSERT, UPDATE или DELETE ссылается на представление, для которого определен триггер INSTEAD OF, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] вызывает триггер вместо того, чтобы предпринять какое-либо прямое действие по отношению к таблице. Триггер использует сведения, представленные в таблицах inserted и deleted, для создания инструкций, необходимых для выполнения требуемых действий в базовых таблицах, даже в том случае, если формат данных в таблицах inserted и deleted, созданных для представления, отличается от формата данных базовой таблицы.  
   

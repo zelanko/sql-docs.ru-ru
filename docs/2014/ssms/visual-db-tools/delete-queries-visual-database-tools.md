@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dropping queues
 - deleting queries
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - queries [SQL Server], deleting
 ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b4d9cd28dc8205ea10546d3f50add14da5c3da0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c9690ed54b747460fe5ee706d50085c53c85c1a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240050"
 ---
 # <a name="delete-queries-visual-database-tools"></a>Удаление запросов (визуальные инструменты для баз данных)
   Можно удалить запрос, убрав его из проекта и окончательно удалив его из файловой системы. Запросы, удаленные с использованием нижеследующей процедуры, не отправляются в корзину и не могут быть восстановлены.  
@@ -43,9 +43,9 @@ ms.locfileid: "36192574"
 >  Если необходимо убрать запрос из проекта, не удаляя его окончательно, выберите **Удалить**. Далее щелкните правой кнопкой мыши папку запроса и выберите пункт **Добавить элемент** , чтобы найти и снова добавить запрос.  
   
 ## <a name="see-also"></a>См. также  
- [Очистка результатов запросов &#40;визуальные средства базы данных&#41;](visual-database-tools.md)   
- [Отменить изменения, выполненные в запросе &#40;визуальные средства базы данных&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
- [Проектировать запросы и представления инструкции &#40;визуальные средства базы данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Очистка результатов запросов &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
+ [Отмена изменений, внесенных в запросы &#40;визуальных инструментах баз данных&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
+ [Проектирование запросов и представлений инструкции &#40;визуальных инструментах баз данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

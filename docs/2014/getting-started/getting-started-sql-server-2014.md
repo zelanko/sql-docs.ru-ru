@@ -1,5 +1,5 @@
 ---
-title: Приступая к работе (SQL Server 2014) | Документы Microsoft
+title: Приступая к работе (SQL Server 2014) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5148c993-6cd4-42f0-9109-1ec08d8e798c
 caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6fdc2a443c0318fc7a40a21034171c5a043fd43d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5dc6314da166a0503f31326dfd562fc42a635f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205874"
 ---
 # <a name="getting-started-sql-server-2014"></a>Приступая к работе (SQL Server 2014)
   Источники сведений по [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], системным требованиям, инструкции по установке и многое другое.  
@@ -39,7 +39,7 @@ ms.locfileid: "36190810"
   
  [Быстрая установка SQL Server 2014](quick-start-installation-of-sql-server-2014.md)  
   
- [Приступая к работе с документацией по SQL Server](../2014-toc/books-online-for-sql-server-2014.md)  
+ [Начало работы с документацией по SQL Server](../2014-toc/books-online-for-sql-server-2014.md)  
   
  [Получение помощи &#40;SQL Server 2014&#41;](getting-assistance-sql-server-2014.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Элемент optionality (ASSL) | Документы Microsoft
+title: Элемент optionality (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Optionality element
 ms.assetid: 6cd2ef0a-6fbe-4462-ab27-4cdfeb33f8ab
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 971aaf70fe3cb2e239ace81d85f02d07374ce80f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe204e2b8eed7b5629b9c6d6060295383371aa48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159365"
 ---
 # <a name="optionality-element-assl"></a>Элемент Optionality (ASSL)
-  Указывает на необязательность вложенных элементов для [AttributeRelationship](../objects/attributerelationship-element-assl.md) элемента.  
+  Указывает на необязательность вложенных элементов для [AttributeRelationship](../objects/attributerelationship-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36194355"
 |Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
-|Значение по умолчанию|*Обязательное*|  
+|Значение по умолчанию|*Обязательный*|  
 |Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
@@ -64,7 +64,7 @@ ms.locfileid: "36194355"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*Обязательное*|Каждый член связанного атрибута должен быть связан по крайней мере с одним членом атрибута, являющегося владельцем элемента `AttributeRelationship`.|  
+|*Обязательный*|Каждый член связанного атрибута должен быть связан по крайней мере с одним членом атрибута, являющегося владельцем элемента `AttributeRelationship`.|  
 |*Необязательно*|Каждый член связанного атрибута не обязательно должен быть связан по крайней мере с одним членом атрибута, являющегося владельцем элемента `AttributeRelationship`.|  
   
  Перечисление, соответствующее допустимым значениям элемента `Cardinality` в модели объектов AMO, — это <xref:Microsoft.AnalysisServices.Optionality>.  

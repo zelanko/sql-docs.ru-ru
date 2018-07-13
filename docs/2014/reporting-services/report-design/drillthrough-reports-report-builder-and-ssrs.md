@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ececfced738b8ea71b8cbedef4c7495607522309
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6cea127909617ef7230dfd59e995f878274291a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230624"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Детализированные отчеты (построитель отчетов и службы SSRS)
   Детализированный отчет — это отчет, открываемый пользователем щелчком по ссылке в другом отчете. Обычно детализированный отчет содержит подробности об элементе, содержащемся в исходном сводном отчете. Например, на этом рисунке в сводном отчете по продажам содержатся заказы на продажу и итоговые данные. Когда пользователь щелкает номер заказа в сводном списке, открывается другой отчет, содержащий подробности о заказе.  
@@ -55,6 +55,6 @@ ms.locfileid: "36193944"
  Чтобы просмотреть сводный отчет со ссылками детализации после его опубликования, следует убедиться, что детализированные отчеты находятся на том же сервере отчетов, что и сводный отчет. Во всех случаях для просмотра детализированного отчета пользователь должен обладать разрешениями на доступ к отчету.  
   
 ## <a name="see-also"></a>См. также  
- [Детализация, Углубленная детализация, вложенные отчеты и вложенные области данных &#40;отчетов построителя отчетов и службы SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Детализация, Углубленная детализация, вложенные отчеты и вложенные области данных &#40;построитель отчетов и службы SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

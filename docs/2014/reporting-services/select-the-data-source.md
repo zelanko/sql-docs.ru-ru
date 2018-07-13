@@ -1,5 +1,5 @@
 ---
-title: Выберите источник данных | Документы Microsoft
+title: Выберите источник данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
 caps.latest.revision: 31
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8cb8cb384b83c4d5ca8ba16e017cbf79d53f3742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 888e3415163fafee1d5300b2a62c5063f61c8621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155795"
 ---
 # <a name="select-the-data-source"></a>Выбор источника данных
   Эта страница мастера отчетов предназначена для определения источника данных для отчета.  
@@ -40,17 +40,17 @@ ms.locfileid: "36193727"
  Выберите тип используемого источника данных (например, если используется база данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], то выберите [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]).  
   
  **Строка соединения**  
- Введите строку соединения для источника данных. Дополнительные сведения о строках соединения см. в разделе [подключения к данным, источники данных и строки подключения в службах Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ Введите строку соединения для источника данных. Дополнительные сведения о строках подключения см. в разделе [подключения к данным, источники данных и строки подключения в службах Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
  Нажмите кнопку **Изменить** , чтобы указать сервер источника данных в диалоговом окне **Свойства соединения** . Можно указать как локальный, так удаленный источник данных.  
   
  Нажмите кнопку **Учетные данные** , чтобы ввести учетные данные базы данных. Указываемые учетные данные должны быть достаточными для подключения к источнику данных для конструирования отчета. Когда отчет развертывается на сервере отчетов, учетные данные базы данных должны включать всех пользователей отчета. Например, если необходимо, чтобы все пользователи отчета соединялись с источником данных под своими учетными данными, выберите **Использовать проверку подлинности Windows (встроенная безопасность)**. Указанные учетные данные должны быть действительными для источника данных, поэтому при выборе проверки подлинности Windows убедитесь в том, что источник данных принимает соединения от всех учетных записей, от которых будет запускаться отчет. Управление учетными данными базы данных может производиться независимо от отчета. Дополнительные сведения см. в разделе [Управление источниками данных отчета](report-data/manage-report-data-sources.md).  
   
- **Сделать этот общий источник данных**  
+ **Сделать этот источник данных общим**  
  Выберите этот параметр, чтобы сохранить источник данных не в отчете, а в качестве общего источника данных для проекта. После этого им можно будет пользоваться в качестве источника данных для других отчетов в этом проекте.  
   
 ## <a name="see-also"></a>См. также  
- [Внедренные и общие подключения к данным или источники данных &#40;отчетов построителя отчетов и службы SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Внедренные и общие подключения к данным или источники данных &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Задание учетных данных и сведениях о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Сервер отчетов служб Reporting Services](../../2014/reporting-services/reporting-services-report-server.md)   
  [Файл конфигурации RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)   

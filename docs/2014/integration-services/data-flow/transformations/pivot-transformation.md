@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.pivottrans.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ed9e181d9e346e39aa537b50fa8c0b166ba03da1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1845f31deda21a34b0ef3e843ef33016981c074b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182763"
 ---
 # <a name="pivot-transformation"></a>преобразование «Сведение»
   Преобразование «Сведение» делает нормализованный набор данных менее нормализованным, но более компактным, выполняя сведение входных данных по значению столбца. Например, нормализованный набор данных **Orders** , содержащий имя клиента, продукт и количество приобретенных единиц продукта, обычно содержит множество строк для клиента, купившего несколько наименований продуктов. Каждая строка содержит подробности о различных продуктах. Выполнив сведение набора данных по столбцу продукта, можно получить набор данных, который содержит по одной строке для каждого клиента. Каждая строка будет содержать все покупки одного клиента, причем наименования продуктов будут именами столбцов, а количество приобретенных единиц каждого продукта будет значением соответствующих столбцов. Так как не каждый клиент приобретает все виды продукции, многие столбцы могут содержать значения NULL.  

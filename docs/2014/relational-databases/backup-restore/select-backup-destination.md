@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.selectbackupdest.f1
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 304e1f865c023d8edada929cb6b803d8331b4161
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ca8c14c4daae046786bfcd78e04c0bd1b08139d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160565"
 ---
 # <a name="select-backup-destination"></a>Выбор места расположения резервной копии
   Используйте диалоговое окно **Выбор места расположения резервной копии** для выбора устройства, где будет находиться резервная копия. Расположением резервной копии может быть диск или логическое устройство резервного копирования.  
@@ -44,7 +43,7 @@ ms.locfileid: "36192695"
   
 |||  
 |-|-|  
-|**Имя файла**|Выберите этот параметр и введите в текстовом поле локальный или удаленный файл как место расположения резервной копии.<br /><br /> Для указания локального файла, нажмите кнопку обзора справа от текстового поля и укажите файл на фиксированных дисках компьютера, работающего на сервере или введите полный путь и имя файла напрямую. например `C:\Program Files\Microsoft SQL Server\MSSQL\Backup\AdventureWorksBackup.bak`.<br /><br /> Для указания удаленного файла в качестве места расположения резервной копии введите полное имя файла в формате UNC. Дополнительные сведения см. в разделе [Устройства резервного копирования (SQL Server)](backup-devices-sql-server.md).<br /><br /> **\*\* Важная информация. \*\*** В случае резервного копирования данных по сети могут произойти сетевые ошибки. Поэтому по его завершении рекомендуется сделать проверку. Дополнительные сведения см. в разделе [RESTORE VERIFYONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).|  
+|**Имя файла**|Выберите этот параметр и введите в текстовом поле локальный или удаленный файл как место расположения резервной копии.<br /><br /> Для указания локального файла, нажмите кнопку «Обзор» справа от текстового поля и укажите файл на фиксированных дисках компьютера, на котором запущен сервер или введите полный путь и имя файла напрямую; например `C:\Program Files\Microsoft SQL Server\MSSQL\Backup\AdventureWorksBackup.bak`.<br /><br /> Для указания удаленного файла в качестве места расположения резервной копии введите полное имя файла в формате UNC. Дополнительные сведения см. в разделе [Устройства резервного копирования (SQL Server)](backup-devices-sql-server.md).<br /><br /> **\*\* Важная информация. \*\*** В случае резервного копирования данных по сети могут произойти сетевые ошибки. Поэтому по его завершении рекомендуется сделать проверку. Дополнительные сведения см. в разделе [RESTORE VERIFYONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).|  
 |**устройство резервного копирования;**|Выберите этот параметр для выбора логического устройства резервного копирования.<br /><br /> Примечание. Дополнительные сведения о создании дискового устройства резервного копирования см. в разделе [Определение логического устройства резервного копирования для дискового файла (SQL Server)](define-a-logical-backup-device-for-a-disk-file-sql-server.md).|  
   
  **Место назначения на ленте**  

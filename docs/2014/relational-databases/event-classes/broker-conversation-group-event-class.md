@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Conversation Group event class
 ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 04e8fd6c939774838b306096c9ee3fa91bc3c229
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b66505d8c7e33aecbe4bc52e22ded57514b77bf0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195302"
 ---
 # <a name="brokerconversation-group-event-class"></a>Broker:Conversation Group, класс событий
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует событие **Broker:Conversation Group** , когда компонент Service Broker создает новую или удаляет существующую группу сообщений.  

@@ -1,5 +1,5 @@
 ---
-title: Получение помощи по SQL Server | Документы Microsoft
+title: Получение помощи по SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - offline resources [SQL Server]
 - Books Online [SQL Server], additional resources
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - SQL Server Solution Center
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ac98b9aa879844e1a458e9f9ed59cd14c10804c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 812e23a1e3e3b8ca07f5c29415955cb9a688885f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195426"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171165"
 ---
 # <a name="getting-sql-server-assistance"></a>Получение помощи по SQL Server
   Существует три основных источника сведений из [!INCLUDE[msCoName](../includes/msconame-md.md)] о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -61,7 +61,7 @@ ms.locfileid: "36195426"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] сведения о дополнительных [!INCLUDE[msCoName](../includes/msconame-md.md)] веб-сайтов.  
   
- Если не удается найти сведения, вы ищете, в этих источниках можно опубликовать вопросы на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] форумы сообщества и группы новостей либо можно открыть в службу технической поддержки с [!INCLUDE[msCoName](../includes/msconame-md.md)].  
+ Если не удается найти сведения, которые вы ищете, в этих источниках, можно опубликовать вопросы на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] форумы сообщества и группы новостей либо открыть обращение в службу поддержки с [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>Электронная документация по[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]   
  В электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] описаны основные понятия и действия, необходимые для эффективного использования [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Электронная документация также включает в себя справочные материалы по языкам и интерфейсам программирования, обеспечивающим хранение, извлечение и изменение данных, а также создание отчетов при помощи [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -85,10 +85,10 @@ ms.locfileid: "36195426"
 |--------------|--------------|  
 |[Центр разработчиков SQL Server](http://msdn.microsoft.com/sqlserver/)|Разработчики, которые создают базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], систему отчетов, решения бизнес-аналитики, а также разрешают приложениям и веб-сайтам использовать эти системы.|  
 |[Центр разработчиков XML](http://go.microsoft.com/fwlink/?LinkId=42458)|Создатели веб-сайтов и разработчики приложений, чьи веб-сайты и приложения используют XML для хранения данных и работы с ними.|  
-|[Веб-сайт TechNet SQL Server](http://technet.microsoft.com/sqlserver/dn135309)|Администраторы и операторы, которые занимаются планированием, развертыванием, администрированием и поддержкой систем, в которых используется [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|[Сайт SQL Server TechNet](http://technet.microsoft.com/sqlserver/dn135309)|Администраторы и операторы, которые занимаются планированием, развертыванием, администрированием и поддержкой систем, в которых используется [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
 ## <a name="additional-online-information"></a>Дополнительные источники сведений в Интернете  
- Дополнительные [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] информацию можно получить из этих [!INCLUDE[msCoName](../includes/msconame-md.md)] веб-сайтов.  
+ Дополнительные [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] информация доступна на основе этих [!INCLUDE[msCoName](../includes/msconame-md.md)] веб-сайтов.  
   
 |Ресурс|Описание|  
 |--------------|-----------------|  

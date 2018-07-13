@@ -1,5 +1,5 @@
 ---
-title: Настройка службы Integration Services в качестве ресурса кластера | Документы Microsoft
+title: Настройка службы Integration Services в качестве ресурса кластера | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8455d0a43e478cdb05f945269a3999b72fc581ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b524b2c570b3fac16403565716aaea36a31a7f24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223774"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Настройка служб Integration Services на работу в качестве ресурса кластера
   Этот раздел содержит инструкции по настройке службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в качестве ресурса кластера, которые могут пригодиться клиентам, считающим, что преимущества данной конфигурации перевешивают ее недостатки. Тем не менее корпорация [!INCLUDE[msCoName](../includes/msconame-md.md)] не рекомендует настраивать службу [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в качестве ресурса кластера.  
@@ -104,9 +104,9 @@ ms.locfileid: "36194321"
   
 2.  Создайте на общем диске новую папку с именем **Packages** , которая будет служить хранилищем пакетов. Предоставьте подходящим группам и пользователям разрешения на просмотр содержимого и на запись в созданную папку.  
   
-3.  Откройте файл конфигурации с общего диска в редакторе текста или XML. Измените значение `ServerName` имя виртуального [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , находящегося в той же группе ресурсов.  
+3.  Откройте файл конфигурации с общего диска в редакторе текста или XML. Измените значение свойства `ServerName` имя виртуального [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , находится в той же группе ресурсов.  
   
-4.  Измените значение `StorePath` элемент полный путь к **пакетов** папки, созданной на общем диске на предыдущем шаге.  
+4.  Измените значение свойства `StorePath` полный путь к **пакетов** папки, созданной на общем диске на предыдущем шаге.  
   
 5.  Измените значение **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** в реестре, указав полный путь и имя файла конфигурации службы на общем диске.  
   

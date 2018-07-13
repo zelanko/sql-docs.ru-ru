@@ -19,15 +19,15 @@ helpviewer_keywords:
 - named permission sets [Reporting Services]
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
 caps.latest.revision: 28
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 63c945219362a677c2dcb74f9eda1aff875aa9c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 94cae16b2cfd437ff5e2e1d4878ffb027745e3ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195339"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218904"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Управление доступом для кода в службах Reporting Services
   Управление доступом для кода основывается на следующих базовых понятиях: свидетельство, группы кода и именованные наборы разрешений. В службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] каждый из компонентов (диспетчер отчетов, конструктор отчетов и сервер отчетов) имеет файл политики, в котором задана конфигурация управления доступом для кода для пользовательских сборок, а также для модулей обработки данных, доставки, подготовки отчетов и безопасности. В следующих разделах приведены общие сведения об управлении доступом для кода. Дополнительные сведения по темам, рассматриваемым в этом разделе, см. в разделе "Модель политики безопасности" в документации по пакету SDK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  

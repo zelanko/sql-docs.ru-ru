@@ -1,31 +1,29 @@
 ---
-title: Метода IBCPSession2::BCPSetBulkMode | Документы Microsoft
+title: IBCPSession2::BCPSetBulkMode | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9dbbe9d7c8ea60d83cf13b3460a7e4eee925aa07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2f0c0ec3e7f76da7eb908cf2154cd33a2ee55b40
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189519"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427523"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
-  Метода IBCPSession2::BCPSetBulkMode представляет собой альтернативу [IBCPSession::BCPColFmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md) для указания формата столбца. В отличие от IBCPSession::BCPColFmt, который задает отдельные атрибуты формата столбцов, метода IBCPSession2::BCPSetBulkMode задает все атрибуты.  
+  IBCPSession2::BCPSetBulkMode представляет собой альтернативу [IBCPSession::BCPColFmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md) для указания формата столбца. В отличие от IBCPSession::BCPColFmt, который задает отдельные атрибуты формата столбцов, IBCPSession2::BCPSetBulkMode задает все атрибуты.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -57,35 +55,35 @@ HRESULT BCPSetBulkMode (
  Длина в байтах значения признака конца строки.  
   
 ## <a name="returns"></a>Возвращает  
- Метода IBCPSession2::BCPSetBulkMode может возвращать одно из следующих значений:  
+ IBCPSession2::BCPSetBulkMode может возвращать одно из следующих значений:  
   
 |||  
 |-|-|  
 |`S_OK`|Метод выполнен успешно.|  
-|`E_FAIL`|Произошла ошибка поставщика, подробные сведения используйте ISQLServerErrorInfo, интерфейс.|  
-|`E_UNEXPECTED`|Непредвиденный вызов метода. Например `IBCPSession2::BCPInit` не был вызван метод перед вызовом метода IBCPSession2::BCPSetBulkMode.|  
+|`E_FAIL`|Произошла ошибка поставщика, подробные сведения используйте интерфейс ISQLServerErrorInfo.|  
+|`E_UNEXPECTED`|Непредвиденный вызов метода. Например `IBCPSession2::BCPInit` не был вызван метод перед вызовом IBCPSession2::BCPSetBulkMode.|  
 |`E_INVALIDARG`|Недопустимое значение аргумента.|  
 |`E_OUTOFMEMORY`|Ошибка, связанная с нехваткой памяти.|  
   
 ## <a name="remarks"></a>Примечания  
- Метода IBCPSession2::BCPSetBulkMode можно использовать для массового копирования из запроса или таблицы. При использовании метода IBCPSession2::BCPSetBulkMode для массового копирования из инструкции запроса его необходимо вызывать до вызова метода `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` для указания инструкции запроса.  
+ IBCPSession2::BCPSetBulkMode можно использовать для массового копирования из таблицы или запроса. Когда IBCPSession2::BCPSetBulkMode используется для массового копирования из инструкции запроса, его необходимо вызывать перед вызовом метода `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` для указания инструкции запроса.  
   
- В рамках одной команды не следует сочетать синтаксис вызова RPC с синтаксисом пакетных запросов (например,`{rpc func};SELECT * from Tbl`).  Это приведет к ICommandPrepare::Prepare возвращает сообщение об ошибке и предотвратить получение метаданных. Если в рамках одной команды требуется объединить выполнение хранимой процедуры и пакетный запрос, то следует использовать синтаксис ODBC CALL (например,`{call func}; SELECT * from Tbl`).  
+ В рамках одной команды не следует сочетать синтаксис вызова RPC с синтаксисом пакетных запросов (например,`{rpc func};SELECT * from Tbl`).  В результате ICommandPrepare::Prepare сообщение об ошибке и не позволит получить метаданные. Если в рамках одной команды требуется объединить выполнение хранимой процедуры и пакетный запрос, то следует использовать синтаксис ODBC CALL (например,`{call func}; SELECT * from Tbl`).  
   
  В следующей таблице перечислены константы для параметра *property* .  
   
 |property|Описание|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру-c в BCP. EXE-файла и IBCPSession::BCPColFmt с *eUserDataType* свойство `BCP_TYPE_SQLCHARACTER`.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру-w в BCP. EXE и IBCPSession::BCPColFmt с *eUserDataType* свойство `BCP_TYPE_SQLNCHAR`.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Указывает собственные типы для несимвольных типов и Юникод для символьных типов.<br /><br /> Соответствует параметру – N в BCP. EXE и IBCPSession::BCPColFmt с *eUserDataType* свойство `BCP_TYPE_SQLNCHAR` Если типом столбца является строкой или `BCP_TYPE_DEFAULT` Если не строка.|  
-|BCP_OUT_NATIVE_MODE|Указывает типы данных базы данных.<br /><br /> Соответствует параметру – n в BCP. EXE и IBCPSession::BCPColFmt с *eUserDataType* свойство `BCP_TYPE_DEFAULT`.|  
+|BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру – c в BCP. EXE-файла и чтобы IBCPSession::BCPColFmt с *eUserDataType* свойство значение `BCP_TYPE_SQLCHARACTER`.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру-w в BCP. EXE-файла и IBCPSession::BCPColFmt с *eUserDataType* свойство значение `BCP_TYPE_SQLNCHAR`.|  
+|BCP_OUT_NATIVE_TEXT_MODE|Указывает собственные типы для несимвольных типов и Юникод для символьных типов.<br /><br /> Соответствует параметру – N в BCP. EXE-файла и IBCPSession::BCPColFmt с *eUserDataType* свойство значение `BCP_TYPE_SQLNCHAR` Если типом столбца является строка или `BCP_TYPE_DEFAULT` Если не является строкой.|  
+|BCP_OUT_NATIVE_MODE|Указывает типы данных базы данных.<br /><br /> Соответствует параметру – n в BCP. EXE-файла и IBCPSession::BCPColFmt с *eUserDataType* свойство значение `BCP_TYPE_DEFAULT`.|  
   
- Можно вызвать метод IBCPSession::BCPControl и метода IBCPSession2::BCPSetBulkMode IBCPSession::BCPControl параметров, которые не конфликтуют с помощью метода IBCPSession2::BCPSetBulkMode. Например, можно вызвать метод IBCPSession::BCPControl с `BCP_OPTION_FIRST` и метода IBCPSession2::BCPSetBulkMode.  
+ Можно вызвать IBCPSession::BCPControl и IBCPSession2::BCPSetBulkMode IBCPSession::BCPControl параметров, которые не конфликтуют с IBCPSession2::BCPSetBulkMode. Например, можно вызвать IBCPSession::BCPControl с `BCP_OPTION_FIRST` и IBCPSession2::BCPSetBulkMode.  
   
- Не удается вызвать метод IBCPSession::BCPControl с `BCP_OPTION_TEXTFILE` и метода IBCPSession2::BCPSetBulkMode.  
+ Невозможно вызвать IBCPSession::BCPControl с `BCP_OPTION_TEXTFILE` и IBCPSession2::BCPSetBulkMode.  
   
- При попытке вызова метода IBCPSession2::BCPSetBulkMode с последовательностью вызовов функций, которая включает в себя IBCPSession::BCPColFmt, IBCPSession::BCPControl и IBCPSession::BCPReadFmt один из вызовов функций вернет ошибку последовательности. Если вы решили Устраните причину сбоя, вызовите IBCPSession::BCPInit, чтобы сбросить параметры и начать заново.  
+ Если попытаться вызвать IBCPSession2::BCPSetBulkMode с последовательностью вызовов функций, которая включает в себя IBCPSession::BCPColFmt IBCPSession::BCPControl и IBCPSession::BCPReadFmt, один из вызовов функций вернет ошибку последовательности. Если вы решили исправить ошибку, вызовите IBCPSession::BCPInit, чтобы сбросить параметры и начать заново.  
   
  В следующей таблице приведено несколько примеров вызовов функций, которые вызовут ошибку последовательности.  
   

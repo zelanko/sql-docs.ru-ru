@@ -1,5 +1,5 @@
 ---
-title: Метод SetDisable (класс ClientNetworkProtocol) | Документы Microsoft
+title: Метод SetDisable (класс ClientNetworkProtocol) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetDisable method
 ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d25b92c4c88750662a895bac607d26230e6dc602
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 08d291f0272e602538f1a6cceef92e5f26bc6858
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186111"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>Метод SetDisable (класс ClientNetworkProtocol)
   Отключает сетевой протокол клиента, который задается параметром [Настройка клиентских протоколов](http://technet.microsoft.com/library/ms181035.aspx).  

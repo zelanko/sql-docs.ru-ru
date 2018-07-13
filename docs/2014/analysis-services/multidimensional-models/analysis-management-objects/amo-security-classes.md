@@ -1,5 +1,5 @@
 ---
-title: Классы безопасности AMO | Документы Microsoft
+title: Классы безопасности объектов AMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - AMO, security
 ms.assetid: e3d5012a-8121-40de-9244-1fc824228693
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9562c7aab750f4114ef59c1a7c17f44c8e3b05e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de0adbcc122e87ef95a349b357f0cfd173bd98a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220294"
 ---
 # <a name="amo-security-classes"></a>Классы безопасности объектов AMO
   
  На следующем рисунке показана связь между классами, описываемыми в этом разделе.  
   
- ![В этом разделе рассматриваются классы безопасности AMO](../../../analysis-services/dev-guide/media/amo-securityclasses.gif "в этом разделе рассматриваются классы безопасности AMO")  
+ ![В этом разделе рассматривается классы безопасности AMO](../../../analysis-services/dev-guide/media/amo-securityclasses.gif "в этом разделе рассматривается классы безопасности AMO")  
   
 ##  <a name="RolesMembers"></a> Объекты role и RoleMember  
  Объект <xref:Microsoft.AnalysisServices.Role> создается путем добавления его в коллекцию ролей базы данных и обновления объекта <xref:Microsoft.AnalysisServices.Role> до сервера при помощи метода Update. Перед использованием объект <xref:Microsoft.AnalysisServices.Role> необходимо обновить.  
@@ -54,7 +54,7 @@ ms.locfileid: "36195692"
  <xref:Microsoft.AnalysisServices>   
  [Программирование объектов безопасности AMO](programming-amo-security-objects.md)   
  [Разрешения и права доступа &#40;службы Analysis Services — многомерные данные&#41;](https://msdn.microsoft.com/library/ms174786(v=sql.120).aspx)   
- [Знакомство с классами объектов AMO](amo-classes-introduction.md)   
+ [Введение в классы объектов AMO](amo-classes-introduction.md)   
  [Логическая архитектура &#40;службы Analysis Services — многомерные данные&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Объекты базы данных &#40;службы Analysis Services — многомерные данные&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

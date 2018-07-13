@@ -1,5 +1,5 @@
 ---
-title: Тип данных PerspectiveKpi (ASSL) | Документы Microsoft
+title: Тип данных PerspectiveKpi (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveKpi data type
 ms.assetid: e8d19ec8-70d3-4947-904a-fb81fcac9afd
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e4e6c512b0cab76a87b0d39428bfc570680fa42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca2bc8d765e7ffe5a0111a22d8b2e5977a17f010
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215924"
 ---
 # <a name="perspectivekpi-data-type-assl"></a>Тип данных PerspectiveKpi (ASSL)
-  Определяет тип-примитив, представляющий сведения о ключевой показатель эффективности (KPI) в [перспективы](../objects/perspective-element-assl.md) элемента.  
+  Определяет тип-примитив, представляющий сведения о ключевой показатель эффективности (KPI) в [перспективы](../objects/perspective-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -61,9 +61,9 @@ ms.locfileid: "36193883"
 |Производные элементы|[Ключевой показатель эффективности](../objects/kpi-element-assl.md) ([ключевые показатели эффективности](../collections/kpis-element-assl.md) коллекцию [перспективы](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.PerspectiveKpi>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.PerspectiveKpi>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

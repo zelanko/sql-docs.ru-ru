@@ -1,14 +1,13 @@
 ---
-title: Описание индексов ColumnStore | Документы Microsoft
+title: Сведения об индексах ColumnStore | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes creation, columnstore
 - indexes [SQL Server], columnstore
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 caps.latest.revision: 50
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 9dd9d25eaaa21361a050e8a80c32be8907cb4b9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9cd8b98b2e62dbc11d62e07b9b0d7e2ac3e05c6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211324"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *Индекс columnstore в памяти* хранит данные и управляет ими с помощью хранилища данных на основе столбца и обработки запросов на основе столбца. Индексы Columnstore подходят для рабочих нагрузок хранилища данных, которые выполняют в основном массовую загрузку и запросы только для чтения. Используйте индекс columnstore для повышения **производительности запросов максимум в 10 раз** относительно традиционного хранилища, основанного на строках, и **повышения эффективности сжатия данных до 7 раз** относительно несжатых данных.  
@@ -132,21 +131,21 @@ ms.locfileid: "36195798"
  ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
   
  некластеризованный индекс columnstore  
- Объект *некластеризованный индекс columnstore* создается на основе существующего кластеризованного индекса или кучи таблицы индексов только для чтения. Он содержит копию подмножества столбцов вплоть до включения всех столбцов в таблице. Таблица доступна только для чтения, если она содержит некластеризованный индекс columnstore.  
+ Объект *некластеризованный индекс columnstore* является только для чтения индекс, созданный в существующей кластеризованного индекса или кучи таблицы. Он содержит копию подмножества столбцов вплоть до включения всех столбцов в таблице. Таблица доступна только для чтения, если она содержит некластеризованный индекс columnstore.  
   
  Некластеризованный индекс columnstore дает возможность использования индекса columnstore для выполнения запросов анализа, выполняемых одновременно с операциями только для чтения в исходной таблице.  
   
  ![Некластеризованный индекс columnstore](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "некластеризованный индекс columnstore")  
   
  кластеризованный индекс columnstore  
- Объект *кластеризованный индекс columnstore* — это физическое хранилище для всей таблицы и является единственным индексом для таблицы. Кластеризованный индекс можно обновлять. Можно выполнять операции вставки, удаления и обновления индекса, а также выполнять массовую загрузку данных в индекс.  
+ Объект *кластеризованный индекс columnstore* — физическое хранилище для всей таблицы и единственный индекс для таблицы. Кластеризованный индекс можно обновлять. Можно выполнять операции вставки, удаления и обновления индекса, а также выполнять массовую загрузку данных в индекс.  
   
  ![Clustered Columnstore Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
   
  Чтобы снизить фрагментацию сегментов столбцов и повысить производительность, индекс columnstore может некоторые данные сохранить временно в таблице, которая называется deltastore, и использовать сбалансированное дерево идентификаторов для удаленных строк. Операции deltastore обрабатываются в фоновом режиме. Для получения правильных результатов запросов кластеризованные индексы columnstore объединяют результаты запроса от columnstore и deltastore.  
   
  deltastore  
- Используется с кластеризованными индексами columnstore, *deltastore* является таблицей rowstore, в которой хранятся строки, пока число строк, достаточное для перемещения в columnstore. Deltastore используется с кластеризованными индексами columnstore для повышения производительности при загрузке и других операциях DML.  
+ Кластеризованный индекс columnstore только с индексами, *deltastore* является таблицей rowstore, в которой хранятся строки, пока число строк не достаточно большим, чтобы быть перемещены в columnstore. Deltastore используется с кластеризованными индексами columnstore для повышения производительности при загрузке и других операциях DML.  
   
  При крупной массовой загрузке большинство строк переходят непосредственно в columnstore без промежуточного помещения в deltastore. Некоторых строк в конце массовой загрузки может оказаться слишком мало для соответствия минимальному размеру rowgroup, составляющему 102 400 строк. В этом случае последние строки переходят в deltastore вместо columnstore. Для небольших массовых загрузок с менее 102 400 строк, все строки перемещаются напрямую в deltastore.  
   
@@ -155,18 +154,18 @@ ms.locfileid: "36195798"
 ##  <a name="dataload"></a> Загрузка данных  
   
 ###  <a name="dataload_nci"></a> Загрузка данных в некластеризованном индексе Columnstore  
- Для загрузки данных в некластеризованный индекс columnstore, данные сначала загружаются в стандартную таблицу rowstore сохранена как куча или кластеризованный индекс и создайте некластеризованный индекс columnstore с [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
+ Чтобы загрузить данные в некластеризованный индекс columnstore, сначала данные загружаются в стандартную таблицу rowstore сохраненную в виде кучи или кластеризованного индекса и создайте некластеризованный индекс columnstore с [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
   
  ![Загрузка данных в индекс columnstore](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "загрузка данных в индекс columnstore")  
   
  Таблица с некластеризованным индексом columnstore доступна только для чтения до тех пор, пока индекс не будет удален или отключен. Обновить таблицу и некластеризованный индекс columnstore можно путем входящего и исходящего переключения секций. Можно также отключить индекс, обновить таблицу и перестроить индекс.  
   
- Дополнительные сведения см. [с помощью некластеризованные индексы Columnstore](indexes.md)  
+ Дополнительные сведения см. в разделе [Using Nonclustered Columnstore Indexes](indexes.md)  
   
 ###  <a name="dataload_cci"></a> Загрузка данных в кластеризованный индекс Columnstore  
  ![Загрузка в кластеризованный индекс columnstore](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Загрузка в кластеризованный индекс columnstore")  
   
- Как видно на диаграмме, чтобы загрузить данные в кластеризованный индекс, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ Как видно на диаграмме, чтобы загрузить данные в кластеризованный индекс columnstore, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 1.  Вставляет rowgroup максимального размера непосредственно в columnstore. По мере загрузки данных компонент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] назначает строки данных в порядке FIFO в открытую группу строк.  
   
@@ -200,20 +199,20 @@ ms.locfileid: "36195798"
 ##  <a name="related"></a> Связанные задачи и разделы  
   
 ### <a name="nonclustered-columnstore-indexes"></a>Некластеризованные индексы columnstore  
- Общие задачи в разделе [с помощью некластеризованные индексы Columnstore](../../database-engine/using-nonclustered-columnstore-indexes.md).  
+ Общие задачи, см. в разделе [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md).  
   
 -   [CREATE COLUMNSTORE INDEX (Transact-SQL)](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
--   [Инструкция ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) с параметром REBUILD.  
+-   [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) с параметром REBUILD.  
   
 -   [DROP INDEX (Transact-SQL)](/sql/t-sql/statements/drop-index-transact-sql)  
   
 ### <a name="clustered-columnstore-indexes"></a>Кластеризованные индексы columnstore  
- Общие задачи в разделе [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md).  
+ Общие задачи, см. в разделе [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md).  
   
 -   [СОЗДАТЬ КЛАСТЕРИЗОВАННЫЙ индекс COLUMNSTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
--   [Инструкция ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) с параметром REBUILD или REORGANIZE.  
+-   [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) с параметром REBUILD или REORGANIZE.  
   
 -   [DROP INDEX (Transact-SQL)](/sql/t-sql/statements/drop-index-transact-sql)  
   

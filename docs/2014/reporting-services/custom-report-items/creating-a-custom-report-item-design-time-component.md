@@ -14,15 +14,15 @@ helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14ff967c6b21fbf4438db3c44d28eb86e9738281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 996e70b70e2cf253212baae972dd6caa6acdf7c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149275"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Создание компонента времени разработки пользовательского элемента отчета
   Компонент времени разработки пользовательского элемента отчета ― это элемент управления, который может быть использован в конструкторе отчетов среды Visual Studio. Компонент времени разработки пользовательского элемента отчета предоставляет активную область конструктора, поддерживающую операции перетаскивания, интеграцию с браузером свойств среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] и возможность использования пользовательских редакторов свойств.  
@@ -189,7 +189,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Использование крайних элементов  
- Классы пользовательских элементов отчета также реализуют класс `Microsoft.ReportDesigner.Design.Adornment`. Крайний элемент позволяет элементу управления пользовательского элемента отчета иметь области за пределами основного прямоугольника области конструктора. Эти области могут обрабатывать события пользовательского интерфейса, такие как щелчки кнопкой мыши и операции перетаскивания. `Adornment` Класс, который определен в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` пространством имен является транзитной реализацией <xref:System.Windows.Forms.Design.Behavior.Adorner> найти класс в Windows Forms. Полную документацию по `Adorner` см. в описании [Общие сведения о службе поведения](http://go.microsoft.com/fwlink/?LinkId=116673) в библиотеке MSDN. Пример кода, который реализует `Microsoft.ReportDesigner.Design.Adornment` см. в описании [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Классы пользовательских элементов отчета также реализуют класс `Microsoft.ReportDesigner.Design.Adornment`. Крайний элемент позволяет элементу управления пользовательского элемента отчета иметь области за пределами основного прямоугольника области конструктора. Эти области могут обрабатывать события пользовательского интерфейса, такие как щелчки кнопкой мыши и операции перетаскивания. `Adornment` Класс, который определен в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` пространством имен является транзитной реализацией класса <xref:System.Windows.Forms.Design.Behavior.Adorner> класс найден в Windows Forms. Полную документацию по `Adorner` , представлена в разделе [Общие сведения о службе поведения](http://go.microsoft.com/fwlink/?LinkId=116673) в библиотеке MSDN. Пример кода, который реализует `Microsoft.ReportDesigner.Design.Adornment` , представлена в разделе [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
  Дополнительные сведения о программировании и использовании форм Windows Forms в среде [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] см. в следующих разделах библиотеки MSDN:  
   

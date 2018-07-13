@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], master jobs
 - jobs [SQL Server Agent], creating
 - master SQL Server Agent job [SQL Server]
 ms.assetid: c12ab23f-d7ee-43a5-8cd2-0a9121292bcd
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f58fb2055f4da93f882818bc78fe2d7cb2bdd39a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b4146d8b0011255f923a386b3dbcb38cf8b13c7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226964"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>Создание задания агента главного сервера SQL Server
   В данном разделе описывается создание задание агента главного сервера [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "36195300"
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="Restrictions"></a> Ограничения  
- Изменения задания агента главного сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны распространяться на все связанные целевые серверы. Так как целевые серверы изначально не загружают задание, пока не указаны их цели, [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует завершить все шаги и расписания индивидуального задания перед указанием каких-либо целевых серверов. Иначе необходимо будет вручную запросить повторное скачивание измененного задания целевыми серверами либо с помощью хранимой процедуры **sp_post_msx_operation** , либо путем изменения задания в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [sp_post_msx_operation &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) или [изменить задание](modify-a-job.md).  
+ Изменения задания агента главного сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны распространяться на все связанные целевые серверы. Так как целевые серверы изначально не загружают задание, пока не указаны их цели, [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует завершить все шаги и расписания индивидуального задания перед указанием каких-либо целевых серверов. Иначе необходимо будет вручную запросить повторное скачивание измененного задания целевыми серверами либо с помощью хранимой процедуры **sp_post_msx_operation** , либо путем изменения задания в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [sp_post_msx_operation &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) или [Изменение задания](modify-a-job.md).  
   
 ###  <a name="Security"></a> безопасность  
   
@@ -59,17 +59,17 @@ ms.locfileid: "36195300"
   
 3.  Щелкните правой кнопкой мыши папку **Задания** и выберите пункт **Создать задание…**  
   
-4.  На странице **Общие** в диалоговом окне **Создание задания** измените общие свойства задания. Дополнительные сведения о параметрах, доступных на этой странице см. в разделе [задания свойств и новое задание &#40;страница «Общие»&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+4.  На странице **Общие** в диалоговом окне **Создание задания** измените общие свойства задания. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [свойства задания и новое задание &#40;страница "Общие"&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-5.  На странице **Действия** задайте шаги задания. Дополнительные сведения о параметрах, доступных на этой странице см. в разделе [свойства задания: новое задание &#40;страницу шаги&#41;](job-properties-new-job-steps-page.md)  
+5.  На странице **Действия** задайте шаги задания. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [свойства задания: новое задание &#40;страница "шаги"&#41;](job-properties-new-job-steps-page.md)  
   
-6.  На странице **Расписания** задайте расписания для задания. Дополнительные сведения о параметрах, доступных на этой странице см. в разделе [свойства задания: новое задание &#40;страница «расписание»&#41;](job-properties-new-job-schedules-page.md)  
+6.  На странице **Расписания** задайте расписания для задания. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [свойства задания: новое задание &#40;страница "расписания"&#41;](job-properties-new-job-schedules-page.md)  
   
-7.  На странице **Предупреждения** задайте предупреждения для задания. Дополнительные сведения о параметрах, доступных на этой странице см. в разделе [свойства задания: новое задание &#40;страницы оповещений&#41;](job-properties-new-job-alerts-page.md)  
+7.  На странице **Предупреждения** задайте предупреждения для задания. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [свойства задания: новое задание &#40;странице "оповещения"&#41;](job-properties-new-job-alerts-page.md)  
   
-8.  На странице **Уведомления** задайте действия, которые должен выполнять агент [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после завершения задания. Дополнительные сведения о параметрах, доступных на этой странице см. в разделе [свойства задания: новое задание &#40;страницу уведомления&#41;](job-properties-new-job-notifications-page.md).  
+8.  На странице **Уведомления** задайте действия, которые должен выполнять агент [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после завершения задания. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [свойства задания: новое задание &#40;страница "уведомления"&#41;](job-properties-new-job-notifications-page.md).  
   
-9. Страница **Цели** используется для управления целевыми серверами в задании. Дополнительные сведения о параметрах, доступных на этой странице см. в разделе [свойства задания: новое задание &#40;страница «цели»&#41;](job-properties-new-job-targets-page.md).  
+9. Страница **Цели** используется для управления целевыми серверами в задании. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [свойства задания: новое задание &#40;страница "цели"&#41;](job-properties-new-job-targets-page.md).  
   
 10. После завершения нажмите кнопку **ОК**.  
   

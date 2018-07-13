@@ -1,28 +1,26 @@
 ---
-title: Обработка ошибок ODBC (ODBC) | Документы Microsoft
+title: Обработка ошибок ODBC (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - errors [ODBC]
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b925bc53c1427e1964b8d2487727994d39f24354
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8057ac412d673fff49105c8fd7d051d13f3ac63e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188682"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423033"
 ---
 # <a name="process-odbc-errors-odbc"></a>Обработка ошибок ODBC (ODBC)
   Для получения сообщений ODBC можно использовать две функции ODBC: [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) и [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md). Для получения в полях диагностики **SQLState**, **pfNative**и **ErrorMessage** сведений, касающихся ODBC, вызывайте функцию [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) до тех пор, пока она не вернет значение SQL_NO_DATA. Чтобы получить отдельные поля, можно вызвать функцию [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) для каждой записи диагностики. Все зависящие от драйвера поля нужно получить с помощью функции `SQLGetDiagField`.  

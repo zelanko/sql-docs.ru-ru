@@ -1,5 +1,5 @@
 ---
-title: Установка SQL Server 2014 | Документы Microsoft
+title: Установка SQL Server 2014 | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.portal.Installation.f1
 helpviewer_keywords:
@@ -17,19 +17,19 @@ helpviewer_keywords:
 - initial installation [SQL Server]
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c6eb94e86633e5bff588993ac1b71cd52bde3ae3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8c25f5057c6e1cd5b877376e67634946ef489276
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224464"
 ---
 # <a name="installation-for-sql-server-2014"></a>Установка SQL Server 2014
- ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ Загрузите SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
-  **Благодарим вас к [Скотт Хансельман](http://www.hanselman.com/) для сбора всех ссылок пакета установщика в одном месте.**
+ ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ Скачивание SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+  **Выражаем благодарность [(Scott hanselman)](http://www.hanselman.com/) для сбора всех ссылок пакета установщика в одном месте.**
   
   Мастер установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет единое дерево компонентов для установки всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
@@ -49,11 +49,11 @@ ms.locfileid: "36191499"
   
 -   Компоненты соединения  
   
- Каждый компонент можно установить отдельно или выбрать сочетания перечисленных выше компонентов. Чтобы выбрать наиболее подходящий выпуск и компоненты, доступные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в разделе [выпуски и компоненты SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) и [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Доступны 32-разрядный и 64-разрядный выпуски [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ Каждый компонент можно установить отдельно или выбрать сочетания перечисленных выше компонентов. Чтобы сделать доступным в наиболее подходящий выпуск и компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [выпуски и компоненты SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) и [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Доступны 32-разрядный и 64-разрядный выпуски [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
  
  **Попробуйте продукт:**  
   
--   Есть учетная запись Azure?  Затем перейдите **[здесь](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** для раскрутки виртуальную машину с SQL Server 2014 с пакетом обновления 1 (SP1) уже установлена. Дополнительные сведения о SQL Server 2014 (SP1) см. в разделе [замечания к выпуску SQL Server 2014 с пакетом обновления 1 ](https://support.microsoft.com/en-us/kb/3058865).  
+-   Есть учетная запись Azure?  Затем перейдите **[здесь](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** запустить виртуальную машину с SQL Server 2014 с пакетом обновления 1 (SP1) уже установлен. Дополнительные сведения о SQL Server 2014 (SP1), см. в разделе [сведения о выпуске пакета обновления 1 для SQL Server 2014 ](https://support.microsoft.com/en-us/kb/3058865).  
   
 ## <a name="in-this-section"></a>в этом разделе  
  Независимо от способа установки служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с помощью мастера установки или командной строки) программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]выполнят следующие три шага:  

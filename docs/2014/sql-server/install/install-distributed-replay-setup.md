@@ -1,5 +1,5 @@
 ---
-title: Установка распределенного воспроизведения (программа установки) | Документы Microsoft
+title: Установка распределенного воспроизведения (программа установки) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea29de67ee3e94089c63d5310e38a050be614ce3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 82e9df54c797b965409020056faac334a0d60709
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202524"
 ---
 # <a name="install-distributed-replay-setup"></a>Установка распределенного воспроизведения (программа установки)
   Установите компоненты распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . При планировании расположения установленных компонентов примите во внимание следующее.  
@@ -135,7 +135,7 @@ ms.locfileid: "36193936"
  Для установки компонентов распределенного воспроизведения необходимо обладать разрешениями администратора. Только имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с разрешениями sysadmin может добавлять учетные записи службы клиента в роль sysadmin тестового сервера. Дополнительные сведения о вопросах безопасности распределенного воспроизведения см. в разделе [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
 ## <a name="see-also"></a>См. также  
- [Возможности, поддерживаемые различными выпусками SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+ [Функции, поддерживаемые различными выпусками SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Распределенное воспроизведение SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Требования распределенного воспроизведения](../../tools/sql-server-profiler/replay-requirements.md)   
  [Параметры командной строки средства администрирования (программа распределенного воспроизведения)](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   

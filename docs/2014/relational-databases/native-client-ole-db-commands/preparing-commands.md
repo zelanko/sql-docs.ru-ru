@@ -1,13 +1,11 @@
 ---
-title: Подготовка команд | Документы Microsoft
+title: Подготовка команд | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - command preparation [SQL Server Native Client]
 ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6c40c3b018e72a9e349518578e3e6773cfa84789
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 231c749ec41e571de17e18405e805210e6dc4b0b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195381"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428643"
 ---
 # <a name="preparing-commands"></a>Подготовка команд
   Поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает подготовку команды для оптимизированного многократного выполнения, однако подготовка команды создает дополнительную нагрузку; поэтому потребителю нет необходимости подготавливать команду для ее выполнения более одного раза. Как правило, подготовку команды следует выполнять в том случае, если планируется ее не менее чем четырехкратное выполнение.  
@@ -44,17 +42,17 @@ ms.locfileid: "36195381"
   
  Создание временных хранимых процедур управляется свойством инициализации SSPROP_INIT_USEPROCFORPREP, определяемым поставщиком OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если свойство имеет значение SSPROPVAL_USEPROCFORPREP_ON или SSPROPVAL_USEPROCFORPREP_ON_DROP, то поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при подготовке команды выполняет попытку создать хранимую процедуру. Хранимая процедура будет создана успешно, если пользователь приложения имеет все необходимые разрешения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Для потребителей, изредка теряющих соединение, создание временных хранимых процедур может потребовать значительных ресурсов **tempdb**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] системной базы данных, в котором создаются временные объекты. Если свойство SSPROP_INIT_USEPROCFORPREP имеет значение SSPROPVAL_USEPROCFORPREP_ ON, то временные хранимые процедуры, созданные поставщиком OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], удаляются только после потери соединения сеанса, создавшего команду, с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если это соединение по умолчанию, созданное при инициализации источника данных, то временная хранимая процедура удаляется только тогда, когда источник данных становится неинициализированным.  
+ Для потребителей, изредка теряющих соединение, создание временных хранимых процедур может потребовать значительных ресурсов **tempdb**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] системной базы данных, в котором были созданы временные объекты. Если свойство SSPROP_INIT_USEPROCFORPREP имеет значение SSPROPVAL_USEPROCFORPREP_ ON, то временные хранимые процедуры, созданные поставщиком OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], удаляются только после потери соединения сеанса, создавшего команду, с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если это соединение по умолчанию, созданное при инициализации источника данных, то временная хранимая процедура удаляется только тогда, когда источник данных становится неинициализированным.  
   
  Если свойство SSPROP_INIT_USEPROCFORPREP имеет значение SSPROPVAL_USEPROCFORPREP_ON_DROP, то временные хранимые процедуры поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будут удаляться только в следующих случаях.  
   
 -   Потребитель вызывает **ICommandText::SetCommandText** для задания новой команды.  
   
--   Потребитель вызывает **ICommandPrepare::Unprepare** для указания, что текст команды больше не требуется.  
+-   Потребитель вызывает **ICommandPrepare::Unprepare** для указания, что он больше не требуется текст команды.  
   
 -   Потребитель освобождает все ссылки на объект команды, связанной с временной хранимой процедурой.  
   
- Объект команды имеет не более одной хранимой процедуры в **tempdb**. Любая существующая временная хранимая процедура представляет текущий текст команды для этого объекта.  
+ Объект command имеет не более одной хранимой процедуры в **tempdb**. Любая существующая временная хранимая процедура представляет текущий текст команды для этого объекта.  
   
 ## <a name="see-also"></a>См. также  
  [Команды](commands.md)  

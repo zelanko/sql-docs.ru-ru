@@ -1,5 +1,5 @@
 ---
-title: Сведения об издателе, подписка просмотрите список (публикация транзакций, SQL Server 2005 и более поздние версии) | Документы Microsoft
+title: Сведения об издателе, список просмотра подписок (публикация транзакций, SQL Server 2005 и более поздние версии) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publisherinfo.subscriptionssummary.tran.f1
 ms.assetid: 6bc64ddb-5c86-4681-a391-77fc1d3c4e6e
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c0a029b08569c70d13cdc7e1d0812b4ddc864f74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bff3f7cfc01997f4f4194966902d6e74efe8357a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160305"
 ---
 # <a name="publisher-information-subscription-watch-list-transactional-publication-sql-server-2005-and-later"></a>Сведения об издателе, список наблюдения за подписками (публикация транзакций, SQL Server 2005 и более поздние версии)
   Вкладка **Список наблюдения за подписками** доступна для распространителей под управлением SQL Server 2005 и более поздних версий. Она предназначается для отображения сведений о подписках на все публикации, доступные на выбранном издателе. Список подписок можно фильтровать для просмотра ошибок, предупреждений и подписок с низкой производительностью. Эта вкладка предоставляет администратору единое расположение для контроля за активностью всех репликаций на издателе. Монитор репликации отображает все подписки, требующие внимания администратора, на основе выбранного типа репликации и в соответствии с параметром, выбранным в раскрывающемся списке **Показать** . Элементы отображаются на этой вкладке в соответствии с текущим состоянием и производительностью, поэтому подписки отображаются на этой странице только в случае, если они в настоящее время соответствуют параметру в списке **Показать** .  

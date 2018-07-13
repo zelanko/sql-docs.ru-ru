@@ -1,5 +1,5 @@
 ---
-title: Редактор источника OLE DB (страница «Диспетчер соединений») | Документы Microsoft
+title: Редактор источника OLE DB (страница «Диспетчер соединений») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsourceadapter.connection.f1
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
 caps.latest.revision: 41
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 48a56983486d07e2331394a9a07b39bde38925b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71b29c69425508e15ba306c6f9ae7d0319c8a6ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206494"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>Редактор источника OLE DB (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор источника OLE DB** для выбора диспетчера соединений OLE DB для источника. На этой странице также можно выбрать таблицу или представление базы данных.  
@@ -34,7 +34,7 @@ ms.locfileid: "36192477"
 >  Чтобы загрузить данные из источника данных, использующего [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2003 или более раннюю версию, используйте источник Excel. Дополнительные сведения см. в разделе [Редактор источника Excel (страница "Диспетчер соединений")](../../2014/integration-services/excel-source-editor-connection-manager-page.md).  
   
 > [!NOTE]  
->  `CommandTimeout` Свойство источника OLE DB недоступно в **Редактор источника OLE DB**, но может быть задано с помощью **расширенный редактор**. Дополнительные сведения о данном свойстве см. в подразделе «Источник Excel» раздела [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
+>  `CommandTimeout` Свойство источника OLE DB недоступно в **Редактор источника OLE DB**, однако его можно установить с помощью **расширенный редактор**. Дополнительные сведения о данном свойстве см. в подразделе «Источник Excel» раздела [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
   
  Дополнительные сведения об источнике OLE DB см. в разделе [OLE DB Source](data-flow/ole-db-source.md).  
   
@@ -100,9 +100,9 @@ ms.locfileid: "36192477"
  Выберите переменную, содержащую текст SQL-запроса.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор источника OLE DB &#40;страница «столбцы»&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
- [Редактор источника OLE DB &#40;страницы вывода ошибок&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор источника OLE DB &#40;страница "столбцы"&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [Редактор источника OLE DB &#40;странице вывода ошибок&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [Извлечение данных с помощью источника OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [Диспетчер подключений OLE DB](connection-manager/ole-db-connection-manager.md)  
   

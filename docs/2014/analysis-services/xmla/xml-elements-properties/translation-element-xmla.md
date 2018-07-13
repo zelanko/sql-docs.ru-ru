@@ -1,5 +1,5 @@
 ---
-title: Элемент Translation (XML для Аналитики) | Документы Microsoft
+title: Элемент Translation (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Translation element
 ms.assetid: ce962d4b-dda9-4a16-a56c-ff7a5275c48a
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 63072fae7d585f18fdc3b3bc1da5ffbef5bb9b8c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 2ce94966eae0cb1088ff462f551bdd27ad4304ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180791"
 ---
 # <a name="translation-element-xmla"></a>Элемент Translation (XML для аналитики)
   Определяет перевод для элемента атрибута.  
@@ -67,7 +67,7 @@ ms.locfileid: "36192747"
 |Дочерние элементы|[Language](language-element-xmla.md), [Name](name-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Объект `Translation` определяет сведения, необходимые для связи элемента атрибута с переводом, определенным для данного атрибута, во время [вставить](../xml-elements-commands/insert-element-xmla.md) или [обновление](../xml-elements-commands/update-element-xmla.md) команды.  
+ Объект `Translation` определяет сведения, необходимые для связи элемента атрибута с переводом, определенным для данного атрибута, во время [вставить](../xml-elements-commands/insert-element-xmla.md) или [обновления](../xml-elements-commands/update-element-xmla.md) команды.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)  

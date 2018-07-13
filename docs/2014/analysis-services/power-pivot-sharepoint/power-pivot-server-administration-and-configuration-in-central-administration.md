@@ -1,5 +1,5 @@
 ---
-title: Настройка и администрирование сервера PowerPivot в центре администрирования | Документы Microsoft
+title: Настройка и администрирование сервера PowerPivot в центре администрирования | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 62232430002833de70ecbf1cf76a401324b12174
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17a0dd962b2cd3bf3515df6151e1ce5d2ed9699b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200294"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>Настройка и администрирование сервера PowerPivot в центре администрирования
   Администрирование и настройка сервера PowerPivot осуществляется администраторами приложения службы SharePoint с помощью центра администрирования SharePoint.  
@@ -62,10 +62,10 @@ ms.locfileid: "36194140"
 |[Настройка сбора данных об использовании &#40;PowerPivot для SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|Необязательно|Сбор данных об использовании настраивается по умолчанию. Эти шаги можно использовать для изменения настроек по умолчанию.|  
 |[Настройка выделенного обновления данных или обработки только запросов &#40;PowerPivot для SharePoint&#41;](../configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)|Необязательно|Можно выделить экземпляр PowerPivot только для заданий и запросов обновления данных. Кроме того, можно изменить настройки по умолчанию для параллельных заданий обновления данных.|  
 |[Указание учетных записей служб PowerPivot](configure-power-pivot-service-accounts.md)|Необязательно|Пояснение для обновления паролей или для изменения учетных записей, используемых службами.|  
-|[Подключение приложения службы PowerPivot к веб-приложении SharePoint в центре администрирования](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|Необязательно|В этом разделе приведено описание изменения служебных параметров.|  
+|[Подключение приложения службы PowerPivot веб-приложение SharePoint в центре администрирования](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|Необязательно|В этом разделе приведено описание изменения служебных параметров.|  
 |[Создание надежного расположения для сайтов PowerPivot в центре администрирования](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|Необязательно|В этой статье описано, как добавить галерею PowerPivot в качестве доверенного местоположения.|  
-|[Настройка и просмотр файлов журнала SharePoint и ведения журнала диагностики &#40;PowerPivot для SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)|Необязательно|Запись событий в журнал настраивается по умолчанию. Эти шаги можно использовать для изменения настроек по умолчанию.|  
-|[Настройка правил определения исправности PowerPivot-](configure-power-pivot-health-rules.md)|Необязательно|Правила для определения исправности сервера настраиваются по умолчанию. Эти шаги помогут изменить некоторые настройки по умолчанию.|  
+|[Настройка и просмотр файлов журнала SharePoint и ведение журнала диагностики &#40;PowerPivot для SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)|Необязательно|Запись событий в журнал настраивается по умолчанию. Эти шаги можно использовать для изменения настроек по умолчанию.|  
+|[Настройка правил определения работоспособности PowerPivot-](configure-power-pivot-health-rules.md)|Необязательно|Правила для определения исправности сервера настраиваются по умолчанию. Эти шаги помогут изменить некоторые настройки по умолчанию.|  
 |[Создание и настройка галереи PowerPivot](create-and-customize-power-pivot-gallery.md)|Необязательно|Для установки, настраиваемой вручную, эта процедура описывает способ создания библиотеки галереи PowerPivot, в которой отображаются миниатюрные эскизы содержащихся книг PowerPivot.|  
 |[Добавление типа содержимого соединения семантической модели бизнес-Аналитики в библиотеку &#40;PowerPivot для SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)|Необязательно|Описывает, как следует расширить библиотеку документов так, чтобы она поддерживала создание файлов связи семантической модели.|  
   

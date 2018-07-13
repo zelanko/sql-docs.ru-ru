@@ -5,25 +5,24 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "948"
 helpviewer_keywords:
 - 948 (Database Engine error)
 ms.assetid: 95c4ad45-a518-4165-a5c4-6e6b932b0570
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cb36765216f906b92cdd6b87e7890b94f3b15d37
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 45c987dea690125de2784068b42369a454fafd8d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194505"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426383"
 ---
 # <a name="mssqlserver948"></a>MSSQLSERVER_948
     
@@ -44,6 +43,6 @@ ms.locfileid: "36194505"
  Например, эта ошибка может возникнуть при использовании формата хранения vardecimal в более поздней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и при последующей попытке добавить файлы базы данных в версию более раннюю, чем [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 2 (SP2).  
   
 ## <a name="user-action"></a>Действие пользователя  
- Определите версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], запущенную на исходном сервере. В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], либо щелкните правой кнопкой мыши сервер и нажмите кнопку **свойства** или тип `SELECT @@VERSION` в окне запроса. Откройте базу данных с помощью исходной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Изучите функции, которые включены в исходной базе данных экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Измените параметры для работы с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в которой будет выполняться добавление базы данных.  
+ Определите версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], запущенную на исходном сервере. В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], либо щелкните правой кнопкой мыши сервер и затем нажмите кнопку **свойства** или тип `SELECT @@VERSION` в окне запроса. Откройте базу данных с помощью исходной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Изучите функции, которые включены в исходной базе данных экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Измените параметры для работы с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в которой будет выполняться добавление базы данных.  
   
   

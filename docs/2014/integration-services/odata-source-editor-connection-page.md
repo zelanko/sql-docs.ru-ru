@@ -1,5 +1,5 @@
 ---
-title: Редактор источника OData (страница «соединение») | Документы Microsoft
+title: Редактор источника OData (страница «соединение») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 35f67b1f60acd8fd65132f1d6fe71bff2d52c724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f3ae477a34a296ade90fb50dde0a600cf81ac18a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194524"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213274"
 ---
 # <a name="odata-source-editor-connection-page"></a>Редактор источника OData (страница «Подключение»)
   Страница **Диспетчер соединений** диалогового окна **Редактор источника OData** служит для выбора диспетчера соединений OData для источника. На этой странице также можно задать путь к коллекции или ресурсу, а также параметры запроса, чтобы указать, какие данные нужно получить из источника OData. Дополнительные сведения об источнике OData см. в разделе [OData Source](data-flow/odata-source.md).  
@@ -61,8 +61,8 @@ ms.locfileid: "36194524"
  Введите путь к ресурсу. Например: Employees  
   
 ## <a name="see-also"></a>См. также  
- [Редактор источника OData &#40;страница «столбцы»&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
- [Редактор источника OData &#40;страницы вывода ошибок&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [Редактор источника OData &#40;страница "столбцы"&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [Редактор источника OData &#40;странице вывода ошибок&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [Диспетчер подключений OData](connection-manager/odata-connection-manager.md)  
   
   

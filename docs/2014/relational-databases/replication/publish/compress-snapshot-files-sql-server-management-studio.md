@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], compressed
 - snapshot replication [SQL Server], compressed snapshots
 ms.assetid: 174ade3e-74a1-4e67-a6da-b874be3ff50f
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 70b8ec331bcc1d14174a4efb9d9808820ad62c04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8bede91816cff3c6b2c25535142c89b9f03e052b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194952"
 ---
 # <a name="compress-snapshot-files-sql-server-management-studio"></a>сжать файлы моментальных снимков (среда SQL Server Management Studio)
   Укажите, что файлы требуется сжать, на странице **Моментальный снимок** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  

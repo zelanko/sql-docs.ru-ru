@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - retrieving report data
 - datasets [Reporting Services], with DMX queries
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - queries [Reporting Services], data mining prediction
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1e9d492d5c01f4445a7f8ed79a9b386eaa5b5ad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7755e5026dc99e13f27de9619bb619e5f9e22db7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152245"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>Получение данных из модели интеллектуального анализа данных (расширения интеллектуального анализа данных) (службы SSRS)
   Для использования в отчете данных из модели интеллектуального анализа данных служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] необходимо определить источник данных служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и один или несколько наборов данных отчета. При создании определения источника данных необходимо указать строку соединения и учетные данные, необходимые для осуществления доступа к источнику данных с компьютера клиента.  
@@ -72,7 +72,7 @@ ms.locfileid: "36195530"
   
 2.  В диалоговом окне **Свойства набора данных** введите имя в текстовое поле **Имя** .  
   
-3.  В **поле источника данных**, убедитесь, что имя указано имя источника данных, который подключается к [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] источника данных.  
+3.  В **"источник данных"**, убедитесь, что имя является именем источника данных, который подключается к [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] источника данных.  
   
 4.  Нажмите кнопку **Конструктор запросов** , чтобы открыть графический конструктор запросов для интерактивного построения запроса. Если конструктор запросов открывается в режиме многомерных выражений (MDX), нажмите кнопку **Расширения интеллектуального анализа данных командного типа** (![Переключение в режим DMX-запросов](../media/rsqdicon-commandtypedmx.gif "Переключение в режим DMX-запросов")) на панели инструментов для переключения на конструктор запросов интеллектуального анализа данных. Дополнительные сведения см. в статье [Analysis Services DMX Query Designer User Interface](analysis-services-dmx-query-designer-user-interface.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36195530"
      Набор данных и его коллекция полей появляются в области данных отчета под узлом источника данных.  
   
 ## <a name="see-also"></a>См. также  
- [Тип соединения служб аналитики для расширений интеллектуального анализа данных &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Тип служб Analysis Services соединение для расширения интеллектуального анализа данных &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
  [Подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

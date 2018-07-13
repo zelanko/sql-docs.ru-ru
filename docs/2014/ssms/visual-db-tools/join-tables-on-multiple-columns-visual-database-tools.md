@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple column joins
 - joins [SQL Server], multiple columns
 ms.assetid: 56a158bc-a42a-4b78-baad-4721d2d22cd3
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 666774f8cfa46e1328f6d1e335a498c1d5e3e6cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e0b8807ad4a8b2cbcadc0ecaa30db2db105ed482
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193021"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218694"
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>Соединение таблиц по нескольким столбцам (визуальные инструменты для баз данных)
   Таблицы можно соединять по нескольким столбцам. То есть можно создать запрос, который будет сопоставлять строки из двух таблиц, только если они удовлетворяют нескольким условиям. Если база данных содержит связь, которая сопоставляет несколько столбцов с внешними ключами в одной таблице первичному ключу из нескольких столбцов в другой, эту связь можно использовать для соединения по нескольким столбцам. Дополнительные сведения см. в статье [Автоматическое соединение таблиц (визуальные инструменты для баз данных)](visual-database-tools.md).  

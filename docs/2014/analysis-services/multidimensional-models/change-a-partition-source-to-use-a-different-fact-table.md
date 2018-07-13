@@ -1,5 +1,5 @@
 ---
-title: Смена источника секции на другую таблицу фактов | Документы Microsoft
+title: Смена источника секции использовать различные таблицы фактов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - fact tables [Analysis Services]
 - partitions [Analysis Services], fact tables
 ms.assetid: 5508312f-8e46-4802-9362-6688ca03d098
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7355f5f7430a5e74cd06ffa73c1b6ed68e11a7c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 403e34a69d5007ca09404ed6d720493b899b0419
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159325"
 ---
 # <a name="change-a-partition-source-to-use-a-different-fact-table"></a>Смена источника секции на другую таблицу фактов
   При создании секции для куба можно использовать различные таблицы фактов. Таблицы могут принадлежать представлению отдельного источника данных, представлениям различных источников данных или различным источникам данных. Представление источника данных также может содержать различные таблицы из нескольких источников данных.  
@@ -36,6 +36,6 @@ ms.locfileid: "36194835"
  Можно, но не рекомендуется, использовать различные таблицы фактов с дублирующимися данными. В этом случае необходимо использовать фильтры в секциях, чтобы гарантировать, что данные, используемые одной секцией, не используются другой. Дополнительные сведения см. в разделе [Create and Manage a Local Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md).  
   
 ## <a name="see-also"></a>См. также  
- [Создание и управление локальной секции &#40;служб Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
+ [Создание и управление ими локальной секции &#40;служб Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
   

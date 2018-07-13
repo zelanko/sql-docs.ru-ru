@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7ae6615491a300a5e5270f417522e9613914319
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e5e75f62bc6d0b5d8da6a0ce244dfde1939155e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188341"
 ---
 # <a name="sql-trace"></a>Трассировка SQL
   При трассировке SQL собираются события, классы которых указаны в ее определении. Эти события можно выделить из трассировки или поставить в очередь по своему назначению. В качестве назначения могут выступать файлы и объекты управления (SMO) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , предоставляющие сведения трассировки приложениям, которые управляют сервером [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -143,7 +143,7 @@ ms.locfileid: "36194453"
   
  <sup>1</sup> эти столбцы данных заполняются по умолчанию для всех событий.  
   
- <sup>2</sup> Дополнительные сведения о **ObjectType** столбец данных. в разделе [столбец события ObjectType Trace](../event-classes/objecttype-trace-event-column.md).  
+ <sup>2</sup> Дополнительные сведения о **ObjectType** столбец данных, см. в разделе [столбец события ObjectType Trace](../event-classes/objecttype-trace-event-column.md).  
   
 ## <a name="sql-trace-tasks"></a>Задачи трассировки SQL  
   

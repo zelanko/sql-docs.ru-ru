@@ -1,13 +1,11 @@
 ---
-title: Поиск дополнительных сведений о собственный клиент SQL Server | Документы Microsoft
+title: Поиск дополнительных сведений о собственном клиенте SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - SQL Server Native Client, additional resources
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1f5a1af6d37a4bcda841a2e56e3ce9ed99808603
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fba30d71b06f0c25de8916f1dbfac7d5edd99d3d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195782"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418643"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Поиск дополнительных сведений о собственном клиенте SQL Server
   Дополнительные сведения о собственном клиенте для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и других типах программирования доступа к данным см. в следующих ресурсах в сети.  
@@ -39,7 +37,7 @@ ms.locfileid: "36195782"
   
  Пакет SDK Window DAC содержит документацию по объектам ADO, OLE DB и интерфейсу ODBC.  
   
- Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента можно найти, выполнив поиск [базы знаний Майкрософт](http://go.microsoft.com/fwlink?linkid=5757).  
+ Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client можно найти, выполнив поиск [базы знаний Майкрософт](http://go.microsoft.com/fwlink?linkid=5757).  
   
 ## <a name="see-also"></a>См. также  
  [Программирование собственного клиента SQL Server](sql-server-native-client-programming.md)  

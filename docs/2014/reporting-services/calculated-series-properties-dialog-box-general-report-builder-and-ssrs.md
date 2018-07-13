@@ -1,5 +1,5 @@
 ---
-title: Вычисляемый ряд свойства диалогового окна «Общие» (построитель отчетов и службы SSRS) | Документы Microsoft
+title: Вычисляется диалоговое окно Свойства серии «Общие» (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.calculatedseriesproperties.formula.f1
 - "10151"
 ms.assetid: 97d4a29b-30ae-4141-8595-e994e47e6648
 caps.latest.revision: 20
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 93ceacfa3e9fbfa9feb77945a4918b62d9d8b719
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 41ae566621a527fb55c83d06e8bf8dcaaec227b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168062"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>Диалоговое окно «Свойства вычисляемого ряда» — «Общие» (построитель отчетов и службы SSRS)
   Перейдите на вкладку **Формула** в диалоговом окне **Свойства вычисляемого ряда**, чтобы добавить или изменить ряд, который должен быть рассчитан на основе встроенных формул, использующих существующие данные ряда в качестве входных значений.  
@@ -63,6 +63,6 @@ ms.locfileid: "36194669"
  Укажите параметры для выбранной формулы.  
   
 ## <a name="see-also"></a>См. также  
- [Диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+ [Диаграммы &#40;построитель отчетов и службы SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
 - authorization [Reporting Services]
@@ -25,13 +25,13 @@ ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d889c606718bca0f917322cbf031f9c89c0ede3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9628b3e6393c6fe33bcff6b5bf14933b46c2dd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260130"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Предоставление разрешений на сервер отчетов в собственном режиме
   Службы SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют авторизацию, основанную на ролях, и подсистему проверки подлинности для определения того, кто может выполнять операции и обращаться к элементам на сервере отчетов. Основанная на ролях авторизация разбивает на категории (роли) множество действий, которые может выполнять отдельный пользователь или группа. Проверка подлинности основывается на встроенной проверке подлинности Windows либо в пользовательском модуле проверки подлинности, предоставленном пользователем. Можно использовать стандартные или настраиваемые роли с любым типом проверки подлинности.  
@@ -43,7 +43,7 @@ ms.locfileid: "36191932"
   
  Для предоставления доступа к элементам и операциям сервера отчетов следуйте приведенным ниже рекомендациям.  
   
-1.  Ознакомьтесь со списком стандартных ролей и определите, допустимо ли использовать их без изменений. Если необходимо изменить набор задач для ролей или определить дополнительные роли, это следует сделать до назначения пользователям каких-либо ролей. Дополнительные сведения о каждой роли см. в разделе [стандартные роли](role-definitions-predefined-roles.md).  
+1.  Ознакомьтесь со списком стандартных ролей и определите, допустимо ли использовать их без изменений. Если необходимо изменить набор задач для ролей или определить дополнительные роли, это следует сделать до назначения пользователям каких-либо ролей. Дополнительные сведения о каждой роли, см. в разделе [стандартные роли](role-definitions-predefined-roles.md).  
   
 2.  Выясните, каким пользователям и группам требуется доступ к серверу отчетов и на каком уровне. Большинству пользователей следует назначить роль **Браузер** или роль **Построитель отчетов** . Меньшему числу пользователей следует назначить роль **Издатель** . В роль **Диспетчер содержимого**должно быть включено весьма небольшое число пользователей.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36191932"
  [Предопределенные роли](role-definitions-predefined-roles.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Проверка подлинности с использованием сервера отчетов](authentication-with-the-report-server.md)   
- (Создание и управлять роли assignments.md)   
+ (Создание и управление role-assignments.md)   
  [Защита и обеспечение безопасности служб Reporting Services](reporting-services-security-and-protection.md)   
  [Управление содержимым сервера отчетов (службы Reporting Services в собственном режиме)](../report-server/report-server-content-management-ssrs-native-mode.md)  
   

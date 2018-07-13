@@ -1,5 +1,5 @@
 ---
-title: Элемент DataSource (XML для Аналитики) | Документы Microsoft
+title: Элемент DataSource (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DataSource element
 ms.assetid: adc0713a-3927-40f3-8b87-012130908f34
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f0af7343a1d359bae1e02763b71fa80bdf557d82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 40efe20736e6e2e6364ddcf5aa41a92409a2e68c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167165"
 ---
 # <a name="datasource-element-xmla"></a>Элемент DataSource (XML для аналитики)
-  Содержит привязку источника данных вне строки для родительского [пакета](../xml-elements-commands/batch-element-xmla.md) или [процесс](../xml-elements-commands/process-element-xmla.md) элемента.  
+  Содержит привязку к источнику данных вне строки для родительского [пакета](../xml-elements-commands/batch-element-xmla.md) или [процесс](../xml-elements-commands/process-element-xmla.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -67,9 +67,9 @@ ms.locfileid: "36195224"
 |Дочерние элементы|[DatabaseID](id-element-xmla.md), [DataSourceID](datasourceid-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- `DataSource` Элемент представляет собой вне строки привязку к источнику данных, используемые `Batch` или `Process` для временного переопределения привязки источника данных для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объектов, обрабатываемых команда.  
+ `DataSource` Представляет собой вне строки привязку к источнику данных, используемые `Batch` или `Process` для временного переопределения привязки источника данных для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объектов, обрабатываемых команда.  
   
- Дополнительные сведения о ожидания привязок см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Дополнительные сведения о привязках вне строки, см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)  

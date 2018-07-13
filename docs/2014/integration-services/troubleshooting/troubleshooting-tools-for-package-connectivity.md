@@ -1,5 +1,5 @@
 ---
-title: Устранение неполадок соединения пакетов "Сервис" | Документы Microsoft
+title: Устранение неполадок соединения пакетов "Сервис" | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
 - SSIS packages, troubleshooting
@@ -20,13 +20,13 @@ ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6c949af42aa90b00d38ff0c5f254a2eb51ba0c3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a15f2e78fd2a3cbc88f1d3668fde27c5cdb88924
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178081"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>Инструменты устранения неполадок соединения пакетов
   Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают в себя функции и средства, которые используются для устранения неполадок соединений между пакетами и источниками данных, из которых пакеты извлекают и загружают данные.  
@@ -73,7 +73,7 @@ ms.locfileid: "36193190"
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Инструменты устранения неполадок при разработке пакета](troubleshooting-tools-for-package-development.md)   
+ [Средства устранения неполадок для разработки пакетов](troubleshooting-tools-for-package-development.md)   
  [Инструменты устранения неполадок с выполнением пакетов](troubleshooting-tools-for-package-execution.md)  
   
   

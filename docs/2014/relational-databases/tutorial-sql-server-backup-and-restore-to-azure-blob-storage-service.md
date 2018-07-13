@@ -1,5 +1,5 @@
 ---
-title: 'Учебник: SQL Server резервного копирования и восстановления в Windows Azure BLOB-объект службы хранилища | Документы Microsoft'
+title: 'Учебник: SQL Server резервного копирования и восстановления в Windows Azure BLOB-объектов службы хранилища | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85f16d4f3a96c8d661981a998eab93eaffdc67d7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 856ff3ec55236b8216c04fbffeb4f5abed6dbc5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188021"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service
   Добро пожаловать в учебник «Приступая к резервному копированию и восстановлению данных SQL Server при помощи службы хранилищ больших двоичных объектов Windows Azure». С помощью этого учебника вы научитесь создавать и восстанавливать резервные копии с помощью службы хранилища больших двоичных объектов Windows Azure.  

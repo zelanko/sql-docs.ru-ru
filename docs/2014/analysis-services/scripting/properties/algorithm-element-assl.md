@@ -1,5 +1,5 @@
 ---
-title: Элемент Algorithm (ASSL) | Документы Microsoft
+title: Элемент Algorithm (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Algorithm element
 ms.assetid: 188bf7ce-c5c9-406a-af75-5a026c92a569
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86e44cf8069d9ed78a414cad5ac5079f8f2faa22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ca7406538a81768e8cab8d0c24142c8105c963
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218494"
 ---
 # <a name="algorithm-element-assl"></a>Элемент Algorithm (ASSL)
-  Определяет алгоритм, используемый [MiningModel](../objects/miningmodel-element-assl.md) элемента.  
+  Определяет алгоритм, используемый в [MiningModel](../objects/miningmodel-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36191299"
 ## <a name="remarks"></a>Примечания  
  Значением элемента `Algorithm` является строка, которая идентифицирует алгоритм. Например, эта строка может иметь *Microsoft_Naive_Bayes*, *Microsoft_Decision_Trees*, или *Microsoft_Clustering.* Строка идентифицирует алгоритмы, предоставляемые [!INCLUDE[msCoName](../../../includes/msconame-md.md)] и пользовательские алгоритмы, предоставленные пользователем. Доступные значения для `Algorithm` элемента можно получить из столбца SERVICE_NAME [DMSCHEMA_MINING_SERVICES](../../schema-rowsets/data-mining/dmschema-mining-services-rowset.md) набора строк схемы.  
   
- Элемент, соответствующий родителю параметра `Algorithm` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.MiningModel>. Тесно связанным элементом в модели объектов AMO является <xref:Microsoft.AnalysisServices.MiningModelAlgorithms>.  
+ Элемент, соответствующий родителю параметра `Algorithm` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.MiningModel>. Тесно связанным элементом в модели объектов AMO является <xref:Microsoft.AnalysisServices.MiningModelAlgorithms>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент AlgorithmParameter &#40;ASSL&#41;](../objects/algorithmparameter-element-assl.md)   

@@ -1,29 +1,28 @@
 ---
-title: Устаревшие функции полнотекстового поиска в SQL Server 2014 | Документы Microsoft
+title: Устаревшие функции полнотекстового поиска в SQL Server 2014 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [full-text search]
 - full-text search [SQL Server], deprecated features
 - full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7f6820edd97ae68872c56bd086e8e981c88f7399
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 140e7262d3cfc66e956ee0fc53ea1009d7afda0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179691"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2014"></a>Устаревшие функции полнотекстового поиска в SQL Server 2014
   В этом разделе описаны устаревшие функции полнотекстового поиска, по-прежнему доступные в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
@@ -52,7 +51,7 @@ ms.locfileid: "36194234"
   
 |Устаревшая функция|Замена|Имя функции|Идентификатор функции|  
 |------------------------|-----------------|------------------|----------------|  
-|инструкции CONTAINS и CONTAINSTABLE, универсальный оператор NEAR:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|Пользовательский оператор NEAR:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,\<расстояние > [,\<порядок >]]<br /><br /> }<br /><br /> )<br /><br /> \<расстояние >:: = {*целое* &#124; **MAX**}<br /><br /> \<Порядок >:: = {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|инструкции CONTAINS и CONTAINSTABLE, универсальный оператор NEAR:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|Пользовательский оператор NEAR:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,\<расстояние > [,\<порядок >]]<br /><br /> }<br /><br /> )<br /><br /> \<расстояние >:: = {*целое число* &#124; **MAX**}<br /><br /> \<Порядок >:: = {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |Параметр CREATE FULLTEXT CATALOG:<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|Нет.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> Нет.*|237<br /><br /> Нет.<sup>*</sup>|  
 |Свойство DATABASEPROPERTYEX: IsFullTextEnabled|Нет.|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |Параметр sp_detach_db:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|Нет.|sp_detach_db @keepfulltextindexfile|226|  
@@ -62,7 +61,7 @@ ms.locfileid: "36194234"
   
 ## <a name="see-also"></a>См. также  
  [SQL Server, объект Deprecated Features](../performance-monitor/sql-server-deprecated-features-object.md)   
- [Критические изменения полнотекстового поиска](../../database-engine/breaking-changes-to-full-text-search.md)   
+ [Критические изменения в компонент Full-Text Search](../../database-engine/breaking-changes-to-full-text-search.md)   
  [Нерекомендуемые функции ядра СУБД в SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

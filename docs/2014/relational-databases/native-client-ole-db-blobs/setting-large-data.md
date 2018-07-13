@@ -1,13 +1,11 @@
 ---
-title: Присваивание больших данных | Документы Microsoft
+title: Присваивание больших данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,18 +16,18 @@ helpviewer_keywords:
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6fd64ccaa9d5b4abb87123bc6cb1d9977c6ef03b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fa1b0857b155f077920f60eee85cbcebb2ef4250
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190978"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423023"
 ---
 # <a name="setting-large-data"></a>Присваивание больших данных
-  С [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента позволяет передавать данные BLOB по указателю на объект хранилища потребителя.  
+  С помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента позволяет передавать данные BLOB по указателю на объект хранилища потребителя.  
   
  Потребитель создает объект хранилища, содержащий эти данные, и передает поставщику указатель на этот объект. Поставщик считывает данные из объекта в хранилище поставщика и записывает их в столбец BLOB.  
   
@@ -46,17 +44,17 @@ ms.locfileid: "36190978"
 ## <a name="how-to-set-large-data"></a>Как сохранить большой объем данных  
  Для передачи указателя на свой собственный объект хранения потребитель создает метод доступа, который привязывает значение столбца BLOB, а затем вызывает метод **IRowsetChange::SetData** или **IRowsetChange::InsertRow** . Сохранение данных BLOB происходит следующим образом.  
   
-1.  Создайте структуру DBOBJECT, описывающую, каким образом должен производиться доступ к столбцу BLOB. Задать *dwFlag* элемент структуры DBOBJECT STGM_READ, а *iid* равным IID_ISequentialStream (интерфейс должен быть предоставлен).  
+1.  Создайте структуру DBOBJECT, описывающую, каким образом должен производиться доступ к столбцу BLOB. Задайте *dwFlag* элементом структуры DBOBJECT значение STGM_READ, а *iid* равным IID_ISequentialStream (интерфейс должен быть предоставлен).  
   
 2.  Установите свойства в группе свойств DBPROPSET_ROWSET, чтобы включить возможность обновления для набора строк.  
   
-3.  Создайте набор привязок (по одной для каждого столбца) с помощью массива структур DBBINDING. Задать *wType* элемента в структуре DBBINDING значение DBTYPE_IUNKNOWN и *pObject* элемент, чтобы она указывала на созданную структуру DBOBJECT.  
+3.  Создайте набор привязок (по одной для каждого столбца) с помощью массива структур DBBINDING. Задайте *wType* элемент структуры DBBINDING значение DBTYPE_IUNKNOWN, а *pObject* элемент, чтобы он указывал на созданную структуру DBOBJECT.  
   
 4.  Создайте метод доступа на основе сведений о привязках в массиве структур DBBINDINGS.  
   
 5.  Вызовите функцию **GetNextRows** для выборки следующих строк из набора строк. Вызовите функцию **GetData** для чтения данных набора строк.  
   
-6.  Создайте объект хранилища, содержащий данные (и признак длины), а затем вызвать **IRowsetChange::SetData** (или **IRowsetChange::InsertRow**) с методом доступа, привязывающим столбец BLOB-объект для задания данные.  
+6.  Создайте объект хранилища, содержащий данные (а также индикатор длины), а затем вызвать **IRowsetChange::SetData** (или **IRowsetChange::InsertRow**) с помощью доступа, привязывающим столбец BLOB к набору данные.  
   
 ## <a name="example"></a>Пример  
  Следующий пример показывает получение данных BLOB. В примере создается таблица, добавляется образец записи, эта запись выбирается из набора строк, а затем устанавливается значение поля BLOB.  

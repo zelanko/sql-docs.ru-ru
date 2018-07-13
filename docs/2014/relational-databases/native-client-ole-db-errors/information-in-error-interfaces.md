@@ -1,13 +1,11 @@
 ---
-title: Сведения в интерфейсах обработки ошибок | Документы Microsoft
+title: Сведения в интерфейсах ошибок | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +17,18 @@ helpviewer_keywords:
 - errors [OLE DB], error interfaces
 ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6057ecaddf37f0b0a8b6fab50ac6aef5d4840515
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a121dc2e94c67637e867398bfa40c7fe230cd411
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189001"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419023"
 ---
 # <a name="information-in-error-interfaces"></a>Сведения в интерфейсах обработки ошибок
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента сообщает некоторые сведения об ошибках и состоянии в интерфейсах OLE DB определен ошибок **IErrorInfo**, **IErrorRecords**, и **ISQLErrorInfo** .  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента сообщает некоторые сведения об ошибках и состоянии в интерфейсах OLE DB ошибки **IErrorInfo**, **IErrorRecords**, и **ISQLErrorInfo** .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поддерживает поставщик OLE DB для собственного клиента **IErrorInfo** для функций-членов следующим образом.  
   
@@ -42,22 +40,22 @@ ms.locfileid: "36189001"
 |**GetHelpFile**|Не поддерживается. Всегда возвращает значение NULL.|  
 |**GetSource**|Строка «Собственный клиент Microsoft SQL Server».|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента поддерживает доступные потребителя **IErrorRecords** для функций-членов следующим образом.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента поддерживает доступные для потребителей **IErrorRecords** для функций-членов следующим образом.  
   
 |Функция-член|Описание|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|Заполняет структуру ERRORINFO основными сведениями об ошибке. Структура ERRORINFO содержит элементы, которые идентифицируют возвращаемое значение HRESULT для ошибки, поставщика и интерфейс, к которому относится ошибка.|  
-|**GetCustomErrorObject**|Возвращает ссылку на интерфейсы **ISQLErrorInfo** и [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md).|  
-|**GetErrorInfo**|Возвращает ссылку на **IErrorInfo** интерфейса.|  
-|**GetErrorParameters**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента не возвращает потребителю через параметры **GetErrorParameters**.|  
+|**GetCustomErrorObject**|Возвращает ссылку на интерфейсы **ISQLErrorInfo,** и [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md).|  
+|**GetErrorInfo**|Возвращает ссылку на **IErrorInfo** интерфейс.|  
+|**GetErrorParameters**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента не возвращает параметры объекту-получателю через **GetErrorParameters**.|  
 |**GetRecordCount**|Число доступных записей ошибок.|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поддерживает поставщик OLE DB для собственного клиента **ISQLErrorInfo::GetSQLInfo** параметры следующим образом.  
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|*pbstrSQLState*|Возвращает значение SQLSTATE для ошибки. Значения SQLSTATE определены в стандартах SQL-92, ODBC и ISO SQL, а также спецификациях API-интерфейсов. Ни [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ни [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента определены значения SQLSTATE зависит от реализации.|  
-|*plNativeError*|Возвращает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] номер ошибки в **master.dbo.sysmessages** при ее наличии. Собственные ошибки доступны после успешной попытки инициализировать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источника данных поставщика OLE DB для собственного клиента. До этой попытки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента всегда возвращает ноль.|  
+|*pbstrSQLState*|Возвращает значение SQLSTATE для ошибки. Значения SQLSTATE определены в стандартах SQL-92, ODBC и ISO SQL, а также спецификациях API-интерфейсов. Ни [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ни [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента определены значения SQLSTATE зависящие от реализации.|  
+|*plNativeError*|Возвращает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] номер ошибки из **master.dbo.sysmessages** при его наличии. Собственные ошибки доступны после успешной попытки инициализировать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источник данных поставщика OLE DB для собственного клиента. До попытки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента всегда возвращает значение 0.|  
   
 ## <a name="see-also"></a>См. также  
  [ошибки](errors.md)  
