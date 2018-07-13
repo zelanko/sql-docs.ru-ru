@@ -1,5 +1,5 @@
 ---
-title: Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса Майкрософт упрощенного | Документы Microsoft
+title: Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса (Майкрософт) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - discrimination [Analysis Services]
 - naive bayes model [Analysis Services]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - dependencies [Analysis Services]
 ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da5682ca2b998a9a73071aad9038c119e58152f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 74d50a1d9f51b9cf443a2c502a5cbd41498d6f05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185521"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса (Майкрософт)
   Средство просмотра упрощенного алгоритма Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, которые построены по упрощенным алгоритмам Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Упрощенный алгоритм Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) — это алгоритм классификации, хорошо адаптирующийся к задачам прогнозирующего моделирования. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md).  
@@ -84,16 +84,16 @@ ms.locfileid: "36193910"
  **Значения**  
  Показывает значение атрибута в столбце **Атрибут**.  
   
- **Отдает приоритет \<значение 1 >**  
+ **Подходит к \<значение 1 >**  
  Выводит цветную полоску, показывающую, насколько значение атрибута соответствует значению прогнозируемого атрибута, показанному в поле **Значение 1**.  
   
- **Отдает приоритет \<значение 2 >**  
+ **Подходит к \<равное 2 >**  
  Выводит цветную полоску, показывающую, насколько значение атрибута соответствует значению прогнозируемого атрибута, показанному в поле **Значение 2**.  
   
  [В начало](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритма Байеса (Майкрософт)](microsoft-naive-bayes-algorithm.md)   
+ [Алгоритм Байеса (Майкрософт)](microsoft-naive-bayes-algorithm.md)   
  [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](mining-model-viewer-tasks-and-how-tos.md)   
  [Средства интеллектуального анализа данных](data-mining-tools.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining-model-viewers.md)  

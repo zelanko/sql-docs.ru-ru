@@ -1,5 +1,5 @@
 ---
-title: Просмотр отчетов служб Reporting Services на устройствах Microsoft Surface и Apple iOS | Документы Microsoft
+title: Просмотр отчетов служб Reporting Services на устройствах Microsoft Surface и Apple iOS | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - iPad
 - Safari
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - iOS
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
 caps.latest.revision: 21
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2766644db67f3f677060c90a2addd2123276f1e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 683a20afc442b7e10a64cac86aa0502c57dabbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191375"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166325"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Просмотр отчетов служб Reporting Services на устройствах с Microsoft Surface и Apple iOS
   В этой статье описаны функции и рабочие процессы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], поддерживаемые для планшета Microsoft Surface и устройств с Apple iOS 6 и Apple Safari, таких как iPad.  
   
 ## <a name="view-and-interact-with-reports"></a>Представление и взаимодействие с помощью отчетов  
- Начиная с [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживает просмотр и Базовое взаимодействие с отчетами в Microsoft Surface и устройств с Apple iOS 6 и Apple Safari, таких как iPad. Также можно публиковать отчеты с помощью устройств Microsoft Surface.  
+ Начиная с [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживает просмотр и Базовое взаимодействие с отчетами на устройствах Microsoft Surface и устройств с Apple iOS 6 и браузер Apple Safari, таких как iPad. Также можно публиковать отчеты с помощью устройств Microsoft Surface.  
   
  ![Рабочий стол IPad](media/videothumbnail.jpg "рабочий стол IPad")  
 Ознакомьтесь с демонстрацией просмотра отчетов на iPad.  
@@ -44,7 +44,7 @@ ms.locfileid: "36191375"
   
      [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] можно загрузить из [центра загрузки Майкрософт](http://www.microsoft.com/download/details.aspx?id=35575).  
   
--   Сервер отчетов режима SharePoint, установите [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] или более поздней [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] надстройки для продуктов SharePoint.  
+-   Сервер отчетов режима SharePoint, установить [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] или более поздней версии [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] надстройки для продуктов SharePoint.  
   
  **Для просмотра и взаимодействия с отчетом на устройстве iPad или устройстве Microsoft Surface**  
   
@@ -54,16 +54,16 @@ ms.locfileid: "36191375"
   
     -   **Начните с электронной почты:** в сообщении электронной почты, созданный [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] подписки, выберите URL-адрес отчета. Отчет откроется в браузере.  
   
-    -   **Запуск с сервера отчетов:** Просмотрите каталог на [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сервером отчетов, а затем нажмите имя отчета, чтобы открыть отчет.  
+    -   **Запуск с сервера отчетов:** перейдите в каталог на [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сервером отчетов, а затем выберите имя отчета, чтобы открыть отчет.  
   
-    -   **Запуск из библиотеки документов SharePoint:** перейдите к библиотеке документов SharePoint, который содержит [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] отчеты, а затем выберите имя отчета. Можно просматривать отчет и работать с ним.  
+    -   **Запуск из библиотеки документов SharePoint:** перейдите к библиотеке документов SharePoint, содержащий [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] отчеты, а затем выберите имя отчета. Можно просматривать отчет и работать с ним.  
   
         > [!IMPORTANT]  
         >  При использовании iPad свойство **Скрытый просмотр** в Safari должно быть отключено.  
   
-    -   **Веб-часть SharePoint:** веб-часть добавлена на страницу SharePoint, можно просмотреть [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] отчеты.  
+    -   **Веб-часть SharePoint:** Если веб-часть на страницу SharePoint была добавлена, можно просмотреть [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] отчеты.  
   
-3.  На устройстве Microsoft Surface можно также открыть отчет с использованием диспетчера отчетов. Просмотрите каталог в [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] диспетчеру отчетов, а затем выберите имя отчета, чтобы открыть отчет.  
+3.  На устройстве Microsoft Surface можно также открыть отчет с использованием диспетчера отчетов. Перейдите в каталог, в [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] диспетчеру отчетов, а затем выберите имя отчета, чтобы открыть отчет.  
   
     > [!IMPORTANT]  
     >  Просмотр отчетов в диспетчере отчетов не поддерживается на iPad.  
@@ -136,12 +136,12 @@ ms.locfileid: "36191375"
   
 -   [Общие сведения о мобильных устройствах и SharePoint 2013](http://technet.microsoft.com/library/fp161351\(v=office.15\).aspx) (http://technet.microsoft.com/library/fp161351(v=office.15).aspx).  
   
--   [Поддерживаемые браузеры для мобильных устройств в SharePoint 2013](http://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (http://technet.microsoft.com/library/fp161353(v=office.15).aspx).  
+-   [Поддерживаемые браузеры мобильного устройства в SharePoint 2013](http://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (http://technet.microsoft.com/library/fp161353(v=office.15).aspx).  
   
 -   [Просмотр отчетов и оценочных листов на устройствах Apple iPad (SharePoint Server 2010)](http://technet.microsoft.com/library/hh697482.aspx) (http://technet.microsoft.com/library/hh697482.aspx).  
   
 -   [Просмотр отчетов служб Reporting Services на iPad (видеоролик)](http://technet.microsoft.com/sqlserver/jj873792.aspx) (http://technet.microsoft.com/sqlserver/jj873792.aspx).  
   
--   [Просмотр отчетов служб Reporting Services на Microsoft Surface RT устройством (видео)](http://technet.microsoft.com/sqlserver/dn146017)  
+-   [Просмотр отчетов служб Reporting Services устройства Microsoft Surface RT (видео)](http://technet.microsoft.com/sqlserver/dn146017)  
   
   

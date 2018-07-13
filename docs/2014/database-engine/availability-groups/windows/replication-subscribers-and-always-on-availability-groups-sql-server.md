@@ -1,29 +1,28 @@
 ---
-title: Подписчики репликации и группы доступности AlwaysOn (SQL Server) | Документы Microsoft
+title: Подписчики репликации и группы доступности AlwaysOn (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - failover subscribers with AlwaysOn
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 caps.latest.revision: 18
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c74ebdfb93f26ce91ddb678a2b56651bf96156f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5b61d999215af224e626929d4b2766e045571715
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176471"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>Подписчики репликации и группы доступности AlwaysOn (SQL Server)
   Если в группе доступности AlwaysOn, содержащей базу данных, которая является подписчиком репликации, выполняется отработка отказа, то подписка на репликацию может завершиться ошибкой. Для подписчиков транзакций агент распространителя сможет продолжить репликацию автоматически, если в подписке используется имя прослушивателя группы доступности подписчика. Для подписчиков на публикацию слиянием администратор репликации должен вручную перенастроить подписчик путем повторного создания подписки.  

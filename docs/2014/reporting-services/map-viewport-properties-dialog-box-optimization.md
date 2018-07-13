@@ -1,5 +1,5 @@
 ---
-title: Сопоставление окна просмотра диалогового окна свойств оптимизации | Документы Microsoft
+title: Сопоставление окна просмотра свойства, оптимизация | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.optimization.f1
 - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 54606ed4dda94c569e1a4aef2438e42cd104eebd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da12f40cba7da5a7c56d702c20d7ad2e7759b796
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150255"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Диалоговое окно «Свойства окна просмотра карты», вкладка «Оптимизация»
   Вкладка **Оптимизация** диалогового окна **Свойства окна просмотра карты** позволяет управлять разрешением при просмотре карты в отчете.  
@@ -38,11 +38,11 @@ ms.locfileid: "36193960"
  **Качество**  
  Передвиньте указатель ближе к отметке **Качество** , чтобы отрисовывать более подробную карту.  
   
- **разрешение карты**  
+ **Разрешение карты**  
  Укажите разрешение карты. Это значение указывает минимальный размер (в пунктах) элементов, отображаемых на карте, готовой для просмотра.  
   
 ## <a name="see-also"></a>См. также  
  [Карты (построитель отчетов и службы SSRS)](report-design/maps-report-builder-and-ssrs.md)   
- [Устранение неполадок в отчетах: Сопоставления отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Устранение неполадок в отчетах: Отчеты-карты &#40;построитель отчетов и службы SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

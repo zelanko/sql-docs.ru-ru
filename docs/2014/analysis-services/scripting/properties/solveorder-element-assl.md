@@ -1,5 +1,5 @@
 ---
-title: Элемент SolveOrder (ASSL) | Документы Microsoft
+title: Элемент SolveOrder (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - SolveOrder element
 ms.assetid: ec43e055-97dd-4f2a-9a7c-2df2e1119e56
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed5092f93494162179dc2ee142a6769eddd5d6da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: defbaca134f92df4cf765dda68ad2fb30c848800
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173295"
 ---
 # <a name="solveorder-element-assl"></a>Элемент SolveOrder (ASSL)
-  Указывает порядок вычисления, в котором [CalculationProperty](../objects/calculationproperty-element-assl.md) применяется к вычисляемым элементам или вычисляемым определениям ячеек.  
+  Указывает порядок вычисления, в котором [CalculationProperty](../objects/calculationproperty-element-assl.md) элемент применяется к вычисляемым элементам или вычисляемым определениям ячеек.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,14 +62,14 @@ ms.locfileid: "36192977"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- `SolveOrder` Свойство применяется к `CalculationProperty` элементы с [CalculationType](calculationtype-element-assl.md) из *член* или *ячейки*.  
+ `SolveOrder` Свойство применяется к `CalculationProperty` элементов при помощи [CalculationType](calculationtype-element-assl.md) из *член* или *ячеек*.  
   
- Элемент, соответствующий родителю параметра `SolveOrder` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ Элемент, соответствующий родителю параметра `SolveOrder` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент CalculationProperties &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   
  [Элемент MdxScript &#40;ASSL&#41;](../objects/mdxscript-element-assl.md)   
- [Элемент MdxScript &#40;ASSL&#41;](../collections/mdxscripts-element-assl.md)   
+ [Элемент MdxScripts &#40;ASSL&#41;](../collections/mdxscripts-element-assl.md)   
  [Свойства &#40;ASSL&#41;](properties-assl.md)  
   
   

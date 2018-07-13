@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshot replication [SQL Server], about snapshot replication
 - snapshot replication [SQL Server]
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 763619d813e3f94ff1b64df2c69bdcba2234b825
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 53ca6d9dcd50d09e804f593b519cf269fc3f2ee9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154295"
 ---
 # <a name="snapshot-replication"></a>Репликация моментальных снимков
   Репликация моментальных снимков распространяет данные точно в том виде, в котором они были представлены в определенный момент времени, и не наблюдает за обновлением этих данных. Во время синхронизации формируется моментальный снимок и отсылается подписчикам целиком.  

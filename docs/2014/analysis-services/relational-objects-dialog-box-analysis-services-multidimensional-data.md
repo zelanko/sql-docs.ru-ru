@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно «Реляционные объекты» (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Диалоговое окно «Реляционные объекты» (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.relationalobjectsdialog.f1
 ms.assetid: 662ff835-2132-4171-b0d4-649d5873d052
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17e7c07ce8aaef2077ed46f18bc1c28b4de4c199
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc15ef3dbfcaab51bd3e19b7c723c04f49c261b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176971"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Реляционные объекты» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Реляционные объекты** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для выбора таблиц, представлений и других объектов источника данных, для которых необходимо включить упреждающее кэширование. Чтобы открыть это окно в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , нажмите кнопку с многоточием (**...**) рядом с любым из параметров **Указать таблицы отслеживания** на вкладке **Уведомления** диалогового окна **Параметры хранилища** .  
@@ -38,6 +38,6 @@ ms.locfileid: "36190110"
   
 ## <a name="see-also"></a>См. также  
  [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Уведомления о &#40;диалоговое окно параметров хранения&#41; &#40;службы Analysis Services — многомерные данные&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)  
+ [Уведомления &#40;диалоговое окно параметров хранения&#41; &#40;службы Analysis Services — многомерные данные&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)  
   
   

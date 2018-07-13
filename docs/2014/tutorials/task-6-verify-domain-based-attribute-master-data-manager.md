@@ -1,5 +1,5 @@
 ---
-title: 'Задача 6: Убедитесь, что атрибут на основе домена создан с помощью диспетчера основных данных | Документы Microsoft'
+title: 'Задача 6: Убедитесь, что атрибут на основе домена создан с помощью диспетчера основных данных | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d12764af6fbebf8c0fa82d38059cc64ea9bbc2c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f607a6faaf8a6891ff2d7191142f11dbaa55f961
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191304"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Задача 6. Убедитесь, что атрибут на основе домена создан с помощью диспетчера основных данных
   В этой задаче вы проверите, создана ли сущность **Штат** в службах **MDS** и является ли атрибут **Штат** сущности **Поставщик** атрибутом на основе домена, который зависит от сущности **Штат**, с помощью **диспетчера основных данных**.  
@@ -82,7 +82,7 @@ ms.locfileid: "36190106"
   
 11. Теперь обратите внимание, что значение поля **Штат** можно изменить в области **Подробности** с помощью раскрывающегося списка. Также можно увидеть, что в списке слева и в раскрывающемся списке на панели **Подробности** сначала отображается код, а затем название в фигурных скобках. На панели **Подробности** можно также изменить любое другое значение.  
   
-     ![Состояние атрибута с обновленными кодом и названиями](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "состояния атрибутов с обновленными кодом и названиями")  
+     ![Состояние атрибута с обновленными кодом и названиями](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "состояние атрибута с обновленными кодом и названиями")  
   
 ## <a name="next-step"></a>Следующий шаг  
  [Задача 7. Просмотр изменений, выполненных с помощью диспетчера основных данных в Excel](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  

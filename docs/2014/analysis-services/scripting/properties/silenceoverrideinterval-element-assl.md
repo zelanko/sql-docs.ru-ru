@@ -1,5 +1,5 @@
 ---
-title: Элемент SilenceOverrideInterval (ASSL) | Документы Microsoft
+title: Элемент SilenceOverrideInterval (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SilenceOverrideInterval element
 ms.assetid: 0dcd2db4-9bc0-4460-b1dd-def0b38c4617
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f12bc90bcac229c3aaff35e23686b127f30b03d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba345f4d7ebe21af3c2ff79739f3badf89da03d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192494"
 ---
 # <a name="silenceoverrideinterval-element-assl"></a>Элемент SilenceOverrideInterval (ASSL)
   Определяет количество времени, которое должно пройти после получения первичного уведомления до того, как начнется безусловное создание образа многомерного OLAP (MOLAP).  
@@ -64,7 +64,7 @@ ms.locfileid: "36194582"
 ## <a name="remarks"></a>Примечания  
  Если уведомление получено во время интервала бездействия, то значение `SilenceOverrideInterval` заменяет значение `SilenceInterval`.  
   
- Элемент, соответствующий родителю параметра `SilenceOverrideInterval` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
+ Элемент, соответствующий родителю параметра `SilenceOverrideInterval` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

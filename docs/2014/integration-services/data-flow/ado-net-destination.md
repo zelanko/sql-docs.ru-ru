@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8f795c264fb46076ec203e4a21ca8d5fa6ccd82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0233bc6dad87580764f67eea68f20171bcb5e82e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164845"
 ---
 # <a name="ado-net-destination"></a>Назначение «ADO.NET»
   Назначение ADO NET загружает данные в различные базы данных, совместимые с [!INCLUDE[vstecado](../../includes/vstecado-md.md)], которые используют таблицу или представление базы данных. Можно загрузить эти данные в существующую таблицу или представление либо создать новую таблицу и загрузить в нее данные.  
@@ -51,11 +51,11 @@ ms.locfileid: "36190572"
   
  Дополнительные сведения о свойствах, которые можно установить в диалоговом окне **Редактор назначения ADO NET** , см. в одном из следующих разделов:  
   
--   [Редактор назначения «ADO.NET» &#40;страницы диспетчера соединений&#41;](../ado-net-destination-editor-connection-manager-page.md)  
+-   [Редактор назначения «ado.net» &#40;страницы диспетчера соединений&#41;](../ado-net-destination-editor-connection-manager-page.md)  
   
--   [Редактор назначения «ADO.NET» &#40;страница «сопоставления»&#41;](../ado-net-destination-editor-mappings-page.md)  
+-   [Редактор назначения «ado.net» &#40;страница «сопоставления»&#41;](../ado-net-destination-editor-mappings-page.md)  
   
--   [Редактор назначения «ADO.NET» &#40;страницы вывода ошибок&#41;](../ado-net-destination-editor-error-output-page.md)  
+-   [Редактор назначения «ado.net» &#40;странице вывода ошибок&#41;](../ado-net-destination-editor-error-output-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   

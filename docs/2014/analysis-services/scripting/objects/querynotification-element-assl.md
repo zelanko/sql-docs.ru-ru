@@ -1,5 +1,5 @@
 ---
-title: Элемент QueryNotification (ASSL) | Документы Microsoft
+title: Элемент QueryNotification (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - QueryNotification element
 ms.assetid: 0ee06730-81ff-4913-96e6-f39b6f181650
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3c9bc13772d549d6ade640af4c3f57ac52efbbec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7d31cef8ee52964bf9aeb0c7c489f2831f5cb80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153305"
 ---
 # <a name="querynotification-element-assl"></a>Элемент QueryNotification (ASSL)
   Содержит сведения для элемента [ProactiveCaching](proactivecaching-element-assl.md) о запросе, который необходимо выполнить, чтобы определить, был ли изменен источник данных.  
@@ -60,7 +60,7 @@ ms.locfileid: "36190831"
 |Дочерние элементы|[Запрос](../properties/query-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.QueryNotification>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.QueryNotification>.  
   
 ## <a name="see-also"></a>См. также  
  [Тип данных ProactiveCachingQueryBinding &#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

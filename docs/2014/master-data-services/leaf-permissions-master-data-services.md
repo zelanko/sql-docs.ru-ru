@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], permissions
 - members [Master Data Services], leaf member permissions
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], leaf member attribute permissions
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6487c15c05fa157afdb8e644ead2f692e35f6ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 82dea3e40d1e6c367441b8fa057fad36570430bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175831"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Разрешения конечного элемента (службы основных данных)
   Разрешения конечного элемента применяются к значениям атрибутов для всех конечных элементов сущности.  
@@ -67,8 +67,8 @@ ms.locfileid: "36191009"
 >  В этом примере «Подкатегория» является доменным атрибутом на основе сущности SubcategoryList. Можно выбрать другую подкатегорию для Mountain-100, но нельзя добавлять элементы или удалять элементы из сущности SubcategoryList.  
   
 ## <a name="see-also"></a>См. также  
- [Назначение разрешения объекта модели &#40;службы Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
- [Консолидированные разрешения &#40;службы Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)   
+ [Назначение разрешений объекта модели &#40;службы Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
+ [Объединенные разрешения &#40;службы Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)   
  [Разрешения объекта модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Элементы (службы Master Data Services)](../../2014/master-data-services/members-master-data-services.md)   
  [Атрибуты &#40;службы Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  

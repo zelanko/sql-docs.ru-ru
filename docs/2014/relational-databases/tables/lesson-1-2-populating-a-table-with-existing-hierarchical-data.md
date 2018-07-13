@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73a61c2af9d178911f206e2e5006dabd8620329e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ded697f41f68e26e677fe5054e7e4f59955fc74c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186121"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Заполнение таблицы существующими иерархическими данными
   В этой задаче создается таблица и заполняется данными из таблицы **EmployeeDemo**. Эта задача включает следующие шаги.  
@@ -117,7 +117,7 @@ ms.locfileid: "36191168"
   
      `10        4         2`  
   
-3.  Заполнение таблицы **NewOrg** . Использование методов GetRoot и ToString для сцепления **Num** значений в `hierarchyid` форматирования, а затем обновите **OrgNode** столбец с результирующими иерархическими значениями:  
+3.  Заполнение таблицы **NewOrg** . Используйте методы GetRoot и ToString для объединения **Num** значения в `hierarchyid` форматирования, а затем обновите **OrgNode** столбец результирующий иерархическими значениями:  
   
     ```  
     WITH paths(path, EmployeeID)   
@@ -155,7 +155,7 @@ ms.locfileid: "36191168"
   
     ```  
   
-     **LogicalNode** преобразует столбца `hierarchyid` столбца в более удобочитаемой форме текста, которая представляет иерархию. В оставшихся задачах для представления логического формата столбцов типа данных `hierarchyid` также следует использовать метод `ToString()`.  
+     **LogicalNode** преобразует столбец `hierarchyid` столбца в более доступную текстовую форму, которая представляет иерархию. В оставшихся задачах для представления логического формата столбцов типа данных `hierarchyid` также следует использовать метод `ToString()`.  
   
 5.  Удалите временную таблицу, она больше не понадобится:  
   

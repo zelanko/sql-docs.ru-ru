@@ -1,5 +1,5 @@
 ---
-title: Кубы элемент (ASSL) | Документы Microsoft
+title: Кубы элемент (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Cubes element
 ms.assetid: 0eaaaf3f-0c78-4eb4-bc3a-d266579eca56
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 07fb51c5c02a8931ce582f9115ab82b922ba5709
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d63af6605e1633f310f6c7089fc4e6ffaa481ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194274"
 ---
 # <a name="cubes-element-assl"></a>Элемент Cubes (ASSL)
-  Содержит коллекцию элементов [куба](../objects/cube-element-assl.md) элементы, связанные с [базы данных](../objects/database-element-assl.md) элемента.  
+  Содержит коллекцию элементов [куба](../objects/cube-element-assl.md) элементы, связанные с [базы данных](../objects/database-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36193682"
 |Дочерние элементы|[Cube](../objects/cube-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.CubeCollection>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.CubeCollection>.  
   
 ## <a name="see-also"></a>См. также  
  [Коллекции &#40;ASSL&#41;](collections-assl.md)  

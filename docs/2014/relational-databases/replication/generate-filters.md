@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.generatefilters.f1
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8d59bbe785c9f27edae9a841df983c3a94be83b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8cae311ef131f8ceafcc32dbae0881c236e3ea19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175791"
 ---
 # <a name="generate-filters"></a>Формирование фильтров
   Диалоговое окно **Формирование фильтров** позволяет определить фильтр строк на одной таблице в публикации слиянием. Далее репликация автоматически распространяет фильтр на другие таблицы, связанные через связи внешних ключей. Например, если фильтр определяется на таблице заказчика таким образом, чтобы в результате фильтрации оставались только данные о французских заказчиках, репликация распространяет этот фильтр таким образом, что соответствующие заказы и таблицы с подробностями заказов будут содержать только данные, относящиеся к французским заказчикам.  

@@ -1,5 +1,5 @@
 ---
-title: Определение источника данных | Документы Microsoft
+title: Определение источника данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a564a314e92b683418b2bb3d12291fddeded016c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f764d7e7640fc7549d97402a83f997b63f9105cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190312"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179081"
 ---
 # <a name="defining-a-data-source"></a>Определение источника данных
   После создания проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] работа с проектом обычно начинается с определения одного или нескольких источников данных, которые будут использоваться в этом проекте. Для определения источника данных нужно задать строку соединения, которая будет использована для подключения к этому источнику данных. Дополнительные сведения см. в разделе [Создание источника данных (многомерные службы SSAS)](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "36190312"
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] также поддерживают других поставщиков, которые доступны в списке **Поставщик** .  
   
-5.  В **имя сервера** введите `localhost`.  
+5.  В **имя_сервера** текстовое поле, тип `localhost`.  
   
      Чтобы подключиться к именованному экземпляру на локальном компьютере, введите **localhost\\< имя экземпляра\>**. Чтобы подключиться к конкретному компьютеру вместо локального, введите имя компьютера или его IP-адрес.  
   

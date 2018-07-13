@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [hierarchyid]
 - hierarchyid [Database Engine], tutorial
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a3d380b0ad7eb1fb6120d959e3b7fb303466c010
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1a9282da58d26e29c3f88a005e72fc431bf1e57a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168355"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>Учебник. Использование типа данных hierarchyid
   Этот учебник предназначен для пользователей, имеющих опыт работы с [!INCLUDE[tsql](../../includes/tsql-md.md)], но незнакомых с типом данных `hierarchyid`.  
@@ -46,7 +46,7 @@ ms.locfileid: "36193317"
 -   Internet Explorer 6 или более поздней версии.  
   
 ## <a name="see-also"></a>См. также  
- [Учебник: Приступая к работе с компонентом Database Engine](../tutorial-getting-started-with-the-database-engine.md)   
+ [Учебник: Начало работы с ядром СУБД](../tutorial-getting-started-with-the-database-engine.md)   
  [Учебник: Составление инструкций Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)   
  [Справочник по методам типа данных hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
  [Иерархические данные &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   

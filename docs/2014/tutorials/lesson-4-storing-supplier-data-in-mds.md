@@ -1,5 +1,5 @@
 ---
-title: 'Урок 4: Хранение данных поставщика в MDS | Документы Microsoft'
+title: 'Занятие 4: Хранение данных поставщика в MDS | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bacd9eaf-4d12-4f25-aec7-d785dec1b623
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 40f09aa6544bc38378e547c5b6e94dd26956a549
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c366d18c9f8c4606da6cc864df7a7d399151c6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180951"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>Урок 4. Хранение данных поставщика в MDS
   Службы Master Data Services (MDS) — это решение SQL Server для управления основными данными. Управление основными данными (MDM) описывает усилия, предпринимаемые организациями, чтобы обнаружить и определить нетранзакционные списки данных.  

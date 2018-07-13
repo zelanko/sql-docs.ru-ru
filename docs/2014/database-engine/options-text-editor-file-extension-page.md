@@ -1,5 +1,5 @@
 ---
-title: Параметры (текстовый редактор - страница расширение файла) | Документы Microsoft
+title: Параметры (текстовый редактор - страница расширения файла) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.File_Extension
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 307d7f6fbf3405d0ff84d1c2672c1de2c90bf092
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4fd0abdb6c1bc93d730ccb502d6eb1c2facf891a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176421"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Параметры ("Текстовый редактор" — страница "Расширение файла")
   Используйте диалоговое окно **Параметры**, чтобы задать способ обработки файлов с определенными расширениями в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Для каждого введенного расширения можно выбрать соответствующий редактор. Таким образом, можно выбрать редактор среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], в котором будут открываться документы определенного типа. Чтобы открыть параметры расширений файлов, выберите **Параметры** в меню **Сервис**, разверните **Редактор текстов** и выберите **Расширение файла**.  
@@ -44,7 +44,7 @@ ms.locfileid: "36194093"
  **Расширение**  
  Список всех расширений, для которых указан какой-либо редактор.  
   
- **Использование редакторов**  
+ **Возможности редактирования**  
  Список всех редакторов, выбранных для списка **Расширения**.  
   
  **Сопоставить файлы без расширений с**  

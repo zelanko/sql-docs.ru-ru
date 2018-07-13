@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Degree of Parallelism event class
 ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 03f723987ebce872068a128bec80be6bb8cfe10b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: aa223f74da700517ed957e83f96114ea75703822
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158255"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Класс событий Degree of Parallelism (7.0 Insert)
   События класса **Degree of Parallelism (7.0 Insert)** происходят каждый раз, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкции SELECT, INSERT, UPDATE или DELETE.  
@@ -35,7 +35,7 @@ ms.locfileid: "36195393"
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
-|**BinaryData**|**image**|Количество процессоров, которые используются для завершения этого процесса на основе следующих значений:<br /><br /> 0x00000000: указывает последовательный план, который выполняется последовательно.<br /><br /> 0x01000000 указывает параллельный план, который выполняется последовательно.<br /><br /> > = 0x02000000: указывает параллельный план параллельного выполнения.|2|Нет|  
+|**BinaryData**|**image**|Количество процессоров, которые используются для завершения этого процесса на основе следующих значений:<br /><br /> 0x00000000: указывает последовательный план, исполняемый последовательно.<br /><br /> 0x01000000 указывает параллельный план, исполняемый последовательно.<br /><br /> > = 0x02000000: указывает параллельный план параллельного выполнения.|2|Нет|  
 |**ClientProcessID**|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент вводит идентификатор клиентского процесса.|9|Да|  
 |**DatabaseID**|**int**|Идентификатор базы данных, указанной в инструкции USE database, или базы данных по умолчанию, если для данного экземпляра инструкция USE database не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |**DatabaseName**|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  

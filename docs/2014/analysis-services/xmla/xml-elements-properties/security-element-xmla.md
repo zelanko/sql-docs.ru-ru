@@ -1,5 +1,5 @@
 ---
-title: Элемент безопасности (XMLA) | Документы Microsoft
+title: Элемент Security (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Security element
 ms.assetid: 0b601f69-d16d-4d10-9361-b8afaa6ed357
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4811ae03eb6f30c4b9f4557e791339920161b4ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 138b93043cbfeba51472dfa61816cf9023a3f2c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155025"
 ---
 # <a name="security-element-xmla"></a>Элемент Security (XML для аналитики)
-  Указывает, как для резервного копирования или восстановления определений безопасности, такие как роли и разрешения, во время [резервного копирования](../xml-elements-commands/backup-element-xmla.md) или [восстановить](../xml-elements-commands/restore-element-xmla.md) команды.  
+  Указывает способ резервного копирования или восстановления определений безопасности, таких как роли и разрешения, во время [резервного копирования](../xml-elements-commands/backup-element-xmla.md) или [восстановить](../xml-elements-commands/restore-element-xmla.md) команды.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36195235"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- `Security` Определяет, является ли определения безопасности, такие как роли и разрешения, определенные в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных резервного копирования или восстановления во время выполнения, соответственно, `Backup` или `Restore` команда. Этот элемент также определяет, распространяются ли команды `Backup` и `Restore` на учетные записи пользователей и группы Windows, являющиеся членами определений безопасности.   
+ `Security` Определяет ли определения безопасности, такие как роли и разрешения, определенные в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных резервного копирования или восстановления при выполнении, соответственно, `Backup` или `Restore` команда. Этот элемент также определяет, распространяются ли команды `Backup` и `Restore` на учетные записи пользователей и группы Windows, являющиеся членами определений безопасности.   
   
  Значением этого элемента может быть только одна из строк в следующей таблице.  
   

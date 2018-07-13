@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], excluding
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d64a01cf9df6865790b39510ad5c6222d8d6fd87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a51bf291ebdf7904fbce836cfaddb3cceb5e17cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172951"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>Исключение бизнес-правила (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]исключите бизнес-правило, если его не следует удалять без возможности восстановления и отсутствует необходимость проверки данных на соответствие этому бизнес-правилу.  
@@ -47,14 +47,14 @@ ms.locfileid: "36191641"
   
 6.  Выберите из списка **Атрибут** атрибут или оставьте **Все**по умолчанию.  
   
-7.  В сетке на строке бизнес-правила, установите флажок в **исключить** столбца. Значение в **состояние** столбец **ожидается исключение**.  
+7.  В сетке, в строке бизнес-правила, установите флажок в **исключить** столбца. Значение в **состояние** столбец **ожидается исключение**.  
   
 8.  Нажмите кнопку **Опубликовать бизнес-правила**.  
   
 9. В диалоговом окне подтверждения нажмите кнопку **ОК**. Значение в **состояние** столбец **исключенные**.  
   
 ## <a name="see-also"></a>См. также  
- [Удаление бизнес-правило &#40;службы Master Data Services&#41;](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)   
+ [Удалить бизнес-правило &#40;службы Master Data Services&#41;](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)   
  [Создание и публикация бизнес-правила (службы Master Data Services)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [Бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   

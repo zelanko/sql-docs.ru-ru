@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], about models
 - models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17d84c1656e90c4fc00e4b3474bc986ae84f8404
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4b7d295a5f9eac9c6a333618dc62d53cbf8294f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178111"
 ---
 # <a name="models-master-data-services"></a>Модели (службы основных данных)
   Модели — это самый высокий уровень организации данных в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Модель определяет структуру данных в решении управления основными данными. Модель содержит следующие объекты:  
@@ -74,7 +74,7 @@ ms.locfileid: "36193393"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание модели для организации основных данных.|[Создать модель &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
+|Создание модели для организации основных данных.|[Создание модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
 |Изменение имени существующей модели.|[Изменение имени модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
 |Удаление существующей модели.|[Удаление модели (службы Master Data Services)](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
   

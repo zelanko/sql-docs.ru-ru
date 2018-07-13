@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ae16ede1cf9a1fc51f0b7f7f31cc0b65a4565b9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bbbaf9e86f3a75f57c61099475f0692e8a017cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171005"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Общие сведения о консоли конструктора CDC
   В этом разделе описаны процедуры установки конструктора отслеживания измененных данных для Oracle от Attunity.  
   
 ## <a name="installation"></a>Установка  
- В этом разделе описаны процедуры установки конструктора отслеживания измененных данных для Oracle от Attunity. Чтобы установить консоль конструктора CDC, вручную запустите **AttunityOracleCdcDesigner.msi** с установочного носителя SQL Server.  Установочные пакеты для x86- и x64 расположены в **.\Tools\AttunityCDCOracle\\**  на установочном носителе SQL Server.  
+ В этом разделе описаны процедуры установки конструктора отслеживания измененных данных для Oracle от Attunity. Чтобы установить консоль конструктора CDC, вручную запустите **AttunityOracleCdcDesigner.msi** с установочного носителя SQL Server.  Установочные пакеты для x86 и x64 расположены в **.\Tools\AttunityCDCOracle\\**  на установочном носителе SQL Server.  
   
 ## <a name="supported-windows-environments"></a>Поддерживаемые среды Windows  
  Консоль конструктора CDC может работать в следующих средах Windows:  
@@ -60,7 +60,7 @@ ms.locfileid: "36194087"
   
 -   Клиент Oracle 11.x  
   
- **Примечание**: необходимо использовать 32-разрядная или 64-разрядной версии данного программного обеспечения, соответствующая устанавливаемой версии консоли конструктора CDC Oracle.  
+ **Примечание**: необходимо использовать 32-разрядной или 64-разрядную версию этого программного обеспечения, версия установлена консоль конструктора Oracle CDC.  
   
  Консоль конструктора CDC Oracle выполняет обмен данными с исходной базой данных Oracle через поставщик ODBC Oracle.  
   

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1457c44ed95f09891bb8e8617968d2f9b9cbfbc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2776ccbb78346ad6243e5b6a4ed1e7c5827d31bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157835"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Подготовка к просмотру в виде HTML (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов в формате HTML подготавливает отчет к просмотру в HTML-формате. Модуль подготовки отчетов также позволяет создавать полностью сформированные HTML-страницы или фрагменты HTML для внедрения в другие HTML-страницы. Все документы HTML создаются в кодировке UTF-8.  
   
  Модуль подготовки отчетов в формате HTML используется по умолчанию для отчетов, просматриваемых в браузере, в том числе при запуске в диспетчере отчетов.  
   
- Модуль подготовки отчетов в формате HTML используется по умолчанию для отчетов, просматриваемых в браузере, в том числе при запуске в диспетчере отчетов. Модуль подготовки отчетов HTML может формировать код HTML в виде фрагмента или в виде полного документа HTML. Если код HTML является фрагментом, `HEAD`, `HTML`, и `BODY` удаляются теги HTML-документа. Формируется только содержимое тега `BODY`. Это удобно при внедрении элементов HTML в документ HTML, созданный другим приложением.  
+ Модуль подготовки отчетов в формате HTML используется по умолчанию для отчетов, просматриваемых в браузере, в том числе при запуске в диспетчере отчетов. Модуль подготовки отчетов HTML может формировать код HTML в виде фрагмента или в виде полного документа HTML. Если код HTML является фрагментом, `HEAD`, `HTML`, и `BODY` теги документа HTML удаляются. Формируется только содержимое тега `BODY`. Это удобно при внедрении элементов HTML в документ HTML, созданный другим приложением.  
   
  В некоторых сценариях параметры отчета могут использоваться для запуска атак с внедрением скрипта при подготовке отчетов к просмотру в формате HTML. Дополнительные сведения о защите отчетов см. в разделе [Обеспечение безопасности отчетов и ресурсов](../security/secure-reports-and-resources.md).  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36192179"
 ## <a name="see-also"></a>См. также  
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных модулей подготовки отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Интерактивные возможности различных модулей подготовки отчетов &#40;построитель отчетов и службы SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

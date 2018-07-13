@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1f6eb37de996e8956468efb54fa74535e419f44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16ca3b28e9b19c0f7935f2938d054939f0cc57a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155395"
 ---
 # <a name="data-quality-services-concepts"></a>Основные понятия служб Data Quality Services
   В этом разделе содержится краткая сводка по основным понятиям служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) в управлении набором знаний, проектах служб DQS и их администрировании.  
@@ -43,7 +43,7 @@ ms.locfileid: "36195456"
   
  С помощью эталонных данных можно проверить, исправить и обогатить данные, воспользовавшись службами компаний, гарантирующих качество своих эталонных данных. Для подключения к поставщикам эталонных данных можно использовать службы Windows Azure Marketplace или установить прямое соединение с поставщиком. Дополнительные сведения см. в статье [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
- Дополнительные сведения об управлении знаниями в DQS см. в разделе [базы знаний DQS и домены](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ Дополнительные сведения об управлении знаниями в DQS см. в разделе [DQS знаний и домены](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
 ##  <a name="Projects"></a> Основные понятия проекта служб DQS  
  Диспетчер данных выполняет операции повышения качества данных (очистки и сопоставления) с использованием проекта качества данных в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
@@ -85,11 +85,11 @@ ms.locfileid: "36195456"
   
 -   Включать и отключать уведомления о профилировании. Дополнительные сведения см. в разделе [Включение или отключение уведомлений по профилированию в DQS](../../2014/data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md).  
   
--   Настраивать степени серьезности для файлов журнала DQS на уровне действий или на более точном уровне модулей. Дополнительные сведения см. в разделе [настройка степени серьезности для файлов журнала DQS](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md).  
+-   Настраивать степени серьезности для файлов журнала DQS на уровне действий или на более точном уровне модулей. Дополнительные сведения см. в разделе [Configure Severity Levels for DQS Log Files](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md).  
   
  **Безопасность DQS**  
   
- Роли в рамках механизма обеспечения безопасности SQL Server используются для обеспечения безопасности DQS. Уровень доступа пользователя в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] определяется тремя ролями DQS: dqs_administrator, dqs_kb_editor и dqs_kb_operator. Роли нельзя предоставлять пользователям в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Для этого используется среда SQL Server Management Studio. Дополнительные сведения см. в разделе [DQS Security](../../2014/data-quality-services/dqs-security.md).  
+ Роли в рамках механизма обеспечения безопасности SQL Server используются для обеспечения безопасности DQS. Уровень доступа пользователя в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] определяется тремя ролями DQS: dqs_administrator, dqs_kb_editor и dqs_kb_operator. Роли нельзя предоставлять пользователям в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Для этого используется среда SQL Server Management Studio. Дополнительные сведения см. в разделе [безопасность DQS](../../2014/data-quality-services/dqs-security.md).  
   
  Дополнительные сведения об администрировании DQS см. в разделе [Администрирование DQS](../../2014/data-quality-services/dqs-administration.md).  
   

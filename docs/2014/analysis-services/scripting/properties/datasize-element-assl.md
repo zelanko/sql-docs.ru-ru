@@ -1,5 +1,5 @@
 ---
-title: Элемент DataSize (ASSL) | Документы Microsoft
+title: Элемент DataSize (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DataSize element
 ms.assetid: 4be79dbb-304e-4a65-9198-89fad407f775
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a79084349dfda487a4675d6963665980cc22e2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a34a8e8740e57bdcafbdd9ff1f3dce188e7d5e5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157155"
 ---
 # <a name="datasize-element-assl"></a>Элемент DataSize (ASSL)
-  Содержит размер в байтах [DataItem](../data-type/dataitem-data-type-assl.md) элемента.  
+  Содержит размер в байтах [DataItem](../data-type/dataitem-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36192527"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `DataSize` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.DataItem>.  
+ Элемент, соответствующий родителю параметра `DataSize` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.DataItem>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

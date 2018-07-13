@@ -1,5 +1,5 @@
 ---
-title: Тип данных ComAssembly (ASSL) | Документы Microsoft
+title: Тип данных ComAssembly (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ComAssembly data type
 ms.assetid: 23c0f4b3-b6ac-4ec8-9254-74d2f84f5244
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bfe3a7791d02d97b4283b63a1aedd3b6702fe563
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 824fb508bb392f6ef84ede39645a5bac0da645e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192097"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171555"
 ---
 # <a name="comassembly-data-type-assl"></a>Тип данных ComAssembly (ASSL)
-  Определяет производный тип данных, представляющий библиотеку COM, связанную с [сервера](../objects/server-element-assl.md) или [базы данных](../objects/database-element-assl.md) элемента.  
+  Определяет производный тип данных, представляющий библиотеку COM, связанную с [Server](../objects/server-element-assl.md) или [базы данных](../objects/database-element-assl.md) элемент.  
   
 > [!IMPORTANT]  
 >  Использование сборок COM может представлять угрозу безопасности. По этой причине, а также по ряду других сборки COM в службах [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]являются устаревшими. Поддержка сборок COM в последующих версиях может быть прекращена.  
@@ -52,7 +52,7 @@ ms.locfileid: "36192097"
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|Базовые типы данных|[сборки](../objects/assembly-element-assl.md)|  
+|Базовые типы данных|[Сборки](../objects/assembly-element-assl.md)|  
 |Производные типы данных|None|  
   
 ## <a name="data-type-relationships"></a>Связи типа данных  
@@ -61,15 +61,15 @@ ms.locfileid: "36192097"
 |------------------|-------------|  
 |Родительские элементы|None|  
 |Дочерние элементы|[Source](../properties/source-element-comassembly-assl.md)|  
-|Производные элементы|В разделе [сборки](../objects/assembly-element-assl.md) ([сборки](../collections/assemblies-element-assl.md) коллекцию [базы данных](../objects/database-element-assl.md) или [сервера](../objects/server-element-assl.md))|  
+|Производные элементы|См. в разделе [сборки](../objects/assembly-element-assl.md) ([сборки](../collections/assemblies-element-assl.md) коллекцию [базы данных](../objects/database-element-assl.md) или [Server](../objects/server-element-assl.md))|  
   
 ## <a name="remarks"></a>Примечания  
  `ComAssembly` Элемент содержит ссылку на (полное имя файла или программный идентификатор) в библиотеку COM, связанные с экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] или с конкретной базой данных экземпляра [!INCLUDE[ssAS](../../../includes/ssas-md.md)].  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.ComAssembly>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.ComAssembly>.  
   
 ## <a name="see-also"></a>См. также  
  [Тип данных ClrAssembly &#40;ASSL&#41;](assembly-data-type-assl.md)   
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

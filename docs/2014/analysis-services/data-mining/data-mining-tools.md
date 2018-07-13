@@ -1,5 +1,5 @@
 ---
-title: Средства интеллектуального анализа данных | Документы Microsoft
+title: Средства интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tools [Analysis Services]
 - mining models [Analysis Services], tools
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data mining [Analysis Services], development
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 caps.latest.revision: 47
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3bde9cb83ca06208573b88bbfdc06a8e86f676ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 810210c6c04cc0830c8c1586d82cb18c0ed5a02e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179091"
 ---
 # <a name="data-mining-tools"></a>Средства интеллектуального анализа данных
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] включены следующие средства создания решений интеллектуального анализа данных.  
@@ -95,7 +95,7 @@ ms.locfileid: "36191328"
   
 ## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; ссылки](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Задачи модели интеллектуального анализа данных и инструкции](mining-model-tasks-and-how-tos.md)   
+ [Задачи модели интеллектуального анализа данных и инструкции по](mining-model-tasks-and-how-tos.md)   
  [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](mining-model-viewer-tasks-and-how-tos.md)   
  [Решения для интеллектуального анализа данных](data-mining-solutions.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Приложение SQL Server Profiler — организация столбцов | Документы Microsoft
+title: SQL Server Profiler — организация столбцов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.organize.columns.f1
 ms.assetid: bf5674f4-da5e-43f9-aeb2-76ca37993790
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69622d02bbe0eae497f7d6e463ea6d40eb6536cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1bfa74b1d6f8eb7f3c13c294aba37bfb88f7e995
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162915"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>Приложение SQL Server Profiler — организация столбцов
   Диалоговое окно **Упорядочение столбцов** используется для выбора столбцов данных для событий группирования и статистической обработки, которые отображаются в трассировке. Это позволяет упростить просмотр и анализ больших файлов и таблиц трассировки.  
@@ -52,7 +52,7 @@ ms.locfileid: "36191679"
  После выбора столбца данных нажмите **Вниз** для перемещения столбца данных с панели **Группы**. Можно также нажать **Вниз** для изменения порядка показа столбцов в окне трассировки.  
   
 ## <a name="see-also"></a>См. также  
- [Упорядочить столбцы, отображаемые в трассировке &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
+ [Упорядочивание столбцов, отображаемых в трассировке &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
  [Создать трассировку &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [Создание шаблона трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [Открытие файла трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   

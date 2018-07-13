@@ -1,5 +1,5 @@
 ---
-title: Тип данных RelationshipEndVisualizationProperties (ASSL) | Документы Microsoft
+title: Тип данных RelationshipEndVisualizationProperties (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 11f9a10f-d36c-4faf-b595-3fe969d1935e
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 13bde90af2ecbb8aba03bea4d140139c8437a747
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58348251e9ea00c4f6eebc5fcec067683e49a3a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161275"
 ---
 # <a name="relationshipendvisualizationproperties-data-type-assl"></a>Тип данных RelationshipEndVisualizationProperties (язык ASSL)
   Определяет примитивный тип данных, который представляет элемент связи в связи.  
@@ -57,6 +57,6 @@ ms.locfileid: "36190839"
 |Производные элементы||  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.RelationshipEnd>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.RelationshipEnd>.  
   
   

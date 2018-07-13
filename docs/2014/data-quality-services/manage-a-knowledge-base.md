@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8589086db4f176080bbddc1dab257b4931a059f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20886efdda6ef944331d2bc619cd9324ad0adb3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185221"
 ---
 # <a name="manage-a-knowledge-base"></a>Управление базой знаний
   В этом разделе описано, как выполнять функции управления в базе знаний служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Вы можете удалить базу знаний, разблокировать ее, отменить работу в ней, переименовать ее и отобразить ее свойства.  

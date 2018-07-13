@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - selOraTabDia
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eb73c91e7f11a0a925b808589dfac77fc4bb7374
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bff65efbe755045a46721436d3b058725b9ed31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150965"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>Выбор таблиц Oracle для отслеживания изменений
   В этом диалоговом окне можно выбрать таблицы, включенные в экземпляр CDC. Выбранные таблицы добавляются в список на странице **Выбор таблиц и столбцов** мастера создания экземпляра. Это диалоговое окно предназначено для следующих целей.  
@@ -49,7 +49,7 @@ ms.locfileid: "36193214"
 >  Если была выбрана таблица, в которой содержатся данные неподдерживаемого типа, то на экране появится сообщение об ошибке, а таблица не будет включена в экземпляр.  
   
 ## <a name="see-also"></a>См. также  
- [Как создать экземпляр изменения базы данных SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
+ [Как создать экземпляр базы данных изменения SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Выбор таблиц и столбцов Oracle](select-oracle-tables-and-columns.md)  
   
   

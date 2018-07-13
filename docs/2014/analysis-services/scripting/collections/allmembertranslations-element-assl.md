@@ -1,5 +1,5 @@
 ---
-title: Элемент AllMemberTranslations (ASSL) | Документы Microsoft
+title: Элемент AllMemberTranslations (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllMemberTranslations element
 ms.assetid: 982ee2bf-c88d-4da5-a679-7a6b08a48a0d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2a1a8b9b72895c69cb8d415d00d633be99ebc99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 977168f25f81c1755b6c25e442bae4b7e6e3bfa7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171545"
 ---
 # <a name="allmembertranslations-element-assl"></a>Элемент AllMemberTranslations (ASSL)
-  Содержит коллекцию элементов [перевода](../objects/translation-element-assl.md) для заголовка элемента «все» [иерархии](../objects/hierarchy-element-assl.md) элемента.  
+  Содержит коллекцию элементов [перевода](../objects/translation-element-assl.md) элементы для заголовка элемента «все» элемента [иерархии](../objects/hierarchy-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36191515"
 |Дочерние элементы|[AllMemberTranslation](../objects/allmembertranslation-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родительский `AllMemberTranslations` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Hierarchy>.  
+ Элемент, соответствующий родителю параметра `AllMemberTranslations` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Hierarchy>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент Translation &#40;ASSL&#41;](../objects/translation-element-assl.md)   

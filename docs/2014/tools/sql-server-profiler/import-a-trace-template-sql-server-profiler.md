@@ -1,5 +1,5 @@
 ---
-title: Импортировать шаблон трассировки (приложение SQL Server Profiler) | Документы Microsoft
+title: Импорт шаблона трассировки (SQL Server Profiler) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
 - trace templates [SQL Server]
 - importing trace templates
 ms.assetid: 1dd5391e-dcd5-4ac2-b8dd-0e40922758a8
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7ac2ccae1819b118487ebcc2809eb9d8db5e0b5c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8b900bfcd616096d5a93fec579beb62daac83b30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177013"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>импортировать шаблон трассировки (приложение SQL Server Profiler)
   В этом подразделе описывается импортирование файла шаблона трассировки (расширение TDF) с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

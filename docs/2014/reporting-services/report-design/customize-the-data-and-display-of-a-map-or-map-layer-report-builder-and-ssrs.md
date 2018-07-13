@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10521"
 - sql12.rtp.rptdesigner.shared.shadowdv.f1
@@ -24,15 +24,15 @@ f1_keywords:
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: dcacda9428bd9a3e404778ed688f94081c1dbb1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ae9f4afd9dc5d04e3f9cb511b4bfc4bf9fdb104b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170305"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Настройка данных и отображения карты или слоя карты (построитель отчетов и службы SSRS)
   После добавления в отчет карты или слоя карты с помощью мастера может потребоваться изменить способ отображения карты в отчете. При внесении изменений следует учитывать следующие соображения.  

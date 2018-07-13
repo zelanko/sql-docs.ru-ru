@@ -1,5 +1,5 @@
 ---
-title: Элемент DiscoverResponse (XML для Аналитики) | Документы Microsoft
+title: Элемент DiscoverResponse (XML для Аналитики) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DiscoverResponse element
 ms.assetid: 20e10a82-dbd1-4ead-b92d-f84b4b2f10c6
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 6834a0dbd0842cce7a3756ffbeb53be6f9515713
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 61552da233cdcd405fc9d0e07ecc93e186295422
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180817"
 ---
 # <a name="discoverresponse-element-xmla"></a>Элемент DiscoverResponse (XML для аналитики)
-  Содержит информацию, возвращаемую экземпляром служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в ответ на [Discover](xml-elements-methods-discover.md) вызова метода.  
+  Содержит данные, возвращаемые экземпляром служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в ответ на [Discover](xml-elements-methods-discover.md) вызова метода.  
   
  **Пространство имен** urn:schemas-microsoft-com:xml-analysis  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36192094"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|None|  
-|Дочерние элементы|[Возврат](xml-elements-properties/return-element-xmla.md)|  
+|Дочерние элементы|[вернуть](xml-elements-properties/return-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
  Элемент `DiscoverResponse` является элементом верхнего уровня в тексте ответа SOAP для метода `Discover`.  

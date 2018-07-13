@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a82a52b230564b81261cece8f61ea56cdb21da8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3c4144787ac5085c4713781569d7e6d364ff7951
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172175"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Создание группы рекурсивной иерархии (построитель отчетов и службы SSRS)
   Группа рекурсивной иерархии организует данные отдельного набора данных отчета, включающего несколько уровней иерархии, например структуру подчинения для иерархии связей «начальник-подчиненный» в организации.  
@@ -54,22 +54,22 @@ ms.locfileid: "36194654"
     > [!NOTE]  
     >  Если панель "Свойства" не отображается, щелкните **Свойства** на вкладке **Вид** .  
   
-2.  В панели «Свойства» разверните `Padding` узел, щелкните **влево**и в раскрывающемся списке выберите  **\<выражение... >**.  
+2.  В панели «Свойства» разверните `Padding` узел, щелкните **слева**и в раскрывающемся списке выберите  **\<выражение... >**.  
   
 3.  На панели «Выражение» введите следующее выражение:  
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Для свойств заполнения необходимо указать строку в формате *nnyy*, где *nn* — число, а *yy* — единица измерения. Приведенное выражение создает строку с использованием `Level` функции, чтобы увеличить размер отступа в зависимости от уровня рекурсии. Например, строка с уровнем 1 будет иметь отступ в 12 пунктов (2 + (1\*10)), а строка с уровнем 3 — отступ в 32 пункта (2 + (3\*10)). Сведения о `Level` см. в разделе [уровень](report-builder-functions-level-function.md).  
+     Для свойств заполнения необходимо указать строку в формате *nnyy*, где *nn* — число, а *yy* — единица измерения. Приведенное выражение создает строку, которая использует `Level` функция, чтобы увеличить размер отступа в зависимости от уровня рекурсии. Например, строка с уровнем 1 будет иметь отступ в 12 пунктов (2 + (1\*10)), а строка с уровнем 3 — отступ в 32 пункта (2 + (3\*10)). Сведения о `Level` функции, см. в разделе [уровень](report-builder-functions-level-function.md).  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      Запустите отчет. Отчет выведет группированные данные в иерархическом представлении.  
   
 ## <a name="see-also"></a>См. также  
- [Создание групп рекурсивной иерархии &#40;отчетов построителя отчетов и службы SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Создание групп рекурсивной иерархии &#40;построитель отчетов и службы SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Справочник по функциям статистической обработки &#40;отчетов построителя отчетов и службы SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [Справочник по агрегатным функциям &#40;построитель отчетов и службы SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [Таблицы &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Матрицы &#40;построитель отчетов и службы SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Списки &#40;построитель отчетов и службы SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

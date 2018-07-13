@@ -1,5 +1,5 @@
 ---
-title: Отмена элемент (XMLA) | Документы Microsoft
+title: Отменить элемент (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Cancel command
 ms.assetid: de4062c1-7434-44dc-9f01-29fcf78963bd
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cd0fdd50a1dcddb51d167ab76cd5408b631bb3ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fb71b55e514a2e058d50cd1c923a3e0b794ac8f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173275"
 ---
 # <a name="cancel-element-xmla"></a>Элемент Cancel (XML для аналитики)
-  Отменяет текущую команду [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра.  
+  Отменяет данный момент команды [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36190529"
   
  Как правило, команда `Cancel` используется для отмены команд в активном сеансе. В этом случае для команды `Cancel` не требуется указывать ни один из дочерних элементов. Команда `Cancel` может также использоваться администраторами для отмены команд, выполняющихся в других соединениях или сеансах, не относящихся к текущему активному сеансу. Члены роли, имеющие разрешения администратора для конкретной базы данных, могут отменять команды для соединений и сеансов, применимых к этой базе данных, в то время как администраторы сервера могут отменять команды для соединений и сеансов конкретного экземпляра служб Analysis Services.  
   
- Чтобы получить сведения о текущих соединениях и сеансах для экземпляра служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], можно выполнить метод `Discover`, запросив, соответственно, наборы строк схемы DISCOVER_CONNECTIONS и DISCOVER_SESSIONS. Члены роли, имеющие разрешения администратора для конкретной базы данных, могут возвращать сеансы только для этой базы данных, указав ее в столбце ограничений SESSION_CURRENT_DATABASE для наборов строк схемы DISCOVER_SESSIONS. Дополнительные сведения о `Discover` метода, в разделе [метод обнаружения &#40;XMLA&#41;](../xml-elements-methods-discover.md).  
+ Чтобы получить сведения о текущих соединениях и сеансах для экземпляра служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], можно выполнить метод `Discover`, запросив, соответственно, наборы строк схемы DISCOVER_CONNECTIONS и DISCOVER_SESSIONS. Члены роли, имеющие разрешения администратора для конкретной базы данных, могут возвращать сеансы только для этой базы данных, указав ее в столбце ограничений SESSION_CURRENT_DATABASE для наборов строк схемы DISCOVER_SESSIONS. Дополнительные сведения о `Discover` метод, см. в разделе [метод Discover &#40;XMLA&#41;](../xml-elements-methods-discover.md).  
   
 ## <a name="see-also"></a>См. также  
  [Элемент Batch &#40;XML для Аналитики&#41;](batch-element-xmla.md)   

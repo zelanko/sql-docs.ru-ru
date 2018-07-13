@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 caps.latest.revision: 29
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: d4f3796c0e6145e2dc24110e805971fb88058484
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8a0a6c8fb4b87ca1bbb51947b722fc4238a1c187
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161865"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>Настройка параметров свойства FailureConditionLevel
   Свойство FailureConditionLevel служит для задания для экземпляра отказоустойчивого кластера FCI в группе AlwaysOn условий отработки отказа или перезапуска. Изменения значения этого свойства вступают в силу немедленно, без перезапуска службы отказоустойчивого кластера Windows Server или ресурса отказоустойчивого кластера SQL Server.  
@@ -46,7 +45,7 @@ ms.locfileid: "36192159"
   
 2.  Импортируйте модуль `FailoverClusters` для включения командлетов кластера.  
   
-3.  Используйте `Get-ClusterResource` командлет, чтобы найти [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ресурса, затем с помощью `Set-ClusterParameter` командлету задать **FailureConditionLevel** свойство для экземпляра отказоустойчивого кластера.  
+3.  Используйте `Get-ClusterResource` найдите [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ресурса, затем с помощью `Set-ClusterParameter` командлет, чтобы задать **FailureConditionLevel** свойство для экземпляра отказоустойчивого кластера.  
   
 > [!TIP]  
 >  Каждый раз при открытии нового окна PowerShell, необходимо импортировать `FailoverClusters` модуля.  

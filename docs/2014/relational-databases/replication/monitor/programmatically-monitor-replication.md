@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 486c0e39c34c706128fc5191ecb15394eb584247
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0ece1fccdfc4fab42bd2b5cd2913dfcd238e9b40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167015"
 ---
 # <a name="programmatically-monitor-replication"></a>Наблюдение за репликацией программным образом
   Монитор репликации — это графическое средство, позволяющее осуществлять мониторинг топологии репликации. К данным мониторинга можно обращаться программным путем с помощью хранимых процедур репликации [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов RMO. Эти объекты позволяют программировать следующие задачи:  
@@ -176,7 +176,7 @@ ms.locfileid: "36189518"
   
 2.  Получите объект <xref:Microsoft.SqlServer.Replication.PublisherMonitor> одним из следующих способов.  
   
-    -   Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Задайте для издателя свойство <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> . Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, либо было неправильно задано имя издателя, либо публикация не существует.  
+    -   Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Задайте для издателя свойство <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> . Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, было неправильно задано имя издателя, либо публикация не существует.  
   
     -   Из коллекции <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> , доступ к которой был получен с помощью свойства <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> существующего объекта <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> .  
   

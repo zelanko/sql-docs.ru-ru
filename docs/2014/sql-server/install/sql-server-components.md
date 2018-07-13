@@ -1,5 +1,5 @@
 ---
-title: Компоненты SQL Server | Документы Microsoft
+title: Компоненты SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Upgrade Advisor, components
 - listing components to analyze
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - identifying components to analyze
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85a89e2114cd00b28444cf6ee62d12ff1abdec42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 99998b5b9e24de92f826a73941bf6b86e5ad4318
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177127"
 ---
 # <a name="sql-server-components"></a>Компоненты SQL Server
   Можно запустить мастер анализа помощника по обновлению для локального или удаленного компьютера, который имеет [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] установлен. Первый шаг анализа, предшествующего обновлению, — определение компьютера и компонентов, подлежащих анализу.  
   
 ## <a name="options"></a>Параметры  
  **Имя компьютера**  
- Задает имя компьютера для проведения анализа. Помощник по обновлению заполняет **имя сервера** поле, содержащее имя локального компьютера. Для подключения к локальному компьютеру можно также использовать обозначения «.» и «localhost».  
+ Задает имя компьютера для проведения анализа. Помощник по обновлению заполняет **имя_сервера** поле с именем локального компьютера. Для подключения к локальному компьютеру можно также использовать обозначения «.» и «localhost».  
   
  Для анализа другого компьютера используются следующие правила.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36191361"
  При просмотре служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] следует указать имя локального компьютера. Помощник по обновлению просматривает только локальные серверы отчетов.  
   
  **Обнаружение**  
- **Обнаружить** кнопка обращается к указанного компьютера и обнаруживает компонентов для анализа:  
+ **Найти** кнопку обращается к указанному компьютеру и обнаруживает компонентов для анализа:  
   
 -   Если выполняется анализ экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном компьютере, на этом компьютере необходимо включить службы удаленного реестра.  
   

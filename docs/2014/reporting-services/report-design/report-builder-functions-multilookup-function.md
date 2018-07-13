@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 92395b7b91d94187dc790978baa084c418224686
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3022c5d802da527dc1c1bfb062f8a5dca267f50e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157745"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Функция Multilookup (построитель отчетов и службы SSRS)
   Возвращает набор первых подходящих значений для указанного набора имен из набора данных, содержащего пары «имя-значение».  
@@ -42,7 +42,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (`Variant`) Выражение, вычисляемое для каждой строки в наборе данных и указывающее имя или ключ для сопоставления. Например, `=Fields!ID.Value`.  
   
  *result_expression*  
- (`Variant`) Выражение, вычисляемое для строки в наборе данных где *source_expression* = *destination_expression*, и указывающее извлекаемого значения. Например, `=Fields!Name.Value`.  
+ (`Variant`) Выражение, вычисляемое для строки в наборе данных где *source_expression* = *destination_expression*, и указывает извлекаемого значения. Например, `=Fields!Name.Value`.  
   
  *набор данных*  
  Константа, задающая имя набора данных в отчете. Например, «Colors».  
@@ -51,9 +51,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  Возвращает `VariantArray`, или `Nothing` Если совпадения нет.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте `Multilookup` для получения набора значений из набора данных для пар имя значение, где каждая пара имеет отношение 1 к 1. `MultiLookup` является эквивалентом функции `Lookup` для набора имен или ключей. Например, для многозначного параметра, который основан на идентификаторов первичных ключей, можно использовать `Multilookup` в выражении в текстовом поле таблицы для извлечения связанных значений из набора данных, который не привязан к параметру или таблице.  
+ Используйте `Multilookup` для извлечения набора значений из набора данных для пар "имя значение", где каждая пара имеет связь один-к одному. `MultiLookup` является эквивалентом функции `Lookup` для набора имен или ключей. Например, для многозначного параметра, основанный на идентификаторов первичных ключей, можно использовать `Multilookup` в выражении в текстовом поле таблицы для извлечения связанных значений из набора данных, который не привязан к параметру или таблице.  
   
- `Multilookup` выполняет следующие задачи.  
+ `Multilookup` выполняет следующие функции:  
   
 -   вычисляет исходное выражение в текущей области и создает массив объектов типа variant;  
   
@@ -101,7 +101,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 |3|Clothing|  
 |4|Components|  
   
- Для поиска имен, соответствующих списку идентификаторов, используйте функцию `Multilookup`. Сначала необходимо разбить список на массив строк, вызов `Multilookup` для извлечения названий категорий и объединить результаты в строку.  
+ Для поиска имен, соответствующих списку идентификаторов, используйте функцию `Multilookup`. Сначала необходимо разделить списка в массив строк, вызов `Multilookup` для извлечения названий категорий и объединить результаты в строку.  
   
  Следующее выражение при помещении текстового поля в область данных, привязанную к набору данных Category, отображает «Bikes, Components, Bikes, Accessories».  
   
@@ -127,9 +127,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Выражения используются в отчетах &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
- [Область выражения для итогов, статистических функций и встроенных коллекций &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

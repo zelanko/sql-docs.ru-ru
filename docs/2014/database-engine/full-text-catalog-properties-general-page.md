@@ -1,27 +1,26 @@
 ---
-title: Свойства полнотекстового каталога (страница «Общие») | Документы Microsoft
+title: Свойства полнотекстового каталога (страница "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.general.f1
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 caps.latest.revision: 34
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fc774b0dfd87ae4f63e9332dd6813d92f79e4a5c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc0d0c6e287d978b0a10979843a50f40f906872b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169349"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Свойства полнотекстового каталога (страница «Общие»)
   В этом разделе показаны параметры и функции, доступные на странице **Общие** диалогового окна **Свойства полнотекстового каталога** .  
@@ -58,7 +57,7 @@ ms.locfileid: "36192285"
   
 -   **Change tracking**  
   
- **Количество элементов**  
+ **Число элементов**  
  Отображается количество полнотекстовых элементов в каталоге.  
   
  **Размер каталога**  

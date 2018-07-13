@@ -1,5 +1,5 @@
 ---
-title: Параметры статистической обработки (мастер статистических схем) | Документы Microsoft
+title: Параметры статистической обработки (мастер статистических схем) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.setaggregateoptions.f1
 ms.assetid: 4672d686-10c0-43f8-a53e-a16dfa840c81
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 29a9334ebe2f098c805d7093a739ecbf29d18d72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e99f96de2f9b75fb49b0de5a73ef611bb7d991c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190894"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>Параметры статистической обработки (мастер статистических схем)
   Страница **Параметры статистической обработки** используется для запуска обработки статистической схемы и указания хранилища или пределов производительности для созданных статистических схем.  
@@ -30,10 +30,10 @@ ms.locfileid: "36191506"
  **Размер хранилища достиг**  
  Ограничьте статистическую схему, указав максимальный объем в мегабайтах (МБ) или гигабайтах (ГБ), который может использоваться при формировании статистических схем.  
   
- **Рост производительности достиг**  
+ **Выигрыш производительности достиг**  
  Ограничьте статистическую схему, указав для нее максимальный процент ожидаемой производительности.  
   
- **Нажата кнопка Stop**  
+ **Я щелкните Stop**  
  Ограничьте статистическую схему, нажав кнопку **Остановить** во время обработки проекта.  
   
  **Не создавать статистические схемы (0%)**  

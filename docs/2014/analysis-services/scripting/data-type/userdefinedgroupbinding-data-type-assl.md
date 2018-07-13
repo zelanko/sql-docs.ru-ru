@@ -1,5 +1,5 @@
 ---
-title: Тип данных UserDefinedGroupBinding (ASSL) | Документы Microsoft
+title: Тип данных UserDefinedGroupBinding (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UserDefinedGroupBinding data type
 ms.assetid: 70149929-0ff7-4a67-84bf-e94908ae7611
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8ebbc22ff9a9ff2d38e36b53d5e1e2e382739ca0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a31c1867296ff00d8000b24640dfb44bef034a00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194324"
 ---
 # <a name="userdefinedgroupbinding-data-type-assl"></a>Тип данных UserDefinedGroupBinding (ASSL)
   Определяет производный тип данных, представляющий определенное пользователем группирование для атрибута.  
@@ -59,18 +59,18 @@ ms.locfileid: "36192111"
 |------------------|-------------|  
 |Родительские элементы|None|  
 |Дочерние элементы|[AttributeID](../properties/id-element-assl.md), [групп](../collections/groups-element-assl.md)|  
-|Производные элементы|В разделе [привязки](binding-data-type-assl.md)|  
+|Производные элементы|См. в разделе [привязки](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- `UserDefinedGroupBinding` автоматически рассматривается как [AttributeBinding](attributebinding-data-type-assl.md), чей [тип](../properties/type-element-binding-assl.md) задан равным *все*.  
+ `UserDefinedGroupBinding` автоматически обрабатывается как [AttributeBinding](attributebinding-data-type-assl.md), чей [тип](../properties/type-element-binding-assl.md) элементу присваивается *все*.  
   
- Дополнительные сведения о `Binding` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) `Binding` тип и иерархию наследования `Binding` типов, в разделе [тип привязки данных &#40;ASSL &#41;](binding-data-type-assl.md).  
+ Дополнительные сведения о `Binding` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) типа `Binding` тип и иерархию наследования `Binding` типов, см. в разделе [типа привязки данных &#40;ASSL &#41;](binding-data-type-assl.md).  
   
- Обзор привязок данных в ASSL см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Обзор привязки данных в языке ASSL, см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.UserDefinedGroupBinding>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.UserDefinedGroupBinding>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

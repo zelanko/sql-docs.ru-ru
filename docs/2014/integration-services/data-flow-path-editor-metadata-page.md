@@ -1,5 +1,5 @@
 ---
-title: Редактор пути (страница «метаданные») потока данных | Документы Microsoft
+title: Редактор пути (страница «метаданные») потока данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.patheditor.metadata.f1
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: b30bb9d7-ebc0-4b1a-8d0f-ee006b32e841
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6cd52c13526eb3ecd91f5255f24726dc1d2830e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f14ff76694d380cfa5e118615568b20c2994872
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176451"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>Редактор пути потока данных (страница «Метаданные»)
   Страница **Метаданные** диалогового окна **Редактор пути потока данных** используется для просмотра метаданных столбцов пути.  
@@ -66,8 +66,8 @@ ms.locfileid: "36192079"
  Копирование метаданных столбца в буфер обмена. По умолчанию все строки метаданных копируются в порядке, отображенном в текущий момент.  
   
 ## <a name="see-also"></a>См. также  
- [Редактор пути потока данных &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
- [Редактор пути потока данных &#40;страницы средств просмотра данных&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
+ [Редактор пути потока данных &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
+ [Редактор пути потока данных &#40;странице средства просмотра данных&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [Поток данных](data-flow/data-flow.md)   
  [Использование заметок в пакетах](use-annotations-in-packages.md)  
   

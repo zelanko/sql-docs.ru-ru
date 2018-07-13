@@ -1,5 +1,5 @@
 ---
-title: Параметры (выполнение запроса — SQL Server Общие страница) | Документы Microsoft
+title: Параметры (запроса выполнения SQL Server — "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionGeneral
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
 caps.latest.revision: 33
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 809a3a2d681285a0a0f02e6ca9ac18497ae28804
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c08ee6ab08fe90ffc075ef3f1ee0fe638d1da4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192505"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167155"
 ---
-# <a name="options-query-execution-sql-server-general-page"></a>Параметры (выполнение запроса — SQL Server Общие страница)
+# <a name="options-query-execution-sql-server-general-page"></a>Параметры (запроса выполнения SQL Server — "Общие")
   Используйте эту страницу, чтобы задать параметры для запросов служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Изменения этих параметров применяются только к новым запросам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для изменения параметров текущего запроса выберите пункт **Параметры запроса** в меню **Запрос** или щелкните правой кнопкой мыши в окне запроса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и выберите пункт **Параметры запроса**.  
   
 ## <a name="options"></a>Параметры  
@@ -50,7 +50,7 @@ ms.locfileid: "36192505"
   
 -   Поскольку редактор запросов не может ответить на подсказки и приглашения операционной системы, будьте внимательны и не запускайте интерактивные инструкции.  
   
- **По умолчанию**  
+ **Восстановить значения по умолчанию**  
  Выберите этот пункт для сброса всех значений этой страницы и установки значений по умолчанию.  
   
 ## <a name="see-also"></a>См. также  

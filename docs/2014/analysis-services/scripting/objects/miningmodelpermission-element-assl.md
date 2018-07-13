@@ -1,5 +1,5 @@
 ---
-title: Элемент MiningModelPermission (ASSL) | Документы Microsoft
+title: Элемент MiningModelPermission (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MiningModelPermission element
 ms.assetid: 4bd2f7e7-ff0d-404e-96fb-7e2c4eeb91e9
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 42a02eedcc2c054269872e4c0f9523ab63632eda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb714eb08fac3a6611669d48bf10aaee3580ee8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176441"
 ---
 # <a name="miningmodelpermission-element-assl"></a>Элемент MiningModelPermission (ASSL)
-  Определяет разрешения членов [роли](role-element-assl.md) имеют для отдельных [MiningModel](miningmodel-element-assl.md) элемента.  
+  Определяет разрешения членов [роли](role-element-assl.md) имеют для отдельного [MiningModel](miningmodel-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36191514"
 |Дочерние элементы|[AllowBrowsing](../properties/allowbrowsing-element-assl.md), [AllowDrillThrough](../properties/allowdrillthrough-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- В [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], можно включить детализацию в структурах интеллектуального анализа данных, добавив `AllowDrillthrough` право [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md) коллекции. Если `AllowDrillthrough` включен в структуре интеллектуального анализа данных и модели интеллектуального анализа данных, любой член роли, имеющей [элемент AllowDrillThrough &#40;ASSL&#41; ](../properties/allowdrillthrough-element-assl.md) разрешения на модель выполнять запросы к модели интеллектуального анализа данных и возврата столбцы структуры, которые не были включены в модель, используя следующий синтаксис:  
+ В [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], вы можете включить детализацию в структурах интеллектуального анализа данных, добавив `AllowDrillthrough` разрешение на [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md) коллекции. Если `AllowDrillthrough` включен в структуре интеллектуального анализа данных и модели интеллектуального анализа данных, любой член роли, обладающей [элемент AllowDrillThrough &#40;ASSL&#41; ](../properties/allowdrillthrough-element-assl.md) разрешения на модель выполнять запросы к модели интеллектуального анализа данных и возврата столбцы структуры, которые не были включены в модель, используя следующий синтаксис:  
   
 ```  
 SELECT StructureColumn('<column name>') FROM <model>.CASES  
@@ -72,7 +72,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
   
  Поэтому, чтобы защитить конфиденциальные или персональные данные, разрешение `AllowDrillthrough` для модели интеллектуального анализа данных следует предоставлять только при необходимости. Дополнительные сведения см. в разделе [элемент AllowDrillThrough &#40;ASSL&#41;](../properties/allowdrillthrough-element-assl.md).  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.MiningModelPermission>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.MiningModelPermission>.  
   
 ## <a name="see-also"></a>См. также  
  [Объекты &#40;ASSL&#41;](objects-assl.md)  

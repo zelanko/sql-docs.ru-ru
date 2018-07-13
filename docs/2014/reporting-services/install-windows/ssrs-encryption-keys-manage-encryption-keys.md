@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
 - private keys [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: bea136573490ba06fba1ce5f8ca7c7a47a17d3f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95ba14d23db8c606e66db48b5be5b865879de7c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187981"
 ---
 # <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] пользуются ключами шифрования. Для защиты конфиденциальных данных в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]применяется сочетание открытого, закрытого и симметричного ключей. Симметричный ключ создается при инициализации сервера отчетов в момент его установки или настройки, и используется для шифрования конфиденциальных данных, хранящихся на сервере отчетов. Открытые и закрытые ключи создаются операционной системой, и используются для защиты симметричного ключа. Пара из открытого и закрытого ключей создается для каждого экземпляра, который сохраняет конфиденциальные данные в базе данных сервера отчетов.  
@@ -55,7 +55,7 @@ ms.locfileid: "36190930"
  [Резервное копирование и восстановление ключей шифрования служб Reporting Services](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
  Объясняет, как проводить резервное копирование ключей шифрования и восстанавливать их при восстановлении или перемещении файлов установки сервера отчетов.  
   
- [Хранить зашифрованных данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Store зашифрованных данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
  Описывает шифрование на сервере отчетов.  
   
  [Удаление и повторное создание ключей шифрования &#40;диспетчер конфигурации служб SSRS&#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
@@ -65,6 +65,6 @@ ms.locfileid: "36190930"
  Объясняет, как добавить или удалить ключи шифрования для управления списком серверов отчетов, входящих в масштабное развертывание.  
   
 ## <a name="see-also"></a>См. также  
- [Хранить зашифрованных данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Store зашифрованных данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Тип данных MiningModelingFlag (ASSL) | Документы Microsoft
+title: Тип данных MiningModelingFlag (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MiningModelingFlag data type
 ms.assetid: aaa72ba8-051e-4b01-b1e9-9c8d83b8b752
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32ee744bdfcd084c4be88511ecba025ca9a270de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ece92d63c0d66c1ef845ce2d28d3317b2f65d66f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167525"
 ---
 # <a name="miningmodelingflag-data-type-assl"></a>Тип данных MiningModelingFlag (ASSL)
-  Определяет тип-примитив, представляющий доступные флаги моделирования для [ModelingFlag](../objects/modelingflag-element-assl.md) элемента.  
+  Определяет тип-примитив, представляющий доступные флаги моделирования для [ModelingFlag](../objects/modelingflag-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,14 +63,14 @@ ms.locfileid: "36192326"
 |Значение|Описание|  
 |-----------|-----------------|  
 |*MODEL_EXISTENCE_ONLY*|Столбец должен моделироваться с двумя возможными состояниями: значение отсутствует или присутствует, независимо от самих значений в столбце. Это особенно удобно для столбцов во вложенной таблице, где значения распределены по вариантам.|  
-|*НЕ NULL*|Столбец не может принимать значения NULL.|  
-|*REGRESSOR*|Столбец предоставляет значения регрессора для проверочных вариантов.|  
+|*NOT NULL*|Столбец не может принимать значения NULL.|  
+|*РЕГРЕССОР*|Столбец предоставляет значения регрессора для проверочных вариантов.|  
   
- Дополнительные флаги поставщика может использоваться, если используются сторонние поставщики интеллектуального анализа данных OLE DB или данных в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Дополнительные флаги поставщика может использоваться, если используются сторонние поставщики интеллектуального анализа данных OLE DB или данных на экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  Тесно связанный элемент в объектной модели AMO — это <xref:Microsoft.AnalysisServices.MiningModelingFlags>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

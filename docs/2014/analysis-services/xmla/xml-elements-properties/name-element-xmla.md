@@ -1,5 +1,5 @@
 ---
-title: Имя элемента (XMLA) | Документы Microsoft
+title: Назовите элемент (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Name element
 ms.assetid: cc1a93df-0b1b-4c38-9183-4f11c26fea6a
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d3ae469cc1a02a02dc2bdb2ff7d6db7f75a46a69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 088dd6aa9ce8d9ecae3e3a8f293f64b3ddc93c70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194234"
 ---
 # <a name="name-element-xmla"></a>Элемент Name (XML для аналитики)
-  Содержит имя элемента атрибута для родительского [атрибута](attribute-element-xmla.md) или [перевода](translation-element-xmla.md) элемента.  
+  Содержит имя элемента атрибута для родительского [атрибут](attribute-element-xmla.md) или [перевода](translation-element-xmla.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -71,8 +71,8 @@ ms.locfileid: "36191488"
  Для элементов `Translation` элемент `Name` содержит заголовок элемента атрибута на языке, указанном в элементе `Language` родительского объекта `Translation`. Если элемент `Name` не указан или содержит пустую строку, используется значение элемента `Name` для элемента `Attribute`, который содержит элемент `Translation`.  
   
 ## <a name="see-also"></a>См. также  
- [Элемент INSERT &#40;XML для Аналитики&#41;](../xml-elements-commands/insert-element-xmla.md)   
- [Элемент языка &#40;XML для Аналитики&#41;](language-element-xmla.md)   
+ [Вставка элемента &#40;XML для Аналитики&#41;](../xml-elements-commands/insert-element-xmla.md)   
+ [Языковой элемент &#40;XML для Аналитики&#41;](language-element-xmla.md)   
  [Элемент Update &#40;XML для Аналитики&#41;](../xml-elements-commands/update-element-xmla.md)   
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)  
   

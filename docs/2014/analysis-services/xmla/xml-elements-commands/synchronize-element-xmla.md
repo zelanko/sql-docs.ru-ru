@@ -1,5 +1,5 @@
 ---
-title: Синхронизировать элемент (XMLA) | Документы Microsoft
+title: Синхронизировать элемент (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Synchronize command
 ms.assetid: 9401323c-feff-409a-a9da-94aee47e0563
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 367d237cab7ea63b85e000433742d866466b3f62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3f88b07721d391c1f834ed93d21039753728081d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187101"
 ---
 # <a name="synchronize-element-xmla"></a>Элемент Synchronize (XML для аналитики)
   Синхронизирует [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных с другой существующей базой данных.  
@@ -79,12 +79,12 @@ ms.locfileid: "36191498"
   
  Во время выполнения команды `Synchronize` на базу данных-источник ставится блокировка на чтение, а на целевую базу данных — блокировка на запись. Обе блокировки снимаются после выполнения команды `Synchronize`.  
   
- Дополнительные сведения о синхронизации баз данных см. в разделе [резервное копирование, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Дополнительные сведения о синхронизации баз данных, см. в разделе [резервного копирования, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>См. также  
  [Резервное копирование элемента &#40;XML для Аналитики&#41;](backup-element-xmla.md)   
  [Элемент Batch &#40;XML для Аналитики&#41;](batch-element-xmla.md)   
- [Параллельные элемент &#40;XML для Аналитики&#41;](../xml-elements-properties/parallel-element-xmla.md)   
+ [Элемент Parallel &#40;XML для Аналитики&#41;](../xml-elements-properties/parallel-element-xmla.md)   
  [Элемент RESTORE &#40;XML для Аналитики&#41;](restore-element-xmla.md)   
  [Команды &#40;XML для Аналитики&#41;](xml-elements-commands.md)  
   

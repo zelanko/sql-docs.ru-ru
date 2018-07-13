@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 136335f0e56433a9478ddee37d0b8f585564776e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc37afd9e91b23ebef0e7f53fc5690f845f49d28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152135"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
   На этом занятии будет использована управляемая данными подписка для подключения к источнику данных подписки, построен запрос, получающий данные для этой подписки, а также сопоставлен результирующий набор с отчетом и параметрами доставки.  
@@ -37,11 +37,11 @@ ms.locfileid: "36191942"
   
 -   [Шаг 2 - определить соединение с источником данных подписчика](#bkmk_defineconnectiontosubscriber)  
   
--   [Шаг 3 - определение запроса для получения данных подписчика](#bkmk_definequery)  
+-   [Шаг 3 — определить запрос для получения данных подписчика](#bkmk_definequery)  
   
--   [Шаг 4. Задайте параметры доставки](#bkmk_set_deliveryoptions)  
+-   [Шаг 4 - задайте параметры доставки](#bkmk_set_deliveryoptions)  
   
--   [Шаг 5 – задайте значение параметра для изменения вывода отчета](#bkmk_configure_parameter)  
+-   [Шаг 5 — задайте значение параметра для изменения вывода отчета](#bkmk_configure_parameter)  
   
 -   [Шаг 6. Создайте расписание для подписки](#bkmk_schedule_subscription)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36191942"
   
 2.  В контекстном меню отчета выберите пункт **Управление**, а затем перейдите на вкладку **Подписки** .  
   
-3.  Нажмите кнопку **новый управляемой данными подписки**. Если указанная кнопка не видна, это означает отсутствие разрешений диспетчера содержимого.  
+3.  Нажмите кнопку **новой управляемой данными подписки**. Если указанная кнопка не видна, это означает отсутствие разрешений диспетчера содержимого.  
   
 ##  <a name="bkmk_definesubscription"></a> Шаг 1 - Описание  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36191942"
   
 5.  Выберите **Использовать учетные данные Windows при подключении к источнику данных**и нажмите кнопку **Далее**.  
   
-##  <a name="bkmk_definequery"></a> Шаг 3 - определение запроса для получения данных подписчика  
+##  <a name="bkmk_definequery"></a> Шаг 3 — определить запрос для получения данных подписчика  
   
 1.  Введите следующий запрос в поле запроса:  
   
@@ -95,11 +95,11 @@ ms.locfileid: "36191942"
   
 3.  Нажмите кнопку **Проверить**, а затем кнопку **Далее**.  
   
-##  <a name="bkmk_set_deliveryoptions"></a> Шаг 4. Задайте параметры доставки  
+##  <a name="bkmk_set_deliveryoptions"></a> Шаг 4 - задайте параметры доставки  
   
 1.  Для параметра **Имя файла**выберите **Получить значение из базы данных**. Выберите поле **Order**.  
   
-2.  Для параметра **Путь**выберите **Указать статическое значение**. В значении параметра введите имя общей папки, в которой имеются разрешения на запись (например, `\\mycomputer\public\myreports`).  
+2.  Для параметра **Путь**выберите **Указать статическое значение**. В значении параметра, введите имя общей папки, для которого у вас есть разрешения на запись (например, `\\mycomputer\public\myreports`).  
   
 3.  Для параметра **Формат обработки**выберите **Получить значение из базы данных**. Выберите **Формат**.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36191942"
   
 8.  Нажмите кнопку **Далее.**  
   
-##  <a name="bkmk_configure_parameter"></a> Шаг 5 – задайте значение параметра для изменения вывода отчета  
+##  <a name="bkmk_configure_parameter"></a> Шаг 5 — задайте значение параметра для изменения вывода отчета  
   
 1.  Для параметра **OrderNumber**выберите **Получить значение из базы данных**. В поле «Значение параметра» выберите **Order**. Нажмите кнопку **Далее.**  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36191942"
   
  ![Результаты подписки в диспетчере отчетов](../../2014/tutorials/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.gif "Результаты подписки в диспетчере отчетов")  
   
- Этот шаг завершает учебник «Определение управляемой данными подписки». Дополнительные сведения о других [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] учебников по [миграции служб Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md).  
+ Этот шаг завершает учебник «Определение управляемой данными подписки». Дополнительные сведения о других [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] см. в разделе руководства и [учебники по службам Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md).  
   
 ## <a name="see-also"></a>См. также  
  [Создание управляемой данными подписки (учебник по службам SSRS)](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   

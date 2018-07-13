@@ -1,5 +1,5 @@
 ---
-title: Настройка служб Analysis Services для ограниченного делегирования Kerberos | Документы Microsoft
+title: Настройка служб Analysis Services для ограниченного делегирования Kerberos | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6a47530c6c38c67b865c808ef0e80ea235d658b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3436b2d0e73fc452c12e1aa5a71724e9f8dcd31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191314"
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Настройка служб Analysis Services для ограниченного делегирования Kerberos
   Во время настройки служб Analysis Services для проверки подлинности Kerberos, скорее всего, потребуется добиться одного или обоих приведенных ниже результатов: олицетворения пользовательского удостоверения с помощью служб Analysis Services для доступа к данным или делегирования пользовательского удостоверения с помощью служб Analysis Services в службу более низкого уровня. У каждого сценария есть свои требования к конфигурации. Для обоих сценариев необходима проверка, чтобы убедиться в правильности настройки.  
@@ -107,7 +107,7 @@ ms.locfileid: "36192345"
   
 1.  Запустите приложение **SQL Server Profiler** на экземпляре служб Analysis Services, затем запустите новую трассировку.  
   
-2.  Убедитесь, что на выбор событий `Audit Login` и `Audit Logout` проверяются в разделе «Аудит безопасности».  
+2.  Выбор событий, убедитесь, что `Audit Login` и `Audit Logout` проверяются в разделе «Аудит безопасности».  
   
 3.  Подключитесь к службам Analysis Services через службу приложений (например, SharePoint или службы Reporting Services) с удаленного клиентского компьютера. Событие «Имя входа учетной записи аудита» отобразит удостоверение пользователя, подключенного к службам Analysis Services.  
   
@@ -118,8 +118,8 @@ ms.locfileid: "36192345"
 ## <a name="see-also"></a>См. также  
  [Проверка подлинности для бизнес-аналитики Майкрософт и делегирование удостоверений](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Взаимная проверка подлинности с помощью Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
- [Подключитесь к службам Analysis Services](connect-to-analysis-services.md)   
+ [Подключение к службам Analysis Services](connect-to-analysis-services.md)   
  [Регистрация имени участника-службы для экземпляра служб Analysis Services](spn-registration-for-an-analysis-services-instance.md)   
- [Свойства строки соединения &#40;служб Analysis Services&#41;](connection-string-properties-analysis-services.md)  
+ [Свойства строки подключения &#40;служб Analysis Services&#41;](connection-string-properties-analysis-services.md)  
   
   

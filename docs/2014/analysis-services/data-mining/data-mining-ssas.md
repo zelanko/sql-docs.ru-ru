@@ -1,5 +1,5 @@
 ---
-title: Интеллектуальный анализ данных (службы SSAS) | Документы Microsoft
+title: Интеллектуальный анализ данных (службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], about data mining
 ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b118f03580aeb0053203cd2535bafecd1649ccb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ff1d223cee1ce86851b3021bad15582db156639
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163435"
 ---
 # <a name="data-mining-ssas"></a>Интеллектуальный анализ данных (службы SSAS)
   Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] — это интегрированная платформа для решений, в которых реализован интеллектуальный анализ данных. Для создания решений интеллектуального анализа данных с прогнозирующим анализом могут быть использованы либо реляционные данные, либо данные в кубе.  

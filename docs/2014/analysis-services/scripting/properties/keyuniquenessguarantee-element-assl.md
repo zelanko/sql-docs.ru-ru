@@ -1,5 +1,5 @@
 ---
-title: Элемент KeyUniquenessGuarantee (ASSL) | Документы Microsoft
+title: Элемент KeyUniquenessGuarantee (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyUniquenessGuarantee element
 ms.assetid: 6e0cf107-dd02-4bbd-94f5-c26d96438d4b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d95c6c4479a0ce6b496dec934206ad893df6ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3038ab6fe49f3791d62ae171171783e46207365
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153275"
 ---
 # <a name="keyuniquenessguarantee-element-assl"></a>Элемент KeyUniquenessGuarantee (ASSL)
   Определяет, гарантируется ли правильность связи между ключом атрибута и его именем и связи со связанными атрибутами.  
@@ -64,7 +64,7 @@ ms.locfileid: "36190834"
 ## <a name="remarks"></a>Примечания  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] использует `KeyUniquenessGuarantee` элемент позволяет оптимизировать конструкцию запросов при получении элементов из базового источника данных для этого атрибута.  
   
- Элемент, соответствующий родителю параметра `KeyUniquenessGuarantee` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ Элемент, соответствующий родителю параметра `KeyUniquenessGuarantee` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

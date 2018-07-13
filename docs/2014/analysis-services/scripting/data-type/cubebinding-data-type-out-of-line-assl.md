@@ -1,5 +1,5 @@
 ---
-title: Тип данных CubeBinding (вне строки) (ASSL) | Документы Microsoft
+title: Тип данных CubeBinding (вне строки) (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CubeBinding data type
 ms.assetid: 5e1ee8ef-855c-4f3d-ae21-a33360d00d66
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b919e8f28d5cb102268ed3338aa0309e45a738c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c13cd736887569cfa5fd12bde73e1129e1fd046
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189363"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161255"
 ---
 # <a name="cubebinding-data-type-out-of-line-assl"></a>Тип данных CubeBinding (внешний) (ASSL)
-  Определяет тип-примитив, представляющий связь между [куба](../objects/cube-element-assl.md) элемент и [DataSource](../objects/datasource-element-assl.md) элемента.  
+  Определяет тип-примитив, представляющий связь между [куба](../objects/cube-element-assl.md) элемент и [DataSource](../objects/datasource-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -59,14 +59,14 @@ ms.locfileid: "36189363"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|None|  
-|Дочерние элементы|[Источник данных](../objects/datasource-element-assl.md), [DataSourceID](../properties/id-element-assl.md), [идентификатор](../properties/id-element-assl.md), [группы мер](../objects/group-element-assl.md)|  
-|Производные элементы|[Привязка](../../xmla/xml-elements-properties/binding-element-xmla.md) ([привязки](../../xmla/xml-elements-properties/bindings-element-xmla.md) коллекцию [процесс](../../xmla/xml-elements-commands/process-element-xmla.md) или [пакета](../../xmla/xml-elements-commands/batch-element-xmla.md) команды)|  
+|Дочерние элементы|[Источник данных](../objects/datasource-element-assl.md), [DataSourceID](../properties/id-element-assl.md), [идентификатор](../properties/id-element-assl.md), [MeasureGroup](../objects/group-element-assl.md)|  
+|Производные элементы|[Привязка](../../xmla/xml-elements-properties/binding-element-xmla.md) ([привязки](../../xmla/xml-elements-properties/bindings-element-xmla.md) коллекцию [процесс](../../xmla/xml-elements-commands/process-element-xmla.md) или [пакета](../../xmla/xml-elements-commands/batch-element-xmla.md) команд)|  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о ожидания привязок см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Дополнительные сведения о привязках вне строки, см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>См. также  
  [Тип данных Binding &#40;ASSL&#41;](binding-data-type-assl.md)   
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

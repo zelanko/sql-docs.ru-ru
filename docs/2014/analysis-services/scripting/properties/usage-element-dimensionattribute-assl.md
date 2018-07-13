@@ -1,5 +1,5 @@
 ---
-title: Элемент Usage (DimensionAttribute) (ASSL) | Документы Microsoft
+title: Элемент Usage (DimensionAttribute) (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Usage element
 ms.assetid: c5e38d2e-5a8e-4157-84e9-285e78c84e74
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2e7787edb562580eaaddc3cdaf1094958eec9742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce7dea2cb3c0e928b5a1b0c80aa0ca526f5f8329
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183248"
 ---
 # <a name="usage-element-dimensionattribute-assl"></a>Элемент Usage (DimensionAttribute) (ASSL)
   Описывает, как используется атрибут.  
@@ -51,7 +51,7 @@ ms.locfileid: "36193248"
 |Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
-|Значение по умолчанию|*Обычный*|  
+|Значение по умолчанию|*Регулярные*|  
 |Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
@@ -66,7 +66,7 @@ ms.locfileid: "36193248"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*Обычный*|Этот атрибут является обычным атрибутом.|  
+|*Регулярные*|Этот атрибут является обычным атрибутом.|  
 |*Key*|Этот атрибут является ключевым атрибутом.|  
 |*Parent*|Этот атрибут является родительским атрибутом.|  
   

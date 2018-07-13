@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], marks
 - STOPBEFOREMARK option [RESTORE statement]
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ca2529a4dbe6e237b3d8e833659a7c3df1fc941
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8fc37a9704dde533ae9d626a9853ccfb147cb06a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188611"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Восстановление связанных баз данных, которые содержат помеченную транзакцию
   Этот раздел относится только к базам данных, содержащим помеченные транзакции и использующим полную модель восстановления или модель восстановления с неполным протоколированием.  
@@ -58,18 +57,18 @@ ms.locfileid: "36190773"
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- В журнале транзакций записывается имя метки (имя транзакции), описание, база данных, пользователь `datetime` сведения и порядковый номер транзакции в журнале (LSN). `datetime` Информация используется с именем метки, чтобы уникально идентифицировать метку.  
+ В журнале транзакций записывается имя метки (имя транзакции), описание, база данных, пользователь, `datetime` сведения, а также порядковый номер транзакции в журнале (LSN). `datetime` Информация используется с именем метки, чтобы уникально идентифицировать метку.  
   
  Дополнительные сведения о вставке метки в транзакцию, которая охватывает несколько баз данных, см. в статье [Использование помеченных транзакций для согласованного восстановления связанных баз данных (модель полного восстановления)](use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Синтаксис языка Transact-SQL для восстановления до метки  
  Отметив помеченную транзакцию с помощью инструкции[RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql), можно использовать одно из следующих предложений, чтобы остановиться на метке или перед ней.  
   
--   Используйте WITH STOPATMARK = **"*`<mark_name>`*"** предложений, чтобы указать, что помеченная транзакция представляет точку восстановления.  
+-   Используйте WITH STOPATMARK = **"*`<mark_name>`*"** предложение, чтобы указать, что помеченная транзакция представляет собой точку восстановления.  
   
      С помощью предложения STOPATMARK выполняется накат к метке, при этом помеченная транзакция включается в накат.  
   
--   Используйте WITH STOPBEFOREMARK = **"*`<mark_name>`*"** предложений, чтобы указать, что запись журнала, которая находится непосредственно перед меткой представляет собой точку восстановления.  
+-   Используйте WITH STOPBEFOREMARK = **"*`<mark_name>`*"** предложение, чтобы указать, что запись журнала, которая находится непосредственно перед меткой представляет собой точку восстановления.  
   
      С помощью предложения STOPBEFOREMARK выполняется накат к метке, при этом помеченная транзакция не включается в накат.  
   

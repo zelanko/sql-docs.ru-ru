@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6f0bfcc4ed838cccd0088cbf0011f6e630ee1fc5
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 75a9ef3ae1c496c2469ea27d766eedf317af5bf2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176161"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Выбор назначения (мастер импорта и экспорта SQL Server)
   Диалоговое окно **Выбор назначения** указывает место назначения для копируемых данных.  
   
- Дополнительные сведения о работе этого мастера см. в разделе [SQL Server Импорт и экспорт](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Дополнительные сведения о режимах запуска мастера, а также разрешения, необходимые для успешного запуска мастера см. в разделе [запустить мастер экспорта и импорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
+ Дополнительные сведения о работе этого мастера см. в разделе [SQL Server Импорт и экспорт](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Дополнительные сведения о режимах запуска мастера, а также разрешения, необходимые для успешного запуска мастера, см. в разделе [запустить мастер экспорта и импорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
- Назначение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастер импорта и экспорта заключается в копировании данных из источника в место назначения. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ Цель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастер импорта и экспорта заключается в копировании данных из источника в место назначения. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="static-options"></a>Статические параметры  
  **Назначение**  
@@ -50,16 +50,16 @@ ms.locfileid: "36324628"
  Укажите, должен ли пакет использовать проверку подлинности Microsoft Windows для доступа к базе данных. Для лучшей защиты рекомендуется использовать проверку подлинности Windows.  
   
  **Использовать проверку подлинности SQL Server**  
- Укажите, должен ли пакет использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности для входа базу данных. Если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо ввести имя пользователя и пароль.  
+ Укажите, должен ли пакет использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности для входа в базе данных. Если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо ввести имя пользователя и пароль.  
   
  **Имя пользователя**  
- Укажите имя пользователя для подключения к базе данных при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.  
+ Укажите имя пользователя для подключения к базе данных, при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.  
   
  **Пароль**  
  Укажите пароль для подключения к базе данных, если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **База данных**  
- Выберите из списка баз данных на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], или создать новую базу данных, щелкнув **New**.  
+ Выберите из списка баз данных на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], или создайте новую базу данных, щелкнув **New**.  
   
  **Обновить**  
  Нажатие кнопки **Обновить** восстанавливает список доступных баз данных.  
@@ -101,10 +101,10 @@ ms.locfileid: "36324628"
 ### <a name="destination--microsoft-excel"></a>Назначение — «Microsoft Excel»  
   
 > [!NOTE]  
->  Выберите **Microsoft Excel** только в случае, если необходимо соединиться с источником данных, использующим Excel 2003 или более раннюю версию. Для подключения к источнику данных, использующим Excel 2007, выберите **поставщик Microsoft Office 12.0 Access базы данных ядра OLE DB**, нажмите кнопку **свойства**, а затем на **все** вкладка **Свойства связи данных** диалоговом для **расширенные свойства**, введите `Excel 12.0`.  
+>  Выберите **Microsoft Excel** только в случае, если необходимо соединиться с источником данных, использующим Excel 2003 или более раннюю версию. Чтобы подключиться к источнику данных, использующим Excel 2007, выберите **поставщик Microsoft Office 12.0 Access базы данных ядра OLE DB**, нажмите кнопку **свойства**, а затем на **все** вкладке **Свойства канала передачи данных** диалоговом окне для **расширенные свойства**, введите `Excel 12.0`.  
   
  **Путь к файлу Excel**  
- Укажите путь и имя файла для книги, в которой хранятся данные (например, C:\MyData.xls \\\Sales\Database\Northwind.xls). Или нажмите кнопку **Обзор** , чтобы найти книгу.  
+ Укажите путь и имя файла для книги, в которой для хранения данных (например, C:\MyData.xls \\\Sales\Database\Northwind.xls). Или нажмите кнопку **Обзор** , чтобы найти книгу.  
   
  **Обзор**  
  Выберите книгу Excel с помощью диалогового окна **Открыть** .  
@@ -113,7 +113,7 @@ ms.locfileid: "36324628"
  Выберите версию Excel для целевой рабочей книги.  
   
 > [!NOTE]  
->  При экспорте данных [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] назначения, мастер использует [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] компонент назначения «Excel». Сведения об использовании и известных проблемах см. в разделе [назначение «Excel»](../data-flow/excel-destination.md).  
+>  При экспорте данных [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] назначения, то мастер использует [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] компонент назначения Excel. Сведения об использовании и известных проблемах см. в разделе [назначение «Excel»](../data-flow/excel-destination.md).  
   
 ### <a name="destination--microsoft-access"></a>Назначение — «Microsoft Access»  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36324628"
 >  Выберите **Microsoft Access** только в случае, если необходимо соединиться с источником данных, использующим Access 2003 или более раннюю версию. Чтобы соединиться с источником данных, использующим Access 2007, выберите **Поставщик OLE DB для ядра СУБД Microsoft Office 12.0 Access**.  
   
  **Имя файла**  
- Укажите путь и имя файла базы данных, в котором для хранения данных (например, C:\MyData.mdb \\\Sales\Database\Northwind.mdb). Или нажмите кнопку **Обзор** , чтобы найти файл базы данных.  
+ Укажите путь к файлу и имя файла базы данных, в котором для хранения данных (например, C:\MyData.mdb, \\\Sales\Database\Northwind.mdb). Или нажмите кнопку **Обзор** , чтобы найти файл базы данных.  
   
  **Обзор**  
  Перейдите к нужной базе данных при помощи диалогового окна **Открыть** .  

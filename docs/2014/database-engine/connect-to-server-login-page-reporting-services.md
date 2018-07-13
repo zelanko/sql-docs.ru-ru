@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttors.login.f1
 helpviewer_keywords:
 - Connect to Server dialog box, Reporting Services
 ms.assetid: d312c740-19d7-4931-84a2-88b805ec8439
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 468a462bac31bc731bab9e3ac815834fc614f57f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f5478cb168d6c30dccdb33c1f40edb2605a13b3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190599"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171395"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>Соединение с сервером служб Reporting Services (страница «Вход»)
   Используйте эту вкладку для просмотра или задания следующих параметров при соединении со службами [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -35,9 +35,9 @@ ms.locfileid: "36190599"
  **Имя сервера**  
  Значение, которое необходимо ввести, определяется серверным режимом того экземпляра сервера отчетов, с которым производится соединение.  
   
- Для сервера отчетов, работающего в собственном режиме, задайте экземпляр сервера отчетов, с которым производится соединение. При использовании экземпляра по умолчанию имя сервера обычно совпадает с именем компьютера. При установке именованного экземпляра добавьте имя экземпляра к имени сервера в следующем формате: \<имя_сервера >\\< имя_экземпляра\>. Службы Reporting Services используют в качестве ограничителя для имени экземпляра обратную косую черту.  
+ Для сервера отчетов, работающего в собственном режиме, задайте экземпляр сервера отчетов, с которым производится соединение. При использовании экземпляра по умолчанию имя сервера обычно совпадает с именем компьютера. Если устанавливался именованный экземпляр, добавьте имя экземпляра, то к имени сервера в следующем формате: \<servername >\\< имя_экземпляра\>. Службы Reporting Services используют в качестве ограничителя для имени экземпляра обратную косую черту.  
   
- Для сервера отчетов, работающего в режиме интеграции с SharePoint, необходимо указать сайт SharePoint. Можно указать любой сайт из семейства сайтов, интегрированного со службами [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Введенный URL-адрес должен содержать префикс HTTP или HTTPS. Чтобы подключиться к сайту SharePoint из среды Management Studio, необходимо иметь разрешение на доступ к нему. Уровень разрешений определяет набор объектов, которые доступны для просмотра и управления. Дополнительные сведения см. в разделе [подключение к серверу отчетов в среде Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
+ Для сервера отчетов, работающего в режиме интеграции с SharePoint, необходимо указать сайт SharePoint. Можно указать любой сайт из семейства сайтов, интегрированного со службами [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Введенный URL-адрес должен содержать префикс HTTP или HTTPS. Чтобы подключиться к сайту SharePoint из среды Management Studio, необходимо иметь разрешение на доступ к нему. Уровень разрешений определяет набор объектов, которые доступны для просмотра и управления. Дополнительные сведения см. в разделе [соединиться с сервером отчетов в среде Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
  **Проверка подлинности**  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] можно настроить для принятия запросов проверки подлинности Windows или запросов проверки подлинности с помощью форм, обрабатываемых нестандартным модулем проверки подлинности. При подключении к службам Reporting Services выберите один из следующих режимов проверки подлинности.  

@@ -1,5 +1,5 @@
 ---
-title: Параметры (страница ANSI сервера SQL выполнения запроса) | Документы Microsoft
+title: Параметры ("запрос выполнения SQL Server ANSI") | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
 caps.latest.revision: 24
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4d2e08a89e68c15d2d665fd0468610d2324fd800
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f8c5e7e322358a12db2bfa8aebb0983951053502
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173365"
 ---
-# <a name="options-query-execution-sql-server-ansi-page"></a>Параметры (страница ANSI сервера SQL выполнения запроса)
+# <a name="options-query-execution-sql-server-ansi-page"></a>Параметры ("запрос выполнения SQL Server ANSI")
   Все вместе эти параметры SET стандарта ANSI (ISO) определяют среду обработки запроса на время выполнения пользовательского запроса, триггера или хранимой процедуры. Однако эти параметры SET включают не все возможности, необходимые для соответствия стандарту ISO. Эта страница позволяет указать, что [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] будет выполнять запросы с использованием всех или части параметров, заданных в стандарте ISO. Изменения этих параметров применяются только к новым запросам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Для изменения установок текущих запросов выберите в меню **Запрос** пункт **Параметры запроса** или щелкните правой кнопкой мыши в окне запросов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и выберите пункт **Параметры запроса**. В диалоговом окне **Параметры запроса** в разделе **Выполнение**щелкните **ANSI**.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
@@ -57,7 +57,7 @@ ms.locfileid: "36190587"
  **SET ANSI_NULLS**  
  -   Позволяет задать поведение операторов сравнения «Равно» (=) и «Не равно» (<>) в соответствии со стандартом ISO, если эти операторы используются со значениями NULL. Если флажок SET ANSI_NULLS установлен, то согласно стандарту ISO все сравнения со значением NULL дают результат UNKNOWN. Если флажок SET ANSI_NULLS не установлен, все сравнения со значением NULL дают значение TRUE. Этот флажок выбран по умолчанию.  
   
- **По умолчанию**  
+ **Восстановить значения по умолчанию**  
  Позволяет вернуть исходные значения по умолчанию для всех параметров на данной странице.  
   
   

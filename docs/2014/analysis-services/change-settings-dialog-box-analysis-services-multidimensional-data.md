@@ -1,5 +1,5 @@
 ---
-title: Изменить диалоговое окно «Параметры» (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Изменить диалоговое окно «Параметры» (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.batchsettingsdialog.f1
 ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 57dd66ac41586aa1732d7a3a5aeb915450b7c9f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c9a70f95f552ee5a614f8f44e1f8436c0aa35e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151745"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Изменение настроек» (службы Analysis Services — многомерные данные)
   В диалоговом окне **Изменение настроек** в средах [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] можно изменить настройки обработки объектов, перечисленных в диалоговом окне **Обработка** . Открыть диалоговое окно **Изменить установки** можно, щелкнув **Изменить установки** в диалоговом окне **Обработка** .  
@@ -39,7 +39,7 @@ ms.locfileid: "36191908"
  **Максимальное число параллельных задач**  
  Задайте максимальное число задач, выполняемых при обработке параллельно, или выберите режим **Разрешить серверу принять решение** , чтобы службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] выбрали оптимальное число параллельных задач.  
   
- **Последовательный**  
+ **Последовательные**  
  Выберите этот параметр для последовательной обработки объектов.  
   
  **Режим транзакции**  
@@ -143,6 +143,6 @@ ms.locfileid: "36191908"
   
 ## <a name="see-also"></a>См. также  
  [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Диалоговое окно Обработка &#40;службы Analysis Services — многомерные данные&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+ [Диалоговое окно обработки &#40;службы Analysis Services — многомерные данные&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

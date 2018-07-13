@@ -1,5 +1,5 @@
 ---
-title: Автоматическое группирование элементов атрибута | Документы Microsoft
+title: Автоматическое группирование элементов атрибута | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: eef5ca79172be96af5ded2c01a8c3f01e633caa7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10a6ae9dee61d211c178a42e38087ad104344343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183431"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Автоматическое группирование элементов атрибута
   При просмотре куба обычно выполняется распределение по измерениям элементов одной иерархии атрибута на основе элементов другой иерархии атрибута. Например, можно сгруппировать продажи по таким признакам, как город, приобретенный товар или пол. Однако при работе с некоторыми типами атрибутов лучше группировать их элементы автоматически с использованием служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , основываясь на распределении элементов в рамках иерархии атрибута. Например, с помощью служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно объединить заказчиков в группы на основе их годового дохода. При этом пользователь, просматривающий иерархию атрибута, будет видеть названия и значения групп вместо самих элементов групп. Данный подход ограничивает количество отображаемых уровней, что упрощает анализ данных.  
@@ -48,11 +48,11 @@ ms.locfileid: "36191103"
   
 4.  На панели **Атрибуты** выберите атрибут **Yearly Income**.  
   
-5.  В окне «Свойства» измените значение для **DiscretizationMethod** свойства **автоматического** и измените значение для **DiscretizationBucketCount** свойство Чтобы `5`.  
+5.  В окне «Свойства» измените значение для **DiscretizationMethod** свойства **автоматического** и измените значение **DiscretizationBucketCount** свойство Чтобы `5`.  
   
      На следующем рисунке показаны измененные свойства атрибута **Yearly Income**.  
   
-     ![Изменить свойства столбца Yearly Income](../../2014/tutorials/media/l4-discretizationmethod-1.gif "измененные свойства столбца Yearly Income")  
+     ![Измененные свойства столбца Yearly Income](../../2014/tutorials/media/l4-discretizationmethod-1.gif "измененные свойства столбца Yearly Income")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Группирование элементов иерархии атрибута в измерении Employee  
   
@@ -66,11 +66,11 @@ ms.locfileid: "36191103"
   
 4.  На панели **Атрибуты** выберите атрибут **Sick Leave Hours**.  
   
-5.  В окне «Свойства» измените значение для **DiscretizationMethod** свойства **кластеры** и измените значение для **DiscretizationBucketCount** свойства `5`.  
+5.  В окне «Свойства» измените значение для **DiscretizationMethod** свойства **кластеров** и измените значение **DiscretizationBucketCount** свойства `5`.  
   
 6.  На панели **Атрибуты** выберите атрибут **Vacation Hours**.  
   
-7.  В окне «Свойства» измените значение для **DiscretizationMethod** свойства **равных областей** и измените значение для **DiscretizationBucketCount** свойство Чтобы `5`.  
+7.  В окне «Свойства» измените значение для **DiscretizationMethod** свойства **равных областей** и измените значение **DiscretizationBucketCount** свойство Чтобы `5`.  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Просмотр измененных иерархий атрибутов  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36191103"
   
      На приведенном ниже рисунке приведена зависимость объемов продаж от количества часов отпуска по болезни.  
   
-     ![Sales, разбитая на измерения по отпуска по болезни оставить часы](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Sales, разбитая на измерения по отпуска по болезни оставить часов")  
+     ![Sales, разбитая на измерения по отпуска по болезни оставьте часов](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Sales, разбитая на измерения по отпуска по болезни оставьте часов")  
   
 10. Удалите иерархию атрибута **Sick Leave Hours** из раздела столбцов панели **Данные** .  
   
@@ -130,6 +130,6 @@ ms.locfileid: "36191103"
  [Скрытие и отключение иерархий атрибутов](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>См. также  
- [Группы элементов атрибута &#40;дискретизации&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
+ [Атрибут членов группы &#40;дискретизации&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   

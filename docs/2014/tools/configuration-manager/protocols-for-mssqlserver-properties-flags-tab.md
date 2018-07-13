@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQLSERVER property protocols
 ms.assetid: 4d38e6e9-f95f-4e79-ae45-89f631037528
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d03ccbb73a848b02f8f388305004020264c25b14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f22b60c7558ab9ce95bdeb9e989617ad49f1ea60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153535"
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>Протоколы для свойств MSSQLSERVER (вкладка «Флаги»)
   Если на сервер установлен сертификат, используйте вкладку **Флаги** диалогового окна **Протоколы для свойств MSSQLSERVER** , чтобы просмотреть или задать параметры шифрования протокола и скрытия экземпляра. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо перезапустить **ForceEncryption** .  
@@ -43,7 +43,7 @@ ms.locfileid: "36192352"
  Выполнять принудительное шифрование протокола. Шифрование — это метод сохранения конфиденциальности важной информации путем преобразования данных в вид, недоступный для прочтения. Шифрование гарантирует, что данные останутся в сохранности, даже если передаваемые пакеты будут просмотрены во время процесса передачи. Чтобы использовать привязку канала, задайте для параметра **Принудительное шифрование** значение **Вкл** и настройте **Расширенную защиту** на вкладке **Дополнительно** .  
   
  **HideInstance**  
- Запрещает службе " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер" показывать этот экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на компьютерах клиентов, выполняющих поиск экземпляра при помощи кнопки **Обзор** . Для подключения к именованным экземплярам на сервере клиентские приложения должны указывать сведения о конечной точке протокола. Например, номер порта или именованный канал имя, такое как `tcp:server,5000`. Дополнительные сведения см. в статье [Logging In to SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md).  
+ Запрещает службе " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер" показывать этот экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на компьютерах клиентов, выполняющих поиск экземпляра при помощи кнопки **Обзор** . Для подключения к именованным экземплярам на сервере клиентские приложения должны указывать сведения о конечной точке протокола. Например, номер порта или именованного канала имя, такое как `tcp:server,5000`. Дополнительные сведения см. в статье [Logging In to SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md).  
   
  Дополнительные сведения см. в статье "Инструкции. Включение шифрования соединений с компонентом Database Engine (диспетчер конфигурации SQL Server)" электронной документации.  
   

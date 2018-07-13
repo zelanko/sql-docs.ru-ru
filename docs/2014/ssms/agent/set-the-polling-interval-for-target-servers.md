@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interval for polling [SQL Server]
 - target servers [SQL Server], polling interval
 - polling interval [SQL Server]
 ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db2913badf1b5ecf8bda10a810f7d2f604354cf9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c6ec96e9b728d5b00b15b5258895e1f17b119e18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165787"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Установка интервала опроса на целевых серверах
   В этом разделе описывается установка частоты, с которой агент [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обновляет данные с главного сервера на целевых серверах. Задание — это указанная последовательность действий, выполняемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Многосерверное задание — это задание, которое главный сервер выполняет на одном или нескольких целевых серверах.  
   
 -   **Перед началом работы:**  [безопасность](#Security)  
   
--   **Чтобы установить интервал опроса на целевых серверах, с помощью:**[SQL Server Management Studio](#SSMS), [Transact-SQL  ](#TSQL)  
+-   **Чтобы задать интервал опроса на целевых серверах с помощью:**[SQL Server Management Studio](#SSMS), [Transact-SQL  ](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  На каждом целевом сервере может одновременно выполняться только один экземпляр одного и того же задания. Каждый целевой сервер периодически опрашивает главный сервер, загружает копию новых назначенных ему заданий и отключается. Целевой сервер выполняет задание локально, а затем снова подключается к главному серверу, чтобы передать результирующее состояние задания.  
@@ -67,7 +67,7 @@ ms.locfileid: "36190668"
   
 2.  На панели инструментов нажмите кнопку **Создать запрос**.  
   
-3.  В окне запроса используйте [sp_post_msx_operation &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) системной хранимой процедуры Установка интервала опроса на целевых серверах.  
+3.  В окне запроса используйте [sp_post_msx_operation &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) системную хранимую процедуру, чтобы задать интервал опроса на целевых серверах.  
   
 ## <a name="see-also"></a>См. также  
  [dbo.sysdownloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  

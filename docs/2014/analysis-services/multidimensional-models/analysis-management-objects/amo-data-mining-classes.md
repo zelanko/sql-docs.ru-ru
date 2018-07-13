@@ -1,5 +1,5 @@
 ---
-title: Классы интеллектуального анализа данных объектов AMO | Документы Microsoft
+title: Классы интеллектуального анализа данных объектов AMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -16,27 +16,27 @@ helpviewer_keywords:
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 091d68fedffc16d57834a02cfcbd8ef3a6c2d087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbea4d55066e2de5061d75c2b40092b84e8008ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171645"
 ---
 # <a name="amo-data-mining-classes"></a>Классы интеллектуального анализа данных объектов AMO
   Классы интеллектуального анализа данных позволяют создавать, изменять, удалять и обрабатывать объекты интеллектуального анализа данных. Среди действий при работе с объектами интеллектуального анализа данных — создание структур интеллектуального анализа данных, создание моделей интеллектуального анализа и их обработка.  
   
- Дополнительные сведения о том, как настроить среду, а также об <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, и <xref:Microsoft.AnalysisServices.DataSourceView> объектов, в разделе [основные классы объектов AMO](amo-fundamental-classes.md).  
+ Дополнительные сведения о том, как настроить среду, а также об <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, и <xref:Microsoft.AnalysisServices.DataSourceView> объектов, см. в разделе [основные классы объектов AMO](amo-fundamental-classes.md).  
   
  Для определения объектов в объектах AMO требуется задать несколько свойств для каждого объекта, чтобы создать правильный контекст. Сложные объекты, например объекты OLAP и объекты интеллектуального анализа данных, требуют написания длинного и подробного кода.  
   
   
  На следующем рисунке показана связь между классами, описываемыми в этом разделе.  
   
- ![Классы AMO для интеллектуального анализа данных](../../../analysis-services/dev-guide/media/amo-dataminingclasses.gif "классы объектов AMO для интеллектуального анализа данных")  
+ ![Классы объектов AMO для интеллектуального анализа данных](../../../analysis-services/dev-guide/media/amo-dataminingclasses.gif "классы объектов AMO для интеллектуального анализа данных")  
   
 ##  <a name="MiningStructure"></a> Объекты MiningStructure  
  Структура интеллектуального анализа данных является контейнером для моделей интеллектуального анализа данных. Структура определяет все возможные столбцы, которые могут использоваться в модели интеллектуального анализа данных. В каждой модели интеллектуального анализа данных определяются собственные столбцы из набора столбцов, определенных в структуре.  
@@ -60,7 +60,7 @@ ms.locfileid: "36191316"
  Объект <xref:Microsoft.AnalysisServices.MiningStructure> может обрабатываться при помощи собственного метода обработки или обрабатываться тогда, когда родительский объект обрабатывает себя с помощью собственного метода обработки.  
   
 ### <a name="columns"></a>Столбцы  
- Столбцы содержат данные для модели и могут быть разных типов в зависимости от использования: ключ, входных данных, прогнозируемый или InputPredictable. Прогнозируемые столбцы являются целью построения модели интеллектуального анализа данных.  
+ Столбцы данных для модели и могут быть разных типов в зависимости от использования: ключ, входные данные, Predictable или InputPredictable. Прогнозируемые столбцы являются целью построения модели интеллектуального анализа данных.  
   
  В объектах AMO столбцы с одним значением называются <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>. Столбцы с несколькими значениями называются <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36191316"
   
  В общие сведения входит имя и идентификатор (внутренний) столбца <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
- Тип является типом данных значения: LONG, DOUBLE логическое значение, текст, дата.  
+ Тип является типом данных значения: LONG, DOUBLE логическое значение, текст, даты.  
   
  Содержимое указывает ядру, как можно моделировать столбец. Значения могут быть: дискретные, непрерывные, дискретизированные, упорядоченный, Cyclical, вероятности, дисперсии, StdDev, ProbabilityVariance, ProbabilityStdDev, поддержка, ключ.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36191316"
  <xref:Microsoft.AnalysisServices>   
  [Основные классы объектов AMO](amo-fundamental-classes.md)   
  [Программирование объектов интеллектуального анализа данных AMO](programming-amo-data-mining-objects.md)   
- [Знакомство с классами объектов AMO](amo-classes-introduction.md)   
+ [Введение в классы объектов AMO](amo-classes-introduction.md)   
  [Логическая архитектура &#40;службы Analysis Services — многомерные данные&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Объекты базы данных &#40;службы Analysis Services — многомерные данные&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

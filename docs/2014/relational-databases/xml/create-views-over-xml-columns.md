@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ec628981acc51d660a0e8a99dba991d957955e9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3f575b1a21efa30d2317cff644b65c73150c4ac1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170185"
 ---
 # <a name="create-views-over-xml-columns"></a>Создание представления для XML-столбцов
-  Можно использовать `xml` тип столбца для создания представлений. В следующем примере создается представление, в котором значение из `xml` столбец типа получаются с помощью `value()` метод `xml` тип данных.  
+  Можно использовать `xml` столбец типа для создания представлений. В следующем примере создается представление, в котором значение из `xml` столбец типа извлекается с использованием `value()` метод `xml` тип данных.  
   
 ```  
 -- Create the table.  
@@ -63,7 +63,7 @@ ProductID   PName
   
 -   тип данных xml может быть создан в материализованном представлении. Материализованное представление не может быть основано на методе типа данных xml. Однако они могут быть приведены к коллекции XML-схем, отличающейся от столбца типа xml базовой таблицы;  
   
--   `xml` Тип данных не может использоваться в распределенных секционированных представлениях.  
+-   `xml` Тип данных не может применяться в распределенных секционированных представлениях.  
   
 -   выполнение предикатов SQL по отношению к представлению не будет включено в выражения XQuery определения этого представления;  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -21,18 +20,18 @@ helpviewer_keywords:
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 caps.latest.revision: 64
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c64662a9bbfa8a4d36ed406b6fb7529961b693da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 260183c80e3efaa53ba5c0e7000c54a1102425e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179731"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Поиск слов близких к другим с использованием оператора NEAR
-  Выражение с учетом расположения (NEAR) может применяться в предикате [CONTAINS](/sql/t-sql/queries/contains-transact-sql) или функции [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) для поиска слов или фраз, расположенных рядом. Также можно указать максимальное количество слов, которые не включаются в поиск и разделяют первое и последнее из искомых слов. Кроме того, можно искать два слова или две фразы в любом порядке или в порядке, в котором они указаны. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает [универсальное выражение](#Generic_NEAR), которое теперь считается устаревшим и [настраиваемое выражение](#Custom_NEAR), которое впервые появилось в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+  Выражение с учетом расположения (NEAR) может применяться в предикате [CONTAINS](/sql/t-sql/queries/contains-transact-sql) или функции [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) для поиска слов или фраз, расположенных рядом. Также можно указать максимальное количество слов, которые не включаются в поиск и разделяют первое и последнее из искомых слов. Кроме того, можно искать два слова или две фразы в любом порядке или в порядке, в котором они указаны. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает [термин универсальное выражение с учетом](#Generic_NEAR), которое теперь считается устаревшим и [термин настраиваемое выражение с учетом](#Custom_NEAR), которое впервые появилось в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ##  <a name="Custom_NEAR"></a> Настраиваемое выражение с учетом термин  
  Настраиваемое выражение с учетом расположения дает следующие новые возможности.  
@@ -129,7 +128,7 @@ GO
   
 
   
-##  <a name="Additional_Considerations"></a> Дополнительные вопросы, касающиеся поиска с учетом расположения  
+##  <a name="Additional_Considerations"></a> Дополнительные замечания по сходству  
  В этом разделе описываются вопросы, касающиеся универсальных и настраиваемых поисковых запросов с учетом расположения.  
   
 -   Перекрывающиеся экземпляры слов поиска  
@@ -157,10 +156,10 @@ GO
   
 
   
-##  <a name="Generic_NEAR"></a> Устаревшие универсального выражения с учетом расположения  
+##  <a name="Generic_NEAR"></a> Устаревшие универсальное выражение с учетом термин  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Мы рекомендуем использовать [настраиваемое выражение](#Custom_NEAR).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Мы рекомендуем использовать [термин настраиваемое выражение с учетом](#Custom_NEAR).  
   
  Универсальное выражение с учетом расположения показывает, что для возвращения результата все указанные слова поиска должны встречаться в документе независимо от числа прочих слов ( *расстояния*) между словами поиска. Базовый синтаксис:  
   

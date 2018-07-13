@@ -1,5 +1,5 @@
 ---
-title: Тип данных PerspectiveMeasureGroup (ASSL) | Документы Microsoft
+title: Тип данных PerspectiveMeasureGroup (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveMeasureGroup data type
 ms.assetid: 5927120d-f30e-4f87-8523-6d17012817d7
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc1978c2ae733b07071c7c95d3fd232c207d2853
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da4817ba23f7e4be50eb11aa97a3163e48536425
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154955"
 ---
 # <a name="perspectivemeasuregroup-data-type-assl"></a>Тип данных PerspectiveMeasureGroup (ASSL)
-  Определяет тип-примитив, представляющий сведения о группе мер в [перспективы](../objects/perspective-element-assl.md) элемента.  
+  Определяет тип-примитив, представляющий сведения о группе мер в [перспективы](../objects/perspective-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -59,14 +59,14 @@ ms.locfileid: "36191893"
 |------------------|-------------|  
 |Родительские элементы|None|  
 |Дочерние элементы|[Заметки](../collections/annotations-element-assl.md), [MeasureGroupID](../properties/id-element-assl.md), [меры](../collections/measures-element-assl.md)|  
-|Производные элементы|[Группа мер](../objects/group-element-assl.md) ([MeasureGroups](../collections/groups-element-assl.md) коллекцию [перспективы](../objects/perspective-element-assl.md))|  
+|Производные элементы|[MeasureGroup](../objects/group-element-assl.md) ([MeasureGroups](../collections/groups-element-assl.md) коллекцию [перспективы](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Примечания  
  Структура группы мер в перспективе совпадает со структурой группы мер в базовом кубе.  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.PerspectiveMeasureGroup>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.PerspectiveMeasureGroup>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

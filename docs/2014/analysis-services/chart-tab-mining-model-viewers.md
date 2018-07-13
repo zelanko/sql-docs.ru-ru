@@ -1,5 +1,5 @@
 ---
-title: Диаграммы вкладка (средства просмотра моделей интеллектуального анализа данных) | Документы Microsoft
+title: Диаграммы вкладка «» (средства просмотра моделей интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.chart.f1
 ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 08c1fbe446555e34354330b18ffe5bc5c4d80ef5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd1c2cf7ecc6a4cc734197a55365fb4a661b1b36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169805"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Вкладка «Диаграмма» (средства просмотра моделей интеллектуального анализа данных)
   Панель **Диаграмма** используется для отображения исторических данных, используемых при обучении модели временной последовательности, наряду с прогнозируемыми значениями. Вертикальная ось диаграммы представляет значение ряда, а горизонтальная — время. Будущие прогнозы представлены пунктирной линией.  
@@ -41,7 +41,7 @@ ms.locfileid: "36194846"
  **Увеличить масштаб**  
  Позволяет увеличить масштаб диаграммы.  
   
- **Уменьшение масштаба**  
+ **Уменьшить масштаб**  
  Позволяет уменьшить масштаб диаграммы.  
   
  **Подобрать масштаб диаграммы по размеру окна**  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a20097a87111ad7cbedc9b7de7599741e2a4e360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 69b6d59bce9eb4de36ad8cc33192cdee7b583f1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155745"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Создание пошагового отчета (построитель отчетов и службы SSRS)
   В пошаговом отчете строки детализации или дочерние группы располагаются с отступом в родительской группе в том же столбце, как показано в примере ниже.  
@@ -68,7 +68,7 @@ ms.locfileid: "36192824"
   
     2.  На вкладке **Выравнивание**панели свойств разверните свойства **Заполнение**.  
   
-    3.  Для **влево**, введите новое значение заполнения, например `.5in`. Заполнение смещает текст в ячейке на указанное значение. Значение заполнения по умолчанию — 2 пункта. Допустимыми значениями заполнения являются числовые значения, больше или равные нулю, за которыми следуют единицы измерения.  
+    3.  Для **слева**, введите новое значение заполнения, например `.5in`. Заполнение смещает текст в ячейке на указанное значение. Значение заполнения по умолчанию — 2 пункта. Допустимыми значениями заполнения являются числовые значения, больше или равные нулю, за которыми следуют единицы измерения.  
   
          Существуют следующие единицы измерения.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36192824"
 3.  Измените заполнение для ячейки, отображающей данные группы.  
   
 ## <a name="see-also"></a>См. также  
- [Верхние и нижние колонтитулы страницы &#40;отчетов построителя отчетов и службы SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [И нижние колонтитулы страницы &#40;построитель отчетов и службы SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Форматирование элементов отчета (построитель отчетов и службы SSRS)](formatting-report-items-report-builder-and-ssrs.md)   
  [Область данных табликса (построитель отчетов и службы SSRS)](../tablix-data-region-report-builder-and-ssrs.md)   
  [Таблицы &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md)   

@@ -1,5 +1,5 @@
 ---
-title: Технический справочник по алгоритму взаимосвязей (Майкрософт) | Документы Microsoft
+title: Технический справочник по алгоритму взаимосвязей (Майкрософт) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE parameter
 - MAXIMUM_SUPPORT parameter
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1179752b5a1870af925463687056f3f767318aac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4f787b070c72c2cc8c1f071fee9cc6bcdd3d96e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171995"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Технический справочник по алгоритму взаимосвязей (Майкрософт)
   Алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой простую реализацию хорошо известного априорного алгоритма.  
@@ -77,7 +77,7 @@ ms.locfileid: "36192133"
  Алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает несколько параметров, влияющих на работу, производительность и точность итоговой модели интеллектуального анализа данных.  
   
 ### <a name="setting-algorithm-parameters"></a>Задание параметров алгоритма  
- Параметры модели интеллектуального анализа данных можно изменить в любой момент с помощью конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Можно также изменить параметры программным образом с помощью <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> коллекции объектов AMO или с помощью [элемент MiningModels &#40;ASSL&#41; ](../scripting/collections/miningmodels-element-assl.md) в XML для Аналитики. В следующей таблице содержатся описания всех параметров.  
+ Параметры модели интеллектуального анализа данных можно изменить в любой момент с помощью конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Можно также менять параметры программно с помощью <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> коллекции объектов AMO или с помощью [элемент MiningModels &#40;ASSL&#41; ](../scripting/collections/miningmodels-element-assl.md) в XML для Аналитики. В следующей таблице содержатся описания всех параметров.  
   
 > [!NOTE]  
 >  Изменить параметры существующей модели с помощью инструкций на языке расширений интеллектуального анализа данных нельзя. Нужно задать параметры в инструкциях DMX CREATE MODEL или ALTER STRUCTURE… ADD MODEL при создании модели.  
@@ -167,7 +167,7 @@ ms.locfileid: "36192133"
   
 ## <a name="see-also"></a>См. также  
  [Алгоритм взаимосвязей (Майкрософт)](microsoft-association-algorithm.md)   
- [Примеры запросов к модели взаимосвязей](association-model-query-examples.md)   
+ [Примеры запросов моделей взаимосвязей](association-model-query-examples.md)   
  [Модель интеллектуального анализа данных для моделей взаимосвязей &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

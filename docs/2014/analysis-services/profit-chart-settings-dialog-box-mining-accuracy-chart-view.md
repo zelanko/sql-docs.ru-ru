@@ -1,5 +1,5 @@
 ---
-title: Прибыль в диалоговое окно «Параметры диаграммы» (представление диаграммы точности интеллектуального анализа данных) | Документы Microsoft
+title: Прибыль в диалоговое окно «Параметры диаграммы» (представление диаграммы точности интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.profitcostdialog.f1
 ms.assetid: e534b40b-f4d2-4fbc-80e7-3b1dd8784cfd
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6e662f4db0a812253a8113779347457871ce1d2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44e18791656240d2f6253d325d2151e49f5b890f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187281"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>Диалоговое окно «Настройки диаграммы роста прибыли» (представление диаграммы точности интеллектуального анализа данных)
   Используйте диалоговое окно **Настройки диаграммы роста прибыли** для настройки параметров формирования диаграммы роста прибыли. Дополнительные сведения о диаграммах роста прибыли см. в разделе [Диаграмма точности прогнозов (службы Analysis Services — интеллектуальный анализ данных)](data-mining/lift-chart-analysis-services-data-mining.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36194589"
  Введите предполагаемый доход, который будет получен в результате продаж или привлечения клиентов.  
   
 ## <a name="see-also"></a>См. также  
- [Конструктор диаграммы точности интеллектуального анализа &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Конструктор диаграммы точности интеллектуального &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Тестирование и проверка задачи и инструкции по &#40;интеллектуального анализа данных&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Тестирование и проверка &#40;интеллектуального анализа данных&#41;](data-mining/testing-and-validation-data-mining.md)  
   

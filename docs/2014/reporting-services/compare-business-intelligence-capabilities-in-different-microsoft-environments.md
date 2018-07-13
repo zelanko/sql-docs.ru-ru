@@ -1,5 +1,5 @@
 ---
-title: Сравнение возможностей бизнес-аналитики в разных средах Microsoft | Документы Microsoft
+title: Сравните возможности бизнес-аналитики в разных средах Microsoft | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ae54486aa141880189a012d897251604a292aefe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97ac603e2e043810d468d9c9ada00c11a4f78d15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188091"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Сравнение возможностей бизнес-аналитики в разных средах Microsoft
-  Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] бизнес-аналитики могут развертываться в нескольких различных средах, включая [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с сервера SharePoint, SharePoint Online и Power BI для Office 365. В этом разделе приводится сравнение компонентов и функций, поддерживаемых в каждой среде.  
+  Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] бизнес-аналитики могут развертываться в нескольких разных сред, в том числе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с SharePoint Server, SharePoint Online и Power BI для Office 365. В этом разделе приводится сравнение компонентов и функций, поддерживаемых в каждой среде.  
   
  Дополнительные сведения о сравнении SharePoint Server и SharePoint Online см. в разделе [Сравнение планов и параметров SharePoint](http://products.office.com/SharePoint/compare-sharepoint-plans).  
   
@@ -41,13 +41,13 @@ ms.locfileid: "36192414"
 |Экспорт интерактивных панелей мониторинга Power View в презентацию PowerPoint|Да|Нет|Нет|  
 |Создание панели мониторинга в браузере|Да|Нет|Нет|  
 |Отслеживание использования|Да|Нет|Да|  
-|Использование на основе строк безопасность [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] кубы|Да|Нет|Нет|  
+|Безопасности на основе строк используйте [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] кубы|Да|Нет|Нет|  
   
- **<sup>1</sup>**[сведения о роли управляющих данными в управлении данными](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) и [видео: Power BI сведения управления и централизованное управление данными](https://www.youtube.com/watch?v=8dHOj68ts7c).    
+ **<sup>1</sup>**[основные сведения о роли управляющих данными в управлении данными](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) и [видео: Power BI управлении информацией и администраторе данных](https://www.youtube.com/watch?v=8dHOj68ts7c).    
   
- **<sup>2</sup>**[power BI в вопросах и ответах оптимизировать книгу Power BI (Облачное моделирование)](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US).    
+ **<sup>2</sup>**[power BI Q & A: оптимизация книги Power BI (Облачное моделирование)](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US).    
   
- **<sup>3</sup>**[введение новыми возможностями прогнозирования в Power View для Office 365](http://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).    
+ **<sup>3</sup>**[Знакомство с новыми возможностями прогнозирования в Power View для Office 365](http://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).    
   
 ## <a name="view-and-browse-bi-data-reports-and-dashboards"></a>Просмотр и обзор данных, отчетов и панелей мониторинга бизнес-аналитики  
   
@@ -56,12 +56,12 @@ ms.locfileid: "36192414"
 |Просмотр рабочих книг Microsoft Excel в браузере|Да, если размер рабочей книги меньше, чем 2 ГБ|Да, если размер рабочей книги меньше, чем 10 ГБ|Да, если размер рабочей книги меньше, чем 250 МБ|  
 |Просмотр данных в браузере в HTML5|Нет|Нет|Да|  
 |Приложения бизнес-аналитики для удаленного доступа к отчетам и панелям мониторинга|Нет|Нет|Да  **<sup>1</sup>**|  
-|Книга Excel с [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] в качестве источника данных  **<sup>2</sup>**|Да|Нет|Нет|  
+|Книга Excel с [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] как источник данных  **<sup>2</sup>**|Да|Нет|Нет|  
 |Возможность использования функций в различных браузерах и версиях|Да, для визуализации Power View  **<sup>3</sup>**|Да, для книги файл размером меньше 10 МБ  **<sup>3</sup>**|Да  **<sup>3</sup>**|  
   
  **<sup>1</sup>**[Microsoft Power BI](http://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).    
   
- **<sup>2</sup>**[книг PowerPivot в качестве источника данных  ](http://blogs.technet.com/b/excel_services__powerpivot_for_sharepoint_support_blog/archive/2013/02/15/powerpivot-workbook-as-a-data-source.aspx)  
+ **<sup>2</sup>**[рабочие книги PowerPivot как источник данных  ](http://blogs.technet.com/b/excel_services__powerpivot_for_sharepoint_support_blog/archive/2013/02/15/powerpivot-workbook-as-a-data-source.aspx)  
   
  **<sup>3</sup>**[поддержка мобильных устройств через средства бизнес-аналитики (BI)](http://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) и [планирование служб Reporting Services и поддержки Power View в браузере (Reporting Services 2014)](http://msdn.microsoft.com/library/ms156511.aspx).    
   
@@ -79,7 +79,7 @@ ms.locfileid: "36192414"
   
 -   [Сравнение сайт центра бизнес-аналитики с Power BI для Office 365 сайтов](http://technet.microsoft.com/library/dn394343\(v=office.15\).aspx).  
   
--   [Знакомство с средств анализа и создания отчетов бизнес-Аналитики Майкрософт](http://go.microsoft.com/fwlink/p/?LinkId=617093)  
+-   [Общие сведения о Microsoft BI Reporting и средства анализа](http://go.microsoft.com/fwlink/p/?LinkId=617093)  
   
 ## <a name="community-content"></a>Содержимое сообщества  
  [Сравнение локальных и облачных средств бизнес-аналитики Майкрософт](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/).  
