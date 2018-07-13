@@ -1,5 +1,5 @@
 ---
-title: Выбор ключа вложенной таблицы (мастер добавления новой вложенной таблицы) | Документы Microsoft
+title: Выбор ключа вложенной таблицы (мастер добавления новой вложенной таблицы) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.addnestedtable.selectnestedtablekey.f1
 ms.assetid: c715ac28-3c5d-4e4b-8104-f97b79150654
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9fd1b9a0f16c3440b9764d8ed8cdd74533e6ed02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c1ac4955f638c8653bfbf48452908e607b3bea9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110231"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155285"
 ---
 # <a name="select-nested-table-key-add-new-nested-table-wizard"></a>Выбор ключа вложенной таблицы (мастер создания вложенной таблицы)
   На странице **Выбор ключа вложенной таблицы** можно выбрать атрибут, который будет ключом вложенной таблицы.  

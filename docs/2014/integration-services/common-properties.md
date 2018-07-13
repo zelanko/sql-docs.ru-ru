@@ -1,5 +1,5 @@
 ---
-title: Общие свойства | Документы Microsoft
+title: Общие свойства | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
 caps.latest.revision: 45
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3cf48911196d3bb96fa54a6d912fbf5a5646516f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5bc0d0f75f911c27ec8b117653aef978a615f3e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169348"
 ---
 # <a name="common-properties"></a>Общие свойства
   Объекты потока данных в объектной модели служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] имеют общие свойства и пользовательские свойства на уровне компонента, входы и выходы, а также входные и выходные столбцы. Многие свойства имеют значения, доступные только для чтения и присваиваемые подсистемой обработки потока данных на этапе выполнения.  
@@ -112,14 +112,14 @@ ms.locfileid: "36102502"
 |--------------|---------------|-----------------|  
 |Описание|String|Описание входа.|  
 |ErrorOrTruncationOperation|String|Дополнительная строка, указывающая типы ошибок или типы усечения, которые могут происходить при обработке строки.|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, указывающее порядок обработки ошибок. Значения являются `Fail component`, `Ignore failure`, и `Redirect row`.|  
-|HasSideEffects|Логическое значение|Указывает, можно ли удалять компонент из плана выполнения потока данных, когда он не присоединен к компоненту нисходящего потока данных и когда `RunInOptimizedMode` — `true`.|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, указывающее порядок обработки ошибок. Допустимые значения — `Fail component`, `Ignore failure`, и `Redirect row`.|  
+|HasSideEffects|Логическое значение|Указывает, можно ли удалять компонент из плана выполнения потока данных, если он не присоединен к нисходящему компоненту и при `RunInOptimizedMode` является `true`.|  
 |ID|Целочисленный|Значение, уникально определяющее вход.|  
 |IdentificationString|String|Строка, определяющая вход.|  
 |IsSorted|Логическое значение|Указывает, сортируются ли данные на входе.|  
 |Имя|String|Имя входа.|  
 |SourceLocale|Целочисленный|Идентификатор локали данных входа.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, определяющее, как компонент обрабатывает усечения, происходящие при обработке строк. , и делает это по-другому. Значения являются `Fail component`, `Ignore failure`, и `Redirect row`.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, определяющее, как компонент обрабатывает усечения, происходящие при обработке строк. , и делает это по-другому. Допустимые значения — `Fail component`, `Ignore failure`, и `Redirect row`.|  
   
  Назначения и некоторые преобразования не поддерживают вывод ошибок на выходе, а свойства ErrorRowDisposition и TruncationRowDisposition этих компонентов доступны только для чтения.  
   
@@ -133,20 +133,20 @@ ms.locfileid: "36102502"
 |ComparisonFlags|Целочисленный|Набор флагов, задающий правила сравнения столбцов, имеющих символьный тип данных. Дополнительные сведения см. в статье [Comparing String Data](data-flow/comparing-string-data.md).|  
 |Описание|String|Описывает входной столбец.|  
 |ErrorOrTruncationOperation|String|Дополнительная строка, указывающая типы ошибок или типы усечения, которые могут происходить при обработке строки.|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, указывающее порядок обработки ошибок. Значения являются `Fail component`, `Ignore failure`, и `Redirect row`.|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, указывающее порядок обработки ошибок. Допустимые значения — `Fail component`, `Ignore failure`, и `Redirect row`.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|Идентификатор столбца внешних метаданных, присвоенный входному столбцу.|  
 |ID|Целочисленный|Значение, уникально определяющее входной столбец.|  
 |IdentificationString|String|Строка, определяющая входной столбец.|  
 |LineageID|Целочисленный|Идентификатор восходящего столбца.|  
 |Имя|String|Имя входного столбца.|  
 |SortKeyPosition|Целочисленный|Значение указывает, является ли столбец отсортированным, порядок его сортировки и последовательность, в которой отсортированы несколько столбцов. Значение **0** указывает на то, что столбец не отсортирован.  Дополнительные сведения см. в разделе [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, определяющее, как компонент обрабатывает усечения, происходящие при обработке строк. Значения являются `Fail component`, `Ignore failure`, и `Redirect row`.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, определяющее, как компонент обрабатывает усечения, происходящие при обработке строк. Допустимые значения — `Fail component`, `Ignore failure`, и `Redirect row`.|  
 |UpstreamComponentName|String|Имя компонента восходящего потока данных.|  
 |UsageType|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>|Значение, определяющее, как входной столбец используется компонентом.|  
   
  Входной столбец также использует свойства типа данных, описанные в разделе "Свойства типа данных".  
   
-##  <a name="outputs"></a> Свойства выхода  
+##  <a name="outputs"></a> Выходные свойства  
  В объектной модели служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] источники и назначения имеют выходы. Выход компонента потока данных реализует интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>.  
   
  В следующей таблице показаны свойства выходов компонентов в потоке данных. Некоторые свойства имеют значения, доступные только для чтения и присваиваемые подсистемой обработки потока данных на этапе выполнения.  
@@ -156,7 +156,7 @@ ms.locfileid: "36102502"
 |DeleteOutputOnPathDetached|Логическое значение|Определяет, удаляет ли подсистема обработки потока данных выход при отключении от пути.|  
 |Описание|String|Описывает выход.|  
 |ErrorOrTruncationOperation|String|Дополнительная строка, указывающая типы ошибок или типы усечения, которые могут происходить при обработке строки.|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, указывающее порядок обработки ошибок. Значения являются `Fail component`, `Ignore failure`, и `Redirect row`.|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, указывающее порядок обработки ошибок. Допустимые значения — `Fail component`, `Ignore failure`, и `Redirect row`.|  
 |ExclusionGroup|Целочисленный|Значение, определяющее группу взаимоисключающих выводов.|  
 |HasSideEffects|Логическое значение|Указывает, можно ли удалять компонент из плана выполнения потока данных, если он не присоединен к компоненту восходящего потока данных, а свойство `RunInOptimizedMode` установлено в `true`.|  
 |ID|Целочисленный|Значение, уникально определяющее выход.|  
@@ -165,7 +165,7 @@ ms.locfileid: "36102502"
 |IsSorted|Логическое значение|Указывает, отсортирован ли выход. Значение по умолчанию — `False`.<br /><br /> **\*\* Важные \* \***  значения параметра `IsSorted` свойства `True` не приводит к сортировке данных. Это свойство только указывает компонентам нисходящего потока, что данные раньше были отсортированы. Дополнительные сведения см. в разделе [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |Имя|String|Имя выхода.|  
 |SynchronousInputID|Целочисленный|Идентификатор синхронного с выходом входа.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, определяющее, как компонент обрабатывает усечения, происходящие при обработке строк. Значения являются `Fail component`, `Ignore failure`, и `Redirect row`.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, определяющее, как компонент обрабатывает усечения, происходящие при обработке строк. Допустимые значения — `Fail component`, `Ignore failure`, и `Redirect row`.|  
   
 ###  <a name="outputcolumns"></a> Свойства выходного столбца  
  В объектной модели служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] выход содержит коллекцию выходных столбцов. Выходной столбец компонента потока данных реализует интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
@@ -177,7 +177,7 @@ ms.locfileid: "36102502"
 |ComparisonFlags|Целочисленный|Набор флагов, задающий правила сравнения столбцов, имеющих символьный тип данных. Дополнительные сведения см. в статье [Comparing String Data](data-flow/comparing-string-data.md).|  
 |Описание|String|Описывает выходной столбец.|  
 |ErrorOrTruncationOperation|String|Дополнительная строка, указывающая типы ошибок или типы усечения, которые могут происходить при обработке строки.|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, указывающее порядок обработки ошибок. Значения являются `Fail component`, `Ignore failure`, и `Redirect row`. Значение по умолчанию — `Fail component`.|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, указывающее порядок обработки ошибок. Допустимые значения — `Fail component`, `Ignore failure`, и `Redirect row`. Значение по умолчанию — `Fail component`.|  
 |ExternalMetadataColumnID|Целочисленный|Идентификатор столбца внешних метаданных, присвоенный входному столбцу.|  
 |ID|Целочисленный|Значение, уникально определяющее выходной столбец.|  
 |IdentificationString|String|Строка, определяющая выходной столбец.|  
@@ -185,7 +185,7 @@ ms.locfileid: "36102502"
 |Имя|String|Имя выходного столбца.|  
 |SortKeyPosition|Целочисленный|Значение указывает, является ли столбец отсортированным, порядок его сортировки и последовательность, в которой отсортированы несколько столбцов. Значение **0** указывает на то, что столбец не отсортирован. Дополнительные сведения см. в разделе [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |SpecialFlags|Целочисленный|Значение, содержащее специальные флаги выходного столбца.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, определяющее, как компонент обрабатывает усечения, происходящие при обработке строк. Значения являются `Fail component`, `Ignore failure`, и `Redirect row`. Значение по умолчанию — `Fail component`.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, определяющее, как компонент обрабатывает усечения, происходящие при обработке строк. Допустимые значения — `Fail component`, `Ignore failure`, и `Redirect row`. Значение по умолчанию — `Fail component`.|  
   
  Выходные столбцы также содержат набор свойств типа данных.  
   

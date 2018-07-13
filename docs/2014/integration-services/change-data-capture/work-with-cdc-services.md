@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6cf6ae866d37764407720877345a82060abaf7cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2b37eb9e852dd7b9559ed4cb15e85e7613114ac3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188811"
 ---
 # <a name="work-with-cdc-services"></a>Работа со службами CDC
   Можно использовать консоль настройки службы CDC для создания новой службы CDC и подготовки базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для CDC.  
@@ -44,7 +44,7 @@ ms.locfileid: "36110210"
  Откроется диалоговое окно создания новой службы Oracle CDC.  
   
 ## <a name="see-also"></a>См. также  
- [Работа со службами CDC](work-with-cdc-services.md)   
+ [Как работать со службами CDC](work-with-cdc-services.md)   
  [Создание и изменение службы CDC Oracle](create-and-edit-an-oracle-cdc-service.md)  
   
   

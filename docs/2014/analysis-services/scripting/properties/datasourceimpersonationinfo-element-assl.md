@@ -1,5 +1,5 @@
 ---
-title: Элемент DataSourceImpersonationInfo (ASSL) | Документы Microsoft
+title: Элемент DataSourceImpersonationInfo (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - DataSourceImpersonationInfo element
 ms.assetid: a153044b-2d6c-406b-aeb3-15bf096931f4
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4d99a11e1f0801024544e7a64a4321e8f6e53d6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da8889abe558a33b18e20ca8ee81855656f149f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101599"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187081"
 ---
 # <a name="datasourceimpersonationinfo-element-assl"></a>Элемент DataSourceImpersonationInfo (ASSL)
-  Содержит сведения, используемые для задания режима олицетворения при подключении к источнику данных для [базы данных](../objects/database-element-assl.md) элемента.  
+  Содержит сведения, используемые для задания режима олицетворения при соединении с источником данных для [базы данных](../objects/database-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   

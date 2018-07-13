@@ -1,5 +1,5 @@
 ---
-title: Установка служб Analysis Services в табличном режиме | Документы Microsoft
+title: Установка служб Analysis Services в табличном режиме | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f6fabd9129e3f3e1e07e813935f36e7c70c48072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b6ee555e975e89da584c0efab3fab8bb9f9429a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183454"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>Установка служб Analysis Services в табличном режиме
   Если службы Analysis Services устанавливаются для использования новых функций табличных моделей, необходимо устанавливать их в серверном режиме с поддержкой соответствующего типа модели. Серверный режим — табличный, он настраивается во время установки.  
@@ -35,7 +35,7 @@ ms.locfileid: "36102323"
   
      ![Дерево компонентов программы установки со службами Analysis Services](../../../sql-server/install/media/ssas-setupas.gif "дерево компонентов программы установки со службами Analysis Services")  
   
-2.  На странице «Конфигурация служб Analysis Services» обязательно выберите **табличном режиме**.  
+2.  На странице "Настройка служб Analysis Services", не забудьте выбрать **табличном режиме**.  
   
      ![Страница установки с параметрами конфигурации служб Analysis Services](../../../sql-server/install/media/ssas-setupasconfig.gif "страница установки с параметрами конфигурации служб Analysis Services")  
   

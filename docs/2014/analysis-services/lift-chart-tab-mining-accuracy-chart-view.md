@@ -1,5 +1,5 @@
 ---
-title: Поднимите Вкладка «Диаграмма» (представление диаграммы точности интеллектуального анализа данных) | Документы Microsoft
+title: Поднимите Вкладка «Диаграмма» (представление диаграммы точности интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.liftchart.f1
 ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 480f224d3948b88117b5b708900639539cfdffab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09b0acd6bb7a4d079476b866a56f47029192db47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224654"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Вкладка «Диаграмма точности прогнозов» (представление диаграммы точности интеллектуального анализа данных)
   Панель **Диаграмма точности прогнозов** позволяет просмотреть диаграмму, в которой сравниваются все выбранные модели интеллектуального анализа данных, имеющиеся в выбранной структуре интеллектуального анализа данных.  
@@ -47,7 +47,7 @@ ms.locfileid: "36102552"
  Копирует диаграмму в буфер обмена.  
   
 ## <a name="see-also"></a>См. также  
- [Конструктор диаграммы точности интеллектуального анализа &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Конструктор диаграммы точности интеллектуального &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Тестирование и проверка задачи и инструкции по &#40;интеллектуального анализа данных&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Тестирование и проверка &#40;интеллектуального анализа данных&#41;](data-mining/testing-and-validation-data-mining.md)  
   

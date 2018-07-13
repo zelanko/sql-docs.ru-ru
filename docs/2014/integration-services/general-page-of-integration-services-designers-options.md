@@ -1,5 +1,5 @@
 ---
-title: Страница «Общие» | Документы Microsoft
+title: Страница "Общие" | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4026e9f9cf6f246f126b9d60d2fe6940cbe27700
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bc23fd22ec07f78e71713e1cce93d9845c35ccc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229284"
 ---
 # <a name="general-page"></a>Страница «Общие»
   Страница **Общие** страницы **Конструкторы служб Integration Services** диалогового окна **Параметры** позволяет указать параметры загрузки, отображения и обновления пакетов.  
@@ -58,7 +58,7 @@ ms.locfileid: "36109540"
  При обновлении пакетов служб [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] создает новые идентификаторы пакетов для обновленных версий пакетов.  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения о безопасности &#40;службы Integration Services&#41;](security/security-overview-integration-services.md)   
+ [Общие сведения о безопасности &#40;служб Integration Services&#41;](security/security-overview-integration-services.md)   
  [Расширение пакетов с помощью сценариев](extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

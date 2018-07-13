@@ -1,13 +1,11 @@
 ---
-title: Асинхронный режим и команда SQLCancel | Документы Microsoft
+title: Асинхронный режим и команда SQLCancel | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, asynchronous mode
 ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 027cb897dae84986369148c0dbdacb5f96f4ec71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4465e572aaa0068e5a5c9f84c1a6525438e75c17
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094984"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431573"
 ---
 # <a name="asynchronous-mode-and-sqlcancel"></a>Асинхронный режим и команда SQLCancel
   Некоторые функции ODBC могут работать как синхронно, так и асинхронно. В приложении могут быть разрешены асинхронные операции как для дескриптора инструкции, так и для дескриптора соединения. Если параметр установлен для дескриптора соединения, он затрагивает все дескрипторы инструкции в этом дескрипторе соединения. Приложение использует следующие инструкции, чтобы включить или отключить асинхронный режим:  
@@ -50,7 +48,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  Когда приложение проверяет завершение выполнения команды, делается тот же вызов функции с теми же параметрами для драйвера. Если драйвер еще не получил ответ от сервера, он опять вернет значение SQL_STILL_EXECUTING. Приложение должно проверять команду периодически до тех пор, пока код возврата не станет отличен от SQL_STILL_EXECUTING. Когда приложение получает любой другой код возврата, даже SQL_ERROR, оно может определить, что выполнение команды завершено.  
   
- Иногда команда остается необработанной долгое время. Если приложение должно отменить команду без ожидания ответа, его можно сделать, вызвав **SQLCancel** с той же инструкции обработки необработанных командой. Это единственный случай **SQLCancel** следует использовать. Некоторые программисты используют **SQLCancel** если они обработка части результирующего набора и нужно отменить оставшуюся часть результирующего набора. [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) или [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) следует использовать для отмены оставшейся части необработанного результирующего набора, не **SQLCancel**.  
+ Иногда команда остается необработанной долгое время. Если приложение должно отменить команду без ожидания ответа, это можно сделать, вызвав **SQLCancel** с той же инструкции обработки как необработанные команды. Это единственный случай, когда **SQLCancel** следует использовать. Некоторые программисты используют **SQLCancel** когда они обработка части результирующего набора и нужно отменить оставшуюся часть результирующего набора. [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) или [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) следует использовать для отмены оставшейся части необработанного результирующего набора, не **SQLCancel**.  
   
 ## <a name="see-also"></a>См. также  
  [Создание драйвера ODBC для собственного клиента SQL Server](creating-a-driver-application.md)  

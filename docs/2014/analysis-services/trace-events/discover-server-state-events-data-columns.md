@@ -1,5 +1,5 @@
 ---
-title: Состояние сервера столбцы данных событий обнаружения | Документы Microsoft
+title: Столбцы данных событий состояния сервера обнаружения | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Discover Server State event category
 ms.assetid: fbacb187-a4d1-4aa4-be3b-3ddd175f9e19
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: afa5fdcba9e74e23c9ae8f5c4a9d4ac49f3ad0a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49aeff626e1b227974da0e122b2a94ed28c5d917
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196094"
 ---
 # <a name="discover-server-state-events-data-columns"></a>Столбцы данных событий «Определение состояния сервера»
   Категория событий «Определение состояния сервера» содержит следующие классы событий.  

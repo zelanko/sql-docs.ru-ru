@@ -1,5 +1,5 @@
 ---
-title: Создание областью действия сеанса с именем наборами (многомерные Выражения) | Документы Microsoft
+title: Создание с областью действия сеанса с именем наборами (многомерные Выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CREATE SET statement
 - session-scoped named sets [MDX]
 ms.assetid: b751e1e4-6d4c-4d36-a28d-ffdaaee0f1c7
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 101109dce04d6a31c4b78a47573ccb54f2c80f0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a3d6a1fd35c91733b32ecc3244f0fd3bafe6a07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167695"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>Создание именованных наборов с областью действия сеанса (многомерные выражения)
   Для создания именованного набора, доступного в сеансе многомерных выражений, используется инструкция [CREATE SET](/sql/mdx/mdx-data-definition-create-set). Именованный набор, созданный с помощью инструкции CREATE SET, удаляется только при закрытии сеанса многомерных выражений.  
@@ -57,6 +57,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание областью действия запроса именованных наборов с &#40;многомерных Выражений&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [Создание, областью действия запроса именованных наборов с &#40;многомерных Выражений&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

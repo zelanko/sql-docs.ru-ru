@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - STOPAT clause [RESTORE LOG statement]
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 62676ecbbe57529a2f1eeec4448ef91a4ebf6d4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 504810285ca79879e2442526747d40bbf0ed50bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101850"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203564"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)
   В данном разделе содержатся инструкции по восстановлению базы данных на определенный момент времени в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Сведения в этом разделе относятся только к тем базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые используют полную модель восстановления или модель восстановления с неполным протоколированием.  
@@ -156,7 +155,7 @@ ms.locfileid: "36101850"
   
 3.  Восстановите последнюю разностную резервную копию, если таковая имеется, без восстановления базы данных (RESTORE DATABASE *имя_базы_данных* FROM *устройство_резервного_копирования* WITH NORECOVERY).  
   
-4.  Применить каждую резервную копию журнала транзакций в той же последовательности, в котором они были созданы, указывая время, когда необходимо остановить восстановление журнала (RESTORE DATABASE *имя_базы_данных* FROM < устройство_резервного_копирования > WITH STOPAT **= *`time`*,** Восстановления).  
+4.  Применить каждую резервную копию журнала транзакций в той же последовательности, в котором они были созданы, указывая время, по которому необходимо остановить восстановление журнала (RESTORE DATABASE *имя_базы_данных* FROM < устройство_резервного_копирования > WITH STOPAT **= *`time`*,** Восстановления).  
   
     > [!NOTE]  
     >  Параметры RECOVERY и STOPAT. Если в резервной копии журнала транзакций не содержится требуемое время (например, если указанное время выходит за рамки времени, отраженного в журнале транзакций), создается предупреждение и база данных остается невосстановленной.  

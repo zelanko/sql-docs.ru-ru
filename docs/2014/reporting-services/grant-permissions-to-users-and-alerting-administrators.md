@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9598249ac124362b76492e60af5531b7d5b3d418
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f46c3f16f0adc630e246b1ee6634a523a295ae2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220760"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>Предоставление разрешений для пользователей и оповещение администраторов
   Чтобы создавать, изменять, удалять и просматривать предупреждения данных, пользователи и администраторы предупреждений должны иметь разрешения SharePoint. Специальных разрешений для функции предупреждений об изменении данных в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] нет, для этого используются встроенные разрешения SharePoint.  

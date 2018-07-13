@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledest.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 624815a71ccd642cda1ee11db39ca08994cb6dff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60337914cab72631b4a6c647af15ce21bbbcfdcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239204"
 ---
 # <a name="flat-file-destination"></a>назначение «Неструктурированный файл»
   Назначение «Неструктурированный файл» записывает данные в текстовый файл. Текстовый файл может быть в следующих форматах: с разделителями, фиксированной ширины, фиксированной ширины с разделителем строки и без выравнивания текста справа.  
@@ -48,9 +48,9 @@ ms.locfileid: "36098695"
   
  Дополнительные сведения о свойствах, которые можно задать в диалоговом окне **Редактор источника «Неструктурированный файл»** , см. в следующих разделах:  
   
--   [Редактор назначения файл с плоскими &#40;страницы диспетчера соединений&#41;](../flat-file-destination-editor-connection-manager-page.md)  
+-   [Редактор назначения файлов неструктурированными &#40;страницы диспетчера соединений&#41;](../flat-file-destination-editor-connection-manager-page.md)  
   
--   [Редактор назначения файл с плоскими &#40;страница «сопоставления»&#41;](../flat-file-destination-editor-mappings-page.md)  
+-   [Редактор назначения файлов неструктурированными &#40;страница «сопоставления»&#41;](../flat-file-destination-editor-mappings-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   

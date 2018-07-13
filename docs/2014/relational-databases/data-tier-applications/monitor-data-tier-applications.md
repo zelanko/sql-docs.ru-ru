@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [SQL Server], data-tier applications
 - monitoring server performance [SQL Server], DACs
 - data-tier application [SQL Server], monitor
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bccfc04258207e0c9010f2d906d815f3beae9927
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1e42ec1e943f53c8e2250f55335c667ed15eaf0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163015"
 ---
 # <a name="monitor-data-tier-applications"></a>Наблюдение за приложениями уровня данных
   Наблюдение за приложениями уровня данных (DAC) может осуществляться из **обозревателя программ** или **обозревателя объектов** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) наряду с системными представлениями и таблицами. Кроме того, для наблюдения за всеми объектами базы данных, содержащейся в DAC, могут применяться стандартные методы наблюдения за базой данных и компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  

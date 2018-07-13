@@ -1,5 +1,5 @@
 ---
-title: Передача редактор задачи базы данных (страница «Общие») | Документы Microsoft
+title: Передача редактор задачи базы данных (страница "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.general.f1
 helpviewer_keywords:
 - Transfer Database Task Editor
 ms.assetid: 0f65927a-5835-45ee-9c19-e33f00d0755c
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f4c41ae48818f7a112d738388fd857f3928959f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e16f5bab19ee91e108f2d375107106d8d6f7c83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195644"
 ---
 # <a name="transfer-database-task-editor-general-page"></a>Редактор задачи «Передача базы данных» (страница «Общие»)
   Страница **Общие** диалогового окна **Редактор задачи «Передача базы данных»** позволяет дать имя и описание задачи передачи базы данных. Задача «Передача базы данных» копирует или перемещает базу данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] между двумя экземплярами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Эту задачу можно также использовать для копирования базы данных в пределах того же сервера. Дополнительные сведения об этой задаче см. в разделе [Задача "Передача базы данных"](control-flow/transfer-database-task.md).  
@@ -39,9 +39,9 @@ ms.locfileid: "36101094"
  Введите описание задачи передачи базы данных.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи служб Integration Services](control-flow/integration-services-tasks.md)   
- [Редактор задачи базы данных передачи &#40;страницы базы данных&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)   
+ [Редактор задач базы данных передача &#40;баз данных страницы&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)   
  [Страница "Выражения"](expressions/expressions-page.md)  
   
   

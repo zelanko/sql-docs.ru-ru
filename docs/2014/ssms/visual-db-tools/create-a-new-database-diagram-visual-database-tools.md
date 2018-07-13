@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagrams [SQL Server], creating
 - database diagrams [SQL Server], creating
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72d4217370ab913eb094af946fc5870412ea2023
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f4591615a01d43d0fe2aa6f734f854a24119187d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181181"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Создание новой диаграммы базы данных (визуальные инструменты для баз данных)
   Для создания новых диаграмм баз данных можно использовать обозреватель объектов. Диаграммы базы данных графически изображают структуру баз данных. При помощи диаграмм баз данных можно создавать и изменять таблицы, столбцы, связи и ключи. Кроме того, можно изменять индексы и ограничения.  
@@ -42,7 +42,7 @@ ms.locfileid: "36109624"
  Продолжайте добавлять и удалять таблицы, изменять существующие таблицы и изменять связи между таблицами до завершения новой диаграммы базы данных.  
   
 ## <a name="see-also"></a>См. также  
- [Работа с диаграммами базы данных &#40;визуальные средства базы данных&#41;](visual-database-tools.md)   
+ [Работа с диаграммами базы данных &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
  [Основные сведения о владении диаграммами баз данных (визуальные инструменты для баз данных)](understand-database-diagram-ownership-visual-database-tools.md)  
   
   

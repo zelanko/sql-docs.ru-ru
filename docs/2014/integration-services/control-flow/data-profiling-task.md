@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ee64eeed2e6508fc31cac544e6ba4f2617b8a24b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 48075a70eba052e6996fa096cde9f8f3b5f946e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213544"
 ---
 # <a name="data-profiling-task"></a>Задача «Профилирование данных»
   Задача «Профилирование данных» вычисляет различные профили, помогающие ознакомиться с источниками данных и определить ошибки в данных, требующие исправления.  
@@ -86,7 +86,7 @@ ms.locfileid: "36102035"
 |FunctionalDependencyProfile|Столбцы `integer` типа, `char` типа, и `datetime` типа|  
 |InclusionProfile|Столбцы `integer` типа, `char` типа, и `datetime` типа|  
   
- \* В приведенной выше таблице допустимых типов данных `integer`, `char`, `datetime`, и `numeric` типы включают следующие типы данных:  
+ \* В приведенной выше таблице допустимых типов данных типы `integer`, `char`, `datetime`, и `numeric` типы включают следующие определенные типы данных:  
   
  К целочисленным типам относятся `bit`, `tinyint`, `smallint`, `int` и `bigint`.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36102035"
   
  Числовым типам относятся `integer` типов (за исключением `bit`), `money`, `smallmoney`, `decimal`, `float`, `real`, и `numeric`.  
   
- \*\* `image`, `text`, `XML`, `udt`, и `variant` типы не поддерживаются для профилей, отличных от профиля соотношения значений Null столбца.  
+ \*\* `image`, `text`, `XML`, `udt`, и `variant` типы не поддерживаются для профилей, отличных от профиля соотношения значений Null.  
   
 ### <a name="valid-tables-and-columns"></a>Допустимые таблицы и столбцы  
  Если таблица или столбец пусты, то задача «Профилирование данных» предпринимает следующие действия.  
@@ -142,20 +142,20 @@ ms.locfileid: "36102035"
  [Страница «запросы профиля»](data-profiling-task-editor-profile-requests-page.md)  
  На странице **Запросы профиля** указывается источник данных, а также выбираются и настраиваются профили данных для вычисления. Дополнительные сведения о различных профилях, доступных для настройки, см. в следующих разделах:  
   
--   [Параметры запроса профиля ключей кандидата &#40;задачи «профилирование данных»&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Параметры профиля потенциальных ключей запроса &#40;задачи "профилирование данных"&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля распределения длины столбца &#40;задачи «профилирование данных»&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля распределения длины столбцов &#40;задачи "профилирование данных"&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля соотношения значений Null столбца &#40;задачи «профилирование данных»&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля соотношение значений Null в столбцах &#40;задачи "профилирование данных"&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля шаблона столбцов &#40;задачи «профилирование данных»&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля шаблона столбцов &#40;задачи "профилирование данных"&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиль статистики столбцов &#40;задачи «профилирование данных»&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля статистики столбцов &#40;задачи "профилирование данных"&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля распределения значения столбца &#40;задачи «профилирование данных»&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля распределения значений столбцов &#40;задачи "профилирование данных"&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля функциональной зависимости &#40;задачи «профилирование данных»&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля функциональной зависимости &#40;задачи "профилирование данных"&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля включения значений &#40;задачи «профилирование данных»&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля включения значений &#40;задачи "профилирование данных"&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
   

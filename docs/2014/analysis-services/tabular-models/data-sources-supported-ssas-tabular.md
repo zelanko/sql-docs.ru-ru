@@ -1,5 +1,5 @@
 ---
-title: Поддерживаемые источники данных (табличные службы SSAS) | Документы Microsoft
+title: Поддерживаемые источники данных (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 360a0d7d556589947d312deab1f2ff485afb85d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b8aac369dd82f75f251df1195ac29c8ccf3b983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185301"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   В этом разделе описаны типы источников данных, которые могут использоваться в табличной модели.  
@@ -56,9 +56,9 @@ ms.locfileid: "36109578"
   
  <sup>1</sup> также можно использовать поставщик OLE DB для ODBC.  
   
- <sup>2</sup> Дополнительные сведения о SQL Azure см. в разделе веб-сайт [SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> Дополнительные сведения о SQL Azure, см. в разделе веб-сайт [SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> Дополнительные сведения о SQL Server PDW см. в разделе веб-сайт [SQL Server 2008 R2 параллельного хранилища данных](http://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> Дополнительные сведения о SQL Server PDW см. в разделе веб-сайт [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
   
  <sup>4</sup> в некоторых случаях использование поставщика MSDAORA OLE DB может привести к ошибкам соединения, особенно в новых версиях Oracle. Если возникают ошибки, рекомендуется использовать один из других поставщиков для Oracle.  
   

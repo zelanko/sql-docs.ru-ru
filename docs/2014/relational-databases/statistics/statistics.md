@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-statistics
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statistical information [SQL Server], query optimization
 - query performance [SQL Server], statistics
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-caps.latest.revision: 67
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: da931b48b7571cd7d109980ef6deb0a7e4bb5246
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 257abd70ea2b0f6345d40c7b6f009d50da5045c5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094757"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428343"
 ---
 # <a name="statistics"></a>Статистика
   Оптимизатор запросов использует статистику для создания планов запросов, которые повышают производительность запросов. Для большинства запросов оптимизатор уже создает необходимую статистику для формирования высококачественного плана запроса, но в некоторых случаях для достижения наилучших результатов нужно создать дополнительные статистические данные или изменить структуру запроса. В этом разделе обсуждаются основные статистические понятия и предоставляются рекомендации по эффективному использованию статистики для оптимизации запросов.  
@@ -191,7 +189,7 @@ GO
   
 -   Создайте отсутствующую статистику инструкцией CREATE STATISTICS.  
   
- Если статистика для базы данных только для чтения или только для чтения моментальный снимок отсутствует или устарела, [!INCLUDE[ssDE](../../../includes/ssde-md.md)] создаст и будет поддерживать временную статистику в `tempdb`. Когда компонент [!INCLUDE[ssDE](../../../includes/ssde-md.md)] создает временную статистику, перед именем статистики добавляется суффикс _readonly_database_statistic для проведения различия между временной статистикой и постоянной. Суффикс _readonly_database_statistic зарезервирован для статистики, создаваемой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Скрипты для временной статистики могут создаваться и воспроизводиться в базе данных для чтения и записи. При создании скрипта [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] изменяет суффикс имени статистики с _readonly_database_statistic на _readonly_database_statistic_scripted.  
+ Если статистика базы данных только для чтения или только для чтения моментального снимка отсутствует или устарела, [!INCLUDE[ssDE](../../../includes/ssde-md.md)] создаст и будет поддерживать временную статистику в `tempdb`. Когда компонент [!INCLUDE[ssDE](../../../includes/ssde-md.md)] создает временную статистику, перед именем статистики добавляется суффикс _readonly_database_statistic для проведения различия между временной статистикой и постоянной. Суффикс _readonly_database_statistic зарезервирован для статистики, создаваемой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Скрипты для временной статистики могут создаваться и воспроизводиться в базе данных для чтения и записи. При создании скрипта [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] изменяет суффикс имени статистики с _readonly_database_statistic на _readonly_database_statistic_scripted.  
   
  Только [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может создавать и обновлять временную статистику. Тем не менее можно удалять временную статистику и наблюдать за свойствами статистики с помощью тех же инструментов, которые используются для постоянной статистики:  
   

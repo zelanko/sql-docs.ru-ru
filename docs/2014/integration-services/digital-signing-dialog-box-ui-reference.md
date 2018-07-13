@@ -1,5 +1,5 @@
 ---
-title: Цифровая подпись диалогового окна пользовательского интерфейса в справочник | Документы Microsoft
+title: Цифровая подпись диалогового окна пользовательского интерфейса в справочник | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.digitalsigning.f1
 helpviewer_keywords:
 - Digital Signing dialog box
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f9a1d691a87df5e307fcf19d7ec8c246d7df286c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87c24975549416e09ad73e8528dee3e74f1925cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173095"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>Справочник по пользовательскому Интерфейсу цифровой подписи диалоговое
   С помощью диалогового окна **Цифровая подпись** можно подписать пакет цифровой подписью или удалить подпись. Диалоговое окно **Цифровая подпись** доступно из параметра **Цифровая подпись** в меню **службы SSIS** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -38,6 +38,6 @@ ms.locfileid: "36101791"
  Щелкните, чтобы удалить цифровую подпись.  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения о безопасности &#40;службы Integration Services&#41;](security/security-overview-integration-services.md)  
+ [Общие сведения о безопасности &#40;служб Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: PowerPivot доступности и аварийного восстановления (SQL Server 2014) | Документы Microsoft
+title: PowerPivot доступности и аварийное восстановление (SQL Server 2014) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c05bb8ca3e917d12fe1452dd598c30c698d3c4a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15efd2e1265635fa2870013d580ea4ef929b4600
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159295"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>Доступность и аварийное восстановление PowerPivot (SQL Server 2014)
   Планы доступности и аварийного восстановления для [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] зависят главным образом от проекта фермы SharePoint, продолжительности простоя, приемлемой для различных компонентов, а также средств и методов работы, которые используются для поддержания доступности SharePoint. В этом разделе содержатся сведения о технологии и диаграммы с примерами топологий, которые следует рассматривать при планировании доступности и аварийного восстановления для развертывания [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
@@ -51,7 +51,7 @@ ms.locfileid: "36102322"
   
 -   **(3)** Службы вычислений Excel выполняются на каждом сервере приложений, что позволяет приложению службы работать на разных серверах приложений. Поэтому, если один сервер приложений переходит в режим «вне сети», службы вычислений Excel останутся доступными.  
   
--   **(4)**  и **(6)** экземпляров [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] модули режиме интеграции с SharePoint выполняются на серверах, находящихся за пределами фермы SharePoint, включая службу Windows **SQL Server Analysis Services (POWERPIVOT)**. Каждый из этих экземпляров регистрируется в службах Excel **(3)**. Службы Excel обеспечивают балансировку нагрузки запросов к серверам [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Архитектура [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 позволяет иметь несколько серверов для [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , поэтому по мере необходимости можно легко добавлять другие экземпляры. Дополнительные сведения см. в разделе [Управление параметрами модели данных служб Excel (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
+-   **(4)**  и **(6)** экземпляров [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] модули режиме интеграции с SharePoint выполняются на серверах, за пределами фермы SharePoint, Сюда же входит служба Windows **SQL Server Analysis Services (POWERPIVOT)**. Каждый из этих экземпляров регистрируется в службах Excel **(3)**. Службы Excel обеспечивают балансировку нагрузки запросов к серверам [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Архитектура [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 позволяет иметь несколько серверов для [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , поэтому по мере необходимости можно легко добавлять другие экземпляры. Дополнительные сведения см. в разделе [Управление параметрами модели данных служб Excel (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
   
 -   **(5)** Базы данных SQL Server, используемые для содержимого, конфигурации и в качестве баз данных приложения. Сюда входит и база данных приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . В плане аварийного восстановления следует учитывать уровень базы данных. В этом проекте базы данных выполняются на том же сервере, что и **(4)** один из экземпляров [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . **(4)** и **(5)** также могут находиться на разных серверах.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36102322"
   
 -   **(1)** Серверы клиентского веб-интерфейса. Установите поставщики данных на каждом сервере. Дополнительные сведения см. в статье [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
--   **(2)**  Два [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] общих служб и **(4)** службу Windows **SQL Server Analysis Services (POWERPIVOT)** устанавливаются на серверах приложений SharePoint.  
+-   **(2)**  Двух [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] общих служб и **(4)** службы Windows **SQL Server Analysis Services (POWERPIVOT)** устанавливаются на серверы приложений SharePoint.  
   
      Системная служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] выполняется **на каждом** сервере приложений, что позволяет приложению службы работать **на нескольких** серверах приложений. Если один сервер приложений переходит в режим «вне сети», приложение службы [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] будет по-прежнему доступно.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36102322"
  Дополнительные сведения о планировании сценария холодного резерва с [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]см. в разделе [Аварийное восстановление PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx).  
   
 ## <a name="verification"></a>Проверка  
- Руководство и скрипты для проверки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] развертывания до и после цикла аварийного восстановления, в разделе [контрольный список: использование PowerShell для проверки PowerPivot для SharePoint](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
+ Руководство и скрипты, которые помогут проверить [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] развертывания до и после цикла аварийного восстановления, см. в разделе [контрольный список: использование PowerShell для проверки PowerPivot для SharePoint](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_more_resources"></a> Ссылки на дополнительные сведения  
   

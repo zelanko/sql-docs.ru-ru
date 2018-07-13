@@ -1,5 +1,5 @@
 ---
-title: Свойства компонента | Документы Microsoft
+title: Свойства компонента | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQMSupportEnabled property
 - ComUdfEnabled property
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - UseCachedPageAllocators property
 ms.assetid: a34d046a-6562-4d98-b827-37cebc6d77b4
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c91c6d037bbb01c47f22159d846b40f8e1bbcca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ae26995283bcfa50a33f78ab55536f8aac75453
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188961"
 ---
 # <a name="feature-properties"></a>Свойства функций
   Свойства функций служат для настройки возможностей продуктов, большинство из них являются расширенными, включая свойства, которые управляют связями между экземплярами сервера.  
@@ -54,6 +54,6 @@ ms.locfileid: "36110030"
 ## <a name="see-also"></a>См. также  
  [Настройка свойств сервера в службах Analysis Services](server-properties-in-analysis-services.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Используйте динамические административные представления &#40;динамических административных представлений&#41; для наблюдения за Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Используйте динамические административные представления &#40;динамические административные представления&#41; мониторинг Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

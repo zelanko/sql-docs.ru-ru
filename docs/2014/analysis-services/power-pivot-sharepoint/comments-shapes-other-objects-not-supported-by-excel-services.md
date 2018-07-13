@@ -1,5 +1,5 @@
 ---
-title: 'Следующие функции не поддерживаются службами Excel и могут не отображаться или отображаться лишь частично: комментарии, фигуры или другие объекты | Документы Microsoft'
+title: 'Следующие функции не поддерживаются службами Excel и могут не отображаться или отображаться лишь частично: комментарии, фигуры или другие объекты | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ade92e15-dfbf-496b-9378-a00bd83ba750
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de9ce6b0d7123cf2156483e6357cef25609ba4fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1bee0273ba256ea6861b4259d48e377528c5e4eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192430"
 ---
 # <a name="the-following-features-are-not-supported-by-excel-services-and-may-not-display-or-may-display-only-partially-comments-shapes-or-other-objects"></a>Следующие объекты не поддерживаются службой Excel Services и могут не отображаться совсем или отображаться лишь частично: комментарии, фигуры или другие объекты.
   Эта ошибка возникает при добавлении в книгу PowerPivot срезов из списка полей PowerPivot.  
@@ -34,7 +34,7 @@ ms.locfileid: "36110053"
 |Текст сообщения|Следующие объекты не поддерживаются службой Excel Services и могут не отображаться совсем или отображаться лишь частично:<br /><br /> комментарии, фигуры или другие объекты.<br /><br /> Некоторые функции, например запросы внешних данных, отображают данные из кэша, которые можно обновить только в Microsoft Excel.|  
   
 ## <a name="explanation"></a>Объяснение  
- Веб-клиент Excel отображает эту ошибку при открытии книги PowerPivot в браузере и нажатии кнопки **сведения** кнопки в окне сообщения **неподдерживаемые компоненты: Эта книга может отображаться должным образом**.  
+ Excel Web Access отображает эту ошибку при открытии книги PowerPivot в браузере и нажатии кнопки **сведения** кнопки для сообщения, **неподдерживаемые компоненты: Эта книга может отображаться не полностью**.  
   
  Эта ошибка возникает потому, что книга PowerPivot содержит срезы, параметры которых управляются скрытым объектом «Фигура» в Excel. Объект «Фигура» отвечает за форматирование и расположение срезов по горизонтали и вертикали.  
   

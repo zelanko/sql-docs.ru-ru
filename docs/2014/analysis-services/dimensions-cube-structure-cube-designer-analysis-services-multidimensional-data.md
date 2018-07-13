@@ -1,5 +1,5 @@
 ---
-title: Измерения (вкладка «Структура куба», конструктор кубов) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Измерения (вкладка «Структура куба», конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.dimensionspane.f1
 ms.assetid: 37eb7525-b423-4df5-9e62-9f4680d47b9b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: baa3754ed3fe72c19324ae830edf5c2e46a218a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed541a6abd2a6a966df88440d280aa67a1688dca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109604"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149165"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Измерения (вкладка «Структура куба», конструктор кубов) (службы Analysis Services — многомерные данные)
   Панель **Измерения** используется для просмотра и правки измерений куба, включая иерархии и атрибуты, на вкладке **Структура куба** конструктора кубов.  
@@ -30,12 +30,12 @@ ms.locfileid: "36109604"
  **Иерархии**  
  Выберите этот пункт для отображения доступных измерений куба и связанных с ними иерархий куба.  
   
- Разверните измерение куба и выберите **изменить \<измерения >** чтобы отобразить конструктор измерений и отредактировать измерение базы данных, на котором основано измерение куба. Дополнительные сведения о конструкторе измерений см. в разделе [Конструктор измерений (службы Analysis Services — многомерные данные)](dimension-designer-analysis-services-multidimensional-data.md).  
+ Разверните измерение куба и выберите **изменить \<измерения >** отобразить конструктор измерений и отредактировать измерение базы данных, на котором основано измерение куба. Дополнительные сведения о конструкторе измерений см. в разделе [Конструктор измерений (службы Analysis Services — многомерные данные)](dimension-designer-analysis-services-multidimensional-data.md).  
   
  **Атрибуты**  
  Выберите этот пункт для отображения доступных измерений куба и связанных с ними атрибутов куба.  
   
- Разверните измерение куба и выберите **изменить \<измерения >** чтобы отобразить конструктор измерений и отредактировать измерение базы данных, на котором основано измерение куба. Дополнительные сведения о конструкторе измерений см. в разделе [Конструктор измерений (службы Analysis Services — многомерные данные)](dimension-designer-analysis-services-multidimensional-data.md).  
+ Разверните измерение куба и выберите **изменить \<измерения >** отобразить конструктор измерений и отредактировать измерение базы данных, на котором основано измерение куба. Дополнительные сведения о конструкторе измерений см. в разделе [Конструктор измерений (службы Analysis Services — многомерные данные)](dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="context-menu"></a>Контекстное меню  
  Следующие пункты доступны в контекстном меню, которое выводится при щелчке правой кнопкой на панели **Измерения** :  
@@ -89,9 +89,9 @@ ms.locfileid: "36109604"
  Выберите этот пункт для отображения окна **Свойства** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для выбранного измерения куба, иерархии куба или атрибута куба.  
   
 ## <a name="see-also"></a>См. также  
- [Панель инструментов &#40;вкладка «Структура куба», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Меры &#40;вкладка «Структура куба», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Представление источника данных &#40;вкладка «Структура куба», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)   
+ [Панель инструментов &#40;вкладка «Структура куба» конструктора кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Меры &#40;вкладка «Структура куба» конструктора кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Представление источника данных &#40;вкладка «Структура куба» конструктора кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)   
  [Структура куба &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
   
   

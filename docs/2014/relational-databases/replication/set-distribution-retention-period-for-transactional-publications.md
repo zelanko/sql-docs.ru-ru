@@ -1,5 +1,5 @@
 ---
-title: Настроить срок хранения на распространителе для публикаций транзакций (среда SQL Server Management Studio) | Документы Microsoft
+title: Настройка срока хранения распространения для публикаций транзакций (SQL Server Management Studio) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction retention periods [SQL Server replication]
 - retention periods [SQL Server replication]
 ms.assetid: 9a98c53a-fea5-4235-b23d-6c69587c5676
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ad1a697d6e139939723296fd481b2bbdb15cc39e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0c2997c2d3c07fad951bf750e852e9e4ab37e9da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225314"
 ---
 # <a name="set-the-distribution-retention-period-for-transactional-publications-sql-server-management-studio"></a>настроить срок хранения на распространителе для публикаций транзакций (среда SQL Server Management Studio)
   Укажите минимальный и максимальный срок хранения на распространителе в диалоговом окне **Свойства базы данных распространителя — \<база_данных_распространителя>**. Его можно открыть на странице **Общие** диалогового окна **Свойства распространителя — \<распространитель>**. Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств издателя и распространителя](view-and-modify-distributor-and-publisher-properties.md).  

@@ -1,5 +1,5 @@
 ---
-title: Редактор источника «Excel» (страница «Диспетчер соединений») | Документы Microsoft
+title: Редактор источника «Excel» (страница «Диспетчер соединений») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.connection.f1
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
 caps.latest.revision: 39
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eeb3af2f65be818c41dd88dc89028cb0f27cb36e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb74698304e70e1125003e5b15cef991f8511ed4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161035"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Редактор источника Excel (страница «Диспетчер соединений»)
   Используйте раздел **Диспетчер соединений** диалогового окна **Редактор источника «Excel»** , чтобы выбрать используемую рабочую книгу [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] . Источник Excel считывает данные из рабочего листа или из именованного диапазона в существующей рабочей книге.  
   
 > [!NOTE]  
->  `CommandTimeout` Свойство источника Excel недоступно в **Редактор источника Excel**, но может быть задано с помощью **расширенный редактор**. Дополнительные сведения о данном свойстве см. в подразделе «Источник Excel» раздела [Excel Custom Properties](data-flow/excel-custom-properties.md).  
+>  `CommandTimeout` Свойство источника Excel недоступно в **Редактор источника «Excel»**, однако его можно установить с помощью **расширенный редактор**. Дополнительные сведения о данном свойстве см. в подразделе «Источник Excel» раздела [Excel Custom Properties](data-flow/excel-custom-properties.md).  
   
  Дополнительные сведения об источнике Excel см. в разделе [Excel Source](data-flow/excel-source.md).  
   
@@ -84,9 +84,9 @@ ms.locfileid: "36101571"
  Выберите переменную, содержащую текст SQL-запроса.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор источника «Excel» &#40;страница «столбцы»&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
- [Редактор источника «Excel» &#40;страницы вывода ошибок&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор источника «Excel» &#40;страница "столбцы"&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Редактор источника «Excel» &#40;странице вывода ошибок&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Диспетчер подключений Excel](connection-manager/excel-connection-manager.md)   
  [Просмотр файлов и таблиц Excel с помощью контейнера «цикл по каждому элементу»](control-flow/foreach-loop-container.md)  
   

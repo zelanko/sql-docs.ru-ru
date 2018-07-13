@@ -1,5 +1,5 @@
 ---
-title: Ход выполнения помощника по обновлению | Документы Microsoft
+title: Ход выполнения помощника по обновлению | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], analysis progress status
 - analyzing system [Upgrade Advisor], progress information
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - status information [Upgrade Advisor]
 ms.assetid: a9e3d1c8-d492-4beb-93c7-f1bc40d4a910
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e1b867360b773253ae22d24a76ce00b35c589d96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 96ba7fd92927d5d18d7b1dc966829f3ff02911cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148605"
 ---
 # <a name="upgrade-advisor-progress"></a>Ход выполнения помощника по обновлению
-  Анализ помощника по обновлению начинается с запуска выделенного анализатора, производящего анализ каждого выбранного компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Как анализа компонентов отчет о состоянии формируется в **выполняется** диалоговое окно.  
+  Анализ помощника по обновлению начинается с запуска выделенного анализатора, производящего анализ каждого выбранного компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Как выполняется анализ компонентов, о состоянии сообщается в **ход выполнения** диалоговое окно.  
   
 ## <a name="options"></a>Параметры  
  **Действие**  
@@ -50,8 +50,8 @@ ms.locfileid: "36102568"
 >  Предыдущие отчеты сохраняются при каждом анализе сервера. При сохранении отчетов в качестве имени файла используется отметка времени. Средство просмотра отчетов отображает пять последних сохраненных отчетов.  
   
 ## <a name="see-also"></a>См. также  
- [Способ: запустите помощник по обновлению](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
- [Как: запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Практическое: запустить помощник по обновлению](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+ [Практическое: запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Компоненты SQL Server](../../../2014/sql-server/install/sql-server-components.md)   
  [Справочник по пользовательскому интерфейсу помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [Работа с помощником по обновлению](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

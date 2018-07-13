@@ -1,13 +1,11 @@
 ---
-title: Обработка инструкций, выдающих сообщения | Документы Microsoft
+title: Обработка инструкций, выдающих сообщения | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -26,15 +24,15 @@ helpviewer_keywords:
 - SQLExecDirect function
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1d81c4e8907ac944d62c09607adc460f0c83c80b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5548ff0d9ffdc958c0ce39c66e616d2d5ebf1037
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087349"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423073"
 ---
 # <a name="processing-statements-that-generate-messages"></a>Обработка инструкций, выдающих сообщения
   Параметры STATISTICS TIME и STATISTICS IO инструкции SET языка [!INCLUDE[tsql](../../includes/tsql-md.md)] используются для получения сведений, помогающих при диагностике долго выполняющихся запросов. Предыдущие версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также поддерживают параметр SHOWPLAN для анализа планов запросов. Приложение ODBC может установить эти параметры с помощью следующих инструкций:  
@@ -46,7 +44,7 @@ SQLExecDirect(hstmt, "SET STATISTICS TIME ON", SQL_NTS90
 SQLExecDirect(hstmt, "SET STATISTICS IO ON", SQL_NTS);  
 ```  
   
- При выполнении или SET SHOWPLAN SET STATISTICS TIME ON, **SQLExecute** и **SQLExecDirect** возвращено значение SQL_SUCCESS_WITH_INFO, и в этот момент приложение может получить выходные данные SHOWPLAN или STATISTICS времени путем вызова **SQLGetDiagRec** пока не будет возвращено значение SQL_NO_DATA. Каждая строка данных SHOWPLAN возвращается в следующем формате.  
+ При выполнении или SET SHOWPLAN инструкции SET STATISTICS TIME ON, **SQLExecute** и **SQLExecDirect** возвращают значение SQL_SUCCESS_WITH_INFO, и в этот момент приложение может получить выходные данные SHOWPLAN или STATISTICS времени путем вызова **SQLGetDiagRec** пока не будет возвращено значение SQL_NO_DATA. Каждая строка данных SHOWPLAN возвращается в следующем формате.  
   
 ```  
 szSqlState="01000", *pfNativeError=6223,  
@@ -74,7 +72,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-dbcc-statements"></a>Использование инструкций DBCC  
- Инструкции DBCC возвращают данные в виде сообщений, а не результирующих наборов. **SQLExecDirect** или **SQLExecute** возвращает SQL_SUCCESS_WITH_INFO, а приложение получает вывод вызывая **SQLGetDiagRec** пока не будет возвращено значение SQL_NO_DATA.  
+ Инструкции DBCC возвращают данные в виде сообщений, а не результирующих наборов. **SQLExecDirect** или **SQLExecute** возвращают значение SQL_SUCCESS_WITH_INFO, а приложение получает вывод путем вызова **SQLGetDiagRec** пока не будет возвращено значение SQL_NO_DATA.  
   
  Например, следующая инструкция возвращает значение SQL_SUCCESS_WITH_INFO.  
   
@@ -101,7 +99,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-print-and-raiserror-statements"></a>Использование инструкций PRINT и RAISERROR  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] Инструкций PRINT и RAISERROR также возвращают данные путем вызова **SQLGetDiagRec**. Инструкции PRINT вызывают выполнение инструкции SQL, возвращают значение SQL_SUCCESS_WITH_INFO, а в последующем вызове **SQLGetDiagRec** возвращает *SQLState* со значением 01000. Инструкция RAISERROR со степенью серьезности 10 или ниже работает так же, как PRINT. Инструкция RAISERROR с уровнем серьезности 11 и более, вызывает выполнение для возврата SQL_ERROR, а в последующем вызове **SQLGetDiagRec** возвращает *SQLState* 42000. Например, следующая инструкция возвращает значение SQL_SUCCESS_WITH_INFO.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] Инструкции PRINT и RAISERROR также возвращают данные путем вызова **SQLGetDiagRec**. Инструкции PRINT вызывают выполнение инструкции SQL для возврата значение SQL_SUCCESS_WITH_INFO, а последующий вызов **SQLGetDiagRec** возвращает *SQLState* со значением 01000. Инструкция RAISERROR со степенью серьезности 10 или ниже работает так же, как PRINT. Инструкция RAISERROR с уровнем серьезности 11 или более поздней версии, вызывает выполнение для возврата SQL_ERROR, а последующий вызов **SQLGetDiagRec** возвращает *SQLState* 42000. Например, следующая инструкция возвращает значение SQL_SUCCESS_WITH_INFO.  
   
 ```  
 SQLExecDirect (hstmt, "PRINT  'Some message' ", SQL_NTS);  
@@ -144,11 +142,11 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
    Sample error 2."  
 ```  
   
- Время вызова функции **SQLGetDiagRec** является критическим, если выходные данные инструкций PRINT или RAISERROR включены в результирующий набор. Вызов **SQLGetDiagRec** для получения инструкций PRINT или RAISERROR выходные данные должны выполняться сразу после инструкции, которая получает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO. Это просто в случае выполнения отдельной инструкции SQL, как показано в примере выше. В этих случаях вызов **SQLExecDirect** или **SQLExecute** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO и **SQLGetDiagRec** затем может быть вызван. При программировании циклов для обработки выходных данных пакета инструкций SQL или выполнении хранимых процедур [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возникают осложнения.  
+ Время вызова функции **SQLGetDiagRec** крайне важен, если выходные данные инструкций PRINT или RAISERROR включаются в результирующем наборе. Вызов **SQLGetDiagRec** извлекаемого PRINT или RAISERROR выходные данные должны выполняться сразу после инструкции, которая получает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO. Это просто в случае выполнения отдельной инструкции SQL, как показано в примере выше. В этом случае вызов **SQLExecDirect** или **SQLExecute** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO и **SQLGetDiagRec** затем может быть вызван. При программировании циклов для обработки выходных данных пакета инструкций SQL или выполнении хранимых процедур [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возникают осложнения.  
   
- В этом случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает результирующий набор для каждой инструкции SELECT, выполненной в пакете или хранимой процедуре. Если пакет или процедура содержит инструкции PRINT или RAISERROR, то их выходные данные чередуются с результирующими наборами инструкций. Если первой инструкцией в пакете или процедуре PRINT или RAISERROR, **SQLExecute** или **SQLExecDirect** возвращает SQL_SUCCESS_WITH_INFO или SQL_ERROR, а также приложения должен вызывать **SQLGetDiagRec** пока не будет возвращено SQL_NO_DATA для получения сведений о PRINT или RAISERROR.  
+ В этом случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает результирующий набор для каждой инструкции SELECT, выполненной в пакете или хранимой процедуре. Если пакет или процедура содержит инструкции PRINT или RAISERROR, то их выходные данные чередуются с результирующими наборами инструкций. Если первой инструкцией в пакете или процедуре является PRINT или RAISERROR, **SQLExecute** или **SQLExecDirect** возвращает SQL_SUCCESS_WITH_INFO или SQL_ERROR, а также приложения должен вызывать **SQLGetDiagRec** пока не будет возвращено SQL_NO_DATA для получения сведения PRINT или RAISERROR.  
   
- Если инструкции PRINT или RAISERROR следует после инструкции SQL (например, SELECT), то сведения PRINT или RAISERROR возвращается [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md)устанавливается на результирующем наборе, содержащем ошибку. **SQLMoreResults** возвращает SQL_SUCCESS_WITH_INFO или SQL_ERROR в зависимости от важности сообщения. Сообщения, полученного посредством обращения **SQLGetDiagRec** пока не будет возвращено значение SQL_NO_DATA.  
+ Если в инструкции PRINT или RAISERROR следует после инструкции SQL (например, SELECT), то сведения PRINT или RAISERROR возвращается, когда [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md)устанавливается на результирующем наборе, содержащем ошибку. **SQLMoreResults** возвращает SQL_SUCCESS_WITH_INFO или SQL_ERROR в зависимости от серьезности сообщения. Сообщения извлекаются путем вызова **SQLGetDiagRec** пока не будет возвращено значение SQL_NO_DATA.  
   
 ## <a name="see-also"></a>См. также  
  [Обработка ошибок и сообщений](handling-errors-and-messages.md)  

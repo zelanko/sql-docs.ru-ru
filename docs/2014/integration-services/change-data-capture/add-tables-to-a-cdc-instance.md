@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b8be72bc61a4da253b9296ac2cf5a80fd01082ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 967d8cc50e1784de0fa66a9a437d35774e6b52a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151075"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>Добавление таблиц в экземпляр CDC
   Диалоговое окно «Выбор таблицы» используется для добавления дополнительных таблиц из источника Oracle в экземпляр CDC. Выбранные таблицы добавляются в список на вкладке **Таблицы** редактора свойств.  
@@ -53,7 +53,7 @@ ms.locfileid: "36110222"
   
 ## <a name="see-also"></a>См. также  
  [Изменение свойств экземпляра CDC](how-to-edit-the-cdc-instance-properties.md)   
- [Управление экземпляром CDC](manage-a-cdc-instance.md)   
+ [Как управлять экземпляром CDC](manage-a-cdc-instance.md)   
  [Выбор таблиц Oracle для отслеживания изменений](select-oracle-tables-for-capturing-changes.md)  
   
   

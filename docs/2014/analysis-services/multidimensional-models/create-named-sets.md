@@ -1,5 +1,5 @@
 ---
-title: Для создания именованных наборов | Документы Microsoft
+title: Для создания именованных наборов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - calculations [Analysis Services], named sets
 - named sets [Analysis Services]
 - members [Analysis Services], named sets
 ms.assetid: 03cf97a4-1a18-45f3-acb0-35123bd619be
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf758860212adbd100a8385802d769f031b2bf64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7aaf4fa92bf471c06c606028431dae33c07b2c3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200324"
 ---
 # <a name="create-named-sets"></a>Создание именованных наборов
   Именованный набор — это набор элементов измерения или выражение набора, которые создаются для многократного использования, например в запросах на языке многомерных выражений. Для создания именованных наборов может использоваться сочетание данных куба, арифметических операторов, чисел и функций. Например, можно создать именованный набор с именем Top Ten Factories, содержащий десять элементов измерения Factories с наибольшими значениями показателя Production. Затем набор Top Ten Factories можно использовать в запросах конечных пользователей. Например, конечный пользователь помещает набор Top Ten Factories на одну ось, а измерение меры, включая Production, — на другую ось. Дополнительные сведения см. в разделах [Вычисления в многомерных моделях](calculations-in-multidimensional-models.md) и [Построение именованных наборов в многомерных выражениях](mdx/mdx-named-sets-building-named-sets.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "36101866"
  Можно скопировать или перетащить компоненты куба с вкладки **Метаданные** панели **Средства вычисления** в поле **Выражение** панели **Редактор форм именованных наборов** . Можно скопировать или перетащить функции с вкладки **Функции** панели **Средства вычисления** в поле **Выражение** панели **Редактор форм именованных наборов** .  
   
 > [!IMPORTANT]  
->  При создании выражения набора с явным указанием имен элементов в наборе заключить список элементов в фигурные скобки ({}).  
+>  При создании выражения набора с явным указанием имен элементов в наборе, заключить список элементов в фигурные скобки ({}).  
   
 ## <a name="see-also"></a>См. также  
  [Вычисления в многомерных моделях](calculations-in-multidimensional-models.md)  

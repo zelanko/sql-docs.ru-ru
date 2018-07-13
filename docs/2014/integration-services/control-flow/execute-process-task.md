@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3b67903b59934fb8d43d8dafe2bfc8392ab56462
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e46bd0278b782c85189416b8d452b5148a3ed63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187177"
 ---
 # <a name="execute-process-task"></a>Задача «Выполнение процесса»
   Задача «Выполнение процесса» запускает приложение или пакетный файл как часть рабочего процесса пакета служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Хотя задача «Выполнение процесса» может использоваться для выполнения любого стандартного приложения, такого как [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] или [!INCLUDE[ofprword](../../includes/ofprword-md.md)], обычно она применяется для запуска бизнес-приложений или командных файлов, работающих с источником данных. Например, задачу «Выполнение процесса» можно использовать для развертывания сжатого текстового файла. Потом пакет сможет использовать текстовый файл в качестве источника данных для потока данных в пакете. Или, например, задача «Выполнение процесса» может использоваться для запуска приложения [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , создающего ежедневный отчет о продажах. Затем можно присоединить отчет к задаче «Отправка почты» и разослать отчет по списку распространения.  
@@ -43,7 +43,7 @@ ms.locfileid: "36180099"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задач процесса выполнение &#40;страница «Общие»&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задач процесса выполнение &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Редактор задач процесса выполнение &#40;обработки страницы&#41;](../execute-process-task-editor-process-page.md)  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36180099"
   
  Можно использовать выражение, чтобы задать различные свойства задачи «Выполнение процесса».  
   
- При использовании **StandardInputVariable** свойства для настройки задачи «Выполнение процесса» на предоставление входных данных, вызовите `Console.ReadLine` метод из приложения, чтобы считать входные данные. Дополнительные сведения см. в разделе [Console.ReadLine Method](http://go.microsoft.com/fwlink/?LinkId=129201)в библиотеке классов платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ При использовании **StandardInputVariable** свойства для настройки задачи «Выполнение процесса» на предоставление входных данных, вызовите `Console.ReadLine` метода из приложения, чтобы считать входные данные. Дополнительные сведения см. в разделе [Console.ReadLine Method](http://go.microsoft.com/fwlink/?LinkId=129201)в библиотеке классов платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  При использовании свойства **Аргументы** для настройки задачи «Выполнение процесса» на предоставление входных данных выполните одно из следующих действий, чтобы получить аргументы.  
   
--   Если для написания приложения используется Microsoft Visual Basic, задайте `My.Application.CommandLineArgs` свойство. В следующем примере устанавливается свойство `My.Application.CommandLineArgs`, чтобы получить два аргумента.  
+-   Если вы используете Microsoft Visual Basic для написания приложения, задайте `My.Application.CommandLineArgs` свойство. В следующем примере устанавливается свойство `My.Application.CommandLineArgs`, чтобы получить два аргумента.  
   
     ```  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  

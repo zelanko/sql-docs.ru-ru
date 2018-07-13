@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - constraints [SQL Server], Visual Database Tools
 - Visual Database Tools [SQL Server], constraints
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f00d765861a86543109754ccd9500d17b2189bac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 980915c6b35295674e24fd603dca5f0a720a87a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179612"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Ограничения уникальности и проверочные ограничения
   Ограничения UNIQUE и CHECK — это два типа ограничений, которые могут использоваться для обеспечения целостности данных в таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это важные объекты базы данных.  
@@ -55,7 +55,7 @@ ms.locfileid: "36180014"
 >  Ограничения, которые включают явное или неявное преобразование данных, могут вызывать ошибки в операциях такого рода. Например, ограничения, заданные для таблиц, которые являются исходными при переключении секций, могут приводить к ошибкам при использовании оператора ALTER TABLE...SWITCH. Следует избегать преобразования типов данных в определениях ограничений.  
   
 ### <a name="limitations-of-check-constraints"></a>Ограничения проверочных ограничений  
- Проверочные ограничения отклоняют значения, вычисляемые в FALSE. Поскольку значения NULL вычисляются как UNKNOWN, то их наличие в выражениях может переопределить ограничение. Предположим, например, установить ограничение на `int` столбца **MyColumn** , указав **MyColumn** может содержать только значение 10 (**MyColumn = 10**). При вставке значения NULL в столбец **MyColumn**компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] вставит значение NULL и не возвратит ошибку.  
+ Проверочные ограничения отклоняют значения, вычисляемые в FALSE. Поскольку значения NULL вычисляются как UNKNOWN, то их наличие в выражениях может переопределить ограничение. Предположим, например, установить ограничение на `int` столбец **MyColumn** указав, что **MyColumn** может содержать только значение 10 (**MyColumn = 10**). При вставке значения NULL в столбец **MyColumn**компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] вставит значение NULL и не возвратит ошибку.  
   
  Проверочное ограничение возвращает TRUE, если для проверяемого условия в любой строке таблицы отсутствует значение FALSE. Проверочное ограничение работает на уровне строки. Если в только что созданной таблице отсутствуют строки, то любое проверочное ограничение на эту таблицу считается допустимым. В результате могут возвращаться неожиданные результаты, как в следующем примере.  
   

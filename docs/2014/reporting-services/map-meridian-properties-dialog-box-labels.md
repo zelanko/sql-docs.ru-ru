@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно Свойства меридиана, метки карты | Документы Microsoft
+title: Сопоставить меридиана диалоговом окне Свойства метки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: aba651eed623304f977a548a18537c6fdd5c14cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05fe2f7cecbcc2f43e5013d5785f76e09feecf8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163885"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Диалоговое окно «Свойства меридианов карты», вкладка «Метки»
-  Используйте **MapMeridian свойства** диалоговое окно «» позволяет изменить параметры меток вертикальной сетки в окне просмотра карты. Меридиан представляет одно из следующих значений в зависимости от выбранной системы координат области просмотра.  
+  Используйте **MapMeridian свойства** диалоговое окно, чтобы изменить параметры меток вертикальной сетки в окне просмотра карты. Меридиан представляет одно из следующих значений в зависимости от выбранной системы координат области просмотра.  
   
 -   **Планарные координаты**. Координата Y.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "36101953"
  **Интервал**  
  Введите целое значение в градусах, задающее интервал между меридианами. По умолчанию выбрано значение **Авто** . Значение**Авто** указывает, что значение автоматически определяется по пространственным данным.  
   
- **Показывать метки**  
+ **Показать метки**  
  Выберите этот параметр для отображения меток меридианов.  
   
  **Размещение**  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.externaltools
 helpviewer_keywords:
 - External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ecaf04f54600f26489aa1b34ee1cbf69645752d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 42e289a8ec12b64841f190297be60cfee31e007f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157495"
 ---
 # <a name="external-tools"></a>Внешние инструменты
   С помощью этого диалогового окна можно добавить в меню **Сервис** внешние инструменты, такие как диспетчер конфигурации SQL Server или "Блокнот". Добавление внешних средств позволяет легко запускать другие приложения во время работы в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. При запуске средств можно указать аргументы и рабочий каталог. Кроме того, выходные данные некоторых средств могут отображаться в окне «Вывод». Диалоговое окно **Внешние инструменты** доступно в меню **Сервис** .  
@@ -76,9 +76,9 @@ ms.locfileid: "36179981"
   
 2.  В поле **Заголовок** введите **Диспетчер конфигурации SQL Server**.  
   
-3.  В **команда** введите путь к [!INCLUDE[msCoName](../../includes/msconame-md.md)] исполняемые файлы, такие как консоль управления `C:\WINNT\system32\mmc.exe`  
+3.  В **команда** введите путь к [!INCLUDE[msCoName](../../includes/msconame-md.md)] исполняемого файла, такие как консоль управления `C:\WINNT\system32\mmc.exe`  
   
-4.  В **аргументы** введите путь к msc-файл, например `"C:\WINNT\system32\SQLServerManager.msc"`  
+4.  В **аргументы** введите путь к msc-файлу, такие как `"C:\WINNT\system32\SQLServerManager.msc"`  
   
 > [!NOTE]  
 >  Чтобы проверить расположение соответствующих файлов на компьютере, просмотрите свойства ярлыка среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в меню **Пуск** .  

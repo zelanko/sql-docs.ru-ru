@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.checkconstraintexpression
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f71477726c02f1fc37586242d969d7709bfb8e07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 843fe6a662c0d77962881683fb8d5842a4f44612
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278270"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>Диалоговое окно «Выражение проверочного ограничения» (визуальные инструменты для баз данных)
   При присоединении проверочных ограничений к таблице или столбцу нужно задать выражение SQL. Введите в предоставляемое окно выражение проверочного ограничения.  
@@ -71,7 +71,7 @@ NOT (payment_method = 'credit card') OR
 |NOT|Инвертирует любое логическое выражение (которое может содержать ключевые слова LIKE, NULL, BETWEEN, IN и EXISTS).<br /><br /> Если в инструкции используется несколько логических операторов, то первым обрабатывается оператор NOT. Можно изменить порядок выполнения, используя скобки.|  
   
 ## <a name="see-also"></a>См. также  
- [Ограничения UNIQUE и CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+ [Ограничения уникальности и проверочные ограничения](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [Создание ограничений уникальности](../../relational-databases/tables/create-unique-constraints.md)  
   
   

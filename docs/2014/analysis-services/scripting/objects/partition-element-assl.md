@@ -1,5 +1,5 @@
 ---
-title: Секции элемент (ASSL) | Документы Microsoft
+title: Секции элемент (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Partition element
 ms.assetid: 40020840-1bb7-478f-9017-1a30342ac4c6
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 371c6fbb2d77993a0d6113101c0f074b88009ede
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c298ec80f1bb1f17d97e36f2ce93b6efbf924508
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209974"
 ---
 # <a name="partition-element-assl"></a>Элемент Partition (ASSL)
-  Определяет секцию элемента [MeasureGroup](group-element-assl.md) элемента или привязку секции во вне строки [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md) элемента.  
+  Определяет секцию элемента [MeasureGroup](group-element-assl.md) элемента или привязку секции во вне строки [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36100291"
   
 |Предок или родитель|Дочерние элементы|  
 |------------------------|--------------------|  
-|[MeasureGroup](../properties/id-element-assl.md), [AggregationInstances](../collections/aggregationinstances-element-assl.md), [AggregationInstanceSource](../properties/aggregationinstancesource-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [CurrentStorageMode](../properties/storagemode-element-assl.md), [Description](../properties/description-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [EstimatedSize](../properties/estimatedsize-element-assl.md), [ID](../properties/id-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [Name](../properties/name-element-assl.md), [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md), [ProcessingPriority](../properties/processingpriority-element-assl.md), [RemoteDatasourceID](../properties/datasourceid-element-assl.md), [Slice](../properties/slice-element-assl.md), [Source](../properties/source-element-binding-assl.md), [State](../properties/state-element-assl.md), [StorageLocation](../properties/storagelocation-element-assl.md), [StorageMode](../properties/storagemode-element-assl.md), [Type](../properties/type-element-partition-assl.md)|  
+|[MeasureGroup](../properties/id-element-assl.md), [AggregationInstances](../collections/aggregationinstances-element-assl.md), [AggregationInstanceSource](../properties/aggregationinstancesource-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [заметки](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [CurrentStorageMode](../properties/storagemode-element-assl.md), [описание](../properties/description-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [EstimatedSize](../properties/estimatedsize-element-assl.md), [идентификатор](../properties/id-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [Имя](../properties/name-element-assl.md), [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md), [ProcessingPriority](../properties/processingpriority-element-assl.md), [ RemoteDatasourceID](../properties/datasourceid-element-assl.md), [срез](../properties/slice-element-assl.md), [источника](../properties/source-element-binding-assl.md), [состояние](../properties/state-element-assl.md), [StorageLocation](../properties/storagelocation-element-assl.md), [ StorageMode](../properties/storagemode-element-assl.md), [типа](../properties/type-element-partition-assl.md)|  
 |[MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)|None|  
   
 ## <a name="remarks"></a>Примечания  
@@ -131,9 +131,9 @@ ms.locfileid: "36100291"
   
      Использование любого из приведенных выше элементов может вызвать ошибку.  
   
--   [Источника](../properties/source-element-binding-assl.md) принимает только **запроса** привязки.  
+-   [Источника](../properties/source-element-binding-assl.md) элемент принимает только **запроса** привязки.  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.Partition>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## <a name="see-also"></a>См. также  
  [Объекты &#40;ASSL&#41;](objects-assl.md)  

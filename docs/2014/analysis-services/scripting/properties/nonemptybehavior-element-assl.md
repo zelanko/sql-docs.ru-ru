@@ -1,5 +1,5 @@
 ---
-title: Элемент NonEmptyBehavior (ASSL) | Документы Microsoft
+title: Элемент NonEmptyBehavior (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - NonEmptyBehavior element
 ms.assetid: b4c78af4-b049-4189-a35b-206e3938d1db
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d328b41ee8c40497019fe918d40925b3ce2a1436
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eda18e3ed67884e964439e80e0ae0103f522e116
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183301"
 ---
 # <a name="nonemptybehavior-element-assl"></a>Элемент NonEmptyBehavior (ASSL)
-  Определяет установленное поведение, связанное с родителем элемента [CalculationProperty](../objects/calculationproperty-element-assl.md) элемента.  
+  Определяет установленное поведение, связанное с родителем элемента [CalculationProperty](../objects/calculationproperty-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,14 +62,14 @@ ms.locfileid: "36180127"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- `NonEmptyBehavior` Свойство применяется к `CalculationProperty` элементы с [CalculationType](calculationtype-element-assl.md) значение *член*.  
+ `NonEmptyBehavior` Свойство применяется к `CalculationProperty` элементов при помощи [CalculationType](calculationtype-element-assl.md) присвоено *член*.  
   
- Элемент, соответствующий родителю параметра `NonEmptyBehavior` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ Элемент, соответствующий родителю параметра `NonEmptyBehavior` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент CalculationProperties &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   
  [Элемент MdxScript &#40;ASSL&#41;](../objects/mdxscript-element-assl.md)   
- [Элемент MdxScript &#40;ASSL&#41;](../collections/mdxscripts-element-assl.md)   
+ [Элемент MdxScripts &#40;ASSL&#41;](../collections/mdxscripts-element-assl.md)   
  [Свойства &#40;ASSL&#41;](properties-assl.md)  
   
   

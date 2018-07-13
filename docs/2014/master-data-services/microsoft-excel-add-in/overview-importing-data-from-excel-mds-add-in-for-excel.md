@@ -1,5 +1,5 @@
 ---
-title: Публикация данных (надстройка MDS для Excel) | Документы Microsoft
+title: Публикация данных (надстройка MDS для Excel) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 39acbad0925e8dfc250fcd4cc3913dbaf0ff0771
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f9fbee4ad70222c81f8f2fc40c460974f6f5ac05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155065"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>Публикация данных (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно опубликовать данные в репозитории MDS, если их необходимо передать другим пользователям. После публикации они станут доступными для загрузки другим пользователям надстройки.  
@@ -39,7 +39,7 @@ ms.locfileid: "36102229"
   
 -   Заметки к операциям удаления не добавляются, хотя они сохраняются в виде транзакций, которые могут использоваться для выполнения обратной операции администратором.  
   
--   При изменении **код** значение для члена, они не записаны как транзакцию, а все предыдущие транзакции для элемента будут недоступны.  
+-   При изменении **код** значение для элемента, он не регистрируется как транзакции, а все предыдущие транзакции для элемента будут недоступны.  
   
 -   Можно просмотреть транзакции для элемента, сделанные другими пользователями. Можно также просмотреть все свои транзакции для элемента, даже если вы больше не имеете разрешений на определенные атрибуты.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36102229"
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |Публикация данных из активного листа в репозитории MDS.|[Публикация данных из Excel в MDS &#40;надстройка MDS для Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|Одновременное удаление строки из репозитория MDS и с листа.|[Удаление строки &#40;надстройка MDS для Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
+|Одновременное удаление строки из репозитория MDS и с листа.|[Удалить строку &#40;надстройка MDS для Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>См. также  
   

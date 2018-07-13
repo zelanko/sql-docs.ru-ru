@@ -1,5 +1,5 @@
 ---
-title: Элемент AggregationDesignID (ASSL) | Документы Microsoft
+title: Элемент AggregationDesignID (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AggregationDesignID element
 ms.assetid: e7f1f7ae-3169-4c0c-aadb-f7465155d652
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0548685e81b7c98b80e49ea67bdb754cb0dfe887
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 373f77f8195f0e8d9c3000f9e55e0f1395c91b67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194284"
 ---
 # <a name="aggregationdesignid-element-assl"></a>Элемент AggregationDesignID (ASSL)
-  Идентифицирует [AggregationDesign](../objects/aggregationdesign-element-assl.md) элемента, связанного с [секции](../objects/partition-element-assl.md) элемента.  
+  Идентифицирует [AggregationDesign](../objects/aggregationdesign-element-assl.md) элемент, связанный с [секции](../objects/partition-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36102311"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `AggregationDesignID` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Partition>. См. также <xref:Microsoft.AnalysisServices.AggregationDesign>.  
+ Элемент, соответствующий родителю параметра `AggregationDesignID` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Partition>. См. также <xref:Microsoft.AnalysisServices.AggregationDesign>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент AggregationDesign &#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md)   

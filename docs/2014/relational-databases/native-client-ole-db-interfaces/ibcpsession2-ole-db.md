@@ -1,31 +1,29 @@
 ---
-title: IBCPSession2 (OLE DB) | Документы Microsoft
+title: IBCPSession2 (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IBCPSession2 interface
 ms.assetid: 12816656-940d-4724-acfb-e916eef2e644
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2123db9ced37b3a20b9617d11f7c40bb5a4330a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 7663e856b0381e3cd44cf11bad9b88365c115bfb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094534"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431603"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2 (OLE DB)
-  IBCPSession2, интерфейс является расширением IBCPSession, предоставляющий функцию-член является альтернативой вызывающий IBCPSession::BCPColFmt для каждого столбца.  IBCPSession2, наследующий от IBCPSession и добавлением одного нового метода: [метода IBCPSession2::BCPSetBulkMode](ibcpsession2-bcpsetbulkmode.md).  
+  IBCPSession2, интерфейс является расширением IBCPSession, предоставляющий функцию-член, является альтернативой для вызова IBCPSession::BCPColFmt для каждого столбца.  IBCPSession2 наследует от интерфейса IBCPSession и добавлением одного нового метода: [IBCPSession2::BCPSetBulkMode](ibcpsession2-bcpsetbulkmode.md).  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейсы &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  

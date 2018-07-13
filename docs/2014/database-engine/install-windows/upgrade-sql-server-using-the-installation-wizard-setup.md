@@ -1,5 +1,5 @@
 ---
-title: Обновление до SQL Server 2014 с помощью мастера установки (программа установки) | Документы Microsoft
+title: Обновление до SQL Server 2014 с помощью мастера установки (программа установки) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 caps.latest.revision: 62
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b56fc3323fcd29b19f43d63c054a9cd844944bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 71f2683e42e6a1af7c971b3e192ad534847896ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219794"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Обновление до версии SQL Server 2014 с помощью мастера установки (программа установки)
   Мастер установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает обновление всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через единое дерево компонентов. Можно также установить [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] параллельно с предыдущей версией или выполнить перенос существующих баз данных и параметров конфигурации из предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем применить их к экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "36102281"
 -   [Использование мастера копирования базы данных](../../relational-databases/databases/use-the-copy-database-wizard.md)  
   
 > [!NOTE]  
->  Обновление предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] не поддерживается на компьютере с [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core с пакетом обновления 1 (SP1). Дополнительные сведения об установках Server Core см. в разделе [Установка SQL Server 2014 на Server Core](install-sql-server-on-server-core.md).  
+>  Обновление предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] не поддерживается на компьютере с [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core с пакетом обновления 1 (SP1). Дополнительные сведения об установке основных серверных компонентов, см. в разделе [Установка SQL Server 2014 на Server Core](install-sql-server-on-server-core.md).  
   
 ## <a name="prerequisites"></a>предварительные требования  
  Необходимо запустить программу установки с правами администратора. При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из удаленной общей папки необходимо пользоваться учетной записью домена, имеющей разрешения на чтение и выполнение в удаленной общей папке и являющейся локальным администратором.  
@@ -58,7 +58,7 @@ ms.locfileid: "36102281"
 -   [Обратная совместимость компонента ядра СУБД SQL Server](../sql-server-database-engine-backward-compatibility.md)  
   
 > [!WARNING]  
->  Не забудьте, что во время обновления невозможно ни изменять обновляемые компоненты, ни добавлять их. Дополнительные сведения о добавлении компонентов к обновляемому экземпляру объекта [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] после завершения операции обновления см. в разделе [Добавление компонентов к экземпляру SQL Server 2014 &#40;установки&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
+>  Не забудьте, что во время обновления невозможно ни изменять обновляемые компоненты, ни добавлять их. Дополнительные сведения о том, как добавление компонентов к обновляемому экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] после завершения операции обновления, см. в разделе [Добавление компонентов в экземпляр SQL Server 2014 &#40;установки&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
   
 ## <a name="procedure"></a>Процедура  
   

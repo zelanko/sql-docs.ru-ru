@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Object:Deleted event class
 ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3878a6432a35e0749b37da1e7a6e4b330f12eea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bc5d8458889b809f583457514c37d1d65ce4860b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182291"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted, класс событий
   Класс событий Object:Deleted указывает на удаление объекта (например, инструкцией DROP INDEX или DROP TABLE). Он предназначен для отслеживания факта удаления объекта, например приложениями ODBC, которые часто создают временные хранимые процедуры.  

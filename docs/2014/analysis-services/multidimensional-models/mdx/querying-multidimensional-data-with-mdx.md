@@ -1,5 +1,5 @@
 ---
-title: Запрос многомерных данных с помощью многомерных Выражений | Документы Microsoft
+title: Запрос многомерных данных с помощью многомерных Выражений | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [Analysis Services], querying
 ms.assetid: e0a5dd60-35a3-4a4f-b36f-52ecea814886
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7519860407e5ae929a0e899ced0eea663a453f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4227c7a2483035c7fdf5ae472711ad0ea96c73bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212304"
 ---
 # <a name="querying-multidimensional-data-with-mdx"></a>Запрос многомерных данных с помощью многомерных выражений
   Многомерные выражения — это язык запросов, предназначенный для работы с многомерными данными и их получения в службах [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Многомерные выражения основаны на спецификации XML для аналитики (XMLA) с некоторыми расширениями для служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Многомерные выражения состоят из идентификаторов, значений, инструкций, функций и операторов, которые службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] могут вычислять для получения объекта (например, набора или элемента) или скалярного значения (например, строки или числа).  
@@ -39,7 +39,7 @@ ms.locfileid: "36101403"
  Синтаксис многомерных выражений внешне похож на синтаксис языка SQL, который обычно используется в реляционных базах данных. Тем не менее, многомерные выражения не являются расширением языка SQL и во многом от него отличаются. Для создания многомерных выражений, предназначенных для конструирования или защиты кубов, или для создания запросов многомерных выражений, возвращающих или форматирующих многомерные данные, необходимо изучить основные понятия многомерных выражений и многомерного моделирования, а также синтаксис элементов, операторов, инструкций и функций многомерных выражений.  
   
 > [!NOTE]  
->  Дополнительные сведения см. в разделе «Дополнительные ресурсы» на [SQL Server 2005 — службы Analysis Services](http://go.microsoft.com/fwlink/?LinkId=80853) страницы на сайте Microsoft TechNet. Дополнительные сведения о производительности запросов многомерных выражений и вычислений см. в разделе «Написание эффективных многомерных выражений» [Руководства по производительности служб SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
+>  Дополнительные сведения см. в разделе «Дополнительные ресурсы» на [SQL Server 2005 — службы Analysis Services](http://go.microsoft.com/fwlink/?LinkId=80853) страницу на сайте Microsoft TechNet Web. Дополнительные сведения о производительности запросов многомерных выражений и вычислений см. в разделе «Написание эффективных многомерных выражений» [Руководства по производительности служб SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
@@ -47,10 +47,10 @@ ms.locfileid: "36101403"
 |-----------|-----------------|  
 |[Основные понятия многомерных выражений &#40;служб Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)|Многомерные выражения применяются для запросов многомерных данных или для работы с кубами. Сначала необходимо ознакомиться с основными понятиями и терминами, связанными с измерениями служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
 |[Основные принципы запросов многомерных Выражений &#40;служб Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)|Язык многомерных выражений позволяет обращаться с запросами к многомерным объектам (например, кубам) и возвращать многомерные наборы ячеек, содержащие данные куба. Этот раздел и его подразделы содержат общие сведения о многомерных запросах.|  
-|[Основные понятия о сценариях многомерных Выражений &#40;служб Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)|В службах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]скрипты многомерных выражений состоят из одного или нескольких многомерных выражений или инструкций, заполняющих куб вычислениями.<br /><br /> Скрипт многомерных выражений определяет процесс вычислений для куба. Скрипт многомерных выражений также считается частью самого куба. Поэтому изменение скрипта многомерных выражений, связанного с кубом, сразу изменяет процесс вычислений для куба.<br /><br /> Для создания скриптов многомерных выражений можно воспользоваться конструктором кубов в [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].|  
+|[Основные принципы создания скриптов многомерных Выражений &#40;служб Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)|В службах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]скрипты многомерных выражений состоят из одного или нескольких многомерных выражений или инструкций, заполняющих куб вычислениями.<br /><br /> Скрипт многомерных выражений определяет процесс вычислений для куба. Скрипт многомерных выражений также считается частью самого куба. Поэтому изменение скрипта многомерных выражений, связанного с кубом, сразу изменяет процесс вычислений для куба.<br /><br /> Для создания скриптов многомерных выражений можно воспользоваться конструктором кубов в [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].|  
   
 ## <a name="see-also"></a>См. также  
- [Синтаксис элементов &#40;многомерных Выражений&#41;](/sql/mdx/mdx-syntax-elements-mdx)   
+ [Элементы синтаксиса многомерных Выражений &#40;многомерных Выражений&#41;](/sql/mdx/mdx-syntax-elements-mdx)   
  [Справочник по языку многомерных Выражений &#40;многомерных Выражений&#41;](/sql/mdx/mdx-language-reference-mdx)  
   
   

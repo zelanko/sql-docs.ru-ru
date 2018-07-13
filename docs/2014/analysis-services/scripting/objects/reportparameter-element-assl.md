@@ -1,5 +1,5 @@
 ---
-title: Элемент ReportParameter (ASSL) | Документы Microsoft
+title: Элемент ReportParameter (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReportParameter element
 ms.assetid: 653a5c64-f1af-4796-bb7b-b44a40e52901
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58aeafeaee114c1d08d0ad8b0119bee2dc5d5dea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e1ceef5a3794aaaaec6ac24d9aca6e66384267ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101833"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197830"
 ---
 # <a name="reportparameter-element-assl"></a>Элемент ReportParameter (ASSL)
   Содержит имя и значение параметра, передаваемое [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] отчета во время выполнения.  
@@ -65,7 +65,7 @@ ms.locfileid: "36101833"
 ## <a name="remarks"></a>Примечания  
  Элемент `Value` должен содержать многомерное выражение.  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.ReportParameter>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.ReportParameter>.  
   
 ## <a name="see-also"></a>См. также  
  [Тип данных ReportAction &#40;ASSL&#41;](../data-type/action-data-type-assl.md)   

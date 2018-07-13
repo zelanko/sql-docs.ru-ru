@@ -1,5 +1,5 @@
 ---
-title: Интерфейс IMDEmbedded | Документы Microsoft
+title: Интерфейс IMDEmbedded | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3973640b4a4efca789ec107c1c1f086801cac234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc1f1032a644277cab9645a11f8b3bedbb65c13d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157145"
 ---
 # <a name="imdembedded-interface"></a>Интерфейс IMDEmbedded
   Интерфейс IMDEmbedded является открытым и служит для управления внедренной базой данных PowerPivot или шаблоном базы данных. Этот интерфейс наследует интерфейс `IPersistStream`. Этот интерфейс позволяет выполнить следующие операции:  
@@ -44,7 +44,7 @@ ms.locfileid: "36180352"
 -   Сохранить локальную или внутрипроцессную базу данных во внедренном потоке в документе-контейнере. Наследуется от `IPersistStream`.  
   
 ## <a name="reference"></a>Справочник  
- Далее приводится `IMDEmbedded` интерфейс, представленный в **msmd.h** файл заголовка.  
+ Следующие ссылки на документы `IMDEmbedded` интерфейс, представленный в **msmd.h** файл заголовка.  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Исходный файл: PXOEmbeddedData.idl  
   

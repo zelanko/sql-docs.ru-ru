@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно «Свойства сборки» (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Диалоговое окно «Свойства сборки» (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.assemblyproperties.f1
 ms.assetid: da1174d6-d82b-4337-ac19-7368dbd95a84
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa00c8753e30926113d90881401a8b38e573e6b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20a5837b112106952e649bc25fcda5a3d93ab3fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192584"
 ---
 # <a name="assembly-properties-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Свойства сборки» (службы Analysis Services — многомерные данные)
   Диалоговое окно **Свойства сборки** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] используется для задания свойств ссылки на сборку в базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Чтобы отобразить диалоговое окно **Свойства сборки** , можно щелкнуть правой кнопкой мыши сборку в **обозревателе объектов** и выбрать пункт **Свойства**.  
@@ -35,7 +35,7 @@ ms.locfileid: "36109613"
 |**Описание**|Введите новое описание ссылки на сборку.|  
 |**Отметка времени создания**|Отображает дату и время создания ссылки на сборку.|  
 |**Последнее обновление схемы**|Отображается дата и время последнего обновления метаданных для ссылки на сборку.|  
-|**Тип**|Отображается тип ссылки на сборку. Могут отображаться следующие значения:<br /><br /> **Сборка .NET**: ссылка на сборку указывает на [!INCLUDE[msCoName](../includes/msconame-md.md)] сборки .NET Framework.<br /><br /> **COM DLL**: ссылка на сборку указывает на библиотеку COM.|  
+|**Тип**|Отображается тип ссылки на сборку. Могут отображаться следующие значения:<br /><br /> **Сборка .NET**: ссылка на сборку ссылается на [!INCLUDE[msCoName](../includes/msconame-md.md)] сборки .NET Framework.<br /><br /> **Библиотека DLL COM**: ссылка на сборку указывает на библиотеку COM.|  
 |**Source**|Отображается источник ссылки на сборку. Обычно это свойство содержит полный путь и имя файла сборки, на которую указывает ссылка.|  
 |**Набор разрешений**|Выберите набор разрешений, используемый для определения доступа к ссылке на сборку. Дополнительные сведения о возможных значениях этого свойства см. в разделе <xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A>.|  
 |**Сведения об олицетворении**|Выберите сведения об олицетворении, используемые при обращении к ссылке на сборку. Дополнительные сведения о возможных значениях этого свойства см. в разделе [Элемент ImpersonationInfo (ASSL)](scripting/properties/impersonationinfo-element-assl.md).|  

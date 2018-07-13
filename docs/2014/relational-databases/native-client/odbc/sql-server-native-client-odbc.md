@@ -1,13 +1,11 @@
 ---
-title: Собственный клиент SQL Server (ODBC) | Документы Microsoft
+title: Собственный клиент SQL Server (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - ODBC, about SQL Server Native Client ODBC driver
 ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4a70dbbdb338673288ee6f3cb51c9df02e01a0f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: da24388b12c83931ea2a4af9b525e5e2030f6940
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094533"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426303"
 ---
 # <a name="sql-server-native-client-odbc"></a>Собственный клиент SQL Server (ODBC)
   ODBC — это стандартное определение прикладного программного интерфейса (API), который используется для доступа к данным в реляционных базах данных и базах данных с индексно-последовательным методом доступа (ISAM). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает ODBC через драйвер ODBC клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client как один из собственных API для написания приложений на языках C и C++, взаимодействующих с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -67,13 +65,13 @@ ms.locfileid: "36094533"
   
 -   [Возвращающие табличные значения параметров &#40;ODBC&#41;](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
--   [Дата и время улучшениях &#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [Дата и время улучшения &#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
 -   [Определяемые пользователем типы больших значений CLR &#40;ODBC&#41;](large-clr-user-defined-types-odbc.md)  
   
 -   [Поддержка FILESTREAM &#40;ODBC&#41;](filestream-support-odbc.md)  
   
--   [Имена участника-службы &#40;имена участников-служб&#41; в клиентских соединениях &#40;ODBC&#41;](service-principal-names-spns-in-client-connections-odbc.md)  
+-   [Имена участников-служб &#40;имена участников-служб&#41; в клиентских соединениях &#40;ODBC&#41;](service-principal-names-spns-in-client-connections-odbc.md)  
   
 -   [Поддержка разреженных столбцов &#40;ODBC&#41;](sparse-columns-support-odbc.md)  
   

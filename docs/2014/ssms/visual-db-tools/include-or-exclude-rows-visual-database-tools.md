@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
 - search criteria [SQL Server], WHERE clause
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - excluding rows
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa82306f17c84c9751169339c8500272e2789997
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e58848432a2bd1973eee5f2a941a3fbe3ec9980f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278317"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>Включение или исключение строк (визуальные инструменты для баз данных)
   Чтобы ограничить число строк, возвращаемых запросом SELECT, создают условия поиска или критерии фильтрации. В языке SQL условия поиска появляются в предложении инструкций WHERE или, если запрос статистический, в предложении HAVING.  
@@ -108,8 +108,8 @@ region = 'UK' OR region = 'US'
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Проектировать запросы и представления инструкции &#40;визуальные средства базы данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [Укажите условия поиска &#40;визуальные средства базы данных&#41;](specify-search-criteria-visual-database-tools.md)   
+ [Проектирование запросов и представлений инструкции &#40;визуальных инструментах баз данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Определение критериев поиска &#40;визуальных инструментах баз данных&#41;](specify-search-criteria-visual-database-tools.md)   
  [Запрос с параметрами (визуальные инструменты для баз данных)](query-with-parameters-visual-database-tools.md)  
   
   

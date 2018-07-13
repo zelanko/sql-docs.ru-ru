@@ -1,37 +1,36 @@
 ---
-title: Новый полнотекстовый список стоп-слов (страница «Общие») | Документы Microsoft
+title: Новый полнотекстовый список стоп-слов (страница "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplist.general.f1
 ms.assetid: 97f8e82d-82ab-4525-91c9-1ee3ae217309
 caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5217bd995855ff33e6b21b883c854cb3db474e03
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2304b2b9a8711210117ffbb2a84abbf167694e71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221974"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>Создание списка полнотекстовых стоп-слов (страница «Общие»)
   Используется для создания полнотекстового списка стоп-слов. *Список стоп-слов* — это набор часто употребляемых слов, называемых *стоп-словами*, которые не включаются в полнотекстовый индекс для таблиц, использующих такой список. Дополнительные сведения см. в разделе [Настройка стоп-слов и списков стоп-слов для полнотекстового поиска и управление ими](../relational-databases/search/full-text-search.md).  
   
- **Использование среды SQL Server Management Studio для создания списка стоп-слов**  
+ **Использование SQL Server Management Studio для создания списка стоп-слов**  
   
 -   [Настройка стоп-слов, списков стоп-слов и управление ими для полнотекстового поиска](../relational-databases/search/full-text-search.md)  
   
 ## <a name="options"></a>Параметры  
- **Имя полнотекстового списка стоп-слов**  
+ **Имя списка стоп-слов полнотекстового поиска**  
  Введите имя полнотекстового списка стоп-слов.  
   
  **Владелец**  
@@ -51,7 +50,7 @@ ms.locfileid: "36109558"
  **Создать из существующего полнотекстового списка стоп-слов**  
  Новый список стоп-слов создается путем копирования существующего.  
   
- **База данных-источник**  
+ **Базы данных-источника**  
  Указывает имя базы данных, которой принадлежит существующий список стоп-слов. По умолчанию выбрана текущая база данных. При необходимости можно выбрать из списка другую базу данных.  
   
  **Источник списка стоп-слов**  

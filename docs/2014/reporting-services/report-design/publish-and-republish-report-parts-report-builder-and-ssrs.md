@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 28c5f5063aa7e1c6e6fabe68405eb08a31feaad4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c9bf84f3d8cd8e0c1b00c4a2e891d6a727b9b91a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220804"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Публикация и повторная публикация элементов отчетов (построитель отчетов и службы SSRS)
   Предусмотрена возможность публикации элемента отчета с настройками по умолчанию в заданном по умолчанию местоположении или изменения таких метаданных элемента отчета, как заголовок и описание, с последующим сохранением где-то в другом месте на сервере отчетов. Можно также сохранить ее на сайте SharePoint, который объединен с сервером отчетов (при наличии соответствующих разрешений).  
@@ -61,10 +61,10 @@ ms.locfileid: "36101223"
 >  Если элемент отчета будет опубликован как новый, то получит новый уникальный идентификатор. Она больше не будет получать обновления при изменении исходного элемента отчета.  
   
 ## <a name="see-also"></a>См. также  
- [Элементы отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Элементы отчета &#40;построитель отчетов и службы SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Элементы отчета и наборы данных в построителе отчетов](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [Устранение неполадок в элементах отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [Проверка наличия обновлений или отключение обновлений, &#40;отчетов построителя отчетов и службы SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [Просмотр элементов отчета и назначение папки по умолчанию &#40;отчетов построителя отчетов и службы SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [Устранение неполадок в элементах отчета &#40;построитель отчетов и службы SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Снимите флажок для обновлений или отключение обновлений &#40;построитель отчетов и службы SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+ [Просмотр элементов отчета и назначение папки по умолчанию &#40;построитель отчетов и службы SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

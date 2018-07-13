@@ -1,5 +1,5 @@
 ---
-title: Выборка данных BLOB при помощи интерфейса IRow | Документы Microsoft
+title: Выборка данных BLOB при помощи интерфейса IRow | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - BLOBs, fetching
 ms.assetid: badbd6ac-20aa-4891-a14f-48d38e7f30de
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 91cbe5e0611bd0d8fab1237b7e7dcd968d2876b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a2716ae0fdde3cf94a43f0b73f1a381a173ec466
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190884"
 ---
 # <a name="fetching-blob-data-using-irow"></a>Выборка данных большого двоичного объекта при помощи интерфейса IRow
-  Столбец большого двоичного ОБЪЕКТА в объекте строки можно получить с помощью **IRow::GetColumns**, или **IRow::Open** и **ISequentialStream**.  
+  Столбец BLOB-ОБЪЕКТОВ в объекте строки можно получить с помощью **IRow::GetColumns**, или **IRow::Open** и **ISequentialStream**.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   

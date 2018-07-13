@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 основные понятия о программировании | Документы Microsoft
+title: SQLXML 4.0 основные понятия программирования | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQLXML
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2ab9bd2ff6cfddcf96e4844eb9ea14eea414b650
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5d745284f575feb39f488f0667f5ab976144392e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227077"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Основные понятия о программировании для SQLXML 4.0
   Компонент SQLXML 3.0 стал доступен в виде веб-версии. Он обеспечивает дополнительную XML-функциональность на стороне клиента и расширение существующих функций: схемы XSD, пакетную загрузку XML, поддержку веб-служб (SOAP), диаграммы обновления и т. д.  

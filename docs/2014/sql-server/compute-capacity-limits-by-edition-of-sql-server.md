@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - processors [SQL Server], supported
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a0d9d1e3076c19df548eb2a1714a2093046fd352
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 2893a0fdb04e834e2eeab0343b23888c244fd036
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157545"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Compute Capacity Limits by Edition of SQL Server
   В этом разделе описываются ограничения вычислительной мощности в разных выпусках [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] и различия в их работе в физических и виртуальных средах с процессорами Hyper-Threading.  
@@ -86,7 +86,7 @@ ms.locfileid: "36180421"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Выпуск|Максимальная вычислительная мощность, используемая одним экземпляром ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Максимальная вычислительная мощность, используемая одним экземпляром (службы Analysis Services, службы Reporting Services)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|Enterprise Edition: Лицензирование по числу ядер<sup>1</sup>|Максимальное значение, поддерживаемое операционной системой|Максимальное значение, поддерживаемое операционной системой|  
+|Enterprise Edition: Лицензирование<sup>1</sup>|Максимальное значение, поддерживаемое операционной системой|Максимальное значение, поддерживаемое операционной системой|  
 |Разработчик|Максимальное значение, поддерживаемое операционной системой|Максимальное значение, поддерживаемое операционной системой|  
 |Ознакомительная версия|Максимальное значение, поддерживаемое операционной системой|Максимальное значение, поддерживаемое операционной системой|  
 |Business Intelligence|Ограничение: меньшее из 4 процессоров и 16 ядер|Максимальное значение, поддерживаемое операционной системой|  
@@ -96,7 +96,7 @@ ms.locfileid: "36180421"
 |Express с инструментами|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|  
 |Express с дополнительными службами|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|  
   
- <sup>1</sup> Enterprise Edition с сервера и клиентских лицензий (CAL) на основе лицензирования (недоступно для новых соглашений) ограничено максимум 20 ядрами в расчете на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] экземпляра. В модели лицензирования по числу ядер никаких ограничений нет.  
+ <sup>1</sup> Enterprise Edition с сервера и клиентскую лицензию (CAL) на основе лицензирования (недоступно для новых соглашений) ограничено максимум 20 ядрами в расчете на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] экземпляра. В модели лицензирования по числу ядер никаких ограничений нет.  
   
  В виртуальной среде ограничение вычислительной мощности зависит от числа логических процессоров, а не ядер, поскольку архитектура процессора скрыта от гостевых приложений.  Например, сервер с четырьмя четырехъядерными процессорами и технологией Hyper-Threading, поддерживающей два потока на ядро, содержит 32 логических процессора, если технология Hyper-Threading включена, и 16, если она отключена. Такие логические процессоры могут сопоставляться с виртуальными машинами на сервере, а вычислительная нагрузка виртуальных машин на данный логический процессор сопоставляется с потоком выполнения в физическом процессоре на сервере.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36180421"
   
 ## <a name="see-also"></a>См. также  
  [Выпуски и компоненты SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md)   
- [Возможности, поддерживаемые различными выпусками SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+ [Функции, поддерживаемые различными выпусками SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Задание максимальной вместимости SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
  [Быстрая установка SQL Server 2014](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   

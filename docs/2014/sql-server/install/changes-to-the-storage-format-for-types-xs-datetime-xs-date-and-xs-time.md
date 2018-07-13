@@ -1,5 +1,5 @@
 ---
-title: 'Изменяет формат хранения для типов xs: DateTime, xs: Date и xs: Time | Документы Microsoft'
+title: 'Изменения в формат хранения для типов xs: DateTime, xs: Date и xs: Time | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xs:date
 - xs:time
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - DateTime
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56342ff7c7754fb8ef1619fdb1b71e37600192b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1acc25889e693a69e55adc4f5da5ece616bc41a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102143"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222524"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Изменение формата хранения для типов xs:dateTime, xs:date и xs:time
   Правило XMLDATETIME определяет, содержат ли базы данных типизированные XML-данные, которые станут недопустимыми после обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "36102143"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Описание  
- Формат хранения в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для типов xs: DateTime, xs: Date и xs: Time был изменен для поддержки значений с или без сведений о часовом поясе и сохранения часового пояса.  
+ Формат хранения в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для типов xs: DateTime, xs: Date и xs: Time был изменен для поддержки значения с или без сведений о часовом поясе и разрешить сохранение часового пояса.  
   
  Если коллекция XML-схем ссылается на один из таких типов, XML-индексы на всех столбцах, связанных с коллекцией, будут выключены до обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Запросы к ним с помощью инструкций SELECT и запросов XQUERIES будут возможны, но XML-индекс при этом использоваться не будет. Отрицательное значение года вызовет ошибку времени выполнения.  
   
@@ -190,6 +190,6 @@ EXECUTE DateTimeInvestigation 1;
  Для использования XML-индексов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] необходимо после обновления перестроить XML-индексы или заново ввести все XML-столбцы, использующие типы xs:date, xs:time или xs:dateTime.  
   
 ## <a name="see-also"></a>См. также  
- [Проблемы обновления компонента Database Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
+ [Проблемы обновления ядра СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

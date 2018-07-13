@@ -1,5 +1,5 @@
 ---
-title: Параметры сетки переменных | Документы Microsoft
+title: Параметры сетки переменных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variableoptionswindow.f1
 helpviewer_keywords:
 - Choose Variable Columns dialog box
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3ef640f5aadc018702c9141de97e18e1920edb8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec0b57e2c65080a00ecef30be21a6151d544a9e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102449"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172985"
 ---
 # <a name="variable-grid-options"></a>Параметры сетки переменных
   Используйте диалоговое окно **Параметры сетки переменных** для выбора столбцов, которые появятся в окне **Переменные** , и для выбора фильтров, применяемых к списку переменных. Дополнительные сведения о свойствах соответствующей переменной см. в разделе [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  

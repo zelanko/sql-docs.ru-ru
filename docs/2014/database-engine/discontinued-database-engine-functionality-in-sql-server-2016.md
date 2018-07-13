@@ -1,5 +1,5 @@
 ---
-title: Неподдерживаемые функции ядра СУБД в SQL Server 2014 | Документы Microsoft
+title: Неподдерживаемые функции ядра СУБД в SQL Server 2014 | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VIA protocol
 - unsupported features [SQL Server]
@@ -34,15 +34,15 @@ helpviewer_keywords:
 - SET DISABLE_DEF_CNST_CHK
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 caps.latest.revision: 93
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 81ceffcd3009906b41316a7a9778a0b38ded7b29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 648ff85c3061bc7d20408eaae7a14748650e5886
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218044"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Неподдерживаемые функции ядра СУБД в SQL Server 2014
   В этом разделе описаны функции компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , которые больше не доступны в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -59,10 +59,10 @@ ms.locfileid: "36102270"
   
 |Категория|Неподдерживаемая функция|Замена|  
 |--------------|--------------------------|-----------------|  
-|Резервное копирование и восстановление|**Резервное копирование {базы данных &#124; ЖУРНАЛА} WITH PASSWORD** и **BACKUP {базы данных &#124; ЖУРНАЛА} WITH MEDIAPASSWORD** не поддерживаются. **RESTORE {базы данных &#124; ЖУРНАЛА} с [MEDIA] PASSWORD**остается устаревшей.|None|  
-|Резервное копирование и восстановление|**RESTORE {БАЗЫ ДАННЫХ &AMP;#124; ЖУРНАЛА}... WITH DBO_ONLY**|**RESTORE {БАЗЫ ДАННЫХ &AMP;#124; ЖУРНАЛА}...... С RESTRICTED_USER**|  
+|Резервное копирование и восстановление|**Резервное копирование {базы данных &#124; LOG} WITH PASSWORD** и **резервной копии {базы данных &#124; LOG} WITH MEDIAPASSWORD** не поддерживаются. **ВОССТАНОВИТЬ {базы данных &#124; ЖУРНАЛА} с [MEDIA] PASSWORD**остается устаревшей.|None|  
+|Резервное копирование и восстановление|**RESTORE {DATABASE &AMP;#124; ЖУРНАЛА}... WITH DBO_ONLY**|**RESTORE {DATABASE &AMP;#124; ЖУРНАЛА}...... С ПОМОЩЬЮ RESTRICTED_USER**|  
 |Уровень совместимости|уровень совместимости 80|Уровень совместимости базы данных должен быть не менее 90.|  
-|Параметры конфигурации|`sp_configure 'user instance timeout'` и `'user instances enabled'`|Использование функции локальной базы данных. Дополнительные сведения см. в разделе [служебной программы SqlLocalDB](../tools/sqllocaldb-utility.md)|  
+|Параметры конфигурации|`sp_configure 'user instance timeout'` и `'user instances enabled'`|Использование функции локальной базы данных. Дополнительные сведения см. в разделе [программа SqlLocalDB](../tools/sqllocaldb-utility.md)|  
 |Протоколы соединений|Прекращена поддержка протокола VIA.|Используйте вместо него протокол TCP.|  
 |Объекты базы данных|Предложение `WITH APPEND` в триггерах|Создайте заново весь триггер.|  
 |Параметры базы данных|`sp_dboption`|`ALTER DATABASE`|  
@@ -73,7 +73,7 @@ ms.locfileid: "36102270"
 |Указания запросов|Подсказка `FASTFIRSTROW`|`OPTION (FAST` *n* `)`.|  
 |Удаленные серверы|Пользователям больше не предоставляется возможность создавать новые удаленные серверы с помощью хранимой процедуры `sp_addserver`. Хранимая процедура `sp_addserver` с параметром local остается доступной. Можно использовать удаленные серверы, которые сохраняются при обновлении или были созданы при репликации.|Замените удаленные серверы связанными серверами.|  
 |безопасность|`sp_dropalias`|Псевдонимы заменены сочетанием учетных записей пользователей и ролями базы данных. Используйте `sp_dropalias` удалите псевдонимы в обновленных базах данных.|  
-|безопасность|Параметр версии **PWDCOMPARE** предоставляющее значение для имени входа из более ранней, чем [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 более не поддерживается.|None|  
+|безопасность|Параметр версии **PWDCOMPARE** представляющий значение имени входа из более ранней, чем [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 более не поддерживается.|None|  
 |Возможности объектов SMO по программированию компонента Service Broker|Класс **Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** больше не реализует интерфейс **Microsoft.SqlServer.Management.Smo.IObjectPermission** .||  
 |Параметры SET|`SET DISABLE_DEF_CNST_CHK`|Нет.|  
 |Системные таблицы|sys.database_principal_aliases|Использование ролей вместо псевдонимов.|  

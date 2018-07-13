@@ -1,5 +1,5 @@
 ---
-title: Определение свойства среза секции (службы Analysis Services) | Документы Microsoft
+title: Задайте свойства среза секции (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/05/2015
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data slices [Analysis Services]
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b122622e4bd90f9b78e994a5d5aba55f33bc120d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 539cef78d7c9f9333688f4db1e5fbf35461479ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230084"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Определение свойства среза секции (службы Analysis Services)
   Срез данных является важной функцией оптимизации, которая помогает направить запросы к данным соответствующих секций. Прямое указание свойства Slice позволяет повысить производительность запросов, переписав стандартные срезы, сформированные для секций MOLAP и HOLAP. Также свойство Slice обеспечивает дополнительную проверку при обработке секции.  
@@ -49,9 +49,9 @@ ms.locfileid: "36101171"
 >   
 >  Например, вместо использования [: &#40;диапазон&#41; &#40;многомерных Выражений&#41; ](/sql/mdx/range-mdx) функции для определения диапазона, потребуется перечислить каждый элемент по конкретным годам.  
 >   
->  Если необходимо определить сложный срез, рекомендуется идентифицировать кортежи в срезе с помощью скрипта изменения XMLA. Затем можно использовать средство командной строки ascmd или SSIS [задача выполнения DDL служб Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) задачи для выполнения скрипта и создания указанного набора элементов непосредственно перед секционированием.  
+>  Если необходимо определить сложный срез, рекомендуется идентифицировать кортежи в срезе с помощью скрипта изменения XMLA. Затем можно использовать средство командной строки ascmd или SSIS [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) задачи для запуска скрипта и создания указанного набора элементов непосредственно перед секционированием.  
   
 ## <a name="see-also"></a>См. также  
- [Создание и управление локальной секции &#40;служб Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
+ [Создание и управление ими локальной секции &#40;служб Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
   

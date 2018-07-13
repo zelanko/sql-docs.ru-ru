@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 caps.latest.revision: 50
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 34595ca07e370bb0a66512c839a6843f8c38f5d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 719776a37cae748516d7a4882ea31e9796d01332
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202654"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Занятие 3. Определение набора данных для табличного отчета (службы Reporting Services)
   После определения источника данных необходимо определить набор данных. В службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]данные, используемые в отчетах, содержатся в *наборе данных*. Набор данных содержит указатель на источник данных и запрос, используемый в отчете, а также вычисляемые поля и переменные.  
   
- Чтобы создать запрос, можно использовать «Конструктор запросов». В этом учебнике вы создадите запрос, который получает сведения о заказе на продажу из [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** базы данных.  
+ Чтобы создать запрос, можно использовать «Конструктор запросов». В этом руководстве вы создадите запрос, возвращающий данные заказов на продажу из [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** базы данных.  
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>Определение запроса Transact-SQL для данных отчета  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36101010"
   
 6.  Нажмите кнопку **Конструктор запросов** (необязательно). В текстовом конструкторе запросов будет отображен запрос. Вы можете переключиться к графическому конструктору запросов, нажав кнопку **Изменить как текст**. Просмотреть результаты запроса, нажав кнопку запуска **(!)**  кнопку на панели инструментов конструктора запросов.  
   
-     Просмотреть данные из шести полей четырех различных таблиц в [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных. В запросе используется возможность псевдонимов языка Transact-SQL. Например, таблица SalesOrderHeader называется soh.  
+     Будут показаны данные из шести полей четырех различных таблиц из [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных. В запросе используется возможность псевдонимов языка Transact-SQL. Например, таблица SalesOrderHeader называется soh.  
   
      Нажмите кнопку **ОК** для выхода из конструктора запросов.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36101010"
  Определен запрос, получающий данные для отчета. Далее предстоит создать макет отчета. См. [Занятие 4. Добавление таблицы в отчет (службы Reporting Services)](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также  
- [Средства разработки в отчет конструктора SQL Server Data Tools запросов &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [Средства проектирования в отчет конструктора SQL Server Data Tools запросов &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Тип соединения SQL Server (службы SSRS)](report-data/sql-server-connection-type-ssrs.md)   
  [Учебник. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   

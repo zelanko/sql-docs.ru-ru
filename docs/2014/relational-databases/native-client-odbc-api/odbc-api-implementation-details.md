@@ -1,13 +1,11 @@
 ---
-title: Сведения о реализации API ODBC | Документы Microsoft
+title: Сведения о реализации API ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,20 +15,20 @@ helpviewer_keywords:
 - functions [ODBC]
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1daffe7b45f162b3fcfda99405d85dbb96493607
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d5d4850fd9a3bb51cf306bea6e960ed6bc4d9bc8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087843"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430463"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
   В данном разделе описываются функции ODBC, демонстрирующие специфичное для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поведение при использовании с драйвером ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Здесь перечислены не все функции ODBC. В отдельных разделах обсуждаются только те проблемы, которые специфичны для функции ODBC в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они не являются полным справочником по функциям ODBC.  
   
- Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует спецификации ODBC 3.51, а также спецификации ODBC 3.8 в случае использования пакета Windows 7 SDK. Для получения полной справки ODBC просмотра [справочнике программиста ODBC](http://go.microsoft.com/fwlink/?LinkId=45250) online.  
+ Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует спецификации ODBC 3.51, а также спецификации ODBC 3.8 в случае использования пакета Windows 7 SDK. Полный справочник по ODBC, просмотреть [Справочник по программированию ODBC](http://go.microsoft.com/fwlink/?LinkId=45250) online.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   

@@ -1,5 +1,5 @@
 ---
-title: Определяемый пользователем тип | Документы Microsoft
+title: Определяемый пользователем тип | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a9b75f36-d7f5-47f7-94d6-b4448c6a2191
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55627b179f472c5501fb2a64bec9cc57f097d007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f3a0bcae3a44553fdc6d2d337e9e54993bd7e769
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209954"
 ---
 # <a name="user-defined-type"></a>Определяемый пользователем тип
   В образце определяемого пользователем типа данных демонстрируется создание и применение простого пользовательского типа данных в Transact-SQL и в клиентском приложении при использовании `System.Data.SqlClient`.  
@@ -95,7 +95,7 @@ ms.locfileid: "36101148"
   
     -   Выполнение`: Csc /reference:ComplexNumber.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.XML.dll /out:Client.exe /target:exe Program.cs`  
   
-    -   Проверьте, выполнив: `Client AdventureWorks`  
+    -   Тестирование путем выполнения. `Client AdventureWorks`  
   
 12. Скопируйте скрипт очистки [!INCLUDE[tsql](../../includes/tsql-md.md)] в файл и сохраните его в файле `cleanup.sql` в том же каталоге.  
   

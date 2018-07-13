@@ -1,5 +1,5 @@
 ---
-title: Набор строк DISCOVER_LITERALS | Документы Microsoft
+title: Набор строк DISCOVER_LITERALS | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DISCOVER_LITERALS rowset
 ms.assetid: 1bf0a2e2-a419-4c25-b271-37dfa44de2ea
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4643ab803f3e6a7d63c4172423e909b6badd64b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bd59dfdc385775f0846a1a0f9de41f7d3bf2750
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099599"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259970"
 ---
 # <a name="discoverliterals-rowset"></a>Набор строк DISCOVER_LITERALS
   Возвращает сведения о литералах, включая типы данных и значения, поддерживаемые поставщиком XML для аналитики [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   
- При вызове метода [Discover](../../xmla/xml-elements-methods-discover.md) метод с `DISCOVER_LITERALS` значения перечисления в [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) элемент, `Discover` возвращает `DISCOVER_LITERALS` набора строк.  
+ При вызове метода [Discover](../../xmla/xml-elements-methods-discover.md) метод с `DISCOVER_LITERALS` значение перечисления в [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) элемент, `Discover` возвращает метод `DISCOVER_LITERALS` набора строк.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  `DISCOVER_LITERALS` Набор строк содержит следующие столбцы.  
@@ -55,7 +55,7 @@ ms.locfileid: "36099599"
 |`LiteralName`|`DBTYPE_WSTR`|Необязательный параметр.|  
   
 ## <a name="see-also"></a>См. также  
- [XML для аналитики наборы строк схемы](xml-for-analysis-schema-rowsets.md)   
+ [XML для анализа наборов строк схемы](xml-for-analysis-schema-rowsets.md)   
  [Набор строк DISCOVER_KEYWORDS &#40;XML для Аналитики&#41;](discover-keywords-rowset-xmla.md)  
   
   

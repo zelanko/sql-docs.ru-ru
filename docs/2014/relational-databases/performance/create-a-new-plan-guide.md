@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-plan-guides
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.designer.newplanguide.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 29d7fb37e59b0440051f7115745d5dabc084567a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d43e9e75b58123b1009c247d1435c71e94698fae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087108"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429883"
 ---
 # <a name="create-a-new-plan-guide"></a>Создание структуры плана
   Структуру плана в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Структура плана влияет на оптимизацию запросов путем присоединения указаний запросов или фиксированного плана запросов к ним. В структуре плана указывается оператор [!INCLUDE[tsql](../../includes/tsql-md.md)] , который нужно оптимизировать, и либо предложение OPTION, которое содержит указания запросов, которые будут использоваться, либо специальный план запроса, который используется для оптимизации запроса. Когда запрос выполняется, оптимизатор запросов сопоставляет инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] со структурой плана и либо присоединяет условие OPTION к запросу в процессе выполнения, либо использует указанный план запроса.  
@@ -47,7 +46,7 @@ ms.locfileid: "36087108"
   
 ###  <a name="Restrictions"></a> Ограничения  
   
--   Аргументы процедуры sp_create_plan_guide должны задаваться в указанном порядке. При задании значений параметрам процедуры `sp_create_plan_guide`, параметр all, имена должны быть указаны явно или вообще. Например, если указан параметр `@name =`, необходимо также указать параметры `@stmt =`, `@type =` и т. д. Аналогично Если `@name =` пропущен и только указано значение параметра, имена остальных параметров также должен быть опущен и указаны только их значения. Имена аргументов приводятся исключительно в целях описания, чтобы помочь разобраться с синтаксисом. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не проверяет соответствие указанных имен параметров их позициям.  
+-   Аргументы процедуры sp_create_plan_guide должны задаваться в указанном порядке. При задании значений для параметров `sp_create_plan_guide`, все имена параметров необходимо указывать явно или вообще. Например, если указан параметр `@name =`, необходимо также указать параметры `@stmt =`, `@type =` и т. д. Аналогично Если `@name =` пропущен и только задается значение параметра, имена остальных параметров должен быть также пропущены и указаны только их значения. Имена аргументов приводятся исключительно в целях описания, чтобы помочь разобраться с синтаксисом. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не проверяет соответствие указанных имен параметров их позициям.  
   
 -   Можно создать несколько структур планов OBJECT или SQL для одного и того же запроса и пакета либо модуля. Однако только одна структура плана может быть включена в данный момент времени.  
   

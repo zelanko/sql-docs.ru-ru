@@ -1,5 +1,5 @@
 ---
-title: Разработчик&#39;руководство (компонент Database Engine) | Документы Microsoft
+title: Разработчик&#39;руководство (ядро СУБД) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e414fe4737caa5c1e9e862555ecd9be3286b592a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6a611237e283ad10a6dfd8433d08ef2b3708dd6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258910"
 ---
 # <a name="developer39s-guide-database-engine"></a>Разработчик&#39;руководство (компонент Database Engine)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит богатый набор средств разработки, администрирования и управления приложениями баз данных.  
@@ -59,7 +59,7 @@ ms.locfileid: "36098908"
 ## <a name="see-also"></a>См. также  
  [Программирование интеллектуального анализа данных](../analysis-services/dev-guide/data-mining-programming.md)   
  [Руководство разработчика &#40;служб Analysis Services&#41;](../analysis-services/analysis-services-developer-documentation.md)   
- [Руководство разработчика &#40;службы Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
+ [Руководство разработчика &#40;служб Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
  [Руководство разработчика &#40;репликации&#41;](replication/concepts/replication-developer-documentation.md)   
  [Руководство разработчика &#40;службы Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
   

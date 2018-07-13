@@ -1,5 +1,5 @@
 ---
-title: Службы Master Data Services | Документы Microsoft
+title: Службы Master Data Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 caps.latest.revision: 12
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ab4e08f960fa7ef72daad9ff5c751cdc17bbec2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce167bf5e95e67282aa37b002c32ccaa816c3be1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156485"
 ---
 # <a name="master-data-services"></a>Службы Master Data Services
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) — это решение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по управлению основными данными. Управление основными данными (master data management, MDM) включает в себя действия, предпринимаемые организацией для нахождения и определения нетранзакционных списков данных с целью компиляции управляемых главных списков. Проект MDM в основном предусматривает оценку и реструктуризацию внутренних бизнес-процессов, наряду с реализацией технологии MDM. Результатом успешно реализованного решения MDM становится получение надежных, централизованных данных, доступных для анализа, что влечет за собой принятие лучших бизнес-решений.  
@@ -28,7 +28,7 @@ ms.locfileid: "36180303"
   
  В число других функциональных возможностей служб Master Data Services входят иерархии, детализированная безопасность, транзакции, поддержка версий данных и бизнес-правила.  
   
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] включает следующие средства и компоненты:  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] включает в себя следующие компоненты и средства:  
   
 -   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], средство, используемое для создания и настройки [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] баз данных и веб-приложений.  
   
@@ -40,10 +40,10 @@ ms.locfileid: "36180303"
   
 -   Средство [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], используемое для управления данными и создания новых сущностей и атрибутов.  
   
- Обзор MDS ресурсов см. [порталу образец службы данных для SQL Server](http://go.microsoft.com/fwlink/?LinkID=214272).  
+ Обзор MDS ресурсов, см. в разделе [портал SQL Server Master Data Services](http://go.microsoft.com/fwlink/?LinkID=214272).  
   
 |||  
 |-|-|  
-|**Просмотр содержимого по области**<br /> ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") [Обзор служб Master Data Services](master-data-services-overview-mds.md)<br /><br /> ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") [Master Data Services, функции и задачи](../../2014/master-data-services/master-data-services-features-and-tasks.md)<br /><br /> ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") [Технический справочник (Master Data Services)](technical-reference-master-data-services.md)<br /><br /> ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") [руководство разработчика (Master Data Services)](develop/master-data-services-developer-documentation.md)||  
+|**Просмотр содержимого по области**<br /> ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") [Обзор служб Master Data Services](master-data-services-overview-mds.md)<br /><br /> ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") [Master Data Services, функции и задачи](../../2014/master-data-services/master-data-services-features-and-tasks.md)<br /><br /> ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") [Технический справочник (службы основных данных)](technical-reference-master-data-services.md)<br /><br /> ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") [Developer's Guide (Master Data Services)](develop/master-data-services-developer-documentation.md)||  
   
   

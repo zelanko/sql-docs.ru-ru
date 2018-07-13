@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0792825135920bff993088c00bf5eec1694a342d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e3d682f7018261e967729a26db201bef5a3b6e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220724"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Закрепление области данных отчета в конструкторе отчетов (службы SSRS)
   В конструкторе отчетов в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], области данных отчета Отображает иерархическое представление объектов данных, которые можно использовать в отчете, включая источники данных, наборы данных, поля, параметры и изображения. Источники данных, показанные в этом представлении, могут быть внедренными, а также представлять собой ссылки на общие источники данных, выводимые в обозревателе решений.  
@@ -38,7 +38,7 @@ ms.locfileid: "36101002"
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>Преобразование области данных отчета из закрепленного окна в окно с вкладками  
   
--   Щелкните правой кнопкой мыши заголовок области данных отчета, а затем нажмите кнопку **документ с вкладками**.  
+-   Щелкните правой кнопкой мыши заголовок области данных отчета и нажмите кнопку **вкладка**.  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>Преобразование области данных отчета из окна с вкладками в закрепленное окно  
   

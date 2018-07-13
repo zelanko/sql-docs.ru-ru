@@ -1,5 +1,5 @@
 ---
-title: Выполнение задач редактор SQL (страница «сопоставление параметров») | Документы Microsoft
+title: Выполнение задач редактор SQL (страница «сопоставление параметров») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.parametermapping.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 863ae3b186cc60c4d2d2e04308dd81023f653f12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4baffae0ada8cddc911561f63ca32f9b4b578283
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152785"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>Редактор задачи «Выполнение SQL» (страница «Сопоставление параметров»)
   Используйте страницу **Сопоставление параметров** диалогового окна **Редактор задачи «Выполнение SQL»** для сопоставления переменных с параметрами в инструкции SQL.  
@@ -61,9 +61,9 @@ ms.locfileid: "36102242"
  Выберите сопоставление параметра из списка, затем нажмите **Удалить**.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Выполнение задач редактор SQL &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
- [Выполнение задач редактор SQL &#40;«результирующий набор»&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задач SQL Выполнение &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
+ [Редактор задач SQL Выполнение &#40;результирующий набор страниц&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
  [Справочник по Transact-SQL (компонент Database Engine)](/sql/t-sql/language-reference)  
   
   

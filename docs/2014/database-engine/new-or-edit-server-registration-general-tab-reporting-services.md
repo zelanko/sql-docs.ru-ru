@@ -1,5 +1,5 @@
 ---
-title: Новые или редактировать регистрацию сервера (вкладка «Общие») (службы Reporting Services) | Документы Microsoft
+title: Новый или редактирование регистрации сервера (вкладка "Общие") (службы Reporting Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerserver.general.reportserver.f1
 ms.assetid: 5f899a8e-52ef-46b5-b7a9-f200ccd9f724
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 17c10bb36de85a7d0ad1d9522d5d54a540d51a61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d03ee36c46ba0fb4e4c026c61d94c1b4ee29befc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202044"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>Создание или редактирование регистрации сервера (вкладка «Общие») (службы Reporting Services)
   В этой вкладке указываются параметры при регистрации экземпляра служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

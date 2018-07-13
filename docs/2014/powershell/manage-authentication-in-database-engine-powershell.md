@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: d444739180c4326dd68af08be0a382c0e0ff6cb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f7ec9327a35e9ba110dd9d93db53c50b5c130f6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227814"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Управление проверкой подлинности в компонент Database Engine PowerShell
-  По умолчанию компоненты [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell используют при установлении соединения с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)]проверку подлинности Windows. Можно использовать проверку подлинности SQL Server, необходимо либо определить виртуальный диск PowerShell, либо указав `–Username` и `–Password` параметров для `Invoke-Sqlcmd`.  
+  По умолчанию компоненты [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell используют при установлении соединения с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)]проверку подлинности Windows. Можно использовать проверку подлинности SQL Server, необходимо либо определить виртуальный диск PowerShell, либо указав `–Username` и `–Password` параметры `Invoke-Sqlcmd`.  
   
 1.  **Перед началом работы выполните следующие действия.**  [Разрешения](#Permissions)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "36101355"
 ##  <a name="Permissions"></a> Permissions  
  Все действия, которые могут быть выполнены на экземпляре компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , определяются разрешениями, предоставляемыми учетным данным, которые использовались при подключении к экземпляру. По умолчанию для подключения к компоненту [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с проверкой подлинности Windows поставщик [!INCLUDE[ssDE](../includes/ssde-md.md)]и командлеты используют учетную запись Windows, под которой они работают.  
   
- Для подключения с проверкой подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] необходимо указать идентификатор имени входа и пароль проверки подлинности SQL Server. При использовании [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поставщика, необходимо связать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] учетные данные входа с виртуальным диском, а затем используйте команду смены каталога (`cd`) для подключения к этому диску. В Windows PowerShell учетные данные безопасности можно связывать только с виртуальными дисками.  
+ Для подключения с проверкой подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] необходимо указать идентификатор имени входа и пароль проверки подлинности SQL Server. При использовании [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поставщика, необходимо связать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] учетные данные для входа с виртуальным диском, а затем используйте команду смены каталога (`cd`) для подключения к этому диску. В Windows PowerShell учетные данные безопасности можно связывать только с виртуальными дисками.  
   
 ##  <a name="SQLAuthVirtDrv"></a> Проверка подлинности SQL Server с помощью виртуального диска  
  **Создание виртуального диска с именем входа для проверки подлинности SQL Server**  
@@ -51,7 +51,7 @@ ms.locfileid: "36101355"
 ### <a name="example-virtual-drive"></a>Пример (виртуальный диск)  
  В этом примере показано создание функции **sqldrive** для создания виртуального диска, который затем будет связан с указанным именем входа для проверки подлинности и экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- Функция **sqldrive** запрашивает ввод пароля для имени входа, скрывая символы пароля при их вводе. При каждом использовании команду смены каталога (`cd`) для подключения к пути с помощью имени виртуального диска, все операции выполняются с помощью [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] входа учетные данные проверки подлинности, которые были указаны при создании этого диска.  
+ Функция **sqldrive** запрашивает ввод пароля для имени входа, скрывая символы пароля при их вводе. При каждом использовании команды перехода в каталог (`cd`) для подключения к пути с помощью имени виртуального диска, все операции выполняются с помощью [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] учетные данные для входа проверки подлинности, которые были указаны при создании этого диска.  
   
 ```  
 ## Create a function that specifies the login and prompts for the password.  

@@ -1,5 +1,5 @@
 ---
-title: Определение обычной связи и ее свойств | Документы Microsoft
+title: Определение обычной связи и ее свойств | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - granularity attribute
 - relationships [Analysis Services], regular relationships
 ms.assetid: 840280d8-20c3-46c0-99ea-62479469c36b
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 62820860d8479776abc232f9355367cc35da1966
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbf4b0f179c0c4ba0990b8fe61b2cd2a7584f058
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211934"
 ---
 # <a name="define-a-regular-relationship-and-regular-relationship-properties"></a>Определение обычной связи и ее свойств
   При определении нового измерения куба или новой группы мер, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] попытаются определить, существует ли обычная связь, и установить настройку использования измерения в значение `Regular`. Связь обычного измерения можно просмотреть или отредактировать на вкладке **Использование измерений** конструктора кубов.  

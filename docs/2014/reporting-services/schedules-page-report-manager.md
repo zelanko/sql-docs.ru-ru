@@ -1,5 +1,5 @@
 ---
-title: Страница «расписания» (диспетчер отчетов) | Документы Microsoft
+title: Планирует страницы (диспетчер отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8d460ad3e85f1884a101ad1ad52adc1cd04fe43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf66402ba021949bce1eb2810d634177ddf1916d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198514"
 ---
 # <a name="schedules-page-report-manager"></a>Страница «Расписания» (диспетчер отчетов)
   Страница «Расписания» используется для создания, изменения, удаления, приостановки или возобновления общих расписаний. Общее расписание — это именованное расписание, которое можно создать и которым можно управлять отдельно от отчетов, подписок и других процессов, требующих сведений расписания. Назначенные общие расписания могут выбираться другими пользователями.  

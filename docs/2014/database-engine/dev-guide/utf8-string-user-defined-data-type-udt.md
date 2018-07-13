@@ -1,5 +1,5 @@
 ---
-title: UTF-8 Строка, определяемый пользователем тип (UDT) | Документы Microsoft
+title: UTF8 Строковый определяемый пользователем тип (UDT) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 41b84606-1fa8-4e4b-8f4c-bdc66537c613
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fcb411e3947de3e939a3f7e328c80b0605bf47d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e9ffea3675f13320d68d5b829cde29272c83f28d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259180"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>UTF8 String User-Defined Data Type (UDT)
   Образец UTF8String для SQL Server демонстрирует реализацию определяемого пользователем типа данных. Этот образец показывает реализацию определяемого пользователем типа данных UTF8, который расширяет систему типов базы данных, обеспечивая возможность хранения значений в кодировке UTF8. Этот тип также реализует программный код для преобразования строк в Юникоде в формат UTF8 и обратно.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c9367e4715022afcff7c988cbe877a1565f41cab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c8eec2498cace997c8f67493772c9ac23d374bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217834"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Создание функции для получения информации об изменениях
   После завершения потока управления для пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , выполняющего добавочную загрузку информации об изменениях, нужно выполнить следующую задачу: создать функцию с табличным значением, которая получает измененные данные. Создавать эту функцию необходимо только один раз — перед первой добавочной загрузкой.  
@@ -145,7 +145,7 @@ deallocate #hfunctions
 ## <a name="writing-your-own-table-value-function"></a>Написание собственной функции, возвращающей табличное значение  
  Также можно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], чтобы написать функцию-оболочку с табличным значением, которая вызывает функцию запроса системы отслеживания измененных данных, и сохранить эту функцию-оболочку с табличным значением в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о создании функций Transact-SQL см. в разделе [CREATE FUNCTION (Transact-SQL)](/sql/t-sql/statements/create-function-transact-sql).  
   
- В следующем примере определяется возвращающая табличное значение функция, которая получает из таблицы Customer данные об изменениях за указанный период изменений. Это функция использует данные функции системы отслеживания измененных сопоставляется `datetime` значения в двоичный файл журнала порядковый номер (LSN) значения, которые используются внутренними механизмами таблиц изменений. Кроме того, эта функция обрабатывает некоторые особые ситуации.  
+ В следующем примере определяется возвращающая табличное значение функция, которая получает из таблицы Customer данные об изменениях за указанный период изменений. Это данные отслеживания функция применяет для сопоставления `datetime` значений двоичный журнал порядковый номер (LSN) значения, которые используются внутренними механизмами таблиц изменений. Кроме того, эта функция обрабатывает некоторые особые ситуации.  
   
 -   Если для времени начала передается значение NULL, функция использует самое раннее из доступных значений.  
   

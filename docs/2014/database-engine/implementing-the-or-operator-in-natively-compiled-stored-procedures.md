@@ -1,5 +1,5 @@
 ---
-title: Реализация или оператора в хранимых процедурах, скомпилированных в собственном коде | Документы Microsoft
+title: Реализация OR оператора в скомпилированных хранимых процедур | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
 caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 562917bdb9cad0fd8471d97663e01616091ce475
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce9b8660fa52d2a09302b51b0f95e368071caa4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228184"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>Реализация оператора OR в скомпилированных в собственном коде хранимых процедурах
   Операторы OR не поддерживаются в предикатах запросов в скомпилированных в собственном коде хранимых процедурах. Так как операторы NOT также не поддерживаются в предикатах запросов в скомпилированных в собственном коде хранимых процедурах, использование операторов OR нельзя имитировать только с помощью эквивалентных логических операторов. Однако результаты выполнения оператора OR можно имитировать с помощью переменных оптимизированных для памяти таблиц.  
@@ -50,7 +50,7 @@ ms.locfileid: "36100681"
   
 5.  Используйте содержимое переменной оптимизированной для памяти таблицы в качестве результата запроса.  
   
- В следующем образце используются таблицы из базы данных AdventureWorks2012, которые были обновлены для [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Для загрузки файлов для данного образца goto [баз данных AdventureWorks — 2012, 2008R2 и 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Чтобы применить [!INCLUDE[hek_2](../includes/hek-2-md.md)] кода образца, к базе данных AdventureWorks2012, перейдите к [SQL Server 2014 In-Memory OLTP Sample](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
+ В следующем образце используются таблицы из базы данных AdventureWorks2012, которые были обновлены для [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Для загрузки файлов для этого примера можно на странице [баз данных AdventureWorks — 2012, 2008R2 и 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Чтобы применить [!INCLUDE[hek_2](../includes/hek-2-md.md)] кода примера к базе данных AdventureWorks2012, перейдите к [образца SQL Server 2014 In-Memory OLTP](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
   
  Добавьте в базу данных следующую хранимую процедуру. Мы преобразуем эту хранимую процедуру так, чтобы она компилировалась в собственном коде.  
   
@@ -165,7 +165,7 @@ GO
   
 5.  Используйте содержимое переменной оптимизированной для памяти таблицы в качестве результата запроса.  
   
- В следующем образце используются таблицы из базы данных AdventureWorks2012, которые были обновлены для [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Для загрузки файлов для данного образца goto [баз данных AdventureWorks — 2012, 2008R2 и 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Чтобы применить [!INCLUDE[hek_2](../includes/hek-2-md.md)] кода образца, к базе данных AdventureWorks2012, перейдите к [SQL Server 2014 In-Memory OLTP Sample](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
+ В следующем образце используются таблицы из базы данных AdventureWorks2012, которые были обновлены для [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Для загрузки файлов для этого примера можно на странице [баз данных AdventureWorks — 2012, 2008R2 и 2008](http://msftdbprodsamples.codeplex.com/releases/view/93587). Чтобы применить [!INCLUDE[hek_2](../includes/hek-2-md.md)] кода примера к базе данных AdventureWorks2012, перейдите к [образца SQL Server 2014 In-Memory OLTP](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
   
  Добавьте в базу данных следующую хранимую процедуру. Мы преобразуем эту хранимую процедуру так, чтобы она компилировалась в собственном коде. В этом образце используются условия INNER JOIN.  
   

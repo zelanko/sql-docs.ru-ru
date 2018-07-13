@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ee1b5a26edc9c1335abf35dd2af23e7035b84809
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a991f1e7362be2e9516857ec2f6d98b4e487b536
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277450"
 ---
 # <a name="raw-file-custom-properties"></a>Пользовательские свойства необработанного файла
   **Пользовательские свойства источника**  
@@ -47,7 +47,7 @@ ms.locfileid: "36098949"
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (перечисление)|Значение, указывающее, содержит ли свойство FileName имя файла, или указывающее переменную, которая содержит имя файла. Параметрами являются `File name` (0) и `File name from variable` (1).|  
 |FileName|String|Имя файла, в который назначение «Необработанный файл» осуществляет запись.|  
-|WriteOption|Integer (перечисление)|Значение, указывающее, следует ли назначению «Необработанный файл» удалять существующий файл с таким же именем. Возможные варианты: `Create Always` (0), `Create Once` (1), `Truncate and Append` (3) и `Append` (2). Значение по умолчанию этого свойства — `Create Always` (0).|  
+|WriteOption|Integer (перечисление)|Значение, указывающее, следует ли назначению «Необработанный файл» удалять существующий файл с таким же именем. Возможные варианты: `Create Always` (0), `Create Once` (1), `Truncate and Append` (3), и `Append` (2). Значение по умолчанию этого свойства — `Create Always` (0).|  
   
 > [!NOTE]  
 >  Операция добавления в файл требует, чтобы метаданные добавляемых данных совпадали с метаданными данных, уже содержащихся в файле.  

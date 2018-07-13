@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, described
 - null columns
 - sparse columns
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5f89bf86f17cf274d579ed22d3439f8ec0d7a662
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 37706a23164e3948eb139deff9fd1eb14c654e22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204974"
 ---
 # <a name="use-sparse-columns"></a>Использование разреженных столбцов
   Разреженные столбцы — это обычные столбцы, имеющие оптимизированное хранилище для значений NULL. Разреженные столбцы уменьшают пространство, необходимое для хранения значений NULL, однако увеличивается стоимость получения значений, отличных от NULL. Разреженные столбцы следует использовать только в том случае, если экономится не менее чем от 20 до 40 процентов места. Наборы столбцов и разреженные столбцы определяются с помощью инструкций [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) и [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) .  
@@ -124,7 +124,7 @@ ms.locfileid: "36100381"
 ## <a name="restrictions-for-using-sparse-columns"></a>Ограничения на использование разреженных столбцов  
  Разреженные столбцы могут иметь любой тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Они работают так же, как и другие столбцы, но со следующими ограничениями.  
   
--   Разреженный столбец должен допускать значения NULL и не может иметь свойств ROWGUIDCOL или IDENTITY. Разреженный столбец не может иметь следующие типы данных: `text`, `ntext`, `image`, `timestamp`, определяемый пользователем тип, `geometry`, или `geography`; или атрибута FILESTREAM.  
+-   Разреженный столбец должен допускать значения NULL и не может иметь свойств ROWGUIDCOL или IDENTITY. Разреженный столбец не может иметь следующие типы данных: `text`, `ntext`, `image`, `timestamp`, определяемый пользователем тип, `geometry`, или `geography`; или имеющие атрибут FILESTREAM.  
   
 -   Разреженный столбец не может иметь значения по умолчанию.  
   

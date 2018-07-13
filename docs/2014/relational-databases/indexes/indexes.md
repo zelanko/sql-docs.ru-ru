@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index types [SQL Server]
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b501af28b1c9fbfb8f8fbdca9099aa11d4f2e3db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 007728b4f429cd0857a2131fb25c9de53b2258db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177751"
 ---
 # <a name="indexes"></a>Индексы
   В следующей таблице приведен список типов индексов, доступных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также указаны ссылки на дополнительные сведения.  
@@ -38,7 +37,7 @@ ms.locfileid: "36101351"
 |Индекс на вычисляемых столбцах|Индекс на столбце, являющемся производным от одного или нескольких других столбцов или нескольких детерминированных источников.|[Индексы для вычисляемых столбцов](indexes-on-computed-columns.md)|  
 |Фильтруемый|Оптимизированный некластеризованный индекс, в особенности подходящий для покрытия запросов из хорошо определенного подмножества данных. Он использует предикат фильтра для индексирования части строк в таблице. Хорошо спроектированный отфильтрованный индекс позволяет повысить производительность запросов, снизить затраты на обслуживание и хранение индексов по сравнению с полнотабличными индексами.|[Создание отфильтрованных индексов](create-filtered-indexes.md)|  
 |Пространственный|Пространственный индекс обеспечивает возможность более эффективного использования определенных операций с пространственными объектами (*пространственными данными*) в столбце типа данных **geometry** . Пространственные индексы снижают количество объектов, к которым должны применяться пространственные операции, требующие больших затрат.|[Общие сведения о пространственных индексах](../spatial/spatial-indexes-overview.md)|  
-|XML|Представление разобранное и сохраненное, большим двоичным объектам XML (BLOB) в `xml` столбец типа данных.|[XML-индексы (SQL Server)](../xml/xml-indexes-sql-server.md)|  
+|XML|Вырезанное материализованное, представлением большим двоичным объектам XML (BLOB) в `xml` столбце с типом данных.|[XML-индексы (SQL Server)](../xml/xml-indexes-sql-server.md)|  
 |Полнотекстовый|Специальный тип функционального индекса, основанный на токене, построенный и поддерживаемый средством полнотекстового поиска (Майкрософт) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Он обеспечивает эффективную поддержку сложных операций поиска слов в символьных строковых данных.|[Заполнение полнотекстовых индексов](../search/populate-full-text-indexes.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
