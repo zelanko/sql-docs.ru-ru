@@ -1,5 +1,5 @@
 ---
-title: Средства и подходы для обработки (службы Analysis Services) | Документы Microsoft
+title: Средства и способы обработки (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - process [Analysis Services]
 - processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8c191732dd66214c19c949d28e3dcd0efe01f7fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f00c1a31869bdfb9375d1e97822c98a0e4f9f914
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261410"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Средства и способы обработки (службы Analysis Services)
   Обработка — это операция, при которой службы Analysis Services запрашивают реляционный источник данных и заполняют этими данными объекты служб Analysis Services.  

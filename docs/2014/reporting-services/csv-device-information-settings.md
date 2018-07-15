@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CSV [Reporting Services]
 - device information settings [Reporting Services], CSV rendering
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 caps.latest.revision: 42
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 205d1ac37c78001d4f34f4f1cbc92731b88cfd1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5e2183790fcc7af3f173d7f674173f3dd49857fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307504"
 ---
 # <a name="csv-device-information-settings"></a>Настройки сведений об устройстве CSV
   Настройки сведений об устройстве для модуля подготовки отчетов CSV позволяет изменять разделители и квалификаторы, а также указывать правила обработки разрывов строк. Также можно указать расширение файла, кодировку и определить включение строк заголовка в выходные данные. Поскольку разделителями, скорее всего, будут специальные символы, их следует кодировать в разделе CDATA, если параметры записываются в формате XML.  
@@ -38,7 +38,7 @@ ms.locfileid: "36098593"
 |**NoHeader**|Показывает, исключается ли из выходных данных строка заголовка. Значение по умолчанию — `false`.|  
 |`Qualifier`|Строка-квалификатор, размещаемая вокруг результатов, содержащих разделитель полей или разделитель записей. Если результаты содержат квалификатор, квалификатор повторяется. Значение параметра `Qualifier` должно отличаться от значений параметров `FieldDelimiter` и `RecordDelimiter`. По умолчанию используется кавычка (").|  
 |`RecordDelimiter`|Разделитель записей, помещаемый в конце каждой записи. Значением по умолчанию является \<cr>\<lf>.|  
-|**SuppressLineBreaks**|Показывает, удаляются ли разрывы строк из данных, включаемых в выходной документ. Значение по умолчанию — `false`. Если значение равно `true`, `FieldDelimiter`, `RecordDelimiter`, и `Qualifier` параметров не может быть пробельный символ.|  
+|**SuppressLineBreaks**|Показывает, удаляются ли разрывы строк из данных, включаемых в выходной документ. Значение по умолчанию — `false`. Если значение равно `true`, `FieldDelimiter`, `RecordDelimiter`, и `Qualifier` параметров не может быть символом пробела.|  
 |`UseFormattedValues`|Показывает, помещаются ли форматированные строки в выходной CSV-документ. Значение по умолчанию — `true` при `ExcelMode` — `true`; в противном случае это `false`.|  
   
 ## <a name="see-also"></a>См. также  

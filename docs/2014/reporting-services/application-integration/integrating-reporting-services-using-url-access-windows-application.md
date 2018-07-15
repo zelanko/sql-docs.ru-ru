@@ -18,15 +18,15 @@ helpviewer_keywords:
 - URL access [Reporting Services], Windows applications
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 caps.latest.revision: 47
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 685946486d187214fb6e05d82d4e2f19e44255d7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6afbc2feba8430e85ecd8b9695797f49eef1c420
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262370"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>Использование доступа по URL-адресу в приложении Windows
   Доступ к серверу отчетов по URL-адресу оптимизирован для веб-среды, его также можно использовать для внедрения отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в приложение [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Однако для доступа по URL-адресу, в котором используется Windows Forms, по-прежнему необходимо применение технологии веб-браузера. Для интеграции доступа по URL-адресу и Windows Forms можно использовать следующие сценарии.  

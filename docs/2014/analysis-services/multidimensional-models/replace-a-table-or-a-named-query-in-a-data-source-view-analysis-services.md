@@ -1,5 +1,5 @@
 ---
-title: Замена таблицы или именованного запроса в представлении источника данных (службы Analysis Services) | Документы Microsoft
+title: Замена таблицы или именованного запроса в представлении источника данных (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replacing tables
 - data source views [Analysis Services], tables
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - partitions [Analysis Services], named queries
 ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17928764bbeb2b13df0763d653cf98d3933bb7d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc6b16c98f438a02309a2509e0d070f7718b0c97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295804"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>Замена таблицы или именованного запроса в представлении источника данных (службы Analysis Services)
   В конструкторе представлений источников данных можно заменить таблицу, представление или именованный запрос в представлении источника данных на другую таблицу или представление из того же или из другого источника данных или на именованный запрос, определенный в представлении источника данных. При замене таблицы все другие объекты в базе данных или проекте служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] со ссылками на эту таблицу продолжают ссылаться на таблицу, так как идентификатор объекта для таблицы в представлении источника данных не изменился. Любые связи по-прежнему остаются действительными (на основе соответствия имен и типа столбцов). Если таблица удаляется, а затем добавляется, то ссылки и связи также удаляются, поэтому их необходимо создавать повторно.  

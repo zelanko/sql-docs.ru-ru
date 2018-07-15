@@ -1,5 +1,5 @@
 ---
-title: Добавление таблицы (табличные службы SSAS) | Документы Microsoft
+title: Добавление таблицы (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d713c432-db99-4983-acc1-52b0fdd58bd6
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c75d304514a3f08c7c3df94f47a66abc7ad436ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 82167dfaa3de6d9312cb3115849aac7a9beaf07b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281900"
 ---
 # <a name="add-a-table-ssas-tabular"></a>Добавление таблицы (табличные службы SSAS)
   В этом разделе описывается добавление таблицы из источника данных, из которого ранее выполнялся импорт данных в модель. Чтобы добавить таблицу из того же источника данных, можно использовать существующее соединение с источником данных. Рекомендуется всегда использовать одно соединение для импорта любого количества таблиц из одного источника данных.  

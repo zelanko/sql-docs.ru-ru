@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 544931a2a43d875af5d2688bd1e52667ea5c5b5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c46f1e1993743365c9a0120a086f8732c2b60e5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097867"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264210"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Макет страницы и подготовка к просмотру (построитель отчетов и службы SSRS)
   При создании отчетов важно понимать поведение модуля подготовки отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], чтобы быть уверенным, что отчет, готовый для просмотра, выглядит должным образом, включая макет страницы и разбивку на страницы. Также, вероятно, понадобится убедиться в том, что отчет, готовый для просмотра, соответствует размеру обычно используемой бумаги.  
@@ -57,11 +57,11 @@ ms.locfileid: "36097867"
     > [!NOTE]  
     >  Хотя он и не предоставляет возможности экспорта в другие форматы, модуль подготовки Atom создает файлы данных из отчетов.  
   
--   **Модули подготовки отчетов к просмотру** . Модули подготовки отчетов к просмотру сохраняют макет и форматирование отчета. Результирующий файл оптимизирован для просмотра на экране и доставки, например в виде веб-страниц. Модули подготовки отчетов доступны мягкие разрывы страниц,: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, веб-архив (MHTML) и HTML.  
+-   **Модули подготовки отчетов к просмотру** . Модули подготовки отчетов к просмотру сохраняют макет и форматирование отчета. Результирующий файл оптимизирован для просмотра на экране и доставки, например в виде веб-страниц. Будут доступны мягких разрывов страниц: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, веб-архив (MHTML) и HTML.  
   
 -   **Модули подготовки жестких разрывов страниц** .   Модули подготовки жестких разрывов страниц сохраняют макет и форматирование отчета. Результирующий файл оптимизирован для согласованного представления при печати или для просмотра отчета в режиме в сети в виде книги. Поддерживаются следующие модули подготовки отчетов к печати: TIFF и PDF.  
   
- При предварительном просмотре отчета в построителе или конструкторе отчетов или запуске отчета в диспетчере отчетов, отчет всегда сначала подготавливается к просмотру в формате HTML. После запуска отчета можно экспортировать его в различные форматы файлов. Дополнительные сведения см. в разделе [экспорта отчетов &#40;построитель отчетов и службы SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
+ При предварительном просмотре отчета в построителе или конструкторе отчетов или запуске отчета в диспетчере отчетов, отчет всегда сначала подготавливается к просмотру в формате HTML. После запуска отчета можно экспортировать его в различные форматы файлов. Дополнительные сведения см. в разделе [экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
   
   
@@ -98,33 +98,33 @@ ms.locfileid: "36097867"
 ##  <a name="HowTo"></a> Инструкции  
  В данном разделе содержатся пошаговые инструкции о разбиении отчетов на страницы.  
   
--   [Добавление разрыва страницы &#40;отчетов построителя отчетов и службы SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
+-   [Добавление разрыва страницы &#40;построитель отчетов и службы SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
   
--   [Отображение заголовков строк и столбцов на нескольких страницах &#40;отчетов построителя отчетов и службы SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
+-   [Отображение заголовков строк и столбцов на нескольких страницах &#40;построитель отчетов и службы SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
   
--   [Добавить или удалить верхний или нижний колонтитул &#40;отчетов построителя отчетов и службы SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+-   [Добавление или удаление верхнего или нижнего колонтитула &#40;построитель отчетов и службы SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
--   [Сохранение заголовков видимыми при прокрутке отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+-   [Сохранение заголовков видимыми при прокрутке отчета &#40;построитель отчетов и службы SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
--   [Отображение номеров страниц или других свойств отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
+-   [Отображение номеров страниц или других свойств отчета &#40;построитель отчетов и службы SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
   
--   [Скрытие верхнего или нижнего колонтитула на первой или последней страницы &#40;отчетов построителя отчетов и службы SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
+-   [Скрытие верхнего или нижнего колонтитула на первой или последней страницы &#40;построитель отчетов и службы SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
   
   
 ##  <a name="InThisSection"></a> в этом разделе  
  Следующие подразделы содержат дополнительные сведения о макете страницы и о подготовке к просмотру.  
   
- [Верхние и нижние колонтитулы страницы &#40;отчетов построителя отчетов и службы SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [И нижние колонтитулы страницы &#40;построитель отчетов и службы SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
  Содержит сведения об использовании в отчетах верхних и нижних колонтитулов и об управлении с их помощью разбиения на страницы.  
   
- [Управление разрывами страниц, заголовками, столбцами и строками &#40;отчетов построителя отчетов и службы SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
+ [Управление разрывами страниц, заголовками, столбцами и строками &#40;построитель отчетов и службы SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  Содержит сведения об использовании разрывов страниц.  
   
   
   
 ## <a name="see-also"></a>См. также  
- [Интерактивные возможности различных модулей подготовки отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Экспорт отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Интерактивные возможности различных модулей подготовки отчетов &#40;построитель отчетов и службы SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

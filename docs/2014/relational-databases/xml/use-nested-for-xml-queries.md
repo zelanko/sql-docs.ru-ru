@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, nested FOR XML queries
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e8ce91a3ee069562a6a4d3f9d6aa3c02999e4dff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: cf9e0d63af7283dfbb36a12d34224a6c379c111f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249664"
 ---
 # <a name="use-nested-for-xml-queries"></a>Использование вложенных запросов FOR XML
-  `xml` Тип данных и [директива TYPE в запросах FOR XML](type-directive-in-for-xml-queries.md) включить код XML, возвращаемый запросами FOR XML для обработки на сервере, а также на стороне клиента.  
+  `xml` Тип данных и [директива TYPE в запросах FOR XML](type-directive-in-for-xml-queries.md) включить XML-Документы, возвращаемые запросами FOR XML обрабатываться на сервере, а также на стороне клиента.  
   
 ## <a name="processing-with-xml-type-variables"></a>Обработка переменных типа XML  
  Результат запроса FOR XML можно присвоить переменной типа `xml` или воспользоваться языком XQuery, чтобы выполнить к нему запрос, после чего присвоить полученный результат переменной типа `xml` для дополнительной обработки.  
@@ -70,7 +70,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- Поскольку результат имеет `xml` тип, можно указать один из `xml` методов непосредственно к нему, типа данных, как показано в следующем запросе. В запросе [метод query() (тип данных xml)](/sql/t-sql/xml/query-method-xml-data-type) используется для получения первого дочернего элемента <`row`> элемента <`myRoot`>.  
+ Поскольку результат имеет `xml` типа, можно указать один из `xml` методы непосредственно к НЕМУ, типа данных, как показано в следующем запросе. В запросе [метод query() (тип данных xml)](/sql/t-sql/xml/query-method-xml-data-type) используется для получения первого дочернего элемента <`row`> элемента <`myRoot`>.  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  

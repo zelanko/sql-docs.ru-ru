@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.createrelationships.f1
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ebcf3e48cdb2648556c5066c96258cda58e5c51c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2ca9f48a5f5cc545f89b226b869291ecef54907
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269400"
 ---
 # <a name="create-relationships"></a>Создание связей
   Используйте диалоговое окно **Создание связей** , чтобы изменить сопоставления между исходными столбцами и столбцами таблицы уточняющих запросов, настроенные в редакторе преобразования «Нечеткий уточняющий запрос», в редакторах преобразования «Уточняющий запрос» и «Уточняющий запрос термина».  
@@ -53,9 +53,9 @@ ms.locfileid: "36097608"
  Укажите имя для нового выходного столбца, который является подобным выбранному столбцу. Если оставить это значение пустым, то выходной столбец не будет создан.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../integration-services-error-and-message-reference.md)   
  [Редактор преобразования "Нечеткий уточняющий запрос" (вкладка "Столбцы")](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
  [Редактор преобразования "Уточняющий запрос" (страница "Столбцы")](../../lookup-transformation-editor-columns-page.md)   
- [Редактор преобразования Уточняющий запрос термина &#40;вкладка Уточняющий запрос термина&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
+ [Редактор преобразования Уточняющий запрос термина &#40;вкладке Уточняющий запрос термина&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
   

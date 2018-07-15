@@ -1,5 +1,5 @@
 ---
-title: Отображение ряда с несколькими диапазонами данных на диаграмме (построитель отчетов и службы SSRS) | Документы Microsoft
+title: Отображение ряда с несколькими диапазонами данных на диаграмме (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: deba57aaef05f5859f7a241fee0a3ca17c8362c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 647aef9c4cc3f06e9482d507791ff4c4fcc23a38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251296"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>Отображение на диаграмме ряда с несколькими диапазонами данных (построитель отчетов и службы SSRS)
   Диаграмма использует минимальное и максимальное значения ряда для вычисления масштаба оси диаграммы. Если ряд, выводимый на диаграмме, содержит несколько диапазонов данных, точки данных могут перекрываться, и на диаграмме будут отчетливо видны лишь некоторые из них. Допустим, в отчете содержатся данные о ежедневных продажах за 30 дней.  
@@ -65,11 +65,11 @@ ms.locfileid: "36099945"
  Пример диаграммы с разрывами шкалы доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других примеров отчетов см. в статье [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
 ## <a name="see-also"></a>См. также  
- [Несколько рядов на диаграмме &#40;отчетов построителя отчетов и службы SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [Несколько рядов на диаграмме &#40;построитель отчетов и службы SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [Объемные эффекты рельефа, объемные и другие эффекты в диаграмме &#40;отчетов построителя отчетов и службы SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
+ [Объемные эффекты рельефа, объемные и другие эффекты в диаграмме &#40;построитель отчетов и службы SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Диалоговое окно "Свойства оси" — "Параметры оси" (построитель отчетов и службы SSRS)](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
- [Сбор мелких срезов на круговой диаграмме &#40;отчетов построителя отчетов и службы SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [Сбор мелких срезов на круговой диаграмме &#40;построитель отчетов и службы SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

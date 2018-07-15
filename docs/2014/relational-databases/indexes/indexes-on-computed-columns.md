@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, index creation
 - index creation [SQL Server], computed columns
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - precise [SQL Server]
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9b7d9b25ccb9404011c459ba0275f2ba0c63746a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ffa842513c5cd185c7760bc737aeb64a4c33742e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279120"
 ---
 # <a name="indexes-on-computed-columns"></a>Индексы вычисляемых столбцов
   Индексы вычисляемых столбцов можно определить, если удовлетворяются следующие требования:  
@@ -74,7 +73,7 @@ ms.locfileid: "36098404"
   
 -   Выражение не относится к типу данных `float` или `real`.  
   
--   Он не использует `float` или `real` тип данных в его определении. Например, в следующей инструкции столбец `y` — `int` и детерминированным, но неточным.  
+-   Он не использует `float` или `real` тип данных в своем определении. Например, в следующей инструкции столбец `y` является `int` и детерминированным, но неточным.  
   
     ```  
     CREATE TABLE t2 (a int, b int, c int, x float,   
@@ -94,9 +93,9 @@ ms.locfileid: "36098404"
   
 -   *Computed_column_expression* заданное для вычисляемого столбца не может определять `text`, `ntext`, или `image` типов данных.  
   
--   Вычисляемые столбцы, производные от `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, и `xml` типы данных могут быть проиндексированы, при условии, что тип данных вычисляемого столбца является допустимым в качестве ключевого столбца индекса.  
+-   Вычисляемые столбцы, производные от `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, и `xml` типы данных, которые могут быть проиндексированы, до тех пор, пока тип данных вычисляемого столбца является допустимым в качестве ключевого столбца индекса.  
   
--   Вычисляемые столбцы, производные от `image`, `ntext`, и `text` типы данных могут быть неключевыми (включенными) столбцами некластеризованного индекса, при условии, что тип данных вычисляемого столбца является допустимым в качестве неключевого индексного столбца.  
+-   Вычисляемые столбцы, производные от `image`, `ntext`, и `text` типами данных могут быть неключевыми (включенными) столбцами некластеризованного индекса, до тех пор, пока тип данных вычисляемого столбца является допустимым в качестве неключевого индексного столбца.  
   
  **SET Option Requirements**  
   
@@ -121,7 +120,7 @@ ms.locfileid: "36098404"
      Если уровень совместимости базы данных равен 90 или более, при установке параметра ANSI_WARNINGS в состояние ON параметр ARITHABORT также устанавливается в состояние ON.  
   
 ##  <a name="BKMK_persisted"></a> Создание индексов материализованных вычисляемых столбцов  
- Индекс вычисляемого столбца, который определен с помощью детерминированного, но неточного выражения, можно создать, если в инструкции CREATE TABLE или ALTER TABLE этот столбец помечен как PERSISTED. Это означает, что [!INCLUDE[ssDE](../../../includes/ssde-md.md)] использует эти сохраненные значения при создании индекса для столбца, а также когда индекс упоминается в запросе. Этот параметр позволяет создавать индекс для вычисляемого столбца при [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)], является детерминированными и точными.  
+ Индекс вычисляемого столбца, который определен с помощью детерминированного, но неточного выражения, можно создать, если в инструкции CREATE TABLE или ALTER TABLE этот столбец помечен как PERSISTED. Это означает, что [!INCLUDE[ssDE](../../../includes/ssde-md.md)] использует эти сохраненные значения при создании индекса по столбцу, а в том случае, когда индекс упоминается в запросе. Этот параметр позволяет создать индекс на вычисляемом столбце при [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)], — стали детерминированными и точными.  
   
 ## <a name="related-content"></a>См. также  
  [COLUMNPROPERTY (Transact-SQL)](/sql/t-sql/functions/columnproperty-transact-sql)  

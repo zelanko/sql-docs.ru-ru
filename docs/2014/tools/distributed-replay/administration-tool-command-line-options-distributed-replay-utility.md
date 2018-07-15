@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8e137d3e03594cda0a799f066ac175f78c194514
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 36f31c211affa12e7db9988200e3d04040ec227e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261800"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>Параметры командной строки средства администрирования (программа распределенного воспроизведения)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Распределенного воспроизведения средство администрирования `DReplay.exe`, это средство командной строки, можно использовать для взаимодействия с контроллером распределенного воспроизведения. При помощи средства администрирования можно инициировать операции на контроллере, наблюдать за ними и отменять.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Средство администрирования распределенного воспроизведения `DReplay.exe`, это средство командной строки, которое можно использовать для взаимодействия с контроллером распределенного воспроизведения. При помощи средства администрирования можно инициировать операции на контроллере, наблюдать за ними и отменять.  
   
  ![Topic link icon](../../database-engine/media/topic-link.gif "Значок ссылки на раздел") Дополнительные сведения о синтаксических обозначениях, используемых в синтаксисе средства администрирования, см. в разделе [Синтаксические обозначения в Transact-SQL (Transact-SQL)](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
   
@@ -67,7 +67,7 @@ Usage:
   
 -   [Параметр воспроизведения &#40;распределенного воспроизведения средство администрирования&#41;](replay-option-distributed-replay-administration-tool.md)  
   
--   [Параметр Status &#40;распределенного воспроизведения средство администрирования&#41;](status-option-distributed-replay-administration-tool.md)  
+-   [Параметр состояния &#40;распределенного воспроизведения средство администрирования&#41;](status-option-distributed-replay-administration-tool.md)  
   
 -   [Параметр отмены &#40;распределенного воспроизведения средство администрирования&#41;](cancel-option-distributed-replay-administration-tool.md)  
   

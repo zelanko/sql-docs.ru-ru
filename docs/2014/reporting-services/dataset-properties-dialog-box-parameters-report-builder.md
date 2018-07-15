@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно Свойства набора данных, параметры (построитель отчетов) | Документы Microsoft
+title: Диалоговое окно свойств набора данных, параметров (построитель отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0b2d38e3cb08d0fd3370557e3c3ad1aa53e97fb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 50ee6db4cd7e8d16da89f234a67c437390260364
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232464"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Настройки» (построитель отчетов)
-  Выберите **параметры** на **свойства набора данных** для добавления, изменения и удаления параметров запроса используется диалоговое окно.  
+  Выберите **параметры** на **свойства набора данных** диалоговое окно для добавления, изменения и удаления параметров запроса.  
   
  Что касается внедренного набора данных, то параметры применяются к набору данных в определении отчета.  
   
@@ -74,14 +74,14 @@ ms.locfileid: "36098832"
   
  Выберите этот параметр, чтобы применение значения NULL стало допустимым.  
   
- **Пропустить в запросе**  
+ **Не указывать в запросе**  
  Относится только к общим наборам данных.  
   
  Выберите этот вариант, если ссылка на параметр отчета находится в выражении фильтра общего набора данных, а не в запросе. После выбора этого варианта отпадает необходимость задавать значение по умолчанию для данного параметра при выполнении запроса.  
   
 ## <a name="see-also"></a>См. также  
  [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Диалоговое окно «Свойства набора данных», запрос &#40;построитель отчетов&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
+ [Диалоговое окно свойств набора данных, запрос &#40;построитель отчетов&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Выражения (построитель отчетов и службы SSRS)](report-design/expressions-report-builder-and-ssrs.md)   
  [Учебник. Добавление параметра к отчету (построитель отчетов)](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Параметры отчета (построитель отчетов и конструктор отчетов)](report-design/report-parameters-report-builder-and-report-designer.md)   

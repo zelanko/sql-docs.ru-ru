@@ -1,1 +1,1 @@
-**корневой\\Microsoft\\SqlServer\\ReportServer\\\<*InstanceName*\>\\v11**
+**корневой\\Microsoft\\SqlServer\\ReportServer\\\<*InstanceName*\>\\версии 11**

@@ -1,5 +1,5 @@
 ---
-title: Добавление итерации к потоку управления | Документы Microsoft
+title: Добавление итерации к потоку управления | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - repeating workflows
 - adding iterations
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7727dafeee728347511e91723ae9674fe9fd089e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fb691bb954b463e584cf56527b8b87b0662c6f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273420"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Добавление итерации к потоку управления
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включает в себя контейнер "Цикл по элементам" — элемент потока управления, который позволяет легко использовать циклы, в зависимости от определенных условий повторяющие поток управления в пакете. Дополнительные сведения см. в статье [For Loop Container](control-flow/for-loop-container.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "36098957"
   
  Выражения могут содержать переменные. Преимущество использования переменных состоит в том, что они могут изменяться во время выполнения, делая пакеты более гибкими и простыми в управлении. Максимальная длина выражения составляет 4000 символов.  
   
- При указании в выражении переменной ее имя должно начинаться с символа @. Например, переменная с именем `Counter`, введите @Counter в выражении, которое использует контейнер цикла For. Если для данной переменной указывается пространство имен, необходимо заключать переменную и пространство имен в скобки. Например, для `Counter` переменных в `MyNamespace` пространств имен, типов [@MyNamespace::Counter].  
+ При указании в выражении переменной ее имя должно начинаться с символа @. Например, для переменной с именем `Counter`, введите @Counter в выражении, которое использует контейнер цикла For. Если для данной переменной указывается пространство имен, необходимо заключать переменную и пространство имен в скобки. Например, для `Counter` переменных в `MyNamespace` пространств имен, типов [@MyNamespace::Counter].  
   
  Переменные, используемые в контейнере «цикл по элементам», должны быть определены в области действия данного контейнера «цикл по элементам» или в области действия любого контейнера, стоящего выше в иерархии контейнеров данного пакета. Например контейнер «цикл по элементам» может использовать переменные, определенные в его области действия и определенные в области действия пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md) и [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md).  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36098957"
 4.  Задайте параметры контейнера «цикл по элементам». Дополнительные сведения см. в разделе [Настройка контейнера "цикл по элементам"](../../2014/integration-services/configure-a-for-loop-container.md).  
   
 ## <a name="see-also"></a>См. также  
- [Добавление или удаление задачи или контейнера в потоке управления](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [Добавление или удаление задачи или контейнера в поток управления](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Группирование и разгруппирование компонентов](group-or-ungroup-components.md)   
  [Соединение задач и контейнеров с помощью элементов управления очередностью по умолчанию](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Добавление перечисления к потоку управления](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   

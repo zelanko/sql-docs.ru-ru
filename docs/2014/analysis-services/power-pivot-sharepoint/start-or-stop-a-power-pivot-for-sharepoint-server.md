@@ -1,5 +1,5 @@
 ---
-title: Запуск и остановка PowerPivot для SharePoint Server | Документы Microsoft
+title: Запуск и остановка PowerPivot для SharePoint Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6039a0181cfce993e0c1970a5db68deb9d3c17c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df2305d3efa7896d8646be33a5f95ade8c4e7c00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247394"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>Запуск и остановка PowerPivot для сервера SharePoint
-  Системная служба PowerPivot и [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] экземпляр работают совместно на одном локальном сервере приложений для поддержки согласованной запросов и обработки данных в ферме SharePoint.  
+  Системная служба PowerPivot и [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] экземпляра работают совместно на одном локальном сервере приложений для поддержки согласованной запросов и обработки данных в ферме SharePoint.  
   
  Этот раздел состоит из следующих подразделов.  
   

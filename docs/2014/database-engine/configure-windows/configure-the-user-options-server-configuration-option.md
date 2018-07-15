@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - global default for all users [SQL Server]
 - users [SQL Server], global defaults
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 88edb881309b66cd84f953d8166a47b9e4eeb472
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a746b087259d5159f693198a3cf60a1ce98ce6e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099849"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257070"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Настройка параметра конфигурации сервера user options
   В этом разделе описано, как настроить параметр конфигурации сервера **user options** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **user options** задает глобальные параметры по умолчанию для всех пользователей. Список параметров обработки запросов по умолчанию создается на время сеанса работы пользователя. Параметр **user options** позволяет изменить значения по умолчанию параметров инструкции SET (в случае если настройки сервера по умолчанию не подходят).  

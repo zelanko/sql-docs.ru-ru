@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.importdac.progress.f1
 - sql12.swb. importdac.settings.f1
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - DAC
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 41897611efc3c44baa03b24763f76c6f6925e514
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 17545a7c79026b546ce31b3dcefbcf946c452ef1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266830"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Импорт файла BACPAC для создания новой пользовательской базы данных
   Импортируйте файл приложения уровня данных (DAC), файл .bacpac, для создания копии исходной базы данных с данными в новом экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] или в компоненте [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Операции экспорта-импорта могут быть совмещены для переноса приложения уровня данных или базы данных из одного экземпляра в другой или для создания логического резервного копирования, например создания находящейся на предприятии копии базы данных, развернутой в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

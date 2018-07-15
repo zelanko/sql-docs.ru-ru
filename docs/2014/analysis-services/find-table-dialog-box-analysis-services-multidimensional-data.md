@@ -1,5 +1,5 @@
 ---
-title: Найти таблицу-диалоговое окно (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Найти таблицу-диалоговое окно (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.findtabledialog.f1
 helpviewer_keywords:
 - Find Table dialog box
 ms.assetid: 133d28e8-55eb-4783-bb8b-d3776a95ebda
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e3386756ade73e6e04391debdae8415b9b00c75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 489f85e874c6cb8ba2c9d9ca457626e52db89cce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243674"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Поиск таблицы» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Поиск таблицы** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для поиска таблицы в представлении источников данных, связанном с измерением, кубом или структурой интеллектуального анализа данных. Чтобы открыть это диалоговое окно в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , выполните одно из следующих действий.  
@@ -39,7 +39,7 @@ ms.locfileid: "36097815"
 -   Щелкните правой кнопкой мыши фон панели **Представление источника данных** на странице **Структура интеллектуального анализа данных** в **конструкторе моделей интеллектуального анализа данных** и выберите в контекстном меню пункт **Найти таблицу**.  
   
 ## <a name="options"></a>Параметры  
- **Выберите таблицу из представления источника данных**  
+ **Выберите таблицу из представления источников данных**  
  Выберите таблицу для поиска на панели **Представление источника данных** . Данный параметр отображает сетку доступных объектов и их типы, совпадающие с фильтром, заданным на странице **Фильтр** (или все таблицы, если **Фильтр** не установлен), которые пока не отображаются в данной диаграмме.  
   
  **Filter**  
@@ -47,7 +47,7 @@ ms.locfileid: "36097815"
   
 ## <a name="see-also"></a>См. также  
  [Диалоговое окно «Свойства сборки» &#40;службы Analysis Services — многомерные данные&#41;](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)   
- [Представление источника данных &#40;вкладка «Структура измерения», конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [Представление источника данных &#40;вкладка «Структура куба», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
+ [Представление источника данных &#40;вкладка «Структура измерения» конструктора измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Представление источника данных &#40;вкладка «Структура куба» конструктора кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
   
   

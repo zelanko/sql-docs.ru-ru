@@ -1,5 +1,5 @@
 ---
-title: Образец Hello World Ready | Документы Microsoft
+title: Образец Hello World Ready | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e4fed72859ff91a9a0056529893c7f5664fe6254
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7d94ed99238f6e4a38b92059ad7cd5571abd47e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235604"
 ---
 # <a name="hello-world-ready-sample"></a>Образец Hello World Ready
   Образец Hello World Ready демонстрирует основные операции, применяемые при создании, развертывании и отладке простых общедоступных хранимых процедур на основе интеграции со средой CLR. Общедоступный компонент может быть легко локализован для различных рынков по всему миру без изменения исходного кода компонента. В этом образце также показывается, как вернуть данные через выходной параметр и через запись, которая динамически конструируется хранимой процедурой и возвращается клиенту. Он практически идентичен образцу «Hello World» за тем исключением, что это приложение значительно проще и легче локализовать. Для изменения локализованного текста необходимо:  
@@ -40,7 +40,7 @@ ms.locfileid: "36098256"
   
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
 -   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](http://go.microsoft.com/fwlink/?linkid=62796).  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36098256"
   
 4.  В каталоге c:\MySample создайте файл `messages.resx` и скопируйте в него образец кода.  
   
-5.  В c:\MySample, создайте файл `messages.de.resx` , сохранив файл `messages.resx` как `messages.de.resx` после изменения в строке  
+5.  В c:\MySample создайте файл `messages.de.resx` , сохраняя его `messages.resx` как `messages.de.resx` после изменения в строке  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36098256"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  В c:\MySample, создайте файл `messages.es.resx` , сохранив файл `messages.resx` как `messages.es.resx` после изменения в строке  
+6.  В c:\MySample создайте файл `messages.es.resx` , сохраняя его `messages.resx` как `messages.es.resx` после изменения в строке  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36098256"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  В c:\MySample, создайте файл `messages.fr.resx` , сохранив файл `messages.resx` как `messages.fr.resx` после изменения в строке  
+7.  В c:\MySample создайте файл `messages.fr.resx` , сохраняя его `messages.resx` как `messages.fr.resx` после изменения в строке  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36098256"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  В c:\MySample, создайте файл `messages.fr-FR.resx` , сохранив файл `messages.resx` как `messages.fr-FR.resx` после изменения в строке  
+8.  В c:\MySample создайте файл `messages.fr-FR.resx` , сохраняя его `messages.resx` как `messages.fr-FR.resx` после изменения в строке  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36098256"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. В c:\MySample, создайте файл `messages.it.resx` , сохранив файл `messages.resx` как `messages.it.resx` после изменения в строке  
+9. В c:\MySample создайте файл `messages.it.resx` , сохраняя его `messages.resx` как `messages.it.resx` после изменения в строке  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36098256"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. В c:\MySample, создайте файл `messages.ja.resx` , сохранив файл `messages.resx` как `messages.ja.resx` после изменения в строке  
+10. В c:\MySample создайте файл `messages.ja.resx` , сохраняя его `messages.resx` как `messages.ja.resx` после изменения в строке  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   

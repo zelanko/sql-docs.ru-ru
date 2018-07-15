@@ -1,5 +1,5 @@
 ---
-title: Подключиться к службам Reporting Server (страница «Свойства соединения») | Документы Microsoft
+title: Соединиться с сервером (страница "Свойства подключения") служб Reporting Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttors.connectionproperties.f1
 ms.assetid: 66761a14-d646-44bb-9dff-be5ab2c40e88
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a66de16f4454742983bde4f45d3da496122ed9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1f079e76c4f3d7b659d3b48cf94a9e7fe54d27a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308034"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>Соединение с сервером (страница «Свойства соединения») (службы Reporting Services)
   Используйте эту вкладку для просмотра или указания параметров при соединении с [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] или при регистрации служб [!INCLUDE[ssRS](../includes/ssrs-md.md)] в списке **Зарегистрированные серверы**. Кнопки**Соединить** и **Параметры** появляются в этом диалоговом окне только при соединении. Кнопки**Проверить** и **Сохранить** появляются в этом диалоговом окне только при регистрации компонента [!INCLUDE[ssRS](../includes/ssrs-md.md)].  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], about paths
 - data flow [Integration Services], paths
@@ -19,13 +19,13 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 33ce96096c0675b16d58532a351c20d897afb46a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2775a35efd26f8132ef2b103ad546a92872d915a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248594"
 ---
 # <a name="integration-services-paths"></a>Пути служб Integration Services
   Путь связывает два компонента в потоке данных при помощи соединения выхода одного компонента потока данных с входом другого. У пути есть источник и целевой объект. Например, если путь соединяет источник OLE DB и преобразование «Сортировка», то источник OLE DB является источником пути, а целевым объектом пути будет преобразование «Сортировка». Источником является начало пути, а целевым объектом — его конец.  
@@ -45,11 +45,11 @@ ms.locfileid: "36100047"
   
  Дополнительные сведения о свойствах, которые могут быть заданы в диалоговом окне **Редактор пути потока данных** , см. в следующих разделах:  
   
--   [Редактор пути потока данных &#40;страница «Общие»&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор пути потока данных &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Редактор пути потока данных &#40;страница «метаданные»&#41;](../data-flow-path-editor-metadata-page.md)  
   
--   [Редактор пути потока данных &#40;страницы средств просмотра данных&#41;](../data-flow-path-editor-data-viewers-page.md)  
+-   [Редактор пути потока данных &#40;странице средства просмотра данных&#41;](../data-flow-path-editor-data-viewers-page.md)  
   
  Дополнительные сведения о свойствах, которые можно задать программно, см. в разделе [Path Properties](../path-properties.md).  
   

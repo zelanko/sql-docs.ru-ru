@@ -1,5 +1,5 @@
 ---
-title: Запрос и фильтр (вкладка «браузер», конструктор кубов) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Запрос и фильтр (вкладка «браузер», конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.filterpane.f1
 ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 93055c2220f4dfa7b32293ee88178defbf1d0f6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85570891b1af0b102067f9153fe17e7a7b5b21a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250976"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Запрос и фильтр (вкладка «Браузер», конструктор кубов) (службы Analysis Services — многомерные данные)
   Эта область вкладки **Браузер** в конструкторе кубов содержит область запросов и фильтров, которая помогает выбирать из куба данные, используемые при просмотре или в запросах. Можно добавить любое количество кубов и просмотреть результаты в области данных или экспортировать их в отчет с помощью функции «Анализ в Excel», чтобы получить представление о том, как данные будут выглядеть для конечных пользователей.  
@@ -46,10 +46,10 @@ ms.locfileid: "36099895"
 |**Равно**|Результаты ограничены набором, определенным в **Критерии фильтра**.|  
 |**Не равно**|Результаты ограничены элементами, исключенными набором, определенным в **Критерии фильтра**.|  
 |**In**|Результаты ограничены именованным набором, выбранным в **Критерии фильтра**.|  
-|**Не поддерживается в**|Результаты ограничены элементами, исключенными именованным набором, выбранным в **Критерии фильтра**.|  
+|**Не в**|Результаты ограничены элементами, исключенными именованным набором, выбранным в **Критерии фильтра**.|  
 |**Содержит**|Результаты ограничены элементами, чьи имена содержат строку в **Критерии фильтра**.|  
 |**Начинается с**|Результаты ограничены элементами, чьи имена начинаются со строки в **Критерии фильтра**.|  
-|**Диапазон (включительно)**|Результаты ограничены диапазоном, выбранным в **Критерии фильтра**.|  
+|**Диапазон (включая границы)**|Результаты ограничены диапазоном, выбранным в **Критерии фильтра**.|  
 |**Диапазон (исключая границы)**|Результаты ограничены элементами, исключенными диапазоном, выбранным в **Критерии фильтра**.|  
 |**МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ**|Результаты ограничиваются многомерными выражениями, установленными в поле **Критерий фильтра**.|  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36099895"
   
 ## <a name="see-also"></a>См. также  
  [Конструктор кубов &#40;службы Analysis Services — многомерные данные&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Обозреватель &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Браузер &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
  [Панель инструментов &#40;вкладка «браузер», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Анализ в Excel &#40;вкладка «браузер», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
  [Метаданные &#40;вкладка «браузер», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)  

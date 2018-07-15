@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c681fed24d521c978946c46caeb4a9bbe1124bd4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee4d362dc90ac51f90c91d5fcdebd849c23a6882
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272340"
 ---
 # <a name="reporting-services-data-alerts"></a>Предупреждения об изменении данных в службах Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] — это управляемое данными решение, информирующее пользователей об изменении данных отчета, которые представляют для них непосредственный интерес. Использование предупреждений об изменении данных позволяет воздержаться от поиска данных — данные будут доставляться вам.  
@@ -116,9 +116,9 @@ ms.locfileid: "36099246"
 ##  <a name="InstallAlerting"></a> Установка предупреждений об изменении данных  
  Функция предупреждений об изменении данных доступна только в случае, если службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] установлены в режиме интеграции с SharePoint. При установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint программа установки автоматически создает базу данных предупреждений, в которой хранятся определения предупреждений и метаданные предупреждений, и две страницы SharePoint для управления предупреждениями, а также добавляет конструктор предупреждений об изменении данных к сайту SharePoint. Для установки системы предупреждений не нужно выполнять каких-либо специальных действий.  
   
- Если вы хотите узнать больше об установке [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint, включая [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] общую службу, новые возможности [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] и [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] приложения, необходимо создать и настроить перед использованием службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] возможности, см. [установить службы Reporting Services в режиме SharePoint для SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) в библиотеке MSDN.  
+ Если вы хотите узнать больше об установке [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint, включая [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] общей службы, который впервые появился в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] и [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] приложения, необходимо создать и настроить перед использованием службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] функции, см. в разделе [установить службы Reporting Services в режиме SharePoint для SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) в библиотеке MSDN.  
   
- Как показано на приведенной выше диаграмме, предупреждения об изменении данных используют задания агента SQL Server. Чтобы можно было создавать задания, должен работать агент SQL Server. Агент SQL Server мог быть настроен для автоматического запуска при установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Если это не было сделано, вы можете запустить агент SQL Server вручную. Дополнительные сведения см. в разделе [Настройка агента SQL Server](../ssms/agent/configure-sql-server-agent.md) и [запуск, остановка, приостановка, возобновление, перезапуск компонента Database Engine, агента SQL Server и службы обозревателя SQL Server](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+ Как показано на приведенной выше диаграмме, предупреждения об изменении данных используют задания агента SQL Server. Чтобы можно было создавать задания, должен работать агент SQL Server. Агент SQL Server мог быть настроен для автоматического запуска при установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Если это не было сделано, вы можете запустить агент SQL Server вручную. Дополнительные сведения см. в разделе [Настройка агента SQL Server](../ssms/agent/configure-sql-server-agent.md) и [запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и служба обозревателя SQL Server](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
  Страницу **Подготовка подписок и предупреждений** в центре администрирования SharePoint можно использовать, чтобы узнать, выполняется ли агент SQL Server, а также чтобы создавать и загружать пользовательские скрипты [!INCLUDE[tsql](../includes/tsql-md.md)] , которые впоследствии запускаются для предоставления разрешений агенту SQL Server. С ее помощью также можно создавать скрипты [!INCLUDE[tsql](../includes/tsql-md.md)] с использованием PowerShell. Дополнительные сведения см. в разделе [Подготовка подписок и предупреждений для приложений служб SSRS](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
@@ -199,7 +199,7 @@ ms.locfileid: "36099246"
 ##  <a name="Permissions"></a> Разрешения для предупреждений об изменении данных  
  Чтобы можно было создавать предупреждения об изменении данных для отчетов, необходимо иметь разрешения на выполнение отчетов и создание предупреждений на сайте SharePoint. Дополнительные сведения о разрешениях для отчетов см. в следующих разделах:  
   
--   [Формирование потоков данных из отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
+-   [Формирование потоков данных из отчетов &#40;построитель отчетов и службы SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
 -   [Задать разрешения для элементов сервера отчетов на сайте SharePoint &#40;режим интеграции служб Reporting Services в SharePoint&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
@@ -225,7 +225,7 @@ ms.locfileid: "36099246"
 ### <a name="logs"></a>Журналы  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] доступно несколько журналов, с помощью которых можно узнать больше об отчетах, выполняемых при обработке определений предупреждений об изменении данных, создаваемых экземплярах предупреждений, изменении данных и т. д. Три журнала являются особенно полезными: журнал выполнения системы предупреждений, журнал выполнения сервера отчетов и журнал трассировки сервера отчетов.  
   
- Дополнительные сведения о других [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] см. журналы, [файлы журнала служб Reporting Services и источники](report-server/reporting-services-log-files-and-sources.md).  
+ Дополнительные сведения о других [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] журналы, см. в разделе [файлы журнала служб Reporting Services и источники](report-server/reporting-services-log-files-and-sources.md).  
   
 #### <a name="alerting-execution-log"></a>Журнал выполнения системы предупреждений  
  Служба среды выполнения системы предупреждений вносит записи в таблицу ExecutionLogView базы данных предупреждений. Можно выполнять запросы к этой таблице или выполнять следующие хранимые процедуры для получения более полных диагностических сведений о предупреждениях об изменении данных, сохраненных в базе данных предупреждений.  
@@ -268,7 +268,7 @@ ms.locfileid: "36099246"
 |GenerateAlert|Система предупреждений: события обрабатываются — GenerateAlert|  
 |DeliverAlert|Система предупреждений: события обрабатываются — DeliverAlert|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляют счетчики производительности для других функций [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [счетчики производительности ReportServer: Service и reportserversharepoint: Service объекты производительности](report-server/performance-counters-reportserver-service-performance-objects.md), [счетчики производительности для веб-службы MSRS 2014 и MSRS 2014 Windows Объекты производительности службы &#40;собственный режим&#41;](report-server/performance-counters-msrs-2011-web-service-performance-objects.md), и [счетчики производительности для MSRS 2014 Web Service SharePoint Mode и MSRS 2014 Windows Service SharePoint режим объекты по производительности &#40;SharePoint Режим&#41;](report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляют счетчики производительности для других функций [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [счетчики производительности ReportServer: Service и reportserversharepoint: Service объекты](report-server/performance-counters-reportserver-service-performance-objects.md), [счетчики производительности для MSRS 2014 Web Service и MSRS 2014 Windows Объекты производительности службы &#40;собственный режим&#41;](report-server/performance-counters-msrs-2011-web-service-performance-objects.md), и [счетчики производительности для MSRS 2014 Web Service SharePoint Mode и MSRS 2014 Windows Service SharePoint режим, объекты производительности &#40;SharePoint Режим&#41;](report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
 ##  <a name="SupportForSSL"></a> Поддержка SSL.  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] могут использовать HTTP-службу SSL для установления зашифрованного соединения с сервером отчетов или сайтом SharePoint.  
@@ -280,13 +280,13 @@ ms.locfileid: "36099246"
 ##  <a name="UserInterface"></a> Пользовательский интерфейс предупреждений об изменении данных  
  Функции предупреждения об изменении данных реализуют страницы SharePoint для управления предупреждениями и конструктор для создания и изменения определений предупреждений об изменении данных.  
   
--   **Конструктор предупреждений об изменении данных** , в котором можно создавать и изменять определения предупреждений об изменении данных. Дополнительные сведения см. в разделе [конструктор предупреждений об изменении данных](../../2014/reporting-services/data-alert-designer.md), [создать предупреждение об изменении данных в конструкторе предупреждений](create-a-data-alert-in-data-alert-designer.md) и [изменение данных предупреждений конструктора предупреждений об изменении](edit-a-data-alert-in-alert-designer.md).  
+-   **Конструктор предупреждений об изменении данных** , в котором можно создавать и изменять определения предупреждений об изменении данных. Дополнительные сведения см. в разделе [конструктор предупреждений об изменении данных](../../2014/reporting-services/data-alert-designer.md), [Создание предупреждения данных в конструкторе предупреждений данных](create-a-data-alert-in-data-alert-designer.md) и [изменение предупреждения в конструкторе предупреждений](edit-a-data-alert-in-alert-designer.md).  
   
 -   **Диспетчер предупреждений об изменении данных** , в котором можно просматривать списки предупреждений, удалять предупреждения об изменении данных и открывать предупреждения для изменения. Диспетчер предупреждений об изменении данных доступен в двух версиях: версия для пользователей, позволяющая управлять собственными предупреждениями, и версия для администраторов, с помощью которой можно управлять предупреждениями пользователей сайта.  
   
-     Дополнительные сведения об управлении оповещениями данных, созданные в разделе [диспетчер предупреждений данных для пользователей SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) и [управление оповещения о данных в диспетчере предупреждений об изменении данных Мои](manage-my-data-alerts-in-data-alert-manager.md).  
+     Дополнительные сведения об управлении собственными предупреждениями данных см. в разделе [диспетчер предупреждений данных для пользователей SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) и [Управление предупреждениями данных в диспетчере предупреждений данных](manage-my-data-alerts-in-data-alert-manager.md).  
   
-     Дополнительные сведения об управлении всеми предупреждениями данных на сайте см. в разделе [диспетчер предупреждений данных для оповещения администраторов](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) и [управление всеми предупреждениями на сайте SharePoint в диспетчере предупреждений данных](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
+     Дополнительные сведения об управлении всеми предупреждениями данных на сайте см. в разделе [диспетчер предупреждений данных для оповещения администраторов](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) и [управление всеми предупреждениями данных на сайте SharePoint в диспетчере предупреждений данных](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
 -   **Подготовка подписок и предупреждений об изменении данных** , в которой можно определить, могут ли службы Reporting Services использовать агент SQL Server для работы с предупреждениями об изменении данных и для загрузки скриптов, позволяющих осуществлять доступ к агенту SQL Server. Дополнительные сведения см. в разделе [Подготовка подписок и предупреждений для приложений служб SSRS](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   

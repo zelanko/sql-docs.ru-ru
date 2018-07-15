@@ -1,5 +1,5 @@
 ---
-title: Образец «Hello World» | Документы Microsoft
+title: Пример Hello World | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 05ac9594d985766e48fbd5757dca48bdd47c2aa1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 75ac8eafd490dc3a9b7501f7c653bc8aaf99cde4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269930"
 ---
 # <a name="hello-world-sample"></a>Образец «Hello World»
   Образец Hello World демонстрирует основные операции, применяемые при создании, развертывании и тестировании простых хранимых процедур на основе интеграции со средой CLR. Этот образец также демонстрирует способы возврата данных при помощи выходного параметра и записи, которая динамически создается хранимой процедурой и возвращается вызывающему.  
@@ -30,7 +30,7 @@ ms.locfileid: "36099584"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
 -   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](http://go.microsoft.com/fwlink/?linkid=62796).  
   

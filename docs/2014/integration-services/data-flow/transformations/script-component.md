@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponentdetails.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 56b26f0c43df3257fc563ea246045ad3baf1e3ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 73a67a807ee928315b264ea52bd0d993e0ee81f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097131"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295084"
 ---
 # <a name="script-component"></a>Компонент скрипта
   Компонент скрипта размещает скрипт и позволяет пакету включать и выполнять пользовательский код скрипта. Можно использовать компонент скрипта в пакетах для следующих целей.  
@@ -94,13 +94,13 @@ ms.locfileid: "36097131"
 ### <a name="configuring-the-script-component-in-the-designer"></a>Настройка компонента скрипта в конструкторе  
  Дополнительные сведения о свойствах, которые можно установить в диалоговом окне **Редактор преобразования «Скрипт»** , см. в следующих разделах:  
   
--   [Редактор преобразования «скрипт» &#40;ввода страница «столбцы»&#41;](../../script-transformation-editor-input-columns-page.md)  
+-   [Редактор преобразования "скрипт" &#40;ввода страница "столбцы"&#41;](../../script-transformation-editor-input-columns-page.md)  
   
--   [Редактор преобразования «скрипт» &#40;получает на входе и выводит страницу&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [Редактор преобразования "скрипт" &#40;входных и выходных данных страницы&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [Редактор преобразования «скрипт» &#40;страница "сценарий"&#41;](../../script-transformation-editor-script-page.md)  
+-   [Редактор преобразования "скрипт" &#40;страница "сценарий"&#41;](../../script-transformation-editor-script-page.md)  
   
--   [Редактор преобразования «скрипт» &#40;страница «Диспетчеры соединений»&#41;](../../script-transformation-editor-connection-managers-page.md)  
+-   [Редактор преобразования "скрипт" &#40;страница «Диспетчеры соединений»&#41;](../../script-transformation-editor-connection-managers-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] см. в следующем разделе:  
   

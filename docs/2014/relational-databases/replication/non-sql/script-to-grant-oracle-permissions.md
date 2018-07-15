@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], script to grant permissions
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 89829997447453f336065dd1e9c94ca48c53607e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: de3df0aa4e66f882f618fc4db13bcce544ce6fab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307514"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Скрипт для предоставления разрешений Oracle
   Скрипт, предложенный в этом разделе, используется во время конфигурации базы данных Oracle, которая будет публиковать данные с помощью репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Этот скрипт доступен также в следующем каталоге после установки *: \<диск>*:\\\Program Files\Microsoft SQL Server\\*\<имя_экземпляра>* \MSSQL\Install\oracleadmin.sql. Дополнительные сведения о настройке базы данных Oracle см. в разделе [Настройка издателя Oracle](configure-an-oracle-publisher.md).  

@@ -1,5 +1,5 @@
 ---
-title: Приступая к работе с Visual C# .NET | Документы Microsoft
+title: Приступая к работе с Visual C# .NET | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - Visual C# [SMO]
 ms.assetid: 37a22721-546c-453d-bc6f-238c13d7505d
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4ab73cb74f260ecb1b25e5452544cdebb9f1fdd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7996f92639e3bdc6bf759b3f223dff4907752acb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244586"
 ---
 # <a name="getting-started-in-visual-c-net"></a>Приступая к работе с Visual C# .NET
-  [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET является одним из языков программирования с управляемым, поддерживаемых общеязыковой среды выполнения (CLR) в [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. См. Дополнительные сведения о языке C# [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] документации по платформе .NET. Для разработки приложений объектов SMO можно использовать [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] и [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] .  
+  [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET является одним из управляемых языков программирования, поддерживаемых общеязыковой среды выполнения (CLR) в [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Дополнительные сведения о языке C#, см. в разделе [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] документация по .NET. Для разработки приложений объектов SMO можно использовать [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] и [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] .  
   
 ## <a name="references-and-imports"></a>Ссылки и импорт  
  После запуска проекта [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] необходимо добавить ссылки на сборки объектов (SMO). Затем нужно импортировать требуемые пространства имен, чтобы программа могла распознать типы SMO.  

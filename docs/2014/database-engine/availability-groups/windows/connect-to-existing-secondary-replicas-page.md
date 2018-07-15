@@ -1,28 +1,27 @@
 ---
-title: Подключение к странице существующих вторичных реплик (мастер добавления реплики и мастер добавления баз данных) | Документы Microsoft
+title: Подключение к странице существующих вторичных реплик (мастер добавления реплики и мастер добавления баз данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.connecttoreplicas.f1
 - sql12.swb.adddatabasewizard.connecttoreplicas.f1
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 caps.latest.revision: 5
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: c64f0ec6d4e54da8be90063cadfac60b2837ddef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6f7282c48e5c31dc4ee71ddb8dee5d828f70a049
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097797"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245834"
 ---
 # <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>Подключение к странице существующих вторичных реплик (мастер добавления реплики и мастер добавления баз данных)
   В этом разделе описываются параметры на странице **Подключение к существующим вторичным репликам** . Этот раздел используется в [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] и [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] из [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.datapartitions.f1
 ms.assetid: 5869edb7-d05f-495b-b828-b7fd5e828d20
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fe5c3417d20656c207bcdddea97b8cb998d5050f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ba8e9cb13187b493797ea63a7d1f21197c8411bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098375"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284890"
 ---
 # <a name="publication-properties-data-partitions"></a>Свойства публикации, секции данных
   Страница **Секции данных** диалогового окна **Свойства публикации** позволяет определить секции данных для публикаций слиянием, использующих параметризованную фильтрацию. После определения секций для них можно создать моментальные снимки, предоставляя первоначальные наборы данных для различных подписчиков на основе свойств соединений (имени входа или имени компьютера) подписчиков. Также можно разрешить подписчикам запрашивать доставку и создание моментальных снимков, если для их секции недоступен моментальный снимок в момент их первой синхронизации. Дополнительные сведения см. в статье [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  

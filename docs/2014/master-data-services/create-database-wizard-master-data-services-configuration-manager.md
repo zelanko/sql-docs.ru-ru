@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef3d71e52b29895111378ad26973f819bcf14076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1c020e8c27a7e4e2e7d22eb5a89308ddab5b8112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296694"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>Мастер создания базы данных (диспетчер конфигурации служб Master Data Services)
   **Мастер создания базы данных** используется для создания базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -60,7 +60,7 @@ ms.locfileid: "36097302"
   
 ## <a name="see-also"></a>См. также  
  [Страница "Конфигурация базы данных" (диспетчер конфигурации служб Master Data Services)](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [Настройка базы данных и веб-сайт для служб Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Настройка веб-сайта и базы данных для служб Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [Требования к базе данных &#40;службы Master Data Services&#41;](install-windows/database-requirements-master-data-services.md)  
   
   

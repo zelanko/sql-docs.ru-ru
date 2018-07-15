@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - foreign keys [SQL Server], cascading referential integrity
 - FOREIGN KEY constraints
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 30a0d2f23c814c9ff1c963c1a5d430cb6d711cbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 95825200426f9fc2f5989a2667b5504f6c4d6f3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268820"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Ограничения первичных и внешних ключей
   Первичные и внешние ключи представляют собой два типа ограничений, которые могут использоваться для обеспечения целостности данных в таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это важные объекты базы данных.  
@@ -82,7 +82,7 @@ ms.locfileid: "36099261"
  Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] формирует ошибку, после чего выполняется откат операции удаления или обновления строки в родительской таблице.  
   
  CASCADE  
- Соответствующие строки обновляются или удаляются из ссылающейся таблицы, если данная строка обновляется или удаляется из родительской таблицы. Не может быть задан аргумент CASCADE, если `timestamp` столбец является частью внешнего ключа или ссылочного ключа. Действие ON DELETE CASCADE не может быть указано в таблице, для которой определен триггер INSTEAD OF DELETE. Предложение ON UPDATE CASCADE не может быть задано применительно к таблицам, для которых определены триггеры INSTEAD OF UPDATE.  
+ Соответствующие строки обновляются или удаляются из ссылающейся таблицы, если данная строка обновляется или удаляется из родительской таблицы. CASCADE не может быть указано, если `timestamp` столбец является частью внешнего ключа или ссылочного ключа. Действие ON DELETE CASCADE не может быть указано в таблице, для которой определен триггер INSTEAD OF DELETE. Предложение ON UPDATE CASCADE не может быть задано применительно к таблицам, для которых определены триггеры INSTEAD OF UPDATE.  
   
  SET NULL  
  Всем значениям, составляющим внешний ключ, присваивается значение NULL, когда обновляется или удаляется соответствующая строка в родительской таблице. Для выполнения этого ограничения внешние ключевые столбцы должны допускать значения NULL. Не может быть задано применительно к таблицам, для которых определены триггеры INSTEAD OF UPDATE.  

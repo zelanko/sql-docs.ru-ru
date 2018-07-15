@@ -1,1 +1,1 @@
-Хранилище параллельных данных SQL Server 2014
+SQL Server 2014 Parallel Data Warehouse

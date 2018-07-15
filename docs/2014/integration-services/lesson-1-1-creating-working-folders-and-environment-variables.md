@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b28c191bb07ca9898c594de82dee6b27592786f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e35294a2a98d71c67553791732520cb8c710c29e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246913"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>Шаг 1. Создание рабочих папок и переменных среды
   В этой задаче предстоит создать рабочую папку (C:\DeploymentTutorial) и новые системные переменные среды (`DataTransfer` и `LoadXMLData`), которые будут использоваться в последующих задачах учебника.  
@@ -52,11 +52,11 @@ ms.locfileid: "36097990"
   
 4.  В диалоговом окне **Переменные среды** в области **Системные переменные** нажмите кнопку **Создать**.  
   
-5.  В **Новая системная переменная** диалоговом `DataTransfer` в **имя переменной** поле, и `C:\DeploymentTutorial\datatransferconfig.dtsconfig` в **значение переменной** поле.  
+5.  В **Новая системная переменная** диалоговом окне `DataTransfer` в **имя переменной** », вкладка «и `C:\DeploymentTutorial\datatransferconfig.dtsconfig` в **значение переменной** поле.  
   
 6.  Нажмите кнопку **ОК**.  
   
-7.  Нажмите кнопку **New** еще раз и тип `LoadXMLData` в **имя переменной** поле, и `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` в **значение переменной** поле.  
+7.  Нажмите кнопку **New** еще раз и тип `LoadXMLData` в **имя переменной** », вкладка «и `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` в **значение переменной** поле.  
   
 8.  Нажмите кнопку **ОК** для выхода из диалогового окна **Переменные среды** .  
   
@@ -74,11 +74,11 @@ ms.locfileid: "36097990"
   
 4.  В диалоговом окне **Переменные среды** в области **Системные переменные** нажмите кнопку **Создать**.  
   
-5.  В **Новая системная переменная** диалоговом `DataTransfer` в **имя переменной** поле, и `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` в **значение переменной** поле.  
+5.  В **Новая системная переменная** диалоговом окне `DataTransfer` в **имя переменной** », вкладка «и `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` в **значение переменной** поле.  
   
 6.  Нажмите кнопку **ОК**.  
   
-7.  Нажмите кнопку **New** еще раз и тип `LoadXMLData` в **имя переменной** поле, и `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` в **значение переменной** поле.  
+7.  Нажмите кнопку **New** еще раз и тип `LoadXMLData` в **имя переменной** », вкладка «и `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` в **значение переменной** поле.  
   
 8.  Нажмите кнопку **ОК** для выхода из диалогового окна **Переменные среды** .  
   
@@ -89,6 +89,6 @@ ms.locfileid: "36097990"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Шаг 2. Создание проекта развертывания](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
-![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться установка последних со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services в MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services  **<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
   

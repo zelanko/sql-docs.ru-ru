@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 caps.latest.revision: 57
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a65acdb83f7a9bccc36751a760d61133597caf8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ecdadef4e49f3630c78fc33c1c6f490deda26b5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274750"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Использование выражений в отчетах (построитель отчетов и службы SSRS)
   Выражения используются по всему определению отчета для указания или вычисления значений параметров, запросов, свойств элементов отчета, определений группирований и сортировки, свойств текстовых полей, закладок, схем документов, динамического содержимого заголовков и нижних колонтитулов страниц, изображений и динамических определений источников данных. В данном разделе приводится множество примеров использования выражений для внесения разнообразия в содержимое или внешний вид отчета. Этот список не является исчерпывающим. Выражение для любого свойства можно задать в диалоговом окне, содержащем кнопку выражения (**fx**), или в раскрывающемся списке, содержащем **\<выражение...>**.  
@@ -80,10 +80,10 @@ ms.locfileid: "36098128"
  [Выражения (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Параметры отчета (построитель отчетов и конструктор отчетов)](report-parameters-report-builder-and-report-designer.md)   
- [Примеры уравнений фильтра &#40;отчетов построителя отчетов и службы SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
+ [Примеры уравнений фильтра &#40;построитель отчетов и службы SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Верхние и нижние колонтитулы страницы &#40;отчетов построителя отчетов и службы SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [Форматирование текста и заполнителей &#40;отчетов построителя отчетов и службы SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [И нижние колонтитулы страницы &#40;построитель отчетов и службы SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Форматирование текста и заполнителей &#40;построитель отчетов и службы SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Скрытие элемента (построитель отчетов и службы SSRS)](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

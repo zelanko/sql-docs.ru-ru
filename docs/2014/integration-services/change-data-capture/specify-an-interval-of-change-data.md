@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50b8ca15207eaa89726ed2abe90bb8d862b2f266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ecc113b3ed38461a277996497f73bca7cd83a4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267240"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Задание интервала для информации об изменениях данных
   Первой задачей в потоке управления пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , который выполняет добавочную загрузку информации об измененных данных, является вычисление конечных точек интервала изменений. Эти конечные точки имеют `datetime` значения и сохраняются в переменных пакета для дальнейшего использования в пакете.  
@@ -49,18 +49,18 @@ ms.locfileid: "36099577"
  Если конечные точки вычисляются в главном пакете, который управляет несколькими дочерними пакетами, можно использовать конфигурации переменных родительского пакета, чтобы передать значения этих переменных каждому дочернему пакету. Дополнительные сведения см. в разделах [Задача "Выполнение пакета"](../control-flow/execute-package-task.md) и [Использование значений переменных и параметров в дочернем пакете](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ## <a name="calculate-a-starting-point-and-an-ending-point-for-change-data"></a>Вычисление начальной и конечной точек для измененных данных  
- Когда переменные пакета для конечных точек интервала настроены, можно вычислить фактические значения конечных точек и сопоставить эти значения с соответствующими переменными пакета. Поскольку конечные точки имеют значения `datetime`, необходимо использовать функции, поддерживающие вычисление или обработку значений `datetime`. Оба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Transact-SQL и языка выражений имеют функции, работающие с `datetime` значения:  
+ Когда переменные пакета для конечных точек интервала настроены, можно вычислить фактические значения конечных точек и сопоставить эти значения с соответствующими переменными пакета. Поскольку конечные точки имеют значения `datetime`, необходимо использовать функции, поддерживающие вычисление или обработку значений `datetime`. Оба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] язык выражений и Transact-SQL имеют функции, работающие с `datetime` значения:  
   
- Функции в [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] язык выражений, работать с `datetime` значений  
- -   [Функция DATEADD &#40;выражение служб SSIS&#41;](../expressions/dateadd-ssis-expression.md)  
+ Функции в [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] язык выражений, которые работают с `datetime` значения  
+ -   [DATEADD &#40;выражение служб SSIS&#41;](../expressions/dateadd-ssis-expression.md)  
   
--   [Функция DATEDIFF &#40;выражение служб SSIS&#41;](../expressions/datediff-ssis-expression.md)  
+-   [DATEDIFF &#40;выражение служб SSIS&#41;](../expressions/datediff-ssis-expression.md)  
   
 -   [DATEPART &#40;выражение служб SSIS&#41;](../expressions/datepart-ssis-expression.md)  
   
 -   [ДЕНЬ &#40;выражение служб SSIS&#41;](../expressions/day-ssis-expression.md)  
   
--   [Функция GETDATE &#40;выражение служб SSIS&#41;](../expressions/getdate-ssis-expression.md)  
+-   [GETDATE &#40;выражение служб SSIS&#41;](../expressions/getdate-ssis-expression.md)  
   
 -   [GETUTCDATE &#40;выражение служб SSIS&#41;](../expressions/getutcdate-ssis-expression.md)  
   
@@ -68,14 +68,14 @@ ms.locfileid: "36099577"
   
 -   [ГОД &#40;выражение служб SSIS&#41;](../expressions/year-ssis-expression.md)  
   
- Функции языка Transact-SQL, которое работает с `datetime` значений  
+ Функции Transact-SQL, работающие с `datetime` значения  
  [Типы данных и функции даты и времени (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
   
  Прежде чем использовать какую-либо из этих функций `datetime` для вычисления конечных точек, необходимо определить, является ли интервал фиксированным и регулярно повторяющимся. Обычно требуется регулярное применение изменений, произошедших в исходных таблицах, к целевым таблицам. Например, эти изменения могут применяться каждый час, ежедневно или еженедельно.  
   
  Когда характер интервала изменений установлен (фиксированный или случайный), можно вычислять конечные точки.  
   
--   **Вычисление начальной даты и времени**. В качестве текущей начальной даты и времени используется конечная дата и время предыдущей загрузки. Если для добавочной загрузки используется фиксированный интервал, это значение можно вычислить с помощью `datetime` функции Transact-SQL или из [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] языка выражений. В других случаях иногда приходится сохранять конечные точки между выполнениями и использовать задачи «Выполнение SQL» или «Скрипт» для загрузки предыдущей конечной точки.  
+-   **Вычисление начальной даты и времени**. В качестве текущей начальной даты и времени используется конечная дата и время предыдущей загрузки. Если для добавочных загрузок используется фиксированный интервал, значение можно вычислить с помощью `datetime` функции Transact-SQL или из [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] языка выражений. В других случаях иногда приходится сохранять конечные точки между выполнениями и использовать задачи «Выполнение SQL» или «Скрипт» для загрузки предыдущей конечной точки.  
   
 -   **Вычисление конечной даты и времени**. Если для добавочной загрузки используется фиксированный интервал, текущая конечная дата и время вычисляются как смещение относительно начальной даты и времени. Опять же, это значение можно вычислить с помощью `datetime` функции Transact-SQL или из [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] языка выражений.  
   

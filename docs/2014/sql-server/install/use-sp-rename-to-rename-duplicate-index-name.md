@@ -1,5 +1,5 @@
 ---
-title: С помощью хранимой процедуры sp_rename переименуйте повторяющиеся имена индексов | Документы Microsoft
+title: С помощью хранимой процедуры sp_rename переименуйте повторяющиеся имена индексов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - table names [SQL Server]
 - duplicate table names
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - duplicate index names
 ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b47cb1000c4b427f8780c8a3f3ba57ef73fef9bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 522fcd712882d031a5febe4766946a31d5696859
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232514"
 ---
 # <a name="use-sprename-to-rename-duplicate-index-name"></a>При помощи хранимой процедуры sp_rename переименуйте повторяющиеся имена индексов
   Советник по переходу обнаружил повторяющиеся имена таблиц или индексированных представлений. Перед обновлением переименуйте повторяющиеся индексы, чтобы их не было.  
@@ -62,7 +62,7 @@ ms.locfileid: "36098556"
     WHERE i.id = OBJECT_ID('table_or_view_name')  
     ```  
   
-4.  При необходимости используйте **sp_rename** снова для исправления имен индексов.  
+4.  При необходимости используйте **sp_rename** еще раз, чтобы исправления имен индексов.  
   
 ## <a name="see-also"></a>См. также  
  [Проблемы обновления компонента Database Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

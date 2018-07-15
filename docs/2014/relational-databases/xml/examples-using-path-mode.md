@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bf9d4775b776c0766e05b39d8cd271bff9fccbd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: acc07be98a39a302cb4d20f9d18ed11c0f85869b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274630"
 ---
 # <a name="examples-using-path-mode"></a>Примеры, использование режима PATH
   В следующих примерах показано использование режима PATH при формировании XML из запроса SELECT. Многие из этих запросов являются запросами к XML-документам с инструкциями по производству велосипедов, хранящимся в столбце Instructions таблицы ProductModel.  
@@ -190,7 +190,7 @@ GO
   
  `</Root>`  
   
- Следующий запрос извлекает не только код модели продукта и его имя, но и расположения производственных инструкций для модели продукции. Поскольку столбец Instructions имеет `xml` типа, `query()` метод `xml` для получения расположения указывается тип данных.  
+ Следующий запрос извлекает не только код модели продукта и его имя, но и расположения производственных инструкций для модели продукции. Поскольку столбец Instructions имеет `xml` типа, `query()` метод `xml` для получения расположения указывается указан тип данных.  
   
 ```  
 SELECT ProductModelID AS "@id",  

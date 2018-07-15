@@ -1,5 +1,5 @@
 ---
-title: Тип данных DimensionBinding (ASSL) | Документы Microsoft
+title: Тип данных DimensionBinding (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DimensionBinding data type
 ms.assetid: 6163d86b-0f6c-4237-b07b-47bc7e2962c4
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac0dfce6e5c21ee901e065561b161c2d66cdd8c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6da2c5696654bf019ac139f8de6ff11507f3701a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252906"
 ---
 # <a name="dimensionbinding-data-type-assl"></a>Тип данных DimensionBinding (ASSL)
-  Определяет производный тип данных, представляющий привязку между источником данных и [измерения](../objects/dimension-element-assl.md) элемента.  
+  Определяет производный тип данных, представляющий привязку между источником данных и [измерения](../objects/dimension-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,16 +62,16 @@ ms.locfileid: "36098275"
 |------------------|-------------|  
 |Родительские элементы|None|  
 |Дочерние элементы|[DataSourceID](../properties/id-element-assl.md), [DimensionID](../properties/dimensionid-element-assl.md), [сохраняемости](../properties/persistence-element-assl.md), [RefreshInterval](../properties/refreshinterval-element-assl.md), [RefreshPolicy](../properties/refreshpolicy-element-assl.md)|  
-|Производные элементы|В разделе [привязки](binding-data-type-assl.md)|  
+|Производные элементы|См. в разделе [привязки](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о `Binding` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) `Binding` тип и иерархию наследования `Binding` типов, в разделе [тип привязки данных &#40;ASSL&#41; ](binding-data-type-assl.md) элемента.  
+ Дополнительные сведения о `Binding` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) типа `Binding` тип и иерархию наследования `Binding` типов, см. в разделе [типа привязки данных &#40;ASSL&#41; ](binding-data-type-assl.md) элемент.  
   
- Обзор привязок данных в ASSL см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Обзор привязки данных в языке ASSL, см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.DimensionBinding>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.DimensionBinding>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

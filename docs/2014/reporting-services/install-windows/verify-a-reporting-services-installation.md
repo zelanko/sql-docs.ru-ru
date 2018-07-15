@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checking report server installations
 - verifying report server installations
@@ -21,13 +21,13 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 67898b04b17ad344f07dc457927cd4abee6695bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e57883c7b6119499135fede5ad9c398350e587a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272538"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно установить в один из двух режимов — в собственном режиме или в режиме интеграции с SharePoint. Шаги, которые необходимо выполнить для проверки установки, зависят от выбранного режима сервера отчетов.  
@@ -36,7 +36,7 @@ ms.locfileid: "36097444"
   
 -   [Проверка установки в режиме интеграции с SharePoint](#bkmk_sharepointmode)  
   
--   [Проверьте установку собственного режима](#bkmk_nativemode)  
+-   [Проверка установки в собственном режиме](#bkmk_nativemode)  
   
 ##  <a name="bkmk_sharepointmode"></a> Проверка установки в режиме SharePoint  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36097444"
   
 2.  Убедитесь в том, что **Служба SQL Server Reporting Services** установлена и находится в состоянии **Выполняется** .  
   
-     Если вы не видите в списке службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , убедитесь, что служба установлена. Дополнительные сведения см в разделе «Установка и запуск служб Reporting Services SharePoint» [установить службы Reporting Services в режиме SharePoint для SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
+     Если вы не видите в списке службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , убедитесь, что служба установлена. Дополнительные сведения см. в разделе «Установка и запуск служб Reporting Services SharePoint» статьи [установить службы Reporting Services в режиме SharePoint для SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
 #### <a name="to-verify-the-service-application"></a>Проверка приложения службы  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36097444"
   
 #### <a name="to-verify-reporting-server-content-types"></a>Проверка типов содержимого сервера отчетов  
   
-1.  Чтобы проверить или добавить [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] типов содержимого сервера отчетов см. в разделе [Добавление типов сервера отчетов содержимого в библиотеку &#40;служб Reporting Services в режиме интеграции с SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).  
+1.  Чтобы проверить или добавить [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] типов содержимого сервера отчетов, см. в разделе [Добавление типов сервера отчетов содержимого в библиотеку &#40;служб Reporting Services в режиме интеграции с SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 #### <a name="to-verify-you-can-launch-report-builder"></a>Проверка возможности запуска построителя отчетов  
   

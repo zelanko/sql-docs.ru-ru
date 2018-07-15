@@ -1,5 +1,5 @@
 ---
-title: Использование столбцов для модели (мастер интеллектуального анализа данных) | Документы Microsoft
+title: Укажите интеллектуального анализа данных использование столбцов для модели (мастер интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifycolumnusage.f1
 ms.assetid: 41a9867e-e055-495b-ba40-0a7ffaf57604
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dd71b1a79471a2738a3779f644c73c01771b1a57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfe0b051e2fe3a961065a9c89d1b1b202d3b063d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254966"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>Использование столбцов для модели (мастер интеллектуального анализа данных)
   Страница **Использование столбцов для модели** используется для задания того, как будут использоваться столбцы модели интеллектуального анализа данных и для добавления вложенных таблиц.  
@@ -49,7 +49,7 @@ ms.locfileid: "36098258"
   
 ## <a name="see-also"></a>См. также  
  [Справка F1 мастера интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Выберите вариант столбцами уровня &#40;мастер интеллектуального анализа данных&#41;](select-case-level-columns-data-mining-wizard.md)   
+ [Столбцы уровня вариантов выберите &#40;мастер интеллектуального анализа данных&#41;](select-case-level-columns-data-mining-wizard.md)   
  [Определение содержимого и типа данных столбца &#40;мастер интеллектуального анализа данных&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

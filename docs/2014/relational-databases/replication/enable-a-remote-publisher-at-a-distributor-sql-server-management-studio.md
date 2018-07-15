@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - remote Distributors [SQL Server replication]
 - Publishers [SQL Server replication]
 ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d30eea9ddb042bfa13655079716e3cdab5ce5fd6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5876c1550eba3d239ba262ff67a97e8300a5bca6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264680"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>включить удаленный издатель на распространителе (среда SQL Server Management Studio)
   Предоставьте издателю разрешение использовать удаленный распространитель на странице **Издатели** . Эта страница доступна в мастере настройки распространителя и в диалоговом окне **Свойства распространителя — \<распространитель>**. Дополнительные сведения об использовании мастера и о доступе к этому диалоговому окну см. в статьях [Настройка публикации и распространения](configure-publishing-and-distribution.md) и [Просмотр и изменение свойств издателя и распространителя](view-and-modify-distributor-and-publisher-properties.md).  

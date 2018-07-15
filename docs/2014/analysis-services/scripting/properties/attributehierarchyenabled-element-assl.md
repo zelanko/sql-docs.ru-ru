@@ -1,5 +1,5 @@
 ---
-title: Элемент AttributeHierarchyEnabled (ASSL) | Документы Microsoft
+title: Элемент AttributeHierarchyEnabled (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeHierarchyEnabled element
 ms.assetid: 1e95307f-530e-4e98-a0e1-2b0462d330a3
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3433ad50f1a8d769eec53090087683324f8a9383
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab14a4adf69281ec919811270c3d2220a76682e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250874"
 ---
 # <a name="attributehierarchyenabled-element-assl"></a>Элемент AttributeHierarchyEnabled (ASSL)
   Определяет, включена ли иерархия атрибутов для атрибута.  
@@ -62,9 +62,9 @@ ms.locfileid: "36098743"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- `AttributeHierarchyEnabled` Определяет, формируется ли иерархия атрибутов службами [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] для атрибута. Если иерархия атрибута отключена, то атрибут нельзя использовать в пользовательской иерархии или нельзя ссылаться на иерархию в инструкциях многомерных выражений.  
+ `AttributeHierarchyEnabled` Элемент определяет, создана ли иерархия атрибутов службами [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] для атрибута. Если иерархия атрибута отключена, то атрибут нельзя использовать в пользовательской иерархии или нельзя ссылаться на иерархию в инструкциях многомерных выражений.  
   
- Элементы, соответствующие родителям элемента `AttributeHierarchyEnabled` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.CubeAttribute> и <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ Элементы, соответствующие родителям элемента `AttributeHierarchyEnabled` в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.CubeAttribute> и <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент AttributeHierarchyVisible &#40;ASSL&#41;](visible-element-assl.md)   

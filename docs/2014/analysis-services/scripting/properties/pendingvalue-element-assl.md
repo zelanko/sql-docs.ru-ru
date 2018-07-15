@@ -1,5 +1,5 @@
 ---
-title: Элемент PendingValue (ASSL) | Документы Microsoft
+title: Элемент PendingValue (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PendingValue element
 ms.assetid: 386b2ec6-3d83-42d2-b83a-83e375fbdcbd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 120c98d128698331a054a89be97ffa1513bb0191
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef24ae229f879adc15fa9f2ecfd8cb10a19d09ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263400"
 ---
 # <a name="pendingvalue-element-assl"></a>Элемент PendingValue (ASSL)
-  Содержит допускающее только чтение отложенное значение связанного [ServerProperty](../objects/serverproperty-element-assl.md) элемента.  
+  Содержит допускающее только чтение отложенное значение связанного [ServerProperty](../objects/serverproperty-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36099877"
 ## <a name="remarks"></a>Примечания  
  Этот элемент содержит значение `ServerProperty` , которые будут использоваться при следующем запуске текущего экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] запущена. Это значение обычно получается из того же места, где хранится соответствующее значение свойства сервера: из файла инициализации, системного реестра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows или из другого средства хранения данных.  
   
- Элемент, соответствующий родителю параметра `PendingValue` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ServerProperty>.  
+ Элемент, соответствующий родителю параметра `PendingValue` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент ServerProperties &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - outer joins
 - joins [SQL Server], outer
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbde6fbf96809a3ab05ecf1814ce90437436a503
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ef4e658ffd8af66ec8b3ad7e43eba8dade79bf85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306874"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Создание внешних соединений (визуальные инструменты для баз данных)
   По умолчанию [Конструктор запросов и представлений](visual-database-tools.md) создает внутреннее соединение таблиц. Внутренние соединения исключают строки, не соответствующие строке из другой таблицы. Однако внешние соединения возвращают все строки хотя бы из одной таблицы или представления, упомянутых в предложении FROM, если эти строки удовлетворяют условиям поиска WHERE или HAVING. Если необходимо включить строки данных, которые не имеют совпадений в соединяемой таблице, в результирующий набор, можно создать внешнее соединение.  
@@ -33,7 +33,7 @@ ms.locfileid: "36098553"
   
 1.  Создайте соединение автоматически или вручную. Дополнительные сведения см. в статье [Автоматическое соединение таблиц (визуальные инструменты для баз данных)](join-tables-automatically-visual-database-tools.md) или [Соединение таблиц вручную (визуальные инструменты для баз данных)](join-tables-manually-visual-database-tools.md).  
   
-2.  Выберите линию соединения на панели диаграмм, а затем от **конструктор запросов** меню, выберите **выбрать все строки из \<tablename >**, выбирая команду, которая включает таблицы, дополнительный Чтобы включить нужные строки.  
+2.  Выберите линию соединения на панели диаграмм, а затем из **конструктор запросов** меню, выберите **выбрать все строки из \<имя_таблицы >**, выбирая команду, которая содержит таблицу, дополнительная строки, которые требуется включить.  
   
     -   Выберите первую таблицу для создания левого внешнего соединения.  
   
@@ -62,7 +62,7 @@ WHERE (jobs.job_id IS NULL)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Запрос с соединениями &#40;визуальные средства базы данных&#41;](query-with-joins-visual-database-tools.md)   
+ [Запрос с соединениями &#40;визуальных инструментах баз данных&#41;](query-with-joins-visual-database-tools.md)   
  [Диалоговое окно "Соединение" (визуальные инструменты для баз данных)](join-dialog-box-visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Приведение типов данных и SQL: DataType заметки (SQLXML 4.0) | Документы Microsoft'
+title: 'Приведение типов данных и заметка (SQLXML 4.0), SQL: DataType | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb04ef325a598382e014257dafdc979a47c05eff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 095df15d5a917b54e1a518445f49a7ab1f351378
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297944"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Приведение типов данных и заметка sql:datatype (SQLXML 4.0)
   В схеме XSD атрибут `xsd:type` указывает тип XSD-данных элемента или атрибута. Если схема XSD используется для получения данных из базы данных, указанный тип данных используется для форматирования данных.  
@@ -39,7 +39,7 @@ ms.locfileid: "36098863"
  Кроме указания XSD-типа в схеме, можно также указать тип данных Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью заметки `sql:datatype`. Атрибуты `xsd:type` и `sql:datatype` управляют сопоставлением между типами данных XSD и типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="xsdtype-attribute"></a>Атрибут xsd:type  
- Атрибут `xsd:type` позволяет задать тип данных XML атрибута или элемента, сопоставляемого со столбцом. Атрибут `xsd:type` влияет на документ, возвращаемый сервером, а также на выполняемый запрос XPath. При выполнении запроса XPath к схеме сопоставления, которая содержит атрибут `xsd:type`, XPath использует указанный тип данных при обработке запроса. Дополнительные сведения об использовании XPath `xsd:type`, в разделе [сопоставление типов данных XSD в типы данных XPath &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
+ Атрибут `xsd:type` позволяет задать тип данных XML атрибута или элемента, сопоставляемого со столбцом. Атрибут `xsd:type` влияет на документ, возвращаемый сервером, а также на выполняемый запрос XPath. При выполнении запроса XPath к схеме сопоставления, которая содержит атрибут `xsd:type`, XPath использует указанный тип данных при обработке запроса. Дополнительные сведения о способах использования XPath `xsd:type`, см. в разделе [сопоставление типов данных XSD с типами данных XPath &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
   
  В возвращенном документе все типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразуются в строковые представления. Для некоторых типов данных необходимо дополнительное преобразование. В следующей таблице перечислены виды преобразования, которые применяются для различных значений `xsd:type`.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36098863"
  В основном рекомендуется указывать заметку `sql:datatype` в схеме.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для выполнения примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-xsdtype"></a>A. Указание заметки xsd:type  
  Этот пример показывает, как XSD-тип `date`, указанный с помощью атрибута `xsd:type` в схеме, влияет на результирующий XML-документ. Схема обеспечивает XML-представление таблицы Sales.SalesOrderHeader в базе данных AdventureWorks.  
@@ -124,9 +124,9 @@ ms.locfileid: "36098863"
   
 -   Указывает `xsd:type=date` на **OrderDate** атрибут дату часть значения, возвращенного [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для **OrderDate** атрибут отображается.  
   
--   Указывает `xsd:type=time` на **ShipDate** атрибут часть времени значения, возвращаемого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для **ShipDate** атрибут отображается.  
+-   Указывает `xsd:type=time` на **ShipDate** атрибут, часть времени значения, возвращенного [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для **ShipDate** атрибут отображается.  
   
--   Не указывайте `xsd:type` на **DueDate** атрибута, то же значение, возвращенный [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображается.  
+-   Не указывайте `xsd:type` на **DueDate** атрибута, значение, возвращается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображается.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Проверка образца запроса XPath к схеме  
   
@@ -150,7 +150,7 @@ ms.locfileid: "36098863"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Частичный результирующий набор:  
   
@@ -195,6 +195,6 @@ ms.locfileid: "36098863"
 ```  
   
 ### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>Б. Указание типа данных SQL с помощью заметки sql:datatype  
- Работающий пример см. в разделе примере Е в [примеры массовой загрузки XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). В этом примере выполняется массовая загрузка значения идентификатора GUID, включая "{" и "}". Схема в этом примере указывает заметку `sql:datatype`, чтобы определить тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как `uniqueidentifier`. В этом примере показано, когда необходимо указать `sql:datatype` в схеме.  
+ Работающий пример см. в разделе в примере G [примеры массовой загрузки XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). В этом примере выполняется массовая загрузка значения идентификатора GUID, включая "{" и "}". Схема в этом примере указывает заметку `sql:datatype`, чтобы определить тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как `uniqueidentifier`. В этом примере показано, когда необходимо указать `sql:datatype` в схеме.  
   
   

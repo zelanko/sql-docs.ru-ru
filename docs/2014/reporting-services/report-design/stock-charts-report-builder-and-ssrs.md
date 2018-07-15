@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8ea218a0b7b201d929fd03a1a208a2eb6019ebb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2f23be5833220535cc5e53e5fa5fc1eb965f3a35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258060"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>Биржевые диаграммы (построитель отчетов и службы SSRS)
   Биржевая диаграмма — это диаграмма, специально созданная для работы с финансовыми или научными данными, в которой на каждую точку данных приходится до четырех значений. Эти значения сравниваются со значениями максимума, минимума, открытия и закрытия, используемыми для отображения биржевых данных. В этом типе диаграммы значения открытия и закрытия отображаются с помощью маркеров (обычно это линии или треугольники). В следующем примере значения открытия помечены маркерами слева, а значения закрытия — маркерами справа.  
@@ -44,9 +44,9 @@ ms.locfileid: "36098122"
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют множество вычисляемых формул для работы с биржевыми диаграммами, включая «Индикатор цен», «Индекс относительной силы», «Схождение/расхождение скользящего среднего» и т.п.  
   
 ## <a name="see-also"></a>См. также  
- [Диаграммы диапазонов &#40;отчетов построителя отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Диаграммы диапазонов &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [Диалоговое окно «Свойства оси», параметры оси &#40;отчетов построителя отчетов и службы SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
+ [Диалоговое окно «Свойства оси», параметры оси &#40;построитель отчетов и службы SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   
   

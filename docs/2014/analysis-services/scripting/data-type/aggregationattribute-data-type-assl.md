@@ -1,5 +1,5 @@
 ---
-title: Тип данных AggregationAttribute (ASSL) | Документы Microsoft
+title: Тип данных AggregationAttribute (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationAttribute data type
 ms.assetid: 636827c7-938d-4b7d-9827-46da3bc60d9a
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 388bd739938a7b756157659ce34c0a215710a034
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71da4468ab4edece07744ae73a13243eefd1dfed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243424"
 ---
 # <a name="aggregationattribute-data-type-assl"></a>Тип данных AggregationAttribute (ASSL)
   Определяет тип-примитив, представляющий взаимосвязь между [статистической обработки](../objects/aggregation-element-assl.md) элемента и атрибута.  
@@ -65,6 +65,6 @@ ms.locfileid: "36099598"
   
 ## <a name="see-also"></a>См. также  
  [Элемент Aggregation &#40;ASSL&#41;](../objects/aggregation-element-assl.md)   
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

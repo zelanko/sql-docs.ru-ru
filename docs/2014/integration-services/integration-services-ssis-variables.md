@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
 - user-defined variables [Integration Services]
@@ -21,13 +21,13 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6a5737635ffd69a7d09a93ac1104a1ee65b8277
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7352ff51810a16f2c3e81b5362bad764955f67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283620"
 ---
 # <a name="integration-services-ssis-variables"></a>Переменные в службах Integration Services (SSIS)
   Переменные хранят значения, которые могут использоваться пакетом служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , а также его контейнерами, задачами и обработчиками событий во время выполнения. Скрипты в задаче «Скрипт» и компоненте скрипта также могут использовать переменные. Управления очередностью, которые упорядочивают задачи и контейнеры в рабочий процесс, могут использовать переменные, если связанные с ними определения ограничений включают в себя выражения.  
@@ -90,7 +90,7 @@ ms.locfileid: "36099810"
  Задает описание переменной.  
   
  EvaluateAsExpression  
- Если значение свойства `True`, введенное выражение используется для задания значения переменной.  
+ Если присвоить свойство `True`, введенное выражение используется для задания значения переменной.  
   
  Выражение  
  Указывает выражение, назначаемое переменной.  
@@ -118,17 +118,17 @@ ms.locfileid: "36099810"
  IncludeInDebugDump  
  Указывает, включается ли значение переменной в отладочные файлы дампа.  
   
- Для определяемых пользователем и системные переменные, значение по умолчанию для **InclueInDebugDump** параметр — `true`.  
+ Для определяемых пользователем и системные переменные, значение по умолчанию для **InclueInDebugDump** параметр `true`.  
   
- Однако для определяемых пользователем переменных, то система устанавливает **IncludeInDebugDump** для параметра `false` при выполнении следующих условий:  
+ Тем не менее, для определяемых пользователем переменных, система сбрасывает **IncludeInDebugDump** равным `false` при соблюдении следующих условий:  
   
--   Если **EvaluateAsExpression** переменной свойству `true`, система сбрасывает **IncludeInDebugDump** для параметра `false`.  
+-   Если **EvaluateAsExpression** переменной свойству `true`, система сбрасывает **IncludeInDebugDump** равным `false`.  
   
-     Чтобы включить текст выражения в виде значения переменной в отладочные файлы дампа, установить **IncludeInDebugDump** для параметра `true`.  
+     Чтобы включить текст выражения в качестве значения переменной в отладочные файлы дампа, установите **IncludeInDebugDump** равным `true`.  
   
--   Если строка изменяется тип данных переменной, то система устанавливает **IncludeInDebugDump** для параметра `false`.  
+-   Если строка изменяется тип данных переменной, то система устанавливает **IncludeInDebugDump** равным `false`.  
   
- Когда система сбрасывает **IncludeInDebugDump** для параметра `false`, это может переопределить значение, выбранное пользователем.  
+ Когда система сбрасывает **IncludeInDebugDump** равным `false`, может быть переопределено значением, выбранного пользователем.  
   
  Значение  
  Значение пользовательской переменной может быть задано строкой или выражением. Переменная включает в себя параметры для установки значения и типа данных переменной. Эти два свойства должны быть совместимыми: например, недопустимо использование строкового значения совместно с типом данных integer.  
@@ -146,7 +146,7 @@ ms.locfileid: "36099810"
   
  Дополнительные сведения о свойствах, которые можно задавать в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)], см. в статье [Окно "Переменные"](../../2014/integration-services/variables-window.md).  
   
- Дополнительные сведения о свойствах переменных и Дополнительные сведения о программной установке этих свойств см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
+ Чтобы узнать больше о свойствах переменных и получить дополнительные сведения о задании этих свойств программными средствами, см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Добавление, удаление и изменение области определяемой пользователем переменной в пакете](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  

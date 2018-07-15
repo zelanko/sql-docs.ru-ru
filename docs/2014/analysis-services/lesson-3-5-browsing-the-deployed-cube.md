@@ -1,5 +1,5 @@
 ---
-title: Просмотр развернутого куба | Документы Microsoft
+title: Просмотр развернутого куба | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 56b804f31df461225d5325de63568b303bdc475e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96480e0303dbb3176ea9fd17b14536e84d9006c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253406"
 ---
 # <a name="browsing-the-deployed-cube"></a>Просмотр развернутого куба
   В этой задаче будет проводиться просмотр куба [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Так как при проведении анализа сравниваются несколько измерений, для просмотра данных воспользуемся сводной таблицей Excel. Разместим в сводной таблице информацию о клиенте, дате и продукте на разных осях, чтобы было видно, как изменяются продажи через Интернет в различные периоды времени, для различных групп клиентов и продуктовых линий.  

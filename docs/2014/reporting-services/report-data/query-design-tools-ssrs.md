@@ -1,5 +1,5 @@
 ---
-title: Средства проектирования отчета конструктора SQL Server Data Tools (SSRS) запросов | Документы Microsoft
+title: Средства проектирования в отчете, конструктора SQL Server Data Tools (SSRS) запросов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - graphical query designer [Reporting Services]
 - MDX query designer [Reporting Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Report Model Query Designer
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 caps.latest.revision: 35
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ad3b9109d78523f8a273ce44e32ceab163bdf869
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4721d0df4f1c6d8f5a0dda8c70d90b0134c62fbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264220"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>Средства проектирования запросов в конструкторе отчетов SQL Server Data Tools (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] содержат различные средства проектирования запросов, которые можно использовать для создания запросов набора данных в конструкторе отчетов. Доступность конкретного конструктора запросов зависит от типа источника данных, с которым вы работаете. Кроме того, некоторые конструкторы запросов поддерживают альтернативные режимы работы, что позволяет выбирать между работой в визуальном режиме или непосредственно на языке запросов. В этом разделе представлено каждое из этих средств и описаны типы источников данных, поддерживаемых каждым средством. В этом разделе описаны следующие средства.  
@@ -86,7 +86,7 @@ ms.locfileid: "36099522"
  Чтобы использовать конструктор DMX-запросов, необходимо определить источник данных, для которого доступна допустимая модель интеллектуального анализа данных. При определении набора данных для источника данных можно открыть запрос в конструкторе DMX-запросов. При необходимости используйте кнопки «MDX» и «DMX» на панели инструментов для переключения между режимами многомерных выражений (MDX) и расширения интеллектуального анализа данных (DMX). После выбора модели можно создавать запросы прогноза интеллектуального анализа данных, предоставляющие данные для отчета. Дополнительные сведения см. в статье [Analysis Services DMX Query Designer User Interface](analysis-services-dmx-query-designer-user-interface.md).  
   
 ##  <a name="SAPBW"></a> Конструктор запросов BI Sap NetWeaver  
- Конструктор запросов [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] используется для получения данных из базы данных [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] . Чтобы использовать этот конструктор, должен иметь [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] источника данных, который имеет по крайней мере один InfoCube, MultiProvider или запрос веб интерфейса. Ниже приведена иллюстрация конструктора запросов [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] .  
+ Конструктор запросов [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] используется для получения данных из базы данных [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] . Для использования этого конструктора запросов, необходимо иметь [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] источника данных, который имеет по крайней мере один InfoCube, MultiProvider или запрос веб интерфейсом. Ниже приведена иллюстрация конструктора запросов [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] .  
   
  ![Конструктор запросов с использованием многомерных выражений в режиме конструктора](../media/rsqd-dssapbw-mdx-designmode.gif "Конструктор запросов с использованием многомерных выражений в режиме конструктора")  
   
@@ -99,10 +99,10 @@ ms.locfileid: "36099522"
   
 ## <a name="see-also"></a>См. также  
  [Инструментальные средства служб Reporting Services](../tools/reporting-services-tools.md)   
- [Добавление данных в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](report-datasets-ssrs.md)   
+ [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)   
  [Подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Учебники по службам Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
  [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Создать внедренный или общий источник данных &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
+ [Создать источник данных на внедренный или общий &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
   
   

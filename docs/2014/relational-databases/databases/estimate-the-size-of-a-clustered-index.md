@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], index size
 - size [SQL Server], tables
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - calculating table size
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5b270dc2485be2c5c9a9fd2b491db8a9278cce43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b9293859eeef13f497c79989a546d527d5fb317a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305984"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Оценка размера кластеризованного индекса
   Для оценки места, необходимого для хранения данных в кластеризованном индексе, можно использовать следующие шаги:  
@@ -87,7 +87,7 @@ ms.locfileid: "36098921"
      Байты, добавляемые к ***Max_Var_Size*** , нужны для отслеживания каждого столбца переменных. Эта формула исходит из предположения, что все столбцы переменной длины заполнены на 100 %. Если предполагается, что будет использовано меньше места для хранения столбца изменяемой длины, можно изменить значение ***Max_Var_Size*** в процентах от общей изменяемой длины для более точного подсчета общего размера таблицы.  
   
     > [!NOTE]  
-    >  Можно объединять `varchar`, `nvarchar`, `varbinary`, или `sql_variant` , вызывающие общая определенная ширина таблицы может превышать 8 060 байт. Длина каждого из этих столбцов должна быть в пределах 8 000 байт для столбцов типа `varchar`, `varbinary` или `sql_variant` и 4 000 байт для столбцов типа `nvarchar`. Тем не менее их общая ширина в таблице может превышать предел в 8 060 байт.  
+    >  Вы можете объединить `varchar`, `nvarchar`, `varbinary`, или `sql_variant` , вызывающие общая определенная ширина таблицы может превышать 8 060 байт. Длина каждого из этих столбцов должна быть в пределах 8 000 байт для столбцов типа `varchar`, `varbinary` или `sql_variant` и 4 000 байт для столбцов типа `nvarchar`. Тем не менее их общая ширина в таблице может превышать предел в 8 060 байт.  
   
      Если в таблице нет столбцов переменной ширины, присвойте параметру ***Variable_Data_Size*** значение 0.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "36098921"
   
 7.  Расчет количества уровней в индексе.  
   
-     ***Non-leaf_Levels*** = 1 + log Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Non-leaf_Levels*** = 1 + журнал Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
   
      Данное значение округляется в большую сторону до ближайшего целого числа. Это значение не учитывает конечный уровень кластеризованного индекса.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "36098921"
   
 -   Значения LOB  
   
-     Алгоритм определения точности объем места, используемого для хранения типов данных LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml`, и `image` сложен. Достаточно только добавить средний размер ожидаемого значения LOB, умножить на ***Число_строк***и добавить полученное значение к общему размеру кластеризованного индекса.  
+     Алгоритм определения точно объем пространства, используемого для хранения данных типа LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml`, и `image` значения является сложным. Достаточно только добавить средний размер ожидаемого значения LOB, умножить на ***Число_строк***и добавить полученное значение к общему размеру кластеризованного индекса.  
   
 -   Сжатие  
   

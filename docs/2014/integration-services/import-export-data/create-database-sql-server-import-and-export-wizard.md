@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.createdatabase.f1
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a2af52bdfbb4e6e2a2f5b069ff4555fbce7315bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 472daf928c92c69ab330ae1d77e6a6021c96e04f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250494"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Создание базы данных (мастер импорта и экспорта SQL Server)
   Используйте страницу **Создание базы данных** , чтобы определить новую базу данных для целевого файла.  
   
  Эта страница предоставляет подмножество параметров, доступных при создании базы данных. Чтобы просмотреть все параметры, используйте [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Дополнительные сведения о работе этого мастера см. в разделе [SQL Server Импорт и экспорт](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Дополнительные сведения о параметрах запуска этого мастера и о разрешениях, необходимых для успешного запуска мастера см. в разделе [запустить мастер экспорта и импорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
+ Дополнительные сведения о работе этого мастера см. в разделе [SQL Server Импорт и экспорт](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Дополнительные сведения о параметрах запуска этого мастера и о разрешениях, необходимых для успешного запуска мастера, см. в разделе [запустить мастер экспорта и импорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  Назначение мастера импорта и экспорта SQL Server заключается в копировании данных из исходного расположения в целевое. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36100229"
  **Начальный размер (файл данных)**  
  Задайте количество мегабайтов для начального размера файла данных.  
   
- **Рост недопустим (файл данных)**  
+ **Рост не разрешен (файл данных)**  
  Укажите, может ли файл данных выйти за пределы заданного начального размера.  
   
  **Процент роста (файл данных)**  
@@ -57,7 +57,7 @@ ms.locfileid: "36100229"
  **Начальный размер (файл журнала)**  
  Задайте количество мегабайтов для начального размера файла журнала.  
   
- **Рост недопустим (файл журнала)**  
+ **Рост не разрешен (файл журнала)**  
  Укажите, может ли файл журнала выйти за пределы заданного начального размера.  
   
  **Процент роста (файл журнала)**  

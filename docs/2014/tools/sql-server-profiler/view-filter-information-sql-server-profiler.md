@@ -1,5 +1,5 @@
 ---
-title: Просмотр сведений о фильтре (приложение SQL Server Profiler) | Документы Microsoft
+title: Просмотр сведений о фильтре (SQL Server Profiler) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying filter information
 - filters [SQL Server], viewing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - viewing filter information
 ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7936ad4df64746697b5c9d0ff8f2be1c7a5cbef1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d0c040ead976dc02e8309cb65dbd615acd11ae3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253836"
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>просмотреть сведения о фильтре (приложение SQL Server Profiler)
   В этом разделе описывается, как просмотреть фильтры столбцов данных для классов событий, используя приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

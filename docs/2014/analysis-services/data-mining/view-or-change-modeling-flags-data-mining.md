@@ -1,5 +1,5 @@
 ---
-title: Просмотр или изменение флагов модели (интеллектуальный анализ данных) | Документы Microsoft
+title: Просмотреть или изменить флаги моделирования (интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d1169735-fb18-417b-b8d6-9a161e444020
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 235b87b8f0aba0753044511f955cedab031e0ac1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7a225d0c20148d8e9728b1e502a36ccc3b0891b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303144"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Просмотр или изменение флагов модели (интеллектуальный анализ данных)
   Флаги модели представляют собой свойства, которые можно задать в столбце структуры интеллектуального анализа данных или столбцах модели интеллектуального анализа данных для определения того, как алгоритм обрабатывает данные во время анализа.  
@@ -55,7 +55,7 @@ ms.locfileid: "36099422"
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Задачи модели интеллектуального анализа данных и инструкции](mining-model-tasks-and-how-tos.md)   
+ [Задачи модели интеллектуального анализа данных и инструкции по](mining-model-tasks-and-how-tos.md)   
  [Флаги моделирования &#40;интеллектуального анализа данных&#41;](modeling-flags-data-mining.md)  
   
   

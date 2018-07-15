@@ -1,5 +1,5 @@
 ---
-title: Выполнить метод (XMLA) | Документы Microsoft
+title: Выполнение метода (XML для Аналитики) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - Execute method
 ms.assetid: 0fff5221-7164-4bbc-ab58-49cf04c52664
 caps.latest.revision: 34
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5c32261e06788f366a6c5ce5af24c508b87a6882
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ec3fa458148638af5431b4a519acf8556d29b122
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235564"
 ---
 # <a name="execute-method-xmla"></a>Метод Execute (XML для аналитики)
-  Отправляет XML для аналитики (XMLA) команды для экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Сюда входят запросы, связанные с передачей данных, например извлечение или обновление данных на сервере.  
+  Отправляет команды XML для аналитики (XMLA) для экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Сюда входят запросы, связанные с передачей данных, например извлечение или обновление данных на сервере.  
   
  **Пространство имен** urn:schemas-microsoft-com:xml-analysis  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36096215"
 |Дочерние элементы|[Команда](xml-elements-properties/command-element-xmla.md), [параметры](xml-elements-properties/parameters-element-xmla.md), [свойства](xml-elements-properties/properties-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- `Execute` Метод выполняет команды XMLA, предоставленные в `Command` элемент и возвращает результат с помощью XML для Аналитики [строк](xml-data-types/rowset-data-type-xmla.md) типа данных (для табличных результирующих наборов) или XML для Аналитики [MDDataSet](xml-data-types/mddataset-data-type-xmla.md) тип данных (для многомерных результирующих наборов.)  
+ `Execute` Метод выполняет команды XMLA, предоставленные в `Command` элемент и возвращает результат с помощью XML для Аналитики [набора строк](xml-data-types/rowset-data-type-xmla.md) тип данных (для табличных результирующих наборов) или XML для Аналитики [MDDataSet](xml-data-types/mddataset-data-type-xmla.md) тип данных (для многомерных результирующих наборов.)  
   
 ## <a name="example"></a>Пример  
  Следующий образец кода демонстрирует вызов метода `Execute`, содержащего многомерное выражение (MDX) в инструкции SELECT.  
@@ -97,7 +97,7 @@ ms.locfileid: "36096215"
  [Типы данных XML &#40;XML для Аналитики&#41;](xml-data-types/xml-data-types-xmla.md)   
  [Метод Discover &#40;XML для Аналитики&#41;](xml-elements-methods-discover.md)   
  [Методы &#40;XML для Аналитики&#41;](xml-elements-methods.md)   
- [XML-элементы &#40;XML для Аналитики&#41;](../dev-guide/xml-elements-xmla.md)   
+ [XML-элементов &#40;XML для Аналитики&#41;](../dev-guide/xml-elements-xmla.md)   
  [Наборы строк схемы служб Analysis Services](../schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

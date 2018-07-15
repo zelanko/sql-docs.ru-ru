@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 11d97017f27634c5c6f3f913cd41447780b68199
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29da6dedad91566c0d111acfeb18b3778d2da4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308124"
 ---
 # <a name="step-4-adding-package-configurations"></a>Шаг 4. Добавление конфигурации пакета
   В этой задаче необходимо добавить конфигурацию каждому пакету. Конфигурации позволяют обновлять значения свойств и объектов пакетов во время выполнения.  
@@ -46,7 +46,7 @@ ms.locfileid: "36097308"
   
 5.  На странице приветствия мастера настройки пакета нажмите кнопку **Далее**.  
   
-6.  На странице выбора типа конфигурации выберите **XML-файл конфигурации** в **тип конфигурации** выберите **расположении файла конфигурации хранятся в переменной среды** и введите `DataTransfer,` или выберите **DataTransfer** переменной среды в списке.  
+6.  На странице выбора типа конфигурации, выберите **XML-файл конфигурации** в **тип конфигурации** выберите **расположении файла конфигурации хранятся в переменной среды** , а затем введите `DataTransfer,` или выберите **DataTransfer** переменной среды в списке.  
   
     > [!NOTE]  
     >  Чтобы переменная среды была доступна в списке, после добавления переменной может потребоваться перезагрузка компьютера. Если перезагрузка компьютера нежелательна, можно просто ввести имя переменной.  
@@ -97,7 +97,7 @@ ms.locfileid: "36097308"
   
 5.  На странице приветствия мастера настройки пакета нажмите кнопку **Далее**.  
   
-6.  На странице выбора типа конфигурации выберите **XML-файл конфигурации** в **тип конфигурации** выберите **расположении файла конфигурации хранятся в переменной среды** , введите `LoadXMLData` или выберите `LoadXMLData` переменной среды в списке.  
+6.  На странице выбора типа конфигурации, выберите **XML-файл конфигурации** в **тип конфигурации** выберите **расположении файла конфигурации хранятся в переменной среды** , введите `LoadXMLData` или выберите `LoadXMLData` переменной среды в списке.  
   
     > [!NOTE]  
     >  Чтобы переменная среды была доступна в списке, после добавления переменной может потребоваться перезагрузка компьютера.  
@@ -135,11 +135,11 @@ ms.locfileid: "36097308"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Шаг 5. Тестирование обновленных пакетов](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться установка последних со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services в MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services  **<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
- [Конфигурации пакета](../../2014/integration-services/package-configurations.md)   
- [Создать конфигурации пакетов](../../2014/integration-services/create-package-configurations.md)   
+ [Конфигурации пакетов](../../2014/integration-services/package-configurations.md)   
+ [Создание конфигурации пакетов](../../2014/integration-services/create-package-configurations.md)   
  [Доступ к файлам, используемым пакетами](../../2014/integration-services/access-to-files-used-by-packages.md)  
   
   

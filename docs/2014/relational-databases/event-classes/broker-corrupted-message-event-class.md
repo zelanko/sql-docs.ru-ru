@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Corrupted Message event class
 ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22d863ee7fe3fb0ed5fd8f025ceff692f92448df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9b4585e093505e684efc694e450e5e37ceca168b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292774"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message, класс событий
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие **Broker:Corrupted Message** , когда компонент Service Broker получает поврежденное сообщение.  
@@ -49,7 +49,7 @@ ms.locfileid: "36098927"
 |**NTDomainName**|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |**NTUserName**|**nvarchar**|Имя пользователя, которому принадлежит соединение, создавшее это событие.|6|Да|  
 |**ObjectName**|**nvarchar**|Имя службы другой стороны диалога и строка соединения, используемая удаленной базой данных для установки соединения с этой базой данных.|34|Нет|  
-|**RoleName**|**nvarchar**|Роль конечной точки, получающей это сообщение. Одно из следующих значений.<br /><br /> **инициатор**:<br />                  Получающая конечная точка является инициатором диалога.<br /><br /> **целевой**:<br />                  Получающая конечная точка является адресатом диалога.|38|Нет|  
+|**RoleName**|**nvarchar**|Роль конечной точки, получающей это сообщение. Одно из следующих значений.<br /><br /> **инициатор**:<br />                  Получающая конечная точка является инициатором диалога.<br /><br /> **целевой объект**:<br />                  Получающая конечная точка является адресатом диалога.|38|Нет|  
 |**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , подвергаемого трассировке.|26|Нет|  
 |**Severity**|**int**|Если ошибка стала причиной, по которой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удалил сообщение — серьезность этой ошибки.|29|Нет|  
 |**SPID**|**int**|Идентификатор процесса сервера, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присвоил процессу, связанному с клиентом.|12|Да|  

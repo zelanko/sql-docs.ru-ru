@@ -1,5 +1,5 @@
 ---
-title: Настройка компонента Database Engine — пользовательский экземпляр | Документы Microsoft
+title: Настройка компонента Database Engine — пользовательский экземпляр | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - database engine configuration
 - database engine configuration, user instance
 ms.assetid: dfc27c1e-0fe2-4221-bed5-f52667ddd3c8
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 00ce0b457fcb64c8568662ce4a64b8929c29e5ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fdba96d79e842f568ba3077c7da0254483b81d60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274350"
 ---
 # <a name="database-engine-configuration---user-instance"></a>Конфигурация компонента Database Engine — пользовательский экземпляр
   Страница **Пользовательский экземпляр** используется для создания отдельного экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для пользователей, не имеющих разрешений администратора, и для добавления пользователей к роли администратора.  

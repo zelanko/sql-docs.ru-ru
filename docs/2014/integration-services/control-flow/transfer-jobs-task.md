@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferjobstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b4bd6884ed4994f55fb9edd816505796ea47c60b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef0ed6a2af2d48010550997d7ba216a91f2728f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296994"
 ---
 # <a name="transfer-jobs-task"></a>Задача «Передача заданий»
   Задача «Передача заданий» служит для передачи одного или нескольких заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -47,7 +47,7 @@ ms.locfileid: "36097596"
  Задача «Передача заданий» инициирует уведомляющее событие, сообщающее число переданных заданий, а также событие-предупреждение в случае, когда задание перезаписывается. Задача не сообщает о ходе передачи задания; она сообщает лишь о выполнении 0% и 100%.  
   
 ## <a name="execution-value"></a>Значение выполнения  
- Значение выполнения, определяемое свойством `ExecutionValue` задачи, возвращает число переданных заданий. Назначив пользовательскую переменную, чтобы `ExecValueVariable` свойство «Передача заданий», сведения о передаче заданий могут быть сделаны доступными для других объектов в пакете. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md) и [Использование переменных в пакетах](../use-variables-in-packages.md).  
+ Значение выполнения, определяемое свойством `ExecutionValue` задачи, возвращает число переданных заданий. Назначив пользовательскую переменную, чтобы `ExecValueVariable` свойство «Передача заданий», сведения о передаче заданий могут быть сделаны доступными другим объектам в пакете. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md) и [Использование переменных в пакетах](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Записи журнала  
  Задача «Передача заданий» позволяет настраивать запись в журнал следующих событий:  
@@ -66,9 +66,9 @@ ms.locfileid: "36097596"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах.  
   
--   [Редактор задач задания передача &#40;страница «Общие»&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи задания передача &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задач задания передача &#40;заданий страницы&#41;](../transfer-jobs-task-editor-jobs-page.md)  
+-   [Редактор задачи задания передача &#40;заданий страницы&#41;](../transfer-jobs-task-editor-jobs-page.md)  
   
 -   [Страница "Выражения"](../expressions/expressions-page.md)  
   

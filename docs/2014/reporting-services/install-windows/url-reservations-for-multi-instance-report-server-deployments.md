@@ -1,5 +1,5 @@
 ---
-title: Резервирование URL-адресов для нескольких экземпляров отчета развертывание сервера (диспетчер конфигурации служб SSRS) | Документы Microsoft
+title: Резервирование URL-адресов для нескольких экземпляров при развертывании сервера (диспетчер конфигурации служб SSRS) отчетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 76466658cfc049c196b5ba512d31cd1fe8a9051d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 126a885988deee0ac05126282f4db233f7a756ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307354"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации служб SSRS)
   При установке нескольких экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на одном компьютере необходимо учесть необходимость резервирования URL-адресов для каждого экземпляра. Для каждого экземпляра веб-службе сервера отчетов и диспетчеру отчетов необходимо, по крайней мере, по одному зарезервированному URL-адресу. Все зарезервированные адреса должны быть уникальны в рамках HTTP.SYS.  
@@ -52,7 +52,7 @@ ms.locfileid: "36098820"
  Используемые службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] технологии накладывают требования к уникальным именам. Для HTTP.SYS необходима уникальность всех URL-адресов в пределах его репозитория. Чтобы создать уникальный URL-адрес, можно изменять порт, имя узла или виртуального каталога. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] необходима уникальность идентификаторов приложений в пределах одного процесса. Это требование влияет на имена виртуальных каталогов. Оно запрещает повторение имен виртуальных каталогов в пределах одного экземпляра сервера отчетов.  
   
 ## <a name="see-also"></a>См. также  
- [Настройка URL-адреса сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Настройка URL-адресов сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [Настройка URL-адрес &#40;диспетчер конфигурации служб SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   

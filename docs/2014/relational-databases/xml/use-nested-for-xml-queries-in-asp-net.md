@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, nested FOR XML queries
 - queries [XML in SQL Server], ASP.NET and
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ASP.NET [SQL Server]
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 82a97f8d270b260aa432f8d285fe7e7f785f19df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d0e64df2387c48c9722a41372fac1c5b63bbe096
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232644"
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>Использование вложенных запросов FOR XML в ASP.NET
   В данном примере приложение ASP.NET возвращает браузеру XML-данные, выполняя хранимую процедуру SQL Server. Эта хранимая процедура формирует XML при помощи вложенных запросов. Похожая инструкция SELECT представлена в разделе [Формирование одноуровневых элементов с помощью вложенного запроса в режиме AUTO](generate-siblings-with-a-nested-auto-mode-query.md). Данный пример демонстрирует способ применения вложенных запросов FOR XML для формирования элементного XML в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -94,7 +94,7 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
   
 2.  Сохраните приложение .aspx в каталоге c:\inetpub\wwwroot (GetSalesOrderInfo.aspx).  
   
-3.  Выполните приложение (http://server/GetSalesOrderInfo.aspx).  
+3.  Запустите приложение (http://server/GetSalesOrderInfo.aspx).  
   
 ## <a name="see-also"></a>См. также  
  [Использование вложенных запросов FOR XML](use-nested-for-xml-queries.md)  

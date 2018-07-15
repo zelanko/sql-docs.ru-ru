@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8a73e945-daa6-4e5d-93da-10f000f1f3a2
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: b11d666165c266467fbdbe46a5d95fb8d7dbad70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 191371a7f8f79c0fa52c4975edf1bfd25037d6e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298634"
 ---
 # <a name="escape-sql-server-identifiers"></a>Применение escape-символов к идентификаторам SQL Server
   Часто можно использовать escape-символ обратной кавычки Windows PowerShell (`) для экранирования символов, применение которых допускается в идентификаторах с разделителями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , но не в именах путей Windows PowerShell. Тем не менее экранирование некоторых символов невозможно. Например, в среде Windows PowerShell нельзя экранировать символ двоеточия (:). Идентификаторы с этим символом должны быть закодированы. Кодировка более надежна, чем экранирование, поскольку действует для всех символов.  

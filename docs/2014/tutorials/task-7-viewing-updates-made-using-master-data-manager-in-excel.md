@@ -1,5 +1,5 @@
 ---
-title: 'Задача 7: Просмотр изменений, выполненных с помощью диспетчера основных данных в Excel | Документы Microsoft'
+title: 'Задача 7: Просмотр изменений, выполненных с помощью диспетчера основных данных в Excel | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -10,29 +10,29 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2ff4972-cf18-4d5c-98cd-ec78861a63ce
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 333d7e6a56f112d4bfae790b405e1b19a9bdc34f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d30dd08217dc6325e90f6cc99fdbb215e117e09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286438"
 ---
 # <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>Задача 7. Просмотр изменений, выполненных с помощью диспетчера основных данных в Excel
   В этой задаче вы проверите, что обнаруживаются обновленные данные из MDS в Excel.  
   
-1.  Теперь, переключитесь в окно excel, в котором **Cleansed and Matched Suppliers** открыта электронная таблица.  
+1.  Перейдите в окно excel, который имеет **Cleansed and Matched Suppliers** открыта электронная таблица.  
   
-2.  Нажмите кнопку **обновление** кнопки на ленте.  
+2.  Нажмите кнопку **обновить** кнопку на ленте.  
   
      ![Excel — "Обновить" на вкладке основных данных](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-01.jpg "Excel — \"Обновить\" на вкладке основных данных")  
   
-3.  Обратите внимание, что **имена** отображаться (Калифорния, Нью-Йорк и т. д) для **состояние** вместе с их **коды**.  
+3.  Обратите внимание, что **имена** отобразить на странице (Калифорния, Нью-Йорк и т. д) **состояние** поле вместе с их **коды**.  
   
      ![Excel — обновленные коды состояния и имена](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-02.jpg "Excel — обновленные коды состояния и имена")  
   
