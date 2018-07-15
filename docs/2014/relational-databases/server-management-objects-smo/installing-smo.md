@@ -1,5 +1,5 @@
 ---
-title: Установка SMO | Документы Microsoft
+title: Установка SMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - SQL Server Management Objects, installing
 ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a5c62ded354d093661d2ac5ebc6f12950db5156a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 935845eaf8cb4eea8578f93c5069086efaad466d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298014"
 ---
 # <a name="installing-smo"></a>Установка SMO
-  Если требуется создавать приложения, использующего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляющих объектов (SMO) следует выбрать пакет SDK клиентских средств при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы установить пакет клиентских средств пакета SDK без установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установите общие управляющие объекты из пакета возможностей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если вы хотите убедиться, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты установлены на компьютере, который будет выполняться приложение, можно использовать общие управляющие объекты MSI-файл в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пакета дополнительных компонентов.  
+  Если вы хотите разрабатывать приложения, использующего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляющих объектов (SMO), следует выбрать пакет SDK клиентских средств при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы установить пакет клиентских средств пакета SDK без установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установите общие управляющие объекты из пакета возможностей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если вы хотите убедиться, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты установлены на компьютере, который будет выполняться приложение, можно использовать MSI-файла общих управляющих объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пакет дополнительных компонентов.  
   
  По умолчанию сборки объектов SMO устанавливаются в каталог [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)].  
   

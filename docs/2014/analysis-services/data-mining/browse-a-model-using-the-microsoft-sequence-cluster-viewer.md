@@ -1,5 +1,5 @@
 ---
-title: Просмотр модели в средстве просмотра кластеризации последовательностей Майкрософт | Документы Microsoft
+title: Просмотр модели с помощью средства просмотра кластеризации последовательностей Майкрософт | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Sequence Cluster Viewer
 - clusters [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - transitions [Analysis Services]
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 37a7d3c5be648c1861dbbb33ac20a824e462296f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14b1cb2c1aff17b9953865846ba2d4d100132397
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276220"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Просмотр модели с помощью средства просмотра кластеризации последовательностей (Майкрософт)
   В средстве просмотра кластеризации последовательностей [!INCLUDE[msCoName](../../includes/msconame-md.md)] в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображаются модели интеллектуального анализа, построенные с использованием алгоритма кластеризации последовательностей [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Этот алгоритм [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом анализа последовательностей для исследования данных, содержащих события, которые могут быть связаны с помощью следования путям или *последовательностям*. Дополнительные сведения об этом алгоритме см. в статье [Алгоритм кластеризации последовательностей (Майкрософт)](microsoft-sequence-clustering-algorithm.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "36189156"
  [В начало](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Profile"></a> Профили кластеров  
- Вкладка **Профили кластера** предоставляет общий вид кластеров, создаваемых алгоритмом в модели. Каждый столбец, идущий за столбцом **Заполнение** в сетке, представляет кластер, обнаруженный моделью. \<Атрибута > .Samples представляет различные последовательности данных, которая существует в кластере, и \<атрибут > строка описывает все элементы, которые содержит кластер и их общее распределение.  
+ Вкладка **Профили кластера** предоставляет общий вид кластеров, создаваемых алгоритмом в модели. Каждый столбец, идущий за столбцом **Заполнение** в сетке, представляет кластер, обнаруженный моделью. \<Атрибут > .Samples представляет различные последовательности данных, который существует в кластере, и \<атрибут > строка описывает всех элементов, содержащихся в кластере и их общее распределение.  
   
  Параметр **Столбцы гистограммы** управляет количеством видимых столбцов на гистограмме. Если доступно больше столбцов, чем выбрано для отображения, то наиболее важные столбцы сохраняются, а оставшиеся группируются в сегмент серого цвета.  
   

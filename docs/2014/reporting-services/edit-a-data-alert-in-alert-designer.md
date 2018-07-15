@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editing, data alerts
 - updating, data alerts
@@ -18,13 +18,13 @@ ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f5c9314b2dca029341c4ea503e6417a5e9c2507d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c8b11052241d66086eb9206978a65527e0df9a93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251706"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>изменить предупреждение в конструкторе предупреждений
   Если вы хотите изменить определение предупреждения об изменении данных, его следует открыть в диспетчере предупреждений об изменении данных. Изменить определение предупреждения может только пользователь, который его создал. Дополнительные сведения об открытии диспетчера предупреждений данных см. в разделе [Управление предупреждениями данных в диспетчере предупреждений данных](manage-my-data-alerts-in-data-alert-manager.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "36192614"
   
      Определение предупреждения откроется в конструкторе предупреждений об изменении данных.  
   
-2.  Обновите правила, параметры расписания и параметры электронной почты. Дополнительные сведения см. в разделе [конструктор предупреждений об изменении данных](../../2014/reporting-services/data-alert-designer.md) и [создать предупреждение об изменении данных в конструкторе предупреждений об изменении данных](create-a-data-alert-in-data-alert-designer.md).  
+2.  Обновите правила, параметры расписания и параметры электронной почты. Дополнительные сведения см. в разделе [конструктор предупреждений об изменении данных](../../2014/reporting-services/data-alert-designer.md) и [Создание предупреждения данных в конструкторе предупреждений данных](create-a-data-alert-in-data-alert-designer.md).  
   
     > [!NOTE]  
     >  Выбрать другой веб-канал данных нельзя. Чтобы использовать другой веб-канал данных, следует создать новое определение предупреждения об изменении данных.  

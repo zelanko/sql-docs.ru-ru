@@ -1,5 +1,5 @@
 ---
-title: Редактор источника «ODBC» (страница «столбцы») | Документы Microsoft
+title: Редактор источника ODBC (страница "столбцы") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.columns.f1
 ms.assetid: 565984eb-8318-4be7-bebc-262209cf5065
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c81948bfcb6d0c2c523d563e850e9466ae45679a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b16be16730643cc063b39594c8e01f1321b6a983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209434"
 ---
 # <a name="odbc-source-editor-columns-page"></a>Редактор источника «ODBC» (страница «Столбцы»)
   Страница **Столбцы** диалогового окна **Редактор источника ODBC** используется для сопоставления выходного столбца с каждым внешним (исходным) столбцом.  
@@ -52,6 +52,6 @@ ms.locfileid: "36191016"
   
 ## <a name="see-also"></a>См. также  
  [Редактор источника ODBC &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
- [Редактор источника ODBC &#40;страницы вывода ошибок&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
+ [Редактор источника ODBC &#40;странице вывода ошибок&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

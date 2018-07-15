@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 93794bc4f692f84b7c44b9e8b6ccca36fb43afe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2bbe45e006930798396c13136f999c8152c4f48b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286906"
 ---
 # <a name="linestring"></a>LineString
   `LineString` является одномерным объектом, представляющим последовательность точек и соединяющих их линейных сегментов.  
@@ -36,7 +36,7 @@ ms.locfileid: "36100374"
   
 -   на рисунке 1 представлен простой незамкнутый экземпляр объекта `LineString`;  
   
--   На рисунке 2 представлен незамкнутый `LineString` экземпляра.  
+-   На рисунке 2 представлен отличный от простого незамкнутый `LineString` экземпляра.  
   
 -   на рисунке 3 продемонстрирован простой замкнутый экземпляр объекта `LineString`, представляющий собой кольцо;  
   
@@ -53,7 +53,7 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
   
  `@g3` показывает, что, хотя экземпляр `LineString` допустим, он недействителен.  
   
- Следующие `LineString` экземпляр не принимается. Он выдаст исключение `System.FormatException`.  
+ Следующие `LineString` не является принимаемым. Он выдаст исключение `System.FormatException`.  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
@@ -79,7 +79,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
 ```  
   
- Следующие `LineString` экземпляров не допускаются.  
+ Следующие `LineString` экземпляры являются недопустимыми.  
   
 ```  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  

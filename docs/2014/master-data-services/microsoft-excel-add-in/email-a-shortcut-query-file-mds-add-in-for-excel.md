@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f1bfd287b6e43da0da4717b723d402f1be38e4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e5e774a598ca45bf340d8f42f1bfd5b5faa9f5c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262920"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Отправка файла ярлыка запроса по электронной почте (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно отправить кому-либо файл ярлыка запроса по электронной почте, если адресат должен иметь возможность работать с теми же данными, что и вы. Вместо сохранения и отправки листа по электронной почте следует предоставлять общий доступ к запросу.  
@@ -33,7 +33,7 @@ ms.locfileid: "36101359"
   
 ### <a name="to-send-a-shortcut-query-file"></a>Отправка файла ярлыка запроса  
   
-1.  Убедитесь, что данные на листе представлены в формате, который должен использоваться совместно. Дополнительные сведения о фильтрации данных и переупорядочении столбцов см. в разделе [фильтрации данных перед загрузкой &#40;надстройки MDS для Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md) и [переупорядочить столбцы &#40;надстройки MDS для Excel&#41; ](reorder-columns-mds-add-in-for-excel.md).  
+1.  Убедитесь, что данные на листе представлены в формате, который должен использоваться совместно. Дополнительные сведения о фильтрации данных и переупорядочении столбцов см. в разделе [фильтрация данных перед загрузкой &#40;надстройки MDS для Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md) и [переупорядочение столбцов &#40;надстройки MDS для Excel&#41; ](reorder-columns-mds-add-in-for-excel.md).  
   
 2.  В группе **Сохранение и отправка** нажмите **Отправить запрос**. Открывается сообщение электронной почты с файлом ярлыка запроса во вложении.  
   

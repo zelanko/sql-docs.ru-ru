@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c077e53cbca0e9c97d6ac347ff85cec5c5e752f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d19c17410c5cf6511db7b53ccf0de758dfefc0aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329984"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Мастер обновления баз данных (диспетчер конфигурации служб Master Data Services)
   Используйте **Мастер обновления баз данных** для обновления базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -40,7 +40,7 @@ ms.locfileid: "36109727"
   
 ## <a name="see-also"></a>См. также  
  [Страница "Конфигурация базы данных" (диспетчер конфигурации служб Master Data Services)](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [Настройка базы данных и веб-сайт для служб Master Data Services](set-up-the-database-and-website-for-master-data-services.md)   
+ [Настройка веб-сайта и базы данных для служб Master Data Services](set-up-the-database-and-website-for-master-data-services.md)   
  [Обновление служб Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  
   
   

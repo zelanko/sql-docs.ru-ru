@@ -1,5 +1,5 @@
 ---
-title: Средства вычисления (вкладка «вычисления», конструктор кубов) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Средства вычисления (вкладка «вычисления», конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.calculationtoolspane.f1
 ms.assetid: b1aa8a1a-6532-45d2-8f53-d3e211d7197a
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 106821212578d341292be4ef5f33bef055d5c1c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1263a4037f42b7546e6f248cfd0c4b75bbede8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257590"
 ---
 # <a name="calculation-tools-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Средства вычисления (вкладка «Вычисления», конструктор кубов) (службы Analysis Services — многомерные данные)
   С помощью панели **Средства вычисления** на вкладке **Вычисления** конструктора кубов можно исследовать метаданные, функции и шаблоны, доступные для использования в расчетах.  
@@ -66,7 +66,7 @@ ms.locfileid: "36193708"
 > [!NOTE]  
 >  Этот параметр доступен только в том случае, если на панели **Метаданные**выбран уровень для атрибута.  
   
- **Добавить шаблон**  
+ **Добавление шаблона**  
  Выберите для добавления нового вычисляемого элемента, именованного набора или команды скрипта, основанной на выбранном шаблоне, в скрипт куба и открытия одного из редакторов **Редактор скриптов**, **Редактор форм вычисляемого элемента**или **Редактор форм именованных наборов** , наиболее подходящего для этой команды (в представлении формы) или для перехода к этой команде в скрипте куба на панели **Редактор скриптов** (в представлении скрипта).  
   
 > [!NOTE]  
@@ -77,8 +77,8 @@ ms.locfileid: "36193708"
  [Панель инструментов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Организатор скриптов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [Редактор форм вычисляемых элементов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Редактор формы именованных наборов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Редактор сценариев &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Редактор формы именованного набора &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Редактор скриптов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)   
  [Вычисления &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

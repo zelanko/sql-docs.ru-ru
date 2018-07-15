@@ -1,5 +1,5 @@
 ---
-title: Набор строк DMSCHEMA_MINING_STRUCTURES | Документы Microsoft
+title: Набор строк DMSCHEMA_MINING_STRUCTURES | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_STRUCTURES rowset
 ms.assetid: 6224556b-08a0-496e-bd7c-632c3e833e26
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b61df846e3b9da7301650a8029d12eb72a218049
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab600b39e4a8347e470153cf21510554605d1c71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323074"
 ---
 # <a name="dmschemaminingstructures-rowset"></a>Набор строк DMSCHEMA_MINING_STRUCTURES
   Перечисляет информацию о структурах интеллектуального анализа данных в текущем каталоге.  

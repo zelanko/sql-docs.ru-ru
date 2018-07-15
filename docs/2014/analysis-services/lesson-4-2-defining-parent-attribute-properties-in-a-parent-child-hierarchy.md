@@ -1,5 +1,5 @@
 ---
-title: Определение свойств родительского атрибута в иерархии родители потомки | Документы Microsoft
+title: Определение свойств родительского атрибута в иерархии родители потомки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a167d70ba2041a3b40da242e51b6fb99aa14e900
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34e32c84044b1ba709ef893949ef83a612d7e4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110058"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328584"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Определение свойств родительского атрибута в иерархии «родители-потомки»
   Иерархия типа «родители-потомки» представляет собой иерархию в измерении, которая основана на двух столбцах таблицы. Вместе эти столбцы определяют иерархическую связь между элементами измерения. Первый столбец, называемый *ключевым столбцом элемента*, идентифицирует каждый элемент измерения. Второй столбец, называемый *родительским столбцом*, идентифицирует родителя для каждого из элементов измерения. Свойство **NamingTemplate** родительского атрибута определяет имя каждого уровня в иерархии типа "родители-потомки", а свойство **MembersWithData** — будут ли отображаться данные для родительских элементов.  
   
- Дополнительные сведения см. в разделе [иерархии родители-потомки](multidimensional-models/parent-child-dimension.md), [атрибутов в иерархии родители-потомки](multidimensional-models/parent-child-dimension-attributes.md)  
+ Дополнительные сведения см. в разделе [«родители-потомки»](multidimensional-models/parent-child-dimension.md), [атрибутов в иерархии родители-потомки](multidimensional-models/parent-child-dimension-attributes.md)  
   
 > [!NOTE]  
 >  Если измерение создается с помощью мастера измерений, мастер распознает таблицы, которые имеют связи типа «родители-потомки», и автоматически определяет иерархию типа «родители-потомки».  
@@ -61,7 +61,7 @@ ms.locfileid: "36110058"
   
      На следующем рисунке показана развернутая иерархия Employees.  
   
-10. ![Сводная таблица, показывающая иерархии Employees](../../2014/tutorials/media/l4-employee-1.gif "Сводная таблица, показывающая иерархии Employees")  
+10. ![Сводная таблица, показывающая иерархии Employees](../../2014/tutorials/media/l4-employee-1.gif "Сводная таблица, показывающая иерархию Employees")  
   
      Обратите внимание, что продажи, совершенные каждым менеджером уровня 03, отображаются и на уровне 04. Это связано с тем, что каждый менеджер является также подчиненным другого менеджера. В следующей задаче предстоит скрыть эти суммы продаж.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36110058"
   
      На рисунке ниже показаны изменения в диалоговом окне **Шаблон именования уровней** .  
   
-     ![Диалоговое окно шаблон именования уровня](../../2014/tutorials/media/l4-namingtemplate.gif "диалоговое окно «шаблон именования уровней»")  
+     ![Диалоговое окно уровня шаблон именования](../../2014/tutorials/media/l4-namingtemplate.gif "диалоговое окно «шаблон именования уровней»")  
   
 5.  Нажмите кнопку **ОК**.  
   
@@ -105,13 +105,13 @@ ms.locfileid: "36110058"
   
      На следующем рисунке показаны изменения, внесенные в иерархию Employees. Обратите внимание на то, что Stephen Y. Jiang больше не отображается как сотрудник самого себя.  
   
-     ![Изменить иерархию Employees](../../2014/tutorials/media/l4-employee-2.png "иерархии Employees изменен")  
+     ![Изменить иерархию Employees](../../2014/tutorials/media/l4-employee-2.png "иерархии Employees изменения")  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Автоматическое группирование элементов атрибута](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
   
 ## <a name="see-also"></a>См. также  
- [Иерархии родители потомки](multidimensional-models/parent-child-dimension.md)   
+ [«Родители потомки»](multidimensional-models/parent-child-dimension.md)   
  [Атрибуты в иерархиях типа "родители-потомки"](multidimensional-models/parent-child-dimension-attributes.md)  
   
   

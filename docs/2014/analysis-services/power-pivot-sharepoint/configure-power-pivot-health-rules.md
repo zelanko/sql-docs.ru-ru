@@ -1,5 +1,5 @@
 ---
-title: Правила определения исправности PowerPivot — Настройка | Документы Microsoft
+title: Правила определения исправности PowerPivot — Настройка | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f22cf615d32ebe0d784aa71f3169f4ce9b9e9125
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 853dc9e66b42830f241715f2283b75f1983e2433
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265431"
 ---
 # <a name="powerpivot-health-rules---configure"></a>Правила определения исправности PowerPivot — настройка
   PowerPivot для SharePoint включает правила выявления неисправностей SharePoint, позволяющие отслеживать и устранять проблемы доступности и конфигурации сервера. Правила выявления неисправностей, применимые к PowerPivot для SharePoint, отображаются на странице «Просмотр определений правил».  
@@ -32,7 +32,7 @@ ms.locfileid: "36190844"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 #124; SharePoint 2010|  
   
- **Примечание.** Параметры правил определения исправности настраиваются независимо для экземпляра служб SQL Server Analysis Services и приложения службы PowerPivot. Инструкции данного раздела позволяют настроить правила определения исправности для каждой службы. В развертывании SharePoint 2013 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] использует только приложение службы. Поэтому [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] устанавливает разные наборы правил определения исправности для разных версий SharePoint. См. столбец «версия» в разделе [Справочник по правилам работоспособности &#40;PowerPivot для SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), также можно выполнить следующую команду Windows PowerShell для отображения списка установленных правил.  
+ **Примечание.** Параметры правил определения исправности настраиваются независимо для экземпляра служб SQL Server Analysis Services и приложения службы PowerPivot. Инструкции данного раздела позволяют настроить правила определения исправности для каждой службы. В развертывании SharePoint 2013 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] использует только приложение службы. Поэтому [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] устанавливает разные наборы правил определения исправности для разных версий SharePoint. См. в столбце «версия» в разделе [Справочник по правилам работоспособности &#40;PowerPivot для SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), также можно выполнить следующую команду Windows PowerShell для отображения списка установленных правил.  
   
 ```  
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
@@ -68,7 +68,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  В верхней части страницы выберите сервер фермы SharePoint, на котором имеется экземпляр служб Analysis Services (на следующем рисунке имя сервера — AW-SRV033). В списке служб появятся службы**SQL Server Analysis Services** .  
   
-     ![Снимок экрана управление службами на странице сервера](../media/ssas-centraladmin-servicesonserver.gif "экрана управление службами на странице сервера")  
+     ![Снимок экрана «управление службами» на странице сервера](../media/ssas-centraladmin-servicesonserver.gif "снимок экрана «управление службами» на странице сервера")  
   
 3.  Нажмите **Службы SQL Server Analysis Services**.  
   
@@ -95,7 +95,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      Этот параметр конфигурации соответствует следующему определению правила на странице **Обзор проблем и решений** : **PowerPivot: большое число подключений свидетельствует о необходимости задействовать дополнительные серверы, чтобы справиться с нагрузкой.**  
   
      Недостаточный объем места на диске (по умолчанию 5 %)  
-     Место на диске, используемое для кэширования данных PowerPivot при каждом запросе базы данных. Это правило позволяет узнать о нехватке места на диске. По умолчанию это правило определения исправности срабатывает, когда объем свободного места на диске становится меньше 5 % объема диска, на котором расположена папка резервного копирования. Дополнительные сведения об использовании см. в разделе [Настройка использования места на диске &#40;PowerPivot для SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md).  
+     Место на диске, используемое для кэширования данных PowerPivot при каждом запросе базы данных. Это правило позволяет узнать о нехватке места на диске. По умолчанию это правило определения исправности срабатывает, когда объем свободного места на диске становится меньше 5 % объема диска, на котором расположена папка резервного копирования. Дополнительные сведения об использовании диска см. в разделе [Настройка использования места на диске &#40;PowerPivot для SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md).  
   
      Этот параметр конфигурации соответствует следующему определению правила на странице **Обзор проблем и решений** : **PowerPivot: недостаток места на диске, на который кэшируются данные PowerPivot.**  
   
@@ -108,11 +108,11 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  На странице «Приложения службы» нажмите кнопку **Приложение службы PowerPivot по умолчанию**.  
   
-     ![Страница приложения ManageService экрана](../media/ssas-centraladmin-app.gif "страница приложения ManageService экрана")  
+     ![Снимок экрана: страница приложения ManageService](../media/ssas-centraladmin-app.gif "снимок экрана: страница приложения ManageService")  
   
 3.  Откроется панель мониторинга PowerPivot. В списке **Действия** выберите **Настройка параметров приложения службы** , чтобы открыть страницу параметров приложений службы.  
   
-     ![Снимок экрана панели мониторинга, сосредоточиться на список действий](../media/ssas-centraladmin-actionslist.gif "снимок экрана панели мониторинга, сосредоточиться на списке «действия»")  
+     ![Снимок экрана панели мониторинга, сосредоточиться на список действий](../media/ssas-centraladmin-actionslist.gif "снимок экрана панели мониторинга, сосредоточиться на список действий")  
   
 4.  В разделе «Параметры правил определения исправности» измените следующие параметры.  
   

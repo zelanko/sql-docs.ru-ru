@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], resolving permissions
 - permissions [Master Data Services], user and group overlaps
 - groups [Master Data Services], resolving permissions
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6523603f7524af93bc21417f378a41bd907532d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 06b8f48e1f2b7c246c1f5e4559bbbba851ccf128
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264940"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Перекрытие разрешений пользователей и групп (службы основных данных)
   Разрешения пользователя основаны:  
@@ -48,11 +48,11 @@ ms.locfileid: "36193598"
   
  Пользователь принадлежит к группе 1 и группе 2.  
   
- У пользователя есть **только для чтения** разрешения на сущности «продукт».  
+ У пользователя есть **только для чтения** разрешения для сущности Product.  
   
  Группа 1 имеет разрешение **Обновить** для сущности Product.  
   
- Группа 2 имеет **только для чтения** разрешения на сущности «продукт».  
+ Группа 2 имеет **только для чтения** разрешения для сущности Product.  
   
  Результат: действующим разрешением пользователя для сущности Product будет **Обновить** .  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36193598"
   
  Пользователь принадлежит к группе 1 и группе 2.  
   
- У пользователя есть **только для чтения** разрешения на сущности «продукт».  
+ У пользователя есть **только для чтения** разрешения для сущности Product.  
   
  Группа 1 имеет разрешение **Обновить** для сущности Product.  
   

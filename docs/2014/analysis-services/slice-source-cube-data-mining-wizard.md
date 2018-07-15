@@ -1,5 +1,5 @@
 ---
-title: Срез исходного куба (мастер интеллектуального анализа данных) | Документы Microsoft
+title: Срез исходного куба (мастер интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.slicesourcecube.f1
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a0e3badd385e654db3b869a197130fde26fbffcc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6024c1e58b48c8661eaa15a0ea85c464103403ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188546"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326554"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Срез исходного куба (мастер интеллектуального анализа данных)
   Можно использовать диалоговое окно **Срез исходного куба** для ограничения данных, используемых при обучении модели. Обычно куб содержит данные, относящиеся к разным измерениям и атрибутам, такие как все магазины, все регионы и все товары. Не имеет смысла обучать модель на неограниченных сочетаниях атрибутов, поэтому следует использовать это диалоговое окно в целях выбора конкретного набора для использования в обучении модели.  
@@ -30,16 +30,16 @@ ms.locfileid: "36188546"
   
  Если вы не знакомы со срезами и кубами, рекомендуется просмотреть следующие статьи.  
   
--   [Определение свойства среза секции &#40;служб Analysis Services&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
+-   [Задайте свойства среза секции &#40;служб Analysis Services&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
   
--   [Создание и управление локальной секции &#40;служб Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+-   [Создание и управление ими локальной секции &#40;служб Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
 > [!NOTE]  
 >  Обратите внимание, что динамические функции многомерных выражений (такие как [Generate (многомерное выражение)](/sql/mdx/generate-mdx) или [Except (многомерное выражение)](/sql/mdx/except-mdx-function)) не поддерживаются в свойстве Slice для секций. Необходимо определить срез с помощью явных кортежей или ссылок на элементы.  
 >   
 >  Например, вместо использования [: &#40;диапазон&#41; &#40;многомерных Выражений&#41; ](/sql/mdx/range-mdx) для определения диапазона, потребуется перечислить каждый элемент по конкретным годам.  
 >   
->  Если необходимо определить сложный срез, рекомендуется идентифицировать кортежи в срезе с помощью скрипта изменения XMLA. Затем можно использовать средство командной строки ascmd или SSIS [задача выполнения DDL служб Analysis Services](../integration-services/control-flow/analysis-services-execute-ddl-task.md) для запуска скрипта и создания указанного набора элементов непосредственно перед секционированием.  
+>  Если необходимо определить сложный срез, рекомендуется идентифицировать кортежи в срезе с помощью скрипта изменения XMLA. Затем можно использовать средство командной строки ascmd или SSIS [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) для запуска скрипта и создания указанного набора элементов непосредственно перед секционированием.  
   
  **Дополнительные сведения:** [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md)  
   
@@ -66,6 +66,6 @@ ms.locfileid: "36188546"
 ## <a name="see-also"></a>См. также  
  [Завершение работы мастера &#40;мастер интеллектуального анализа данных&#41;](completing-the-wizard-data-mining-wizard.md)   
  [Справка F1 мастера интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Использование столбцов модели &#40;мастер интеллектуального анализа данных&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
+ [Укажите использование столбца модели интеллектуального &#40;мастер интеллектуального анализа данных&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   
   

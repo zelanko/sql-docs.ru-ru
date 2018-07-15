@@ -1,5 +1,5 @@
 ---
-title: Предварительный просмотр выбранной таблицы (SSAS) | Документы Microsoft
+title: Предварительный просмотр выбранной таблицы (SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.previewselecttable.f1
 ms.assetid: b6b34b5a-43b3-4a75-9f3b-b2ad1084b1b6
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ccaa243593d2885ab935e1cbe4da5c194d36b708
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49207b2d1574593c14ca6b005febebb28864dec3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314994"
 ---
 # <a name="preview-selected-table-ssas"></a>Предварительный просмотр выбранной таблицы (SSAS)
   Эта страница **мастера импорта таблиц** позволяет просмотреть данные в выбранной таблице, выбрать столбцы для включения в импорт данных и отфильтровать данные в выбранных столбцах. Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  

@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.newagwizard.f1
 - sql12.swb.newavgroupwiz.f1
@@ -18,18 +17,18 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 caps.latest.revision: 41
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 79cdbd700e1eda482b02902a23de66eb92652fdf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f021d637b04a67dccde5d3428edd0b033f0bf297
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189137"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300904"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Использование мастера групп доступности (SQL Server Management Studio)
-  В этом разделе описывается использование мастера создания группы доступности (в [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) для создания и настройки группы доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
+  В этом разделе описывается использование мастера создания групп доступности (в [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) для создания и настройки группы доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
   
 > [!NOTE]  
 >  Базовые сведения о группах доступности см. в разделе [Обзор групп доступности AlwaysOn (SQL Server)](overview-of-always-on-availability-groups-sql-server.md).  
@@ -120,7 +119,7 @@ ms.locfileid: "36189137"
     |Вкладка|Краткое описание|  
     |---------|-----------------------|  
     |**Реплики**|На этой вкладке можно задать каждый экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , где будет размещена вторичная реплика. Обратите внимание, что первичная реплика должна быть размещена на экземпляре сервера, с которым в данный момент установлено соединение.|  
-    |**Конечные точки**|Эту вкладку можно использовать для проверки существующих конечных точек зеркального отображения баз данных, а также для их автоматического создания в случае, если они отсутствуют на экземпляре сервера, служба которого использует проверку подлинности Windows. **Примечание:** Если любой экземпляр сервера выполняется с учетной записью пользователя домена, необходимо вручную перейти на свой экземпляр сервера до продолжения работы с мастером. Дополнительные сведения см. в подразделе [Предварительные условия](#PrerequisitesRestrictions)ранее в этом разделе.|  
+    |**Конечные точки**|Эту вкладку можно использовать для проверки существующих конечных точек зеркального отображения баз данных, а также для их автоматического создания в случае, если они отсутствуют на экземпляре сервера, служба которого использует проверку подлинности Windows. **Примечание:** Если любой экземпляр сервера работает под учетной записью пользователя домена, необходимо сделать вручную перейти на свой экземпляр сервера, прежде чем перейти в мастере. Дополнительные сведения см. в подразделе [Предварительные условия](#PrerequisitesRestrictions)ранее в этом разделе.|  
     |**Параметры резервного копирования**|Эту вкладку можно использовать для задания настроек резервного копирования для группы доступности в целом, а также для задания приоритетов резервного копирования для отдельных реплик доступности.|  
     |**Средство прослушивания**|Эта вкладка используется для создания прослушивателя группы доступности. По умолчанию мастер не создает прослушиватель.|  
   
@@ -182,7 +181,7 @@ ms.locfileid: "36189137"
   
  **Настройка конечной точки зеркального отображения базы данных**  
   
--   [Создать базу данных конечной точки зеркального отображения для групп доступности AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Создание базы данных конечной точки зеркального отображения для групп доступности AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -190,11 +189,11 @@ ms.locfileid: "36189137"
   
 -   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
- **Устранение неполадок с конфигурацией группы доступности AlwaysOn**  
+ **Устранение неполадок с конфигурацией групп доступности AlwaysOn**  
   
--   [Диагностика конфигурации групп доступности AlwaysOn &#40;SQL Server&#41;удалена](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [Устранение неполадок с конфигурацией групп доступности AlwaysOn &#40;SQL Server&#41;удален](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
--   [Устранение неполадок с операцией не удалось добавить файл &#40;группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Устранение неполадок с операцией добавления файла, завершившейся сбоем &#40;группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> См. также  
   
@@ -202,19 +201,19 @@ ms.locfileid: "36189137"
   
      [-Обучающая серия AlwaysON HADRON: Использование рабочего пула для HADRON баз данных с поддержкой](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Блоги SQL Server AlwaysOn Team: Официальный блог SQL Server AlwaysOn](http://blogs.msdn.com/b/sqlalwayson/)  
+     [Блоги группы AlwaysOn SQL Server: Официальный блог SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
   
      [Блоги инженеров CSS SQL Server](http://blogs.msdn.com/b/psssql/)  
   
 -   **Видеоролики**  
   
-     [Серия AlwaysOn Microsoft SQL Server с рабочим названием «Denali», часть 1: Вводные сведения о решении высокого уровня доступности следующего поколения](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Серия Microsoft SQL Server с кодовым названием «Denali» AlwaysOn, часть 1: Представляем решение высокого уровня доступности следующего поколения](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Серия AlwaysOn Microsoft SQL Server с рабочим названием «Denali», часть 2: Создание критически важных высокого уровня доступности с помощью AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Серия AlwaysOn Microsoft SQL Server с кодовым названием «Denali», часть 2: Создание критически важных высокого уровня доступности с помощью AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Технические документы**  
   
-     [Microsoft SQL Server AlwaysOn Solutions Guide for высокого уровня доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Технические документы Майкрософт Microsoft по SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   

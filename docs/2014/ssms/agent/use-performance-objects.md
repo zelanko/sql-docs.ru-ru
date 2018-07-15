@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, monitoring
 - SQL Server Agent service, monitoring
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - counters [SQL Server], SQL Server Agent
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0cbb49b9c96d09027adcee1573168df6ba661d4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 724d921aaabafbe17adb96f48e679485247f8e92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301434"
 ---
 # <a name="use-performance-objects"></a>Использование объектов производительности
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент включает объекты и счетчики производительности, позволяющие отслеживать работу служб. Эти объекты производительности дают возможность использования системного монитора, средства Windows для определения задач, выполняемых службой агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в фоновом режиме. Например, можно узнать, сколько активных заданий запущено в данный момент в службе агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и определить заблокированные задания.  
@@ -40,8 +40,8 @@ ms.locfileid: "36099710"
   
 |Тип экземпляра|Имя объекта|  
 |-------------------|-----------------|  
-|По умолчанию|**SQLAgent:** *объекта*:*счетчика*|  
-|Именованный|**SQLAgent$**<br /> ***имя_экземпляра* :** *объекта*:*счетчика*|  
+|По умолчанию|**SQLAgent:** *объект*:*счетчика*|  
+|Именованный|**SQLAgent$**<br /> ***имя_экземпляра* :** *объект*:*счетчика*|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующие объекты производительности для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

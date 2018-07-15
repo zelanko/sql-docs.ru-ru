@@ -1,5 +1,5 @@
 ---
-title: Системные представления, хранимые процедуры, динамические административные представления и типы ожидания для In-Memory OLTP | Документы Microsoft
+title: Системные представления, хранимые процедуры, динамические административные представления и типы ожидания для выполняющейся в памяти OLTP | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
 caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a4e50744a716e42e0fd2767ec9cc677b2ccc085f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0a11867eafdcd747da207c2ff6783391ed3485f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245224"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Системные представления, хранимые процедуры, динамические административные представления и типы ожидания для In-Memory OLTP
   В этой статье представлены краткие описания многих объектов баз данных, которые поддерживают In-Memory OLTP, и ссылки на них.  
@@ -28,8 +28,8 @@ ms.locfileid: "36192281"
   
 |Системное представление|Описание|Функция In-Memory OLTP|  
 |-----------------|-----------------|-----------------------------|  
-|[sys.data_spaces (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|Проверьте, содержит ли файловая группа данные, оптимизированные для памяти.|В следующих столбцах отображаются дополнительные значения: **тип** и **type_desc**.|  
-|[sys.indexes (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)|Проверьте, находится ли индекс в таблице, оптимизированной для памяти.|В следующих столбцах отображаются дополнительные значения: **тип** и **type_desc**.|  
+|[sys.data_spaces (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|Проверьте, содержит ли файловая группа данные, оптимизированные для памяти.|Следующие столбцы показывают дополнительные значения: **тип** и **type_desc**.|  
+|[sys.indexes (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)|Проверьте, находится ли индекс в таблице, оптимизированной для памяти.|Следующие столбцы показывают дополнительные значения: **тип** и **type_desc**.|  
 |[sys.parameters (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)|Убедитесь, параметр не допускает значения NULL (для более эффективного выполнения компилируемых в собственном коде хранимых процедур).|**is_nullable** столбца.|  
 |[sys.all_sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|Убедитесь, что хранимая процедура компилируется в собственном режиме.|**uses_native_compilation** столбца.|  
 |[sys.sql_modules (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)|Убедитесь, что хранимая процедура компилируется в собственном режиме.|**uses_native_compilation** столбца.|  

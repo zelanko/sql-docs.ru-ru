@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c5993cfd66502310035a16325eb2e56bb0c698c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18fe88708f5e57b37ad18811d6d7a6d587fa86c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263219"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Редактор источников SAP BW (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор источника SAP BW** , чтобы выбрать диспетчер соединений SAP BW для источника SAP BW. На этой странице можно также выбрать режим выполнения и параметры для извлечения данных из источника данных системы SAP Netweaver BW.  
@@ -126,7 +126,7 @@ ms.locfileid: "36195629"
  Введите идентификатор запроса, связанный с извлечением.  
   
 ## <a name="see-also"></a>См. также  
- [Редактор источников SAP BW &#40;страница «столбцы»&#41;](sap-bw-source-editor-columns-page.md)   
+ [Редактор источника SAP BW &#40;страница "столбцы"&#41;](sap-bw-source-editor-columns-page.md)   
  [Редактор источника SAP BW (страница "Вывод ошибок")](sap-bw-source-editor-error-output-page.md)   
  [Редактор источника SAP BW (страница "Дополнительно")](sap-bw-source-editor-advanced-page.md)   
  [Справка F1 по Microsoft Connector 1.1 для SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  

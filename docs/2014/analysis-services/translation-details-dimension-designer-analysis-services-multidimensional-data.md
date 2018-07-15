@@ -1,5 +1,5 @@
 ---
-title: Подробности перевода (вкладка «Переводы», конструктор измерений) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Сведения о переводе (вкладка «Переводы», конструктор измерений) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.translations.translationpane.tranlationdetails.f1
 ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c3fea9b837915fff37bad632780544bcf7ebb1a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4051de358b2567d6473a016e7f965d15b1dd215
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306334"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Сведения о переводе (вкладка «Переводы», конструктор измерений) (службы Analysis Services — многомерные данные)
   Панель **Подробности перевода** на вкладке **Переводы** окна «Конструктор измерений» позволяет определять переводы для выбранного измерения и управлять ими.  
   
- **Чтобы отобразить область Подробности перевода**  
+ **Для отображения в области сведений переводы**  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем откройте нужное измерение.  
   

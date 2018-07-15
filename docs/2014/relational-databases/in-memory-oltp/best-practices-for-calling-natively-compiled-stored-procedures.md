@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694bb
 caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5439f539e126a64cff92065e049da359e89345b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f28a62753f2ce6b5474e87be95276b0f464d4314
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298344"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Рекомендации по вызову хранимых процедур, скомпилированных в собственном коде
   Скомпилированные в собственном коде хранимые процедуры:  
@@ -52,9 +52,9 @@ ms.locfileid: "36191615"
   
  Использование именованных параметров с хранимыми процедурами, скомпилированными в собственном коде, можно обнаружить с помощью XEvent `hekaton_slow_parameter_passing` с `reason=named_parameters`.  
   
- Аналогичным образом можно определить использование несовместимых типов через то же событие XEvent `hekaton_slow_parameter_passing`, с `reason=parameter_conversion`.  
+ Аналогичным образом можно определить использование несовместимых типов через то же событие XEvent `hekaton_slow_parameter_passing`, с помощью `reason=parameter_conversion`.  
   
- Чтобы реализовать логику повторного выполнения при использовании таблиц с оптимизацией для памяти (во многих сценариях) и обойти ограничения некоторых функций, можно создать интерпретируемую оболочкой хранимую процедуру [!INCLUDE[tsql](../../includes/tsql-md.md)] . Пример см. в разделе [рекомендации по логика повтора для транзакции на оптимизированных для памяти таблицах](memory-optimized-tables.md).  
+ Чтобы реализовать логику повторного выполнения при использовании таблиц с оптимизацией для памяти (во многих сценариях) и обойти ограничения некоторых функций, можно создать интерпретируемую оболочкой хранимую процедуру [!INCLUDE[tsql](../../includes/tsql-md.md)] . Например, см. в разделе [Guidelines for Retry Logic для транзакции на оптимизированных для памяти таблицах](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>См. также  
  [Скомпилированные в собственном коде хранимые процедуры](natively-compiled-stored-procedures.md)  

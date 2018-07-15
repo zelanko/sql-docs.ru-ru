@@ -1,5 +1,5 @@
 ---
-title: Элемент AttributePermissions (ASSL) | Документы Microsoft
+title: Элемент AttributePermissions (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AttributePermissions element
 ms.assetid: ac703177-5936-440e-b1a5-a254a89258bc
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 328442196ded3537b8f6926bdfd67ea8e9100c5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98869453e0ecd50301e94cf5b7034173fc7a8a5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249044"
 ---
 # <a name="attributepermissions-element-assl"></a>Элемент AttributePermissions (ASSL)
-  Содержит коллекцию разрешений атрибутов для отдельного [роли](../objects/role-element-assl.md) элемента на конкретное измерение [куба](../objects/cube-element-assl.md) элемента.  
+  Содержит коллекцию разрешений атрибутов для отдельного [роли](../objects/role-element-assl.md) элемент с указанным измерением из [куба](../objects/cube-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36192317"
 ## <a name="remarks"></a>Примечания  
  Для элемента `DimensionPermission` эта коллекция может содержать только один элемент `AttributePermission` для каждого атрибута.  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.AttributePermissionCollection>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.AttributePermissionCollection>.  
   
 ## <a name="see-also"></a>См. также  
  [Тип данных Permission &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   

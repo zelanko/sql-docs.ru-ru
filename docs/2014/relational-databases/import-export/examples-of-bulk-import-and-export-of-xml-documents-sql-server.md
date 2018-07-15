@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - field terminators [SQL Server]
 - bulk importing [SQL Server], data formats
@@ -19,19 +18,19 @@ helpviewer_keywords:
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ef7ed95cce28904377f0aa9fd1b446c89fb0db1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 957ca45730f0f16febff3c86d2c459965069bd3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303934"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Примеры массового импорта и экспорта XML-документов (SQL Server)
     
-##  <a name="top"></a> Можно выполнить массовый импорт XML-документов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных или осуществить массовый экспорт их из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных. В этом разделе приведены примеры и того, и другого.  
+##  <a name="top"></a> Можно выполнить массовый импорт XML-документов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных или осуществить массовый экспорт из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных. В этом разделе приведены примеры и того, и другого.  
   
  Для выполнения массового импорта данных из файла в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или несекционированное представление могут использоваться следующие средства.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "36190444"
   
 -   Инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...).  
   
- Дополнительные сведения см. в разделе [массовый импорт и экспорт данных с помощью программы bcp &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) и [массовый импорт данных с помощью инструкции BULK INSERT или OPENROWSET&#40;BULK... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ Дополнительные сведения см. в разделе [массовый импорт и экспорт данных с помощью программы bcp &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) и [массовый импорт данных при помощи инструкции BULK INSERT или OPENROWSET&#40;МАССОВОГО... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ## <a name="examples"></a>Примеры  
  Далее следуют примеры.  
@@ -59,7 +58,7 @@ ms.locfileid: "36190444"
 -   Д. [Массовый экспорт XML-данных](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> A. Массовый импорт XML-данных в виде двоичного байтового потока  
- При массовом импорте XML-данных из файла, содержащего объявление кодировки, которое необходимо применить, нужно указать параметр SINGLE_BLOB в функции OPENROWSET(BULK…). Параметр SINGLE_BLOB гарантирует, что синтаксический анализатор XML в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Импорт данных в соответствии со схемой кодирования, указанной в объявлении XML.  
+ При массовом импорте XML-данных из файла, содержащего объявление кодировки, которое необходимо применить, нужно указать параметр SINGLE_BLOB в функции OPENROWSET(BULK…). Параметр SINGLE_BLOB гарантирует, что синтаксический анализатор XML в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] импортирует данные в соответствии со схемой кодирования, указанной в объявлении XML.  
   
 #### <a name="sample-table"></a>Образец таблицы  
  Для проверки примера A необходимо создать образец таблицы `T`.  

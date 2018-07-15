@@ -1,5 +1,5 @@
 ---
-title: Справка F1 мастера представлений источников данных (службы Analysis Services) | Документы Microsoft
+title: Справка F1 мастера представлений источников данных (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Source View Wizard
 ms.assetid: 0f5057a3-2d3a-4966-8b61-99c4b8ec3433
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f866ebe7d18a749409d1bdeb0f2b7d2b073c5f74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efc9c20cc6e79ae4e03838d9d4621fca383a5b43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269830"
 ---
 # <a name="data-source-view-wizard-f1-help-analysis-services"></a>Справка F1 мастера представлений источников данных (службы Analysis Services)
   С помощью мастера представлений источников данных можно создать представление источника данных для использования в следующих проектах бизнес-аналитики в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -46,13 +46,13 @@ ms.locfileid: "36192794"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Выберите источник данных &#40;мастер представлений источника данных&#41; &#40;служб Analysis Services&#41;](select-a-data-source-data-source-view-wizard-analysis-services.md)  
+-   [Выберите источник данных &#40;мастер представления источников данных&#41; &#40;служб Analysis Services&#41;](select-a-data-source-data-source-view-wizard-analysis-services.md)  
   
--   [Совпадение имен &#40;мастер представлений источника данных&#41; &#40;служб Analysis Services&#41;](name-matching-data-source-view-wizard-analysis-services.md)  
+-   [Совпадение имен &#40;мастер представления источников данных&#41; &#40;служб Analysis Services&#41;](name-matching-data-source-view-wizard-analysis-services.md)  
   
--   [Выбор таблиц и представлений &#40;мастер представлений источника данных&#41; &#40;служб Analysis Services&#41;](select-tables-and-views-data-source-view-wizard-analysis-services.md)  
+-   [Выбор таблиц и представлений &#40;мастер представления источников данных&#41; &#40;служб Analysis Services&#41;](select-tables-and-views-data-source-view-wizard-analysis-services.md)  
   
--   [Завершение работы мастера &#40;мастер представлений источника данных&#41; &#40;служб Analysis Services&#41;](completing-the-wizard-data-source-view-wizard-analysis-services.md)  
+-   [Завершение работы мастера &#40;мастер представления источников данных&#41; &#40;служб Analysis Services&#41;](completing-the-wizard-data-source-view-wizard-analysis-services.md)  
   
 ## <a name="see-also"></a>См. также  
  [Мастера служб Analysis Services &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  

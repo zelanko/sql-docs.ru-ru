@@ -1,5 +1,5 @@
 ---
-title: Свойства диалогового окна «Общие» (построитель отчетов) источника данных | Документы Microsoft
+title: Источник данных, свойства, общие (построитель отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: edd997ab55e63abe4b5085bbe0b11c197020c2ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30114b93158424512e9a9be6441dc5c3ab8dd460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288460"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Диалоговое окно «Свойства источника данных» — «Общие» (построитель отчетов)
   Перейдите на вкладку **Общие** диалогового окна **Свойства источника данных** , чтобы выбрать общий источник данных с сервера отчетов либо создать или изменить сведения о соединении для источника данных, внедренного в отчет.  
@@ -68,10 +68,10 @@ ms.locfileid: "36193314"
  Нажмите, чтобы проверить работу соединения с источником данных с использованием указанных учетных данных. Если не удается установить соединение, то нужно проверить учетные данные и доступность сервера. Можно проверять соединения с общими и внедренными источниками данных.  
   
 ## <a name="see-also"></a>См. также  
- [Добавление данных в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Добавление и проверка подключения к данным или источник данных &#40;отчетов построителя отчетов и службы SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Добавление и проверка подключения к данным или источнику данных &#40;построитель отчетов и службы SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [Подключения к данным, источники данных и строки подключения в построителе отчетов](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Диалоговое окно «Свойства», учетные данные источника данных &#40;построитель отчетов&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
- [Справка построителя отчетов по диалоговым окнам, панелей и мастеров](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

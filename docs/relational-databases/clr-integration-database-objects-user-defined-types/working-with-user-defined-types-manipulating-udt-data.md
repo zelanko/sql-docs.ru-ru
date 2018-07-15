@@ -1,11 +1,11 @@
 ---
-title: Обработка данных определяемого пользователем ТИПА | Документы Microsoft
+title: Обработка данных определяемого пользователем ТИПА | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -32,19 +32,19 @@ caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3eeab65950cf19e967ad9bb0fbd082a879cead8a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: baf3dad1ff4db835e825eacf9a411d56c7d72923
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702075"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354276"
 ---
-# <a name="working-with-user-defined-types---manipulating-udt-data"></a>Работа с пользовательскими типами - обработка определяемого пользователем ТИПА данных
+# <a name="working-with-user-defined-types---manipulating-udt-data"></a>Работа с определяемыми пользователем типами — обработка данных определяемого пользователем ТИПА
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В [!INCLUDE[tsql](../../includes/tsql-md.md)] не используется специальный синтаксис для инструкций INSERT, UPDATE или DELETE при изменении данных в столбцах определяемого пользователем типа. Функции [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST и CONVERT используются для приведения собственных типов данных к определяемому пользователем типу.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Вставка данных в столбец определяемого пользователем типа  
- Следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций вставки трех строк образца данных в **точки** таблицы. **Точки** тип данных состоит из X и Y целочисленных значений, которые представлены как свойства определяемого пользователем типа. Необходимо использовать функции CAST или CONVERT для приведения запятой значения X и Y для **точки** типа. Первые две инструкции используют функцию CONVERT для преобразования строкового значения **точки** типа, а третья инструкция использует функцию CAST:  
+ Следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций вставки трех строк образца данных в **точек** таблицы. **Точки** тип данных состоит из X и Y целочисленных значений, которые представлены как свойства определяемого пользователем типа. Необходимо использовать функцию CAST или CONVERT привести разделяемые запятой значения X и Y к **точки** типа. Первые две инструкции используют функцию CONVERT для преобразования строкового значения **точки** типа, а третья инструкция использует функцию CAST:  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -59,7 +59,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- Чтобы просмотреть выходные данных в формате, удобном для чтения, вызовите **ToString** метод **точки** определяемого пользователем ТИПА, который преобразует значение в строковое представление.  
+ Чтобы просмотреть выходные данных в удобном для чтения формате, вызовите **ToString** метод **точки** определяемого пользователем ТИПА, который преобразует значение в строковое представление.  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -133,7 +133,7 @@ SELECT @PointValue.ToString() AS PointValue;
  Различие между использованием инструкций SELECT и SET для присваиваний значений переменных состоит в том, что SELECT позволяет присваивать значения нескольких переменных в одной инструкции SELECT, в то время как синтаксис SET требует для каждого присваивания переменной отдельной инструкции SET.  
   
 ## <a name="comparing-data"></a>Сравнение данных  
- Операторы сравнения можно использовать для сравнения значений в определяемого пользователем ТИПА, если вы задали **IsByteOrdered** свойства **true** при определении класса. Дополнительные сведения см. в разделе [Создание определяемого пользователем типа](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md).  
+ Можно использовать операторы сравнения для сравнения значений в определяемого пользователем ТИПА, если вы задали **IsByteOrdered** свойства **true** при определении класса. Дополнительные сведения см. в разделе [Создание определяемого пользователем типа](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md).  
   
 ```  
 SELECT ID, PointValue.ToString() AS Points   
@@ -141,7 +141,7 @@ FROM dbo.Points
 WHERE PointValue > CONVERT(Point, '2,2');  
 ```  
   
- Можно сравнить внутренние значения определяемого пользователем типа независимо от **IsByteOrdered** параметр, если сравнимы сами значения. Следующая инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] выбирает строки, в которых X больше, чем Y:  
+ Можно сравнить внутренние значения определяемого пользователем типа вне зависимости от **IsByteOrdered** параметр, если сами значения сравнимы. Следующая инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] выбирает строки, в которых X больше, чем Y:  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -160,7 +160,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Вызов методов определяемого пользователем типа  
- Можно также вызывать методы, которые определены в определяемом пользователем типе [!INCLUDE[tsql](../../includes/tsql-md.md)]. **Точки** класс содержит три метода **расстояние**, **DistanceFrom**, и **DistanceFromXY**. Примеры кода, определяющего эти три метода, в разделе [Coding User-Defined типов](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ Можно также вызывать методы, которые определены в определяемом пользователем типе [!INCLUDE[tsql](../../includes/tsql-md.md)]. **Точки** содержит три метода **расстояние**, **DistanceFrom**, и **DistanceFromXY**. Примеры кода, определяющего эти три метода, см. в разделе [программирование определяемых пользователем типов](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
  Следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция вызывает **PointValue.Distance** метод:  
   
@@ -199,7 +199,7 @@ ID PntDistanceFromPoint
 31,990  
 ```  
   
- **DistanceFromXY** метод принимает точек отдельно в качестве аргументов:  
+ **DistanceFromXY** метод принимает точек по отдельности в качестве аргументов:  
   
 ```  
 SELECT ID, PointValue.X as X, PointValue.Y as Y,   
@@ -226,7 +226,7 @@ SET PointValue.Y = 99
 WHERE ID = 3  
 ```  
   
- Если определяемый пользователем тип был определен с упорядочением байт, установленным для **true**, [!INCLUDE[tsql](../../includes/tsql-md.md)] может оценить столбец определяемого пользователем ТИПА в предложении WHERE.  
+ Если определяемый пользователем тип был определен с упорядочением равным байт **true**, [!INCLUDE[tsql](../../includes/tsql-md.md)] может оценить столбец определяемого пользователем ТИПА в предложении WHERE.  
   
 ```  
 UPDATE dbo.Points  

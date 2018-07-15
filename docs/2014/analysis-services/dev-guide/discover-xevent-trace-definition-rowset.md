@@ -1,5 +1,5 @@
 ---
-title: Набор строк DISCOVER_XEVENT_TRACE_DEFINITION | Документы Microsoft
+title: Набор строк DISCOVER_XEVENT_TRACE_DEFINITION | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e1ce2d2d-f994-4318-801a-ee0385aecd84
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2994ce526ff0f8035d16485bf99b146e2366389e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26bfb6747562f5f0c64d77aaceec1baa4f1bd6d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237694"
 ---
 # <a name="discoverxeventtracedefinition-rowset"></a>Набор строк DISCOVER_XEVENT_TRACE_DEFINITION
   Содержит сведения о трассировках XEvent, которые в настоящее время активны на сервере.  
@@ -47,8 +47,8 @@ ms.locfileid: "36100106"
 |String|DISCOVER_XEVENT_TRACE_DEFINITION|  
   
 ## <a name="see-also"></a>См. также  
- [XML для аналитики наборы строк схемы](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)   
- [Использование расширенных событий SQL Server &#40;XEvents&#41; для наблюдения за Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
- [Используйте динамические административные представления &#40;динамических административных представлений&#41; для наблюдения за Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [XML для анализа наборов строк схемы](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)   
+ [Использование расширенных событий SQL Server &#40;XEvents&#41; мониторинг Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
+ [Используйте динамические административные представления &#40;динамические административные представления&#41; мониторинг Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

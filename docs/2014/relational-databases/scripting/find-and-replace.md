@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.quickfind
 - vs.find
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8b41964b364a2ff3f06f6210637af6d3c26f506f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 87780d4f33a3e7674778880423f66ac6369ead5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324314"
 ---
 # <a name="find-and-replace"></a>Найти и заменить
   Диалоговое окно **Найти и заменить** позволяет найти текст в файле и при необходимости заменить его. Версии диалогового окна **Найти и заменить** могут несколько отличаться по набору параметров в зависимости от способа вызова этого окна. В меню **Правка** перейдите к пункту **Найти и заменить**, затем щелкните **Быстрый поиск** для открытия этого диалогового окна с параметрами поиска, но без параметров замены. В меню **Правка** перейдите к пункту **Найти и заменить**, затем щелкните **Быстрая замена** для открытия этого диалогового окна с параметрами и поиска, и замены.  

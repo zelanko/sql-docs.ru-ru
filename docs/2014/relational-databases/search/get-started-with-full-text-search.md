@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text indexes [SQL Server], creating
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a4bdb94c371342a94c74e72a1cb1f33886fc0963
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e9745635b277a53f724b61ff4143e41af47775a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324014"
 ---
 # <a name="get-started-with-full-text-search"></a>Приступая к работе с компонентом Full-Text Search
   Базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживают полнотекстовую индексацию по умолчанию. Однако для использования полнотекстового индекса в таблице надо настроить полнотекстовое индексирование для столбцов таблиц, к которым планируется обращение при использовании средства полнотекстового поиска.  
@@ -46,7 +45,7 @@ ms.locfileid: "36087306"
   
  Полнотекстовый поиск поддерживает использование нескольких языков благодаря таким *лингвистическим компонентам*, как средства разбиения по словам и парадигматические модули, списки стоп-слов (известных также как пропускаемые слова) и файлы тезауруса. Для файлов тезауруса и в некоторых случаях для списков стоп-слов требуется настройка, выполняемая администратором базы данных. Данный файл тезауруса поддерживает все полнотекстовые индексы, которые используют соответствующий язык, а данный список стоп-слов может быть связан с любым необходимым числом полнотекстовых индексов.  
   
-##  <a name="setup"></a> Настройка полнотекстового каталога и индекса  
+##  <a name="setup"></a> Создание полнотекстового каталога и индекса  
  Для этого необходимо выполнить следующие основные шаги.  
   
 1.  Создание полнотекстового каталога для хранения полнотекстовых индексов.  
@@ -105,7 +104,7 @@ ms.locfileid: "36087306"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>Установление связи между полнотекстовым списком стоп-слов и индексом.  
  В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] были добавлены списки стоп-слов. *Список стоп-слов* — это список, в котором перечислены стоп-слова, также известные как пропускаемые слова. Список стоп-слов связывается с каждым полнотекстовым индексом. Слова в данном списке применяются к полнотекстовым запросам в данном индексе. По умолчанию с новым полнотекстовым индексом связан системный список стоп-слов. Однако пользователь может создать и использовать собственный список стоп-слов. Дополнительные сведения см. в разделе [Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
- Например, следующая [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкция создает новый полнотекстовый список стоп-слов с именем myStoplist3 путем копирования из списка системы:  
+ Например, следующая [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкция создает новый полнотекстовый список стоп-слов с именем myStoplist3 путем копирования из системы стоп-слов:  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  

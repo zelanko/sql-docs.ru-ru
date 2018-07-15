@@ -1,5 +1,5 @@
 ---
-title: Определение измерения | Документы Microsoft
+title: Определение измерения | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 112696db-3838-4b50-91bd-d2ce5fa04ee5
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: df62cff6aa47c37371d6a3ad6f52f120ad3f740b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c2c40d27d4dc9310ee54d4211efe88777b8c62f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246734"
 ---
 # <a name="defining-a-dimension"></a>Определение измерения
   В следующей задаче с помощью мастера измерений создается измерение Date.  
@@ -80,7 +80,7 @@ ms.locfileid: "36194370"
   
 ## <a name="see-also"></a>См. также  
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [Создать измерение с помощью существующей таблицы](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
+ [Создание измерения с помощью существующей таблицы](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
  [Создание измерения с помощью мастера измерений](multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  
   
   

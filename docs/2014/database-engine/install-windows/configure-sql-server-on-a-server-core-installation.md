@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2306c5d35aa6b36196348c6733430dadbbf0b5be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7016c90e98e7719c4566e53b7aa071edf469b080
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194551"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269790"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Настройка SQL Server на установке Server Core
   Этот раздел содержит сведения о настройке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на установке Server Core из [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1). См. следующие разделы:  
@@ -39,7 +39,7 @@ ms.locfileid: "36194551"
   
 -   [Приложение SQL Server Profiler](configure-sql-server-on-a-server-core-installation.md#bkmk_profiler)  
   
--   [Подсистема аудита SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_auditing)  
+-   [Аудит SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_auditing)  
   
 -   [Программы командной строки](configure-sql-server-on-a-server-core-installation.md#bkmk_cmd)  
   
@@ -56,24 +56,24 @@ ms.locfileid: "36194551"
   
 -   [Настройка установки Server Core: Обзор](http://go.microsoft.com/fwlink/?LinkId=245958) ()http://go.microsoft.com/fwlink/?LinkId=245958)  
   
--   [Настройка установки Server Core из Windows Server 2008 R2 с помощью Sconfig.cmd](http://go.microsoft.com/fwlink/?LinkId=245959) ()http://go.microsoft.com/fwlink/?LinkId=245959)  
+-   [Настройка установки Server Core Windows Server 2008 R2 с помощью Sconfig.cmd](http://go.microsoft.com/fwlink/?LinkId=245959) ()http://go.microsoft.com/fwlink/?LinkId=245959)  
   
--   [Установка роли сервера на сервере под управлением установки основных серверных компонентов Windows Server 2008 R2: Обзор](http://go.microsoft.com/fwlink/?LinkId=245960) ()http://go.microsoft.com/fwlink/?LinkId=245960)  
+-   [Установка роли сервера на сервере под управлением установки Server Core Windows Server 2008 R2: Обзор](http://go.microsoft.com/fwlink/?LinkId=245960) ()http://go.microsoft.com/fwlink/?LinkId=245960)  
   
--   [Установка компонентов Windows на сервере под управлением установки основных серверных компонентов Windows Server 2008 R2: Обзор](http://go.microsoft.com/fwlink/?LinkId=245961) ()http://go.microsoft.com/fwlink/?LinkId=245961)  
+-   [Установка компонентов Windows на сервере под управлением установки Server Core Windows Server 2008 R2: Обзор](http://go.microsoft.com/fwlink/?LinkId=245961) ()http://go.microsoft.com/fwlink/?LinkId=245961)  
   
 -   [Управление установкой Server Core: Обзор](http://go.microsoft.com/fwlink/?LinkId=245962) ()http://go.microsoft.com/fwlink/?LinkId=245962)  
   
 -   [Администрирование установки Server Core](http://go.microsoft.com/fwlink/?LinkId=245963) ()http://go.microsoft.com/fwlink/?LinkId=245963)  
   
 ##  <a name="BKMK_InstallSQLUpdates"></a> Установка обновлений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Этот раздел содержит сведения об установке обновлений для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на компьютере под управлением Windows Server Core. Пользователям рекомендуется своевременно оценивать и устанавливать последние обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы обеспечить наличие последних обновлений безопасности для систем. Дополнительные сведения об установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на компьютере Windows Server Core, в разделе [Установка SQL Server 2014 на Server Core](install-sql-server-on-server-core.md).  
+ Этот раздел содержит сведения об установке обновлений для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на компьютере под управлением Windows Server Core. Пользователям рекомендуется своевременно оценивать и устанавливать последние обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы обеспечить наличие последних обновлений безопасности для систем. Дополнительные сведения об установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на компьютере под управлением Windows Server Core см. в разделе [Установка SQL Server 2014 на Server Core](install-sql-server-on-server-core.md).  
   
  Ниже приведены два сценария для установки обновлений продукта.  
   
 -   [Установка обновлений для SQL Server 2014 во время новой установки](configure-sql-server-on-a-server-core-installation.md#bkmk_newinstall)  
   
--   [Установка обновлений для SQL Server 2014 после установки](configure-sql-server-on-a-server-core-installation.md#bkmk_alreadyinstall)  
+-   [Установка обновлений для SQL Server 2014, после установки](configure-sql-server-on-a-server-core-installation.md#bkmk_alreadyinstall)  
   
 ###  <a name="bkmk_NewInstall"></a> Установка обновлений для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при установке нового экземпляра  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает только установку из командной строки в операционной системе Server Core. Дополнительные сведения см. в статье [Установка SQL Server 2014 из командной строки](install-sql-server-from-the-command-prompt.md).  
@@ -120,7 +120,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
  Включение групп доступности AlwaysOn является предварительным требованием для экземпляра сервера, чтобы использовать группы доступности в качестве решения высокого уровня доступности и аварийного восстановления. Дополнительные сведения об управлении группами доступности AlwaysOn см. в разделе [Включение и отключение групп доступности AlwaysOn (SQL Server)](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>Удаленное использование диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Эти действия предназначены для выполнения на Компьютере под управлением клиентской версии [!INCLUDE[win7](../../includes/win7-md.md)] или более поздней версии, или на другом сервере, где установлена графическая оболочка сервера (т. е. Полная установка [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] или установки сервера Windows Server 8 Включенной графической оболочкой).  
+ Эти действия предназначены для выполнения на Компьютере под управлением клиентской редакции [!INCLUDE[win7](../../includes/win7-md.md)] или более поздней версии, или другом сервере, где установлена графическая оболочка сервера (т. е. полной установки [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] или установки сервера Windows Server 8 Включенной графической оболочкой).  
   
 1.  Откройте оснастку «Управление компьютером». Чтобы открыть оснастку «Управление компьютером», выполните одно из следующих действий.  
   
@@ -144,7 +144,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 5.  Дважды щелкните диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-6.  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager щелкните [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы, щелкните правой кнопкой мыши [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<имя экземпляра >), где \<имя экземпляра > — имя экземпляра локального сервера, для которого вы хотите включить функцию AlwaysOn Группы доступности и выберите пункт Свойства.  
+6.  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager последовательно щелкните [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы, щелкните правой кнопкой мыши [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<имя экземпляра >), где \<имя экземпляра > — имя локального экземпляра сервера для которого вы хотите включить AlwaysOn Группы доступности и выберите пункт Свойства.  
   
 7.  Перейдите на вкладку Высокий уровень доступности AlwaysOn.  
   

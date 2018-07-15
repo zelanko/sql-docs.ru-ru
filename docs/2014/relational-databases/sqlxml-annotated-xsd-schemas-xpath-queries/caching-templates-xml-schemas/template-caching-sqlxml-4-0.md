@@ -1,5 +1,5 @@
 ---
-title: Кэширование шаблонов (SQLXML 4.0) | Документы Microsoft
+title: Кэширование шаблонов (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - templates [SQLXML], caching
 ms.assetid: 73e151c6-b24e-4422-a116-51e0846bc6f5
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4107a253b7fc82f3961caa08b005c33a95d46a4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 79d5d5ea1cd40d1a2fc167d16da4fa2e2af65a43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236584"
 ---
 # <a name="template-caching-sqlxml-40"></a>Кэширование шаблонов (SQLXML 4.0)
   Кэширование шаблонов значительно повышает производительность. Если установлено кэширование шаблонов, при первом выполнении шаблон располагается в памяти. Это повышает производительность последующего выполнения шаблона.  
@@ -38,9 +38,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSi
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
   
- Размер кэша необходимо указывать, исходя из объема доступной памяти и количества используемых шаблонов. Значение по умолчанию для **TemplateCacheSize** равно 31. Размер кэша можно увеличить, если доступ к шаблону кажется медленным, или уменьшить при небольшом объеме памяти.  
+ Размер кэша необходимо указывать, исходя из объема доступной памяти и количества используемых шаблонов. Значение по умолчанию **TemplateCacheSize** равно 31. Размер кэша можно увеличить, если доступ к шаблону кажется медленным, или уменьшить при небольшом объеме памяти.  
   
- Для повышения производительности рекомендуется установить **TemplateCacheSize** превышающее число обычно используемых шаблонов. Если **TemlateCacheSize** меньше, чем число имеющихся шаблонов, производительность снижается по мере число шаблонов. **TemplateCacheSize** можно задать не более чем 128.  
+ Для повышения производительности рекомендуется установить **TemplateCacheSize** выше, чем количество обычно используемых шаблонов. Если **TemlateCacheSize** меньше, чем число имеющихся шаблонов, производительность снижается по мере число шаблонов. **TemplateCacheSize** можно задать до максимального размера в 128.  
   
  При каждом использовании кэшированного шаблона проверяется время изменения файла шаблона, чтобы при необходимости его обновить. Это происходит потому, что копия на диске новее копии в кэше.  
   

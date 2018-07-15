@@ -1,5 +1,5 @@
 ---
-title: Тип соединения PowerPivot (SSRS) | Документы Microsoft
+title: Тип соединения PowerPivot (SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cf22b7c44d554f4e82eb330752d8580102469cc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3cf73cb88d2d7e88836e41e5b1a8c3a80368e8a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234754"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Тип соединения PowerPivot (службы SSRS)
   Для извлечения данных из книги PowerPivot, опубликованной в галерее PowerPivot на сайте SharePoint, можно использовать модуль обработки данных служб SQL Server Analysis Services.  
   
- Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным или источник данных &#40;построитель отчетов и службы SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным или источнику данных &#40;построитель отчетов и службы SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ## <a name="prerequisites"></a>предварительные требования  
  Источник данных PowerPivot должен быть опубликован в галерее PowerPivot на сайте SharePoint.  
@@ -35,10 +35,10 @@ ms.locfileid: "36109641"
  Используйте тип источника данных отчета **Microsoft SQL Server Analysis Services**.  
   
 ## <a name="connection-string"></a>Строка подключения  
- Строка подключения является URL-адрес книги PowerPivot, опубликованных на SharePoint в галерее PowerPivot или другой библиотеке, например, http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx.  
+ Строка подключения является URL-адрес к книге PowerPivot, опубликованной на сайте SharePoint в галерее PowerPivot или другой библиотеке, например, http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx.  
   
 ## <a name="credentials"></a>Учетные данные  
- Укажите учетные данные, необходимые для доступа к книге PowerPivot и сайту SharePoint, например, данные проверки подлинности Windows (встроенная безопасность). Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) или [укажите учетные данные в построителе отчетов](../specify-credentials-in-report-builder.md).  
+ Укажите учетные данные, необходимые для доступа к книге PowerPivot и сайту SharePoint, например, данные проверки подлинности Windows (встроенная безопасность). Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) или [указание учетных данных в построителе отчетов](../specify-credentials-in-report-builder.md).  
   
 ## <a name="queries"></a>Запросы  
  После подключения к источнику данных PowerPivot используйте графический конструктор запросов многомерных выражений для формирования запроса путем просмотра и выбора из базовых структур данных. После создания запроса запустите его, чтобы просмотреть выбранный образец данные на панели результатов.  

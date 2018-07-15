@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 387db446f8fc0f3c5ac90ab31466ae8c8597ce1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 874137b75fbade0468a284f28397b30334936bd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249754"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Представление конструктора общих наборов данных (построитель отчетов)
   В окне конструктора общих наборов данных создаются запросы к наборам данных, которые будут доступны другим пользователям. Окно позволяет выбрать общий источник данных, указать свойства для общего набора данных и создать запрос в конструкторе запросов.  
   
  ![rs_SharedDatasetDesignMode](../media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- Дополнительные сведения о работе с данными в отчете см. в разделе [добавить данные в отчет &#40;построитель отчетов и службы SSRS&#41;](../report-data/report-datasets-ssrs.md).  
+ Дополнительные сведения о работе с данными в отчете см. в разделе [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
 ##  <a name="Ribbon"></a> Лента  
  Лента предназначена для быстрого доступа к командам, необходимым для выполнения задачи. Команды организованы в следующие логические группы: подключение, набор данных и конструктор запросов.  
@@ -35,7 +35,7 @@ ms.locfileid: "36101249"
  Используйте кнопку **Выбрать** в группе «Соединение» для выбора общего источника данных в отчете или нахождения общего источника данных на сервере отчетов.  
   
 > [!NOTE]  
->  Общий набор данных должен быть основан на общем источнике данных. Если необходимый источник данных недоступен, его необходимо создать на сервере отчетов. Дополнительные сведения см. в разделе [создать, удалить или изменить общий источник данных &#40;диспетчера отчетов&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md) в документации служб Reporting Services в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [электронной документации по](http://go.microsoft.com/fwlink/?linkid=121312).  
+>  Общий набор данных должен быть основан на общем источнике данных. Если необходимый источник данных недоступен, его необходимо создать на сервере отчетов. Дополнительные сведения см. в разделе [создать, удалить или изменить общий источник данных &#40;диспетчера отчетов&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md) в документации служб Reporting Services в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [документации](http://go.microsoft.com/fwlink/?linkid=121312).  
   
  Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки подключения в построителе отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
@@ -56,12 +56,12 @@ ms.locfileid: "36101249"
   
  Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
- Дополнительные сведения о планах обновления кэша см. в разделе [общие наборы данных кэша &#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) в документации служб Reporting Services в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [электронной документации по](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Дополнительные сведения о планах обновления кэша см. в разделе [общие наборы данных кэша &#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) в документации служб Reporting Services в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [документации](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 ### <a name="query-designer"></a>Конструктор запросов  
  С помощью панели инструментов конструктора запросов создаются запросы, указывающие, какие данные следует извлечь с помощью подключения к данным. Отображаемая панель инструментов зависит от конструктора запросов, который связан с типом источника данных из подключения к данным.  
   
- Дополнительные сведения см. в разделе, который соответствует типу источника данных в [добавить данные из внешних источников данных &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) и [конструкторы запросов &#40;построитель&#41; ](../query-designers-report-builder.md) .  
+ Дополнительные сведения см. в разделе, который соответствует типу источника данных в [Добавление данных из внешних источников данных &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) и [конструкторы запросов &#40;построитель отчетов&#41; ](../query-designers-report-builder.md) .  
   
 
   
@@ -72,7 +72,7 @@ ms.locfileid: "36101249"
   
  Некоторые типы источников данных поддерживают текстовый конструктор запросов, который можно использовать для вставки запросов, созданных в других средствах, таких как среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Каждый тип источника данных имеет особые требования к запросу, который будет выполняться относительно внешнего источника данных. Дополнительные сведения см. в разделе, который соответствует типу источника данных в [добавить данные из внешних источников данных &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) и [источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41; ](../create-deploy-and-manage-mobile-and-paginated-reports.md) в документации служб Reporting Services в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [электронной документации по](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Каждый тип источника данных имеет особые требования к запросу, который будет выполняться относительно внешнего источника данных. Дополнительные сведения см. в разделе, который соответствует типу источника данных в [Добавление данных из внешних источников данных &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) и [источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41; ](../create-deploy-and-manage-mobile-and-paginated-reports.md) в документации служб Reporting Services в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [документации](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 
   
@@ -100,7 +100,7 @@ ms.locfileid: "36101249"
 
   
 ## <a name="see-also"></a>См. также  
- [Добавление данных в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../report-design/report-parameters-report-builder-and-report-designer.md)  
   

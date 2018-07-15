@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserting tables
 - adding tables
 ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f17a356790f16e3557299dbd5853fe476b9fd643
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 59ede7a063cf0f804dee05654c652afc516b2d5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299554"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>Добавление таблиц в диаграммы (визуальные инструменты для баз данных)
   Можно добавить таблицу в диаграмму базы данных, чтобы изменить структуру этой таблицы или связать ее с другими таблицами. В диаграмму можно добавлять существующие таблицы или вставлять новые, еще не определенные в базе данных.  
@@ -75,7 +75,7 @@ ms.locfileid: "36193292"
 >  В диаграмму добавляются и таблицы, на которые ссылается ограничение внешнего ключа из выбранных таблиц, и таблицы, которые ссылаются на выбранные таблицы по ограничению внешнего ключа.  
   
 ## <a name="see-also"></a>См. также  
- [Работа с диаграммами базы данных &#40;визуальные средства базы данных&#41;](visual-database-tools.md)   
+ [Работа с диаграммами базы данных &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
  [Работа с таблицами в диаграммах базы данных (визуальные инструменты для баз данных)](work-with-tables-in-database-diagram-visual-database-tools.md)  
   
   

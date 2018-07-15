@@ -1,5 +1,5 @@
 ---
-title: Модель интеллектуального анализа данных для моделей логистической регрессии (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+title: Модель интеллектуального анализа данных для моделей логистической регрессии (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e9846361e76eac9f4ad61edde10c0fda20f4f546
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6af2d4d2e3f5007cbe0721fe734073e7306b95a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328940"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей логистической регрессии (службы Analysis Services — интеллектуальный анализ данных)
   В этом разделе приведено описание содержимого модели интеллектуального анализа данных, характерного для моделей, в которых используется алгоритм логистической регрессии (Майкрософт). Объяснение способов интерпретации статистики и описание структуры, общей для всех типов моделей, а также общие определения терминов, связанных с содержимым моделей интеллектуального анализа данных, см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-analysis-services-data-mining.md).  
@@ -188,7 +188,7 @@ ms.locfileid: "36087034"
  С помощью этих идентификаторов можно определить, как выходные атрибуты связаны с заданными атрибутами входного слоя. Для этого нужно просмотреть таблицу NODE_DISTRIBUTION выходного узла. Каждая строка в этой таблице содержит идентификатор, указывающий на определенный узел входного атрибута. В таблице NODE_DISTRIBUTION также содержится коэффициент для этой пары входного и выходного атрибутов.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм логистической регрессии Майкрософт](microsoft-logistic-regression-algorithm.md)   
+ [Алгоритм логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm.md)   
  [Модель интеллектуального анализа данных для моделей нейронных сетей &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Примеры запросов модели логистической регрессии](logistic-regression-model-query-examples.md)   
  [Технический справочник по алгоритму логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm-technical-reference.md)  

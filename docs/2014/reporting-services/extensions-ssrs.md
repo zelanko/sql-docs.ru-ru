@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17b923177aed9583b3757baadce00b6a1aa01038
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9f51af9131329a37be6772310dd2817e4f62fd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282940"
 ---
 # <a name="extensions-ssrs"></a>Расширения (SSRS)
   Сервер отчетов в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] использует расширения для разделения на модули различных типов ввода и вывода, которые он принимает для проверки подлинности, обработки данных, подготовки и доставки отчетов. Это облегчает существующим установкам служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] использование таких новых стандартов программного обеспечения в отрасли, как новая схема проверки подлинности или пользовательский тип источника данных. Сервер отчетов поддерживает пользовательские модули проверки подлинности, модули обработки данных, модули обработки отчетов, модули подготовки отчетов и модули доставки, и все модули, доступные пользователям, можно настроить в файле конфигурации RSReportServer.config. Например, можно ограничить форматы экспорта, которые могут использоваться средством просмотра отчетов. Обязательно наличие хотя бы одного модуля проверки подлинности, одного модуля обработки данных и одного модуля подготовки отчетов. Модули доставки и обработки отчетов необязательны, но необходимы, если требуется распространение отчетов или пользовательские элементы управления.  
@@ -59,7 +59,7 @@ ms.locfileid: "36194210"
 ## <a name="rendering-extensions"></a>Модули подготовки отчетов к просмотру  
  Модули подготовки отчетов преобразуют данные и макет отчета, полученные от обработчика отчетов, в формат для конкретного устройства. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] входит семь модулей подготовки отчетов: HTML, Excel, CSV, XML, модуль подготовки в формате изображения, PDF и [!INCLUDE[msCoName](../includes/msconame-md.md)] Word.  
   
--   **Модуль подготовки отчетов в формате HTML** . Если отчет запрашивается через веб-браузер, сервер отчетов использует модуль подготовки отчетов в формате HTML. Этот модуль подготовки отчетов к просмотру формирует код в формате HTML только в кодировке UTF-8. Дополнительные сведения см. в разделе [Подготовка к просмотру в формате HTML &#40;построитель отчетов и службы SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md) и [планирование служб Reporting Services и поддержки Power View в браузерах &#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+-   **Модуль подготовки отчетов в формате HTML** . Если отчет запрашивается через веб-браузер, сервер отчетов использует модуль подготовки отчетов в формате HTML. Этот модуль подготовки отчетов к просмотру формирует код в формате HTML только в кодировке UTF-8. Дополнительные сведения см. в разделе [Подготовка к просмотру в HTML &#40;построитель отчетов и службы SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md) и [планирование служб Reporting Services и поддержки Power View в браузерах &#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 -   **Модуль подготовки отчетов к просмотру в формате Excel** . Модуль подготовки отчетов в формате Excel производит подготовку отчетов для просмотра и изменения в [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 или более поздней версии. Он создает двоичные файлы в формате BIFF, собственном формате файлов Excel. Отчеты, подготовленные для просмотра в формате [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] , поддерживают все возможности, доступные для электронных таблиц. Дополнительные сведения см. в разделе [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   

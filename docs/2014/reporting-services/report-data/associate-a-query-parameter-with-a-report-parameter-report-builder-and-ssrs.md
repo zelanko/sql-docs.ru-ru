@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [Reporting Services], parameters
 - parameters [Reporting Services], queries
 ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
 caps.latest.revision: 47
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c9d7c519e79330e3295a7d3b3dca1e6a9a131087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d1755bf2afe801626d81689ba2a520a39137fa06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272350"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>Связь параметра запроса с параметром отчета (построитель отчетов и службы SSRS)
   При определении запроса к набору данных, содержащего переменную запроса, команда запроса анализируется. Для каждой переменной запроса создается соответствующий параметр набора данных и параметр отчета. Параметр набора данных указывает на параметр отчета. Это позволяет пользователю вводить значение, которое передается непосредственно запросу. Каждый раз при изменении команды запроса происходит тот же процесс.  
@@ -52,6 +52,6 @@ ms.locfileid: "36192613"
   
 ## <a name="see-also"></a>См. также  
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Концепция параметров отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
+ [Концепция параметров отчета &#40;построитель отчетов и службы SSRS&#41;](../report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
   

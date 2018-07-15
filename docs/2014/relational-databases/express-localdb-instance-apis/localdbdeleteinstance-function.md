@@ -1,5 +1,5 @@
 ---
-title: Функция LocalDBDeleteInstance | Документы Microsoft
+title: Функция LocalDBDeleteInstance | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 64bba7808c533a140891b4c3c5be7795f81fc93d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a3daa2c8b2d6d5ff3bb7af25283b13fc7a38a694
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318404"
 ---
 # <a name="localdbdeleteinstance-function"></a>Функция LocalDBDeleteInstance
   Удаляет экземпляр SQL Server Express LocalDB.  

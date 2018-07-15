@@ -1,5 +1,5 @@
 ---
-title: Страница «Общие свойства», общие наборы данных (диспетчер отчетов) | Документы Microsoft
+title: Страница «Общие свойства», общие наборы данных (диспетчер отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3378300841bb6ad4f37ee7b7da5d7add6e78adb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 747121123f3a654ccd475913ffe8b4a8c7e79be0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192842"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290310"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Страница «Общие свойства» — «Общие наборы данных» (диспетчер отчетов)
   Страница «Общий набор данных» используется для просмотра и управления свойствами элемента общего набора данных.  
@@ -72,8 +72,8 @@ ms.locfileid: "36192842"
  [Содержимое страницы &#40;диспетчера отчетов&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
  [Параметры обновления кэша &#40;диспетчера отчетов&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
- [Страница «кэширование», общие наборы данных &#40;диспетчера отчетов&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
+ [Страница "кэширование", общие наборы данных &#40;диспетчера отчетов&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
  [Управление общими наборами данных](report-data/manage-shared-datasets.md)   
- [Общие наборы данных в кэше &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
+ [Кэширование общих наборов данных &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

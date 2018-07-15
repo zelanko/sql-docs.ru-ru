@@ -1,5 +1,5 @@
 ---
-title: Выберите диалоговое окно «таблицы» (представление диаграммы точности интеллектуального анализа данных) | Документы Microsoft
+title: Выберите диалоговое окно «таблицы» (представление диаграммы точности интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.selecttable.f1
 helpviewer_keywords:
 - Select Table dialog box
 ms.assetid: 5694d3fe-52e8-4fb7-a1f1-22629151b618
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4ee1ec37ce45378ff0a310b51b340ef2bcf08138
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c7bd479724ba2d109d2ae7b107ea535a5663cb09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285880"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>Диалоговое окно «Выбор таблицы» (представление диаграммы точности интеллектуального анализа данных)
   Используйте диалоговое окно **Выбор таблицы** , чтобы выбрать таблицы для использования и для тестирования точности моделей интеллектуального анализа данных, содержащихся в выбранной структуре интеллектуального анализа данных.  
@@ -36,7 +36,7 @@ ms.locfileid: "36189603"
  Выберите таблицу или представление, доступное в источнике данных, выбранном в текущий момент.  
   
 ## <a name="see-also"></a>См. также  
- [Конструктор диаграммы точности интеллектуального анализа &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Конструктор диаграммы точности интеллектуального &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Тестирование и проверка задачи и инструкции по &#40;интеллектуального анализа данных&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Тестирование и проверка &#40;интеллектуального анализа данных&#41;](data-mining/testing-and-validation-data-mining.md)  
   

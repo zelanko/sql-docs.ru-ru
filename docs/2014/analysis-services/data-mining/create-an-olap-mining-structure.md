@@ -1,5 +1,5 @@
 ---
-title: Создание структуры интеллектуального анализа данных OLAP | Документы Microsoft
+title: Создание структуры интеллектуального анализа данных OLAP | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71efb42dd17c6b959fedab50841d09625f62f458
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 060b2fc3a8cfcb54470d21dace787cd1ccbc025c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232434"
 ---
 # <a name="create-an-olap-mining-structure"></a>Создание структуры интеллектуального анализа данных OLAP
   Создание модели интеллектуального анализа данных на основе куба OLAP или другого многомерного хранилища данных имеет множество преимуществ. Решение OLAP содержит огромное количество данных, которые уже хорошо организованы, очищены и правильно отформатированы. Однако сложность данных такова, что пользователи вряд ли смогут найти значительные шаблоны путем случайного перебора. Интеллектуальный анализ данных обеспечивает возможность выявления новых связей и принятия соответствующих решений.  

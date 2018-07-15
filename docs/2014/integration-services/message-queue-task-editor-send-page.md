@@ -1,5 +1,5 @@
 ---
-title: Редактор задачи очереди сообщений (страница «Отправка») | Документы Microsoft
+title: Редактор задачи очереди сообщений (страница «Отправка») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.send.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 152b01a69c462e7d736b5e2aeef7d96af4cf5ac3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc35be8153ec5ebbaa5da4ebe5004deb360f9766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250404"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Редактор задачи «Очередь сообщений» (страница «Отправка»)
   Используйте страницу **Отправить** диалогового окна **Редактор задачи «Очередь сообщений»** , чтобы настроить задачу «Очередь сообщений» для отправки сообщений от пакета служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -69,8 +69,8 @@ ms.locfileid: "36109744"
  Введите строковое сообщение или нажмите кнопку с многоточием **(…)** , а затем введите сообщение в диалоговом окне **Введите строковое сообщение** .  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи очереди сообщений &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи очереди сообщений &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Редактор задачи очереди сообщений &#40;страница «получение»&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [Страница "Выражения"](expressions/expressions-page.md)  
   

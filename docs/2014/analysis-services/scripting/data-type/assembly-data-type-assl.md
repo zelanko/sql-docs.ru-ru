@@ -1,5 +1,5 @@
 ---
-title: Тип данных ASSEMBLY (ASSL) | Документы Microsoft
+title: Тип данных ASSEMBLY (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Assembly data type
 ms.assetid: 0a381322-9509-4579-a754-c6cdd0a70cc9
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3fd706974b0cb4a897a7ef75e147dcd35ac91481
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 40cafd0d8ef11feaebce5161e97ef3717a9fb943
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233834"
 ---
 # <a name="assembly-data-type-assl"></a>Тип данных Assembly (ASSL)
-  Определяет абстрактный примитивный тип данных, представляющий [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] сборку или библиотеку динамической компоновки COM (DLL), связанную с [сервера](../objects/server-element-assl.md) или [базы данных](../objects/database-element-assl.md) элемента.  
+  Определяет абстрактный примитивный тип данных, представляющий [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] сборку или библиотеку динамической компоновки COM (DLL), связанную с [Server](../objects/server-element-assl.md) или [базы данных](../objects/database-element-assl.md) элемент.  
   
 > [!IMPORTANT]  
 >  Использование сборок COM может представлять угрозу безопасности. По этой причине, а также по ряду других сборки COM в службах [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]являются устаревшими. Поддержка сборок COM в последующих версиях может быть прекращена.  
@@ -69,11 +69,11 @@ ms.locfileid: "36187821"
 ## <a name="remarks"></a>Примечания  
  Тип данных `Assembly` служит базовым типом данных для элемента `ComAssembly`, представляющего библиотеки COM, связанные с экземпляром или базой данных, и элемент `ClrAssembly`, который представляет сборки платформы [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], связанные с экземпляром или базой данных. Дополнительные сведения о сборках см. в разделе [Управление сборками многомерной модели](../../multidimensional-models/multidimensional-model-assemblies-management.md).  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.Assembly>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.Assembly>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент Server &#40;ASSL&#41;](../objects/server-element-assl.md)   
- [Элемент Database &#40;ASSL&#41;](../objects/database-element-assl.md)   
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Элемент Database описания &#40;ASSL&#41;](../objects/database-element-assl.md)   
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

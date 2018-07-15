@@ -1,5 +1,5 @@
 ---
-title: Осуществление дочерних пакетов | Документы Microsoft
+title: Осуществление дочерних пакетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - child packages
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 caps.latest.revision: 38
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 85a9e6c93f0b1c3157f9814508ee4fb9263cd444
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbf5d3d4142c543f5bd0ab3cebae72eeea3bb432
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287590"
 ---
 # <a name="implementation-of-child-packages"></a>Осуществление дочерних пакетов
   При реализации балансировки нагрузки с помощью служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]дочерние пакеты устанавливаются на другие серверы для получения преимуществ от доступного времени ЦП или сервера. Чтобы создать и запустить дочерние пакеты, требуется выполнить следующие шаги.  
@@ -45,7 +45,7 @@ ms.locfileid: "36195442"
   
 -   Экспорт пакетов с помощью среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
--   Развертывание пакетов путем построения программы развертывания для проекта, содержащего необходимые пакеты, с последующим запуском мастера установки пакета для размещения пакетов в файловой системе или на экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [развертывание пакета &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+-   Развертывание пакетов путем построения программы развертывания для проекта, содержащего необходимые пакеты, с последующим запуском мастера установки пакета для размещения пакетов в файловой системе или на экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [развертывания пакета &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
   
  Развертывание необходимо повторить на каждом используемом удаленном сервере.  
   

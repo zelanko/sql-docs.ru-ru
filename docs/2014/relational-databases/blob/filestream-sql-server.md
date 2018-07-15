@@ -5,39 +5,38 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b8af5e825fb72ce47c7612b0c1c56af9bce4369
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6c2c5e8841a866eb82d9c844b1eccf60c09555ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287300"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
   FILESTREAM позволяет приложениям на основе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранить в файловой системе неструктурированные данные, например документы и изображения. Приложения могут одновременно использовать многопоточные API-интерфейсы и производительность файловой системы, тем самым обеспечивая транзакционную согласованность между неструктурированными и соответствующими им структурированными данными.  
   
- Хранилище FILESTREAM объединяет [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с файловой системой NTFS, сохраняя `varbinary(max)` данные больших двоичных объектов (BLOB) в виде файлов в файловой системе. [!INCLUDE[tsql](../../includes/tsql-md.md)] можно вставлять, обновлять, запрашивать, искать и создавать резервные копии данных FILESTREAM. Интерфейсы файловой системы Win32 предоставляют потоковый доступ к этим данным.  
+ Хранилище FILESTREAM объединяет [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с помощью NTFS файловая система, сохраняя `varbinary(max)` данные больших двоичных объектов (BLOB) в файловой системе в виде файлов. [!INCLUDE[tsql](../../includes/tsql-md.md)] можно вставлять, обновлять, запрашивать, искать и создавать резервные копии данных FILESTREAM. Интерфейсы файловой системы Win32 предоставляют потоковый доступ к этим данным.  
   
  Для кэширования данных файлов в хранилище FILESTREAM используется системный кэш NT. Это позволяет снизить возможное влияние данных FILESTREAM на производительность компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Буферный пул [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не используется, поэтому эта память доступна для обработки запросов.  
   
- FILESTREAM не включается автоматически при установке или обновлении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. FILESTREAM необходимо включить с помощью диспетчера конфигурации SQL Server и среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Для использования FILESTREAM нужно создать или изменить базу данных, которая будет содержать заданный тип файловой группы. Затем создайте или изменить таблицу, чтобы он содержал `varbinary(max)` столбец с атрибутом FILESTREAM. После завершения выполнения этих задач можно будет пользоваться [!INCLUDE[tsql](../../includes/tsql-md.md)] и Win32 для управления данными FILESTREAM.  
+ FILESTREAM не включается автоматически при установке или обновлении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. FILESTREAM необходимо включить с помощью диспетчера конфигурации SQL Server и среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Для использования FILESTREAM нужно создать или изменить базу данных, которая будет содержать заданный тип файловой группы. Затем создайте или измените таблицу так, чтобы он содержал `varbinary(max)` столбец с атрибутом FILESTREAM. После завершения выполнения этих задач можно будет пользоваться [!INCLUDE[tsql](../../includes/tsql-md.md)] и Win32 для управления данными FILESTREAM.  
   
  Дополнительные сведения об установке и использованию FILESTREAM см. в списке [Связанные задачи](#reltasks).  
   
 ##  <a name="whentouse"></a> Условия использования FILESTREAM  
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], больших двоичных объектов может быть стандартная `varbinary(max)` данных, где хранятся данные в таблицах или FILESTREAM `varbinary(max)` объектов, которые хранят данные в файловой системе. Выбор в качестве хранилища базы данных или файловой системы определяется размером и назначением данных. Объекты FILESTREAM следует использовать в следующих случаях:  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], большие двоичные объекты могут представлять собой либо стандартный `varbinary(max)` данных, который хранит данные в таблицах или FILESTREAM `varbinary(max)` объектов, которые хранят данные в файловой системе. Выбор в качестве хранилища базы данных или файловой системы определяется размером и назначением данных. Объекты FILESTREAM следует использовать в следующих случаях:  
   
 -   средний размер сохраняемых объектов превышает 1 МБ;  
   
@@ -49,9 +48,9 @@ ms.locfileid: "36191013"
   
   
 ##  <a name="storage"></a> Хранилище FILESTREAM  
- Хранилище FILESTREAM реализуется в виде `varbinary(max)` столбец, в котором данные хранятся как большие двоичные объекты в файловой системе. Размеры объектов BLOB ограничены только размером тома файловой системы. Стандартные `varbinary(max)` ограничение размеров файлов 2 ГБ не применяется к большим двоичным объектам, которые хранятся в файловой системе.  
+ Хранилище FILESTREAM реализовано в виде `varbinary(max)` столбец, в котором данные хранятся как большие двоичные объекты в файловой системе. Размеры объектов BLOB ограничены только размером тома файловой системы. Стандартный `varbinary(max)` ограничение размеров файлов 2 ГБ не применяется к большим двоичным объектам, которые хранятся в файловой системе.  
   
- Чтобы указать, что столбец следует хранить данные в файловой системе, укажите атрибут FILESTREAM для `varbinary(max)` столбца. В результате компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] будет сохранять все данные этого столбца в файловой системе, а не в файле базы данных.  
+ Чтобы указать, что необходимость сохранения данных столбца в файловой системе, укажите атрибут FILESTREAM для `varbinary(max)` столбца. В результате компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] будет сохранять все данные этого столбца в файловой системе, а не в файле базы данных.  
   
  Данные FILESTREAM должны сохраняться в файловых группах FILESTREAM. Файловая группа FILESTREAM представляет собой особую файловую группу, в которой вместо самих файлов содержатся системные каталоги файлов. Данные системные каталоги файлов называются *контейнерами данных*. Они являются интерфейсом между хранилищем компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и хранилищем файловой системы.  
   

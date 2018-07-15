@@ -19,13 +19,13 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cbc0be5255b3345ba27297123981f2b0138e4437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c34669ffc14ee623b17549f588385886488ed02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287600"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Синтаксический анализ текстовых файлов нестандартного формата в компоненте скрипта
   Если исходные данные организованы в нестандартном формате, может оказаться удобнее объединить всю логику синтаксического анализа в единый скрипт вместо создания цепочки преобразований служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], приводящих к тому же результату.  
@@ -40,7 +40,7 @@ ms.locfileid: "36193410"
 ##  <a name="example1"></a> Пример 1. Синтаксический анализ записей, разделенных на строки  
  В этом примере берется текстовый файл, в котором каждый столбец данных размещается на новой строке, и с помощью синтаксического анализа, реализованного в компоненте скрипта, преобразуется в целевую таблицу.  
   
- Дополнительные сведения о том, как настроить компонент скрипта для использования в качестве преобразования в потоке данных см. в разделе [создание синхронного преобразования с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)и [Создание асинхронный Преобразование с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Дополнительные сведения о том, как настроить компонент скрипта для использования в качестве преобразования в потоке данных см. в разделе [создание синхронного преобразования с компонентом скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)и [Создание асинхронный Преобразование бизнеса с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Настройка этого примера компонента скрипта  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36193410"
   
 11. На странице **Входные столбцы** в **редакторе преобразования "Скрипт"** выберите единственный доступный входной столбец.  
   
-12. На **входы и выходы** страница **редактор преобразования «скрипт»**, выберите выход 0 и установите его `SynchronousInputID` значение None. Создайте 5 выходных столбцов со строковым типом [DT_STR] и длиной 32:  
+12. На **входы и выходы** странице **редактор преобразования "скрипт"** выберите выход 0 и задайте его `SynchronousInputID` значение None. Создайте 5 выходных столбцов со строковым типом [DT_STR] и длиной 32:  
   
     -   FirstName  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36193410"
   
     -   StateProvince  
   
-13. На **сценарий** страница **редактор преобразования «скрипт»**, нажмите кнопку **изменить скрипт** и введите код, показанный в `ScriptMain` класса примера. Закройте среду разработки скриптов и **редактор преобразования "Скрипт"**.  
+13. На **сценарий** странице **редактор преобразования "скрипт"**, нажмите кнопку **изменить скрипт** и введите код, показанный на `ScriptMain` класс примера. Закройте среду разработки скриптов и **редактор преобразования "Скрипт"**.  
   
 14. Добавьте в поток данных назначение «SQL Server». Настройте его на использование диспетчера соединений OLE DB и таблицы RowDelimitedData. Настройте выход компонента скрипта на это назначение.  
   
@@ -198,7 +198,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 > [!CAUTION]  
 >  Данный образец предназначен только для демонстрационных целей. Если запустить образец несколько раз, он вставит в целевую таблицу повторяющиеся ключевые значения.  
   
- Дополнительные сведения о том, как настроить компонент скрипта для использования в качестве преобразования в потоке данных см. в разделе [создание синхронного преобразования с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)и [Создание асинхронный Преобразование с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Дополнительные сведения о том, как настроить компонент скрипта для использования в качестве преобразования в потоке данных см. в разделе [создание синхронного преобразования с компонентом скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)и [Создание асинхронный Преобразование бизнеса с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Настройка этого примера компонента скрипта  
   
@@ -258,7 +258,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 11. На странице **Входные столбцы** в **редакторе преобразования "Скрипт"** выберите единственный доступный входной столбец.  
   
-12. На **входы и выходы** страница **редактор преобразования «скрипт»**, выберите выход 0, переименуйте его в ParentRecords и задайте его `SynchronousInputID` значение None. Создайте 2 выходных столбца.  
+12. На **входы и выходы** странице **редактор преобразования "скрипт"**, выберите выход 0, переименуйте его в ParentRecords и задайте его `SynchronousInputID` значение None. Создайте 2 выходных столбца.  
   
     -   ParentID (первичный ключ), имеющий тип четырехбайтового целого числа со знаком [DT_I4].  
   
@@ -351,7 +351,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться установка последних со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services в MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services  **<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
  [Создание синхронного преобразования с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  

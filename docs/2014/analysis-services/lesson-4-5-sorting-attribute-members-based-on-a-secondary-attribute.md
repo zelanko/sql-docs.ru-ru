@@ -1,5 +1,5 @@
 ---
-title: Сортировка элементов атрибута на основе вторичного атрибута | Документы Microsoft
+title: Сортировка элементов атрибута на основе вторичного атрибута | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 5286bcca918cd77985ea6aef98cd3c99b89e20f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6245cc93f107ff437e3c17e6cc5e789dd5994698
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299294"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Сортировка элементов атрибута по вторичному атрибуту
   На третьем занятии рассматривалась сортировка элементов атрибута по имени или значению ключа. Кроме того, было показано, как изменять элементы атрибута и порядок сортировки с помощью составных ключей элементов. Дополнительные сведения см. в разделе [Изменение измерения Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Однако, если ни имя, ни значение ключа первичного атрибута не обеспечивают требуемого порядка сортировки, можно использовать вторичный атрибут. Посредством определения связи между атрибутами можно использовать второй атрибут для сортировки элементов первого атрибута.  
@@ -73,7 +73,7 @@ ms.locfileid: "36101410"
   
      Обратите внимание, что месяцы теперь отсортированы в хронологическом порядке, как показано на следующем рисунке.  
   
-     ![Изменить пользовательская иерархия в хронологическом порядке](../../2014/tutorials/media/l4-memberproperties-3.gif "изменения пользовательская иерархия в хронологическом порядке")  
+     ![Изменить пользовательскую иерархию в хронологическом порядке](../../2014/tutorials/media/l4-memberproperties-3.gif "изменения пользовательская иерархия в хронологическом порядке")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>Определение связей атрибутов и порядка сортировки в измерении «Заказчик»  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36101410"
   
      Обратите внимание, что элементы иерархии атрибута теперь отсортированы в логическом порядке, основанном на увеличении расстояния, как показано на следующем рисунке.  
   
-     ![Повторная сортировка иерархия атрибута Commute Distance](../../2014/tutorials/media/l4-memberproperties-5.gif "иерархии атрибута Re-sorted расстояние.")  
+     ![Сортировать заново иерархия атрибута Commute Distance](../../2014/tutorials/media/l4-memberproperties-5.gif "иерархия атрибута Re-sorted Commute Distance")  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Определение связей атрибутов в определенной пользователем иерархии](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  

@@ -1,5 +1,5 @@
 ---
-title: Элемент AxisInfo (XML для Аналитики) | Документы Microsoft
+title: Элемент AxisInfo (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - AxisInfo element
 ms.assetid: 060741db-b2ec-4174-9277-58d996440a88
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1ac7ce9fdfeca2e2c48fe990c32c809827729959
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 36eb4542923f9be42c0a114fb198c1efb1285a26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243464"
 ---
 # <a name="axisinfo-element-xmla"></a>Элемент AxisInfo (XML для аналитики)
-  Представляет метаданные одной оси, содержащейся в родительском [AxesInfo](axesinfo-element-xmla.md) элемента.  
+  Представляет метаданные одной оси, содержащейся в родительском [AxesInfo](axesinfo-element-xmla.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   

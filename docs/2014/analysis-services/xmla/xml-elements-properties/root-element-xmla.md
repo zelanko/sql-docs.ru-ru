@@ -1,5 +1,5 @@
 ---
-title: корневой элемент (XMLA) | Документы Microsoft
+title: Элемент root (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - root element
 ms.assetid: ecd9d6e8-b16c-4d62-9a87-107c413a0056
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 481947e1d58fe5da34b29f43405bfff48583b8c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 11045be6946a5a73f0ad86fdcfcc53610800a6c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321084"
 ---
 # <a name="root-element-xmla"></a>Элемент root (XML для аналитики)
-  Содержит результат, возвращаемый методом [Discover](../xml-elements-methods-discover.md) метода или команду XML для аналитики (XMLA) выполняется с помощью [Execute](../xml-elements-methods-execute.md) метод.  
+  Содержит результат, возвращаемый методом [Discover](../xml-elements-methods-discover.md) метода или XML для аналитики (XMLA) команды, выполненной с помощью [Execute](../xml-elements-methods-execute.md) метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36189591"
 |Предок|Тип данных|  
 |--------------|---------------|  
 |[DiscoverResponse](../xml-data-types/rowset-data-type-xmla.md), [olapxmla_EmptyResult](../xml-data-types/emptyresult-data-type-xmla.md)|  
-|[ExecuteResponse](../xml-data-types/mddataset-data-type-xmla.md), [строк](../xml-data-types/rowset-data-type-xmla.md), [olapxmla_EmptyResult](../xml-data-types/emptyresult-data-type-xmla.md)|  
+|[ExecuteResponse](../xml-data-types/mddataset-data-type-xmla.md), [набора строк](../xml-data-types/rowset-data-type-xmla.md), [olapxmla_EmptyResult](../xml-data-types/emptyresult-data-type-xmla.md)|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36189591"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- `root` Элемент содержит данные, возвращаемые в любом [DiscoverResponse](../xml-elements-objects-discoverresponse.md) элемент, возвращаемый один `Discover` вызова метода, или в [ExecuteResponse](../xml-elements-objects-executeresponse.md) элемент Возвращенный одной команды XMLA, выполненной при единственном `Execute` вызова метода.  
+ `root` Элемент содержит сведения, возвращаемые в любом [DiscoverResponse](../xml-elements-objects-discoverresponse.md) элемент, возвращаемый один `Discover` вызова метода, или в [ExecuteResponse](../xml-elements-objects-executeresponse.md) элемент возвращенный в отдельной команде XMLA, выполненной при единственном `Execute` вызова метода.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL) | Документы Microsoft
+title: sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: ''
@@ -7,23 +7,22 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
+ms.component: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b3abe99e707a4123e2f05fc1eb47b40d2b74fced
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: 3af945ced5fcbef03565a4e839a5cc56295810a7
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467040"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36772039"
 ---
 # <a name="sysdmpdwnodesdatabaseencryptionkeys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "34467040"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Идентификатор физической базы данных на каждом узле.|  
-|encryption_state|**int**|Указывает, зашифрованы или не зашифрован базы данных на этом узле.<br /><br /> 0 = нет ключа шифрования базы данных, нет шифрования<br /><br /> 1 = не зашифрована<br /><br /> 2 = выполняется шифрование<br /><br /> 3 = зашифрована<br /><br /> 4 = выполняется изменение ключа<br /><br /> 5 = выполняется расшифровка<br /><br /> 6 = Изменение защиты (сертификат, который используется для шифрования ключа шифрования базы данных, изменяется.)|  
+|encryption_state|**int**|Указывает, зашифрован ли не зашифрован базы данных на данном узле.<br /><br /> 0 = нет ключа шифрования базы данных, нет шифрования<br /><br /> 1 = не зашифрована<br /><br /> 2 = выполняется шифрование<br /><br /> 3 = зашифрована<br /><br /> 4 = выполняется изменение ключа<br /><br /> 5 = выполняется расшифровка<br /><br /> 6 = Изменение защиты выполняется (сертификат, который шифрует ключ шифрования базы данных, изменяется.)|  
 |create_date|**datetime**|Отображает дату создания ключа шифрования.|  
 |regenerate_date|**datetime**|Отображает дату повторного создания ключа шифрования.|  
 |modify_date|**datetime**|Отображает дату изменения ключа шифрования.|  
@@ -49,7 +48,7 @@ ms.locfileid: "34467040"
  Необходимо разрешение VIEW SERVER STATE на сервере.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Следующий пример соединяет `sys.dm_pdw_nodes_database_encryption_keys` с другими системными таблицами, в которых указывается состояние шифрования для каждого узла прозрачного шифрования данных защищенного баз данных.  
+ Следующий пример соединяет `sys.dm_pdw_nodes_database_encryption_keys` с другими системными таблицами, в которых указывается состояние шифрования, для каждого узла TDE защищенного баз данных.  
   
 ```  
 SELECT D.database_id AS DBIDinMaster, D.name AS UserDatabaseName,   
@@ -66,7 +65,7 @@ ORDER BY D.database_id, PD.pdw_node_ID;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранилище данных SQL и параллельные хранилища данных динамических административных представлений &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [Хранилище данных SQL и параллельные хранилища данных динамические административные представления &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
  [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [ALTER DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  

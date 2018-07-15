@@ -1,5 +1,5 @@
 ---
-title: Элемент Tuples (XML для Аналитики) | Документы Microsoft
+title: Элемент Tuples (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Tuples element
 ms.assetid: 5494bbaa-c1aa-43fa-b3e0-83befb2bccdd
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: da9614fb01620a3dec5bdff9f63d044652a4749b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5e5f6f1dbddea4e5e962d30f352c254b0f2a7a80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254596"
 ---
 # <a name="tuples-element-xmla"></a>Элемент Tuples (XML для аналитики)
-  Содержит набор [кортежа](tuple-element-xmla.md) объектов для [оси](axis-element-xmla.md) элемент, который использует [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) тип данных, возвращенных [Execute](../xml-elements-methods-execute.md) метод.  
+  Содержит набор [кортежа](tuple-element-xmla.md) объектов для [оси](axis-element-xmla.md) элемент, использующий [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) тип данных, возвращенных [Execute](../xml-elements-methods-execute.md) метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,10 +63,10 @@ ms.locfileid: "36190825"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[Axis](axis-element-xmla.md)|  
-|Дочерние элементы|[кортеж](tuple-element-xmla.md)|  
+|Дочерние элементы|[Кортеж](tuple-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Когда клиентское приложение задает `AxisFormat` свойства *TupleFormat*, ось представляется в виде набора кортежей. Каждый элемент `Axis` содержит элемент `Tuples`, представляющий набор кортежей на этой оси. Каждый кортеж представляется с помощью `Tuple` элемент, содержащий [член](member-element-xmla.md) элементов из каждой иерархии на оси.  
+ Когда клиентское приложение устанавливает `AxisFormat` свойства *TupleFormat*, ось представляется в виде набора кортежей. Каждый элемент `Axis` содержит элемент `Tuples`, представляющий набор кортежей на этой оси. Каждый кортеж представлен с помощью `Tuple` элемент, содержащий [член](member-element-xmla.md) элементы из каждой иерархии на оси.  
   
 ## <a name="example"></a>Пример  
  Следующий пример иллюстрирует структуру `Tuples` элемент, если клиент указывает *TupleFormat* или *CustomFormat* для `AxisFormat` XML для аналитики (XMLA), на оси имеются следующие члены:  

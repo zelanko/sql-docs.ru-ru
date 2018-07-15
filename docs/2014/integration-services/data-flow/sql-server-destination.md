@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdest.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 39aaf8c972070b717f4b50bf42d4fe587a509d3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a518189d9ee14da620689cd3ebaff8b4982d590f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312044"
 ---
 # <a name="sql-server-destination"></a>назначение «SQL Server»
   Назначение «SQL Server» подключается к локальной базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и производит массовую загрузку данных в таблицы и представления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Нельзя использовать назначение «SQL Server» в пакетах, получающих доступ к базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном сервере. Вместо этого пакеты должны использовать назначение «OLE DB». Дополнительные сведения см. в разделе [OLE DB Destination](ole-db-destination.md).  
@@ -95,11 +95,11 @@ ms.locfileid: "36192286"
   
  Дополнительные сведения о свойствах, которые могут быть заданы в диалоговом окне **Редактор назначения SQL Server** , см. в следующих разделах:  
   
--   [Редактор назначения «SQL» &#40;страницы диспетчера соединений&#41;](../sql-destination-editor-connection-manager-page.md)  
+-   [Редактор назначения SQL &#40;страницы диспетчера соединений&#41;](../sql-destination-editor-connection-manager-page.md)  
   
--   [Редактор назначения «SQL» &#40;страница «сопоставления»&#41;](../sql-destination-editor-mappings-page.md)  
+-   [Редактор назначения SQL &#40;страница «сопоставления»&#41;](../sql-destination-editor-mappings-page.md)  
   
--   [Редактор назначения «SQL» &#40;страница «Дополнительно»&#41;](../sql-destination-editor-advanced-page.md)  
+-   [Редактор назначения SQL &#40;страница "Дополнительно"&#41;](../sql-destination-editor-advanced-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   

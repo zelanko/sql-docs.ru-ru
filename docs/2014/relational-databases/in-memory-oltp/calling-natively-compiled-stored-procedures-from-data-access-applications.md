@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 517208d1fa790739a2008cd5e149147cbf91643c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 458fa987ee31f024534b184b2729667cea3597c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287230"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Вызов хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным
   В этом разделе приведены рекомендации по вызову хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным.  
@@ -40,7 +40,7 @@ ms.locfileid: "36190210"
   
  Следующие рекомендации применимы к вызовам хранимой процедуры, скомпилированным в собственном коде, с помощью драйвера ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- Наиболее эффективный способ однократного вызова хранимой процедуры — предоставление прямой вызов RPC с помощью `SQLExecDirect` и предложений ODBC CALL. Не используйте [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` инструкции. Если хранимая процедура вызывается более одного раза, подготовленное выполнение более эффективно.  
+ Наиболее эффективный способ однократного вызова хранимой процедуры — выполнить прямой вызов RPC с помощью `SQLExecDirect` и предложения ODBC CALL. Не используйте [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` инструкции. Если хранимая процедура вызывается более одного раза, подготовленное выполнение более эффективно.  
   
  Наиболее эффективный способ неоднократного вызова хранимой процедуры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] — через подготовленные вызовы процедур RPC. Подготовленные вызовы RPC выполняются следующим образом с помощью драйвера ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   

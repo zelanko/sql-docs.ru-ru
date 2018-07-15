@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptrans.f1
 helpviewer_keywords:
@@ -22,13 +22,13 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 caps.latest.revision: 104
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f7a4d4a05d738ee844b6eb63ab5c762fb84f6194
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0dcebe1fa634678fa754b74be04d1dd5e1bcac5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298814"
 ---
 # <a name="lookup-transformation"></a>Преобразование «Уточняющий запрос»
   Преобразование «Уточняющий запрос» выполняет уточняющие запросы, объединяя данные во входных столбцах со столбцами в ссылочном наборе данных. Уточняющие запросы используются для доступа к дополнительной информации в связанной таблице, основанной на значениях в общих столбцах.  
@@ -78,7 +78,7 @@ ms.locfileid: "36100262"
 -   Выход несовпадающих строк. Выход несовпадающих строк обрабатывает строки во входе, которые не совпадают ни с одной записью эталонного набора данных. Если преобразование «Уточняющий запрос» было настроено для обработки строк без совпадающих записей как ошибок, строки будут перенаправлены в вывод ошибок на выходе. В противном случае преобразование перенаправит эти строки в выход несовпадающих строк.  
   
     > [!NOTE]  
-    >  В службах [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] у преобразования «Уточняющий запрос» только один выход. Дополнительные сведения о запуске уточняющий, который был создан в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], в разделе [обновление «Уточняющий запрос»](../../../sql-server/install/upgrade-lookup-transformations.md).  
+    >  В службах [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] у преобразования «Уточняющий запрос» только один выход. Дополнительные сведения о выполнении преобразования «Уточняющий запрос», который был создан в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], см. в разделе [обновление «Уточняющий запрос»](../../../sql-server/install/upgrade-lookup-transformations.md).  
   
 -   Вывод ошибок на выходе.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36100262"
   
  Сохранение кэша в файл имеет следующие преимущества.  
   
--   ***Совместное использование файла кэша несколькими пакетами. Дополнительные сведения см в разделе***  [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера соединений с кэшем](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***.***  
+-   ***Совместное использование файла кэша несколькими пакетами. Дополнительные сведения см в разделе *** [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера соединений с кэшем](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***.***  
   
 -   Развертывание кэш-файла с пакетом. ***Затем эти данные можно использовать на нескольких компьютерах.*** Дополнительные сведения см. в разделе [Создание или развертывание кэша для преобразования "Уточняющий запрос"](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   

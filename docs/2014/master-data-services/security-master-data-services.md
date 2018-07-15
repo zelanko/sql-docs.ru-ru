@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bbb9817ac5e9ef4c779dd8a283223622b28c9119
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 138ab7faa61857de9f130b9feffe7879095a32c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287572"
 ---
 # <a name="security-master-data-services"></a>Безопасность (службы Master Data Services)
   Используйте систему безопасности в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], чтобы пользователи имели доступ к определенным основным данным, необходимым для их работы, и не имели доступа к данным, которые не должны быть им открыты.  
@@ -42,9 +42,9 @@ ms.locfileid: "36102447"
   
 -   [Доступ к функциональным областям](../../2014/master-data-services/functional-area-permissions-master-data-services.md), определяющий к какой из пяти функциональных областей пользовательского интерфейса пользователь имеет доступ.  
   
--   [Разрешения объекта модели](../../2014/master-data-services/model-object-permissions-master-data-services.md), которые определяют атрибуты, пользователь может получить доступ и тип доступа (чтение или изменение), что пользователь имеет к этим атрибутам.  
+-   [Разрешения объекта модели](../../2014/master-data-services/model-object-permissions-master-data-services.md), которые определяют атрибуты, имеет доступ пользователь и тип доступа (чтение или изменение), что пользователь имеет к этим атрибутам.  
   
--   При необходимости [разрешения для элементов иерархии](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md), которые определяют элементы, пользователь может получить доступ, и тип доступа (чтение или изменение) пользователь имеет к этим элементам.  
+-   При необходимости [разрешения элементов иерархии](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md), которое определяет, какие элементы, имеет доступ пользователь имеет, и тип доступа (чтение или изменение) к этим элементам.  
   
  При назначении разрешений для атрибутов и элементов приоритет разрешений определяется пересечением разрешений и правилами. Дополнительные сведения см. в разделе [How Permissions Are Determined &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md).  
   
@@ -52,11 +52,11 @@ ms.locfileid: "36102447"
   
  На следующем рисунке показана производная иерархия для сущности стиля и разрешения элементов стилей для выбранного пользователя. Разрешения для обновления назначены элементам М {мужские} и У {унисекс}, а разрешения только для чтения назначены элементу стиля "Женские". Это означает, что пользователь может обновить записи для мужских продуктов и продуктов унисекс и записи, доступные только для чтения, для женских продуктов.  
   
- ![Стиль производной иерархии и член разрешения](../../2014/master-data-services/media/style-derived-hierarchy-mds.png "разрешений стиль производной иерархии и элементов")  
+ ![Разрешения в стиле производной иерархии и элемента](../../2014/master-data-services/media/style-derived-hierarchy-mds.png "разрешений стиля производной иерархии и элементов")  
   
- Сведения о создании иерархии см. в разделе [создать явную иерархию &#40;службы Master Data Services&#41; ](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md) и [создать производную иерархию &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md).  
+ Сведения о том, как создать иерархию, см. в разделе [создать явную иерархию &#40;службы Master Data Services&#41; ](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md) и [создать производную иерархию &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md).  
   
- Сведения о назначении разрешений для элементов в разделе [назначить разрешения для элементов иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
+ Сведения о назначении разрешений для элементов, см. в разделе [назначить разрешения на элементы иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
 ## <a name="security-in-the-add-in-for-excel"></a>Безопасность для надстройки Excel  
  Набор безопасности для веб-приложения [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] также применяется и для [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. Пользователи могут просматривать и работать только с данными, на которые имеют разрешение. Администраторы выполняют административные задачи.  
@@ -70,15 +70,15 @@ ms.locfileid: "36102447"
 |Создание пользователя, который имеет полное разрешение доступа к модели.|[Создание администратора модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)|  
 |Добавление группы Active Directory к [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Это будет первым шагом к выдаче группе разрешения на доступ к данным в веб-приложении [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Добавьте группу &#40;службы Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)|  
 |Назначение разрешения для функциональной области веб-приложения [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Назначение разрешений для функциональной области &#40;службы Master Data Services&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)|  
-|Назначение разрешения для значений атрибутов путем назначения разрешения для объектов модели.|[Назначение разрешения объекта модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
-|Назначение разрешения для значений элементов путем назначения разрешений для узлов иерархии.|[Назначение разрешений для элементов иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
+|Назначение разрешения для значений атрибутов путем назначения разрешения для объектов модели.|[Назначение разрешений объекта модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|Назначение разрешения для значений элементов путем назначения разрешений для узлов иерархии.|[Назначение разрешений для элемента иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
 ## <a name="see-also"></a>См. также  
  [Администраторы &#40;службы Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)   
  [Пользователи и группы (службы Master Data Services)](../../2014/master-data-services/users-and-groups-master-data-services.md)   
  [Разрешения функциональной области (службы Master Data Services)](../../2014/master-data-services/functional-area-permissions-master-data-services.md)   
  [Разрешения объекта модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [Разрешения для элементов иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [Разрешения элементов иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [Способ определения разрешений &#40;службы Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

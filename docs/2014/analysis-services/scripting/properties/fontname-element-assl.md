@@ -1,5 +1,5 @@
 ---
-title: Элемент FontName (ASSL) | Документы Microsoft
+title: Элемент FontName (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FontName element
 ms.assetid: 5560a852-9745-4abb-93d8-9cebe8a9897c
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a58b048255bd0f079f6fc8d22d4666a3f4ced29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1b179415e7b64c4d64090df6168fcc492ab1c30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289530"
 ---
 # <a name="fontname-element-assl"></a>Элемент FontName (ASSL)
-  Описывает характеристики отображения шрифта [CalculationProperty](../objects/calculationproperty-element-assl.md) или [мер](../objects/measure-element-assl.md) родительского элемента.  
+  Описывает характеристики отображения, связанные со шрифтами [CalculationProperty](../objects/calculationproperty-element-assl.md) или [мер](../objects/measure-element-assl.md) родительского элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,14 +62,14 @@ ms.locfileid: "36189822"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- `FontName` Свойство содержит выражение многомерных выражений (MDX) и применяется к `CalculationProperty` элементы, которые имеют [CalculationType](calculationtype-element-assl.md) из *член* или *ячеек* .  
+ `FontName` Содержит выражение многомерных выражений (MDX) и применяется к `CalculationProperty` элементов, которые имеют [CalculationType](calculationtype-element-assl.md) из *член* или *ячеек *.  
   
- Элементы, соответствующие родителям элемента `FontName` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.CalculationProperty> и <xref:Microsoft.AnalysisServices.Measure>.  
+ Элементы, соответствующие родителям элемента `FontName` в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.CalculationProperty> и <xref:Microsoft.AnalysisServices.Measure>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент CalculationProperties &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   
  [Элемент MdxScript &#40;ASSL&#41;](../objects/mdxscript-element-assl.md)   
- [Элемент MdxScript &#40;ASSL&#41;](../collections/mdxscripts-element-assl.md)   
+ [Элемент MdxScripts &#40;ASSL&#41;](../collections/mdxscripts-element-assl.md)   
  [Свойства &#40;ASSL&#41;](properties-assl.md)  
   
   

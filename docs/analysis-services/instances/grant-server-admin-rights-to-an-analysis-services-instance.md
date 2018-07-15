@@ -1,5 +1,5 @@
 ---
-title: Предоставление прав администратора сервера для экземпляра служб Analysis Services | Документы Microsoft
+title: Предоставление прав администратора сервера для экземпляра служб Analysis Services | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dac4df875c8a620f735822e73215f86f17a88c3d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ad46e78f5accb54a3870f0c12a8442dc76201b9
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018861"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36760099"
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>Предоставление прав администратора сервера для экземпляра служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34018861"
  После установки можно изменить членство в роли, чтобы добавить дополнительных пользователей с полными правами доступа к службе. Ролями сервера вы можете также управлять с помощью объектов AMO. Дополнительные сведения см. в разделе [Разработка объектов управления аналитикой (объекты AMO)](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предусматривают несколько очень детализированных ролей обработка и запросы на уровне сервера, базы данных и объекта. Инструкции по использованию этих ролей см. в разделе [Роли и разрешения (службы Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md).  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предусматривают несколько очень детализированных ролей для обработки и выполнять запросы на уровне сервера, базы данных и объекта. Инструкции по использованию этих ролей см. в разделе [Роли и разрешения (службы Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md).  
   
 ## <a name="modify-server-role-membership"></a>Изменение членства в роли сервера  
   
@@ -48,15 +48,15 @@ ms.locfileid: "34018861"
   
 4.  Установите флажок **Компьютеры** и нажмите кнопку **ОК**.  
   
-     ![Добавление учетных записей компьютеров в качестве администраторов служб ssas](../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "добавить учетные записи компьютеров в качестве администраторов служб ssas")  
+     ![Добавление учетных записей компьютеров в качестве администраторов ssas](../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "Добавление учетных записей компьютеров в качестве администраторов служб ssas")  
   
 5.  В текстовом поле **Введите имена объектов для выбора** введите имя компьютера и нажмите кнопку **Проверить имена** , чтобы проверить, находится ли учетная запись компьютера в текущем расположении. Если учетная запись компьютера не найдена, проверьте имя компьютера и домена, членом которого является компьютер.  
   
 ## <a name="nt-servicessastelemetry-account"></a>Учетная запись NT Service\SSASTelemetry  
- **NT Service/SSASTelemetry** — это учетная запись компьютера с ограниченными правами, которая создается во время установки и используется исключительно для реализации службы программы улучшения качества программного обеспечения службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Для выполнения нескольких команд обнаружения этой службе необходимы права администратора на экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения см. в разделах [Customer Experience Improvement Program for SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) и [Microsoft SQL Server Privacy Statement](http://msdn.microsoft.com/library/57769f4a-5689-49a1-8298-e3c0db5106f8) .  
+ **NT Service/SSASTelemetry** — это учетная запись компьютера с ограниченными правами, которая создается во время установки и используется исключительно для реализации службы программы улучшения качества программного обеспечения службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Для выполнения нескольких команд обнаружения этой службе необходимы права администратора на экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения см. в разделах [Customer Experience Improvement Program for SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) и [Microsoft SQL Server Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444) .  
   
 ## <a name="see-also"></a>См. также  
  [Предоставление доступа к объектам и операциям (службы Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
- [Роли безопасности & #40; Analysis Services — многомерные данные & #41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+ [Роли безопасности (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

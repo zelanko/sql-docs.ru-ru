@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - technical reference [SQL Server Database Engine]
 - Database Engine [SQL Server], getting assistance
@@ -16,13 +16,13 @@ ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 caps.latest.revision: 31
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d4632f40972cfa555358746dac5b0ff49422e61a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c79c55c9eab4c165f2fd49e57c622a802c549375
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298934"
 ---
 # <a name="technical-reference-database-engine"></a>Технический справочник (ядро СУБД)
   В [!INCLUDE[ssDE](../includes/ssde-md.md)] имеется справочная документация по средствам, языкам и программированию для администратора компонента [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "36101805"
   
  [Справка F1 визуальных инструментов для баз данных](../ssms/visual-db-tools/visual-database-tools-f1-help.md)  
   
- ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") **Справка программы командной строки**  
+ ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") **Справочник по программе командной строки**  
  [Программа bcp](../tools/bcp-utility.md)  
   
  [dta, программа](../tools/dta/dta-utility.md)  
@@ -43,13 +43,13 @@ ms.locfileid: "36101805"
   
  [Подробнее...](../tools/command-prompt-utility-reference-database-engine.md)  
   
- ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") **Database Engine командлеты PowerShell**  
+ ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") **командлеты PowerShell для ядра базы данных**  
  [Invoke-PolicyEvaluation, командлет](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)  
   
  [Командлет Invoke-Sqlcmd](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)  
   
  ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") **ошибки и события**  
- [База данных события и ошибки Engine] (.. /Relational-databases/Errors-Events/Database-Engine-Events-and-Errors.md0  
+ [События ядра базы данных и ошибки] (.. /Relational-databases/Errors-Events/Database-Engine-Events-and-Errors.md0  
   
  ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") **Справочник по логическим и физическим операторам Showplan**  
  [Справочник по логическим и физическим операторам Showplan](../relational-databases/showplan-logical-and-physical-operators-reference.md)  

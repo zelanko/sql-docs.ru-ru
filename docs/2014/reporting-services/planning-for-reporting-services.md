@@ -1,5 +1,5 @@
 ---
-title: Планирование | Документы Microsoft
+title: Планирование | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2124b296e173974d470ba10d627803a864b4d1bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e720586f448512342d88dc695988ce9afb90b56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260530"
 ---
 # <a name="planning"></a>Планирование
   Эти подразделы помогут лучше понять работу служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Сведения об установке и настройке среды служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в соответствии с потребностями пользователя.  

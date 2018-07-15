@@ -1,5 +1,5 @@
 ---
-title: Связанные группы мер | Документы Microsoft
+title: Связанные группы мер | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linked measure groups [Analysis Services]
 - referencing measure groups
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f01313ce33a2dca510846a66d34d972540d72d85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e67d39b1cafa212b2a43b55d9de58e5df918bd11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251476"
 ---
 # <a name="linked-measure-groups"></a>Связанные группы мер
   Связанная группа мер основана на другой группе мер в другом кубе в той же или другой базе данных служб Analysis Services. Можно использовать связанную группу мер, если требуется повторно использовать набор мер и соответствующие значения данных в нескольких кубах.  
   
- Корпорация Майкрософт рекомендует, чтобы исходные и связанные группы мер находились в решениях, которые выполняются на том же сервере. Связывание с группой мер на удаленном сервере планируется отменить в будущих версиях (см. [рекомендуется к использованию функций служб Analysis Services в SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
+ Корпорация Майкрософт рекомендует, чтобы исходные и связанные группы мер находились в решениях, которые выполняются на том же сервере. Связывание с группой мер на удаленном сервере планируется отменить в будущих выпусках (см. в разделе [нерекомендуемые функции служб Analysis Services в SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
   
 > [!IMPORTANT]  
 >  Связанные группы мер доступны только для чтения. Для получения самых последних изменений следует удалить и повторно создать все связанные группы мер на основе измененного исходного объекта. По этой причине копирование и вставка группы мер между проектами является альтернативным подходом, который следует рассматривать в том случае, если в будущем в группу мер необходимо будет вносить изменения.  
@@ -72,7 +72,7 @@ ms.locfileid: "36109810"
 ## <a name="secure-a-linked-measure"></a>Защита связанной меры  
  После того как ссылка определена, управление доступом к измерениям в связанной группе мер осуществляется так же, как и доступ к другим группам мер. В конструкторе ролей связанный объект отображается рядом со своими аналогами, которые не имеют связей. Дополнительные сведения об управлении безопасностью группы мер см. в разделе [Предоставление разрешений кубу или модели (службы Analysis Services)](grant-cube-or-model-permissions-analysis-services.md).  
   
- Чтобы определить или использовать связанную группу мер, учетная запись службы Windows [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] должны принадлежать экземпляр [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] роли базы данных, которая имеет `ReadDefinition` и `Read` источника права доступа [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляр Источник куба и группы мер или должны относиться к [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] роли администраторов для источника [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра.  
+ Чтобы определить или использовать связанную группу мер, учетная запись для службы Windows [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляр должны принадлежать к [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] роли базы данных, имеющий `ReadDefinition` и `Read` права на источнике доступа [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляр исходный куб и группу мер или должны относиться к [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] роли администраторов для источника [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра.  
   
 ## <a name="see-also"></a>См. также  
  [Определение связанных измерений](define-linked-dimensions.md)  

@@ -1,5 +1,5 @@
 ---
-title: Изменения в поведении флагов трассировки | Документы Microsoft
+title: Изменения в поведении флагов трассировки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - trace flags [SQL Server], behavior changes
 ms.assetid: d739df96-2659-4383-8e10-194657632526
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f03a9db47c6296e7d1c4ab764488c44d343393c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3eacd213cd113cb6f96e4a23d1208b6e7b21b760
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297804"
 ---
 # <a name="changes-to-behavior-of-trace-flags"></a>Изменения в поведении флагов трассировки
   Глобальные флаги трассировки, установленные сеансом, немедленно учитываются в других сеансах. Некоторые флаги трассировки [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] отсутствуют в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

@@ -1,5 +1,5 @@
 ---
-title: Устранение неполадок в построителе отчетов | Документы Microsoft
+title: Устранение неполадок в построителе отчетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,37 +8,37 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ea90051d521f14465543ea135a8a2472aef5be68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff8bc634306d783e943388d19f149e735d15383f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255506"
 ---
 # <a name="troubleshoot-report-builder"></a>Устранение неполадок в построителе отчетов
-  Построитель отчетов — это средство разработки отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], которое позволяет строить отчеты с использованием разного рода источников данных, а также публиковать отчеты на сервере отчетов или на сайте SharePoint. Созданные отчеты можно просматривать в построителе отчетов в веб-браузере или как часть [!INCLUDE[msCoName](../includes/msconame-md.md)] приложение Windows или на сайте SharePoint.  
+  Построитель отчетов — это средство разработки отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], которое позволяет строить отчеты с использованием разного рода источников данных, а также публиковать отчеты на сервере отчетов или на сайте SharePoint. Созданные отчеты можно просмотреть в построителе отчетов в веб-браузере или как часть [!INCLUDE[msCoName](../includes/msconame-md.md)] приложения Windows или на сайте SharePoint.  
   
- Сведения об использовании построителя отчетов и выполнении множества простых задач см. в разделе [учебники](report-builder-tutorials.md).  
+ Чтобы узнать, как использовать построитель отчетов и выполнении множества простых задач, см. в разделе [учебники](report-builder-tutorials.md).  
   
  Следующие разделы помогут устранить неполадки отчетов, с точки зрения автора отчетов или администратора сервера отчетов.  
   
 ## <a name="report-authors"></a>Авторы отчетов  
- [Устранение неполадок в отчетах: Сопоставления отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Устранение неполадок в отчетах: Отчеты-карты &#40;построитель отчетов и службы SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
- [Устранение неполадок в элементах отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Устранение неполадок в элементах отчета &#40;построитель отчетов и службы SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [Устранение неполадок с диаграммами &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+ [Устранение неполадок с диаграммами &#40;построитель отчетов и службы SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
 ## <a name="administrators"></a>Администраторы  
  [Установка, удаление и поддержка построителя отчетов](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
- Кроме того, см. в следующих разделах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] документации в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [электронной документации по](http://go.microsoft.com/fwlink/?linkid=121312):  
+ Кроме того, см. в следующих разделах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] документации в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [документации](http://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [План поддержки отчетов-карт](../../2014/reporting-services/plan-for-map-report-support.md)  
   

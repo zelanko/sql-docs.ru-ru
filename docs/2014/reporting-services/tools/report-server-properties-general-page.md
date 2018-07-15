@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 05bcbd306dc29769db143fb4614c01d527144b82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 905d673939c1831cbe84d49e863ec401a03ec4b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290270"
 ---
 # <a name="server-properties-general-page"></a>Свойства сервера (страница «Общие»)
   Данная страница позволяет просмотреть или изменить заголовок, используемый в диспетчере отчетов, включить или отключить папку «Мои отчеты», выбрать определение роли для защиты папки «Мои отчеты», а также включить или отключить клиентское средство управления печатью.  
@@ -53,7 +53,7 @@ ms.locfileid: "36188160"
  Задает определение роли для защиты папки «Мои отчеты». Это определение роли обозначает набор задач, которые поддерживаются во время работы в каждой папке «Мои отчеты».  
   
  **Разрешить загрузку элемента управления печатью ActiveX клиента**  
- Наборы `EnableClientPrinting` системного свойства сервера отчетов. Если клиентская печать разрешена, у пользователей, имеющих разрешения локального администратора, имеется возможность загрузки подписанного элемента управления ActiveX для печати HTML-отчетов. Дополнительные сведения см. в разделе [Включение и отключение клиентского печати для служб Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Наборы `EnableClientPrinting` системному свойству сервера отчетов. Если клиентская печать разрешена, у пользователей, имеющих разрешения локального администратора, имеется возможность загрузки подписанного элемента управления ActiveX для печати HTML-отчетов. Дополнительные сведения см. в разделе [Включение и отключение печати на стороне клиента для служб Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также  
  [Установка свойств сервера отчетов (среда Management Studio)](set-report-server-properties-management-studio.md)   

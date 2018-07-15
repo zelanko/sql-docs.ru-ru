@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapandlayerwizard.f1
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a840b5b3cc60e10a95f1cf7b2c4a473ee8fd0c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7232850d053d238b81b8db9ef6f5eaeec581ab72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299824"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS)
   Мастер карт и мастер слоев карт автоматизируют задачи создания карты, добавления слоя карты или изменения параметров слоя карты применительно к существующему слою.  
@@ -201,7 +201,7 @@ ms.locfileid: "36087571"
   
  Дополнительные сведения о мозаичных элементах см. в разделе [Мозаичная система Bing Maps](http://go.microsoft.com/fwlink/?LinkId=147315). Дополнительные сведения об использовании в отчете мозаичных элементов Bing Map см. в разделах [Дополнительные условия использования](http://go.microsoft.com/fwlink/?LinkId=151371) и [Заявление о конфиденциальности](http://go.microsoft.com/fwlink/?LinkId=151372).  
   
- Для просмотра мозаичного фона в режиме конструктора необходим доступ к Интернету. Чтобы отображать мозаичный фон при предварительном просмотре отчета на сервере отчетов, сервер отчета должен быть настроен для поддержки мозаичного фона Bing Map. Дополнительные сведения см. в разделе [Устранение неполадок отчетов: отчеты-карты &#40;построитель отчетов и службы SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) и «Планирование поддержки карты» в [документации служб Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) в электронной документации по SQL Server .  
+ Для просмотра мозаичного фона в режиме конструктора необходим доступ к Интернету. Чтобы отображать мозаичный фон при предварительном просмотре отчета на сервере отчетов, сервер отчета должен быть настроен для поддержки мозаичного фона Bing Map. Дополнительные сведения см. в разделе [Устранение неполадок в отчетах: отчеты-карты &#40;построитель отчетов и службы SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) и «Планирование поддержки карты» в [документации по службам Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) в электронной документации по SQL Server .  
   
  Дополнительные сведения о других способах настройки мозаичного слоя см. в разделе [Добавление, изменение или удаление карты или слоя карты (построитель отчетов и службы SSRS)](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

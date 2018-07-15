@@ -1,5 +1,5 @@
 ---
-title: Действия (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Действия (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services]
 - actions [Analysis Services], about actions
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e5828886d047c6b8fcec0d511a8d1ddbd94bbae5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d77c8d49f052d11de98747ff9deee0c61e0070c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319454"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Действия (службы Analysis Services — многомерные данные)
   Действия могут быть разных типов, поэтому их создание должно осуществляться соответствующим образом. Действия могут представлять собой следующее.  
@@ -42,7 +42,7 @@ ms.locfileid: "36190535"
   
  Цель представляет собой фактическое местоположение в кубе, в котором должно произойти действие. Цель состоит из целевого типа и целевого объекта. Тип цели обозначает разновидность объектов в кубе, в которых должно быть разрешено действие. Типами цели могут быть члены уровня, ячейки, иерархии, члены иерархии или другие объекты. Целевой объект — это конкретный объект рассматриваемого типа цели; если типом цели является иерархия, то объект цели представляет собой любую из определенных иерархий в кубе.  
   
- Условие — `Boolean` Многомерное выражение, которое вычисляется на события действия. Если условие принимает значение `true`, то выполняется действие. В ином случае действие не выполняется.  
+ Условие — `Boolean` Многомерное выражение, которое вычисляется к получению события действия. Если условие принимает значение `true`, то выполняется действие. В ином случае действие не выполняется.  
   
  Тип — это разновидность действия, предназначенного для выполнения. <xref:Microsoft.AnalysisServices.Action> является абстрактным классом, поэтому вместо него должен использоваться один из производных классов. Две разновидности действий являются стандартными: детализация и формирование отчетов. Они имеют соответствующие производные классы: <xref:Microsoft.AnalysisServices.DrillThroughAction> и <xref:Microsoft.AnalysisServices.ReportAction>. Другие действия охвачены в классе <xref:Microsoft.AnalysisServices.StandardAction> .  
   

@@ -1,35 +1,34 @@
 ---
-title: Свести к минимуму время простоя для зеркально отображаемых баз данных при обновлении экземпляров сервера | Документы Microsoft
+title: Снижение времени простоя зеркальных баз данных при обновлении экземпляров сервера | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fc5bea207d824c860d197ca75eff788f6794ecc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ba14393c7b8281ae5a9e3a141e7a3e9bd28d0399
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300824"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Снижение времени простоя зеркальных баз данных при обновлении экземпляров сервера
-  При обновлении экземпляров сервера для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], можно сократить время простоя для каждой зеркальной базы данных только один другой ресурс вручную путем последовательного обновления, известный как *пошаговое обновление*. Последовательное обновление является многоэтапным процессом, который в самом простом случае заключается в обновлении экземпляра сервера, который выступает в роли зеркального сервера в сеансе зеркального отображения, и последующего перехода на зеркальную базу данных вручную, обновления сервера, бывшего основным, и возобновления зеркального отображения. Набор операций, фактически применяемый на практике, будет зависеть от режима работы, а также от количества и структуры сеансов зеркального отображения, активных в обновляемых экземплярах сервера.  
+  При обновлении экземпляров сервера для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], можно сократить время простоя каждой зеркальной базы данных только один другой ресурс вручную, выполнив метод обновления, известный как *последовательное обновление*. Последовательное обновление является многоэтапным процессом, который в самом простом случае заключается в обновлении экземпляра сервера, который выступает в роли зеркального сервера в сеансе зеркального отображения, и последующего перехода на зеркальную базу данных вручную, обновления сервера, бывшего основным, и возобновления зеркального отображения. Набор операций, фактически применяемый на практике, будет зависеть от режима работы, а также от количества и структуры сеансов зеркального отображения, активных в обновляемых экземплярах сервера.  
   
 > [!NOTE]  
->  Сведения о последовательного обновления для установки пакета обновления или исправления см. в разделе [установки пакета обновления в системе с минимальным временем простоя для зеркального отображения баз данных](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
+>  Сведения о выполнении последовательного обновления для установки пакета обновления или исправления, см. в разделе [установки пакета обновления в системе с минимальным временем простоя для зеркальных баз данных](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
   
  **Рекомендуемые подготовительные действия (рекомендации)**  
   
@@ -112,7 +111,7 @@ ms.locfileid: "36087717"
     > [!NOTE]  
     >  Для установки нового сеанса зеркального отображения требуется, чтобы на всех участниках работала одинаковая версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-3.  После отработки отказа, рекомендуется запускать [инструкции DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) в базе данных theprincipal.  
+3.  После отработки отказа, мы рекомендуем запустить [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) theprincipal базе данных команду.  
   
 4.  Обновите каждый экземпляр сервера, который в настоящий момент является зеркальным сервером во всех сеансах зеркального отображения, в которых он участвует. На этом этапе, возможно, придется обновить несколько серверов.  
   
@@ -149,7 +148,7 @@ ms.locfileid: "36087717"
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [Просмотр состояния зеркального отображения базы данных (среда SQL Server Management Studio)](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   
  [Зеркальное отображение базы данных (SQL Server)](database-mirroring-sql-server.md)   
- [Установка пакета обновления в системе с минимальным временем простоя для зеркально отображаемых баз данных](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
+ [Установите пакет обновления в системе с минимальным временем простоя для зеркально отображаемых баз данных](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
  [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Принудительный запуск службы в сеансе зеркального отображения базы данных (Transact-SQL)](force-service-in-a-database-mirroring-session-transact-sql.md)   
  [Запуск монитора зеркального отображения баз данных (среда SQL Server Management Studio)](start-database-mirroring-monitor-sql-server-management-studio.md)   

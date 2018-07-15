@@ -1,5 +1,5 @@
 ---
-title: Конвертация валюты (службы Analysis Services) | Документы Microsoft
+title: Конвертация валюты (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple currency conversions
 - monetary data [SQL Server]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - many-to-one currency conversions [Analysis Services]
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe7eb5df9c2f25912d95aa9b0d72a6effaf06f2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d2a439a5ef4d422b69b95d1c76dbeefa39b658a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289830"
 ---
 # <a name="currency-conversions-analysis-services"></a>Преобразования валюты (службы Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Только многомерные  
@@ -58,7 +58,7 @@ ms.locfileid: "36109829"
  Измерение валюты  
  Измерение базы данных, определенное следующими настройками.  
   
--   `Type` Измерения присвоено значение Currency.  
+-   `Type` Свойство измерения присвоено значение Currency.  
   
 -   Свойству `Type` одного из атрибутов измерения присвоено значение CurrencyName.  
   
@@ -72,14 +72,14 @@ ms.locfileid: "36109829"
   
 -   Существует связь обычного измерения между измерением времени и группой мер курсов.  
   
--   Дополнительно свойство `Type` установлено равным ExchangeRate. В то время как мастер бизнес-аналитики использует связи с измерениями валют и времени для идентификации вероятных групп мер курсов, установка `Type` равным ExchangeRate позволяет клиентским приложениям легче идентифицировать меру курса группы.  
+-   Дополнительно свойство `Type` установлено равным ExchangeRate. В то время как мастер бизнес-аналитики использует связи с измерениями валют и времени для идентификации вероятных групп мер курсов, установка `Type` свойство равным ExchangeRate позволяет клиентским приложениям легче идентифицировать меру курса группы.  
   
 -   Одна или несколько мер, представляющих обменные курсы, содержащиеся в группе мер курсов.  
   
  Измерение валют отчета  
  Измерение, определенное мастером бизнес-аналитики после определения конвертации валюты, содержащее валюты отчета для этой конвертации валюты. Измерение валют отчета основано на именованном запросе, определенном в представлении источника данных, на котором основано измерение валют, связанное с группой мер курсов, из главной таблицы измерения валют. Это измерение определено со следующими настройками.  
   
--   `Type` Измерения присвоено значение Currency.  
+-   `Type` Свойство измерения присвоено значение Currency.  
   
 -   `Type` Свойство ключевого атрибута измерения присвоено значение CurrencyName.  
   

@@ -1,5 +1,5 @@
 ---
-title: Настройка свойств мер | Документы Microsoft
+title: Настройка свойств мер | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - additivity [Analysis Services]
 - ID property
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - ProactiveCaching property
 ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
 caps.latest.revision: 50
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4072342fcdace380e08b507c118279b837ba26fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b7be3b5e73134e65cefad48b3d03c4c912a4279a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323184"
 ---
 # <a name="configure-measure-properties"></a>Настройка свойств мер
   Меры имеют свойства, позволяющие определять и управлять их работой и отображением для пользователей.  
@@ -62,11 +62,11 @@ ms.locfileid: "36188350"
   
 |Свойство|Определение|  
 |--------------|----------------|  
-|`AggregateFunction`|Обязательный. Определяет, как выполняется статистическое вычисление мер. `Sum` Представляет агрегат по умолчанию. Описание каждой функции см. в разделе [Use Aggregate Functions](use-aggregate-functions.md) .|  
+|`AggregateFunction`|Обязательный. Определяет, как выполняется статистическое вычисление мер. `Sum` — Это агрегирование по умолчанию. Описание каждой функции см. в разделе [Use Aggregate Functions](use-aggregate-functions.md) .|  
 |`DataType`|Обязательный. Указывает тип данных столбца базовой таблицы фактов, к которым привязана мера. Это значение наследуется из исходного столбца по умолчанию.|  
 |`Description`|Содержит описание меры, которое может быть видно в клиентских приложениях.|  
 |`DisplayFolder`|Указывает папку отображения, в которой будет представлена мера при подключении пользователя к кубу. Если куб содержит множество мер, папки отображения позволяют разбить их по категориям мер, упростив доступ к ним.|  
-|`FormatString`|Можно выбрать формат, который используется для отображения значений меры пользователям, используя `FormatString` свойство меры.<br /><br /> Список форматов отображения представлен в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], но можно указать множество дополнительных форматов, не содержащихся в этом списке. Можно указать любой именованный или определенный пользователем формат, допустимый в языке Microsoft Visual Basic.|  
+|`FormatString`|Можно выбрать формат, который используется для отображения значений меры пользователям с помощью `FormatString` свойства меры.<br /><br /> Список форматов отображения представлен в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], но можно указать множество дополнительных форматов, не содержащихся в этом списке. Можно указать любой именованный или определенный пользователем формат, допустимый в языке Microsoft Visual Basic.|  
 |`ID`|Обязательный. Отображает уникальный идентификатор (ID) меры. Это свойство доступно только для чтения.|  
 |`MeasureExpression`|Указывает ограниченное многомерное выражение, определяющее значение меры. Выражение вычисляется на конечном уровне до агрегирования и позволяет получить взвешенное значение. Например, конвертация валют, где объем продаж взвешен с учетом обменного курса.|  
 |`Name`|Обязательный. Имя меры.|  

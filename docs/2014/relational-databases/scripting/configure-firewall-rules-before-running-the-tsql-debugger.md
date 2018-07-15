@@ -1,5 +1,5 @@
 ---
-title: Настройка отладчика Transact-SQL | Документы Microsoft
+title: Настройка отладчика Transact-SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.sqlde_register_failed
 - vs.debug.error.sqlde_accessdenied
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 747165efe7f5493263da0deec3ec5b2ebcdbad04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 79bb9e677f078f4ee1f4a18142fa3068f61349b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262520"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Настройка отладчика Transact-SQL
   Необходимо настроить правила брандмауэра Windows, включив отладку [!INCLUDE[tsql](../../includes/tsql-md.md)] при подключении к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , который работает на компьютере, отличном от того, на котором работает редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -60,7 +60,7 @@ ms.locfileid: "36195559"
   
     2.  В диалоговом окне **Тип правила** выберите **Программа**и нажмите кнопку **Далее**.  
   
-    3.  В диалоговом окне **Программа** выберите элемент **Путь к этой программе** и введите полный путь к файлу sqlservr.exe для данного экземпляра. По умолчанию sqlservr.exe устанавливается в C:\Program Files\Microsoft SQL Server\MSSQL12. *InstanceName*\MSSQL\Binn», где *InstanceName* — это MSSQLSERVER для экземпляра по умолчанию и имя экземпляра для любого именованного экземпляра.  
+    3.  В диалоговом окне **Программа** выберите элемент **Путь к этой программе** и введите полный путь к файлу sqlservr.exe для данного экземпляра. По умолчанию sqlservr.exe устанавливается в C:\Program Files\Microsoft SQL Server\MSSQL12. *InstanceName*\MSSQL\Binn, где *InstanceName* — это MSSQLSERVER для экземпляра по умолчанию или имя любого именованного экземпляра.  
   
     4.  В диалоговом окне **Действие** выберите **Разрешить соединение**и нажмите кнопку **Далее**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36195559"
   
 * Окно редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] должно быть подключено к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] из [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 2 (SP2) или более поздней версии. Когда окно редактора запросов подключено к экземпляру, работающему в однопользовательском режиме, отладчик запустить невозможно.
 
-* Сервер должен обмениваться данными с клиентом через RPC. Учетная запись, под которой запущена служба SQL Server должен быть проверки подлинности разрешения для клиента.  
+* Сервер должен обмениваться данными с клиентом через RPC. Учетная запись, под которой запущена служба SQL Server должен иметь разрешения для клиента на проверку подлинности.  
   
 ## <a name="see-also"></a>См. также  
  [Отладчик Transact-SQL](transact-sql-debugger.md)   

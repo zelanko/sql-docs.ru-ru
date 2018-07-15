@@ -1,5 +1,5 @@
 ---
-title: Приложение sqllogship | Документы Microsoft
+title: Приложение sqllogship | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 66b07b7867d8337941c052818d665d9590550806
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 065491c5bdf2254f6ee356383f7992c6d52b6c0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306684"
 ---
 # <a name="sqllogship-application"></a>Приложение sqllogship
   Приложение **sqllogship** выполняет операции резервного копирования, обычного копирования и восстановления, а также связанные с ними задачи очистки для конфигурации доставки журналов. Операция выполняется на определенном экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для определенной базы данных.  
   
- ![Значок ссылки на раздел](../../2014/database-engine/media/topic-link.gif "значок ссылки на раздел") синтаксических обозначениях см. в разделе [Справка программы командной строки &#40;СУБД&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Значок ссылки на раздел](../../2014/database-engine/media/topic-link.gif "значок ссылки на раздел") о синтаксических обозначениях см. в разделе [Справочник по программе командной строки &#40;СУБД&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -78,7 +78,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  Журнал доставки журналов, созданный программой **sqllogship** , смешивается с журналом, создаваемым заданиями доставки журналов. При частом использовании программы **sqllogship** в конфигурациях доставки журналов стоит рассмотреть отключение заданий доставки журналов. Дополнительные сведения см. в статье [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
- **Sqllogship** приложения SqlLogShip.exe устанавливается в каталог x:\Program Files\Microsoft SQL Server\120\Tools\Binn.  
+ **Sqllogship** установлено приложение, SqlLogShip.exe, в каталоге x:\Program Files\Microsoft SQL Server\120\Tools\Binn.  
   
 ## <a name="permissions"></a>Разрешения  
  **sqllogship** использует проверку подлинности Windows. Учетной записи Windows, от которой выполняется команда, необходимы доступ к каталогу Windows и разрешения [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Это требование зависит от того, какой параметр задается командой **sqllogship** : **-backup**, **-copy**или **-restore** .  

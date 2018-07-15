@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createapp.f1
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0edae9b1692eb12f14f66ebb067758f5a6c468f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 92ca9531bd94f2fc81fc4c074841b4049b6e3120
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194741"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273010"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>Диалоговое окно «Создание веб-приложения» (диспетчер конфигурации служб Master Data Services)
   С помощью диалогового окна **Создание веб-приложения** можно создать веб-приложение [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Это веб-приложение создается для сайта, выбранного на странице **Веб-конфигурация** .  
   
 ## <a name="web-application"></a>Веб-приложение  
- Веб-сервер обслуживает содержимое этого веб-приложения, используя папку [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **WebApplication** файловой системы. Ее местоположение указывается во время установки, и по умолчанию является путь *диск*: \Program Files\Microsoft SQL Server\120\Master Data Services\WebApplication.  
+ Веб-сервер обслуживает содержимое этого веб-приложения, используя папку [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **WebApplication** файловой системы. Ее местоположение указывается во время установки, и по умолчанию это *диск*: \Program Files\Microsoft SQL Server\120\Master Data Services\WebApplication.  
   
 |Имя элемента управления|Описание|  
 |------------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "36194741"
   
 ## <a name="see-also"></a>См. также  
  [Веб-страница конфигурации &#40;диспетчер конфигурации Master Data Services&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
- [Настройка базы данных и веб-сайт для служб Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Настройка веб-сайта и базы данных для служб Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [Веб-приложения требованиям &#40;службы Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [Создание веб-приложения диспетчера основных данных (службы Master Data Services)](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Приостановить обработку отчетов и подписок | Документы Microsoft
+title: Приостановка обработки отчетов и подписок | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pausing schedules
 - subscriptions [Reporting Services], pausing
@@ -24,13 +24,13 @@ ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a10c8a9b2d23ea5d4803dfc97911cc5695b26b38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ece2c0fe9ae32652e92a5f8d20b628d924b369a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261970"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Приостановка обработки отчета и подписки
   Приостановить обработку отчетов или подписки напрямую невозможно. Однако можно остановить обработку отчетов и подписки перед ее началом или после соединения с источником данных. Также можно предотвратить обработку отчетов или подписки, запретив пользователям доступ к этим элементам.  

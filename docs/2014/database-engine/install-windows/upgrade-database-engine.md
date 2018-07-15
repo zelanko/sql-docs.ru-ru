@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], databases
 - compatibility levels [SQL Server], after upgrade
 - Database Engine [SQL Server], upgrading
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a263e00df1978f09a77a4eeebbf90f0059fb2590
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b8837cb450313df1c72a255a12fe0f26e29c941f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279856"
 ---
 # <a name="upgrade-database-engine"></a>Обновление [компонент ядра СУБД]
   В данном разделе содержатся сведения, которые понадобятся для понимания процесса обновления при подготовке к нему. Он состоит из следующих подразделов.  
@@ -50,7 +50,7 @@ ms.locfileid: "36189335"
 >  При обновлении до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с предыдущей версии выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise выберите "Enterprise Edition: лицензирование по числу ядер" и "Enterprise Edition". Эти выпуски Enterprise отличаются только режимом лицензирования. Дополнительные сведения см. в разделе [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Контрольный список действий перед обновлением  
- Программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает обновление предыдущей версии до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Есть также возможность выполнить миграцию баз данных из предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Миграция может быть произведена из одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в другой на том же компьютере или из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на другой компьютер. Параметры миграции включают использование функциональности мастера копирования баз данных, резервное копирование и восстановление, использование [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] мастера экспорта и импорта и массового экспорта и импорта.  
+ Программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает обновление предыдущей версии до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Есть также возможность выполнить миграцию баз данных из предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Миграция может быть произведена из одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в другой на том же компьютере или из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на другой компьютер. Варианты миграции: при помощи мастера копирования баз данных, резервное копирование и восстановление функциональные возможности, использование [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] импорта и экспорта и массового экспорта и импорта методы.  
   
  Перед обновлением компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]просмотрите следующие источники:  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36189335"
  Если уровень совместимости пользовательской базы данных до обновления был 100 или выше, после обновления он останется таким же. Если уровень совместимости до обновления был 90, в обновленной базе данных он устанавливается в значение 100, что является минимально поддерживаемым уровнем совместимости в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Новый пользователь базы данных наследуют уровень совместимости `model` базы данных.  
+>  Новые пользовательские базы данных наследуют уровень совместимости `model` базы данных.  
   
 ## <a name="migrating-databases"></a>Миграция баз данных  
  Переместить пользовательские базы данных на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно при помощи функций резервного копирования и восстановления либо с помощью функций отсоединения и присоединения, предоставляемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Копирование баз данных путем создания и восстановления резервных копий](../../relational-databases/databases/copy-databases-with-backup-and-restore.md) или [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
@@ -146,7 +146,7 @@ ms.locfileid: "36189335"
   
     3.  Если оптимизатор не выбрал подходящий план, настройте запрос и затем укажите подсказку USE PLAN с нужным планом запроса.  
   
-     **Если подсказка USE PLAN указан в структуре плана:**  
+     **Если указание USE PLAN указан в структуре плана:**  
   
     1.  При помощи функции sys.fn_validate_plan_guide проверьте правильность структуры плана. Кроме того, проверить недопустимые планы можно в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]по событию Plan Guide Unsuccessful.  
   
@@ -168,7 +168,7 @@ EXEC sp_fulltext_service 'pause_indexing', 0;
   
 ## <a name="see-also"></a>См. также  
  [Поддерживаемые обновления версий и выпусков](supported-version-and-edition-upgrades.md)   
- [Работа с несколькими версиями и экземплярами SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
+ [Работать с несколькими версиями и экземплярами SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Обратная совместимость](../../getting-started/backward-compatibility.md)   
  [Обновление реплицируемых баз данных](upgrade-replicated-databases.md)  
   

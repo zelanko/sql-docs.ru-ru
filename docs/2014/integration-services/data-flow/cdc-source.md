@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f81e48f4466bf4f5765273df7c4fa58fbb447f8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff8eccaf0e1c13c63d73eff20e7415c6872c967b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269520"
 ---
 # <a name="cdc-source"></a>CDC-источник
   Источник CDC считывает диапазон информации об изменениях из таблиц изменений [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и доставляет изменения другим нижестоящим компонентам SSIS.  
@@ -103,9 +103,9 @@ use <cdc-enabled-database-name>
   
 -   [Редактор источника CDC &#40;страницы диспетчера соединений&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [Редактор источника CDC &#40;страница «столбцы»&#41;](../cdc-source-editor-columns-page.md)  
+-   [Редактор источника CDC &#40;страница "столбцы"&#41;](../cdc-source-editor-columns-page.md)  
   
--   [Редактор источника CDC &#40;страницы вывода ошибок&#41;](../cdc-source-editor-error-output-page.md)  
+-   [Редактор источника CDC &#40;странице вывода ошибок&#41;](../cdc-source-editor-error-output-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые могут быть заданы программным путем.  
   
@@ -119,9 +119,9 @@ use <cdc-enabled-database-name>
   
 -   [Редактор источника CDC &#40;страницы диспетчера соединений&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [Редактор источника CDC &#40;страница «столбцы»&#41;](../cdc-source-editor-columns-page.md)  
+-   [Редактор источника CDC &#40;страница "столбцы"&#41;](../cdc-source-editor-columns-page.md)  
   
--   [Редактор источника CDC &#40;страницы вывода ошибок&#41;](../cdc-source-editor-error-output-page.md)  
+-   [Редактор источника CDC &#40;странице вывода ошибок&#41;](../cdc-source-editor-error-output-page.md)  
   
 -   [Пользовательские свойства источника «CDC»](cdc-source-custom-properties.md)  
   

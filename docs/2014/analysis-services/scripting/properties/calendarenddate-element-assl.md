@@ -1,5 +1,5 @@
 ---
-title: Элемент CalendarEndDate (ASSL) | Документы Microsoft
+title: Элемент CalendarEndDate (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CalendarEndDate element
 ms.assetid: abedd074-9a28-4169-85b5-49ea57f10fb6
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2702e10f6b772ff072212d1fc9ac3097b50e9308
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd23c1747f25eb092a1c1e9a6d6ccd1029380d5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191076"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332564"
 ---
 # <a name="calendarenddate-element-assl"></a>Элемент CalendarEndDate (ASSL)
-  Определяет конечную дату календарного периода для [TimeBinding](../data-type/binding-data-type-assl.md) элемента.  
+  Определяет конечную дату календарного периода для [TimeBinding](../data-type/binding-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36191076"
 ## <a name="remarks"></a>Примечания  
  Элемент `CalendarEndDate` должен следовать после элемента `CalendarStartDate`.  
   
- Элемент, соответствующий родителю параметра `CalendarEndDate` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.TimeBinding>.  
+ Элемент, соответствующий родителю параметра `CalendarEndDate` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

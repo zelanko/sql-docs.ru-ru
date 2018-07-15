@@ -1,5 +1,5 @@
 ---
-title: OLE DB для OLAP наборы строк схемы | Документы Microsoft
+title: OLE DB для OLAP наборы строк схемы | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,23 +17,23 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB for OLAP
 ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 898749e17cb5b85e61a2b2c3a94b7247a7ab219b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 406451b0e8e6edce92d69cde493888f70813f4de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306484"
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>Наборы строк схемы для OLAP (OLE DB)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) поставщик поддерживает следующие OLE DB для OLAP наборы строк схемы.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) поставщик поддерживает следующие OLE DB для наборов строк схемы OLAP.  
   
 > [!NOTE]  
->  Чтобы проверить, поддерживает ли конкретный поставщик источника данных набор строк, используйте `DISCOVER_ENUMERATIONS` набора строк с [Discover](../../xmla/xml-elements-methods-discover.md) метод.  
+>  Чтобы проверить, поддерживает ли конкретный поставщик источника данных набор строк, используйте `DISCOVER_ENUMERATIONS` набор строк с помощью [Discover](../../xmla/xml-elements-methods-discover.md) метод.  
   
- Также можно найти подробные сведения об этих наборах строк путем поиска см. в разделе «Наборы строк схемы OLAP,» в библиотеке MSDN на [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?LinkId=15426).  
+ Подробные сведения об этих наборах строк можно также найти путем поиска см. в разделе «Наборы строк схемы OLAP,» в библиотеке MSDN по адресу это [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?LinkId=15426).  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36100974"
 |[Набор строк MDSCHEMA_PROPERTIES](mdschema-properties-rowset.md)|Описывает свойства элементов в базе данных.|  
 |[Набор строк MDSCHEMA_SETS](mdschema-sets-rowset.md)|Описывает любые наборы, определенные на текущий момент в базе данных, в том числе наборы с областью сеанса.|  
   
- <sup>1</sup> все наборы строк схемы, приведенные здесь поддерживаются поставщиком источника данных MSOLAP для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] поставщика XML для Аналитики.  
+ <sup>1</sup> все наборы строк схемы, перечисленные здесь поддерживаются поставщиком источника данных MSOLAP для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] поставщика XML для Аналитики.  
   
 ## <a name="see-also"></a>См. также  
  [Набор строк DISCOVER_ENUMERATORS](../xml/discover-enumerators-rowset.md)   

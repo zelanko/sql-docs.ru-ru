@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 caps.latest.revision: 23
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 80961e5899162575ae832d5d6a8dd35824b43a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd40a67ecd13dde8c78b38ba0f37d4928b86dd0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102005"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324554"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Этап 2. Создание поврежденного файла
   Для демонстрации настройки и обработки ошибок преобразования необходимо создать образец неструктурированного файла, который при обработке вызовет сбой в работе компонента.  
@@ -38,12 +38,12 @@ ms.locfileid: "36102005"
   
     3.  Щелкните файл SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
-2.  Использование текстового редактора для поиска и замены, замените все вхождения `VEB` и заменяет их значением `BAD`.  
+2.  Использование текстового редактора для поиска и замены, замените все вхождения `VEB` и замените их значением `BAD`.  
   
-3.  В той же папке, как другие файлы образцов данных, сохраните измененный файл с именем `Currency_BAD.txt`.  
+3.  Сохраните измененный файл в той же папке, что другие файлы образцов данных, `Currency_BAD.txt`.  
   
     > [!IMPORTANT]  
-    >  Убедитесь, что `Currency_BAD.txt` сохраняется той же папке, как другие файлы образцов данных.  
+    >  Убедитесь, что `Currency_BAD.txt` сохраняется той же папке, что другие файлы образцов данных.  
   
 4.  Закройте текстовый редактор.  
   
