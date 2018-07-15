@@ -1,13 +1,11 @@
 ---
-title: Поддерживаемые библиотеки платформы .NET Framework | Документы Microsoft
+title: Поддерживаемые библиотеки платформы .NET Framework | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - .NET Framework [CLR Integration]
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1e24738e82e9e73c5777780377207fdc4471aa47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 8c50e18862d2c3ca5b5e900c6eccebe6e921ea94
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195603"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351036"
 ---
 # <a name="supported-net-framework-libraries"></a>Поддерживаемые библиотеки платформы .NET Framework
   Если среда CLR размещается в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], то появляется возможность разрабатывать на управляемом коде хранимые процедуры, триггеры, определяемые пользователем функции, определяемые пользователем типы и определяемые пользователем статистические функции. Функциональность, реализованная в библиотеках классов платформы .NET Framework, предоставляет доступ к предварительно построенным классам для операций со строками, сложных математических операций, доступа к файлам, шифрования и т. д. Доступ к этим классам легко получить из любой управляемой хранимой процедуры, определяемого пользователем типа, триггера, определяемой пользователем функции или определяемой пользователем статистической функции.  
@@ -32,7 +30,7 @@ ms.locfileid: "36195603"
 >  При обслуживании или обновлении неподдерживаемых сборок в глобальный кэш сборок (GAC), ваш [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Если сборка существует как в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] интеграция со средой CLR. При обслуживании или обновлении любых сборок в глобальном кэше сборок, которые также зарегистрированы в базе данных, в том числе неподдерживаемых сборок платформы .NET Framework, необходимо обеспечить обслуживание или обновление копии сборки в базах данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью инструкции `ALTER ASSEMBLY`. Дополнительные сведения см. в разделе [статье 949080 базы знаний](http://support.microsoft.com/kb/949080).  
   
 ## <a name="supported-libraries"></a>Поддерживаемые библиотеки  
- Начиная с версии [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] содержит список поддерживаемых библиотек платформы .NET Framework, которые были проверены на соответствие стандартам надежности и безопасности для взаимодействия с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] загружает их непосредственно из глобального кэша СБОРОК.  
+ Начиная с версии [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] со списком поддерживаемых библиотек платформы .NET Framework, которые были проверены на соответствие стандартам надежности и безопасности для взаимодействия с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] загружает их непосредственно из глобального кэша СБОРОК.  
   
  Библиотеки и пространства имен, поддерживаемые интеграцией со средой CLR в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
@@ -75,7 +73,7 @@ ms.locfileid: "36195603"
   
 ## <a name="see-also"></a>См. также  
  [Создание сборки](../assemblies/creating-an-assembly.md)   
- [Среда CLR Integration Code Access Security](../security/clr-integration-code-access-security.md)   
+ [CLR Integration Code Access Security](../security/clr-integration-code-access-security.md)   
  [Ограничения модели программирования на основе интеграции со средой CLR](clr-integration-programming-model-restrictions.md)  
   
   

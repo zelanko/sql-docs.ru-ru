@@ -1,5 +1,5 @@
 ---
-title: Программирование объектов AMO расширенных объектов OLAP | Документы Microsoft
+title: Расширенных объектов AMO OLAP программирование | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6408cfd8dd3a7b8f7d6993ca84c3325bedddee24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c511fe1a542804ebf05077d5f9a46c77dd69b2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254926"
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>Программирование расширенных объектов AMO OLAP
   В этом разделе рассказывается о программировании объектов AMO объектов OLAP с расширенными возможностями. Этот раздел состоит из следующих подразделов.  
   
--   [Объекты Action](#Action)  
+-   [Объекты действия](#Action)  
   
 -   [Объекты KPI](#KPI)  
   
@@ -38,9 +38,9 @@ ms.locfileid: "36097632"
   
 -   [Объекты ProactiveCaching](#PC)  
   
--   [Объекты Translation](#Transl)  
+-   [Объекты переводов](#Transl)  
   
-##  <a name="Action"></a> Объекты Action  
+##  <a name="Action"></a> Объекты действия  
  Классы действий позволяют создавать активные ответные действия во время просмотра определенных областей куба. Объекты действий можно определять при помощи объектов AMO, но они используются из клиентского приложения, просматривающего данные. Действия могут быть разных типов, поэтому их создание должно осуществляться в соответствии с их типом. Действия могут представлять собой следующее.  
   
 -   Действия детализации, которые возвращают набор строк, представляющих основополагающие данные выделенных ячеек куба, в которых происходит действие.  
@@ -61,7 +61,7 @@ ms.locfileid: "36097632"
   
 3.  Добавьте действие в коллекцию кубов и обновите куб. Действие не является обновляемым объектом.  
   
- Для проверки действия требуется другая прикладная программа. Проверить действие можно в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Во-первых, необходимо установить [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] примеры см. в разделе [многомерной модели обработки объекта](../processing-a-multidimensional-model-analysis-services.md).  
+ Для проверки действия требуется другая прикладная программа. Проверить действие можно в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Во-первых, необходимо установить [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] см. в разделе [обработку объекта многомерных моделей](../processing-a-multidimensional-model-analysis-services.md).  
   
  В следующем образце кода выполняется репликация трех разных действий из образца Adventure Works Analysis Services Project. Действия можно различать, поскольку имена действий, введенных при помощи следующего образца, начинаются с «My».  
   
@@ -467,7 +467,7 @@ static public void SetProactiveCachingSettings(Database db)
 }  
 ```  
   
-##  <a name="Transl"></a> Объекты Translation  
+##  <a name="Transl"></a> Объекты переводов  
  Объекты переводов можно определять при помощи объектов AMO, но для их использования служит клиентское приложение, применяемое для просмотра данных. Объекты переводов просты в программировании. Переводы заголовков объектов обеспечиваются парами «Локаль языка» и «Переведенный заголовок». Для любого заголовка можно разрешить несколько переводов. Переводы можно предусмотреть для большинства объектов служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], например измерений, атрибутов, иерархий, кубов, групп мер, мер и др.  
   
  Следующий образец кода обеспечивает перевод на испанский язык имени атрибута «Название продукта».  
@@ -488,7 +488,7 @@ static public void CreateTranslations(Database db)
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices>   
- [Знакомство с классами объектов AMO](amo-classes-introduction.md)   
+ [Введение в классы объектов AMO](amo-classes-introduction.md)   
  [Классы OLAP объектов AMO](amo-olap-classes.md)   
  [Логическая архитектура &#40;службы Analysis Services — многомерные данные&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Объекты базы данных &#40;службы Analysis Services — многомерные данные&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)   

@@ -1,5 +1,5 @@
 ---
-title: Разработчик&#39;руководство (репликация) | Документы Microsoft
+title: Разработчик&#39;руководство (репликация) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - replication [SQL Server], development
 ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fb0ffaba9b07a24c6d3ae27e442c4b4e41d8f255
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8726fd8595c769513fa56203f33fd2a3ee58b0e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320276"
 ---
 # <a name="developer39s-guide-replication"></a>Разработчик&#39;руководство (репликация)
   Возможность настраивать, сопровождать и осуществлять программным путем наблюдение за топологией репликации позволяет упростить повторное выполнение задачи репликации и повысить удобство работы пользователей с приложениями на основе репликации. Благодаря программной реализации средств репликации конечные пользователи получают возможность применять настраиваемые функциональные средства репликации, не будучи вынужденными изучать хранимые процедуры репликации и знакомиться с исполняемыми файлами агентов репликации или прибегать к использованию пользовательского интерфейса репликации, реализованного в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  

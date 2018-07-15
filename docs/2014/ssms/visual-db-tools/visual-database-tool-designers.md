@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [SQL Server]
 - View Designer
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Properties window [Visual Database Tools]
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a2913a032f6013678042901dc7fdff6954522da7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: afd7f3ca3f39d2c416eeb0e4f05b9dac28a99b8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269860"
 ---
 # <a name="visual-database-tool-designers"></a>Конструкторы визуальных инструментов для баз данных
   Визуальные инструменты для баз данных представляют собой сочетание средств проектирования, которые можно использовать для работы с источниками данных. С их помощью можно создавать запросы, конструировать и менять структуру базы данных и обновлять данные. В число этих средств входят конструктор диаграмм баз данных, конструктор таблиц и конструктор запросов и представлений.  
@@ -91,8 +91,8 @@ ms.locfileid: "36097182"
 >  Данная версия визуальных инструментов для баз данных не поддерживает Microsoft SQL Server версии 7 и более ранние версии.  
   
 ## <a name="see-also"></a>См. также  
- [Конструирование диаграмм баз данных &#40;визуальные средства базы данных&#41;](design-database-diagrams-visual-database-tools.md)   
- [Создавать таблицы &#40;визуальные средства базы данных&#41;](design-tables-visual-database-tools.md)   
+ [Конструирование диаграмм баз данных &#40;визуальных инструментах баз данных&#41;](design-database-diagrams-visual-database-tools.md)   
+ [Проектирование таблиц &#40;визуальных инструментах баз данных&#41;](design-tables-visual-database-tools.md)   
  [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c814b8d89686c635fd0479576eeda982a8b7b957
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 9a1696168c72bf65c3a1771c0a54c51d9080d091
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266840"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Выбор источника данных (мастер импорта и экспорта SQL Server)
   Используйте страницу **Выбор источника данных** , чтобы указать источник данных, который нужно копировать.  
   
- Дополнительные сведения о работе этого мастера см. в разделе [SQL Server Импорт и экспорт](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Дополнительные сведения о параметрах запуска этого мастера и о разрешениях, необходимых для успешного запуска мастера см. в разделе [запустить мастер экспорта и импорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
+ Дополнительные сведения о работе этого мастера см. в разделе [SQL Server Импорт и экспорт](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Дополнительные сведения о параметрах запуска этого мастера и о разрешениях, необходимых для успешного запуска мастера, см. в разделе [запустить мастер экспорта и импорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
- Назначение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастер импорта и экспорта заключается в копировании данных из источника в место назначения. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ Цель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастер импорта и экспорта заключается в копировании данных из источника в место назначения. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="options"></a>Параметры  
  **Источник данных**  
@@ -47,10 +47,10 @@ ms.locfileid: "36324618"
  Укажите, должен ли пакет использовать проверку подлинности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для доступа к базе данных. Для лучшей защиты рекомендуется использовать проверку подлинности Windows.  
   
  **Использовать проверку подлинности SQL Server**  
- Укажите, должен ли пакет использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности для входа базу данных. Если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо ввести имя пользователя и пароль.  
+ Укажите, должен ли пакет использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности для входа в базе данных. Если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо ввести имя пользователя и пароль.  
   
  **Имя пользователя**  
- Укажите имя пользователя для подключения к базе данных при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.  
+ Укажите имя пользователя для подключения к базе данных, при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.  
   
  **Пароль**  
  Укажите пароль для подключения к базе данных, если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -71,20 +71,20 @@ ms.locfileid: "36324618"
  Введите имя базы данных-источника.  
   
  **Встроенные функции безопасности**  
- Укажите `True` подключаться с помощью встроенной проверки подлинности Windows, рекомендуется или `False` подключаться с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. При выборе `False` необходимо ввести идентификатор пользователя и пароль. Значение по умолчанию — `False`.  
+ Укажите `True` для подключения, встроенную проверку подлинности Windows, который рекомендуется, или `False` подключиться с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. При выборе `False` необходимо ввести идентификатор пользователя и пароль. Значение по умолчанию — `False`.  
   
  **Идентификатор пользователя**  
- Укажите имя пользователя для подключения к базе данных при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.  
+ Укажите имя пользователя для подключения к базе данных, при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.  
   
  **Пароль**  
  Укажите пароль для подключения к базе данных, если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Другие перечисленные ниже параметры при выборе этого поставщика необязательно указывать для успешного подключения к базе данных-источнику [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Описание этих дополнительных параметров, см. в документации для [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] поставщик данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] пакет средств разработки программного обеспечения.  
+ Другие перечисленные ниже параметры при выборе этого поставщика необязательно указывать для успешного подключения к базе данных-источнику [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Описание этих дополнительных параметров, см. в документации по [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] поставщик данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] пакета средств разработки программного обеспечения.  
   
 ### <a name="data-source--microsoft-excel"></a>Источник данных = Microsoft Excel  
   
 > [!NOTE]  
->  Выберите **Microsoft Excel** только в случае, если необходимо соединиться с источником данных, использующим Excel 2003 или более раннюю версию. Для подключения к источнику данных, использующим Excel 2007, выберите **поставщик Microsoft Office 12.0 Access базы данных ядра OLE DB**, нажмите кнопку **свойства**, а затем на **все** вкладка **Свойства связи данных** диалогового окна введите `Excel 12.0` как значение для **расширенные свойства**.  
+>  Выберите **Microsoft Excel** только в случае, если необходимо соединиться с источником данных, использующим Excel 2003 или более раннюю версию. Чтобы подключиться к источнику данных, использующим Excel 2007, выберите **поставщик Microsoft Office 12.0 Access базы данных ядра OLE DB**, нажмите кнопку **свойства**, а затем на **все** вкладке **Свойства канала передачи данных** диалогового окна введите `Excel 12.0` как значение для **расширенные свойства**.  
   
  **Путь к файлу Excel**  
  Укажите путь и имя файла для рабочего листа, с которого импортируются данные. Например **C:\MyData.xls, \\\Sales\Database\Northwind.xls**. или нажмите **Обзор**.  

@@ -1,5 +1,5 @@
 ---
-title: Вкладка профили кластеров кластеризации последовательностей (средство просмотра модели интеллектуального анализа | Документы Microsoft
+title: Вкладка профили кластеров кластеризации последовательностей (просмотра модели интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.profiles.f1
 ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7730b07877b0cfe6cdcc6d4a749d28ce4cf093d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b69066bd09f74fddd0fc7151eae216b74444e8f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323134"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Вкладка «Профили кластеров кластеризации последовательностей» (средство просмотра моделей интеллектуального анализа данных)
   На вкладке **Профили кластера** в **средстве просмотра кластеризации последовательностей (Майкрософт)** содержатся представления последовательностей с цветовой кодировкой, включенных в каждый кластер.  
   
  Используйте представление модели кластеризации последовательностей, чтобы быстро просмотреть способы группирования последовательностей, обнаруженных моделью. Можно с одного взгляда выяснить, сколько последовательностей являются длинными и сколько — короткими. Можно также щелкнуть кластер для отображения **Легенды интеллектуального анализа данных** , которая позволит точно узнать, какие состояния представляют цвета в каждой последовательности.  
   
- **Дополнительные сведения:**[алгоритма кластеризации последовательностей (Microsoft)](data-mining/microsoft-sequence-clustering-algorithm.md), [просмотреть модель, используя средство просмотра кластеризации последовательностей (Майкрософт)  ](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Дополнительные сведения:**[алгоритма кластеризации последовательностей (Майкрософт)](data-mining/microsoft-sequence-clustering-algorithm.md), [просмотр модели с помощью средства просмотра кластеризации последовательностей Майкрософт  ](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Параметры  
  **Обновить содержимое средства просмотра**  

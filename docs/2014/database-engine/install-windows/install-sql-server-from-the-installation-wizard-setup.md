@@ -1,5 +1,5 @@
 ---
-title: Установка SQL Server 2014 с помощью мастера установки (программа установки) | Документы Microsoft
+title: Установка SQL Server 2014 с помощью мастера установки (программа установки) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, steps
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 caps.latest.revision: 79
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 684a9d837fa08beaf8917a7193edff622aea4cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6ff8c854a7f2004b30caa11c48423de0995d4652
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250624"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>Установка SQL Server «2014» с помощью мастера установки (программы установки)
-  В этом разделе приведена пошаговая процедура установки нового экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В мастере установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступно единое дерево для установки всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поэтому их не требуется устанавливать по отдельности. Дополнительные сведения о различных компонентов, которые могут быть установлены в разделе [установки для SQL Server 2014](installation-for-sql-server.md).  Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонентов по отдельности см [Установка SQL Server 2014](install-sql-server.md).  
+  В этом разделе приведена пошаговая процедура установки нового экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В мастере установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступно единое дерево для установки всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поэтому их не требуется устанавливать по отдельности. Дополнительные сведения о различных компонентах, которые могут быть установлены, см. в разделе [установки для SQL Server 2014](installation-for-sql-server.md).  Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонентов по отдельности, см. в разделе [Установка SQL Server 2014](install-sql-server.md).  
   
  Эти дополнительные разделы описывают другие способы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -114,7 +114,7 @@ ms.locfileid: "36097803"
   
     -   Режим безопасности — выберите для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]режим проверки подлинности: «Проверка подлинности Windows» или «Смешанный режим». Если выбран смешанный режим проверки подлинности, необходимо задать надежный пароль для встроенной учетной записи системного администратора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-         После удачного соединения устройства с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в режиме проверки подлинности Windows и смешанном режиме начинает действовать один механизм безопасности. Дополнительные сведения см. в разделе [конфигурация ядра СУБД — Провизионирование учетных записей](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
+         После удачного соединения устройства с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в режиме проверки подлинности Windows и смешанном режиме начинает действовать один механизм безопасности. Дополнительные сведения см. в разделе [Настройка компонента Database Engine - Провизионирование учетных записей](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы добавить учетную запись, с которой выполняется программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить или удалить учетные записи из списка системных администраторов, нажмите кнопку **Добавить** или **Удалить**и затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

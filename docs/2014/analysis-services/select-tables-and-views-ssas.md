@@ -1,5 +1,5 @@
 ---
-title: Выбор таблиц и представлений (SSAS) | Документы Microsoft
+title: Выбор таблиц и представлений (SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.seltablesviews.f1
 ms.assetid: 5e8121cc-03f0-4168-98cf-63c5c032bb0b
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cdb1c21481e79c98b2d9f7958b54e1d5e2f8745
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dcc5de5cfa1125ee950b9c86e02445f192199439
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232054"
 ---
 # <a name="select-tables-and-views-ssas"></a>Выбор таблиц и представлений (SSAS)
   На этой странице **мастера импорта таблиц** выбираются таблицы и представления, из которых импортируются данные. Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  

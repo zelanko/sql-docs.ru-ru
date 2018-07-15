@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [Reporting Services]
 - report snapshots [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6bfd685dd37b40f943a014c2a7230b11c4495216
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8954e5f1959460c8546543e79b2db9cd49c8342b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270250"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Создание, изменение и удаление моментальных снимков в журнале отчетов
   Журнал отчета — это коллекция моментальных снимков отчета. Журнал отчета можно изменять, добавляя и удаляя моментальные снимки или редактируя свойства, от которых зависит его сохранение. Журнал отчета может быть создан вручную или по расписанию.  
@@ -67,7 +67,7 @@ ms.locfileid: "36097429"
  [Создание журнала отчета &#40;режим интеграции служб Reporting Services в SharePoint&#41;](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
  [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Управление содержимым сервера отчетов &#40;собственный режим служб SSRS&#41;](report-server-content-management-ssrs-native-mode.md)   
- [Добавить моментальный снимок к журналу отчета &#40;диспетчера отчетов&#41;](add-a-snapshot-to-report-history-report-manager.md)   
+ [Добавление моментального снимка к журналу отчета &#40;диспетчера отчетов&#41;](add-a-snapshot-to-report-history-report-manager.md)   
  [Ограничение размеров журнала отчета (диспетчер отчетов)](../reports/limit-report-history-report-manager.md)  
   
   

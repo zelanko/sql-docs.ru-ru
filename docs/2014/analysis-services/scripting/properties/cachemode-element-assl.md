@@ -1,5 +1,5 @@
 ---
-title: Элемент CacheMode (ASSL) | Документы Microsoft
+title: Элемент CacheMode (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - CacheMode element
 ms.assetid: bfb8f7bb-ccd3-4dfe-a36a-1cea15edfe40
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0698628ee699ab19abaf7c1b1857db3c1d68dfc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 790f3a087e0e7beda2d3cdbf228356fe1fa125d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330394"
 ---
 # <a name="cachemode-element-assl"></a>Элемент CacheMode (ASSL)
   Определяет механизм кэширования, который используется для обучающих данных, полученных при обработке структуры интеллектуального анализа данных.  
@@ -68,7 +68,7 @@ ms.locfileid: "36096006"
 |*ClearAfterProcessing*|Обучающие варианты кэшируются во время обработки и удаляются после обработки.|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `CacheMode` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.MiningStructure>.  
+ Элемент, соответствующий родителю параметра `CacheMode` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.MiningStructure>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

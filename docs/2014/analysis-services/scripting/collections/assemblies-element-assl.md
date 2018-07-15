@@ -1,5 +1,5 @@
 ---
-title: Элемент Assemblies (ASSL) | Документы Microsoft
+title: Элемент Assemblies (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Assemblies element
 ms.assetid: 8c9be991-0717-4fcf-97d9-13df0f27da05
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 777a1125d36f0d874ef85645c688ececffc2c869
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2990946d1e124027cf653db3148c55d4c828a3e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314814"
 ---
 # <a name="assemblies-element-assl"></a>Элемент Assemblies (ASSL)
-  Содержит коллекцию элементов [сборки](../objects/assembly-element-assl.md) элементы, связанные с [сервера](../objects/server-element-assl.md) или [базы данных](../objects/database-element-assl.md) элемента.  
+  Содержит коллекцию элементов [сборки](../objects/assembly-element-assl.md) элементы, связанные с [Server](../objects/server-element-assl.md) или [базы данных](../objects/database-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,10 +62,10 @@ ms.locfileid: "36097811"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[Database](../objects/database-element-assl.md), [Server](../objects/server-element-assl.md)|  
-|Дочерние элементы|[сборки](../objects/assembly-element-assl.md)|  
+|Дочерние элементы|[Сборки](../objects/assembly-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.AssemblyCollection>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.AssemblyCollection>.  
   
 ## <a name="see-also"></a>См. также  
  [Коллекции &#40;ASSL&#41;](collections-assl.md)  

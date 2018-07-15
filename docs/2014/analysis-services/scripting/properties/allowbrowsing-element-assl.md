@@ -1,5 +1,5 @@
 ---
-title: Элемент AllowBrowsing (ASSL) | Документы Microsoft
+title: Элемент AllowBrowsing (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllowBrowsing element
 ms.assetid: e5d09f8c-080b-4013-8c6a-0c9775e6ab25
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 722923cff6a839b6882c5a44de67ca075d0ea46f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26c93ea360fb7036179375ff62aa6f182c9b790f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282010"
 ---
 # <a name="allowbrowsing-element-assl"></a>Элемент AllowBrowsing (ASSL)
-  Определяет ли члены [роли](../objects/role-element-assl.md) элемент иметь разрешение на просмотр [MiningModel](../objects/miningmodel-element-assl.md) элемента.  
+  Определяет ли члены [роли](../objects/role-element-assl.md) элемент иметь разрешение на просмотр [MiningModel](../objects/miningmodel-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36097616"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `AllowBrowsing` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.MiningModelPermission>.  
+ Элемент, соответствующий родителю параметра `AllowBrowsing` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.MiningModelPermission>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Элемент KPI (ASSL) | Документы Microsoft
+title: Элемент KPI (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Kpi element
 ms.assetid: 1979a58f-97a8-4c1a-aa65-dcfb6d2404cf
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6205e1a14a992ed8bd0fc05f91d162e90be3346c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27b0bcbe2ddaabcc7b3f9ef16f3fa620a8c2db38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235644"
 ---
 # <a name="kpi-element-assl"></a>Элемент Kpi (ASSL)
-  Определяет ключевой показатель эффективности (KPI) в пределах [куба](cube-element-assl.md) элемент или [перспективы](perspective-element-assl.md) элемента.  
+  Определяет ключевой показатель эффективности (KPI) в пределах [куба](cube-element-assl.md) элемент или [перспективы](perspective-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36095318"
   
 |Предок или родитель|Дочерние элементы|  
 |------------------------|--------------------|  
-|[Cube](../collections/annotations-element-assl.md), [AssociatedMeasureGroupID](../properties/id-element-assl.md), [CurrentTimeMember](member-element-assl.md), [Description](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [Goal](../properties/goal-element-assl.md), [ID](../properties/id-element-assl.md), [Name](../properties/name-element-assl.md), [Status](../properties/status-element-assl.md), [StatusGraphic](../properties/statusgraphic-element-assl.md), [Translations](../collections/translations-element-assl.md), [Trend](../properties/trend-element-assl.md), [TrendGraphic](../properties/trendgraphic-element-assl.md), [Value](../properties/value-element-assl.md)|  
+|[Куб](../collections/annotations-element-assl.md), [AssociatedMeasureGroupID](../properties/id-element-assl.md), [CurrentTimeMember](member-element-assl.md), [описание](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [Цель](../properties/goal-element-assl.md), [идентификатор](../properties/id-element-assl.md), [имя](../properties/name-element-assl.md), [состояние](../properties/status-element-assl.md), [StatusGraphic](../properties/statusgraphic-element-assl.md), [переводы ](../collections/translations-element-assl.md), [Тренда](../properties/trend-element-assl.md), [TrendGraphic](../properties/trendgraphic-element-assl.md), [значение](../properties/value-element-assl.md)|  
 |[Перспективы](perspective-element-assl.md)|None|  
   
 ## <a name="remarks"></a>Примечания  

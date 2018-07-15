@@ -1,5 +1,5 @@
 ---
-title: Активация сущности для явных иерархий и коллекций (Master Data Services) | Документы Microsoft
+title: Активация сущности для явных иерархий и коллекций (Master Data Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], enabling for collections
 - entities [Master Data Services], enabling for explicit hierarchies
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c15f62eaebbfe77303004bb2417989ed5320ea11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a300dd4ab0a162c335dc0c0efac548dcb757f11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311924"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>Активация сущности для явных иерархий и коллекций (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] активации сущностей в явные иерархии и коллекции позволяет создавать явные иерархии и коллекции для сущности.  
@@ -50,7 +50,7 @@ ms.locfileid: "36096183"
   
 6.  Из **включить явные иерархии и коллекции** выберите **Да**.  
   
-7.  В **имя явной иерархии** введите имя явной иерархии.  
+7.  В **имя явной иерархии** поле, введите имя явной иерархии.  
   
 8.  По желанию снимите флажок **Обязательная иерархия** для создания необязательной иерархии.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36096183"
   
 -   [Создание явной иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
--   [Создайте коллекцию &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)  
+-   [Создание коллекции &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также  
  [Сущности &#40;службы Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   

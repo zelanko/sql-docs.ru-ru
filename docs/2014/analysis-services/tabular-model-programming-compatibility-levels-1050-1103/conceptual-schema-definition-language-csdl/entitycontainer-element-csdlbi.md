@@ -1,5 +1,5 @@
 ---
-title: Элемент EntityContainer (CSDLBI) | Документы Microsoft
+title: Элемент EntityContainer (CSDLBI) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 3c357a61a238c10244dd9f1941cdaa9483ef9d16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3e7b477c8f972f277db921c7adb6f9511efb065c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275210"
 ---
 # <a name="entitycontainer-element-csdlbi"></a>Элемент EntityContainer (CSDLBI)
   Элемент EntityContainer — сложный тип на основе типа языка CSDL EntityContainer, который определяет коллекцию сущностей в рамках единой модели данных. В приложении бизнес-аналитики модель данных, представленная элементом EntityContainer, может содержать несколько таблиц со столбцами, для которых объединены отношения, а также вычисления, меры и ключевые показатели эффективности. Он концептуально похож на базу данных или источник данных.  
@@ -53,7 +53,7 @@ ms.locfileid: "36097152"
 |IgnoreWidth|Логическое значение, указывающее, следует ли при сравнении строк учитывать ширину символов.|  
   
 ## <a name="directquerymode"></a>DirectQueryMode  
- **DirectQueryMode**  
+ **Режим Directquery**  
   
  Простой тип DirectQueryMode определяет тип запроса, используемый по умолчанию, когда модель может получать данные напрямую из реляционного источника данных. Это свойство применимо только к табличным моделям, работающим в режиме DirectQuery. В следующей таблице приводятся возможные значения перечисления в режиме DirectQuery.  
   

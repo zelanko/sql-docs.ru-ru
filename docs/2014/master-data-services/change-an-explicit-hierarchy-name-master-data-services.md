@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, changing name
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4b9ae4e9db2e2d48def332b337ff9788e26464e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e56e52948282d49db948b76fd1b3837f656fd8de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267080"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>Изменение имени явной иерархии (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить имя явной иерархии.  
@@ -45,11 +45,11 @@ ms.locfileid: "36098673"
   
 5.  Щелкните **Изменить выбранную сущность**.  
   
-6.  На **изменение сущности** щелкните явную иерархию, которую требуется переименовать.  
+6.  На **изменение сущности** щелкните явную иерархию, которую необходимо переименовать.  
   
 7.  Нажмите кнопку **изменить выбранную иерархию**.  
   
-8.  В **имя явной иерархии** введите новое имя иерархии.  
+8.  В **имя явной иерархии** поле, введите новое имя иерархии.  
   
 9. Нажмите кнопку **сохранить иерархию**.  
   

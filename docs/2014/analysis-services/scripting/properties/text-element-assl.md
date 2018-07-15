@@ -1,5 +1,5 @@
 ---
-title: Элемент Text (ASSL) | Документы Microsoft
+title: Элемент Text (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Text element
 ms.assetid: 0edece73-236f-4661-8102-3fcc29326bf4
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8cfc13728fa8c6f73e14e8534dd911316bb4616f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26eebe93b7bdf9662011363a2023aaf9e4fe0efa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328423"
 ---
 # <a name="text-element-assl"></a>Элемент Text (ASSL)
-  Содержит текст [команда](../objects/command-element-assl.md) элемента.  
+  Содержит текст [команда](../objects/command-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36096001"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `Text` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Command>.  
+ Элемент, соответствующий родителю параметра `Text` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Command>.  
   
 ## <a name="see-also"></a>См. также  
  [Команды элемент &#40;ASSL&#41;](../collections/commands-element-assl.md)   

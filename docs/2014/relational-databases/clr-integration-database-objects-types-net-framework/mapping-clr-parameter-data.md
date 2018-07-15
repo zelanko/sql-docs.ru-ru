@@ -1,13 +1,11 @@
 ---
-title: Сопоставление данных о параметрах CLR | Документы Microsoft
+title: Сопоставление данных параметров CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,23 +26,23 @@ helpviewer_keywords:
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 caps.latest.revision: 69
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a7c442f3bf102c668f0889f008b8a87205b2257
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 34d30e57908e8cd44eefa43d6f2d030ae0d102f7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194297"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354526"
 ---
 # <a name="mapping-clr-parameter-data"></a>Сопоставление данных о параметрах CLR
-  В следующей таблице перечислены [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , типы данных эквивалентов в среде (CLR) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в `System.Data.SqlTypes` пространства имен и их собственные эквиваленты CLR в [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
+  В следующей таблице перечислены [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных, их эквиваленты в системе common language runtime (CLR) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в `System.Data.SqlTypes` пространства имен и их собственные эквиваленты CLR в [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
 ||||  
 |-|-|-|  
 |**Тип данных SQL Server**|Тип (в System.Data.SqlTypes or Microsoft.SqlServer.Types)|**Тип данных CLR (.NET Framework)**|  
-|`bigint`|`SqlInt64`|**Int64, допускающие значения NULL\<Int64 >**|  
+|`bigint`|`SqlInt64`|**Int64, допускающее значение NULL\<Int64 >**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`bit`|`SqlBoolean`|**Логический, допускающие значения NULL\<логическое >**|  
 |`char`|None|None|  
@@ -53,30 +51,30 @@ ms.locfileid: "36194297"
 |`datetime`|`SqlDateTime`|**DateTime, допускающий значение NULL\<DateTime >**|  
 |`datetime2`|None|**DateTime, допускающий значение NULL\<DateTime >**|  
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset, допускающие значения NULL\<DateTimeOffset >**|  
-|`decimal`|`SqlDecimal`|**Decimal, допускающий значение NULL\<десятичное число >**|  
-|`float`|`SqlDouble`|**Двойное, допускающие значения NULL\<Double >**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` определен в Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакета дополнительных компонентов](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` определен в Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакета дополнительных компонентов](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` определен в Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакета дополнительных компонентов](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
+|`decimal`|`SqlDecimal`|**Decimal, допускающий значение NULL\<десятичное >**|  
+|`float`|`SqlDouble`|**Double, допускающее значение NULL\<Double >**|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography` определяется в библиотеке Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакет дополнительных компонентов](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` определяется в библиотеке Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакет дополнительных компонентов](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` определяется в библиотеке Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакет дополнительных компонентов](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
 |`image`|None|None|  
-|`int`|`SqlInt32`|**Int32, допускающие значения NULL\<Int32 >**|  
-|`money`|`SqlMoney`|**Decimal, допускающий значение NULL\<десятичное число >**|  
+|`int`|`SqlInt32`|**Int32, допускающий значение NULL\<Int32 >**|  
+|`money`|`SqlMoney`|**Decimal, допускающий значение NULL\<десятичное >**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
 |`ntext`|None|None|  
-|`numeric`|`SqlDecimal`|**Decimal, допускающий значение NULL\<десятичное число >**|  
+|`numeric`|`SqlDecimal`|**Decimal, допускающий значение NULL\<десятичное >**|  
 |`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` лучше подходит для передачи данных и доступа, тогда как `SQLString` более подходит для выполнения строковых операций.|`String, Char[]`|  
-|`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, строки, Char [], Nullable\<char >**|  
-|`real`|`SqlSingle` (но `SqlSingle` поддерживает больший диапазон значений, чем `real`)|**Единый, допускающие значения NULL\<один >**|  
+|`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, строка, Char [], Nullable\<char >**|  
+|`real`|`SqlSingle` (но `SqlSingle` поддерживает больший диапазон значений, чем `real`)|**Единый, допускающие значения NULL\<единый >**|  
 |`rowversion`|None|`Byte[]`|  
-|`smallint`|`SqlInt16`|**Int16, допускающие значения NULL\<Int16 >**|  
-|`smallmoney`|`SqlMoney`|**Decimal, допускающий значение NULL\<десятичное число >**|  
+|`smallint`|`SqlInt16`|**Int16, допускающее значение NULL\<Int16 >**|  
+|`smallmoney`|`SqlMoney`|**Decimal, допускающий значение NULL\<десятичное >**|  
 |`sql_variant`|None|`Object`|  
 |`table`|None|None|  
 |`text`|None|None|  
 |`time`|None|**Интервал времени, допускающие значения NULL\<TimeSpan >**|  
 |`timestamp`|None|None|  
 |`tinyint`|`SqlByte`|**Байт, допускающий значение NULL\<байтов >**|  
-|`uniqueidentifier`|`SqlGuid`|**Идентификатор GUID, допускающих значение NULL\<Guid >**|  
+|`uniqueidentifier`|`SqlGuid`|**Идентификатор GUID, допускающий значение NULL\<Guid >**|  
 |`User-defined type(UDT)`|None|Тот же класс связывается с определяемым пользователем типом данных в той же сборке или в зависимой сборке.|  
 |**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**байт, Byte [], Nullable\<байтов >**|  

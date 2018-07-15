@@ -1,5 +1,5 @@
 ---
-title: Настройка компонента Database Engine — Провизионирование учетных записей | Документы Microsoft
+title: Настройка компонента Database Engine — Провизионирование учетных записей | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 834b26bc-49de-4033-88d5-6aa7b1609720
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4377f3eb668f78cdf29b886acf22549e1e5be0aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 895af367f5acdd8c17c66d7575bf64376a401867
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284470"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>Настройка компонента Database Engine — провизионирование учетных записей
   Эта страница служит для задания режима безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также для добавления пользователей или групп Windows в качестве администраторов компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -53,7 +53,7 @@ ms.locfileid: "36099450"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Никогда не указывайте пустой или простой пароль для пользователя sa.  
   
- **Смешанный режим (проверка подлинности Windows или проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])**  
+ ** Смешанный режим (проверка подлинности Windows или проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])**  
  Возможность подключения пользователей с помощью режима проверки подлинности Windows или проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Пользователи, которые подключаются под учетной записью Windows, могут использовать доверенные соединения, которые проверяются Windows.  
   
  При выборе смешанного режима проверки подлинности и наличии условий для использования входных имен SQL для согласования унаследованных приложений необходимо установить надежные пароли для всех учетных записей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

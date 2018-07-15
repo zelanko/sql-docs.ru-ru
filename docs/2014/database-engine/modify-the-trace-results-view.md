@@ -1,5 +1,5 @@
 ---
-title: Изменить представление результатов трассировки | Документы Microsoft
+title: Изменить представление результатов трассировки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5bb647bb704bee1b33eee00c9b13903d48140ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a2c1e9c9c2d0041e2e09156e4f33744ea1964812
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302764"
 ---
 # <a name="modify-the-trace-results-view"></a>Изменение представления результатов трассировки
   Данный раздел содержит описание процесса изменения представления результатов трассировки сеанса расширенных событий в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] посредством выполнения следующих задач.  
   
-1.  [Добавление или удаление столбцов](#AddRemoveColumns)  
+1.  [Добавить или удалить столбцы](#AddRemoveColumns)  
   
 2.  [Создание, изменение или удаление объединенных столбцов](#ChangeColumns)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "36096906"
   
 4.  [Группирование результатов](#GroupResults)  
   
-5.  [Агрегатная обработка результатов](#AggregateResults)  
+5.  [Статистическая обработка результатов](#AggregateResults)  
   
 6.  [Фильтрация результатов](#Filter)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36096906"
   
 8.  [Изменение параметров отображения](#ChangeDisplay)  
   
-##  <a name="AddRemoveColumns"></a> Добавление или удаление столбцов  
+##  <a name="AddRemoveColumns"></a> Добавить или удалить столбцы  
   
 1.  Откройте XEL-файл для просмотра результатов трассировки.  
   

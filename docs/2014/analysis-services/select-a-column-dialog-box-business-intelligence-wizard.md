@@ -1,5 +1,5 @@
 ---
-title: Выберите столбец диалоговое окно «» (мастер бизнес-аналитики) | Документы Microsoft
+title: Выбор столбцов-диалоговое окно (мастер бизнес-аналитики) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.specifyordering.columnselection.f1
 ms.assetid: bf25d649-f35a-458b-a8f4-9b159b3b2abe
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 69400a145f24e6aa09a7f66868e76863ecebf71d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5267a67bcf89cb386731f612952ae661defde9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317024"
 ---
 # <a name="select-a-column-dialog-box-business-intelligence-wizard"></a>Диалоговое окно «Выбор столбца» (мастер бизнес-аналитики)
   Диалоговое окно **Выбор столбца** используется для выбора столбца из списка таблиц, представленных в дереве просмотра. Это диалоговое окно открывается мастером бизнес-аналитики.  

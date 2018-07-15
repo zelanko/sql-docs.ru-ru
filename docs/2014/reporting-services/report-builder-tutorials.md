@@ -1,5 +1,5 @@
 ---
-title: Учебники (построитель отчетов) | Документы Microsoft
+title: Учебники (построитель отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 92d54d4e6f0db25605bf3d59ac7de59953d43d71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d5c422eded8ac3ffb54306790c88a80b0f841736
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266160"
 ---
 # <a name="tutorials-report-builder"></a>Учебники (построитель отчетов)
   Следующие учебники по построителю отчетов помогают научиться создавать простые отчеты.  
   
- [Необходимые условия для использования учебников &#40;построитель отчетов&#41;](prerequisites-for-tutorials-report-builder.md)  
+ [Предварительные требования для использования учебников &#40;построитель отчетов&#41;](prerequisites-for-tutorials-report-builder.md)  
  Чтобы использовать эти учебники, необходимо иметь доступ только для чтения к базе данных [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] и разрешения на доступ к серверу отчетов служб [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] .  
   
  Чтобы получить доступ к этим объектам, обратитесь к администратору сервера отчетов.  
@@ -56,7 +56,7 @@ ms.locfileid: "36098824"
  [Учебник. Добавление спарклайна в отчет (построитель отчетов)](tutorial-add-a-sparkline-to-your-report-report-builder.md)  
  Выполняйте пошаговые процедуры из этого учебника, чтобы узнать, как создать матрицу и добавить в нее набор спарклайн графиков.  
   
- [Учебник: Добавление ключевого показателя Эффективности в отчет &#40;построитель отчетов&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
+ [Учебник: Добавление ключевого показателя Эффективности к отчету &#40;построитель отчетов&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
  Выполните пошаговые процедуры из этого учебника, чтобы научиться добавлять к отчету ключевой показатель эффективности.  
   
  [Учебник: Отчет-карта &#40;построитель отчетов&#41;](tutorial-map-report-report-builder.md)  
@@ -74,6 +74,6 @@ ms.locfileid: "36098824"
 ## <a name="see-also"></a>См. также  
  [Представление конструктора отчетов (построитель отчетов)](report-builder/report-design-view-report-builder.md)   
  [Построитель отчетов в SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
- [Учебник: Создание стандартного отчета с диаграммой сети &#40;построитель отчетов&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Учебник: Создание стандартного отчета с диаграммой автономно &#40;построитель отчетов&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
   
   

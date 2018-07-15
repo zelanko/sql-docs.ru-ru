@@ -1,5 +1,5 @@
 ---
-title: Мастер формирования схем (службы Analysis Services) | Документы Microsoft
+title: Мастер формирования схем (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - relational schema [Analysis Services]
 ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 82df99618c39c8fb7212747eed2c9cc269701ca5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1842a775468c03f47b9d6af19e2d1450ce2e8921
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232034"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>Мастер формирования схем (службы Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] поддерживает два метода работы с реляционными схемами при определении объектов OLAP в рамках проекта или базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . В целом, определение объектов OLAP основано на модели логических данных, созданной в представлении источника данных в проекте или базе данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Такое представление источника данных определяется на основе элементов схемы одного или более источников реляционных данных в соответствии с настройками представления источников данных.  
@@ -43,7 +43,7 @@ ms.locfileid: "36095803"
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Используйте мастер формирования схем &#40;служб Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|Содержит описание формирования схемы для баз данных предметной области и промежуточной области хранения.|  
+|[Использовать мастер формирования схем &#40;служб Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|Содержит описание формирования схемы для баз данных предметной области и промежуточной области хранения.|  
 |[Основные сведения о схемах баз данных](understanding-the-database-schemas.md)|Содержит описание схемы, формируемой для баз данных предметной области и промежуточной области.|  
 |[Основные сведения о добавочном создании](understanding-incremental-generation.md)|Содержит описание возможностей постепенного создания мастера формирования схем.|  
   

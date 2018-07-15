@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: eb056a0a156526d5adf3f280bc8aeba302cd5c58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 66bd7f7e6bc67856a3c5f6e231a2c554a3eb4b29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264430"
 ---
 # <a name="configure-an-oracle-publisher"></a>Настройка издателя Oracle
   Публикации издателей Oracle создаются таким же способом, как и публикации моментальных снимков и публикации транзакций, но перед тем как создать публикацию от издателя Oracle, необходимо выполнить следующие шаги (в данном разделе подробно описаны шаги 1, 3 и 4):  

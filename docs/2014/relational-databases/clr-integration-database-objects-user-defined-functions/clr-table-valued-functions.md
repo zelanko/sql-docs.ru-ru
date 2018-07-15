@@ -1,13 +1,11 @@
 ---
-title: Возвращающие табличные значения функции CLR | Документы Microsoft
+title: Возвращающие табличные значения функции CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - TVFs [CLR integration]
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 caps.latest.revision: 86
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 83d955467034448e5c9a7337b674b85a12acb0c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 67bb174803f7368257217e5244ef023e2c274929
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102216"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354006"
 ---
 # <a name="clr-table-valued-functions"></a>Функции среды CLR с табличным значением
   Функция с табличным значением представляет собой определяемую пользователем функцию, которая возвращает таблицу.  
@@ -81,7 +79,7 @@ select * from table t cross apply function(t.column);
   
 -   Если они созданы из внешних данных. Например, функция с табличным значением, считывающая журнал событий и представляющая его в виде таблицы.  
   
- **Примечание** табличную функцию можно выполнить только доступ к данным в [!INCLUDE[tsql](../../includes/tsql-md.md)] запроса в `InitMethod` метода, а не в `FillRow` метод. Метод `InitMethod` не должен быть помечен свойством атрибута `SqlFunction.DataAccess.Read`, если выполняется запрос [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ **Примечание** табличную функцию может выполнять только доступ к данным через [!INCLUDE[tsql](../../includes/tsql-md.md)] запроса в `InitMethod` метод, а не в `FillRow` метод. Метод `InitMethod` не должен быть помечен свойством атрибута `SqlFunction.DataAccess.Read`, если выполняется запрос [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="a-sample-table-valued-function"></a>Образец функции с табличным значением  
  Следующая функция с табличным значением возвращает сведения из журнала системных событий. Функция принимает один строковый аргумент, содержащий имя журнала событий.  
@@ -180,7 +178,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Образец. Возвращение результатов запроса SQL Server  
- В следующем образце показана возвращающая табличное значение функция, которая запрашивает базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В этом образце используется база данных AdventureWorks Light из [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. В разделе [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) Дополнительные сведения о загрузке AdventureWorks.  
+ В следующем образце показана возвращающая табличное значение функция, которая запрашивает базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В этом образце используется база данных AdventureWorks Light из [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. См. в разделе [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) Дополнительные сведения о загрузке AdventureWorks.  
   
  Задайте для файла исходного кода имя FindInvalidEmails.cs или FindInvalidEmails.vb.  
   

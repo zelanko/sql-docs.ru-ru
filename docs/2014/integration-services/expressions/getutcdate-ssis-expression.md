@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], GETUTCDATE
 - current date
@@ -18,13 +18,13 @@ ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 091063acbaea65d155e578ff6a4c21c95d941a39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbca67b78be052e50e5e554be194f2fea440b3de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296824"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE (выражение служб SSIS)
   Возвращает текущую дату системы в формате времени UTC (универсальное время, или время по Гринвичу), используя формат DT_DBTIMESTAMP. Функция GETUTCDATE не имеет аргументов.  
@@ -62,7 +62,7 @@ DATEADD("Month",3,GETUTCDATE())
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Функция GETDATE &#40;выражение служб SSIS&#41;](getdate-ssis-expression.md)   
+ [GETDATE &#40;выражение служб SSIS&#41;](getdate-ssis-expression.md)   
  [Функции &#40;выражение служб SSIS&#41;](functions-ssis-expression.md)  
   
   

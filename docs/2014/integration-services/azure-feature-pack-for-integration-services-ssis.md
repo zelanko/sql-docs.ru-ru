@@ -1,5 +1,5 @@
 ---
-title: Пакет дополнительных компонентов Azure | Документы Microsoft
+title: Пакет дополнительных компонентов Azure | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL11.SSIS.AZURE.F1
 - SQL12.SSIS.AZURE.F1
@@ -16,13 +16,13 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43ddc105e442e510b54a70ed22ef27336f1497bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c2e496c8fb9aebff66d998f742d8604558112e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281740"
 ---
 # <a name="azure-feature-pack"></a>Пакет дополнительных компонентов Azure
 Пакет дополнительных компонентов Azure для служб SQL Server Integration Services (SSIS) — это дополнение, которое предоставляет перечисленные на этой странице компоненты для подключения служб SSIS к Azure, передачи данных между Azure и локальными источниками данных и обработки данных, хранящихся в Azure.
@@ -69,7 +69,7 @@ ms.locfileid: "36098006"
     
     -   [Цель Azure Data Lake Store](../../2014/integration-services/azure-data-lake-store-destination.md)
   
--   Перечислитель больших двоичных объектов Azure & ADLS файл перечислителя. См. раздел [Foreach Loop Container](control-flow/foreach-loop-container.md).  
+-   Перечислитель больших двоичных объектов Azure и перечислитель файлов ADLS. См. раздел [Foreach Loop Container](control-flow/foreach-loop-container.md).  
   
  
 ## <a name="download-the-feature-pack"></a>Скачивание пакета дополнительных компонентов  
@@ -98,17 +98,17 @@ ms.locfileid: "36098006"
   
 5.  Скачивание выходных данных из хранилища больших двоичных объектов Azure с помощью задачи скачивания больших двоичных объектов Azure HDInsight.  
   
- ![Службы SSIS-AzureConnector-BigDataScenario](media/ssis-azureconnector-bigdatascenario.png "служб SSIS-AzureConnector-BigDataScenario")  
+ ![SSIS-AzureConnector-BigDataScenario](media/ssis-azureconnector-bigdatascenario.png "служб SSIS-AzureConnector-BigDataScenario")  
   
 ### <a name="cloud-data-archiving"></a>Архивация данных облака  
  Используйте назначение больших двоичных объектов Azure в пакете служб SSIS для записи выходных данных в хранилище больших двоичных объектов Azure или используйте источник больших двоичных объектов Azure для чтения данных из хранилища больших двоичных объектов Azure.  
   
- ![Службы SSIS-AzureConnector-CloudArchive-1](media/ssis-azureconnector-cloudarchive-1.png "служб SSIS-AzureConnector-CloudArchive-1")  
+ ![SSIS-AzureConnector-CloudArchive-1](media/ssis-azureconnector-cloudarchive-1.png "служб SSIS-AzureConnector-CloudArchive-1")  
   
- ![Службы SSIS-AzureConnector-CloudArchive-2](media/ssis-azureconnector-cloudarchive-2.png "служб SSIS-AzureConnector-CloudArchive-2")  
+ ![SSIS-AzureConnector-CloudArchive-2](media/ssis-azureconnector-cloudarchive-2.png "служб SSIS-AzureConnector-CloudArchive-2")  
   
  Используйте контейнер цикла Foreach с перечислителем больших двоичных объектов Azure для обработки данных в нескольких файлах больших двоичных объектов.  
   
- ![Службы SSIS-AzureConnector-CloudArchive-3](media/ssis-azureconnector-cloudarchive-3.png "служб SSIS-AzureConnector-CloudArchive-3")  
+ ![SSIS-AzureConnector-CloudArchive-3](media/ssis-azureconnector-cloudarchive-3.png "служб SSIS-AzureConnector-CloudArchive-3")  
   
   

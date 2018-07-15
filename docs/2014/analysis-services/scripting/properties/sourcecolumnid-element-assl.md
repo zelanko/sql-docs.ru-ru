@@ -1,5 +1,5 @@
 ---
-title: Элемент SourceColumnID (ASSL) | Документы Microsoft
+title: Элемент SourceColumnID (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - SourceColumnID element
 ms.assetid: 715c0be7-aa07-4dff-a909-9738224941ec
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d1ad5aecbf77103ae3e06b932dd0da678fbaa83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 523977b881e9e8357b32cd606252d0a758d3b46a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281780"
 ---
 # <a name="sourcecolumnid-element-assl"></a>Элемент SourceColumnID (ASSL)
-  Содержит идентификатор (ID) исходного столбца структуры интеллектуального анализа данных в родительском элементе [MiningStructure](../objects/miningstructure-element-assl.md) элемента.  
+  Содержит идентификатор (ID) из исходного столбца структуры интеллектуального анализа данных в предке [MiningStructure](../objects/miningstructure-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36099333"
 ## <a name="remarks"></a>Примечания  
  Значение `SourceColumnID` совпадает с идентификатором столбца структуры интеллектуального анализа данных в [столбцы](../collections/columns-element-assl.md) коллекции родительского объекта `MiningStructure`.  
   
- Элемент, соответствующий родителю параметра `SourceColumnID` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.MiningModelColumn>.  
+ Элемент, соответствующий родителю параметра `SourceColumnID` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.MiningModelColumn>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

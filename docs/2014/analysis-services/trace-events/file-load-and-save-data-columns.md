@@ -1,5 +1,5 @@
 ---
-title: Загрузка и сохранение столбцы данных файлов | Документы Microsoft
+title: Загрузка и сохранение данных столбцы файлов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0101e809-d6ea-4d0c-95ec-65dd77acf665
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f3e5ddbc14ab934dfdd0c1a16c2ec7f711f67a57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a2be1023518327e28861cffbcd1406f8f1650c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285950"
 ---
 # <a name="file-load-and-save-data-columns"></a>Столбцы загрузки файлов и сохранения данных
   В категорию событий «Загрузка и сохранение файлов» входят следующие классы событий:  

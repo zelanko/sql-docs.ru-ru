@@ -1,5 +1,5 @@
 ---
-title: Элемент AggregationFunction (ASSL) | Документы Microsoft
+title: Элемент AggregationFunction (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationFunction element
 ms.assetid: 40cfc7f9-1089-45f9-be90-a29770ed9682
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c8b28c740e82d661c2664eac576f0e079fd3d46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90908001138f59d4270811376ac44025148889cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308444"
 ---
 # <a name="aggregationfunction-element-assl"></a>Элемент AggregationFunction (ASSL)
   Содержит статистическую функцию, используемую для типа счета.  
@@ -67,7 +67,7 @@ ms.locfileid: "36096942"
 |Значение|Описание|  
 |-----------|-----------------|  
 |*Sum*|Статистическая обработка этой меры выполняется с помощью функции `Sum`.|  
-|*Счетчик*|Статистическая обработка этой меры выполняется с помощью функции `Count`.|  
+|*Число*|Статистическая обработка этой меры выполняется с помощью функции `Count`.|  
 |*Min*|Статистическая обработка этой меры выполняется с помощью функции `Min`.|  
 |*Max*|Статистическая обработка этой меры выполняется с помощью функции `Max`.|  
 |*DistinctCount*|Статистическая обработка этой меры выполняется с помощью функции `DistinctCount`.|  
@@ -81,7 +81,7 @@ ms.locfileid: "36096942"
  Перечисление, соответствующее допустимым значениям элемента `AggregationFunction` в модели объектов AMO, — это <xref:Microsoft.AnalysisServices.AggregationFunction>.  
   
 ## <a name="see-also"></a>См. также  
- [Учетные записи элемента &#40;ASSL&#41;](../collections/accounts-element-assl.md)   
+ [Учетные записи элемент &#40;ASSL&#41;](../collections/accounts-element-assl.md)   
  [Свойства &#40;ASSL&#41;](properties-assl.md)  
   
   

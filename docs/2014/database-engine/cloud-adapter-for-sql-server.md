@@ -1,5 +1,5 @@
 ---
-title: Адаптера для облака для SQL Server | Документы Microsoft
+title: Адаптера для облака для SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cloud adapter
 - Deploy to Windows Azure
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74a991f9dc8c20e1cf4342312ecd66f95e1b240d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fd0a6901770c3c30138e694c9e792146be85ba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243384"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Адаптер для облака для SQL Server
   Служба Cloud Adapter создается в ходе провизионирования [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на виртуальной машине Windows Azure. Служба адаптера для облака создает самозаверяющий SSL-сертификат в рамках своего первого запуска, а затем запускается от имени учетной записи **Local System** . Она создает файл конфигурации, который используется для ее настройки. Служба адаптера для облака также создает правило брандмауэра Windows для разрешения входящих TCP-подключений на стандартный порт 11435.  
@@ -34,7 +34,7 @@ ms.locfileid: "36097342"
   
 -   Cloud Adapter поддерживается в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 и более поздних версиях. В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 службе Cloud Adapter для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] требуются объекты SMO для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012.  
   
--   Веб-служба адаптера для облака запускается в учетной записи **Local System** и проверяет учетные данные клиента до выполнения любой задачи. Предоставленные клиентом учетные данные должны принадлежать использовать учетную запись, которая является членом локальной **Администраторы** на удаленном компьютере.  
+-   Веб-служба адаптера для облака запускается в учетной записи **Local System** и проверяет учетные данные клиента до выполнения любой задачи. Предоставленные клиентом учетные данные должны принадлежать использовать учетную запись, которая является членом локальной группы **Администраторы** группы на удаленном компьютере.  
   
 -   Служба Cloud Adapter поддерживает только проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36097342"
 ## <a name="cloud-adapter-configuration-settings"></a>Параметры конфигурации адаптера для облака  
  Используйте следующую конфигурацию, чтобы изменить параметры адаптера для облака.  
   
--   **По умолчанию путь к файлу конфигурации** — C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
+-   **Путь по умолчанию для файла конфигурации** — C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
   
 -   **Параметры файла конфигурации** -  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36097342"
   
 -   **События и трассировки** — все события записываются в журнал событий приложений.  
   
--   **Управление, конфигурация** — использовать файл конфигурации, расположенных в: C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
+-   **Управление, конфигурация** — использовать файл конфигурации, расположенный в: C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
   
 |Ошибка|Идентификатор ошибки|Причина|Решение|  
 |-----------|--------------|-----------|----------------|  

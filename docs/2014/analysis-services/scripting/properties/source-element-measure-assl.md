@@ -1,5 +1,5 @@
 ---
-title: Исходный элемент (Measure) (ASSL) | Документы Microsoft
+title: Исходный элемент (Measure) (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 9bae7ba4-3065-4623-b3e0-d54cebea7503
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed41316f62469268d86a89d0c0a5e59f07c8f726
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d4e374490fdfe04e5da39a0f4e9424b2cb1ccde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323214"
 ---
 # <a name="source-element-measure-assl"></a>Элемент Source (Measure) (ASSL)
-  Содержит сведения об источнике, содержащем значение [мер](../objects/measure-element-assl.md) элемента.  
+  Содержит сведения об источнике, содержащем значение [мер](../objects/measure-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36097806"
 ## <a name="remarks"></a>Примечания  
  `Source` Из `DataItem`, который используется в качестве `Source` из `Measure`, в свою очередь может иметь тип [RowBinding](../data-type/binding-data-type-assl.md), [ColumnBinding](../data-type/columnbinding-data-type-assl.md), [MeasureBinding ](../data-type/measurebinding-data-type-assl.md), или [CubeDimensionBinding](../data-type/dimensionbinding-data-type-assl.md).  
   
- Дополнительные сведения о `DataItem` типа, включая таблицы объектов языка ASSL и свойства `DataItem` введите см. в разделе [DataItem, тип данных &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+ Дополнительные сведения о `DataItem` типа, включая таблицы объектов языка ASSL и свойства `DataItem` введите, см. в разделе [тип данных DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
- Элемент, соответствующий родительский `Source` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Measure>.  
+ Элемент, соответствующий родителю параметра `Source` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Measure>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

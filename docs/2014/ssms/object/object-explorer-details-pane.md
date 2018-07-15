@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.report.f1
 - sql12.swb.summary.general.f1
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - searching objects [SQL Server]
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 45c9e3808bb3d546441060431c0d311f22c95904
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5a24c1f4e695b86d27737dc09df33a7a91f2bdac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313144"
 ---
 # <a name="object-explorer-details-pane"></a>Область сведений обозревателя объектов
   Подробности обозревателя объектов — это компонент среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], который обеспечивает просмотр всех объектов сервера и пользовательский интерфейс для управления ими. Возможности обозревателя объектов могут незначительно отличаться в зависимости от типа сервера, но в общем случае они включают функции разработки для баз данных, а также функции управления для всех типов серверов.  
@@ -91,7 +91,7 @@ ms.locfileid: "36096566"
 ## <a name="sql-server-object-search"></a>Поиск объектов SQL Server  
  Шаблоны  
   
--   Поддерживаются стандартные символы-шаблоны. Например, поиск по **dm_os%counters** вернет как "dm_os_memory_cache_counters", так и "dm_os_performance_counters". Дополнительные сведения см. в разделе [поиск текста с символами-шаблонами](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Поддерживаются стандартные символы-шаблоны. Например, поиск по **dm_os%counters** вернет как "dm_os_memory_cache_counters", так и "dm_os_performance_counters". Дополнительные сведения см. в разделе [поиск текста с помощью подстановочных знаков](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
  Область поиска  
   

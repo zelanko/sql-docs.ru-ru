@@ -1,5 +1,5 @@
 ---
-title: 'Параметры (текстовый редактор: XML:Tabs страница) | Документы Microsoft'
+title: 'Параметры (текстовый редактор: XML:Tabs ") | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Tabs
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb41fb44ad1f820623ab3db96b1bf6108fd580a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2843acbc8935d8bd9f505a9265c704a342ddee3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324924"
 ---
-# <a name="options-text-editorxmltabs-page"></a>Параметры (текстовый редактор: XML:Tabs страница)
+# <a name="options-text-editorxmltabs-page"></a>Параметры (страница «Текстовый редактор: XML:Tabs»)
   Это диалоговое окно используется для изменения режима табуляции в редакторе XML, который используется для изменения XML-документов. Для вывода этих параметров выберите пункт **Параметры** в меню **Сервис** , раскройте узел **Текстовый редактор** , раскройте узел **XML** и щелкните **Табуляции**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Настройка параметров в нескольких местах  
@@ -33,7 +33,7 @@ ms.locfileid: "36095975"
  **None**  
  Если данный параметр выбран, при нажатии клавиши ВВОД отступ у новой строки создаваться не будет. Курсор помещается в первый столбец новой строки.  
   
- **блок**  
+ **Блок**  
  Если выбран данный режим, то новая строка, создаваемая при нажатии клавиши ВВОД, будет автоматически перемещена на такое же расстояние, что и предыдущая.  
   
  **Смарт-**  

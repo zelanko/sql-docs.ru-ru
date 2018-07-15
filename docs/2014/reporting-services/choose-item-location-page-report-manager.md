@@ -1,5 +1,5 @@
 ---
-title: Страница «Выбор расположения элемента» (диспетчер отчетов) | Документы Microsoft
+title: «Выбор расположения элементов» (диспетчер отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bf08188225c10d72230eea781ac9ebbff3d7c5f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3e0f94a0785aa13fc4c83c304e207b8775e58b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260521"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Страница «Выбор расположения элементов» (диспетчер отчетов)
   Страница «Выбор расположения элемента» позволяет выбрать папку для нового связанного отчета или новой модели. При создании связанного отчета или модели для определенной группы пользователей может потребоваться переместить элемент в папку с другими отчетами и моделями этой группы пользователей. Необходимо выбрать существующую папку, для которой имеется разрешение на добавление данных.  
@@ -66,7 +66,7 @@ ms.locfileid: "36099248"
   
 ## <a name="see-also"></a>См. также  
  [Страница "Создание связанного отчета" (диспетчер отчетов)](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
- [Страница «Создание модели» &#40;диспетчера отчетов&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
+ [Новая страница модели &#40;диспетчера отчетов&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

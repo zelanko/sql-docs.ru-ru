@@ -1,5 +1,5 @@
 ---
-title: Редактор назначения OLE DB (страница «Диспетчер соединений») | Документы Microsoft
+title: Редактор назначения OLE DB (страница «Диспетчер соединений») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.connection.f1
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 caps.latest.revision: 81
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0cead24f56ca904d8d1286dfb7e1dd1b96302291
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 1e6aaff0e415aeaab5e42395a3acd7c0b96a0f00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328074"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>Редактор назначения OLE DB (страница «Диспетчер соединений»)
   Страница **Диспетчер соединений** диалогового окна **Редактор назначения «OLE DB»** используется для выбора подключения OLE DB для назначения. На этой странице также можно выбрать таблицу или представление базы данных.  
   
 > [!NOTE]  
->  `CommandTimeout` Свойство назначения «OLE DB» недоступно в **Редактор назначения OLE DB**, но может быть задано с помощью **расширенный редактор**. Кроме того, некоторые параметры быстрой загрузки доступны только в **Расширенном редакторе**. Дополнительные сведения об этих свойствах см. в подразделе «Назначение "OLE DB"» раздела [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
+>  `CommandTimeout` Свойство назначения «OLE DB» недоступно в **Редактор назначения OLE DB**, однако его можно установить с помощью **расширенный редактор**. Кроме того, некоторые параметры быстрой загрузки доступны только в **Расширенном редакторе**. Дополнительные сведения об этих свойствах см. в подразделе «Назначение "OLE DB"» раздела [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
   
  Дополнительные сведения о назначении «OLE DB» см. в разделе [OLE DB Destination](data-flow/ole-db-destination.md).  
   
@@ -161,9 +161,9 @@ ms.locfileid: "36324718"
  Проверить синтаксис текста запроса.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения OLE DB &#40;страница «сопоставления»&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
- [Редактор назначения OLE DB &#40;страницы вывода ошибок&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
+ [Редактор назначения OLE DB &#40;странице вывода ошибок&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [Загрузка данных с помощью назначения «OLE DB»](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

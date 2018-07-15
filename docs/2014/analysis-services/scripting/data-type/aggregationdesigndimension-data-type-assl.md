@@ -1,5 +1,5 @@
 ---
-title: Тип данных AggregationDesignDimension (ASSL) | Документы Microsoft
+title: Тип данных AggregationDesignDimension (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AggregationDesignDimension data type
 ms.assetid: 06a0d418-014c-4f40-a63a-5cfeee3f6a41
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0828fb652833b84948552ffe1802af77e0d1e83c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 74a28002d7074ad58c044b4af57310c22518a87d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247254"
 ---
 # <a name="aggregationdesigndimension-data-type-assl"></a>Тип данных AggregationDesignDimension (ASSL)
-  Определяет тип-примитив, представляющий связь между измерением куба и [AggregationDesign](../objects/aggregationdesign-element-assl.md) элемента.  
+  Определяет тип-примитив, представляющий связь между измерением куба и [AggregationDesign](../objects/aggregationdesign-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,10 +62,10 @@ ms.locfileid: "36097142"
 |Производные элементы|[Измерение](../objects/dimension-element-assl.md) ([измерения](../collections/dimensions-element-assl.md) коллекцию [AggregationDesign](../objects/aggregationdesign-element-assl.md))|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.AggregationDesignDimension>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.AggregationDesignDimension>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент AggregationDesign &#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md)   
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

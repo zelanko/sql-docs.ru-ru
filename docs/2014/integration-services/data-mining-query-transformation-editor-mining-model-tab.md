@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразования запросов интеллектуального анализа данных (вкладка «модель интеллектуального анализа данных») | Документы Microsoft
+title: Редактор преобразования запроса интеллектуального анализа данных (вкладка «модель интеллектуального анализа данных») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytransformation.miningmodel.f1
 helpviewer_keywords:
 - Data Mining Query Transformation Editor
 ms.assetid: 432bba6f-b218-403e-b92c-59ef9f39e4d5
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fad00af545c430f5f1b7d9cf58085a2c378c84e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d47d8d95c08c2e625183832eec18a569b4171de0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304094"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>Редактор преобразования «Запрос интеллектуального анализа данных» (вкладка «Модель интеллектуального анализа данных»)
   Вкладка **Модель интеллектуального анализа данных** диалогового окна **Редактор преобразования «Запрос интеллектуального анализа данных»** предназначена для выбора структуры интеллектуального анализа данных и ее моделей.  
@@ -44,7 +44,7 @@ ms.locfileid: "36096928"
  Просмотрите список моделей интеллектуального анализа данных, связанных с выбранной структурой интеллектуального анализа данных.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор преобразования запросов интеллектуального анализа данных &#40;запрос вкладки&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор преобразования запроса интеллектуального анализа данных &#40;запроса вкладку&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
   
   

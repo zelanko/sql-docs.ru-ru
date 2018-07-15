@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server], CPU usage
 - tuning databases [SQL Server], CPU usage
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a2d1c9d5db24b005afe4d2db67d16110cb8de0fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1ecd078c838e846993277614f016597ff6b74ffc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325734"
 ---
 # <a name="monitor-cpu-usage"></a>Мониторинг использования ЦП
   Периодически контролируйте экземпляр Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы определить, находятся ли уровни загрузки ЦП в стандартных диапазонах. Постоянный высокий уровень использования ЦП может указывать на необходимость обновления ЦП или на необходимость добавления нескольких процессоров. Кроме того, высокий уровень использования ЦП может указывать на плохо настроенное или плохо разработанное приложение. Оптимизация работы приложения может снизить уровень загрузки ЦП.  

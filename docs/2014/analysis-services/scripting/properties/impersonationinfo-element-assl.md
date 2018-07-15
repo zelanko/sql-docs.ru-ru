@@ -1,5 +1,5 @@
 ---
-title: Элемент ImpersonationInfo (ASSL) | Документы Microsoft
+title: Элемент ImpersonationInfo (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ImpersonationInfo element
 ms.assetid: d4b9c372-1023-43f7-97e9-b0a90f544fbb
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a97f9949baa904b2282568d1005ad99f8b10fdcd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3ed7caa18c18f73f70a3f39dce608f2b32dbc319
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275500"
 ---
 # <a name="impersonationinfo-element-assl"></a>Элемент ImpersonationInfo (ASSL)
   Содержит данные, которые используются для задания режима олицетворения при доступе или исполнении сборки.  
@@ -56,7 +56,7 @@ ms.locfileid: "36098031"
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительские элементы|[Сборка](../data-type/assembly-data-type-assl.md), [источник данных](../data-type/datasource-data-type-assl.md)|  
+|Родительские элементы|[Сборка](../data-type/assembly-data-type-assl.md), [источника данных](../data-type/datasource-data-type-assl.md)|  
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  

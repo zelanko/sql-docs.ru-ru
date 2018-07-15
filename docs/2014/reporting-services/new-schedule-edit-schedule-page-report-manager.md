@@ -1,5 +1,5 @@
 ---
-title: 'Создание расписания: Изменение расписания страницы (диспетчер отчетов) | Документы Microsoft'
+title: 'Создание расписания: Edit страница "Расписание" (диспетчер отчетов) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 019cb1a12e25ac3c347d1dbdb72296c2f2a888f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2772db639b664724ee6d594d061f6c9ccdc847cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262010"
 ---
-# <a name="new-schedule-edit-schedule-page-report-manager"></a>Создание расписания: Изменение страница «расписания» (диспетчер отчетов)
+# <a name="new-schedule-edit-schedule-page-report-manager"></a>Создание расписания: Изменить страница «расписания» (диспетчер отчетов)
   Используйте страницу «Создание расписания» / «Изменение расписания», чтобы создать расписание для отчета. Расписания используются с подписками для обновления кэшированных отчетов и для создания моментальных снимков в качестве отдельных элементов или в журнале отчета.  
   
 > [!NOTE]  
 >  Эта функция поддерживается не во всех выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Перечень функций, поддерживаемых в разных выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], см. в разделе [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- Расписания можно создавать только для отчетов, исполняемых в автоматическом режиме. Для автоматического выполнения отчета учетные данные для доступа к источнику данных отчета необходимо сохранять в базе данных сервера отчетов. Дополнительные сведения см. в разделе [страницы свойств источников данных &#40;диспетчера отчетов&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
+ Расписания можно создавать только для отчетов, исполняемых в автоматическом режиме. Для автоматического выполнения отчета учетные данные для доступа к источнику данных отчета необходимо сохранять в базе данных сервера отчетов. Дополнительные сведения см. в разделе [страницу свойств источников данных &#40;диспетчера отчетов&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
   
  В одном расписании могут поддерживаться не все комбинации частоты событий. Например, если требуется запускать отчет в 12:00 и в 16:00 каждую пятницу, необходимо создать два ежедневных расписания, запускаемых в пятницу, и для одного указать время запуска 12:00, а для другого — 16:00.  
   

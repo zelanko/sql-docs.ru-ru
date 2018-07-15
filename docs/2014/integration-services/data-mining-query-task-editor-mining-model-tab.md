@@ -1,5 +1,5 @@
 ---
-title: Редактор задач запросов интеллектуального анализа данных (вкладка «модель интеллектуального анализа данных») | Документы Microsoft
+title: Редактор задачи запроса интеллектуального анализа данных (вкладка «модель интеллектуального анализа данных») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytask.miningmodel.f1
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 78d1021d5ac6aa2c4d8452394cd69d298b76cdaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9069acf132c048f07f8e27cb956032100f53a9eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261500"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Редактор задачи «Запрос интеллектуального анализа данных» (вкладка «Модель интеллектуального анализа данных»)
   Вкладка **Модель интеллектуального анализа данных** диалогового окна **Задача «Запрос интеллектуального анализа данных»** позволяет выбрать используемые структуру и модель интеллектуального анализа данных.  
@@ -58,9 +58,9 @@ ms.locfileid: "36099574"
  Выберите модель интеллектуального анализа данных, построенную на выбранной структуре интеллектуального анализа данных.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задач запросов интеллектуального анализа данных &#40;запрос вкладки&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [Редактор задач запросов интеллектуального анализа данных &#40;вкладки вывода&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи запроса интеллектуального анализа данных &#40;запроса вкладку&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [Редактор задачи запроса интеллектуального анализа данных &#40;вывода вкладку&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
  [Конструктор интеллектуального анализа данных](../analysis-services/data-mining/data-mining-designer.md)  
   
   

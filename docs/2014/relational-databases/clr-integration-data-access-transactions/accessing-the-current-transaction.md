@@ -1,13 +1,11 @@
 ---
-title: Доступ к текущей транзакции | Документы Microsoft
+title: Доступ к текущей транзакции | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 618b272195dc61179db7ac36a19cc30f5eaa2aef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: dad95c2d2fc02e46b139f29889315873f21887e7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192262"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351816"
 ---
 # <a name="accessing-the-current-transaction"></a>Доступ к текущей транзакции
   Если транзакция является активной в той точке, в которой вызывается код среды CLR, применяемой в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то транзакция становится доступной через класс `System.Transactions.Transaction`. Для доступа к текущей транзакции используется свойство `Transaction.Current`. В большинстве случаев в получении явного доступа к транзакции нет необходимости. Что касается подключений к базам данных, то в ADO.NET автоматически происходят проверка `Transaction.Current` при вызове метода `Connection.Open` и явное прикрепление соединения к этой транзакции (если только в строке соединения ключевое слово `Enlist` не задано равным false).  
@@ -48,7 +46,7 @@ ms.locfileid: "36192262"
   
 -   Управляемая процедура или функция может возвратить какое-либо значение с помощью выходного параметра. В вызове процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] может быть предусмотрена проверка возвращаемого значения, и, в случае необходимости, выполнение `ROLLBACK TRANSACTION`.  
   
--   Управляемая процедура или функция может активизировать пользовательское исключение. Вызывающий [!INCLUDE[tsql](../../includes/tsql-md.md)] может перехватывать исключения, управляемой процедуры или функции в блок try/catch и выполнять процедуры `ROLLBACK TRANSACTION`.  
+-   Управляемая процедура или функция может активизировать пользовательское исключение. Вызывающий [!INCLUDE[tsql](../../includes/tsql-md.md)] можно перехватить исключение, активизируемое управляемой процедурой или функцией в блоке try/catch и выполнить процедуру `ROLLBACK TRANSACTION`.  
   
 -   Управляемая процедура или функция может отменить текущую транзакцию путем вызова метода `Transaction.Rollback`, если соблюдается определенное условие.  
   
@@ -69,7 +67,7 @@ The context transaction which was active before entering user defined routine, t
  Это исключение также является ожидаемым, и чтобы обеспечить дальнейшее выполнение, необходимо заключить в блок try-catch инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)], которая выполняет действие, вызывающее запуск триггера. Несмотря на два активизированных исключения, происходит откат транзакции, а изменения не фиксируются.  
   
 ### <a name="example"></a>Пример  
- Ниже приведен пример транзакции, откат которой осуществляется из управляемой процедуры с помощью метода `Transaction.Rollback`. Обратите внимание на то, что метод `Transaction.Rollback` в управляемом коде заключен в блок try-catch. В скрипте [!INCLUDE[tsql](../../includes/tsql-md.md)] создаются сборка и управляемая хранимая процедура. Имейте в виду, что `EXEC uspRollbackFromProc` упаковывается в блок try/catch, чтобы перехватывается исключение, вызываемое при завершении выполнения управляемой процедуры.  
+ Ниже приведен пример транзакции, откат которой осуществляется из управляемой процедуры с помощью метода `Transaction.Rollback`. Обратите внимание на то, что метод `Transaction.Rollback` в управляемом коде заключен в блок try-catch. В скрипте [!INCLUDE[tsql](../../includes/tsql-md.md)] создаются сборка и управляемая хранимая процедура. Имейте в виду, что `EXEC uspRollbackFromProc` упаковывается в блок try/catch, чтобы перехватывается исключение, возникающее при завершении выполнения управляемой процедуры.  
   
 ```csharp  
 using System;  

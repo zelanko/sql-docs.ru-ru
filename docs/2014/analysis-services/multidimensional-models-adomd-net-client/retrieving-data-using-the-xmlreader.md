@@ -1,5 +1,5 @@
 ---
-title: Получение данных с помощью XmlReader | Документы Microsoft
+title: Получение данных с помощью XmlReader | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], XmlReader object
 ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 257777c40c829921680b8fce333bd6e44f6f57fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa47902131522f807ebe96b0b14a3df28aaf657f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267570"
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>Получение данных с помощью объекта XmlReader
-  `XmlReader` Класса часть `System.Xml` пространство имен для библиотеки классов Microsoft .NET Framework аналогично <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> класса в том, что `XmlReader` класс также предоставляет быстрый некэшируемый однопроходный доступ к данным. Если нет необходимости создавать аналитическое представление данных в памяти с помощью объекта <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, то для получения XML-данных (особенно больших объемов) хорошо подходит объект `XmlReader`. Поскольку `XmlReader` потоки данных, `XmlReader` не должен получать и кэшировать все данные перед передачей вызывающему объекту, как было бы в том случае, если <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> объекта были использованы для преобразования ответа XML для аналитики в аналитические объекта представление модели.  
+  `XmlReader` Класса часть `System.Xml` пространство имен для библиотеки классов Microsoft .NET Framework аналогичен <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> класс, в который `XmlReader` класс также предоставляет быстрый некэшируемый однопроходный доступ к данным. Если нет необходимости создавать аналитическое представление данных в памяти с помощью объекта <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, то для получения XML-данных (особенно больших объемов) хорошо подходит объект `XmlReader`. Так как `XmlReader` выполняет потоковую передачу данных, `XmlReader` нет необходимости получать и кэшировать все данные перед передачей их вызывающему объекту, как если бы в том случае, если <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> объекта были использованы для преобразования ответа XML для аналитики в аналитические объекта представление модели.  
   
  Класс `XmlReader` обеспечивает прямой доступ к ответу XML для аналитики, полученному ADOMD.NET, через вызов метода <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteXmlReader%2A> объекта <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>. Синтаксический анализ полученных данных необходимо выполнить вручную, поскольку они представляют собой необработанный XML. Объект `XmlReader` должен быть закрыт сразу же после получения данных.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36098525"
   
 3.  **Закройте средство чтения.**  
   
-     Необходимо вызывать метод <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A> после завершения работы с объектом `XmlReader`. Хотя `XmlReader` открыт, `XmlReader` имеет монопольное право на использование <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> объект, который был использован для выполнения команды. Пока не будет закрыт исходный объект `XmlReader`, выполнение каких-либо команд при помощи этого объекта <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> (включая создание другого объекта `XmlReader` или <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>) будет невозможным.  
+     Необходимо вызывать метод <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A> после завершения работы с объектом `XmlReader`. Хотя `XmlReader` открыт, в который `XmlReader` эксклюзивное использование <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> объект, который был использован для выполнения команды. Пока не будет закрыт исходный объект `XmlReader`, выполнение каких-либо команд при помощи этого объекта <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> (включая создание другого объекта `XmlReader` или <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>) будет невозможным.  
   
 ### <a name="example-of-retrieving-data-from-the-xmlreader"></a>Пример получения данных из объекта XmlReader  
  В следующем примере выполняется команда и производится получение данных в виде объекта `XmlReader` с выводом содержимого файла на консоль.  
@@ -53,7 +53,7 @@ ms.locfileid: "36098525"
   
 ## <a name="see-also"></a>См. также  
  [Получение данных из источника аналитических данных](retrieving-data-from-an-analytical-data-source.md)   
- [Получение данных с помощью набора ячеек](retrieving-data-using-the-cellset.md)   
+ [Получение данных с помощью объекта CellSet](retrieving-data-using-the-cellset.md)   
  [Получение данных с помощью объекта AdomdDataReader](retrieving-data-using-the-adomddatareader.md)  
   
   

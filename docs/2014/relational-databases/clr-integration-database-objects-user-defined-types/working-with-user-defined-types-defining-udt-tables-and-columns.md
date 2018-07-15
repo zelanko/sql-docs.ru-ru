@@ -1,13 +1,11 @@
 ---
-title: Определение определяемого пользователем ТИПА таблицы и столбцы | Документы Microsoft
+title: Определение Пользовательских таблиц и столбцов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -24,21 +22,21 @@ helpviewer_keywords:
 - indexes [CLR integration]
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 802ebd32f1df4a51aca9dde80f0951d3ed9df491
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 360715f3b239347aedcae2b50a0e21f7a2943125
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195188"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351806"
 ---
 # <a name="defining-udt-tables-and-columns"></a>Определение таблиц и столбцов определяемых пользователем типов
-  После сборки, содержащей определяемый пользователем тип (UDT) определение был зарегистрирован в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных, он может использоваться в определении столбца.  
+  После сборки, содержащей определяемого пользователем типа (UDT) определения регистрации в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных, он может использоваться в определении столбца.  
   
 ## <a name="creating-tables-with-udts"></a>Создание таблиц с использованием определяемых пользователем типов  
- Не существует специального синтаксиса для создания в таблице столбца определяемого пользователем типа. Можно использовать в определении столбца имя определяемого пользователем типа, как если бы он был одним из внутренних типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В следующей ТАБЛИЦЕ, СОЗДАЙТЕ [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция создает таблицу с именем **точки**, со столбцом с именем **идентификатор,** определяется как `int` столбца идентификаторов и \ первичный ключ для таблицы. Второй столбец называется **PointValue**, с типом данных **точки**. Имя схемы, используемой в этом примере — **dbo**. Обратите внимание, что требуется иметь соответствующие разрешения на указание имени схемы. Если имя схемы опущено, используется схема по умолчанию для пользователя базы данных.  
+ Не существует специального синтаксиса для создания в таблице столбца определяемого пользователем типа. Можно использовать в определении столбца имя определяемого пользователем типа, как если бы он был одним из внутренних типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В следующей ТАБЛИЦЕ, СОЗДАЙТЕ [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция создает таблицу с именем **точки**, со столбцом с именем **идентификатор,** определяется как `int` столбец идентификаторов и \ первичный ключ для таблицы. Второй столбец называется **PointValue**, с типом данных **точки**. Имя схемы, используемой в этом примере является **dbo**. Обратите внимание, что требуется иметь соответствующие разрешения на указание имени схемы. Если имя схемы опущено, используется схема по умолчанию для пользователя базы данных.  
   
 ```  
 CREATE TABLE dbo.Points   
