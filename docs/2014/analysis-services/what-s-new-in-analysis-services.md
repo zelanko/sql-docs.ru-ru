@@ -1,5 +1,5 @@
 ---
-title: Что&#39;новые возможности бизнес-аналитики и служб Analysis Services | Документы Microsoft
+title: Что&#39;возможности служб Analysis Services и бизнес-аналитики | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81dc5c82b8b034556ab4eb69c9f9ca377f641c43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30789972454ecc6c32ef4cb109bfbb20a2523e37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323114"
 ---
-# <a name="what39s-new-in-analysis-services-and-business-intelligence"></a>Что&#39;новые возможности служб Analysis Services и бизнес-аналитики
+# <a name="what39s-new-in-analysis-services-and-business-intelligence"></a>Что&#39;возможности служб Analysis Services и бизнес-аналитики
   За исключением добавленной функции поддержки отчетов Power View в многомерных моделях [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] не отличается от предыдущего выпуска.  
   
- Дополнительные сведения о других [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] продуктов и технологий, которые отличаются в этом выпуске в разделе [новые возможности SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
+ Дополнительные сведения о других [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] продуктов и технологий, которые отличаются в этом выпуске см. в разделе [новые возможности в SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
 ## <a name="updates-to-design-tool-installation"></a>Изменения установки средства проектирования  
  Среда [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] для бизнес-аналитики (SSDT-BI), которая ранее называлась Business Intelligence Development Studio (BIDS), используется для создания моделей служб Analysis Services, отчетов служб Reporting Services и пакетов служб Integration Services. Загрузить SSDT-BI можно из следующих расположений:  

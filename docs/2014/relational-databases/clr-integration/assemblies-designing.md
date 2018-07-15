@@ -1,13 +1,11 @@
 ---
-title: Конструирование сборок | Документы Microsoft
+title: Конструирование сборок | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 486c6ad507682db3bd7ab06c674164b1d31f34bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: de9b80a9406078a6f5d4ad3a16add7c02f4bde5a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192690"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351026"
 ---
 # <a name="designing-assemblies"></a>Конструирование сборок
   В этом подразделе описываются факторы, которые следует принять во внимание при конструировании сборок:  
@@ -39,7 +37,7 @@ ms.locfileid: "36192690"
   
  При компоновке кода в сборку надо учитывать следующее.  
   
--   Определяемые пользователем типы данных CLR и индексы, зависящие от определяемых пользователем функций среды CLR, могут вызвать появление в базе данных материализованных данных, зависящих от сборки. Часто изменение кода сборки является более сложным, если в базе данных присутствуют материализованные данные, зависящие от сборки. Таким образом, в общем случае лучше отделять код, от которого зависят материализованные данные (такие как определяемые пользователем типы и индексы, использующие определяемые пользователем функции), от кода, от которого не зависят никакие материализованные данные. Дополнительные сведения см. в разделе [реализации сборки](assemblies-implementing.md) и [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql).  
+-   Определяемые пользователем типы данных CLR и индексы, зависящие от определяемых пользователем функций среды CLR, могут вызвать появление в базе данных материализованных данных, зависящих от сборки. Часто изменение кода сборки является более сложным, если в базе данных присутствуют материализованные данные, зависящие от сборки. Таким образом, в общем случае лучше отделять код, от которого зависят материализованные данные (такие как определяемые пользователем типы и индексы, использующие определяемые пользователем функции), от кода, от которого не зависят никакие материализованные данные. Дополнительные сведения см. в разделе [реализация сборок](assemblies-implementing.md) и [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql).  
   
 -   Если часть управляемого кода требует разрешения более высокого уровня, лучше поместить данный код в отдельную сборку, отдельно от кода, не требующего этого разрешения.  
   
@@ -88,7 +86,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>Неразрешенные API-интерфейсы платформы .NET Framework  
- Любой [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] API, который содержит один из недопустимых **HostProtectionAttributes** может быть вызван из сборок SAFE и EXTERNAL_ACCESS.  
+ Любой [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] API, который содержит один из **HostProtectionAttributes** может быть вызван из сборок SAFE и EXTERNAL_ACCESS.  
   
 ```  
 eSelfAffectingProcessMgmt  

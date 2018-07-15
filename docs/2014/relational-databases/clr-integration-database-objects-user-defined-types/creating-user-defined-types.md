@@ -1,13 +1,11 @@
 ---
-title: Создание определяемого пользователем типа | Документы Microsoft
+title: Создание определяемого пользователем типа | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b832d8191cd153f5f11af88263f4ecbeb1021ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4446d468738ea9db533488de62705c548e777f0a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098425"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350980"
 ---
 # <a name="creating-a-user-defined-type"></a>Создание определяемого пользователем типа
   Чтобы создать определяемый пользователем тип, пригодный для установки в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо сначала создать класс в одном из поддерживаемых языков программирования среды .NET Framework, таком как Visual C# или Visual Basic, соответствующем требованиям спецификаций по созданию определяемых пользователем типов. Затем класс можно скомпилировать в виде DLL-библиотеки, которая может загружаться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Создавать и развертывать определяемые пользователем типы также можно с помощью Visual Studio.  
@@ -45,7 +43,7 @@ Reconfigure
  Демонстрирует требования к приемам кодирования, используемым при создании определяемых пользователем типов.  
   
 ## <a name="example"></a>Пример  
- Следующий пример кода определяет определяемый пользователем тип Point, который подробно описывается в [Coding User-Defined типов](creating-user-defined-types-coding.md).  
+ Следующий пример кода определяет определяемый пользователем тип Point, который описан подробно [программирование определяемых пользователем типов](creating-user-defined-types-coding.md).  
   
  Полные листинги кода для других примеров, описываемых в этом разделе, можно получить, установив образцы из среды CLR. Инструкции по установке этих образцов см. в разделе [образцы SQL Server Database Engine](http://msftengprodsamples.codeplex.com/).  
   

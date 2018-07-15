@@ -1,5 +1,5 @@
 ---
-title: Значение элемента (Parameter) (XMLA) | Документы Microsoft
+title: Значение элемента (Parameter) (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Value element
 ms.assetid: e590d189-91aa-40c7-8669-09c87812f4ce
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 37e0ac55da5c8bae13fcddcaad52aeb8cf51da22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 05535bb119ce20334b5681ea001e4e8528a507f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302704"
 ---
 # <a name="value-element-parameter-xmla"></a>Элемент Value (Parameter) (XML для аналитики)
-  Содержит значение параметра, представленного [параметр](parameter-element-xmla.md) элемента.  
+  Содержит значение параметра, представленного [параметр](parameter-element-xmla.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36097817"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- `Value` Элемент может хранить любой простой тип XML, а также XML для аналитики (XMLA) `Rowset` тип данных, для параметров, используемых командами XMLA в [Execute](../xml-elements-methods-execute.md) метод.  
+ `Value` Элемент можно хранить любой простой тип XML, а также XML для аналитики (XMLA) `Rowset` тип данных, для параметров, используемых командами XMLA в [Execute](../xml-elements-methods-execute.md) метод.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)  

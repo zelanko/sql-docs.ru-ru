@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - static database views
 - snapshots [SQL Server database snapshots]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1e7c3cb27b119505d015d8725262d017ab6d9c1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4c478f8a5d60d2604b95146fc1a712742e3f3420
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320404"
 ---
 # <a name="database-snapshots-sql-server"></a>Моментальные снимки базы данных (SQL Server)
   Моментальный снимок базы данных является статичным, доступным только для чтения представлением базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (*базы данных-источника*). Моментальный снимок базы данных согласуется на уровне транзакций с базой данных-источником в момент создания моментального снимка. Моментальный снимок базы данных всегда находится на том же экземпляре сервера, что и база данных-источник. При обновлении базы данных-источника обновляется и моментальный снимок базы данных. Это означает, что чем дольше существует моментальный снимок базы данных, тем больше вероятность того, что он израсходует все доступное место на диске.  

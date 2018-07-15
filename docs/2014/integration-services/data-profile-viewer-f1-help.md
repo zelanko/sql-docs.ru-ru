@@ -1,5 +1,5 @@
 ---
-title: Справка F1 средства просмотра профиля данных | Документы Microsoft
+title: Справка F1 средства просмотра профиля данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dataprofileviewer.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 41f29fae6a9f9284bd35b2779029d7b3f176bcd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27869a87ed10056517806bd872ef1e48d572690b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302394"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Справка F1 средства просмотра профиля данных
   Используйте средство просмотра профиля данных для просмотра выхода задачи «Профилирование данных».  
@@ -58,10 +58,10 @@ ms.locfileid: "36096211"
  Отображает максимальную длину значений в этом столбце.  
   
  **Без учета начальных пробелов**  
- Указывает, является ли этот профиль вычислено с `IgnoreLeadingSpaces` значение True или False. Это свойство задается на странице **Запросы профиля** задачи «Профилирование данных».  
+ Показывает, какое этот профиль был `IgnoreLeadingSpaces` значение True или False. Это свойство задается на странице **Запросы профиля** задачи «Профилирование данных».  
   
  **Без учета конечных пробелов**  
- Указывает, является ли этот профиль вычислено с `IgnoreTrailingSpaces` значение True или False. Это свойство задается на странице **Запросы профиля** задачи «Профилирование данных».  
+ Показывает, какое этот профиль был `IgnoreTrailingSpaces` значение True или False. Это свойство задается на странице **Запросы профиля** задачи «Профилирование данных».  
   
  **Количество строк**  
  Отображает число строк в таблице или представлении.  

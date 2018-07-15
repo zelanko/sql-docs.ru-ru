@@ -1,5 +1,5 @@
 ---
-title: Изменение свойств шаблона трассировки (вкладка «Общие») | Документы Microsoft
+title: Изменение свойств шаблона трассировки (вкладка "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.edittracetemplateproperties.general.f1
 helpviewer_keywords:
 - Trace Template Properties dialog box
 ms.assetid: 2ab1a21d-3a0f-4ba4-92d8-7150b68e585e
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 384979b0a5a6377102c53ea9843dd84e96adc4d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 01e568b91050e3f42dd8788d5cc46d4deebd0fc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257040"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>Изменение свойств шаблона трассировки (вкладка «Общие»)
   Используйте вкладку **Общие** диалогового окна **Свойства шаблона трассировки** для просмотра и редактирования имеющихся шаблонов трассировки с помощью следующих параметров. Чтобы открыть это диалоговое окно, в меню [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Файл** укажите пункт **Шаблоны**и выберите команду **Изменить шаблон**.  

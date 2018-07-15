@@ -1,5 +1,5 @@
 ---
-title: Изменить или удалить измерение базы данных в обозревателе решений | Документы Microsoft
+title: Изменение или удаление измерения базы данных в обозревателе решений | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying dimensions
 - dimensions [Analysis Services], deleting
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - removing dimensions
 ms.assetid: be52b351-f376-42ee-adba-2dcaa0c0f69c
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9604ee0deaf42206843eb3dcfbd5d28e93e8a1a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 316d2c3266f2df40e0f887e2e8728e4a144289a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291660"
 ---
 # <a name="modify-or-delete-a-database-dimension-in-solution-explorer"></a>Изменение или удаление измерения базы данных в обозревателе решений
-  Можно изменять и удалять измерения, используя конструктор измерений в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Выполненные изменения измерения недоступны пользователям до его обработки. Дополнительные сведения см. в разделе [многомерной модели обработки объекта](processing-a-multidimensional-model-analysis-services.md).  
+  Можно изменять и удалять измерения, используя конструктор измерений в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Выполненные изменения измерения недоступны пользователям до его обработки. Дополнительные сведения см. в разделе [обработку объекта многомерных моделей](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-modify-a-dimension-in-sql-server-data-tools"></a>Изменение измерения в SQL Server Data Tools  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36097623"
   
 2.  На вкладке **Структура измерения** , на панелях **Атрибуты**, **Иерархии**или **Представление источника данных** щелкните элемент, который нужно изменить, и внесите изменения.  
   
-     Дополнительные сведения о типах изменений, которые можно сделать в разделе [многомерной модели обработки объекта](processing-a-multidimensional-model-analysis-services.md).  
+     Дополнительные сведения о типах изменений, которые планируется сделать, см. в разделе [обработку объекта многомерных моделей](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-delete-a-dimension-in-sql-server-data-tools"></a>Удаление измерения в SQL Server Data Tools  
   

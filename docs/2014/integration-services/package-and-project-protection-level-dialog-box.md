@@ -1,5 +1,5 @@
 ---
-title: Пакет и защиты уровня диалоговое окно проекта | Документы Microsoft
+title: Пакет и защиты уровня диалоговое окно проекта | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.packageprotectionlevel.f1
 - sql12.ssis.bids.projectprotectionlevel.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Package Protection Level dialog box
 ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6e1f6bea2a13e223aa1466e43c600a83e32544f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 038c4b3f03b2dca9b0c6fd9676d21f7c16747a47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248834"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>Диалоговое окно уровня защиты пакета и проекта
   Диалоговое окно **Уровень защиты пакета** позволяет изменять уровень защиты пакета. Уровень защиты определяет метод защиты (пароль или ключ пользователя) и область защиты пакетов. Защита может охватывать все данные или только конфиденциальные данные.  

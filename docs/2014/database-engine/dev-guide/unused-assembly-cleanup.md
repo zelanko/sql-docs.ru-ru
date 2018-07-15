@@ -1,5 +1,5 @@
 ---
-title: Очистка неиспользуемой сборки | Документы Microsoft
+title: Очистка неиспользуемой сборки | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 277847c61e7ea41c569e2b73485e845c0c1da055
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2951bc509d3ab745a9fd56766284cb6763444cc8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300704"
 ---
 # <a name="unused-assembly-cleanup"></a>Очистка неиспользуемой сборки
   Образец `AssemblyCleanup` содержит хранимую процедуру .NET, которая удаляет неиспользуемые сборки из текущей базы данных, выполняя запрос к каталогам метаданных. Единственный параметр этой хранимой процедуры `visible_assemblies` указывает, должны ли быть удалены неиспользуемые видимые сборки. Значение 'false' по умолчанию указывает на то, что должны быть удалены только неиспользуемые невидимые сборки. Если указано другое значение, то производится удаление всех неиспользуемых сборок. К неиспользуемым сборкам относятся те, для которых не определено ни одной точки входа (процедуры, тип и статистическая функция), а также ни одной сборки, которая ссылается на них прямо или косвенно.  
@@ -28,7 +28,7 @@ ms.locfileid: "36096216"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
 -   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](http://go.microsoft.com/fwlink/?linkid=62796).  
   

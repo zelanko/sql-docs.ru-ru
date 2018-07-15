@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring [SQL Server], log backups
 - transaction log backups [SQL Server], applying backups
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab3a27eea48c0d34d2cf994c29fff99f91f3ef37
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 287fbe416b7e0b824f9a6287b85e8dcb7aa17aa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289120"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Применение резервных копий журналов транзакций (SQL Server)
   Этот раздел относится только к модели полного восстановления и модели восстановления с неполным протоколированием.  
@@ -38,7 +37,7 @@ ms.locfileid: "36096446"
   
 -   [Журналы восстановления и транзакций](#RecoveryAndTlogs)  
   
--   [Использование резервных копий журналов для восстановления до точки сбоя](#PITrestore)  
+-   [Использование резервных копий журнала для восстановления до точки сбоя](#PITrestore)  
   
 -   [Связанные задачи](#RelatedTasks)  
   
@@ -62,7 +61,7 @@ ms.locfileid: "36096446"
 > [!NOTE]  
 >  В некоторых обстоятельствах при восстановлении журнала можно явно добавить файл.  
   
-##  <a name="PITrestore"></a> Использование резервных копий журналов для восстановления до точки сбоя  
+##  <a name="PITrestore"></a> Использование резервных копий журнала для восстановления до точки сбоя  
  Предполагается такая последовательность событий.  
   
 |Time|Событие|  

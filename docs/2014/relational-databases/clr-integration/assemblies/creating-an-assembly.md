@@ -1,13 +1,11 @@
 ---
-title: Создание сборки | Документы Microsoft
+title: Создание сборки | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +17,18 @@ helpviewer_keywords:
 - assemblies [CLR integration], creating
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7f58e9cd0122739b7d55e8cfe96731a39684fc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: a7dcaae61cdfa6466f8f7194b4f93977ec2e7d97
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100015"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353352"
 ---
 # <a name="creating-an-assembly"></a>Создание сборки
-  Управляемые объекты базы данных, например хранимые процедуры или триггеры, компилируются и развертываются в единицах, называемых сборками. Управляемые DLL-сборки должны регистрироваться в [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] перед тем как использовать возможности этой сборки. Для регистрации сборки в базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используется инструкция CREATE ASSEMBLY. В этом разделе описывается регистрация сборки с помощью инструкции CREATE ASSEMBLY и способы указания параметров безопасности для сборки.  
+  Управляемые объекты базы данных, например хранимые процедуры или триггеры, компилируются и развертываются в единицах, называемых сборками. Управляемые DLL-сборки должны регистрироваться в [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] прежде чем можно будет использовать возможности этой сборки. Для регистрации сборки в базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используется инструкция CREATE ASSEMBLY. В этом разделе описывается регистрация сборки с помощью инструкции CREATE ASSEMBLY и способы указания параметров безопасности для сборки.  
   
 ## <a name="the-create-assembly-statement"></a>Инструкция CREATE ASSEMBLY  
  Инструкция CREATE ASSEMBLY используется для создания сборки в базе данных. Например:  
@@ -44,7 +42,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не дает возможность регистрировать различные версии сборок с одинаковыми именами, культурой и открытыми ключами.  
   
- Можно создавать сборки, ссылающиеся на другие сборки. При создании сборки в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] также создает сборки ссылается сборка корневого уровня, если эти сборки уже не созданы в базе данных.  
+ Можно создавать сборки, ссылающиеся на другие сборки. При создании сборки в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] также создает сборки ссылается сборка корневого уровня, в том случае, если эти сборки уже не созданы в базе данных.  
   
  Пользователям базы данных или ролям пользователей предоставляются разрешения на создание в базе данных сборок, владельцами которых они будут. Чтобы создавать сборки, пользователь или роль базы данных должны иметь разрешение CREATE ASSEMBLY.  
   
@@ -55,7 +53,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   Сборка, которая вызывается или на которую указывает ссылка, была создана в этой базе данных.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>Уровни безопасности при создании сборки  
- При создании сборки в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных, можно указать один из трех различных уровней безопасности, в котором может выполняться код: `SAFE`, `EXTERNAL_ACCESS`, или `UNSAFE`. При вызове инструкции `CREATE ASSEMBLY` в коде сборки выполняются определенные проверки, в результате которых сборка может быть не зарегистрирована на сервере. Дополнительные сведения см. в образце олицетворения на [CodePlex](http://msftengprodsamples.codeplex.com/).  
+ При создании сборки в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных, можно указать один из трех различных уровней безопасности, в котором может выполняться код: `SAFE`, `EXTERNAL_ACCESS`, или `UNSAFE`. При вызове инструкции `CREATE ASSEMBLY` в коде сборки выполняются определенные проверки, в результате которых сборка может быть не зарегистрирована на сервере. Дополнительные сведения см. в разделе образца Impersonation на [CodePlex](http://msftengprodsamples.codeplex.com/).  
   
  `SAFE` является набором разрешений по умолчанию и работает в большинстве сценариев. Чтобы задать определенный уровень безопасности, измените синтаксис инструкции CREATE ASSEMBLY следующим образом.  
   
@@ -83,11 +81,11 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
 1.  Сборка должна иметь строгое имя, подписанное обычной подписью или кодом Authenticode с сертификатом. Это строгое имя (или удостоверение) создается в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] как ассиметричный ключ (или сертификат) и имеет соответствующую учетную запись с разрешением `EXTERNAL ACCESS ASSEMBLY` (для сборок внешнего доступа) или `UNSAFE ASSEMBLY` (для небезопасных сборок).  
   
-2.  Владелец базы данных (DBO) имеет `EXTERNAL ACCESS ASSEMBLY` (для `EXTERNAL ACCESS` сборок) или `UNSAFE ASSEMBLY` (для `UNSAFE` сборок) разрешение и база данных имеет [свойство базы данных TRUSTWORTHY](../../security/trustworthy-database-property.md) значение `ON`.  
+2.  Владелец базы данных (DBO) имеет `EXTERNAL ACCESS ASSEMBLY` (для `EXTERNAL ACCESS` сборок) или `UNSAFE ASSEMBLY` (для `UNSAFE` сборок) разрешение и база данных имеет [свойство базы данных TRUSTWORTHY](../../security/trustworthy-database-property.md) присвоено `ON`.  
   
  Два приведенных выше условия также проверяются при загрузке сборки (которая включает выполнение). Чтобы загрузить сборку, должно выполняться хотя бы одно условие.  
   
- Рекомендуется, чтобы [свойство базы данных TRUSTWORTHY](../../security/trustworthy-database-property.md) в базе данных не будет присвоено `ON` только для запуска общий язык кода среды CLR в процессе сервера. Вместо этого рекомендуется создать асимметричный ключ из файла сборки в главной базе данных. Необходимо создать имя входа, сопоставляемое с этим асимметричным ключом, которому будет предоставлено разрешение `EXTERNAL ACCESS ASSEMBLY` или `UNSAFE ASSEMBLY`.  
+ Мы рекомендуем [свойство базы данных TRUSTWORTHY](../../security/trustworthy-database-property.md) в базе данных не будет присвоено `ON` только для запуска common language runtime (CLR) кода в серверный процесс. Вместо этого рекомендуется создать асимметричный ключ из файла сборки в главной базе данных. Необходимо создать имя входа, сопоставляемое с этим асимметричным ключом, которому будет предоставлено разрешение `EXTERNAL ACCESS ASSEMBLY` или `UNSAFE ASSEMBLY`.  
   
  Следующие [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкции перед выполнением инструкции CREATE ASSEMBLY.  
   
@@ -132,13 +130,13 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = UNSAFE;  
 ```  
   
- Дополнительные сведения о разрешениях для каждого параметра см. в разделе [безопасность интеграции со средой CLR](../security/clr-integration-security.md).  
+ Дополнительные сведения о разрешениях для каждого параметра см. в разделе [безопасность интеграции CLR](../security/clr-integration-security.md).  
   
 ## <a name="see-also"></a>См. также  
  [Управление сборками интеграции со средой CLR](managing-clr-integration-assemblies.md)   
  [Изменение сборки](altering-an-assembly.md)   
  [При удалении сборки](dropping-an-assembly.md)   
- [Среда CLR Integration Code Access Security](../security/clr-integration-code-access-security.md)   
+ [CLR Integration Code Access Security](../security/clr-integration-code-access-security.md)   
  [Свойство базы данных TRUSTWORTHY](../../security/trustworthy-database-property.md)   
  [Частично доверенный вызывающий код](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
   

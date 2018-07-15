@@ -1,5 +1,5 @@
 ---
-title: Тип данных AttributeBinding (ASSL) | Документы Microsoft
+title: Тип данных AttributeBinding (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeBinding data type
 ms.assetid: 24d511a9-d0eb-4150-9f78-541e03963d67
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 796e20c3047914ca65e7d48be26fbc951695e583
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e475cb0ecb867daec6864fb5d078835e8fe95688
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279750"
 ---
 # <a name="attributebinding-data-type-assl"></a>Тип данных AttributeBinding (ASSL)
   Определяет производный тип данных, представляющий привязку для [атрибут](../objects/attribute-element-assl.md) элемента.  
@@ -59,16 +59,16 @@ ms.locfileid: "36098747"
 |------------------|-------------|  
 |Родительские элементы|None|  
 |Дочерние элементы|[AttributeID](../properties/id-element-assl.md), [порядковый номер](../properties/ordinal-element-assl.md), [типа](../properties/type-element-binding-assl.md)|  
-|Производные элементы|В разделе [привязки](binding-data-type-assl.md)|  
+|Производные элементы|См. в разделе [привязки](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о `Binding` типа данных, включая таблицы объектов языка сценариев служб Analysis Services (ASSL), производный от `Binding` тип данных, в разделе [тип данных привязки &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Дополнительные сведения о `Binding` типа данных, включая таблицы объектов языка сценариев служб Analysis Services (ASSL), производным от `Binding` тип данных, см. в разделе [типа привязки данных &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- Обзор привязок данных в ASSL см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Обзор привязки данных в языке ASSL, см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.AttributeBinding>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.AttributeBinding>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

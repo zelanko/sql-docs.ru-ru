@@ -1,5 +1,5 @@
 ---
-title: Заметки языка CSDL для бизнес-аналитики (CSDLBI) | Документы Microsoft
+title: Заметки языка CSDL для бизнес-аналитики (CSDLBI) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 caps.latest.revision: 19
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0e545667bd907460b695f63cbe9f2f537c9be62d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 45f29343fe3fb3bd95e8f9753438e90214f18c80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328434"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Заметки языка CSDL для бизнес-аналитики (CSDLBI)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает представление определения табличной модели в формате XML, называемое языком определения концептуальной схемы с заметками бизнес-аналитики (CSDLBI).  
@@ -36,7 +36,7 @@ ms.locfileid: "36095290"
   
 -   [Развертывание решений табличной модели &#40;табличные службы SSAS&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
--   [Соединение семантической модели бизнес-Аналитики PowerPivot &#40;bism-файл&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
+-   [Соединение семантической модели бизнес-Аналитики PowerPivot &#40;bism-файлы&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   
  Схема CSDLBI создается сервером служб Analysis Services в ответ на запрос определения модели от клиентских средств, таких как [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Клиентское приложение отправляет XML-запрос серверу служб Analysis Services, на котором размещены данные модели. В ответ сервер отправляет XML-сообщение, содержащее определение сущностей в модели с использованием заметок CSDLBI. С помощью этих сведений клиентское средство создания отчетов представляет поля, статистические выражения и меры, доступные в модели. Заметки CSDLBI также содержат сведения о том, как группировать, сортировать и форматировать данные.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36095290"
   
 -   Поддержка перспектив.  
   
- Подробные сведения об отдельных элементах в заметки CSDLBI см [Технический справочник по заметки бизнес-Аналитики для языка CSDL](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md). Сведения о базовой спецификации языка CSDL см. в разделе [спецификация языка CSDL версии 3](https://msdn.microsoft.com/en-us/data/jj652004) в библиотеке MSDN.  
+ Подробные сведения об отдельных элементах в заметках csdlbi см. в разделе [Технический справочник по аннотациям бизнес-Аналитики для языка CSDL](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md). Сведения о базовой спецификации языка CSDL, см. в разделе [спецификация языка CSDL версии 3](https://msdn.microsoft.com/en-us/data/jj652004) на сайте MSDN.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о модели табличного объекта](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   

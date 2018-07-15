@@ -1,13 +1,11 @@
 ---
-title: Построение объектов базы данных среды CLR интеграции со средой | Документы Microsoft
+title: Построение объектов базы данных, интеграции среды выполнения (CLR) со средой | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +17,18 @@ helpviewer_keywords:
 - .NET Framework routines [SQL Server]
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 070e9df2a42cbed665de1b076600d333926f6ea1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 72d68e213d240e3c6182f99e8c1637c1f1ebedfb
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190783"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351016"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Создание объектов базы данных с интеграцией со средой CLR
-  Можно создавать объекты базы данных с помощью [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] называется «подпрограмма CLR». Эти подпрограммы включают:  
+  Вы можете создавать объекты базы данных с помощью [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] называется «подпрограммы среды CLR». Эти подпрограммы включают:  
   
 -   определяемые пользователем функции, возвращающие скалярное значение (скалярные определяемые пользователем функции);  
   
@@ -42,7 +40,7 @@ ms.locfileid: "36190783"
   
  Подпрограммы CLR в управляемом коде имеют одинаковую структуру. Они сопоставляются с публичными статическими методами класса (используемыми совместно с [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET). Кроме подпрограмм, с помощью .NET Framework можно определять пользовательские типы (UDT) и определяемые пользователем агрегатные функции. Определяемые пользователем типы и определяемые пользователем статистические функции сопоставляются с целыми классами .NET Framework.  
   
- Каждый тип подпрограммы .NET Framework имеет [!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] , [!INCLUDE[tsql](../../../includes/tsql-md.md)] эквивалент может использоваться. Например, скалярные определяемые пользователем функции могут использоваться во всех скалярных выражениях. Возвращающая табличное значение функция может использоваться в любом предложении FROM. Процедура может вызываться в инструкции EXEC или из клиентского приложения.  
+ Каждый тип подпрограмма .NET Framework имеет [!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] , [!INCLUDE[tsql](../../../includes/tsql-md.md)] эквивалент может использоваться. Например, скалярные определяемые пользователем функции могут использоваться во всех скалярных выражениях. Возвращающая табличное значение функция может использоваться в любом предложении FROM. Процедура может вызываться в инструкции EXEC или из клиентского приложения.  
   
 > [!NOTE]  
 >  Выполнение объекта CLR (определяемой пользователем функции, определяемого пользователем типа или триггера) в среде CLR может производиться в нескольких потоках (параллельный план), если оптимизатор запросов посчитает это более выгодным. Однако, если доступ к данным выполняет определяемая пользователем функция, выполнение будет осуществляться согласно последовательному плану. При выполнении на сервере, имеющем версию, предшествующую [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], в случае, если определяемая пользователем функция содержит параметры или возвращает значения больших объектов (LOB), выполнение также должно производиться согласно последовательному плану.  
@@ -77,6 +75,6 @@ ms.locfileid: "36190783"
  Показывает, как реализовать и использовать триггеры CLR.  
   
 ## <a name="see-also"></a>См. также  
- [Общеязыковая среда выполнения &#40;CLR&#41; интеграции](../common-language-runtime-integration-overview.md)  
+ [Среда CLR &#40;CLR&#41; Общие сведения об интеграции](../common-language-runtime-integration-overview.md)  
   
   

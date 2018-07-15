@@ -1,5 +1,5 @@
 ---
-title: Доступные для записи секции | Документы Microsoft
+title: Доступные для записи секции | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - storing data [Analysis Services], partitions
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9098219cccf4559fbb2a9b9e7e03da0004f1b570
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24fd38410e5719dd72e5a55b2914c22fc153ea98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326574"
 ---
 # <a name="write-enabled-partitions"></a>Секции, доступные для записи
   Как правило, данные в кубе доступны только для чтения. Однако для определенных сценариев может быть необходимым иметь доступ к секции с возможностью записи. Секции, доступные для записи, позволяют пользователям исследовать сценарии, изменяя значения ячеек и анализируя влияние этих изменений на данные куба. При разрешении записи в секцию клиентские приложения могут записывать изменения данных секции. Эти изменения, называющиеся данными обратной записи, сохраняются в отдельной таблице, и не перезаписывают существующие данные в группе мер. Однако они включены в результаты запросов, поскольку являются частью данных куба.  

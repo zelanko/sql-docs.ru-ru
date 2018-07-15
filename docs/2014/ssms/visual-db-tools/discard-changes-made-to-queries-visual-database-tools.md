@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reverting queries
 - queries [SQL Server], discarding changes
 - discarding query changes
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c5804f6dd20fbe2d5d015f4e1b1d2bc1c51fd712
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4d2766bc1c064a98b241b6be06518857a3822886
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272150"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>Отмена изменения, внесенных в запросы (визуальные инструменты для баз данных)
   Изменения в определении запроса можно отменить перед сохранением. После того, как они сохранены, их нельзя вернуть в прежнее состояние.  
@@ -40,9 +40,9 @@ ms.locfileid: "36096980"
      Определение запроса вернется в состояние, в котором оно было при последнем сохранении.  
   
 ## <a name="see-also"></a>См. также  
- [Сохранение запросов &#40;визуальные средства базы данных&#41;](visual-database-tools.md)   
- [Проектировать запросы и представления инструкции &#40;визуальные средства базы данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [Выполнение основных операций с запросами &#40;визуальные средства базы данных&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
+ [Сохранение запросов &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
+ [Проектирование запросов и представлений инструкции &#40;визуальных инструментах баз данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Выполнение основных операций с запросами &#40;визуальных инструментах баз данных&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
  [Работа с данными на панели результатов (визуальные инструменты для баз данных)](results-pane-visual-database-tools.md)  
   
   

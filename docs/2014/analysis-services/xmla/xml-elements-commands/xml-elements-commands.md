@@ -1,5 +1,5 @@
 ---
-title: Команды (XMLA) | Документы Microsoft
+title: Команды (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XMLA, commands
 ms.assetid: c8a93ea6-8eb5-4204-b037-69cb442a0082
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: bbfb56cc1ee12acd511c344ba3e1940fd5d56b32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 215db39cdf87cff69f2bfefbc28e730590daec15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298894"
 ---
 # <a name="commands-xmla"></a>Команды (XMLA)
   Этот раздел справочника содержит элементы XML для аналитики (XMLA), которые можно использовать в элементе `Command` во время вызова метода `Execute`.  
@@ -35,13 +35,13 @@ ms.locfileid: "36097609"
 |Элемент|Описание|  
 |-------------|-----------------|  
 |[Элемент Alter (XML для аналитики)](alter-element-xmla.md)|Содержит элементы языка сценариев служб Analysis Services (ASSL), используемые методом [Execute](../xml-elements-methods-execute.md) для изменения объектов в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[Backup, элемент](backup-element-xmla.md)|Создает резервную копию [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных в файл резервной копии.|  
-|[Batch, элемент](batch-element-xmla.md)|Выполняет один или несколько XML для аналитики (XMLA) команды как пакетная операция последовательно или параллельно на экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Backup, элемент](backup-element-xmla.md)|Создает резервные копии [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных в файл резервной копии.|  
+|[Batch, элемент](batch-element-xmla.md)|Выполняет один или несколько XML для аналитики (XMLA) команды пакетной операции, последовательно или параллельно на экземпляр [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[BeginTransaction, элемент](begintransaction-element-xmla.md)|Начинает транзакцию в текущем сеансе с экземпляром служб Analysis Services.|  
 |[Cancel, элемент](cancel-element-xmla.md)|Отменяет команду, выполняющуюся в настоящий момент в экземпляре служб Analysis Services.|  
 |[ClearCache, элемент](clearcache-element-xmla.md)|Очищает кэш памяти для указанного объекта в экземпляре служб Analysis Services.|  
 |[CommitTransaction, элемент](committransaction-element-xmla.md)|Фиксирует транзакцию в текущем сеансе с экземпляром служб Analysis Services.|  
-|[Create, элемент](create-element-xmla.md)|Содержит элементы языка сценариев служб Analysis Services (ASSL), используемые методом [Execute](../xml-elements-methods-execute.md) метод для создания объектов в экземпляре служб Analysis Services.|  
+|[Create, элемент](create-element-xmla.md)|Содержит элементы языка сценариев служб Analysis Services (ASSL), используемые методом [Execute](../xml-elements-methods-execute.md) для создания объектов в экземпляре служб Analysis Services.|  
 |[Delete, элемент](delete-element-xmla.md)|Удаляет объект в экземпляре служб Analysis Services.|  
 |[DesignAggregations, элемент](designaggregations-element-xmla.md)|Создает агрегаты для статистической схемы в экземпляре служб Analysis Services.|  
 |[Drop, элемент](drop-element-xmla.md)|Удаляет элементы атрибута из измерения.|  

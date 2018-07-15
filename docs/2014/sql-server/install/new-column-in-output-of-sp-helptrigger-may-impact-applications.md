@@ -1,5 +1,5 @@
 ---
-title: Новый столбец в выходных данных sp_helptrigger может повлиять на работу приложений | Документы Microsoft
+title: Новый столбец, возвращаемый процедурой sp_helptrigger может повлиять на работу приложений | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sp_helptrigger
 ms.assetid: b7c42a8f-f2e0-4fa3-b046-3cf39c854c47
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2d62b9b9546fa113557bf962d68876d8c55a71ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8d8cb7b6623cd15e2e7617a1ae63baeaebe4e375
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306994"
 ---
 # <a name="new-column-in-output-of-sphelptrigger-may-impact-applications"></a>Новый столбец, возвращаемый процедурой sp_helptrigger, может повлиять на работу приложений
-  последний столбец в результирующем наборе возвращается системой sp_helptrigger trigger_schemaias хранимой процедуры.  
+  последний столбец в наборе результатов, выдаваемых системой sp_helptrigger trigger_schemaias хранимой процедуры.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Чтобы получить сведения о триггерах, определенных для конкретной таблицы, нужно выполнить запрос к представлению каталога sys.triggers.  

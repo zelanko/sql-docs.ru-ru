@@ -1,13 +1,11 @@
 ---
-title: Среда CLR Integration Code Access Security | Документы Microsoft
+title: CLR Integration Code Access Security | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,33 +17,33 @@ helpviewer_keywords:
 - EXTERNAL_ACCESS assemblies
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8ccb03b45b27150c00a5620f772afc764dc6ff0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: c2e0d51e1c3268fd7399467f22fb833e77f14131
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098671"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349886"
 ---
 # <a name="clr-integration-code-access-security"></a>Управление доступом для кода на основе интеграции со средой CLR
   Среда CLR поддерживает модель безопасности, называемую управлением доступом для кода. В этой модели разрешения предоставляются сборкам на основе идентификатора кода. Дополнительные сведения см. в разделе «Управление доступом для кода» справочной документации пакета средств разработки программного обеспечения .NET Framework.  
   
  Политика безопасности, которая регламентирует разрешения, предоставляемые сборкам, определяется в трех разных местах.  
   
--   Политики компьютера: — это политика действует для всего управляемого кода, выполнение на компьютере, на котором [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] установлен.  
+-   Политики компьютера: это политика действует для всего управляемого кода, выполняющихся на машине, на котором [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] установлен.  
   
--   Политика пользователя: политики, применяемые для управляемого кода в процессе. Для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] служба запущена.  
+-   Политика пользователя: это политика действует для управляемого кода, выполняемый в рамках процесса. Для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] служба запущена.  
   
--   Политика размещения: политики, Настройка узлом среды CLR (в этом случае [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]), действует для управляемого кода, выполняемый на узле.  
+-   Разместить политики: политика, Настройка узлом среды CLR (в этом случае [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]), распространяется на управляемый код, выполняемый на узле.  
   
- Механизм управления доступом к коду, поддерживаемый средой CLR, основан на предположении, что в среде времени выполнения может размещаться код, доверенный полностью или частично. Ресурсы, которые защищены с помощью управления доступом для кода среды CLR, обычно окружены управляемые прикладные программные интерфейсы, requirethe соответствующего разрешения доступа к ресурсу. Demandfor разрешения удовлетворяется только в том случае, если все вызывающие элементы (на уровне сборки) в стеке вызовов обладают соответствующими разрешениями ресурсов.  
+ Механизм управления доступом к коду, поддерживаемый средой CLR, основан на предположении, что в среде времени выполнения может размещаться код, доверенный полностью или частично. Ресурсы, которые защищены с помощью управления доступом для кода среды CLR, обычно окружены управляемые прикладные программные интерфейсы, соответствующее разрешение requirethe перед предоставлением ему доступа к ресурсу. Demandfor разрешения удовлетворяется только в том случае, если все вызывающие элементы (на уровне сборки) в стеке вызовов обладают соответствующими ресурсными разрешениями.  
   
- Набор разрешений CAS, предоставленные для управляемого кода при выполнении в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет ряд разрешений сборке, загруженной в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], в конечном итоге набор разрешений, предоставляемых пользовательскому коду может быть ограничен продолжается пользователь и политики уровня компьютера.  
+ Набор разрешений CAS, которые предоставляются управляемому коду при его выполнении в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет ряд разрешений сборке, загруженной в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], итоговая набор разрешений, предоставляемых пользовательскому коду может быть ограничен в пользователь и политики уровня компьютера.  
   
 ## <a name="sql-server-host-policy-level-permission-sets"></a>Наборы разрешений на уровне политики узла SQL Server  
- Набор разрешений CAS, который предоставляется определяемым пользователем сборкам на уровне политики узла [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], определяется набором разрешений, заданным при создании сборки. Существуют три набора разрешений: `SAFE`, `EXTERNAL_ACCESS` и `UNSAFE` (указанный с помощью **PERMISSION_SET** параметр[CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)) .  
+ Набор разрешений CAS, который предоставляется определяемым пользователем сборкам на уровне политики узла [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], определяется набором разрешений, заданным при создании сборки. Существует три набора разрешений: `SAFE`, `EXTERNAL_ACCESS` и `UNSAFE` (указанный с помощью **PERMISSION_SET** параметр[CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)) .  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Эта политика не предназначена для домена приложения по умолчанию, который применяется при создании в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляра среды CLR.  
   
@@ -66,14 +64,14 @@ ms.locfileid: "36098671"
 |`SqlClientPermission`|`Context connection = true`, `context connection = yes`. Можно использовать только контекстное соединение; в строке соединения можно задавать только значение «context connection=true» или «context connection=yes».<br /><br /> **AllowBlankPassword = false:** пустые пароли не допускаются.|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
- Сборки EXTERNAL_ACCESS имеют те же разрешения, что `SAFE` сборки с дополнительными возможностями для доступа к внешним системным ресурсам, например файлы, сети, переменные среды и реестр.  
+ Сборки EXTERNAL_ACCESS имеют те же разрешения, что `SAFE` сборки, с дополнительными возможностями для доступа к внешним системным ресурсам, например файлы, сети, переменные среды и реестр.  
   
  Сборки `EXTERNAL_ACCESS` обладают также следующими разрешениями и значениями свойств.  
   
 |Разрешение|Значения и описание|  
 |----------------|-----------------------------|  
 |`DistributedTransactionPermission`|`Unrestricted:` Распределенные транзакции допускаются.|  
-|`DNSPermission`|`Unrestricted:` Разрешение для запроса данных от DNS-серверов.|  
+|`DNSPermission`|`Unrestricted:` Разрешение на запрос сведений с DNS-серверов.|  
 |`EnvironmentPermission`|`Unrestricted:` разрешается полный доступ к системным и пользовательским переменным среды.|  
 |`EventLogPermission`|`Administer:` разрешаются следующие действия: создание источника события, чтение существующих журналов, удаление источников событий или журналов, формирование ответов на записи, очистка журнала событий, прослушивание событий и доступ к коллекции всех журналов событий.|  
 |`FileIOPermission`|`Unrestricted:` разрешен полный доступ к файлам и папкам.|  
@@ -93,7 +91,7 @@ ms.locfileid: "36098671"
  Сборки `UNSAFE` получают набор разрешений `FullTrust`.  
   
 > [!IMPORTANT]  
->  `SAFE` является рекомендованной установкой разрешений для сборок, которые выполняют задачи вычисления и управления данными без доступа к ресурсам вне [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. `EXTERNAL_ACCESS` сборки по умолчанию, выполняются как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] учетная запись службы, разрешение на выполнение `EXTERNAL_ACCESS` должно предоставляться только именам входа, которым доверено выполняться как учетная запись службы. С точки зрения безопасности сборки `EXTERNAL_ACCESS` и `UNSAFE` являются идентичными. Но сборки `EXTERNAL_ACCESS` предоставляют различные средства защиты, обладающие надежностью и прочностью, которые не предусмотрены в сборках `UNSAFE`. Указание `UNSAFE` позволяет коду в сборке выполнять запрещенные операции в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения о создании сборок CLR в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], в разделе [Управление сборками интеграции со средой CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
+>  `SAFE` является рекомендованной установкой разрешений для сборок, которые выполняют задачи вычисления и управления данными без доступа к ресурсам вне [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. `EXTERNAL_ACCESS` сборки по умолчанию, выполняются как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] учетная запись службы, разрешение на выполнение `EXTERNAL_ACCESS` должно предоставляться только именам входа, которым доверено выполнение в качестве учетной записи службы. С точки зрения безопасности сборки `EXTERNAL_ACCESS` и `UNSAFE` являются идентичными. Но сборки `EXTERNAL_ACCESS` предоставляют различные средства защиты, обладающие надежностью и прочностью, которые не предусмотрены в сборках `UNSAFE`. Указание `UNSAFE` позволяет коду в сборке выполнять запрещенные операции [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения о создании сборок CLR в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в разделе [Управление сборками интеграции со средой CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
   
 ## <a name="accessing-external-resources"></a>Доступ к внешним ресурсам  
  Если сборка с определяемыми пользователем типами (UDT), хранимыми процедурами или конструкциями другого типа зарегистрирована с набором разрешений `SAFE`, то управляемый код, который выполняется в конструкции, не способен получить доступ к внешним ресурсам. Но если задан набор разрешений `EXTERNAL_ACCESS` или `UNSAFE` и в управляемом коде предпринимается попытка получить доступ к внешним ресурсам, то в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] применяются следующие правила.  
@@ -119,7 +117,7 @@ ms.locfileid: "36098671"
   
 ## <a name="see-also"></a>См. также  
  [Безопасность интеграции со средой CLR](clr-integration-security.md)   
- [Атрибуты защиты узла и программирование средств интеграции со средой CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
+ [Атрибуты защиты узла и программирование интеграции со средой CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
  [Ограничения модели программирования интеграции со средой CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
  [Среда размещения CLR](../clr-integration-architecture-clr-hosted-environment.md)  
   

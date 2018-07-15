@@ -1,5 +1,5 @@
 ---
-title: Просмотр использования статистической обработки (мастер статистических схем) | Документы Microsoft
+title: Просмотр использования статистической обработки (мастер статистических схем) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.aggregationdesignwizard.reviewusage.f1
 ms.assetid: 107ee872-3df2-4931-b56c-af11e38f6745
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a26ea23dda5bba4813a9c5a99d797471124750d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c0027b2bceada8bfe84f0ee835395dd62686d16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332816"
 ---
 # <a name="review-aggregation-usage-aggregation-design-wizard"></a>Просмотр использования статистической обработки (мастер статистических схем)
   Используйте страницу **Просмотр использования статистической обработки** для настройки параметров статистической обработки.  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server распределенное воспроизведение | Документы Microsoft
+title: SQL Server распределенного воспроизведения | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Distributed Replay
 - SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 63974e86420e347d66b36e361e9b68fc0f54c318
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 20ea880286578872964ffe88123c41ee4201f573
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232634"
 ---
 # <a name="sql-server-distributed-replay"></a>Распределенное воспроизведение SQL Server
   Функция распределенного воспроизведения [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет оценить влияние будущих обновлений [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ее также можно использовать для оценки влияния обновления аппаратной части и операционной системы, а также для настройки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -35,7 +35,7 @@ ms.locfileid: "36096779"
  Функция распределенного воспроизведения [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет использовать несколько компьютеров для воспроизведения данных трассировки и моделирования важной рабочей нагрузки. Программу распределенного воспроизведения можно использовать для тестирования совместимости приложений, производительности и планирования загрузки.  
   
 ## <a name="when-to-use-distributed-replay"></a>Применение распределенного воспроизведения  
- [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] и распределенного воспроизведения имеют частично совпадающую функциональность.  
+ [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] и распределенного воспроизведения частично совпадают функциональных возможностей.  
   
  С помощью приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] можно воспроизводить записанную трассировку в обновленной тестовой среде. Кроме того, результаты воспроизведения можно анализировать с целью поиска потенциальных функциональных несовместимостей и проблем производительности. Однако приложение [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] позволяет воспроизводить рабочую нагрузку только с одного компьютера. При воспроизведении работы загруженного приложения OLTP с большим числом активных параллельных соединений или пропускной способностью на сеть приложению [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] может не хватить ресурсов.  
   

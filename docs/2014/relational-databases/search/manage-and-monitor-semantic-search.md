@@ -5,29 +5,28 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], managing
 - semantic search [SQL Server], monitoring
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 366a8e3047cdba872fa9cb004c2a1d8a1892d22b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4dc25a584e7e883ce07040e0d5d0d567995533f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311464"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Управление и наблюдение за семантическим поиском
   Описывается процесс семантического индексирования и задачи, связанные с наблюдением за индексами и управлением ими.  
   
-##  <a name="HowToMonitorStatus"></a> Как Проверить состояние семантического индексирования  
+##  <a name="HowToMonitorStatus"></a> Практическое руководство: Проверка состояния семантической индексации  
  **Завершен первый этап семантического индексирования?**  
  Запросите динамическое административное представление [sys.dm_fts_index_population (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql) и проверьте столбцы **status** и **status_description**.  
   
@@ -41,7 +40,7 @@ SELECT * FROM sys.dm_fts_index_population WHERE table_id = OBJECT_ID('table_name
 GO  
 ```  
   
- **Завершен ли второй этап семантического индексирования?**  
+ **Завершена ли второй этап семантического индексирования?**  
  Запросите динамическое административное представление [sys.dm_fts_semantic_similarity_population (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql) и проверьте столбцы **status** и **status_description**.  
   
  Второй этап индексирования включает заполнение семантического индекса подобия документов.  
@@ -55,7 +54,7 @@ GO
 ```  
   
 ##  <a name="HowToCheckSize"></a> Практическое руководство: Проверка размера семантических индексов  
- **Каков логический размер семантического индекса ключевых фраз или семантического индекса подобия документов?**  
+ **Что такое логический размер семантического индекса ключевых фраз или семантического индекса подобия документов?**  
  Запросите динамическое административное представление [sys.dm_db_fts_index_physical_stats (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql).  
   
  Логический размер отображается в количестве страниц индекса.  
@@ -68,7 +67,7 @@ SELECT * FROM sys.dm_db_fts_index_physical_stats WHERE object_id = OBJECT_ID('ta
 GO  
 ```  
   
- **Каков общий размер полнотекстового и семантического индексов для полнотекстового каталога?**  
+ **Что такое общий размер полнотекстового и семантического индексов для полнотекстового каталога?**  
  Запросите свойство **IndexSize** функции метаданных [FULLTEXTCATALOGPROPERTY (Transact-SQL)](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql).  
   
 ```tsql  
@@ -76,7 +75,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')
 GO  
 ```  
   
- **Сколько элементов проиндексированы в полнотекстовом и семантического индексов для полнотекстового каталога?**  
+ **Сколько элементов проиндексированы в полнотекстового и семантического индексов для полнотекстового каталога?**  
  Запросите свойство **ItemCount** функции метаданных [FULLTEXTCATALOGPROPERTY (Transact-SQL)](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql).  
   
 ```tsql  
@@ -102,7 +101,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a> Практическое руководство: Отключение или повторное включение семантического индексирования  
+##  <a name="HowToDisableIndexing"></a> Практическое руководство: Отключение или повторное включение семантической индексации  
  Можно включить или отключить полнотекстовое или семантическое индексирование с помощью предложений ENABLE/DISABLE с таким же синтаксисом и поведением, как описано для полнотекстовых индексов. Дополнительные сведения см. в разделе [ALTER FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/alter-fulltext-index-transact-sql).  
   
  Если семантическое индексирование отключено и приостановлено, запросы к семантическим данным продолжают успешно выполняться и возвращать ранее проиндексированные данные. Такое поведение не согласуется с поведением полнотекстового поиска.  
@@ -141,10 +140,10 @@ GO
  **Заполнены ли связанные полнотекстовые индексы?**  
  Поскольку семантическое индексирование зависит от полнотекстового индексирования, семантические индексы заполняются только после заполнения связанных полнотекстовых индексов.  
   
- **Компонент full-text search и семантический поиск правильной установки и настройки?**  
+ **Такое компонент full-text search и семантический поиск правильной установки и настройки**  
  Дополнительные сведения см. в разделе [Установка и настройка семантического поиска](install-and-configure-semantic-search.md).  
   
- **Недоступна служба FDHOST и нет других проблем, которые бы вызвать сбой полнотекстового индексирования?**  
+ **Недоступна служба FDHOST, или существует другое условие, которые могли бы вызвать ошибку индексирования полнотекстового поиска?**  
  Дополнительные сведения см. в разделе [Устранение неполадок полнотекстового индексирования](troubleshoot-full-text-indexing.md).  
   
   

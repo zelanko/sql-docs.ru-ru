@@ -1,5 +1,5 @@
 ---
-title: Завершение работы мастера (мастер источников данных) (службы Analysis Services) | Документы Microsoft
+title: Завершение работы мастера (мастер источников данных) (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.completion.f1
 ms.assetid: fa04d602-d12e-425a-971d-68bf1500152a
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48ca2eb92d263bb4244dd173b1ca818df2f814aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 594e28807eb33e28a74102681bc867ebbe5b7b9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279870"
 ---
 # <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>Завершение работы мастера (мастер источников данных) (службы Analysis Services)
   Используйте страницу мастера **Завершение работы мастера** , чтобы просмотреть строку соединения и указать имя нового источника данных.  

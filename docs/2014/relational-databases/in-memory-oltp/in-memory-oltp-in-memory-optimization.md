@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 caps.latest.revision: 98
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a7ee2a4a5a9bb56eee68aab349ff65ca811356cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1a1df515a5a88c94e52d376394905a819d361281
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316204"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (оптимизация в памяти)
   Новое в [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] может значительно улучшить производительность приложения базы данных OLTP. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] является оптимизированным для памяти ядром СУБД, встроенным в ядро [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], оптимизированное для OLTP.  
@@ -53,7 +53,7 @@ ms.locfileid: "36095978"
   
  В службе [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] имеются ограничения в контактной зоне службы [!INCLUDE[tsql](../../../includes/tsql-md.md)] , поддерживаемые службой [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].  
   
- [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] достигает значительного роста производительности и масштабируемости с помощью:  
+ [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] обеспечивает значительное увеличение производительности и масштабируемости с помощью:  
   
 -   алгоритмов, оптимизированных для доступа к хранимым в памяти данным;  
   

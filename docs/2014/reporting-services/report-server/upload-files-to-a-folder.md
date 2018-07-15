@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publishing reports [Reporting Services], uploading files
 - reports [Reporting Services], publishing
@@ -21,13 +21,13 @@ ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 579d4d16e72b349ac4c2aa5d083d8dc1cfeb85a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9abf4ad5aef29b6064b53af80553b02ee01c2fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266150"
 ---
 # <a name="upload-files-to-a-folder"></a>Передача файлов в папку
   Предусмотрена возможность передавать файлы из файловой системы и сохранять их в качестве управляемых элементов в базе данных сервера отчетов. Действия системы при передаче зависят от типа файла.  
@@ -63,7 +63,7 @@ ms.locfileid: "36098120"
 |Просмотр содержимого папки|Просмотр ресурсов, просмотр отчетов|  
   
 ## <a name="see-also"></a>См. также  
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;]... / отчетов — диспетчер ssrs-машинный код mode.md)   
+ [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;]... / отчетов manager-ssrs-машинный код mode.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [Задачи и разрешения](../security/tasks-and-permissions.md)   
  [Передача файла или отчета (диспетчер отчетов)](../reports/upload-a-file-or-report-report-manager.md)  

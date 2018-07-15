@@ -1,5 +1,5 @@
 ---
-title: Элемент Status (ASSL) | Документы Microsoft
+title: Элемент Status (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Status element
 ms.assetid: 4938465e-7876-43e2-9d03-70dcc9b7b749
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fd27525f6a0a7457a3fd6a3f63f102b1f6ae7bf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f5f67c4f94e5817d36f54d5d54465425c7837119
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247294"
 ---
 # <a name="status-element-assl"></a>Элемент Status (ASSL)
-  Содержит выражение многомерных выражений (MDX), возвращающее Признак состояния [ключевого показателя эффективности](../objects/kpi-element-assl.md) элемента.  
+  Содержит выражение многомерных выражений (MDX), возвращающее Признак состояния [ключевого показателя эффективности](../objects/kpi-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36097133"
 ## <a name="remarks"></a>Примечания  
  Элемент `Status` содержит многомерное выражение.  
   
- Элемент, соответствующий родителю параметра `Status` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Kpi>.  
+ Элемент, соответствующий родителю параметра `Status` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Kpi>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

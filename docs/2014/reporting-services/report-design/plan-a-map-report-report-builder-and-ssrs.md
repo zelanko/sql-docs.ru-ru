@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 025d087a662fbf641d60e42314a7116df4632bb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: fd3b765bff38ea006a1dd1a60fe861373715ee80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309424"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Планирование отчета-карты (построитель отчетов и службы SSRS)
   Хорошее представление сведений в отчетах может помочь их пониманию и выполнению действий. Для представления аналитических данных в отчете, например данных о продажах или демографических данных по географическим районам, можно добавить в отчет карту. Карта может содержать несколько уровней, каждый уровень содержит элементы карты, определенные в конкретном типе пространственных данных: точки, представляющие расположение, линии, представляющие маршруты, или многоугольники, представляющие области. Можно соотнести аналитические данные с каждым элементом карты на каждом уровне.  
@@ -66,7 +66,7 @@ ms.locfileid: "36097442"
   
 -   Карты из отчетов в галерее карт.  
   
--   Сторонние сайты, которые содержат Пространственные данные, такие как ШЕЙП-файлы или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пространственных данных.  
+-   Сторонние сайты, которые содержат Пространственные данные, как файлы фигуры ESRI или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пространственных данных.  
   
 -   Мозаики Bing Map, обеспечивающие фон для просмотра карты. Чтобы отобразить мозаику на карте, сервер отчетов должен быть настроен для поддержки веб-служб Bing Map.  
   
@@ -168,6 +168,6 @@ ms.locfileid: "36097442"
  [Настройка данных и отображения карты или слоя карты (построитель отчетов и службы SSRS)](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Учебник. Отчет-карта (построитель отчетов)](../tutorial-map-report-report-builder.md)   
  [Карты (построитель отчетов и службы SSRS)](maps-report-builder-and-ssrs.md)   
- [Устранение неполадок в отчетах: Сопоставления отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Устранение неполадок в отчетах: Отчеты-карты &#40;построитель отчетов и службы SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

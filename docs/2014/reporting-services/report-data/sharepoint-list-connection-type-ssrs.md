@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2c4022d7cfca3a85e6e01618bbf5ee20694a9b88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 129fabab52b2e7b7e59cf832d21e25972cb9b07a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260400"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Тип соединения список SharePoint (службы SSRS)
   Для включения данных из списка Microsoft SharePoint в отчет следует добавить или создать набор данных, основанный на источнике данных отчета типа «Список Microsoft SharePoint». Это встроенный тип источника данных, основанный на модуле обработки данных «Список SharePoint служб Microsoft SQL Server Reporting Services». Используйте этот тип источника данных для подключения и извлечения данных списка с сайтов [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 и [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
   
- Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным или источник данных &#40;построитель отчетов и службы SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным или источнику данных &#40;построитель отчетов и службы SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Строка подключения  
  Строка подключения к списку SharePoint — это URL-адрес сайта или дочернего сайта SharePoint, например `http://MySharePointWeb/MySharePointSite` или `http://MySharePointWeb/MySharePointSite/Subsite`.  
@@ -42,7 +42,7 @@ ms.locfileid: "36097218"
   
  **Таблица 1**  
   
-||Поддерживаемые учетные данные|Классический режим проверки подлинности Windows|<sup>3</sup> требует проверки подлинности|  
+||Поддерживаемые учетные данные|Классический режим проверки подлинности Windows|<sup>3</sup> утверждений проверки подлинности|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |Локальный список фермы SharePoint|Проверка подлинности Windows (встроенная) или токен пользователя SharePoint|Да|Да|  
 ||Хранимые, запрос, нет (с учетными данными Windows<sup>1</sup>)|Да|Нет|  
@@ -51,18 +51,18 @@ ms.locfileid: "36097218"
   
  **Таблица 2**  
   
-||Поддерживаемые учетные данные|Классический режим проверки подлинности Windows|<sup>3</sup> требует проверки подлинности|  
+||Поддерживаемые учетные данные|Классический режим проверки подлинности Windows|<sup>3</sup> утверждений проверки подлинности|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |Локальный список фермы SharePoint|Проверка подлинности Windows (встроенная) или токен пользователя SharePoint|Да|Да|  
 ||Хранимые, запрос, нет (с учетными данными Windows<sup>1</sup>)|Нет|Нет|  
 |Удаленный список SharePoint|Проверка подлинности Windows (встроенная) или токен пользователя SharePoint|Да|Не<sup>2</sup>|  
 ||Хранимые, запрос, нет (с учетными данными Windows<sup>1</sup>)|Нет|Не<sup>2</sup>|  
   
- <sup>1</sup> хранимые и запрашивать учетные данные с учетными данными не под управлением Windows не поддерживается.  
+ <sup>1</sup> хранимые данные и запрос учетных данных с учетными данными не Windows не поддерживается.  
   
- <sup>2</sup> проверку подлинности на основе форм и проверки подлинности утверждений не поддерживаются для удаленных списков SharePoint.  
+ <sup>2</sup> проверки подлинности на основе форм и проверки подлинности утверждений не поддерживаются для удаленных списков SharePoint.  
   
- <sup>3</sup> проверку подлинности Windows, проверку подлинности на основе форм (FBA), защитить приложения Markup Language (SAML) токены, другие поставщики удостоверений или сочетание более чем одним из приведенных выше упомянутых поставщиков проверки подлинности.  
+ <sup>3</sup> проверки подлинности Windows, проверку подлинности на основе форм (FBA), Secure Application Markup Language (SAML) маркеры, других поставщиков удостоверений или сочетание нескольких из перечисленных выше упомянутых поставщиков проверки подлинности.  
   
  **Проверка подлинности Windows.**  
  Для технологии SharePoint, настроенной для работы с сервером отчетов в режиме «Доверенная учетная запись», этот параметр не поддерживается. Относится только к выпускам до версии служб SQL Server 2012 Reporting Services.  
@@ -76,7 +76,7 @@ ms.locfileid: "36097218"
   
  Дополнительные сведения о поддержке проверки подлинности на основе утверждений в стеке бизнес-аналитики Майкрософт см. в разделе [Использование проверки подлинности на основе утверждений в стеке бизнес-аналитики Майкрософт](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
- Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md), [укажите учетные данные в построителе отчетов](../specify-credentials-in-report-builder.md), и [источники данных, поддерживаемые в Службы Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md), [указание учетных данных в построителе отчетов](../specify-credentials-in-report-builder.md), и [Data Sources Supported by Службы Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
 ##  <a name="Query"></a> Запросы  
  Чтобы построить запрос, создайте новый набор данных на основе источника данных и откройте связанный конструктор запросов. Дополнительные сведения см. в разделе [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
@@ -163,7 +163,7 @@ ms.locfileid: "36097218"
 ##  <a name="HowTo"></a> Инструкции  
  В этом разделе содержатся пошаговые инструкции по работе с подключениями к данным, источниками данных и наборами данных.  
   
- [Добавление и проверка подключения к данным или источник данных &#40;отчетов построителя отчетов и службы SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Добавление и проверка подключения к данным или источнику данных &#40;построитель отчетов и службы SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -173,7 +173,7 @@ ms.locfileid: "36097218"
 ##  <a name="Related"></a> См. также  
  В этих разделах документации содержатся подробные сведения о данных отчетов, а также методические сведения об определении, настройке и использовании элементов отчетов, связанных с данными.  
   
- [Добавление данных в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](report-datasets-ssrs.md)  
+ [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)  
  Предоставляет общие сведения о доступе к данным отчета.  
   
  [Подключения к данным, источники данных и строки подключения в построителе отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
