@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 41f2345cf31347fba98448a02d4d3014b8883d73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: be8b75318aec2bd921a7d995f63e722f38881426
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319864"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>Функция RunningValue (построитель отчетов и службы SSRS)
   Возвращает текущий агрегат всех числовых значений, отличных от NULL, заданных выражением, вычисляемым для данной области.  
@@ -52,7 +52,7 @@ RunningValue(expression, function, scope)
   
  Функция `RunningValue` не может быть использована в выражении фильтра или сортировки.  
   
- Набор данных, для которого вычислено текущее значение, должен иметь такой же тип данных. Чтобы преобразовать данные, имеющие разные числовые типы один и тот же тип данных, используйте функции преобразования, такие как `CInt`, `CDbl` или `CDec`. Дополнительные сведения см. в разделе [Функции преобразования типов](http://go.microsoft.com/fwlink/?LinkId=96142).  
+ Набор данных, для которого вычислено текущее значение, должен иметь такой же тип данных. Чтобы преобразовать данные, имеющие разные числовые типы в тот же тип данных, используйте функции преобразования, например `CInt`, `CDbl` или `CDec`. Дополнительные сведения см. в разделе [Функции преобразования типов](http://go.microsoft.com/fwlink/?LinkId=96142).  
   
  Значением*Scope* не может быть выражение.  
   
@@ -62,7 +62,7 @@ RunningValue(expression, function, scope)
   
 -   Область для вложенных агрегатов не может быть именем набора данных.  
   
--   *Выражение* не должны содержать `First`, `Last`, `Previous`, или `RunningValue` функции.  
+-   *Выражение* не может содержать `First`, `Last`, `Previous`, или `RunningValue` функции.  
   
 -   *Expression* не может содержать вложенные агрегаты, в которых указан параметр *recursive*.  
   
@@ -92,9 +92,9 @@ RunningValue(expression, function, scope)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Выражения используются в отчетах &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
- [Область выражения для итогов, статистических функций и встроенных коллекций &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

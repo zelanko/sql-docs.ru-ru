@@ -1,5 +1,5 @@
 ---
-title: Использовать расширенные события (XEvents) SQL Server для мониторинга служб Analysis Services | Документы Microsoft
+title: Использовать расширенные события (XEvents) SQL Server для мониторинга служб Analysis Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb67c1eca2b803c01a3716708f73afbb3861476a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4aa591ff08106f7af8946d6725d8894c52149634
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332804"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>Использование расширенных событий SQL Server (XEvents) для мониторинга служб Analysis Services
   Службы Analysis Services предоставляют возможности трассировки посредством использования [расширенных событий](../../relational-databases/extended-events/extended-events.md).  
   
  Расширенные события — это инфраструктура событий с высоким уровнем масштабирования и настройки для серверных систем. Расширенные события — это упрощенная система мониторинга производительности, в которой применяется очень небольшой объем ресурсов.  
   
- Все службы Analysis Services, события могут быть захвачены и направлены к конкретным получателям, как определено в [расширенных событий](../../relational-databases/extended-events/extended-events.md), через XEvents.  
+ Все службы Analysis Services, события могут записываться и направлены к конкретным получателям, как определено в [расширенных событий](../../relational-databases/extended-events/extended-events.md), через XEvents.  
   
 ## <a name="initiating-extended-events-in-analysis-services"></a>Запуск расширенных событий в службах Analysis Services  
  Расширенная трассировка событий включается с помощью команды скрипта создания объекта, аналогичной команде XML для аналитики, как показано ниже.  

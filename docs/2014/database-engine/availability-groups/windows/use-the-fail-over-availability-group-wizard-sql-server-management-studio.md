@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.failoverwizard.progress.f1
 - sql12.swb.failoverwizard.f1
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 caps.latest.revision: 25
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 351c09770b0e0e35c0ab4d039d8f4c9b5c76abe0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4e760ac9e1c806ef742c84f0725b94c204dc8345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314540"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Использование мастера отработки отказа группы доступности (Среда SQL Server Management Studio)
   В этом разделе описано выполнение планового перехода на другой ресурс вручную или принудительный переход на другой ресурс вручную (принудительная отработка отказа) в группе доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Группа доступности выполняет переход на другой ресурс на уровне реплики доступности. Если переход выполняется на вторичную реплику, находящуюся в состоянии SYNCHRONIZED, мастер выполнит плановый переход на другой ресурс вручную (без потери данных). Если переход выполняется на вторичную реплику, находящуюся в состоянии UNSYNCHRONIZED или NOT SYNCHRONIZING, мастер выполнит принудительный переход на другой ресурс вручную, который также называется *принудительная отработка отказа* (с возможной потерей данных). При использовании обеих этих форм перехода на другой ресурс вручную вторичная реплика, с которой установлено подключение, переводится в роль первичной. В настоящее время при выполнении планового перехода на другой ресурс вручную прежняя первичная реплика принимает роль вторичной. После принудительной отработки отказа, когда прежняя первичная реплика переходит в режим «в сети» она принимает роль вторичной.  
@@ -45,11 +44,11 @@ ms.locfileid: "36098489"
   
      [Страниц "Подтверждение возможной потери данных"](#ConfirmPotentialDataLoss) (далее в этом разделе)  
   
-     [Страница «Сводка» &#40;мастера группы доступности AlwaysOn&#41;](summary-page-always-on-availability-group-wizards.md)  
+     [Страница «Сводка» &#40;мастера групп доступности AlwaysOn&#41;](summary-page-always-on-availability-group-wizards.md)  
   
-     [Страница «Выполнение» &#40;мастера группы доступности AlwaysOn&#41;](progress-page-always-on-availability-group-wizards.md)  
+     [Ход выполнения страницы &#40;мастера групп доступности AlwaysOn&#41;](progress-page-always-on-availability-group-wizards.md)  
   
-     [Страница «результаты» &#40;мастера группы доступности AlwaysOn&#41;](results-page-always-on-availability-group-wizards.md)  
+     [Страница «результаты» &#40;мастера групп доступности AlwaysOn&#41;](results-page-always-on-availability-group-wizards.md)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Перед первым выполнением запланированного перехода на другой ресурс вручную ознакомьтесь с пунктом "Перед началом" в разделе [Выполнение запланированного перехода на другой ресурс вручную для группы доступности (SQL Server)](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  

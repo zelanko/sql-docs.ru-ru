@@ -1,5 +1,5 @@
 ---
-title: Программирование фундаментальных объектов AMO | Документы Microsoft
+title: Программирование фундаментальных объектов AMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c85b48c62e271dff6a4db582527c68a7735f0dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d85bbc23bd016f2e1dd1d4842a5bd66645035ec2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321304"
 ---
 # <a name="programming-amo-fundamental-objects"></a>Программирование фундаментальных объектов AMO
   Фундаментальные объекты, как правило, являются простыми и понятными. Чаще всего пользователь создает эти объекты и их экземпляры, а затем, когда они больше не нужны, отключается от них. К фундаментальным классам относятся следующие объекты: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, и <xref:Microsoft.AnalysisServices.DataSourceView>. Единственным сложным объектом среди фундаментальных объектов AMO является <xref:Microsoft.AnalysisServices.DataSourceView>, которому необходимы подробные данные для построения абстрактной модели, которая является представлением источника данных.  
@@ -83,7 +83,7 @@ static Server ServerConnect( String strStringConnection)
   
  Структура строки соединения:  
   
- «**Источник данных =**\<имя сервера >».  
+ "**Источник данных =**\<имя сервера >».  
   
  Дополнительные сведения о строке соединения см. в разделе <xref:Microsoft.SqlServer.Management.Common.OlapConnectionInfo.ConnectionString%2A>.  
   
@@ -108,7 +108,7 @@ if ( (svr != null) && ( svr.Connected))
 ```  
   
 ###  <a name="AMO"></a> Объекты исключений AmoException  
- При возникновении различных проблем объекты AMO формируют исключения. Подробное описание исключений см. в разделе [AMO другие классы и методы](amo-other-classes-and-methods.md). В следующем образце кода показан правильный способ захвата исключений в объектах AMO.  
+ При возникновении различных проблем объекты AMO формируют исключения. Подробное описание исключений, см. в разделе [AMO другие классы и методы](amo-other-classes-and-methods.md). В следующем образце кода показан правильный способ захвата исключений в объектах AMO.  
   
 ```  
 try  
@@ -247,7 +247,7 @@ static string CreateDataSource(Database db, string strDataSourceName, string str
 >  Следующий образец кода усечен с целью повышения его наглядности. Полный код приведен в конце этого раздела.  
   
 > [!NOTE]  
->  Следующие методы являются частью в образце кода: `AddTable`, `AddComputedColumn`, `AddRelation`, и `AddCompositeRelation`.  
+>  Следующие методы являются частью пример кода: `AddTable`, `AddComputedColumn`, `AddRelation`, и `AddCompositeRelation`.  
   
 > [!NOTE]  
 >  Предложение `'WHERE 1=0'` используется для того, чтобы запрос не возвращал строки в объект `DataSet`.  
@@ -558,7 +558,7 @@ static void AddCompositeRelation(DataSourceView dsv, String fkTableName, String 
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices>   
- [Знакомство с классами объектов AMO](amo-classes-introduction.md)   
+ [Введение в классы объектов AMO](amo-classes-introduction.md)   
  [Основные классы объектов AMO](amo-fundamental-classes.md)   
  [Логическая архитектура &#40;службы Analysis Services — многомерные данные&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Объекты базы данных &#40;службы Analysis Services — многомерные данные&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  

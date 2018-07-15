@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report-specific schedules [Reporting Services]
 - shared schedules [Reporting Services]
@@ -25,13 +25,13 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c4ac89d35cfe118cb82e945ef48d87c24b56abed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5cecee40fb3eaee2bd481b38a54cbcfa686eb0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097007"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317884"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   В этом подразделе представлены сведения о создании, изменении и удалении расписаний.  
@@ -45,7 +45,7 @@ ms.locfileid: "36097007"
 -   [Создание и управление общими расписаниями (собственный режим)](#bkmk_native)  
   
 ##  <a name="bkmk_overview"></a> Общие сведения об управлении общими расписаниями  
- Для управления общими расписаниями для собственного режима используйте страницу «расписания» диспетчера отчетов или «общие расписания» в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Для режима интеграции с SharePoint используйте страницы управления для приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Для управления общими расписаниями для собственного режима используйте страницу «расписания» в диспетчере отчетов или в папке общих расписаний [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Для режима интеграции с SharePoint используйте страницы управления для приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Можно просматривать все общие расписания, определенные на сервере отчетов, приостанавливать и возобновлять их действие (только на диспетчере отчетов), а также изменять или удалять выбранные расписания. На странице «Общие расписания» представлена сводка по состоянию каждого из расписаний, отражающая частоту, владельца, дату окончания действия и состояние.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "36097007"
 1.  В диспетчере отчетов щелкните **Настройки сайта**на главной панели инструментов.  
   
     > [!NOTE]  
-    >  Если **параметры сайта** будет недоступна, у вас разрешения для доступа к параметрам сайта.  
+    >  Если **параметры сайта** является не доступен, у вас нет разрешения для доступа к параметрам сайта.  
   
 2.  В разделе **Другие** на странице выберите пункт **Управление общими расписаниями**.  
   

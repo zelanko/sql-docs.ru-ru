@@ -5,23 +5,22 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 caps.latest.revision: 49
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: ecc1ea0c52016116ca9bbe5c102b6fbb44859da5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a5ed555d0b81e74babd60b16c1ba8df4685d6b37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328494"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Создание группы доступности (Transact-SQL)
   В данном разделе описывается использование [!INCLUDE[tsql](../../../includes/tsql-md.md)] для создания и настройки группы доступности на основе экземпляров [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , на которых включена функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
@@ -57,7 +56,7 @@ ms.locfileid: "36099048"
 |Подготовьте базу данных-получатель|[BACKUP](/sql/t-sql/statements/backup-transact-sql) и [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).|Создайте резервные копии на экземпляре сервера, размещающем первичную реплику.<br /><br /> Восстановить резервные копии на каждом экземпляре сервера, размещающем вторичную реплику, используя инструкцию RESTORE WITH NORECOVERY.|  
 |Запуск синхронизации данных с помощью присоединения каждой базы данных-получателя к группе доступности|[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) *database_name* SET HADR AVAILABILITY GROUP = *group_name*|Выполнить на каждом экземпляре сервера, размещающем вторичную реплику.|  
   
- **<sup>*</sup>**  Для выполнения данной задачи, подключиться к указанной экземпляр или экземпляры сервера.  
+ **<sup>*</sup>**  Для выполнения данной задачи, подключитесь к указанный экземпляр или экземпляры сервера.  
   
 ##  <a name="TsqlProcedure"></a> Создание и настройка группы доступности с помощью Transact-SQL  
   
@@ -460,7 +459,7 @@ GO
   
 -   [Создание или настройка прослушивателя группы доступности (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [Настройка гибкой политики отработки отказа для элемента управления для автоматического перехода на другой ресурс (группы доступности AlwaysOn)](configure-flexible-automatic-failover-policy.md)  
+-   [Настройка гибкой политики отработки отказа для обеспечения контроля над для автоматической отработки отказа (группы доступности AlwaysOn)](configure-flexible-automatic-failover-policy.md)  
   
 -   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
@@ -496,7 +495,7 @@ GO
   
  **Настройка конечной точки зеркального отображения базы данных**  
   
--   [Создать базу данных конечной точки зеркального отображения для групп доступности AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Создание базы данных конечной точки зеркального отображения для групп доступности AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -504,11 +503,11 @@ GO
   
 -   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
- **Устранение неполадок с конфигурацией группы доступности AlwaysOn**  
+ **Устранение неполадок с конфигурацией групп доступности AlwaysOn**  
   
--   [Диагностика конфигурации групп доступности AlwaysOn (SQL Server) удалена](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [Устранение неполадок конфигурации групп доступности AlwaysOn (SQL Server) удалена](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
--   [Устранение неполадок с операцией не удалось добавить файл &#40;группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Устранение неполадок с операцией добавления файла, завершившейся сбоем &#40;группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> См. также  
   
@@ -516,19 +515,19 @@ GO
   
      [-Обучающая серия AlwaysON HADRON: Использование рабочего пула для HADRON баз данных с поддержкой](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Блоги SQL Server AlwaysOn Team: Официальный блог SQL Server AlwaysOn](http://blogs.msdn.com/b/sqlalwayson/)  
+     [Блоги группы AlwaysOn SQL Server: Официальный блог SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
   
      [Блоги инженеров CSS SQL Server](http://blogs.msdn.com/b/psssql/)  
   
 -   **Видеоролики**  
   
-     [Серия AlwaysOn Microsoft SQL Server с рабочим названием «Denali», часть 1: Вводные сведения о решении высокого уровня доступности следующего поколения](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Серия Microsoft SQL Server с кодовым названием «Denali» AlwaysOn, часть 1: Представляем решение высокого уровня доступности следующего поколения](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Серия AlwaysOn Microsoft SQL Server с рабочим названием «Denali», часть 2: Создание критически важных высокого уровня доступности с помощью AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Серия AlwaysOn Microsoft SQL Server с кодовым названием «Denali», часть 2: Создание критически важных высокого уровня доступности с помощью AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Технические документы**  
   
-     [Microsoft SQL Server AlwaysOn Solutions Guide for высокого уровня доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Технические документы Майкрософт Microsoft по SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   

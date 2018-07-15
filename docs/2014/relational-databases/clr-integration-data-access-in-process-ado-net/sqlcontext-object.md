@@ -1,13 +1,11 @@
 ---
-title: Объект SqlContext | Документы Microsoft
+title: Объект SqlContext | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - context [CLR integration]
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea7cd3ca105fd599f3b157f64189210b539de4ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 46ff059b14d5937d1214e0d97ad9aa13083e7fd3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189536"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354016"
 ---
 # <a name="sqlcontext-object"></a>Объект SqlContext
   На сервере управляемый код запускается при вызове процедуры, функции или метода для определяемого пользователем типа данных CLR или когда действие вызывает срабатывание триггера, определенного на одном из языков платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Так как выполнение этого кода необходимо как часть соединения пользователя, требуется доступ к контексту участника из кода, работающего на сервере. Кроме того, определенные операции доступа к данным могут быть допустимы, только если они выполняются в контексте участника. Например, доступ к вставленным или удаленным псевдотаблицам, применяемым в операциях триггеров, допустим только в контексте участника.  
@@ -33,9 +31,9 @@ ms.locfileid: "36189536"
   
  Объект `SqlContext` обеспечивает доступ к следующим компонентам.  
   
--   `SqlPipe`: объект `SqlPipe` представляет «канал», по которому результаты передаются клиенту. Дополнительные сведения о `SqlPipe` см. в разделе [объект SqlPipe](sqlpipe-object.md).  
+-   `SqlPipe`: объект `SqlPipe` представляет «канал», по которому результаты передаются клиенту. Дополнительные сведения о `SqlPipe` объекта, см. в разделе [объект SqlPipe](sqlpipe-object.md).  
   
--   `SqlTriggerContext`: объект `SqlTriggerContext` можно получить только из триггера CLR. Он предоставляет сведения об операции, которая вызвала срабатывание триггера, а также карту столбцов, которые были обновлены. Дополнительные сведения о `SqlTriggerContext` см. в разделе [SqlTriggerContext, объект](sqltriggercontext-object.md).  
+-   `SqlTriggerContext`: объект `SqlTriggerContext` можно получить только из триггера CLR. Он предоставляет сведения об операции, которая вызвала срабатывание триггера, а также карту столбцов, которые были обновлены. Дополнительные сведения о `SqlTriggerContext` объекта, см. в разделе [SqlTriggerContext, объект](sqltriggercontext-object.md).  
   
 -   `IsAvailable`: свойство `IsAvailable` используется для определения доступности контекста.  
   
@@ -134,7 +132,7 @@ End Sub
   
 ## <a name="see-also"></a>См. также  
  [Объект SqlPipe](sqlpipe-object.md)   
- [SqlTriggerContext, объект](sqltriggercontext-object.md)   
+ [Объект SqlTriggerContext](sqltriggercontext-object.md)   
  [Триггеры CLR](../../database-engine/dev-guide/clr-triggers.md)   
  [Внутрипроцессные расширения SQL Server для ADO.NET](sql-server-in-process-specific-extensions-to-ado-net.md)  
   

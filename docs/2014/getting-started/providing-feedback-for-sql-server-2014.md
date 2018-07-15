@@ -1,12 +1,12 @@
 ---
-title: Отзывы по SQL Server 2014 | Документы Microsoft
+title: Отзывы по SQL Server 2014 | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sending feedback to Microsoft
 - errors [SQL Server], feedback reporting
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - automatic error or usage reporting
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ae86c2af70277c6dc3157d0cb3b3b73122397d54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e878c3d09e2dde7d32e9fa5b37fd02081a6979c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312104"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Отзывы по SQL Server 2014
   Корпорация [!INCLUDE[msCoName](../includes/msconame-md.md)] ценит, что вы уделили часть своего времени, чтобы помочь в улучшении продуктов и документации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Можно предоставлять отчеты об ошибках и выдвигать предложения, касающиеся характеристик продуктов или пользовательского интерфейса, предоставлять отзывы о документации; кроме того, можно разрешить автоматическую отправку отчетов об ошибках и данных об использовании продуктов в [!INCLUDE[msCoName](../includes/msconame-md.md)] для дальнейшего анализа. Каждый из трех методов обратной связи описывается в этом разделе.  

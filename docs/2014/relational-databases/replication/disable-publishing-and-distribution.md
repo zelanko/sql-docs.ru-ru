@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - disabling publishing
 - publishing [SQL Server replication], disabling
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - disabling distribution
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2b1cb0af2c8082ba7ba649c6d6f21b53d9b96c7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0ec2381b96818d038c7e40b71a4e56b1c4d415af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313494"
 ---
 # <a name="disable-publishing-and-distribution"></a>Отключение публикации и распространения
   В данном разделе описывается отключение публикации и распространения в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
@@ -116,11 +116,11 @@ ms.locfileid: "36098387"
   
 5.  (Необязательно) Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> , чтобы получить свойства объекта и убедиться, что издатель существует. Если этот метод возвращает `false`, имя издателя, установленное на шаге 4, неверно или издатель не используется этим распространителем.  
   
-6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> . Передайте значение `true` для *принудительно* Если издатель и распространитель находятся на разных серверах и если издатель нужно удалить с распространителя, не проверяя, публикаций больше не существует в Издатель.  
+6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> . Передайте значение `true` для *принудительно* Если издатель и распространитель расположены на разных серверах и в случае, если нужно удалить с распространителя, не проверяя, больше не существуют ли публикации на издателе Издатель.  
   
 7.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 3.  
   
-8.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> . Передайте значение `true` для *принудительно* для удаления всех объектов репликации на распространителе, не проверяя, отключены ли все локальные базы данных публикации и удалены ли базы данных распространителя.  
+8.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> . Передайте значение `true` для *принудительно* удалить все объекты репликации с распространителя, не проверяя, отключены все локальные базы данных публикации и удалены ли базы данных распространителя.  
   
 ###  <a name="PShellExample"></a> Примеры (объекты RMO)  
  В этом примере удаляется как регистрация издателя на распространителе, так и база данных распространителя, а также удаляется распространитель.  

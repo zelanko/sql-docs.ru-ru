@@ -1,5 +1,5 @@
 ---
-title: Конфигурации пакета | Документы Microsoft
+title: Конфигурации пакета | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - package configuration syntax [Integration Services]
 - SQL Server Integration Services packages, configurations
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 caps.latest.revision: 47
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b3b80e197cedae2b8a9902b8e3de4f9066fab374
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b8341d97c711501b4a9ade2f15d73443312e83a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314154"
 ---
 # <a name="package-configurations"></a>Конфигурации пакетов
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] содержат конфигурации пакета, которые можно использовать для обновления значений свойств во время выполнения.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] содержат конфигурацию пакетов, которые можно использовать для обновления значений свойств во время выполнения.  
   
 > [!NOTE]  
 >  Доступны конфигурации для модели развертывания пакетов. Для моделей развертывания проектов вместо конфигураций используются параметры. Модель развертывания проектов позволяет развертывать проекты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сервере служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Дополнительные сведения о моделях развертывания см. в разделе [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "36096910"
   
 -   Конфигурации делают пакеты более гибкими. Например, конфигурация может обновить значение переменной, используемой в выражении свойства.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] поддерживает несколько различных методов хранения конфигураций пакетов, таких как XML-файлы, таблицы в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] базы данных и переменные среды и пакета.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] поддерживают несколько различных методов хранения конфигураций пакетов, таких как XML-файлы, таблицы в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] базы данных и переменные среды и пакета.  
   
  Каждая конфигурация является парой вида «свойство-значение». XML-файл конфигурации и [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] могут включать несколько конфигураций.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36096910"
   
 -   Нельзя использовать параметр **/ConfigFile** для загрузки конфигураций, которые заменяют параметры, указанные во время разработки.  
   
- Дополнительные сведения об этих параметрах и как поведение этих параметров отличается от [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] и более ранних версий, см. раздел [изменения в работе функций служб Integration Services в SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
+ Дополнительные сведения об этих параметрах и как поведение этих параметров отличается между [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] и более ранних версий, см. в разделе [изменения в работе функций служб Integration Services в SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
   
 ## <a name="package-configuration-types"></a>Типы конфигураций пакета  
  Следующая таблица описывает типы конфигураций пакета.  
@@ -125,7 +125,7 @@ ms.locfileid: "36096910"
 ```  
   
 ### <a name="registry-entry"></a>Параметр реестра  
- Если для хранения конфигурации нужно использовать параметр реестра, то можно либо использовать существующий раздел, либо создать новый подраздел в разделе HKEY_CURRENT_USER. Раздел реестра, который вы используете должен иметь значение с именем `Value`. Значение может иметь строковый тип или тип DWORD.  
+ Если для хранения конфигурации нужно использовать параметр реестра, то можно либо использовать существующий раздел, либо создать новый подраздел в разделе HKEY_CURRENT_USER. Раздел реестра, который используется должен иметь значение с именем `Value`. Значение может иметь строковый тип или тип DWORD.  
   
  Если выбран тип конфигурации **Запись реестра** , необходимо ввести имя раздела реестра в соответствующее поле. Формат — \<раздел реестра>. Если нужно использовать раздел реестра, корневым разделом которого является не HKEY_CURRENT_USER, то для его задания используйте формат \<Раздел реестра\раздел реестра\\...>. Например, чтобы использовать раздел MyPackage, расположенный в разделе SSISPackages, введите `SSISPackages\MyPackage`.  
   
@@ -148,7 +148,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  Имя, задаваемое для конфигурации, является значением, которое хранится в столбце **ConfigurationFilter** .  
   
 ## <a name="direct-and-indirect-configurations"></a>Прямые и косвенные конфигурации  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляет прямые и косвенные конфигурации. Если задать конфигурации напрямую, службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] создадут прямую связь между элементом конфигурации и свойством объекта пакета. Прямые конфигурации используются в том случае, когда местоположение источника не меняется. Например, если пользователь уверен, что все развертываемые элементы пакета используют один и тот же путь к файлу, можно задать XML-файл конфигурации.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют прямые и косвенные конфигурации. Если задать конфигурации напрямую, службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] создадут прямую связь между элементом конфигурации и свойством объекта пакета. Прямые конфигурации используются в том случае, когда местоположение источника не меняется. Например, если пользователь уверен, что все развертываемые элементы пакета используют один и тот же путь к файлу, можно задать XML-файл конфигурации.  
   
  Косвенные конфигурации используют переменные среды. Конфигурация указывает на переменную среды, содержащую значение конфигурации, вместо задания значения конфигурации напрямую. Использовать косвенные конфигурации лучше в случае, когда местоположение конфигурации меняется для каждого развертываемого пакета.  
   

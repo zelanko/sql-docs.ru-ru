@@ -1,13 +1,11 @@
 ---
-title: Ограничения обычных и контекстных соединений | Документы Microsoft
+title: Ограничения обычных и контекстных соединений | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - regular connections [CLR integration]
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f0d266b75dad229a0784606af112c249728a112c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: aaff8841ec9ccd7b61b5ab7646daaf700a05b3df
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190984"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349456"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>Ограничения обычных и контекстных соединений
   В этом разделе содержатся сведения об ограничениях, связанных с кодом, выполняемым в [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] через контекстные и обычные соединения.  

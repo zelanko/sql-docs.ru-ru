@@ -1,13 +1,11 @@
 ---
-title: При удалении сборки | Документы Microsoft
+title: При удалении сборки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - dropping assemblies
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3551d0971a90c77135ca3e74b30d3009108646c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 3920b679e017d5d0e4f069dea29ada7ba97bf13b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188470"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354596"
 ---
 # <a name="dropping-an-assembly"></a>Удаление сборки
   Сборки, зарегистрированные в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью инструкции CREATE ASSEMBLY, могут быть удалены, если предоставляемые ими функциональные возможности больше не требуются. При удалении сборки из базы данных удаляются и все связанные с ней файлы, такие как файлы отладки. Чтобы удалить сборку, используйте инструкцию DROP ASSEMBLY со следующим синтаксисом:  
@@ -48,7 +46,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   Функции, хранимые процедуры или триггеры, которые используют переменные или параметры определяемого пользователем типа и созданы в базе данных с помощью предложения WITH SCHEMABINDING.  
   
 ### <a name="finding-udt-dependencies"></a>Поиск зависимостей определяемого пользователем типа  
- Сначала необходимо удалить все зависимые объекты, а затем выполнить инструкцию DROP TYPE. Следующие [!INCLUDE[tsql](../../../includes/tsql-md.md)] запрос находит все столбцы и параметры, используемые определяемого пользователем ТИПА в **AdventureWorks** базы данных.  
+ Сначала необходимо удалить все зависимые объекты, а затем выполнить инструкцию DROP TYPE. Следующие [!INCLUDE[tsql](../../../includes/tsql-md.md)] запрос находит все столбцы и параметров, которые используют определяемый пользователем тип в **AdventureWorks** базы данных.  
   
 ```  
 USE Adventureworks;  
@@ -76,6 +74,6 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [DROP FUNCTION (Transact-SQL)](/sql/t-sql/statements/drop-function-transact-sql)   
  [DROP PROCEDURE (Transact-SQL)](/sql/t-sql/statements/drop-procedure-transact-sql)   
  [DROP TRIGGER (Transact-SQL)](/sql/t-sql/statements/drop-trigger-transact-sql)   
- [Тип удаления &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-type-transact-sql)  
+ [Тип ПЕРЕНОСА &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-type-transact-sql)  
   
   

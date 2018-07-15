@@ -1,5 +1,5 @@
 ---
-title: Применение преобразования XSL (управляемые классы SQLXML) | Документы Microsoft
+title: Применение преобразования XSL (управляемые классы SQLXML) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - XSL Transformations [SQLXML]
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1d6c91330e87cd978edc32102f7af925ff5afae6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ec1e85409711164eae449bb7c246ef5a291eb132
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311276"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Применение преобразования XSL (управляемые классы SQLXML)
   В этом примере SQL-запрос выполняется в базе данных AdventureWorks. Преобразование XSL применяется к результату запроса для формирования состоящей из двух столбцов таблицы с именами и фамилиями служащих.  
   
- XslPath, свойство SqlXmlCommand объекта используется для указания файла XSL и его путь к каталогу.  
+ XslPath, свойство объекта SqlXmlCommand используется для указания файла XSL и его путь к каталогу.  
   
 > [!NOTE]  
 >  В коде необходимо задать имя экземпляра Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения.  

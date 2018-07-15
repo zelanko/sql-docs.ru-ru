@@ -1,13 +1,11 @@
 ---
-title: Объект SqlDataRecord | Документы Microsoft
+title: Объект SqlDataRecord | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - custom result sets [CLR integration]
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 236e1221e8be9a6818839faf06f94666a5f000e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 70949e9dbc01e724180dd61dcf4a583a580cdc51
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189781"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349956"
 ---
 # <a name="sqldatarecord-object"></a>Объект SqlDataRecord
   Объект `SqlDataRecord` представляет одну строку данных и связанные с ними метаданные.  
