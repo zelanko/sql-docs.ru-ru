@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
@@ -16,13 +16,13 @@ ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8e9333ffac363c12176057ab4da006881ce4cbe8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d03b080b757fc8cdc8ffdc52d4ac7c0734cdbfe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250554"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (больше) (выражение служб SSIS)
   Выполняет сравнение с целью определения, является ли первое выражение больше второго. Перед проведением сравнения средство оценки выражений автоматически преобразует большинство типов данных.  

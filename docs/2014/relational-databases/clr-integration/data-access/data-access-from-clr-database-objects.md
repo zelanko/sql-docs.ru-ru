@@ -1,13 +1,11 @@
 ---
-title: Доступ к данным из объектов базы данных CLR | Документы Microsoft
+title: Доступ к данным из объектов базы данных CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,18 +23,18 @@ helpviewer_keywords:
 - in-process data access providers [CLR integration]
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab43297c592258075e9c80ec9808b10c7bd267df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1c49134c931bc9f27e7c4856ce23ccde70364000
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101354"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351146"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Доступ к данным из объектов среды CLR для работы с базами данных
-  Общие подпрограммы среды выполнения (CLR) языка может легко получить доступ к данным, хранящимся в экземпляре [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] , в котором она выполняется, а также данных, хранящихся на удаленных экземплярах. Какие именно это данные — определяет контекст пользователя, в котором выполняется код. Доступ к данным из объекта базы данных среды CLR, используя поставщик данных .NET Framework для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] данных из управляемого клиента и приложений среднего уровня. Это позволяет эффективно использовать опыт работы с ADO.NET и `SqlClient` как в клиентских приложениях, так и в приложениях среднего уровня.  
+  Общие процедуры среды выполнения (CLR) языка может легко получить доступ к данных, хранящихся в экземпляре [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] в котором она выполняется, а также данные, хранящиеся на удаленных экземплярах. Какие именно это данные — определяет контекст пользователя, в котором выполняется код. Доступ к данным из объекта базы данных среды CLR, используя поставщик данных .NET Framework для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] данных из управляемого клиента и приложений среднего уровня. Это позволяет эффективно использовать опыт работы с ADO.NET и `SqlClient` как в клиентских приложениях, так и в приложениях среднего уровня.  
   
 > [!NOTE]  
 >  По умолчанию методы определяемых пользователем типов и определяемые пользователем функции не могут производить доступ к данным. Чтобы разрешить такой доступ, необходимо присвоить свойству `DataAccess` объекта `SqlMethodAttribute` или `SqlFunctionAttribute` значение `DataAccessKind.Read`. Операции изменения данных из методов определяемых пользователем типов и определяемых пользователем функций не разрешены. При попытке выполнить такую операцию будет вызвано исключение времени выполнения.  

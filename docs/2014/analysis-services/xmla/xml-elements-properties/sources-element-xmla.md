@@ -1,5 +1,5 @@
 ---
-title: Источники элемент (XMLA) | Документы Microsoft
+title: Источники элемент (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Sources element
 ms.assetid: fefe8f01-4c62-4b70-9bf6-f11d2f01623a
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f634df53b1eb92979caa699b25824d9345e00c21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1aae2aca405aaabce130400d4d5896a6ae823851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304174"
 ---
 # <a name="sources-element-xmla"></a>Элемент Sources (XML для аналитики)
-  Содержит коллекцию [источника](source-element-xmla.md) для родительского [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) элемента.  
+  Содержит коллекцию [источника](source-element-xmla.md) для родительского [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   

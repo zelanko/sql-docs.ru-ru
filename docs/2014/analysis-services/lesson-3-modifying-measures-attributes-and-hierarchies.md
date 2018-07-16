@@ -1,5 +1,5 @@
 ---
-title: 'Урок 3: Изменение мер, атрибутов и иерархий | Документы Microsoft'
+title: 'Урок 3: Изменение мер, атрибутов и иерархий | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 17d243cb-9bfb-43d7-8e6f-4d601fd62150
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: e985dc25323960ccaab5ad9c320bf12bd14bf43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f6d1f397b5950144ed898e4907c7ea30bc582f1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255496"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Урок 3. Изменение мер, атрибутов и иерархий
   После определения начального куба можно увеличить его полезность и удобство использования. Это можно сделать, добавив иерархии, поддерживающие навигацию и агрегаты на разных уровнях, применив форматы к конкретной мере и определив вычисления и связи.  
@@ -46,6 +46,6 @@ ms.locfileid: "36195697"
   
 ## <a name="see-also"></a>См. также  
  [Сценарий учебника по службам Analysis Services](analysis-services-tutorial-scenario.md)   
- [Многомерное моделирование &#40;компания Adventure Works учебника&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [Многомерное моделирование &#40;руководством по Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

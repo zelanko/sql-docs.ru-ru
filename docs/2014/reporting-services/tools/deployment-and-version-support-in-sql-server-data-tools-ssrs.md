@@ -1,5 +1,5 @@
 ---
-title: Развертывание и поддержка версий в SQL Server Data Tools (SSRS) | Документы Microsoft
+title: Развертывание и поддержка версий в SQL Server Data Tools (SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d52ae21eb9313bbb58d04305c9dd79eb41551290
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 856834aa8c29ebaba0661012383d52ad30e3ad59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313236"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>Развертывание и поддержка версий в SQL Server Data Tools (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] поддерживает следующие сценарии:  
@@ -72,9 +72,9 @@ ms.locfileid: "36190918"
 |Проект сервера отчетов<br /><br /> или диспетчер конфигурации служб<br /><br /> Проект мастера сервера отчетов|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Схема языка определения отчетов версии 2005|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сервера отчетов||  
 |Проект сервера отчетов|[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|Схема языка определения отчетов версии 2003|Не поддерживается||  
 |[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Конструктор отчетов RDLC|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|Схема языка определения отчетов версии 2005|Не поддерживается|Схема языка определения отчетов версии 2008 не поддерживается.|  
-|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Элементы управления средства просмотра|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|Язык определения отчетов версии 2008 не поддерживается в локальном режиме|Недоступно|Можно просматривать отчеты языка определения отчетов версии 2008 на [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сервера отчетов в режиме сервера.|  
+|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Элементы управления средства просмотра|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|Язык определения отчетов версии 2008 не поддерживается в локальном режиме|Недоступно|Можно просматривать отчеты языка определения Отчетов 2008 на [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сервера отчетов в режиме сервера.|  
   
- Дополнительные сведения об открытии отчетов в предыдущей версии схемы определения отчета см. в разделе [Upgrade Reports](../install-windows/upgrade-reports.md). Дополнительные сведения о конкретных схемах определений отчетов см. в разделе [Спецификация по языку определения отчетов](http://go.microsoft.com/fwlink/?linkid=116865).  
+ Дополнительные сведения об открытии отчетов в предыдущей версии схемы определения отчета см. в разделе [обновление отчетов](../install-windows/upgrade-reports.md). Дополнительные сведения о конкретных схемах определений отчетов см. в разделе [Спецификация по языку определения отчетов](http://go.microsoft.com/fwlink/?linkid=116865).  
   
 ## <a name="see-also"></a>См. также  
  [Публикация источников данных и отчетов](../reports/publishing-data-sources-and-reports.md)  

@@ -1,5 +1,5 @@
 ---
-title: Точечная диаграмма (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+title: Точечная диаграмма (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - charts [Analysis Services]
 - mining models [Analysis Services], validating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 166812ec-fd1c-47c8-88db-d5041142be91
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3d087d615a5e2852cdc8d7a72a9facc5df4f33b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ae52af8c9449b5636d799d306e3ab317cea9d6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251556"
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>Точечная диаграмма (службы Analysis Services — интеллектуальный анализ данных)
   На *точечной диаграмме* реальные значения пользовательских данных графически сравниваются с прогнозируемыми значениями в модели. Реальные значения отображаются на оси Х точечной диаграммы; прогнозируемые значения — на оси Y. На ней также отображается линия, отображающая идеальный прогноз, на которой прогнозируемое значение точно совпадает с реальным значением. Расстояние от точки на линии идеальных прогнозов, расположенной под углом в 45 градусов, показывает, насколько хорошо или плохо был выполнен прогноз.  
@@ -51,7 +51,7 @@ ms.locfileid: "36096763"
   
 |Подраздел|Ссылки|  
 |------------|-----------|  
-|Объясняет, как создать диаграмму точности прогнозов для модели целевой рассылки.|[Учебник по основам интеллектуального анализа данных](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Проверка точности при помощи диаграммы точности прогнозов &#40;учебник по интеллектуальному анализу данных&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Объясняет, как создать диаграмму точности прогнозов для модели целевой рассылки.|[Учебник по основам интеллектуального анализа данных](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Проверка точности при помощи диаграммы точности прогнозов &#40;учебник интеллектуального анализа данных&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
 |Объясняет типы соответствующих диаграмм.|[Диаграмма точности прогнозов &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Диаграмма роста прибыли &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Матрица классификации &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](classification-matrix-analysis-services-data-mining.md)|  
 |Описывает использование перекрестной проверки для моделей интеллектуального анализа данных и структур интеллектуального анализа данных.|[Перекрестная проверка &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](cross-validation-analysis-services-data-mining.md)|  
 |Описывает шаги для создания диаграммы точности прогнозов и других диаграмм точности.|[Тестирование и проверка задачи и инструкции по &#40;интеллектуального анализа данных&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  

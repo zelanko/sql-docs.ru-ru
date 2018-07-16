@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.diagnostic.InstallSqlDiagramSupport
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - diagrams [SQL Server], Database Diagram Designer
 ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f0b95fb47be883d6c30cd6a525716577020ca7b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: eda956d955756b9617a609b9954e0ad1881b6b1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232444"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>Настройка конструктора диаграмм баз данных (визуальные инструменты для баз данных)
   Чтобы можно было использовать конструктор диаграмм баз данных, его вначале должен установить член роли **db_owner** для контроля доступа к диаграммам.  
@@ -62,8 +62,8 @@ ms.locfileid: "36087266"
     9. хранимая процедура sp_upgraddiagrams.  
   
 ## <a name="see-also"></a>См. также  
- [Понимать принадлежности диаграмм баз данных &#40;визуальные средства базы данных&#41;](visual-database-tools.md)   
- [Обновление схемы базы данных из предыдущих версий &#40;визуальные средства базы данных&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
+ [Основные сведения о владении базы данных &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
+ [Обновление диаграмм баз данных из предыдущих версий &#40;визуальных инструментах баз данных&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
  [ALTER AUTHORIZATION (Transact-SQL)](/sql/t-sql/statements/alter-authorization-transact-sql)  
   
   

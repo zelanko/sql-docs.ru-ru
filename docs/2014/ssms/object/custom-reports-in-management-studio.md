@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.new.custom.report.f1
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 59819655763d017ebe549b7325aa920960000fa0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 08c664c7e8f2c345331b90d5b4ad502638a0c5be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263760"
 ---
 # <a name="custom-reports-in-management-studio"></a>Пользовательские отчеты в среде Management Studio
   Во многих узлах обозревателя объектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отображается набор стандартных отчетов, созданных в [!INCLUDE[msCoName](../../includes/msconame-md.md)]. В этих отчетах сведены все обычно запрашиваемые данные о серверах. Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 2 (SP2), администраторы могут запускать настраиваемые отчеты, созданные в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , из среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -79,7 +79,7 @@ ms.locfileid: "36193023"
   
 ## <a name="see-also"></a>См. также  
  [Добавление пользовательского отчета в среде Management Studio](add-a-custom-report-to-management-studio.md)   
- [Подавление предупреждений для пользовательских отчетов](unsuppress-run-custom-report-warnings.md)   
+ [Отмена подавления предупреждений для пользовательских отчетов](unsuppress-run-custom-report-warnings.md)   
  [Использование пользовательских отчетов для свойств узлов обозревателя объектов](use-custom-reports-with-object-explorer-node-properties.md)  
   
   

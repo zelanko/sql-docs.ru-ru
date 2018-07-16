@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 744cfd4600c58d0c5f9508243e2635d108f7fd73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d8c4cc67ad7a3719db277840e4ca535a373e8b44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287020"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>Отображение процентных значений на круговой диаграмме (построитель отчетов и службы SSRS)
   По умолчанию категории отображаются в условных обозначениях для идентификации каждого значения. Если круговая диаграмма отмечена метками категорий, в условных обозначениях можно показать проценты.  
@@ -35,7 +35,7 @@ ms.locfileid: "36192169"
   
 3.  В области конструктора щелкните правой кнопкой мыши метки и выберите пункт **Свойства метки ряда**. Появится диалоговое окно **Свойства метки ряда** .  
   
-4.  Тип `#PERCENT` для **метки данных** параметр.  
+4.  Тип `#PERCENT` для **данные метки** параметр.  
   
 5.  (Необязательно) Чтобы указать для метки количество десятичных разрядов, введите значение #PERCENT{P*n*}, где *n* — число десятичных разрядов. Например, чтобы не отображать десятичные разряды, введите «#PERCENT{P0}».  
   
@@ -46,9 +46,9 @@ ms.locfileid: "36192169"
 2.  В **условных обозначений**, тип `#PERCENT` для **пользовательский текст условных обозначений** свойство.  
   
 ## <a name="see-also"></a>См. также  
- [Круговые диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Форматирование условных обозначений на диаграмме &#40;отчетов построителя отчетов и службы SSRS&#41;](chart-legend-formatting-report-builder.md)   
- [Метки точек данных отображаемое за пределами круговой диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
- [Сбор мелких срезов на круговой диаграмме &#40;отчетов построителя отчетов и службы SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [Круговые диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Форматирование условных обозначений на диаграмме &#40;построитель отчетов и службы SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [Отображение меток точек данных за пределами круговой диаграммы &#40;построитель отчетов и службы SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Сбор мелких срезов на круговой диаграмме &#40;построитель отчетов и службы SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

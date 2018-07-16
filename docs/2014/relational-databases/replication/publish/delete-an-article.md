@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - dropping articles
 ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fa5cfaec81c0e2b22e7b66a36907daf57e443bdb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a9b4b452f37f06610ccccd042fd1aae6d616bac2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305454"
 ---
 # <a name="delete-an-article"></a>Удаление статьи
   В данном разделе описывается удаление статьи в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов RMO. Сведения об условиях, при которых статьи могут быть удалены, и о том, требуется ли при удалении статьи создание нового моментального снимка или повторная инициализация подписок, см. в [этой статье](add-articles-to-and-drop-articles-from-existing-publications.md).  
@@ -72,7 +72,7 @@ ms.locfileid: "36191944"
   
 4.  Установите полученное на шаге 1 соединение в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> , чтобы убедиться, что статья существует. Если значение этого свойства равно `false`, были неправильно заданы свойства статьи на шаге 3, либо статья не существует.  
+5.  Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> , чтобы убедиться, что статья существует. Если значение этого свойства равно `false`, либо на статью на шаге 3 были неверно определены свойства, либо статья не существует.  
   
 6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> .  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36191944"
   
 4.  Установите полученное на шаге 1 соединение в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> , чтобы убедиться, что статья существует. Если значение этого свойства равно `false`, были неправильно заданы свойства статьи на шаге 3, либо статья не существует.  
+5.  Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> , чтобы убедиться, что статья существует. Если значение этого свойства равно `false`, либо на статью на шаге 3 были неверно определены свойства, либо статья не существует.  
   
 6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> .  
   

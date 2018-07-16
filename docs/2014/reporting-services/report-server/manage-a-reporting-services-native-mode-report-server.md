@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - configuration options [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 63291b62b946e733dbcc48359b06e1f3e33abc15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c63f642cd5028bd227c6f6bf59e53de6339a5faa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305014"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Управление сервером отчетов служб Reporting Services в собственном режиме
   Этот раздел содержит описание процедур по настройке экземпляра сервера отчетов в собственном режиме с использованием диспетчера конфигурации служб Reporting Services.  
@@ -66,7 +66,7 @@ ms.locfileid: "36087311"
  [Включение и отключение компонентов Reporting Services](turn-reporting-services-features-on-or-off.md)  
  Объясняет, как удалить неиспользуемые компоненты после установки служб Reporting Services.  
   
- [Включите удаленный контроль ошибок &#40;службы Reporting Services&#41;](enable-remote-errors-reporting-services.md)  
+ [Включение отслеживания удаленных ошибок &#40;службы Reporting Services&#41;](enable-remote-errors-reporting-services.md)  
  Поясняет, как задать свойства сервера на сервере отчетов для возвращения дополнительных сведений об условиях возникновения ошибок на удаленных серверах.  
   
 ## <a name="see-also"></a>См. также  

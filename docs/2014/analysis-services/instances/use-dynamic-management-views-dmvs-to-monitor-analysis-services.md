@@ -1,5 +1,5 @@
 ---
-title: Используйте динамические административные представления (DMV) для мониторинга служб Analysis Services | Документы Microsoft
+title: Используйте динамические административные представления (DMV) для мониторинга служб Analysis Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ef037d3d2745a5cfce8949ca7ac14e0d5743326
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 789811d4588efe47848d7a6045342d506e1975ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288570"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Использование динамических административных представлений для мониторинга служб Analysis Services
   Динамические административные представления служб Analysis Services — это структуры запросов, которые предоставляют сведения о локальных операциях сервера и его состоянии. Структура запроса — это интерфейс для наборов строк схемы, которые возвращают метаданные и сведения об экземпляре служб Analysis Services.  
@@ -102,7 +102,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Если динамическое административное Представление недоступно для определенного набора строк, то сервер возвращает следующую ошибку: « \<schemarowset > тип запроса не распознан сервером». Все остальные ошибки указывают на проблемы с синтаксисом.  
+>  Если динамическое административное Представление недоступно для определенного набора строк, сервер возвращает следующую ошибку: « \<schemarowset > тип запроса не распознан сервером». Все остальные ошибки указывают на проблемы с синтаксисом.  
   
 |Набор строк|Описание|  
 |------------|-----------------|  
@@ -168,7 +168,7 @@ ORDER BY TABLE_NAME ASC
   
 ## <a name="see-also"></a>См. также  
  [Руководстве по использованию служб Analysis Services SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [Новый System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
+ [Создание объекта System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [Новая функция SYSTEMRESTRICTEDSCHEMA для ограниченных наборов строк и динамических административных представлений](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

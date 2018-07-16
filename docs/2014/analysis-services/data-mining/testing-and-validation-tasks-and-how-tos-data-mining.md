@@ -1,5 +1,5 @@
 ---
-title: Тестирование и задачи и проверке решения по тестированию (интеллектуальный анализ данных) | Документы Microsoft
+title: Тестирование и задачи и проверке решения по тестированию (интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services]
 - predictive modeling [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - predictive accuracy [data mining]
 ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ecc1fadea54aa289fd6ed4ce74fb7f410e99fba9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c93a36d33ed9f0071d396cc736bd10fc06e57c15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243974"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Задачи и решения по тестированию и проверке (интеллектуальный анализ данных)
   Вкладку **Диаграмма точности интеллектуального анализа** конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] можно использовать для сравнения точности прогнозов моделей интеллектуального анализа данных в структуре интеллектуального анализа.  

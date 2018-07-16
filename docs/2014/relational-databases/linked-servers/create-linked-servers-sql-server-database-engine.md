@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server (starting with 2008)
 f1_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fcfb3933a1ce88855ec32a9b4ac86a5c2075819d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 47292d5659b5244a6c318b330b45825ad5408486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294793"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Создание связанных серверов (компонент SQL Server Database Engine)
   В этом разделе описано, как создать связанный сервер и производить доступ к данным из другого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Путем создания связанного сервера вы можете работать с данными из нескольких источников. Связанный сервер не обязательно должен быть другим экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], хотя такой вариант часто встречается.  

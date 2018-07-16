@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b92aba7afebc203ba8d32386eaf0dd154d97c208
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8d47f5480a5e01000b23830d36fb6b0da586dfa4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246474"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Занятие 3. Проектирование родительского отчета с использованием мастера отчетов
   После создания подключения к данным и таблицы данных для родительского отчета следующий шаг состоит в проектировании родительского отчета в конструкторе отчетов с помощью мастера отчетов. Дополнительные сведения о конструкторе отчетов см. в разделе [Разработка отчетов с использованием конструктора отчетов (SSRS)](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "36097215"
   
      Запустится мастер отчетов.  
   
-4.  На **свойства набора данных** страницы в **источника данных** выберите **DataSet1** был создан в [Lesson 2: определение подключения к данным и таблица данных для Родительского отчета](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+4.  На **свойства набора данных** странице **источника данных** выберите **DataSet1** был создан в [занятии 2: определение подключения к данным и таблицы данных для Родительского отчета](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
     Значение поля **Доступные наборы данных** автоматически изменится на **DataTable** (созданную ранее таблицу данных).  
   
 5.  Нажмите кнопку **Далее**.  
@@ -43,7 +43,7 @@ ms.locfileid: "36097215"
   
     1.  Перетащите элементы **ProductID**, **Name**, **ProductNumber**, **SafetyStockLevel**и **ReorderLevel** из области **Доступные поля** в поле **Значения** .  
   
-    2.  Щелкните стрелку рядом с **Sum(ProductID)**, **Sum(SafetyStockLevel)**, **Sum(ReorderLevel)** и снимите **сумма** выделения.  
+    2.  Щелкните стрелку рядом с полем **Sum(ProductID)**, **Sum(SafetyStockLevel)**, **Sum(ReorderLevel)** и очистить **Sum** выбора.  
   
 7.  Нажмите кнопку **Далее** , затем щелкнуть **Готово** закрыть **мастер отчетов**.  
   

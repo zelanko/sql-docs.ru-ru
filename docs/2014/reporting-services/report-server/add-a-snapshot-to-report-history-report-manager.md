@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report history [Reporting Services], adding snapshots
 - historical data [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9d7c8723311845f7e9e7ba8cc6ecda6f3a37cbc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fb2c755b95a31c5c7892b6a9dcb192f250a46e93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246344"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>добавить моментальный снимок к журналу отчета (диспетчер отчетов)
   Журнал отчета — это коллекция моментальных снимков отчета, созданных на протяжении определенного времени. Моментальный снимок отчета — это отчет, содержащий сведения о макете и результаты запроса, полученные в определенный момент времени. В отличие от отчетов по требованию, при открытии которых производится получение актуальных, действительных на текущий момент данных, моментальные снимки отчета выполняются по расписанию и сохраняются на сервере отчетов. Если для просмотра выбирается моментальный снимок отчета, сервер отчетов извлекает сохраненный отчет из базы данных сервера отчетов и отображает макет и данные, которые были действительны на момент создания моментального снимка.  
@@ -41,7 +41,7 @@ ms.locfileid: "36194892"
 3.  Выберите **Создать моментальный снимок**. Новый моментальный снимок будет создан в столбце **Время запуска** .  
   
     > [!NOTE]  
-    >  Для данной задачи администратор должен выбрать **Разрешить создание журнала вручную**. Дополнительные сведения см. в разделе [ограничить объем журнала отчета &#40;диспетчера отчетов&#41;](../reports/limit-report-history-report-manager.md).  
+    >  Для данной задачи администратор должен выбрать **Разрешить создание журнала вручную**. Дополнительные сведения см. в разделе [ограничение размеров журнала отчета &#40;диспетчера отчетов&#41;](../reports/limit-report-history-report-manager.md).  
   
 4.  Нажмите кнопку **Применить**.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36194892"
   
 ## <a name="see-also"></a>См. также  
  [Настройка свойств выполнения для отчета &#40;диспетчера отчетов&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Открыть и закрыть отчет &#40;диспетчера отчетов&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [Открытие и закрытие отчетов &#40;диспетчера отчетов&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [Ограничение размеров журнала отчета (диспетчер отчетов)](../reports/limit-report-history-report-manager.md)   
  [Расписания](../subscriptions/schedules.md)   
  [Диспетчер отчетов (службы SSRS в собственном режиме)](../report-manager-ssrs-native-mode.md)  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tape backup devices, about tape backup devices
 - backup devices [SQL Server]
@@ -26,15 +25,15 @@ helpviewer_keywords:
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 caps.latest.revision: 89
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c3f5bfc7186470ed713cdb9d979af2e5b3b0367
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d7a3603d8d2f8f947a2c708a11015bf031ede8ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237184"
 ---
 # <a name="backup-devices-sql-server"></a>Устройства резервного копирования (SQL Server)
   Во время выполнения операции резервного копирования базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается резервная копия данных (*резервная копия*), которая записывается на физическое устройство резервного копирования. Данное физическое устройство резервного копирования инициализируется при записи на него первой резервной копии в наборе носителей. Резервные копии на наборе из одного или нескольких устройств резервного копирования образуют отдельный набор носителей.  
@@ -74,7 +73,7 @@ ms.locfileid: "36095699"
   
 -   [Указание пути файла резервной копии диска](#BackupFileDiskPath)  
   
--   [Резервное копирование файлов в общей сетевой папке](#NetworkShare)  
+-   [Создание резервной копии файла в общей сетевой папке](#NetworkShare)  
   
  Если дисковый файл будет заполнен во время добавления резервной копии к набору носителей операцией резервного копирования, то она завершится c ошибкой. Максимальный размер файла резервной копии определяется свободным местом, доступным на жестком диске, поэтому необходимый размер жесткого диска резервного копирования зависит от размера резервных копий.  
   
@@ -127,7 +126,7 @@ GO
 > [!NOTE]  
 >  Расположение по умолчанию находится в разделе реестра **BackupDirectory** в ветке **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer**.  
   
-###  <a name="NetworkShare"></a> Резервное копирование файлов в общей сетевой папке  
+###  <a name="NetworkShare"></a> Создание резервной копии файла в общей сетевой папке  
  Чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мог обращаться к удаленному дисковому файлу, учетная запись службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна иметь доступ к общему сетевому ресурсу. Включая наличие разрешений на запись, необходимых для выполнения операций резервного копирования на общий сетевой ресурс, и разрешения на чтение с ресурса для выполнения операций восстановления. Уровень доступности сетевых дисков и разрешения зависят от контекста, в котором выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Чтобы создать резервную копию на сетевой диск, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется под учетной записью пользователя домена, в сеансе, в котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , общий диск должен быть подключен как сетевой диск. Если файл Sqlservr.exe запускается из командной строки, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] видит любые сетевые диски, подключенные в ходе сеанса.  
@@ -157,7 +156,7 @@ GO
   
  **В этом разделе.**  
   
--   [Указание ленты для резервного копирования по ее физическому имени (Transact-SQL)](#BackupTapeUsingPhysicalName)  
+-   [Указать ленту для резервного копирования по его физическому имени (Transact-SQL)](#BackupTapeUsingPhysicalName)  
   
 -   [Ленточных устройств параметры BACKUP и RESTORE (Transact-SQL)](#TapeOptions)  
   
@@ -173,7 +172,7 @@ GO
   
 -   Если ленточное устройство окажется переполненным до завершения резервного копирования, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предложит вставить новую ленту и продолжит операцию после ее загрузки.  
   
-###  <a name="BackupTapeUsingPhysicalName"></a> Указание ленты для резервного копирования по ее физическому имени (Transact-SQL)  
+###  <a name="BackupTapeUsingPhysicalName"></a> Указать ленту для резервного копирования по его физическому имени (Transact-SQL)  
  Базовый синтаксис инструкции [BACKUP](/sql/t-sql/statements/backup-transact-sql) для указания ленты резервного копирования с помощью физического имени накопителя на магнитной ленте:  
   
  BACKUP { DATABASE | LOG } *database_name*  

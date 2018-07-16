@@ -18,15 +18,15 @@ helpviewer_keywords:
 - reports [Reporting Services], integrating
 ms.assetid: 49eb539c-d89b-4291-839a-0ec1a65cd270
 caps.latest.revision: 56
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3a27e580a6558b6574b1bdb166f6bdbfb250f01c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 18c5e61ddd29b4f0c30eeb4e6fc856dda3276aa6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325574"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Интеграция служб Reporting Services в приложения
   Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] представляют собой открытую и расширяемую платформу создания отчетов, которая позволяет предоставить разработчикам всеобъемлющий набор API для разработки решений.  
@@ -54,7 +54,7 @@ ms.locfileid: "36087077"
   
 ## <a name="see-also"></a>См. также  
  [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Выбор между URL-адресов и SOAP](../../../2014/reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
+ [Выбор между доступом по URL-адрес и SOAP](../../../2014/reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
  [Технический справочник (службы SSRS)](../../../2014/reporting-services/technical-reference-ssrs.md)   
  [Веб-службы сервера отчетов](../report-server-web-service/report-server-web-service.md)  
   

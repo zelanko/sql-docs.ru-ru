@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bf60290c4946ef6f45bccba32632ed81dfaf650b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a90dfbac3006f7dfbf27b38a8ab584ebb9e5d710
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249634"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Импорт HTML в отчет (построитель отчетов и службы SSRS)
   Текстовое поле можно использовать для вставки в отчет текста в формате HTML, выбранного из поля набора данных. Этот текст может исходить из любого простого или сложного выражения, обработка которого приводит к получению правильно отформатированного кода HTML. Отформатированный текст может быть подготовлен к просмотру в любом поддерживаемом формате вывода, включая PDF.  
@@ -39,7 +39,7 @@ ms.locfileid: "36096081"
 ## <a name="supported-html-tags"></a>Поддерживаемые теги HTML  
  Ниже приведен полный список тегов, которые подготавливаются к просмотру в формате HTML, если они определены в качестве текста заполнителя.  
   
--   Элементы заголовка, стиля и блока: \<H {n} >, \<DIV >, \<диапазон >,\<P >, \<LI >  
+-   Элементы заголовка, стиля и блока: \<H {n} >, \<DIV >, \<SPAN >,\<P >, \<LI >  
   
  Все прочие теги разметки HTML во время обработки отчета пропускаются. Если код HTML, представленный с помощью выражения в тексте заполнителя, не имеет правильного формата, то заполнитель подготавливается к просмотру в виде обычного текста. Все теги HTML рассматриваются без учета регистра.  
   
@@ -81,6 +81,6 @@ ms.locfileid: "36096081"
 -   Применительно к атрибутам и стилям CSS, если свойство задано больше одного раза, применяется только последний экземпляр свойства. Например, если текстом является **\<p align="left" align="right">**, то текст выравнивается по правому краю.  
   
 ## <a name="see-also"></a>См. также  
- [Подготовка к просмотру в формате HTML &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
+ [Подготовка к просмотру в HTML &#40;построитель отчетов и службы SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

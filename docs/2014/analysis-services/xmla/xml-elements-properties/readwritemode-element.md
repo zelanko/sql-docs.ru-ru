@@ -1,5 +1,5 @@
 ---
-title: Элемент ReadWriteMode | Документы Microsoft
+title: Элемент ReadWriteMode | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ReadWriteMode command
 ms.assetid: 379bcaca-bb7e-4934-a9e7-21f8ede2fdc7
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 88ebc7e23fc3ec4aad0d8273464636354958217a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3577feacc65bc1d7259d95af9b5bc6179e72b3b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285790"
 ---
 # <a name="readwritemode-element"></a>Элемент ReadWriteMode
   Свойство базы данных `ReadWriteMode` указывает, в каком режиме работает база данных: `ReadWrite` или `ReadOnly`. Эти значения являются единственными допустимыми для данного свойства.  

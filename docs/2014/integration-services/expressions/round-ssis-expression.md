@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rounding expressions
 - ROUND function [SSIS]
@@ -16,13 +16,13 @@ ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 76773d66166d2030b4970fab740660525f26e25d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ece0f01fe74340ae96b087204ec36c0cb6ef9fff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246816"
 ---
 # <a name="round-ssis-expression"></a>ROUND (выражение служб SSIS)
   Возвращает числовое выражение, округленное до указанной длины или точности. Параметр длины должен иметь целочисленное значение.  

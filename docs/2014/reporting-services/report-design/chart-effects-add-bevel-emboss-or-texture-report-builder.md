@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a8b3a780db49bc34d0060a33f934ea7169cae3bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f9fac39f0b11bdc2bbf14b054bfe8947bf767906
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309294"
 ---
 # <a name="add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs"></a>Добавление в диаграмму стилей рельефа, приподнятости и текстуры (построитель отчетов и службы SSRS)
   При использовании диаграмм определенных типов можно ввести в действие эффекты рисования для повышения внешней привлекательности диаграммы. Эти эффекты рисования применяются только к ряду, представленному на диаграмме. Они не оказывают никакого влияния на другие элементы диаграммы.  
@@ -64,9 +64,9 @@ ms.locfileid: "36087996"
  ![Линейчатая диаграмма с эффектом LightToDark](../media/rs-bardrawingeffects-lighttodark.gif "Линейчатая диаграмма с эффектом LightToDark")  
   
 ## <a name="see-also"></a>См. также  
- [Линейчатые диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Линейчатые диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Гистограммы (построитель отчетов и службы SSRS)](column-charts-report-builder-and-ssrs.md)   
- [Круговые диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](pie-charts-report-builder-and-ssrs.md)   
- [Форматирование диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [Круговые диаграммы &#40;построитель отчетов и службы SSRS&#41;](pie-charts-report-builder-and-ssrs.md)   
+ [Форматирование диаграммы &#40;построитель отчетов и службы SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Настройка хранилища строк для измерений и секций | Документы Microsoft
+title: Настройка хранилища строк для измерений и секций | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3874e787b6e6923568a9d72277249e949aa31550
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ae16d1e77e5e7dd16113bd8ee4ed4a0d5234668
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275710"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Настройка хранилища строк для измерений и секций
   Можно изменить конфигурацию хранилища строк, чтобы оно обеспечивало хранение очень больших строк в атрибутах измерений или секциях, превышающих предельный размер файла в 4 ГБ для хранилищ строк. Если измерения или секции содержат хранилища строк такого размера, можно обойти ограничение размера файла, изменив свойство **StringStoresCompatibilityLevel** на уровне измерения или секции для локальных, а также связанных объектов (локальных или удаленных).  
@@ -91,9 +91,9 @@ ms.locfileid: "36195477"
  Следует использовать параметр «Обработка. Полная» для каждого объекта, который использует новую архитектуру хранилища строк. До обработки обязательно выполните анализ влияния для измерения, чтобы проверить необходимость повторной обработки зависимых объектов.  
   
 ## <a name="see-also"></a>См. также  
- [Средства и подходы для обработки &#40;служб Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [Средства и способы обработки &#40;служб Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
  [Настройка параметров обработки &#40;служб Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
- [Обработка и режимы хранения секции](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [Режимы хранения и обработки](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [Хранение измерений](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

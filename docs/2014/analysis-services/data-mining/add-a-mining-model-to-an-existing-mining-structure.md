@@ -1,5 +1,5 @@
 ---
-title: Добавление модели интеллектуального анализа данных к существующей структуре интеллектуального анализа данных | Документы Microsoft
+title: Добавление модели интеллектуального анализа данных к существующей структуре интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], adding
 - mining structures [Analysis Services], mining models
 - adding mining models
 ms.assetid: fcf72300-0674-4e73-a826-9b8eeffefbb5
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 708d03cac04dc8c3574c40398c005fd17faf4bb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5140aa597e6ed1fea65ba3358fb5c493ffdaa5c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295914"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>добавить модель интеллектуального анализа данных к существующей структуре интеллектуального анализа данных
   После определения первой модели к структуре интеллектуального анализа данных можно добавить еще несколько моделей интеллектуального анализа данных. В каждой модели должны содержаться столбцы, существующие в структуре, но использование столбцов можно определять отдельно для каждой модели интеллектуального анализа данных. Дополнительные сведения об определении столбцов моделей интеллектуального анализа данных см. в разделе [Столбцы модели интеллектуального анализа данных](mining-model-columns.md).  

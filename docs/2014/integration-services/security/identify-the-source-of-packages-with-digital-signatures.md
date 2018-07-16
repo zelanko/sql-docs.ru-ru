@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - signing packages [Integration Services]
 - certificates [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e1657156b61b3f87fb639394b6624f8e0a209207
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b744fb7d966fc7079cf05072f94f425d79e2b34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320664"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Определение источника пакетов с помощью цифровых подписей
   Пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] может быть подписан цифровым сертификатом, удостоверяющим его происхождение. После подписи пакета цифровым сертификатом службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проверяют цифровую подпись перед загрузкой пакета. Чтобы службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проверяли подпись, необходимо задать параметр в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или в программе **dtexec** (dtexec.exe) либо задать необязательное значение реестра.  
@@ -38,7 +38,7 @@ ms.locfileid: "36192470"
   
 -   Чтобы во время разработки перед загрузкой проверялась цифровая подпись всех пакетов, установите параметр **Проверять цифровую подпись при загрузке пакета** в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Этот параметр является глобальной настройкой для всех пакетов в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения см. в разделе [General Page](../general-page-of-integration-services-designers-options.md).  
   
--   Чтобы проверить цифровую подпись отдельного пакета, укажите `/VerifyS[igned]` при использовании **dtexec** служебная программа для запуска пакета. Дополнительные сведения см. в статье [dtexec Utility](../packages/dtexec-utility.md).  
+-   Чтобы проверить цифровую подпись отдельного пакета, укажите `/VerifyS[igned]` параметр при использовании **dtexec** служебная программа для запуска пакета. Дополнительные сведения см. в статье [dtexec Utility](../packages/dtexec-utility.md).  
   
 ## <a name="setting-a-registry-value-to-check-the-package-signature"></a>Задание значения реестра для проверки цифровой подписи  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] также поддерживают необязательное значение реестра **BlockedSignatureStates**, которое позволяет управлять политикой организации в отношении загрузки подписанных и неподписанных пакетов. Этот параметр препятствует загрузке пакетов, которые не подписаны либо имеют неверную или ненадежную подпись. Дополнительные сведения о задании этого значения реестра см. в разделе [Реализация политики подписывания путем задания параметра реестра](../implement-a-signing-policy-by-setting-a-registry-value.md).  
@@ -48,6 +48,6 @@ ms.locfileid: "36192470"
   
 ## <a name="see-also"></a>См. также  
  [Службы Integration Services &#40;SSIS&#41; пакетов](../integration-services-ssis-packages.md)   
- [Общие сведения о безопасности &#40;службы Integration Services&#41;](security-overview-integration-services.md)  
+ [Общие сведения о безопасности &#40;служб Integration Services&#41;](security-overview-integration-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Использовать галерею PowerPivot | Документы Microsoft
+title: Использование коллекции PowerPivot | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17ae0f4d1c8fea1e5e320ea0131575c01bf44008
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6864e7144ce3a1098e7733924e02978b13c744c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321264"
 ---
 # <a name="use-powerpivot-gallery"></a>использовать галерею PowerPivot
   Галерея [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] — это специальная библиотека документов SharePoint. Она предлагает широкие возможности просмотра документов и управления ими для опубликованных книг Excel и отчетов служб Reporting Services, содержащих данные PowerPivot.  
@@ -39,7 +39,7 @@ ms.locfileid: "36087753"
   
 -   [Расписание обновления данных для книг PowerPivot в галерее PowerPivot](#newdr)  
   
--   [Удаление книги или отчета из галереи PowerPivot](#delete)  
+-   [Удаление книги или отчета в галерее PowerPivot](#delete)  
   
 -   [Обновление эскиза](#image)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36087753"
 > Чтобы изменить представление по умолчанию, щелкните вкладку **Библиотека** и щелкните "Изменить представление". Щелкните "Сделать представлением по умолчанию", а затем "ОК", чтобы сохранить представление по умолчанию.  
 >  Дополнительную информацию о том, что поддерживается в Edge, см. в статье блога Windows [Побег из прошлого, часть 2: прощание с ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
- Полный список необходимых компонентов см. в разделе [Создание и настройка галереи PowerPivot](create-and-customize-power-pivot-gallery.md).  
+ Полный список необходимых компонентов, см. в разделе [Создание и настройка галереи PowerPivot](create-and-customize-power-pivot-gallery.md).  
   
 ##  <a name="icons"></a> Значки в галерее PowerPivot  
  Значки являются визуальным индикатором наличия контекста и состояния.  
@@ -129,7 +129,7 @@ ms.locfileid: "36087753"
 |-|-|  
 |![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Нажмите кнопку «Управление обновлением данных», чтобы создать или просмотреть расписание получения обновленных данных из подключенных источников данных. Инструкции по созданию расписания см. в разделе [Планирование обновления данных &#40;PowerPivot для SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
   
-##  <a name="delete"></a> Удаление книги или отчета из галереи PowerPivot  
+##  <a name="delete"></a> Удаление книги или отчета в галерее PowerPivot  
  Чтобы удалить документ из библиотеки, сначала нужно переключиться на представление «Все документы».  
   
 1.  На сайте SharePoint откройте коллекцию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -166,8 +166,8 @@ ms.locfileid: "36087753"
   
 ## <a name="see-also"></a>См. также  
  [Создание надежного расположения для сайтов PowerPivot в центре администрирования](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Удаление коллекции PowerPivot](delete-power-pivot-gallery.md)   
- [Создать и настроить галерею PowerPivot](create-and-customize-power-pivot-gallery.md)   
+ [Удаление галереи PowerPivot](delete-power-pivot-gallery.md)   
+ [Создание и настройка галереи PowerPivot](create-and-customize-power-pivot-gallery.md)   
  [Планирование обновления данных &#40;PowerPivot для SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   
   

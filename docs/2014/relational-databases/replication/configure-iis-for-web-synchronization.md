@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 caps.latest.revision: 86
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6589261f0ad1a800bcf88d11abe2ebe6314a4855
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: eda7d98c6c90cf53f8b788a52717db01bcc8fae9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307594"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>настроить сервер IIS для веб-синхронизации
   Описанные в данном разделе процедуры составляют второй этап настройки веб-синхронизации при репликации слиянием. Эти процедуры выполняют после включения веб-синхронизации для публикации. Обзор этого процесса настройки см. в разделе [Настроить веб-синхронизацию](configure-web-synchronization.md). После завершения выполнения процедур, описанных в этом разделе, перейдите к третьему этапу — настройке подписки для использования веб-синхронизации. Этот этап описывается в следующих разделах:  

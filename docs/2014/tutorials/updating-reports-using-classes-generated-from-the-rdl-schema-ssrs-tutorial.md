@@ -1,5 +1,5 @@
 ---
-title: Обновление отчетов с помощью классов, созданных из RDL-схемы (учебник по службам SSRS) | Документы Microsoft
+title: Обновление отчетов с помощью классов, созданных из RDL-схемы (учебник по службам SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RDL [Reporting Services], generating
 - RDL [Reporting Services], tutorials
 - RDL [Reporting Services], serializing
 ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
 caps.latest.revision: 26
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a13d94965eebf99c401159c86e5fed065f5ec7ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96d125a3d69b564c94b64d23f825778c55068991
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297564"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>Обновление отчетов с помощью классов, созданных из схемы языка определения отчетов (учебник по службам SSRS)
   Этот учебник демонстрирует, как использовать инструмент определения схемы XML (Xsd.exe) создавать классы, позволяющие сериализацию и десериализацию файлов определения отчета (RDL и RDLC) с [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> класса.  
@@ -33,7 +33,7 @@ ms.locfileid: "36087264"
   
 -   Создание приложения с помощью [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] шаблон проекта консольного приложения.  
   
--   Создать классы из схемы языка определения отчетов (RDL) с помощью **xsd** средства.  
+-   Создать классы из схемы языка определения отчетов (RDL) с помощью **xsd** средство.  
   
 -   Подключиться к серверу отчетов и получить определение отчета.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36087264"
 > [!NOTE]  
 >  Образцы не устанавливаются автоматически в процессе установки, но их можно установить в любое время. Сведения об образцах см. в разделе [SQL Server Product Samples](http://go.microsoft.com/fwlink/?LinkId=182887).  
   
- **Предполагаемое время для выполнения заданий учебника:** 30 минут  
+ **Предполагаемое время для работы с учебником:** 30 минут  
   
 ## <a name="tasks"></a>Задания  
  [Урок 1. Создание проекта Visual Studio "RDL-схема"](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  

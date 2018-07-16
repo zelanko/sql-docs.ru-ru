@@ -1,5 +1,5 @@
 ---
-title: Определение данных источника (службы Analysis Services) | Документы Microsoft
+title: Определение данных источника (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], data source views
 - name matching criteria [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90c3085f0dde8ba5fd317ce8768926787ac5f585
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46e84e7a5f546dc90bf3ffbe141dcf5bec4b2792
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308554"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Определение представления источников данных (службы Analysis Services)
   В представлении источников данных содержится логическая модель схемы, используемой объектами многомерной базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а именно кубы, измерения и структуры интеллектуального анализа данных. Представление источника данных — это определение метаданных, хранящееся в формате XML, для элементов схемы, используемых в унифицированной многомерной модели (UDM) и структурах интеллектуального анализа данных. Представление источника данных:  
@@ -111,7 +111,7 @@ ms.locfileid: "36194603"
 ##  <a name="bkmk_secondaryDS"></a> Добавление вторичного источника данных  
  При определении представления источников данных, содержащего таблицы, представления или столбцы из нескольких источников данных, первый источник данных, из которого в представление источников данных добавляются объекты, служит в качестве первичного источника данных (нельзя изменить первичный источник данных после его создания). После определения представления источников данных, основанного на объектах из одного источника данных, можно добавлять в него объекты из других источников данных.  
   
- Если для обработки OLAP или запроса интеллектуального анализа данных необходимы данные из нескольких источников данных в одном запросе, первичный источник данных должен поддерживать удаленные запросы с помощью `OpenRowset`. Как правило, это будет источник данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Например, при конструировании измерения OLAP, содержащего атрибуты, привязанные к столбцам из нескольких источников данных, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают запрос `OpenRowset` для заполнения этого измерения во время обработки. Тем не менее, если объект OLAP может заполняться или интеллектуального анализа данных запроса разрешаться из одного источника данных, а затем `OpenRowset` запроса не создается. В определенных ситуациях для устранения необходимости в запросе `OpenRowset` можно определять связи атрибутов. Дополнительные сведения о связях атрибутов см. в разделе [Связи атрибутов](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) и [Define Связи атрибутов](attribute-relationships-define.md).  
+ Если для обработки OLAP или запроса интеллектуального анализа данных необходимы данные из нескольких источников данных в одном запросе, первичный источник данных должен поддерживать удаленные запросы через `OpenRowset`. Как правило, это будет источник данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Например, при конструировании измерения OLAP, содержащего атрибуты, привязанные к столбцам из нескольких источников данных, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают запрос `OpenRowset` для заполнения этого измерения во время обработки. Тем не менее, если объект OLAP может заполняться или интеллектуального анализа данных запроса, разрешаться из одного источника данных, а затем `OpenRowset` запроса не создается. В определенных ситуациях для устранения необходимости в запросе `OpenRowset` можно определять связи атрибутов. Дополнительные сведения о связях атрибутов см. в разделе [Связи атрибутов](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) и [Define Связи атрибутов](attribute-relationships-define.md).  
   
  Для добавления таблиц и столбцов из второго источника данных необходимо дважды щелкнуть представление источника данных в обозревателе решений для открытия его в конструкторе представлений источников данных, а затем воспользоваться диалоговым окном «Добавление или удаление таблиц» для включения объектов из других источников данных, определенных в проекте. Дополнительные сведения см. в разделе [Добавление или удаление таблиц или представлений в представлении источника данных (службы Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
@@ -135,14 +135,14 @@ ms.locfileid: "36194603"
 >  После завершения работы мастера представлений источников данных можно добавить или удалить связи на панели схем конструктора представлений источников данных. Дополнительные сведения см. в разделе [Определение логических связей в представлении источника данных (службы Analysis Services)](define-logical-relationships-in-a-data-source-view-analysis-services.md).  
   
 ## <a name="see-also"></a>См. также  
- [Добавление или удаление таблиц или представлений в данных представление источника &#40;служб Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
+ [Добавление или удаление таблиц или представлений данных представление источника &#40;служб Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
  [Определение логических первичных ключей в представлении источника данных &#40;служб Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
  [Определение именованных вычислений в представлении источника данных &#40;служб Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Определение именованных запросов в представлении источника данных &#40;служб Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)   
  [Замена таблицы или именованного запроса в представлении источника данных &#40;служб Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
  [Работа с диаграммами в конструкторе представлений источников данных &#40;служб Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [Просмотр данных в представлении источника данных &#40;служб Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
- [Удаление представления источника данных &#40;служб Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)   
+ [Удалить представление источника данных &#40;служб Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)   
  [Обновление схемы в представлении источника данных &#40;служб Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

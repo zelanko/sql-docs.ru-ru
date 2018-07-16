@@ -1,5 +1,5 @@
 ---
-title: Редактор источника XML (страница «Вывод ошибок») | Документы Microsoft
+title: Редактор источника XML (страница "Вывод ошибок") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a7c8de4263e780658a2128832575c66f47a9d990
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e39eeee91c458dda4fb882e6374075a95d255b94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271240"
 ---
 # <a name="xml-source-editor-error-output-page"></a>Редактор источника «XML» (страница «Вывод ошибок»)
   Используйте страницу **Вывод ошибок** диалогового окна **Редактор источника «XML»** для выбора параметров обработки ошибок и задания свойств выходных столбцов ошибок.  
@@ -55,9 +55,9 @@ ms.locfileid: "36193596"
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор источника «XML» &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [Редактор источника «XML» &#40;страница «столбцы»&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор источника XML &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
+ [Редактор источника XML &#40;страница "столбцы"&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
  [Извлечение данных с помощью XML-источника](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report execution properties [Reporting Services]
 - reports [Reporting Services], properties
 - reports [Reporting Services], execution options
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 caps.latest.revision: 40
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e739ba283864faf55891707e99bb482f469fc8ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: af4a6a8a01a5a07f0f050460f26998db2c1c8550
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315414"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>Настройка свойств выполнения для отчета (диспетчер отчетов)
   Параметры обработки отчета можно настроить для указания получения данных для отчета. Планирование обработки данных для отчета становится целесообразным, если обновление внешнего источника данных происходит в определенные моменты времени (пример: хранилище данных, которое обновляется ежедневно или еженедельно) и необходимо избежать издержек, связанных с выборкой одних и тех же данных при каждом запросе отчета. Планирование обработки данных становится также необходимым, если требуется управлять рабочей нагрузкой сервера внешней базы данных или обеспечить предоставление согласованных результатов для многочисленных пользователей, которым приходится работать с идентичными наборами данных. Для быстро изменяющихся данных отчеты по требованию могут каждую минуту выдавать различные результаты. Моментальный снимок отчета, напротив, позволяет сопоставить данные различных отчетов и средств аналитики, действительные на один и тот же момент времени.  
@@ -52,7 +52,7 @@ ms.locfileid: "36193034"
   
 ## <a name="see-also"></a>См. также  
  [Установка свойств обработки отчетов](../report-server/set-report-processing-properties.md)   
- [Открыть и закрыть отчет &#40;диспетчера отчетов&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [Открытие и закрытие отчетов &#40;диспетчера отчетов&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [Содержимое страницы &#40;диспетчера отчетов&#41;](../contents-page-report-manager.md)   
  [Управление содержимым сервера отчетов &#40;собственный режим служб SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [Страница "Свойства параметров обработки" (диспетчер отчетов)](../processing-options-properties-page-report-manager.md)  

@@ -1,5 +1,5 @@
 ---
-title: Тип данных TableMiningStructureColumn (ASSL) | Документы Microsoft
+title: Тип данных TableMiningStructureColumn (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TableMiningStructureColumn data type
 ms.assetid: 350358b0-f2fc-43c3-957d-884c59fa879e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a57859ca60ae7fa83ec4bb4ea8f6a4e742a74f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e03fec81f796ccf87f19df9b2e43fe29b0e318e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319404"
 ---
 # <a name="tableminingstructurecolumn-data-type-assl"></a>Тип данных TableMiningStructureColumn (ASSL)
   Определяет производный тип данных, представляющий [MiningStructureColumn](miningstructurecolumn-data-type-assl.md) элемент, который содержит вложенные таблицы, в отличие от скалярных значений, связанных с [ScalarMiningStructureColumn](scalarminingstructurecolumn-data-type-assl.md) элемент содержащий скалярные значения.  
@@ -60,13 +60,13 @@ ms.locfileid: "36086987"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|None|  
-|Дочерние элементы|[Столбцы](../collections/columns-element-assl.md), [ForeignKeyColumn](../objects/column-element-assl.md), [SourceMeasureGroup](../objects/group-element-assl.md), [переводов](../collections/translations-element-assl.md)|  
+|Дочерние элементы|[Столбцы](../collections/columns-element-assl.md), [ForeignKeyColumn](../objects/column-element-assl.md), [SourceMeasureGroup](../objects/group-element-assl.md), [переводы](../collections/translations-element-assl.md)|  
 |Производные элементы|[Столбец](../objects/column-element-assl.md) ([столбцы](../collections/columns-element-assl.md) коллекцию [MiningStructure](../objects/miningstructure-element-assl.md))|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

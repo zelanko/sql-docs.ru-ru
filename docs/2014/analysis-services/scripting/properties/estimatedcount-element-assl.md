@@ -1,5 +1,5 @@
 ---
-title: Элемент EstimatedCount (ASSL) | Документы Microsoft
+title: Элемент EstimatedCount (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - EstimatedCount element
 ms.assetid: ce84b54a-8ab2-42f4-a7dd-e10a3d41cb4d
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c865a89d1c67bcb4155aa771ee6709a0068a7bbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a69d67554d0090e0e586421986bc97ba556c84a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300854"
 ---
 # <a name="estimatedcount-element-assl"></a>Элемент EstimatedCount (ASSL)
   Содержит ожидаемое число элементов атрибута, определенное пользователем.  
@@ -64,7 +64,7 @@ ms.locfileid: "36087445"
 ## <a name="remarks"></a>Примечания  
  Это значение назначается пользователем и используется [элемент AggregationDesign &#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md).  
   
- Элементы, соответствующие родителям элемента `EstimatedCount` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.AggregationDesignAttribute> и <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ Элементы, соответствующие родителям элемента `EstimatedCount` в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.AggregationDesignAttribute> и <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Кубы в многомерных моделях | Документы Microsoft
+title: Кубы в многомерных моделях | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], cubes
 - cubes [Analysis Services], about cubes
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - OLAP [Analysis Services], cubes
 ms.assetid: e0f7acf3-4b07-41fc-a5fc-ac30b4a56c54
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4c32903245da975c9a62d6b7600abbe074b19bc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca5da5ea8dfb22adc6e038f9dc54740e5102aad0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237734"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Кубы в многомерных моделях
   Куб является многомерной структурой, содержащей сведения для анализа. Главными составными элементами куба являются измерения и меры. Измерения определяют структуру куба, используемую для срезов данных, а меры предоставляют статистически вычисленные числовые значения, представляющие интерес для конечного пользователя. В качестве логической структуры куб позволяет клиентскому приложению получать значения мер в виде ячеек куба, определенных для всех возможных суммарных значений. Ячейка куба определяется пересечением элементов измерения и содержит статистически вычисляемые значения мер в этом конкретном пересечении.  
@@ -38,7 +38,7 @@ ms.locfileid: "36095124"
 |Элемент|Описание|  
 |-------------|-----------------|  
 |Измерения|[Измерения в многомерных моделях](dimensions-in-multidimensional-models.md)|  
-|Меры и их группы|[Создание меры и группы мер в многомерных моделях](create-measures-and-measure-groups-in-multidimensional-models.md)|  
+|Меры и их группы|[Создание мер и групп мер в многомерных моделях](create-measures-and-measure-groups-in-multidimensional-models.md)|  
 |Секции|[Секции в многомерных моделях](partitions-in-multidimensional-models.md)|  
 |перспективами|[Перспективы в многомерных моделях](perspectives-in-multidimensional-models.md)|  
 |Иерархии|[Создание определяемых пользователем иерархий](user-defined-hierarchies-create.md)|  
@@ -52,7 +52,7 @@ ms.locfileid: "36095124"
 |Раздел|Описание|  
 |-----------|-----------------|  
 |[Создание куба с помощью мастера кубов](create-a-cube-using-the-cube-wizard.md)|Описывает использование мастера кубов для определения куба, измерений, атрибутов измерения и пользовательских иерархий.|  
-|[Создание меры и группы мер в многомерных моделях](create-measures-and-measure-groups-in-multidimensional-models.md)|Описывает процесс определения групп мер.|  
+|[Создание мер и групп мер в многомерных моделях](create-measures-and-measure-groups-in-multidimensional-models.md)|Описывает процесс определения групп мер.|  
 |[Вычисления в многомерных моделях](calculations-in-multidimensional-models.md)|Описывает определение и настройку вычисления в скрипте многомерных выражений.|  
 |[Действия в многомерных моделях](actions-in-multidimensional-models.md)|Описывает определение и настройку действия.|  
 |[Перспективы в многомерных моделях](perspectives-in-multidimensional-models.md)|Описывает определение и настройку перспективы.|  

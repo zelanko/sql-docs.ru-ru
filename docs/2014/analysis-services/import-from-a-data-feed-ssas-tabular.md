@@ -1,5 +1,5 @@
 ---
-title: Импорт из потока данных (табличные службы SSAS) | Документы Microsoft
+title: Импорт из потока данных (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7869e07a67e7e3a74ee93ebef495eaba26d55317
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b476ed1641b5db87afefc8bc4787efed01e2a5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325144"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Импорт из потока данных (табличные службы SSAS)
   Потоки данных — это один или несколько потоков XML-данных, формируемых из источника данных в сети и направляемых в целевой документ или приложение. Данные из веб-канала данных можно импортировать в модель с помощью мастера импорта таблиц.  
@@ -126,7 +126,7 @@ ms.locfileid: "36192789"
   
 3.  На странице **Соединение с каналом данных** введите описательное имя для канала, к которому выполняется доступ. При импорте нескольких потоков или источников данных целесообразно использовать описательные имена для соединений, чтобы помнить, как используется соединение.  
   
-4.  В данных URL-адрес канала, введите адрес службы списка данных, заменив \<имя сервера > фактическим именем вашего сервера SharePoint:  
+4.  В данных URL-адрес канала, введите адрес службы списка данных, заменив \<имя_сервера > фактическим именем вашего сервера SharePoint:  
   
     ```  
     http://<server-name>/_vti_bin/listdata.svc  
@@ -195,9 +195,9 @@ ms.locfileid: "36192789"
   
 ## <a name="see-also"></a>См. также  
  [Источники данных, поддерживаемые &#40;табличные службы SSAS&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [Типы данных, поддерживаемые &#40;табличные службы SSAS&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
+ [Поддерживаемые типы данных &#40;табличные службы SSAS&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
  [Олицетворение &#40;табличные службы SSAS&#41;](tabular-models/impersonation-ssas-tabular.md)   
- [Обрабатывать данные &#40;табличные службы SSAS&#41;](process-data-ssas-tabular.md)   
+ [Обработка данных &#40;табличные службы SSAS&#41;](process-data-ssas-tabular.md)   
  [Импорт данных &#40;табличные службы SSAS&#41;](import-data-ssas-tabular.md)  
   
   

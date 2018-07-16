@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], PowerShell
 - scripts [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 caps.latest.revision: 22
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 02ae3d24f1f9f642876b4314a41bc2823fc8c622
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 15ead723c73da69d9dd8e6f41b1bf5533eb3c313
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284800"
 ---
 # <a name="database-engine-scripting"></a>Работа со сценариями компонента Database Engine
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] поддерживает среду скриптов [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell для управления экземплярами компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и объектами в экземплярах. Можно также строить и запускать запросы компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , содержащие [!INCLUDE[tsql](../../includes/tsql-md.md)] и XQuery, в средах, подобных средам сценариев.  
@@ -34,7 +34,7 @@ ms.locfileid: "36192195"
   
 -   Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, отображающий иерархии моделей управляющих объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виде путей PowerShell, подобных путям файловой системы. С помощью классов модели управляющих объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно управлять объектами, представленными на каждом узле пути.  
   
--   Набор командлетов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , реализующих команды [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Одним из командлетов является **Invoke-Sqlcmd**. Это используется для запуска [!INCLUDE[ssDE](../../includes/ssde-md.md)] скриптов, выполняемых с запросов `sqlcmd` программы.  
+-   Набор командлетов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , реализующих команды [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Одним из командлетов является **Invoke-Sqlcmd**. Это используется для запуска [!INCLUDE[ssDE](../../includes/ssde-md.md)] скриптов, выполняемых с помощью запросов `sqlcmd` служебной программы.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает эти возможности для запуска PowerShell.  
   
@@ -51,19 +51,19 @@ ms.locfileid: "36192195"
   
 -   Инструкции языка XQuery.  
   
--   Команды и переменные из `sqlcmd` программы.  
+-   Команды и переменные из `sqlcmd` служебной программы.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает три среды для построения и запуска запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 -   Запросы компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] можно запускать в интерактивном режиме и отлаживать в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. В одном сеансе можно закодировать и отладить несколько инструкций, а затем сохранить их все в одном файле скрипта.  
   
--   `sqlcmd` Служебная программа командной строки позволяет запускать в интерактивном режиме [!INCLUDE[ssDE](../../includes/ssde-md.md)] запросы, а также запускать существующие [!INCLUDE[ssDE](../../includes/ssde-md.md)] файлы скриптов с запросами.  
+-   `sqlcmd` Служебная программа командной строки позволяет в интерактивном режиме [!INCLUDE[ssDE](../../includes/ssde-md.md)] запросы, а также запускать существующие [!INCLUDE[ssDE](../../includes/ssde-md.md)] файлы скриптов с запросами.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] обычно кодируются в интерактивном режиме в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] с помощью редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . В дальнейшем файл можно открыть в одной из следующих сред.  
   
 -   Чтобы открыть файл в новом окне редактора запросов компонента [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **, воспользуйтесь меню**/**/** Открыть [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
--   Используйте **-i *** входной_файл* параметр, чтобы запустить файл с `sqlcmd` программы.  
+-   Используйте **-i *** входной_файл* параметр, чтобы запустить файл с `sqlcmd` служебной программы.  
   
 -   Чтобы запустить файл с помощью командлета **Invoke-Sqlcmd** в скриптах **PowerShell, укажите параметр** -QueryFromFile [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

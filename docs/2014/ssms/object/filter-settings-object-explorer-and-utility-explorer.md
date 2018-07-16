@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.filtersettings.f1
 - sql12.swb.common.filtersettings.f1
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 33fb385ecfaac18b3c38a426361f381b301d63cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5299d873117679ca937074549e1ef08ad71cf6df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321842"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Настройки фильтра (обозреватель объектов и проводник служебной программы)
   Используйте данное диалоговое окно для задания фильтра. Фильтр позволяет настроить обозреватель объектов и проводник служебной программы для отображения только тех элементов, которые соответствуют заданным критериям. Например, фильтр можно использовать для отображения только тех заданий, имена которых содержат слово «Maintenance». В заголовке диалогового окна **Настройки фильтра** содержится имя сервера и может содержаться имя базы данных.  

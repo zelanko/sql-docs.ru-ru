@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - management tools, upgrading
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1cfdd0e84020a3cb9eb919b9ac5e9d8ed0055938
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2895efa338745f8935674ff42620c1f8d6272652
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289430"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>Обновление средств управления SQL Server
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает обновление с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней. В этом разделе описаны средства поддержки и процесс обновления средств управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , компонента Database Mail, планов обслуживания, XPStar, XPWeb и других компонентов управления.  

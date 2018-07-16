@@ -1,13 +1,11 @@
 ---
-title: Атрибуты защиты и программирование средств интеграции со средой CLR | Документы Microsoft
+title: Атрибуты защиты и программирование интеграции со средой CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - HPAs [CLR integration]
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9c6f8f8f9d00ba798d9f62aa17df3ed8223fc84b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 823fe8edf33b4a849e8d1fdba65581d958b0a188
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086918"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350056"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Атрибуты защиты узла и программирование средств интеграции со средой CLR
   Среда CLR предоставляет механизм для аннотирования управляемых API, входящих в состав платформы .NET Framework, при помощи определенных атрибутов, которые могут потребоваться серверу CLR (такому как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Примеры таких атрибутов защиты сервера включают следующее:  
@@ -38,7 +36,7 @@ ms.locfileid: "36086918"
   
 -   `ExternalProcessMgmt`, который указывает, предоставляет ли API способ управления процессом узла.  
   
- C учетом этих атрибутов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи управления доступом для кода определяет список атрибутов защиты сервера, которые запрещены в размещенной среде. Требования управления доступом для кода применяется один из трех [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] наборов разрешений: `SAFE`, `EXTERNAL_ACCESS`, или `UNSAFE`. Один из этих трех уровней безопасности задается с помощью инструкции `CREATE ASSEMBLY` при регистрации сборки на сервере. В коде, выполняющемся с наборами разрешений `SAFE` или `EXTERNAL_ACCESS`, необходимо избегать использования элементов определенных типов, к которым применен атрибут `System.Security.Permissions.HostProtectionAttribute`. Дополнительные сведения см. в разделе [Создание сборки](../clr-integration/assemblies/creating-an-assembly.md) и [ограничения модели программирования интеграции со средой CLR](../clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ C учетом этих атрибутов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи управления доступом для кода определяет список атрибутов защиты сервера, которые запрещены в размещенной среде. Требования управления доступом для кода применяется один из трех [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] наборов разрешений: `SAFE`, `EXTERNAL_ACCESS`, или `UNSAFE`. Один из этих трех уровней безопасности задается с помощью инструкции `CREATE ASSEMBLY` при регистрации сборки на сервере. В коде, выполняющемся с наборами разрешений `SAFE` или `EXTERNAL_ACCESS`, необходимо избегать использования элементов определенных типов, к которым применен атрибут `System.Security.Permissions.HostProtectionAttribute`. Дополнительные сведения см. в разделе [Creating an Assembly](../clr-integration/assemblies/creating-an-assembly.md) и [ограничения модели программирования интеграции со средой CLR](../clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
  Атрибут `HostProtectionAttribute` представляет собой скорее не право доступа, а способ повышения надежности, поскольку он определяет конкретные конструкции в коде (типы или методы), которые могут быть запрещены сервером. В результате применения атрибута `HostProtectionAttribute` в действие вводится модель программирования, которая позволяет защитить стабильность сервера.  
   
@@ -51,7 +49,7 @@ ms.locfileid: "36086918"
   
 -   Могут привести к дестабилизации самого процесса сервера.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не допускает использования тип или член, имеющий `HostProtectionAttribute` , указывающий `System.Security.Permissions.HostProtectionResource` перечисление со значением `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, `SharedState`, `Synchronization`, или `UI`. В силу этого сборки утрачивают возможность вызывать элементы, которые включают общее состояние, выполняют синхронизацию, могут вызвать утечку ресурсов при завершении или повлиять на целостность процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не допускает использования типа или члена, имеющего `HostProtectionAttribute` , указывающий `System.Security.Permissions.HostProtectionResource` перечисление со значением `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, `SharedState`, `Synchronization`, или `UI`. В силу этого сборки утрачивают возможность вызывать элементы, которые включают общее состояние, выполняют синхронизацию, могут вызвать утечку ресурсов при завершении или повлиять на целостность процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="disallowed-types-and-members"></a>Запрещенные типы и элементы  
  В следующих разделах приведены типы и элементы, значения `HostProtectionResource` которых запрещены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -76,7 +74,7 @@ ms.locfileid: "36086918"
  Приведены типы и элементы из файла System.Core.dll, для которых запрещены значения атрибутов защиты сервера.  
   
 ## <a name="see-also"></a>См. также  
- [Среда CLR Integration Code Access Security](../clr-integration/security/clr-integration-code-access-security.md)   
+ [CLR Integration Code Access Security](../clr-integration/security/clr-integration-code-access-security.md)   
  [Ограничения модели программирования интеграции со средой CLR](../clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
  [Создание сборки](../clr-integration/assemblies/creating-an-assembly.md)  
   

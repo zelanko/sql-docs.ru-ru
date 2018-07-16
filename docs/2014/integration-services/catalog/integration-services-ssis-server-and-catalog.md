@@ -1,5 +1,5 @@
 ---
-title: Службы Integration Services (SSIS) сервера | Документы Microsoft
+title: Службы Integration Services Server (SSIS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], managing
 - managing packages [Integration Services]
@@ -16,13 +16,13 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 69598f8ca412e32a76ea841f9a234d01c6847718
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea60bbdac3df4cd1130ba4afee83f882f138d33d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289400"
 ---
 # <a name="integration-services-ssis-server"></a>Службы Integration Services (SSIS Server)
   После разработки и тестирования пакетов в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]вы можете выполнить развертывание проектов, содержащих пакеты, на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -36,7 +36,7 @@ ms.locfileid: "36194084"
  Общие сведения о функциональных возможностях каталога SSISDB см. в разделе [Каталог служб SSIS](ssis-catalog.md).  
   
 ## <a name="high-availability"></a>Высокий уровень доступности  
- Как и другие пользовательские базы данных `SSISDB` поддерживает зеркальное отображение базы данных и репликация базы данных. Дополнительные сведения о зеркальном отображении и репликации см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
+ Другие пользовательские базы данных, такие как `SSISDB` базы данных поддерживает зеркальное отображение базы данных и репликацию. Дополнительные сведения о зеркальном отображении и репликации см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
  Также вы можете обеспечить высокий уровень доступности SSISDB и содержимого с помощью служб SSIS и групп доступности AlwaysOn. Дополнительные сведения см. в записи блога Метта Мэйсона (Matt Masson) [Службы SSIS с AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873)на сайте blogs.msdn.com.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36194084"
   
 -   **База данных SSISDB**  
   
-     `SSISDB` Базы данных отображается в узле **баз данных** в обозревателе объектов. Вы можете создавать запросы к представлениям и вызывать хранимые процедуры для управления сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и объектами, которые хранятся на нем.  
+     `SSISDB` База данных отображается в разделе **баз данных** в обозревателе объектов. Вы можете создавать запросы к представлениям и вызывать хранимые процедуры для управления сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и объектами, которые хранятся на нем.  
   
 -   **Каталоги служб Integration Services**  
   

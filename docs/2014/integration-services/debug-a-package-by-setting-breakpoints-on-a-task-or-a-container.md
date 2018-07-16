@@ -1,5 +1,5 @@
 ---
-title: Выполнение отладки пакета путем установки точек останова для задачи или контейнера | Документы Microsoft
+title: Выполнение отладки пакета путем установки точек останова для задачи или контейнера | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], breakpoints
 - breakpoints [Integration Services]
 - tasks [Integration Services], breakpoints
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
 caps.latest.revision: 33
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6535657a5b193b92b76fd32fee9497e8ef76580e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b063089105af1de7656387be8cc12639498e7c37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308114"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Выполнение отладки пакета путем установки точек останова для задачи или контейнера
   Эта процедура описывает, как установить точки останова в пакете, задаче, контейнерах «цикл по элементам», «цикл по каждому элементу» и контейнере последовательности.  
@@ -49,8 +49,8 @@ ms.locfileid: "36194310"
 6.  Чтобы сохранить пакеты, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
 ## <a name="see-also"></a>См. также  
- [Инструменты устранения неполадок при разработке пакета](troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Отладка сценария, установив точки останова в задаче «скрипт» и компоненте скрипта](data-flow/transformations/script-component.md)   
+ [Средства устранения неполадок для разработки пакетов](troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Отладка скрипта с помощью точек останова в задаче «скрипт» и компоненте скрипта](data-flow/transformations/script-component.md)   
  [Кодирование и отладка задачи «скрипт»](control-flow/script-task.md)   
  [Кодирование и отладка компонента скрипта](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   

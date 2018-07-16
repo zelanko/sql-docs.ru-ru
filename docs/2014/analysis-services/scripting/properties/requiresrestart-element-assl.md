@@ -1,5 +1,5 @@
 ---
-title: Элемент RequiresRestart (ASSL) | Документы Microsoft
+title: Элемент RequiresRestart (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RequiresRestart element
 ms.assetid: 9e98f956-c41e-4e15-a7bd-e17c10ee6fc6
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cde3c22439c06e254191a2a732e7030fab36cc7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7790c12c0b5889ef89991de042db8d8a6a93a7e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295424"
 ---
 # <a name="requiresrestart-element-assl"></a>Элемент RequiresRestart (ASSL)
-  Содержит значение только для чтения, связанное с [ServerProperty](../objects/serverproperty-element-assl.md) элемент, который определяет, является ли изменение значения свойства сервера требуется перезагрузка экземпляра чтобы изменения вступили в силу.  
+  Содержит значение только для чтения, связанное с [ServerProperty](../objects/serverproperty-element-assl.md) элемент, который определяет, требуется ли при изменении значения свойства сервера перезапускать экземпляр, чтобы изменения вступили в силу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36094837"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `RequiresRestart` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ServerProperty>.  
+ Элемент, соответствующий родителю параметра `RequiresRestart` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент ServerProperties &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   

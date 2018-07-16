@@ -1,5 +1,5 @@
 ---
-title: Элемент DataType (ASSL) | Документы Microsoft
+title: Элемент DataType (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataType element
 ms.assetid: efe6f717-8288-4ca2-85ed-9b63d27c02d8
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 706d13e68b21a71fa9be80bf89fc4f9cdd4c6014
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16bc234f74aa8d6eb80607c7d03d63da8130e8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231874"
 ---
 # <a name="datatype-element-assl"></a>Элемент DataType (ASSL)
   Определяет тип данных связанного элемента.  
@@ -66,11 +66,11 @@ ms.locfileid: "36095101"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*BigInt*|64-разрядное целое число со знаком. Этот тип данных соответствует `Int64` в тип данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework и DBTYPE_I8 типу данных в OLE DB.|  
+|*BigInt*|64-разрядное целое число со знаком. Этот тип данных соответствует типу `Int64` в тип данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework и DBTYPE_I8 тип данных в OLE DB.|  
 |*Bool*|Значение типа Boolean. Этот тип данных соответствует типу данных `Boolean` платформы .NET Framework и типу данных DBTYPE_BOOL в OLE DB.|  
 |*Валюта*|Значение валюты в диапазоне от -2<sup>63</sup> (или -922,337,203,685,477.5808) до 2<sup>63</sup>-1 (или + 922,337,203,685,477.5807) с точностью до одной десятитысячной денежной единицы. Этот тип данных соответствует типу данных `Decimal` платформы  .NET Framework и типу данных DBTYPE_CY в OLE DB.|  
 |*Дата*|Данные о дате, сохраненные в виде числа с плавающей запятой двойной точности. Целая часть числа равна числу дней, прошедшему с 30 декабря 1899 г., а десятичная часть равна части дня. Этот тип данных соответствует типу данных `DateTime` платформы .NET Framework и типу данных DBTYPE_DATE в OLE DB.|  
-|*Double*|Число с плавающей запятой двойной точности в диапазоне от -1,79E +308 до 1,79E +308. Этот тип данных соответствует типу данных `Double` платформы  .NET Framework и типу данных DBTYPE_R8 в OLE DB.|  
+|*Двойной*|Число с плавающей запятой двойной точности в диапазоне от -1,79E +308 до 1,79E +308. Этот тип данных соответствует типу данных `Double` платформы  .NET Framework и типу данных DBTYPE_R8 в OLE DB.|  
 |*Целочисленный*|32-разрядное целое число со знаком. Этот тип данных соответствует типу данных `Int32` платформы  .NET Framework и типу данных DBTYPE_I4 в OLE DB.|  
 |*Один*|Число с плавающей запятой одинарной точности в диапазоне от -3,40E +38 до 3,40E +38. Этот тип данных соответствует типу данных `Single` платформы  .NET Framework и типу данных DBTYPE_R4 в OLE DB.|  
 |*SmallInt*|16-разрядное целое число со знаком. Этот тип данных соответствует типу данных `Int16` платформы  .NET Framework и типу данных DBTYPE_I2 в OLE DB.|  
@@ -78,8 +78,8 @@ ms.locfileid: "36095101"
 |*UnsignedBigInt*|64-разрядное целое число без знака. Этот тип данных соответствует типу данных `UInt64` платформы  .NET Framework и типу данных DBTYPE_UI8 в OLE DB.|  
 |*UnsignedInt*|32-разрядное целое число без знака. Этот тип данных соответствует типу данных `UInt32` платформы  .NET Framework и типу данных DBTYPE_UI4 в OLE DB.|  
 |*UnsignedSmallInt*|16-разрядное целое число без знака. Этот тип данных соответствует типу данных `UInt16` платформы  .NET Framework и типу данных DBTYPE_UI2 в OLE DB.|  
-|*Тип данных WChar*|Поток символов в кодировке Юникод, заканчивающийся символом NULL. Этот тип данных соответствует типу данных `String` платформы .NET Framework и типу данных DBTYPE_WSTR в OLE DB.|  
-|*Унаследованные*|Тип данных `DataItem` содержащихся в [источника](source-element-measure-assl.md) элемент `Measure` элемента. **Примечание:** применимо только к `Measure` элементов.|  
+|*WChar*|Поток символов в кодировке Юникод, заканчивающийся символом NULL. Этот тип данных соответствует типу данных `String` платформы .NET Framework и типу данных DBTYPE_WSTR в OLE DB.|  
+|*Унаследованные*|Тип данных `DataItem` содержащихся в [источника](source-element-measure-assl.md) элемент `Measure` элемент. **Примечание:** применимо только к `Measure` элементов.|  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

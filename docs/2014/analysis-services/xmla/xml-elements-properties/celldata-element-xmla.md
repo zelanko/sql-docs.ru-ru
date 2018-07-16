@@ -1,5 +1,5 @@
 ---
-title: Элемент CellData (XML для Аналитики) | Документы Microsoft
+title: Элемент CellData (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - CellData element
 ms.assetid: 0ebfb5e1-a674-4b9b-bd8c-c529da105f61
 caps.latest.revision: 27
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: ce445127e78f7f503bf3b81a640047f0d1f1d87f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 370837c78fe1fa49396a5209dd94dd0e7cb4f69d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330414"
 ---
 # <a name="celldata-element-xmla"></a>Элемент CellData (XML для аналитики)
   Содержит коллекцию элементов Cell, представляющих данные ячеек и содержащиеся в элементе [root](root-element-xmla.md) , который использует тип данных [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) .  
@@ -62,7 +62,7 @@ ms.locfileid: "36193453"
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительские элементы|[корень](root-element-xmla.md)|  
+|Родительские элементы|[корневой](root-element-xmla.md)|  
 |Дочерние элементы|[Cell](cell-element-mddataset-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  

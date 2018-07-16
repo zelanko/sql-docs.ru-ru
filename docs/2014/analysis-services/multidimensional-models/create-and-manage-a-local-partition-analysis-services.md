@@ -1,5 +1,5 @@
 ---
-title: Создание и управление локальной секции (службы Analysis Services) | Документы Microsoft
+title: Создание и управление ими локальной секции (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - local partitions [Analysis Services]
 - partitions [Analysis Services], local
 - partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7aee67c9e63078a0218665fc818381d473e493e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10b6498034ddcd2733501c63601f026b229d616a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321274"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Создание локальной секции и управление ей (Analysis Services)
   Для улучшения производительности обработки можно создать дополнительные секции для группы мер. Несколько секций позволяют разделять фактические данные между соответствующим числом файлов физических данных на локальном и удаленных серверах. В службах Analysis Services секции могут обрабатываться параллельно, что дает больше контроля над процессом обработки рабочих нагрузок на сервере.  
@@ -31,7 +31,7 @@ ms.locfileid: "36195695"
  Секции могут создаваться во время разработки модели в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] или при развертывании решения с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или XMLA-скрипта. Рекомендуется выбрать и использовать только один подход. При использовании разных средств может возникнуть ситуация, когда изменения, внесенные в развернутую базу данных с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , будут перезаписаны последующим развертыванием решения из [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 ## <a name="before-you-start"></a>Перед началом  
- Убедитесь, что у вас установлен выпуск Business Intelligence или Enterprise. Выпуск Standard не поддерживает работу с множественными секциями. Чтобы проверить выпуск, щелкните правой кнопкой мыши узел сервера в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и выберите пункт **Отчеты** | **Общие**. Дополнительные сведения о доступности функций см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Убедитесь, что у вас установлен выпуск Business Intelligence или Enterprise. Выпуск Standard не поддерживает работу с множественными секциями. Чтобы проверить выпуск, щелкните правой кнопкой мыши узел сервера в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и выберите пункт **Отчеты** | **Общие**. Дополнительные сведения о доступных функциях см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Важно понять, что секции должны иметь одинаковую агрегатную схему, если вы в будущем планируете выполнять их объединение. Объединять можно только секции с одними и теми же режимами хранения и агрегатными схемами.  
   
@@ -128,6 +128,6 @@ ms.locfileid: "36195695"
 ## <a name="see-also"></a>См. также  
  [Секции &#40;службы Analysis Services — многомерные данные&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Удаленные секции](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Слияние секций в службах Analysis Services &#40;SSAS — многомерные данные&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Слияние секций в службах Analysis Services &#40;службы SSAS — многомерные&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

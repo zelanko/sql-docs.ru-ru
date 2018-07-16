@@ -1,5 +1,5 @@
 ---
-title: 'Задача 6: Добавление источника Excel в поток данных | Документы Microsoft'
+title: 'Задача 6: Добавление источника Excel в поток данных | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cde5dc49851e7d8c808d4a6273f4d4caf6603e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ce6d1ec5ab2fc9c57bd56e12b56b13231e74606
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280000"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>Задача 6. Добавление источника Excel в поток данных
   В этой задаче источник Excel будет добавлен в поток данных, что позволит считывать данные поставщиков из исходного файла Excel. Источник Excel извлекает данные из листов или диапазонов в книгах Microsoft Excel. Дополнительные сведения см. в разделе [Источник Excel](http://msdn.microsoft.com/library/ms141683.aspx) .  
@@ -38,7 +38,7 @@ ms.locfileid: "36195707"
   
 6.  В диалоговом окне **Диспетчер соединений Excel** выберите **Обзор**и выберите файл **Suppliers.xls** в папке **Учебник EIM** . Убедитесь, что выбрано значение **Microsoft Excel 97-2003** в поле **Версия Excel** и нажмите кнопку **ОК**.  
   
-     ![Диалоговое окно «Диспетчер соединений с Excel»](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "диалоговое окно диспетчера соединений с Excel")  
+     ![Диалоговое окно «Диспетчер соединений с Excel»](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "диалоговое окно «Диспетчер соединений с Excel»")  
   
 7.  В диалоговом окне **Редактор источника «Excel»** выберите **IncomingSuppliers$** в раскрывающемся списке **Имя листа Excel** .  
   

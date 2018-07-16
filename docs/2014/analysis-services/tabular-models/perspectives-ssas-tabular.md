@@ -1,5 +1,5 @@
 ---
-title: Перспективы (табличные службы SSAS) | Документы Microsoft
+title: Перспективы (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3f15ca3035759717de251f6d300ace3182430ac7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ad07ccba62df7054f4ec19e0713192154ad62db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304304"
 ---
 # <a name="perspectives-ssas-tabular"></a>Перспективы (табличные службы SSAS)
   Перспективы в табличных моделях определяют просматриваемые подмножества модели, реализующие точки обзора для модели, которые сосредоточены на определенном аспекте либо предназначены для конкретных деловых целей или использования в конкретном приложении.  

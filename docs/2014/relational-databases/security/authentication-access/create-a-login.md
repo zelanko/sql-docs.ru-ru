@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.LOGIN.SERVERROLES.F1
 - sql12.swb.login.databaseaccess.f1
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 27f80c34522042794bae5fee9a99bfd95bb15d4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 01ea98feb38ee8fcfdf7a021f9663bd8001ff941
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274670"
 ---
 # <a name="create-a-login"></a>Создание имени входа
   В этом разделе описано, как создать имя входа в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Имя входа представляет собой идентификатор пользователя или процесса, выполняющего соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -44,7 +43,7 @@ ms.locfileid: "36096857"
   
      [безопасность](#Security)  
   
--   **Чтобы создать имя входа с помощью:**  
+-   **Создание имени входа, с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -183,7 +182,7 @@ ms.locfileid: "36096857"
 2.  В диалоговом окне **Добавление объектов** выберите один из следующих параметров: **Определенные объекты…**, **Все объекты типов…** или **Сервер***server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  При выборе **сервера *** имя_сервера* автоматически верхняя Сетка заполняется всеми защищаемыми объектами сервера.  
+    >  Выбрав **сервера *** имя_сервера* автоматически заполняется верхней сетке все защищаемые объекты, необходимые для сервера.  
   
 3.  При выборе параметра **Конкретные объекты...**  
   

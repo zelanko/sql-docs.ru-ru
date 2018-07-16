@@ -1,5 +1,5 @@
 ---
-title: Элемент DefaultDetails (CSDLBI) | Документы Microsoft
+title: Элемент DefaultDetails (CSDLBI) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 05a08baa-23cc-4011-9c2e-f60a20bb87da
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2b10c8b155cb0f06754ed6c2bc45062ae5e69898
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 708e829f1af3ebc9d727e3abfd6643913cd460f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330234"
 ---
 # <a name="defaultdetails-element-csdlbi"></a>Элемент DefaultDetails (CSDLBI)
   Элемент DefaultDetails представляет список ссылок на свойства, которые совместно определяют поле «набор полей по умолчанию» столбцов в таблице. Каждое свойство может ссылаться либо на меру, либо на столбец.  

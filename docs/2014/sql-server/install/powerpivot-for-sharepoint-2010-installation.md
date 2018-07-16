@@ -1,5 +1,5 @@
 ---
-title: Установка PowerPivot для SharePoint 2010 | Документы Microsoft
+title: Установка PowerPivot для SharePoint 2010 | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8d47dde7-c941-4280-a934-e2fe3f9a938f
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 26f7d5188f5c119bcd4fd114e955638f22b9efd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db5a6400ee6191c6be328857ea44365238adcab6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232526"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>Установка PowerPivot для SharePoint 2010
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] представляет собой набор серверных компонентов, которые обеспечивают обработку запросов и административное управление книгами [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], публикуемыми в SharePoint. Набор содержит ядро служб Analysis Services и системную службу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
@@ -27,13 +27,13 @@ ms.locfileid: "36195732"
 > [!NOTE]  
 >  Дополнительные сведения о [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] и установке с SharePoint Server 2013 см. далее:  
 >   
->  -   Раздел «SQL Server 2012 SP1» [Общие сведения об установке SQL Server обслуживания](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md).  
+>  -   В разделе «SQL Server 2012 SP1» [Общие сведения об установке SQL Server Servicing](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md).  
   
- Службы Analysis Services обеспечивают серверную обработку для книг Excel, которые содержат данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Системная служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] работает параллельно со службами Analysis Services, обеспечивая дополнительную интеграцию с SharePoint, балансировку нагрузки и возможности управления соединениями. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] расширяет службы Excel за счет объединения ее возможностей по обработке данных большого объема со службами подготовки данных, которые имеются в Excel.  
+ Службы Analysis Services обеспечивают серверную обработку для книг Excel, которые содержат данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Системная служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] работает параллельно со службами Analysis Services, обеспечивая дополнительную интеграцию с SharePoint, балансировку нагрузки и возможности управления соединениями. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] расширяет службы Excel за счет объединения ее возможностей по обработке данных большого объема со службами подготовки данных, предоставляемых в Excel.  
   
- Чтобы установить [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], используйте [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]установочного носителя.  
+ Чтобы установить [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], использовать [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]установочного носителя.  
   
- Инструкции по расширенным вариантам развертывания см. в разделе [контрольный список развертывания: службы Reporting Services, Power View и PowerPivot для SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) и [контрольный список развертывания: масштабное развертывание путем добавления серверов PowerPivot для Фермы SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
+ Инструкции по расширенным вариантам развертывания см. в разделе [контрольный список развертывания: служб Reporting Services, Power View и PowerPivot для SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) и [контрольный список развертывания: масштабное развертывание путем добавления серверов PowerPivot для Фермы SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Установка PowerPivot для SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  

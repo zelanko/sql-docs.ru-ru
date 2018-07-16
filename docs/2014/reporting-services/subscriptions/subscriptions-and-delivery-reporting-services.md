@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
 - reports [Reporting Services], distributing
@@ -24,13 +24,13 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 083cadfe123af29861e4bfccd8ed6182705003c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa14730ce105b17e3eb016effd2c409fc4a37851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195334"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268610"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
   Подписка [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] представляет собой конфигурацию, создающую отчет в определенное время или в ответ на конкретное событие. Отчет выводится в указанном формате файла. Например, каждую среду отчет MonthlySales.rdl можно сохранять в виде документа Microsoft Word на общем файловом ресурсе. С помощью подписок можно планировать и автоматизировать создание отчетов, в которых будет использоваться заданный набор значений параметров.  
@@ -42,7 +42,7 @@ ms.locfileid: "36195334"
  Подписки доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Перечень функций, поддерживаемых в разных выпусках [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в разделе [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 > [!NOTE]  
->  Начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] можно передавать владение подписки программным путем. Пользовательского интерфейса, который можно использовать для передачи владения подписками, не существует. Дополнительные сведения см. в разделе <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>и [изменений и список Reporting Services Subscription Owners и выполнения подписки с помощью PowerShell](manage-subscription-owners-and-run-subscription-powershell.md).  
+>  Начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] можете передавать владение подписки программным путем. Пользовательского интерфейса, который можно использовать для передачи владения подписками, не существует. Дополнительные сведения см. в разделе <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>и [использование PowerShell для изменения и список Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  **В этом разделе:**  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36195334"
 |-----------------|-----------------|  
 |Разрешения|Пользователь должен иметь доступ к отчету. Прежде чем можно будет подписаться на отчет, пользователь должен иметь разрешения на его просмотр.<br /><br /> Назначение ролей должно включать задачу «Управление индивидуальными подписками».|  
 |Сохраненные учетные данные|Чтобы создать подписку, отчет должен использовать или не использовать сохраненные учетные записи для извлечения данных во время выполнения. Нельзя подписаться на отчет, настроенный для использования олицетворенных или делегированных учетных данных текущего пользователя для подключения к внешнему источнику данных. Хранимые учетные данные могут быть или учетной записью Windows, или учетной записью базы данных. Дополнительные сведения см. в разделе [Задание учетных данных и сведений о соединении для источников данных отчета](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Для просмотра отчета и создания отдельных подписок необходимо иметь соответствующее разрешение. На сервере отчетов должны быть включены**Запланированные события и доставка отчетов** . Дополнительные сведения см. в разделе [Создание и управление подписками для серверов отчетов в собственном режиме](../create-manage-subscriptions-native-mode-report-servers.md).|  
-|Зависящие от пользователя значения в отчете|Только для стандартных подписок можно создавать подписки на отчеты, которые включают сведения пользовательской учетной записи в фильтре или как текст, появляющийся в отчете. В отчете имя учетной записи пользователя указывается через `User!UserID` выражений, которое разрешается к текущему пользователю. При создании подписки текущим считается пользователь, создающий эту подписку.|  
+|Зависящие от пользователя значения в отчете|Только для стандартных подписок можно создавать подписки на отчеты, которые включают сведения пользовательской учетной записи в фильтре или как текст, появляющийся в отчете. В отчете имя учетной записи пользователя указывается через `User!UserID` выражение, которое разрешается в текущего пользователя. При создании подписки текущим считается пользователь, создающий эту подписку.|  
 |Отсутствие безопасности элементов модели|Нельзя подписаться на отчет построителя отчетов, который в качестве источника данных использует модель, содержащую настройки безопасности элементов модели. Только отчеты, использующие безопасность элементов модели отчета, входят в это ограничение.|  
 |Значения параметра|Если отчет использует параметры, их значения должны быть заданы в самом отчете или в определяемой подписке. Если в отчете были определены значения по умолчанию, то в параметрах можно указать, чтобы использовались они.|  
   
@@ -178,7 +178,7 @@ ms.locfileid: "36195334"
  [Создание управляемой данными подписки (учебник по службам SSRS)](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Расписания](schedules.md)   
  [Сервер отчетов служб Reporting Services (основной режим)](../report-server/reporting-services-report-server-native-mode.md)   
- [Создание и управление подписками для серверов отчетов в собственном режиме](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Создание и администрирование подписок для серверов отчетов в собственном режиме](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Отслеживание подписок служб Reporting Services](monitor-reporting-services-subscriptions.md)  
   
   

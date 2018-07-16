@@ -1,5 +1,5 @@
 ---
-title: Элемент invocation (ASSL) | Документы Microsoft
+title: Элемент invocation (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Invocation element
 ms.assetid: f6bf64ad-ae57-4d46-bf92-1d07a65378bb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bd9d04f677049a932e3f974c22d7e2fb7cb8aade
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 62f6b15f8aa8426930fdc3572bbd37bfb033afd6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312244"
 ---
 # <a name="invocation-element-assl"></a>Элемент Invocation (ASSL)
-  Указывает, каким образом [действия](../objects/action-element-assl.md) должны вызываться.  
+  Указывает, каким образом [действие](../objects/action-element-assl.md) должны вызываться.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36194579"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Вызов действия зависит от клиентского приложения. `Invocation` Элемент предлагает клиентскому приложению, как должно обрабатываться действие и не указывает на экземпляр [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] способ вызова действия.  
+ Вызов действия зависит от клиентского приложения. `Invocation` Предлагает клиентскому приложению способ обработки действия и не указывает на экземпляр [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] как для вызова действия.  
   
  Значением этого элемента может быть только одна из строк в следующей таблице.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36194579"
 |-----------|-----------------|  
 |*Интерактивный*|Вызывается интерактивно пользователем.|  
 |*OnOpen*|Вызывается при открытии объекта клиентским приложением.|  
-|*Пакет*|Вызывается командой пакетной обработки.|  
+|*Пакетной службы*|Вызывается командой пакетной обработки.|  
   
  Перечисление, соответствующее допустимым значениям элемента `Invocation` в модели объектов AMO, — это <xref:Microsoft.AnalysisServices.Action>.  
   

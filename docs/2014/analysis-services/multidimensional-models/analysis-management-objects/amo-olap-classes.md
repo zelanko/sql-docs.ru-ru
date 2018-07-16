@@ -1,5 +1,5 @@
 ---
-title: Классы OLAP объектов AMO | Документы Microsoft
+title: Классы OLAP объектов AMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6db043eff86d0cd1675674cefee6aa74508e33f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1fcf669d63554c9a57dc927cb0071fbc17a9f2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280410"
 ---
 # <a name="amo-olap-classes"></a>Классы OLAP объектов AMO
   Классы OLAP объектов AMO позволяют создавать, изменять, удалять и обрабатывать кубы, измерения и связанные с ними объекты, например ключевые показатели эффективности, действия и упреждающее кэширование.  
   
- Дополнительные сведения о настройке среды программирования объектов AMO как для установления соединения с сервером, доступ к базе данных или определение данных источников и представления источников данных, в разделе [основные классы объектов AMO](amo-fundamental-classes.md).  
+ Дополнительные сведения о настройке среды программирования объектов AMO как для установления соединения с сервером, доступ к базе данных или определения данных источников и представления источников данных, см. в разделе [основные классы объектов AMO](amo-fundamental-classes.md).  
   
  Этот раздел состоит из следующих подразделов.  
   
@@ -39,19 +39,19 @@ ms.locfileid: "36193703"
   
 -   [Объекты MeasureGroup](#MeasureGroups)  
   
--   [Объекты partition](#Partition)  
+-   [Объекты раздела](#Partition)  
   
 -   [Объекты AggregationDesign](#AggregationDesign)  
   
 -   [Объекты Aggregation](#Aggregation)  
   
--   [Объекты Action](#Action)  
+-   [Объекты действия](#Action)  
   
 -   [Объекты KPI](#KPI)  
   
 -   [Объекты перспективы](#Perspective)  
   
--   [Объекты Translation](#Translation)  
+-   [Объекты переводов](#Translation)  
   
 -   [Объекты ProactiveCaching](#ProactiveCaching)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36193703"
   
  Дополнительные сведения о доступных методах и свойствах см. в описании класса <xref:Microsoft.AnalysisServices.MeasureGroup> из пространства имен <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Partition"></a> Объекты partition  
+###  <a name="Partition"></a> Объекты раздела  
  Объект <xref:Microsoft.AnalysisServices.Partition> создается путем его добавления в коллекцию секций родительской группы мер и обновления объекта <xref:Microsoft.AnalysisServices.Partition> на сервере методом Update. Удалить объект <xref:Microsoft.AnalysisServices.Partition> можно методом Drop.  
   
  Дополнительные сведения о доступных методах и свойствах см. в описании класса <xref:Microsoft.AnalysisServices.Partition> из пространства имен <xref:Microsoft.AnalysisServices>.  
@@ -116,7 +116,7 @@ ms.locfileid: "36193703"
   
  Объекты AMO задают определения для этих улучшений, однако фактический результат зависит от обозревателя клиента, который их реализует.  
   
-###  <a name="Action"></a> Объекты Action  
+###  <a name="Action"></a> Объекты действия  
  Объект <xref:Microsoft.AnalysisServices.Action> создается путем его добавления в коллекцию действий куба и обновления объекта <xref:Microsoft.AnalysisServices.Cube> на сервере методом Update. Методу Update куба может быть передан параметр UpdateOptions.ExpandFull, который обновляет на сервере все изменившиеся объекты куба в рамках текущей операции обновления.  
   
  Чтобы удалить объект <xref:Microsoft.AnalysisServices.Action>, его необходимо удалить из коллекции и обновить родительский куб.  
@@ -143,7 +143,7 @@ ms.locfileid: "36193703"
   
  Дополнительные сведения о доступных методах и свойствах см. в описании класса <xref:Microsoft.AnalysisServices.Perspective> из пространства имен <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Translation"></a> Объекты Translation  
+###  <a name="Translation"></a> Объекты переводов  
  Объект <xref:Microsoft.AnalysisServices.Translation> создается путем его добавления в коллекцию переводов и обновления ближайшего основного родительского объекта на сервере методом Update. Методу Update ближайшего родительского объекта может быть передан параметр UpdateOptions.ExpandFull, который обновляет на сервере все изменившиеся дочерние объекты в рамках текущей операции обновления.  
   
  Чтобы удалить объект <xref:Microsoft.AnalysisServices.Translation>, его необходимо удалить из коллекции и обновить ближайший родительский объект.  
@@ -161,7 +161,7 @@ ms.locfileid: "36193703"
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices>   
- [Знакомство с классами объектов AMO](amo-classes-introduction.md)   
+ [Введение в классы объектов AMO](amo-classes-introduction.md)   
  [Программирование основных объектов AMO OLAP](programming-amo-olap-basic-objects.md)   
  [Программирование объектов AMO расширенных объектов OLAP](programming-amo-olap-advanced-objects.md)   
  [Логическая архитектура &#40;службы Analysis Services — многомерные данные&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   

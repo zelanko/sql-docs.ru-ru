@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 09afff6c9464261193283267b33fe5c5533aba63
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: bd78c18acc34c9549c574d3f82cfce6c0e5612a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325624"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Отображение одних и тех же данных в матрице и на диаграмме (построитель отчетов)
   Если нужно отобразить одинаковые данные в матрице и на диаграмме, необходимо установить свойства в обеих областях данных таким образом, чтобы они ссылались на один и тот же набор данных, а также на одни и те же выражения фильтров, групп, сортировки и данных.  
   
- Поскольку обе области данных будут иметь один источник данных (набор данных отчета), к матрице можно добавить кнопку интерактивной сортировки, которая при нажатии пользователем будет изменять порядок сортировки как для матрицы, так и для диаграммы. Дополнительные сведения см. в разделе [Добавление интерактивной сортировки к таблице или матрице &#40;построитель отчетов и службы SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
+ Поскольку обе области данных будут иметь один источник данных (набор данных отчета), к матрице можно добавить кнопку интерактивной сортировки, которая при нажатии пользователем будет изменять порядок сортировки как для матрицы, так и для диаграммы. Дополнительные сведения см. в разделе [Добавление интерактивной сортировки в таблицу или матрицу &#40;построитель отчетов и службы SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
  Чтобы использовать значения группы столбцов матрицы в качестве условных обозначений диаграммы, необходимо задать цвета для рядов данных диаграммы, а затем использовать те же цвета для заливки фона текстовых полей в ячейках матрицы, в которых отображаются эти значения группы. Дополнительные сведения см. в разделе [Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md).  
   
@@ -103,6 +103,6 @@ ms.locfileid: "36087563"
  [Связывание нескольких областей данных с одним набором данных (построитель отчетов и службы SSRS)](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Списки &#40;построитель отчетов и службы SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stretch cluster
 - Availability Groups [SQL Server], WSFC clusters
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server]
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b2238da7a6eae3e4374f899d8f7c667bc163f1e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65f8cb55f16372e5b0d70298fc3b3d5bb52ce2a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317554"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Кластеры SQL Server с несколькими подсетями [SQL Server]
   Отказоустойчивый кластер с узлами в нескольких подсетях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] представляет собой конфигурацию, в которой узлы отказоустойчивого кластера подключены к разным подсетям или разным наборам подсетей. Эти подсети могут находиться в одном месте или на географически распределенных сайтах. Кластеры географически распределенных сайтов иногда называют растянутыми. Поскольку не существует общедоступного для всех узлов хранилища, существует необходимость в репликации данных между хранилищами данных, расположенных в разных подсетях. При репликации данных в наличии имеется несколько копий данных. Поэтому, отказоустойчивый кластер с узлами, расположенными в нескольких подсетях, обеспечивает не только высокий уровень доступности, но и является решением для аварийного восстановления данных.  

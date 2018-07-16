@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - result sets [SQL Server], queries
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1a0923c3c8fd27764e01e1656f95fef0a9deaf4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 911f9eaa294b88ce9c773493f3eed9824a12ae7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321684"
 ---
 # <a name="results-pane-visual-database-tools"></a>Панель результатов (визуальные инструменты для баз данных)
   панель результатов отображает результаты самого последнего выполненного запроса SELECT (результаты запросов других типов отображаются в окнах сообщений). Чтобы открыть панель результатов, откройте или создайте запрос или представление или получите данные таблицы. Если панель результатов не отображается по умолчанию, в меню **Конструктор запросов** выберите пункт **Панель**и щелкните **Результаты**.  
@@ -67,11 +67,11 @@ ms.locfileid: "36191922"
  Если запрос изменился, в правом нижнем углу панели результатов появляется значок предупреждения и текст «Запрос изменен». Изображение значка появляется также в левом верхнем углу панели.  
   
 ## <a name="see-also"></a>См. также  
- [Создание запросов &#40;визуальные средства базы данных&#41;](create-queries-visual-database-tools.md)   
- [Выполнение запросов &#40;визуальные средства базы данных&#41;](run-queries-visual-database-tools.md)   
- [Проектировать запросы и представления инструкции &#40;визуальные средства базы данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [Панель диаграмм &#40;визуальные средства базы данных&#41;](diagram-pane-visual-database-tools.md)   
- [Панель критериев &#40;визуальные средства базы данных&#41;](criteria-pane-visual-database-tools.md)   
+ [Создание запросов &#40;визуальных инструментах баз данных&#41;](create-queries-visual-database-tools.md)   
+ [Выполнение запросов &#40;визуальных инструментах баз данных&#41;](run-queries-visual-database-tools.md)   
+ [Проектирование запросов и представлений инструкции &#40;визуальных инструментах баз данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Панель диаграмм &#40;визуальных инструментах баз данных&#41;](diagram-pane-visual-database-tools.md)   
+ [Панель критериев &#40;визуальных инструментах баз данных&#41;](criteria-pane-visual-database-tools.md)   
  [Работа с данными на панели результатов (визуальные инструменты для баз данных)](results-pane-visual-database-tools.md)  
   
   

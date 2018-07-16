@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - opening tables
 - opening Table Designer
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Table Designer, opening
 ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: eee9d6c9a62b1b3d6b07fd5078ca311ed0a86a6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4cb680ae0028958ee704f0e5a8d787a14dff67d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328164"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Открытие конструктора таблиц (визуальные инструменты для баз данных)
   Конструктор таблиц является визуальным средством, позволяющим разрабатывать и отображать таблицы подключенной базы данных. С помощью конструктора таблиц можно создавать, редактировать и удалять таблицы, столбцы, ключи, индексы, связи и ограничения.  
@@ -47,7 +47,7 @@ ms.locfileid: "36193415"
      Меню **Конструктор таблиц** добавляется к главному меню, а таблица открывается на панелях конструктора.  
   
 ## <a name="see-also"></a>См. также  
- [Создавать таблицы &#40;визуальные средства базы данных&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
+ [Проектирование таблиц &#40;визуальных инструментах баз данных&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
  [Таблицы](../relational-databases/tables/tables.md)  
   
   

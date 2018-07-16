@@ -1,5 +1,5 @@
 ---
-title: Настройка сервера — параметры сортировки | Документы Microsoft
+title: Конфигурация сервера — параметры сортировки | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collation configuration, SQL Server
 - collation configuration, Setup
 - collation configuration
 ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ee24c8f9234069526780db72457e178d50d5c824
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: abd57940e3caf8af66cb58fdeceebc802e877f6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290180"
 ---
 # <a name="server-configuration---collation"></a>Настройка сервера — параметры сортировки
   На странице «Конфигурация сервера — Параметры сортировки» мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно изменить параметры сортировки, используемые компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] и службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Это позволят согласовать параметры сортировки для различных установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или на разных компьютерах.  

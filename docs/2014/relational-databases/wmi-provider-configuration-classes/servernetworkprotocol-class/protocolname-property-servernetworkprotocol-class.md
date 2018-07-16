@@ -1,5 +1,5 @@
 ---
-title: Свойство ProtocolName (класс ServerNetworkProtocol) | Документы Microsoft
+title: Свойство ProtocolName (класс ServerNetworkProtocol) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 5894a32b-c2d8-4bba-8f9d-d09e5cd65f71
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ae941a2b181d27c5d059793c320f1cb0498bfe3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 09b4e19323a68bc1bb78e171be5f2dc933019aa9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318034"
 ---
 # <a name="protocolname-property-servernetworkprotocol-class"></a>Свойство ProtocolName (класс ServerNetworkProtocol)
   Возвращает имя сетевого протокола сервера.  

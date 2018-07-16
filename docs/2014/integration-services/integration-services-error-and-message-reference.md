@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 38dccbf58c4e0cbfee98b10c7cd8974198bceabc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 111a6cddaae54f05bb751e569487c4b94542bf07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300004"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Справочник по сообщениям об ошибках служб Integration Services
   Следующие таблицы содержат стандартные ошибки, предупреждения и информационные сообщения служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в возрастающей цифровой последовательности в каждой категории вместе с числовыми кодами и символьными именами. Каждая ошибка определена как поле в классе <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> в пространстве имен <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -362,7 +362,7 @@ ms.locfileid: "36095863"
 |0xC001F206|-1073614330|DTS_E_DTSNAME_BEGINSWITHALPHA|Недопустимое имя объекта "%1". Имя должно начинаться с алфавитного символа.|  
 |0xC001F207|-1073614329|DTS_E_DTSNAME_BEGINSWITHALPHAUNDERBAR|Недопустимое имя объекта "%1". Имя должно начинаться с алфавитного символа или знака подчеркивания "_".|  
 |0xC001F208|-1073614328|DTS_E_DTSNAME_ALPHADIGITUNDERBAR|Недопустимое имя объекта "%1". Имя должно содержать только алфавитно-цифровые символы или знаки подчеркивания "_".|  
-|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Недопустимое имя объекта "%1". Имя не может содержать следующие символы: / \ : ? « \< >&#124;|  
+|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Недопустимое имя объекта "%1". Имя не может содержать следующие символы: / \ : ? " \< >&#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|Не удалось загрузить свойство значения "%1" при использовании механизма сохраняемости по умолчанию.|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|Диспетчер соединений "%1" не принадлежит к типу "%2".|  
 |0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|"%1" пуст.|  

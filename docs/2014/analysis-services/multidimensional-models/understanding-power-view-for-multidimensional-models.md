@@ -1,5 +1,5 @@
 ---
-title: Основные сведения о Power View для многомерных моделей | Документы Microsoft
+title: Основные сведения о Power View для многомерных моделей | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a252c89adfe34f849e6fe2bd538ddf22b044c7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df50d1ac785e58bf3136f6d8777a01c98a81d568
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288060"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Основные сведения о Power View для многомерных моделей
   В этой статье рассматривается функция Power View для многомерных моделей в Microsoft SQL Server 2014 и предоставлены важные сведения для специалистов по бизнес-аналитике и администраторов, которые намереваются внедрить Power View для многомерных моделей в своей организации.  
@@ -80,7 +80,7 @@ ms.locfileid: "36087972"
   
  **Группы мер в списке полей Power View**  
   
- ![Список в Power View полей](../media/daxmd-powerviewfieldlist.gif "список в Power View полей")  
+ ![Поле списка в Power View](../media/daxmd-powerviewfieldlist.gif "поле списка в Power View")  
   
  Меры в группах мер отображаются как меры. Вычисляемые меры, не имеющие связанной группы мер, группируются в специальной таблице с именем Measures.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36087972"
   
  **Измерения, атрибуты и иерархии в SQL Server Data Tools (SSDT) и список полей Power View**  
   
- ![Измерения в SSDT и в списке полей Power View](../media/daxmd-ssdt-dimensions.gif "измерений в SSDT и списке полей Power View")  
+ ![Измерения в SSDT и списке полей Power View](../media/daxmd-ssdt-dimensions.gif "измерений в SSDT и списке полей Power View")  
   
 ### <a name="dimension-attribute-type"></a>Тип атрибута измерения  
  Многомерные модели поддерживают связывание атрибутов измерений с конкретными типами атрибутов измерений. На приведенном ниже рисунке показано измерение Geography, в котором атрибуты City, State-Province, Country и Postal Code имеют связанные с ними географические типы. Доступ к ним предоставляется в табличных метаданных. Power View распознает метаданные, позволяя пользователям создавать визуализации карт. Это показано значком карты рядом со столбцами City, Country, Postal Code и State-Province таблицы Geography в списке полей Power View.  
@@ -129,7 +129,7 @@ ms.locfileid: "36087972"
   
  **Отчет Power View с вычисляемыми элементами**  
   
- ![Вычисляемые элементы в Power View](../media/daxmd-calcmembersinpowerview.gif "вычисляемых элементов в Power View")  
+ ![Вычисляемые элементы в Power View](../media/daxmd-calcmembersinpowerview.gif "вычисляемые элементы в Power View")  
   
 ### <a name="default-members"></a>элементы по умолчанию;  
  Многомерные модели поддерживают элементы по умолчанию для атрибутов измерений. Элемент по умолчанию используется службами Analysis Services при статистической обработке данных для запроса. Доступ к элементу по умолчанию атрибута измерения предоставляется как к значению по умолчанию или фильтру для соответствующего столбца в табличных метаданных.  
@@ -151,7 +151,7 @@ ms.locfileid: "36087972"
   
  **Тип атрибута измерения ImageURL в SSDT**  
   
- ![Свойства атрибутов измерения](../media/daxmd-dimattribute-properties.gif "свойства атрибутов измерения")  
+ ![Свойства атрибутов измерения](../media/daxmd-dimattribute-properties.gif "измерения свойств атрибута")  
   
 ## <a name="parent-child-hierarchies"></a>Иерархии типа «родители-потомки»  
  Многомерные модели поддерживают иерархии типа «родители-потомки», доступ к которым предоставляется как к иерархиям в табличных метаданных. Доступ к каждому уровню иерархии типа «родители-потомки» обеспечивается как к скрытому столбцу. Доступ к ключевому атрибуту измерения типа «родители-потомки» не предоставляется в табличных метаданных.  

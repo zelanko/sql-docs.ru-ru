@@ -1,5 +1,5 @@
 ---
-title: Справочник по пользовательскому Интерфейсу мастера настройки пакета | Документы Microsoft
+title: Справочник по пользовательскому Интерфейсу мастера конфигурации пакетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.configwizard.selectobjects.f1
 - sql12.dts.configwizard.selecconfigtype.f1
@@ -16,15 +16,15 @@ f1_keywords:
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e88427ce2a7450e2e03638254da720d0c464fb8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a95f28077a06d52d8b597cae8d6a36d5cd1d502
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322434"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Мастер конфигурации пакетов справочника по пользовательскому интерфейсу
   **Мастер настройки пакета** используется для создания конфигураций, обновляющих свойства пакета служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и его объекты во время выполнения. Мастер запускается при добавлении новой конфигурации или изменении существующей в диалоговом окне **Организатор конфигураций пакетов** . Для открытия диалогового окна **Организатор конфигураций пакетов** выберите пункт **Конфигурации пакета** в меню **службы SSIS** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения см. в разделе [Создание конфигурации пакетов](../../2014/integration-services/create-package-configurations.md).  

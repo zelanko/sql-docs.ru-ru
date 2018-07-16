@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - production environments [Reporting Services]
 - report projects [Reporting Services]
@@ -26,16 +26,16 @@ ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 30571f0eaa50961fd9d96c3e1c13b4c57da774d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98482f6ad6e2f98120603c28cdc40181e37ef9a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273960"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Публикация отчетов на сервере отчетов
-  После создания и проверки отчета или набора отчетов можно воспользоваться встроенными функциями развертывания в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для публикации отчетов на сервере отчетов. Можно опубликовать отдельные отчеты или проект «Сервер отчетов». Публикация проекта сервера отчетов — это самый простой способ публикации нескольких отчетов. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] используется термин *развертывание*, вместо термина *публикации*. Два этих термина взаимозаменяемы.  
+  После создания и проверки отчета или набора отчетов можно воспользоваться встроенными функциями развертывания в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для публикации отчетов на сервере отчетов. Можно опубликовать отдельные отчеты или проект «Сервер отчетов». Публикация проекта сервера отчетов — это самый простой способ публикации нескольких отчетов. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует термин *развертывание*, вместо термина *публикации*. Два этих термина взаимозаменяемы.  
   
  Прежде чем публиковать отчет, необходимо получить на это разрешение. Разрешение определяется параметрами безопасности на основе ролей, заданными администратором сервера отчетов. Разрешения на операции публикации обычно предоставляются через роль «Издатель».  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36192817"
   
  По умолчанию [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] предоставляет три конфигурации проекта: DebugLocal, Debug и Release. Конфигурация по умолчанию — DebugLocal. Как правило, конфигурация DebugLocal служит для просмотра отчетов в локальном окне просмотра, конфигурация Debug — для публикации отчетов на тестовом сервере, а конфигурация Release — для публикации отчетов на рабочем сервере. Раскрывающийся список конфигураций решения на стандартной панели инструментов отображает активную конфигурацию. Для использования другой конфигурации выберите ее из списка.  
   
- Среда создания отчетов может иметь несколько серверов отчетов и разные установленные версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Можно создать несколько конфигураций и использовать одну из них в зависимости от сценария развертывания. Дополнительные сведения см. в разделе [развертывание и поддержка версий в SQL Server Data Tools &#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md) и [задание свойств развертывания &#40;служб Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md).  
+ Среда создания отчетов может иметь несколько серверов отчетов и разные установленные версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Можно создать несколько конфигураций и использовать одну из них в зависимости от сценария развертывания. Дополнительные сведения см. в разделе [развертывание и поддержка версий в SQL Server Data Tools &#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md) и [задание свойства развертывания &#40;служб Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md).  
   
 ## <a name="publishing-reports"></a>Публикация отчетов  
  Можно опубликовать один отчет или проект «Сервер отчетов», содержащий несколько отчетов. Инструкции по публикации отчетов см. в разделе [публиковать отчеты](../publish-reports.md).  

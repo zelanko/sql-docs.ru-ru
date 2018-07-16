@@ -1,5 +1,5 @@
 ---
-title: Элемент ModelingFlags (ASSL) | Документы Microsoft
+title: Элемент ModelingFlags (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ModelingFlags element
 ms.assetid: 83968c1e-aae8-4657-aa53-d971de0dc834
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 219b5b7dfc0ff50a1dfe5a49be69121925ce63ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bcaab47515c02a2ba40a6fb837309a7f5bed4308
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207914"
 ---
 # <a name="modelingflags-element-assl"></a>Элемент ModelingFlags (ASSL)
   Содержит коллекцию элементов [ModelingFlag](../objects/modelingflag-element-assl.md) для столбца в [MiningStructure](../objects/miningstructure-element-assl.md) или [MiningModel](../objects/miningmodel-element-assl.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "36195686"
 |Дочерние элементы|[ModelingFlag](../objects/modelingflag-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.MiningModelingFlags>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.MiningModelingFlags>.  
   
 ## <a name="see-also"></a>См. также  
  [Коллекции &#40;ASSL&#41;](collections-assl.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], WMI
 - connection managers [Integration Services], WMI
@@ -17,18 +17,18 @@ ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 199cea31baaee58c25b50a8ef0aefed15dfab387
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c014af5509091585a4aa73f6c5e900cad069ffe6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269420"
 ---
 # <a name="wmi-connection-manager"></a>Диспетчер WMI-соединений
   Диспетчер WMI-соединений позволяет использовать в пакетах службу инструментария управления Windows (WMI) для управления данными в корпоративной среде. Задача «Веб-служба», которую включают в себя службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , использует диспетчер WMI-соединений.  
   
- При добавлении диспетчер WMI-соединений в пакет [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создает, который разрешает WMI-сеанс во время выполнения, устанавливает свойства диспетчера соединений диспетчер соединений и добавляет диспетчер соединений для `Connections` коллекции пакет. `ConnectionManagerType` Диспетчера соединений задано значение `WMI`.  
+ При добавлении к пакету диспетчер WMI-соединений [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создает соединение диспетчера, который будет разрешен в соединение WMI во время выполнения, устанавливает свойства диспетчера соединений и добавляет диспетчер соединений для `Connections` коллекции пакет. `ConnectionManagerType` Свойства диспетчера соединений присваивается `WMI`.  
   
 ## <a name="configuration-of-the-wmi-connection-manager"></a>Настройка диспетчера WMI-соединений  
  Чтобы настроить диспетчер WMI-соединений, выполните следующее:  

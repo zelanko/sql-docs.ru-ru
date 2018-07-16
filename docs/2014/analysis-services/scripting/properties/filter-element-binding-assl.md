@@ -1,5 +1,5 @@
 ---
-title: Элемент filter (Binding) (ASSL) | Документы Microsoft
+title: Элемент filter (Binding) (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Filter element
 ms.assetid: 3d4cd169-2903-4266-8541-540ece424b7b
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 659719ea4ba87b548b08b5b7cb680e1b28b563d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca1fe43bfe98061065cda1da5b1ff64772a4751d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291310"
 ---
 # <a name="filter-element-binding-assl"></a>Элемент Filter (Binding) (ASSL)
   Содержит многомерное выражение, фильтрующее содержание родительского элемента.  
@@ -62,11 +62,11 @@ ms.locfileid: "36193459"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о `Binding` типа, включая таблицы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объектов языка сценариев (ASSL) `Binding` тип и иерархию наследования `Binding` типов, в разделе [тип привязки данных &#40;ASSL &#41;](../data-type/binding-data-type-assl.md).  
+ Дополнительные сведения о `Binding` типа, включая таблицы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объекты языка сценариев (ASSL) `Binding` тип и иерархию наследования `Binding` типов, см. в разделе [типа привязки данных &#40;ASSL &#41;](../data-type/binding-data-type-assl.md).  
   
- Обзор привязок данных в ASSL см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Обзор привязки данных в языке ASSL, см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
- Элементы, соответствующие родителям элемента `Filter` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.CubeDimensionBinding> и <xref:Microsoft.AnalysisServices.MeasureGroupBinding>.  
+ Элементы, соответствующие родителям элемента `Filter` в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.CubeDimensionBinding> и <xref:Microsoft.AnalysisServices.MeasureGroupBinding>.  
   
 ## <a name="see-also"></a>См. также  
  [Тип данных Binding &#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e66e94d1b49ecb275ba1422a6c7ee16c1eddc3f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f605305a86295f8b2e91aa7300086c5827e683d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271140"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] поддерживает Windows PowerShell — многофункциональную оболочку для работы со скриптами, позволяющую администраторам и разработчикам автоматизировать администрирование серверов и развертывание приложений. Язык Windows PowerShell поддерживает более сложные логические конструкции по сравнению со сценариями [!INCLUDE[tsql](../includes/tsql-md.md)] , что дает администраторам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] возможность создавать надежно работающие сценарии администрирования. Сценарии Windows PowerShell также можно использовать для администрирования других серверных продуктов [!INCLUDE[msCoName](../includes/msconame-md.md)] . В результате администраторы получают возможность использовать общий язык сценариев для разных серверов.  
@@ -40,7 +40,7 @@ ms.locfileid: "36195190"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Описание предпочтительного механизма для запуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] компоненты PowerShell; открытия сеанса PowerShell и загрузки `sqlps` модуля. `sqlps` Модуль загружается в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell, поставщик и командлеты сборки управляющих объектов SQL Server (SMO), используемые поставщиком и командлетами.|[Импорт модуля SQLPS](../database-engine/import-the-sqlps-module.md)|  
+|Описание предпочтительного механизма для запуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] компоненты PowerShell; открытия сеанса PowerShell и загрузки `sqlps` модуля. `sqlps` Модуль загружается в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поставщика PowerShell и командлеты сборки объектов управления SQL Server (SMO), используемые поставщиком и командлетами.|[Импорт модуля SQLPS](../database-engine/import-the-sqlps-module.md)|  
 |Описание способа загрузки только сборок объектов SMO без поставщика и командлетов.|[Загрузка сборки объектов SMO в Windows PowerShell](load-the-smo-assemblies-in-windows-powershell.md)|  
 |Описание способа запуска сеанса Windows PowerShell щелчком правой кнопкой мыши узла в **обозревателе объектов**. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] запускает сеанс Windows PowerShell, загружает `sqlps` модуля и настраивает путь поставщика SQL Server для выделенного объекта.|[Запуск Windows PowerShell из среды SQL Server Management Studio](run-windows-powershell-from-sql-server-management-studio.md)|  
 |Описание создания шагов задания агента SQL Server для запуска скрипта Windows PowerShell. Пользователь может планировать выполнение заданий в указанное время или в ответ на события.|[Использование Windows PowerShell в шагах агента SQL Server] (run-windows-powershell-steps-in-sql-server-agent.md

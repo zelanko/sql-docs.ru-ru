@@ -1,5 +1,5 @@
 ---
-title: Параметры (текстовый редактор-Transact-SQL — IntelliSense) | Документы Microsoft
+title: Параметры (текстовый редактор-Transact-SQL-технология IntelliSense) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.Advanced
 dev_langs:
@@ -17,13 +17,13 @@ ms.assetid: 1855d916-5bf9-4d94-b0fb-9f9bb05ff950
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 67dc90ab7682d4882a3d64b78af1a69968fd2247
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c63a9d226372e155f52f57b473346c9caf7ba1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332234"
 ---
 # <a name="options-text-editor-transact-sql-intellisense"></a>Параметры (текстовый редактор-Transact-SQL-технология IntelliSense)
   Диалоговое окно **Параметры** позволяет изменять параметры технологии IntelliSense для редактора запросов [!INCLUDE[ssDE](../includes/ssde-md.md)] . Для доступа к этим параметрам в меню **Сервис** выберите пункт **Параметры**, разверните папку **Редактор текстов**, раскройте папку **Transact-SQL** и нажмите кнопку **Дополнительно**.  

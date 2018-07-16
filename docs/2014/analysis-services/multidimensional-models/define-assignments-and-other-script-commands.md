@@ -1,5 +1,5 @@
 ---
-title: Определение назначений и других команд скриптов | Документы Microsoft
+title: Определение назначений и других команд скриптов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - empty scripts [Analysis Services]
 - calculations [Analysis Services], scripts
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - scripts [Analysis Services], calculations
 ms.assetid: f28b9b22-3dc7-4a45-b4eb-2d023f2c94b8
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 41d9b2fc60563d62d475930e0904ec38128e7b75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bcdd7fdf3a16224b3189cbeaaf5160518c26892
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297304"
 ---
 # <a name="define-assignments-and-other-script-commands"></a>Определение назначений и других команд скриптов
   На вкладке **Вычисления** конструктора кубов щелкните значок **Создать команду скрипта** на панели инструментов для создания пустого скрипта. После создания новый скрипт отображается с пустым именем на панели **Организатор скриптов** на вкладке «Вычисления». Символы, вводимые на панели «Выражения вычисления», отображаются как имя элемента на панели **Организатор скриптов**. Следовательно, можно в первую строку ввести имя с комментарием для упрощения определения скрипта на панели **Организатор скриптов** . Дополнительные сведения см. в разделе [Введение в сценарии многомерных выражений в Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Дополнительные сведения о производительности запросов многомерных выражений и вычислений см. в разделе «Написание эффективных многомерных выражений» [Руководства по производительности служб SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  

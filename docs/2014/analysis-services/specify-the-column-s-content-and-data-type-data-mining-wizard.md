@@ -1,5 +1,5 @@
 ---
-title: Укажите столбец&#39;s содержимого и типа данных (мастер интеллектуального анализа данных) | Документы Microsoft
+title: Укажите столбец&#39;s содержимого и типа данных (мастер интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifycontentdatatype.f1
 ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 25272b7bd3c7929b152731eca205f75d4931d891
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4ee726afd23b410d5d145a548a1f810fe758711
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316964"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>Укажите столбец&#39;s содержимого и типа данных (мастер интеллектуального анализа данных)
   Используйте страницу **Определение содержимого и типа данных столбцов** , чтобы изменить типы данных и типы содержимого столбцов, уже установленные мастером. Мастер использует типы данных исходных столбцов и возможности выбранного алгоритма, чтобы определить данные по умолчанию и типы содержимого для каждого столбца.  

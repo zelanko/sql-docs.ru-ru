@@ -1,5 +1,5 @@
 ---
-title: Редактор формы именованных наборов (вкладка «вычисления», конструктор кубов) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Редактор формы именованных наборов (вкладка «вычисления», конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.namedset.f1
 ms.assetid: 0fcdb908-b160-4c66-917f-3185cd272079
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71b2e06ab78f4e9267c9bc85bf55a14b0c71d69c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c548022920690437937bc3a24f39049574d3d911
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291650"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Редактор формы именованного набора (вкладка «Вычисления», конструктор кубов) (службы Analysis Services — многомерные данные)
   Панель **Редактор формы именованных наборов** на вкладке **Вычисления** в конструкторе кубов позволяет создавать и изменять именованный набор.  
@@ -50,6 +50,6 @@ ms.locfileid: "36195027"
  [Организатор скриптов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [Средства вычисления &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
  [Редактор форм вычисляемых элементов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Редактор сценариев &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [Редактор скриптов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

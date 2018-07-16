@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML query
 - queries [XML in SQL Server], nested FOR XML
 - XML [SQL Server], FOR XML queries
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: af69cc7956717388f9a8f97a8220e7ffe02db76a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1c970d2472b304e3dbc2591019f7d70a9405cfd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234794"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>Формирование XML-кода с вложенными запросами FOR XML
   В следующем примере к таблице `Production.Product` выполняется запрос, чтобы получить значения `ListPrice` и `StandardCost` указанного продукта. Чтобы сделать пример более информативным, обе цены возвращаются как элемент <`Price`> и у каждого элемента <`Price`> имеется атрибут `PriceType`.  
@@ -90,7 +90,7 @@ WHERE ProductID = 520
 FOR XML AUTO, TYPE  
 ```  
   
- В предыдущем примере используется `query()` метод `xml` данных введите, чтобы запросить XML, возвращаемый внутренним запросом FOR XML и построить прогнозируемый результат.  
+ В предыдущем примере используется `query()` метод `xml` данных введите для запроса XML, возвращаемый внутренним запросом FOR XML и построить прогнозируемый результат.  
   
  Результат:  
   

@@ -1,5 +1,5 @@
 ---
-title: Тип данных CubeAttributeBinding (ASSL) | Документы Microsoft
+title: Тип данных CubeAttributeBinding (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubeAttributeBinding data type
 ms.assetid: 04e3d619-1de8-4fc8-a089-9a44ac0f930c
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2cfde783ea648fde31b3d5c098e21f7e49550566
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0991e2e25f20e41462fe445ca93e8d84db0c7e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286010"
 ---
 # <a name="cubeattributebinding-data-type-assl"></a>Тип данных CubeAttributeBinding (ASSL)
   Определяет производный тип данных, представляющий привязку атрибута в измерении куба к действию или к столбцу структуры интеллектуального анализа данных.  
@@ -62,16 +62,16 @@ ms.locfileid: "36094652"
 |------------------|-------------|  
 |Родительские элементы|None|  
 |Дочерние элементы|[AttributeID](../properties/id-element-assl.md), [CubeDimensionID](../properties/dimensionid-element-assl.md), [CubeID](../properties/cubeid-element-assl.md), [порядковый номер](../properties/ordinal-element-assl.md), [типа](../properties/type-element-binding-assl.md)|  
-|Производные элементы|В разделе [привязки](binding-data-type-assl.md)|  
+|Производные элементы|См. в разделе [привязки](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о `Binding` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) `Binding` тип и иерархию наследования `Binding` типов, в разделе [тип привязки данных &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Дополнительные сведения о `Binding` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) типа `Binding` тип и иерархию наследования `Binding` типов, см. в разделе [типа привязки данных &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- Обзор привязок данных в ASSL см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Обзор привязки данных в языке ASSL, см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.CubeAttributeBinding>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.CubeAttributeBinding>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

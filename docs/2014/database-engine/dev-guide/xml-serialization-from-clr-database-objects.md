@@ -1,5 +1,5 @@
 ---
-title: Сериализация XML из объектов базы данных CLR | Документы Microsoft
+title: Сериализация XML из объектов базы данных CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XmlSerializer class
 ms.assetid: ac84339b-9384-4710-bebc-01607864a344
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ad6b9ebaba9f05b0a927cd65f788cdbdb672a6d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8b59c013a9a21aaa50465acd5a565eda5c1e0653
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279830"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>Сериализация XML из объектов базы данных CLR
   XML-сериализация используется в двух случаях:  
@@ -34,9 +34,9 @@ ms.locfileid: "36195648"
   
 -   для преобразования определяемого пользователем типа данных в XML.  
   
- Выполнение XML-сериализации с помощью вызова класса `XmlSerializer` обычно создает дополнительную сборку сериализации, перегружаемую в проект, содержащий исходную сборку.  Однако в целях безопасности в CLR эта перегрузка отключена. Таким образом для вызова веб-службы или преобразования определяемого пользователем ТИПА в XML внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует создать сборку вручную с помощью инструмента **Sgen.exe** поставляемого вместе с .NET Framework, которая создает необходимые сборки сериализации. При вызове класса `XmlSerializer` следует создать сборку сериализации вручную, проделав следующие шаги:  
+ Выполнение XML-сериализации с помощью вызова класса `XmlSerializer` обычно создает дополнительную сборку сериализации, перегружаемую в проект, содержащий исходную сборку.  Однако в целях безопасности в CLR эта перегрузка отключена. Таким образом для вызова веб-службы или преобразования определяемого пользователем ТИПА в XML внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует создать сборку вручную с помощью инструмента **Sgen.exe** поставляемого вместе с .NET Framework, которое создает необходимые сборки сериализации. При вызове класса `XmlSerializer` следует создать сборку сериализации вручную, проделав следующие шаги:  
   
-1.  Запустите **Sgen.exe** средство, которое входит в состав .NET Framework SDK для создания сборки, содержащей сериализаторы XML для исходной сборки.  
+1.  Запустите **Sgen.exe** средство, которое входит в состав пакета SDK для .NET Framework для создания сборки, содержащей сериализаторы XML для исходной сборки.  
   
 2.  Зарегистрируйте созданную сборку в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью инструкции `CREATE ASSEMBLY`.  
   

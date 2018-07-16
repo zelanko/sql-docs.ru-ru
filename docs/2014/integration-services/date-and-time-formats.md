@@ -1,5 +1,5 @@
 ---
-title: Форматы даты и времени | Документы Microsoft
+title: Форматы даты и времени | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time data types [Integration Services]
 - fast parse [Integration Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - date and time formats for fast parse
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
 caps.latest.revision: 52
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c5c223189964ee9c9bdcd471d64275838ba65d70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7c54b3ee399043d752efb9e55ce9c2f8fed488d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289390"
 ---
 # <a name="date-and-time-formats"></a>Форматы даты и времени
   Быстрый синтаксический анализ обеспечивает быстрый и простой набор процессов для анализа данных. Быстрый синтаксический анализ поддерживает следующие форматы даты и времени.  

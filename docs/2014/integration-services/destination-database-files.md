@@ -1,5 +1,5 @@
 ---
-title: Файлы целевой базы данных | Документы Microsoft
+title: Файлы целевой базы данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.destdbfiles.f1
 ms.assetid: f6f90417-86fb-4b8c-a790-0b215c344ef6
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 97d8a955b199aeb617171ed29f27271252a9fc4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 184d1838b2f3d6effd37cfbeead410dc2f5299d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310134"
 ---
 # <a name="destination-database-files"></a>Файлы базы данных-назначения
   Используйте диалоговое окно **Файлы целевой базы данных** для просмотра или изменения имен файлов базы данных и местоположений на целевом сервере, или для определения положения в сети файла для задачи «Передача базы данных». Дополнительные сведения об этой задаче см. в разделе [Задача "Передача базы данных"](control-flow/transfer-database-task.md).  
@@ -47,8 +47,8 @@ ms.locfileid: "36087685"
  При передаче базы данных в режиме вне сети файлы базы данных копируются в **Сетевую общую папку** перед тем, как они переданы в расположение **Целевая папка** .  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи базы данных передачи &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
- [Редактор задачи базы данных передачи &#40;страницы базы данных&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задач базы данных передача &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
+ [Редактор задач базы данных передача &#40;баз данных страницы&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

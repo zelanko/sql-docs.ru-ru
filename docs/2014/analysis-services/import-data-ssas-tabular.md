@@ -1,5 +1,5 @@
 ---
-title: Импорт данных (табличные службы SSAS) | Документы Microsoft
+title: Импорт данных (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6617b2a2-9f69-433e-89e0-4c5dc92982cf
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc8728c2a4e023fb03e0e2de8e3c457e0f15fd72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35312647eeb1b452c155c05d7f4392fa540aa156
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253566"
 ---
 # <a name="import-data-ssas-tabular"></a>Импорт данных (табличные службы SSAS)
   Данные можно импортировать в табличную модель из разнообразных источников. Здесь представлены разделы, в которых описано использование мастера импорта данных для подключения и выбора данных, импортируемых в проект модели.  
@@ -33,7 +33,7 @@ ms.locfileid: "36195041"
 |---------------------|---------------------|  
 |**Реляционные базы данных**|Реляционные источники данных включают:<br /><br /> Microsoft SQL Server<br /><br /> Microsoft SQL Azure<br /><br /> Параллельные хранилища данных Microsoft SQL Server<br /><br /> Microsoft Access<br /><br /> Oracle;<br /><br /> Teradata<br /><br /> Sybase<br /><br /> Informix<br /><br /> IBM DB2<br /><br /> OLEDB/ODBC|  
 |**Многомерные источники**|Куб служб Microsoft SQL Server Analysis Services|  
-|**Веб-каналы данных**|Веб-каналы данных включают:<br /><br /> Отчет служб Microsoft Reporting Services<br /><br /> Набор данных Azure DataMarket<br /><br /> Веб-каналы Atom от общедоступного или корпоративного поставщика|  
+|**Веб-каналов данных**|Веб-каналы данных включают:<br /><br /> Отчет служб Microsoft Reporting Services<br /><br /> Набор данных Azure DataMarket<br /><br /> Веб-каналы Atom от общедоступного или корпоративного поставщика|  
 |**Текстовые файлы**|Текстовые файлы включают:<br /><br /> Файлы Excel (XLSX)<br /><br /> Текстовый файл (TXT)|  
   
  В дополнение к импорту данных с помощью мастера импорта таблиц, данные можно скопировать и вставить (из буфера обмена) в таблицу. Вставляемые данные ведут себя иначе, чем данные, которые были импортированы из других источников данных. Вставляемые данные в таблицах не обладают свойством имени соединения или данных источника. Вставленные данные сохраняются в файле Model.bim. При сохранении проекта или файла Model.bim вставленные данные также будут сохранены.  

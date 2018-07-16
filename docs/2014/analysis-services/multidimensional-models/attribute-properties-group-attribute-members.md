@@ -1,5 +1,5 @@
 ---
-title: Группы элементов атрибутов (дискретизация) | Документы Microsoft
+title: Группы элементов атрибутов (дискретизация) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NameColumn property
 - discretization [Analysis Services]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - names [Analysis Services], member groups
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc2c51f16733597af532fe256c73c69649f0e1c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e07f85d5a6162bed15393d8c255a55cf01b903c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192785"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251456"
 ---
 # <a name="group-attribute-members-discretization"></a>Группирование элементов атрибутов (дискретизация)
   Группа элементов является созданным системой набором последовательных элементов измерения. В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]элементы атрибута могут группироваться в различные группы элементов в ходе процесса, называемого дискретизацией. Уровень в иерархии содержит либо группы элементов, либо элементы, но не то и другое сразу. Когда пользователи выполняют обзор уровня, содержащего группы элементов, они видят имена и значения ячеек групп элементов. Элементы, формируемые службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для поддержания групп членов, называются элементами группирования и выглядят как обычные элементы.  
@@ -41,7 +41,7 @@ ms.locfileid: "36192785"
 |Значение `DiscretizationMethod`|Описание|  
 |--------------------------------------|-----------------|  
 |`None`|Позволяет отобразить элементы.|  
-|`Automatic`|Выбирает метод, наилучшим образом представляющий данные: либо `EqualAreas` метода или `Clusters` метод.|  
+|`Automatic`|Выбирает метод, наилучшим образом представляющий данные: либо `EqualAreas` метод или `Clusters` метод.|  
 |`EqualAreas`|Пытается разделить элементы в атрибуте на группы, содержащие равное количество элементов.|  
 |`Clusters`|Пытается разделить элементы в атрибуте на группы с помощью выборки обучающих данных, инициализации для определенного количества случайных точек и выполнения нескольких итераций алгоритма кластеризации максимизации ожидания (EM).<br /><br /> Метод полезен, т.к. он работает с любой кривой распределения, но для его выполнения требуется больше времени.|  
   

@@ -1,5 +1,5 @@
 ---
-title: Редактор источника «файл» (страница «Диспетчер соединений») с плоскими | Документы Microsoft
+title: Редактор исходного файла (страница «Диспетчер соединений») с неструктурированными | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesourceadapter.connection.f1
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 72cf4b3ee9dbcedb7a8f917328a0bdb715ba575a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e88beab545eee8349672d6e2651882a84c110153
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252376"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>Редактор источника «Неструктурированный файл» (страница «Диспетчер соединений»)
   Для выбора диспетчера соединений, который будет использоваться источником «Неструктурированный файл», используется страница **Диспетчер соединений** диалогового окна **Редактор источника «Неструктурированный файл»** . Источник «Неструктурированный файл» считывает данные из текстового файла, который может содержать разделители, поля фиксированной ширины или иметь смешанный формат.  
@@ -50,9 +50,9 @@ ms.locfileid: "36094822"
  Осуществляйте предварительный просмотр результатов в диалоговом окне **Просмотр данных** . В окне «Предварительный просмотр» может отображаться до 200 строк.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор исходного файла с плоскими &#40;страница «столбцы»&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
- [Редактор исходного файла с плоскими &#40;страницы вывода ошибок&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор источника «файл» с плоскими &#40;страница "столбцы"&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
+ [Редактор источника «файл» с плоскими &#40;странице вывода ошибок&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [Диспетчер подключений неструктурированных файлов](connection-manager/file-connection-manager.md)  
   
   

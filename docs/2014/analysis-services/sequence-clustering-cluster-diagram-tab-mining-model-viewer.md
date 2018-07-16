@@ -1,5 +1,5 @@
 ---
-title: На вкладке Диаграмма кластеров кластеризации последовательностей (средство просмотра модели интеллектуального анализа | Документы Microsoft
+title: Вкладка Диаграмма кластеров кластеризации последовательностей (просмотра модели интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.diagrams.f1
 ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56c384e39ae4ef364f608cef8fa507d20bb746ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 862dca35dcec3c1113117cf472b3866fb9df0be3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257250"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>Вкладка «Диаграмма кластеров кластеризации последовательностей» (средство просмотра моделей интеллектуального анализа данных)
   Вкладка **Диаграмма кластеров** в **средстве просмотра деревьев содержимого общего вида (Майкрософт)** содержит графическое представление всех кластеров, содержащихся в модели кластеризации последовательностей.  
@@ -43,7 +43,7 @@ ms.locfileid: "36095092"
  **Увеличить масштаб**  
  Увеличить диаграмму для получения более подробного представления кластеров.  
   
- **Уменьшение масштаба**  
+ **Уменьшить масштаб**  
  Уменьшить масштабы диаграммы, чтобы увидеть все кластеры в модели.  
   
  **Копировать представление диаграммы**  

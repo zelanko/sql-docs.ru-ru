@@ -1,5 +1,5 @@
 ---
-title: Переименовать экземпляр диалоговое окно «» (службы Analysis Services) | Документы Microsoft
+title: Переименовать диалоговое окно «экземпляр» (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssas.instancerename.f1
 ms.assetid: 3708d992-8dd9-461c-8aa0-5da6df96ed70
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 181c1cc507fd1f05b9a9504526cea0fb860f4ea4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 287d1e6bdb82ec7e87529f74fff787476b88988f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281950"
 ---
 # <a name="rename-instance-dialog-box-analysis-services"></a>Диалоговое окно «Переименование экземпляра» (службы Analysis Services)
   Используйте диалоговое окно **Переименование экземпляра** для переименования существующего экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Диалоговое окно **Переименование экземпляра** можно отобразить с помощью средства **переименования экземпляра** (asinstancerename.exe) из папки "C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE".  
@@ -30,9 +30,9 @@ ms.locfileid: "36192761"
   
 |Термин|Определение|  
 |----------|----------------|  
-|**Переименовываемый экземпляр**|Выберите экземпляр для переименования.|  
+|**Экземпляр для переименования**|Выберите экземпляр для переименования.|  
 |**Новое имя экземпляра**|Введите нужное имя экземпляра. Не включайте в него имя сервера. То есть вместо ввода \<имя сервера >\\< имя экземпляра\>, введите только \<имя экземпляра >.<br /><br /> Если переименовываемый экземпляр нужно сделать экземпляром служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] по умолчанию, оставьте его имя пустым.|  
-|**имя пользователя**|Отображает учетную запись, используемую службой для запуска. Имя пользователя изменить нельзя.|  
+|**Имя пользователя**|Отображает учетную запись, используемую службой для запуска. Имя пользователя изменить нельзя.|  
 |**Пароль**|Введите пароль для учетной записи службы.|  
   
 ## <a name="see-also"></a>См. также  

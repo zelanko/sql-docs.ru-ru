@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23e267d78091895e5d0ec899835ce7aa09e8c9d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9e5c53e76330c00dde7b6d14fb0c6592546582bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329844"
 ---
 # <a name="create-an-entity-master-data-services"></a>Создание сущности (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]сущности создаются, чтобы содержать элементы и их атрибуты.  
@@ -55,11 +55,11 @@ ms.locfileid: "36094799"
   
 7.  Необязательный параметр. Установите флажок в поле **Автоматически создавать значения кода** . Дополнительные сведения см. в разделе [Автоматическое создание кодов (службы Master Data Services)](../../2014/master-data-services/automatic-code-creation-master-data-services.md).  
   
-8.  Из **включить явные иерархии и коллекции** выберите один из следующих вариантов:  
+8.  Из **включить явные иерархии и коллекции** выберите одно из следующих вариантов:  
   
     -   **Не**. Выберите этот параметр, если сущность не должна включать явные иерархии и коллекции. При необходимости это значение можно впоследствии изменить.  
   
-    -   **Да**. Выберите этот параметр, если необходимо включить использование явных иерархий и коллекций. В **имя явной иерархии** введите имя. При необходимости установите **обязательная иерархия (все конечные элементы включены** чтобы сделать явную иерархию обязательной иерархии.  
+    -   **Да**. Выберите этот параметр, если необходимо включить использование явных иерархий и коллекций. В **имя явной иерархии** введите имя. При необходимости выберите **обязательная иерархия (все конечные элементы** чтобы сделать явную иерархию обязательной иерархии.  
   
 9. Нажмите кнопку **сохранить сущность**.  
   

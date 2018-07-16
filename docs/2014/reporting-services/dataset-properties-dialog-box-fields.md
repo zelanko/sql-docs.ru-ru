@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно свойств набора данных, поля | Документы Microsoft
+title: Диалоговое окно свойств набора данных, поля | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.datasetproperties.fields.f1
 - "10140"
 ms.assetid: e1367556-736e-4a6b-b9e7-10432a3e50b5
 caps.latest.revision: 36
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0006ff1564f6adbcadd529cd82e726d847ed646f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ad672dfa5e9161e781d2caf975e5511126924c2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274140"
 ---
 # <a name="dataset-properties-dialog-box-fields"></a>Диалоговое окно «Свойства набора данных» — «Поля»
   Чтобы изменить коллекцию полей для набора данных отчета, перейдите на вкладку **Поля** в диалоговом окне **Свойства набора данных** . Список полей формируется автоматически, но с помощью вкладки **Поля** можно добавлять, изменять и удалять поля запросов и вычисляемые поля.  
@@ -44,12 +44,12 @@ ms.locfileid: "36095417"
   
  Для поля запроса источник должен иметь имя существующего поля, возвращаемого запросом набора данных.  
   
- **Выражения (fx)**  
+ **Выражение (fx)**  
  Добавляет или изменяет выражение для вычисляемого поля. Эта кнопка появляется, только если нажать кнопку **Добавить** и выбрать пункт **Вычисляемое поле**.  
   
 ## <a name="see-also"></a>См. также  
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Добавление данных в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](report-design/expressions-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Меры (вкладка «Структура куба», конструктор кубов) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Меры (вкладка «Структура куба», конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.measurespane.f1
 ms.assetid: be70f63b-58f2-4eff-81bc-c86d8229e617
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b81387a3eb85ca695ffd9860e09a9bf2c696ba6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90042bb67b29b86941055ed0689a4c7043bfdd6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190536"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319464"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Меры (вкладка «Структура куба», конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте панель **Меры** для управления группами мер и элементами на вкладке **Структура куба** в конструкторе кубов.  
@@ -55,13 +55,13 @@ ms.locfileid: "36190536"
 ## <a name="context-menu"></a>Контекстное меню  
  Следующие пункты доступны в контекстном меню, которое появляется, если щелкнуть правой кнопкой мыши панель **Меры** .  
   
- **Создание меры**  
+ **Новая мера**  
  Выберите этот параметр для отображения диалогового окна **Создать меру** и добавления новой меры в группу мер, выбранную на панели **Меры** .  
   
  **Создание группы мер**  
  Выберите эту меру для отображения диалогового окна **Создание группы мер** и добавления новой группы мер на панель **Меры** .  
   
- **Отобразить меры в**  
+ **Отображать меры в**  
  Выберите для циклического просмотра следующих параметров или выберите один из следующих параметров для изменения представления панели **Меры** .  
   
 |Параметр|Определение|  

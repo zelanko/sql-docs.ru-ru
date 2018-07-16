@@ -1,5 +1,5 @@
 ---
-title: Параметры (текстовый редактор - XML - форматирование страница) | Документы Microsoft
+title: Параметры (текстовый редактор - XML - Форматирование ") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Formatting
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
 caps.latest.revision: 12
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d77f7351d712f63e9cfc92c3ff03b131cb6d5d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 667b01cbdaa1e5107dcbac8a68879a94d6efc06e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095073"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209594"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Параметры ("Текстовый редактор" — "XML" — страница "Форматирование")
   При помощи этого диалогового окна можно задать настройки форматирования для XML-редактора. Диалоговое окно **Параметры** можно открыть из меню **Сервис**.  
@@ -36,7 +36,7 @@ ms.locfileid: "36095073"
 > [!NOTE]  
 >  Если атрибуты расположены на нескольких строках, редактор смещает каждую строку атрибутов, чтобы соответствовать структурированию родительского элемента.  
   
- **Выравнивать атрибуты, каждый в отдельной строке**  
+ **Выравнивание каждого из атрибутов на отдельной строке**  
  Расположить второй и последующий атрибуты вертикально, в соответствии со структурированием первого атрибута. Следующий XML-текст является примером расположения атрибутов.  
   
 ```  
@@ -54,7 +54,7 @@ ms.locfileid: "36095073"
  Переформатировать элемент по завершении закрывающего тега.  
   
 ## <a name="mixed-content"></a>Смешанное содержимое  
- **Формате смешанное содержимое по умолчанию.**  
+ **Форматировать смешанное содержимое по умолчанию.**  
  Произвести попытку переформатировать смешанное содержимое, за исключением тех случаев, когда содержание находится в области `xml:space="preserve"`. Это значение по умолчанию.  
   
  Содержимое элемента считается смешанным, если он состоит из текста и разметки. Далее приводится пример элемента со смешанным содержимым.  
@@ -65,7 +65,7 @@ ms.locfileid: "36095073"
   <file readOnly="false">test2.txt</file>  
 ```  
   
- \<Переключатели/dir >  
+ \</ dir >  
   
 ## <a name="see-also"></a>См. также  
  [Редактор XML (среда SQL Server Management Studio)](../ssms/sql-server-management-studio-ssms.md)  

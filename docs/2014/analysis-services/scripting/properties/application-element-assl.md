@@ -1,5 +1,5 @@
 ---
-title: Элемент Application (ASSL) | Документы Microsoft
+title: Элемент Application (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Application element
 ms.assetid: dfd780ad-f643-4a1c-b58b-34271ae91240
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 363f72b39a48e1606861168461abc3e19cb8b5bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e04ce46a9fc2797885e3c8dff0acd697a782b95a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087741"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279500"
 ---
 # <a name="application-element-assl"></a>Элемент Application (ASSL)
-  Определяет приложение, связанное с [действия](../objects/action-element-assl.md) элемента.  
+  Определяет приложение, связанное с [действие](../objects/action-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -58,13 +58,13 @@ ms.locfileid: "36087741"
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительский элемент|[Действие](../objects/action-element-assl.md) или один из его производных элементов: [DrillThroughAction](../data-type/action-data-type-assl.md), [ReportAction](../data-type/reportaction-data-type-assl.md), [StandardAction](../data-type/standardaction-data-type-assl.md)|  
+|Родительский элемент|[Действие](../objects/action-element-assl.md) или одного из его производных элементов: [DrillThroughAction](../data-type/action-data-type-assl.md), [ReportAction](../data-type/reportaction-data-type-assl.md), [StandardAction](../data-type/standardaction-data-type-assl.md)|  
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
  Элемент `Application` может использоваться клиентскими приложениями для определения действий, применимых к конкретному клиентскому приложению. Клиентское приложение отвечает за проверку значения этого элемента.  
   
- Элемент, соответствующий родителю параметра `Application` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Action>.  
+ Элемент, соответствующий родителю параметра `Application` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент Actions &#40;ASSL&#41;](../collections/actions-element-assl.md)   

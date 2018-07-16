@@ -1,5 +1,5 @@
 ---
-title: Технический справочник Майкрософт упрощенный алгоритм Байеса | Документы Microsoft
+title: Технический справочник по алгоритму Байеса (Майкрософт) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_DEPENDENCY_PROBABILITY parameter
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - MAXIMUM_STATES parameter
 ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 421da938c83045cea508a5926d1edc8892be11a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0f489c08c33fa66794f0eace23d207855e207b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253536"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Технический справочник по упрощенному алгоритму Байеса (Майкрософт)
   Упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом классификации, предоставляемым службами [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для использования в прогнозном моделировании. Этот алгоритм вычисляет условную вероятность между входными и прогнозируемыми столбцами и предполагает, что столбцы являются независимыми. Из-за этого предположения о независимости алгоритм и называется упрощенным алгоритмом Байеса.  
@@ -103,8 +103,8 @@ ms.locfileid: "36193900"
 >  Типы содержимого Cyclical и Ordered поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритма Байеса (Майкрософт)](microsoft-naive-bayes-algorithm.md)   
- [Примеры запросов к модели упрощенного алгоритма Байеса](naive-bayes-model-query-examples.md)   
+ [Алгоритм Байеса (Майкрософт)](microsoft-naive-bayes-algorithm.md)   
+ [Примеры запросов к упрощенной модели Байеса](naive-bayes-model-query-examples.md)   
  [Модель интеллектуального анализа данных для моделей упрощенного алгоритма Байеса &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

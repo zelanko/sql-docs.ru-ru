@@ -1,5 +1,5 @@
 ---
-title: Создание иерархий и управление ими (табличные службы SSAS) | Документы Microsoft
+title: Создание иерархий и управление ими (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4faae5fb17bf2be67fa33e590a65fce222f7cbb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e729d8963149809ba53a423a19bf9c2c7eac6fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293252"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Создание иерархий и управление ими (табличные службы SSAS)
   Создавать иерархии и управлять ими можно в конструкторе моделей, в представлении диаграммы. Чтобы просмотреть представление диаграммы в конструкторе моделей в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], укажите в меню **Модель** пункт **Представление модели**, а затем выберите пункт **Представление диаграммы**.  

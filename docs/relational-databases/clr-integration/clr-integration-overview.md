@@ -1,12 +1,11 @@
 ---
-title: Общие сведения об интеграции со средой CLR | Документы Microsoft
+title: Общие сведения об интеграции со средой CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/19/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], about CLR integration
@@ -21,12 +20,12 @@ caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3e1be655f6f1da49e9c432243e46d34e4d0412ec
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8f4fb83b806fe03bf1b68e7f9d70beb7ce876f7e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696785"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351346"
 ---
 # <a name="clr-integration---overview"></a>Интеграция со средой CLR - Обзор
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

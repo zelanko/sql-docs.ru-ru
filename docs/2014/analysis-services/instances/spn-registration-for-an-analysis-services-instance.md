@@ -1,5 +1,5 @@
 ---
-title: Регистрация имени участника-службы для экземпляра служб Analysis Services | Документы Microsoft
+title: Регистрация имени участника-службы для экземпляра служб Analysis Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb4397780a5e0d3a77b5feabe37e69b421ec8342
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b615640efe6529808652a10413d66d0fb2159e36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267630"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
   Имя участника-службы (SPN) однозначно идентифицирует экземпляр службы в домене Active Directory, если протокол Kerberos используется для взаимной проверки подлинности идентификаторов клиента и службы. Имя участника-службы сопоставляется с учетной записью входа, от имени которой выполняется экземпляр службы.  
@@ -80,10 +80,10 @@ ms.locfileid: "36191916"
 |Имя узла|Идентифицирует компьютер, на котором выполняется служба. Это может быть полное доменное имя или имя NetBIOS. Регистрация имени участника-службы необходима в обоих случаях.<br /><br /> При регистрации имени участника-службы для имени NetBIOS сервера обязательно используйте команду `SetupSPN –S` для проверки повторяющихся регистраций. Обратите внимание, что в пределах леса не гарантируется уникальность имен NetBIOS, а наличие дублированных регистраций имени участника-службы приведет к сбою подключения.<br /><br /> Для сбалансированных по нагрузке кластеров служб Analysis Services имя узла должно быть виртуальным именем, назначенным кластеру.<br /><br /> Никогда не создавайте имя участника-службы (SPN) с помощью IP-адреса. Протокол Kerberos использует возможности домена по разрешению DNS. Задание IP-адреса приводит к неиспользованию этих возможностей.|  
 |Номер порта|Хотя номер порта и является частью синтаксиса имени участника-службы, не указывайте номер порта при регистрации имени участника-службы Analysis Services. Символ двоеточия ( : ), который, как правило, в стандартном синтаксисе имени участника-службы используется для указания номера порта, в службах Analysis Services применяется для указания имени экземпляра. Для экземпляров служб Analysis Services применяется порт по умолчанию (порт TCP 2383) или порт, назначенный службой обозревателя SQL Server (порт TCP 2382).|  
 |Имя экземпляра|Analysis Services — службы, которые можно установить несколько раз на одном и том же компьютере. Каждый экземпляр определяется посредством его имени.<br /><br /> Перед именем экземпляра добавляется символ двоеточия ( : ). Например, если есть главный компьютер с именем SRV01 и именованный экземпляр SSAS-Tabular, то имя участника-службы выглядит как SRV01:SSAS-Tabular.<br /><br /> Обратите внимание, что синтаксис для указания именованного экземпляра служб Analysis Services отличается от того, что используется другими экземплярами SQL Server. Другие службы используют обратную косую черту (\) для добавления имени экземпляра в имя участника-службы.|  
-|Service-account|Это стартовая учетная запись службы Windows **MSSQLServerOLAPService** . Это может быть учетная запись пользователя домена Windows, виртуальная учетная запись, управляемая учетная запись службы (MSA) или встроенная учетная запись, например идентификатор безопасности службы, NetworkService или LocalSystem. Учетную запись пользователя домена Windows может быть отформатирован как домен\пользователь или user@domain.|  
+|Service-account|Это стартовая учетная запись службы Windows **MSSQLServerOLAPService** . Это может быть учетная запись пользователя домена Windows, виртуальная учетная запись, управляемая учетная запись службы (MSA) или встроенная учетная запись, например идентификатор безопасности службы, NetworkService или LocalSystem. Учетную запись пользователя домена Windows может быть представлен в виде "домен\пользователь" или user@domain.|  
   
 ##  <a name="bkmk_virtual"></a> Регистрация имени участника-службы для виртуальной учетной записи.  
- Виртуальные учетные записи для служб SQL Server являются типом записи по умолчанию. Виртуальная учетная запись является **NT Service\MSOLAPService** для экземпляра по умолчанию и **NT Service\MSOLAP$**\<имя экземпляра > для именованного экземпляра.  
+ Виртуальные учетные записи для служб SQL Server являются типом записи по умолчанию. Виртуальная учетная запись — **NT Service\MSOLAPService** для экземпляра по умолчанию и **NT Service\MSOLAP$**\<имя экземпляра > для именованного экземпляра.  
   
  Как следует из имен, эти учетные записи не присутствуют в Active Directory. Виртуальная учетная запись существует только на локальном компьютере. При подключении ко внешним службам, приложениям и устройствам подключение осуществляется от имени учетной записи локальной машины. Поэтому регистрация имени участника-службы для служб Analysis Services, выполняющихся от имени виртуальной учетной записи, фактически является регистрацией SPN для учетной записи машины.  
   
@@ -100,7 +100,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **Пример синтаксиса для именованного экземпляра, запущенного как NT Service\MSOLAP$\<имя экземпляра >**  
   
- Этот пример демонстрирует синтаксис **setspn** для именованного экземпляра служб Analysis Services, запущенного под стандартной виртуальной учетной записью. В этом примере имя узла — **AW-SRV02**, а имя экземпляра — **AW-FINANCE**. Опять же, это учетная запись, указанный для имени участника-службы, а не виртуальной учетной записи **NT Service\MSOLAP$**\<имя экземпляра >.  
+ Этот пример демонстрирует синтаксис **setspn** для именованного экземпляра служб Analysis Services, запущенного под стандартной виртуальной учетной записью. В этом примере имя узла — **AW-SRV02**, а имя экземпляра — **AW-FINANCE**. Опять же, это учетную запись компьютера, который указан для имени участника-службы, а не виртуальная учетная запись **NT Service\MSOLAP$**\<имя экземпляра >.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  
@@ -120,7 +120,7 @@ Setspn –s msolapsvc.3\AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service
 ```  
   
 > [!TIP]  
->  Проверьте, было ли создано имя участника-службы для сервера Analysis Services, запустив командлет `Setspn -L <domain account>` или `Setspn -L <machinename>`в зависимости от способа регистрации имени участника-службы. Вы должны имя msolapsvc.3/\<hostname > в списке.  
+>  Проверьте, было ли создано имя участника-службы для сервера Analysis Services, запустив командлет `Setspn -L <domain account>` или `Setspn -L <machinename>`в зависимости от способа регистрации имени участника-службы. Вы должны быть имя msolapsvc.3/\<имя узла > в списке.  
   
 ##  <a name="bkmk_builtin"></a> Регистрация имени участника-службы для встроенной учетной записи  
  Хотя подобный метод не рекомендуется, предыдущие установки служб Analysis Service иногда настраиваются для запуска от имени встроенной учетной записи, такой как Network Service, Local Service или Local System.  
@@ -173,10 +173,10 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
  [Проверка подлинности для бизнес-аналитики Майкрософт и делегирование удостоверений](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Взаимная проверка подлинности с помощью Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [Настройка SQL Server 2008 Analysis Services и SQL Server 2005 Analysis Services на использование проверки подлинности Kerberos](http://support.microsoft.com/kb/917409)   
- [Имен субъектов-служб (SPN) синтаксис команды SetSPN (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [Какое имя участника-службы требуется использовать и как поставить его существует?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Синтаксис (SPN) SetSPN (Setspn.exe) имен субъектов](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Какие имя участника-службы использовать и как поставить его место?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
- [Пошаговое руководство по учетным записям служб](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
+ [Пошаговое руководство по учетные записи служб](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
  [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [Как использовать имена участников-служб при настройке веб-приложений, размещенных в службах IIS](http://support.microsoft.com/kb/929650)   
  [новые возможности учетных записей служб](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], permissions
 - traces [SQL Server], replaying
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQL Server], SQL Server Profiler
 ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 981305998f4526f10accfd7a4787a6854c6c910d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a03ef4f76007dc4d3366b2ac78b3df02dbebb206
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274230"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Разрешения, необходимые для запуска приложения SQL Server Profiler
   По умолчанию для запуска приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] требуются такие же разрешения, что и для хранимых процедур языка Transact-SQL, используемых для создания трассировок. Для запуска приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] пользователь должен обладать разрешением ALTER TRACE. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на сервер (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).  
@@ -66,7 +66,7 @@ ms.locfileid: "36096310"
   
  На следующей диаграмме показан процесс проверки разрешений во время воспроизведения трассировок:  
   
- ![Разрешения на воспроизведение трассировки приложения SQL Server Profiler](../../database-engine/media/replaytracedecisiontree.gif "разрешения на воспроизведение трассировки приложения SQL Server Profiler")  
+ ![Разрешения на воспроизведение трассировки SQL Server Profiler](../../database-engine/media/replaytracedecisiontree.gif "разрешения на воспроизведение трассировки SQL Server Profiler")  
   
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры приложения SQL Server Profiler (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)   

@@ -1,5 +1,5 @@
 ---
-title: Подписание пакета цифровым сертификатом | Документы Microsoft
+title: Подписание пакета цифровым сертификатом | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - digital signatures [Integration Services]
 - signing packages [Integration Services]
 - signatures [Integration Services]
 ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
 caps.latest.revision: 59
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8704b41e27a392225989e10876b27b5dbd402f42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 011b4ee289a55f150d7a800a26db2f9f7f954ad0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326234"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>Подписание пакета цифровым сертификатом
   Данный раздел описывает подписание пакета служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] цифровым сертификатом. Цифровая подпись может использоваться совместно с другими методами предотвращения загрузки и выполнения недействительного пакета.  
@@ -71,6 +71,6 @@ ms.locfileid: "36094800"
      Теперь пакет подписан, но службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] необходимо настроить для проверки наличия и корректности цифровой подписи перед загрузкой пакета. Дополнительные сведения см. в разделе [Определение источника пакетов с помощью цифровых подписей](security/identify-the-source-of-packages-with-digital-signatures.md).  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения о безопасности &#40;службы Integration Services&#41;](security/security-overview-integration-services.md)  
+ [Общие сведения о безопасности &#40;служб Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

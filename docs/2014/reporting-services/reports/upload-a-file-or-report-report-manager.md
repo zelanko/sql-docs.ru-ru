@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publishing reports [Reporting Services], uploading files
 - reports [Reporting Services], publishing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - files [Reporting Services], uploading
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 caps.latest.revision: 41
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b30d6a4e0f9359b53ac7182879903484fbd54c27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 2875701f8b058974df7abf993b1bcc44bf8d08bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315214"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>Передача файла или отчета (диспетчер отчетов)
   В диспетчере отчетов предусмотрена функция передачи, позволяющая добавлять отчеты, модели и другие файлы к серверу отчетов без публикации этих элементов из клиентского приложения. Файлы, переданные из файловой системы, сохраняются на сервере отчетов как элементы. Способ сохранения зависит от типа передаваемого файла.  
@@ -53,7 +53,7 @@ ms.locfileid: "36086853"
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Создать, удалить или изменить общий источник данных &#40;диспетчера отчетов&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Создание, удаление и изменение общего источника данных &#40;диспетчера отчетов&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Содержимое страницы &#40;диспетчера отчетов&#41;](../contents-page-report-manager.md)   
  [Страница "Передача файла" (диспетчер отчетов)](../upload-file-page-report-manager.md)   
  [Передача файлов в папку](../report-server/upload-files-to-a-folder.md)  

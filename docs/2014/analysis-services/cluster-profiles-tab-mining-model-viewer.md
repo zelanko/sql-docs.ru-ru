@@ -1,5 +1,5 @@
 ---
-title: Вкладка (средство просмотра моделей интеллектуального анализа данных) в профилях кластера | Документы Microsoft
+title: Кластер профили вкладку (средство просмотра моделей интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.profiles.f1
 ms.assetid: 1ebafa1f-74e9-4c05-b278-a690fa8543bd
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3cf0d0437b8aea93c692e993d3d2e7167cc4a1c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e1b3e9bc36c75e0786f0e7de4799fd54f13120ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267606"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>Вкладка «Профили кластеров» (средство просмотра моделей интеллектуального анализа данных)
   Вкладка **Профили кластеров** используется для общего представления кластеров, обнаруженных алгоритмом в модели кластеризации. Эта вкладка выводит каждый атрибут и распределение этого атрибута в каждом кластере.  

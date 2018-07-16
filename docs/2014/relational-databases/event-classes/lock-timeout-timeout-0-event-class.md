@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Timeout event class
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e94eadfb707402c7fc99d5d5ea9d569f1051a6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a6713a2a55ae3326ffccef661093f97aa33a6d3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286220"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Класс событий Lock:Timeout (timeout &gt; 0)
   Класс событий **Lock:Timeout (timeout > 0)** показывает, что запрос на блокировку некоторого ресурса, например страницы, превысил время ожидания, так как этот ресурс был блокирован другой транзакцией. Данный класс событий работает аналогично классу событий **Lock:Timeout** за тем исключением, что не включает события со значением времени ожидания 0.  
@@ -37,7 +37,7 @@ ms.locfileid: "36203831"
 |ApplicationName|`nvarchar`|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |BinaryData|`image`|Идентификатор ресурса блокировки.|2|Да|  
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
-|DatabaseID|`int`|Идентификатор базы данных, в которой истекло время ожидания. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Отображает имя базы данных, если `ServerName` столбец данных был захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
+|DatabaseID|`int`|Идентификатор базы данных, в которой истекло время ожидания. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Отображает имя базы данных, если `ServerName` столбец данных фиксируется при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |DatabaseName|`nvarchar`|Имя базы данных, в которой истекло время ожидания.|35|Да|  
 |Duration|`bigint`|Длительность события (в микросекундах).|13|Да|  
 |EndTime|`datetime`|Время окончания события. Этот столбец не заполняется для классов событий запуска, таких как **SQL:BatchStarting** или **SP:Starting**.|15|Да|  
@@ -57,7 +57,7 @@ ms.locfileid: "36203831"
 |OwnerID|`int`|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE|58|Да|  
 |RequestID|`int`|Идентификатор запроса, содержащего инструкцию.|49|Да|  
 |ServerName|`nvarchar`|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
-|SessionLoginName|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием имени Имя_входа1 и выполнении инструкции под именем Имя_входа2, `SessionLoginName` выводит значение Имя_входа1 и `LoginName` Имя_входа2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
+|SessionLoginName|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Имя_входа1 и выполнении инструкции под именем Имя_входа2 в столбце `SessionLoginName` выводит значение Имя_входа1 и `LoginName` Имя_входа2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|`int`|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|`datetime`|Время начала события, если оно известно.|14|Да|  
 |TextData|`ntext`|Текстовое значение, зависящее от класса событий, фиксируемых при трассировке.|1|Да|  

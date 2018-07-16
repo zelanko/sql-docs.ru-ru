@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 - sql12.rtp.rptdesigner.dataview.asquerydesigner.f1
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - query designers [DMX]
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 69ac2db218c6c33ae7477874e6817da77ce9d591
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d8b4d662cb54e827f8810695c4945f2eee25d327
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286710"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Пользовательский интерфейс конструктора DMX-запросов служб Analysis Services
-  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графические конструкторы запросов для построения DMX-запросов и запросов многомерных выражений из источника данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. В этом разделе описан конструктор DMX-запросов. Дополнительные сведения о конструкторе запросов многомерных Выражений см. в разделе [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md).  
+  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графические конструкторы запросов для построения DMX-запросов и запросов многомерных выражений из источника данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. В этом разделе описан конструктор DMX-запросов. Дополнительные сведения о конструкторе запросов многомерных Выражений см. в разделе [интерфейс пользователя конструктор запросов многомерных Выражений Analysis Services](analysis-services-mdx-query-designer-user-interface.md).  
   
  Графический конструктор запросов расширений интеллектуального анализа данных имеет три режима: "Конструктор", "Запрос" и "Результат". Для переключения режимов щелкните правой кнопкой мыши панель конструктора запросов и выберите режим. В каждом режиме имеется панель «Метаданные», из которой можно перетащить элементы из выбранных кубов для построения DMX-запроса, получающего данные для набора данных при обработке отчета.  
   
@@ -88,12 +88,12 @@ ms.locfileid: "36095171"
  Для переключения обратно в режим конструктора или запроса щелкните правой кнопкой мыши панель "Результат" и выберите пункт **Конструктор** или **Запрос**.  
   
 ## <a name="see-also"></a>См. также  
- [Определение параметров в конструкторе запросов многомерных Выражений для служб Analysis Services &#40;отчетов построителя отчетов и службы SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [Определение параметров в конструкторе запросов многомерных Выражений для служб Analysis Services &#40;построитель отчетов и службы SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Тип соединения служб аналитики для расширений интеллектуального анализа данных &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Тип служб Analysis Services соединение для расширения интеллектуального анализа данных &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
  [Получение данных из модели интеллектуального анализа данных (расширения интеллектуального анализа данных) (службы SSRS)](retrieve-data-from-a-data-mining-model-dmx-ssrs.md)   
  [Файл конфигурации RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)   
  [Тип соединения служб аналитики для многомерных Выражений &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
- [Тип соединения служб аналитики для расширений интеллектуального анализа данных &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Тип служб Analysis Services соединение для расширения интеллектуального анализа данных &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)  
   
   

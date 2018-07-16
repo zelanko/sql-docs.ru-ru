@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.forcefailover.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 caps.latest.revision: 80
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a9ababac85cb978253682050d558c7d8aca8aad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 11041aeddd084b47ba1747ce2e555819743d9766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287996"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Выполнение принудительного перехода на другой ресурс вручную для группы доступности (SQL Server)
   В этом разделе описывается выполнение принудительной отработки отказа (с возможной потерей данных) в группе доступности AlwaysOn с использованием [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Принудительная отработка отказа — это форма перехода на другой ресурс вручную, предназначенная исключительно для аварийного восстановления в случаях, когда невозможно выполнить [запланированную отработку отказа вручную](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Если выполняется принудительный переход на несинхронизированную вторичную реплику, возможна потеря данных. Поэтому мы настоятельно рекомендуем выполнять принудительную отработку отказа только в том случае, если необходимо немедленно возобновить работу группы доступности и вы готовы пойти на риск потери данных.  
@@ -173,7 +172,7 @@ ms.locfileid: "36195476"
   
     -   **-AllowDataLoss-Force**  
   
-         Чтобы инициировать принудительную отработку отказа без подтверждения, укажите оба параметра, `-AllowDataLoss` и `-Force`. Это полезно, если нужно включить команду в скрипт и запустить ее без взаимодействия с пользователем.  Тем не менее, использовать `-Force` осмотрительно, так как Принудительная отработка отказа может привести к потере данных в базах данных, участвующих в группе доступности.  
+         Чтобы инициировать принудительную отработку отказа без подтверждения, укажите оба параметра, `-AllowDataLoss` и `-Force`. Это полезно, если нужно включить команду в скрипт и запустить ее без взаимодействия с пользователем.  Тем не менее, использовать `-Force` осмотрительно, так как Принудительная отработка отказа может привести к потере данных в базах данных, принадлежащих группе доступности.  
   
          В следующем примере выполняется принудительная отработка отказа (с возможной потерей данных) группой доступности `MyAg` на экземпляр сервера с именем `SecondaryServer\InstanceName`. Параметр `-Force` запрещает подтверждение этой операции.  
   
@@ -184,7 +183,7 @@ ms.locfileid: "36195476"
         ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь `Get-Help` командлета в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] среде PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, используйте `Get-Help` командлет в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] среде PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 3.  После принудительной отработки отказа группой доступности выполните необходимые дополнительные действия. Дополнительные сведения см. в разделе [Дальнейшие действия. Основные задачи после принудительной отработки отказа](#FollowUp)далее в этой статье.  
   
@@ -311,21 +310,21 @@ ms.locfileid: "36195476"
   
  **Сведения для поиска и устранения неполадок**  
   
--   [Диагностика конфигурации групп доступности AlwaysOn &#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
+-   [Устранение неполадок с конфигурацией групп доступности AlwaysOn &#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
--   [Устранение неполадок с операцией не удалось добавить файл &#40;группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Устранение неполадок с операцией добавления файла, завершившейся сбоем &#40;группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> См. также  
   
 -   **Блоги**  
   
-     [Блоги SQL Server AlwaysOn Team: Официальный блог SQL Server AlwaysOn](http://blogs.msdn.com/b/sqlalwayson/)  
+     [Блоги группы AlwaysOn SQL Server: Официальный блог SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
   
      [Блоги инженеров CSS SQL Server](http://blogs.msdn.com/b/psssql/)  
   
 -   **Технические документы**  
   
-     [Microsoft SQL Server AlwaysOn Solutions Guide for высокого уровня доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Технические документы Майкрософт Microsoft по SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   

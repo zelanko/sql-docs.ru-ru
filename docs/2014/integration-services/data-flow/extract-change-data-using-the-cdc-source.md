@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e570cf245e261fb10c7eb07cc318c7ee9df470ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86ea9dd907eac082321b2b6d8edd45475912a545
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233844"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Извлечение информации об изменениях данных с помощью источника CDC
   Чтобы можно было добавить и настроить источник CDC, пакет уже должен включать по крайней мере одну задачу «Поток данных» и задачу «Управление CDC».  
@@ -76,7 +76,7 @@ ms.locfileid: "36087686"
   
 ## <a name="see-also"></a>См. также  
  [Редактор источника CDC &#40;страницы диспетчера соединений&#41;](../cdc-source-editor-connection-manager-page.md)   
- [Редактор источника CDC &#40;страница «столбцы»&#41;](../cdc-source-editor-columns-page.md)   
- [Редактор источника CDC &#40;страницы вывода ошибок&#41;](../cdc-source-editor-error-output-page.md)  
+ [Редактор источника CDC &#40;страница "столбцы"&#41;](../cdc-source-editor-columns-page.md)   
+ [Редактор источника CDC &#40;странице вывода ошибок&#41;](../cdc-source-editor-error-output-page.md)  
   
   

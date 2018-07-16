@@ -1,5 +1,5 @@
 ---
-title: Метод SetServiceAccount (класс SqlService) | Документы Microsoft
+title: Метод SetServiceAccount (класс SqlService) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetServiceAccount method
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74f296fd52640c950d7d2c4b227a1c3aedb17df7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7186220ae32ceb8faa3fd5bdd906712d844d88e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317944"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>Метод SetServiceAccount (класс SqlService)
   Пытается изменить имя пользователя и пароль, с которыми выполняется экземпляр службы.  
@@ -54,9 +54,9 @@ ServiceStartName , ServiceStartPassword
   
 -   если учетная запись принадлежит встроенному домену, можно указать \ИмяПользователя;  
   
--   Если задано значение NULL, служба будет войти в систему как **LocalSystem** учетной записи.  
+-   Если задано значение NULL, служба входит в систему как **LocalSystem** учетной записи.  
   
- Для драйверов системного уровня ядра или *StartName* содержит имя объекта драйвера \FileSystem\Rdr или \Driver\Xns, которое система ввода-вывода использует для загрузки драйвера устройства. Если задано значение NULL, драйвер выполняется с именем объекта «значение по умолчанию», созданным системой ввода-вывода на основе имени службы, например DWDOM\Admin.  
+ Для ядра или драйверов системного уровня *StartName* содержит имя объекта драйвера \FileSystem\Rdr или \Driver\Xns, которое система ввода-вывода использует для загрузки драйвера устройства. Если задано значение NULL, драйвер выполняется с именем объекта «значение по умолчанию», созданным системой ввода-вывода на основе имени службы, например DWDOM\Admin.  
   
  *ServiceStartPassword*  
  Строковое значение, указывающее пароль для имени учетной записи в *StartName* параметра. Если пароль не меняется, указывается значение NULL. Если служба не имеет пароля, указывается пустая строка.  

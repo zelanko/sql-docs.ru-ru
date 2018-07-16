@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bb6cce73d7d49e091f4757c8b03e12cdc2045a86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: df869e1dc331a16d500e95bbc711584ab7482d3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244284"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Области данных табликса (построитель отчетов и службы SSRS)
   Область данных табликса имеет четыре области, которые содержат ячейки табликса: угол, область группы строк, область группы столбцов и текст. Ячейки в каждой области имеют различное назначение. Можно добавить ячейки в область текста табликса, чтобы отобразить подробные данные и сгруппированные данные. Построитель отчетов и конструктор отчетов добавляют ячейки к области группы строк или группы столбцов при создании группы для отображения значений экземпляра группы. В построителе и конструкторе отчетов создаются угловые ячейки табликса, если существуют и группы строк, и группы столбцов.  
@@ -55,6 +55,6 @@ ms.locfileid: "36195081"
  [Таблицы &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Матрицы &#40;построитель отчетов и службы SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Списки &#40;построитель отчетов и службы SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Область данных Табликса &#40;отчетов построителя отчетов и службы SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Область данных Табликса &#40;построитель отчетов и службы SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

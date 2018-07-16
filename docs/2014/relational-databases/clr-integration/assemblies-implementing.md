@@ -1,28 +1,26 @@
 ---
-title: Реализация сборок | Документы Microsoft
+title: Реализация сборок | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], implementing
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efd00348db3f4c92ad90f79e4e87094a542f1f95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: c9306c3b8a86595268e9108844686d40c65b6f40
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094604"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353356"
 ---
 # <a name="implementing-assemblies"></a>Реализация сборок
   Эта тема предоставляет сведения о следующих областях, чтобы помочь в реализации и работе со сборками в базе данных.  
@@ -36,7 +34,7 @@ ms.locfileid: "36094604"
 -   Управление версиями сборок.  
   
 ## <a name="creating-assemblies"></a>Создание сборок.  
- Сборки создаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY или в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] с использованием редактора сборок. При развертывании проекта SQL Server в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] регистрирует сборку в базе данных, указанной для проекта. Дополнительные сведения см. в статье [Deploying CLR Database Objects](deploying-clr-database-objects.md).  
+ Сборки создаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY или в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] с использованием редактора сборок. Кроме того, развертывание проекта SQL Server в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] регистрирует сборку в базе данных, указанной для проекта. Дополнительные сведения см. в статье [Deploying CLR Database Objects](deploying-clr-database-objects.md).  
   
  **Чтобы создать сборку с помощью Transact-SQL**  
   
@@ -44,7 +42,7 @@ ms.locfileid: "36094604"
   
  **Чтобы создать сборку с помощью SQL Server Management Studio**  
   
--   [Свойства сборки &#40;страница «Общие»&#41;](assemblies-properties.md)  
+-   [Свойства сборки &#40;страница "Общие"&#41;](assemblies-properties.md)  
   
 ## <a name="modifying-assemblies"></a>Изменение сборок  
  Сборки изменяются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY или в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] с использованием редактора сборок. Можно изменить сборку, когда надо сделать следующее.  
@@ -63,7 +61,7 @@ ms.locfileid: "36094604"
   
  **Чтобы изменить сборку с помощью SQL Server Management Studio**  
   
--   [Свойства сборки &#40;страница «Общие»&#41;](assemblies-properties.md)  
+-   [Свойства сборки &#40;страница "Общие"&#41;](assemblies-properties.md)  
   
 ## <a name="dropping-disabling-and-enabling-assemblies"></a>Удаление, отключение и включение сборок  
  Сборки удаляются с помощью инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP ASSEMBLY или среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -76,7 +74,7 @@ ms.locfileid: "36094604"
   
 -   [Удаление объектов](../../ssms/object/delete-objects.md)  
   
- По умолчанию, все сборки, созданные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], отключены от выполнения. Можно использовать **включена среда clr** параметр **sp_configure** системной хранимой процедуры для отключения или включения выполнения всех сборок, загруженных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Отключение выполнения сборки не допускает выполнения функций среды CLR, хранимых процедур, триггеров, статистических выражений и определяемых пользователем типов, а также останавливает все эти объекты, выполняющиеся в настоящее время. Отключение выполнения сборки не отключает способность создавать, изменять или удалять сборки. Дополнительные сведения см. в разделе [параметра конфигурации сервера «clr enabled»](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
+ По умолчанию, все сборки, созданные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], отключены от выполнения. Можно использовать **включена среда clr** параметр **sp_configure** системной хранимой процедуры для отключения или включения выполнения всех сборок, загруженных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Отключение выполнения сборки не допускает выполнения функций среды CLR, хранимых процедур, триггеров, статистических выражений и определяемых пользователем типов, а также останавливает все эти объекты, выполняющиеся в настоящее время. Отключение выполнения сборки не отключает способность создавать, изменять или удалять сборки. Дополнительные сведения см. в разделе [параметр конфигурации сервера «clr enabled»](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
   
  **Чтобы отключить и включить выполнение сборки**  
   
@@ -96,13 +94,13 @@ ms.locfileid: "36094604"
 > [!CAUTION]  
 >  Если не указан параметр WITH UNCHECKED DATA, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] старается избежать выполнения ALTER ASSEMBLY, если сборка новой версии изменяет существующие данные в таблицах, индексах и т. д. Однако при обновлении сборки в среде CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не обеспечивает согласованности вычисляемых столбцов, индексов, индексированных представлений или выражений с базовыми процедурами или типами. Следует проявлять осторожность при исполнении ALTER ASSEMBLY, чтобы избежать несоответствия результата выражения и его значения, хранящегося в сборке.  
   
- Только члены **db_owner** и **db_ddlowner** предопределенной роли базы данных могут выполнять запуск ALTER ASSEMBLY с помощью предложения WITH UNCHECKED DATA.  
+ Только члены **db_owner** и **db_ddlowner** предопределенной роли базы данных можно выполнять запуск ALTER ASSEMBLY с помощью предложения WITH UNCHECKED DATA.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отправляет сообщение в журнал событий приложений Windows о том, что сборка была изменена непроверенными данными в таблицах. Затем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отмечает любые таблицы, содержащие данные, зависящие от сборки, как таблицы с непроверенными данными. **Has_unchecked_assembly_data** столбец **sys.tables** представление каталога содержит значение 1 для таблиц, содержащих непроверенные данные и 0 для таблиц без непроверенных данных.  
   
  Чтобы проверить целостность непроверенных данных, выполните инструкцию DBCC CHECKTABLE по отношению к каждой таблице, которая имеет непроверенные данные. Если DBCC CHECKTABLE терпит неудачу, надо либо удалить неправильные строки таблицы, либо изменить код сборки для решения проблем, а затем выполнить дополнительные инструкции ALTER ASSEMBLY.  
   
- Инструкция ALTER ASSEMBLY изменяет версию сборки. Язык и региональные параметры и маркер открытого ключа сборки не изменяются. SQL Server не допускает регистрации различных версий сборок с одинаковыми именами, культурой и открытый ключ.  
+ Инструкция ALTER ASSEMBLY изменяет версию сборки. Язык и региональные параметры и маркер открытого ключа сборки не изменяются. SQL Server не допускает регистрации различных версий сборки с одинаковыми именами, культурой и открытый ключ.  
   
 ### <a name="interactions-with-computer-wide-policy-for-version-binding"></a>Взаимодействие с политикой уровня компьютера для привязки версии  
  Если обращение к сохраненным в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сборкам перенаправляются к определенным версиям, с помощью политики издателя или политики администратора уровня компьютера необходимо сделать любое из следующего.  

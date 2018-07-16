@@ -1,5 +1,5 @@
 ---
-title: Столбцы данных событий запросов | Документы Microsoft
+title: Запрашивает Events Data Columns | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Queries Events event category
 ms.assetid: 28aa7df5-3e1f-4f4f-8a1c-8bbd29d5da13
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 174fa26fd7ed7105c14514b216f02d85224fcf82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0577680218a6059a0a14a5232fd328131e0f69c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310464"
 ---
 # <a name="queries-events-data-columns"></a>Столбцы данных «События запросов»
   Категория событий «События запросов» содержит следующие классы событий:  
@@ -38,7 +38,7 @@ ms.locfileid: "36087729"
 |**Имя столбца**|**Идентификатор столбца**|**Тип столбца**|**Описание столбца**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Класс событий используется для категоризации событий.|  
-|EventSubclass|1|1|Следующих подклассов событий предоставляют дополнительные сведения о каждом классе событий.<br /><br /> 0: MDXQuery<br /><br /> 1: DMXQuery<br /><br /> 2: SQLQuery<br /><br /> 3: DAXQuery|  
+|EventSubclass|1|1|Дополнительные сведения о каждом классе событий получить следующих подклассов событий:<br /><br /> 0: MDXQuery<br /><br /> 1: DMXQuery<br /><br /> 2: SQLQuery<br /><br /> 3: DAXQuery|  
 |CurrentTime|2|5|Содержит текущее время события, если доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |StartTime|3|5|Содержит время начала события, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |ConnectionID|25|1|Содержит уникальный идентификатор соединения, связанный с событием запроса.|  
@@ -60,7 +60,7 @@ ms.locfileid: "36087729"
 |**Имя столбца**|**Идентификатор столбца**|**Тип столбца**|**Описание столбца**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Класс событий используется для категоризации событий.|  
-|EventSubclass|1|1|Следующих подклассов событий содержат дополнительные сведения о каждом классе событий.<br /><br /> 0: MDXQuery<br /><br /> 1: DMXQuery<br /><br /> 2: SQLQuery<br /><br /> 3: DAXQuery|  
+|EventSubclass|1|1|Следующих подклассов событий предоставляют дополнительные сведения о каждом классе событий.<br /><br /> 0: MDXQuery<br /><br /> 1: DMXQuery<br /><br /> 2: SQLQuery<br /><br /> 3: DAXQuery|  
 |CurrentTime|2|5|Содержит текущее время события, если доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |StartTime|3|5|Содержит время начала события, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |EndTime|4|5|Содержит время окончания события. Этот столбец не заполняется для таких классов событий запуска, как SQL:BatchStarting или SP:Starting. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  

@@ -1,5 +1,5 @@
 ---
-title: Создание нового проекта служб Integration Services | Документы Microsoft
+title: Создание нового проекта служб Integration Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
 - Integration Services projects, creating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SSIS projects, creating
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
 caps.latest.revision: 51
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4ee4484b97102b6bae3bd9496ee161233c47ee12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd06f9372092ccbbe221796555c63880d3566f91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298734"
 ---
 # <a name="create-a-new-integration-services-project"></a>Создание нового проекта служб Integration Services
   Данная процедура создает новый проект и новое решение служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -52,7 +52,7 @@ ms.locfileid: "36095964"
     > [!NOTE]  
     >  Чтобы просмотреть и изменить выбранный встраиваемый модуль управления версиями, а также настроить среду управления версиями, выберите пункт **Параметры** в меню **Сервис**, а затем разверните узел **Управление версиями**.  
   
-8.  Нажмите кнопку **ОК** Чтобы добавить решение в **обозревателе**r и добавьте проект в решение.  
+8.  Нажмите кнопку **ОК** для добавления решения для **обозреватель решений**r и добавить проект в решение.  
   
 ## <a name="see-also"></a>См. также  
  [Службы Integration Services &#40;SSIS&#41; проектов](integration-services-ssis-projects-and-solutions.md)   

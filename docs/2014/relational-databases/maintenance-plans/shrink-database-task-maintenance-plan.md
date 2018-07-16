@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.shrink.f1
 - Shrink Database Task
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Shrink Database Task dialog box
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f9b27fc7c94403cc8cc8f5e5f066fd50a8b0edc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 67022b20d1f92f02ca92ef69b58cce27cc0bcc50
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305584"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Задача «Сжатие базы данных» (план обслуживания)
   Диалоговое окно **Задача «Сжатие базы данных»** используется для создания задачи, которая пытается уменьшить размер выбранных баз данных. Перечисленные ниже параметры используются для определения количества неиспользуемого пространства, которое должно остаться в базе данных после сжатия (чем больше процент, тем меньше сжимается база данных). Это значение определяется долей фактических данных в базе данных. Например: 100-мегабайтная база данных, содержащая 60 МБ данных и 40 МБ свободного пространства с заданным значением свободного пространства, равным 50 процентам, будет содержать 60 МБ данных и 30 МБ свободного пространства (поскольку 50 процентов от 60 МБ равно 30 МБ). Удаляется только лишнее пространство в базе данных. Допустимые значения: от 0 до 100.  

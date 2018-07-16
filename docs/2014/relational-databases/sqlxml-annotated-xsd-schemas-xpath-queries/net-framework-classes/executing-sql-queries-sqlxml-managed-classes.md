@@ -1,5 +1,5 @@
 ---
-title: Выполнение запросов SQL (управляемые классы SQLXML) | Документы Microsoft
+title: Выполнение запросов SQL (управляемые классы SQLXML) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL queries [SQLXML]
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2da4e8f0757dad1fb052ec890be695ee957a9df3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 72e16fe5cc17e48b110c70f03a6e900be3b76c2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288300"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>Выполнение запросов SQL (управляемые классы SQLXML)
   В этом примере показано следующее.  
@@ -35,9 +35,9 @@ ms.locfileid: "36094747"
   
 -   Присвоение значений свойств объектов SqlXmlParameter (имя и значение).  
   
- В этом примере выполняется простой SQL-запрос, который получает фамилию, имя и дату рождения сотрудника, чья фамилия передается в качестве параметра. При указании параметра (*LastName*), задать свойство Value. Свойство Name не задано, так как в этом запросе параметр является позиционным, имя не является обязательным.  
+ В этом примере выполняется простой SQL-запрос, который получает фамилию, имя и дату рождения сотрудника, чья фамилия передается в качестве параметра. При указании параметра (*LastName*), устанавливается только свойство Value. Свойство Name не задано, так как в этом запросе параметр является позиционным, поэтому имя не требуется.  
   
- Свойство CommandType SqlXmlCommand, объект по умолчанию является **Sql**. Поэтому ему явно не присваивается значение.  
+ Свойство CommandType объект SqlXmlCommand по умолчанию равно **Sql**. Поэтому ему явно не присваивается значение.  
   
 > [!NOTE]  
 >  В коде необходимо задать имя экземпляра Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения.  
@@ -125,7 +125,7 @@ cmd = null;
 ```  
   
 ## <a name="using-executetostream"></a>Использование ExecuteToStream  
- Если имеется существующий поток, можно использовать метод ExecuteToStream вместо создания объекта потока и с помощью метода Execute. Код из предыдущего примера изменен для использования ExecuteToStream, метод:  
+ Если у вас есть существующий поток, можно использовать метод ExecuteToStream вместо создания объекта Stream и с помощью метода Execute. Код из предыдущего примера изменен для использования ExecuteToStream, метод:  
   
 ```  
 using System;  

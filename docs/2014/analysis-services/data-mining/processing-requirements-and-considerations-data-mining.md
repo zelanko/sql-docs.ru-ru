@@ -1,5 +1,5 @@
 ---
-title: Требования к обработке и замечания (интеллектуальный анализ данных) | Документы Microsoft
+title: Требования к обработке и связанные замечания (интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], objects
 - mining structures [Analysis Services], processing
 - mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbb38b12357b90b8ee2e4183af2d44724e7ce969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 982349548e300e17f97c61f4679c085ed98b3208
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232394"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Требования к обработке и связанные замечания (интеллектуальный анализ данных)
   В этом разделе рассматриваются некоторые технические вопросы, которые необходимо учитывать при обработке объектов интеллектуального анализа данных. Общее описание обработки и ее применения в интеллектуальном анализе данных см. в разделе [Обработка объектов интеллектуального анализа данных](processing-data-mining-objects.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "36087253"
   
  Во время обработки модель не считывает повторно данные из источника, а получает сводку данных из структуры интеллектуального анализа данных. Совместно используя созданный куб, кэшированный индекс и данные таблицы вариантов, сервер создает независимые потоки для обучения моделей.  
   
- Дополнительные сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающих параллельную обработку моделей см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+ Дополнительные сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающих параллельную обработку моделей, см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ##  <a name="bkmk_ProcessStructures"></a> Обработка структур интеллектуального анализа данных  
  Структуру интеллектуального анализа можно обрабатывать вместе со всеми зависимыми моделями или отдельно. Обработка структуры интеллектуального анализа данных отдельно от моделей может оказаться полезной, когда некоторые модели обрабатываются продолжительное время и эту операцию необходимо отложить.  

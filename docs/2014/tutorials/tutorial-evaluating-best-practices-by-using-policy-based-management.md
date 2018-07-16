@@ -1,5 +1,5 @@
 ---
-title: 'Учебник: Выполнение политик рекомендаций с помощью управления на основе политик | Документы Microsoft'
+title: 'Руководство: Выполнение политик рекомендаций с помощью управления на основе политик | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - best practices analyzer
 - Policy-Based Management, best practices policies
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - Policy-Based Management, tutorials
 ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: abcb108fc5f19bba718173674fccb08fc0aa29d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 129fdbd715df234c05319ab02b15fcb99b19ac08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315064"
 ---
-# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Учебник: Выполнение политик рекомендаций с помощью управления на основе политик
+# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Руководство: Выполнение политик рекомендаций с помощью управления на основе политик
   Добро пожаловать в учебник по выполнению рекомендаций с помощью управления на основе политик. Этот учебник предназначен для пользователей, имеющих представление о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], но незнакомых с управлением на основе политик. Управление на основе политик — это система определения политик, которые можно использовать для обеспечения принудительного выполнения стандартов администрирования. Управление на основе политик подразумевает использование набора рекомендуемых политик, которые могут быть использованы для анализа экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и дают возможность определить, соответствует ли он советам и рекомендациям.  
   
 ## <a name="what-you-will-learn"></a>Обзор учебника  

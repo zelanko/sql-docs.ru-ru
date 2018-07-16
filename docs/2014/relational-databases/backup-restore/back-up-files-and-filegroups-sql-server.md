@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up filegroups [SQL Server]
 - file backups [SQL Server], how-to topics
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 49e2ba4f8788a60b5d0e00d24539a085c233b446
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f453d2f34713a4a00b1a5d99870f3597ac32262e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332654"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Создание резервных копий файлов и файловых групп (SQL Server)
   В этом разделе описывается создание резервной копии файлов и файловых групп в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell. Если размер базы данных и требования по производительности делают полное резервное копирование базы данных нецелесообразным, можно создать резервную копию файлов. *Резервная копия файлов* содержит данные одного или нескольких файлов или файловых групп. Дополнительные сведения о резервных копиях файлов см. в разделах [Полные резервные копии файлов (SQL Server)](full-file-backups-sql-server.md) и [Разностные резервные копии (SQL Server)](differential-backups-sql-server.md).  
@@ -40,7 +39,7 @@ ms.locfileid: "36190471"
   
      [безопасность](#Security)  
   
--   **Создание резервных копий файлов и файловых групп, с помощью:**  
+-   **Для резервного копирования файлов и файловых групп, с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -223,7 +222,7 @@ GO
   
     -   Чтобы создать резервную копию определенного файла, укажите `-DatabaseFile` *строка* параметр, где *строка* — один или несколько файлов базы данных для резервного копирования.  
   
-    -   Чтобы создать резервную копию всех файлов из заданной файловой группы, укажите `-DatabaseFileGroup` *строка* параметр, где *строка* — один или несколько файловых групп базы данных для резервного копирования.  
+    -   Чтобы создать резервную копию всех файлов в заданной файловой группы, укажите `-DatabaseFileGroup` *строка* параметр, где *строка* ― это один или несколько файловых групп базы данных для резервного копирования.  
   
      В следующем примере создается полная резервная копия каждого файла из вторичных файловых групп «FileGroup1» и «FileGroup2» базы данных `MyDB` . Резервные копии создаются в расположении резервных копий по умолчанию экземпляра сервера `Computer\Instance`.  
   

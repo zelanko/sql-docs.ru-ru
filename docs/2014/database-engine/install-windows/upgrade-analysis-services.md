@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - databases [Analysis Services], upgrading
@@ -21,25 +21,25 @@ helpviewer_keywords:
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 caps.latest.revision: 63
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: dd4ae8ef0eb99859885dfbd33af284c843c282d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: Minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f59e24f7028dd54b39ea7b27ab98ad85c149cadd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245254"
 ---
 # <a name="upgrade-analysis-services"></a>Обновление служб Analysis Services
-  Используйте пакет установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Подробные сведения об обновлении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме интеграции с SharePoint в разделе [обновление PowerPivot для SharePoint](upgrade-power-pivot-for-sharepoint.md). Дополнительные сведения об обновлении существующего SQL Server см. в разделе [обновление до SQL Server 2014 с помощью мастера установки &#40;установки&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
+  Используйте пакет установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Подробные сведения об обновлении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме интеграции с SharePoint см. в разделе [обновление PowerPivot для SharePoint](upgrade-power-pivot-for-sharepoint.md). Дополнительные сведения об обновлении существующего SQL Server экземпляра, см. в разделе [обновление до SQL Server 2014 с помощью мастера установки &#40;установки&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 ## <a name="known-upgrade-issues"></a>Известные проблемы при обновлении  
  Перед обновлением до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]просмотрите следующие источники:  
   
 -   [Заметки о выпуске SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
   
--   Сведения о [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] возможности и функции поддерживаются, устарели или изменить в разделе [обратная совместимость служб Analysis](../../analysis-services/analysis-services-backward-compatibility.md).  
+-   Сведения о [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] функции и возможности не поддерживаются, устарели или изменить см. в разделе [обратная совместимость служб Analysis Services](../../analysis-services/analysis-services-backward-compatibility.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Контрольный список действий перед обновлением  
  Перед обновлением просмотрите следующую информацию:  
@@ -82,7 +82,7 @@ ms.locfileid: "36095747"
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Возможности, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+ [Функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Основные сведения об архитектуре Microsoft OLAP](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)   
  [Обновление PowerPivot для SharePoint](upgrade-power-pivot-for-sharepoint.md)   

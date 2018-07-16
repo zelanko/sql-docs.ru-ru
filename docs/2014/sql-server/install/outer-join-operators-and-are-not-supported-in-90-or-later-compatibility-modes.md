@@ -1,5 +1,5 @@
 ---
-title: Операторы внешнего соединения *= и =* не поддерживаются в режиме совместимости 90 и более поздних версий | Документы Microsoft
+title: Операторы внешнего соединения *= и =* не поддерживаются в режиме совместимости 90 и выше | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - outer joins
 - =* join
@@ -16,24 +16,24 @@ helpviewer_keywords:
 - joins [SQL Server]
 ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 47a58b60ecd303b893e001663134d9b510bbabfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 579565320855694166f57039402e3fbef14183d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255446"
 ---
-# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Операторы внешнего соединения *= и =* не поддерживаются в режиме совместимости 90 или выше.
-  Советник по переходу обнаружил использование операторов внешнего соединения * = и =\*. Эти операторы не поддерживаются в режиме совместимости 90 и выше. При обновлении пользовательские базы данных сохраняют свой режим совместимости. Инструкции, использующие эти операторы, завершатся ошибкой.  
+# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Операторы внешнего соединения *= и =* не поддерживаются в режиме совместимости 90 и более поздних версий
+  Помощник по обновлению обнаружил использование операторов внешнего соединения * = и =\*. Эти операторы не поддерживаются в режиме совместимости 90 и выше. При обновлении пользовательские базы данных сохраняют свой режим совместимости. Инструкции, использующие эти операторы, завершатся ошибкой.  
   
 ## <a name="component"></a>Компонент  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>Действие по исправлению  
- Перед изменением уровня совместимости базы данных 90 или более поздней версии, измените инструкции, использующие операторы внешнего соединения * = и =\* использовать эквивалентные ключевые слова OUTER JOIN. В следующем примере показан запрос, использующий оператор `*=`, и эквивалентный ему запрос, использующий ключевые слова `LEFT OUTER JOIN`.  
+ Перед изменением режима совместимости базы данных 90 или более поздней версии, измените инструкции, использующие операторы внешнего соединения * = и =\* использовать эквивалентные ключевые слова OUTER JOIN. В следующем примере показан запрос, использующий оператор `*=`, и эквивалентный ему запрос, использующий ключевые слова `LEFT OUTER JOIN`.  
   
 ```  
 -- This query uses an old-style outer join operator.  

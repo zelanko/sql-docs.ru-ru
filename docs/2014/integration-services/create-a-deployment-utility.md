@@ -1,5 +1,5 @@
 ---
-title: Создание программы развертывания | Документы Microsoft
+title: Создание программы развертывания | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
 caps.latest.revision: 49
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c7e51388856f6bbd63382410100b5655194ec3d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09c39bccc82df8539fc419180465739cf1ed8054
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273120"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   Первый шаг в развертывании пакетов — это создание программы развертывания для проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Программа развертывания — это папка, которая содержит файлы, требуемые для развертывания пакетов проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на другом сервере. Программа развертывания создается на компьютере, где хранится проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -53,7 +53,7 @@ ms.locfileid: "36194778"
   
 4.  Для обновления конфигураций пакета после развертывания пакетов установите **AllowConfigurationChanges** для `True`.  
   
-5.  Задать `CreateDeploymentUtility` для `True`.  
+5.  Задайте `CreateDeploymentUtility` для `True`.  
   
 6.  При необходимости обновите расположение программы развертывания посредством изменения свойства `DeploymentOutputPath`.  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36194778"
 9. Просмотрите ход компоновки и ошибки в окне **Выход** .  
   
 ## <a name="see-also"></a>См. также  
- [Конфигурации пакета](../../2014/integration-services/package-configurations.md)   
- [Создать конфигурации пакетов](../../2014/integration-services/create-package-configurations.md)   
+ [Конфигурации пакетов](../../2014/integration-services/package-configurations.md)   
+ [Создание конфигурации пакетов](../../2014/integration-services/create-package-configurations.md)   
  [Развертывание пакетов с помощью программы развертывания](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
- [Пакет развертывания &#40;служб SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+ [Развертывания пакета &#40;служб SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

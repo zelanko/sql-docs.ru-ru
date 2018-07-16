@@ -1,5 +1,5 @@
 ---
-title: Поддержка типов данных в SQLXML 4.0 XML | Документы Microsoft
+title: Поддержка типов данных в SQLXML 4.0 XML | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3f0c3589b34087c5615179d2e7b6449372bea54d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 639dbfab6191b7266c367997396fa0d127031e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296364"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Поддержка типов данных xml в SQLXML 4.0
   Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML поддерживает типизированные данные с помощью `xml` тип данных. В этом разделе представлены сведения о том, как SQLXML 4.0 распознает экземпляры типов данных `xml` и реализует их поддержку.  
@@ -39,7 +39,7 @@ ms.locfileid: "36095882"
   
 ## <a name="guidelines-and-limitations"></a>Рекомендации и ограничения  
   
--   **\<XSD: любой >** не может быть сопоставлен столбцу, в том числе `xml` тип данных. В SQLXML это делается с помощью заметки `sql:overflow-field`. Другой способ обойти это ограничение — сопоставление поля с типом данных `xml` в качестве элемента `xsd:anyType`. Этот способ показан в примере «Сопоставление XML-элемента со столбцом типа данных xml», ссылка на который дана в таблице выше.  
+-   **\<XSD: любой >** не может быть сопоставлен столбец, в том числе `xml` тип данных. В SQLXML это делается с помощью заметки `sql:overflow-field`. Другой способ обойти это ограничение — сопоставление поля с типом данных `xml` в качестве элемента `xsd:anyType`. Этот способ показан в примере «Сопоставление XML-элемента со столбцом типа данных xml», ссылка на который дана в таблице выше.  
   
 -   Запрос XPath к содержимому столбца с типом данных `xml` не поддерживается.  
   

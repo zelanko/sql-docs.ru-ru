@@ -1,5 +1,5 @@
 ---
-title: Представление источника данных определение | Документы Microsoft
+title: Определение данных представление источника | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 54cce390a82259430abf9820804cb5c9ca556532
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 556c860f3714de07e2b0f0242b9c73b731af2f4b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286154"
 ---
 # <a name="defining-a-data-source-view"></a>Определение представления источников данных
   После определения источников данных, используемых в проекте служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], на следующем этапе, как правило, определяется представление источника данных для этого проекта. Представление источника данных является отдельным единым представлением метаданных из указанных таблиц и представлений, определяемых источником данных для проекта. Хранение метаданных в представлении источника данных позволяет работать с метаданными в процессе разработки, не устанавливая соединений с базовыми источниками данных. Дополнительные сведения см. в разделе [Представления источников данных в многомерных моделях](multidimensional-models/data-source-views-in-multidimensional-models.md).  

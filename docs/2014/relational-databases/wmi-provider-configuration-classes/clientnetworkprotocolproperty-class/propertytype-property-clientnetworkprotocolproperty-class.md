@@ -1,5 +1,5 @@
 ---
-title: Свойство PropertyType (класс ClientNetworkProtocolProperty) | Документы Microsoft
+title: Свойство PropertyType (класс ClientNetworkProtocolProperty) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyType property
 ms.assetid: fc0e4725-979f-4517-a8f5-25436b87f5c2
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 40603fc717d8ec0a07d2e73e68910c6cfa775b86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 29fe521e607e1eb70ce6f3bf83110450d7a26383
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232904"
 ---
 # <a name="propertytype-property-clientnetworkprotocolproperty-class"></a>Свойство PropertyType (класс ClientNetworkProtocolProperty)
   Возвращает тип свойства, на которое ссылается значение свойства [PropertyIdx (класс ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) .  

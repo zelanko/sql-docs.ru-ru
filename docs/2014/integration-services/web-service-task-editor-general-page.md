@@ -1,5 +1,5 @@
 ---
-title: Редактор задач веб-служб (страница «Общие») | Документы Microsoft
+title: Редактор задач веб-служба (страница "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.general.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 caps.latest.revision: 34
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d23c975b44a9d61bb9e9b1b61ebf04285842ba01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d68fdf156caf460ee6130df7ab746fcbd13fec0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331864"
 ---
 # <a name="web-service-task-editor-general-page"></a>Редактор задачи «Веб-служба» (страница «Общие»)
   Страница **Общие** в диалоговом окне **Редактор задачи "Веб-служба"** применяется для указания диспетчера HTTP-соединений, расположения файла WSDL, используемого задачей веб-службы, описания задачи веб-службы и загрузки файла WSDL.  
@@ -48,7 +48,7 @@ ms.locfileid: "36087648"
   
 -   Выберите этот пустой файл для параметра **WSDLFile** .  
   
--   Установите для параметра **OverwriteWSDLFile** для `True` для включения пустой файл можно перезаписать с фактическим WSDL-файлом.  
+-   Установите для параметра **OverwriteWSDLFile** для `True` для включения пустой файл по фактическим WSDL-файлом.  
   
 -   Нажмите кнопку **Загрузить язык WSDL** , чтобы загрузить фактический WSDL-файл и перезаписать пустой файл.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36087648"
  **OverwriteWSDLFile**  
  Укажите, можно ли перезаписать WSDL-файл для задачи веб-службы.  
   
- Если планируется загрузить WSDL-файл с помощью **загрузить язык WSDL** кнопку, это значение равно `True`.  
+ Если планируется загрузить WSDL-файл с помощью **загрузить язык WSDL** "Кнопка", это значение равно `True`.  
   
  **Название**  
  Введите уникальное имя задачи веб-службы. Это имя используется в качестве метки для значка задачи.  
@@ -75,9 +75,9 @@ ms.locfileid: "36087648"
  Эта кнопка недоступна, пока не указано имя существующего локального файла в поле **WSDLFile** .  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задач веб-служба &#40;страница «Вход»&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [Редактор задач веб-служба &#40;вывода страниц&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Редактор задач веб-служба &#40;вывода страницы&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Страница "Выражения"](expressions/expressions-page.md)  
   
   

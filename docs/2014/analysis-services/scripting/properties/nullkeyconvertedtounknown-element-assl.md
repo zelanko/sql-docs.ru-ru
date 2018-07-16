@@ -1,5 +1,5 @@
 ---
-title: Элемент NullKeyConvertedToUnknown (ASSL) | Документы Microsoft
+title: Элемент NullKeyConvertedToUnknown (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NullKeyConvertedToUnknown element
 ms.assetid: 1a6cde33-01ba-4095-b464-16d1ad3c6905
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e11f7de1b3fa7b11774a960351a1b3c974ce4f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cebeef3421533b429a38f6c5696780cb008eca69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316924"
 ---
 # <a name="nullkeyconvertedtounknown-element-assl"></a>Элемент NullKeyConvertedToUnknown (ASSL)
   Определяет действие, которое следует выполнять при возникновении ошибки преобразования значения NULL.  

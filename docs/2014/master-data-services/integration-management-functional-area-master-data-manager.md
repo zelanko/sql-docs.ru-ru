@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f87fe62b7d723111231ecffc4e1c927478b8b516
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fc94ad9ffcd37479df2fa1379f4872b9ee3aa5e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283380"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Функциональная область управления интеграцией (диспетчер основных данных)
   В функциональной области «Управление интеграцией» администраторы могут выполнять импорт данных из промежуточных таблиц и создавать представления подписки для систем подписки. Дополнительные сведения об администраторах см. в разделе [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
@@ -27,11 +27,11 @@ ms.locfileid: "36096447"
 ## <a name="import-data"></a>Импорт данных  
  [Импорт данных &#40;службы Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
- [Загрузка или обновление членов в Master Data Services с помощью промежуточного процесса](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)  
+ [Загрузка или обновление членов в службы Master Data Services с помощью промежуточного процесса](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)  
   
  [Перемещение элементов явной иерархии с помощью промежуточного процесса &#40;службы Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)  
   
- [Просмотр ошибок, возникших в процессе промежуточного хранения &#40;службы Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
+ [Просмотр ошибок, возникающих в ходе промежуточного процесса &#40;службы Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   
  [Устранение неполадок в промежуточном процессе (службы Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   

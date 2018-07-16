@@ -1,5 +1,5 @@
 ---
-title: Обозначения в ASSL XML | Документы Microsoft
+title: Обозначения в ASSL XML | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - inherited defaults [Analysis Services Scripting Language]
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0411903c72aba9b0122beb4c0e46e9f172f4f4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d248cc39e20869752deb67c0c84c8b0aca6aafd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279900"
 ---
 # <a name="assl-xml-conventions"></a>Обозначения в XML языка ASSL
   Язык ASSL представляет иерархию объектов в виде набора типов элементов, каждый из которых определяет дочерние элементы, которые они могут содержать.  
@@ -43,7 +43,7 @@ ms.locfileid: "36194139"
   
 -   Все объекты и свойства, за исключением стандартных XML-атрибутов, например «xml:lang», представлены как элементы.  
   
--   Имена элементов и значений перечисления Следуйте соглашению об именах платформы Microsoft .NET Framework Pascal без символов подчеркивания.  
+-   Имена элементов и значений перечисления соглашению об именовании Microsoft .NET Framework па без символов подчеркивания.  
   
 -   Регистр всех значений сохраняется. Значения для перечислений учитывают также регистр.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36194139"
   
 -   Пробелы внутри текста сохранены.  
   
- Свойства `Name` и `ID` имеют особые ограничения на допустимые символы в строковых элементах. Дополнительные сведения о `Name` и `ID` обозначениях см. в разделе [объекты ASSL и характеристики объектов](assl-objects-and-object-characteristics.md).  
+ Свойства `Name` и `ID` имеют особые ограничения на допустимые символы в строковых элементах. Дополнительные сведения о `Name` и `ID` соглашения, см. в разделе [объекты ASSL и характеристики объектов](assl-objects-and-object-characteristics.md).  
   
  `DateTime`  
  Объект `DateTime` структуру на основе .NET Framework. Значение `DateTime` не может быть NULL. Самая давняя дата, которую поддерживает тип данных `DataTime`, —1 января 1601 года; программисты могут использовать ее в форме `DateTime.MinValue`. Самая давняя поддерживаемая дата указывает, что значение `DateTime` отсутствует.  
@@ -156,7 +156,7 @@ ms.locfileid: "36194139"
 |`Boolean`|False|  
 |`String`|"" (пустая строка)|  
 |`Integer` или `Long`|0 (ноль)|  
-|`Timestamp`|12:00:00 AM, 1/1/0001 (в зависимости от платформы .NET `System.DateTime` с 0 тактов)|  
+|`Timestamp`|12:00:00 AM, 1/1/0001 (соответствует .NET Frameworks `System.DateTime` с 0 тактов)|  
   
  Элемент, который имеется в наличии, но является пустым, интерпретируется как имеющий значение пустой строки, а не значение по умолчанию.  
   
@@ -183,6 +183,6 @@ ms.locfileid: "36194139"
   
  `</Dimension>`  
   
- Дополнительные сведения о унаследованные значения по умолчанию см. в разделе [объекты ASSL и характеристики объектов](assl-objects-and-object-characteristics.md).  
+ Дополнительные сведения о унаследованные значения по умолчанию, см. в разделе [объекты ASSL и характеристики объектов](assl-objects-and-object-characteristics.md).  
   
   

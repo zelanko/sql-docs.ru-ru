@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing indexes
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 88db7af7bbca5a202b79ec42d8cade77e85cd258
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2a6021971575b0a17821e415aaf738ff651e9ec5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323974"
 ---
 # <a name="drop-xml-indexes"></a>Удаление XML-индексов
   Инструкция [DROP INDEX (Transact-SQL)](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет удалить существующие первичные и вторичные XML-индексы и индексы других типов. Однако к XML-индексам не применяется ни один из параметров DROP INDEX. Если удаляется первичный XML-индекс, то вместе с ним удаляются также и все имеющиеся вторичные индексы.  
@@ -31,7 +31,7 @@ ms.locfileid: "36192839"
  Синтаксис инструкции DROP для *TableName.IndexName* постепенно вытесняется и для XML-индексов не поддерживается.  
   
 ## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Пример. Создание и удаление первичного XML-индекса  
- В следующем примере создается XML-индекс на `xml` тип столбца.  
+ В следующем примере создается XML-индекса на `xml` столбец типа.  
   
 ```  
 DROP TABLE T  
@@ -55,7 +55,7 @@ DROP INDEX PIdx_T_XmlCol ON T
   
  При удалении таблицы автоматически удаляются все созданные для нее XML-индексы. Однако столбец XML не может быть удален из таблицы, если для него существует XML-индекс.  
   
- В следующем примере создается XML-индекс на `xml` тип столбца. Дополнительные сведения см. в статье [Сравнение типизированного и нетипизированного XML](../xml/compare-typed-xml-to-untyped-xml.md).  
+ В следующем примере создается XML-индекса на `xml` столбец типа. Дополнительные сведения см. в статье [Сравнение типизированного и нетипизированного XML](../xml/compare-typed-xml-to-untyped-xml.md).  
   
 ```  
 CREATE TABLE TestTable(  

@@ -1,5 +1,5 @@
 ---
-title: Переводы измерений | Документы Microsoft
+title: Переводы измерений | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - translations [Analysis Services], dimensions
 ms.assetid: 38fc1e05-2ac9-4816-b52b-dfd19c3a43a2
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c1ac374c71c4e6a7d2be081f5d9d607d28b3424
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ad366e146a52eacbad63e5fb3eac71418fd5d34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243454"
 ---
 # <a name="dimension-translations"></a>Переводы измерений
   Перевод — это простой механизм для отображения меток и заголовков на другом языке. Каждый перевод определяется как пара значений: строка с переведенным текстом и значение с идентификатором языка. Переводы доступны для всех объектов в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Значения атрибутов измерений также можно перевести. Клиентское приложение отвечает за поиск языка, заданного пользователем, и отображения на этом языке всех меток и заголовков. Объект может иметь неограниченное число переводов.  
   
  Простой объект <xref:Microsoft.AnalysisServices.Translation> содержит кода языка и переведенного заголовка. Код языка — это значение типа `Integer` с идентификатором языка. Переведенное текстовое обозначение является заголовком.  
   
- В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], перевод измерений — это зависящее от языка представление имени измерения, имени объекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объект или одно из его элементов, например заголовка, элемента или уровня иерархии. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] также поддерживают переводы объектов кубов.  
+ В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], перевод измерений — зависящие от языка представление имени измерения, имени объекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объекта или одного из его элементов, например заголовка, элемента или уровня иерархии. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] также поддерживают переводы объектов кубов.  
   
  Переводы обеспечивают серверную поддержку клиентских приложений, которые поддерживают несколько языков. Часто пользователи из разных стран просматривают куб и его измерения. Полезно иметь возможность перевода различных элементов куба и его измерений на другой язык, чтобы эти пользователи могли просматривать и понимать куб. Например, если пользователь из Франции обращается к кубу с рабочей станции, имеющей французскую локаль, он видит значения свойства объекта на французском языке. Аналогично пользователь в Германии, обращающийся к тому же кубу с рабочей станции с немецкой локалью, видит те же значения свойства объекта на немецком языке.  
   
@@ -43,6 +43,6 @@ ms.locfileid: "36191105"
 ## <a name="see-also"></a>См. также  
  [Переводы куба](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
  [Переводы &#40;служб Analysis Services&#41;](../translations-analysis-services.md)   
- [Советы и рекомендации по глобализации &#40;служб Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [Глобализация, советы и рекомендации по &#40;служб Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

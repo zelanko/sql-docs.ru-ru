@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql11.rtp.rptdesigner.placeholderproperties.font.f1
 - "10118"
@@ -18,15 +18,15 @@ f1_keywords:
 - sql11.rtp.rptdesigner.textproperties.font.f1
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6c3add2546128bedffdcbeb14c6cc819f6318871
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b395410bfe5a5a8a1dad97260c766500c0e814e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294154"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Форматирование текста и заполнителей (построитель отчетов и службы SSRS)
   Текстовое поле может представлять собой элемент отчета или отдельную ячейку в области данных, которая содержит текст, вычисляемое поле, указатель на поле в базе данных или сочетание всех этих трех элементов. Предусмотрена возможность смешивать шрифты и цвета, добавлять полужирный и курсивный стили и использовать такие стили абзаца, как выравнивание и выступы. Можно форматировать все текстовое поле или конкретный текст, числа, выражения или поля в текстовом поле.  
@@ -81,6 +81,6 @@ ms.locfileid: "36195527"
  [Списки &#40;построитель отчетов и службы SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Диалоговое окно "Свойства заполнителя" — "Общие" (построитель отчетов и службы SSRS)](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
- [Текстовые поля &#40;отчетов построителя отчетов и службы SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
+ [Текстовые поля &#40;построитель отчетов и службы SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
   
   

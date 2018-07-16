@@ -1,5 +1,5 @@
 ---
-title: Тип данных ImpersonationInfo (ASSL) | Документы Microsoft
+title: Тип данных ImpersonationInfo (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ImpersonationInfo data type
 ms.assetid: 8a6b55fe-1f02-4519-bdc2-4553b576b2f3
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0525811218028039e8244c93a87090bd7909f685
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 25321c491db72fb61770b48a3d75743cf50276bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310734"
 ---
 # <a name="impersonationinfo-data-type-assl"></a>Тип данных ImpersonationInfo (ASSL)
   Определяет примитивный тип данных, представляющий сведения, которые используются для олицетворения пользователя.  
@@ -61,6 +61,6 @@ ms.locfileid: "36194125"
 |Производные элементы|[DataSourceImpersonationInfo](../properties/impersonationinfo-element-assl.md), [ImpersonationInfo](../properties/impersonationinfo-element-assl.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

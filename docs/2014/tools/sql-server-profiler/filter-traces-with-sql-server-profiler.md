@@ -1,5 +1,5 @@
 ---
-title: Фильтрация трассировок с помощью приложения SQL Server Profiler | Документы Microsoft
+title: Фильтрация трассировок с помощью SQL Server Profiler | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], filters
 - filters [SQL Server], events
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 34577136-a0ed-4822-94de-4a0d5f98265f
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b18c4b4450f3e009ae484cb9733e4bdebe90e8fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 82b24c2ce9324f0cddc917849f3158e8ae0bd62d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247804"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>Фильтрация трассировок с помощью приложения SQL Server Profiler
   Можно определить фильтры на столбцах данных для событий трассировки в программе [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] таким образом, чтобы происходил перехват только тех сведений, которые относятся к событиям, представляющим интерес. Фильтры трассировки позволяют уменьшить воздействие трассировки на производительность системы, поскольку способствуют сокращению числа событий, перехватываемых в трассировке. Кроме того, фильтрация упрощает чтение выходных данных трассировки за счет того, что приходится просматривать меньше событий.  

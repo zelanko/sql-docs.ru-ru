@@ -1,5 +1,5 @@
 ---
-title: Элемент Location (XML для Аналитики) | Документы Microsoft
+title: Элемент Location (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Location element
 ms.assetid: cea5e776-f435-425a-9bce-812d727a2b71
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 51b0838b9843658b4081f9464c63274631ed74be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6674d88797e738c4120a7cafae3d12a71e52e36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295394"
 ---
 # <a name="location-element-xmla"></a>Элемент Location (XML для аналитики)
   Содержит сведения об удаленном сервере для родительской [резервного копирования](../xml-elements-commands/backup-element-xmla.md), [восстановить](../xml-elements-commands/restore-element-xmla.md), или [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) команды.  
@@ -85,7 +85,7 @@ ms.locfileid: "36192969"
 |[Synchronize](../xml-elements-commands/synchronize-element-xmla.md)|[ConnectionString](connectionstring-element-xmla.md), [DataSourceID](datasourceid-element-xmla.md), [DataSourceType](type-element-xmla.md), [папки](folders-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Для `Backup` команд, `Location` элемент предоставляет сведения о создании удаленного файла резервной копии для удаленного экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Для `Backup` команды, `Location` элемент содержит сведения о создании удаленного файла резервной копии для удаленного экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  Для команд `Restore` элемент `Location` предоставляет сведения об идентификации и соединении с удаленным экземпляром служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], а также об удаленном файле резервной копии, используемом для восстановления удаленных секций на этом экземпляре.  
   

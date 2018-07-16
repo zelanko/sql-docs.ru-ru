@@ -1,5 +1,5 @@
 ---
-title: Выполнение диаграммы обновления с помощью ADO (SQLXML 4.0) | Документы Microsoft
+title: Выполнение диаграммы обновления с помощью ADO (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37a8cb3f06152ac2bc7dc682ae8d06e54d33ef6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ad4ed1723cc8ad49ed18304c106b0849e6bc2fb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319974"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Выполнение диаграммы обновления при помощи ADO (SQLXML 4.0)
   Следующее приложение на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic использует ADO для установки соединения с экземпляром Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и выполняет диаграмму обновления. Диаграмма обновления изменяет фамилию конкретного сотрудника. В примере используется образец базы данных AdventureWorks.  
   
  В этом образце приложения происходит следующее.  
   
--   **Conn** объекта (**ADODB. Подключение**) устанавливает подключение к запущенному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на заданном сервере.  
+-   **Conn** объекта (**ADODB. Подключение**) подключается к запущенному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на заданном сервере.  
   
 -   **Cmd** объекта (**ADODB.Command**) выполняется в рамках установленного подключения.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36190944"
   
 -   Диаграмма обновления копируется в поток команды (**strmIn**).  
   
--   Выходной поток команды задано значение **StrmOut** объекта (**ADODB. Поток**) который получает все возвращенные данные.  
+-   Выходной поток команды присваивается **StrmOut** объекта (**ADODB. Stream**), который получает все возвращаемых данных.  
   
 -   Наконец выполняется команда (диаграмма обновления).  
   

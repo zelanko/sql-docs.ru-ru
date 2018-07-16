@@ -1,5 +1,5 @@
 ---
-title: Вызов хранимых процедур | Документы Microsoft
+title: Вызов хранимых процедур | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CALL statement
 ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed6cad7159c7ef8873c7fd1d9d9ba153380e2c33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb799a4e366c0301998b46d7244438aabd2c4411
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299154"
 ---
 # <a name="calling-stored-procedures"></a>Вызов хранимых процедур
   Хранимые процедуры можно вызывать на сервере или из клиентского приложения. В любом случае хранимые процедуры всегда выполняются на сервере либо в контексте сервера, либо в контексте базы данных. Для выполнения хранимой процедуры не нужны специальные разрешения. После того как хранимая процедура добавлена сборкой к контексту сервера или базы данных, любой пользователь может выполнить эту хранимую процедуру, если только роль для этого пользователя разрешает действия, выполняемые этой хранимой процедурой.  

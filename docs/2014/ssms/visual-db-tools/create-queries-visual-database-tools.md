@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], creating
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 75bf7b8fc40f7eb4a926ec1d43a858b06f704a2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3b1ff0b00bbbee79b5d24144e733f367807a91d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097398"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257700"
 ---
 # <a name="create-queries-visual-database-tools"></a>Создание запросов (визуальные инструменты для баз данных)
   Запросы позволяют получить данные из таблиц и представлений базы данных. Для создания запросов и работы с ними служит **Конструктор запросов и представлений**, который содержит четыре панели: [панель диаграммы](visual-database-tools.md), [панель SQL](sql-pane-visual-database-tools.md), [панель критериев](criteria-pane-visual-database-tools.md)и [панель результатов](results-pane-visual-database-tools.md).  
@@ -48,10 +48,10 @@ ms.locfileid: "36097398"
  При дальнейшем улучшении запроса можно изменить код SQL на **панели SQL** или выбрать такие параметры, как порядок сортировки или псевдонимы столбцов на **панели критериев**.  
   
 ## <a name="see-also"></a>См. также  
- [Сохранение запросов &#40;визуальные средства базы данных&#41;](save-queries-visual-database-tools.md)   
- [Типы запросов &#40;визуальные средства базы данных&#41;](types-of-queries-visual-database-tools.md)   
- [Укажите условия поиска &#40;визуальные средства базы данных&#41;](specify-search-criteria-visual-database-tools.md)   
- [Резюмирование результатов запросов &#40;визуальные средства базы данных&#41;](summarize-query-results-visual-database-tools.md)   
+ [Сохранение запросов &#40;визуальных инструментах баз данных&#41;](save-queries-visual-database-tools.md)   
+ [Типы запросов &#40;визуальных инструментах баз данных&#41;](types-of-queries-visual-database-tools.md)   
+ [Определение критериев поиска &#40;визуальных инструментах баз данных&#41;](specify-search-criteria-visual-database-tools.md)   
+ [Резюмирование результатов запросов &#40;визуальных инструментах баз данных&#41;](summarize-query-results-visual-database-tools.md)   
  [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

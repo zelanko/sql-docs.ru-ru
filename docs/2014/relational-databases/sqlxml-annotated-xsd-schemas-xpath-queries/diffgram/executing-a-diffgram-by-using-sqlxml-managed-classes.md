@@ -1,5 +1,5 @@
 ---
-title: Выполнение дельты с помощью SQLXML управляемых классов | Документы Microsoft
+title: Выполнение дельты с использованием SQLXML управляемых классов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - SQLXML, Managed Classes
 ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5c5837a1709bca49f1d06429d49da67719bfc6fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 79b8446bb09dafdf7eff01380b20b21fdbb9b80e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266276"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Выполнение дельты с использованием управляемых классов SQLXML
-  В этом примере показано, как выполнять файл дельты в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] обновления среды .NET Framework для применения данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблиц с помощью управляемых классов SQLXML (Microsoft.Data.SqlXml).  
+  В этом примере показано, как выполнять файл дельты в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] среды .NET Framework для применения данных обновляет до [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицы с помощью управляемых классов SQLXML (Microsoft.Data.SqlXml).  
   
  В этом примере дельта обновляет CompanyName и ContactName для клиента ALFKI.  
   
@@ -57,9 +57,9 @@ ms.locfileid: "36193326"
 </ROOT>  
 ```  
   
- **\<Перед >** блок содержит  **\<клиента >** элемент (**diffgr: ID = «Customer1»**). **\<DataInstance >** блок содержит соответствующий  **\<клиента >** элемент с таким же **идентификатор**.  **\<Клиента >** элемент в  **\<NewDataSet >** также указывает **diffgr: HasChanges = «modified»**. Это указывает на операцию по обновлению, и запись о заказчике в таблице Cust соответствующим образом обновляется. Обратите внимание, что если **diffgr:** атрибут не указан, то логика обработки дельты пропустит этот элемент и обновления не выполняются.  
+ ** \<Перед >** блок содержит ** \<клиента >** элемент (**diffgr: ID = «Customer1»**). ** \<DataInstance >** блок содержит соответствующий ** \<клиента >** элемент с таким же **идентификатор**. ** \<Клиента >** элемент в ** \<NewDataSet >** также указывает **diffgr: HasChanges = «modified»**. Это указывает на операцию по обновлению, и запись о заказчике в таблице Cust соответствующим образом обновляется. Обратите внимание, что если **diffgr: HasChanges** атрибут не указан, то логика обработки дельты пропустит этот элемент и обновления не выполняются.  
   
- Ниже приведен код для приложения C# tutorial, показано, как использовать управляемые классы SQLXML для выполнения вышеупомянутого файла дельты и обновления двух таблиц (Cust, Ord), также создается **tempdb** базы данных.  
+ Ниже приведен код для приложения C# tutorial, показывающий, как использовать управляемые классы SQLXML для выполнить выше дельту и обновления двух таблиц (Cust, Ord), также создается в **tempdb** базы данных.  
   
 ```  
 using System;  

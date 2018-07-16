@@ -1,5 +1,5 @@
 ---
-title: Указать столбец для использования в качестве Регрессора в модели | Документы Microsoft
+title: Указание столбца, который используется как Регрессор в модели | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8e0cb8e-302a-4166-9ed0-e2d9e2919b0a
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0c2897d8b57b381a5a25cd83086f3cb2178994d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8d3418ced07536e0ab02c6ad1324096f0898bc6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293624"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Указание столбца, который будет использоваться в модели в качестве регрессора
   Модель линейной регрессии представляет значение прогнозируемого атрибута как результат формулы, в которой входные данные комбинируются таким образом, чтобы они как можно ближе соответствовали предполагаемой линии регрессии. Этот алгоритм принимает только числовые значения и автоматически обнаруживает входные данные, которые обеспечивают наиболее близкое соответствие.  
@@ -64,7 +64,7 @@ ms.locfileid: "36195277"
      В средстве просмотра модель представляется единственным узлом, содержащим формулу регрессии. Можно просмотреть формулу в окне **Обозначения интеллектуального анализа данных**или получить коэффициенты для формулы с помощью запросов.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм линейной регрессии Майкрософт](microsoft-linear-regression-algorithm.md)   
+ [Алгоритм линейной регрессии (Майкрософт)](microsoft-linear-regression-algorithm.md)   
  [Запросы интеллектуального анализа данных](data-mining-queries.md)   
  [Технический справочник по алгоритму линейной регрессии Майкрософт](microsoft-linear-regression-algorithm-technical-reference.md)   
  [Модель интеллектуального анализа данных для моделей линейной регрессии &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  

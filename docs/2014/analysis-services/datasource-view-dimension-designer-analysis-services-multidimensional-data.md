@@ -1,5 +1,5 @@
 ---
-title: Представление (вкладка «Структура измерения», конструктор измерений) источника данных (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Представление (вкладка «Структура измерения», конструктор измерений) источника данных (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.datasourcepane.f1
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c960a5c08f3d95ee6ef0813db67f8d9a33a6a683
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa82d94a6e034c514b173e623f8c6d0ab9932880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246164"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Представление источника данных (вкладка «Структура измерения» конструктора измерений) (службы Analysis Services — многомерные данные)
   Панель **Представление источника данных** используется для просмотра таблиц и столбцов в представлении источника данных, связанном с выбранным измерением. На панели можно создавать атрибуты, свойства элементов, иерархии и уровни, перетаскивая столбцы из панели **Представление источника данных** на панель **Атрибуты** или **Иерархии и уровни** .  
@@ -95,7 +95,7 @@ ms.locfileid: "36096305"
 ## <a name="table-context-menu"></a>Контекстное меню таблицы  
  Команды, перечисленные в следующей таблице, находятся в контекстном меню, которое открывается, если щелкнуть правой кнопкой мыши имя таблицы или представлении на панели **Представление источника данных** .  
   
- **Показать связанные таблицы**  
+ **Показывать связанные таблицы**  
  Отображает на панели таблицы, связанные с таблицей, выбранной в представлении источника данных.  
   
  **Скрыть таблицу**  
@@ -136,8 +136,8 @@ ms.locfileid: "36096305"
   
 ## <a name="see-also"></a>См. также  
  [Структура измерения &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Панель инструментов &#40;вкладка «Структура измерения», конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)   
- [Атрибуты &#40;вкладка «Структура измерения», конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
- [Иерархии &#40;вкладка «Структура измерения», конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Панель инструментов &#40;вкладка «Структура измерения» конструктора измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)   
+ [Атрибуты &#40;вкладка «Структура измерения» конструктора измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Иерархии &#40;вкладка «Структура измерения» конструктора измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

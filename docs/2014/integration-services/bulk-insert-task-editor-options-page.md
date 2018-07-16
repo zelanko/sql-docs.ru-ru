@@ -1,5 +1,5 @@
 ---
-title: Массовая вставка редактор задачи (страница «Параметры») | Документы Microsoft
+title: Массовой вставки редактор задачи (страница «Параметры») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.options.f1
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a1a958108c8b6975c3aa362ba6512b995759ff99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b878f48473e70d61f6de2a02c9268eb4fc91f0ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36203861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326214"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Редактор задачи «Массовая вставка» (страница «Параметры»)
   Страница **Параметры** диалогового окна **Редактор задачи «Массовая вставка»** используется для установки свойств операции массовой вставки. С помощью задачи «Массовая вставка» большой объем данных копируется в таблицу или представление [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -65,9 +65,9 @@ ms.locfileid: "36203861"
 >  Каждая строка, которая не может быть импортирована операцией массовой загрузки, считается за одну ошибку.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Массовая вставка редактор задачи &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
- [Массовая вставка редактор задачи &#40;страница «соединение»&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Массовая вставка редактор задачи &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
+ [Массовая вставка редактор задачи &#40;страница "подключения"&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [Страница «выражения»](expressions/expressions-page.md)   
  [Поток управления](control-flow/control-flow.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interactive conflict resolution [SQL Server replication]
 - interactive resolver [SQL Server replication]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e138e501e4cf42ba5c48c1bdf1a6bf0f2947ed20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dcd076c58cdab18f677f2b3c416cfc7754816762
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234924"
 ---
 # <a name="interactive-conflict-resolution"></a>Interactive Conflict Resolution
   Репликация[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует интерактивный арбитр конфликтов, который позволяет разрешать конфликты вручную при проведении синхронизации по требованию в диспетчере синхронизации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Активируемый во время запуска интерактивный сопо является графическим интерфейсом, отображающим данные для каждой конфликтующей строки. Он обеспечивает возможности просмотра и изменения конфликтующих данных, а также разрешения каждого конфликта по отдельности.  

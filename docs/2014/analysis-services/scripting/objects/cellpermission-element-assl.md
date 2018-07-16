@@ -1,5 +1,5 @@
 ---
-title: Элемент CellPermission (ASSL) | Документы Microsoft
+title: Элемент CellPermission (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CellPermission element
 ms.assetid: 54a6afc0-1fcb-4b24-851a-6d81e1fe0efc
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f8fcf84072db28684b2cdda195bf2f31ccb2d1e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f763ee90f4812ef86cae0cd24e96e5fb02b05087
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293374"
 ---
 # <a name="cellpermission-element-assl"></a>Элемент CellPermission (ASSL)
-  Описывает разрешения, которые элементы элемента [роли](role-element-assl.md) имеют для отдельных ячеек в [куба](cube-element-assl.md) элемента.  
+  Описывает разрешения, которые элементы элемента [роли](role-element-assl.md) имеют для отдельных ячеек в [куба](cube-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36087944"
 |Дочерние элементы|[Доступ](../properties/access-element-assl.md), [заметки](../collections/annotations-element-assl.md), [описание](../properties/description-element-assl.md), [выражение](../properties/expression-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.CellPermission>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.CellPermission>.  
   
 ## <a name="see-also"></a>См. также  
  [Объекты &#40;ASSL&#41;](objects-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Элемент AttributeAllMemberTranslations (ASSL) | Документы Microsoft
+title: Элемент AttributeAllMemberTranslations (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeAllMemberTranslations element
 ms.assetid: 1a0d86ea-d95d-4d93-b321-acd35ed4ac26
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa787c7c3731962690c1b8d25e736f061caf74e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fd4a3afeac18c5b0aa4935e6abbb51a79015256
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332884"
 ---
 # <a name="attributeallmembertranslations-element-assl"></a>Элемент AttributeAllMemberTranslations (ASSL)
   Содержит коллекцию переводов для заголовка элемента «Все» в измерении.  
@@ -64,7 +64,7 @@ ms.locfileid: "36095805"
 |Дочерние элементы|[AttributeAllMemberTranslation](../objects/translation-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `AttributeAllMemberTranslations` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Dimension>.  
+ Элемент, соответствующий родителю параметра `AttributeAllMemberTranslations` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент Translation &#40;ASSL&#41;](translations-element-assl.md)   

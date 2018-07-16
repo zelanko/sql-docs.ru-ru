@@ -1,5 +1,5 @@
 ---
-title: Элемент ForeignKeyColumn (ASSL) | Документы Microsoft
+title: Элемент ForeignKeyColumn (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ForeignKeyColumn element
 ms.assetid: 6c00dcc6-8d5b-4293-8b72-c7a22e298c8d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb037ad571884c6bd5cbc6936d3072078f2decc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 824589905f1acf1834e971b8a049005ef1465c26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207884"
 ---
 # <a name="foreignkeycolumn-element-assl"></a>Элемент ForeignKeyColumn (ASSL)
   Определяет соединение с родительской таблицей для реляционного источника данных.  
@@ -60,7 +60,7 @@ ms.locfileid: "36191075"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о `DataItem` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) и свойства `DataItem` введите см. в разделе [DataItem, тип данных &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+ Дополнительные сведения о `DataItem` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) и свойства `DataItem` введите, см. в разделе [тип данных DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
  Элемент, соответствующий родителю параметра `ForeignKeyColumns` в объектной модели AMO, — это <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>.  
   

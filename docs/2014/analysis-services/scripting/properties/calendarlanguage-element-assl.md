@@ -1,5 +1,5 @@
 ---
-title: Элемент CalendarLanguage (ASSL) | Документы Microsoft
+title: Элемент CalendarLanguage (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CalendarLanguage element
 ms.assetid: e43a0f48-a583-418b-a0a4-d73a40035573
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d3be256a83ee4ee0d6b1c448699f50076e44e186
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0bcdf5c3f0955a3adb8994217eb10f3fd9447863
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241384"
 ---
 # <a name="calendarlanguage-element-assl"></a>Элемент CalendarLanguage (ASSL)
-  Определяет язык календаря, используемый для [TimeBinding](../data-type/binding-data-type-assl.md) элемента.  
+  Определяет язык календаря, используемый для [TimeBinding](../data-type/binding-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36192979"
 ## <a name="remarks"></a>Примечания  
  Язык, на котором создаются имена элементов измерения. Язык заголовков должен определяться с помощью целочисленных кодов, основанных на коде языка. Например, значение по умолчанию представляет код языка English-US.  
   
- Элемент, соответствующий родителю параметра `CalendarLanguage` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.TimeBinding>.  
+ Элемент, соответствующий родителю параметра `CalendarLanguage` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

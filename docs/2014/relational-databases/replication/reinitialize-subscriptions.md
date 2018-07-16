@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
 - subscriptions [SQL Server replication], reinitializing
 - reinitializing subscriptions
 ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 caps.latest.revision: 50
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c235100c4f00d9b10b766ff66c9491c2769dfe0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ca8769e10a525ef1543dc10983aaa2caaa12ffb1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294624"
 ---
 # <a name="reinitialize-subscriptions"></a>Повторная инициализация подписок
   Повторная инициализация подписки влечет за собой применение нового моментального снимка одной или нескольких статей к одному или нескольким подписчикам: репликация транзакций и репликация моментальных снимков позволяют повторно инициализировать отдельные статьи; репликация слиянием требует, чтобы повторно были инициализированы все статьи. Узлы в одноранговой топологии репликации транзакций не могут быть инициализированы повторно. Если нужно убедиться в том, что узел имеет новую копию данных, восстановите резервную копию на этом узле. Повторная инициализация выполняется по одной из двух причин.  

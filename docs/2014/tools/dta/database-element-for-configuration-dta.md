@@ -1,5 +1,5 @@
 ---
-title: Элемент Database описания конфигурации (DTA) | Документы Microsoft
+title: Элемент Database описания конфигурации (DTA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Database element
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6afd8b418cd00c2ec89430e4c82613ea1af285d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fa99c86b6e4cc6705a04f0b1eecd1695033f50de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263890"
 ---
 # <a name="database-element-for-configuration-dta"></a>Элемент Database описания конфигурации (DTA)
-  Указывает имя базы данных, для которого помощник по настройке ядра СУБД должен произвести оценку гипотетической конфигурации (заданные `Configuration` элемент).  
+  Указывает базу данных, для которой нужно помощник по настройке ядра СУБД должен произвести оценку гипотетической конфигурации (определяется `Configuration` элемент).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36096036"
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Требуется один или несколько раз для каждого `Server` элемента.|  
+|**Наличие**|Требуется один или несколько раз для каждого `Server` элемент.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36096036"
  Этот элемент с именем **DatabaseTypecomplexType** определен в схеме XML помощника по настройке ядра СУБД. Не путайте этот элемент `Database` с элементом, родительским корневым элементом которого является элемент `Server`, находящийся в верхней части входного XML-файла. Дополнительные сведения см. в разделе [Элемент Database описания сервера (DTA)](database-element-for-server-dta.md).  
   
 ## <a name="example"></a>Пример  
- Пример использования этого `Database` элемент, в разделе [Образец входного файла XML с указанной пользователем конфигурации &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
+ Пример использования этого `Database` элемент, см. в разделе [Образец входного файла XML с пользовательской конфигурацией &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](xml-input-file-reference-database-engine-tuning-advisor.md)  

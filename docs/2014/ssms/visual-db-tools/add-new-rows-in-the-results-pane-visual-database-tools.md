@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - inserting rows
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - row additions [SQL Server], Results pane
 ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 00efde2b8d3598524dea15f105005d99275f311b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6ace4fb5b33cb2649e81398be6483d87f4371321
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330854"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>Добавление новых строк на панель результатов (визуальные инструменты для баз данных)
   Новые данные можно добавлять, вводя их или копируя из другой программы, например из блокнота или приложения Excel. Чтобы можно было вставить строку, в ней должно быть ровно то же число столбцов тех же типов, что и в таблице, куда производится вставка. За раз на панель результатов можно вставить несколько строк.  
@@ -58,7 +58,7 @@ ms.locfileid: "36087049"
 -   Отменить правку, нажав клавишу ESC. При нажатии клавиши ESC, если курсор находится в изменяемой ячейке, изменения в этой ячейке будут отменены. При нажатии клавиши ESC, если курсор находится в неизменяемой ячейке, будут отменены изменения во всей строке.  
   
 ## <a name="see-also"></a>См. также  
- [Работа с данными в области результатов &#40;визуальные средства базы данных&#41;](results-pane-visual-database-tools.md)   
+ [Работа с данными в области результатов &#40;визуальных инструментах баз данных&#41;](results-pane-visual-database-tools.md)   
  [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

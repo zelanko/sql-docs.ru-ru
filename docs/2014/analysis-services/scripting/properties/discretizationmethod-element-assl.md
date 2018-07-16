@@ -1,5 +1,5 @@
 ---
-title: Элемент DiscretizationMethod (ASSL) | Документы Microsoft
+title: Элемент DiscretizationMethod (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DiscretizationMethod element
 ms.assetid: 4cfe015f-ad6c-47e1-8aff-c9c7677867b1
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c22387c74c49446c74b06125da02bda11acd0b7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6347db0e5d964b10112516b4c607a5185f247b65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253006"
 ---
 # <a name="discretizationmethod-element-assl"></a>Элемент DiscretizationMethod (ASSL)
   Определяет метод дискретизации.  

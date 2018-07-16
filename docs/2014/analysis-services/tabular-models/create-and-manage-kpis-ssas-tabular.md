@@ -1,5 +1,5 @@
 ---
-title: Создание и управление ими ключевые показатели эффективности (табличные службы SSAS) | Документы Microsoft
+title: Создание и управление ключевыми показателями эффективности (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.kpi.f1
 ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5eabccab4bcb43175ea9da5813c75d5a4f890d80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 735d471cdfb847a56cb4b30857a097d8acd7e8b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302814"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>Создание ключевых показателей эффективности и управление ими (табличные службы SSAS)
   В этом разделе описывается создание, изменение и удаление ключевого показателя эффективности (KPI) в табличной модели. Чтобы создать ключевой показатель эффективности (KPI), выберите меру для вычисления базового значения KPI. Затем в диалоговом окне «Ключевой показатель эффективности» необходимо выбрать вторую меру или абсолютное значение, на основании которого будет вычисляться целевое значение. Затем можно определить пороговые значения состояний, которые определяют эффективность между базовой и целевой мерами.  

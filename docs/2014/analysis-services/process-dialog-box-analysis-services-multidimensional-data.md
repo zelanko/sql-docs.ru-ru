@@ -1,5 +1,5 @@
 ---
-title: Обработать диалоговое окно «» (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Диалоговое окно "(службы Analysis Services — многомерные данные) процесса" | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.processdialog.f1
 ms.assetid: c065248c-9001-4f0c-928f-9c59eccb618b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5788bce44bc3ad63956183ac4e8950a0ace11d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 187de4a1978b20065080f50a1d9924e8d1138e7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315004"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Обработка» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Обработка** в средах [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для обработки объектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Можно вызвать диалоговое окно **Обработка** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] следующим образом:  
@@ -47,7 +47,7 @@ ms.locfileid: "36190632"
  Отображает тип объекта, который должен быть обработан.  
   
  **Параметры обработки**  
- Выберите тип обработки, которая должна быть выполнена над выделенным объектом. Дополнительные сведения о возможных параметрах обработки см. в разделе [многомерной модели обработки объекта](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Выберите тип обработки, которая должна быть выполнена над выделенным объектом. Дополнительные сведения о доступных параметрах обработки см. в разделе [обработку объекта многомерных моделей](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  **Настройки**  
  Отображает гиперссылку **Настроить** , если выбрана **Добавочная обработка** в **Параметрах обработки** для кубов, групп мер или секций. Щелкните ссылку **Настроить** для запуска диалогового окна **Добавочная обработка** . Дополнительные сведения о диалоговом окне **Добавочное обновление** см. в разделе [Диалоговое окно "Добавочное обновление" (службы Analysis Services — многомерные данные)](incremental-update-dialog-box-analysis-services-multidimensional-data.md).  
