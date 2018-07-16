@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - audit records [SQL Server]
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f62cf2b44af1b34b87ce5f08e993135d1447ed59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: a55513bbe857d1d3ea48371d1e147d54ce8d3326
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253786"
 ---
 # <a name="sql-server-audit-records"></a>Записи подсистемы аудита SQL Server
   Подсистема аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет выполнять аудит событий и групп событий на уровне сервера и уровне базы данных. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -35,7 +34,7 @@ ms.locfileid: "36191404"
 |**action_id**|Идентификатор действия.<br /><br /> Совет. Для использования значения **action_id** в качестве предиката его следует преобразовать из строки символов в числовое значение. Дополнительные сведения см. в статье [Фильтрация подсистемы аудита SQL Server по предикату action_id / class_type](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|`varchar(4)`|Да|  
 |**succeeded**|Показывает, было ли успешным действие, запустившее событие.|`bit` – 1 = успешное завершение, 0 = неуспешное завершение|Да|  
 |**permission_bitmask**|Когда применимо, отображаются предоставленные, запрещенные или отмененные разрешения.|`bigint`|Нет|  
-|**is_column_permission**|Флаг, обозначающий разрешение уровня столбца.|`bit` – 1 = true, 0 = False|Нет|  
+|**is_column_permission**|Флаг, обозначающий разрешение уровня столбца.|`bit` – 1 = ИСТИНА, 0 = False|Нет|  
 |**session_id**|Идентификатор сеанса, в котором произошло событие.|`int`|Да|  
 |**server_principal_id**|Идентификатор контекста имени входа, в котором выполнено действие.|`int`|Да|  
 |**database_principal_id**|Идентификатор контекста пользователя базы данных, в котором выполнено действие.|`int`|Нет|  

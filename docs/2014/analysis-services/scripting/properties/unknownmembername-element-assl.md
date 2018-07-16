@@ -1,5 +1,5 @@
 ---
-title: Элемент UnknownMemberName (ASSL) | Документы Microsoft
+title: Элемент UnknownMemberName (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UnknownMemberName element
 ms.assetid: 54271336-ea9b-4270-ac3a-9658a5cff77b
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcd9e1d81560b5175765c4aa77d1f921a258addd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c788574586a20ef44f0206d07bb21389cfd0308
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306494"
 ---
 # <a name="unknownmembername-element-assl"></a>Элемент UnknownMemberName (ASSL)
   Содержит заголовок (на языке по умолчанию для измерения) для неизвестного элемента измерения.  
@@ -64,7 +64,7 @@ ms.locfileid: "36192103"
 ## <a name="remarks"></a>Примечания  
  Значение элемента `UnknownMemberName` задает заголовок, используемый для неизвестного элемента. Идентификатором неизвестного элемента является *Dimension*.UnknownMember, где *Dimension* представляет собой уникальное имя измерения, которое не может быть изменено.  
   
- Элемент, соответствующий родителю параметра `UnknownMemberName` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Dimension>.  
+ Элемент, соответствующий родителю параметра `UnknownMemberName` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

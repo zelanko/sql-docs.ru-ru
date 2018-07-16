@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - credentials [Reporting Services]
 - security [Analysis Services], data sources
@@ -18,13 +18,13 @@ ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
 caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f24e248f8ce1bf9018e1fc5e05c70af360717872
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c94a9cbcacfa2851066682e0fb0859e500b95dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311324"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Сохраненные учетные данные в источнике данных Reporting Services
   Сохраненные учетные данные, используемые сервером отчетов [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , можно настроить для получения доступа к внешним данным отчета. Сохраненные учетные данные используются, если отчет запускается автоматически, например, подписка [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], которая публикует отчет как электронное письмо. Сервер отчетов возвращает и использует учетные данные при планировании или запуске обработки отчета. В этом разделе описывается настройка сохраненных учетных данных для серверов отчетов как в собственном режиме, так и в режиме интеграции с SharePoint.  
@@ -165,7 +165,7 @@ ms.locfileid: "36195087"
 ## <a name="see-also"></a>См. также  
  [Задание учетных данных и сведениях о соединении для источников данных отчета](../../integration-services/connection-manager/data-sources.md)   
  [Настройка свойств источника данных для отчета (диспетчер отчетов)](configure-data-source-properties-for-a-report-report-manager.md)   
- [Создать, удалить или изменить общий источник данных &#40;диспетчера отчетов&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Создание, удаление и изменение общего источника данных &#40;диспетчера отчетов&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Страница "Свойства источников данных" (диспетчер отчетов)](../data-sources-properties-page-report-manager.md)   
  [Страница "Создание источника данных" (диспетчер отчетов)](../new-data-source-page-report-manager.md)  
   

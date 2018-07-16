@@ -1,5 +1,5 @@
 ---
-title: Набор строк MDSCHEMA_MEMBERS | Документы Microsoft
+title: Набор строк MDSCHEMA_MEMBERS | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_MEMBERS rowset
 ms.assetid: 0b1aada0-67f8-4ef6-81b2-0100b65e0c2f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2473797ef34c0fd204c878da8c6044a307cc1ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d36a065ea73f249ce5c4d9dc37cc047ac864cb84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193691"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280020"
 ---
 # <a name="mdschemamembers-rowset"></a>Набор строк MDSCHEMA_MEMBERS
   Описывает элементы в базе данных.  
@@ -79,8 +79,8 @@ ms.locfileid: "36193691"
 |`MEMBER_UNIQUE_NAME`|`DBTYPE_WSTR`|Необязательный параметр.|  
 |`MEMBER_CAPTION`|`DBTYPE_WSTR`|Необязательный параметр.|  
 |`MEMBER_TYPE`|`DBTYPE_I4`|Необязательный параметр.|  
-|`TREE_OP`|`DBTYPE_I4`|Применяется только к единственному элементу (необязательно):<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) возвращает всех предков.<br />-   `MDTREEOP_CHILDREN` (`0x01`) возвращает только непосредственные дочерние элементы.<br />-   `MDTREEOP_SIBLINGS` (`0x02`) возвращает элементы на том же уровне.<br />-   `MDTREEOP_PARENT` (`0x04`) возвращает только непосредственного родителя.<br />-   `MDTREEOP_SELF` (`0x08`) возвращает себя в списке возвращенных строк.<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) возвращает всех потомков.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|Битовая карта с одним из следующих допустимых значений (необязательно).<br /><br /> -КУБ 1<br />-2 ИЗМЕРЕНИЯ.<br /><br /> Значение по умолчанию для ограничения — 1.|  
+|`TREE_OP`|`DBTYPE_I4`|Применяется только к единственному элементу (необязательно):<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) возвращает всех предков.<br />-   `MDTREEOP_CHILDREN` (`0x01`) возвращает только непосредственные дочерние элементы.<br />-   `MDTREEOP_SIBLINGS` (`0x02`) возвращает элементы на одном уровне.<br />-   `MDTREEOP_PARENT` (`0x04`) возвращает только непосредственного родителя.<br />-   `MDTREEOP_SELF` (`0x08`) возвращает себя в списке возвращенных строк.<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) возвращает всех потомков.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|Битовая карта с одним из следующих допустимых значений (необязательно).<br /><br /> -КУБ 1<br />— ИЗМЕРЕНИЯ 2<br /><br /> Значение по умолчанию для ограничения — 1.|  
   
 ## <a name="see-also"></a>См. также  
  [Наборы строк схемы OLE DB для OLAP](ole-db-for-olap-schema-rowsets.md)  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f55eafc585d6f47172df56108eeb8f8dfbe70321
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 42a957d156bfcdfc01ff2e2091bcc9c6a742dab0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284380"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Урок 1. Основы перемещения в помощнике по настройке ядра СУБД
   Помощник по настройке ядра СУБД предоставляет графический интерфейс пользователя для просмотра сеансов настройки и создания отчетов с рекомендациями по настройке. На этом занятии объясняется, как запустить данный инструмент и выполнить настройку его вида. После завершения занятия пользователь будет иметь представление о различных способах запуска этого инструмента, а также узнает, как настраивать его вид для оптимизации выполнения регулярных задач по настройке.  

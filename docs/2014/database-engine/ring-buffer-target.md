@@ -1,5 +1,5 @@
 ---
-title: Целевой буфер кольца | Документы Microsoft
+title: Кольцевой буфер целевой | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - targets [SQL Server extended events], ring buffer target
 - ring buffer target [SQL Server extended events]
 ms.assetid: 54494e11-b56b-43b7-aa5e-c8724e56b251
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbba7b6da37f292d31d985921d25be5cabc51798
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b60f4e3c5ca8d207d3eac23047c8cdefc99d9f66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273080"
 ---
 # <a name="ring-buffer-target"></a>Цель «Кольцевой буфер»
   Цель «Кольцевой буфер» кратковременно хранит данные о событиях в памяти. Данная цель может управлять событиями в одном из двух режимов.  

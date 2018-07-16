@@ -1,5 +1,5 @@
 ---
-title: Поддерживаемые источники данных (многомерные службы SSAS) | Документы Microsoft
+title: Поддерживаемые источники данных (многомерные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data sources
 - data sources [Analysis Services], about data sources
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SSAS, data sources
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 caps.latest.revision: 59
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 130e0e904dcd60b8dc7838cfc8e57f7589739857
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c4d8c3c37b63568da63d65e9548b50c44bcc455
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301174"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Источники данных, поддерживаемых (многомерные службы SSAS)
   В этом разделе описываются типы источников данных, которые можно использовать в многомерной модели.  
@@ -52,11 +52,11 @@ ms.locfileid: "36191903"
   
  <sup>2</sup> Дополнительные сведения см. в разделе [!INCLUDE[ssSDS](../../includes/sssds-md.md)]на [azure.microsoft.com](http://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW. в разделе [SQL Server Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW, см. в разделе [SQL Server Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
   
  <sup>4</sup> в некоторых случаях использование поставщика MSDAORA OLE DB может привести к ошибкам соединения, особенно в новых версиях Oracle. Если возникают ошибки, рекомендуется использовать один из других поставщиков для Oracle.  
   
- <sup>5</sup> некоторых функций требуется реляционной базы данных SQL Server, работающей в локальной среде. Это требуется для функции обратной записи и хранилища ROLAP — используемый источник данных должен быть реляционной базой данных SQL Server.  
+ <sup>5</sup> некоторых функций требуется SQL Server реляционной базы данных, которая работает локально. Это требуется для функции обратной записи и хранилища ROLAP — используемый источник данных должен быть реляционной базой данных SQL Server.  
   
 ## <a name="see-also"></a>См. также  
  [Источники данных, поддерживаемые &#40;табличные службы SSAS&#41;](../tabular-models/data-sources-supported-ssas-tabular.md)   

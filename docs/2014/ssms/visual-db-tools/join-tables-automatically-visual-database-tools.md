@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic joins
 - joins [SQL Server], creating
 - joins [SQL Server], automatic
 ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 373264e421362d29ee00909707abc2be41ce1956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 394aab0fd5726b2a885f0f113cfe1f66c1eac5c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268180"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>Автоматическое соединение таблиц (визуальные инструменты для баз данных)
   При добавлении двух или более таблиц в запрос [конструктор запросов и представлений](visual-database-tools.md) пытается определить, имеется ли между ними связь. Если это так, конструктор запросов и представлений автоматически помещает строки соединения между прямоугольниками, представляющими таблицы или объекты, структурированные в виде таблиц.  
@@ -44,8 +44,8 @@ ms.locfileid: "36192348"
  Если конструктор запросов и представлений не выполнит автоматическое соединение таблиц в запросе, такое соединение можно создать вручную. Дополнительные сведения см. в статье [Соединение таблиц вручную (визуальные инструменты для баз данных)](join-tables-manually-visual-database-tools.md).  
   
 ## <a name="see-also"></a>См. также  
- [Как конструктор запросов и представлений представляет соединения &#40;визуальные средства базы данных&#41;](how-the-query-and-view-designer-represents-joins-visual-database-tools.md)   
- [Проектировать запросы и представления инструкции &#40;визуальные средства базы данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Как конструктор запросов и представлений представляет соединения &#40;визуальных инструментах баз данных&#41;](how-the-query-and-view-designer-represents-joins-visual-database-tools.md)   
+ [Проектирование запросов и представлений инструкции &#40;визуальных инструментах баз данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Запросы с соединениями (визуальные инструменты для баз данных)](query-with-joins-visual-database-tools.md)  
   
   

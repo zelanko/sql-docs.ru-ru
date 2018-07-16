@@ -1,5 +1,5 @@
 ---
-title: Управление изменениями для представления источников данных и источники данных | Документы Microsoft
+title: Управление изменениями в источниках данных и представлениях источников данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying data sources
 - modifying data source views
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data sources [Analysis Services], schema updates
 ms.assetid: 928c9f63-365a-43fd-9bbd-78828cc7e54d
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b02b4ff60be353022735d6b28c4239fb08ff6a81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 899c882bd434da8ccf9b05cb55aad79a0d8e45fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326594"
 ---
 # <a name="manage-changes-to-data-source-views-and-data-sources"></a>Управление изменениями в источниках данных и представлениях источников данных
   При повторном запуске мастера формирования схем он повторно использует тот же источник данных и представление источника данных, которые он использовал при первоначальном формировании. При добавлении источника данных или представления источников данных мастер не использует их. При удалении оригинального источника данных или представления источников данных после первоначального формирования мастер необходимо запустить с самого начала. Все предыдущие настройки мастера также удаляются. Любые существующие объекты в основной базе данных, связанные с удаленным источником данных или представлением источника данных, при следующем запуске мастера формирования схем воспринимаются как объекты, созданные пользователем.  

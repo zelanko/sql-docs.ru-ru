@@ -1,5 +1,5 @@
 ---
-title: Редактор источника XML (страница «Диспетчер соединений») | Документы Microsoft
+title: Редактор источника XML (страница «Диспетчер соединений») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsourceadapter.connectionmanager.f1
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
 caps.latest.revision: 19
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 48193a85232443ea8a5fbc618582a2503e32f84b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88bbe341af005344a6c7e8984b2fa668291973fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262850"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Редактор источника «XML» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** компонента **Редактор источника «XML»** для указания XML-файла и XSD-схемы, выполняющей преобразование XML-данных.  
@@ -70,9 +70,9 @@ ms.locfileid: "36095033"
  Выберите переменную, содержащую XML-данные.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор источника «XML» &#40;страница «столбцы»&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
- [Редактор источника «XML» &#40;страницы вывода ошибок&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор источника XML &#40;страница "столбцы"&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [Редактор источника XML &#40;странице вывода ошибок&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [Извлечение данных с помощью XML-источника](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

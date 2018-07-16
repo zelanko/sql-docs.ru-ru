@@ -19,13 +19,13 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: db92a9dddb75f8dd7b6856124a8a1abd450f7323
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9caf48a0ba48956e6f732a2cd2514422a3d6139a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245234"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Расширение вывода ошибок с помощью компонента скрипта
   По умолчанию два дополнительных столбца в выводе ошибок служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ErrorCode и ErrorColumn, содержат только числовые коды, представляющие номер ошибки и идентификатор столбца, в котором произошла ошибка. Эти числовые значения могут быть малополезны без соответствующего описания ошибки.  
@@ -38,7 +38,7 @@ ms.locfileid: "36193607"
 ## <a name="example"></a>Пример  
  В приведенном примере компонент скрипта, настроенный в качестве преобразования, используется для добавления столбца с описанием ошибки к существующим выходным данным ошибок в потоке данных.  
   
- Дополнительные сведения о том, как настроить компонент скрипта для использования в качестве преобразования в потоке данных см. в разделе [создание синхронного преобразования с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)и [Создание асинхронный Преобразование с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Дополнительные сведения о том, как настроить компонент скрипта для использования в качестве преобразования в потоке данных см. в разделе [создание синхронного преобразования с компонентом скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)и [Создание асинхронный Преобразование бизнеса с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Настройка этого примера компонента скрипта  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36193607"
   
 7.  В редакторе сценариев преобразования на **входные столбцы** выберите столбец ErrorCode.  
   
-8.  На **входы и выходы** добавьте новый выходной столбец типа `String` с именем **ErrorDescription**. Увеличьте длину нового столбца по умолчанию до 255 для поддержки длинных сообщений.  
+8.  На **входы и выходы** странице, добавьте новый выходной столбец типа `String` с именем **ErrorDescription**. Увеличьте длину нового столбца по умолчанию до 255 для поддержки длинных сообщений.  
   
 9. Закройте **редактор преобразования "Скрипт"**.  
   
@@ -90,7 +90,7 @@ public class ScriptMain:
   
 ```  
   
-![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться установка последних со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services в MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services  **<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
  [Обработка ошибок в данных](../data-flow/error-handling-in-data.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65536
 - vdt.DatabaseDesigner
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - diagrams [SQL Server], designing
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f4b54da69923a73d5c73647683fd9136c970e81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 00f9386b6940d24f3ce7a063a58fb76c436221f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255396"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Конструирование диаграмм баз данных (визуальные инструменты для баз данных)
   Конструктор баз данных — это визуальное средство, позволяющее конструировать и визуализировать базу данных, с которой установлено соединение. Конструктор баз данных используется для создания, редактирования и удаления таблиц, столбцов, ключей, индексов, связей и ограничений. Для визуализации базы данных можно создать одну или несколько диаграмм, иллюстрирующих некоторые или все имеющиеся в ней таблицы, столбцы, ключи и связи.  
@@ -45,7 +45,7 @@ ms.locfileid: "36191119"
   
  Если таблица была изменена, но еще не сохранена, то после имени таблицы появляется звездочка (*), показывающая наличие несохраненных изменений. Дополнительные сведения о сохранении измененных таблиц и диаграмм см. в разделе [Работа с диаграммами баз данных (визуальные инструменты для баз данных)](visual-database-tools.md)  
   
- **Область выделения строки** . Чтобы выбрать столбец базы данных в таблице, щелкните область выделения строки. Если столбец является первичным ключом таблицы, то в этом списке отображается символ ключа. Сведения о первичных ключах см. в разделе [основной и ограничения внешнего ключа](../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
+ **Область выделения строки** . Чтобы выбрать столбец базы данных в таблице, щелкните область выделения строки. Если столбец является первичным ключом таблицы, то в этом списке отображается символ ключа. Сведения о первичных ключах см. в разделе [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
   
  **Столбцы свойств** . Набор столбцов свойств виден не во всех представлениях таблицы. Таблицу можно просмотреть в любом из пяти различных представлений, позволяющих подобрать подходящий размер и размещение элементов диаграммы.  
   
@@ -72,8 +72,8 @@ ms.locfileid: "36191119"
  [Открытие конструктора диаграмм баз данных (визуальные инструменты для баз данных)](open-database-diagram-designer-visual-database-tools.md)  
   
 ## <a name="see-also"></a>См. также  
- [Работа с диаграммами базы данных &#40;визуальные средства базы данных&#41;](visual-database-tools.md)   
- [Работа с таблицами в схеме базы данных &#40;визуальные средства базы данных&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)   
+ [Работа с диаграммами базы данных &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
+ [Работа с таблицами в диаграммах базы данных &#40;визуальных инструментах баз данных&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)   
  [Работа с макетом диаграммы (визуальные инструменты для баз данных)](work-with-diagram-layout-visual-database-tools.md)  
   
   

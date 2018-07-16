@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sa account
 - authentication [SQL Server], changing modes
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - modifying server authentication mode
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ea4598db170e2ef0e42050b34b30a89aa2ca2bae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ab213ee1c49eaf50150c8e3317244e94a99dd1cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295404"
 ---
 # <a name="change-server-authentication-mode"></a>Изменение режима проверки подлинности сервера
   В этом разделе описывается, как изменить режим проверки подлинности сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. В процессе установки компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] настраивается на использование **режима проверки подлинности Windows** или **режима проверки подлинности SQL Server и Windows**. После установки вы можете изменить режим проверки подлинности в любое время.  
@@ -62,7 +62,7 @@ ms.locfileid: "36190281"
   
 #### <a name="to-enable-the-sa-login"></a>Включение имени входа sa  
   
-1.  В обозревателе объектов разверните **безопасности**, имена входа, щелкните правой кнопкой `sa`, а затем нажмите кнопку **свойства**.  
+1.  В обозревателе объектов разверните **безопасности**, имена входа, щелкните правой кнопкой мыши `sa`, а затем нажмите кнопку **свойства**.  
   
 2.  На странице **Общие** , возможно, придется создать и подтвердить пароль для имени входа.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
 - tasks [Integration Services], variables
@@ -19,13 +19,13 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b820a671418fc3126f2b5904f9a2a1c0c881eaa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c5f708afa4ce172807c1e0fd0697f6f7a29542d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311975"
 ---
 # <a name="system-variables"></a>Системные переменные
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют набор системных переменных, в которые записываются данные о запуске пакета и его объектах. Эти переменные можно использовать в выражениях и в выражениях свойств для настройки пакетов, контейнеров, задач и обработчиков событий.  
@@ -45,7 +45,7 @@ ms.locfileid: "36190031"
 |`ExecutionInstanceGUID`|String|Уникальный идентификатор выполняемого экземпляра пакета.|  
 |`FailedConfigurations`|String|Имена конфигураций пакета, в которых возникла ошибка.|  
 |`IgnoreConfigurationsOnLoad`|Логическое значение|Указывает, должны ли конфигурации пакета не учитываться при загрузке пакета.|  
-|**InteractiveMode**|Логическое значение|Указывает, выполняется ли пакет в интерактивном режиме. Если пакет выполняется в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)], это свойство равно `True`. Если пакет выполняется с помощью **DTExec** программы командной строки является свойство `False`.|  
+|**InteractiveMode**|Логическое значение|Указывает, выполняется ли пакет в интерактивном режиме. Если пакет выполняется в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)], это свойство равно `True`. Если пакет выполняется с помощью **DTExec** служебной программы командной строки, свойство имеет значение `False`.|  
 |`LocaleId`|Int32|Локаль, используемый пакетом.|  
 |**MachineName**|String|Имя компьютера, на котором запущен пакет.|  
 |**OfflineMode**|Логическое значение|Указывает, работает ли пакет в режиме «вне сети». Режим «вне сети» не может запрашивать соединения к источникам данных.|  

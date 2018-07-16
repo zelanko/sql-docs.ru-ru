@@ -1,27 +1,26 @@
 ---
-title: Использование политик AlwaysOn для определения работоспособности группы доступности (SQL Server) | Документы Microsoft
+title: Использование политик AlwaysOn для определения работоспособности группы доступности (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 caps.latest.revision: 16
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: ba1f977cf2846438494bedc7b084ade659fca753
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4189c70c8e4cf9e3d2fce378dbbb039ae2c0c601
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297144"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Использование политик AlwaysOn для определения работоспособности группы доступности (SQL Server)
   В этом разделе описано, как определить состояние работоспособности группы доступности AlwaysOn с помощью политики AlwaysOn в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или с помощью Powershell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Сведения об управлении на основе политики AlwaysOn см. в разделе [политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "36192517"
 ####  <a name="Permissions"></a> Permissions  
  Требуются разрешения CONNECT, VIEW SERVER STATE и VIEW ANY DEFINITION.  
   
-##  <a name="SSMSProcedure"></a> Использование панели мониторинга AlwaysOn  
+##  <a name="SSMSProcedure"></a> С помощью панели мониторинга AlwaysOn  
  **Чтобы открыть панель мониторинга AlwaysOn**  
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена одна из реплик доступности. Чтобы просмотреть сведения обо всех репликах доступности в группе доступности, используйте экземпляр сервера, на котором размещена первичная реплика.  
@@ -96,7 +95,7 @@ ms.locfileid: "36192517"
     |------------|-----------------|  
     |`AllowUserPolicies`|Выполняет пользовательские политики из категорий политик AlwaysOn.|  
     |`InputObject`|Коллекция объектов, представляющих состояния групп доступности, реплик доступности или базы данных доступности (в зависимости от того, какой используется командлет). Этот командлет вычисляет исправность указанных объектов.|  
-    |`NoRefresh`|Если задан этот параметр, командлет не обновляет вручную объекты, указанные в `-Path` или `-InputObject` параметра.|  
+    |`NoRefresh`|Если задан этот параметр, командлет не обновляет вручную объекты, указанные с `-Path` или `-InputObject` параметра.|  
     |`Path`|Путь к группе доступности, одной или нескольким репликам доступности или состоянию кластера реплики базы данных доступности (в зависимости от того, какой используется командлет). Этот параметр является необязательным. Если этот параметр не указан, его значение по умолчанию соответствует текущему рабочему расположению.|  
     |`ShowPolicyDetails`|Показывает результат оценки каждой политики, выполненной этим командлетом. В результате работы командлета формируется по одному объекту для оценки каждой политики. Каждый такой объект имеет поле с описанием результатов оценки (было установлено соответствие политике или нет, имя и категория политики и так далее).|  
   
@@ -110,7 +109,7 @@ ms.locfileid: "36192517"
     ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь `Get-Help` командлета в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] среде PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, используйте `Get-Help` командлет в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] среде PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
@@ -119,7 +118,7 @@ ms.locfileid: "36192517"
 -   [Получение справок по SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> См. также  
- **Блоги SQL Server AlwaysOn Team — наблюдение за исправностью AlwaysOn с помощью PowerShell:**  
+ **Блоги по SQL Server AlwaysOn Team — наблюдение за исправностью AlwaysOn с помощью PowerShell:**  
   
 -   [Часть 1. Общие сведения о командлете](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
   

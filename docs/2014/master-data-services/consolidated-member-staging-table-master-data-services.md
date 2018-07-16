@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], attributes staging table
 - attributes staging table [Master Data Services]
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 caps.latest.revision: 13
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 925f20d61f4638041b7606df584147446ba28d65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 15a47c1e8e1785b9b9b63c0a2dd8d17558898434
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320634"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>Промежуточная таблица консолидированных элементов (службы Master Data Services)
   Промежуточная таблица консолидированных элементов (stg.name_Consolidated) используется в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для создания, обновления, деактивации и удаления консолидированных элементов. Ее также можно использовать для обновления значений атрибутов консолидированных элементов.  
@@ -45,10 +45,10 @@ ms.locfileid: "36086700"
 |\<Имя атрибута>|Столбец существует для каждого атрибута в сущности. Используется с параметром **ImportType** , который равен **0** или **2**. Для атрибутов в свободной форме укажите новое текстовое или строковое значение атрибута. Для основанных на домене атрибутов необходимо указать код элемента, который будет атрибутом. Для атрибутов ссылок URL-адрес должен начинаться с **http://**.<br /><br /> Примечание. Промежуточное хранение файловых атрибутов не поддерживается.|  
   
 ## <a name="see-also"></a>См. также  
- [Загрузка или обновление членов в Master Data Services с помощью промежуточного процесса](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [Загрузка или обновление членов в службы Master Data Services с помощью промежуточного процесса](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
  [Перемещение элементов явной иерархии с помощью промежуточного процесса &#40;службы Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
  [Импорт данных &#40;службы Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
- [Просмотр ошибок, возникших в процессе промежуточного хранения &#40;службы Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
- [Промежуточные ошибки процесса &#40;службы Master Data Services&#41;](staging-process-errors-master-data-services.md)  
+ [Просмотр ошибок, возникающих в ходе промежуточного процесса &#40;службы Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
+ [Ошибки промежуточного процесса &#40;службы Master Data Services&#41;](staging-process-errors-master-data-services.md)  
   
   

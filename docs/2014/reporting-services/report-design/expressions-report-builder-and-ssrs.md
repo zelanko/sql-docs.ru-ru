@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c57c783be7740e6cfb9223b70bbb49d4eadbebe4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 669b5d6a8514dce55a2f5fadc0d1c239b5b3ab61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268590"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Выражения (построитель отчетов и службы SSRS)
   Выражения часто используются в отчетах для получения, вычисления, отображения, группирования, сортировки, параметризации и форматирования данных. Многие свойства элементов отчета могут быть заданы в виде выражений. С помощью выражений можно управлять содержимым, внешним видом и интерактивными возможностями отчета. Выражения записываются на [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], сохраняются в определении отчета и вычисляются обработчиком отчетов при запуске отчета.  
   
- В отличие от приложений вроде [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel, где можно работать с данными непосредственно в листе, работать с выражениями, являющимися заполнителями для данных в отчете. Чтобы просмотреть фактические данные из вычисленных выражений, необходимо просмотреть отчет. При запуске отчета обработчик отчета вычисляет каждое выражение, объединяя данные отчета и элементы макета отчета, такие как таблицы и диаграммы.  
+ В отличие от приложений вроде [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel, где можно работать с данными напрямую на листе, в отчете, при работе с выражениями, которые являются заполнителями для данных. Чтобы просмотреть фактические данные из вычисленных выражений, необходимо просмотреть отчет. При запуске отчета обработчик отчета вычисляет каждое выражение, объединяя данные отчета и элементы макета отчета, такие как таблицы и диаграммы.  
   
  При конструировании отчета многие выражения для элементов отчета будут уже заданы. Например, если перетащить поле с панели данных в ячейку таблицы в области конструктора отчета, в качестве значения текстового поля будет задано простое выражение для поля. На следующем рисунке область данных отчета отображает такие поля наборов данных, как ID, Name, SalesTerritory, Code и Sales. В таблицу добавлено три поля: [Name], [Code] и [Sales]. Обозначение [Name] в области конструктора представляет базовое выражение `=Fields!Name.Value`.  
   
@@ -36,13 +36,13 @@ ms.locfileid: "36193313"
   
  Дополнительные сведения и примеры см. в следующих разделах:  
   
--   [Выражения используются в отчетах &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+-   [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
 -   [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)  
   
--   [Примеры уравнений фильтра &#40;отчетов построителя отчетов и службы SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Примеры уравнений фильтра &#40;построитель отчетов и службы SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
--   [Примеры выражений группы &#40;отчетов построителя отчетов и службы SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)  
+-   [Примеры выражений групп &#40;построитель отчетов и службы SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)  
   
 -   [Учебники по &#40;построитель отчетов&#41;](../report-builder-tutorials.md)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36193313"
  Выражения могут включать ссылки на функции, операторы, константы, поля, параметры и элементы из встроенных коллекций, а также ссылки на внедренный пользовательский код или пользовательские сборки.  
   
 > [!NOTE]  
->  Для разработки сложных выражений или выражений, использующих пользовательский код или пользовательские сборки, рекомендуется использовать конструктор отчетов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения см. в разделе [Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+>  Для разработки сложных выражений или выражений, использующих пользовательский код или пользовательские сборки, мы рекомендуем использовать конструктор отчетов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения см. в разделе [Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
  В следующей таблице перечислены типы ссылок, которые можно включать в выражение.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36193313"
 |[Операторы](operators-in-expressions-report-builder-and-ssrs.md)|Описывает операторы, которые можно использовать для объединения ссылок в выражении. Например `&` оператор используется для объединения строк.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
 |[Встроенные коллекции](built-in-collections-in-expressions-report-builder.md)|Описывает встроенные коллекции, которые можно включить в выражение, например `Fields`, `Parameters`и `Variables`.|`=Fields!Sales.Value`<br /><br /> `=Parameters!Store.Value`<br /><br /> `=Variables!MyCalculation.Value`|  
 |[Встроенные функции отчета и агрегатные функции](report-builder-functions-aggregate-functions-reference.md)|Описывает встроенные функции, такие как `Sum` и `Previous`, к которым можно получить доступ из выражения.|`=Previous(Sum(Fields!Sales.Value))`|  
-|[Пользовательский код и ссылок на сборки в выражениях в конструкторе отчетов &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Описывает, как получить доступ к встроенным классам среды CLR из пространства имен <xref:System.Math> и <xref:System.Convert>, другим классам среды CLR, функциям библиотеки времени выполнения [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] или методам из внешней сборки.<br /><br /> Описывает, как получить доступ к пользовательскому коду, внедренному в отчет или скомпилированному и установленному в виде пользовательской сборки на клиент отчета и сервер отчетов.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
+|[Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Описывает, как получить доступ к встроенным классам среды CLR из пространства имен <xref:System.Math> и <xref:System.Convert>, другим классам среды CLR, функциям библиотеки времени выполнения [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] или методам из внешней сборки.<br /><br /> Описывает, как получить доступ к пользовательскому коду, внедренному в отчет или скомпилированному и установленному в виде пользовательской сборки на клиент отчета и сервер отчетов.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
   
 
   
@@ -133,16 +133,16 @@ ms.locfileid: "36193313"
 ##  <a name="Section"></a> в этом разделе  
  [Добавление выражения (построитель отчетов и службы SSRS)](add-an-expression-report-builder-and-ssrs.md)  
   
- [Выражения используются в отчетах &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
- [Область выражения для итогов, статистических функций и встроенных коллекций &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
- [Ссылка на выражение &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-reference-report-builder-and-ssrs.md)  
+ [Справочник по выражениям &#40;построитель отчетов и службы SSRS&#41;](expression-reference-report-builder-and-ssrs.md)  
   
 
   
 ## <a name="see-also"></a>См. также  
- [Диалоговое окно «выражение»](../expression-dialog-box.md)   
+ [Диалоговое окно выражение](../expression-dialog-box.md)   
  [Диалоговое окно "Выражение" (построитель отчетов)](../expression-dialog-box-report-builder.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93418f885f5c14d2d6ad43b7892f64906a43a2be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 6ab4e0486cfcac8eaf4d5ed9d4a0456d4bb6d9dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087137"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290900"
 ---
 # <a name="database-engine-tutorials"></a>Учебники по компоненту ядра СУБД
   В этом разделе приведены учебники по [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
@@ -58,7 +58,7 @@ ms.locfileid: "36087137"
  С помощью этого учебника вы научитесь напрямую сохранять файлы данных SQL Server в службе хранилища больших двоичных объектов Windows Azure.  
   
 ## <a name="see-also"></a>См. также  
- [Учебники по SQL Server 2014](../tutorials/tutorials-for-sql-server-2014.md)   
+ [Учебные материалы по SQL Server 2014](../tutorials/tutorials-for-sql-server-2014.md)   
  [TechNet WIKI: образцы SQL Server 2012](http://go.microsoft.com/fwlink/?linkID=220734)  
   
   

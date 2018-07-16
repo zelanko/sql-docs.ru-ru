@@ -1,5 +1,5 @@
 ---
-title: Настройка узла кластера | Документы Microsoft
+title: Конфигурации узла кластера | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cluster node configuration
 - cluster node configuration, Setup
 ms.assetid: cc960cf3-3b55-44f3-961a-eac4ad05d3d9
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 511f5f489693e166accb1a21c28932c369a983a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 740771813ee953aa57106dc07e1b446ea71f494a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189675"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327094"
 ---
 # <a name="cluster-node-configuration"></a>Настройка узла кластера
   Для добавления или удаления узлов в экземпляре отказоустойчивого кластера используется страница «Настройка узла кластера». Чтобы установить или обновить отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо запустить программу установки на каждом узле кластера. Чтобы добавить узел в существующий отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо запустить программу установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на узле, который добавляется в экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

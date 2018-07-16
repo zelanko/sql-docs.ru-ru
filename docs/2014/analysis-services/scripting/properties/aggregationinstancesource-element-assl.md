@@ -1,5 +1,5 @@
 ---
-title: Элемент AggregationInstanceSource (ASSL) | Документы Microsoft
+title: Элемент AggregationInstanceSource (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - AggregationInstanceSource element
 ms.assetid: ab58c817-eb2b-4974-8470-2946ca5affea
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 318f70f156d78df90ceeb53e56cbc83f9d4e43a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd2001d304d951f4eeb2ac737e3cfe6e8526c1af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312414"
 ---
 # <a name="aggregationinstancesource-element-assl"></a>Элемент AggregationInstanceSource (ASSL)
-  Определяет источник данных для экземпляров определяемых пользователем агрегатов, привязанных к [секции](../objects/partition-element-assl.md) элемента.  
+  Определяет источник данных для экземпляров определяемых пользователем агрегатов, привязанных к [секции](../objects/partition-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36195244"
 ## <a name="remarks"></a>Примечания  
  Если элемент отсутствует или равен пустой строке, то по умолчанию используется представление источника данных для куба, которому принадлежит секция.  
   
- Дополнительные сведения о `Binding` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) `Binding` тип и иерархию наследования `Binding` типов, в разделе [тип привязки данных &#40;ASSL&#41;](../data-type/binding-data-type-assl.md).  
+ Дополнительные сведения о `Binding` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) типа `Binding` тип и иерархию наследования `Binding` типов, см. в разделе [типа привязки данных &#40;ASSL&#41;](../data-type/binding-data-type-assl.md).  
   
- Обзор привязок данных в ASSL см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Обзор привязки данных в языке ASSL, см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

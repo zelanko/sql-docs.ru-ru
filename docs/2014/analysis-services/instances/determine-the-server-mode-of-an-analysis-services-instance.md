@@ -1,5 +1,5 @@
 ---
-title: Определение режима сервера служб Analysis Services экземпляр | Документы Microsoft
+title: Определение режима работы сервера анализа экземпляра служб Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec5ec0ebab56cd5e836385a26fc60a1c5cf1a0d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bca31a21dda5f03b29456f842afb2d4d7504c608
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297434"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Определение режима работы сервера экземпляра служб Analysis Services
-  Службы Analysis Services можно установить в одном из трех серверных режимов: многомерный и интеллектуальный анализ данных (по умолчанию), PowerPivot для SharePoint и табличный. Режим сервера экземпляра служб Analysis Services определяется во время установки, когда пользователь выбирает параметры для установки сервера.  
+  Службы Analysis Services можно установить одним из трех серверных режимов: многомерный и интеллектуальный анализ данных (по умолчанию), PowerPivot для SharePoint и табличный. Режим сервера экземпляра служб Analysis Services определяется во время установки, когда пользователь выбирает параметры для установки сервера.  
   
  Режим сервера определяет тип создаваемого и развертываемого решения. Если программное обеспечение сервера не было установлено и необходимо узнать, в каком режиме установлен сервер, режим можно определить, следуя указаниям в этом разделе. Дополнительные сведения о доступных функциях в определенном режиме см. в разделе [Сравнение табличных и многомерных решений (службы SSAS)](../comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -31,7 +31,7 @@ ms.locfileid: "36190094"
 ## <a name="server-icons-in-object-explorer"></a>Значки сервера в обозревателе объектов  
  Самый простой способ определить режим сервера — это подключиться к серверу в среде SQL Server Management Studio и посмотреть на значок рядом с именем сервера в обозревателе объектов. На следующей иллюстрации показаны три экземпляра служб Analysis Services, развернутые в многомерном, табличном режиме и режиме PowerPivot.  
   
- ![Объект Explorer значки для каждого режима сервера](../media/ssas-ssms-servermodes.gif "значки обозревателя объектов для каждого режима сервера")  
+ ![Объект Explorer значки для каждого режима работы сервера](../media/ssas-ssms-servermodes.gif "значки обозревателя объектов для каждого режима работы сервера")  
   
 ## <a name="viewing-deploymentmode-property-in-msmdsrvini-file"></a>Просмотр свойства DeploymentMode в файле MSMDSRV.INI  
  Также можно проверить свойство `DeploymentMode` в файле msmdsrv.ini, который имеется в каждом экземпляре служб Analysis Services. Значение этого свойства определяет режим сервера. Допустимые значения: 0 (многомерный), 1 (SharePoint) или 2 (табличный). Чтобы открыть файл msmdsrv.ini, необходимо быть администратором служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (то есть членом роли сервера). Этот файл содержит структурированный XML-код. Просмотреть этот файл можно в Блокноте или другом текстовом редакторе.  
@@ -56,7 +56,7 @@ ms.locfileid: "36190094"
  [Установка служб Analysis Services в табличном режиме](install-windows/install-analysis-services.md)   
  [Установка служб Analysis Services в многомерном режиме и режиме интеллектуального анализа данных](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [Установка PowerPivot для SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- [Подключитесь к службам Analysis Services](connect-to-analysis-services.md)   
+ [Подключение к службам Analysis Services](connect-to-analysis-services.md)   
  [Решения табличных моделей &#40;табличные службы SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)   
  [Решения многомерной модели &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Модели интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  

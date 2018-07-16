@@ -1,5 +1,5 @@
 ---
-title: Источник данных диалогового окна свойств учетных данных (построитель отчетов) | Документы Microsoft
+title: Источник данных свойства учетных данных (построитель отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10017"
 ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
 caps.latest.revision: 11
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 237e1c9ef26c5dba838fa8071b2dce7293f2077a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0b6689c1a75cfc9354f8c47532d0ed773f3c6e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238594"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>Диалоговое окно «Свойства источника данных» — «Учетные данные» (построитель отчетов)
   Вкладка **Учетные данные** в диалоговом окне **Свойства источника данных** позволяет просмотреть и изменить учетные данные, используемые для подключения к источнику данных, внедренному в отчет. Указанные учетные данные используются для доступа к источнику данных во время просмотра отчетов. Дополнительные сведения об учетных данных см. в разделе [Указание учетных данных в построителе отчетов](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "36195099"
  **Использовать проверку подлинности Windows (встроенная безопасность)**  
  Выберите этот параметр, чтобы использовать проверку подлинности Windows.  
   
- **Используйте эти имя пользователя и пароль**  
+ **Использовать имя пользователя и пароль**  
  Выберите этот параметр, чтобы использовать определенное имя пользователя и пароль. Для встроенных источников данных: при публикации проекта сервера отчетов на целевом сервере имя пользователя и пароль сохраняются как хранимые учетные данные для базы данных. Если необходимо использовать имя пользователя и пароль как учетные данные Windows, можно изменить свойства опубликованного общего источника данных на целевом сервере. Дополнительные сведения см. в разделе [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) документации к [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [электронной документации](http://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Имя пользователя**  
@@ -55,7 +55,7 @@ ms.locfileid: "36195099"
 ## <a name="see-also"></a>См. также  
  [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Диалоговое окно "Свойства источника данных" — "Общие" (построитель отчетов)](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md)   
- [Добавление и проверка подключения к данным или источник данных &#40;отчетов построителя отчетов и службы SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [Добавление данных в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)  
+ [Добавление и проверка подключения к данным или источнику данных &#40;построитель отчетов и службы SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

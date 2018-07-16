@@ -1,5 +1,5 @@
 ---
-title: Повторное развертывание пакетов | Документы Microsoft
+title: Повторное развертывание пакетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - redeploying packages [Integration Services]
 - deploying packages [Integration Services], redeploying
 ms.assetid: 86806efb-8cf4-4f9d-9824-1152cb4c495c
 caps.latest.revision: 35
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f8b5ffb9f238fdc87ecb51765733f3a9cb632946
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02206eef9b83af13999e9a510253fc9264a5bda1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300534"
 ---
 # <a name="redeployment-of-packages"></a>Повторное развертывание пакетов
   После развертывания проекта может понадобится обновить или расширить функциональные возможности пакета и затем повторно развернуть проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий обновленные пакеты. В рамках процесса повторного развертывания пакетов необходимо просмотреть свойства конфигурации, включенные в программу развертывания. Например, можно запретить изменение конфигурации после повторного развертывания пакета.  

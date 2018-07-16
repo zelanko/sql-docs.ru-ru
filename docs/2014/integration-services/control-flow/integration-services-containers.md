@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS containers
 - containers [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c1cdd3b3a75560d1ced61684e1063f4571115833
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06ba65f48edc9434eb1cec485e0f219958e52a1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283630"
 ---
 # <a name="integration-services-containers"></a>Контейнеры служб Integration Services
   Контейнеры в службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] представляют собой объекты, содержащие структуру пакетов и службы для задач. Они поддерживают повторение потоков управления в пакетах, а также группируют задачи и контейнеры в единые рабочие объекты. Кроме задач контейнеры могут включать другие контейнеры.  
@@ -34,7 +34,7 @@ ms.locfileid: "36195642"
   
 -   Повторение задач для каждого элемента коллекции: файлов, папок, схем или управляющих объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO). Например, пакет может выполнять инструкции Transact-SQL, размещенные в нескольких файлах.  
   
--   Повторение задач, пока указанное выражение, результатом которого является `false`. Например, пакет может посылать разные сообщения по электронной почте семь раз, один раз в каждый день недели.  
+-   Повторение задач, пока определенное выражение не примет значение `false`. Например, пакет может посылать разные сообщения по электронной почте семь раз, один раз в каждый день недели.  
   
 -   Группирование задач и контейнеров, успешное или аварийное выполнение которых учитывается как для единого объекта. Например, пакет может группировать задачи, удаляющие и добавляющие строки в таблице базы данных, а затем фиксировать их или же производить откат всех задач в случае сбоя одной из них.  
   
@@ -61,14 +61,14 @@ ms.locfileid: "36195642"
 |`DisableEventHandlers`|Логическое значение, указывающее, связаны ли обработчики событий с запуском контейнера. Значение по умолчанию для этого свойства — `False`.|  
 |`FailPackageOnFailure`|Логическое значение, указывающее, завершается ли работа пакета с ошибкой в случае ошибки в контейнере. Значение по умолчанию для этого свойства — `False`.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>.|  
 |`FailParentOnFailure`|Логическое значение, указывающее, завершается ли работа родительского контейнера с ошибкой в случае ошибки в контейнере. Значение по умолчанию для этого свойства — `False`.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>.|  
-|`ForcedExecutionValue`|Если `ForceExecutionValue` равно `True`, объект, содержащий значение необязательного выполнения для контейнера. Значение этого свойства по умолчанию равно **0**.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>.|  
+|`ForcedExecutionValue`|Если `ForceExecutionValue` присваивается `True`, объект, содержащий значение необязательного выполнения для контейнера. Значение этого свойства по умолчанию равно **0**.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>.|  
 |`ForcedExecutionValueType`|Тип данных `ForcedExecutionValue`. Значение по умолчанию этого свойства — `Int32`.|  
-|`ForceExecutionResult`|Значение, определяющее вынужденный результат запуска пакета или контейнера. Значения являются `None`, `Success`, `Failure`, и `Completion`. Значение по умолчанию для этого свойства — `None`.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>.|  
+|`ForceExecutionResult`|Значение, определяющее вынужденный результат запуска пакета или контейнера. Допустимые значения — `None`, `Success`, `Failure`, и `Completion`. Значение по умолчанию для этого свойства — `None`.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>.|  
 |`ForceExecutionValue`|Логическое значение, указывающее, должно ли необязательное значение выполнения для контейнера содержать конкретное значение. Значение по умолчанию этого свойства — `False`.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>.|  
 |`ID`|Идентификатор GUID контейнера, назначаемый ему при создании пакета. Это свойство доступно только для чтения.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>.|  
 |`IsolationLevel`|Уровень изоляции транзакции контейнера. Допустимые значения — `Unspecified`, `Chaos`, `ReadUncommitted`, `ReadCommitted`, `RepeatableRead`, `Serializable` и `Snapshot`. Значение по умолчанию этого свойства — `Serializable`. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |`LocaleID`|Локаль Microsoft Win32. Значение этого свойства по умолчанию равно локали операционной системы на локальном компьютере.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>.|  
-|`LoggingMode`|Значение, определяющее для контейнера режим записи в журнал. Значения являются `Disabled`, `Enabled`, и `UseParentSetting`. Значение по умолчанию этого свойства — `UseParentSetting`. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
+|`LoggingMode`|Значение, определяющее для контейнера режим записи в журнал. Допустимые значения — `Disabled`, `Enabled`, и `UseParentSetting`. Значение по умолчанию этого свойства — `UseParentSetting`. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
 |`MaximumErrorCount`|Максимальное число ошибок, после достижения которого выполнение контейнера прекращается. Значение этого свойства по умолчанию равно **1**.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>.|  
 |`Name`|Имя контейнера.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>.|  
 |`TransactionOption`|Участие контейнера в транзакции. Допустимые значения — `NotSupported`, `Supported`, `Required`. Значение по умолчанию этого свойства — `Supported`. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
@@ -87,7 +87,7 @@ ms.locfileid: "36195642"
  Контейнеры включают в себя потоки управления, которые состоят из исполняемых объектов и ограничений очередностью, а также могут использовать обработчики событий и переменные. Контейнер сервера задач является исключением из правила: так как он инкапсулирует единственную задачу, не используется никаких элементов управления очередностью.  
   
 ### <a name="executables"></a>Исполняемые объекты  
- Исполняемыми объектами называются задачи уровня контейнера, а также любые контейнеры внутри контейнера. Исполняемый объект может быть одной из задач или одним из контейнеров, изначально включенных в службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , либо пользовательской задачей. Дополнительные сведения см. в разделе [Integration Services Tasks](integration-services-tasks.md) и [Integration Services Containers](integration-services-containers.md).  
+ Исполняемыми объектами называются задачи уровня контейнера, а также любые контейнеры внутри контейнера. Исполняемый объект может быть одной из задач или одним из контейнеров, изначально включенных в службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , либо пользовательской задачей. Дополнительные сведения см. в разделе [задачи служб Integration Services](integration-services-tasks.md) и [контейнеры служб Integration Services](integration-services-containers.md).  
   
 ### <a name="precedence-constraints"></a>Управление очередностью  
  Элементы управления очередностью связывают контейнеры и задачи из одного родительского контейнера в упорядоченный поток управления. Дополнительные сведения см. в разделе [Precedence Constraints](precedence-constraints.md).  

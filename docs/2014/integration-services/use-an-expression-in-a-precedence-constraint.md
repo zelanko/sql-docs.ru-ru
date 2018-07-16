@@ -1,5 +1,5 @@
 ---
-title: Использование выражения в управлении очередностью | Документы Microsoft
+title: Использование выражения в ограничении очередностью | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precedence constraints [Integration Services], adding expressions
 - expressions [Integration Services], adding
 ms.assetid: 601038bb-3b17-42ac-b09d-5b3a82fb6564
 caps.latest.revision: 44
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9752ccb8a925f144abc256db01a6eab683e7d6b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31e3e002996d523aa225e0d0bb607d1772d8b0e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273070"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>Использование выражения в элементах управлении очередностью
   Эта процедура описывает добавление выражений к объекту управления очередностью с помощью диалогового окна **Редактор управления очередностью** . Перед добавлением выражения к управлению очередностью пакет должен содержать по меньшей мере два исполняемых объекта (задачи или контейнера), которые должны быть соединены объектом управления очередностью.  
@@ -48,8 +48,8 @@ ms.locfileid: "36195617"
 ## <a name="see-also"></a>См. также  
  [Управление очередностью](control-flow/precedence-constraints.md)   
  [Соединение задач и контейнеров с помощью элементов управления очередностью по умолчанию](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
- [Установка значения элементов управления очередностью с помощью контекстного меню](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
- [Задание свойств элементов управления очередностью](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   
+ [Установите для параметра очередностью с помощью контекстного меню](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
+ [Задайте свойства элементов управления очередностью](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   
  [Выражения служб Integration Services (SSIS)](expressions/integration-services-ssis-expressions.md)  
   
   

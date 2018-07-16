@@ -1,5 +1,5 @@
 ---
-title: Расширение OLAP через личные настройки | Документы Microsoft
+title: Расширение OLAP через личные настройки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Analysis Services, extensibility
 ms.assetid: 348e49fc-4390-43c1-9b6c-61b386ff4373
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d2c1bdea4c59a047f613033ae0e8aa8515c8232f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf7785c3acd3815f78e656951e8ae3f05e125245
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280360"
 ---
 # <a name="extending-olap-through-personalizations"></a>Расширение OLAP через личные настройки
   Службы Microsoft [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] предоставляют множество встроенных функций для использования в языках многомерных выражений (MDX) и расширений интеллектуального анализа данных (DMX). Эти функции спроектированы, чтобы выполнять практически все, от стандартных статистических вычислений до прохода по элементам иерархии. Однако, как и в случае с любым другим сложным и надежным продуктом, возникает необходимость в дальнейшем расширении функциональности такого продукта.  

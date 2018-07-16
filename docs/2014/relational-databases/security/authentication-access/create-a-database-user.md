@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASEUSER.GENERAL.F1
 - sql12.swb.user.securables.f1
@@ -24,18 +23,18 @@ helpviewer_keywords:
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 201d314b1f89b518559465c36736c2ab16ad7f18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: b71bfa8857cb754cbab2fa983dea96cb45ea4ae0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299974"
 ---
 # <a name="create-a-database-user"></a>Создание пользователя базы данных
-  В этом разделе описывается создание пользователя базы данных, сопоставленного с именем входа в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Пользователь базы данных — это идентификатор имени входа при подключении к базе данных. Имя пользователя базы данных может совпадать с именем входа, но это не является обязательным требованием. Этот раздел предполагает наличие имени входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Сведения о создании учетных данных см. в разделе [Создайте имя входа](create-a-login.md).  
+  В этом разделе описывается создание пользователя базы данных сопоставляется с именем входа в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Пользователь базы данных — это идентификатор имени входа при подключении к базе данных. Имя пользователя базы данных может совпадать с именем входа, но это не является обязательным требованием. Этот раздел предполагает наличие имени входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Сведения о том, как создать имя входа, см. в разделе [Создайте имя входа](create-a-login.md).  
   
  **В этом разделе**  
   
@@ -45,7 +44,7 @@ ms.locfileid: "36194459"
   
      [безопасность](#Security)  
   
--   **Создание пользователя базы данных, с помощью:**  
+-   **Чтобы создать пользователя базы данных, с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   

@@ -1,5 +1,5 @@
 ---
-title: Создание скриптов служб Analysis Services в среде Management Studio | Документы Microsoft
+title: Создание скриптов служб Analysis Services в среде Management Studio | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services objects, scripts
 - objects [Analysis Services], scripts
 - scripts [Analysis Services], objects
 ms.assetid: 4f1b965c-9ca6-427b-8f4d-0ce1eea7c0fe
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5819b821bf482e02a8a5b189b5600aa6e4e637fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd7a8102fdde22ada4f1b7bf4eb9edc6d1b31d7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330784"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Создание скриптов служб Analysis Services в среде Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживает функции создания скриптов, шаблоны и редакторы, используемые для разработки скриптов с объектами и задачами служб Analysis Services.  

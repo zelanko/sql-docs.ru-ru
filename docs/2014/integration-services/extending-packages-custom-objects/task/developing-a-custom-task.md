@@ -27,13 +27,13 @@ ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5c6d91b076c350bef430c42ec0e3d801a6af6615
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 53838bc555747fe34dd1d04f2b7a0e0a6e3b3891
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283500"
 ---
 # <a name="developing-a-custom-task"></a>Разработка пользовательской задачи
   Для выполнения элементов работы, направленных на обеспечение извлечения, преобразования и загрузки данных службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] используют задачи. В службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] имеются различные задачи, выполняющие наиболее часто используемые действия, от извлечения инструкции SQL до загрузки файла с FTP-сайта. Если имеющиеся задачи и поддерживаемые действия не удовлетворяют потребностям пользователя, можно создать пользовательскую задачу.  
@@ -90,7 +90,7 @@ ms.locfileid: "36087159"
  [Разработка пользовательского компонента потока данных](../data-flow/developing-a-custom-data-flow-component.md)  
  Описывает вопросы программирования пользовательских источников, преобразований и назначений потока данных.  
   
-![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться установка последних со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services в MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services  **<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
  [Расширение пакета с помощью задачи "Скрипт"](../../extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   

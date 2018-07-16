@@ -1,5 +1,5 @@
 ---
-title: Определение измерений базы данных | Документы Microsoft
+title: Определение измерений базы данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], defining
 ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dad1c138202c64a4768f944c9308edd0144602d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c71a335db4b17f365bcb40ebf4c7cefb13c30b3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269910"
 ---
 # <a name="define-database-dimensions"></a>Определение измерений базы данных
   Для настройки существующего измерения базы данных в проекте или базе данных служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используется конструктор измерений среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Конструктор измерений позволяет выполнять следующие функции.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 caps.latest.revision: 52
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2d9c3d3bbae3d7c267a6196eef0d7d0660c4302b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2e80c45aeab9b9ea762b56640d68d46df0d4d4fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307004"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services (SSRS), отчеты служб
   Отчеты служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] — это основанные на XML определения отчетов, включающие данные отчетов и элементы макета отчетов. В клиентской файловой системе определения отчетов имеют расширение RDL. После публикации отчета — элемент отчетов, хранимый на сервере отчетов или сайте Sharepoint. Отчеты — это одна из частей серверной платформы создания отчетов, предоставляемая службами [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -87,7 +87,7 @@ ms.locfileid: "36190929"
   
         -   [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
-        -   [Диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+        -   [Диаграммы &#40;построитель отчетов и службы SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
         -   [Спарклайны и гистограммы (построитель отчетов и службы SSRS)](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36190929"
   
     -   **Настроить данные и макет.** Разработка макета отчета. В определение отчета входят текст отчета, источники данных, наборы данных, области данных, текстовые поля, линии и изображения. Прямоугольники используются в макете как контейнеры, а также как визуальные элементы. Необходимо настроить каждую область данных, написав выражения для управления фильтрацией, группированием, сортировкой, форматированием и отображением данных. Добавить имена отчетов, расположения и другие сведения для идентификации, помогающие управлять десятками и сотнями отчетов. Добавить визуальные элементы и контейнеры для организации элементов макета на странице. Дополнительные сведения см. в следующих разделах:  
   
-        -   [Фильтрация, группирование и сортировка данных &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [Фильтрация, группирование и сортировка данных &#40;построитель отчетов и службы SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
         -   [Параметры отчета (построитель отчетов и конструктор отчетов)](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36190929"
   
         -   [Изображения, текстовые поля, прямоугольники и линии (построитель отчетов и службы SSRS)](../report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
-        -   [Макет страницы и Подготовка к просмотру &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+        -   [Макет страницы и отрисовка &#40;построитель отчетов и службы SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
     -   **Настроить интерактивные функции.** Добавить интерактивные функции для читателей отчетов. Например кнопки сортировки или элементы переключения для просмотра запросов. Дополнительные сведения см. в разделе [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36190929"
 ##  <a name="bkmk_SecureReportsSummary"></a> Безопасность отчетов  
  Обеспечить безопасность отчетов можно следующим образом.  
   
--   Свяжитесь с администратором сервера отчетов и определите систему авторизации и проверки подлинности, используемую для установки служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. По умолчанию [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] использует проверку подлинности Windows, встроенную безопасность и назначение ролей для контроля доступа к опубликованным отчетам. Дополнительные сведения см. в статьях [Роли и разрешения (службы Reporting Services)](../security/roles-and-permissions-reporting-services.md) и [Защита и обеспечение безопасности служб Reporting Services](../security/reporting-services-security-and-protection.md).  
+-   Свяжитесь с администратором сервера отчетов и определите систему авторизации и проверки подлинности, используемую для установки служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. По умолчанию [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] использует проверку подлинности Windows, встроенная безопасность и назначение ролей для контроля доступа на опубликованные отчеты. Дополнительные сведения см. в статьях [Роли и разрешения (службы Reporting Services)](../security/roles-and-permissions-reporting-services.md) и [Защита и обеспечение безопасности служб Reporting Services](../security/reporting-services-security-and-protection.md).  
   
 ## <a name="create-notifications-based-on-report-data"></a>Создание уведомлений на основе данных отчета  
  Можно создать предупреждения об изменении данных для опубликованных отчетов на сайте SharePoint. Предупреждения об изменении данных основываются на потоках данных из областей данных в отчете. По умолчанию имена для областей данных присваиваются автоматически. Авторы отчетов могут облегчить создание предупреждений об изменении данных в своих отчетах, присваивая областям данных имена с учетом их делового назначения. После создания предупреждения об изменении данных на электронную почту создавшего пользователя будут приходить письма в случае, если данные удовлетворяют указанным условиям. Дополнительные сведения см. в разделах [Формирование веб-каналов данных из отчетов (построитель отчетов и службы SSRS)](../report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Создание предупреждения данных в конструкторе предупреждений данных](../create-a-data-alert-in-data-alert-designer.md) и [Предупреждения об изменении данных в службах Reporting Services](../reporting-services-data-alerts.md).  

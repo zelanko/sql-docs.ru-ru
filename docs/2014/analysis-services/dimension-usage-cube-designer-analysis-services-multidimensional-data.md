@@ -1,5 +1,5 @@
 ---
-title: Использование измерений (конструктор кубов) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Измерения использования (конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusagepane.f1
 ms.assetid: 52e62633-856c-4af2-8c8a-d4a5a57351b6
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c1b748c221bb730a855c51b80cb3bfb8c3c3d21b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1bc3fec6c8f618446590c89fe555f5d4592575fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288490"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>Использование измерений (конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте вкладку **Использование измерений** в конструкторе кубов для просмотра и редактирования связей измерений между измерениями куба и группами мер в кубе.  
@@ -34,7 +34,7 @@ ms.locfileid: "36191899"
 |**Сетка**|Используйте сетку для просмотра и редактирования связей измерений между измерениями куба и группами мер в кубе. Дополнительные сведения об этой панели см. в разделе [Сетка (вкладка "Использование измерений", конструктор кубов) (службы Analysis Services — многомерные данные)](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>См. также  
- [Связей измерений](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [Связи измерений](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Конструктор кубов &#40;службы Analysis Services — многомерные данные&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Структура куба &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [Вычисления &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
@@ -43,6 +43,6 @@ ms.locfileid: "36191899"
  [Секции &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   
  [Перспективы &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md)   
  [Переводы &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](translations-cube-designer-analysis-services-multidimensional-data.md)   
- [Обозреватель &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
+ [Браузер &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

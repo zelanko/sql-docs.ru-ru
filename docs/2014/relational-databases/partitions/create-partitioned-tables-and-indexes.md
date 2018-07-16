@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.createpartition.partitionscheme.f1
 - sql12.swb.createpartition.selectoutput.f1
@@ -28,16 +27,15 @@ helpviewer_keywords:
 - partition functions [SQL Server]
 - partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
-caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1dc34a6fdd21b8d4debd2f32df73ef97ba3b281c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d6e7ccf536d221117ecc8359af753a4319f7f5d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244794"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Создание секционированных таблиц и индексов
   Можно создать секционированную таблицу или индекс в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Данные в секционированной таблице и индексах горизонтально разделены на блоки, которые могут быть распределены между несколькими файловыми группами в базе данных. Секционирование может улучшить управляемость и масштабируемость больших таблиц и индексов.  
@@ -146,7 +144,7 @@ ms.locfileid: "36087826"
      На этой странице доступны следующие дополнительные параметры:  
   
      **Установить границы…**  
-     Открытие диалогового окна **Установка граничных значений** , в котором можно выбрать граничные значения и диапазоны дат для секций. Этот параметр доступен, только если выбран столбец секционирования, содержит один из следующих типов данных: `date`, `datetime`, `smalldatetime`, `datetime2`, или `datetimeoffset`.  
+     Открытие диалогового окна **Установка граничных значений** , в котором можно выбрать граничные значения и диапазоны дат для секций. Этот параметр доступен только в том случае, если выбран столбец секционирования, которая содержит один из следующих типов данных: `date`, `datetime`, `smalldatetime`, `datetime2`, или `datetimeoffset`.  
   
      **Оценка хранения**  
      Оценка количества строк, необходимого и доступного пространства для хранения каждой файловой группы, указанной для секций. Эти значения доступны в сетке только для чтения.  

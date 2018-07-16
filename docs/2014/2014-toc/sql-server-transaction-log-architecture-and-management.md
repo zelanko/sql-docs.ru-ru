@@ -1,25 +1,24 @@
 ---
-title: Архитектура журнала транзакций SQL Server и управления | Документы Microsoft
+title: Архитектура журнала транзакций SQL Server и управления | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
 caps.latest.revision: 14
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 15e0b458e74df9e40a05a4abbeeeb730b0bc0cea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0575762bbdb9446fc461bca6d09f71e174138177
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301344"
 ---
 # Архитектура журнала транзакций SQL Server и управление им
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "36191917"
   
  Когда конец логического журнала достигнет конца физического файла журнала, новые записи журнала будут размещаться в начале физического файла журнала.  
   
- ![Записи журнала переноса решения для запуска файла журнала](media/tranlog4.gif "записи журнала около wrap до начала файла журнала")  
+ ![Записи журнала переноса по словам, решения для запуска файла журнала](media/tranlog4.gif "записи журнала будут размещаться около к началу файла журнала")  
   
  Этот цикл повторяется бесконечно, пока конец логического журнала не совмещается с началом этого логического журнала. Если старые записи журнала усекаются достаточно часто, так что при этом всегда остается место для новых записей журнала, созданных с новой контрольной точки, журнал постоянно остается незаполненным. Однако, если конец логического журнала совмещается с началом этого логического журнала, происходит одно из двух событий, перечисленных ниже.  
   

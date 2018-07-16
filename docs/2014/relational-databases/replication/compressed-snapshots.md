@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], compressed
 - snapshot replication [SQL Server], compressed snapshots
 - compressed snapshots [SQL Server replication]
 ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 64414a00f922f0554ac1f7e4ebfc985e16d9a7ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 34a397f4c6597751d50aa676f07d42cc694e9c39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303694"
 ---
 # <a name="compressed-snapshots"></a>Сжатые моментальные снимки
   Сжатие файлов моментальных снимков уместно при передаче моментальных снимков в медленной сети или когда требуется сохранить моментальный снимок на съемный носитель, а объем несжатого моментального снимка превышает свободное место на носителе. Сжатие файлов моментальных снимков полезно в таких случаях, однако сжатие увеличивает время создания и применения моментального снимка.  

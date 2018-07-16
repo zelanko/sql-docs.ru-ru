@@ -1,11 +1,11 @@
 ---
-title: Допустимость значений NULL и трехзначная логика сравнения | Документы Microsoft
+title: Допустимость значений NULL и трехзначная логика сравнения | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,16 +20,16 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cf097cfd86b5226f30658799a5c4eb1dd82ba053
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4a01f167900a0aa64759297f6a3b4b2d2c81cf86
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700765"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356206"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Допустимость значений NULL и трехзначная логика сравнения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Если вы знакомы с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных, вы найдете сходную семантику и точность в **System.Data.SqlTypes** пространства имен в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Однако существуют определенные различия. В этом разделе описаны самые важные из них.  
+  Если вы знакомы с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных, вы найдете сходную семантику и точность в **System.Data.SqlTypes** пространства имен в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Однако существуют определенные различия. В этом разделе описаны самые важные из них.  
   
 ## <a name="null-values"></a>Значения NULL  
  Главное различие между типами данных среды CLR и типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] заключается в том, что первые не допускают значений NULL, а вторые реализуют полную семантику NULL.  
@@ -37,16 +37,16 @@ ms.locfileid: "35700765"
  Значения NULL влияют на результаты сравнений. При сравнении двух значений x и y, если x или y имеет значение NULL, то результатом некоторых логических сравнений будет значение UNKNOWN, а не TRUE или FALSE.  
   
 ## <a name="sqlboolean-data-type"></a>Тип данных SqlBoolean  
- **System.Data.SqlTypes** представляет пространство имен **SqlBoolean** типа, представляющий этот трехзначной логики. Сравнения каких-либо **SqlTypes** возвращают **SqlBoolean** тип значения. Неизвестное значение, представленное значение null **SqlBoolean** типа. Свойства **IsTrue**, **IsFalse**, и **IsNull** предоставляются для проверки значения **SqlBoolean** типа.  
+ **System.Data.SqlTypes** представляет пространство имен **SqlBoolean** тип для представления этого трехзначной логики. Сравнения каких-либо **SqlTypes** возвращают **SqlBoolean** тип значения. Неизвестное значение, представленное значение null **SqlBoolean** типа. Свойства **IsTrue**, **IsFalse**, и **IsNull** обеспечивают возможность проверки значение **SqlBoolean** типа.  
   
 ## <a name="operations-functions-and-null-values"></a>Операции, функции и значения NULL  
- Все арифметические операторы (+, -, \*, /, %), битовые операторы (~ &, и |), и большинство функций возвращают NULL, если любой из операндов или аргументов **SqlTypes** имеют значение NULL. **IsNull** свойство всегда возвращает значение true или false.  
+ Все арифметические операторы (+, -, \*, /, %), битовые операторы (~ &, и |), и большинство функций возвращают NULL, если какой-либо из операндов или аргументов **SqlTypes** равны NULL. **IsNull** свойство всегда возвращает значение true или false.  
   
 ## <a name="precision"></a>Точность  
- Максимальные значения типов данных decimal в среде CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] отличаются от максимальных значений числовых типов и типов decimal в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Кроме того, типы данных decimal в среде CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предполагают использование максимальной точности. В среде CLR для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но при этом **SqlDecimal** обеспечивает такую же максимальную точность и масштаб и совпадает с семантикой типа данных decimal в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Максимальные значения типов данных decimal в среде CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] отличаются от максимальных значений числовых типов и типов decimal в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Кроме того, типы данных decimal в среде CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предполагают использование максимальной точности. В среде CLR для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но при этом **SqlDecimal** предоставляет такую же максимальную точность и масштаб, а также ту же семантику, что тип данных decimal в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="overflow-detection"></a>Обнаружение переполнений  
- В среде CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] сложение двух очень больших чисел не может вызвать исключение. При этом если не использовался оператор проверки, возвращенный результат может «обернуться по кругу» и превратиться в отрицательное целое число. В **System.Data.SqlTypes**, исключения создаются для всех переполнения и потери значимости ошибки и ошибки деления на ноль.  
+ В среде CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] сложение двух очень больших чисел не может вызвать исключение. При этом если не использовался оператор проверки, возвращенный результат может «обернуться по кругу» и превратиться в отрицательное целое число. В **System.Data.SqlTypes**, исключения возникают для всех переполнения и потери значимости ошибки и ошибки деления на ноль.  
   
 ## <a name="see-also"></a>См. также  
  [Типы данных SQL Server в платформе .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  

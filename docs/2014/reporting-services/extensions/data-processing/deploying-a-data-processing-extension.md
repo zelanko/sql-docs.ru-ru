@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deploying [Reporting Services], extensions
 ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 63628c1be1803833a65875ddf75d4434af38c87f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 88fcfd2d87238a31562d17b0811d94485a9d1ad9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242254"
 ---
 # <a name="deploying-a-data-processing-extension"></a>Развертывание модуля обработки данных
   После создания модуля обработки данных для служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и компиляции его в библиотеку платформы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] необходимо сделать модуль доступным для обнаружения сервером отчетов и конструктором отчетов. Для этого нужно просто скопировать модуль в соответствующие каталоги и добавить записи в соответствующие файлы конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "36191566"
 |---------------|-----------------|  
 |`Name`|Уникальное имя модуля, например «SQL» для модуля обработки данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или «OLEDB» для модуля обработки данных OLE DB. Длина атрибута `Name` не должна превышать 255 символов. Имя должно быть уникальным среди всех элементов, вложенных в элемент **Extension** файла конфигурации.|  
 |`Type`|Список с разделителями-запятыми, содержащий полное пространство имен и имя сборки.|  
-|`Visible`|Значение `false` показывает, что модуль обработки данных не должен отображаться в пользовательском интерфейсе. Если атрибут не указан, значение по умолчанию — `true`.|  
+|`Visible`|Значение `false` показывает, что модуль обработки данных не должен отображаться в пользовательском интерфейсе. Если атрибут не включается, значение по умолчанию — `true`.|  
   
  Дополнительные сведения о файлах RSReportServer.config и RSReportDesigner.config см. в разделе [Файлы конфигурации служб Reporting Services](../../report-server/reporting-services-configuration-files.md).  
   

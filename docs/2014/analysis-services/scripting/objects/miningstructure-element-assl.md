@@ -1,5 +1,5 @@
 ---
-title: Элемент MiningStructure (ASSL) | Документы Microsoft
+title: Элемент MiningStructure (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningStructure element
 ms.assetid: b943cd92-0ed8-4bd8-8fbc-7dab0534aede
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5298c78f1902ee9a8fb1ed12ecf066092a02d938
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed39aafbe937c637abd7a6ec67fbd7343b62b116
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271830"
 ---
 # <a name="miningstructure-element-assl"></a>Элемент MiningStructure (язык ASSL)
   Определяет структуру для набора моделей интеллектуального анализа данных.  
@@ -79,7 +79,7 @@ ms.locfileid: "36193454"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[MiningStructures](../collections/miningstructures-element-assl.md)|  
-|Дочерние элементы|[Заметки](../collections/annotations-element-assl.md), [CacheMode](../properties/cachemode-element-assl.md), [сортировки](../properties/collation-element-assl.md), [столбцы](../collections/columns-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [описание ](../properties/description-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md),<br /><br /> [HoldoutActualSize](../properties/holdoutactualsize-element.md),<br /><br /> [HoldoutMaxCases](../properties/holdoutmaxcases-element.md),<br /><br /> [HoldoutMaxPercent](../properties/holdoutmaxpercent-element.md),<br /><br /> [HoldoutSeed](../properties/holdoutseed-element.md),<br /><br /> [Идентификатор](../properties/id-element-assl.md), [язык](../properties/language-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MiningModels](../collections/miningmodels-element-assl.md), [ MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md), [имя](../properties/name-element-assl.md), [источника](../properties/source-element-binding-assl.md), [состояние](../properties/state-element-assl.md), [переводов](../collections/translations-element-assl.md)|  
+|Дочерние элементы|[Заметки](../collections/annotations-element-assl.md), [CacheMode](../properties/cachemode-element-assl.md), [параметры сортировки](../properties/collation-element-assl.md), [столбцы](../collections/columns-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [описание ](../properties/description-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md),<br /><br /> [HoldoutActualSize](../properties/holdoutactualsize-element.md),<br /><br /> [HoldoutMaxCases](../properties/holdoutmaxcases-element.md),<br /><br /> [HoldoutMaxPercent](../properties/holdoutmaxpercent-element.md),<br /><br /> [HoldoutSeed](../properties/holdoutseed-element.md),<br /><br /> [Идентификатор](../properties/id-element-assl.md), [языка](../properties/language-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MiningModels](../collections/miningmodels-element-assl.md), [ MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md), [имя](../properties/name-element-assl.md), [источника](../properties/source-element-binding-assl.md), [состояние](../properties/state-element-assl.md), [переводы](../collections/translations-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
  Структура интеллектуального анализа данных определяет столбцы и привязки. После того, как структура интеллектуального анализа данных определена, ее можно использовать для определения различных моделей интеллектуального анализа данных. Структура интеллектуального анализа данных и входящие в нее модели могут обрабатываться независимо.  
@@ -88,11 +88,11 @@ ms.locfileid: "36193454"
 >  В [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] введено использование контрольных свойств `HoldoutMaxCases`, `HoldoutMaxPercent`, `HoldoutSeed` и `HoldoutActualSize`. Эти свойства позволяют определить секцию структуры интеллектуального анализа данных, которая действует как проверочный набор для всех моделей интеллектуального анализа данных, связанных с этой структурой. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] не поддерживает эти свойства. Поэтому при попытке использовать эти свойства в экземпляре [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] возвратят ошибку.  
   
 ## <a name="drillthrough-to-structure-columns"></a>Детализация столбцов структуры  
- В [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], будет добавлен новый элемент разрешений [элемент MiningStructurePermissions &#40;ASSL&#41; ](../collections/miningstructurepermissions-element-assl.md) коллекции. При добавлении `AllowDrillthrough` разрешение на оба [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md) и [MiningModelPermission](miningmodelpermission-element-assl.md) коллекций, детализация включена из модели интеллектуального анализа данных к структуре, таким образом, Члены роли, имеющей `AllowDrillthrough` для модели разрешения запросов к модели интеллектуального анализа данных и возвращать столбцы структуры, которые не были включены в модель.  
+ В [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], будет добавлен новый элемент разрешения [элемент MiningStructurePermissions &#40;ASSL&#41; ](../collections/miningstructurepermissions-element-assl.md) коллекции. При добавлении `AllowDrillthrough` разрешение на оба [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md) и [MiningModelPermission](miningmodelpermission-element-assl.md) коллекций, детализация включена из модели интеллектуального анализа данных к структуре, и таким образом, Члены роли, обладающей `AllowDrillthrough` разрешения на модель запросов к модели интеллектуального анализа данных и возвращать столбцы структуры, которые не были включены в модели.  
   
  Поэтому, чтобы защитить конфиденциальные или персональные данные, необходимо настроить для представления источников данных маскирование конфиденциальных данных, а разрешение `AllowDrillthrough` для структуры интеллектуального анализа данных предоставлять только при необходимости. Дополнительные сведения см. в разделе [элемент AllowDrillThrough &#40;ASSL&#41;](../properties/allowdrillthrough-element-assl.md).  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.MiningStructure>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.MiningStructure>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент MiningModel &#40;ASSL&#41;](miningmodel-element-assl.md)   

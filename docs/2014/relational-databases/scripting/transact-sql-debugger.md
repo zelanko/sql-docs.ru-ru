@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c81867131974a7cf9f4bdd62b1ab84743a3b3fb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: bc4a0923e5e0d337df82e87a9086e14b61a0e945
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305464"
 ---
 # <a name="transact-sql-debugger"></a>Отладчик Transact-SQL
   Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет находить ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] путем проверки поведения кода во время его выполнения. После перевода окна редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в режим отладки можно приостанавливать выполнение на определенных строках кода и просматривать сведения и данные, которые используются или возвращаются соответствующими инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

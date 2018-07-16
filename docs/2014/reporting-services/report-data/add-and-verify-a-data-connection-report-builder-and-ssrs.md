@@ -1,5 +1,5 @@
 ---
-title: Добавление и проверка подключения к данным или источник данных (построитель отчетов и службы SSRS) | Документы Microsoft
+title: Добавление и проверка подключения к данным или источник данных (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 00be4472fc0f1e495e136b731499e581c1f78178
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4256a55f0dab891834aa633f4f06ca92f2c4c020
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292184"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>Добавление и проверка подключения к данным или источнику данных (построитель отчетов и службы SSRS)
   В построителе отчетов можно добавить общий источник данных с сервера отчетов или создать внедренный источник данных для отчета. В конструкторе отчетов можно создавать общие или внедренные источники данных и развертывать их на сервере отчетов.  
@@ -62,7 +62,7 @@ ms.locfileid: "36194662"
   
     2.  Укажите строку соединения одним из следующих способов.  
   
-    -   Введите строку соединения непосредственно в текстовое поле **Строка подключения** . Список примеров строк соединения см. в разделе [подключения к данным, источники данных и строки подключения в построителе отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+    -   Введите строку соединения непосредственно в текстовое поле **Строка подключения** . Список примеров строк подключения, см. в разделе [подключения к данным, источники данных и строки подключения в построителе отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
     -   Нажмите кнопку выражения **(fx)** , чтобы создать выражение, результатом которого является строка подключения. В диалоговом окне **Выражение** введите выражение на панели выражений. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36194662"
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Добавление данных в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](report-datasets-ssrs.md)   
+ [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Подключения к данным, источники данных и строки подключения в построителе отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

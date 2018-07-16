@@ -1,5 +1,5 @@
 ---
-title: Элемент ReadDefinition (ASSL) | Документы Microsoft
+title: Элемент ReadDefinition (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReadDefinition element
 ms.assetid: 1f250129-13b2-41b9-b083-b5aacddf0060
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdb505ff02917259b71d5f5b1ee803a5982217b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fed91c75bd717e67dd624fc16f7091be24fb030c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297234"
 ---
 # <a name="readdefinition-element-assl"></a>Элемент ReadDefinition (ASSL)
   Определяет, могут ли элементы читать определение базы данных или определение объектов в базе данных.  
@@ -68,7 +68,7 @@ ms.locfileid: "36194832"
 |-----------|-----------------|  
 |*None*|Доступ к определению объекта не разрешен.|  
 |*Основные*|Разрешен базовый доступ к определению объекта. **Примечание:** это разрешение требуется для создания локальных кубов, связывания групп мер и связывания измерений.|  
-|*Допускается*|Разрешен полный доступ к определению объекта. **Примечание:** это разрешение требуется для выполнения [Discover](../../xmla/xml-elements-methods-discover.md) XML для аналитики (XMLA) вызова, с помощью параметра DISCOVER_XML_METADATA.|  
+|*Разрешено*|Разрешен полный доступ к определению объекта. **Примечание:** это разрешение требуется для выполнения [Discover](../../xmla/xml-elements-methods-discover.md) XML для аналитики (XMLA) вызова, с помощью параметра DISCOVER_XML_METADATA.|  
   
  Элементы, соответствующие родителям элемента `ReadDefinition` в модели объектов AMO, — это <xref:Microsoft.AnalysisServices.CubePermission>, <xref:Microsoft.AnalysisServices.DatabasePermission>, <xref:Microsoft.AnalysisServices.DimensionPermission>, <xref:Microsoft.AnalysisServices.MiningModelPermission>, <xref:Microsoft.AnalysisServices.MiningStructurePermission> и <xref:Microsoft.AnalysisServices.Permission>.  
   

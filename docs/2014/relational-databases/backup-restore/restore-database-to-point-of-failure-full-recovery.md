@@ -1,29 +1,28 @@
 ---
-title: Восстановление базы данных до точки сбоя в модели полного восстановления (Transact-SQL) | Документы Microsoft
+title: Восстановление базы данных до точки сбоя в рамках модели полного восстановления (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - point of failure [SQL Server]
 - restoring databases [SQL Server], point of failure
 - database restores [SQL Server], point of failure
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 743408c4cafccedf6648834fbdcb0be459857768
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ad1916a80b7e209773eacbafa4ec390e63be880b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271580"
 ---
 # <a name="restore-a-database-to-the-point-of-failure-under-the-full-recovery-model-transact-sql"></a>Восстановление базы данных до точки сбоя в модели полного восстановления (Transact-SQL)
   В этом подразделе описывается восстановление до точки сбоя. Сведения в этом разделе относятся только к тем базам данных, которые используют модель полного восстановления или модель восстановления с неполным протоколированием.  

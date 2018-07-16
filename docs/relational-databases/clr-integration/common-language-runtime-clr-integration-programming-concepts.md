@@ -1,12 +1,11 @@
 ---
-title: Общие принципы программирования интеграции языка среды выполнения (CLR) | Документы Microsoft
+title: Распространенные языка среды CLR Integration основные понятия программирования | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - CLR [SQL Server] See common language runtime [SQL Server]
@@ -19,12 +18,12 @@ caps.latest.revision: 59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 13eac9448c0cd0d5f5dd208b75c9fc5bed089262
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: df157328c0718a55dae569503e1e5f6bd424131e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703325"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357036"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Основные понятия о программировании интеграции со средой CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,14 +32,14 @@ ms.locfileid: "35703325"
  Пространство имен Microsoft.SqlServer.Server содержит основные возможности программирования CLR для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Однако пространство имен Microsoft.SqlServer.Server документировано в пакете .NET Framework SDK. Эта документация не включена в электронную документацию по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  По умолчанию платформа .NET Framework устанавливается вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но пакет .NET Framework SDK в эту установку не включен. Если пакет SDK установлен на рабочем компьютере и не добавлен к коллекции электронной документации, то ссылки на содержимое пакета SDK, имеющиеся в этом разделе, работать не будут. Установите пакет .NET Framework SDK. После установки включите SDK в коллекцию электронной документации и в оглавление, следуя инструкциям в разделе [установка .NET Framework SDK](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
+>  По умолчанию платформа .NET Framework устанавливается вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но пакет .NET Framework SDK в эту установку не включен. Если пакет SDK установлен на рабочем компьютере и не добавлен к коллекции электронной документации, то ссылки на содержимое пакета SDK, имеющиеся в этом разделе, работать не будут. Установите пакет .NET Framework SDK. После установки включите пакет SDK в коллекцию электронной документации и в оглавление, следуя инструкциям в [установка .NET Framework SDK](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
   
 > [!NOTE]  
->  Функции CLR, такие как функции CLR пользователя являются *не* поддерживается для базы данных SQL Azure.  
+>  Функции CLR, такие как пользователем функции среды CLR, являются *не* поддерживается для базы данных SQL Azure.  
   
  В следующей таблице приводится список подразделов данного раздела.  
   
- [Общеязыковая среда выполнения &#40;CLR&#41; интеграции](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [Среда CLR &#40;CLR&#41; Общие сведения об интеграции](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
  Содержит общие сведения о среде CLR и описывает способы и преимущества использования технологии в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Описывает преимущества использования среды CLR для создания объектов базы данных.  
   
  [Сборки (компонент Database Engine)](../../relational-databases/clr-integration/assemblies-database-engine.md)  
@@ -72,6 +71,6 @@ ms.locfileid: "35703325"
   
 ## <a name="see-also"></a>См. также  
  [Сборки &#40;компонент Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
- [Установка .NET Framework SDK](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
+ [Установка пакета SDK для .NET Framework](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Частично доверенный вызывающий код | Документы Microsoft
+title: Частично доверенный вызывающий код | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - partially trusted callers [CLR integration]
 ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3ef6354d8dee0373af005d7da782bffc3a90eb5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: deb561ec43fda2e831f115b1c1a7f8eb21974e92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265325"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Частично доверенный вызывающий код
   При интеграции со средой CLR часто реализуется общий доступ к программным библиотекам, когда к сборке, которая содержит определяемый пользователем тип, хранимую процедуру, определяемую пользователем функцию, определяемую пользователем статистическую функцию, триггер или служебный класс, получают доступ другие сборки и приложения. Библиотеки кода, к которым осуществляется общий доступ нескольких приложений, должны быть подписана строгим именем.  
@@ -65,7 +65,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  В этом образце показано также применение атрибута «Разрешить частично доверенный вызывающий код», который указывает, что сборка результирующего набора является библиотекой, которая может безопасно вызываться из других сборок. Такой подход немного сложнее, но гораздо безопаснее, чем регистрация вызывающей сборки с разрешением UNSAFE. Регистрация вызывающей сборки как безопасной ограничивает число задействованных ресурсов вне сервера и предотвращает нарушение его целостности.  
   
- В инструкциях по построению этого образца предполагается, что файлы с исходным кодом находятся в каталоге c:\samples.  Если используется другой каталог, то необходимо изменить скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[tsql](../../includes/tsql-md.md)] Скрипты также требует базы данных AdventureWorks. Можно загрузить образец базы данных AdventureWorks с [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) домашней страницы.  
+ В инструкциях по построению этого образца предполагается, что файлы с исходным кодом находятся в каталоге c:\samples.  Если используется другой каталог, то необходимо изменить скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[tsql](../../includes/tsql-md.md)] Скриптов также необходимы базы данных AdventureWorks. Можно загрузить образец базы данных AdventureWorks из [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) домашнюю страницу.  
   
  Чтобы построить и запустить образец, вставьте первый листинг кода в файл ResultSet.cs и скомпилируйте его с параметром csc /target:library ResultSet.cs.  
   

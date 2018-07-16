@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - identity values [SQL Server], bulk imports
 - data formats [SQL Server], identity values
 - bulk importing [SQL Server], identity values
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d43b95ce6025047f2721f6eb56925478a7cde262
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5870c305e74435b6c21fe0a4f872629216203990
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242564"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Сохранение значений идентификаторов при массовом импорте данных (SQL Server)
   Для файлов данных, содержащих значения идентификаторов, можно выполнить массовый импорт в экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию значения столбца идентификаторов в импортируемом файле данных не учитываются, и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически присваивает им уникальные значения на основе начального значения и значения приращения, указанных при создании таблицы.  
@@ -78,12 +77,12 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
  Дополнительные сведения о создании файла форматирования см. в разделе [Создание файла форматирования (SQL Server)](create-a-format-file-sql-server.md).  
   
 ### <a name="a-using-bcp-and-keeping-identity-values"></a>A. Использование команды bcp с сохранением значений идентификаторов  
- В следующем примере показан способ сохранения значений идентификаторов при использовании команды `bcp` для массового импорта данных. `bcp` Команд используется файл форматирования, `myDepartment-f-n-x.Xml`и содержит следующие параметры:  
+ В следующем примере показан способ сохранения значений идентификаторов при использовании команды `bcp` для массового импорта данных. `bcp` Команда использует файл форматирования, `myDepartment-f-n-x.Xml`и содержит следующие параметры:  
   
 |Квалификаторы|Описание|  
 |----------------|-----------------|  
 |**-E**|Указывает, что в столбец идентификаторов загружаются значения идентификаторов, находящиеся в файле данных.|  
-|**-T**|Указывает, что `bcp` программа подключается к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью доверительного соединения.|  
+|**-T**|Указывает, что `bcp` программа устанавливает соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используя доверительное соединение.|  
   
  В командной строке Windows введите:  
   

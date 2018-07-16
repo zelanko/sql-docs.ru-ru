@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 - sql12.rtp.rptdesigner.dataview.vdtquerydesigner.f1
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Reporting Services, query designers
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 caps.latest.revision: 53
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a0b03b1e797aa61e173dc30c9ae8bd5e335add41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4d554173e6341f4f733cdc3e48af587bb4e544be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327174"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Пользовательский интерфейс графического конструктора запросов
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графический и текстовый конструкторы запросов, предназначенных для получения данных из реляционной базы данных в качестве набора данных отчета в конструкторе отчетов. Графический конструктор запросов используется для интерактивного создания запроса и для просмотра результатов при работе с источниками данных следующих типов: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB и ODBC. Текстовый конструктор запросов применяется для задания нескольких инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] , запросов и команд со сложным синтаксисом и запросов на основе выражений. Дополнительные сведения см. в разделе [Пользовательский интерфейс текстового конструктора запросов](../text-based-query-designer-user-interface.md). Дополнительные сведения о работе с конкретными типами источников данных см. в разделе [добавить данные в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графический и текстовый конструкторы запросов, предназначенных для получения данных из реляционной базы данных в качестве набора данных отчета в конструкторе отчетов. Графический конструктор запросов используется для интерактивного создания запроса и для просмотра результатов при работе с источниками данных следующих типов: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB и ODBC. Текстовый конструктор запросов применяется для задания нескольких инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] , запросов и команд со сложным синтаксисом и запросов на основе выражений. Дополнительные сведения см. в разделе [Пользовательский интерфейс текстового конструктора запросов](../text-based-query-designer-user-interface.md). Дополнительные сведения о работе с конкретными типами источников данных см. в разделе [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md).  
   
  , и делает это по-другому.  
   
@@ -148,11 +148,11 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`  
   
 ## <a name="see-also"></a>См. также  
- [Средства разработки в отчет конструктора SQL Server Data Tools запросов &#40;SSRS&#41;](query-design-tools-ssrs.md)   
- [Добавление данных в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](report-datasets-ssrs.md)   
+ [Средства проектирования в отчет конструктора SQL Server Data Tools запросов &#40;SSRS&#41;](query-design-tools-ssrs.md)   
+ [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)   
  [Тип соединения SQL Server (службы SSRS)](sql-server-connection-type-ssrs.md)   
  [Тип подключения OLE DB &#40;SSRS&#41;](ole-db-connection-type-ssrs.md)   
- [Добавление данных в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](report-datasets-ssrs.md)   
+ [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)   
  [Тип подключения Oracle &#40;SSRS&#41;](oracle-connection-type-ssrs.md)   
  [Файл конфигурации RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)   
  [Разделы по конструированию запросов и представлений &#40;визуальные инструменты для баз данных&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

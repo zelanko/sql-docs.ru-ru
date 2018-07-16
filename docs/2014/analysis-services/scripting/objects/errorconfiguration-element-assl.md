@@ -1,5 +1,5 @@
 ---
-title: Элемент ErrorConfiguration (ASSL) | Документы Microsoft
+title: Элемент ErrorConfiguration (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ErrorConfiguration element
 ms.assetid: e8363ec2-fbbf-48f6-a55d-01793afa759c
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c509fa16348e6f91da1587f5879e651f2362678c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e36d41d9788b7c65079f7aff7a97d72dd44d8e17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316934"
 ---
 # <a name="errorconfiguration-element-assl"></a>Элемент ErrorConfiguration (ASSL)
   Задает параметры обработки ошибок, которые возникают при обработке родительского элемента.  
@@ -71,7 +71,7 @@ ms.locfileid: "36086735"
 |Дочерние элементы|[KeyDuplicate](../properties/keyduplicate-element-assl.md), [KeyErrorAction](action-element-assl.md), [KeyErrorLimit](../properties/keyerrorlimit-element-assl.md), [KeyErrorLimitAction](../properties/keyerrorlimitaction-element-assl.md), [KeyErrorLogFile](file-element-assl.md), [ KeyNotFound](../properties/keynotfound-element-assl.md), [NullKeyConvertedToUnknown](../properties/nullkeyconvertedtounknown-element-assl.md), [NullKeyNotAllowed](../properties/nullkeynotallowed-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.ErrorConfiguration>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.ErrorConfiguration>.  
   
 ## <a name="see-also"></a>См. также  
  [Объекты &#40;ASSL&#41;](objects-assl.md)  

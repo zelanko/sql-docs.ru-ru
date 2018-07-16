@@ -1,5 +1,5 @@
 ---
-title: Запрос расширенных хранимых процедур, установленных в SQL Server | Документы Microsoft
+title: Запрос расширенных хранимых процедур, установленных в SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,28 +14,28 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], querying
 ms.assetid: e02348e6-dba6-438a-98b6-684244bb034d
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 25e9b8d1de6acd52182e090f40d955cc17bf5cd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 0714011cb2ba76220517c02fe3d946556610869e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298324"
 ---
 # <a name="querying-extended-stored-procedures-installed-in-sql-server"></a>Запрос расширенных хранимых процедур, установленных в SQL Server
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
   
- Объект [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прошедший проверку пользователь может отображать определенные в данный момент расширенные хранимые процедуры и имя библиотеки DLL, для которых они принадлежит, выполнив **sp_helpextendedproc** системной процедуры. Например, следующий пример возвращает DLL, для которого **xp_hello** принадлежит:  
+ Объект [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прошедшего проверку подлинности пользователь может отобразить в настоящее время определены расширенные хранимые процедуры и имя библиотеки DLL, которым принадлежит, выполнив **sp_helpextendedproc** системной процедуры. Например, в следующем примере возвращается библиотеки DLL, к которому **xp_hello** принадлежит:  
   
 ```  
 sp_helpextendedproc 'xp_hello'  
 ```  
   
- Если **sp_helpextendedproc** выполняется без указания отображаются расширенные хранимые процедуры, расширенные хранимые процедуры и их DLL-библиотеки.  
+ Если **sp_helpextendedproc** выполняется без указания расширенной хранимой процедуры, расширенные хранимые процедуры и их DLL-библиотеки.  
   
 > [!IMPORTANT]  
 >  Сведения будут возвращены только для тех расширенных хранимых процедур, владельцем которых является вошедший в систему пользователь или на которые он имеет разрешение. Только члены **sysadmin** предопределенной роли сервера и **db_owner**, **db_securityadmin**и **db_ddladmin** базы данных роли можно просмотреть сведения для всех расширенных хранимых процедур.  

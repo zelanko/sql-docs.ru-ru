@@ -1,5 +1,5 @@
 ---
-title: Службы Analysis Services редактор задач обработки (страница «Общие») | Документы Microsoft
+title: Службы Analysis Services редактор задач обработки (страница "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asprocessingtask.general.f1
 helpviewer_keywords:
 - Analysis Services Processing Task Editor
 ms.assetid: ce79d133-fbd9-4037-a033-e75cbf28a22d
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4eef72932d73e54defb6e6fc7fc5fbec776ca30c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92304267244e9a8cca64540baf841d9f1eb3dd03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298874"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>Редактор задачи «Обработка средствами Analysis Services» (страница «Общие»)
   Используйте страницу **Общие** в диалоговом окне **Редактор задачи "Обработка средствами Analysis Services"** , чтобы задать имя и описание для задачи "Обработка средствами Analysis Services".  
@@ -41,8 +41,8 @@ ms.locfileid: "36192495"
  Введите описание задачи «Обработка средствами Analysis Services».  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи обработки в службах аналитики &#40;служб Analysis Services страницы&#41;](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи обработки служб аналитики &#40;служб Analysis Services страницы&#41;](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
  [Задача «Выполнение инструкции DDL служб Analysis Services»](control-flow/analysis-services-execute-ddl-task.md)  
   
   

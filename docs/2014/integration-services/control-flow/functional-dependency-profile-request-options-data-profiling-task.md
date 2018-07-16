@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3476bc4e683fe254b2e2760220910a24445108c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0988cccd7bed4112c901c3d5b5954fb7e4a991b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318844"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Параметры запроса для профиля функциональной зависимости (задача «Профилирование данных»)
   Для установки параметров варианта **Запрос профиля функциональной зависимости** , выделенного на панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль функциональной зависимости показывает, в какой степени значения в одном столбце (зависимом) зависят от значений в другом столбце или наборе столбцов (определяющем). Этот профиль также поможет выявить проблемы в данных, например наличие недопустимых значений. Например, выполняется профилирование зависимости между столбцом почтовых индексов США и столбцом штатов США. В этом профиле один и тот же почтовый индекс всегда должен соответствовать одному и тому же штату, но профиль обнаруживает нарушения этой зависимости.  
@@ -124,7 +124,7 @@ ms.locfileid: "36192723"
  Укажите максимальное число нарушений функциональных зависимостей для сообщения в выводе. Значение по умолчанию этого свойства равно 100. Этот параметр будет выключен только в случае выбора для свойства **ThresholdSetting** значения **Точно**.  
   
 ## <a name="see-also"></a>См. также  
- [Редактор задачи «профилирование данных» &#40;страница «Общие»&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "профилирование данных" &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)   
  [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](single-table-quick-profile-form-data-profiling-task.md)  
   
   

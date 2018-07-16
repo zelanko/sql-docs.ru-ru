@@ -1,5 +1,5 @@
 ---
-title: Выполнение дельты с использованием ADO (SQLXML 4.0) | Документы Microsoft
+title: Выполнение дельты с использованием ADO (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - DiffGrams [SQLXML], ADO
 ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6e0d7913e492f911c3303db7af2343bdef1ed940
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f236820719768cb6c04a19b6237bd71f8d8a620b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319964"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Выполнение дельты с использованием ADO (SQLXML 4.0)
-  Следующее приложение на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic использует ADO для установки соединения с экземпляром Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и выполняет DiffGram. В этом приложении дельты и схема XSD хранятся в файле. Приложение загружает DiffGram из заданного файла. Можно использовать любые дельты (и связанной схемы XSD) описано в [примеры дельт](diffgram-examples-sqlxml-4-0.md).  
+  Следующее приложение на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic использует ADO для установки соединения с экземпляром Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и выполняет DiffGram. В этом приложении дельты и схема XSD хранятся в файле. Приложение загружает DiffGram из заданного файла. Можно использовать любые дельты (и связанной схемы XSD) описано в разделе [примеры дельт](diffgram-examples-sqlxml-4-0.md).  
   
  Ниже приводится последовательность действий в образце приложения.  
   
--   **Conn** объекта (**ADODB. Подключение**) устанавливает подключение к запущенному экземпляру SQL Server, на конкретном сервере.  
+-   **Conn** объекта (**ADODB. Подключение**) устанавливает соединение с запущенным экземпляром сервера SQL на конкретном сервере.  
   
 -   **Cmd** объекта (**ADODB.Command**) выполняется в рамках установленного подключения.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "36193963"
   
 -   Дельта копируется в поток команды (**strmIn**) из файла.  
   
--   Выходной поток команды задано значение **StrmOut** объекта (**ADODB. Поток**) который получает все возвращенные данные.  
+-   Выходной поток команды присваивается **StrmOut** объекта (**ADODB. Stream**), который получает все возвращаемых данных.  
   
--   При использовании поставщика SQLOLEDB вы по умолчанию получаете функциональность Microsoft SQLXML, предоставляемую библиотекой Sqlxmlx.dll. Чтобы использовать библиотеку Sqlxml4.dll с поставщиком SQLOLEDB **версии SQLXML** свойству необходимо присвоить значение **SQLXML.4.0** на поставщик SQLOLEDB **подключения** объекта.  
+-   При использовании поставщика SQLOLEDB вы по умолчанию получаете функциональность Microsoft SQLXML, предоставляемую библиотекой Sqlxmlx.dll. Чтобы использовать библиотеку Sqlxml4.dll с поставщиком SQLOLEDB, **SQLXML Version** свойству должно быть присвоено **SQLXML.4.0** на поставщик SQLOLEDB **подключения** объекта.  
   
 -   Команда (дельта) будет выполнена.  
   
@@ -89,7 +89,7 @@ End Sub
   
 ### <a name="to-test-the-diffgram"></a>Проверка дельты  
   
-1.  В папку на компьютере, скопируйте любой дельту и соответствующую схему XSD из одного из примеров в [примеры дельт](diffgram-examples-sqlxml-4-0.md).  
+1.  В папку на компьютере, скопируйте любой из дельту и соответствующую схему XSD из одного из примеров в [примеры дельт](diffgram-examples-sqlxml-4-0.md).  
   
 2.  Откройте Visual Basic и создайте проект стандартного исполняемого файла.  
   
@@ -99,7 +99,7 @@ End Sub
     Microsoft ActiveX Data Objects 2.8 Library  
     ```  
   
-4.  На панели инструментов нажмите кнопку **CommandButton**, а затем перетащите кнопку на форму.  
+4.  В области элементов щелкните **CommandButton**, а затем нарисуйте кнопку в форме.  
   
 5.  Дважды нажмите кнопку, чтобы изменить ее код, и добавьте код приложения из раздела.  
   

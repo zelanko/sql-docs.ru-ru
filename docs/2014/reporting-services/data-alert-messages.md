@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: df5c57bdf3138dbecf23ece011b1dad56f8e9b13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2227a89a3e44934550a828dc9bc47db97b83e28c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331354"
 ---
 # <a name="data-alert-messages"></a>Предупреждающие сообщения
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] доступны два типа предупреждающих сообщений, отправляемых по электронной почте: сообщения с результатами предупреждения об изменении данных и сообщения с описаниями ошибок. Сообщения с результатами информируют всех получателей об изменениях в данных отчетов, представляющих для них интерес и важных для принятия бизнес-решений. Если по какой-то причине произошла ошибка и результаты оказались недоступны, вместо сообщения с результатами будет отправлено сообщение об ошибке.  

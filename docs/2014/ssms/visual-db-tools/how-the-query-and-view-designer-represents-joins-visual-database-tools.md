@@ -1,5 +1,5 @@
 ---
-title: Каким образом представляет конструктора запросов и представлений соединения (визуальные инструменты баз данных) | Документы Microsoft
+title: Как конструктор запросов и представлений представляет соединения (визуальные инструменты баз данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL pane [Visual Database Tools]
 - joins [SQL Server], Query and View Designer
 - Diagram pane [Visual Database Tools]
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 26c8285db35f00361465340824ec3e8b71a67f35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b1ee25f33d06c1d0df0be8ae31b4d3f265cd07db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299434"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Как конструктор запросов и представлений представляет соединения (визуальные инструменты для баз данных)
   При соединении таблиц [конструктор запросов и представлений](visual-database-tools.md) представляет соединение графически на [панели диаграммы](diagram-pane-visual-database-tools.md) и в виде синтаксиса языка SQL на [панели SQL](sql-pane-visual-database-tools.md).  
@@ -85,7 +85,7 @@ ms.locfileid: "36189916"
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Запрос с соединениями &#40;визуальные средства базы данных&#41;](query-with-joins-visual-database-tools.md)   
+ [Запрос с соединениями &#40;визуальных инструментах баз данных&#41;](query-with-joins-visual-database-tools.md)   
  [Диалоговое окно "Соединение" (визуальные инструменты для баз данных)](join-dialog-box-visual-database-tools.md)  
   
   

@@ -1,12 +1,11 @@
 ---
-title: Сборки (компонент Database Engine) | Документы Microsoft
+title: Сборки (ядро СУБД) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration]
@@ -17,18 +16,18 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5429ae69dfabd8d978e3dff6a2a29ff3f4ba56fe
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 02b9011a567eb3a91bf36dfc7d2450dfa9498a60
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697115"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359396"
 ---
 # <a name="assemblies-database-engine"></a>Сборки (компонент Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе содержатся сведения, которые помогут понять, сконструировать и применить сборки.  
   
- Сборки являются DLL-файлы, используемые в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] развертывание функции, хранимые процедуры, триггеры, определяемые пользователем статистические функции и определяемые пользователем типы, написанные на одном из языков управляемого кода, расположенных на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Общеязыковая среда выполнения (CLR), а не в [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Сборки — это файлы DLL, используемые в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для развертывания функции, хранимые процедуры, триггеры, определяемые пользователем статистические функции и определяемые пользователем типы, написанные на одном из языков управляемого кода, проводимых [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Общеязыковая среда выполнения (CLR), а не в [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Сборка в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представляет собой объект, который ссылается на управляемый модуль приложений (DLL-файл), созданный в среде CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Сборка содержит метаданные класса и управляемый код. Передача сборки на экземпляр SQL Server — это первый шаг к созданию любого из следующих объектов базы данных.  
   
@@ -38,9 +37,9 @@ ms.locfileid: "35697115"
   
 -   Триггеры среды CLR. Дополнительные сведения см. в разделе [Создание триггеров CLR](../../relational-databases/triggers/create-clr-triggers.md).  
   
--   Определяемые пользователем агрегатные функции. Дополнительные сведения см. в разделе [создать определяемые пользователем статистические функции](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md).  
+-   Определяемые пользователем агрегатные функции. Дополнительные сведения см. в разделе [создание определяемых пользователем статистических выражений](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md).  
   
--   Определяемые пользователем типы. Дополнительные сведения см. в разделе [Using User-Defined типов](../../relational-databases/native-client/features/using-user-defined-types.md).  
+-   Определяемые пользователем типы. Дополнительные сведения см. в разделе [Using User-Defined типы](../../relational-databases/native-client/features/using-user-defined-types.md).  
   
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сборки выполняют следующие функции.  
   

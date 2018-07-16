@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - joins [SQL Server], operators
 - modifying join operators
 - join operators
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 87174d9f5c13ebc29252076db2f919445181aa6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 865eee3e48d99914e2f04ad0ae59e42443447f59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304954"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>изменить операторы соединения (визуальные инструменты для баз данных)
   По умолчанию [Конструктор запросов и представлений](visual-database-tools.md) соединяет таблицы с помощью знака равенства (эквисоединение), при котором значения в двух столбцах соединения совпадают. При необходимости можно изменить оператор, используемый для сравнения значений в столбцах соединения.  
@@ -37,8 +37,8 @@ ms.locfileid: "36191532"
 3.  В диалоговом окне **Соединение** выберите новый оператор.  
   
 ## <a name="see-also"></a>См. также  
- [Автоматическое соединение таблицы &#40;визуальные средства базы данных&#41;](join-tables-automatically-visual-database-tools.md)   
- [Соединить таблицы вручную &#40;визуальные средства базы данных&#41;](join-tables-manually-visual-database-tools.md)   
+ [Автоматическое соединение таблиц &#40;визуальных инструментах баз данных&#41;](join-tables-automatically-visual-database-tools.md)   
+ [Соединение таблиц вручную &#40;визуальных инструментах баз данных&#41;](join-tables-manually-visual-database-tools.md)   
  [Запросы с соединениями (визуальные инструменты для баз данных)](query-with-joins-visual-database-tools.md)  
   
   

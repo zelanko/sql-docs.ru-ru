@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HAVING clause, query summary results
 - GROUP BY clause, query summary results
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - WHERE clause, query summary results
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b2f0c4dd7b5f406deafe50a804136c981150867e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4efcce69f6a270064e79e415c76e56ac350e607f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291804"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Работа со столбцами в агрегатных запросах (визуальные инструменты для баз данных)
   [Конструктор запросов и представлений](visual-database-tools.md) делает некоторые предположения для создания правильного статистического запроса. Например, если при создании статистического запроса помечается столбец данных для вывода, конструктор запросов и представлений автоматически включает этот столбец в предложение GROUP BY, чтобы в итоговых результатах случайно не было отображено содержимое отдельной строки.  
@@ -71,7 +71,7 @@ ms.locfileid: "36190874"
 -   Если в условии поиска используется агрегатная функция, это условие затрагивает сводку и поэтому должно быть указано в предложении HAVING.  
   
 ## <a name="see-also"></a>См. также  
- [Резюмирование результатов запросов &#40;визуальные средства базы данных&#41;](summarize-query-results-visual-database-tools.md)   
+ [Резюмирование результатов запросов &#40;визуальных инструментах баз данных&#41;](summarize-query-results-visual-database-tools.md)   
  [Результаты запросов сортировки и группирования (визуальные инструменты для баз данных)](sort-and-group-query-results-visual-database-tools.md)  
   
   

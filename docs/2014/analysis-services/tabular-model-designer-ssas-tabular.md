@@ -1,5 +1,5 @@
 ---
-title: Конструктор табличных моделей (табличные службы SSAS) | Документы Microsoft
+title: Конструктор табличных моделей (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7d0fc5ae763542c5f46bdcdb474a71f71250733c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20beaf68692cfecbdc047752ff873921cce6a740
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263350"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Конструктор табличных моделей (SSAS Tabular)
   Конструктор табличных моделей входит в состав среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], интегрированной с Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 или более поздней версии, и содержит дополнительные шаблоны типов проектов, специально предназначенные для разработки профессиональных решений табличных моделей.  
@@ -32,9 +32,9 @@ ms.locfileid: "36194580"
   
 -   [Шаблоны проектов](#bkmk_proj_temp)  
   
--   [Окна и меню](#bkmk_wind_men)  
+-   [Windows и меню](#bkmk_wind_men)  
   
--   [Интеграция Visual Studio](#bkmk_vsint)  
+-   [Интеграция с Visual Studio](#bkmk_vsint)  
   
 ##  <a name="bkmk_benefits"></a> Преимущества  
  При установке среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]к доступным типам проектов добавляются новые типовые шаблоны проекта для создания табличных моделей. После создания нового проекта табличной модели на основе одного из шаблонов можно приступать к созданию моделей с помощью средств и мастеров конструктора табличных моделей.  

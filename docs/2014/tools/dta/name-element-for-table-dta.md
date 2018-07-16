@@ -1,5 +1,5 @@
 ---
-title: Элемент Name описания таблицы (DTA) | Документы Microsoft
+title: Элемент Name описания таблицы (DTA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0cb54e42b9acf1ac4b4224feb0c25dcdb98cab8b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2158ea2131d917ff1ca5ababcc93392ffce8c0dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303154"
 ---
 # <a name="name-element-for-table-dta"></a>Элемент Name описания таблицы (DTA)
   Позволяет задать имя настраиваемой таблицы.  
@@ -43,13 +43,13 @@ ms.locfileid: "36195055"
 |--------------------|-----------------|  
 |**Тип данных и длина**|`string`, от 1 до 255 символов|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Обязательный. Один раз для каждого `Table` элемента.|  
+|**Наличие**|Обязательный. Один раз для каждого `Table` элемент.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент таблицы схемы &#40;DTA&#41;](table-element-for-schema-dta.md)|  
+|**Родительский элемент**|[Элемент таблицы для схемы &#40;DTA&#41;](table-element-for-schema-dta.md)|  
 |**Дочерние элементы**|Нет.|  
   
 ## <a name="example"></a>Пример  

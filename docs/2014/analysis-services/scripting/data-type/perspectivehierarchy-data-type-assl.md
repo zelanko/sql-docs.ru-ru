@@ -1,5 +1,5 @@
 ---
-title: Тип данных PerspectiveHierarchy (ASSL) | Документы Microsoft
+title: Тип данных PerspectiveHierarchy (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveHierarchy data type
 ms.assetid: 30366bd0-ee1c-4940-8c1f-ca5e0dd5fe4b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dddceea6ee82d02ef1a68953bd16d6fc728537ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 134b49fe8aa942dee63feae717a1ff1aa89a06dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208064"
 ---
 # <a name="perspectivehierarchy-data-type-assl"></a>Тип данных PerspectiveHierarchy (ASSL)
-  Определяет тип-примитив, представляющий сведения об иерархии в [PerspectiveDimension](dimension-data-type-assl.md) элемента.  
+  Определяет тип-примитив, представляющий сведения об иерархии в [PerspectiveDimension](dimension-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -61,9 +61,9 @@ ms.locfileid: "36195474"
 |Производные элементы|[Иерархия](../objects/hierarchy-element-assl.md) ([иерархий](../collections/hierarchies-element-assl.md) коллекцию [PerspectiveDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.PerspectiveHierarchy>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.PerspectiveHierarchy>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
