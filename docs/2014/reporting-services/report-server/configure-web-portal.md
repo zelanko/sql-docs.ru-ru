@@ -1,5 +1,5 @@
 ---
-title: Настройка диспетчера отчетов (собственный режим) | Документы Microsoft
+title: Настройка диспетчера отчетов (собственный режим) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7af188d6f1adf097de20bf08ef8343c9e075c073
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9156e229188621fb6c5524f1b6bf9e25c72570c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299764"
 ---
 # <a name="configure-report-manager-native-mode"></a>Настройка диспетчера отчетов (собственный режим)
   Диспетчер отчетов — клиентский веб-интерфейс, используемый для просмотра отчетов, управления содержимым сервера отчетов и для предоставления пользователям доступа к серверу отчетов в собственном режиме. Диспетчер отчетов устанавливается вместе с веб-службой сервера отчетов внутри того же экземпляра сервера отчетов и при необходимости настраивается, если в программе установки пользователь выбирает параметр **Установить конфигурацию по умолчанию для работы в собственном режиме** . Кроме того, диспетчер отчетов можно настроить как задачу, которая будет выполняться после установки. В этом разделе содержатся сведения о следующих сценариях настройки диспетчера отчетов.  
@@ -90,7 +90,7 @@ ms.locfileid: "36099727"
   
 4.  Сохраните внесенные изменения и закройте файл.  
   
- Дополнительные сведения о файле конфигурации см. в разделе [изменения файла конфигурации служб Reporting Services &#40;RSreportserver.config&#41; ](modify-a-reporting-services-configuration-file-rsreportserver-config.md) и [файл конфигурации RSReportServer](rsreportserver-config-configuration-file.md).  
+ Дополнительные сведения о файле конфигурации, см. в разделе [изменение файла конфигурации служб Reporting Services &#40;RSreportserver.config&#41; ](modify-a-reporting-services-configuration-file-rsreportserver-config.md) и [файл конфигурации RSReportServer](rsreportserver-config-configuration-file.md).  
   
 ##  <a name="ConfigureRemoteRS"></a> Настройка диспетчера отчетов для использования удаленного сервера отчетов  
  Для конфигураций развертывания, предполагающих размещение диспетчера отчетов и сервера отчетов на различных компьютерах, необходимо иметь две отдельные установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Диспетчер отчетов внедрен в сервер отчетов и не может быть установлен автономно. Если необходимо запускать диспетчер отчетов на другом компьютере внутри собственного процесса, нужно устанавливать второй сервер отчетов. Оба экземпляра серверов должны быть серверами отчетов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
@@ -179,9 +179,9 @@ ms.locfileid: "36099727"
  [Планирование служб Reporting Services и поддержки Power View в браузерах &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Настройка URL-адрес &#40;диспетчер конфигурации служб SSRS&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Проверка установки служб Reporting Services](../install-windows/verify-a-reporting-services-installation.md)   
- [Настройка таблицы стилей для просмотра HTML-страниц и диспетчера отчетов](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
- [Включение функции служб Reporting Services и отключение](turn-reporting-services-features-on-or-off.md)   
- [Управление сервером отчетов служб Reporting собственный режим служб](manage-a-reporting-services-native-mode-report-server.md)   
+ [Настройка таблицы стилей для просмотра HTML-СТРАНИЦ и диспетчера отчетов](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
+ [Включение и отключение служб Reporting Services функции](turn-reporting-services-features-on-or-off.md)   
+ [Управление сервером отчетов служб собственный режим Reporting Services](manage-a-reporting-services-native-mode-report-server.md)   
  [Файл конфигурации RSReportServer](rsreportserver-config-configuration-file.md)   
  [Настройка сервера отчетов в собственном режиме для локального администрирования &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
   

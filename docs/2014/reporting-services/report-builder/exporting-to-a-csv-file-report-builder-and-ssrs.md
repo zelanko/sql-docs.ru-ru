@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 82b27a6c90694626a5afc1f2256f1b10868f723f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2c6bcbf4ce4a3bb3121bd55b8df95070de817f93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232694"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Экспорт в CSV-файл (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов в формате с разделителями-запятыми (CSV) готовит отчеты для просмотра в виде плоских представлений данных стандартизованного текстового вида. Этот формат легко читается и может использоваться для обмена со многими приложениями.  
   
- Модуль подготовки отчетов в формате CSV использует строковый символ-разделитель для отделения полей и строк. Строковый разделитель можно настроить, чтобы использовать символ, отличный от запятой. Полученный файл может быть открыт в электронных таблицах (например в [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ) или импортирован в другие программы. Экспортированный отчет в CSV-файл и возвращает тип MIME `text/csv`.  
+ Модуль подготовки отчетов в формате CSV использует строковый символ-разделитель для отделения полей и строк. Строковый разделитель можно настроить, чтобы использовать символ, отличный от запятой. Полученный файл может быть открыт в электронных таблицах (например в [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ) или импортирован в другие программы. Отчет экспортируется в CSV-файл и возвращает тип MIME `text/csv`.  
   
  Если необходимо работать с данными, связанными с диаграммами, гистограммами, инфокривыми, датчиками и индикаторами в [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)], экспортируйте отчет в файл в формате CSV и откройте файл в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "36195541"
 ## <a name="see-also"></a>См. также  
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных модулей подготовки отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Интерактивные возможности различных модулей подготовки отчетов &#40;построитель отчетов и службы SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

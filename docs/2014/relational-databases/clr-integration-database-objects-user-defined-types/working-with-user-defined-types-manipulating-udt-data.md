@@ -1,13 +1,11 @@
 ---
-title: Обработка данных определяемого пользователем ТИПА | Документы Microsoft
+title: Обработка данных определяемого пользователем ТИПА | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -31,21 +29,21 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f618cb1faa8c1b5682e069bd7568ad9d856cdc52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b9d8d594b60b5e9ed9716d8aa3c0eed322db98fd
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191633"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349896"
 ---
 # <a name="manipulating-udt-data"></a>Работа с данными определяемого пользователем типа
   В [!INCLUDE[tsql](../../includes/tsql-md.md)] не используется специальный синтаксис для инструкций INSERT, UPDATE или DELETE при изменении данных в столбцах определяемого пользователем типа. Функции [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST и CONVERT используются для приведения собственных типов данных к определяемому пользователем типу.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Вставка данных в столбец определяемого пользователем типа  
- Следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций вставки трех строк образца данных в **точки** таблицы. **Точки** тип данных состоит из X и Y целочисленных значений, которые представлены как свойства определяемого пользователем типа. Необходимо использовать функции CAST или CONVERT для приведения запятой значения X и Y для **точки** типа. Первые две инструкции используют функцию CONVERT для преобразования строкового значения **точки** типа, а третья инструкция использует функцию CAST:  
+ Следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций вставки трех строк образца данных в **точек** таблицы. **Точки** тип данных состоит из X и Y целочисленных значений, которые представлены как свойства определяемого пользователем типа. Необходимо использовать функцию CAST или CONVERT привести разделяемые запятой значения X и Y к **точки** типа. Первые две инструкции используют функцию CONVERT для преобразования строкового значения **точки** типа, а третья инструкция использует функцию CAST:  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -60,7 +58,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- Чтобы просмотреть выходные данных в формате, удобном для чтения, вызовите `ToString` метод **точки** определяемого пользователем ТИПА, который преобразует значение в строковое представление.  
+ Чтобы просмотреть выходные данных в удобном для чтения формате, вызовите `ToString` метод **точки** определяемого пользователем ТИПА, который преобразует значение в строковое представление.  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -161,7 +159,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Вызов методов определяемого пользователем типа  
- Можно также вызывать методы, которые определены в определяемом пользователем типе [!INCLUDE[tsql](../../includes/tsql-md.md)]. **Точки** класс содержит три метода `Distance`, `DistanceFrom`, и `DistanceFromXY`. Примеры кода, определяющего эти три метода, в разделе [Coding User-Defined типов](creating-user-defined-types-coding.md).  
+ Можно также вызывать методы, которые определены в определяемом пользователем типе [!INCLUDE[tsql](../../includes/tsql-md.md)]. **Точки** содержит три метода `Distance`, `DistanceFrom`, и `DistanceFromXY`. Примеры кода, определяющего эти три метода, см. в разделе [программирование определяемых пользователем типов](creating-user-defined-types-coding.md).  
   
  Следующая инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] вызывает метод `PointValue.Distance`:  
   

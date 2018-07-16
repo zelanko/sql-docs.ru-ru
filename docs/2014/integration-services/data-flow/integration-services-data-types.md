@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
 - data types [Integration Services], listed
@@ -21,13 +21,13 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c25bb056540c718c67d5de8ab78f80c3290bc5de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a9c9cb0f668f6484a35be458654bdae26869a2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265351"
 ---
 # <a name="integration-services-data-types"></a>Типы данных служб Integration Services
   Когда данные входят в поток данных в пакете, источник, извлекающий данные, преобразовывает их в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Числовым данным назначается числовой тип данных, строковым — символьный тип данных, а датам — тип даты. Другим данным, таким как идентификатор GUID и BLOB (Binary Large Object Blocks), также назначаются соответствующие типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Если данные имеют тип, не преобразуемый в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , возникает ошибка.  
@@ -66,7 +66,7 @@ ms.locfileid: "36102053"
 |DT_WSTR|Строка в Юникоде заканчивающаяся символом конца строки с максимальной длиной 4000 символов. (Если значение столбца содержит дополнительные символы конца строки, строка усекается в месте вхождения первого такого символа).|  
 |DT_IMAGE|Двоичное значение с максимальным размером 2<sup>31</sup>-1 (2 147 483 647) байт. , и делает это по-другому.|  
 |DT_NTEXT|Строка символов Юникод с максимальной длиной 2<sup>30</sup> - 1 (1 073 741 823) символов.|  
-|DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS строка символов с максимальной длиной 2<sup>31</sup>-1 (2 147 483 647) символов.|  
+|DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS символьная строка длиной не более 2<sup>31</sup>-1 (2 147 483 647) символов.|  
   
 ## <a name="conversion-of-data-types"></a>Преобразование типов данных  
  Если тип источника данных не требует распределения данных по всей ширине столбца, можно изменить тип данных столбца. Максимально короткие строки данных помогают оптимизировать производительность при передаче данных, так как чем короче каждая строка, тем быстрее данные перемещаются от источника к целевому объекту.  

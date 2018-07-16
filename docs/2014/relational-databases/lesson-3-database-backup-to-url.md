@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 4: Создание базы данных в хранилище Windows Azure | Документы Microsoft'
+title: 'Занятие 4: Создание базы данных в хранилище Windows Azure | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b72bfc90936011fc4556fae6021fad89b134c57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1d31f0d1eabe73a681b1932b2826ef38ad9b5456
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327844"
 ---
 # <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Урок 4. Создание базы данных в хранилище Windows Azure
   На этом занятии вы узнаете, как создать базу данных с использованием компонента SQL Server Data Files в Windows Azure. Обратите внимание, что перед началом этого занятия необходимо завершить занятия 1, 2 и 3. Занятие 3 — это очень важный этап, поскольку перед началом занятия 4 вам необходимо сохранить сведения о контейнере хранилища Windows Azure, а также связанные имя политики и ключ SAS в учетных данных SQL Server.  
@@ -115,6 +115,6 @@ ms.locfileid: "36087840"
   
  **Следующее занятие:**  
   
- [Занятие 5. &#40;Необязательно&#41; шифрование базы данных с помощью прозрачного шифрования данных](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
+ [Занятие 5. &#40;Необязательно&#41; зашифровать базу данных с помощью прозрачного шифрования данных](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
   

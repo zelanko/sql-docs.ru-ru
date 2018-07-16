@@ -1,5 +1,5 @@
 ---
-title: Программирование клиента ADOMD.NET | Документы Microsoft
+title: Программирование клиента ADOMD.NET | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9faa64cce77c883ed6adb86bca6d50f32f015c97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd4884abb345f1254c3987acb06e83ced7bcf392
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332754"
 ---
 # <a name="adomdnet-client-programming"></a>Программирование клиента ADOMD.NET
-  Клиентские компоненты ADOMD.NET находятся в пространстве имен `Microsoft.AnalysisServices.AdomdClient` (файл microsoft.analysisservices.adomdclient.dll). Клиентские компоненты обеспечивают функциональные возможности для клиента и приложений среднего уровня возможность запрашивать данные и метаданные из хранилища аналитических данных, таких как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  Клиентские компоненты ADOMD.NET находятся в пространстве имен `Microsoft.AnalysisServices.AdomdClient` (файл microsoft.analysisservices.adomdclient.dll). Эти клиентские компоненты обеспечивают функциональные возможности для клиента и приложений среднего уровня возможность запрашивать данные и метаданные из хранилища аналитических данных, таких как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="using-the-adomdnet-client-objects"></a>Использование клиентских объектов ADOMD.NET  
  Существует набор наиболее типичных действий при выполнении запроса к источнику аналитических данных. В следующей таблице приведены наиболее часто используемые задачи, в которых клиентские объекты ADOMD.NET используются для выполнения такого запроса.  
@@ -43,8 +43,8 @@ ms.locfileid: "36192774"
   
 |Чтобы|Используемый объект|  
 |--------|---------------------|  
-|Соединение с источником аналитических данных|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> Объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> представляет и соединение с источником данных, и метаданные этого источника. Например, можно подключиться к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] локального куба (cub) файла, а затем <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A> , чтобы получить метаданные о кубах, имеющихся в источнике аналитических данных. Кроме того, этот объект представляет реализацию интерфейса `IDbConnection`, который необходим всем поставщикам данных платформы .NET Framework.|  
-|Возможности источника данных по интеллектуальному анализу|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> Объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> содержит несколько коллекций интеллектуального анализа данных.<br /><br /> - <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> Содержит список всех моделей интеллектуального анализа данных в источнике данных.<br />- <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> Предоставляет сведения об алгоритмах интеллектуального анализа данных.<br />- <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> Предоставляет информацию о структурах интеллектуального анализа данных на сервере.|  
+|Соединение с источником аналитических данных|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> Объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> представляет и соединение с источником данных, и метаданные этого источника. Например, можно подключиться к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] локального куба (cub) файл, а затем <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A> свойство для получения метаданных о кубах, имеющихся в источнике аналитических данных. Кроме того, этот объект представляет реализацию интерфейса `IDbConnection`, который необходим всем поставщикам данных платформы .NET Framework.|  
+|Возможности источника данных по интеллектуальному анализу|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> Объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> содержит несколько коллекций интеллектуального анализа данных.<br /><br /> - <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> Содержит список всех моделей интеллектуального анализа данных в источнике данных.<br />- <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> Предоставляет сведения об алгоритмах интеллектуального анализа данных.<br />- <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> Предоставляет сведения о структурах интеллектуального анализа данных на сервере.|  
 |Выполнение запросов к источнику данных|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand><br /> Объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> представляет инструкцию или запрос, который будет отправлен на сервер. После установления соединения с источником данных объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> используется для выполнения инструкций на поддерживаемом языке, например языке MDX или DMX. Объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> также может быть использован для возврата результатов из объектов <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> и <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>.|  
 |Быстрое и эффективное получение данных|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader><br /> Объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> можно создать с помощью вызова метода <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.Execute%2A> или <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader%2A> объекта <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>. Этот объект реализует интерфейс `IDbDataReader` из пространства имен `System.Data` библиотеки классов платформы .NET Framework.|  
 |Получение аналитических данных с наибольшим объемом метаданных|<xref:Microsoft.AnalysisServices.AdomdClient.CellSet><br /> Объект <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> можно создать вызовом метода <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.Execute%2A> или <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteCellSet%2A> объекта <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>. После того как объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> вернул объект <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, можно просмотреть аналитические данные, содержащиеся в объекте <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>.|  

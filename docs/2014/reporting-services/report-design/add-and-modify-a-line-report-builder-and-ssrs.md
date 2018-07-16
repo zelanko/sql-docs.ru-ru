@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c9affb70d95b803a64f359224ff98254e69b9c45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f5170ba11c7ddadbf0df11b15dbbbea3536701c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296124"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Добавление и изменение линии (построитель отчетов и службы SSRS)
   Если нужно отделить разделы отчета каким-либо графическим элементом, можно добавить в отчет линию. Настроить внешний вид линии можно, изменяя ее свойства, такие как цвет или стиль. Например, можно встроить в отчет корпоративные цвета компании.  
@@ -38,9 +38,9 @@ ms.locfileid: "36195331"
 3.  Для изменения свойств линии выберите ее в области конструктора и измените свойства в разделе **Граница** вкладки **Корневая папка** .  
   
     > [!NOTE]  
-    >  Если установить для линии стиль **двойные** и толщина линии равна 1 пт или, строки могут не отображаться двойной при запуске отчета в построителе отчетов, конструктора отчетов или диспетчера отчетов. После экспорта отчета в другие форматы, такие как Microsoft Word и Acrobat PDF, линия будет отображаться двойной.  
+    >  Если установить для линии стиль **двойные** и толщина линии равна 1 1/2 пт или уже, линия может не отображаться двойной при запуске отчета в построителе отчетов, конструктора отчетов или диспетчера отчетов. После экспорта отчета в другие форматы, такие как Microsoft Word и Acrobat PDF, линия будет отображаться двойной.  
   
 ## <a name="see-also"></a>См. также  
- [Прямоугольники и линии &#40;отчетов построителя отчетов и службы SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Прямоугольники и линии &#40;построитель отчетов и службы SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

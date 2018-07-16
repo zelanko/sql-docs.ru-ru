@@ -1,5 +1,5 @@
 ---
-title: Панель инструментов (вкладка «Переводы», конструктор кубов) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Панель инструментов (вкладка «Переводы», конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 22a4ca7a-0d43-47eb-8078-eb4b167b6e72
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3aa374d21c55557aa41072d72f2d6c0876d7eb26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fed68f2c497e1cf007250a8667cf36a4f268036f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295484"
 ---
 # <a name="toolbar-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Панель инструментов (вкладка «Переводы», конструктор кубов) (службы Analysis Services — многомерные данные)
   **Панель инструментов** на вкладке **Переводы** конструктор кубов предназначена для выполнения наиболее часто встречающихся операций.  

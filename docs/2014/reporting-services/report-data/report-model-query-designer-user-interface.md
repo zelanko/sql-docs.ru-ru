@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.dataview.smqlquerydesigner.f1
 - "10015"
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
 caps.latest.revision: 29
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5d01b975eb36f54aa450d4e931740ac319a023e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 231d9357d613d647599a15cbf0e7ed08f7cf25cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301754"
 ---
 # <a name="report-model-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов моделей отчетов
   Конструктор отчетов содержит два конструктора запросов, которые помогают уточнить, какие именно данные из источника данных «Модель сервера отчетов» необходимо использовать в отчете. Используйте графический конструктор запросов для просмотра и выбора сущностей модели и полей сущности. Используйте текстовый редактор запросов, чтобы работать напрямую со спецификацией на языке определения семантических моделей (SMDL) в XML-формате.  
@@ -91,7 +91,7 @@ ms.locfileid: "36096084"
 |![Выполнить запрос](../../analysis-services/media/rsqdicon-run.gif "Выполнить запрос")|Выполнить текст запроса и отобразить результирующий набор строк на панели результатов.|  
   
 ## <a name="see-also"></a>См. также  
- [Средства разработки в отчет конструктора SQL Server Data Tools запросов &#40;SSRS&#41;](query-design-tools-ssrs.md)   
+ [Средства проектирования в отчет конструктора SQL Server Data Tools запросов &#40;SSRS&#41;](query-design-tools-ssrs.md)   
  [Добавление данных из внешних источников данных &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
  [Подключение к модели отчета (службы SSRS)](report-model-connection-ssrs.md)   
  [Файл конфигурации RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)  

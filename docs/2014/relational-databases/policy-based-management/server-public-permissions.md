@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 9a276caa-ea38-473d-92bc-26302bfcf660
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a0b125841e2d3c9f03b7ba46519f80af9293a1cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 13efadee3de21493d979f800f40a279581cadd03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246384"
 ---
 # <a name="server-public-permissions"></a>Разрешения роли сервера public
   Это правило определяет, имеет ли роль сервера public разрешения на сервер. Каждое создающееся на сервере имя входа является членом роли сервера public. Если это условие выполняется, все имена входа на сервере будут иметь разрешение на сервер.  
@@ -30,7 +30,7 @@ ms.locfileid: "36100831"
  Не предоставляйте серверной роли public разрешения на сервер.  
   
 > [!IMPORTANT]  
->  После завершения установки **ОТКРЫТЫЙ** роль имеет `CONNECT` разрешение для всех конечных точек, за исключением **выделенного административного соединения**. Это нормально, и в обычных ситуациях не нуждается в изменении. (Управление доступом осуществляется с помощью `CONNECT SQL` разрешение, которое предоставляется автоматически при создании новых имен входа.)  
+>  После завершения установки **ОТКРЫТЫЙ** роль имеет `CONNECT` разрешение всех конечных точек за исключением **Dedicated Admin Connection**. Это нормально, и в обычных ситуациях не нуждается в изменении. (Доступ контролируется с помощью `CONNECT SQL` разрешение, которое предоставляется автоматически при создании новых имен входа.)  
   
 ### <a name="for-more-information"></a>Дополнительные сведения  
  [Обеспечение безопасности SQL Server](../security/securing-sql-server.md)  

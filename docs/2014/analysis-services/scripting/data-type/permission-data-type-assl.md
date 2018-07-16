@@ -1,5 +1,5 @@
 ---
-title: Тип данных permission (ASSL) | Документы Microsoft
+title: Тип данных permission (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Permission data type
 ms.assetid: 5f309544-59f8-4432-b1eb-b7c1a049f8df
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff5fb67e4f7989fb329e60a106ea8e6d0c734c97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c570ae1b3f2e2dbf65a4037f96e515d6667863a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233954"
 ---
 # <a name="permission-data-type-assl"></a>Тип данных Permission (ASSL)
   Определяет абстрактный примитивный тип данных, представляющий сведения об отдельном разрешении.  
@@ -74,18 +74,18 @@ ms.locfileid: "36087450"
   
  Этот тип данных имеет следующие проверки с параметром DeploymentMode со значением 2 (табличный режим сервера).  
   
--   *Процесс* значение атрибута по умолчанию равно `False`, за исключением случаев, когда пользователь имеет **обновление** разрешение. Для пользователей с **обновление** разрешение *процесс* атрибут имеет значение `True`.  
+-   *Процесс* присваивается значение по умолчанию атрибут `False`, за исключением случаев, когда пользователь имеет **обновить** разрешение. Для пользователей с **обновить** разрешение *процесс* атрибут имеет значение `True`.  
   
 -   *ReadDefinition* атрибут имеет значение `None`; любое другое значение приводит к ошибке.  
   
--   *Чтение* атрибут имеет значение `Allowed` для пользователей с **пользователя** разрешений и `None` Если пользователи имеют разрешение **обновление** ; Если пользователь имеет **Пользователя** и **обновление** разрешения, то атрибуту задано значение `Allowed`. Для пользователей с административными правами доступа атрибут имеет значение `Allowed`.  
+-   *Чтение* атрибут имеет значение `Allowed` для пользователей с **пользователя** разрешение и `None` Если пользователи имеют разрешение **обновить** ; Если пользователь имеет **Пользователя** и **обновить** разрешения, то атрибуту присваивается `Allowed`. Для пользователей с административными правами доступа атрибут имеет значение `Allowed`.  
   
 -   *Запись* атрибут имеет значение `None`; любое другое значение приводит к ошибке.  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.Permission>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.Permission>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент Role &#40;ASSL&#41;](../objects/role-element-assl.md)   
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

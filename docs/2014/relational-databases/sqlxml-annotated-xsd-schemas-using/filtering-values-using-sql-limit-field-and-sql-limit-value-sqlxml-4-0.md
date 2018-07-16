@@ -1,5 +1,5 @@
 ---
-title: 'Фильтрация значений при помощи SQL: Limit-поля и SQL: Limit-value (SQLXML 4.0) | Документы Microsoft'
+title: 'Фильтрация значений при помощи SQL: Limit-поля и SQL: Limit-value (SQLXML 4.0) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6cc802c42db2f688ee7d4cab0876e64ee9becc28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d2ae0fe5a6bc85a9c2535b65f1989a8d5cd72904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102392"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260560"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Фильтрация значений при помощи sql:limit-field и sql:limit-value (SQLXML 4.0)
   Количество строк, возвращаемых запросом к базе данных, можно ограничить на основе какого-либо значения. Для указания столбца базы данных, содержащего ограничивающие значения, и задания конкретного ограничивающего значения, которое будет использовано для фильтрации возвращенных данных, используются заметки `sql:limit-field` и `sql:limit-value`.  
@@ -58,7 +58,7 @@ ms.locfileid: "36102392"
   
  Заказчик может иметь адрес для доставки и адрес для выставления счетов. Столбец AddressType содержит значения Shipping и Billing.  
   
- Это схема сопоставления, в котором **ShipTo** атрибут схемы сопоставляется со столбцом StreetAddress в связи Addresses. Чтобы для этого атрибута возвращались только значения адресов для доставки, нужно задать заметки `sql:limit-field` и `sql:limit-value`. Аналогичным образом **BillTo** атрибут схемы возвращает только адреса выставления счетов для клиента.  
+ Это схема сопоставления, в котором **ShipTo** атрибут схемы сопоставляется со столбцом StreetAddress в связи Addresses. Чтобы для этого атрибута возвращались только значения адресов для доставки, нужно задать заметки `sql:limit-field` и `sql:limit-value`. Аналогичным образом **BillTo** атрибут схемы возвращает только адреса для выставления счетов клиента.  
   
  Схема:  
   
@@ -151,7 +151,7 @@ ms.locfileid: "36102392"
   
 5.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Результат:  
   
@@ -175,7 +175,7 @@ ms.locfileid: "36102392"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Это схема сопоставления, в котором **OrderID** атрибут сведений о заказе сопоставляется со столбцом OrderID в связи orders. Будут возвращены для этого атрибута значения ограничиваются только теми, которые имеют значение равно 2.0000000e-001 (0.2), указанным для **скидки** атрибута с помощью `sql:limit-field` и `sql:limit-value` заметок.  
+ Это схема сопоставления, в котором **OrderID** атрибут в сведениях о заказе сопоставлен со столбцом OrderID в связи orders. Возвращаемые для этого атрибута значения ограничиваются только те, которые имеют значение равно 2.0000000e-001 (0.2), которое задано для **скидки** атрибуте с помощью `sql:limit-field` и `sql:limit-value` заметок.  
   
  Схема:  
   
@@ -312,7 +312,7 @@ ms.locfileid: "36102392"
 ## <a name="see-also"></a>См. также  
  [Типы данных float и real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)   
  [nchar и nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
- [Установка собственного клиента SQL Server](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
+ [Установка SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
  [С помощью аннотированные схемы XSD в запросах &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

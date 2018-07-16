@@ -1,13 +1,11 @@
 ---
-title: Получение сведений о сборках | Документы Microsoft
+title: Получение сведений о сборках | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - metadata [SQL Server], assemblies
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e9940c597e176542fbfcbd7968ce96b496651f88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 592d0e86353179377a73c24da84ed8f21a8e48e7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087144"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349496"
 ---
 # <a name="getting-information-about-assemblies"></a>Получение сведений о сборках
   Чтобы получить метаданные о сборках можно использовать следующие представления каталога и функции.  
@@ -41,7 +39,7 @@ ms.locfileid: "36087144"
   
 -   [sys.assembly_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-files-transact-sql)  
   
- **Для получения сведений о перекрестных ссылках между сборками**  
+ **Чтобы получить сведения о ссылках между сборками**  
   
 -   [sys.assembly_references &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-references-transact-sql)  
   
@@ -51,11 +49,11 @@ ms.locfileid: "36087144"
   
 -   [sys.types (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)  
   
- **Для получения сведений о общий язык среды выполнения (CLR) хранимых процедурах, триггерах и функциях**  
+ **Получение сведений о среде выполнения (CLR) хранимые процедуры, триггеры и функции**  
   
 -   [sys.assembly_modules (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-assembly-modules-transact-sql)  
   
- **Для получения сведений об объектах, не использующей среду CLR**  
+ **Для получения сведений об объектах среды CLR**  
   
 -   [sys.sql_modules (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)  
   

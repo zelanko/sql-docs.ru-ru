@@ -1,5 +1,5 @@
 ---
-title: Обновление приведет к изменению учетная запись прокси-сервера для агента пользователя SQL Server для временной UpgradedProxyAccount | Документы Microsoft
+title: Обновление приведет к изменению учетная запись прокси-сервера для агента пользователя SQL Server для временного UpgradedProxyAccount | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server Agent]
 ms.assetid: cd2d08c3-4e56-4034-8b68-0c78df8b5471
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9bae867b97a9fc63b97506fd8900e68b670b8013
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 14b79ad393db1360520e060b118c8a4e280e358b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292094"
 ---
 # <a name="upgrading-will-change-the-sql-server-agent-user-proxy-account-to-the-temporary-upgradedproxyaccount"></a>При обновлении пользовательская учетная запись-посредник агента SQL Server изменится на временную учетную запись-посредник UpgradedProxyAccount
   Планы обслуживания базы данных с доставкой журналов не будут включены после обновления.  

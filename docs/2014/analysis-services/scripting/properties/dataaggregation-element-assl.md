@@ -1,5 +1,5 @@
 ---
-title: Элемент DataAggregation (ASSL) | Документы Microsoft
+title: Элемент DataAggregation (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - DataAggregation element
 ms.assetid: baf6d2c9-54f6-4a6d-95f7-e1e758be458d
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 795555e24dbdc30a02b0fd3b286e4122323c00f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eca6c0e89bcc120334e179ad59c1dfce657ab057
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289590"
 ---
 # <a name="dataaggregation-element-assl"></a>Элемент DataAggregation (ASSL)
-  Определяет, является ли экземпляр выполнить статистическое вычисление сохраняемых или кэшированных данных для [MeasureGroup](../objects/group-element-assl.md).  
+  Определяет, является ли экземпляр выполнить статистическое вычисление материализованных или кэшированных данных для [MeasureGroup](../objects/group-element-assl.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -69,10 +69,10 @@ ms.locfileid: "36095296"
 |*CacheAggregatable*|Для этой группы мер статистическое вычисление может выполняться для кэшированных данных.|  
 |*DataAndCacheAggregatable*|Для этой группы мер статистическое вычисление может выполняться как для материализованных данных, так и для кэшированных.|  
   
- Элемент, соответствующий родителю параметра `DataAggregation` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.MeasureGroup>.  
+ Элемент, соответствующий родителю параметра `DataAggregation` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ## <a name="see-also"></a>См. также  
- [Куб элемент &#40;ASSL&#41;](../objects/cube-element-assl.md)   
+ [Элемент куба &#40;ASSL&#41;](../objects/cube-element-assl.md)   
  [Элемент измерения &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [Свойства &#40;ASSL&#41;](properties-assl.md)  
   

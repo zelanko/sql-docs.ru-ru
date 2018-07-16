@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.downlevelagents.tran.f1
 ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0b9323a303a2c79ebddfa366cce76225727d941f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7f1a8092492f83b00c00af1144b2077e36027d81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311454"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>Сведения о публикации, агенты (публикация транзакций)
   На вкладке **Агенты** отображаются общие сведения об агентах для выбранной публикации. Сведения об агенте моментальных снимков и агенте чтения журнала выводятся для всех публикаций транзакций. Сведения об агенте чтения очереди отображается только для тех публикаций транзакций, которые включены для очереди обновляемых подписок.  

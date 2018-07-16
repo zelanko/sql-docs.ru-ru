@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c1b01246166c6d7e75f1083fc23b9bd15502c731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72d19e915fc937eb18ca1713e190d077f2e92d5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286720"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Занятие 1. Создание образца базы данных подписчика
   Для определения управляемой данными подписки нужен источник данных, предоставляющий данные подписки. На этом этапе будет создана небольшая база данных для хранения данных подписки, используемых при работе с этим учебником. Позже, после обработки подписки, сервер отчетов получит эти данные и использует их для настройки выходных данных отчетов, параметров доставки и формата представления отчетов.  
   
- На этом занятии предполагается, что [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] для создания [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] базы данных.  
+ Этом занятии предполагается, что вы используете [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] для создания [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] базы данных.  
   
 ### <a name="to-create-a-sample-subscriber-database"></a>Создание образца базы данных подписчика  
   
@@ -32,7 +32,7 @@ ms.locfileid: "36096594"
   
 2.  Щелкните правой кнопкой мыши "Базы данных" и выберите команду **Создать базу данных...**  
   
-3.  В новую базу данных, в имени базы данных введите *подписчиков*. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+3.  В диалоговом окне Новая база данных, в имени базы данных, введите *подписчиков*. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  Нажмите кнопку **Создать запрос** на панели инструментов.  
   

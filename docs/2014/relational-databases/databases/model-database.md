@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
 - model database [SQL Server], about model databases
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3f8fd67f968701440b06274bbd40600be94c00b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 729c2d4ea6f89a8b97917d6b22ca885342618018
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242884"
 ---
 # <a name="model-database"></a>База данных model
   База данных **model** используется в качестве шаблона для всех баз данных, созданных для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Так как база данных **tempdb** создается при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , база данных **model** всегда должна существовать в системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Содержимое базы данных **model** (включая параметры базы данных) полностью копируется в новую базу данных. Некоторые параметры базы данных **model** используются также при создании новой базы данных **tempdb** во время загрузки, поэтому наличие базы данных **model** в системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обязательно.  
@@ -39,7 +39,7 @@ ms.locfileid: "36100860"
  При изменении базы данных **model** все созданные после этого базы данных унаследуют эти изменения. Например, можно установить разрешения или параметры базы данных или добавить такие объекты, как таблицы, функции или хранимые процедуры. Свойства файлов базы данных **model** являются исключением и не учитываются (за исключением первоначального размера файла данных).  
   
 ## <a name="physical-properties-of-model"></a>Физические свойства базы данных model  
- В следующей таблице представлены начальные значения конфигурации данных и файлов журнала базы данных **model** . Размеры этих файлов могут немного различаться для различных выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ В следующей таблице представлены начальные значения конфигурации данных и файлов журнала базы данных **model** . Размеры этих файлов может немного отличаться для разных выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Файл|Логическое имя|Физическое имя|Увеличение размера файлов|  
 |----------|------------------|-------------------|-----------------|  
@@ -77,12 +77,12 @@ ms.locfileid: "36100860"
 |PARAMETERIZATION|SIMPLE|Да|  
 |QUOTED_IDENTIFIER|OFF|Да|  
 |READ_COMMITTED_SNAPSHOT|OFF|Да|  
-|RECOVERY|Зависит от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпуск<sup>1</sup>|Да|  
+|RECOVERY|Зависит от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition<sup>1</sup>|Да|  
 |RECURSIVE_TRIGGERS|OFF|Да|  
 |Параметры компонента Service Broker|DISABLE_BROKER|Нет|  
 |TRUSTWORTHY|OFF|Нет|  
   
- <sup>1</sup> текущей модели восстановления базы данных, находится [Просмотр или изменение модели восстановления базы данных &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) или [sys.databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup> для проверки текущей модели восстановления базы данных, см. в разделе [Просмотр или изменение модели восстановления базы данных &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) или [sys.databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
  Описание этих параметров баз данных см. в разделе [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql).  
   

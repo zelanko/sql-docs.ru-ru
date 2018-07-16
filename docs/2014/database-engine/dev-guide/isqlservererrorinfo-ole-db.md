@@ -1,5 +1,5 @@
 ---
-title: ISQLServerErrorInfo (OLE DB) | Документы Microsoft
+title: ISQLServerErrorInfo (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,24 +16,24 @@ helpviewer_keywords:
 - ISQLServerErrorInfo interface
 ms.assetid: a8323b5c-686a-4235-a8d2-bda43617b3a1
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4a694b3049285f0860de88e27fed878c10272d00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e2459de2a21ebf14d2852518468f1748cb13b97c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109765"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273110"
 ---
 # <a name="isqlservererrorinfo-ole-db"></a>ISQLServerErrorInfo (OLE DB)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Определяет поставщик OLE DB для собственного клиента **ISQLServerErrorInfo** Ошибка интерфейса. Этот интерфейс для извлечения сведений из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ошибку, в том числе уровень серьезности и состояние.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента определяет **ISQLServerErrorInfo** Ошибка интерфейса. Этот интерфейс возвращает сведения из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возникновения ошибки, включая уровень серьезности и состояние.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[ISQLServerErrorInfo::GetErrorInfo &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)|Возвращает указатель на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента структуры SSERRORINFO, содержащей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения об ошибке.|  
+|[ISQLServerErrorInfo::GetErrorInfo &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)|Возвращает указатель на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента структуры SSERRORINFO, который содержит [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения об ошибке.|  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейсы &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/interfaces-ole-db.md)   

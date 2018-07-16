@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f49bf89391a0863a54cc57858cd5fb9c05fba90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9d3ac48037a5a61bd70179927b3c6de0eba90c9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244026"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Пошаговое руководство. Добавление и изменение диаграммы базы данных
   Это пошаговое руководство показывает, как создавать и изменять диаграмму базы данных и производить изменения в базе данных с помощью компонента диаграмм базы данных. Рассматривается добавление таблиц в диаграммы, создание связей между таблицами, создание ограничений и индексов столбцов и изменение уровня сведений, видимых для каждой таблицы.  
@@ -74,11 +74,11 @@ ms.locfileid: "36101439"
   
 1.  Щелкните правой кнопкой мыши конструктор диаграмм вне существующих таблиц и выберите **Создать таблицу**.  
   
-2.  В **Выбор имени** диалоговое окно, нажмите кнопку **ОК** , чтобы принять имя по умолчанию `Table1`.  
+2.  В **Выбор имени** диалоговом окне щелкните **ОК** , чтобы принять имя по умолчанию `Table1`.  
   
      Появится новая сетка таблицы с тремя столбцами: **Имя столбца**, **Тип данных**и **Разрешить значения NULL**.  
   
-3.  Добавьте следующие сведения, чтобы `Table1`:  
+3.  Добавьте следующие сведения для `Table1`:  
   
     |**Имя столбца**|**Тип данных**|**Разрешить значения NULL**|  
     |---------------------|-------------------|---------------------|  
@@ -92,7 +92,7 @@ ms.locfileid: "36101439"
   
 5.  В меню **Файл** выберите пункт **Сохранить Diagram1**.  
   
-6.  В **Выбор имени** диалоговое окно, нажмите кнопку **ОК** , чтобы принять имя по умолчанию `Diagram1`.  
+6.  В **Выбор имени** диалоговом окне щелкните **ОК** , чтобы принять имя по умолчанию `Diagram1`.  
   
 7.  Откроется диалоговое окно **Сохранить** с сообщением, что `Table1` будет сохранена в базу данных. Нажмите кнопку **Да**.  
   
@@ -211,12 +211,12 @@ ms.locfileid: "36101439"
 -   скопировать диаграмму в битовую карту.  
   
 ## <a name="see-also"></a>См. также  
- [Настройка объема сведений, отображаемых в диаграммах &#40;визуальные средства базы данных&#41;](visual-database-tools.md)   
- [Настройка конструктора диаграмм баз данных &#40;визуальные средства базы данных&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
- [Добавление таблиц в диаграммы &#40;визуальные средства базы данных&#41;](add-tables-to-diagrams-visual-database-tools.md)   
- [Создание связей между таблицами на диаграмме &#40;визуальные средства базы данных&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
+ [Настройка объема сведений, отображаемых в диаграммах &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
+ [Настройка конструктора диаграмм баз данных &#40;визуальных инструментах баз данных&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
+ [Добавление таблиц в диаграммы &#40;визуальных инструментах баз данных&#41;](add-tables-to-diagrams-visual-database-tools.md)   
+ [Создание связей между таблицами на диаграмме &#40;визуальных инструментах баз данных&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
  [Создание XML-индексов](../../relational-databases/xml/create-xml-indexes.md)   
- [Копирование изображения диаграммы базы данных в буфер обмена &#40;визуальные средства базы данных&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
+ [Копирование изображения диаграммы базы данных в буфер обмена &#40;визуальных инструментах баз данных&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
  [Работа с макетом диаграммы (визуальные инструменты для баз данных)](work-with-diagram-layout-visual-database-tools.md)  
   
   

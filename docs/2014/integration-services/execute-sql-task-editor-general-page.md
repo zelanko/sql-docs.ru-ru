@@ -1,5 +1,5 @@
 ---
-title: Выполнение задач редактор SQL (страница «Общие») | Документы Microsoft
+title: Выполнение задач редактор SQL (страница "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.general.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 caps.latest.revision: 45
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 853586d51aff06012734a677794f29a9e7991878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68610e2f72c1fa2f47219a7af9620ec911d7d022
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322654"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Редактор задачи «Выполнение SQL» (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор задачи «Выполнение SQL»** для настройки задачи «Выполнение SQL» и формирования инструкции SQL, которую запускает задача.  
@@ -50,7 +50,7 @@ ms.locfileid: "36194079"
 >  Если задача «Выполнение SQL» использует диспетчер соединений ADO или ODBC, свойство **Кодовая страница** недоступно. Если решению необходимо использовать кодовую страницу, с задачей «Выполнение SQL» следует применять диспетчер соединений OLE DB или ADO.NET.  
   
  **TypeConversionMode**  
- Если выбрать значение этого свойства `Allowed`, задача «Выполнение SQL» пытается преобразовать выходной параметр и результаты запроса данных тип переменной результаты назначаются. Это относится к типу результирующего набора **Одна строка** .  
+ Если задано это свойство `Allowed`, задача «Выполнение SQL» пытается преобразовать выходной параметр и результаты запроса данных тип переменной результаты назначаются. Это относится к типу результирующего набора **Одна строка** .  
   
  **ResultSet**  
  Укажите ожидаемый тип результата выполнения инструкции SQL. Выберите из **Одна строка**, **Полный результирующий набор**, **XML**или **Нет**.  
@@ -116,8 +116,8 @@ ms.locfileid: "36194079"
  **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), [Добавление переменной](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Выполнение задач редактор SQL &#40;страница «сопоставление параметров»&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
- [Выполнение задач редактор SQL &#40;«результирующий набор»&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задач SQL Выполнение &#40;странице «сопоставление параметров»&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
+ [Редактор задач SQL Выполнение &#40;результирующий набор страниц&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
   
   

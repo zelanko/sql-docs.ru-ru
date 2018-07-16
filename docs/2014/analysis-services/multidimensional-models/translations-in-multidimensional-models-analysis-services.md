@@ -1,5 +1,5 @@
 ---
-title: Переводы в многомерных моделях | Документы Microsoft
+title: Переводы в многомерных моделях | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.deletelanguagefirm.f1
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edb58addda246c716224b578aad3713812708476
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e018bf778a877ed62612e631951ca92258aaec0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275570"
 ---
 # <a name="translations-in-multidimensional-models"></a>Переводы в многомерных моделях
   Поддержка различных языков в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] осуществляется с помощью переводов. Перевод содержит код языка и привязки для свойств объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], которые могут быть представлены на различных языках. Например, можно задать перевод базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], чтобы представить заголовок и описание этой базы данных на некотором языке. Дополнительные сведения о переводах см. в разделе [Переводы куба](../multidimensional-models-olap-logical-cube-objects/cube-translations.md).  
   
 ## <a name="defining-translations"></a>Определение переводов  
- Можно определить переводы в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , воспользовавшись соответствующим конструктором для объекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , который нужно перевести. При определении перевода создается `Translation` объект, связанный с соответствующим [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объект с указанными явными символьными значениями на определенном языке, для свойств связанного [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объекта.  
+ Можно определить переводы в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , воспользовавшись соответствующим конструктором для объекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , который нужно перевести. При определении перевода создается `Translation` объект, связанный с соответствующим [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объект с указанными явными символьными значениями, в указанный язык, для свойств связанного объекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объекта.  
   
  Следующие объекты и свойства в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] могут обладать связанными с ними переводами.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36109598"
 |Иерархия|`Caption`, `AllMemberName`|[Переводы &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Level|`Caption`|[Переводы &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
   
- <sup>1</sup> `CaptionColumn` свойства атрибута может быть привязано к столбцу в представлении источника данных и можно использовать параметры сортировки Windows, отличный от того, указанный для экземпляра, в противоположность другим переводам.  
+ <sup>1</sup> `CaptionColumn` свойства атрибута может быть привязано к столбцу в представлении источника данных и может использовать параметры сортировки Windows, отличных от заданных для экземпляра, в противоположность другим переводам.  
   
 ### <a name="defining-attribute-translations"></a>Задание переводов атрибутов  
  Переводы, связанные с атрибутами в измерениях базы данных, обрабатываются иначе, чем прочие переводы.  
@@ -57,7 +57,7 @@ ms.locfileid: "36109598"
   
 -   Можно использовать параметры сортировки Windows, отличные от параметров сортировки, заданного для экземпляра, так что элементы атрибута могут сортироваться способом, соответствующим языку, указанному в переводе.  
   
- Можно использовать **перевод данных атрибута** диалоговое окно в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] чтобы определить переводы для атрибутов в измерениях базы данных. Дополнительные сведения о **перевод данных атрибута** диалоговое окно, в разделе [диалогового перевод данных атрибута &#40;службы Analysis Services — многомерные данные&#41;](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
+ Можно использовать **перевод данных атрибута** диалогового окна в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] чтобы определить переводы для атрибутов в измерениях базы данных. Дополнительные сведения о **перевод данных атрибута** диалоговом окне см. в разделе [диалоговое окно Перевод данных атрибута &#40;службы Analysis Services — многомерные данные&#41;](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
   
 ## <a name="resolving-translations"></a>Разрешение переводов  
  Если клиентское приложение запрашивает сведения по заданному идентификатору языка, экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] пытается разрешить данные и метаданные для объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в ближайший возможный идентификатор языка. Если клиентское приложение не задает язык по умолчанию или задает нейтральный код локали (0) или идентификатор языка процесса по умолчанию (1024), то службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют язык по умолчанию для экземпляра, чтобы вернуть данные и метаданные для объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

@@ -1,5 +1,5 @@
 ---
-title: Элемент EventString (DTA) | Документы Microsoft
+title: Элемент EventString (DTA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - EventString element
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6155627f60694cf1a21d39893e40b106b9df0886
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: db55d1d2451ab8febf984deb9e5bcb6d4718353f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291700"
 ---
 # <a name="eventstring-element-dta"></a>Элемент EventString (DTA)
   Задает скрипт рабочей нагрузки [!INCLUDE[tsql](../../includes/tsql-md.md)] непосредственно во входном XML-файле.  
@@ -43,7 +43,7 @@ ms.locfileid: "36095829"
   
 |attribute|Описание|  
 |---------------|-----------------|  
-|`Weight`|Необязательный параметр. Задает весовой коэффициент запроса (коэффициент важности) для указанного события. Используйте `float` тип данных для указания весового коэффициента. Например, `Weight`="100,01". Минимальное значение, которое можно задать для коэффициента `Weight`, равно 0.|  
+|`Weight`|Необязательный параметр. Задает весовой коэффициент запроса (коэффициент важности) для указанного события. Используйте `float` тип данных, чтобы задать вес. Например, `Weight`="100,01". Минимальное значение, которое можно задать для коэффициента `Weight`, равно 0.|  
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36095829"
 |--------------------|-----------------|  
 |**Тип данных и длина**|`string`, длина не ограничена.|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Необходимо наличие одного такого элемента, если не задан никакой другой тип рабочей нагрузки. Необходимо указать `EventString`, `File`, или `Database` дочерний элемент `Workload` можно использовать родительский, но только один тип. Например, если задать рабочую нагрузку `EventString` , то нельзя указывать рабочую нагрузку также с `File` элемент в том же входном файле XML.|  
+|**Наличие**|Необходимо наличие одного такого элемента, если не задан никакой другой тип рабочей нагрузки. Необходимо указать `EventString`, `File`, или `Database` дочернего элемента для `Workload` родительского, но только один тип может использоваться. Например, если рабочая нагрузка с `EventString` элемент, то также нельзя задавать рабочую нагрузку элементом `File` элемент в том же входном XML-файле.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   

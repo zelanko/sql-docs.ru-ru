@@ -1,5 +1,5 @@
 ---
-title: Тип данных ProactiveCachingIncrementalProcessingBinding (ASSL) | Документы Microsoft
+title: Тип данных ProactiveCachingIncrementalProcessingBinding (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ProactiveCachingIncrementalProcessingBinding data type
 ms.assetid: f49c0c96-4277-417b-9660-d77a4faebd00
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 128d118c5f1a6dd05a8bab5434b1dba1f9f22ce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ad1107d1ad2e135e65b2ef4f05fd2e85d799123c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247724"
 ---
 # <a name="proactivecachingincrementalprocessingbinding-data-type-assl"></a>Тип данных ProactiveCachingIncrementalProcessingBinding (ASSL)
-  Определяет производный тип данных, представляющий привязку к [ProactiveCaching](../objects/proactivecaching-element-assl.md) о состоянии процесса перестройки кэша.  
+  Определяет производный тип данных, представляющий привязку к [ProactiveCaching](../objects/proactivecaching-element-assl.md) сведений о состоянии процесса перестройки кэша.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -60,15 +60,15 @@ ms.locfileid: "36101834"
 |Производные элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о `ProactiveCachingBinding` типа, включая таблицу иерархии наследования `ProactiveCachingBinding` типов, в разделе [ProactiveCachingBinding, тип данных &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Дополнительные сведения о `ProactiveCachingBinding` типа, включая таблицу иерархии наследования `ProactiveCachingBinding` типов, см. в разделе [тип данных ProactiveCachingBinding &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- Дополнительные сведения о `Binding` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) `Binding` тип и иерархию наследования `Binding` типов, в разделе [тип привязки данных &#40;ASSL &#41;](binding-data-type-assl.md).  
+ Дополнительные сведения о `Binding` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) типа `Binding` тип и иерархию наследования `Binding` типов, см. в разделе [типа привязки данных &#40;ASSL &#41;](binding-data-type-assl.md).  
   
- Обзор привязок данных в ASSL см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Обзор привязки данных в языке ASSL, см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.ProactiveCachingIncrementalProcessingBinding>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.ProactiveCachingIncrementalProcessingBinding>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

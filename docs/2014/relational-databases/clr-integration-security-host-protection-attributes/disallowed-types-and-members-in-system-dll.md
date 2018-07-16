@@ -1,13 +1,11 @@
 ---
-title: Запрещенные типы и элементы в System.dll | Документы Microsoft
+title: Запрещенные типы и элементы в System.dll | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - common language runtime [SQL Server], host protection attributes
 ms.assetid: 27b550cd-dd3d-4263-bd97-0f0dec1215fd
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 66a3f31d4c1b1717f5987673cc6dd02ec1f00ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f21a3e022898dcf2f62b857dfdf12beeb5e4a048
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100265"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353636"
 ---
 # <a name="disallowed-types-and-members-in-systemdll"></a>Запрещенные типы и элементы в System.dll
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] общего программирования интеграции (со средой CLR) языка не допускает использования тип или член, имеющий `HostProtectionAttribute` , указывающий `System.Security.Permissions.HostProtectionResource` перечисление со значением `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**, `Synchronization`, или `UI`. В следующей таблице приведены элементы и типы сборки System.dll, значения атрибута защиты сервера которых запрещены.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] общего программирования интеграции (со средой CLR) языка не допускает использования типа или члена, имеющего `HostProtectionAttribute` , указывающий `System.Security.Permissions.HostProtectionResource` перечисление со значением `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**, `Synchronization`, или `UI`. В следующей таблице приведены элементы и типы сборки System.dll, значения атрибута защиты сервера которых запрещены.  
   
 > [!NOTE]  
 >  Этот список был создан из поддерживаемых сборок. Дополнительные сведения см. в разделе [поддерживаемые библиотеки платформы .NET Framework](../clr-integration/database-objects/supported-net-framework-libraries.md).  
@@ -286,7 +284,7 @@ ms.locfileid: "36100265"
 |WebClientWriteStream.BeginWrite()|ExternalThreading|  
   
 ## <a name="see-also"></a>См. также  
- [Атрибуты защиты узла и программирование средств интеграции со средой CLR](host-protection-attributes-and-clr-integration-programming.md)   
+ [Атрибуты защиты узла и программирование интеграции со средой CLR](host-protection-attributes-and-clr-integration-programming.md)   
  [Запрещенные типы и элементы в Microsoft.VisualBasic.dll](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
  [Запрещенные типы и элементы в библиотеке mscorlib.dll](disallowed-types-and-members-in-mscorlib-dll.md)   
  [Запрещенные типы и элементы в библиотеке System.Data.dll](disallowed-types-and-members-in-system-data-dll.md)   

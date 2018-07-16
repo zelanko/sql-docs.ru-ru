@@ -1,5 +1,5 @@
 ---
-title: Установка параметров конвертации валюты (мастер бизнес-аналитики) | Документы Microsoft
+title: Установка параметров конвертации валюты (мастер бизнес-аналитики) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.calculationsettings.f1
 ms.assetid: a49d4e1f-bdda-4a83-ab4f-ce8c500e1d6d
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e16756745d8b42bfe0043915b8d6e53b595d3669
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6ecdd5959754ab2ca7d4d9e5fc32d313dacfa00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289516"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>Установка параметров конвертации валюты (мастер бизнес-аналитики)
   Страница **Установка параметров конвертации валюты** используется для установки вычислений конвертации валют для группы мер, содержащих курсы обмена валют.  
@@ -30,7 +30,7 @@ ms.locfileid: "36098485"
 >  Эта страница не выводится на экран, если мастер бизнес-аналитики был запущен из конструктора измерений, а также если щелкнуть правой кнопкой мыши измерение в обозревателе решений в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="options"></a>Параметры  
- **Выберите группу мер, которая содержит обменные курсы**  
+ **Выберите группу мер, содержащих курсы обмена валют**  
  Выберите группу мер, содержащих курсы обмена валют, на которую должны ссылаться вычисления конвертации валют.  
   
  **Укажите основную валюту**  
@@ -42,7 +42,7 @@ ms.locfileid: "36098485"
  **X основной валюте за 1 в валюте образца**  
  Выберите для указания того, что курс обмена валют в группе мер представляет собой множитель для заданной основной валюты.  
   
- **X единиц в валюте образца за 1 единицу в основной валюте**  
+ **X единиц в валюте образца за 1 в основной валюте**  
  Выберите для указания того, что курс обмена валют в группе мер представляет собой множитель для заданной валюты образца.  
   
 ## <a name="see-also"></a>См. также  

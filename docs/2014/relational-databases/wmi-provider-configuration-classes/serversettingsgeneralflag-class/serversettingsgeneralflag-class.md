@@ -1,5 +1,5 @@
 ---
-title: Класс Serversettingsgeneralflag | Документы Microsoft
+title: Класс ServerSettingsGeneralFlag | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ServerSettingsGeneralFlag class
 ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 429548e0bcb2abd73bfa40e29e28d5e4ce7c97e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f4e12ac9a13286bdd26fd86568b553621b686e00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290330"
 ---
 # <a name="serversettingsgeneralflag-class"></a>Класс ServerSettingsGeneralFlag
   Класс [ServerSettingsGeneralFlag](serversettingsgeneralflag-class.md) представляет настройки общего флага на экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

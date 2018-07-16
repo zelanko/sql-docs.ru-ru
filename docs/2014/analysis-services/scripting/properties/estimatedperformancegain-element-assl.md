@@ -1,5 +1,5 @@
 ---
-title: Элемент EstimatedPerformanceGain (ASSL) | Документы Microsoft
+title: Элемент EstimatedPerformanceGain (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - EstimatedPerformanceGain element
 ms.assetid: d7487977-73c3-4244-ad5d-3c357b219db4
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4e2c8ffa997c46b6d4587a971de436c25792694
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b4b9c2c80bbeadf716313756470d1f8d7994152
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267410"
 ---
 # <a name="estimatedperformancegain-element-assl"></a>Элемент EstimatedPerformanceGain (ASSL)
   Содержит процентное значение (только для чтения) ожидаемого прироста производительности для секции.  
@@ -62,7 +62,7 @@ ms.locfileid: "36100713"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родительский `EstimatedPerformanceGain` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.AggregationDesign>.  
+ Элемент, соответствующий родителю параметра `EstimatedPerformanceGain` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.AggregationDesign>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

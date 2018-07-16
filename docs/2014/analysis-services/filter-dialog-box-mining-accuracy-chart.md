@@ -1,5 +1,5 @@
 ---
-title: Фильтрация диалоговое окно «» (диаграмма точности интеллектуального анализа данных) | Документы Microsoft
+title: Фильтровать диалоговое окно «» (диаграмма точности интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 328ebd3f09037c3288450b75b4acd011481c40a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 04630120106816c4018af0fc23cfdf30f26b15cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272610"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Диалоговое окно «Фильтр» (диаграмма точности интеллектуального анализа данных)
   Диалоговое окно **Фильтр** помогает создать условия, которые можно применить к набору данных. Набор данных может быть внешним набором данных, используемых для проверки, или данными варианта, используемых для обучения модели интеллектуального анализа данных. Это диалоговое окно позволяет создавать критерии, которые можно сохранять как часть более сложных условий фильтра в диалоговых окнах **Фильтр набора данных** и **Фильтр модели** .  
@@ -51,6 +51,6 @@ ms.locfileid: "36096544"
   
 ## <a name="see-also"></a>См. также  
  [Тестирование и проверка задачи и инструкции по &#40;интеллектуального анализа данных&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Конструктор диаграммы точности интеллектуального анализа &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)  
+ [Конструктор диаграммы точности интеллектуального &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)  
   
   

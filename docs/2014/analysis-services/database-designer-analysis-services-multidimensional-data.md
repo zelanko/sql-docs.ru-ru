@@ -1,5 +1,5 @@
 ---
-title: Базы данных (службы Analysis Services — многомерные данные) конструктор | Документы Microsoft
+title: Базы данных (службы Analysis Services — многомерные данные) конструктор | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c30016f0-7e50-44de-b45d-df11b8b34320
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a493991430d2777929e6b997b9f9697056658b41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9580e678aba6c8b556f84583af538df277c386a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263680"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>Конструктор баз данных (службы Analysis Services — многомерные данные)
   Конструктор баз данных в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] позволяет изменить свойства и просмотреть предупреждения базы данных служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -35,6 +35,6 @@ ms.locfileid: "36109818"
   
 ## <a name="see-also"></a>См. также  
  [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Базы данных многомерной модели &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Многомерный шаблон баз данных &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

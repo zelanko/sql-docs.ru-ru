@@ -1,5 +1,5 @@
 ---
-title: Планирование обновления данных (PowerPivot для SharePoint) | Документы Microsoft
+title: Планирование обновления данных (PowerPivot для SharePoint) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 822f4a825e359c2e6e8ed69711bfd95fd3bd4eab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbabf680ed67f1b2e144287764d16447d9467a43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325154"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Планирование обновления данных (PowerPivot для SharePoint)
   Предусмотрена возможность планирования автоматического обновления данных PowerPivot в книге Excel, опубликованной на сайте SharePoint.  
@@ -110,7 +110,7 @@ ms.locfileid: "36195271"
   
     3.  Выберите вариант **Подключение с учетными данными, сохраненными в службе Secure Store** , если известен идентификатор целевого приложения, содержащего ранее сохраненные учетные данные, которые нужно использовать.  
   
-     Дополнительные сведения об этих параметрах см. в разделе [Настройка сохраненных учетных данных для обновления данных PowerPivot &#40;PowerPivot для SharePoint&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) и [настройки PowerPivot данные учетной записи автоматического обновления &#40;PowerPivot для SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
+     Дополнительные сведения об этих параметрах см. в разделе [Настройка сохраненных учетных данных для обновления данных PowerPivot &#40;PowerPivot для SharePoint&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) и [Настройка PowerPivot данные учетной записи автоматического обновления &#40;PowerPivot для SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
   
 9. В окне «Источники данных» отметьте флажок **Все источники данных** , если нужно, чтобы при обновлении данных были выполнены повторные запросы ко всем исходным источникам данных.  
   

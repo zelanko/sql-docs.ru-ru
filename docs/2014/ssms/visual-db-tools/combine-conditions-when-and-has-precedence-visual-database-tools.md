@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], combining
 - precedence [SQL Server], Criteria pane
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AND, Criteria pane
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8aeecaae8a8186a94e748b4ad176bd96ea595fa1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dd05831ace669f1d71bb1a46819b1220a766ce27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234384"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>Объединение условий, если приоритет имеет оператор AND (визуальные инструменты для баз данных)
   Для объединения условий с оператором AND столбец добавляется к запросу дважды для каждого из условий. Для объединения условий с оператором OR первое условие необходимо вставить в столбец "Фильтр", а дополнительные условия — в столбец **Или...**  
@@ -62,9 +62,9 @@ ms.locfileid: "36099712"
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Объединение условий с приоритетом оператора OR &#40;визуальные средства базы данных&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
- [Соглашения комбинирования условия поиска на панели критериев &#40;визуальные средства базы данных&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
- [Правила ввода для поиска значений &#40;визуальные средства базы данных&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [Объединение условий, если приоритет имеет оператор OR &#40;визуальных инструментах баз данных&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
+ [Обозначения для объединения условий поиска на панели критериев &#40;визуальных инструментах баз данных&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [Правила ввода для поиска значения &#40;визуальных инструментах баз данных&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [Определение критериев поиска (визуальные инструменты для баз данных)](specify-search-criteria-visual-database-tools.md)  
   
   

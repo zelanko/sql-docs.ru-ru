@@ -1,5 +1,5 @@
 ---
-title: Изменение системы управления версиями | Документы Microsoft
+title: Изменение системы управления версиями | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDD_SCC_CONNECTION_DIALOG
 helpviewer_keywords:
 - Change Source Control dialog box
 ms.assetid: e6a5d83c-5809-4c56-907a-73d0c7ccdd7a
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e2584a7981662bc96fff975d93dfd24ec79d5d77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 825cdbb6f25afb31d49e8150c19790385bc1cf14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312304"
 ---
 # <a name="change-source-control"></a>Изменение систем управления версиями
   Создает и управляет соединениями и привязками, которые связывают локально хранимые решения или проект с папкой базы данных системы управления версиями.  
@@ -35,7 +35,7 @@ ms.locfileid: "36194804"
 >  Вызвать это диалоговое окно также можно, щелкнув правой кнопкой мыши элемент в обозревателе решений.  
   
 ## <a name="options"></a>Параметры  
- **BIND**  
+ **Привязка**  
  Связывает выбранный элемент с расположением заданного сервера системы управления версиями. Например, эту кнопку можно использовать для привязки к последней используемой папке сервера системы управления версиями и базой данных. Если использованная в предыдущий раз папка сервера или база данных не может быть найдена, появится запрос для задания другого расположения.  
   
  **Обзор**  

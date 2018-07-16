@@ -1,27 +1,26 @@
 ---
-title: Свойства полнотекстового индекса (страница «расписания») | Документы Microsoft
+title: Свойства полнотекстового индекса (страница "расписания") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.schedule.f1
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e564784e5f3fcae652068dcb200a805062a5e6bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83eeb3ca9ea1f2e22f3d2dadf8089b8ba510c951
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306234"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Свойства полнотекстового индекса (страница «Расписания»)
   Эта страница предназначена для просмотра и создания расписаний выполнения для задания агента SQL Server, которое запускает добавочное заполнение в ходе обновлений базовой таблицы полнотекстового индекса. Если базовая таблица или представление не содержит столбец `timestamp` тип данных, выполняется полное заполнение.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e65f7d46506d611118b7e3ee43d630503a81c0d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5baccb74f86d4de59d5323c647db5378d5469e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096691"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298674"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Загрузка данных с помощью назначения ODBС
   Эта процедура показывает, как загрузить данные с использованием назначения ODBC. Чтобы можно было добавить и настроить назначение ODBC, пакет уже должен включать по крайней мере одну задачу «Поток данных» и источник.  
@@ -57,6 +57,6 @@ ms.locfileid: "36096691"
 ## <a name="see-also"></a>См. также  
  [Редактор назначения ODBC &#40;страницы диспетчера соединений&#41;](../odbc-destination-editor-connection-manager-page.md)   
  [Редактор назначения ODBC (страница "Сопоставления")](../odbc-destination-editor-mappings-page.md)   
- [Редактор источника ODBC &#40;страницы вывода ошибок&#41;](../odbc-source-editor-error-output-page.md)  
+ [Редактор источника ODBC &#40;странице вывода ошибок&#41;](../odbc-source-editor-error-output-page.md)  
   
   

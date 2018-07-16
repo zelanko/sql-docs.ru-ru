@@ -1,5 +1,5 @@
 ---
-title: (Службы Analysis Services) основные принципы создания скриптов многомерных Выражений | Документы Microsoft
+title: (Службы Analysis Services) основные принципы создания скриптов многомерных Выражений | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cubes [Analysis Services], scripts
 - calculations [Analysis Services], scripts
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], scripts
 ms.assetid: fdecb3ce-7c87-4bab-8000-532ba7a29f96
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f4cdd712fff0de36e051f371cae58a3ff8543628
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01f105ab8cd05029ac4dc7d747f5b0c016745962
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194833"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325194"
 ---
 # <a name="mdx-scripting-fundamentals-analysis-services"></a>Основные принципы создания скриптов многомерных выражений (службы Analysis Services)
   В службах [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]скрипты многомерных выражений состоят из одного или нескольких многомерных выражений или инструкций, заполняющих куб вычислениями.  
@@ -45,7 +45,7 @@ ms.locfileid: "36194833"
 |[Управление областью и контекстом &#40;многомерных Выражений&#41;](managing-scope-and-context-mdx.md)|Использование инструкций [CALCULATE](/sql/mdx/mdx-scripting-calculate) и [SCOPE](/sql/mdx/mdx-scripting-scope) и функции [This](/sql/mdx/this-mdx) для управления контекстом и областью действия в скриптах многомерных выражений.|  
 |[Использование переменных и параметров &#40;многомерных Выражений&#41;](using-variables-and-parameters-mdx.md)|Использование переменных и параметров в скриптах многомерных выражений.|  
 |[Обработка ошибок &#40;многомерных Выражений&#41;](error-handling-mdx.md)|Обработка ошибок в скриптах многомерных выражений.|  
-|[Поддерживается многомерных Выражений &#40;многомерных Выражений&#41;](supported-mdx-mdx.md)|Перечень операторов, инструкций и функций многомерных выражений, поддерживаемых в скриптах многомерных выражений.|  
+|[Поддерживаемые многомерные Выражения &#40;многомерных Выражений&#41;](supported-mdx-mdx.md)|Перечень операторов, инструкций и функций многомерных выражений, поддерживаемых в скриптах многомерных выражений.|  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по языку многомерных Выражений &#40;многомерных Выражений&#41;](/sql/mdx/mdx-language-reference-mdx)  

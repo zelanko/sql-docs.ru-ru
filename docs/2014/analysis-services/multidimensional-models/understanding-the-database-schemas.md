@@ -1,5 +1,5 @@
 ---
-title: Основные сведения о схемах баз данных | Документы Microsoft
+title: Основные сведения о схемах баз данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, database schema
 - database schema [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf611a2ae8e2c2275fc59d3abc124d8fa202d388
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef75cf2773781f94bd02a26c5c94958b9f4dfe3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282250"
 ---
 # <a name="understanding-the-database-schemas"></a>Основные сведения о схемах баз данных
   Мастер формирования схем создает ненормализованную реляционную схему для предметной области базы данных на основе измерений и групп мер служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Мастер создает реляционную таблицу для каждого измерения (таблица измерения), в которой хранятся данные измерений, которую называют таблицей измерения, и реляционную таблицу для каждой группы мер (таблица фактов), в которой хранятся данные фактов. При создании реляционных таблиц мастер игнорирует связанные измерения, связанные группы мер и серверные измерения времени.  
@@ -48,7 +48,7 @@ ms.locfileid: "36100958"
  Мастер формирования схем создает для каждого измерения таблицу, которая включается в предметную область базы данных. Структура таблицы измерения зависит от выборов, сделанных во время проектирования измерения, на котором основана таблица.  
   
  Столбцы  
- Мастер формирует по одному столбцу для привязок, связанных с каждым атрибутом в измерении, на котором основана таблица измерения, например привязок для `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn`и `UnaryOperatorColumn`каждого атрибута.  
+ Мастер формирует один столбец для привязок, связанных с каждым атрибутом в измерении, на котором основана таблица измерения, например привязок для `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn`и `UnaryOperatorColumn`свойства каждого атрибута.  
   
  Связи  
  Мастер формирует связи между столбцом для каждого родительского атрибута и первичным ключом таблицы измерения.  

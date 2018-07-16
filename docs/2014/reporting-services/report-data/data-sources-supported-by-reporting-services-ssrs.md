@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server data processing extension [Reporting Services]
 - XML data processing extension [Reporting Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 caps.latest.revision: 92
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4a2b38ef67782fdc1718c065f264c01e2878eebb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 41c5bf1d39603f1fb0de8dfe6133258f312eab02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266300"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Источники данных, поддерживаемые службами Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] получают через модульный и расширяемый уровень данных, где работают модули обработки данных. Для получения данных отчета из источника данных необходимо выбрать модуль обработки данных, поддерживающий как тип источника данных, так и версию программного обеспечения источника данных и его платформу (32-разрядная или 64-разрядная [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -42,7 +42,7 @@ ms.locfileid: "36098150"
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Параллельное хранилище данных  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse  
   
 -   Oracle;  
   
@@ -109,10 +109,10 @@ ms.locfileid: "36098150"
   
 |Источник<br /><br /> данных отчета|Тип источника данных служб Reporting Services|Имя модуля обработки данных или поставщика данных|Версия базового поставщика данных<br /><br /> (необязательно)|Данные <br /><br /> Source<br /><br /> на платформе x86|Данные<br /><br /> Source<br /><br /> на платформе x64|Версия источника данных|Сервер отчетов<br /><br /> на платформе x86|Сервер отчетов<br /><br /> на платформе x64|  
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реляционная база данных|[Microsoft SQL Server](#MicrosoftSQLServer)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.SqlClient|Да|Да|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздней версии.|Да|Да|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реляционная база данных|[OLEDB](#OLEDBSQL)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.OledbClient|Да|Да|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздней версии.|Да|Да|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реляционная база данных|[интерфейс ODBC](#ODBC)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.OdbcClient|Да|Да|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздней версии.|Да|Да|  
-|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[База данных Azure SQL](#Azure)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.SqlClient|Недоступно|Недоступно|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Да|Да|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реляционная база данных|[Microsoft SQL Server](#MicrosoftSQLServer)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.SqlClient|Да|Да|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздние версии.|Да|Да|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реляционная база данных|[OLEDB](#OLEDBSQL)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.OledbClient|Да|Да|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздние версии.|Да|Да|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реляционная база данных|[интерфейс ODBC](#ODBC)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.OdbcClient|Да|Да|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздние версии.|Да|Да|  
+|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[База данных Azure SQL для Windows](#Azure)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.SqlClient|Недоступно|Недоступно|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Да|Да|  
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] (модуль)|[Параллельные хранилища данных Microsoft](#PWD)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Недоступно|Недоступно|Недоступно|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|Да|Да|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (многомерная база данных)|[Службы Microsoft SQL Server Analysis Services](#AnalysisServices)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Использует ADOMD.NET|Да|Да|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и более поздние версии<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздние версии|Да|Да|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (многомерная база данных)|[OLEDB](#OLEDBAS9)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.OledbClient<br /><br /> Версия 10.0|Да|Да|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Да|Да|  
@@ -130,7 +130,7 @@ ms.locfileid: "36098150"
 |Обычный источник данных OLE DB|[OLEDB](#OLEDBStandard)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Любой источник данных, поддерживающий OLE DB.<br /><br /> См. документацию источника данных по поддержке платформ.|Да|Недоступно|Любой источник данных, поддерживающий OLE DB. См. [примечание](#OLEDBStandard).|Да|Недоступно|  
 |Обычный источник данных ODBC|[интерфейс ODBC](#ODBCGeneric)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Любой источник данных, поддерживающий ODBC.<br /><br /> См. документацию источника данных по поддержке платформ.|Да|Недоступно|Любой источник данных, поддерживающий ODBC. См. [примечание](#ODBCGeneric).|Да|Да|  
   
- Сведения об использовании табличного источника данных см. в разделе [подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ Сведения об использовании табличного источника данных, см. в разделе [подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
  Сведения об использовании внешних источников данных см. в разделе [Добавление данных из внешних источников данных (службы SSRS)](add-data-from-external-data-sources-ssrs.md).  
   
@@ -141,7 +141,7 @@ ms.locfileid: "36098150"
  [Назад к таблице источников данных](#DataSourcesTable)  
   
 ## <a name="reporting-services-data-processing-extensions"></a>Модули обработки данных служб Reporting Services  
- Вместе со службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и средой [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]автоматически устанавливаются следующие модули обработки данных. Дополнительные сведения и проверить правильность установки см. раздел [файл конфигурации RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) и [файл конфигурации RSReportServer](../report-server/rsreportserver-config-configuration-file.md).  
+ Вместе со службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и средой [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]автоматически устанавливаются следующие модули обработки данных. Дополнительные сведения и проверить установку, см. в разделе [файл конфигурации RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) и [файл конфигурации RSReportServer](../report-server/rsreportserver-config-configuration-file.md).  
   
 > [!NOTE]  
 >  Модуль обработки данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не поддерживается в настоящее время.  
@@ -164,7 +164,7 @@ ms.locfileid: "36098150"
   
  В среде [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] графическим конструктором запросов, связанным с этим модулем обработки данных, является [пользовательский интерфейс конструктора реляционных запросов](../relational-query-designer-user-interface.md), а не [конструктор визуальных инструментов для баз данных](../../ssms/visual-db-tools/visual-database-tool-designers.md), который используется с типом источника данных **Microsoft SQL Server**.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] автоматически различает **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** и **Microsoft SQL Server** data source types и открывает графический конструктор, связанный с этим типом источника данных.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] автоматически распознает ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** и **Microsoft SQL Server** источника данных и открывает графический конструктор, связанный с этим типом источника данных.  
   
  Если конструктор запросов используется в графическом режиме, запрос анализируется и, возможно, переписывается. Текстовый конструктор запросов также доступен для написания запросов. Текстовый конструктор запросов можно использовать при необходимости четкого управления синтаксисом [!INCLUDE[tsql](../../includes/tsql-md.md)] в запросе. Дополнительные сведения см. в разделе [Пользовательский интерфейс текстового конструктора запросов](../text-based-query-designer-user-interface.md).  
   
@@ -175,11 +175,11 @@ ms.locfileid: "36098150"
 ###  <a name="PWD"></a> Модуль обработки данных параллельного хранилища данных Microsoft SQL Server  
  В среде [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] графическим конструктором запросов, связанным с этим модулем обработки данных, является [пользовательский интерфейс конструктора реляционных запросов](../relational-query-designer-user-interface.md), а не [конструктор визуальных инструментов для баз данных](../../ssms/visual-db-tools/visual-database-tool-designers.md), который используется с типом источника данных **Microsoft SQL Server**.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] автоматически различает **SQL Server Parallel Data Warehouse** и **Microsoft SQL Server** data source types и открывает графический конструктор, связанный с этим типом источника данных.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] автоматически распознает **SQL Server Parallel Data Warehouse** и **Microsoft SQL Server** источника данных и открывает графический конструктор, связанный с этим типом источника данных.  
   
  Если конструктор запросов используется в графическом режиме, запрос анализируется и, возможно, переписывается. Текстовый конструктор запросов также доступен для написания запросов. Текстовый конструктор запросов можно использовать при необходимости четкого управления синтаксисом [!INCLUDE[tsql](../../includes/tsql-md.md)] в запросе. Дополнительные сведения см. в разделе [Пользовательский интерфейс текстового конструктора запросов](../text-based-query-designer-user-interface.md).  
   
- [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] не поддерживает использование хранимых процедур и функций, возвращающих табличные значения в запросах. Дополнительные сведения см. в разделе [Тип соединения с параллельным хранилищем данных SQL Server (службы SSRS)](sql-server-parallel-data-warehouse-connection-type-ssrs.md).  
+ [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] не поддерживает использование хранимых процедур и возвращающих табличные значения функций в запросах. Дополнительные сведения см. в разделе [Тип соединения с параллельным хранилищем данных SQL Server (службы SSRS)](sql-server-parallel-data-warehouse-connection-type-ssrs.md).  
   
  [Назад к таблице источников данных](#DataSourcesTable)  
   
@@ -317,7 +317,7 @@ ms.locfileid: "36098150"
  Указываемые учетные данные зависят от реализации, которую использует клиентское приложение. Дополнительные сведения см. в разделе [Тип подключения к списку SharePoint](sharepoint-list-connection-type-ssrs.md).  
   
 ###  <a name="XML"></a> Модуль обработки XML-данных  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль обработки данных XML, что позволяет использовать их в отчете. Данные могут быть получены из XML-документа, веб-службы или из веб-приложения, доступ к которым осуществляется с помощью URL-адреса. Дополнительные сведения см. в разделе [Тип соединения XML (службы SSRS)](xml-connection-type-ssrs.md). Дополнительные сведения о соответствующем конструкторе запросов см. раздел текстового режима конструктора в [графический пользовательский интерфейс конструктора запросов](graphical-query-designer-user-interface.md). Примеры см. в техническом документе [Reporting Services: Using XML and Web Service Data Sources](http://go.microsoft.com/fwlink/?LinkId=81654)(Службы Reporting Services: использование источников XML-данных и источников данных веб-служб).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль обработки данных XML, что позволяет использовать их в отчете. Данные могут быть получены из XML-документа, веб-службы или из веб-приложения, доступ к которым осуществляется с помощью URL-адреса. Дополнительные сведения см. в разделе [Тип соединения XML (службы SSRS)](xml-connection-type-ssrs.md). Дополнительные сведения о соответствующем конструкторе запросов см. в разделе текстовом конструкторе запросов статьи [графический пользовательский интерфейс конструктора запросов](graphical-query-designer-user-interface.md). Примеры см. в техническом документе [Reporting Services: Using XML and Web Service Data Sources](http://go.microsoft.com/fwlink/?LinkId=81654)(Службы Reporting Services: использование источников XML-данных и источников данных веб-служб).  
   
  [Назад к таблице источников данных](#DataSourcesTable)  
   
@@ -341,6 +341,6 @@ ms.locfileid: "36098150"
   
 ## <a name="see-also"></a>См. также  
  [Подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Добавление данных в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](report-datasets-ssrs.md)  
+ [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)  
   
   

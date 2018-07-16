@@ -1,5 +1,5 @@
 ---
-title: Конкретные задачи программирования | Документы Microsoft
+title: Программирование конкретных задач | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 00bd816625c9f4aa4116c1c3810957f8a95bc12e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 114cc7d651318a0c3892427a54fefb3c5f6bb781
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274410"
 ---
 # <a name="programming-specific-tasks"></a>Задачи, связанные с программированием
   Задачи, связанные с программированием объектов SMO, которые затрагивают сложные вопросы, которые необходимы лишь программам, выполняющим специальные функции, например резервное копирование, статистику наблюдения, репликацию, управление объектами экземпляра и настройка параметров конфигурации.  

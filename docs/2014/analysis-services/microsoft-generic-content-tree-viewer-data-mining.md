@@ -1,5 +1,5 @@
 ---
-title: Средство просмотра деревьев содержимого общего Microsoft (интеллектуальный анализ данных) | Документы Microsoft
+title: Средство просмотра деревьев содержимого общего Microsoft (интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.contentviewer.f1
 ms.assetid: 751b4393-f6fd-48c1-bcef-bdca589ce34c
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb48d0ce455c41f6e684b54af86bb6ff5f8eddfb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85c2cccfe0d5b578c0faa359ca3c276b654aaa21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100509"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286180"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Средство просмотра деревьев содержимого общего вида (Майкрософт) (интеллектуальный анализ данных)
   **Средство просмотра деревьев содержимого общего вида (Майкрософт)** отображает подробные сведения о содержимом модели интеллектуального анализа данных в стандартизованном табличном формате HTML. Это представление полезно, так как показывает фундаментальную структуру модели, а также сообщает подробности о коэффициентах, распределении значений и многом другом.  

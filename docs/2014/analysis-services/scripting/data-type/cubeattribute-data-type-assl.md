@@ -1,5 +1,5 @@
 ---
-title: Тип данных CubeAttribute (ASSL) | Документы Microsoft
+title: Тип данных CubeAttribute (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CubeAttribute data type
 ms.assetid: 114ffb44-460b-4971-b31b-dd844e960b81
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dce594145db99d7edfa991c2e975f62e55d3ef34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1df72c234fe7835d739e2b1835b01041aa9cbe6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319354"
 ---
 # <a name="cubeattribute-data-type-assl"></a>Тип данных CubeAttribute (ASSL)
-  Определяет тип-примитив, представляющий атрибут, связанный с [куба](../objects/cube-element-assl.md) элемента.  
+  Определяет тип-примитив, представляющий атрибут, связанный с [куба](../objects/cube-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -69,13 +69,13 @@ ms.locfileid: "36100093"
   
  Нельзя добавить атрибут как уровень иерархии, если свойство *AtttributeHierarchyEnabled*имеет значение FALSE и экземпляр работает в режиме DeploymentMode 1 или 2 (режим сервера SharePoint или табличный).  
   
- Атрибуты в [CubeDimension](dimension-data-type-assl.md) элемент, который не включен явно в [атрибуты](../collections/attributes-element-assl.md) становятся частью коллекции со значениями по умолчанию, назначенные им. После добавления в коллекцию, эти атрибуты могут возвращаться [Discover](../../xmla/xml-elements-methods-discover.md) метод.  
+ Атрибуты в [CubeDimension](dimension-data-type-assl.md) элемент, который не включен явно в [атрибуты](../collections/attributes-element-assl.md) коллекции становятся частью коллекции присвоенные им значения по умолчанию. После добавления в коллекцию атрибутов, атрибуты могут возвращаться [Discover](../../xmla/xml-elements-methods-discover.md) метод.  
   
- [AggregationUsage](../properties/aggregationusage-element-assl.md) элемент управления как [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] автоматически статистических схем для атрибута. Элемент `AggregationUsage` не ограничивает любые статистические обработки, созданные для куба вручную.  
+ [AggregationUsage](../properties/aggregationusage-element-assl.md) управляет как [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] автоматически статистических схем для атрибута. Элемент `AggregationUsage` не ограничивает любые статистические обработки, созданные для куба вручную.  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.CubeAttribute>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.CubeAttribute>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

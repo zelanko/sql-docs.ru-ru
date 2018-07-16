@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.newagwizard.listeners.f1
 - sql12.swb.newagwizard.specifyreplicas.f1
 - sql12.swb.addreplicawizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 caps.latest.revision: 33
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 878e1a5df6e67129c9146b1ff0c47e4167b54950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a25a08e57395ca8523b29f976b93179e0989a8ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101604"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279640"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Укажите страницу реплик (мастер создания группы доступности: мастер добавления реплики)
   В этом разделе описываются параметры страницы **Выбор реплик** . Эта страница применяется к [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] и [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Страницу **Выбор реплик** можно использовать для настройки одной или нескольких реплик доступности и добавления ее в группу доступности. Эта страница содержит четыре вкладки, представленные в следующей таблице. Щелкните имя вкладки в таблице, чтобы перейти в соответствующий подраздел, далее в этом разделе.  
@@ -44,10 +43,10 @@ ms.locfileid: "36101604"
  **Первоначальная роль**  
  Указывает роль, которая изначально будет выполняться новой репликой: **Первичная** или **Вторичная**.  
   
- **Автоматический переход на другой ресурс (до 2)**  
+ **Автоматическая отработка отказа (до 2)**  
  Установите этот флажок, только если вы хотите, чтобы реплика доступности стала партнером по автоматическому переходу на другой ресурс. Чтобы настроить автоматический переход на другой ресурс, необходимо выбрать этот параметр для первоначальной основной реплики и одной из вторичных реплик. В этих двух репликах будет использоваться режим доступности синхронной фиксации. Только две реплики могут поддерживать автоматический переход на другой ресурс.  
   
- Сведения о режиме доступности синхронной фиксации см. в разделе [режимы доступности (группы доступности AlwaysOn)](availability-modes-always-on-availability-groups.md). Сведения об автоматической отработке отказа см. в статье [Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn)](failover-and-failover-modes-always-on-availability-groups.md).  
+ Сведения о режиме доступности с синхронной фиксацией см. в разделе [режимы доступности (группы доступности AlwaysOn)](availability-modes-always-on-availability-groups.md). Сведения об автоматической отработке отказа см. в статье [Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn)](failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Синхронная фиксация (до 3).**  
  Если для реплики был выбран **Автоматическая отработка отказа (до 2)**, также будет выбрана **Синхронная фиксация (до 3)**. Если этот флажок не установлен, установить его следует, только если планируется использовать эту реплику в режиме синхронной фиксации только для запланированного перехода на другой ресурс вручную. Режим синхронной фиксации может использоваться только в трех репликах.  
@@ -210,7 +209,7 @@ ms.locfileid: "36101604"
   
 -   [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
--   [Создать базу данных конечной точки зеркального отображения для групп доступности AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Создание базы данных конечной точки зеркального отображения для групп доступности AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## <a name="see-also"></a>См. также  
  [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

@@ -5,21 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 caps.latest.revision: 21
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 93471f74f608febd0f6920b0b93646eac394eb35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a72521b1d2c40eb50954ea16676e17ec40d7d07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317524"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Просмотр и чтение журнала диагностики экземпляра отказоустойчивого кластера
   Все критические ошибки и события предупреждений для библиотеки ресурсов SQL Server записываются в журнал событий Windows. Диагностические сведения, связанные с SQL Server и записываемые в журнал, перехватываются хранимой процедурой [sp_server_diagnostics (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) и записываются в файлы журнала диагностики отказоустойчивого кластера SQL Server (также называемые журналами *SQLDIAG*).  
@@ -33,7 +32,7 @@ ms.locfileid: "36095617"
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="Recommendations"></a> Рекомендации  
- По умолчанию SQLDIAG хранятся в локальной папке LOG в каталоге экземпляра SQL Server, например, "C\Program Files\Microsoft SQL Server\MSSQL12. \<Имя_экземпляра > \MSSQL\LOG "узла-владельца экземпляра кластера AlwaysOn перехода на другой ресурс (FCI). Размер каждого файла журнала SQLDIAG ограничен 100 МБ. На компьютере сохраняются десять таких файлов журнала, после чего они освобождаются для новых журналов.  
+ По умолчанию SQLDIAG хранятся в локальной папке LOG в каталоге экземпляра SQL Server, например, "C\Program Files\Microsoft SQL Server\MSSQL12. \<Имя_экземпляра > \MSSQL\LOG ", узла-владельца из экземпляра кластера отработки отказа AlwaysOn (FCI). Размер каждого файла журнала SQLDIAG ограничен 100 МБ. На компьютере сохраняются десять таких файлов журнала, после чего они освобождаются для новых журналов.  
   
  В журналах используется формат файлов расширенных событий. Для чтения файлов, созданных расширенными событиями, можно использовать системную функцию **sys.fn_xe_file_target_read_file** . Возвращается одно событие в каждой строке в формате XML. Выполните запрос к системному представлению для синтаксического анализа XML-данных в виде результирующего набора. Дополнительные сведения см. в разделе [sys.fn_xe_file_target_read_file (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).  
   
@@ -97,7 +96,7 @@ ORDER BY Time;
 > [!NOTE]  
 >  Пример этой процедуры см. в подразделе [Примеры (Transact-SQL)](#TsqlExample)далее в этом разделе.  
   
- С помощью инструкции языка определения данных (DDL), `ALTER SERVER CONFIGURATION`, можно запускать или останавливать запись в журнал диагностических данных, полученных с [sp_server_diagnostics &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) процедуры и набор журналов SQLDIAG параметры конфигурации, такие как количество переключений файлов журнала, размер файла журнала и расположение файла. Дополнительные сведения о синтаксисе см. в разделе [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
+ С помощью инструкции языка описания данных DDL, `ALTER SERVER CONFIGURATION`, можно запускать или останавливать запись в журнал диагностических данных, полученных с [sp_server_diagnostics &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) процедуры, а также журнал SQLDIAG набора параметры конфигурации, такие как количество переключений файлов журнала, размер файла журнала и расположение файла. Дополнительные сведения о синтаксисе см. в разделе [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
   
 ###  <a name="ConfigTsqlExample"></a> Примеры (Transact-SQL)  
   

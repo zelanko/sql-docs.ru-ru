@@ -5,10 +5,9 @@ ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - full-text search [SQL Server], properties
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 caps.latest.revision: 49
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3aec36dc9ba7771cd83cea8ddc1deafe3bf1a648
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f107485b73df58e8d2da53f111cb522e1d3846bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292304"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Поиск свойств документа с использованием списков свойств поиска
   Ранее содержимое свойств документа нельзя было отличить от содержимого текста документа. Это ограничивало полнотекстовые запросы, позволяя выполнять только поиск во всем документе. Теперь можно настроить полнотекстовый индекс для поддержки поиска по определенным свойствам, например Author и Title, для поддерживаемых типов документов в столбцах двоичных данных `varbinary`, `varbinary(max)` (включая `FILESTREAM`) или `image`. Такая форма поиска называется *поиск свойств*.  
@@ -65,7 +64,7 @@ ms.locfileid: "36101284"
 ##  <a name="impact"></a> Эффект включения поиска свойств  
  Настройка полнотекстового индекса для поддержки поиска по одному или нескольким свойствам несколько увеличивает размер индекса в зависимости от числа свойств, указанных в списке свойств поиска, и содержимого каждого свойства.  
   
- В ходе тестирования типичных корпусов Microsoft Word<sup>®</sup>, Excel<sup>®</sup>и PowerPoint<sup>®</sup> документы, настраивался полнотекстовый индекс для индексирования типичных свойств поиска. Индексирование таких свойств увеличивало размер полнотекстового индекса примерно на 5 %. Ожидается, что наблюдаемое увеличение размера будет характерным для большинства корпусов документов. Однако в конечном итоге увеличение размера определяется отношением объема данных свойств в заданном корпусе документов к общему объему данных.  
+ В ходе тестирования типичных корпусов из Microsoft Word<sup>®</sup>, Excel<sup>®</sup>и PowerPoint<sup>®</sup> документов, мы настроили полнотекстовый индекс для индексирования типичных свойств поиска. Индексирование таких свойств увеличивало размер полнотекстового индекса примерно на 5 %. Ожидается, что наблюдаемое увеличение размера будет характерным для большинства корпусов документов. Однако в конечном итоге увеличение размера определяется отношением объема данных свойств в заданном корпусе документов к общему объему данных.  
   
   
   

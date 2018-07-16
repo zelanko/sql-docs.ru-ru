@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], installing
 - migrating full-text indexes [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 caps.latest.revision: 103
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ab9109e79d845416d89fe44282fe2b2f70629ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 192893274803d5c753fa6bd7acd90c7789d7f8b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264332"
 ---
 # <a name="upgrade-full-text-search"></a>Обновление полнотекстового поиска
   Обновление полнотекстового поиска с переходом к версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] выполняется во время установки, а также во время присоединения, восстановления или копирования файлов баз данных или полнотекстовых каталогов из более ранней версии до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера копирования баз данных.  
@@ -34,13 +33,13 @@ ms.locfileid: "36096381"
   
 -   [Обновление экземпляра сервера](#Upgrade_Server)  
   
--   [Параметры полнотекстового обновления](#FT_Upgrade_Options)  
+-   [Параметры обновления полнотекстового поиска](#FT_Upgrade_Options)  
   
 -   [Замечания по выбору режима полнотекстового обновления](#Choosing_Upgade_Option)  
   
--   [Миграция полнотекстовых индексов при обновлении базы данных до версии SQL Server 2014](#Upgrade_Db)  
+-   [Миграция полнотекстовых индексов при обновлении базы данных до SQL Server 2014](#Upgrade_Db)  
   
--   [Замечания по восстановлению SQL Server 2005 полнотекстового каталога в SQL Server 2014](#Considerations_for_Restore)  
+-   [Замечания по восстановлению каталога SQL Server 2005 полнотекстового поиска в SQL Server 2014](#Considerations_for_Restore)  
   
 -   [Присоединение базы данных SQL Server 2005 до SQL Server 2014](#Attaching_2005_ft_catalogs)  
   
@@ -61,7 +60,7 @@ ms.locfileid: "36096381"
 > [!NOTE]  
 >  Инструкции DDL языка [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)], указывающие полнотекстовые каталоги, продолжают работать правильно.  
   
-##  <a name="FT_Upgrade_Options"></a> Параметры полнотекстового обновления  
+##  <a name="FT_Upgrade_Options"></a> Параметры обновления полнотекстового поиска  
  При обновлении экземпляра сервера до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]пользовательский интерфейс позволяет выбрать один из следующих режимов обновления полнотекстовых функций.  
   
  Импорт  

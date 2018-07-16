@@ -1,5 +1,5 @@
 ---
-title: Элемент Folder (XML для Аналитики) | Документы Microsoft
+title: Элемент Folder (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Folder element
 ms.assetid: 87b305b0-57e3-4ec3-9d80-f1bcf3ce7540
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 64bc73db4cfb1fee4471e474bf498094751edcf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9bc961679619f15211689b4f118f511edbadac8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283920"
 ---
 # <a name="folder-element-xmla"></a>Элемент Folder (XML для аналитики)
-  Содержит место хранения файловой системы должны быть обновлены в [расположение](location-element-xmla.md) во время выполнения [восстановить](../xml-elements-commands/restore-element-xmla.md) или [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) команды.  
+  Содержит расположение хранилища файловой системы должны быть обновлены в [расположение](location-element-xmla.md) во время выполнения [восстановить](../xml-elements-commands/restore-element-xmla.md) или [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) команды.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36100701"
 ## <a name="remarks"></a>Примечания  
  При указании элемента `Folder` он изменяет места хранения объектов, содержащихся в файле резервной копии (для команд `Restore`) или в базе данных на экземпляре источника (для команд `Synchronize`), если их значения совпадают со значением элемента `Original`. Каждое такое значение заменяется значением элемента `New`.  
   
- Дополнительные сведения о резервном копировании и восстановлении объектов см. в разделе [резервное копирование, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Дополнительные сведения о резервном копировании и восстановлении объектов см. в разделе [резервного копирования, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>См. также  
  [Элемент StorageLocation &#40;ASSL&#41;](../../scripting/properties/storagelocation-element-assl.md)   
