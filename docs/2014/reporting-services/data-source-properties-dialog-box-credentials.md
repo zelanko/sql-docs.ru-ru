@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно «Свойства», учетные данные источника данных | Документы Microsoft
+title: Диалоговое окно «Свойства», учетные данные источника данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.datasourceproperties.credentials.f1
 - "10100"
 ms.assetid: 14c3eeb6-d37b-4fda-967b-43afcdb48119
 caps.latest.revision: 38
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: dc168e280f04f43e917c4230e479bd056237e779
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8ef67e673e6ba5fe21180c33c8dd501f1baa0c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280760"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>Диалоговое окно «Свойства источника данных» — «Учетные данные»
   Вкладка **Общие** в диалоговом окне **Свойства источника данных** позволяет просмотреть и изменить учетные данные, используемые для подключения отчета к источнику данных. Предоставленные учетные данные используются для доступа к источнику данных и кэширования копии данных для предварительного просмотра отчета. Дополнительные сведения о кэшировании данных для предварительного просмотра см. в разделе [Предварительный просмотр отчетов](reports/previewing-reports.md). Дополнительные сведения об учетных данных см. в разделе [Указание учетных данных и сведений о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "36192178"
  **Использовать проверку подлинности Windows (встроенная безопасность)**  
  Выберите этот параметр, чтобы использовать проверку подлинности Windows.  
   
- **Используйте эти имя пользователя и пароль**  
+ **Использовать имя пользователя и пароль**  
  Выберите этот параметр, чтобы использовать определенное имя пользователя и пароль. Для общих источников данных при публикации проекта сервера отчетов на целевом сервере имя пользователя и пароль сохраняются как сохраненные учетные данные для базы данных. Если необходимо использовать имя пользователя и пароль как учетные данные Windows, можно изменить свойства опубликованного общего источника данных на целевом сервере. Дополнительные сведения см. в разделе [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md).  
   
  **Имя пользователя**  

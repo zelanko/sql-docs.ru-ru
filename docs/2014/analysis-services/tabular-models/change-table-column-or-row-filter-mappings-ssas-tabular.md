@@ -1,5 +1,5 @@
 ---
-title: Изменение таблиц, столбцов и сопоставления фильтров строк (табличные службы SSAS) | Документы Microsoft
+title: Изменение таблиц, столбцов и сопоставления фильтров строк (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e085b0693e0043283cc142ccf2ca764ae234eed7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db70af7541a46fb061a3b668b61040361b261347
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241314"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Изменение сопоставлений фильтров таблиц, столбцов и строк (табличные службы SSAS)
   В этом разделе описано, как изменить сопоставления таблиц, столбцов или фильтров строк в диалоговом окне **Изменение свойств таблицы** в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -48,6 +48,6 @@ ms.locfileid: "36087223"
          В случае ошибки и при необходимости начать заново нажмите кнопку **Очистить фильтры строк**.  
   
 ## <a name="see-also"></a>См. также  
- [Изменить диалоговое окно «Свойства таблицы» &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
+ [Изменить таблицу-диалоговое окно свойств &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
   
   

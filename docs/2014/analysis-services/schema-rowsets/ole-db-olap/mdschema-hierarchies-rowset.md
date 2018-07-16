@@ -1,5 +1,5 @@
 ---
-title: Набор строк MDSCHEMA_HIERARCHIES | Документы Microsoft
+title: Набор строк MDSCHEMA_HIERARCHIES | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_HIERARCHIES rowset
 ms.assetid: 2e5b2a81-366e-4d5b-af1e-1d372bf596d9
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e8c6fa75c935256235d64ad337500923b5974c68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a38dd03023fc266c5b8505979766d90979d16f05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321224"
 ---
 # <a name="mdschemahierarchies-rowset"></a>Набор строк MDSCHEMA_HIERARCHIES
   Описывает каждую иерархию в конкретном измерении.  
@@ -59,7 +59,7 @@ ms.locfileid: "36102321"
 |`DIMENSION_IS_SHARED`|`DBTYPE_BOOL`||Всегда возвращает `TRUE`.|  
 |`HIERARCHY_IS_VISIBLE`|`DBTYPE_BOOL`||Логическое значение, указывающее, видима ли иерархия.<br /><br /> Возвращает значение `TRUE`, если иерархия видима, в противном случае — `FALSE`.|  
 |`HIERARCHY_ORIGIN`|`DBTYPE_UI2`||Битовая маска, определяющая источник иерархии.<br /><br /> -   `MD_USER_DEFINED` Определяет пользовательские иерархии и имеет значение `0x0000001`.<br />-   `MD_SYSTEM_ENABLED` Определяет иерархии атрибутов и имеет значение `0x0000002`.<br />-   `MD_SYSTEM_INTERNAL` Определяет атрибуты без иерархий атрибутов и имеет значение **0x0000004**.<br /><br /> Иерархия родительских/дочерних атрибутов является и `MD_USER_DEFINED`, и `MD_SYSTEM_ENABLED`.|  
-|`HIERARCHY_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Путь, используемый при отображении иерархии в пользовательском интерфейсе. Имена папок разделяются символом точки с запятой (;). Вложенные папки указываются обратная косая черта (\\).|  
+|`HIERARCHY_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Путь, используемый при отображении иерархии в пользовательском интерфейсе. Имена папок разделяются символом точки с запятой (;). Вложенные папки указываются символами обратной косой черты (\\).|  
 |`INSTANCE_SELECTION`|`DBTYPE_UI2`||Указание иерархии для клиентского приложения по методу отображения. К допустимым значениям относятся:<br /><br /> -   `MD_INSTANCE_SELECTION_NONE`<br />-   `MD_INSTANCE_SELECTION_DROPDOWN`<br />-   `MD_INSTANCE_SELECTION_LIST`<br />-   `MD_INSTANCE_SELECTION_FILTEREDLIST`<br />-   `MD_INSTANCE_SELECTION_MANDATORYFILTER`|  
 |`GROUPING_BEHAVIOR`|`DBTYPE_I2`||Перечисление, определяющее ожидаемый режим группирования клиентов для этой иерархии. Возможны следующие значения:<br /><br /> -   **EncourageGrouping** (1)<br />-   **DiscourageGrouping** (2)|  
 |`STRUCTURE_TYPE`|`DBTYPE_WSTR`||Указывает тип иерархии. К допустимым значениям относятся:<br /><br /> -   `Natural`<br />-   `Unnatural`<br />-   `Unknown`|  
@@ -78,8 +78,8 @@ ms.locfileid: "36102321"
 |`HIERARCHY_NAME`|`DBTYPE_WSTR`|Необязательный параметр.|  
 |`HIERARCHY_UNIQUE_NAME`|`DBTYPE_WSTR`|Необязательный параметр.|  
 |`HIERARCHY_ORIGIN`|`DBTYPE_UI2`|(Необязательно) Ограничение по умолчанию действует на MD_USER_DEFINED и MD_SYSTEM_ENABLED.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|Битовая карта с одним из следующих допустимых значений (необязательно).<br /><br /> -КУБ 1<br />-2 ИЗМЕРЕНИЯ.<br /><br /> Значение по умолчанию для ограничения — 1.|  
-|`HIERARCHY_VISIBILITY`|`DBTYPE_UI2`|Битовая карта с одним из следующих допустимых значений (необязательно).<br /><br /> — Visible 1<br />-2 не отображается<br /><br /> Значение по умолчанию для ограничения — 1.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|Битовая карта с одним из следующих допустимых значений (необязательно).<br /><br /> -КУБ 1<br />— ИЗМЕРЕНИЯ 2<br /><br /> Значение по умолчанию для ограничения — 1.|  
+|`HIERARCHY_VISIBILITY`|`DBTYPE_UI2`|Битовая карта с одним из следующих допустимых значений (необязательно).<br /><br /> -1 Visible<br />-2 не отображается<br /><br /> Значение по умолчанию для ограничения — 1.|  
   
 ## <a name="see-also"></a>См. также  
  [Наборы строк схемы OLE DB для OLAP](ole-db-for-olap-schema-rowsets.md)  

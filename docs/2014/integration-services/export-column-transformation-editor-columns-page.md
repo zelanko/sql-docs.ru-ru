@@ -1,5 +1,5 @@
 ---
-title: Экспорт Column Transformation Editor (страница «столбцы») | Документы Microsoft
+title: Export Column Transformation Editor (страница "столбцы") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fileextractortransformation.columns.f1
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 86f14583351c2ff734ec0cc3e09abaa270c1c9ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b427d8a727f0db31b63d43efbe00378c7ef0f18b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207454"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>Редактор преобразования «Экспорт столбца» (страница «Столбцы»)
   Страница **Столбцы** диалогового окна **Редактор преобразования «Экспорт столбца»** используется для задания столбцов в потоке данных, извлекаемых в файлы. Можно указать, будет ли преобразование «Экспорт столбца» добавлять данные в конец файла или перезаписывать существующий файл.  
@@ -44,10 +44,10 @@ ms.locfileid: "36193205"
  Определяет, будет ли преобразование удалять содержимое существующих файлов перед записью данных. Значение по умолчанию — `false`.  
   
  **Запись BOM**  
- Определяет, будет ли в файл записываться метка порядка следования байтов (BOM). Метка BOM записывается только если данные содержат `DT_NTEXT` или тип данных DT_WSTR, а не добавляется к существующему файлу данных.  
+ Определяет, будет ли в файл записываться метка порядка следования байтов (BOM). Метка BOM записывается только если данные имеют `DT_NTEXT` или тип данных DT_WSTR и не добавляется к существующему файлу данных.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор преобразования столбца Экспорт &#40;страницы вывода ошибок&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Export Column Transformation Editor &#40;странице вывода ошибок&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
   
   

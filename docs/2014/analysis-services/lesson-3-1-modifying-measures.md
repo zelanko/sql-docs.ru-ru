@@ -1,5 +1,5 @@
 ---
-title: Изменение мер | Документы Microsoft
+title: Изменение мер | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: f95003c329dc121c3a743f1f4447a3aa8a9a506a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 447032ab32e222f3827c34020aef612e8125a518
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232384"
 ---
 # <a name="modifying-measures"></a>Изменение мер
   Свойство **FormatString** позволяет определить параметры форматирования, управляющие способом отображения мер для пользователей. В этой задаче предстоит указать свойства форматирования мер валюты и процентов в кубе учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -60,9 +60,9 @@ ms.locfileid: "36180383"
   
 7.  В раскрывающемся списке в верхней части окна свойств (под строкой названия) выберите меру **Процент скидки от стоимости единицы товара**, а затем выберите значение **Процент** в списке **FormatString** .  
   
-8.  В окне «Свойства» измените **имя** свойство **Unit Price Discount Pct** меру `Unit Price Discount Percentage`.  
+8.  В окне «Свойства» измените **имя** свойство для **Unit Price Discount Pct** меру `Unit Price Discount Percentage`.  
   
-9. В **меры** области, нажмите кнопку **Tax Amt** и измените имя меры на `Tax Amount`.  
+9. В **меры** панели щелкните **Tax Amt** и измените имя меры на `Tax Amount`.  
   
 10. В окне свойств нажмите значок **Автоматически скрыть** , чтобы скрыть окно свойств, а затем нажмите кнопку **Показывать дерево мер** на вкладке панели инструментов **Структура куба** .  
   

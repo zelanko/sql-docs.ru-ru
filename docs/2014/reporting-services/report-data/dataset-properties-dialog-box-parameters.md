@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10150"
 - sql12.rtp.rptdesigner.datasetproperties.parameters.f1
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
 caps.latest.revision: 39
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e56f42a687997633f3c86a21f1cbe90f0fbc582e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 551372ad850f94ea12f8970a6a24bbf5693fcad0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247914"
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>Диалоговое окно «Свойства набора данных» — «Настройки»
   Для добавления, изменения и удаления параметров запроса, включая те, которые связаны с параметрами отчета, используется вкладка **Параметры** диалогового окна **Свойства набора данных** .  
@@ -52,7 +52,7 @@ ms.locfileid: "36189471"
   
 ## <a name="see-also"></a>См. также  
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../report-design/report-parameters-report-builder-and-report-designer.md)   
- [Добавление данных в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](report-datasets-ssrs.md)   
- [Изменение порядка параметров отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+ [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)   
+ [Изменение порядка параметров отчета &#40;построитель отчетов и службы SSRS&#41;](../report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
   

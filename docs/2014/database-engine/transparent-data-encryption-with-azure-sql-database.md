@@ -5,28 +5,26 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TDE, SQL Database
 - Transparent Data Encryption, SQL Database
 - encryption (SQL Database) TDE
 ms.assetid: 0bf7e8ff-1416-4923-9c4c-49341e208c62
-caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1850458778cadbfe871880d42a7830c94078c2a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0f5a78b0045e004b17c09bc9e87863179e38eee5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295194"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Прозрачное шифрование данных в Базе данных SQL Azure
-  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] прозрачное шифрование данных (Предварительная версия) защищает от угроз вредоносных действий, выполняя в реальном времени шифрование и дешифрование базы данных, связанных резервных копий и файлов журнала транзакций хранятся без внесения изменений в приложения.  
+  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] прозрачное шифрование данных (Предварительная версия) защищает от угроз вредоносных действий выполняет в реальном времени шифрование и расшифровку базы данных, связанных резервных копий и неактивных файлов журналов транзакций без необходимости изменения приложения.  
   
  TDE шифрует пространство хранения всей базы данных, используя симметричный ключ, который называется ключом шифрования базы данных. В [!INCLUDE[ssSDS](../includes/sssds-md.md)] для защиты ключа шифрования базы данных используется встроенный сертификат сервера. Встроенный сертификат сервера уникален для каждого сервера [!INCLUDE[ssSDS](../includes/sssds-md.md)] . Если база данных находится в отношении GeoDR, на каждом сервере для защиты используется разный ключ. Если две базы данных подключены к одному серверу, используется один встроенный сертификат. [!INCLUDE[msCoName](../includes/msconame-md.md)] автоматически меняет эти сертификаты каждые 90 дней. Общее описание прозрачного шифрования данных см. в разделе [Прозрачное шифрование данных (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md).  
   
@@ -37,7 +35,7 @@ ms.locfileid: "36192950"
 |**Применяется к**: [!INCLUDE[sqldbesa](../includes/sqldbesa-md.md)] ([Предварительная версия в некоторых регионах](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
 > [!IMPORTANT]  
->  В настоящий момент это предварительная версия функции. Я понимаю и соглашаюсь, что реализация [!INCLUDE[ssSDS](../includes/sssds-md.md)] прозрачное шифрование данных в моих базах данных регулируется условиями предварительной версии в моем лицензионном соглашении (например соглашение Enterprise Agreement, соглашение Microsoft Azure или Microsoft Online Subscription Соглашение), а также как и любые применимые [дополнительные условия использования, для предварительной версии Microsoft Azure](http://azure.microsoft.com/support/legal/preview-supplemental-terms/).  
+>  В настоящий момент это предварительная версия функции. Я признаю и соглашаюсь, что [!INCLUDE[ssSDS](../includes/sssds-md.md)] в моих базах данных прозрачного шифрования данных регламентируется условиями предварительной версии в моем лицензионном соглашении (например соглашения Enterprise, соглашении Microsoft Azure или Microsoft Online Subscription Соглашение), а также всем применимым [дополнительные условия использования предварительной версии Microsoft Azure](http://azure.microsoft.com/support/legal/preview-supplemental-terms/).  
   
  Просмотр состояния TDE применяется даже в подмножестве географических регионов, в которых сообщается, что версия семейства V12 [!INCLUDE[ssSDS](../includes/sssds-md.md)] теперь общедоступна. Прозрачное шифрование данных для [!INCLUDE[ssSDS](../includes/sssds-md.md)] не используется в рабочих базах данных до тех пор, пока [!INCLUDE[msCoName](../includes/msconame-md.md)] не объявит, что функция TDE становится общедоступной. Дополнительные сведения о [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12 можно найти в разделе [Новые возможности версии 12 базы данных SQL](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
   
@@ -48,13 +46,13 @@ ms.locfileid: "36192950"
   
 -   Нужен доступ к предварительной версии TDE.  
   
--   Чтобы создать ключ шифрования базы данных, должен быть [!INCLUDE[ssSDS](../includes/sssds-md.md)] администратор или вы должны быть членом **dbmanager** роли в базе данных master базы данных и имеют **УПРАВЛЕНИЯ** разрешения в базе данных.  
+-   Чтобы создать ключ шифрования базы данных, необходимо быть [!INCLUDE[ssSDS](../includes/sssds-md.md)] администратора и у вас должен быть членом **dbmanager** роли в базе данных master базы данных и имеют **УПРАВЛЕНИЯ** разрешение в базе данных.  
   
 -   Чтобы выполнить инструкцию ALTER DATABASE с параметром SET, нужна только роль **dbmanager** .  
   
-##  <a name="Preview"></a> Подписка на предварительную версию TDE и его включение в базе данных  
+##  <a name="Preview"></a> Подписка на предварительную версию TDE и его включение прозрачного шифрования данных в базу данных  
   
-1.  Посетите портал Azure на [ https://portal.azure.com ](https://portal.azure.com) и войдите с учетной записью администратора или участника Azure.  
+1.  Перейдите на портал Azure [ https://portal.azure.com ](https://portal.azure.com) и войдите с учетной записью администратора или участника Azure.  
   
 2.  В области слева нажмите кнопку **ПРОСМОТРЕТЬ ВСЕ**и выберите **Базы данных SQL**.  
   
@@ -66,7 +64,7 @@ ms.locfileid: "36192950"
   
 6.  Щелкните **УСЛОВИЯ ПРЕДВАРИТЕЛЬНОЙ ВЕРСИИ**.  
   
-7.  Ознакомьтесь с условиями предварительной версии и, если вы согласны с условиями, выберите **условия прозрачное encryptionPreview** флажок и нажмите кнопку **ОК** ближе к нижней части страницы. Возврат к **encryptionPREVIEW данные** колонки, где **шифрование данных** кнопки теперь должен быть включен.  
+7.  Ознакомьтесь с условиями использования предварительной версии, если вы согласны с условиями, установите **условия encryptionPreview Transparent Data** флажок и нажмите кнопку **ОК** ближе к нижней части страницы. Возвращаясь к **encryptionPREVIEW данных** колонка, где **шифрование данных** кнопку включен.  
   
 8.  В колонке **Шифрование данных ПРЕДВАРИТЕЛЬНАЯ ВЕРСИЯ** переместите кнопку **Шифрование данных** в положение **ВКЛ**и нажмите кнопку **Сохранить** вверху страницы. В разделе **Состояние шифрования** будет отображаться приблизительный ход прозрачного шифрования данных.  
   
@@ -94,7 +92,7 @@ ms.locfileid: "36192950"
     GO  
     ```  
   
-3.  Чтобы отслеживать ход шифрования в [!INCLUDE[ssSDS](../includes/sssds-md.md)], пользователи базы данных с **VIEW DATABASE STATE** может запросить разрешение `encryption_state` столбец [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) представление.  
+3.  Чтобы отслеживать ход шифрования в [!INCLUDE[ssSDS](../includes/sssds-md.md)], пользователи базы данных с **VIEW DATABASE STATE** можно запросить разрешение `encryption_state` столбец [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) представление.  
   
 ## <a name="enabling-tde-on-sql-database-by-using-powershell"></a>Включение TDE в Базе данных SQL с помощью PowerShell  
  Включить и отключить TDE можно с помощью следующих команд Azure PowerShell. Перед выполнением команды подключите свою учетную запись к окну PS. Далее предполагается, что вы уже подписались на предварительную версию. Дополнительные сведения о PowerShell см. в разделе [Установка и настройка Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
@@ -124,7 +122,7 @@ ms.locfileid: "36192950"
   
 #### <a name="to-disable-tde-by-using-the-azure-portal"></a>Отключение TDE с помощью портала Azure  
   
-1.  Посетите портал Azure на [ https://portal.azure.com ](https://portal.azure.com) и войдите с учетной записью администратора или участника Azure.  
+1.  Перейдите на портал Azure [ https://portal.azure.com ](https://portal.azure.com) и войдите с учетной записью администратора или участника Azure.  
   
 2.  В области слева нажмите кнопку **ПРОСМОТРЕТЬ ВСЕ**и выберите **Базы данных SQL**.  
   
@@ -150,7 +148,7 @@ ms.locfileid: "36192950"
     GO  
     ```  
   
-3.  Чтобы отслеживать ход шифрования в [!INCLUDE[ssSDS](../includes/sssds-md.md)], пользователи базы данных с **VIEW DATABASE STATE** может запросить разрешение `encryption_state` столбец [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) представление.  
+3.  Чтобы отслеживать ход шифрования в [!INCLUDE[ssSDS](../includes/sssds-md.md)], пользователи базы данных с **VIEW DATABASE STATE** можно запросить разрешение `encryption_state` столбец [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) представление.  
   
 ##  <a name="Working"></a> Работа с защитой TDE базы данных на [!INCLUDE[ssSDS](../includes/sssds-md.md)]  
  Расшифровывать базы данных для работы в Azure не нужно. Параметры TDE базы данных-источника прозрачно наследуются целевым объектом. Сюда входят операции, связанные с:  
@@ -165,7 +163,7 @@ ms.locfileid: "36192950"
   
 -   созданием копии базы данных.  
   
-##  <a name="Moving"></a> Перемещение защищенной базы данных прозрачного шифрования данных с помощью. Bacpac-файлы  
+##  <a name="Moving"></a> Перемещение защищенной базы данных прозрачное шифрование данных на использование. Bacpac-файлы  
  При экспорте базы данных с защитой TDE с помощью функции экспорта на портале [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] или в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ее содержимое не шифруется. Содержимое хранится в незашифрованных файлах .bacpac.  Не забудьте защитить файлы .bacpac соответствующим образом и включить TDE после завершения импорта новой базы данных.  
   
 ## <a name="related-sql-server-topic"></a>Связанный раздел по SQL Server  

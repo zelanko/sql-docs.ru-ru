@@ -1,5 +1,5 @@
 ---
-title: Копирование таблиц из одной базы данных схемы в другую (визуальные инструменты баз данных) | Документы Microsoft
+title: Копирование таблиц из одних диаграмм базы данных в другую (визуальные инструменты баз данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - copying tables
 - duplicating tables
 ms.assetid: 155a4f09-9321-4887-a7d4-aa2ce6b51277
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6790a784c39e621ce2fa7c831b278d10b4190a72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3844cd25147f852a5c83a1116cebcf30fbb017f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188143"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241943"
 ---
 # <a name="copy-tables-from-one-database-diagrams-to-another-visual-database-tools"></a>Копирование таблиц из одних диаграмм базы данных в другие (визуальные инструменты для баз данных)
   Можно скопировать таблицу из одной диаграммы базы данных в другую в той же самой базе данных.  
@@ -44,7 +44,7 @@ ms.locfileid: "36188143"
  При изменении таблицы в любой из диаграмм изменения будут отражены в обеих. Точно так же при сохранении таблицы в любой диаграмме таблица больше не считается измененной в любой диаграмме.  
   
 ## <a name="see-also"></a>См. также  
- [Работа с диаграммами базы данных &#40;визуальные средства базы данных&#41;](visual-database-tools.md)   
+ [Работа с диаграммами базы данных &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
  [Добавление таблиц в диаграммы (визуальные инструменты для баз данных)](add-tables-to-diagrams-visual-database-tools.md)  
   
   

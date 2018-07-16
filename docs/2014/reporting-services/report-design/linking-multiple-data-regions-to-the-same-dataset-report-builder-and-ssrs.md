@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 11b4552c73c07f40e40c900aeb29bf738c554dc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c17a66cff53551f9bb4aa6687b8529c45e7f42e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301764"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>Связывание нескольких областей данных с одним набором данных (построитель отчетов и службы SSRS)
   В отчет можно добавить несколько областей данных, чтобы предоставить несколько представлений для одного и того же набора данных в отчете. Например, можно отобразить данные в виде таблицы и также отобразить их наглядно в виде диаграммы. Для этого необходимо использовать одинаковые выражения и области для соответствующих выражений фильтра, сортировки и групп.  
@@ -36,6 +36,6 @@ ms.locfileid: "36190149"
 ## <a name="see-also"></a>См. также  
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Списки &#40;построитель отчетов и службы SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Вложенные области данных &#40;отчетов построителя отчетов и службы SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
+ [Вложенные области данных &#40;построитель отчетов и службы SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
   
   

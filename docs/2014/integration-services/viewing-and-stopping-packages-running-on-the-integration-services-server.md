@@ -1,5 +1,5 @@
 ---
-title: Просмотр и остановка пакетов, выполняющихся на интеграцию сервера служб | Документы Microsoft
+title: Просмотр и остановка пакетов, выполняющихся на интеграцию сервера служб | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], managing
 - managing running packages [Integration Services]
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - running package [Integration Services], managing
 ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ce4fd750986269c0e92ae2ea764f02e1bd642cb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cef267dbb770c0ccb39ea40143ce9591f915db5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215834"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Просмотр и остановка пакетов, выполняющихся на сервере служб Integration Services
   `SSISDB` Базы данных хранится журнал выполнения во внутренних таблицах, невидимых для пользователей. Однако сведения, которые она предоставляет, можно получить с помощью запросов к общим представлениям. Также она предоставляет хранимые процедуры, которые можно вызвать для выполнения стандартных задач, связанных с пакетами.  
   
- Обычно управление объектами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сервере выполняется в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Но также можно создать запросы к представлениям базы данных и вызывать хранимые процедуры напрямую, либо написать специальный код, вызывающий управляемый API-интерфейс. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и управляемый API запрашивают представления и вызывают хранимые процедуры для выполнения многих задач. Например, можно просмотреть список пакетов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , выполняющихся в данный момент на сервере, и запросить остановку их выполнения при необходимости.  
+ Обычно управление объектами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сервере выполняется в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Но также можно создать запросы к представлениям базы данных и вызывать хранимые процедуры напрямую, либо написать специальный код, вызывающий управляемый API-интерфейс. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и управляемый API-Интерфейс запросы к представлениям и вызывать хранимые процедуры для выполнения многих своих задач. Например, можно просмотреть список пакетов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , выполняющихся в данный момент на сервере, и запросить остановку их выполнения при необходимости.  
   
 ## <a name="viewing-the-list-of-running-packages"></a>Просмотр списка выполняемых пакетов  
  Можно просмотреть список пакетов, которые в данный момент выполняются на сервере, в диалоговом окне **Активные операции** . Дополнительные сведения см. в статье [Active Operations Dialog Box](../../2014/integration-services/active-operations-dialog-box.md).  

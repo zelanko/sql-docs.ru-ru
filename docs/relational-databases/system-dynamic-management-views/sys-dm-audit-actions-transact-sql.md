@@ -1,5 +1,5 @@
 ---
-title: sys.dm_audit_actions (Transact-SQL) | Документы Microsoft
+title: sys.dm_audit_actions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,22 +22,22 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34a180e8b337ea984e320d41f77284ee9833b624
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: 864072a00f2db088b03ce280bf0ad137627b6a7c
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465930"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957637"
 ---
 # <a name="sysdmauditactions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Возвращает строку для каждого действия аудита, которое может быть зарегистрировано в журнале аудита, и каждой группы действий аудита, которая может быть настроена в составе аудита [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аудита, в разделе [подсистемы аудита SQL Server &#40;СУБД&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Возвращает строку для каждого действия аудита, которое может быть зарегистрировано в журнале аудита, и каждой группы действий аудита, которая может быть настроена в составе аудита [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аудита, см. в разделе [Подсистема аудита SQL Server &#40;СУБД&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**action_id**|**varchar(4)**|Идентификатор действия аудита. Они связаны с **action_id** значение, записанное в каждую запись аудита. Допускает значение NULL. NULL для групп аудита.|  
-|**action_in_log**|**бит**|Определяет возможность записи действия в журнал аудита. Имеет следующие значения:<br /><br /> 1 = да<br /><br /> 0 = нет|  
+|**action_id**|**varchar(4)**|Идентификатор действия аудита. Связанные с **action_id** значение, записанное в каждую запись аудита. Допускает значение NULL. NULL для групп аудита.|  
+|**action_in_log**|**bit**|Определяет возможность записи действия в журнал аудита. Имеет следующие значения:<br /><br /> 1 = да<br /><br /> 0 = нет|  
 |**name**|**sysname**|Имя действия аудита или группы действий. Не допускает значение NULL.|  
 |**class_desc**|**nvarchar(120)**|Имя класса объекта, для которого применяется действие аудита. Может быть любым объектом области сервера, базы данных или схемы, но не включает объекты схемы. Не допускает значение NULL.|  
 |**parent_class_desc**|**nvarchar(120)**|Имя родительского класса для объекта, описываемого class_desc. Значение NULL, если class_desc — Server.|  

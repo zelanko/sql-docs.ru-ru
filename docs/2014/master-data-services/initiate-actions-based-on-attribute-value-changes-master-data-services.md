@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], tracking attribute changes
 - change tracking groups [Master Data Services], initiating actions
 ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d27195abb30fe68b0fe515da479849dbc2019021
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2f66a7e91bcb475fe72d6abbe9f6007c8b9d668b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275540"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>Инициирование действия на основе значения атрибута (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]для инициации действий на основе значения атрибута создаются бизнес-правила. Например, когда значение определенного атрибута изменяется, может потребоваться изменить значение, отправить уведомление или запустить внешний рабочий процесс.  
@@ -58,7 +58,7 @@ ms.locfileid: "36086703"
   
 10. В узле **Сравнение значений** перетащите **изменено** на значок **Условия** панели **IF** .  
   
-11. В **атрибуты** щелкните атрибут и перетащите его на **Изменение условия** панели **Выбор атрибута** метки. Атрибут не влияет на правило, так что можно выбрать любой из доступных атрибутов.  
+11. В **атрибуты** панели, щелкните атрибут и перетащите его на значок **Изменение условия** области **выбора атрибута** метки. Атрибут не влияет на правило, так что можно выбрать любой из доступных атрибутов.  
   
 12. На панели **Изменение условия** в поле **Группа отслеживания изменений** введите номер группы отслеживания изменений, назначенный в рамках предварительных условий.  
   
@@ -89,9 +89,9 @@ ms.locfileid: "36086703"
   
 -   Примените бизнес-правила к данным с помощью одной из следующих процедур:  
   
-    -   [Проверка конкретных элементов с использованием бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [Проверка конкретных членов, соответствие бизнес-правилам &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [Проверьте версию на соответствие бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [Проверка версии на соответствие бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также  
  [Добавление атрибутов в группу отслеживания изменений &#40;службы Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   

@@ -1,5 +1,5 @@
 ---
-title: Набор строк DBSCHEMA_COLUMNS | Документы Microsoft
+title: Набор строк DBSCHEMA_COLUMNS | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DBSCHEMA_COLUMNS rowset
 ms.assetid: 653bdd07-a533-4a99-8b6a-6e5c7322e1f3
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 413e86e156db59e7621c94bdc1c99cd0087a987f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6fa933eb153b0d8de4c2fec4ba92b072954be141
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267580"
 ---
 # <a name="dbschemacolumns-rowset"></a>Набор строк DBSCHEMA_COLUMNS
   Предоставляет сведения обо всех столбцах, удовлетворяющих указанному критерию ограничения.  
@@ -45,7 +45,7 @@ ms.locfileid: "36180138"
 |`ORDINAL_POSITION`|`DBTYPE_UI4`||Позиция столбца, начиная с 1.|  
 |`COLUMN_HAS_DEFAULT`|`DBTYPE_BOOL`||Не поддерживается.|  
 |`COLUMN_DEFAULT`|`DBTYPE_WSTR`||Не поддерживается.|  
-|`COLUMN_FLAGS`|`DBTYPE_UI4`||Битовая маска `DBCOLUMNFLAGS`, указывающая свойства столбца. В разделе «DBCOLUMNFLAGS перечисляемый тип» в [IColumnsInfo::GetColumnInfo](http://msdn2.microsoft.com/library/ms722704.aspx)|  
+|`COLUMN_FLAGS`|`DBTYPE_UI4`||Битовая маска `DBCOLUMNFLAGS`, указывающая свойства столбца. См. в разделе «DBCOLUMNFLAGS перечисляемый тип» в [IColumnsInfo::GetColumnInfo](http://msdn2.microsoft.com/library/ms722704.aspx)|  
 |`IS_NULLABLE`|`DBTYPE_BOOL`||Всегда возвращает `false`.|  
 |`DATA_TYPE`|`DBTYPE_WSTR`<br /><br /> `DBTYPE_VARIANT`||Тип данных столбца. Возвращает значения типа String для столбцов измерений и значения типа Variant для мер.|  
 |`TYPE_GUID`|`DBTYPE_GUID`||Не поддерживается.|  

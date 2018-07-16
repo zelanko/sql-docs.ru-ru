@@ -1,5 +1,5 @@
 ---
-title: Тип данных EmptyResult (XML для Аналитики) | Документы Microsoft
+title: Тип данных EmptyResult (XML для Аналитики) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - EmptyResult data type
 ms.assetid: 63818123-acbb-4220-9d60-1aa20a7326a1
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bba727b2d7d612fa59c99665bd16d936da137fb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea04f2f170a61bafed2fa06cdb3260668120899c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257160"
 ---
 # <a name="emptyresult-data-type-xmla"></a>Тип данных EmptyResult (XML для аналитики)
   Определяет производный тип данных, представляющий [корневой](../xml-elements-properties/root-element-xmla.md) элемент, который не возвращает данные из [Discover](../xml-elements-methods-discover.md) или [Execute](../xml-elements-methods-execute.md) вызова метода.  
@@ -61,7 +61,7 @@ ms.locfileid: "36193663"
 |------------------|-------------|  
 |Родительские элементы|None|  
 |Дочерние элементы|None|  
-|Производные элементы|[корень](../xml-elements-properties/root-element-xmla.md)|  
+|Производные элементы|[корневой](../xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
  В некоторых командах XML для аналитики (XMLA) возврат результата не предусмотрен или невозможен из-за ошибки. Команды XMLA, не возвращающие результатов, возвращают тип данных `EmptyResult` из пространства имен элемента `root`.  

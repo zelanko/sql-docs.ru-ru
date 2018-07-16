@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data types [SQL Server], extended stored procedures
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9bf26c199332522c91bdc014f6b38b96bd913287
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 6bbf8c994f86502dd43b26ef588d864aa4dbbc4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208994"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Типы данных (API-интерфейс расширенных хранимых процедур)
     
@@ -52,7 +52,7 @@ ms.locfileid: "36193125"
 |SRVFLTN|`real` &#124; `float null`|Данные типа `real` или `float`, значения NULL допускаются.|  
 |SRVIMAGE|`image`|Тип данных `image`.|  
 |SRVINT1|`tinyint`|1-байтовое `tinyint` тип данных.|  
-|SRVINT2|`smallint`|2-байтовое `smallint` тип данных.|  
+|SRVINT2|`smallint`|2-байтовые `smallint` тип данных.|  
 |SRVINT4|`int`|4-байтовое `int` тип данных.|  
 |SRVINTN|`tinyint` &#124; `smallint` &#124; `int null`|Данные типа `tinyint`, `smallint` или `int`, значения NULL допускаются.|  
 |SRVMONEY4|`smallmoney`|4-байтовое `smallmoney` тип данных.|  

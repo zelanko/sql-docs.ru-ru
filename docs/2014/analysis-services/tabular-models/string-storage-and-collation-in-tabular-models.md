@@ -1,5 +1,5 @@
 ---
-title: Хранение строк и параметры сортировки в табличных моделях | Документы Microsoft
+title: Строка, хранения и параметров сортировки в табличных моделях | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6312157544413369574248a06477946a6a45bd71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b61d01e59aa99e6ed97a328d14cee8ab82c3427a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191070"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280550"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Хранение строк и параметры сортировки в табличных моделях
   Строки (текстовые значения) хранятся в формате с большим сжатием в табличных моделях. В силу сжатия при извлечении полных или частичных строк можно получить неверные результаты. Кроме того, поскольку языковой стандарт и параметры сортировки строки наследуются в иерархическом порядке у ближайшего родительского объекта, если язык строки не определен явным образом, локаль и параметры сортировки родительского элемента могут повлиять на то, как каждая строка хранится, является строка уникальной или объединена с похожими строками согласно определению параметров сортировки родительского элемента.  

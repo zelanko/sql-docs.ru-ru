@@ -1,5 +1,5 @@
 ---
-title: Элемент MoveWithDescendants (XML для Аналитики) | Документы Microsoft
+title: Элемент MoveWithDescendants (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - MoveWithDescendants element
 ms.assetid: d02285b6-1801-4da9-8e2b-9ab008e25558
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 975044359f2855f8cced46ca2045c2c397e4234b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b75fffd4d923b7593f403ae2268b980a5ab6de6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332574"
 ---
 # <a name="movewithdescendants-element-xmla"></a>Элемент MoveWithDescendants (XML для аналитики)
-  Указывает, является ли потомки элементов атрибутов обновляются в родительском [обновление](../xml-elements-commands/update-element-xmla.md) команды.  
+  Указывает ли потомки элементов атрибутов также обновляются в родительском [обновления](../xml-elements-commands/update-element-xmla.md) команды.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36102267"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- `MoveWithDescendants` Определяет ли `Update` команды должен обновлять не только элементы атрибутов, определенных в [атрибуты](attributes-element-xmla.md) элемент, но также, потомки этих элементов атрибутов должны быть также обновлены.  
+ `MoveWithDescendants` Определяет ли `Update` команды должен обновлять не только элементы атрибутов, определенных в [атрибуты](attributes-element-xmla.md) элемент, но также, должны быть потомки этих элементов атрибутов также обновлены.  
   
 > [!NOTE]  
 >  Этот элемент применяется только к элементам атрибутов в иерархиях родителей-потомков.  

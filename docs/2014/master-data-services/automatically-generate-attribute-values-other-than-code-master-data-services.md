@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9d895f2270f28ff3da8aabfa2a8701c589b1829e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d2c75529abee7da0550e628a1b6c2263e652fa9e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300494"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Автоматическое формирование значений атрибута отличного от Code (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]значения для атрибутов сущности можно формировать автоматически, если каждый раз при применении бизнес-правил необходимо автоматически задавать целое число в качестве значения.  
@@ -71,9 +71,9 @@ ms.locfileid: "36192260"
   
 ## <a name="next-steps"></a>Следующие шаги  
   
--   [Проверка конкретных элементов с использованием бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+-   [Проверка конкретных членов, соответствие бизнес-правилам &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
--   [Проверьте версию на соответствие бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+-   [Проверка версии на соответствие бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также  
  [Автоматическое создание кодов &#40;службы Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md)   

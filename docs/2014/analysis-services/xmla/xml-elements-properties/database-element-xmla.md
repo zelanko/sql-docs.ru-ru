@@ -1,5 +1,5 @@
 ---
-title: Базы данных элемент (XMLA) | Документы Microsoft
+title: Элемент (XMLA) Database | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Database element
 ms.assetid: 2ded06c4-4eaf-4ccb-a416-41ee51ced8bc
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f1b643a12ab1dbf2dc151fe91a8663b138e581ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 22e385380b2757427b5fa3a33725f6c25e8dde36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249434"
 ---
 # <a name="database-element-xmla"></a>Элемент Database (XML для аналитики)
   Определяет базу данных, содержащей измерение, представленное родительским [объекта](object-element-dimension-xmla.md) элемент.  
@@ -67,7 +67,7 @@ ms.locfileid: "36087221"
  Элемент `Database` представляет собой идентификатор объекта, который содержит имя базы данных служб Analysis Services, включающей измерение, представленное элементом `Object`.  
   
 ## <a name="see-also"></a>См. также  
- [Куб элемент &#40;XML для Аналитики&#41;](cube-element-xmla.md)   
+ [Элемент куба &#40;XML для Аналитики&#41;](cube-element-xmla.md)   
  [Элемент измерения &#40;XML для Аналитики&#41;](dimension-element-xmla.md)   
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)  
   

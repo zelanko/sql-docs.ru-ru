@@ -1,5 +1,5 @@
 ---
-title: Код отчета в диалоговом окне Свойства | Документы Microsoft
+title: Сообщить о диалоговом окне Свойства кода | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10520"
 - sql12.rtp.rptdesigner.reportproperties.customcode.f1
 ms.assetid: 955d4b11-17b4-4f1c-9690-6e7af54caea7
 caps.latest.revision: 34
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c31cd76f1de4ffe7ec528f6040718bb4551669e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60d1ee37f078c5abdc4043ef5ea743c3e9e4f883
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272200"
 ---
 # <a name="report-properties-dialog-box-code"></a>Диалоговое окно «Свойства отчета» — «Код»
   Выберите **Код**в диалоговом окне **Свойства отчета** , чтобы определить пользовательский код, используемый выражениями в отчете.  

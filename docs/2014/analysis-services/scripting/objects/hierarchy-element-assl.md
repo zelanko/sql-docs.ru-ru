@@ -1,5 +1,5 @@
 ---
-title: Элемент Hierarchy (ASSL) | Документы Microsoft
+title: Элемент Hierarchy (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Hierarchy element
 ms.assetid: ac54d74a-5e6c-4c24-83bf-766440478f6c
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c5acacc00f072f50cc0429c345b5a2fedc6afc6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 059536a84ff5eb888b6851f39ab7f418d9edbef3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250904"
 ---
 # <a name="hierarchy-element-assl"></a>Элемент Hierarchy (ASSL)
   Определяет иерархию в измерении.  

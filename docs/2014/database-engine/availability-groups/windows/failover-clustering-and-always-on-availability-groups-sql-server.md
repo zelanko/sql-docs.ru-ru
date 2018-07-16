@@ -1,14 +1,13 @@
 ---
-title: Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server) | Документы Microsoft
+title: Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
 - Availability Groups [SQL Server], WSFC clusters
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 caps.latest.revision: 43
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 842003d531b655e4e302941dba67591a94006a84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e0fc322f09ab45756de441e3edf806ab99a02e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267150"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] — решение высокого уровня доступности и аварийного восстановления, появившееся в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Требует наличия отказоустойчивого кластера Windows Server (WSFC). Кроме того, хотя [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] не зависит от отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на экземпляре отказоустойчивого кластера (FCI) можно размещать реплику для группы доступности. При проектировании среды [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] важно знать роль каждой из технологий кластеризации, а также иметь представления о необходимых требованиях.  
@@ -80,7 +79,7 @@ ms.locfileid: "36087214"
  **Параметры политики перехода на другой ресурс для группы доступности применимы ко всем репликам, независимо от того, размещаются ли они в автономном экземпляре или экземпляре FCI.  
   
 > [!NOTE]  
->  Дополнительные сведения о **число узлов** в отказоустойчивой кластеризации и **группы доступности AlwaysOn** в разных выпусках [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], в разделе [возможности, поддерживаемые Выпуски SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Дополнительные сведения о **количество узлов** в отказоустойчивом кластере и **группы доступности AlwaysOn** для различных выпусков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в разделе [функции, поддерживаемые различными Выпуски SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Рекомендации для размещения реплики доступности на FCI  
   
@@ -118,15 +117,15 @@ ms.locfileid: "36087214"
   
      [Настроить отказоустойчивую кластеризацию Windows для SQL Server (группы доступности или экземпляр отказоустойчивого кластера) с ограниченной безопасностью](http://blogs.msdn.com/b/sqlalwayson/archive/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security.aspx)  
   
-     [Блоги SQL Server AlwaysOn Team: Официальный блог SQL Server AlwaysOn](http://blogs.msdn.com/b/sqlalwayson/)  
+     [Блоги группы AlwaysOn SQL Server: Официальный блог SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
   
      [Блоги инженеров CSS SQL Server](http://blogs.msdn.com/b/psssql/)  
   
 -   **Технические документы**  
   
-     [Руководство по архитектуре AlwaysOn: Построение высокого уровня доступности и аварийного восстановления с помощью экземпляров отказоустойчивого кластера и группы доступности](http://msdn.microsoft.com/library/jj215886.aspx)  
+     [Руководство по архитектуре AlwaysOn: Построение высокого уровня доступности и аварийного восстановления с помощью экземпляров отказоустойчивого кластера и групп доступности](http://msdn.microsoft.com/library/jj215886.aspx)  
   
-     [Microsoft SQL Server AlwaysOn Solutions Guide for высокого уровня доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Технические документы Майкрософт Microsoft по SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   

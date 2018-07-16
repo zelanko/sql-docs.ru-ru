@@ -1,5 +1,5 @@
 ---
-title: Элемент StorageMode (ASSL) | Документы Microsoft
+title: Элемент StorageMode (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StorageMode element
 ms.assetid: 197e8153-1ab6-43ba-a7e9-ae9be19ac511
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d65d778e54a712e3fce18bdac5b3a0e31426863
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d61633743b4ce7e7b72f868b280e1bb376f1846
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299014"
 ---
 # <a name="storagemode-element-assl"></a>Элемент StorageMode (ASSL)
   Определяет режим хранения для родительского элемента.  
@@ -58,7 +58,7 @@ ms.locfileid: "36188104"
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительские элементы|[Куб элемент &#40;ASSL&#41;](../objects/cube-element-assl.md), [измерения элемент &#40;ASSL&#41;](../objects/dimension-element-assl.md), [элемент MeasureGroup &#40;ASSL&#41;](../objects/group-element-assl.md), [секции Элемент &#40;ASSL&#41;](../objects/partition-element-assl.md)|  
+|Родительские элементы|[Элемент куба &#40;ASSL&#41;](../objects/cube-element-assl.md), [измерения элемент &#40;ASSL&#41;](../objects/dimension-element-assl.md), [элемент MeasureGroup &#40;ASSL&#41;](../objects/group-element-assl.md), [секции Элемент &#40;ASSL&#41;](../objects/partition-element-assl.md)|  
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
@@ -68,7 +68,7 @@ ms.locfileid: "36188104"
 |-----------|-----------------|  
 |*MOLAP*|Родительский элемент использует многомерное хранилище OLAP (MOLAP).|  
 |*ROLAP*|Родительский элемент использует реляционное хранилище OLAP (ROLAP).|  
-|*HOLAP*|Родительский элемент использует гибридное хранилище OLAP (HOLAP). **Примечание:** это значение не является допустимым для [измерения](../objects/dimension-element-assl.md) от родительского элемента.|  
+|*HOLAP*|Родительский элемент использует гибридное хранилище OLAP (HOLAP). **Примечание:** это значение не является допустимым для [измерения](../objects/dimension-element-assl.md) родительскими элементами.|  
 |*InMemory*|Родительский элемент использует хранилище IMBI.|  
   
  Перечисление, соответствующее допустимым значениям элемента `StorageMode` в модели объектов AMO, — это <xref:Microsoft.AnalysisServices.StorageMode>.  

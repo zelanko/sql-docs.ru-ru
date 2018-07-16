@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], about entities
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cc52b0264c547c6dd6fabe14cd82762193a5f2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 6f0888b95eb765313b2cf766b0f61c1d71f642b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306044"
 ---
 # <a name="entities-master-data-services"></a>Сущности (службы основных данных)
   Сущности — это объекты, которые содержатся в моделях [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Каждая сущность содержит элементы, которые являются строками основных данных, которыми можно управлять.  
@@ -68,11 +68,11 @@ ms.locfileid: "36110194"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание новой сущности.|[Создание сущности &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
+|Создание новой сущности.|[Создать сущность &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
 |Указание того, что сущность может содержать явные иерархии и коллекции.|[Активация сущности для явных иерархий и коллекций &#40;службы Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |Изменение имени существующей сущности.|[Изменение имени сущности &#40;службы Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
 |Удаление существующей сущности.|[Удаление сущности &#40;службы Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
-|Назначение разрешения сущностям.|[Назначение разрешения объекта модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|Назначение разрешения сущностям.|[Назначение разрешений объекта модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   

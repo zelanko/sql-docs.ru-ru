@@ -1,5 +1,5 @@
 ---
-title: Решения для интеллектуального анализа данных | Документы Microsoft
+title: Решения для интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], about data mining
 - data mining [Analysis Services], development
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 caps.latest.revision: 62
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 78467c48599e9f97cf856be9963ad2e3e5318472
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57c0dcbc62475cd55b827d9104efe8a8c2db249c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263850"
 ---
 # <a name="data-mining-solutions"></a>Решения интеллектуального анализа данных
   Решение по интеллектуальному анализу данных представляет собой решение служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которое содержит один или несколько проектов интеллектуального анализа данных.  
@@ -31,13 +31,13 @@ ms.locfileid: "36190305"
   
  Дополнительные сведения о других типах проектов, полезных для интеллектуального анализа данных, см. в разделе [Связанные проекты для решений интеллектуального анализа данных](data-mining-solutions.md).  
   
- [Реляционные и. Многомерные решения](#bkmk_RelMD)  
+ [Реляционные и Многомерные решения](#bkmk_RelMD)  
   
  [Развертывание решений интеллектуального анализа данных](#bkmk_Deploy)  
   
  [Пошаговые руководства по решениям](#bkmk_Walkthru)  
   
-##  <a name="bkmk_RelMD"></a> Реляционные и. многомерные решения  
+##  <a name="bkmk_RelMD"></a> Реляционные и многомерные решения  
  Решение по интеллектуальному анализу данных может быть основано либо на многомерных данных (то есть на существующем кубе), либо на чисто реляционных данных, например таблицах и представлениях в хранилище данных, а также на текстовых файлах, таблицах Excel и других внешних источниках данных.  
   
 -   Объекты интеллектуального анализа данных можно создать внутри существующего многомерного решения базы данных.  

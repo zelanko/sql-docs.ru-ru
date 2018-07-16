@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sequencecontainer.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d0487ac38c36a8f327df6fbb60a3e084958ec85f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c728fec6573dbcfd36bcc973c1fddbf7ffbe1b45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328184"
 ---
 # <a name="sequence-container"></a>контейнер последовательности
   Контейнер последовательности определяет поток управления, являющийся подмножеством потока управления пакета. Контейнер последовательности группирует пакет в несколько отдельных потоков управления, каждый из которых содержит одну или более задач и контейнеров, выполняющихся в общем потоке управления.  
@@ -60,7 +60,7 @@ ms.locfileid: "36190819"
  Дополнительные сведения о настройке свойств этого компонента [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]см. в разделе [Задание свойств задач или контейнеров](../set-the-properties-of-a-task-or-container.md).  
   
 ## <a name="see-also"></a>См. также  
- [Добавление или удаление задачи или контейнера в потоке управления](add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [Добавление или удаление задачи или контейнера в поток управления](add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Соединение задач и контейнеров с помощью элементов управления очередностью по умолчанию](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Контейнеры служб Integration Services](integration-services-containers.md)  
   

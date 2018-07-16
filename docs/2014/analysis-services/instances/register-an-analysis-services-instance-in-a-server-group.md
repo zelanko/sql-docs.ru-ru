@@ -1,5 +1,5 @@
 ---
-title: Регистрация экземпляра служб Analysis Services в группе серверов | Документы Microsoft
+title: Регистрация экземпляра служб Analysis Services в группе серверов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a503af156ae5998cf841161ceddad53ebc3696ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 538b54cde0de7a49ff151f2f978346a2d8767317
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208084"
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>Регистрация экземпляра служб Analysis Services в группе серверов
   При наличии большого числа экземпляров сервера служб Analysis Services можно создавать группы серверов в среде Management Studio и тем самым упростить администрирование сервера. Группа серверов должна обеспечить близость связанных серверов внутри рабочей области администрирования. Предположим, нужно управлять десятью отдельными экземплярами служб Analysis Services. Группирование по режиму сервера, времени работы или отделу или региону может упростить просмотр и подключение к экземплярам с одинаковыми характеристиками. Вы можете также добавить описательную информацию, которая поможет вспомнить, каким образом используется сервер.  
   
- ![Область зарегистрированного сервера со рядовых серверов](../media/ssas-ssms-registerserver.gif "область зарегистрированных серверов с рядовыми серверами")  
+ ![Панель Server зарегистрировано с рядовыми серверами](../media/ssas-ssms-registerserver.gif "панели зарегистрированных серверов с рядовыми серверами")  
   
  Группы серверов создаются в виде иерархической структуры. Локальная группа серверов — корневой узел. Он всегда содержит экземпляры служб Analysis Services, запущенные на локальном компьютере. Удаленные серверы можно добавить в любую группу, включая локальную группу.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - MSReportServer_ConfigurationSetting Class
 api_location:
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 caps.latest.revision: 36
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6e09e954cb842a25a1e20453dec816479061c597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: fbc5fb6155840f6c64003f1e1dd38dc7914a0f04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280140"
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting, класс
   Представляет установочные параметры и параметры времени выполнения для экземпляра сервера отчетов. Эти параметры хранятся в файле конфигурации для сервера отчетов.  
   
- Список всех членов этого типа см. в разделе [элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md).  
+ Список всех элементов этого типа, см. в разделе [элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,7 +49,7 @@ public class MSReportServer_ConfigurationSetting
  Все открытые статические (**Shared** в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) элементы этого типа можно использовать в многопотоковых операциях. Для элементов экземпляра потокобезопасность не гарантируется.  
   
 ## <a name="example"></a>Пример  
- Чтобы запустить приведенный ниже код, добавьте имя сервера вместо каждого местозаполнителя \<*имя_сервера*>. Путь обновления должен указывать на фактическое расположение установки, если оно отличается от расположения по умолчанию. В следующем примере кода выполняется итерация по всем свойствам [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) класса, вывод имени каждое свойство и его значение на консоль.  
+ Чтобы запустить приведенный ниже код, добавьте имя сервера вместо каждого местозаполнителя \<*имя_сервера*>. Путь обновления должен указывать на фактическое расположение установки, если оно отличается от расположения по умолчанию. В следующем примере кода выполняется итерация по всем свойствам [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) класс, выводит имя каждого свойства и его значение на консоль.  
   
 ```vb  
 Imports System  

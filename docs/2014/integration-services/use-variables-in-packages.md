@@ -1,5 +1,5 @@
 ---
-title: Использование переменных в пакетах | Документы Microsoft
+title: Использование переменных в пакетах | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined variables [Integration Services]
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 81678b498e9c4eca48a0d9de2b5f7070693e7d90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0cc23cf94eef3998e1079a09be5978e4c594ca9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285420"
 ---
 # <a name="use-variables-in-packages"></a>Использование переменных в пакетах
   Переменные — полезное и гибкое дополнение к пакетам служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ; переменные могут обеспечивать взаимодействие между объектами в пакете и между родительскими и дочерними пакетами. Переменные также можно использовать в выражениях и скриптах.  
   
 ## <a name="user-defined-variables-and-system-variables"></a>Пользовательские и системные переменные  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют системные переменные и поддерживают пользовательские переменные. При создании нового пакета, добавлении в него контейнера или задачи или создании обработчика событий служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включает в контейнер набор системных переменных. Системные переменные хранят полезную информацию о пакете, контейнере, задаче или обработчике событий. Например, во время выполнения системная переменная **MachineName** хранит имя компьютера, на котором запущен пакет, а переменная **StartTime** — время начала выполнения пакета. Системные переменные доступны только для чтения. Дополнительные сведения см. в статье [System Variables](system-variables.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют системные переменные и поддерживают определяемые пользователем переменные. При создании нового пакета, добавлении в него контейнера или задачи или создании обработчика событий служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включает в контейнер набор системных переменных. Системные переменные хранят полезную информацию о пакете, контейнере, задаче или обработчике событий. Например, во время выполнения системная переменная **MachineName** хранит имя компьютера, на котором запущен пакет, а переменная **StartTime** — время начала выполнения пакета. Системные переменные доступны только для чтения. Дополнительные сведения см. в статье [System Variables](system-variables.md).  
   
  Можно создавать пользовательские переменные и задействовать их в пакетах. Пользовательские переменные могут использоваться в службах [!INCLUDE[ssIS](../includes/ssis-md.md)]различными способами: в скриптах, в выражениях, использующих элементы управления очередностью, в контейнере "цикл по элементам", в преобразованиях "Производный столбец" и "Условное разбиение" и в выражениях, обновляющих значения свойств.  
   

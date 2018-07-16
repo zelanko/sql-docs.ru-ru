@@ -1,5 +1,5 @@
 ---
-title: Основные классы объектов AMO | Документы Microsoft
+title: Основные классы объектов AMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Analysis Management Objects, data sources
 ms.assetid: 440e9287-53a2-4db3-9481-1d2ceb6e5b5a
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ee31478a526dad385d9721256beebc4324cadb60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 55c1b94f30b21b71a6290e7b782e2eeb411d14f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270030"
 ---
 # <a name="amo-fundamental-classes"></a>Основные классы объектов AMO
   Основу работы с объектами AMO составляют основные классы. Они формируют среду для всех остальных объектов, которые будут использованы в приложении. К фундаментальным классам относятся следующие объекты: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, и <xref:Microsoft.AnalysisServices.DataSourceView>.  
@@ -43,13 +43,13 @@ ms.locfileid: "36190645"
 ##  <a name="ServerObjects"></a> Объекты сервера  
  Кроме того, будут доступны следующие методы.  
   
--   Управление соединениями: подключение, Disconnect, Reconnect и GetConnectionState.  
+-   Управление соединениями: Connect, Disconnect, Reconnect и GetConnectionState.  
   
 -   Управление транзакциями: BeginTransaction, CommitTransaction и RollbackTransaction.  
   
 -   Резервное копирование и восстановление.  
   
--   Выполнение DDL: выполнение CancelCommand SendXmlaRequest, StartXmlaRequest.  
+-   Выполнение DDL: выполнение CancelCommand, SendXmlaRequest, StartXmlaRequest.  
   
 -   Управление метаданными: UpdateObjects и Validate.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36190645"
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices>   
- [Знакомство с классами объектов AMO](amo-classes-introduction.md)   
+ [Введение в классы объектов AMO](amo-classes-introduction.md)   
  [Программирование фундаментальных объектов AMO](programming-amo-fundamental-objects.md)  
   
   

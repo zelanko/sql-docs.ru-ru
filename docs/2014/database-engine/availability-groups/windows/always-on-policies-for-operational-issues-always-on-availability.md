@@ -1,28 +1,27 @@
 ---
-title: Политики проблем в работе всегда в группах доступности (SQL Server) на всегда | Документы Microsoft
+title: Политики AlwaysOn на случай проблем в работе с Always On группы доступности (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], policies
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 caps.latest.revision: 19
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: d046706bcdfa5259feb19a7ad92805b8f37f7c7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 44d086a00d2e18bfd87410848a5acd73461fac6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287920"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)
   Модель правил определения исправности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] вычисляет набор стандартных (PBM) политик управления на основе политик. Их можно использовать для просмотра исправности группы доступности и реплики доступности и базы данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -50,7 +49,7 @@ ms.locfileid: "36110016"
 ##  <a name="AlwaysOnPBM"></a> Стандартные политики и проблемы  
  В следующей таблице приведены итоговые сведения о стандартных политиках.  
   
-|Имя политики|Проблема|Категория**<sup>*</sup>**|Аспект|  
+|Имя политики|Проблема|Категории**<sup>*</sup>**|Аспект|  
 |-----------------|-----------|------------------------------|-----------|  
 |Состояние кластера WSFC|[WSFC служба кластеров работает в режиме вне сети](wsfc-cluster-service-is-offline.md).|Критическая|Экземпляр SQL Server|  
 |Режим «в сети» группы доступности|[Группа доступности в режиме вне сети](availability-group-is-offline.md).|Критическая|группа доступности|  
@@ -104,7 +103,7 @@ ms.locfileid: "36110016"
   
 -   [Выполнение принудительного перехода на другой ресурс вручную для группы доступности (SQL Server)](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [Устранение неполадок с операцией не удалось добавить файл &#40;группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Устранение неполадок с операцией добавления файла, завершившейся сбоем &#40;группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> См. также  
   
@@ -112,7 +111,7 @@ ms.locfileid: "36110016"
   
 -   [Модель исправности AlwaysOn часть 2 — расширение модели исправности](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for высокого уровня доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>См. также  
  [Группы доступности AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)   

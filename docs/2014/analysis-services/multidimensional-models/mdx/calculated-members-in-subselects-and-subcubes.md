@@ -1,5 +1,5 @@
 ---
-title: Вычисляемые элементы в подзапросах выборки и вложенных кубах | Документы Microsoft
+title: Вычисляемые элементы в подзапросах выборки и вложенных кубах | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a073fe9578a877aa840e6a607ca6ae081f97052b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e5681806fd4b7530f3d83d54b21aafb3eeb07b09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323194"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Вычисляемые элементы в подзапросах выборки и вложенных кубах
   В предыдущих версиях вычисляемые элементы не допускались в подзапросах выборки и вложенных кубах. Тем не менее, начиная с версии SQL Server 2008, они разрешены и включаются свойством соединения. Кроме того, в SQL Server 2008 R2 определяется новое поведение вычисляемых элементов в подзапросах выборки и вложенных кубах.  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>Вычисляемые элементы в подзапросах выборки и вложенных кубах  
- `SubQueries` Свойство строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или `DBPROPMSMDSUBQUERIES` свойство в [поддерживаемые свойства XMLA &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) определяет поведение или разрешаемое использование вычисляемых элементов или вычисляемых Задает в подзапросах выборки и вложенных кубах. В контексте настоящего документа, если не указано иное, термин «подзапросы выборки» означает подзапросы выборки и вложенные кубы.  
+ `SubQueries` Свойство строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или `DBPROPMSMDSUBQUERIES` свойство в [поддерживаемые свойства XMLA &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) определяет поведение или квоту для вычисляемых элементов или вычисляемых Задает в подзапросах выборки и вложенных кубах. В контексте настоящего документа, если не указано иное, термин «подзапросы выборки» означает подзапросы выборки и вложенные кубы.  
   
  Свойство SubQueries может принимать следующие значения.  
   

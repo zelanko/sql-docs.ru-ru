@@ -1,5 +1,5 @@
 ---
-title: Набор строк MDSCHEMA_CUBES | Документы Microsoft
+title: Набор строк MDSCHEMA_CUBES | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_CUBES rowset
 ms.assetid: 5f1b63d4-aa3f-48c6-b866-7ffd91675044
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0044c9943b2f2819ea216c735f298b7e30de7a3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 441f83b4b5bec1a2340fbf6e8a3b14da77363162
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190524"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243404"
 ---
 # <a name="mdschemacubes-rowset"></a>Набор строк MDSCHEMA_CUBES
   Описывает структуру кубов в базе данных.  
@@ -38,7 +38,7 @@ ms.locfileid: "36190524"
 |-----------------|--------------------|------------|-----------------|  
 |`CATALOG_NAME`|`DBTYPE_WSTR`||Имя базы данных.|  
 |`SCHEMA_NAME`|`DBTYPE_WSTR`||Не поддерживается.|  
-|`CUBE_NAME`|`DBTYPE_WSTR`||Имя куба или измерения. Перед именами измерений указывается знак доллара ($). **Примечание:** только администраторы базы данных сервера и имеют разрешения на просмотр кубов, созданных из измерения.|  
+|`CUBE_NAME`|`DBTYPE_WSTR`||Имя куба или измерения. Перед именами измерений указывается знак доллара ($). **Примечание:** только администраторы базы данных сервера и иметь разрешения на просмотр кубов, созданных из измерения.|  
 |`CUBE_TYPE`|`DBTYPE_WSTR`||Тип куба. Допустимые значения:<br /><br /> -   `CUBE`<br />-   `DIMENSION`|  
 |`CUBE_GUID`|`DBTYPE_GUID`||Не поддерживается.|  
 |`CREATED_ON`|`DBTYPE_DBTIMESTAMP`||Не поддерживается.|  
@@ -65,7 +65,7 @@ ms.locfileid: "36190524"
 |`CATALOG_NAME`|`DBTYPE_WSTR`|Необязательный параметр.|  
 |`SCHEMA_NAME`|`DBTYPE_WSTR`|Необязательный параметр.|  
 |`CUBE_NAME`|`DBTYPE_WSTR`|Необязательный параметр.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|(Необязательно) Битовая карта с одним из этих допустимых значений.<br /><br /> -КУБ 1<br />-2 ИЗМЕРЕНИЯ.<br /><br /> Значение по умолчанию для ограничения — 1.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|(Необязательно) Битовая карта с одним из этих допустимых значений.<br /><br /> -КУБ 1<br />— ИЗМЕРЕНИЯ 2<br /><br /> Значение по умолчанию для ограничения — 1.|  
 |`Base Cube_Name`|`DBTYPE_WSTR`|Необязательный параметр.|  
   
 ## <a name="see-also"></a>См. также  

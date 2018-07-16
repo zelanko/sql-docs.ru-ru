@@ -1,5 +1,5 @@
 ---
-title: Просмотр и разрешение конфликтов данных для публикаций слиянием (среда SQL Server Management Studio) | Документы Microsoft
+title: Просмотр и разрешение конфликтов данных для публикаций слиянием (среда SQL Server Management Studio) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], viewing conflicts
 - viewing conflict information
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 75c7cab378171c3791cdca63b072698e6bf81330
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 95df6108930543ce728b76c304578aab21927fde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209024"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>просмотреть и разрешить конфликты данных для публикации слиянием (среда SQL Server Management Studio)
   В репликации слиянием конфликты разрешаются на основе сопоставителя, указанного для каждой статьи. По умолчанию для разрешения конфликтов не требуется вмешательство пользователя. Однако просмотреть конфликты и изменить результат разрешения конфликта можно в средстве просмотра конфликтов репликации [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  

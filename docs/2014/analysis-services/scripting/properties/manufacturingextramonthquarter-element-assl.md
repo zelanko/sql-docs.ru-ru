@@ -1,5 +1,5 @@
 ---
-title: Элемент ManufacturingExtraMonthQuarter (ASSL) | Документы Microsoft
+title: Элемент ManufacturingExtraMonthQuarter (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ManufacturingExtraMonthQuarter element
 ms.assetid: 6e97d92c-dd1e-48f6-a379-c1036c975f9f
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d4bc2e36bb67e64aabb5bfdaee67ea945f4bb077
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e57e3e7dbaa07ce86eaa5c0b29749fdc6c974cd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243634"
 ---
 # <a name="manufacturingextramonthquarter-element-assl"></a>Элемент ManufacturingExtraMonthQuarter (ASSL)
-  Определяет месяц производственного периода, которому присваивается дополнительный месяц для [TimeBinding](../data-type/binding-data-type-assl.md) элемента.  
+  Определяет месяц производственного периода, которому присваивается дополнительный месяц для [TimeBinding](../data-type/binding-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36087226"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `ManufacturingExtraMonthQuarter` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.TimeBinding>.  
+ Элемент, соответствующий родителю параметра `ManufacturingExtraMonthQuarter` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

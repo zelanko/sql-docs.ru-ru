@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.AFPDWUPTASK.F1
 - SQL11.DTS.DESIGNER.AFPDWUPTASK.F1
 ms.assetid: 112cf764-f85a-4c1a-b732-d299d717c0d4
 caps.latest.revision: 5
 author: yualan
-ms.author: yual
-manager: jhubbard
-ms.openlocfilehash: 5090da0bc3d3976ed222976c79a5831b5756a4a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: dfdaa7d851e4d29f476e50ddeaacf0fae943c410
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250544"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Задача отправки информации в хранилище данных SQL Azure
 **Задача отправки информации в хранилище данных SQL Azure** позволяет отправить локальные данные в таблицу хранилища данных SQL Azure с использованием пакета SSIS. В настоящее время в качестве формата исходного файла данных поддерживается текст с разделителями в кодировке UTF-8. Процесс передачи следует эффективный подход PolyBase. В частности, данные сначала будут переданы в хранилище BLOB-объектов Azure и лишь затем в хранилище данных SQL Azure. Поэтому для использования этой задачи требуется учетная запись хранилища BLOB-объектов Azure.

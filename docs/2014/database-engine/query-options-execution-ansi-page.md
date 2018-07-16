@@ -1,5 +1,5 @@
 ---
-title: Параметры запроса (страница ANSI) выполнения | Документы Microsoft
+title: Параметры запроса (страница ANSI) выполнения | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.ansi.f1
 ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
 caps.latest.revision: 23
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 41c8957ebd2dfb77b13803945c210d6a09f1e874
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7e3c070c8054378aeae2e3be8e6a2a237c4c3b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252656"
 ---
 # <a name="query-options-execution-ansi-page"></a>Выполнение параметров запроса (страница ANSI)
   Эта страница позволяет указать, что [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] будет выполнять запросы с использованием всех параметров, определенных в стандарте ISO (ANSI), или некоторых из них.  
@@ -57,7 +57,7 @@ ms.locfileid: "36087714"
  **SET ANSI_NULLS**  
  Позволяет задать совместимое со стандартом ISO поведение операторов сравнения «Равно» (`=`) и «Не равно» (`<>`) при использовании со значениями NULL. Если флажок **SET ANSI_NULLS** установлен, то результатом сравнений любых значений со значением NULL оказывается значение UNKNOWN в соответствии со стандартом ISO. Если параметр **SET ANSI_NULLS** не выбран, то результатом сравнений данных со значением NULL становится значение TRUE, если данные имеют значение NULL. Этот параметр выбран по умолчанию.  
   
- **По умолчанию**  
+ **Восстановить значения по умолчанию**  
  Позволяет вернуть исходные значения по умолчанию для всех параметров на данной странице.  
   
   

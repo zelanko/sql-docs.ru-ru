@@ -1,5 +1,5 @@
 ---
-title: Выбор между URL-адресов и SOAP | Документы Microsoft
+title: Выбор между доступом по URL-адрес и SOAP | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], application integration
 ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
 caps.latest.revision: 39
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ddeb463427f159717d899f73031306f05fb424e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7d8d60cd6b91e93dbf0fcd71e8cc995a405af88b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280540"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>Выбор между доступом по URL-адресу и протоколом SOAP
   Интеграция служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательские приложения может оказаться сложной задачей. При этом проблема состоит не в сложности модели программирования или интерфейсов API, а в наличии множества способов для интеграции. Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с самого начала разрабатывались в качестве платформы разработки и поэтому построены с учетом гибких возможностей программирования. Такая гибкость обуславливает необходимость принятия важных решений для интеграции функций служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] по управлению отчетами и перемещению по отчетам в существующие бизнес-приложения.  
@@ -46,7 +46,7 @@ ms.locfileid: "36189489"
   
  Дополнительные сведения о панели инструментов отчета см. в разделе [Средство просмотра HTML-страниц и панель инструментов отчета](../html-viewer-and-the-report-toolbar.md).  
   
- Дополнительные сведения о доступе по URL-АДРЕСУ см. в разделе [URL-адресов &#40;SSRS&#41;](../url-access-ssrs.md).  
+ Дополнительные сведения о URL-адресов, см. в разделе [URL-адресов &#40;SSRS&#41;](../url-access-ssrs.md).  
   
  Доступ по URL-адресу удобен для просмотра отчетов, но он не предоставляет функций управления отчетом и пространством имен, которые могут быть необходимой составляющей любого сценария по созданию отчетов в рамках предприятия. В этом случае рекомендуется использовать широкие и разнообразные функции API SOAP служб Reporting Services. API SOAP позволяет управлять отчетами и развертывать их, создавать расписания, настраивать свойства сервера, управлять пространством имен сервера отчетов, создавать подписки и выполнять другие действия. API SOAP предоставляет доступ к полному набору функций управления служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Он также позволяет просматривать отчеты и переходить по отчетам с помощью метода API <xref:ReportExecution2005.ReportExecutionService.Render%2A>. Однако при просмотре отчетов с помощью API SOAP не включаются встроенные функции просмотра, доступные на панели инструментов отчета, и не выполняется автоматическая обработка интерактивных функций отчета, предоставляемая при доступе по URL-адресу.  
   

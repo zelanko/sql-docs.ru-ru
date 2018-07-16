@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 - data collector [SQL Server], Transact-SQL
 - data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1bd9b3d11069fd035c9a96fcba8d2114f6df0eeb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a682e89cb0c6f419b29d36faa3970730baf4b22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296524"
 ---
 # <a name="manage-data-collection"></a>Управление сбором данных
-  Можно использовать [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимые процедуры и функции для управления различными аспектами сбора данных, например включением или отключением сбора данных, изменив коллекцию набора конфигурации или просмотром данных в хранилище данных управления .  
+  Можно использовать [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимые процедуры и функции для управления различными аспектами сбора данных, например включением или отключением сбора данных, изменение коллекции набора конфигурации или просматривать данные в хранилище данных управления .  
   
 ## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>Управление сбором данных с использованием среды SQL Server Management Studio  
  Можно выполнять следующие задачи связанные со сборщиком данных с помощью обозревателя объектов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
@@ -67,7 +67,7 @@ ms.locfileid: "36179957"
 > [!IMPORTANT]  
 >  В отличие от обычных хранимых процедур, в хранимых процедурах сборщика данных используются жестко типизированные параметры и не поддерживается автоматическое преобразование типов данных. Если эти параметры не вызываются вместе с правильными типами данных входных параметров, как указано в описании аргумента, хранимая процедура возвращает ошибку.  
   
- Можно использовать [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для создания и выполнения представленные образцы кода. Дополнительные сведения см. в статье [Семантический поиск](../../ssms/object/object-explorer.md). В качестве альтернативы можно создать запрос в любом редакторе и сохранить его в текстовом файле с расширением SQL. Можно выполнить запрос из командной строки Windows, используя `sqlcmd` программы. Дополнительные сведения см. в статье [Программа sqlcmd](../scripting/sqlcmd-use-the-utility.md).  
+ Можно использовать [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для создания и выполнения представленные образцы кода. Дополнительные сведения см. в статье [Семантический поиск](../../ssms/object/object-explorer.md). В качестве альтернативы можно создать запрос в любом редакторе и сохранить его в текстовом файле с расширением SQL. Вы можете выполнить запрос из командной строки Windows с помощью `sqlcmd` служебной программы. Дополнительные сведения см. в статье [Программа sqlcmd](../scripting/sqlcmd-use-the-utility.md).  
   
 ### <a name="stored-procedures-and-views"></a>Хранимые процедуры и представления  
  **Работа со сборщиком данных**  

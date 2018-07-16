@@ -1,5 +1,5 @@
 ---
-title: Создание ролей и управление ими (табличные службы SSAS) | Документы Microsoft
+title: Создание ролей и управление ими (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.rolemanager.f1
 - sql12.asvs.bidtoolset.roledb.f1
 ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b1cc9692f7eb74cadb89b7b3a439600db775913b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 771dc3c7d0da05292c132f2b5460e7d05de1f796
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254896"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>Создание ролей и управление ими (табличные службы SSAS)
   В табличной модели роли определяют разрешения члена для модели. Роли определяются для проекта модели с помощью диалогового окна «Диспетчер ролей» в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. В развернутой модели администраторы баз данных могут управлять ролями с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -72,6 +72,6 @@ ms.locfileid: "36189835"
  [Перспективы &#40;табличные службы SSAS&#41;](perspectives-ssas-tabular.md)   
  [Анализ в Excel &#40;табличные службы SSAS&#41;](analyze-in-excel-ssas-tabular.md)   
  [USERNAME, функция &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [CUSTOMDATA, функция &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [Функция CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
   
   

@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.registermirroreddb.f1
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fe3cb9a4781d0bfe1186e4cab9a6607db68a3c74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e84e0d6598c8657e48dbfbd3fb6570f0f8ad7c72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289480"
 ---
 # <a name="register-mirrored-database"></a>Регистрация зеркальной базы данных
   Используйте это диалоговое окно для регистрации одной или нескольких баз данных на данном экземпляре сервера посредством добавления базы или баз данных к монитору зеркального отображения баз данных. Когда база данных добавлена, монитор зеркального отображения баз данных локально кэширует сведения о базе данных, ее участниках и о возможностях соединения с участниками.  

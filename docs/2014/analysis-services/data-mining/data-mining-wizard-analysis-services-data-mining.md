@@ -1,5 +1,5 @@
 ---
-title: Мастер интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+title: Мастер интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
 - OLAP [Analysis Services], mining models
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 caps.latest.revision: 56
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 49b3ecb1f8cc1bb63344b201145f9d6639aace89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 837acee30eb9aa6f6bf2a89c61d598abf52f972b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288420"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
   Мастер интеллектуального анализа данных в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] запускается каждый раз, когда к проекту интеллектуального анализа данных добавляется новая структура интеллектуального анализа данных. Мастер помогает выбрать источник данных и создать представление источника данных, которое определяет данные, используемые для анализа, а также создать начальную модель.  
@@ -55,7 +55,7 @@ ms.locfileid: "36190868"
   
  Затем создается структура интеллектуального анализа данных и одна модель интеллектуального анализа данных, связанная с этой структурой. Можно также создать только структуру интеллектуального анализа данных и добавить модели позже, но обычно проще сначала создать проверочную модель.  
   
-###  <a name="BKMK_Relational"></a> Реляционные и. Модели интеллектуального анализа данных OLAP  
+###  <a name="BKMK_Relational"></a> Реляционные и Модели интеллектуального анализа данных OLAP  
  Теперь следует сделать следующий важный выбор: использовать реляционный источник данных или создать модель на основе многомерных данных (OLAP).  
   
  В этой точке мастер интеллектуального анализа данных разделяется на две ветви в зависимости от того, содержатся данные в реляционном источнике данных или в кубе. Все остальное, кроме процесса выбора данных, остается прежним (выбор алгоритма, возможность добавить необязательный контрольный набор данных и т. д.), но выбор данных из куба немного сложнее, чем использование реляционных данных. (Если модель создается на основе куба, в конце будет несколько дополнительных параметров.)  

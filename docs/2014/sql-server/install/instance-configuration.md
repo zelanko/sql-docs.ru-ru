@@ -1,5 +1,5 @@
 ---
-title: Экземпляр конфигурации | Документы Microsoft
+title: Экземпляр конфигурации | Документация Майкрософт
 ms.custom: ''
 ms.date: 2016-05-04
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 757b29a54828816de27559715e88b337bd5a06a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bdcfdc34d61b38992c44a220b7b58041cd496200
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190676"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274330"
 ---
 # <a name="instance-configuration"></a>Конфигурация экземпляра
   На странице **Конфигурация экземпляра** мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно выбрать создание экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по умолчанию или именованного экземпляра. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] еще не установлен и не указано создание именованного экземпляра, то будет создан экземпляр по умолчанию.  
@@ -65,7 +65,7 @@ ms.locfileid: "36190676"
   
 -   Если в качестве имени экземпляра указано значение «MSSQLServer», то будет создан экземпляр по умолчанию.  
   
--   Установка служб [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] всегда устанавливается как именованный экземпляр «PowerPivot». Нельзя указать другое имя экземпляра для этой роли компонента.  
+-   Установка [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] всегда устанавливается как именованный экземпляр «PowerPivot». Нельзя указать другое имя экземпляра для этой роли компонента.  
   
 -   Длина имени экземпляра ограничена шестнадцатью символами.  
   

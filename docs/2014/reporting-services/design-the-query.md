@@ -1,5 +1,5 @@
 ---
-title: Создание запроса | Документы Microsoft
+title: Создание запроса | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designquery.f1
 ms.assetid: 2dad800f-10a1-453c-8761-2935b9826d84
 caps.latest.revision: 39
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2ca850de7e8f09f704434910ccf0fa45cbfca726
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be1faf198c38ee9445602aa0e0bcc8ae66b5461a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270310"
 ---
 # <a name="design-the-query"></a>Создание запроса
   На этой странице мастера отчетов можно создать запрос: ввести его вручную, воспользоваться построителем запросов для интерактивного создания запроса или импортировать запрос из другого отчета.  
@@ -53,6 +53,6 @@ EXEC uspgetEmployeeManagers '1';
 ## <a name="see-also"></a>См. также  
  [Справка мастера отчетов](../../2014/reporting-services/report-wizard-help.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Добавление данных в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)  
+ [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

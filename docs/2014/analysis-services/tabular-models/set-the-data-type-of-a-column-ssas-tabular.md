@@ -1,5 +1,5 @@
 ---
-title: Задайте тип данных столбца (табличные службы SSAS) | Документы Microsoft
+title: Задайте тип данных столбца (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6c0c55e44192b348b9ae1510d9ee90731185b70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0871dbef7b9b9a053a7c79688ec7073d2d8fdcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189131"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312234"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Выбор типа данных столбца (табличные службы SSAS)
   При импорте данных или вставке данных в модель конструктор модели автоматически обнаруживает и применяет типы данных. После добавления данных в модель можно вручную изменить тип данных столбца, чтобы изменить способ хранения данных. Если необходимо только изменить формат отображения данных, не изменяя способ их хранения, так и сделайте.  
@@ -72,6 +72,6 @@ ms.locfileid: "36189131"
  Подробные сведения о типах данных, которые используются в семантических моделях бизнес-аналитики, о способах неявного преобразования и использовании разных типов данных в формулах см. в разделе [Data Types Supported &#40;SSAS Tabular&#41;](data-types-supported-ssas-tabular.md).  
   
 ## <a name="see-also"></a>См. также  
- [Типы данных, поддерживаемые &#40;табличные службы SSAS&#41;](data-types-supported-ssas-tabular.md)  
+ [Поддерживаемые типы данных &#40;табличные службы SSAS&#41;](data-types-supported-ssas-tabular.md)  
   
   

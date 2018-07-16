@@ -1,5 +1,5 @@
 ---
-title: Панель инструментов (атрибут связи вкладка «конструктор», конструктор измерений) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Панель инструментов (вкладки конструктора атрибута связи, конструктор измерений) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.toolbar.f1
 ms.assetid: 9c0415a8-b780-40dd-a6dd-6ee0e30a24cb
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5bfd406eb54451cd6e3b68b5463172f796cd82e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2426c4c39c68e553782d1b9e1a28e3993f180eb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216024"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Панель инструментов (вкладка «Конструктор связей атрибутов», конструктор измерений) (службы Analysis Services — многомерные данные)
   Панель инструментов на вкладке **Связь атрибутов** конструктора измерений используется для выполнения следующих процедур.  
@@ -63,7 +63,7 @@ ms.locfileid: "36188762"
 > [!NOTE]  
 >  Если установить этот флажок, конструктор измерений вернет фигуры на диаграмме связей атрибутов к виду, используемому по умолчанию.  
   
- **Упорядочение фигур**  
+ **Упорядочить фигуры**  
  Упорядочивает фигуры по алгоритму разметки, используемому конструктором измерений.  
   
  **Автоупорядочивание фигур**  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 568ccf4eb9ccba4ed768d53cd541a6b50847160f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89e532328541cb515d6b39394f1a3a3ea0665506
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292884"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Обработка операций вставки, обновления и удаления
   В потоке данных пакета служб Integration Services, выполняющего добавочную загрузку информации об измененных данных, второй задачей является разделение вставок, обновлений и удалений. Затем можно использовать соответствующие команды, чтобы применить их к назначению.  

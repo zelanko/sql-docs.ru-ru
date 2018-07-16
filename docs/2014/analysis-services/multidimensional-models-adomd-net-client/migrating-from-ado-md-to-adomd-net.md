@@ -1,5 +1,5 @@
 ---
-title: Миграция от ADO MD к ADOMD.NET | Документы Microsoft
+title: Миграция от ADO MD к ADOMD.NET | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ADO MD migration [ADOMD.NET]
 ms.assetid: 8c760db3-c475-468e-948d-e5f599d985ad
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca9b4ba7dae762dead880c39c228391898e36e27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc10312f8e4a19c334c0eeba7284d7af0eabd0df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245734"
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>Миграция от ADO MD к ADOMD.NET
   Библиотека ADOMD.NET похожа на библиотеку ADO MD, представляющую собой расширение библиотеки ActiveX Data Objects (ADO), которая в клиентских приложениях на основе COM используется для доступа к многомерным данным. ADO MD обеспечивает простой доступ к многомерным данным из таких неуправляемых языков, как C++ и [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic. ADOMD.NET обеспечивает простой доступ к аналитическим данным (и многомерным, и используемым в интеллектуальном анализе) из таких управляемых языков, как [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# и [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET. Кроме того, ADOMD.NET предоставляет улучшенную модель объектов метаданных.  
@@ -59,7 +59,7 @@ ms.locfileid: "36189378"
  **Для получения метаданных модели интеллектуального анализа данных**  
  |ADO MD|ADOMD.NET|  
 |------------|---------------|  
-|Не доступен ни один класс.|Используйте одну из коллекций интеллектуального анализа данных.<br /><br /> - <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> Содержит список всех моделей интеллектуального анализа данных в источнике данных.<br />- <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> Предоставляет сведения об алгоритмах интеллектуального анализа данных.<br />- <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> Предоставляет информацию о структурах интеллектуального анализа данных на сервере.|  
+|Не доступен ни один класс.|Используйте одну из коллекций интеллектуального анализа данных.<br /><br /> - <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> Содержит список всех моделей интеллектуального анализа данных в источнике данных.<br />- <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> Предоставляет сведения об алгоритмах интеллектуального анализа данных.<br />- <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> Предоставляет сведения о структурах интеллектуального анализа данных на сервере.|  
   
  Чтобы можно было подчеркнуть эти различия, в следующем примере миграции существующее приложение ADO MD сравнивается с эквивалентным ему приложением ADOMD.NET.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36189378"
  И пример кода существующего приложения ADO MD, и его эквивалент ADOMD.NET, приведенные в этом разделе, выполняют одинаковый набор действий: создание соединения, выполнение инструкции многомерного выражения, а также извлечение метаданных и данных. Однако для выполнения указанных задач в этих двух наборах кода используются разные объекты.  
   
 ### <a name="existing-ado-md-code"></a>Существующий код ADO MD  
- В следующем примере кода из документации по ADO MD 2.8, написан на [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic® 6.0 и используется ADO MD для демонстрации подключения и запроса [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источника данных. В этом примере ADO MD используются следующие объекты:  
+ В следующем примере кода из документации по ADO MD 2.8, написан [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic® 6.0 и используется ADO MD для демонстрации подключения и выполнения запросов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источника данных. В этом примере ADO MD используются следующие объекты:  
   
 -   Создает соединение с использованием объекта `Catalog`.  
   

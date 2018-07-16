@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01789595c470865d4a422ac87c2814bcc9570468
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 16ea4d4a00726453918577e2eb0eb92d73580ccd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260870"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Создание клиентских приложений для данных FILESTREAM
   Win32 можно использовать для считывания и записи данных в объект FILESTREAM BLOB. Требуются следующие шаги.  
@@ -83,7 +82,7 @@ ms.locfileid: "36193381"
   
 -   Старайтесь не использовать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые обновляют большие двоичные объекты FILESTREAM или прикрепляют к ним данные. Это приводит к буферизации данных таких объектов в базе данных tempdb с последующей передачей в новый физический файл.  
   
--   Старайтесь избегать мелких обновлений больших двоичных объектов FILESTREAM. Каждая такая операция приводит к копированию базовых файлов FILESTREAM. Если приложению приходится прикреплять небольшие двоичные объекты, их следует записывать в `varbinary(max)` столбец, а затем выполнять одиночную операцию записи в объект FILESTREAM BLOB, когда число объектов достигнет установленного предела.  
+-   Старайтесь избегать мелких обновлений больших двоичных объектов FILESTREAM. Каждая такая операция приводит к копированию базовых файлов FILESTREAM. Если приложению приходится прикреплять небольшие двоичные объекты, их следует записывать в `varbinary(max)` столбец, а затем выполнять одиночную операцию записи в большой двоичный объект FILESTREAM, когда число объектов достигнет установленного предела.  
   
 -   Старайтесь не получать размер большого количества файлов больших двоичных объектов в приложении. На эту операцию уходит много времени, поскольку размер не хранится в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Если необходимо выяснить размер файла большого двоичного объекта, воспользуйтесь функцией [!INCLUDE[tsql](../../includes/tsql-md.md)] DATALENGTH(), чтобы определить размер объекта, если он закрыт. Функция DATALENGTH() не открывает объект, чтобы определить его размер.  
   

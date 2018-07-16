@@ -1,5 +1,5 @@
 ---
-title: Конфигурация ошибок (диалоговое окно «Структура интеллектуального анализа данных») (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Конфигурация ошибок (диалоговое окно «Структура интеллектуального анализа данных») (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.miningstructuredialog.general.f1
 ms.assetid: d9aa028b-bad9-49c7-a81c-c2150e4dd481
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 95f347b876673bd178f2059136bbbf6e79d8df5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 73c3627f3861b978a9e539943bcb65777b2f36b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257410"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>Конфигурация ошибок (диалоговое окно «Структура интеллектуального анализа данных») (службы Analysis Services — многомерные данные)
   Страница **Конфигурация ошибок** диалогового окна **Свойства структуры интеллектуального анализа данных** среды **SQL Server Management Studio** используется для задания свойств конфигурации ошибок структуры интеллектуального анализа данных в базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -93,7 +93,7 @@ ms.locfileid: "36087246"
  Введите полный путь и имя файла журнала ошибок.  
   
 ## <a name="see-also"></a>См. также  
- [Диалоговое окно свойств структуры интеллектуального анализа &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)   
- [Общие &#40;диалоговое окно структуры интеллектуального анализа&#41; &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
+ [Диалоговое окно свойств структуры интеллектуального &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)   
+ [Общие &#40;интеллектуального анализа данных диалоговое окно «Структура»&#41; &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
   
   

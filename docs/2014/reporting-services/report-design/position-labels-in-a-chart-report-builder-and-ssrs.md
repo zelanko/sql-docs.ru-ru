@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4b7782cb836f437aa61064d64d084859dedf97ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 0eabbd703d04e5aca74b8b94e449d5d8fd18ae97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262000"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>Размещение меток на диаграмме (построитель отчетов и службы SSRS)
   Поскольку формы всех типов диаграмм различны, метки точек данных помещаются в оптимальные положения, не ухудшающие удобочитаемость диаграммы. Позиции меток по умолчанию зависят от типа диаграммы:  
@@ -99,11 +99,11 @@ ms.locfileid: "36193518"
 6.  Выберите значение для свойства Position.  
   
 ## <a name="see-also"></a>См. также  
- [Круговые диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Линейчатые диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
+ [Круговые диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Линейчатые диаграммы &#40;построитель отчетов и службы SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Форматирование меток оси в виде значений даты или валюты &#40;построитель отчетов и службы SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Метки точек данных отображаемое за пределами круговой диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Отображение меток точек данных за пределами круговой диаграммы &#40;построитель отчетов и службы SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Просмотр свойств куба и измерения | Документы Microsoft
+title: Просмотр свойств куба и измерения | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 092ffbd7242d65d06476e3a22f43252600562520
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30dc761707ec02843bcc296bdb3cc7408c33a554
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241744"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Просмотр свойств куба и измерения
   После определения свойств куба можно просмотреть результаты в конструкторе кубов. В следующей задаче предстоит просмотреть структуру куба проекта [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.  
@@ -38,7 +38,7 @@ ms.locfileid: "36109820"
   
 4.  На панели **Измерения** вкладки **Структура куба** раскройте измерение **Customer**, а затем нажмите кнопку **Изменить Customer** , чтобы открыть это измерение в конструкторе измерений.  
   
-     Конструктор измерений содержит следующие вкладки: **Структура измерения**, **Связи атрибутов**, **Переводы**и **Браузер**. Обратите внимание, что вкладка **Структура измерения** содержит три панели: **Атрибуты**, **Иерархии**и **Представление источника данных**. Атрибуты, содержащиеся в измерении, отображаются на панели **Атрибуты** . Дополнительные сведения см. в разделе [Справочник по свойствам атрибута измерения](multidimensional-models/dimension-attribute-properties-reference.md), [Create User-Defined иерархий](multidimensional-models/user-defined-hierarchies-create.md).  
+     Конструктор измерений содержит следующие вкладки: **Структура измерения**, **Связи атрибутов**, **Переводы**и **Браузер**. Обратите внимание, что вкладка **Структура измерения** содержит три панели: **Атрибуты**, **Иерархии**и **Представление источника данных**. Атрибуты, содержащиеся в измерении, отображаются на панели **Атрибуты** . Дополнительные сведения см. в разделе [Справочник по свойствам атрибута измерения](multidimensional-models/dimension-attribute-properties-reference.md), [Создание пользовательских иерархий](multidimensional-models/user-defined-hierarchies-create.md).  
   
 5.  Чтобы переключиться к конструктору кубов, щелкните правой кнопкой мыши **Учебник по службам Analysis Services** в узле **Кубы** в обозревателе решений и выберите пункт **Конструктор представлений**.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - comparing string data
 - comparison options [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 34e8da7b9d951fa0064bd2cebb2bf7af60403bef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5c471942764076ac0c03044d1037c3600e83fc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280310"
 ---
 # <a name="comparing-string-data"></a>сравнение строковых данных
   Сравнения строк — важная составляющая любого преобразования, которое выполняется с помощью служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Кроме того, они применяются для вычисления выражений в переменных и выражениях свойств. Например, при преобразовании «Сортировка» сравниваются значения в наборе данных для сортировки данных по возрастанию или по убыванию.  

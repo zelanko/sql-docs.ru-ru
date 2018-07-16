@@ -1,5 +1,5 @@
 ---
-title: Основные понятия XMLA | Документы Microsoft
+title: Основные понятия XMLA | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - XMLA, concepts
 ms.assetid: 816183a7-d2f7-4e14-8e5b-2a4c1798fbc1
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0669a5ae645d015c0d79e802cc138af368ec472d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e381b0c3880dfd07ff10740ec1fffeeb295629a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293514"
 ---
 # <a name="xmla-concepts"></a>Основные понятия XML для аналитики
-  Открытый стандарт XML для аналитики (XMLA) поддерживает доступ к данным в источниках данных, находящихся в Интернете. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] реализует XML для Аналитики в соответствии со спецификацией XML для Аналитики 1.1.  
+  Открытый стандарт XML для аналитики (XMLA) поддерживает доступ к данным в источниках данных, находящихся в Интернете. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] реализует XML для Аналитики в соответствии со спецификацией XMLA 1.1.  
   
- XML для аналитики (XMLA) — это XML-протокол, основанный на протоколе SOAP, который специально предназначен для обеспечения унифицированного доступа к данным в любом стандартном многомерном источнике данных, находящемся в Интернете. XML для Аналитики также избавляет от необходимости развертывать клиентский компонент, который предоставляет модель объектов компонентов (COM) или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] интерфейсы платформы .NET Framework. Протокол XMLA оптимизирован для работы с Интернетом, особенно если обмен данными с сервером требует больших затрат времени и ресурсов, а в связи с применением поддерживающих состояние соединений с источниками данных количество соединений пользователя с сервером может стать ограниченным.  
+ XML для аналитики (XMLA) — это XML-протокол, основанный на протоколе SOAP, который специально предназначен для обеспечения унифицированного доступа к данным в любом стандартном многомерном источнике данных, находящемся в Интернете. XML для Аналитики также избавляет от необходимости развертывать клиентский компонент, предоставляющий объект модели компонентов (COM) или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] интерфейсов .NET Framework. Протокол XMLA оптимизирован для работы с Интернетом, особенно если обмен данными с сервером требует больших затрат времени и ресурсов, а в связи с применением поддерживающих состояние соединений с источниками данных количество соединений пользователя с сервером может стать ограниченным.  
   
  XML для Аналитики — это собственный протокол [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], используемым для взаимодействия между клиентским приложением и экземпляром [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] полностью поддерживает стандарт XML для аналитики (XMLA) версии 1.1, а также реализует расширения по управлению метаданными, управлению сеансами и блокировке. При обмене данными с экземпляром служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] протокол XMLA используется и объектами AMO, и компонентом ADOMD.NET.  
   

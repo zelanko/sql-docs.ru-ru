@@ -1,5 +1,5 @@
 ---
-title: О условия лицензии SQL Server (SSCM) | Документы Microsoft
+title: О лицензионное соглашение SQL Server (SSCM) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
 caps.latest.revision: 5
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3c3e8f4976f2ceafd73970e44b7d6f797298c672
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5991bbfb135ccd0ab65f342bf59648e4c82de36e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268100"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Об условиях лицензионного соглашения SQL Server (SSCM)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]Условия лицензионного соглашения, копируются на локальный компьютер при [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен. Если на один компьютер устанавливаются нескольких экземпляров одного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на одном языке, то ко всем экземплярам выпуска на этом языке будет применена одна копия лицензионного соглашения. Файлы записываются в: %ProgramFiles%\Microsoft SQL Server\110\License Terms\ или % ProgramFiles (x86) %\Microsoft SQL Server\110\License условия\\.  
@@ -79,7 +79,7 @@ ms.locfileid: "36087528"
 -   RUS — русский  
   
 ## <a name="sql-server-licensing-options"></a>Варианты лицензирования SQL Server  
- Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ценах и вариантах лицензирования см. раздел [Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=190955) веб-сайта.  
+ Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ценах и вариантах лицензирования, см. в разделе [Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=190955) веб-сайта.  
   
 ## <a name="see-also"></a>См. также  
  [Заявление о конфиденциальности Microsoft SQL Server](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   

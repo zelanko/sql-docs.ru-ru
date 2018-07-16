@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.reindex.f1
 - reindex
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d12d547871d2602249d042ff6e93060f340e9b2a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 603f79bcbbe2ec42b05de28b3685c71f6cca9c69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268980"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Задача «Перестроение индекса» (план обслуживания)
   Диалоговое окно **Задача "Перестроение индекса"** используется для пересоздания индексов на таблицах в базе данных с новым коэффициентом заполнения. Коэффициент заполнения определяет количество пустого пространства на каждой странице индекса для обеспечения роста в будущем. По мере того как к таблице добавляются данные, свободное пространство заполняется, поскольку коэффициент заполнения не сохраняется. Восстановить свободное пространство можно путем реорганизации данных и страниц индекса.  
@@ -66,7 +66,7 @@ ms.locfileid: "36180038"
  **Выбор**  
  Укажите таблицы или индексы, которые должны обрабатываться этой задачей. Недоступно, если в диалоговом окне «Объект» выбран тип **Таблицы и представления** .  
   
- **Реорганизовать страницы с по умолчанию объем свободного места**  
+ **Реорганизовать страницы с использованием объема свободного места по умолчанию**  
  Удалите индексы таблиц в базе данных и создайте их повторно с коэффициентом заполнения, указанным при создании индексов.  
   
  **Изменить долю свободного места на странице на**  

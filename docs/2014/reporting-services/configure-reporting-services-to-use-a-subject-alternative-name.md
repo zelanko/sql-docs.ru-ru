@@ -1,5 +1,5 @@
 ---
-title: Настройка служб Reporting Services для использования альтернативного имени субъекта | Документы Microsoft
+title: Настройка использования альтернативного имени субъекта Reporting Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
 caps.latest.revision: 4
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3826590033cfd21bc12fa623633f88d9fa11d76b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2890cea5f4c39d27ce89d4d9c5bcc3efe7384039
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284790"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Настройка Reporting Services для использования альтернативного имени субъекта
   В этом разделе объясняется, как настроить [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS), чтобы использовать альтернативное имя субъекта (SAN), изменив файл rsreportserver.config и используя средство Netsh.exe.  
@@ -34,7 +34,7 @@ ms.locfileid: "36086870"
   
  URL-адреса в [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] могут быть настроены для использования SSL-сертификат. Обычно сертификат имеет только имя субъекта, которое позволяет ему использовать только один URL-адрес для сеанса SSL. SAN — это дополнительное поле в сертификате, которое позволяет службе SSL прослушивать и быть допустимой для многих URL-адресов, а также совместно использовать порт SSL с другими приложениями. SAN выглядит следующим образом: www.s2.com.  
   
- Дополнительные сведения о параметрах SLL для [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], в разделе [Настройка соединений SSL для сервера отчетов в собственном режиме](security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Дополнительные сведения о параметрах SSL для [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], см. в разделе [Настройка подключений SSL на сервер отчетов в собственном режиме](security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Настройка SSRS для использования альтернативного имени субъекта для URL-адреса веб-службы  
   

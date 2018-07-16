@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55f4bd55-aa61-4d5c-98fd-f85824206ea0
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ad0ca1b2550abdd0add92b16930eb8b39a2fd51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 449d734353bd9cebf881646613fad3f5233d7367
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257830"
 ---
 # <a name="sql-server-agent-f1-help"></a>Справка F1 агента SQL Server
   В данном разделе содержится справка F1 для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эти разделы доступны из пользовательского интерфейса по нажатию клавиши F1 или при нажатии кнопки «Справка» в диалоговых окнах.  

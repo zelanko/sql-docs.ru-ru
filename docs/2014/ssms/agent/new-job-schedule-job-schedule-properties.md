@@ -1,5 +1,5 @@
 ---
-title: 'Создание расписания задания: Свойства расписания задания | Документы Microsoft'
+title: 'Создание расписания задания: Свойства расписания задания | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.editrecurringjobsched.f1
 - sql12.ag.job.scheduleproperties.f1
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db92c0f851185d602efd0ce379ec5f1e847383e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 29a1645cf9c75214e0ebade34a6f4c30c8eb830b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275886"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>Создание расписания задания: Свойства расписания задания
   Используйте эту страницу для просмотра и изменения свойств расписания.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
 caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e50abc86092a2d39f6fdb40ab9776063be3e71ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d401a108b3d29dcb370fc202ae50d3423e71fc3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252686"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>Параметры запроса профиля статистики столбцов (задача «Профилирование данных»)
   Для установки параметров режима **Запрос профиля статистики столбцов** , выделенного на панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль статистики столбцов описывает статистические показатели, такие как минимальное, максимальное, среднее и стандартное отклонение для числовых столбцов, а также минимальное и максимальное отклонение для столбцов типа `datetime`. Этот профиль поможет выявить проблемы в данных, например наличие недопустимых дат. Например, во время профилирования столбца исторических дат обнаружена самая поздняя дата, расположенная в будущем.  
@@ -74,7 +74,7 @@ ms.locfileid: "36190816"
  Введите описательное имя для этого запроса профиля. Обычно не нужно менять автоматически сформированное значение.  
   
 ## <a name="see-also"></a>См. также  
- [Редактор задачи «профилирование данных» &#40;страница «Общие»&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "профилирование данных" &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)   
  [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](single-table-quick-profile-form-data-profiling-task.md)  
   
   

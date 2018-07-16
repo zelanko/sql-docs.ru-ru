@@ -1,5 +1,5 @@
 ---
-title: Тип данных PartitionBinding (ASSL) | Документы Microsoft
+title: Тип данных PartitionBinding (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PartitionBinding data type
 ms.assetid: 859d4b47-31c7-4678-9388-254fec484299
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4e265cd83401d480de74adf89949dd8edf73616
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c34bee83ab6a32fe10d00b6d3450412e12729dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281920"
 ---
 # <a name="partitionbinding-data-type-assl"></a>Тип данных PartitionBinding (ASSL)
-  Определяет производный тип данных, представляющий привязку к [секции](../objects/partition-element-assl.md) элемента.  
+  Определяет производный тип данных, представляющий привязку к [секции](../objects/partition-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -60,14 +60,14 @@ ms.locfileid: "36110046"
 |------------------|-------------|  
 |Родительские элементы|None|  
 |Дочерние элементы|[CubeID](../../xmla/xml-elements-properties/id-element-xmla.md), [DatabaseID](../../xmla/xml-elements-properties/databaseid-element-xmla.md), [PartitionID](../../xmla/xml-elements-properties/partitionid-element-xmla.md), [источника](../properties/source-element-binding-assl.md)|  
-|Производные элементы|В разделе [привязки](binding-data-type-assl.md)|  
+|Производные элементы|См. в разделе [привязки](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о `Binding` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) `Binding` тип и иерархию наследования `Binding` типов, в разделе [тип привязки данных &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Дополнительные сведения о `Binding` типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) типа `Binding` тип и иерархию наследования `Binding` типов, см. в разделе [типа привязки данных &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- Обзор привязок данных в ASSL см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Обзор привязки данных в языке ASSL, см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

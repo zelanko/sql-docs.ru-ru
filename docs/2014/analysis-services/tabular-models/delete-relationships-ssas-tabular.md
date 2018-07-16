@@ -1,5 +1,5 @@
 ---
-title: Удаление связей (табличные службы SSAS) | Документы Microsoft
+title: Удаление связей (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e39f2f74824550940fbe206ee2185212abf7dd9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 530e00790a649ad7ccaebfddfc3582d23ee1b1e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249174"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>Удаление связей (табличные службы SSAS)
   Удалять существующие связи можно с помощью конструктора моделей в представлении диаграмм или диалогового окна «Управление связями». Сведения об использовании связей в табличных моделях см. в разделе [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).  
@@ -57,6 +57,6 @@ ms.locfileid: "36087458"
   
 ## <a name="see-also"></a>См. также  
  [Связи &#40;табличные службы SSAS&#41;](relationships-ssas-tabular.md)   
- [Создать связь между двумя таблицами &#40;табличные службы SSAS&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
+ [Создание связи между двумя таблицами &#40;табличные службы SSAS&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

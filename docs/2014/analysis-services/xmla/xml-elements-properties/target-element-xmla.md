@@ -1,5 +1,5 @@
 ---
-title: Целевой элемент (XMLA) | Документы Microsoft
+title: Целевой элемент (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Target element
 ms.assetid: 9a69a777-5f34-4e94-b470-6bab2a98df8b
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cd34f3102d477d9a2e89af8c8ba7e5ff2d37ef62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 08c231b16e6f61f2aa42770ee06832b99a0de5dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287870"
 ---
 # <a name="target-element-xmla"></a>Элемент Target (XML для аналитики)
   Представляет целевой секции для слияния во время [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) команды.  
@@ -67,7 +67,7 @@ ms.locfileid: "36189129"
 |Дочерние элементы|[CubeID](id-element-xmla.md), [DatabaseID](databaseid-element-xmla.md), [MeasureGroupID](measuregroupid-element-xmla.md), [PartitionID](partitionid-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- `Target` Элемент является ссылкой на объект для одной секции, в которой содержимое исходных секций, определяемое [источников](sources-element-xmla.md) родителя `MergePartitions` элемент, объединяемые.  
+ `Target` Элемент – ссылка объекта в одну секцию, в которой содержимое исходных секций, определяемое [источников](sources-element-xmla.md) родителя `MergePartitions` элемент, объединяемые.  
   
 ## <a name="example"></a>Пример  
  В следующем примере все четыре секции группы мер Internet Sales объединяются в целевую секцию `Internet_Sales_2004`. В этом примере используется куб [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] из образца базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

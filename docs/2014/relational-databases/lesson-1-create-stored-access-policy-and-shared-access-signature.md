@@ -1,5 +1,5 @@
 ---
-title: Занятие 2. Создать политику для контейнера, а также сформировать ключ подписи общего доступа (SAS) | Документы Microsoft
+title: Занятие 2. Создание политики для контейнера и создавать ключ подписи общего доступа (SAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c5313872497e120ebfce452547f755f61ba567e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 708c347e587d19ebfb7c2f24e94fd59db0289c52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324304"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>Занятие 2. Создание политики в контейнере ключа и ключа подписанного URL-адреса
   На этом занятии вы узнаете, как создать политику в контейнере больших двоичных объектов, а также сформировать ключ SAS.  
@@ -28,7 +28,7 @@ ms.locfileid: "36189002"
   
  Вы можете создать политику и подписанный URL-адрес с помощью одного из следующих методов:  
   
--   Операции Windows Azure REST API: [Создание контейнера](https://msdn.microsoft.com/library/azure/dd179468.aspx), [задать ACL контейнера](https://msdn.microsoft.com/library/azure/dd179391.aspx), и [получение списка управления Доступом контейнера](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
+-   Операции Windows Azure REST API: [создать контейнер](https://msdn.microsoft.com/library/azure/dd179468.aspx), [Set ACL контейнера](https://msdn.microsoft.com/library/azure/dd179391.aspx), и [получение списка управления Доступом контейнера](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
   
 -   [Метод CloudBlobContainer.GetSharedAccessSignature](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storageclient.cloudblobcontainer.getsharedaccesssignature.aspx) в Windows Azure SDK.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36189002"
   
     ```  
   
--   Средство обозревателя Windows Azure стороннего поставщика, например [обозреватель хранилищ Azure](http://azurestorageexplorer.codeplex.com/).  
+-   Средство обозревателя Windows Azure независимых производителей, таких как [обозреватель службы хранилища Azure](http://azurestorageexplorer.codeplex.com/).  
   
  **Следующее занятие:**  
   

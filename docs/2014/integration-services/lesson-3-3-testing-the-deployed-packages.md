@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 97597fb071ef233b14aa9245ad973b4181667e5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 347b7a25b447f4f41be0dbeb2936d67a29db4102
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289180"
 ---
 # <a name="step-3-testing-the-deployed-packages"></a>Шаг 3. Тестирование развернутых пакетов
   В этой задаче вы проверите пакеты, развернутые на экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  В других учебниках по [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] вы выполняли пакеты в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], среде разработки для [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]при помощи параметра **Запустить отладку** в меню **Отладка** . В этот раз пакет будет выполнен по-другому.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляет несколько средств, которые можно использовать для выполнения пакетов и тестовой или рабочей среде: служебную программу командной строки `dtexec` и программа выполнения пакетов. Программа выполнения пакетов — это графическое средство, основанное на программе `dtexec`. Оба эти средства выполняют пакет немедленно. Кроме того, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставляет подсистему агента SQL Server, которая специально создана для планирования выполнения пакетов в качестве шага в задании агента SQL Server.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляет несколько средств, которые можно использовать для запуска пакетов в тестовой или рабочей среде: программу командной строки `dtexec` и программы выполнения пакетов. Программа выполнения пакетов — это графическое средство, основанное на программе `dtexec`. Оба эти средства выполняют пакет немедленно. Кроме того, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставляет подсистему агента SQL Server, которая специально создана для планирования выполнения пакетов в качестве шага в задании агента SQL Server.  
   
  Программа выполнения пакетов будет использоваться для выполнения развернутых пакетов. Пакеты будут использоваться как есть; следовательно, нет необходимости обновлять сведения на страницах в диалоговом окне. Пакеты будут выполняться со страницы "Общие", которая является первой страницей в программе выполнения пакетов. При желании можно посмотреть на другие страницы, чтобы иметь представление о содержащихся на них сведениях о пакетах.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36189323"
   
      Запрос возвращает 21 строку. Возвращаемый результат состоит из строк XML-файла данных, "orders.xml". Каждая строка является сводкой по стране или региону; в строке присутствуют данные про название страны или региона, про число заказов для каждой страны или региона и даты последнего и первого заказов.  
   
-![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться установка последних со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services в MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services  **<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
  [Программа dtexec](packages/dtexec-utility.md)  

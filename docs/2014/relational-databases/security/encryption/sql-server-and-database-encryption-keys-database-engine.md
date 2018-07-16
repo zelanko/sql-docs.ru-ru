@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 03e1b85250115c3deb8b1615782c3e64c896bed8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 7a7e5c9979dfe42b956a90eb61d1a03a9ef65181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234894"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Ключи шифрования базы данных и SQL Server (компонент Database Engine)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используются ключи шифрования для защиты данных, информации об учетных данных и соединениях, которые хранятся в серверной базе данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] существует два вида ключей: *симметричный* и *aсимметричный*. В симметричных ключах для шифрования и расшифровки данных используется одинаковый пароль. При использовании асимметричных ключей один пароль применяется для шифрования данных ( *открытый* ключ), а другой для расшифровки данных ( *закрытый* ключ).  
@@ -37,7 +36,7 @@ ms.locfileid: "36187971"
   
  При создании этот ключ зашифровывается с помощью алгоритма «Triple DES» и пользовательского пароля. Чтобы разрешить автоматическое шифрование главного ключа, копия этого ключа зашифровывается с помощью главного ключа службы. Ключ хранится как в базе данных, где используется и в `master` системной базы данных.  
   
- Копия главного ключа базы данных, хранящихся в `master` Системная база данных автоматически обновляется при каждом изменении главного ключа. Тем не менее, это значение по умолчанию можно изменить с помощью `DROP ENCRYPTION BY SERVICE MASTER KEY` параметр `ALTER MASTER KEY` инструкции. Главный ключ базы данных, который не зашифрован с помощью главного ключа службы, следует открывать с помощью инструкции `OPEN MASTER KEY` и пароля.  
+ Копия, Которая хранится в `master` системной базы данных автоматически обновляется при каждом изменении главного ключа. Тем не менее, это значение по умолчанию можно изменить с помощью `DROP ENCRYPTION BY SERVICE MASTER KEY` параметр `ALTER MASTER KEY` инструкции. Главный ключ базы данных, который не зашифрован с помощью главного ключа службы, следует открывать с помощью инструкции `OPEN MASTER KEY` и пароля.  
   
 ## <a name="managing-sql-server-and-database-keys"></a>Управление ключами SQL Server и базы данных  
  Управление ключами шифрования заключается в создании новых ключей базы данных, создании резервной копии ключей сервера и базы данных и знании порядка восстановления, удаления и смены ключей.  

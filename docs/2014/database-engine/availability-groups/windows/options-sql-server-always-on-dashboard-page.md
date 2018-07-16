@@ -1,27 +1,26 @@
 ---
-title: Параметры (страница SQL Server AlwaysOn, панели мониторинга) | Документы Microsoft
+title: Параметры (SQL Server AlwaysOn, страница панели мониторинга) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Alwayson.Dashboard
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 caps.latest.revision: 6
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 553f76520f9bb292d795fbbd5e13833391d6bdab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d7ab91fe3fac841c11a0e237a9ec44a4f1ad6911
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330514"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>Параметры (страница панели мониторинга SQL Server AlwaysOn)
   Для настройки панели мониторинга AlwaysOn используйте страницу **SQL Server AlwaysOn Dashboard** (Панель мониторинга SQL Server) диалогового окна [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**в среде** .  
@@ -38,7 +37,7 @@ ms.locfileid: "36180336"
   
 -   В поле **Количество повторных попыток подключения** отображается, сколько раз панель мониторинга будет пытаться установить соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором расположена реплика доступности группы доступности, мониторинг которой выполняет панель. Значение по умолчанию — 65535. Если автоматическое обновление включено, значение в этом поле вы можете изменить, чтобы указать другое количество попыток.  
   
- **Включите собственную политику AlwaysOn определяемой пользователем.**  
+ **Включите в определяемую пользователем политику AlwaysOn.**  
  Если вы определили собственную политику AlwaysOn, выберите этот параметр, чтобы включить ее.  
   
 ## <a name="see-also"></a>См. также  

@@ -1,5 +1,5 @@
 ---
-title: Определение обучающих данных (мастер интеллектуального анализа данных) | Документы Microsoft
+title: Определение обучающих данных (мастер интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytrainingdata.f1
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6c6239831cc1e53ba1925b022d310f5cef907e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f32fe8718acdfbb16e549154ff030ca493f2768c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291430"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>Определение обучающих данных (мастер интеллектуального анализа данных)
   Определить столбцы, которые должны быть включены в структуру интеллектуального анализа данных, можно с помощью страницы **Определение обучающих данных** . Для включения в структуру можно выбрать даже столбцы, которые не будут использоваться во всех моделях. Например, если необходимо выполнить детализацию столбцов модели интеллектуального анализа данных, можно включить их в структуру, а не в модель.  

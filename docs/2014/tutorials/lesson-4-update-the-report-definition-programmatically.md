@@ -1,5 +1,5 @@
 ---
-title: 'Урок 4: Обновление определения отчета программным способом | Документы Microsoft'
+title: 'Занятие 4: Обновление определения отчета программным способом | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1f0a1d46-6d6d-4f67-b51e-06dbbbffacf9
 caps.latest.revision: 20
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bb51cfc7677f60d729efeb1e878c4d4709943860
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18fc88beee15b995c3f705e9b6582d695d94d703
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286500"
 ---
 # <a name="lesson-4-update-the-report-definition-programmatically"></a>Урок 4. Обновление определения отчета программным способом
   После загрузки определения отчета с сервера отчетов и при наличии ссылки на него через поле отчета необходимо обновить определение отчета. В этом примере будет обновлено свойство `Description` отчета.  
@@ -92,7 +92,7 @@ ms.locfileid: "36193281"
     ```  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- На следующем занятии обновленное определение отчета будет сохранено назад на сервер отчетов. В разделе [занятие 5: определение отчета публикуется на сервере отчетов](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
+ На следующем занятии обновленное определение отчета будет сохранено назад на сервер отчетов. См. в разделе [Урок 5: определение отчета публикуется на сервере отчетов](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
   
 ## <a name="see-also"></a>См. также  
  [Обновление отчетов с помощью классов, созданных из RDL-схемы &#40;учебник по службам SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  

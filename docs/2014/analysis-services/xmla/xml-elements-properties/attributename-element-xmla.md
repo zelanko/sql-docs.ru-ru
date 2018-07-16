@@ -1,5 +1,5 @@
 ---
-title: Элемент AttributeName (XML для Аналитики) | Документы Microsoft
+title: Элемент AttributeName (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - AttributeName element
 ms.assetid: 4dc8260b-522e-46d9-9bd8-22a5a0068982
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1251de0a3f81a0b3a25d44de5bfbe2e41fa0f90a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 528bd232e9b49bfab5376b6dee16d22c6e6677d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306154"
 ---
 # <a name="attributename-element-xmla"></a>Элемент AttributeName (XML для аналитики)
   Содержит имя атрибута, представленного родительским [атрибут](attribute-element-xmla.md) элемента.  
@@ -67,9 +67,9 @@ ms.locfileid: "36109571"
   
 ## <a name="see-also"></a>См. также  
  [Элемент DROP &#40;XML для Аналитики&#41;](../xml-elements-commands/drop-element-xmla.md)   
- [Элемент INSERT &#40;XML для Аналитики&#41;](../xml-elements-commands/insert-element-xmla.md)   
+ [Вставка элемента &#40;XML для Аналитики&#41;](../xml-elements-commands/insert-element-xmla.md)   
  [Элемент Update &#40;XML для Аналитики&#41;](../xml-elements-commands/update-element-xmla.md)   
- [Когда элемент &#40;XML для Аналитики&#41;](where-element-xmla.md)   
+ [Где элемент &#40;XML для Аналитики&#41;](where-element-xmla.md)   
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)  
   
   

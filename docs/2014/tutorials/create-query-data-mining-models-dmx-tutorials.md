@@ -1,5 +1,5 @@
 ---
-title: 'Создания и запроса моделей интеллектуального анализа данных с помощью расширений интеллектуального анализа данных: учебники (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft'
+title: 'Создание и выполнение запросов к моделям интеллектуального анализа данных с помощью расширений интеллектуального анализа данных: учебники (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 145b81a7-c0c3-4ca3-bb32-0b482423b9a0
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 46a60e6fc75613b2f763a31185f3e3861b125fc5
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 93bdf0ee8ed305e9e3843b011ce8057894b8b287
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234410"
 ---
-# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Создания и запроса моделей интеллектуального анализа данных с помощью расширений интеллектуального анализа данных: учебники (службы Analysis Services — Интеллектуальный анализ данных)
-  После создания решения интеллектуального анализа данных с помощью [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], можно создавать запросы к модели интеллектуального анализа данных для прогнозирования трендов, получение закономерностей в данных и измерения точности моделей интеллектуального анализа данных.  
+# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Создание и выполнение запросов к моделям интеллектуального анализа данных с помощью расширений интеллектуального анализа данных: учебники (службы Analysis Services — Интеллектуальный анализ данных)
+  После создания решения интеллектуального анализа данных с помощью [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], можно создавать запросы к модели интеллектуального анализа данных для прогнозирования трендов, выявления закономерностей в данных и измерения точности моделей интеллектуального анализа данных.  
   
- В следующем списке пошаговые учебники помогут изучить способы построения и выполнения запросов интеллектуального анализа данных с помощью [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , чтобы вы могли получить от данных.  
+ Приведенные в следующем списке пошаговые учебники помогут вам понять, как построение и запуск запросов интеллектуального анализа данных с помощью [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , чтобы вы могли получить ваши данные.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36312402"
   
      Этот учебник вводит базовые понятия, например: создание проекта, построение структур и моделей интеллектуального анализа данных.  
   
--   [Учебник по интеллектуальному анализу данных промежуточного &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
+-   [Средний уровень учебник по интеллектуальному анализу данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
      В этом учебнике содержится несколько независимых занятий, в каждом из которых представлен определенный тип моделей. Каждое занятие предлагает пошаговую инструкцию по созданию и изучению модели, а также по настройке модели и созданию прогнозирующих запросов.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f673ebfb9034511dc6023cc34d9c3670237d35d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5859430b9a928b79697e53873ef549173963a90f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268520"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>Печать отчетов (построитель отчетов и службы SSRS)
   После сохранения отчета на сервере отчетов его можно просмотреть и распечатать из браузера, диспетчера отчетов или любого приложения, использующегося для просмотра экспортированных отчетов. Перед сохранением отчета его можно напечатать во время просмотра.  
@@ -43,19 +43,19 @@ ms.locfileid: "36087318"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Печать отчетов из браузера с помощью элемента управления печатью &#40;отчетов построителя отчетов и службы SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
+ [Печать отчетов из браузера с помощью элемента управления печатью &#40;построитель отчетов и службы SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
  Описывает, как печатать отчеты на стороне клиента из веб-браузера или диспетчера отчетов.  
   
- [Печать отчетов из других приложений &#40;отчетов построителя отчетов и службы SSRS&#41;](print-reports-from-other-applications-report-builder-and-ssrs.md)  
+ [Печать отчетов из других приложений &#40;построитель отчетов и службы SSRS&#41;](print-reports-from-other-applications-report-builder-and-ssrs.md)  
  Описывает, как напечатать отчеты, экспортированные в другое приложение.  
   
- [Печать отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
+ [Печать отчета &#40;построитель отчетов и службы SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
  Содержит пошаговые инструкции по печати отчета, управлению полями страницы и указанию размера бумаги для отчетов, подготавливаемых к просмотру в модулях подготовки отчетов к печати: "PDF", "Изображение" и "Печать".  
   
 ## <a name="see-also"></a>См. также  
- [Экспорт отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [Верхние и нижние колонтитулы страницы &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Образы &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
+ [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [И нижние колонтитулы страницы &#40;построитель отчетов и службы SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Образы &#40;построитель отчетов и службы SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  
   
   

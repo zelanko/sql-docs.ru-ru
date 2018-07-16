@@ -1,5 +1,5 @@
 ---
-title: Редактор диспетчера соединений (страница «Дополнительно») с несколькими неструктурированными файлами | Документы Microsoft
+title: Редактор диспетчера соединений (страница «Дополнительно») с несколькими неструктурированными файлами | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.advanced.f1
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
 caps.latest.revision: 36
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dfbc768285e81c1abfac99430527f2d5dbfe4a81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc475677c9e122776deb58d749f0630b1bf57294
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246744"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>Редактор диспетчера соединения с несколькими неструктурированными файлами (страница «Дополнительно»)
   Используйте страницу **Дополнительно** в диалоговом окне **Редактор диспетчера соединения с несколькими неструктурированными файлами**, чтобы задать такие свойства, как тип данных и разделители каждого столбца в текстовых файлах, с которыми производит соединение диспетчер подключений неструктурированных файлов.  
@@ -70,9 +70,9 @@ ms.locfileid: "36187787"
  Используйте диалоговое окно **Предлагаемые типы столбцов** для проведения оценки данных выборки в первом выбранном файле и получения предложений относительно типа данных и длины каждого столбца. Дополнительные сведения см. в разделе [Диалоговое окно "Предложение типов столбцов" справочника по пользовательскому интерфейсу](connection-manager/suggest-column-types-dialog-box-ui-reference.md).  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
- [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;страница «столбцы»&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
+ [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;страница "столбцы"&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
  [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;Предварительный просмотр страницы&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

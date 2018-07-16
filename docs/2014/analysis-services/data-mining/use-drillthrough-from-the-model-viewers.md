@@ -1,5 +1,5 @@
 ---
-title: Использование детализации из средств просмотра моделей | Документы Microsoft
+title: Использование детализации из средств просмотра моделей | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f18e2efe4a9457e9e7ac320dcf8570d89df0edbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a272b1a86de667087c8a2a583d0fee6fd5584f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265760"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Использование детализации из средств просмотра моделей
   В зависимости от типа модели можно использовать детализацию из средств просмотра на вкладке **Средство просмотра модели интеллектуального анализа** в конструкторе интеллектуального анализа данных для изучения вариантов, используемых в модели интеллектуального анализа данных, либо для просмотра дополнительных столбцов в структуре интеллектуального анализа данных. Хотя многие типы моделей не поддерживают детализацию, поскольку шаблоны в этой модели нельзя напрямую связывать с конкретными вариантами, приведенные ниже типы моделей поддерживают детализацию.  

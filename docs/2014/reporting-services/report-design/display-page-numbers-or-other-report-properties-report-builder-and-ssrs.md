@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 77e87dc08897954cb210b9e785dc4d6e266a3ea3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8a8b6cc94bf769be46bf3a2fc101731ba28d2021
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321876"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Отображение номеров страниц или других свойств отчета (построитель отчетов и службы SSRS)
   К верхним или нижним колонтитулам страниц в отчете легко добавить номера страниц, заголовок отчета, имя файла и другие свойства отчета. Эти свойства хранятся в виде полей в папке «Встроенные поля» в области данных отчета.  
@@ -68,7 +68,7 @@ ms.locfileid: "36190684"
   
      Текстовое поле **Задать выражение для: значение** содержит выражение =Globals!PageNumber.  
   
-2.  Установите курсор после знака = и введите `"Page " &`.  
+2.  Поместите курсор после знака = и введите `"Page " &`.  
   
      Теперь выражение будет иметь вид ="Стр. "&Globals!PageNumber  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36190684"
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Верхние и нижние колонтитулы страницы &#40;отчетов построителя отчетов и службы SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [Форматирование текста в текстовом поле &#40;отчетов построителя отчетов и службы SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [И нижние колонтитулы страницы &#40;построитель отчетов и службы SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Форматирование текста в текстовом поле &#40;построитель отчетов и службы SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   

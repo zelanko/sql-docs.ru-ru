@@ -1,5 +1,5 @@
 ---
-title: Параметры (текстовый редактор - все языки-страница "Табуляция") | Документы Microsoft
+title: Параметры (текстовый редактор - все языки — страница "Табуляция") | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.Tabs
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f3e0df6dced5c69f60cbb95abcb5ba8eee78879b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cc5922ed04933dcb7a6b09995353e7fd64a3163
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287861"
 ---
-# <a name="options-text-editor---all-languages--tabs-page"></a>Параметры (текстовый редактор - все языки-страница "Табуляция")
+# <a name="options-text-editor---all-languages--tabs-page"></a>Параметры (текстовый редактор - все языки — страница "Табуляция")
   Это диалоговое окно используется для задания действий во всех пяти редакторах в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]при использовании клавиши TAB. Для отображения этих параметров в меню **Сервис** выберите **Параметры** . Выберите папку **Текстовый редактор** , откройте папку **Все языки** и выберите **Вкладки**.  
   
 ## <a name="tabbing-options-by-editor"></a>Параметры табуляции, задаваемые с помощью редактора  
@@ -38,7 +38,7 @@ ms.locfileid: "36189331"
  **None**  
  Если данный параметр выбран, при нажатии клавиши ВВОД отступ у новой строки создаваться не будет. Курсор помещается в первый столбец новой строки.  
   
- **блок**  
+ **Блок**  
  При выборе этого параметра во вновь созданной строке при нажатии пользователем клавиши ВВОД производится отступ на то же расстояние, что и в предыдущей строке.  
   
  **Смарт-**  

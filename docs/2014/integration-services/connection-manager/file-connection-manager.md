@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - folders [Integration Services], connections
 - files [Integration Services], connections
@@ -20,19 +20,19 @@ ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d9f02969042ec839a708045143b748890d25c1de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 33e9bb0dbb4030d09be6db95dda2a33245cd7288
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252696"
 ---
 # <a name="file-connection-manager"></a>диспетчер соединения файлов
   Диспетчер соединения файлов позволяет пакету ссылаться на существующий файл или папку или создавать файл или папку в процессе выполнения. Например, можно установить ссылку на файл Excel. Некоторые компоненты из служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используют данные, хранящиеся в файлах, для выполнения своей работы. Например, задача «Выполнение SQL» может ссылаться на файл, содержащий набор инструкций SQL. Другие компоненты выполняют операции с файлами. Например, задача «Файловая система» может ссылаться на файл для его копирования в другое расположение.  
   
 ## <a name="usage-types-of-the-file-connection-manager"></a>Типы применения в диспетчере соединения файлов  
- `FileUsageType` Свойство диспетчера подключения файлов определяет, как используется соединение с файлом. Диспетчер подключения файлов может создать файл или папку, а также использовать уже существующий файл или папку.  
+ `FileUsageType` Свойство диспетчер подключения файлов определяет, как используется соединение файла. Диспетчер подключения файлов может создать файл или папку, а также использовать уже существующий файл или папку.  
   
  В следующей таблице перечислены значения `FileUsageType`.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "36190282"
  Диспетчер соединения файлов может ссылаться только на один файл или папку. Для создания ссылки на несколько файлов или папок используйте диспетчер соединения нескольких файлов вместо диспетчера соединений с файлом. Дополнительные сведения см. в статье [Multiple Files Connection Manager](multiple-files-connection-manager.md).  
   
 ## <a name="configuration-of-the-file-connection-manager"></a>Настройка диспетчера соединения файлов  
- При добавлении диспетчера соединений с файлами в пакет [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создает соединение диспетчер, который разрешает подключение файла во время выполнения, устанавливает свойства подключения файла и добавляет подключения файла в `Connections` коллекцию пакета.  
+ При добавлении к пакету диспетчер соединения файлов [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создают, разрешит соединение файла во время выполнения, устанавливает свойства подключения файла и добавляет подключения файла в диспетчер соединений `Connections` коллекцию пакета.  
   
- `ConnectionManagerType` Диспетчера соединений задано значение `FILE`.  
+ `ConnectionManagerType` Свойства диспетчера соединений присваивается `FILE`.  
   
  Диспетчер соединения файлов можно настроить следующим образом.  
   

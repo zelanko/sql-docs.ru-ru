@@ -1,5 +1,5 @@
 ---
-title: Образцы приложений диаграмм обновления (SQLXML 4.0) | Документы Microsoft
+title: Образцы приложений диаграмм обновления (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - examples [SQLXML], Updategram
 ms.assetid: d2287e10-4007-4ba4-ad84-4e2b6adfede5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 91e7c134cb1564adc92540626e1b774866ed4082
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5989d87461736535b7c8b1d8cb6d024a4c2ae991
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252766"
 ---
 # <a name="updategram-sample-applications-sqlxml-40"></a>Образцы приложений диаграмм обновления (SQLXML 4.0)
   В этом разделе показаны примеры использования диаграмм обновления.  

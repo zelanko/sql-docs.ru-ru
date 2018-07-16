@@ -1,5 +1,5 @@
 ---
-title: Перемещение элементов страницы (диспетчер отчетов) | Документы Microsoft
+title: Перемещение элементов страницы (диспетчер отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8de86adb899b08cf37151524f2b451b6c54723b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5914bd0020a2d82e9f38ed4f5b60f0c880aaeb66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290280"
 ---
 # <a name="move-items-page-report-manager"></a>Страница «Перемещение элементов» (диспетчер отчетов)
   Используйте страницу «Перемещение элементов», чтобы переместить отчет, папку или другой элемент в новое местоположение на сервере отчетов. Можно ввести путь нового местоположения или использовать представление дерева для указания нового местоположения в пространстве имен сервера отчетов. Переместить можно только те элементы, на перемещение которых есть разрешение и которые хранятся на текущем сервере отчетов.  
@@ -73,7 +73,7 @@ ms.locfileid: "36110101"
  [Страница «Общие свойства», папки &#40;диспетчера отчетов&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [Страница "Общие свойства", "Отчеты" (диспетчер отчетов)](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Страница «Общие свойства», ресурсы &#40;диспетчера отчетов&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   
- [Страница «Общие свойства», общие источники данных &#40;диспетчера отчетов&#41;](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)   
+ [Страница общих свойств, общих источников данных &#40;диспетчера отчетов&#41;](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

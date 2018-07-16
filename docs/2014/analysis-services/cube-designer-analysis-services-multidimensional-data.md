@@ -1,5 +1,5 @@
 ---
-title: (Службы Analysis Services — многомерные данные) конструктор кубов | Документы Microsoft
+title: Конструктор (службы Analysis Services — многомерные данные) кубов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cube Designer
 ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 00720caa0c9bcae9e04cc542864ab99e14eb0f86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc6972d90683de658dd0d8104cff138d59960904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246284"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Конструктор кубов (службы Analysis Services — многомерные данные)
   **Конструктор кубов** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] используется для изменения различных свойств существующего куба, включая группы мер и меры, измерения куба и их связи, вычисления, ключевые показатели эффективности, действия, секции, перспективы и переводы, включенные в куб, а также для обзора данных, содержащихся в кубе. Диалоговое окно **Конструктор кубов** можно открыть следующими способами:  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c7721c5cc57392f1e9968b4b59cb01ba07916f00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 05fe44b16818d52b861fe63dd657e60fef5793fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189702"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311254"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>Функция LookupSet (построитель отчетов и службы SSRS)
   Возвращает набор совпадающих значений для заданного имени из набора данных, содержащего пары «имя-значение».  
@@ -42,7 +42,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  (`Variant`) Выражение, вычисляемое для каждой строки в наборе данных и указывающее имя или ключ для сопоставления. Например, `=Fields!CustomerID.Value`.  
   
  *result_expression*  
- (`Variant`) Выражение, вычисляемое для строки в наборе данных где *source_expression* = *destination_expression*, и указывающее извлекаемого значения. Например, `=Fields!PhoneNumber.Value`.  
+ (`Variant`) Выражение, вычисляемое для строки в наборе данных где *source_expression* = *destination_expression*, и указывает извлекаемого значения. Например, `=Fields!PhoneNumber.Value`.  
   
  *набор данных*  
  Константа, задающая имя набора данных в отчете. Например, «ContactInformation».  
@@ -51,9 +51,9 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  Возвращает `VariantArray`, или `Nothing` Если совпадения нет.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте `LookupSet` для получения набора значений из указанного набора данных для пары «имя значение», где связь «один-ко многим». Например, для идентификатора клиента в таблице, можно использовать `LookupSet` для получения всех телефонных номеров для этого клиента из набора данных, который не привязан к области данных.  
+ Используйте `LookupSet` для получения набора значений из указанного набора данных для пары "имя значение" связью «один к многим». Например, по идентификатору пользователя в таблице, можно использовать `LookupSet` для получения всех телефонных номеров для этого клиента из набора данных, который не привязан к области данных.  
   
- `LookupSet` выполняет следующие задачи.  
+ `LookupSet` выполняет следующие функции:  
   
 -   Вычисляет исходное выражение в текущей области.  
   
@@ -101,11 +101,11 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="example"></a>Пример  
- Поскольку `LookupSet` возвращает коллекцию объектов, результирующее выражение невозможно отобразить непосредственно в текстовое поле. Значения объектов коллекции можно склеить в одну строку.  
+ Так как `LookupSet` возвращает коллекцию объектов, результирующее выражение невозможно отобразить непосредственно в текстовом поле. Значения объектов коллекции можно склеить в одну строку.  
   
  Используйте [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] функция `Join` создать из набора объектов строку с разделителями. Для объединения объектов в одну строку используйте в качестве разделителя запятую. В некоторых модулях подготовки можно использовать в качестве разделителя перевод строки [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`).  
   
- Следующее выражение, если он используется как свойство Value для текстового поля использует `Join` для создания списка.  
+ Следующее выражение, если он используется как свойство Value для текстового поля, использует `Join` для создания списка.  
   
 ```  
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
@@ -151,9 +151,9 @@ End Function
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Выражения используются в отчетах &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
- [Область выражения для итогов, статистических функций и встроенных коллекций &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

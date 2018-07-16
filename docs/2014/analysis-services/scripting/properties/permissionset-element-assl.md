@@ -1,5 +1,5 @@
 ---
-title: Элемент PermissionSet (ASSL) | Документы Microsoft
+title: Элемент PermissionSet (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PermissionSet element
 ms.assetid: da5a9175-48e4-4b5e-a780-3e0077939974
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6246058af826a73b589f1854b0236de946a4d65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 471ef43aea9fadcca7ab8a4a36870a3bdddee22f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263470"
 ---
 # <a name="permissionset-element-assl"></a>Элемент PermissionSet (ASSL)
   Определяет набор разрешений, связанных с [!INCLUDE[msCoName](../../../includes/msconame-md.md)] сборки .NET Framework.  
@@ -68,14 +68,14 @@ ms.locfileid: "36189364"
 |-----------|-----------------|  
 |*Safe*|Разрешаются только внутренние вычисления и локальный доступ к данным. Набор разрешений*Safe* является наиболее ограниченным. Код, выполняемый сборкой с разрешениями *Safe* , не может получить доступ к внешним системным ресурсам, таким как файлы, сеть, переменные среды или реестр.|  
 |*ExternalAccess*|Набор разрешений*Safe*с дополнительными возможностями для доступа к внешним системным ресурсам, таким как файлы, сети, переменные среды и реестр.|  
-|*Без ограничений*|Неограниченный предоставляет сборкам неограниченный доступ к ресурсам как внутри, так и за пределами [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Код, исполняемый внутри сборки с набором разрешений *Unrestricted* , может вызывать неуправляемый код.|  
+|*Неограниченный*|Неограниченный предоставляет сборкам неограниченный доступ к ресурсам, внутренним и внешним [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Код, исполняемый внутри сборки с набором разрешений *Unrestricted* , может вызывать неуправляемый код.|  
   
  Перечисление, соответствующее допустимым значениям элемента `PermissionSet` в модели объектов AMO, — это <xref:Microsoft.AnalysisServices.PermissionSet>.  
   
 ## <a name="see-also"></a>См. также  
  [Тип данных ComAssembly &#40;ASSL&#41;](../data-type/comassembly-data-type-assl.md)   
  [Элемент Assemblies &#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
- [Элемент Database &#40;ASSL&#41;](../objects/database-element-assl.md)   
+ [Элемент Database описания &#40;ASSL&#41;](../objects/database-element-assl.md)   
  [Элемент Server &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [Свойства &#40;ASSL&#41;](properties-assl.md)  
   

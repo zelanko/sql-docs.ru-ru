@@ -1,5 +1,5 @@
 ---
-title: Набор строк DMSCHEMA_MINING_COLUMNS | Документы Microsoft
+title: Набор строк DMSCHEMA_MINING_COLUMNS | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_COLUMNS rowset
 ms.assetid: ae35ccde-4438-46f4-8611-40b2b1a42fce
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d53285b088b471ad7a5fca87536cc897db8126d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60dc2e773b93f27fe96489bcb55fdfe22c3168d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232064"
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>Набор строк DMSCHEMA_MINING_COLUMNS
   Описывает отдельные столбцы всех моделей интеллектуального анализа данных в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Этот набор строк ограничивается текущим каталогом.  
@@ -37,7 +37,7 @@ ms.locfileid: "36189379"
 |Имя столбца|Индикатор типа|Длина|Описание|  
 |-----------------|--------------------|------------|-----------------|  
 |`MODEL_CATALOG`|`DBTYPE_WSTR`||Имя каталога. Заполняется именем базы данных, элементом которой является модель.|  
-|`MODEL_SCHEMA`|`DBTYPE_WSTR`||Неполное имя схемы. Этот столбец не поддерживается [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; он всегда содержит `NULL`.|  
+|`MODEL_SCHEMA`|`DBTYPE_WSTR`||Неполное имя схемы. Этот столбец не поддерживается службами [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; он всегда содержит `NULL`.|  
 |`MODEL_NAME`|`DBTYPE_WSTR`||Имя модели интеллектуального анализа данных. Этот столбец содержит имя модели интеллектуального анализа данных, с которой связан столбец, и никогда не бывает пустым.|  
 |`COLUMN_NAME`|`DBTYPE_WSTR`||Имя столбца.|  
 |`COLUMN_GUID`|`DBTYPE_GUID`||Идентификатор GUID столбца. Этот столбец не поддерживается службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и всегда содержит значение `NULL`.|  
@@ -49,7 +49,7 @@ ms.locfileid: "36189379"
 |`IS_NULLABLE`|`DBTYPE_BOOL`||Логическое значение, которое указывает, допускает ли столбец значения NULL.<br /><br /> Значение `FALSE`, если известно, что столбец не допускает значения NULL; `TRUE` в противном случае.|  
 |`DATA_TYPE`|`DBTYPE_UI2`||Признак типа данных столбца. В следующем списке показаны примеры типов возвращаемого признака:<br /><br /> "`TABLE`" возвратит значение `DBTYPE_HCHAPTER`.<br /><br /> "`TEXT`" возвратит значение `DBTYPE_WCHAR`.<br /><br /> "`LONG`" возвратит значение `DBTYPE_I8`.<br /><br /> "`DOUBLE`" возвратит значение `DBTYPE_R8`.<br /><br /> "`DATE`" возвратит значение `DBTYPE_DATE`.|  
 |`TYPE_GUID`|`DBTYPE_GUID`||Идентификатор GUID для типа данных столбца. Этот столбец не поддерживается службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и всегда содержит значение `VT_NULL`.|  
-|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||Максимально допустимая длина значения данного столбца. Для символьных, двоичных и битовых столбцов это одно из следующих значений.<br /><br /> -Максимальная длина столбца в символах, байтах или битах, соответствующая типу столбца, если длина определена. Например, столбец `CHAR(5)` в таблице SQL Server имеет максимальную длину в 5 символов.<br />-Максимальная длина в символах, байтах или битах, соответствующая типу столбца, если столбец не имеет определенной длины типа данных.<br />-Нуль (0), если определена максимальная длина столбца, ни тип данных.<br />-   `NULL` для всех других типов столбцов|  
+|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||Максимально допустимая длина значения данного столбца. Для символьных, двоичных и битовых столбцов это одно из следующих значений.<br /><br /> -Максимальная длина столбца в символах, байтах или битах, соответствующая типу столбца, если длина определена. Например, столбец `CHAR(5)` в таблице SQL Server имеет максимальную длину в 5 символов.<br />-Максимальная длина типа данных в символах, байтах или битах, соответствующая типу столбца, если столбец не имеет определенной длины.<br />— Нуль (0), если определена максимальная длина столбца, ни тип данных.<br />-   `NULL` для всех других типов столбцов|  
 |`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||Максимальная длина столбца в октетах (байтах), если столбец имеет символьный или двоичный тип. Нулевое значение (0) означает, что для столбца не задана максимальная длина. Этот столбец содержит значение `NULL` для всех других типов столбцов.|  
 |`NUMERIC_PRECISION`|`DBTYPE_UI2`||Максимальная точность столбца, если тип данных столбца представляет собой числовой тип данных, отличный от `VARNUMERIC`.<br /><br /> Значение `NULL`, если тип данных столбца не является числовым или представляет собой `VARNUMERIC`.<br /><br /> Точность столбцов с типом данных `DBTYPE_DECIMAL` или `DBTYPE_NUMERIC` зависит от определения столбца.|  
 |`NUMERIC_SCALE`|`DBTYPE_I2`||Число цифр справа от десятичного разделителя, если индикатор типа столбца имеет значение `DBTYPE_DECIMAL`, `DBTYPE_NUMERIC` или `DBTYPE_VARNUMERIC`. В противном случае этот столбец содержит значение `VT_NULL`.|  
@@ -65,7 +65,7 @@ ms.locfileid: "36189379"
 |`DOMAIN_NAME`|`DBTYPE_WSTR`||Имя домена. Этот столбец не поддерживается службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и всегда содержит значение `NULL`.|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||Понятное описание столбца. Этот столбец не поддерживается в службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; он всегда содержит значение `NULL`.|  
 |`DISTRIBUTION_FLAG`|`DBTYPE_WSTR`||Описание статистического распределения столбца. Этот столбец содержит одно из следующих значений:<br /><br /> -   "`NORMAL`"<br />-   "`LOG_NORMAL`"<br />-   "`UNIFORM`"|  
-|`CONTENT_TYPE`|`DBTYPE_WSTR`||Описание содержимого столбца. Этот столбец содержит одно из следующих значений:<br /><br /> -   "`KEY`"<br />-   "`DISCRETE`"<br />-   "`CONTINUOUS`"<br />-"`DISCRETIZED(`[аргументы]`)`»<br />-   "`ORDERED`"<br />-   "`KEY TIME`"<br />-   "`CYCLICAL`"<br />-   "`PROBABILITY`"<br />-   "`VARIANCE`"<br />-   "`STDEV`"<br />-   "`SUPPORT`"<br />-   "`PROBABILITY_VARIANCE`"<br />-   "`PROBABILITY_STDEV`"<br />-   `"KEY SEQUENCE`"|  
+|`CONTENT_TYPE`|`DBTYPE_WSTR`||Описание содержимого столбца. Этот столбец содержит одно из следующих значений:<br /><br /> -   "`KEY`"<br />-   "`DISCRETE`"<br />-   "`CONTINUOUS`"<br />-"`DISCRETIZED(`[аргументы]`)`"<br />-   "`ORDERED`"<br />-   "`KEY TIME`"<br />-   "`CYCLICAL`"<br />-   "`PROBABILITY`"<br />-   "`VARIANCE`"<br />-   "`STDEV`"<br />-   "`SUPPORT`"<br />-   "`PROBABILITY_VARIANCE`"<br />-   "`PROBABILITY_STDEV`"<br />-   `"KEY SEQUENCE`"|  
 |`MODELING_FLAG`|`DBTYPE_WSTR`||Разделенный запятыми список флагов. Определены следующие флаги:<br /><br /> -   "`MODEL_EXISTENCE_ONLY`"<br />-   "`REGRESSOR`"<br /><br /> Зависящие от алгоритма флаги моделирования могут также содержаться в этом столбце.|  
 |`IS_RELATED_TO_KEY`|`DBTYPE_BOOL`||Логическое значение, которое указывает, связан ли столбец с ключом.<br /><br /> Значение `TRUE`, если этот столбец связан с ключом. Если ключ состоит из единственного столбца, то в поле `RELATED_ATTRIBUTE` может дополнительно содержаться имя этого столбца.|  
 |`RELATED_ATTRIBUTE`|`DBTYPE_WSTR`||Имя целевого столбца, с которым связан текущий столбец или представляет для него специальное свойство.|  

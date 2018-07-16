@@ -1,5 +1,5 @@
 ---
-title: Службы интеллектуального анализа данных и источники данных | Документы Microsoft
+title: Службы интеллектуального анализа данных и источников данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcb6d6ff58773c90a1fa5f70e638666ac92c3a2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3289ecf95c61c21942ba075b8eb20e3db074e870
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297474"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Службы интеллектуального анализа данных и источники данных
   Для интеллектуального анализа данных требуется соединение с экземпляром служб SQL Server Analysis Services. Данные из куба не требуются для интеллектуального анализа данных, и рекомендуется использовать реляционные источники данных. Однако интеллектуальный анализ данных использует компоненты, предоставляемые службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -48,7 +48,7 @@ ms.locfileid: "36189638"
 -   Управление ресурсами сервера  
   
 ### <a name="xmla-listener"></a>Прослушиватель XML для аналитики  
- Компонент прослушивателя XML для аналитики обрабатывает все XMLA-взаимодействия между службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и их клиентами. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` Параметр конфигурации в файле msmdsrv.ini, которые можно использовать для указания порта, на котором [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляр осуществляет прослушивание. Значение 0 указывает на то, что [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] прослушивает порт по умолчанию. По умолчанию службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] пользуются следующими TCP-портами:  
+ Компонент прослушивателя XML для аналитики обрабатывает все XMLA-взаимодействия между службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и их клиентами. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` Параметр конфигурации в файле msmdsrv.ini, может использоваться для указания порта, на котором [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляр осуществляет прослушивание. Значение 0 указывает на то, что [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] прослушивает порт по умолчанию. По умолчанию службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] пользуются следующими TCP-портами:  
   
 |Порт|Описание|  
 |----------|-----------------|  
@@ -74,11 +74,11 @@ ms.locfileid: "36189638"
 ## <a name="configuring-permissions-and-server-properties"></a>Настройка разрешений и свойств сервера  
  Интеллектуальный анализ данных требует дополнительных разрешений в базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Большинство свойств интеллектуального анализа данных можно задать с помощью [диалогового окна "Свойства сервера анализа данных" (службы Analysis Services)](../analysis-server-properties-dialog-box-analysis-services.md).  
   
- Дополнительные сведения о свойствах, которые можно настроить в разделе [Настройка свойств сервера в службах Analysis Services](../server-properties/server-properties-in-analysis-services.md).  
+ Дополнительные сведения о свойствах, которые можно настроить, см. в разделе [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md).  
   
  Следующие свойства сервера имеют особую релевантность для интеллектуального анализа данных.  
   
--   `AllowAdHocOpenRowsetQueries` Управляет нерегламентированным доступом к поставщикам OLE DB, которые загружаются непосредственно в память сервера.  
+-   `AllowAdHocOpenRowsetQueries` Управляет нерегламентированным доступом к поставщикам OLE DB, которые загружаются непосредственно в оперативную память сервера.  
   
     > [!IMPORTANT]  
     >  Чтобы повысить безопасность, рекомендуется присвоить этому свойству значение `false`. Значение по умолчанию — `false`. Тем не менее, если это свойство имеет значение `false`, пользователи могут продолжать создавать одноэлементные запросы и использовать функцию OPENQUERY в разрешенных источниках данных.  
@@ -92,7 +92,7 @@ ms.locfileid: "36189638"
  Можно также установить свойства, позволяющие тонко настраивать сервер и управлять безопасностью использования клиента. Дополнительные сведения см. в статье [Feature Properties](../server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о поддержке подключаемых алгоритмов выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в разделе [функции, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Дополнительные сведения о поддержке подключаемых алгоритмов выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Программный доступ к объектам интеллектуального анализа данных  
  Можно использовать следующие модели объектов для создания соединения с базой данных служб Analysis Services и работы с объектами интеллектуального анализа данных.  

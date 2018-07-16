@@ -1,5 +1,5 @@
 ---
-title: Элемент aliases (ASSL) | Документы Microsoft
+title: Элемент aliases (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Aliases element
 ms.assetid: 9de9e683-d30d-4d61-b32d-c5a946825742
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60673c26bf4a430c842da0fb61c98de7242ccd1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 677434b5ea6383e5905a703225edb5e56e3fb4e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267690"
 ---
 # <a name="aliases-element-assl"></a>Элемент Aliases (ASSL)
   Содержит коллекцию элементов [псевдоним](../properties/alias-element-assl.md) элементы, связанные с [учетной записи](../objects/account-element-assl.md) элемент  
@@ -64,11 +64,11 @@ ms.locfileid: "36188110"
 |Дочерние элементы|[Псевдоним](../properties/alias-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родительский `Aliases` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Account>.  
+ Элемент, соответствующий родителю параметра `Aliases` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Account>.  
   
 ## <a name="see-also"></a>См. также  
- [Учетные записи элемента &#40;ASSL&#41;](accounts-element-assl.md)   
- [Элемент Database &#40;ASSL&#41;](../objects/database-element-assl.md)   
+ [Учетные записи элемент &#40;ASSL&#41;](accounts-element-assl.md)   
+ [Элемент Database описания &#40;ASSL&#41;](../objects/database-element-assl.md)   
  [Коллекции &#40;ASSL&#41;](collections-assl.md)  
   
   

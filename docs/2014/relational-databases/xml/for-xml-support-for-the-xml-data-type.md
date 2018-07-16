@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f33b889cb9bc409815c6fe8a0501de3bc1388e68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 14010ca375afdf5166f737a27e33f8ed3fc42c49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327348"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Поддержка FOR XML для XML-данных
-  Если запрос FOR XML указывает столбец `xml` типа в предложении SELECT, значения столбца сопоставляются как элементы в возвращенном коде XML, независимо от того, указаны ли директива ELEMENTS. XML-декларации в `xml`-столбце не сериализуются.  
+  Если запрос FOR XML указан столбец `xml` типа в предложении SELECT, значения столбца сопоставляются как элементы в возвращенном коде XML, независимо от того, указаны ли директива ELEMENTS. XML-декларации в `xml`-столбце не сериализуются.  
   
- Например, следующий запрос получает контактные сведения клиентов, таких как `BusinessEntityID`, `FirstName`, и `LastName` столбцы, а также телефонные номера в `AdditionalContactInfo` столбец `xml` типа.  
+ Например, следующий запрос извлекает контактные данные заказчика, такие как `BusinessEntityID`, `FirstName`, и `LastName` столбцы, а также телефонные номера в `AdditionalContactInfo` столбец `xml` типа.  
   
 ```  
 USE AdventureWorks2012;  
@@ -44,7 +44,7 @@ declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-
 FOR XML AUTO, TYPE;  
 ```  
   
- Поскольку запрос не содержит директивы ELEMENTS, значения столбцов возвращаются в виде атрибутов. Исключения составляют значения дополнительных сведений о контактах, полученные из `xml` тип столбца. Эти значения возвращаются в виде элементов.  
+ Поскольку запрос не содержит директивы ELEMENTS, значения столбцов возвращаются в виде атрибутов. Исключения составляют значения дополнительных сведений о контактах, полученные из `xml` столбец типа. Эти значения возвращаются в виде элементов.  
   
  Частичный результат:  
   
@@ -152,7 +152,7 @@ for xml auto;
   
 -   Экземпляр `xml` типа  
   
- Например, определяемая пользователем функция возвращает таблицу с одним столбцом `xm`l типа:  
+ Например, определяемой пользователем функции возвращает таблицу с одним столбцом из `xm`l тип:  
   
 ```  
 USE AdventureWorks2012;  
@@ -174,7 +174,7 @@ declare namespace PD="http://www.adventure-works.com/schemas/products/descriptio
 END;  
 ```  
   
- Можно выполнять определяемую пользователем функцию и отправляет запросы к возвращаемой ею таблице. В этом примере код XML, возвращаемый с помощью запроса к таблице присваивается `xml` переменной типа.  
+ Можно выполнять определяемую пользователем функцию и отправляет запросы к возвращаемой ею таблице. В этом примере назначается XML, возвращаемый запроса к таблице `xml` переменной типа.  
   
 ```  
 declare @x xml;  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ba07b855ca6a6e8b16a8ef1610728f4dc9243a63
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f76237e25dbf1bc1ba669513483b0c8f2a71440d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323244"
 ---
 # <a name="data-matching"></a>Сопоставление данных
   Процесс сопоставления данных [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) позволяет сократить дублирование данных и повысить их точность в источнике данных. Сопоставление анализирует степень дублирования во всех записях одного источника данных, возвращая взвешенные вероятности совпадения между всеми наборами сравниваемых записей. Затем вы можете принять решение, какие записи совпадают, и предпринять соответствующие действия в исходных данных.  

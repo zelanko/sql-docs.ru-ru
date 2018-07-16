@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
@@ -16,13 +16,13 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a06b8864c458817185223a9ee45c3dd25c4a2d33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cd26c9c3d81ffd308ca013915f924f9cf88d7e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237144"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Типы данных в выражениях служб Integration Services
   Средство оценки выражений использует типы данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Когда данные впервые попадают в поток данных пакета служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , подсистема обработки потока данных преобразует все данные столбцов в тип данных [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , а данные столбцов, используемых выражением, уже имеют тип данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Выражения, используемые в преобразованиях «Условное разбиение» и «Производный столбец», могут ссылаться на столбцы, поскольку являются частью потока данных, включающего данные столбцов.  
@@ -61,7 +61,7 @@ ms.locfileid: "36191667"
   
 -   [\!= (не равно) (выражение служб SSIS)](unequal-ssis-expression.md)  
   
--   [&#62;&#40;Больше&#41; &#40;выражение служб SSIS&#41;](greater-than-ssis-expression.md)  
+-   [&#62;&#40;Больше, чем&#41; &#40;выражение служб SSIS&#41;](greater-than-ssis-expression.md)  
   
 -   [&#60;&#40;Меньше, чем&#41; &#40;выражение служб SSIS&#41;](less-than-ssis-expression.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Настройка и администрирование сервера отчетов (режим SharePoint Reporting Services) | Документы Microsoft
+title: Настройка и администрирование сервера отчетов (режим SharePoint Reporting Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bd580d08512b72d6643e97b1dda6f7a58d092714
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7546ee205dc20dccbac6a83e8f1fea8420ee511d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329355"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Настройка и администрирование сервера отчетов (режим интеграции с SharePoint служб Reporting Services)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] является Серверная платформа отчетов, которая предоставляет полный спектр готовых к использованию средств и служб для создания, развертывания и управления отчетами организации, а также функции программирования, которые позволяют расширять и настраивать отчеты функциональные возможности. Среду создания отчетов можно интегрировать с продуктами SharePoint, чтобы пользоваться всеми преимуществами среды совместной работы, которые обеспечивает сайт SharePoint.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] — Это серверная платформа отчетов, который предоставляет полный спектр готовых к использованию средств и служб для создания, развертывания и управления отчетами организации, а также функции программирования, которые позволяют расширять и настраивать отчеты функциональные возможности. Среду создания отчетов можно интегрировать с продуктами SharePoint, чтобы пользоваться всеми преимуществами среды совместной работы, которые обеспечивает сайт SharePoint.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  В следующих разделах можно ознакомиться с основными понятиями, сценариями развертывания, процедурами и прочими сведениями, относящимися к интеграции среды служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] с продуктами или технологиями SharePoint.  

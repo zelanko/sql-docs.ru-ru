@@ -1,5 +1,5 @@
 ---
-title: Тип данных PushedDataSource (ASSL) | Документы Microsoft
+title: Тип данных PushedDataSource (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PushedDataSource data type
 ms.assetid: b319ee87-7c0a-41ec-a8af-cc7089aeb6ad
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cd0dec86e7c3abedf241fd79e44bdafd28297c7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98309a1fa1706efaed47ab27cdf88d0b3e313fa5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235574"
 ---
 # <a name="pusheddatasource-data-type-assl"></a>Тип данных PushedDataSource (ASSL)
-  Определяет примитивный тип данных, представляющий источник данных (таких как [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] пакета) используется для данных в «проталкиванием» [куба](../objects/cube-element-assl.md) элемента.  
+  Определяет тип-примитив, представляющий источник данных (таких как [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] пакета) для «отправки» данных в [куба](../objects/cube-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,6 +64,6 @@ ms.locfileid: "36193256"
  Тип данных `PushedDataSource` используется только в команде обработки в качестве внешнего источника данных. Источники материализованных данных никогда не бывают этого типа.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

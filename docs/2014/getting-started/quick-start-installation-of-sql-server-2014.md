@@ -1,5 +1,5 @@
 ---
-title: Быстрая установка SQL Server 2014 | Документы Microsoft
+title: Быстрая установка SQL Server 2014 | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - quick start installation [SQL Server]
 - installation [SQL Server]
 - installing SQL Server, quick start installations
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7567675dffc0395da5152a98700f8fd19a1b3e12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b1b7b5a6a8d763c2773e048f2302f874806a8c27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231804"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Быстрая установка SQL Server 2014
     
@@ -53,37 +53,37 @@ ms.locfileid: "36190298"
   
 -   Компоненты соединения  
   
- Каждый компонент можно установить отдельно или выбрать сочетания перечисленных выше компонентов. Чтобы выбрать наиболее подходящий выпуск и компоненты, доступные в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], в разделе [выпуски и компоненты SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md).  
+ Каждый компонент можно установить отдельно или выбрать сочетания перечисленных выше компонентов. Чтобы сделать доступным в наиболее подходящий выпуск и компоненты [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], см. в разделе [выпуски и компоненты SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md).  
   
  Доступны 32-разрядный и 64-разрядный выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Программа установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает следующие параметры установки.  
   
 -   **Мастер установки**  
   
-     В разделе [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41; ](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) методические сведения об установке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью мастера установки.  
+     См. в разделе [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41; ](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) методические сведения об установке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью мастера установки.  
   
--   **Командной строки**  
+-   **Командная строка**  
   
-     В разделе [Установка SQL Server 2014 из командной строки](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) образцы синтаксиса и параметров для запуска автоматической установки.  
+     См. в разделе [Установка SQL Server 2014 из командной строки](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) образцы синтаксиса и параметров для запуска автоматической установки.  
   
 -   **Файл конфигурации**  
   
-     В разделе [Установка SQL Server 2014 с помощью файла конфигурации](../database-engine/install-windows/install-sql-server-using-a-configuration-file.md) образцы синтаксиса и параметров для запуска установки с помощью файла конфигурации.  
+     См. в разделе [Установка SQL Server 2014 с помощью файла конфигурации](../database-engine/install-windows/install-sql-server-using-a-configuration-file.md) образцы синтаксиса и параметров для запуска установки с помощью файла конфигурации.  
   
 -   **SysPrep**  
   
-     В разделе [Установка SQL Server 2014 с помощью SysPrep](../database-engine/install-windows/install-sql-server-using-sysprep.md) методические сведения об установке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью средства SysPrep.  
+     См. в разделе [Установка SQL Server 2014 с помощью SysPrep](../database-engine/install-windows/install-sql-server-using-sysprep.md) методические сведения об установке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью средства SysPrep.  
   
 -   **Установка основных серверных компонентов**  
   
-     В разделе [Установка SQL Server 2014 на Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md) методические сведения об установке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Windows Server Core.  
+     См. в разделе [Установка SQL Server 2014 на Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md) методические сведения об установке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Windows Server Core.  
   
 -   **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Установка компонентов бизнес-Аналитики**  
   
-     В разделе [Установка компонентов SQL Server 2014 BI](../sql-server/install/install-sql-server-business-intelligence-features.md) сведения об установке компонентов, которые являются частью платформы бизнес-Аналитики Майкрософт, которые включают [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]и несколько клиентские приложения, используемые для создания и работы с аналитическими данными.  
+     См. в разделе [Установка компонентов SQL Server 2014 BI](../sql-server/install/install-sql-server-business-intelligence-features.md) сведения об установке компонентов, которые являются частью платформы бизнес-Аналитики Майкрософт, которые включают [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]и несколько клиентские приложения, используемых для создания и работы с аналитическими данными.  
   
 -   **Установка отказоустойчивого кластера**  
   
-     В разделе [Установка отказоустойчивого кластера SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) методические сведения об установке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отказоустойчивого кластера.  
+     См. в разделе [Установка отказоустойчивого кластера SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) методические сведения об установке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отказоустойчивого кластера.  
   
  По умолчанию при установке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] образцы баз данных и образцы кода не устанавливаются. Чтобы установить образцы баз данных и образцы кода для выпусков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], кроме выпуска Express, посетите [веб-сайт CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843). Сведения о поддержке образцов баз данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и образцы кода для [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]см. в разделе [Обзор баз данных и образцов](http://go.microsoft.com/fwlink/?LinkId=110391).  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36190298"
   
 -   Запустите программу установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для обновления существующей версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] до версии [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Дополнительные сведения см. в разделе [обновление до SQL Server 2014](#BKMK_Upgrading).  
   
--   Запустите программу установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для установки нового экземпляра [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Дополнительные сведения см. в разделе [Установка SQL Server 2014](#BKMK_Install).  
+-   Запустите программу установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для установки нового экземпляра [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Дополнительные сведения см. в разделе [установки SQL Server 2014](#BKMK_Install).  
   
 -   После завершения установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] следующим действием будет настройка [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и компонентов. Настройка [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] при помощи программ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Настройка SQL Server 2014](#BKMK_Configure).  
   
@@ -107,9 +107,9 @@ ms.locfileid: "36190298"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Ознакомьтесь с требованиями к оборудованию и программному обеспечению, операционной системе, рекомендациями относительно сети, Интернета и требованиями относительно свободного места на жестком диске.|[Необходимые условия для установки](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
+|Ознакомьтесь с требованиями к оборудованию и программному обеспечению, операционной системе, рекомендациями относительно сети, Интернета и требованиями относительно свободного места на жестком диске.|[Компоненты, необходимые для установки](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
 |Ознакомьтесь с вопросами безопасности для установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Вопросы безопасности](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
-|Ознакомьтесь со сведения о функциях, поддерживаемых разными выпусками [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|[Выпуски и компоненты](features-supported-by-the-editions-of-sql-server-2014.md)|  
+|Ознакомьтесь со сведения о функциях, поддерживаемых разными выпусками [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|[Функции и выпуски](features-supported-by-the-editions-of-sql-server-2014.md)|  
 |Выберите наиболее подходящий выпуск и компоненты [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Выпуски и компоненты SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md)|  
 |Просмотрите конфигурацию оборудования и изучите процесс установки кластера отработки отказа [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Подготовка к установке отказоустойчивого кластера](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
   
@@ -163,6 +163,6 @@ ms.locfileid: "36190298"
   
 ## <a name="see-also"></a>См. также  
  [Спецификации SQL Server 2014](sql-server-2014-product-specifications.md)   
- [Приступая к работе с документацией по SQL Server](../2014-toc/books-online-for-sql-server-2014.md) [обратной совместимости](backward-compatibility.md)  
+ [Начало работы с документацией по SQL Server](../2014-toc/books-online-for-sql-server-2014.md) [обратной совместимости](backward-compatibility.md)  
   
   

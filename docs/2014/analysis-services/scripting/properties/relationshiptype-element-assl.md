@@ -1,5 +1,5 @@
 ---
-title: Элемент RelationshipType (ASSL) | Документы Microsoft
+title: Элемент RelationshipType (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RelationshipType element
 ms.assetid: 72e1ab0e-a95d-4ebe-857d-21de1bf9fe03
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a2e5b5ec9e9591a45a80f099397ed6568a986313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21ddd4506a2c2a6168779aa40735eb7177406597
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271600"
 ---
 # <a name="relationshiptype-element-assl"></a>Элемент RelationshipType (ASSL)
   Указывает, является ли связей элементов для [AttributeRelationship](../objects/attributerelationship-element-assl.md) можно изменить.  
@@ -69,7 +69,7 @@ ms.locfileid: "36193881"
 |*Жесткая*|Связи элементов между атрибутом и связанным атрибутом не могут быть изменены.|  
 |*Гибкие*|Связи элементов между атрибутом и связанным атрибутом могут быть изменены.|  
   
- Например если `ZipCode` нельзя заменить одно `City` в другую, то связь между `ZipCode` для `City` помечается как *жесткая*.  
+ Например если `ZipCode` нельзя заменить одно `City` на другое, то связь из `ZipCode` для `City` помечается как *жесткая*.  
   
  Перечисление, соответствующее допустимым значениям элемента `RelationshipType` в модели объектов AMO, — это <xref:Microsoft.AnalysisServices.RelationshipType>.  
   
