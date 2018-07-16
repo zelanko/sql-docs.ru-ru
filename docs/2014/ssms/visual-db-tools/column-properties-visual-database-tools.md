@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
 - vdt.designers.properties.Column
@@ -17,15 +17,15 @@ f1_keywords:
 - vdt.designers.properties.Column.ColumnFulltextSpec
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2442b50d7c7a6a325013d3a3a808747925391183
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1aed3d78cbc0f9ef44c15310e2ae9085226c3413
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236184"
 ---
 # <a name="column-properties-visual-database-tools"></a>Свойства столбца (визуальные инструменты для баз данных)
   Имеется два набора свойств столбцов: полный набор, который можно увидеть на вкладке **Свойства столбца[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в конструкторе таблиц (доступен только для баз данных**  [!INCLUDE[msCoName](../../includes/msconame-md.md)]), и сокращенный набор, который доступен в окне "Свойства" обозревателя серверов.  

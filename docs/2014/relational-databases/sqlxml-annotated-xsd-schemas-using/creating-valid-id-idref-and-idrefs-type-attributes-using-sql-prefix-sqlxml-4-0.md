@@ -1,5 +1,5 @@
 ---
-title: 'Создание допустимый идентификатор, IDREF и IDREFS атрибуты типа с помощью SQL: prefix (SQLXML 4.0) | Документы Microsoft'
+title: 'Создание допустимый идентификатор, IDREF и IDREFS атрибуты типа с помощью SQL: prefix (SQLXML 4.0) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - ID relationships [SQLXML]
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0da57705288df64e630b0d69781c151cd1310299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 49576de626183ab603699311b9c18f02013685d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215034"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Создание допустимых атрибутов типа ID, IDREF и IDREFS с использованием sql:prefix (SQLXML 4.0)
   Атрибут может быть задан как атрибут типа ID. Атрибуты, заданные как IDREF или IDREFS, могут затем использоваться для ссылки на атрибуты типа ID, создавая ссылки между документами.  
   
- ID, IDREF и IDREFS соответствуют связям PK/FK («первичный ключ-внешний ключ») в базе данных, не считая некоторых отличий. В XML-документе значения атрибутов типа ID должны быть различными. Если **CustomerID** и **OrderID** атрибутов задаются в виде Идентификатором типа в XML-документ, эти значения должны быть различными. Но в базе данных столбцы CustomerID и OrderID могут иметь одинаковые значения. (Например, в базе данных допустимы значения CustomerID = 1 и OrderID = 1.)  
+ ID, IDREF и IDREFS соответствуют связям PK/FK («первичный ключ-внешний ключ») в базе данных, не считая некоторых отличий. В XML-документе значения атрибутов типа ID должны быть различными. Если **CustomerID** и **OrderID** атрибутов задаются в виде Идентификатором типа в XML-документа, эти значения должны быть различными. Но в базе данных столбцы CustomerID и OrderID могут иметь одинаковые значения. (Например, в базе данных допустимы значения CustomerID = 1 и OrderID = 1.)  
   
  Чтобы атрибуты ID, IDREF и IDREFS были допустимыми, должны выполняться следующие условия.  
   
@@ -54,12 +54,12 @@ ms.locfileid: "36087578"
  Обратите внимание, что заметку `sql:prefix` невозможно использовать с атрибутом неизменности XSD.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для выполнения примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. Задание типов ID и IDREFS  
- В следующей схеме  **\<клиента >** элемент состоит из  **\<порядок >** дочерний элемент. **\<Порядок >** элемент содержит дочерний элемент, а также  **\<OrderDetail >** элемента.  
+ В следующей схеме  **\<клиента >** элемент состоит из  **\<порядок >** дочерний элемент. **\<Порядок >** элемент содержит дочерний элемент, а также  **\<OrderDetail >** элемент.  
   
- **OrderIDList** атрибут  **\<клиента >** является атрибутом типа IDREFS, ссылающийся на **OrderID** атрибут  **\< Порядок >** элемента.  
+ **OrderIDList** атрибут  **\<клиента >** является атрибутом типа IDREFS, ссылающийся на **OrderID** атрибут  **\< Порядок >** элемент.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -135,7 +135,7 @@ ms.locfileid: "36087578"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Частичный результат:  
   

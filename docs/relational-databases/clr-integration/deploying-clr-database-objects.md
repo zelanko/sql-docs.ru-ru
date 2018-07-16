@@ -1,12 +1,11 @@
 ---
-title: Развертывание объектов базы данных CLR | Документы Microsoft
+title: Развертывание объектов базы данных среды CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - deployment script [CLR integration]
@@ -18,12 +17,12 @@ caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: af823eb9457cbe74785de4c110334805f9ac1ad5
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9e0fe80642941daa8604aff9a169eb4cba601af5
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701535"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349786"
 ---
 # <a name="deploying-clr-database-objects"></a>Развертывание объектов базы данных CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "35701535"
  Убедитесь, что все ошибки и предупреждения компилятора устранены. Сборки, содержащие процедуры CLR, можно зарегистрировать в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды Visual Studio или инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  Чтобы использовать среду [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visual Studio для удаленной разработки, отладки и разработки, в экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] должен быть включен протокол TCP/IP. Дополнительные сведения о включении протокола TCP/IP на сервере см. в разделе [Настройка клиентских протоколов](../../database-engine/configure-windows/configure-client-protocols.md).  
+>  Чтобы использовать среду [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visual Studio для удаленной разработки, отладки и разработки, в экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] должен быть включен протокол TCP/IP. Дополнительные сведения о включении протокола TCP/IP на сервере, см. в разделе [Настройка клиентских протоколов](../../database-engine/configure-windows/configure-client-protocols.md).  
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Развертывание сборки с помощью среды Visual Studio  
   
@@ -61,7 +60,7 @@ ms.locfileid: "35701535"
   
  `vbc /target:library C:\helloworld.vb`  
   
- Эти команды запускают Visual C# или Visual Basic с помощью компилятора **/target-** параметр, чтобы указать построение библиотеки DLL.  
+ Эти команды запускают Visual C# или Visual Basic с помощью компилятора **/target** параметр, чтобы указать построение библиотеки DLL.  
   
 1.  Перед развертыванием сборки на тестовом сервере устраните все ошибки и предупреждения, полученные во время построения.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "35701535"
   
  `CREATE ASSEMBLY HelloWorld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE;`  
   
-1.  Процедура, функция, статистическое выражение, определяемый пользователем тип или триггер должны быть созданы в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если **HelloWorld** сборка содержит метод с именем **HelloWorld** в **процедуры** следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] можно добавить в запрос для создания Вызванная процедура **hello** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Процедура, функция, статистическое выражение, определяемый пользователем тип или триггер должны быть созданы в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если **HelloWorld** сборка содержит метод с именем **HelloWorld** в **процедуры** класса следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] можно добавить в запрос для создания процедура с именем **hello** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  `CREATE PROCEDURE hello`  
   
@@ -79,7 +78,7 @@ ms.locfileid: "35701535"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Дополнительные сведения о создании различных типов управляемых объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в разделе [определяемые пользователем функции](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [пользовательские агрегатные функции](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [со средой CLR Определяемые пользователем типы](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [хранимые процедуры CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33), и [триггеры CLR](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
+ Дополнительные сведения о создании различных типов управляемых объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [определяемые пользователем функции](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [пользовательские агрегатные функции](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR Определяемые пользователем типы](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [хранимые процедуры CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33), и [триггеры CLR](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Развертывание сборки на рабочих серверах  
  После тестирования и проверки CLR-объектов базы данных на тестовом сервере их можно распространить на рабочих серверах с помощью сценария развертывания. Дополнительные сведения об отладке управляемых объектов базы данных см. в разделе [отладки объектов базы данных CLR](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  
@@ -90,22 +89,22 @@ ms.locfileid: "35701535"
   
 1.  Откройте среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и соединитесь с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в котором зарегистрирована управляемая сборка или объект баз данных, который необходимо развернуть.  
   
-2.  В **обозревателя объектов**, разверните  **\<имя сервера >** и **баз данных** деревьев. Щелкните правой кнопкой мыши базу данных, где управляемого объекта базы данных не зарегистрирован, выберите **задачи**, а затем выберите **сформировать сценарии**. Откроется мастер скриптов.  
+2.  В **обозревателя объектов**, разверните  **\<имя сервера >** и **баз данных** деревьев. Щелкните правой кнопкой мыши базу данных, где управляемого объекта базы данных не зарегистрирован, выберите **задачи**, а затем выберите **сформировать скрипты**. Откроется мастер скриптов.  
   
 3.  Выберите базу данных из списка и нажмите кнопку **Далее**.  
   
-4.  В **Выбор параметров скрипта** области, нажмите кнопку **Далее**, или измените параметры и нажмите кнопку **Далее**.  
+4.  В **Выбор параметров скрипта** панели щелкните **Далее**, или изменить параметры и нажмите кнопку **Далее**.  
   
-5.  В **Выбор типов объектов** области, выберите тип объекта базы данных для развертывания. Нажмите кнопку **Далее**.  
+5.  В **Выбор типов объектов** области, выберите тип объекта базы данных должны быть развернуты. Нажмите кнопку **Далее**.  
   
-6.  Для каждого типа объекта, выбранного в **Выбор типов объектов** области **Выбор \<типа >** представлены области. На этой панели можно выбирать из всех экземпляров этого типа объекта базы данных, зарегистрированного в указанной базе данных. Выберите один или несколько объектов и щелкните **Далее**.  
+6.  Для каждого типа объекта, выбранного в **Выбор типов объектов** области **Выбор \<тип >** открыть область. На этой панели можно выбирать из всех экземпляров этого типа объекта базы данных, зарегистрированного в указанной базе данных. Выберите один или несколько объектов и щелкните **Далее**.  
   
 7.  **Параметры вывода** появится панель все нужные базы данных объектов, выбранных типов. Выберите **вывести скрипт в файл** и укажите путь к файлу сценария. Выберите **Далее**. Просмотрите выбранные параметры и нажмите кнопку **Готово**. Скрипт развертывания сохранится в указанном файле.  
   
 ## <a name="post-deployment-scripts"></a>Скрипты, выполняемые после развертывания  
  Существует возможность запуска скриптов, выполняемых после развертывания.  
   
- Чтобы добавить такой скрипт, необходимо добавить файл с именем postdeployscript.sql в каталог проекта Visual Studio. Например, щелкните правой кнопкой мыши проект в **обозревателе решений** и выберите **Добавление существующего элемента**. Добавьте файл в корневой каталог проекта, а не в папку «Тестовые скрипты».  
+ Чтобы добавить такой скрипт, необходимо добавить файл с именем postdeployscript.sql в каталог проекта Visual Studio. Например, щелкните правой кнопкой мыши проект в **обозревателе решений** и выберите **добавить существующий элемент**. Добавьте файл в корневой каталог проекта, а не в папку «Тестовые скрипты».  
   
  При выполнении развертывания среда Visual Studio запустит данный скрипт после развертывания проекта.  
   

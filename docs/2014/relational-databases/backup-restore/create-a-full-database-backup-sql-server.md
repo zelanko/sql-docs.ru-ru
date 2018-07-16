@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
 - backing up databases [SQL Server], SQL Server Management Studio
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 89af2b55ab06a6d034ca75d009802f126519ef06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 7d5d52c835ea69914d538138cf189c7171e07a78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320444"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Создание полной резервной копии базы данных (SQL Server)
   В этом разделе описывается создание полной резервной копии базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.  
@@ -42,7 +41,7 @@ ms.locfileid: "36195422"
   
      [безопасность](#Security)  
   
--   **Создание полной базы данных резервной копии:**  
+-   **Создание базы данных полной резервной копии:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -73,7 +72,7 @@ ms.locfileid: "36195422"
 ###  <a name="Security"></a> безопасность  
  Для резервной копии базы данных свойству TRUSTWORTHY присваивается значение OFF. Дополнительные сведения о том, как задать для параметра TRUSTWORTHY значение ON, см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
- Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] `PASSWORD` и `MEDIAPASSWORD` не поддерживаются при создании резервных копий. Все еще вы можете восстанавливать резервные копии, созданные с паролями.  
+ Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] `PASSWORD` и `MEDIAPASSWORD` параметры не поддерживаются при создании резервных копий. Все еще вы можете восстанавливать резервные копии, созданные с паролями.  
   
 ####  <a name="Permissions"></a> Permissions  
  Разрешения BACKUP DATABASE и BACKUP LOG назначены по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator** .  
@@ -93,7 +92,7 @@ ms.locfileid: "36195422"
   
 3.  Щелкните правой кнопкой мыши базу данных, выберите пункт **Задачи**, а затем команду **Создать резервную копию**. Откроется диалоговое окно **Резервное копирование базы данных** .  
   
-4.  В `Database` Проверьте имя базы данных. При необходимости можно выбрать другую базу данных из списка.  
+4.  В `Database` поле со списком, проверьте имя базы данных. При необходимости можно выбрать другую базу данных из списка.  
   
 5.  Резервное копирование базы данных можно выполнять для любой модели восстановления (**FULL**, **BULK_LOGGED** или **SIMPLE**).  
   
@@ -165,7 +164,7 @@ ms.locfileid: "36195422"
   
 18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] и более поздние версии поддерживают [сжатие резервных копий](backup-compression-sql-server.md). По умолчанию сжатие резервных копий зависит от значения параметра конфигурации сервера **backup-compression default** . Однако независимо от текущего значения по умолчанию на уровне сервера можно сжать резервные копии, установив параметр **Сжимать резервные копии**, или отказаться от сжатия резервных копий, установив параметр **Не сжимать резервные копии**.  
   
-     **Для просмотра или изменения текущего значения по умолчанию сжатие резервных копий**  
+     **Чтобы просмотреть или изменить текущее значение по умолчанию сжатие резервных копий**  
   
     -   [Параметр конфигурации сервера «Просмотр или настройка параметра сжатия резервных копий по умолчанию»](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
@@ -208,7 +207,7 @@ ms.locfileid: "36195422"
          ШИФРОВАНИЕ (АЛГОРИТМ, СЕРТИФИКАТ СЕРВЕРА |АСИММЕТРИЧНЫЙ КЛЮЧ)  
          Только для SQL Server 2014 и выше укажите используемый алгоритм шифрования, а также сертификат или асимметричный ключ для шифрования.  
   
-         Описание **=** { **"*`text`*"** | **@*** text_variable* }  
+         Описание **=** { **"*`text`*"** | **@*** текстовая_переменная* }  
          Задает произвольное текстовое описание резервного набора данных. В этой строке может содержаться до 255 символов.  
   
          NAME **=** { *имя_резервного_набора_данных* | **@***переменная_имени_резервного_набора_данных* }  
@@ -276,7 +275,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
   
-1.  Используйте `Backup-SqlDatabase` командлета. Чтобы явно указать, что это полное резервное копирование, задайте **- BackupAction** со значением по умолчанию `Database`. Данный параметр является необязательным для полных резервных копий баз данных.  
+1.  Используйте `Backup-SqlDatabase` командлета. Чтобы явно указать, что это полной резервной копии, задайте **- BackupAction** параметр со значением по умолчанию `Database`. Данный параметр является необязательным для полных резервных копий баз данных.  
   
      В следующем примере создается полная резервная копия базы данных `MyDB` в заданном по умолчанию расположении резервного копирования на экземпляре сервера `Computer\Instance`. Дополнительно в этом примере указывается `-BackupAction Database`.  
   

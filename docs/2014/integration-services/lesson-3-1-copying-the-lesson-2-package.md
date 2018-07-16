@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 caps.latest.revision: 30
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 36a0b3d3237360ede083ce635375eb2ace716bd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f7c92b097d1b6388fe1e531d27b9965da0ec584
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192475"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290970"
 ---
 # <a name="step-1-copying-the-lesson-2-package"></a>Шаг 1. Копирование пакета занятия 2
   В этой задаче будет создана копия пакета Lesson 2.dtsx, созданного на занятии 2. Либо можно добавить пакет для занятия 2, прилагаемый к учебнику по проекту, и скопировать его. Полученная копия впоследствии будет использоваться на протяжении всего занятия 3.  

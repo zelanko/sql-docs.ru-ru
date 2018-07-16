@@ -1,5 +1,5 @@
 ---
-title: Запуск, остановка, приостановка, возобновление, перезапуск компонента Database Engine, агента SQL Server и службы обозревателя SQL Server | Документы Microsoft
+title: Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и служба обозревателя SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, start and stop services
 - stopping SQL Server Agent
@@ -41,18 +41,18 @@ helpviewer_keywords:
 - Management Studio [SQL Server], starting or stopping services
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 22a7d3321cfdcbcbd07e5771fd908f409002999a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 760ad35b8212ab8b38e441a3f5db332bce9f2bec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326284"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server
-  В этом разделе описывается запускать, останавливать, приостанавливать, возобновлять и перезапустите [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент, или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] служба браузера с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **net** команды из командной строки, [!INCLUDE[tsql](../../includes/tsql-md.md)], или PowerShell.  
+  В этом разделе описывается, как запустить, остановить, приостановить, возобновить или перезапустить [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент, или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] служба браузера с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **net** команды из командной строки, [!INCLUDE[tsql](../../includes/tsql-md.md)], или PowerShell.  
   
 -   **Перед началом работы**  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36100483"
 ####  <a name="Permissions"></a> Permissions  
  По умолчанию только участники локальной группы «Администраторы» могут запускать, останавливать, приостанавливать, возобновлять или перезапускать службу. При необходимости предоставить возможность управления службой для пользователей, не обладающих правами администратора, см. раздел [Как предоставить пользователям права для управления службами в Windows Server 2003](http://support.microsoft.com/kb/325349). (Процесс такой же, как и в других версиях Windows.)  
   
- Остановка [!INCLUDE[ssDE](../../includes/ssde-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` требует членства в **sysadmin** или **serveradmin** предопределенных ролей сервера и не предназначена для передачи.  
+ Остановка [!INCLUDE[ssDE](../../includes/ssde-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` команды необходимо быть членом **sysadmin** или **serveradmin** предопределенных ролей сервера и не предназначена для передачи.  
   
 ##  <a name="SSCMProcedure"></a> С помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -268,7 +268,7 @@ ms.locfileid: "36100483"
     SHUTDOWN WITH NOWAIT;   
     ```  
   
- Дополнительные сведения о `SHUTDOWN` инструкции в разделе [завершение работы &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql).  
+ Дополнительные сведения о `SHUTDOWN` инструкции, см. в разделе [завершение работы &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
   

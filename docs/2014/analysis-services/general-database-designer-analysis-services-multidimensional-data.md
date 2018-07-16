@@ -1,5 +1,5 @@
 ---
-title: Общие (конструктор баз данных) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Общие (конструктор баз данных) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.dbconfigurationpane.f1
 helpviewer_keywords:
 - Database Designer
 ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 435817b44643ddf1d3e6703ca2872dd5afe407c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a2af00d2dcdb6d28ab311067172e808e49539a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234274"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>Общие (конструктор баз данных) (службы Analysis Services — многомерные данные)
   Используйте вкладку **Общие** , чтобы изменить свойства базы данных служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -52,7 +52,7 @@ ms.locfileid: "36191106"
  **Язык**  
  Выберите язык для данной транзакции.  
   
- Добавление к сетке новый перевод, нажмите кнопку  **\<добавить новый перевод >**.  
+ Чтобы добавить новый перевод в сетке, щелкните  **\<добавить новый перевод >**.  
   
  **Переведенный заголовок**  
  Введите заголовок базы данных на соответствующем языке для перевода. Если это поле оставить пустым, будет использоваться заголовок базы данных по умолчанию.  
@@ -71,7 +71,7 @@ ms.locfileid: "36191106"
  **Название**  
  Введите имя типа учетной записи.  
   
- Чтобы добавить новый тип учетной записи, нажмите кнопку  **\<добавить новый тип учетной записи >**.  
+ Чтобы добавить новый тип учетной записи, щелкните  **\<добавить новый тип счета >**.  
   
  **Псевдоним**  
  Задает имя типа учетной записи по умолчанию для использования в мастере бизнес-аналитики. Если оставить этот столбец пустым, будет использоваться столбец **Имя** .  
@@ -81,7 +81,7 @@ ms.locfileid: "36191106"
   
 ## <a name="see-also"></a>См. также  
  [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Базы данных многомерной модели &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
+ [Многомерный шаблон баз данных &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
  [Предупреждения &#40;базы данных конструктор&#41; &#40;службы Analysis Services — многомерные данные&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
   
   

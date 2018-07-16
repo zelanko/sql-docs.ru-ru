@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rpt.rptdesigner.projectpropertypages.general.f1
 helpviewer_keywords:
 - Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5ccad4480d09fad1aab6b406cbd3a42ad9083b9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: b4125342c0c85f053d3f7e85124be79766a06c3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238384"
 ---
 # <a name="project-property-pages-dialog-box"></a>Диалоговое окно страниц свойств проекта
   Страницы свойств проекта позволяют настраивать свойства развертывания проекта сервера отчетов. Чтобы открыть это диалоговое окно, в меню **Проект** щелкните ***Свойства***\<имя проекта отчета>.  
@@ -71,19 +71,19 @@ ms.locfileid: "36097428"
   
  При публикации на сервере отчетов, работающем в собственном режиме, укажите полный путь в иерархии папок, начиная с корня. Если папки вложены друг в друга, укажите полный путь от корневой папки, например Папка1/Папка2/Папка3.  
   
- При публикации на сервере отчетов, работающем в режиме интеграции с SharePoint, указывайте URL-адрес библиотеки SharePoint. Например, http://*\<имя_сервера >*/*\<сайта >*  /документы/Мояпапка.  
+ При публикации на сервере отчетов, работающем в режиме интеграции с SharePoint, указывайте URL-адрес библиотеки SharePoint. Например, http://*\<servername >*/*\<сайта >*  /документы/Мояпапка.  
   
  **URL-адрес сервера назначения**  
  URL-адрес целевого сервера отчетов. Перед публикацией отчета необходимо задать в этом свойстве правильный URL-адрес сервера отчетов.  
   
  При публикации на сервере отчетов, работающем в собственном режиме, укажите URL-адрес виртуального каталога сервера отчетов. Например, http://\<сервера > / reportserver. Это виртуальный каталог сервера отчетов, а не диспетчера отчетов. По умолчанию сервер отчетов устанавливается в виртуальный каталог «reportserver».  
   
- При публикации на сервере отчетов, работающем в режиме интеграции с SharePoint, указывайте URL-адрес сайта SharePoint верхнего уровня или соответствующего подсайта. Если сайт не указан, то используется сайт верхнего уровня по умолчанию. Например, http://\<*имя_сервера >*, http://<*servername*/\<*сайта >* или http://\< *имя_сервера >*/\<*сайта >*/\<*дочернего сайта >*.  
+ При публикации на сервере отчетов, работающем в режиме интеграции с SharePoint, указывайте URL-адрес сайта SharePoint верхнего уровня или соответствующего подсайта. Если сайт не указан, то используется сайт верхнего уровня по умолчанию. Например, http://\<*servername >*, http://<*servername*/\<*сайта >* или http://\< *servername >*/\<*сайта >*/\<*дочернего сайта >*.  
   
 ## <a name="see-also"></a>См. также  
  [Публикация отчетов](../publish-reports.md)   
  [Публикация отчета в библиотеку SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
- [Задание свойства развертывания &#40;службы Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
+ [Задание свойств развертывания &#40;службы Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
  [Справка F1 по использованию конструктора отчетов](report-designer-f1-help.md)  
   
   

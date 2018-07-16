@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно разделы отчета | Документы Microsoft
+title: Диалоговое окно разделы отчета | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1ff14dfa-d56b-449f-bef1-cc217f3c14b7
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9962f996bff428411a0372663ef860dfd0865f53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c4bbe031bd7cc918f39d1c3c965cdb9e82ab612a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328925"
 ---
 # <a name="report-sections-dialog-box"></a>Диалоговое окно «Разделы отчета»
-  При открытии отчета конструктор отчетов проверяет, что отчет содержит только один язык определения отчетов (RDL)  **\<раздел >** элемента. Открытие отчета с несколькими элементами **\<Section>** не поддерживается.  
+  При открытии отчета конструктор отчетов проверяет, что отчет содержит только один язык определения отчетов (RDL)  **\<разделе >** элемент. Открытие отчета с несколькими элементами **\<Section>** не поддерживается.  
   
  Хотя определение отчета с несколькими разделами может быть создано программным путем, изменение отчета в среде подготовки отчетов не поддерживается.  
   

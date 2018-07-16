@@ -1,12 +1,11 @@
 ---
-title: Приступая к работе с интеграцией со средой CLR | Документы Microsoft
+title: Приступая к работе с интеграцией со средой CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: get-started-article
 dev_langs:
 - TSQL
@@ -28,19 +27,19 @@ caps.latest.revision: 62
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33904494978b4a85377ef4d3bdb3cee4f176f2f2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e54af4adc976d8a5b8e9990d91155d5178f5ef03
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702375"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349466"
 ---
 # <a name="getting-started-with-clr-integration"></a>Приступая к работе с интеграцией со средой CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  В этом разделе содержится обзор пространств имен и библиотеки, необходимые для компиляции объектов базы данных с помощью [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] интеграция с .NET Framework общеязыковая среда выполнения (CLR). В этом разделе также показано, как написать, скомпилировать и выполнить простую хранимую процедуру CLR на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
+  В этом разделе представлен обзор пространств имен и библиотеки, необходимые для компиляции объектов базы данных с помощью [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] интеграции с .NET Framework среда CLR (CLR). В этом разделе также показано, как написать, скомпилировать и выполнить простую хранимую процедуру CLR на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
   
 ## <a name="required-namespaces"></a>Необходимые пространства имен  
- Компоненты, необходимые для разработки основных объектов базы данных CLR устанавливаются вместе с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Функции интеграции со средой CLR доступны через сборку под названием system.data.dll, которая является частью платформы .NET Framework. Эту сборку можно найти в глобальном кэше сборок (GAC), а также в каталоге .NET Framework. Ссылка на эту сборку обычно добавляется автоматически и при использовании инструментов с интерфейсом командной строки, и при работе в среде [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, поэтому нет необходимости добавлять ее вручную.  
+ Компоненты, необходимые для разработки основных объектов базы данных среды CLR, устанавливаются вместе с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Функции интеграции со средой CLR доступны через сборку под названием system.data.dll, которая является частью платформы .NET Framework. Эту сборку можно найти в глобальном кэше сборок (GAC), а также в каталоге .NET Framework. Ссылка на эту сборку обычно добавляется автоматически и при использовании инструментов с интерфейсом командной строки, и при работе в среде [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, поэтому нет необходимости добавлять ее вручную.  
   
  Сборка system.data.dll содержит следующие пространства имен, необходимые для компиляции объектов базы данных среды CLR:  
   
@@ -89,11 +88,11 @@ End Class
   
 ```  
   
- Эта простая программа содержит единственный статический метод общего класса. Этот метод использует два новых класса **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** и  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, позволяющие создать управляемые объекты базы данных для вывода простого текста Сообщение. Метод также присваивает строке «Hello world!» в качестве значения выходного параметра. Этот метод можно объявить как хранимую процедуру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а затем выполнить так же, как и любую хранимую процедуру [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+ Эта простая программа содержит единственный статический метод общего класса. Этот метод использует два новых класса, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** и  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, позволяющие создать управляемые объекты базы данных для вывода простого текста Сообщение. Метод также присваивает строку «Hello world!» для параметра выходной параметр. Этот метод можно объявить как хранимую процедуру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а затем выполнить так же, как и любую хранимую процедуру [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- Скомпилировать эту программу как библиотеку, загрузить ее в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], и запустите его в виде хранимой процедуры.  
+ Скомпилировать эту программу как библиотеку, загрузить его в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], и запустите его от имени хранимой процедуры.  
   
-## <a name="compile-the-hello-world-stored-procedure"></a>Компиляция «Hello World» хранимой процедуры  
+## <a name="compile-the-hello-world-stored-procedure"></a>Компиляцию «Hello World» хранимые процедуры  
  В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] распространяемые файлы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework устанавливаются по умолчанию. Эти файлы включают csc.exe и vbc.exe, компиляторы командной строки для программ Visual C# и Visual Basic. Чтобы скомпилировать приведенный образец, измените используемую системную переменную пути и укажите в ней путь к каталогу, содержащему файл csc.exe или vbc.exe. Ниже приведен используемый по умолчанию путь установки .NET Framework.  
   
 ```  
@@ -106,7 +105,7 @@ C:\Windows\Microsoft.NET\Framework\(version)
 C:\Windows\Microsoft.NET\Framework\v4.6.1  
 ```  
   
- После добавления каталога .NET Framework к пути можно скомпилировать образец хранимой процедуры с созданием сборки с помощью следующей команды. **/Target-** позволяет скомпилировать в сборку.  
+ После добавления каталога .NET Framework к пути можно скомпилировать образец хранимой процедуры с созданием сборки с помощью следующей команды. **/Target** позволяет скомпилировать в сборку.  
   
  Для файлов с исходным кодом Visual C#:  
   
@@ -180,8 +179,8 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
   
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
- [SQL Server в процессе определенного расширения для ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
- [Отладка объектов базы данных CLR](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)   
+ [Специальные расширения SQL Server в процессе для ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
+ [Отладка объектов баз данных CLR](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)   
  [Безопасность интеграции со средой CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

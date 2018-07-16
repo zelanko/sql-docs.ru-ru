@@ -1,5 +1,5 @@
 ---
-title: Средства настройки PowerPivot | Документы Microsoft
+title: Средства настройки PowerPivot | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6063a6677678fb4fcf0c5f4f15a904d194271f73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2803d0bb8d4ed506208a3dff577e25ec891d6e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317014"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
-  Настройка, восстановление или удаление [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] с помощью средств настройки PowerPivot.  
+  Настройка, исправление или удаление [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] с помощью средств настройки PowerPivot.  
   
  Мастер установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] установит средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2010, а также средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013. В этом разделе приводится описание принципов использования обоих средств и различий между ними.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36193267"
   
 -   [Общие сведения об использовании средства настройки PowerPivot](#bkmk_overview)  
   
--   [Запуск одного из средств настройки PowerPivot.](#bmkm_start_tool)  
+-   [Запуск одного из средств настройки PowerPivot](#bmkm_start_tool)  
   
 ##  <a name="bkmk_requirements"></a> Требования к использованию средств настройки  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36193267"
 -   При работе со средствами настройки порты TCP/IP не задействуются, поэтому не нужно выполнять какую-либо особую настройку брандмауэра. При работе со средством настройки подразумевается, что веб-приложения и общие службы входят в состав платформы SharePoint. Может потребоваться настройка брандмауэра для сервера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения см. в статье [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 ##  <a name="bkmk_twoversions"></a> 2 версии средства настройки  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Мастер установки установит средства настройки PowerPivot для SharePoint 2010, а также средство настройки PowerPivot для SharePoint 2013.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Мастер установки устанавливает средство настройки PowerPivot для SharePoint 2010, а также средство настройки PowerPivot для SharePoint 2013.  
   
  Средства можно использовать только с экземпляром [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] объекта [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Не следует использовать средства с установками [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
@@ -91,11 +91,11 @@ ms.locfileid: "36193267"
 >  -   [Установка служб Reporting Services в режиме SharePoint для SharePoint 2013](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).  
 > -   [Установка служб Reporting Services в режиме SharePoint для SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
-##  <a name="bmkm_start_tool"></a> Запуск одного из средств настройки PowerPivot.  
+##  <a name="bmkm_start_tool"></a> Запуск одного из средств настройки PowerPivot  
   
-1.  На **запуска** введите `powerpivot`  
+1.  На **запустить** введите `powerpivot`  
   
-     На **запустить** введите `powerpivot` или **запустить** меню, нажмите кнопку **все программы**, нажмите кнопку [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], нажмите кнопку **средства настройки** , а затем выберите один из следующих:  
+     На **запустить** введите `powerpivot` или на **запустить** меню, щелкните **все программы**, нажмите кнопку [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], нажмите кнопку **средства настройки** , а затем выберите один из следующих:  
   
     -   **Средство настройки PowerPivot**.  
   
@@ -126,9 +126,9 @@ ms.locfileid: "36193267"
  При нажатии кнопки «Пуск» средство обработает все действия в пакетном режиме. Несмотря на то что каждое действие отображается как отдельный элемент в списке задач, все действия в составе задачи обрабатываются вместе. Обрабатываются только те действия, которые проходят проверку. Для прохождения проверки, возможно, потребуется добавить или изменить некоторые из входных значений.  
   
 ## <a name="related-content"></a>См. также  
- [Обновление PowerPivot для SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) описывает рабочий процесс, который обновляет существующую установку, уже находящегося в ферме.  
+ [Обновление PowerPivot для SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) рассматривает рабочий процесс, который обновляет существующую установку, уже находящегося в ферме.  
   
- [Удаление PowerPivot для SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) описывает рабочий процесс, который удаляет PowerPivot для служб, решения и страницы приложений из фермы SharePoint.  
+ [Удаление PowerPivot для SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) рассматривает рабочий процесс, который удаляет PowerPivot для служб, решения и страницы приложений из фермы SharePoint.  
   
  [Настройка PowerPivot с помощью Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   

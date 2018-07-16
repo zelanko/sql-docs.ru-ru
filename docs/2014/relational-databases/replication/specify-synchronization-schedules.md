@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], synchronizing
 - scheduling synchronization [SQL Server replication]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - replication [SQL Server], synchronization
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 444277abadee330f410e0b1e7db4042acc5fcccf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5b0c837ec8abafa79f6ed27303a69fad62e1c36e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215364"
 ---
 # <a name="specify-synchronization-schedules"></a>Указание расписаний синхронизации
   В данном разделе описывается процесс задания расписаний синхронизации в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. При создании подписки можно определить расписание синхронизации, управляющее запуском агента репликации для подписки. Если не указать параметры расписания, подписка использует расписание по умолчанию.  
@@ -82,7 +82,7 @@ ms.locfileid: "36099287"
   
 3.  Щелкните правой кнопкой мыши подписку, а затем выберите **Просмотреть сведения**.  
   
-4.  В **подписки \< Имя_подписки >** окно, нажмите кнопку **действия**и нажмите кнопку  **\<Имя_агента > Свойства задания**.  
+4.  В **подписки \< SubscriptionName >** окно, нажмите кнопку **действие**, а затем нажмите кнопку  **\<Имя_агента > Свойства задания**.  
   
 5.  На странице **Расписания** диалогового окна **Свойства задания — \<имя_задания>** нажмите кнопку **Изменить**.  
   

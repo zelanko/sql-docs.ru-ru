@@ -1,5 +1,5 @@
 ---
-title: Изменение имен таблиц по умолчанию | Документы Microsoft
+title: Изменение имен таблиц по умолчанию | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 87328bab0552074462ec039cbcb9c8184639f350
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0051a4bdd4a274ee91997117f491c435a556c04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308594"
 ---
 # <a name="modifying-default-table-names"></a>Изменение имен таблиц по умолчанию
   Значение свойства **FriendlyName** для объектов в представлении источника данных можно изменить, сделав его имя более понятным и простым в использовании.  
@@ -37,7 +37,7 @@ ms.locfileid: "36101177"
   
      Когда окно свойств открыто, проще изменять свойства каждой таблицы в представлении источника данных. Если окно не закреплено в открытом состоянии с помощью кнопки **Автоматически скрывать** , оно будет закрыто, как только будет выбран другой объект на панели **Диаграмма** .  
   
-3.  Изменение **FriendlyName** свойство **FactInternetSales** объект *`InternetSales`*.  
+3.  Изменение **FriendlyName** свойство для **FactInternetSales** объект *`InternetSales`*.  
   
      Изменение будет применено, если щелкнуть вне ячейки свойства **FriendlyName** . На следующем занятии будет рассмотрено определение группы мер на основе этой таблицы фактов. Из-за сделанных на этом занятии изменений она будет называться не FactInternetSales, а InternetSales.  
   
@@ -54,6 +54,6 @@ ms.locfileid: "36101177"
   
 ## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Измените свойства в представлении источника данных &#40;служб Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
+ [Изменение свойств в представлении источника данных &#40;служб Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - totals [SQL Server], row counts
 - row counts [SQL Server]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - counting rows
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 41a1b6010d0a1542811d9bbbec9a3e94ac4d943f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d55f9112a4015ead999ca88f7b3b55555fabf324
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269960"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>подсчитать строки в таблице (визуальные инструменты для баз данных)
   Строки в таблице можно подсчитать, чтобы определить:  
@@ -91,7 +91,7 @@ ms.locfileid: "36087769"
 5.  Выполните запрос.  
   
 ## <a name="see-also"></a>См. также  
- [Сортировать и группировать результаты запроса &#40;визуальные средства базы данных&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [Результаты запросов сортировки и группирования &#40;визуальных инструментах баз данных&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Резюмирование результатов запросов (визуальные инструменты для баз данных)](summarize-query-results-visual-database-tools.md)  
   
   

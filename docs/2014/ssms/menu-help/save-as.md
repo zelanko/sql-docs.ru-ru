@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.saveas
 helpviewer_keywords:
 - Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 968cb13c9a115fcc0445cdfba194a2087a06a234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4dc19118c88734062a9c57ac39acf33bab5942d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326904"
 ---
 # <a name="save-as"></a>Сохранить как
-  Используйте это диалоговое окно, чтобы сохранить экземпляр текущего элемента в указанном расположении и в файле указанного формата. Чтобы отображать это диалоговое окно, нажмите кнопку **Сохранить**  *\<файл >* **как** на **файл** меню (где  *\<файл >* имя текущего элемента), или нажмите клавиши ALT + F, A в редакторе кода.  
+  Используйте это диалоговое окно, чтобы сохранить экземпляр текущего элемента в указанном расположении и в файле указанного формата. Чтобы отобразить это диалоговое окно, нажмите кнопку **Сохранить**  *\<файл >* **как** на **файл** меню (где  *\<файл >* — это имя текущего элемента), или нажмите сочетание клавиш ALT + F, A в редакторе кода.  
   
 ## <a name="central-panel"></a>Центральная панель  
  **Сохранить в**  

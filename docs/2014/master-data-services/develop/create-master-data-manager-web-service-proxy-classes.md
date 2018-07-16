@@ -5,22 +5,19 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- docset-sql-devref
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
-caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6714b6317f625f3a931778b1466ebe619ed02816
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fb1caec20ab7af7cd6e263e6718820658940d00f
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087149"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355046"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Создание классов-посредников веб-службы диспетчера основных данных
   Веб-служба [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] позволяет программно использовать функции [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] с любого компьютера, имеющего доступ к веб-сайту [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Перед тем как писать код для доступа к веб-службе, необходимо создать классы-посредники. Основным классом-посредником, который используется для выполнения операций веб-службы, является класс <xref:Microsoft.MasterDataServices.ServiceClient>, реализующий интерфейс <xref:Microsoft.MasterDataServices.IService>.  
@@ -30,7 +27,7 @@ ms.locfileid: "36087149"
   
 1.  Откройте файл Web.config [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] в текстовом редакторе. Этот файл находится в папке WebApplication каталога пути установки [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
-2.  Найти `mdsWsHttpBehavior` раздела  **\<serviceBehaviors >**. Для  **\<serviceMetadata >** , задайте `httpGetEnabled` для `true`.  
+2.  Найти `mdsWsHttpBehavior` раздел  **\<serviceBehaviors >**. Для  **\<serviceMetadata >** элемент, наборе `httpGetEnabled` для `true`.  
   
     > [!NOTE]  
     >  Чтобы включить веб-службы по протоколу SSL, задайте свойству `httpsGetEnabled` значение `true` в секции `mdsWsHttpBehavior` файла web.config. Необходимо также настроить `mdsWsHTTPBinding` на протокол SSL и закомментировать секцию не SSL.  

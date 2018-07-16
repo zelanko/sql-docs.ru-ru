@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing publications
 - publications [SQL Server replication], deleting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deleting publications
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8ab132b903fcb15d11bac4a6d21ab6670397a13e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e13b845d6fba844ccf4199403240c5e8cb79bdbd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303724"
 ---
 # <a name="delete-a-publication"></a>Удаление публикации
   В данном разделе описывается удаление публикации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO.  
@@ -106,7 +106,7 @@ ms.locfileid: "36094795"
   
 3.  Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства.  
   
-4.  Чтобы убедиться в существовании публикации, проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> . Если значение этого свойства равно `false`, были неверно определены свойства публикации, на шаге 3, либо публикация не существует.  
+4.  Чтобы убедиться в существовании публикации, проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> . Если значение этого свойства равно `false`, либо на публикации на шаге 3 были неверно определены свойства, либо публикация не существует.  
   
 5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> .  
   
@@ -116,7 +116,7 @@ ms.locfileid: "36094795"
   
     2.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, убедитесь, что база данных существует.  
   
-    3.  Задать <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> свойства `false`.  
+    3.  Задайте <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> свойства `false`.  
   
     4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> .  
   
@@ -130,7 +130,7 @@ ms.locfileid: "36094795"
   
 3.  Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства.  
   
-4.  Чтобы убедиться в существовании публикации, проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> . Если значение этого свойства равно `false`, были неверно определены свойства публикации, на шаге 3, либо публикация не существует.  
+4.  Чтобы убедиться в существовании публикации, проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> . Если значение этого свойства равно `false`, либо на публикации на шаге 3 были неверно определены свойства, либо публикация не существует.  
   
 5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> .  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36094795"
   
     2.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение `false`, проверьте, существует ли база данных.  
   
-    3.  Задать <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> свойства `false`.  
+    3.  Задайте <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> свойства `false`.  
   
     4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> .  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bidirectional replication
 - transactional replication, bidirectional replication
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - peer-to-peer transactional replication
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 299b9968d9daebc61c9625a661125d45f33a3dfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 838d3fa3190e592c0b46529ea45b7e1a7b91c8be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236654"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
   Одноранговая репликация поддерживает масштабируемые и отказоустойчивые решения, сохраняя копии данных на нескольких экземплярах сервера, которые также называются *узлами*. Одноранговая репликация, основанная на репликации транзакций, распространяет согласованные на уровне транзакций изменения почти в реальном времени. Это позволяет приложениям, для которых требуется масштабируемость операций чтения, распределять клиентские операции чтения на несколько узлов. Поскольку данные сохраняются на узлах почти в режиме реального времени, одноранговая репликация обеспечивает избыточность данных, что повышает доступность данных.  
@@ -149,7 +149,7 @@ ms.locfileid: "36191407"
   
 -   Свойство публикации **@allow_initialize_from_backup** должно иметь значение `true`.  
   
--   Свойство статьи **@replicate_ddl** должно иметь значение `true`; **@identityrangemanagementoption** должно иметь значение `manual`; и **@status** необходимо указать этот параметр **24** имеет значение.  
+-   Свойство статьи **@replicate_ddl** должно иметь значение `true`; **@identityrangemanagementoption** должно иметь значение `manual`; и **@status** требуется соответствующий параметр **24** имеет значение.  
   
 -   Значение для свойства статьи **@ins_cmd**, **@del_cmd**, и **@upd_cmd** не может быть присвоено `SQL`.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Задача 16: Проверка с помощью диспетчера основных данных | Документы Microsoft'
+title: 'Задача 16: Проверка с помощью диспетчера основных данных | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,35 +10,35 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 57ad9d3e-8f95-4df6-af01-c291ccf49164
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 36220f21f3e2e28d75ff546857fd87b1e71436f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d0c5b2f72a04b1c1f99829e61ca2dca3fedc39a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304654"
 ---
 # <a name="task-16-verifying-with-master-data-manager"></a>Задача 16. Проверка с помощью диспетчера основных данных
   В этой задаче вы проверите состояние пакетного задания, отправленного пакетом служб SSIS, и убедитесь, что данные были переданы на сервер MDS с помощью диспетчера основных данных.  
   
-1.  Запустите **диспетчера основных данных** ([http://localhost/MDS](http://localhost/MDS)). Если он уже открыт, нажмите кнопку **Microsoft SQL Server Master Data Services** в верхней части, чтобы переключиться на **Домашняя страница**.  
+1.  Запустите **диспетчера основных данных** ([http://localhost/MDS](http://localhost/MDS)). Если он уже открыт, нажмите кнопку **Microsoft SQL Server Master Data Services** вверху, чтобы переключиться в режим **Домашняя страница**.  
   
 2.  Нажмите кнопку **управление интеграцией**.  
   
-3.  Обратите внимание, что пакет с именем **EIMBatch** , отправленные вами в списке. Нажмите кнопку **импорта данных** в строке меню, если вы не видите следующий экран.  
+3.  Обратите внимание, что имеется пакет с **EIMBatch** , отправленное в списке. Нажмите кнопку **импорта данных** в строке меню, если вы не видите следующий экран.  
   
      ![Пакет EIM](../../2014/tutorials/media/et-verifyingwithmasterdatamanager.jpg "пакет EIM")  
   
-4.  Перейдите на домашнюю страницу, нажмите кнопку **SQL Server 2012 Master Data Services** вверху.  
+4.  Переключитесь обратно на домашнюю страницу, щелкните **SQL Server 2012 Master Data Services** вверху.  
   
-5.  Убедитесь, что **поставщики** выбрана модель **модель** и **VERSION_1** выбран для **версии**и нажмите кнопку  **Обозреватель**.  
+5.  Убедитесь, что **поставщики** выбрана модель **модели** и **VERSION_1** выбран для **версии**и нажмите кнопку  **Обозреватель**.  
   
-6.  Вы можете просмотреть данные, импортированные пакетом служб SSIS в MDS. Данные должны быть очищены и не быть дубликатов **кода** значения (Примечание: **SupplierID** столбец в Excel соответствует **кода** атрибут сущности Supplier в MDS).  
+6.  Вы можете просмотреть данные, импортированные пакетом служб SSIS в MDS. Данные должны быть очищены и не должны содержать повторяющихся **кода** значения (Примечание: **SupplierID** столбец в Excel соответствует **кода** атрибут сущности Supplier в MDS).  
   
 ## <a name="next-step"></a>Следующий шаг  
  [Задача 17. Обзор проекта очистки данных DQS, созданного пакетом служб SSIS](../../2014/tutorials/task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md)  

@@ -1,5 +1,5 @@
 ---
-title: Определение и использование действия детализации | Документы Microsoft
+title: Определение и использование действия детализации | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 3498bae6136476a92df3c772263f943b54e7d3a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7737ab3d7631440010be2fdb3047d7d021b275b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263730"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Определение и использование действия детализации
   Распределение данных фактов по измерениям фактов без верной фильтрации данных, возвращаемых запросом, может привести к снижению его производительности. Чтобы избежать этого, можно определить действие детализации, которое ограничит общее число возвращаемых строк. Это позволит значительно повысить производительность выполнения запросов.  
@@ -50,11 +50,11 @@ ms.locfileid: "36194836"
   
 6.  В списке **Возвращаемые столбцы** установите флажки **Описание элемента** и **Номер заказа** , а затем нажмите кнопку **ОК**. На следующем рисунке показано, как выглядит шаблон действия в этот момент времени данной процедуры.  
   
-     ![Столбцы детализации](../../2014/tutorials/media/l8-action3.gif "столбцы детализации")  
+     ![Столбцы детализации поле](../../2014/tutorials/media/l8-action3.gif "столбцы детализации")  
   
 7.  Разверните поле **Дополнительные свойства** , как показано на рисунке ниже.  
   
-     ![Окно «Дополнительные свойства»](../../2014/tutorials/media/l8-action4.gif "«дополнительные свойства»")  
+     !["Дополнительные свойства"](../../2014/tutorials/media/l8-action4.gif "\"Дополнительные свойства\"")  
   
 8.  В **максимальное число строк** введите `10`.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36194836"
   
      Эти настройки ограничивают количество возвращаемых строк и указывают заголовок, отображаемый в меню клиентского приложения. На рисунке ниже показаны эти параметры в поле **Дополнительные свойства** .  
   
-     ![Окно «Дополнительные свойства»](../../2014/tutorials/media/l8-action5.gif "«дополнительные свойства»")  
+     !["Дополнительные свойства"](../../2014/tutorials/media/l8-action5.gif "\"Дополнительные свойства\"")  
   
 ## <a name="using-the-drillthrough-action"></a>Использование действия детализации  
   
@@ -108,11 +108,11 @@ ms.locfileid: "36194836"
   
     -   ShipDateKey  
   
-6.  Изменение **имя** свойство **ключ даты заказа** атрибут `Order Date` нажмите кнопку обзора для **столбец имени** свойство и в **Столбец имени** выберите **даты** как исходной таблицы и выберите SimpleDate совпадающего с исходным столбцом. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Изменение **имя** свойство для **ключ даты заказа** атрибут `Order Date` , нажмите кнопку обзора для **столбец имени** свойство и в **Столбец имени** выберите **даты** как исходной таблицы и выберите SimpleDate, совпадающего с исходным столбцом. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Изменить **имя** свойство **ключ срока заказа** атрибут `Due Date`и затем, используя один и тот же метод как **ключ даты заказа** , задайте  **Имя столбца** свойства для этого атрибута к **Date.SimpleDate (WChar)**.  
+7.  Изменить **имя** свойство для **ключ срока заказа** атрибут `Due Date`и затем, используя один и тот же метод как **ключ даты заказа** , задайте  **Имя столбца** свойство для этого атрибута к **Date.SimpleDate (WChar)**.  
   
-8.  Изменить **имя** свойство для **ключ даты отгрузки** атрибут `Ship Date`и затем измените **столбец имени** свойство для атрибута  **Date.SimpleDate (WChar)**.  
+8.  Изменить **имя** свойство для **ключ даты отгрузки** атрибут `Ship Date`и затем измените **столбец имени** свойство для этого атрибута к  **Date.SimpleDate (WChar)**.  
   
 9. Перейдите на вкладку **Действия** конструктора кубов для куба "Учебник по [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ".  
   
@@ -126,7 +126,7 @@ ms.locfileid: "36194836"
   
      На следующем рисунке эти столбцы выделены.  
   
-     ![Столбцы детализации](../../2014/tutorials/media/l8-action7.gif "столбцы детализации")  
+     ![Столбцы детализации поле](../../2014/tutorials/media/l8-action7.gif "столбцы детализации")  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>Просмотр измененного действия детализации  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36194836"
 ## <a name="see-also"></a>См. также  
  [Действия &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Действия в многомерных моделях](multidimensional-models/actions-in-multidimensional-models.md)   
- [Связей измерений](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [Связи измерений](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Определение связи фактов](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)   
  [Определение связей фактов и свойств связей фактов](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   

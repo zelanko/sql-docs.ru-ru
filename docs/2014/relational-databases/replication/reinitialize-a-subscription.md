@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
 - subscriptions [SQL Server replication], reinitializing
 - reinitializing subscriptions
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 795ff8c9d1ebc751bdf0a2acfd57b158ed64c956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a13bd70e82e219a3935f0076481df9de7b683e23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318334"
 ---
 # <a name="reinitialize-a-subscription"></a>Повторная инициализация подписки
   В данном разделе описывается повторная инициализация подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. Отдельные подписки можно помечать для повторной инициализации, чтобы во время следующей синхронизации применялся новый моментальный снимок.  
@@ -177,7 +177,7 @@ ms.locfileid: "36096631"
 3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> .  
   
     > [!NOTE]  
-    >  Если этот метод возвращает `false`, были неправильно заданы свойства подписки на шаге 2 или подписки по запросу не существует.  
+    >  Если этот метод возвращает `false`, либо на подписку на шаге 2 были неверно определены свойства, либо подписка по запросу не существует.  
   
 4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> . Этот метод помечает подписку для повторной инициализации.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "36096631"
 3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> .  
   
     > [!NOTE]  
-    >  Если этот метод возвращает `false`, были неправильно заданы свойства подписки на шаге 2 или принудительной подписки не существует.  
+    >  Если этот метод возвращает `false`, либо на подписку на шаге 2 были неверно определены свойства, либо принудительная подписка не существует.  
   
 4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> . Этот метод помечает подписку для повторной инициализации.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36096631"
 3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> .  
   
     > [!NOTE]  
-    >  Если этот метод возвращает `false`, были неправильно заданы свойства подписки на шаге 2 или подписки по запросу не существует.  
+    >  Если этот метод возвращает `false`, либо на подписку на шаге 2 были неверно определены свойства, либо подписка по запросу не существует.  
   
 4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> . Передайте значение `true`, чтобы передать изменения на подписчике перед повторной инициализацией, или значение `false`, чтобы выполнить повторную инициализацию с потерей всех изменений, ожидающих на подписчике. Этот метод помечает подписку для повторной инициализации.  
   
@@ -225,7 +225,7 @@ ms.locfileid: "36096631"
 3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> .  
   
     > [!NOTE]  
-    >  Если этот метод возвращает `false`, были неправильно заданы свойства подписки на шаге 2 или принудительной подписки не существует.  
+    >  Если этот метод возвращает `false`, либо на подписку на шаге 2 были неверно определены свойства, либо принудительная подписка не существует.  
   
 4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> . Передайте значение `true`, чтобы передать изменения на подписчике перед повторной инициализацией, или значение `false`, чтобы выполнить повторную инициализацию с потерей всех изменений, ожидающих на подписчике. Этот метод помечает подписку для повторной инициализации.  
   

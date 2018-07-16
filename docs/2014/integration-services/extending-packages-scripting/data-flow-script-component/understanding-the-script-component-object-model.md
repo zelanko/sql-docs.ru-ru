@@ -18,13 +18,13 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6201ec5007c3f7e09c2713d45bdd86badb2addfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d2c2c37e0f9c5485b530483b60da08d8da06173
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316824"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Основные сведения о модели объектов компонента скрипта
   Как описано в [кодирование и отладка компонента скрипта] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, проект компонента скрипта содержит три элемента проекта:  
@@ -129,7 +129,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Содержимое элемента проекта ComponentWrapper  
  Элемент проекта ComponentWrapper содержит класс с именем `UserComponent`, производный от класса <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. Класс `ScriptMain`, в котором создается пользовательский код, в свою очередь, является производным от класса `UserComponent`. Класс `UserComponent` содержит следующие методы.  
   
--   Переопределенная реализация метода `ProcessInput`. Этот метод вызывается подсистемой обработки потока данных во время выполнения сразу за методом `PreExecute`. Он может быть вызван более одного раза. `ProcessInput` передает обработку  **\<inputbuffer > _ProcessInput** метод. После этого метод `ProcessInput` проверяет, достигнут ли конец входного буфера, и в этом случае вызывает переопределяемый метод `FinishOutputs`, а также частный метод `MarkOutputsAsFinished`. Затем метод `MarkOutputsAsFinished` вызывает метод `SetEndOfRowset` для последнего выходного буфера.  
+-   Переопределенная реализация метода `ProcessInput`. Этот метод вызывается подсистемой обработки потока данных во время выполнения сразу за методом `PreExecute`. Он может быть вызван более одного раза. `ProcessInput` передает обработку  **\<входной_буфер > _ProcessInput** метод. После этого метод `ProcessInput` проверяет, достигнут ли конец входного буфера, и в этом случае вызывает переопределяемый метод `FinishOutputs`, а также частный метод `MarkOutputsAsFinished`. Затем метод `MarkOutputsAsFinished` вызывает метод `SetEndOfRowset` для последнего выходного буфера.  
   
 -   Перегружаемая реализация метода **\<входной_буфер>_ProcessInput**. Эта реализация по умолчанию просто перебирает входящие строки и вызывает метод **\<входной_буфер>_ProcessInputRow**.  
   
@@ -154,7 +154,7 @@ public override void PreExecute()
   
 -   Именованные и типизированные свойства метода доступа только для записи для каждого выходного столбца.  
   
--   Только для записи  **\<столбца > _IsNull** свойство для каждого выбранного выходного столбца, который можно использовать для задания значения столбца `null`.  
+-   Только для записи  **\<столбец > _IsNull** свойство для каждого выбранного выходного столбца, который можно использовать для указания столбца значение `null`.  
   
 -   Метод `AddRow` для добавления новой пустой строки в выходной буфер.  
   
@@ -206,10 +206,10 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться установка последних со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services в MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
- [Настройка компонента скрипта в редакторе компонентов скрипта] ((configuring-the-script-component-in-the-script-component-editor.md)   
+ [Настройка компонента скрипта в редакторе компонента скрипта] ((configuring-the-script-component-in-the-script-component-editor.md)   
  [Кодирование и отладка компонента скрипта] (.. /Extending-Packages-Scripting/Data-Flow-Script-Component/Coding-and-Debugging-the-Script-Component.md  
   
   

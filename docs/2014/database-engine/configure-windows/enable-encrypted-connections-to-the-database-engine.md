@@ -1,5 +1,5 @@
 ---
-title: Активируйте зашифрованные соединения с компонентом Database Engine (диспетчер конфигурации SQL Server) | Документы Microsoft
+title: Включение зашифрованных соединений для ядра СУБД (диспетчер конфигурации SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], encrypted
 - SSL [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 87550bc2c29485eaa1f4ad10e6ca82b79af19724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6a75c1657624475467df1a367e1830145ac561a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275450"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)
   В этом разделе описано, как активировать зашифрованные соединения для экземпляра компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , указав сертификат для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Компьютеру сервера должен быть назначен сертификат, а компьютер клиента должен доверять корневому центру сертификации. Провизионирование — это процесс установки сертификата путем импорта сертификата в систему Windows.  
@@ -45,7 +45,7 @@ ms.locfileid: "36100477"
   
  **В этом разделе**  
   
--   **Включение зашифрованных соединений**  
+-   **Включение шифрования соединений.**  
   
      [Назначение (установка) сертификата на сервере](#Provision)  
   
@@ -55,13 +55,13 @@ ms.locfileid: "36100477"
   
      [Настройка клиента на прием зашифрованных соединений](#ConfigureClientConnections)  
   
-     [Шифрование соединения из среды SQL Server Management Studio](#EncryptConnection)  
+     [Шифрование соединения из SQL Server Management Studio](#EncryptConnection)  
   
 ##  <a name="SSMSProcedure"></a>  
   
 ###  <a name="Provision"></a> Назначение (установка) сертификата на сервер  
   
-1.  На **запустить** меню, нажмите кнопку **запуска**и в **откройте** введите `MMC` и нажмите кнопку **ОК**.  
+1.  На **запустить** меню, щелкните **запуска**и в **откройте** введите `MMC` и нажмите кнопку **ОК**.  
   
 2.  На консоли MMC в меню **Файл** выберите **Добавить или удалить оснастку**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36100477"
   
 1.  В **диспетчере конфигурации SQL Server** разверните узел **Сетевая конфигурация SQL Server**, щелкните правой кнопкой мыши элемент **Протоколы для** *\<экземпляр сервера>* и выберите пункт **Свойства**.  
   
-2.  В **протоколы для ***\<имя экземпляра >* **свойства** диалогового **сертификат** вкладке, выберите необходимый сертификат из раскрывающегося списка для **сертификат** , а затем щелкните **ОК**.  
+2.  В **протоколы для ***\<имя экземпляра >* **свойства** диалоговом окне **сертификат** вкладке, выберите необходимый сертификат из раскрывающегося списка для **сертификат** , а затем щелкните **ОК**.  
   
 3.  На вкладке **Флаги** в поле **ForceEncryption** выберите **Да**, затем нажмите кнопку **ОК** , чтобы закрыть диалоговое окно.  
   

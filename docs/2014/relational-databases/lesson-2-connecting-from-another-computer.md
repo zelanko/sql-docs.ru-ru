@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d2698cc6ce0bd17b7d9cb079fdc4f4c7c1e70c20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4d131860981e30c6a45d4b7fddbb6d7133d10d6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209174"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Занятие 2. Соединение с другого компьютера
   В целях повышения безопасности к компоненту [!INCLUDE[ssDE](../includes/ssde-md.md)] выпусков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition, Express Edition и Evaluation Edition нельзя получить доступ с другого компьютера при первоначальной установке. В этом занятии показано, как включить протоколы, настроить порты и брандмауэр Windows для соединения, используя другие компьютеры.  
@@ -77,7 +77,7 @@ ms.locfileid: "36099998"
   
 6.  На левой панели щелкните **Службы SQL Server**.  
   
-7.  На правой панели щелкните экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]правой кнопкой мыши и выберите пункт **Перезапустить**. Когда [!INCLUDE[ssDE](../includes/ssde-md.md)] перезапуска, он будет прослушивать порт `49172`.  
+7.  На правой панели щелкните экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]правой кнопкой мыши и выберите пункт **Перезапустить**. Когда [!INCLUDE[ssDE](../includes/ssde-md.md)] перезапуск, он будет прослушивать порт `49172`.  
   
 ##  <a name="firewall"></a> Открытие портов в брандмауэре  
  Системы брандмауэров предотвращают несанкционированный доступ к ресурсам компьютера. Для подключения к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с другого компьютера при включенном брандмауэре в брандмауэре необходимо открыть порт.  
@@ -105,7 +105,7 @@ ms.locfileid: "36099998"
   
  Дополнительные сведения о настройке брандмауэра, включая инструкции для [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)], см. в разделе [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md). Дополнительные сведения о настройках брандмауэра Windows по умолчанию и описание портов TCP, влияющих на компонент Database Engine, службы Analysis Services, службы Reporting Services и службы Integration Services, см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-##  <a name="otherComp"></a> Соединение с компонентом Database Engine с другого компьютера  
+##  <a name="otherComp"></a> Подключение к компоненту Database Engine с другого компьютера  
  После настройки компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] на прослушивание определенного порта и открытия порта в брандмауэре можно подключиться к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с другого компьютера.  
   
  Если служба браузера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на сервере запущена и в брандмауэре открыт порт UDP 1434, то подключение можно установить, используя имя компьютера и имя экземпляра. В целях повышения безопасности в нашем примере не используется служба браузера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

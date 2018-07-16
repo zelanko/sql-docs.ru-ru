@@ -1,5 +1,5 @@
 ---
-title: Исключить файлы из системы управления версиями | Документы Microsoft
+title: Исключить файлы из системы управления версиями | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - excluding files from source control
 - source controls [SQL Server Management Studio], file exclusions
 ms.assetid: 7dcb6514-db5c-49eb-8b5a-2c766ce39aa7
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 597be5211a36e42320f3f7601c052121ef8aa2a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b3507f06db699e8e88de2fe2e22f870b97b896e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330444"
 ---
 # <a name="exclude-files-from-source-control"></a>Исключение файлов из системы управления версиями
-  Если вы работаете на решение содержит файлы, не требующие служб управления версиями, можно использовать **исключить из системы управления версиями** команду, чтобы исключить файл из системы управления версиями. В этом случае файл остается в базе данных [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, но его возврат и извлечение в проекте невозможны.  
+  Если вы работаете над решение содержит файлы, не требующие служб управления версиями, можно использовать **исключить из системы управления версиями** команду, чтобы исключить файл из системы управления версиями. В этом случае файл остается в базе данных [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, но его возврат и извлечение в проекте невозможны.  
   
- Следует использовать **исключить из системы управления версиями** только на создаваемые файлы. Создаваемый файл — это то, может быть полностью воссоздан [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] на основе содержимого другого файла в решении.  
+ Следует использовать **исключить из системы управления версиями** команду только к создаваемым файлам. Созданный файл — это приложения, может быть полностью воссоздан [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] на основе содержимого другого файла в решении.  
   
 ### <a name="to-exclude-a-file-from-source-control"></a>Исключение файла из управления версиями  
   
@@ -37,7 +37,7 @@ ms.locfileid: "36189585"
   
 ## <a name="see-also"></a>См. также  
  [Основы системы управления версиями](../../2014/database-engine/source-control-basics.md)   
- [Задать параметры управления версиями](../../2014/database-engine/set-source-control-options.md)   
+ [Задайте параметры системы управления версиями](../../2014/database-engine/set-source-control-options.md)   
  [Изменение соединений с системой управления версиями](../../2014/database-engine/change-source-control-connections.md)  
   
   

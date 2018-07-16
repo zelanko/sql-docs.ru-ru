@@ -1,5 +1,5 @@
 ---
-title: Применение реляционных операторов в запросах XPath (SQLXML 4.0) | Документы Microsoft
+title: Указание реляционных операторов в запросах XPath (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - operators [SQLXML]
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d8c77a561c4853db9bba036b33661f1a1f760a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a44253e26443288286a935fcaf06815ebcdeb405
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329534"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Применение реляционных операторов в запросах XPath (SQLXML 4.0)
   В следующих примерах показано, как задаются реляционные операторы в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "36195376"
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- Предикат, указанный в фильтрах квадратные скобки  **\<клиента >** элементов. Только  **\<клиента >** элементы, которые имеют по крайней мере один  **\<OrderDetail >** внучатый элемент с атрибутом OrderQty, значение больше 3 возвращаются.  
+ Предикат, указанный в квадратных скобках фильтры  **\<клиента >** элементов. Только  **\<клиента >** элементов, которые имеют по крайней мере  **\<OrderDetail >** внучатый элемент с атрибутом OrderQty, значение больше 3 возвращаются.  
   
  Ось `child` является осью по умолчанию. Поэтому запрос можно определить следующим образом.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36195376"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Далее приведен результирующий набор, полученный в результате выполнения этого шаблона.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36195376"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Далее приведен частичный результирующий набор, полученный в результате выполнения этого шаблона.  
   

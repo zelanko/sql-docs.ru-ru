@@ -1,5 +1,5 @@
 ---
-title: Развертывание из SQL Server Data Tools (табличные службы SSAS) | Документы Microsoft
+title: Развертывание из SQL Server Data Tools (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deploystatus.f1
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1b6193c57df6e6fa75f55b27402793fec20ca5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1498798cedeab8dacfe923754b02ba394937aff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265346"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Развертывание из SQL Server Data Tools (табличные службы SSAS)
   Задания в этом разделе помогут развернуть решение табличной модели с помощью команды Deploy в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "36192522"
   
 1.  В среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]в **обозревателе решений**щелкните правой кнопкой мыши имя проекта и выберите пункт меню **Свойства**.  
   
-2.  В  **\<имя проекта > свойства** диалоговое окно, в **варианты развертывания**, задайте значения свойств, если он отличается от значения по умолчанию.  
+2.  В  **\<имя проекта > свойства** диалоговое окно, в **варианты развертывания**, задайте значения свойств, если они отличаются от значений по умолчанию.  
   
     > [!NOTE]  
     >  Для моделей в режиме кэширования **Режим запроса** всегда **В памяти**.  
@@ -58,7 +58,7 @@ ms.locfileid: "36192522"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>Развертывание решения табличной модели  
   
--   В [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]на **построения** меню, нажмите кнопку **развернуть \<имя проекта >**.  
+-   В [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]на **построения** меню, щелкните **развернуть \<имя проекта >**.  
   
      Появится диалоговое окно **Развертывание** , в котором будет отображаться состояние развертывания метаданных и обработки каждой таблицы (если для свойства "Вариант обработки" не выбрано значение "Не обрабатывать"), включенной в модель. После завершения процесса развертывания с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] подключитесь к экземпляру служб Analysis Services и проверьте, был ли создан новый объект шаблона базы данных, либо используйте клиентское приложение создания отчетов для подключения к развернутой модели.  
   

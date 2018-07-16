@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
@@ -16,13 +16,13 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f11b1cd034758b13f54e12c876368ed43e5cca54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a869a295b1a1a5f039a7f0e7ead5a93fa9b4e6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306224"
 ---
 # <a name="data-profile-viewer"></a>Средство просмотра профиля данных
   Просмотр и анализ профилей данных — следующий шаг в процессе профилирования данных. Профили можно просмотреть после запуска задачи «Профилирование данных» внутри пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и расчета профилей данных. Дополнительные сведения о настройке и использовании задач "Профилирование данных" см. в разделе [Установка задачи "Профилирование данных"](data-profiling-task.md).  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - web configuration file [Master Data Services]
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d1163e8575562c5a81fea3bfef65c89a77b1ce5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9c345312ddadab6c5efd689d36f36f09cc2d0a41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250224"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Раздел «Веб-конфигурация» (службы Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] хранит в файле Web.config параметры конфигурации, которые позволяют службам IIS разместить веб-приложение [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] и веб-службу. Этот файл Web.config находится в папке WebApplication пути установки [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Дополнительные сведения о пути и разрешениях см. в разделе [Разрешения для папок и файлов (службы Master Data Services)](folder-and-file-permissions-master-data-services.md).  
@@ -60,9 +60,9 @@ ms.locfileid: "36098925"
 |----------|-----------------|  
 |`instance`|Дочерний элемент. Содержит атрибуты, указывающие данные для веб-службы и строки подключения к базе данных.|  
 |`virtualPath`|Атрибут. Указывает виртуальный путь веб-приложения [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] и службы. Это соответствует `path` атрибут  **\<приложения >** элемента под  **\<сайта >** в файле IIS ApplicationHost.config.|  
-|`siteName`|Атрибут. Указывает имя сайта, на котором размещены веб-приложение [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] и служба. Это соответствует `name` атрибут  **\<сайта >** элемента под  **\<сайтов >** в файле IIS ApplicationHost.config.|  
-|`connectionName`|Атрибут. Определяет имя соединения, которое будет использоваться. Это соответствует `name` атрибут  **\<Добавить >** элемента под  **\<connectionStrings >** элемента в файле Web.config.|  
-|`serviceName`|Атрибут. Указывает имя веб-службы. Это соответствует `name` атрибут  **\<службы >** элемента под  **\<services >** элемента в файле Web.config.|  
+|`siteName`|Атрибут. Указывает имя сайта, на котором размещены веб-приложение [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] и служба. Это соответствует `name` атрибут  **\<сайта >** элемента под  **\<сайты >** в файле IIS ApplicationHost.config.|  
+|`connectionName`|Атрибут. Определяет имя соединения, которое будет использоваться. Это соответствует `name` атрибут  **\<Добавить >** элемента под  **\<connectionStrings >** элемент в файле Web.config.|  
+|`serviceName`|Атрибут. Указывает имя веб-службы. Это соответствует `name` атрибут  **\<службы >** элемента под  **\<services >** элемент в файле Web.config.|  
   
 ### <a name="example"></a>Пример  
  В следующем примере показана служба с именем MDS1 на сайте Contoso и путь /MDS с использованием строки соединения, указанной MDSDB.  

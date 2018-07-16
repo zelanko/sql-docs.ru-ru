@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.indexcolumns
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 264ef7c420ecce145b58f5fc62c56c61fdc63adb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 21004c5afbd0dc9e3eae2c70f2a45858a4a3d295
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232924"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Диалоговое окно «Столбцы индекса» (визуальные инструменты для баз данных)
   Это диалоговое окно используется для выбора столбцов для индекса и установки порядка их сортировки. Индекс может использовать один или несколько столбцов, причем каждый столбец может быть отсортирован по возрастанию или убыванию. Чтобы открыть это диалоговое окно, в диалоговом окне **Индексы/Ключи** нажмите кнопку с многоточием для строки **Столбцы** в разделе **Общие** .  
@@ -36,6 +36,6 @@ ms.locfileid: "36087985"
 ## <a name="see-also"></a>См. также  
  [Создание кластеризованных индексов](../../relational-databases/indexes/create-clustered-indexes.md)   
  [Создание некластеризованных индексов](../../relational-databases/indexes/create-nonclustered-indexes.md)   
- [Индексы и ключи диалоговое окно &#40;визуальные средства базы данных&#41;](visual-database-tools.md)  
+ [Индексы и ключи диалоговое окно &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)  
   
   

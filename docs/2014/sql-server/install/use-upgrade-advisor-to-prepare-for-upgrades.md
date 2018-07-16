@@ -1,5 +1,5 @@
 ---
-title: Использование помощника по обновлению для подготовки к обновлению | Документы Microsoft
+title: Использование помощника по обновлению для подготовки к обновлениям | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server]
 - upgrading SQL Server, Upgrade Advisor
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - analyzing installations for upgrading [SQL Server]
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e2e852fe295ac2e72c4a06f653033f734ac6150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4e669b214e73d462f141022aa84d41224e88ac0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234424"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Использование помощника по обновлению для подготовки к обновлениям
   Помощник по обновлению [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помогает произвести подготовку к обновлениям [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Помощник по обновлению анализирует установленные компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и создает отчет, содержащий список проблем, которые должны быть решены перед началом обновления.  
@@ -68,22 +68,22 @@ ms.locfileid: "36086485"
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2), Windows 7 с пакетом обновления 1 (SP1) и [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1).  
   
--   Установщик Windows Installer, начиная с версии 4.5. Можно установить установщик Windows версии [установщика веб-сайт Windows](http://go.microsoft.com/fwlink/?LinkId=49112).  
+-   Установщик Windows Installer, начиная с версии 4.5. Вы можете установить установщик Windows из [веб-установщик Windows сайт](http://go.microsoft.com/fwlink/?LinkId=49112).  
   
--   Microsoft .NET Framework 4. .NET framework 4 доступна на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] установочного носителя и из [страницу загрузки .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=209895).  
+-   Microsoft .NET Framework 4. .NET framework 4 доступна на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] носителе продукта и из [странице загрузки .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=209895).  
   
     -   Чтобы установить платформу .NET Framework 4 с установочного диска [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], перейдите в корневой каталог диска. Откройте папку «\redist», а затем папку «DotNetFrameworks», после чего запустите файл dotNetFx40_Full_x86_x64.exe (для 32- и 64-разрядных версий операционных систем).  
   
  Чтобы установить помощник по обновлению из веб-узла, нажмите кнопку загрузки на странице загрузки. Затем можно либо сразу начать установку, либо сохранить файл SQLUA.msi для последующего запуска. При установке с диска продукта запустите SQLUA.msi непосредственно с диска.  
   
- После установки помощника по обновлению, его можно открыть из **запустить** меню:  
+ После установки помощник по обновлению, его можно открыть из **запустить** меню:  
   
 -   Нажмите кнопку **запустить**, пункты **все программы**, пункты [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], а затем нажмите кнопку  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] помощник по обновлению**.  
   
  Дополнительные сведения см. в документации помощника по обновлению, включенной в пакет загрузки, и в заметках о выпуске [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="see-also"></a>См. также  
- [Работа с несколькими версиями и экземплярами SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
+ [Работать с несколькими версиями и экземплярами SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Обратная совместимость](../../../2014/getting-started/backward-compatibility.md)  
   

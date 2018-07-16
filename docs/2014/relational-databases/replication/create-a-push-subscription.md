@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - push subscriptions [SQL Server replication], creating
 - merge replication subscribing [SQL Server replication], push subscriptions
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 841236b9f31f5b3bbf9703a9b4695e3c13630702
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e30ea044e434c5dd08336a964f587dcb07ebd88d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268730"
 ---
 # <a name="create-a-push-subscription"></a>Создание принудительной подписки
   В данном разделе описывается процесс создания принудительной подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. Дополнительные сведения о создании принудительной подписки для подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в [этой статье](create-a-subscription-for-a-non-sql-server-subscriber.md).  
@@ -97,7 +97,7 @@ ms.locfileid: "36190198"
   
     -   Если значение **allow_push** — **0**, выполнение [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), указав **allow_push** для **@property** и `true` для **@value**.  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите **@publication**, **@subscriber** и значение **@destination_db**. Укажите значение **push** в **@subscription_type**. Сведения об обновлении подписок см. в разделе [создание обновляемых подписок на публикацию транзакций](create-updatable-subscription-transactional-publication-transact-sql.md)  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите **@publication**, **@subscriber** и значение **@destination_db**. Укажите значение **push** в **@subscription_type**. Сведения об обновлении подписок см. в разделе [Создание обновляемой подписки на публикацию транзакций](create-updatable-subscription-transactional-publication-transact-sql.md)  
   
 3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Укажите следующее.  
   
@@ -232,7 +232,7 @@ ms.locfileid: "36190198"
   
     -   имя публикации в свойстве <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>;  
   
-    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> И <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> или <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> поля <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> ввести учетные данные для [!INCLUDE[msCoName](../../includes/msconame-md.md)] учетной записи Windows, под которой выполняется агент слияния на распространителе. Эта учетная запись будет использоваться для создания локальных соединений с распространителем и удаленных с использованием проверки подлинности Windows.  
+    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> И <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> или <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> поля <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> содержат учетные данные для [!INCLUDE[msCoName](../../includes/msconame-md.md)] учетной записи Windows, под которой выполняется агент слияния на распространителе. Эта учетная запись будет использоваться для создания локальных соединений с распространителем и удаленных с использованием проверки подлинности Windows.  
   
         > [!NOTE]  
         >  Указывать свойство <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> необязательно, если подписка создается членом предопределенной роли сервера `sysadmin`, однако рекомендуется это сделать. В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Модель безопасности агента репликации](security/replication-agent-security-model.md).  

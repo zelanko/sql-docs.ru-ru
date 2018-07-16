@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 2: Добавление циклов | Документы Microsoft'
+title: 'Занятие 2: Добавление циклов | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 caps.latest.revision: 31
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 46f67531366ef7ff91e3afcc4b8d55b7cc08635e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d1d67ffcac889a49de14f628cf7eb996895cf8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281480"
 ---
 # <a name="lesson-2-adding-looping"></a>Занятие 2. Добавление циклов
-  В [занятия 1: Создание проекта и основного пакета](lesson-1-create-a-project-and-basic-package-with-ssis.md), был создан пакет, данные извлекались из отдельного источника неструктурированного файла, преобразовывались с помощью «Уточняющий запрос» и затем загружались  **FactCurrency** таблицу фактов **AdventureWorksDW2012** образца базы данных.  
+  В [занятии 1: Создание проекта и основного пакета](lesson-1-create-a-project-and-basic-package-with-ssis.md), был создан пакет, данные извлекались из отдельного источника неструктурированного файла, преобразовывались с помощью «Уточняющий запрос» и затем загружались  **FactCurrency** таблицу фактов **AdventureWorksDW2012** образца базы данных.  
   
  Однако в процессе извлечения, преобразования и загрузки (ETL) редко используется отдельный неструктурированный файл. Как правило, в процессе ETL данные извлекаются из нескольких источников неструктурированного файла. Извлечение данных из нескольких источников требует итеративного потока управления. Одной из самых ожидаемых возможностей служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] является способность легко добавлять повторения или циклы в пакеты.  
   

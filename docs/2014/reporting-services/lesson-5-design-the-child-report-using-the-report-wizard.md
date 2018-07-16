@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a0c9cea649ecb0f11bdd75d68ce39d48aad8bb92
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 712e454c9bc89fd1df8584789ec9c25796748201
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294174"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Занятие 5. Проектирование родительского отчета с использованием мастера отчетов
   После создания подключения к данным и таблицы данных для дочернего отчета следующий шаг состоит в проектировании дочернего отчета в конструкторе отчетов с помощью мастера отчетов. Дополнительные сведения о конструкторе отчетов см. в разделе [Разработка отчетов с использованием конструктора отчетов (SSRS)](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
@@ -30,11 +30,11 @@ ms.locfileid: "36101697"
   
 2.  Щелкните правой кнопкой мыши веб-сайт и выберите пункт **Добавить новый элемент**.  
   
-3.  В **Добавление нового элемента** диалоговое окно, нажмите кнопку **мастер отчетов**, введите имя файла отчета и нажмите кнопку **добавить**.  
+3.  В **Добавление нового элемента** диалоговом окне щелкните **мастер отчетов**, введите имя файла отчета и нажмите кнопку **добавить**.  
   
      Запустится мастер отчетов.  
   
-4.  В **свойства набора данных** страницы в **источника данных** щелкните **DataSet2**.  
+4.  В **свойства набора данных** странице **источника данных** выберите **DataSet2**.  
   
      Значение, указанное в поле **Доступные наборы данных** , автоматически изменится. В нем будет указана созданная ранее таблица данных.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36101697"
   
     1.  Перетащите элементы **ProductID**, **PurchaseOrderID**, **PurchaseOrderDetailID**, **OrderQty**, **ReceivedQty**, **RejectedQty**и **StockedQty** из области **Доступные поля** в поле **Значения** .  
   
-    2.  Щелкните стрелку рядом с **Sum(ProductID)**, **Sum(PurchaseOrderID)**, **Sum(PurchaseOrderDetailID)**, **Sum(OrderQty)**,  **SUM(ReceivedQty)**, **Sum(RejectedQty)**, и **Sum(StockedQty)** и снимите **сумма** выделения.  
+    2.  Щелкните стрелку рядом с полем **Sum(ProductID)**, **Sum(PurchaseOrderID)**, **Sum(PurchaseOrderDetailID)**, **Sum(OrderQty)**,  **SUM(ReceivedQty)**, **Sum(RejectedQty)**, и **Sum(StockedQty)** и очистить **Sum** выбора.  
   
 7.  Нажмите кнопку **Далее** , затем щелкнуть **Готово** закрыть **мастер отчетов**.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36101697"
   
 8.  Добавьте в открытый RDLC-файл параметр, выполнив следующие действия.  
   
-    1.  Нажмите кнопку **параметры** в **данные отчета** , а затем щелкните **Добавление параметров**.  
+    1.  Нажмите кнопку **параметры** в **данные отчета** области, а затем щелкните **добавить параметры**.  
   
     2.  Введите **productid** в поле **Имя** .  
   

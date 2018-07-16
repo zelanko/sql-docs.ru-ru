@@ -1,35 +1,33 @@
 ---
-title: sp_pdw_database_encryption (хранилище данных SQL) | Документы Microsoft
+title: sp_pdw_database_encryption (хранилище данных SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: system-stored-procedures
+ms.component: system-objects
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
-caps.latest.revision: 8
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: adb48589c9ba6268aa229cd21871504392151f8e
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
-ms.translationtype: MT
+ms.openlocfilehash: 6508d150df663a6e95437d0b6b3bfd0c8f65906f
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33703137"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926155"
 ---
 # <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption (хранилище данных SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Используйте **sp_pdw_database_encryption** Чтобы включить прозрачное шифрование данных для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] устройства. Когда **sp_pdw_database_encryption** равно 1, используйте **инструкции ALTER DATABASE** инструкции для шифрования базы данных с помощью прозрачного шифрования данных.  
+  Используйте **sp_pdw_database_encryption** включить прозрачное шифрование данных на для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] устройства. Когда **sp_pdw_database_encryption** значение 1, используйте **ALTER DATABASE** инструкцию, чтобы зашифровать базу данных с помощью прозрачного шифрования данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,13 +45,13 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
   
 -   1 = Включено  
   
- Выполнение **sp_pdw_database_encryption** без параметров возвращает текущее состояние прозрачное шифрование данных на устройстве как набор скалярный результат: 0 — отключено, или 1 для включена.  
+ Выполнение **sp_pdw_database_encryption** без параметров возвращает текущее состояние прозрачного шифрования данных на устройстве как набор скалярный результат: 0 для отключено или 1 для включена.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- При включении прозрачного шифрования данных с помощью **sp_pdw_database_encryption**, база данных tempdb удалены, заново и зашифрованы. По этой причине прозрачного шифрования данных невозможно активировать на устройство, пока существуют другие активные сеансы с помощью базы данных tempdb. Включение или отключение прозрачное шифрование данных на устройство имеет действие, которое изменяет состояние устройства, в большинстве случаев должно выполнить один раз во время существования устройства и должна быть выполнена при отсутствии трафика на устройстве.  
+## <a name="remarks"></a>Примечания  
+ При включенном TDE с помощью **sp_pdw_database_encryption**, базы данных tempdb удаляется, заново и зашифрованы. По этой причине прозрачного шифрования данных невозможно активировать устройство с поддержкой, пока существуют другие активные сеансы, с помощью базы данных tempdb. Включение или отключение прозрачное шифрование данных на устройство — действие, которое изменяет состояние устройства, в большинстве случаев должен выполняться один раз за время существования устройства и будет выполнена при отсутствии трафика на устройстве.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в **sysadmin** предопределенной роли базы данных или **CONTROL SERVER** разрешение.  

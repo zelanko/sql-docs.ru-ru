@@ -1,5 +1,5 @@
 ---
-title: 'SQL: Overflow-field (SQLXML 4.0) | Документы Microsoft'
+title: 'SQL: Overflow-field (SQLXML 4.0) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sql:overflow-field
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a1ea697a212058218be295a49c3ad2ecc7c644c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3b78db405442ea15fe3d62db4688eb82440dfb2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246254"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
   В схеме можно указать столбец как столбец переполнения, чтобы получить все невостребованные данные из XML-документа. Этот столбец указывается в схеме с помощью заметки `sql:overflow-field`. Возможно иметь несколько столбцов переполнения.  
@@ -80,7 +80,7 @@ ms.locfileid: "36087807"
   
  В схеме  **\<клиента >** элемент сопоставляется с таблицей Cust и  **\<порядок >** элемент сопоставляется с таблицей CustOrder.  
   
- Оба  **\<клиента >** и  **\<порядок >** элементы определяют столбец переполнения. Таким образом, Массовая загрузка XML сохраняет все невостребованные дочерние элементы и атрибуты  **\<клиента >** элемент в столбец переполнения таблицы Cust и все невостребованные дочерние элементы и атрибуты  **\<Порядок >** элемент в столбец переполнения таблицы CustOrder.  
+ Оба  **\<клиента >** и  **\<порядок >** элементы определяют столбец переполнения. Таким образом, Массовая загрузка XML сохраняет все невостребованные дочерние элементы и атрибуты  **\<клиента >** элемент в столбец переполнения таблицы Cust, а все невостребованные дочерние элементы и атрибуты  **\<Порядок >** элемент в столбец переполнения таблицы CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Проверка рабочего образца  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoretlog.options.f1
 - sql12.swb.restoretlog.general.f1
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e688a81d1a555efcad659b6b89ef4f21f116191d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 85c4008e1872a48126c67e47cc8d68ed0867828d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237024"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Восстановление резервной копии журнала транзакций (SQL Server)
   В этом разделе описывается восстановление журнала транзакций из резервной копии в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -150,9 +149,9 @@ ms.locfileid: "36190467"
   
          Сохраняет настройки репликации при восстановлении опубликованной базы данных на сервере, отличном от сервера, на котором была создана база данных.  
   
-         Этот параметр доступен только с **оставить базу данных готовой к использованию путем отката незафиксированных транзакций...**  параметр (описанным ниже), который эквивалентен восстановлению резервной копии с `RECOVERY` параметр.  
+         Этот параметр доступен только с **оставить базу данных готовой к использованию путем отката незафиксированных транзакций...**  (описанным ниже), параметр, который эквивалентен восстановлению резервной копии с `RECOVERY` параметр.  
   
-         Выбор этого параметра эквивалентен использованию `KEEP_REPLICATION` в диалоговом окне [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` инструкции.  
+         Выбор этого параметра равнозначен использованию `KEEP_REPLICATION` в диалоговом окне [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` инструкции.  
   
     -   **Выдавать приглашение перед восстановлением каждой резервной копии**  
   
@@ -172,7 +171,7 @@ ms.locfileid: "36190467"
   
     -   **Восстановить готовность базы данных к работе, выполнив откат незафиксированных транзакций. Невозможно восстановить дополнительные журналы транзакций. (RESTORE WITH RECOVERY)**  
   
-         Восстанавливает базу данных. Этот параметр равнозначен `RECOVERY` в диалоговом окне [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` инструкции.  
+         Восстанавливает базу данных. Этот параметр равнозначен параметру `RECOVERY` в диалоговом окне [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` инструкции.  
   
          Этот параметр следует выбирать только в том случае, если нет файлов журнала, подлежащих восстановлению.  
   

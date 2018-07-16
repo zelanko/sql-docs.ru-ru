@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3bcb077bc785005557f20b96722f5aeb94c58234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4123ae77852bf0ccde4229644393f8160ffb391
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331214"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Доставка отчетов в общие папки с помощью служб Reporting Services
   Службы SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль доставки в общую папку, позволяющий доставить отчет в любую папку. Модуль доставки в общие папки доступен по умолчанию и не требует какой-либо дополнительной настройки. Для успешной доставки файла необходимо иметь разрешение на запись в общую папку. Кроме того, у пользователей, которым нужен доступ к отчетам, должно быть разрешение на чтение из общей папки.  
@@ -74,6 +74,6 @@ ms.locfileid: "36096610"
  Альтернативный подход состоит в создании уникального файла для каждой доставки путем добавления в имя файла отметки времени. Чтобы сделать это, добавьте `@timestamp` переменной к имени файла (например, *CompanySales@timestamp*). При таком подходе имя файла будет уникальным по определению, так что он никогда не будет перезаписан.  
   
 ## <a name="see-also"></a>См. также  
- [Создание, изменение и удаление стандартных подписок &#40;службы Reporting Services в собственном режиме&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  
+ [Создание, изменение и удаление стандартных подписок &#40;Reporting Services в собственном режиме&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
   

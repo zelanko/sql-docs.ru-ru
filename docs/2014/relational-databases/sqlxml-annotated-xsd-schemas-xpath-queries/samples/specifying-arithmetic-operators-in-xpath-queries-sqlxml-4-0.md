@@ -1,5 +1,5 @@
 ---
-title: Задание арифметических операторов в запросах XPath (SQLXML 4.0) | Документы Microsoft
+title: Задание арифметических операторов в запросах XPath (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - operators [SQLXML]
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4fe4e247041306cfd00854ae021e2fb5ec64c0b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 389c249203416041831edec0f910a661f695805d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309454"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Задание арифметических операторов в запросах XPath (SQLXML 4.0)
   В следующем примере показано, как в запросах XPath указывать арифметические операторы. В этом примере задается запрос XPath к схеме сопоставления, содержащейся в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "36180221"
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- В запросе `child` является осью и `OrderDetail` является проверкой узла (значение TRUE, если **OrderDetail** —  **\<узел элемента >**, так как  **\< Элемент >** узел является основным узлом для `child` оси). Для всех  **\<OrderDetail >** узлов элемента применяется проверка в предикате и возвращаются только те узлы, которые удовлетворяют условию.  
+ В запросе `child` является осью и `OrderDetail` является проверкой узла (значение TRUE, если **OrderDetail** —  **\<узла элемента >**, так как  **\< Элемент >** узел является основным узлом для `child` оси). Для всех  **\<OrderDetail >** узлов элемента применяется проверка в предикате и возвращаются только те узлы, которые удовлетворяют условию.  
   
 > [!NOTE]  
 >  Числа в языке XPath являются числами с плавающей запятой двойной точности, и сравнение чисел с плавающей запятой, как указано в примере, приводит к округлению.  
@@ -66,7 +66,7 @@ ms.locfileid: "36180221"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ```  
 Here is the partial result set of the template execution:    

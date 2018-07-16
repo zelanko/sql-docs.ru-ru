@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitioned indexes [SQL Server], replicating
 - partitioned tables [SQL Server], replicating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - transactional replication, partitioned tables
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d38ef8cb96408db96a04184a30d7a803b00a0239
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9764adf620688c4fa5335a65d9cba5d70480ed8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253886"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Репликация секционированных таблиц и индексов
   Секционирование делает большие таблицы и индексы более управляемыми, так как позволяет быстро и эффективно получать доступ к подмножествам данных и управлять ими, при этом сохраняя целостность всей коллекции данных. Дополнительные сведения см. в разделе [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). Репликация поддерживает секционирование, предоставляя набор свойств, которые указывают, как работать с секционированными таблицами и индексами.  
@@ -74,9 +74,9 @@ ms.locfileid: "36109915"
 ### <a name="enabling-partition-switching"></a>Включение переключения секций  
  Следующие свойства публикации транзакций позволяют пользователям управлять переключением секций в реплицируемой среде.  
   
--   **@allow_partition_switch**, если задано значение `true`, SWITCH PARTITION может быть выполнена для базы данных публикации.  
+-   **@allow_partition_switch**, если значение `true`, SWITCH PARTITION можно выполнять в базе данных публикации.  
   
--   **@replicate_partition_switch** определяет, реплицировать ли инструкцию DDL SWITCH PARTITION на подписчик. Этот параметр доступен, только если **@allow_partition_switch** равно `true`.  
+-   **@replicate_partition_switch** определяет, реплицировать ли инструкцию DDL SWITCH PARTITION на подписчик. Этот параметр доступен, только если **@allow_partition_switch** присваивается `true`.  
   
  Эти свойства можно задать с помощью хранимой процедуры [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) при создании публикации или с помощью процедуры [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) после создания публикации. Как уже отмечалось, репликация слиянием не поддерживает переключение секций. Чтобы выполнить команду SWITCH PARTITION для таблицы, для которой включена репликация слиянием, удалите эту таблицу из публикации.  
   

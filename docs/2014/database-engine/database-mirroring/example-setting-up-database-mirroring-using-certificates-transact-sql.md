@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - certificates [SQL Server], database mirroring
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], security
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c61db45a0b4a6b1326c74472158423bdabd05d02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 046d73e4317696c579bbcc6e2ad512227b12f37e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248874"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Пример. Настройка зеркального отображения базы данных с помощью сертификатов (язык Transact-SQL)
   В этом примере описаны все действия, выполняемые при создании сеанса зеркального отображения базы данных с использованием проверки подлинности на основе сертификатов. Примеры в этом подразделе используют язык [!INCLUDE[tsql](../../includes/tsql-md.md)]. За исключением случаев, когда сеть гарантированно защищена, рекомендуется для соединений зеркального отображения базы данных применять шифрование.  
@@ -261,7 +260,7 @@ ms.locfileid: "36097333"
     ```  
   
     > [!NOTE]  
-    >  Если вы собираетесь запустить в режиме высокого уровня безопасности с автоматическим переходом на другой, оставьте безопасность транзакций в положении FULL (значение по умолчанию) и добавьте следящий сервер как можно быстрее после выполнения второй SET PARTNER **"*`partner_server`*"** инструкции. Обратите внимание, что следящий сервер вначале нужно настроить для исходящих и входящих соединений.  
+    >  Если планируется запускать в режиме высокой безопасности с автоматической отработкой отказа оставьте безопасность транзакций в положении FULL (значение по умолчанию) и добавьте следящий сервер как можно быстрее после выполнения второй SET PARTNER **"*`partner_server`*"** инструкции. Обратите внимание, что следящий сервер вначале нужно настроить для исходящих и входящих соединений.  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   

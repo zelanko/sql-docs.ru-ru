@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttodtsserver.login.f1
 - sql12.swb.connecttodts.login.f1
 ms.assetid: 402c2de4-f4ea-40b0-909f-3ddf3bd59950
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e41104462b18f9d236a289dbea0196f981006f44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 703a4f062d327da13b1b75d519c70884a9228978
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241264"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>Соединение с сервером (страница «Имя входа») службы Integration Services
   Используйте эту вкладку для просмотра или задания следующих параметров при соединении со службами [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "36190285"
  Выберите имя сервера для подключения. По умолчанию выводится экземпляр сервера, к которому подключение выполнялось в последний раз.  
   
 > [!NOTE]  
->  Не используйте  *\<имя_сервера >*\\*\<имя_экземпляра >*, так как [!INCLUDE[ssIS](../includes/ssis-md.md)] не поддерживают несколько экземпляров на одном компьютере.  
+>  Не используйте  *\<servername >*\\*\<instancename >*, так как [!INCLUDE[ssIS](../includes/ssis-md.md)] не поддерживают несколько экземпляров на одном компьютере.  
   
  **Проверка подлинности**  
  Для служб [!INCLUDE[msCoName](../includes/msconame-md.md)] доступна только проверка подлинности [!INCLUDE[ssIS](../includes/ssis-md.md)]Windows. Режим проверки подлинности Windows позволяет подключаться с учетной записью Windows.  

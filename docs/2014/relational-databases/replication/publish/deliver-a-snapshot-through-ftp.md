@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
 - FTP snapshots [SQL Server replication]
 - snapshot replication [SQL Server], FTP
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 76f70c85774a84a1d6b7be8de3348c2f6162431b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4396b84840deb4a0973e3aae73183a551d54fce3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331534"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Доставка моментального снимка через FTP
   В этом разделе описывается доставка моментального снимка по протоколу FTP в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -127,7 +127,7 @@ ms.locfileid: "36095660"
   
 1.  На подписчике в базе данных подписки выполните хранимую процедуру [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Укажите параметр **@publisher** и **@publication**.  
   
-    -   На подписчике в базе данных подписки выполните хранимую процедуру [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Укажите **@publisher**, **@publisher_db**, **@publication**, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] учетные данные Windows, под которой агент распространителя на Подписчик выполняется для **@job_login** и **@job_password**, а значение `true` для **@use_ftp**.  
+    -   На подписчике в базе данных подписки выполните хранимую процедуру [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Укажите **@publisher**, **@publisher_db**, **@publication**, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] учетные данные Windows, под которой агент распространителя на Подписчик будет запущен **@job_login** и **@job_password**и значение `true` для **@use_ftp**.  
   
 2.  Чтобы зарегистрировать подписку по запросу, выполните на издателе в базе данных публикации хранимую процедуру [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) . Дополнительные сведения см. в статье [Создание подписки по запросу](../create-a-pull-subscription.md).  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36095660"
   
 1.  В базе данных подписки на издателе выполните процедуру [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Укажите параметр **@publisher** и **@publication**.  
   
-2.  На подписчике в базе данных подписки выполните хранимую процедуру [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql). Укажите **@publisher**, **@publisher_db**, **@publication**, учетные данные Windows, с которыми агент распространителя на подписчике выполняется для **@job_login** и **@job_password**, а значение `true` для **@use_ftp**.  
+2.  На подписчике в базе данных подписки выполните хранимую процедуру [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql). Укажите **@publisher**, **@publisher_db**, **@publication**, учетные данные Windows, при которых агент распространителя на подписчике выполняется для **@job_login** и **@job_password**и значение `true` для **@use_ftp**.  
   
 3.  Чтобы зарегистрировать подписку по запросу, выполните на издателе в базе данных публикации хранимую процедуру [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) . Дополнительные сведения см. в статье [Создание подписки по запросу](../create-a-pull-subscription.md).  
   
@@ -143,7 +143,7 @@ ms.locfileid: "36095660"
   
 1.  На издателе в базе данных публикации выполните процедуру [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Выберите одно из следующих значений в параметре **@property** и укажите новое значение этого параметра в параметре **@value**:  
   
-    -   `ftp_address` — адрес FTP-сервера, используемого для доставки моментального снимка.  
+    -   `ftp_address` — адрес FTP-сервер, используемый для доставки моментального снимка.  
   
     -   `ftp_port` — порт, используемый FTP-сервера.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36095660"
   
 1.  В базе данных публикации на издателе выполните процедуру [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Выберите одно из следующих значений в параметре **@property** и укажите новое значение этого параметра в параметре **@value**:  
   
-    -   `ftp_address` — адрес FTP-сервера, используемого для доставки моментального снимка.  
+    -   `ftp_address` — адрес FTP-сервер, используемый для доставки моментального снимка.  
   
     -   `ftp_port` — порт, используемый FTP-сервера.  
   
