@@ -1,5 +1,5 @@
 ---
-title: Просмотр использования статистической обработки (мастер оптимизации с учетом использования) | Документы Microsoft
+title: Просмотр использования статистической обработки (мастер оптимизации с учетом использования) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.reviewaggregationusage.f1
 ms.assetid: 49ce2094-c4dc-4e46-8cef-c17c5db084ca
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 21618aabe9c7e429c7d78a68c7fcfb9d61a0754c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76140fbc19eaa8beae41c1196143a326dc5c6414
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235684"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>Просмотр использования статистической обработки (мастер оптимизации с учетом использования)
   Используйте страницу **Просмотр использования статистической обработки** для настройки параметров статистической обработки.  
@@ -36,7 +36,7 @@ ms.locfileid: "36101839"
  **None**  
  Выберите, чтобы присвоить параметру статистической обработки атрибута значение «Нет». При использовании этого параметра, ни одна статистическая обработка для куба не может включать данный атрибут.  
   
- **Без ограничений**  
+ **Неограниченный**  
  Выберите этот параметр, чтобы присвоить параметру использования статистической обработки атрибута значение «Unrestricted». При использовании этого параметра к конструктору агрегатов не применяются никакие ограничения. Тем не менее необходимо провести оценку, может ли этот атрибут использоваться в качестве агрегата.  
   
  **Задать все значения по умолчанию**  

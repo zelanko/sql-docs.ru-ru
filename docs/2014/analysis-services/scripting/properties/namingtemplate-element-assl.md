@@ -1,5 +1,5 @@
 ---
-title: Элемент NamingTemplate (ASSL) | Документы Microsoft
+title: Элемент NamingTemplate (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - NamingTemplate element
 ms.assetid: d68d765c-f012-40c1-acd4-32741ee2eadf
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8eb2589b0b33a0b3268e6104b51c3e3612ad894
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ba346be8664cf26992143c15789684c503fdf2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300844"
 ---
 # <a name="namingtemplate-element-assl"></a>Элемент NamingTemplate (ASSL)
-  Определяет, как именуются уровни в иерархии родители потомки, построенным на основе [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) родительского элемента.  
+  Определяет, как именуются уровни в иерархии родители потомки, созданный из [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) родительского элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36101830"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Значение `NamingTemplate` элемент используется только родительскими атрибутами (другими словами, значение [использование](usage-element-dimensionattribute-assl.md) элемент `DimensionAttribute` родительского элемента имеет значение *родительского*).  
+ Значение `NamingTemplate` элемент используется только родительскими атрибутами (другими словами, значение [использования](usage-element-dimensionattribute-assl.md) элемент `DimensionAttribute` родительского элемента имеет значение *родительского*).  
   
  Если для создания иерархии используется родительский атрибут, уровни иерархии определяются связями «родители-потомки» между элементами, содержащимися в родительском атрибуте. Поэтому, в отличие от других измерений, имена уровней нельзя получать из имен атрибутов, используемых для иерархии.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36101830"
   
  Используйте две звездочки (*), чтобы включить звездочку (\*) символ в имени уровня как часть шаблона именования.  
   
- Элемент, соответствующий родителю параметра `NamingTemplate` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ Элемент, соответствующий родителю параметра `NamingTemplate` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент NamingTemplateTranslations &#40;ASSL&#41;](../collections/translations-element-assl.md)   

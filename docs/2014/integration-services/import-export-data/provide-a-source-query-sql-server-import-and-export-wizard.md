@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1c8ad78723a1325ac6e21365b3e00e43f2d36d55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d85fb5d22f88e363c3cc6fd07cf0b7c757911d83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291030"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Определение исходного запроса (мастер импорта и экспорта SQL Server)
   Используйте **определение исходного запроса** страницу, чтобы ввести инструкцию SQL, которая сформирует данные для копирования из источника данных в место назначения.  
   
- Дополнительные сведения о работе этого мастера см. в разделе [SQL Server Импорт и экспорт](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Дополнительные сведения о режимах запуска мастера, а также разрешения, необходимые для успешного запуска мастера см. в разделе [запустить мастер экспорта и импорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
+ Дополнительные сведения о работе этого мастера см. в разделе [SQL Server Импорт и экспорт](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Дополнительные сведения о режимах запуска мастера, а также разрешения, необходимые для успешного запуска мастера, см. в разделе [запустить мастер экспорта и импорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  Назначение мастера импорта и экспорта SQL Server заключается в копировании данных из исходного расположения в целевое. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -47,6 +47,6 @@ WHERE CommissionPct > 0.015
 >  Если время, затрачиваемое на проверку синтаксиса инструкции, превышает 30 секунд, синтаксический анализ прерывается и формируется ошибка. Перейти на следующую страницу мастера невозможно, пока не будет успешно выполнен синтаксический анализ. Одно из возможных решений заключается в создании представления базы данных на основе данного запроса и выполнения запросов из мастера к этому представлению вместо явного ввода текста запроса.  
   
  **Обзор**  
- Выберите файл, содержащий инструкции SQL с помощью **откройте** диалоговое окно. При выборе файла текст копируется из файла в текстовое поле **Инструкция запроса** .  
+ Выберите файл, содержащий инструкцию SQL с помощью **откройте** диалоговое окно. При выборе файла текст копируется из файла в текстовое поле **Инструкция запроса** .  
   
   

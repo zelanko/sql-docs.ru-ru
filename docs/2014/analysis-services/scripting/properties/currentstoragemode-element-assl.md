@@ -1,5 +1,5 @@
 ---
-title: Элемент CurrentStorageMode (ASSL) | Документы Microsoft
+title: Элемент CurrentStorageMode (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CurrentStorageMode element
 ms.assetid: 050c21e4-368b-4ff0-b0c5-349f93fe9747
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cce7bfd399c0c986a79e919c6227ee604e9ff470
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b26d26138e7752b6b41f147f0cc1fd1051e5afc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233825"
 ---
 # <a name="currentstoragemode-element-assl"></a>Элемент CurrentStorageMode (ASSL)
   Определяет текущий режим хранения для родительского элемента.  
@@ -68,7 +68,7 @@ ms.locfileid: "36100290"
 |-----------|-----------------|  
 |*MOLAP*|Родительский элемент использует многомерное хранилище OLAP (MOLAP).|  
 |*ROLAP*|Родительский элемент использует реляционное хранилище OLAP (ROLAP).|  
-|*HOLAP*|Родительский элемент использует гибридное хранилище OLAP (HOLAP). **Примечание:** это значение допустимо только для [секции](../objects/partition-element-assl.md) от родительского элемента.|  
+|*HOLAP*|Родительский элемент использует гибридное хранилище OLAP (HOLAP). **Примечание:** это значение допустимо только для [секции](../objects/partition-element-assl.md) родительскими элементами.|  
   
  Перечислением, относящимся к разрешенным значениям `CurrentStorageMode` в модели объектов AMO является <xref:Microsoft.AnalysisServices.StorageMode>.  
   

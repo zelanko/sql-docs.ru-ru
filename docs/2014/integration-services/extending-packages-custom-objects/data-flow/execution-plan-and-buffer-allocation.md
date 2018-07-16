@@ -24,13 +24,13 @@ ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 544f0e2a231c2f98e848f2450f1d04f16342083d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db35f89f79f6dcd5aeb4416dde78fa6308ceef7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264930"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>План выполнения и выделение буферов
   Перед выполнением задача потока данных проверяет свои компоненты и формирует план выполнения для каждой последовательности компонентов. В этом разделе предоставляются сведения о плане выполнения, рассматривается, как просмотреть план и как на основании плана выполнения выделяются входной и выходной буферы.  
@@ -89,6 +89,6 @@ End WorkThread1
   
  Поскольку буфер, предоставленный компоненту, скорее всего, содержит больше столбцов, чем имеет компонент в его коллекциях входных и выходных столбцов, разработчики компонентов могут вызывать метод <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A>, чтобы определить положение столбца в буфере по его идентификатору `LineageID`.  
   
-![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться установка последних со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services в MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services  **<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
   

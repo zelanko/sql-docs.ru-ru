@@ -1,5 +1,5 @@
 ---
-title: Элемент AttributeRelationship (ASSL) | Документы Microsoft
+title: Элемент AttributeRelationship (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeRelationship element
 ms.assetid: 2e786109-b8bf-4295-b0fe-9c1997349993
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c85c63d69b413239d9bbacc074b1f6f5f0d3b864
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7a13dcac8fd37e16e90888e904cc6f0ae3587c8b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310704"
 ---
 # <a name="attributerelationship-element-assl"></a>Элемент AttributeRelationship (ASSL)
   Предоставляет подробные сведения о связи между двумя атрибутами.  
@@ -67,10 +67,10 @@ ms.locfileid: "36100710"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[AttributeRelationships](../collections/relationships-element-assl.md)|  
-|Дочерние элементы|[Заметки](../collections/annotations-element-assl.md), [AttributeID](../properties/id-element-assl.md), [количества элементов](../properties/cardinality-element-assl.md), [имя](../properties/name-element-assl.md), [Optionality](../properties/optionality-element-assl.md), [OverrideBehavior ](../properties/overridebehavior-element-assl.md), [RelationshipType](../properties/relationshiptype-element-assl.md), [переводы](../collections/translations-element-assl.md), [видимыми](../properties/visible-element-assl.md)|  
+|Дочерние элементы|[Заметки](../collections/annotations-element-assl.md), [AttributeID](../properties/id-element-assl.md), [кратности](../properties/cardinality-element-assl.md), [имя](../properties/name-element-assl.md), [Optionality](../properties/optionality-element-assl.md), [OverrideBehavior ](../properties/overridebehavior-element-assl.md), [RelationshipType](../properties/relationshiptype-element-assl.md), [переводы](../collections/translations-element-assl.md), [видимым](../properties/visible-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.AttributeRelationship>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.AttributeRelationship>.  
   
 ## <a name="see-also"></a>См. также  
  [Объекты &#40;ASSL&#41;](objects-assl.md)  

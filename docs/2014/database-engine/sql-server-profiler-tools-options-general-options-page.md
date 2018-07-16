@@ -1,5 +1,5 @@
 ---
-title: Приложение SQL Server Profiler — Сервис Параметры (страница «Общие параметры») | Документы Microsoft
+title: SQL Server Profiler — Сервис Параметры (страница "Общие параметры") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.tools.generaloptions.f1
 helpviewer_keywords:
 - General Options dialog box
 ms.assetid: a888246d-ccfe-415f-bbdc-d6adafac250a
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fed3aec717b21b3c3486d5fd25b27892969de44c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 695c1fc16604c4ce0e0a49da67016acbaa663d50
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243074"
 ---
-# <a name="sql-server-profiler---tools-options-general-options-page"></a>Приложение SQL Server Profiler — Сервис Параметры (страница «Общие параметры»)
+# <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler — Сервис Параметры (страница «Общие параметры»)
   Диалоговое окно **Общие параметры** используется для просмотра или указания следующих параметров.  
   
 ## <a name="options"></a>Параметры  
@@ -78,7 +78,7 @@ ms.locfileid: "36101128"
   
 ## <a name="see-also"></a>См. также  
  [Запуск трассировки после соединения с сервером, автоматически &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [Настройки отображения трассировки по умолчанию &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [Настройка параметров по умолчанию отображения трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [Воспроизведение таблицы трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Воспроизведение файла трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Воспроизведение трассировок](../tools/sql-server-profiler/replay-traces.md)   

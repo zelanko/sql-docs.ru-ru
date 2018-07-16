@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, application code usage
 - XML [SQL Server], FOR XML clause
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73ca2ee9220b73e329ab829f3533274416b1855b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a8cb0fb56cd1715331c5c3f0e09c4319e0b82335
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254116"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Использование результатов FOR XML в коде приложений
   При помощи предложения FOR XML в SQL-запросах можно получать и даже преобразовывать результаты запросов в формат XML. Если приложение способно обрабатывать XML-данные, эта возможность позволяет выполнять следующие задачи:  
@@ -39,9 +39,9 @@ ms.locfileid: "36109896"
  В этом подразделе содержатся примеры, демонстрирующие перечисленные возможности.  
   
 ## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>Получение данных FOR XML при использовании ADO и островов XML-данных  
- ADO `Stream` объектом или другими объектами, которые поддерживают COM `IStream` интерфейса, например Active Server Pages (ASP) `Request` и `Response` объекты, могут использоваться для хранения результатов при работе с запросами FOR XML.  
+ ADO `Stream` объекта или других объектов, поддерживающих COM `IStream` интерфейса, такие как Active Server Pages (ASP) `Request` и `Response` объектов, можно использовать для хранения результатов при работе с запросами FOR XML.  
   
- Например, следующий код ASP отображает результаты запроса `xml` столбца Demographics таблицы Sales.Store в образце базы данных AdventureWorks. В частности, запрос производит поиск значения столбца для строки, в которой значение CustomerID равно 3.  
+ Например, следующий код ASP отображает результаты запроса к `xml` данных тип столбца Demographics таблицы Sales.Store в образце базы данных AdventureWorks. В частности, запрос производит поиск значения столбца для строки, в которой значение CustomerID равно 3.  
   
 ```  
 <!-- BeginRecordAndStreamVBS -->  
@@ -205,13 +205,13 @@ ms.locfileid: "36109896"
   
  В этом примере применяются следующие управляемые интерфейсы прикладных программ (API) Microsoft .NET Framework для возврата и подготовки просмотра результатов запроса FOR XML:  
   
-1.  `SqlConnection` используется для открытия соединения с SQL Server, на основе содержимого указанного соединения строковой переменной, strConn.  
+1.  `SqlConnection` используется для подключения к SQL Server, на основе содержимого указанного подключения строковой переменной, strConn.  
   
 2.  После этого `SqlDataAdapter`, используя соединение SQL и указанную строку SQL-запроса, выполняет запрос FOR XML.  
   
-3.  После выполнения запроса, `SqlDataAdapter.Fill` затем вызывается метод и передает экземпляр `DataSet,` MyDataSet, чтобы заполнить набор данных результатами выполнения запроса FOR XML.  
+3.  После выполнения запроса, `SqlDataAdapter.Fill` затем вызывается метод и экземпляр объекта `DataSet,` MyDataSet, чтобы заполнить набор данных с выводом запроса FOR XML.  
   
-4.  `DataSet.GetXml` Затем вызывается метод для возврата результатов запроса в виде строки, который может быть отображен на странице HTML, созданный сервером.  
+4.  `DataSet.GetXml` Затем вызывается метод для возврата результатов запроса как строка, которая может отображаться на странице HTML, формируемых сервером.  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -294,7 +294,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` Поддержки, позволяет возвращение результата запроса FOR XML как тип данных `xml` тип данных, а не string или image типизированных данных, указав [директивы TYPE](type-directive-in-for-xml-queries.md). Если в запросе FOR XML указана директива TYPE, она предоставляет программный доступ к результатам FOR XML, как описано в разделе [Использование XML-данных в приложениях](use-xml-data-in-applications.md).  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` Позволяет реализовать поддержку, требование, что результат запроса FOR XML должен быть возвращен как тип данных `xml` тип данных, а не string или image типизированных данных, указав [директивы TYPE](type-directive-in-for-xml-queries.md). Если в запросе FOR XML указана директива TYPE, она предоставляет программный доступ к результатам FOR XML, как описано в разделе [Использование XML-данных в приложениях](use-xml-data-in-applications.md).  
   
 ## <a name="see-also"></a>См. также  
  [FOR XML (SQL Server)](for-xml-sql-server.md)  

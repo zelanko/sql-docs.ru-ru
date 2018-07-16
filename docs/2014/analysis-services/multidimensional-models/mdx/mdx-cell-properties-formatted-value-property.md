@@ -1,5 +1,5 @@
 ---
-title: LANGUAGE и FORMAT_STRING для построения свойства FORMATED_VALUE | Документы Microsoft
+title: LANGUAGE и FORMAT_STRING для построения свойства FORMATED_VALUE | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e68843728ebf28dca0734c7d12953d90b3449e72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de58b31abed2a082964d70ca4036e204767d1f43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319274"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>Взаимодействие свойств LANGUAGE и FORMAT_STRING для построения свойства FORMATED_VALUE
   Свойство FORMATTED_VALUE основано на взаимодействии свойств ячейки VALUE, FORMAT_STRING и LANGUAGE. В этом разделе объясняется, как эти свойства взаимодействуют для построения свойства FORMATTED_VALUE.  
@@ -37,7 +37,7 @@ ms.locfileid: "36100966"
  Спецификация локали, применяемая вместе со свойством FORMAT_STRING для создания локализованной версии свойства FORMATTED_VALUE  
   
 ## <a name="formattedvalue-constructed"></a>Построение свойства FORMATTED_VALUE  
- Свойство FORMATTED_VALUE строится с помощью значения свойства VALUE и применения шаблона формата, указанного в свойстве FORMAT_STRING для этого значения. Кроме того, каждый раз, когда значением форматирования является `named formatting literal` спецификация свойства LANGUAGE изменяет вывод свойства FORMAT_STRING так, чтобы следовать языку именованный форматирования. Все значения «named formatting literal» определяются так, что их можно локализовать. Например, `"General Date"` является спецификацией, которую можно локализовать, в противоположность шаблону `"YYYY-MM-DD hh:nn:ss",` , в котором дата представлена так, как определено шаблоном, независимо от спецификации языка.  
+ Свойство FORMATTED_VALUE строится с помощью значения свойства VALUE и применения шаблона формата, указанного в свойстве FORMAT_STRING для этого значения. Кроме того, если значением форматирования является `named formatting literal` то спецификация свойства LANGUAGE изменяет вывод свойства FORMAT_STRING так, чтобы следовать языку для именованного форматирования. Все значения «named formatting literal» определяются так, что их можно локализовать. Например, `"General Date"` является спецификацией, которую можно локализовать, в противоположность шаблону `"YYYY-MM-DD hh:nn:ss",` , в котором дата представлена так, как определено шаблоном, независимо от спецификации языка.  
   
  Если между шаблоном FORMAT_STRING и спецификацией LANGUAGE возникает конфликт, то шаблон FORMAT_STRING переопределяет спецификацию LANGUAGE. Например, если FORMAT_STRING="$ #0" и LANGUAGE=1034 (испанский), а VALUE=123.456, то FORMATTED_VALUE="$ 123" вместо FORMATTED_VALUE="€ 123" (ожидаемый формат в евро), так как значение шаблона формата переопределяет указанный языковой стандарт.  
   

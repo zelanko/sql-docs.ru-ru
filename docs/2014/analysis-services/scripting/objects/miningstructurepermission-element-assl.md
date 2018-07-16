@@ -1,5 +1,5 @@
 ---
-title: Элемент MiningStructurePermission (ASSL) | Документы Microsoft
+title: Элемент MiningStructurePermission (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MiningStructurePermission element
 ms.assetid: 4ba2bfd2-9003-4eed-8049-a74d452894ea
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0c74423bfbf199825dc707d80e21c5b5a4555cc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f3789cd5b5b72048b9c9163c11bebf4fe5a77d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102524"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295494"
 ---
 # <a name="miningstructurepermission-element-assl"></a>Элемент MiningStructurePermission (язык ASSL)
-  Определяет разрешения членов элемента [роли](role-element-assl.md) имеют для отдельных [MiningStructure](miningstructure-element-assl.md) элемента.  
+  Определяет разрешения членов элемента [роли](role-element-assl.md) имеют для отдельного [MiningStructure](miningstructure-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36102524"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.MiningStructurePermission>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.MiningStructurePermission>.  
   
  В [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], разрешение `AllowDrillthrough` была расширена для применения к структуре интеллектуального анализа данных. При назначении роли разрешения любой пользователь, являющийся членом этой роли, может отправлять прямые запросы к структуре интеллектуального анализа данных с помощью следующего синтаксиса:  
   

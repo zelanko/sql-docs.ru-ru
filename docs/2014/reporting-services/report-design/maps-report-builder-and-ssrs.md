@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapproperties.general.f1
 - "10508"
@@ -18,15 +18,15 @@ f1_keywords:
 - "10500"
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 caps.latest.revision: 28
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b73b5364e4ccd9cdb86210a25a8ee281dc6ad85c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 801c4ef8ce4c07491d45577224726167c86b0250
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313310"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Карты (построитель отчетов и службы SSRS)
   Для визуализации бизнес-данных в географическом контексте можно добавить в отчет карту. Выбранный тип карты будет зависеть от того, какую информацию следует взять из отчета. Можно добавить карту, которая отображает только местоположения, или пузырьковую карту, которая изменяет размер пузырьков в зависимости от количества домов в области, или карту с отметками, которая изменяет стиль маркера в зависимости от наиболее доходного продукта в каждом магазине, или линейную карту, которая отображает маршруты между магазинами.  
@@ -175,7 +175,7 @@ ms.locfileid: "36101966"
   
 -   Использовать ли безопасное соединение для извлечения мозаики из веб-службы Bing Maps.  
   
- Пошаговые инструкции см. в разделе [добавить, изменить или удалить карту или слой карты &#40;построитель отчетов и службы SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Пошаговые инструкции см. в разделе [Добавление, изменение или удаление карты или слоя карты &#40;построитель отчетов и службы SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
  Дополнительные сведения о мозаичных элементах см. в разделе [Мозаичная система Bing Maps](http://go.microsoft.com/fwlink/?linkid=147315). Дополнительные сведения об использовании в отчете мозаичных элементов Bing Map см. в разделах [Дополнительные условия использования](http://go.microsoft.com/fwlink/?LinkId=151371) и [Заявление о конфиденциальности](http://go.microsoft.com/fwlink/?LinkId=151372).  
   
@@ -254,29 +254,29 @@ ms.locfileid: "36101966"
 ##  <a name="HowTo"></a> Инструкции  
  В данном разделе содержатся пошаговые инструкции, описывающие, как работать с картами и слоями карт в отчетах.  
   
--   [Добавить, изменить или удалить карту или слой карты &#40;отчетов построителя отчетов и службы SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+-   [Добавление, изменение или удаление карты или слоя карты &#40;построитель отчетов и службы SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
--   [Изменить условные обозначения, цветовая шкала и связанные правила &#40;отчетов построителя отчетов и службы SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+-   [Изменить условные обозначения, цветовая шкала и связанные правила &#40;построитель отчетов и службы SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
--   [Добавление на карту пользовательских местоположений &#40;отчетов построителя отчетов и службы SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+-   [Добавление на карту пользовательских местоположений &#40;построитель отчетов и службы SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  
   
 ##  <a name="Section"></a> В этом разделе  
- [Планирование отчета-карты &#40;отчетов построителя отчетов и службы SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
+ [Планирование отчета-карты &#40;построитель отчетов и службы SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
   
  [Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS)](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [Настройка данных и отображения карты или слоя карты &#40;отчетов построителя отчетов и службы SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Настройка данных и отображения карты или слоя карты &#40;построитель отчетов и службы SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных (построитель отчетов и службы SSRS)](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
- [Добавить, изменить или удалить карту или слой карты &#40;отчетов построителя отчетов и службы SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Добавление, изменение или удаление карты или слоя карты &#40;построитель отчетов и службы SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [Изменить условные обозначения, цветовая шкала и связанные правила &#40;отчетов построителя отчетов и службы SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Изменить условные обозначения, цветовая шкала и связанные правила &#40;построитель отчетов и службы SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
- [Добавление на карту пользовательских местоположений &#40;отчетов построителя отчетов и службы SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+ [Добавление на карту пользовательских местоположений &#40;построитель отчетов и службы SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Устранение неполадок в отчетах: Сопоставления отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Устранение неполадок в отчетах: Отчеты-карты &#40;построитель отчетов и службы SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

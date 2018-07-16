@@ -1,5 +1,5 @@
 ---
-title: Набор строк DISCOVER_COMMAND_OBJECTS | Документы Microsoft
+title: Набор строк DISCOVER_COMMAND_OBJECTS | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_COMMAND_OBJECTS rowset
 ms.assetid: 325114ee-3a50-4504-9782-dbf7c1a44778
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c53fccdecc824bd123312a881c1ddcdbcae6060a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78970be3b1ed127ad25e4c27fcf81044b1eb9dca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261200"
 ---
 # <a name="discovercommandobjects-rowset"></a>Набор строк DISCOVER_COMMAND_OBJECTS
   Предоставляет сведения по использованию ресурсов и активности для объектов, которые используются указанной командой.  

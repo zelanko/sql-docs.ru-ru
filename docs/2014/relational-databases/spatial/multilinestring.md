@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MultiLineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e87912fc00924698bf2fe735c0bd9ce9433cdb1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c340afc52dbd60f4accb1da7d3883e62d36974f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288530"
 ---
 # <a name="multilinestring"></a>MultiLineString
-  Объект `MultiLineString` — это коллекция из нуля или более `geometry` или **geographyLineString** экземпляров.  
+  Объект `MultiLineString` является коллекцией из нуля или более `geometry` или **geographyLineString** экземпляров.  
   
 ## <a name="multilinestring-instances"></a>Экземпляры MultiLineString  
  На рисунке ниже показаны примеры `MultiLineString` экземпляров.  
@@ -34,20 +34,20 @@ ms.locfileid: "36102168"
   
  На рисунке представлены:  
   
--   На рисунке 1 представлен простой `MultiLineString` экземпляра, граница которого определяется четырьмя конечными точками двух его `LineString` элементов.  
+-   Рис. 1 — это простой `MultiLineString` экземпляра, граница которого определяется четырьмя конечными точками двух его `LineString` элементов.  
   
 -   Изображение 2 представляет простой экземпляр `MultiLineString`, поскольку пересекаются только конечные точки элементов `LineString`. Граница образована двумя неперекрывающимися конечными точками.  
   
 -   Изображение 3 представляет непростой экземпляр `MultiLineString`, поскольку имеется пересечение внутренней части одного из элементов `LineString` этого экземпляра. Границей данного `MultiLineString` экземпляра являются четыре конечные точки.  
   
--   На рисунке 4 представлен незамкнутый `MultiLineString` экземпляра.  
+-   На рисунке 4 представлен отличный от простого незамкнутый `MultiLineString` экземпляра.  
   
--   Изображение 5 представляет простой, незамкнутый экземпляр `MultiLineString`. Не закрыта, поскольку его `LineStrings` элементы не закрыты. Это несложно, поскольку внутренние любого `LineStrings` пересекаются.  
+-   Изображение 5 представляет простой, незамкнутый экземпляр `MultiLineString`. Не закрыта, поскольку его `LineStrings` элементы не закрыты. Это просто, поскольку внутренние стороны любого из `LineStrings` пересекаются.  
   
--   Изображение 6 представляет простой, закрыт `MultiLineString` экземпляра. Экземпляр является замкнутым, поскольку все его элементы замкнуты. Экземпляр является простым, поскольку внутренние области его элементов не пересекаются.  
+-   Рис. 6 представляет простой, закрыто `MultiLineString` экземпляра. Экземпляр является замкнутым, поскольку все его элементы замкнуты. Экземпляр является простым, поскольку внутренние области его элементов не пересекаются.  
   
 ### <a name="accepted-instances"></a>Правильные экземпляры  
- Для `MultiLineString` экземпляр был принят, он должен либо быть пустым, либо содержать только `LineString` принимаемые экземпляры приняты. Дополнительные сведения о принимаемых `LineString` экземпляры, в разделе [LineString](../spatial/linestring.md). В следующих примерах показаны принятые экземпляры `MultiLineString`.  
+ Для `MultiLineString` экземпляр был принят, он должен либо быть пустым, либо содержать только `LineString` принимаемые экземпляры приняты. Дополнительные сведения о принимаемых `LineString` экземпляров, см. в разделе [LineString](../spatial/linestring.md). В следующих примерах показаны принятые экземпляры `MultiLineString`.  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
@@ -56,7 +56,7 @@ DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';
 DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';  
 ```  
   
- В следующем примере показано возникновение `System.FormatException` из-за второй `LineString` экземпляр является недопустимым.  
+ В следующем примере возникает исключение `System.FormatException` так как второй `LineString` экземпляр является недопустимым.  
   
 ```  
 DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  
@@ -79,7 +79,7 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` является недопустимым из-за второй `LineString` экземпляр пересекается с первым `LineString` экземпляра с интервалом. Они соприкасаются в бесконечном количестве точек.  
+ `@g4` не допускается из-за второй `LineString` экземпляр пересекается с первым `LineString` экземпляра с интервалом. Они соприкасаются в бесконечном количестве точек.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается простой экземпляр `geometry``MultiLineString` , содержащий два элемента `LineString` со значением SRID 0.  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.ACTIVITYMON.F1
 - sql12.ag.jobactivitymonitor.alljobs.f1
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3ed7b4a4efacf7be8431c5de10b2cc9d56a7e3d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4896661e08c340fe9d61861b44f8915332d7b688
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253386"
 ---
 # <a name="job-activity-monitor"></a>Монитор активности заданий
   Эта страница позволяет просматривать текущую активность заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Выберите пункт **Фильтр** для отбора выводимых заданий. Сетка **Активность заданий агента** доступна только для чтения. Щелкните заголовки столбцов для сортировки этой сетки. Для изменения задания дважды щелкните его, чтобы открыть диалоговое окно **Свойства задания** . Щелкните правой кнопкой мыши задание в сетке, чтобы запустить его на выполнение всех его шагов, запуска определенного шага задания, отключения или включения, обновления, удаления задания, просмотра его журнала и просмотра свойств задания. Нажмите кнопку **Обновить** для обновления сетки с текущими данными.  
@@ -43,7 +43,7 @@ ms.locfileid: "36102563"
  **Последний запуск**  
  Дата и время последнего запуска задания с использованием локальной даты и времени сервера.  
   
- **Далее выполните** <sup>1</sup>  
+ **Следующий запуск** <sup>1</sup>  
  Дата и время запланированного следующего запуска задания с использованием локальной даты и времени сервера.  
   
  **Категория**  
@@ -55,7 +55,7 @@ ms.locfileid: "36102563"
  **Назначено**  
  **Да** , если заданию назначено расписание; **Нет** , если у задания нет расписания.  
   
- <sup>1</sup>только члены [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin фиксированной серверной роли и группы администраторов сервера могут видеть значения в этом столбце. Члены роли SQLAgentOperatorRole не могут видеть значения в этом столбце.  
+ <sup>1</sup>только членами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin фиксированной серверной роли и группы администраторов сервера могут видеть значения в этом столбце. Члены роли SQLAgentOperatorRole не могут видеть значения в этом столбце.  
   
 #### <a name="to-open-the-job-activity-monitor"></a>Как открыть монитор активности заданий  
   

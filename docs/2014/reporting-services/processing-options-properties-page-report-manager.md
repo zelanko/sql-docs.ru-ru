@@ -1,5 +1,5 @@
 ---
-title: Обработка «свойства параметров» (диспетчер отчетов) | Документы Microsoft
+title: Страница «свойства» (диспетчер отчетов) параметров обработки | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
 caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17db40e24318fad194ec21ca30e6394f3fe607e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: aa0b3682b6358ee2aa7c246156cf59eecdf4559a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288390"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Страница «Свойства параметров обработки» (диспетчер отчетов)
   Используйте страницу «Свойства параметров обработки» для задания свойств выполнения выбранного отчета. Эти параметры определяют время обработки данных для отчетов. Их можно настроить таким образом, чтобы данные для отчета извлекались в часы наименьшей нагрузки. Если доступ к отчету осуществляется часто, можно временно кэшировать его копии, чтобы избежать ожидания в случаях, когда несколько пользователей обращаются к одному отчету практически одновременно.  

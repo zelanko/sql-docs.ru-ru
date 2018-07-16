@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup priority
 - backup on secondary replicas
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 caps.latest.revision: 30
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: fdaebbfc823445594e32f18ba1ec858b2350f108
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b3b35cb41610f490b4a12f8deba77e9d34cc7185
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328444"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Настройка резервного копирования в репликах доступности (SQL Server)
   В этом разделе описывается настройка резервной копии вторичной реплики для группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Общие сведения о резервном копировании для вторичных реплик см. в разделе [ активные вторичные реплики: резервное копирование на вторичных репликах (группы доступности AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Введение в резервное копирование во вторичных репликах, см. в разделе [ активные вторичные реплики: резервное копирование на вторичных репликах (группы доступности AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  
   
@@ -161,7 +160,7 @@ ms.locfileid: "36101613"
     ```  
   
 > [!NOTE]  
->  Чтобы просмотреть синтаксис командлета, воспользуйтесь `Get-Help` командлета в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] среде PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+>  Чтобы просмотреть синтаксис командлета, используйте `Get-Help` командлет в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] среде PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
@@ -199,12 +198,12 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for высокого уровня доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Блог SQL Server AlwaysOn: Официальный блог SQL Server AlwaysOn](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Блог группы AlwaysOn SQL Server: Официальный блог SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>См. также  
  [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [ Активные вторичные реплики: Резервное копирование на вторичных репликах (группы доступности AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [ Активные вторичные реплики: Резервное копирование во вторичных репликах (группы доступности AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

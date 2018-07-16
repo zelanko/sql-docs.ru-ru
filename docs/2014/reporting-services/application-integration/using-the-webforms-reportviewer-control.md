@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 907ee3eb093f4b240aef2199b0928dab602341ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 21d48953edad8d454f75fa919f9e0facdfb5280b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251326"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Использование элемента управления WebForms ReportViewer
   Для просмотра отчетов, развернутых на сервере отчетов, и отчетов, существующих в локальной файловой системе, можно использовать элемент управления WebForms ReportViewer для подготовки отчетов к просмотру в веб-приложении.  
@@ -47,7 +47,7 @@ ms.locfileid: "36101958"
   
  Для просмотра отчета в локальном режиме необходимо выбрать параметр **Создать новый отчет**, чтобы запустить конструктор отчетов, или выбрать отчет, который уже является частью существующего проекта. После выбора отчета обязательно введите имя RDLC-файла отчета в свойстве **ReportPath** элемента управления ReportViewer. Это свойство находится в узле **LocalReport** в области **Свойства**.  
   
- При подготовке отчета к просмотру есть возможность скрыть один или несколько элементов на панели инструментов ReportViewer. Например, можно скрыть кнопку печати. Чтобы скрыть элементы панели инструментов, задайте следующие свойства ReportViewer `False` в **свойства** области.  
+ При подготовке отчета к просмотру есть возможность скрыть один или несколько элементов на панели инструментов ReportViewer. Например, можно скрыть кнопку печати. Для скрытия элементов панели инструментов задайте следующим свойствам ReportViewer `False` в **свойства** области.  
   
 -   `ShowBackButton`  
   

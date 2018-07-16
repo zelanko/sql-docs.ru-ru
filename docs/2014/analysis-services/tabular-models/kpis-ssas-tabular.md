@@ -1,5 +1,5 @@
 ---
-title: Ключевые показатели эффективности (табличные службы SSAS) | Документы Microsoft
+title: Ключевые показатели эффективности (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3415f10896313e14b531489eb9c15ddf20ca1b04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2082afaf4928ffd563b064ac7aba84c973edb2c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102097"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233794"
 ---
 # <a name="kpis-ssas-tabular"></a>Ключевые показатели эффективности (табличные службы SSAS)
   Термин *KPI* (ключевой показатель эффективности) в табличной модели используется для оценки производительности значения, определенного *базовой* мерой, относительно *целевого* значения, также определенного мерой или абсолютным значением. В этом разделе автор табличной модели может почерпнуть основные сведения о ключевых показателях эффективности в табличной модели.  
@@ -87,7 +87,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Создание и управление ими ключевые показатели эффективности &#40;табличные службы SSAS&#41;](kpis-ssas-tabular.md)|Описывает, как создавать KPI с базовыми мерами, целевыми мерами и порогами состояния.|  
+|[Создание и управление ключевыми показателями эффективности &#40;табличные службы SSAS&#41;](kpis-ssas-tabular.md)|Описывает, как создавать KPI с базовыми мерами, целевыми мерами и порогами состояния.|  
   
 ## <a name="see-also"></a>См. также  
  [Меры &#40;табличные службы SSAS&#41;](measures-ssas-tabular.md)   

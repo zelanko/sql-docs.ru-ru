@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asexecuteddltask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0f14f743b09d23619a89ade34726ff346590b081
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fafdf3ff7c4b04f08d2c8d640566b3bf9cfdfc4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275380"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Задача «Выполнение инструкции DDL служб Analysis Services»
   задача «Выполнение инструкции DDL служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] » запускает инструкции языка DDL, которые могут создавать, удалять или изменять модели интеллектуального анализа данных и многомерные объекты, такие как кубы и измерения. Например, инструкция DDL позволяет создать секцию в кубе **Adventure Works** или удалить измерение в [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], образце базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , входящем в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "36102469"
 ## <a name="ddl-statements"></a>Инструкции DDL  
  Инструкции DDL представлены как инструкции в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language (ASSL) и встроены в команду XML для аналитики (XMLA).  
   
--   ASSL используется для определения и описания экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , базы данных и объектов базы данных, которые он содержит. Дополнительные сведения см. в разделе [язык сценариев служб Analysis Services &#40;ASSL&#41; ссылки](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+-   ASSL используется для определения и описания экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , базы данных и объектов базы данных, которые он содержит. Дополнительные сведения см. в разделе [язык сценариев служб Analysis Services &#40;ASSL&#41; ссылку](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
 -   XML для аналитики — это язык команд, используемый для отправки команд-действий, таких как «Создать», «Изменить» или «Обработать», экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения см. в разделе [Справочник по XML для аналитики (XMLA)](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md).  
   
@@ -222,9 +222,9 @@ ms.locfileid: "36102469"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задач DDL выполнение службы анализа &#40;страница «Общие»&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Analysis Services редактор выполнение инструкции DDL задач &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задач DDL выполнение службы анализа &#40;страница DDL&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
+-   [Analysis Services редактор выполнение инструкции DDL задач &#40;страница DDL&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
   
 -   [Страница "Выражения"](../expressions/expressions-page.md)  
   

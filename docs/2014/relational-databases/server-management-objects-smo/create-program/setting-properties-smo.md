@@ -1,5 +1,5 @@
 ---
-title: Установка свойств | Документы Microsoft
+title: Задание свойств | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - properties [SMO]
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d372a0c777e8b4f345b821c3d2c7c864f0f5229c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f24590f0e8f496c5ac5620153cdbfd3459bc6557
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309474"
 ---
 # <a name="setting-properties"></a>Установка свойств
   Свойства — это значения, которые хранят описательные сведения об объекте. Например [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] представлены параметры конфигурации <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> свойств объекта. К свойствам можно получать как прямой, так и косвенный доступ при помощи коллекции свойств. Для прямого доступа к свойствам используется следующий синтаксис:  
@@ -44,7 +44,7 @@ ms.locfileid: "36109453"
   
 -   Версия сервера не поддерживает это свойства (как при попытке получить доступ к свойству, которое представляет новую функцию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из более старой версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
--   Сервер не предоставил данных для свойства, как при попытке получить доступ к свойству, которое представляет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] компонент, который не установлен.  
+-   Сервер не предоставляет данные для свойства, например, если при попытке доступа к свойству, которое представляет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] компонента, который не установлен.  
   
  Обрабатывать эти ситуации можно путем перехвата исключений SMO <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> и <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException>.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "36109453"
   
 2.  Полностью загружено. При ссылке на любое свойство остальные свойства, которые можно быстро загрузить, инициализируются и делаются доступными.  
   
-3.  Свойства, использующие много памяти. Остальные недоступные свойства используют большой объем памяти и имеют <xref:Microsoft.SqlServer.Management.Smo.Property.Expensive%2A> свойство значение true (такие как <xref:Microsoft.SqlServer.Management.Smo.Database.DataSpaceUsage%2A>). Эти свойства загружаются только тогда, когда на них производится ссылка.  
+3.  Свойства, использующие много памяти. Остальные недоступные свойства используют значительный объем памяти и иметь <xref:Microsoft.SqlServer.Management.Smo.Property.Expensive%2A> свойство значение true (такие как <xref:Microsoft.SqlServer.Management.Smo.Database.DataSpaceUsage%2A>). Эти свойства загружаются только тогда, когда на них производится ссылка.  
   
- Если приложение загружает дополнительные свойства помимо тех, которые представлены в состоянии частичной загрузки, оно отправляет запрос для получения этих дополнительных свойств и масштабируется до состояния полной загрузки. Это может привести к образованию ненужного трафика между клиентом и сервером. Дополнительную оптимизацию можно достичь за счет вызова <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> метод. Метод <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> позволяет создавать спецификацию свойств, которые загружаются при инициализации объекта.  
+ Если приложение загружает дополнительные свойства помимо тех, которые представлены в состоянии частичной загрузки, оно отправляет запрос для получения этих дополнительных свойств и масштабируется до состояния полной загрузки. Это может привести к образованию ненужного трафика между клиентом и сервером. Дополнительную оптимизацию можно выполнить, вызвав <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> метод. Метод <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> позволяет создавать спецификацию свойств, которые загружаются при инициализации объекта.  
   
- Метод <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> задает поведение при загрузке свойств для остальной части приложения или до его сброса. Первоначальное поведение можно сохранить с помощью <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> метод и восстановить его при необходимости.  
+ Метод <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> задает поведение при загрузке свойств для остальной части приложения или до его сброса. Можно сохранить исходное поведение с помощью <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> метод и восстановить его при необходимости.  
   
 ## <a name="examples"></a>Примеры  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
@@ -85,12 +85,12 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql;
 ```  
   
 ## <a name="setting-various-properties-before-an-object-is-created-in-visual-basic"></a>Задание различных свойств перед созданием объекта на языке Visual Basic  
- Данный пример кода показано, как для прямого присвоения <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> свойство <xref:Microsoft.SqlServer.Management.Smo.Table> объекта, а также создание и добавление столбцов перед созданием <xref:Microsoft.SqlServer.Management.Smo.Table> объекта.  
+ Данный пример кода показано, как непосредственная установка <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> свойство <xref:Microsoft.SqlServer.Management.Smo.Table> , а также создание и добавление столбцов перед созданием <xref:Microsoft.SqlServer.Management.Smo.Table> объекта.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBProperties2](SMO How to#SMO_VBProperties2)]  -->  
   
 ## <a name="setting-various-properties-before-an-object-is-created-in-visual-c"></a>Задание различных свойств перед созданием объекта на языке Visual C#  
- Данный пример кода показано, как для прямого присвоения <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> свойство <xref:Microsoft.SqlServer.Management.Smo.Table> объекта, а также создание и добавление столбцов перед созданием <xref:Microsoft.SqlServer.Management.Smo.Table> объекта.  
+ Данный пример кода показано, как непосредственная установка <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> свойство <xref:Microsoft.SqlServer.Management.Smo.Table> , а также создание и добавление столбцов перед созданием <xref:Microsoft.SqlServer.Management.Smo.Table> объекта.  
   
 ```  
 {   
@@ -123,14 +123,14 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Проход по всем свойствам объекта на языке Visual Basic  
- Этот пример кода проходит по `Properties` коллекцию <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> объекта и показывает их на [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] результатов на экран.  
+ Этот пример кода проходит по `Properties` коллекцию <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> и отображает их на [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] результатов на экран.  
   
- В примере <xref:Microsoft.SqlServer.Management.Smo.Property> объекта была переведена в квадратные скобки, так как это также [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ключевое слово.  
+ В примере <xref:Microsoft.SqlServer.Management.Smo.Property> объекта была переведена в квадратные скобки, поскольку он также [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ключевое слово.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBProperties3](SMO How to#SMO_VBProperties3)]  -->  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>Проход по всем свойствам объекта на языке Visual C#  
- Этот пример кода проходит по `Properties` коллекцию <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> объекта и показывает их на [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] результатов на экран.  
+ Этот пример кода проходит по `Properties` коллекцию <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> и отображает их на [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] результатов на экран.  
   
 ```  
 {   
@@ -153,14 +153,14 @@ sp.QuotedIdentifierStatus = false;
 ```  
   
 ## <a name="setting-default-initialization-fields-in-visual-basic"></a>Задание полей инициализации по умолчанию на языке Visual Basic  
- Этот пример кода демонстрирует, как свести к минимуму число свойств объекта, инициализируемых в программе SMO. Включить `using System.Collections.Specialized`; инструкции для использования <xref:System.Collections.Specialized.StringCollection> объекта.  
+ Этот пример кода демонстрирует, как свести к минимуму число свойств объекта, инициализируемых в программе SMO. Должен включать в себя `using System.Collections.Specialized`; инструкция, используемая <xref:System.Collections.Specialized.StringCollection> объекта.  
   
  При помощи приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] можно сравнивать числовые инструкции, оправляемые экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], с этой оптимизацией.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBDefaultInitFields1](SMO How to#SMO_VBDefaultInitFields1)]  -->  
   
 ## <a name="setting-default-initialization-fields-in-visual-c"></a>Задание полей инициализации по умолчанию на языке Visual C#  
- Этот пример кода демонстрирует, как свести к минимуму число свойств объекта, инициализируемых в программе SMO. Включить `using System.Collections.Specialized`; инструкции для использования <xref:System.Collections.Specialized.StringCollection> объекта.  
+ Этот пример кода демонстрирует, как свести к минимуму число свойств объекта, инициализируемых в программе SMO. Должен включать в себя `using System.Collections.Specialized`; инструкция, используемая <xref:System.Collections.Specialized.StringCollection> объекта.  
   
  При помощи приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] можно сравнивать числовые инструкции, оправляемые экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], с этой оптимизацией.  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 18858eb2c692be3bfe4c987dd365ae267d097d43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 91dd0d2aefa6128dfdac0a948efe61f0a9334fb4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236364"
 ---
 # <a name="create-xml-indexes"></a>Создание XML-индексов
   В данном разделе описано создание первичных и вторичных XML-индексов.  
@@ -48,9 +48,9 @@ ms.locfileid: "36101703"
   
 -   На имена первичных XML-индексов накладываются те же ограничения, что и на имена представлений.  
   
- Не удается создать XML-индекс на `xml` тип столбца в представлении, на **таблицы** переменной со `xml` типа столбцов или `xml` переменных типа.  
+ Не удается создать XML-индекса на `xml` введите столбец в представлении, на **таблицы** переменной со `xml` типа столбцов или `xml` переменных типа.  
   
--   Чтобы изменить `xml` тип столбца с нетипизированного на типизированный XML или наоборот, с помощью параметра ALTER TABLE ALTER COLUMN не XML-индекс для столбца должна существовать. Если такой индекс существует, он должен быть сначала удален.  
+-   Чтобы изменить `xml` столбец типа с нетипизированного на типизированный XML, или наоборот, с помощью параметра ALTER TABLE ALTER COLUMN не XML-индекс по столбцу должна существовать. Если такой индекс существует, он должен быть сначала удален.  
   
 -   При создании XML-индекса параметр ARITHABORT должен быть установлен в значение ON. Для запроса, вставки, удаления или обновления значений в столбце XML методами типа данных XML этот параметр должен быть установлен для соединения. В противном случае методы типа данных XML будут завершаться ошибкой.  
   

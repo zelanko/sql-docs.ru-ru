@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 17
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 06f20a19801b43a25f3622424aa8ce76d2c34df2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a5d6efd6aa45886aa87fdd5db5f51ae3682e45ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273090"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Надстройка Master Data Services для Microsoft Excel
-  С [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], основные списки справочных данных можно распространять среди пользователей в вашей организации, который используется Excel. Какие именно данные пользователь может просматривать и обновлять, определяется системой безопасности.  
+  С помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], основные списки справочных данных можно распространять среди пользователей используется Excel в организации. Какие именно данные пользователь может просматривать и обновлять, определяется системой безопасности.  
   
  Можно загрузить отфильтрованные списки данных из MDS в Excel, где их обработка может выполняться точно так же, как и обработка любых других данных. Завершив работу, можно снова опубликовать данные в MDS, где они централизованно хранятся.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "36100440"
  В [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно с помощью служб Data Quality Services (DQS) сопоставить данные, прежде чем загружать их в MDS. Это поможет предотвратить дублирование данных в MDS.  
   
 > [!IMPORTANT]  
->  Можно продолжать использовать [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-версию основных данных службы надстройки для Excel после обновления службы Master Data Services и Data Quality Services для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Однако любая более ранняя версия надстройки служб Master Data Services для Excel перестанет работать после обновления до версии SQL Server 2014 CTP2. Вы можете загрузить [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-версию основных данных службы надстройки для Excel из [здесь](http://go.microsoft.com/fwlink/?LinkId=328664).  
+>  Вы можете продолжать использовать [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] версии с пакетом обновления 1 из образца данных службы надстройки для Excel после обновления службы Master Data Services и Data Quality Services до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Однако любая более ранняя версия надстройки служб Master Data Services для Excel перестанет работать после обновления до версии SQL Server 2014 CTP2. Вы можете скачать [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] версии с пакетом обновления 1 из образца данных службы надстройки для Excel из [здесь](http://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ## <a name="terms"></a>Термины  
  Во время работы с надстройкой вы можете встретить следующие термины.  

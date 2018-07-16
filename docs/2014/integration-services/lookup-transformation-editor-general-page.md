@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразования уточняющего запроса (страница «Общие») | Документы Microsoft
+title: Редактор преобразования Уточняющий запрос (страница "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.general.f1
 ms.assetid: 4bd15e48-0feb-4f95-be91-5df58105dbfb
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f0ec34c82b91ee254bb314a945b53ea1f68340b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ced1e5551753ba61f81789eb8dee7d4e77dd6883
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314074"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>Редактор преобразования «Уточняющий запрос» (страница «Общие»)
   Используйте страницу **Общие** в диалоговом окне «Редактор преобразования "Уточняющий запрос"», чтобы выбрать режим кэширования, выбрать тип соединения и указать метод обработки строк без совпадающих записей.  
@@ -56,9 +56,9 @@ ms.locfileid: "36101567"
   
 ## <a name="see-also"></a>См. также  
  [Диспетчер соединений с кэшем](connection-manager/cache-connection-manager.md)   
- [Уточняющий &#40;страница «соединение»&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
+ [Уточняющий &#40;страница "подключения"&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [Редактор преобразования "Уточняющий запрос" (страница "Столбцы")](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [Уточняющий &#40;страница «Дополнительно»&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [Уточняющий &#40;страницы вывода ошибок&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
+ [Уточняющий &#40;страница "Дополнительно"&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [Уточняющий &#40;странице вывода ошибок&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
   
   

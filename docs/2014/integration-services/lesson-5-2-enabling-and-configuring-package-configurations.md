@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 caps.latest.revision: 39
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd88de02a035e041c887d7505cc8b2f35805e577
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 380676537e0035077e0fd37afda058a98c75c741
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274850"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Шаг 2. Активация и настройка конфигурации пакетов
   В этой задаче вы преобразуете проект в модель развертывания пакета и включите конфигурации пакетов с помощью мастера настройки пакета. Этот мастер будет использован для создания файла конфигурации в формате XML, который содержит параметры конфигурации для свойства `Directory` контейнера «цикл по каждому элементу». Значение свойства Directory содержится в новой переменной уровня пакета, обновление которой можно осуществлять в процессе выполнения. Кроме того, будет заполнена новая папка с образцами данных для использования при проверке.  
@@ -102,7 +102,7 @@ ms.locfileid: "36102232"
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>Создание и заполнение новой папки с образцами данных  
   
-1.  В проводнике Windows на корневом уровне диска (например, C:\\), создайте новую папку с именем `New Sample Data`.  
+1.  В обозревателе Windows в корневом каталоге диска (например, C:\\), создайте новую папку с именем `New Sample Data`.  
   
 2.  Найдите образцы файлов на вашем компьютере и скопируйте три файла из папки.  
   

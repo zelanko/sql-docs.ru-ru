@@ -1,5 +1,5 @@
 ---
-title: Вкладка «наборы элементов» (средство просмотра моделей интеллектуального анализа данных) | Документы Microsoft
+title: На вкладке наборы элементов (средство просмотра моделей интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.associationrules.itemsets.f1
 ms.assetid: 95b2b805-b142-4064-9c80-4b1b3fe2fe63
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4fb7491a8c9fd4a3ee4656bac9c45f0f8a365b74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2069f5355629c1ac82889e56b11a9a35023edfb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247624"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Вкладка «Наборы элементов» (средство просмотра моделей интеллектуального анализа данных)
   Можно использовать панель **Наборы элементов** для просмотра часто используемых наборов элементов, которые содержит модель интеллектуального анализа правил взаимосвязи. Модель взаимосвязей может содержать много наборов элементов, поэтому в средстве просмотра предоставляются функции управления, упрощающие фильтрацию наборов элементов, отображаемых в средстве просмотра.  

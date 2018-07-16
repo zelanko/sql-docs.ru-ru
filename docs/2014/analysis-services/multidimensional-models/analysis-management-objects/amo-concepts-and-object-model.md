@@ -1,5 +1,5 @@
 ---
-title: Основные понятия AMO и объектной моделью | Документы Microsoft
+title: Основные понятия AMO и объектной моделью | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -21,28 +21,28 @@ helpviewer_keywords:
 - Analysis Management Objects, objects
 ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 623caca0bf51815328bc24992a8f2d2928b9cab2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f692a0b5d66cc52107b93480bdf9d4541a84603
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310724"
 ---
 # <a name="amo-concepts-and-object-model"></a>Основные понятия и модель объектов AMO
-  Этот раздел содержит определения для анализа Management объекты AMO, как они связаны с другими средствами и библиотеками из архитектуры [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]и общие сведения обо всех основных объектах AMO.  
+  В этом разделе приведено определение из объекты управления Analysis (AMO), как они связаны с другими средствами и библиотеками в архитектуре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]и общие сведения обо всех основных объектах AMO.  
   
- Объекты AMO являются полной коллекцией классов управления для служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], доступных для использования программным способом в управляемой среде, через пространство имен <xref:Microsoft.AnalysisServices>. Эти классы включены в файл AnalysisServices.dll, который обычно находится [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] программа установки устанавливает файлы в папке \100\SDK\Assemblies\\. Для работы с классами AMO укажите в своем проекте ссылку на эту сборку.  
+ Объекты AMO являются полной коллекцией классов управления для служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], доступных для использования программным способом в управляемой среде, через пространство имен <xref:Microsoft.AnalysisServices>. Эти классы включены в файл AnalysisServices.dll, который обычно находится [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] программа установки устанавливает файлы, в папку \100\SDK\Assemblies\\. Для работы с классами AMO укажите в своем проекте ссылку на эту сборку.  
   
- С помощью объектов AMO, можно создавать, изменять и удалять объекты, такие как кубы, измерения, структуры интеллектуального анализа данных и [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] баз данных, со всеми этими объектами, действия могут выполняться из приложения в .NET Framework. Кроме этого, существует также возможность обновления и обработки данных, хранящихся в базах данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ С помощью объектов AMO, вы можете создавать, изменять и удалять объекты, такие как кубы, измерения, структуры интеллектуального анализа данных и [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] баз данных; над всеми этими объектами, действия могут выполняться из приложения в .NET Framework. Кроме этого, существует также возможность обновления и обработки данных, хранящихся в базах данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- Объекты AMO не позволяют выполнять запросы к данным. Чтобы запрашивать данные, используйте [разработка с использованием ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
+ Объекты AMO не позволяют выполнять запросы к данным. Для запроса данных, используйте [разработка с использованием ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
   
  Этот раздел состоит из следующих подразделов.  
   
- [Объекты AMO в архитектуре служб анализа](#AMOintheAnalysisServicesArchitecture)  
+ [Объекты AMO в архитектуре служб Analysis Services](#AMOintheAnalysisServicesArchitecture)  
   
  [Архитектура объектов AMO](#AMOArchitecture)  
   
@@ -50,8 +50,8 @@ ms.locfileid: "36101639"
   
  [Автоматизация административных задач с помощью объектов AMO](#AutomatingAdministrativeTaskswithAMO)  
   
-##  <a name="AMOintheAnalysisServicesArchitecture"></a> Объекты AMO в архитектуре служб анализа  
- Объекты AMO предназначены только для управления объектами, а не для выполнения запросов к данным. Если пользователю требуется запрос [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] данных из клиентского приложения, которые должны использовать клиентское приложение [разработка с использованием ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
+##  <a name="AMOintheAnalysisServicesArchitecture"></a> Объекты AMO в архитектуре служб Analysis Services  
+ Объекты AMO предназначены только для управления объектами, а не для выполнения запросов к данным. Если необходимые пользователю для запроса [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] данных из клиентского приложения, клиентское приложение должно использовать [разработка с использованием ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
   
 ##  <a name="AMOArchitecture"></a> Архитектура объектов AMO  
  Объекты AMO — это полная библиотека классов, предназначенных для управления экземпляром [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] из клиентского приложения в управляемом коде на платформе .NET Framework версии 2.0.  
@@ -60,7 +60,7 @@ ms.locfileid: "36101639"
   
  Приведенная ниже иллюстрация является представлением иерархии AMO высокого уровня, содержащей основные классы. На иллюстрации показано размещение классов среди контейнеров и одноранговых узлов. Объект <xref:Microsoft.AnalysisServices.Dimension> принадлежит объекту <xref:Microsoft.AnalysisServices.Database> и объекту <xref:Microsoft.AnalysisServices.Server> и может быть создан одновременно с объектами <xref:Microsoft.AnalysisServices.DataSource> и <xref:Microsoft.AnalysisServices.MiningStructure>. Необходимо создать экземпляры некоторых одноранговых узлов перед тем, как можно будет пользоваться остальными. Например, перед добавлением нового объекта <xref:Microsoft.AnalysisServices.DataSource> или <xref:Microsoft.AnalysisServices.Dimension> должен быть создан экземпляр объекта <xref:Microsoft.AnalysisServices.MiningStructure>.  
   
- ![Высокоуровневое представление классов AMO](../../../analysis-services/dev-guide/media/amo-highlevelview-majorobjectshighlighted.gif "высокоуровневое представление классов AMO")  
+ ![Высокоуровневое представление классов AMO](../../../analysis-services/dev-guide/media/amo-highlevelview-majorobjectshighlighted.gif "обобщенное представление классов AMO")  
   
  Объект *основной объект* — это класс, который представляет полный объект как единую сущность, а не как часть другого объекта. Основными являются объекты <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Dimension> и <xref:Microsoft.AnalysisServices.MiningStructure> (поскольку являются самостоятельными сущностями). А вот объект <xref:Microsoft.AnalysisServices.Level> не является основным, поскольку является составной частью объекта <xref:Microsoft.AnalysisServices.Dimension>. Основные объекты можно создавать, удалять, изменять или обрабатывать, независимо от других объектов. Второстепенными называются объекты, которые могут быть созданы только в рамках создания родительского основного объекта. Обычно второстепенные объекты создаются после создания основного объекта. Значения для второстепенных объектов следует задавать во время создания, поскольку значения по умолчанию для них не существуют.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36101639"
   
  ![Главные объекты AMO](../../../analysis-services/dev-guide/media/amo-majorobjects.gif "Главные объекты AMO")  
   
- ![Главные объекты AMO выделяются (2)](../../../analysis-services/dev-guide/media/amo-majorobjects-02.gif "Главные объекты AMO выделяются (2)")  
+ ![Главные объекты AMO выделены (2)](../../../analysis-services/dev-guide/media/amo-majorobjects-02.gif "Главные объекты AMO выделены (2)")  
   
  При программировании с помощью объектов AMO в ассоциации между классами и содержащимися в них классами используются атрибуты типа коллекции, например <xref:Microsoft.AnalysisServices.Server> и <xref:Microsoft.AnalysisServices.Dimension>. Для работы со вложенным экземпляром класса необходимо сначала получить ссылку на объект коллекции, в которой он содержится или может содержаться. Затем в коллекции необходимо найти нужный объект и получить ссылку на него, чтобы начать с ним работу.  
   

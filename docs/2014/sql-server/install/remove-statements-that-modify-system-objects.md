@@ -1,5 +1,5 @@
 ---
-title: Удалите инструкции, которые изменяют системные объекты | Документы Microsoft
+title: Удалите инструкции, которые изменяют системные объекты | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - direct system catalog updates [SQL Server]
 - system catalogs [SQL Server]
 ms.assetid: 221b46c2-c27e-4df8-bd8c-8b990d6d5e98
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c77525957fa679659a67bfa41f28090e028a7a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aca644a822673e4d373048fc0d3a95eb0cd6fdf6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297824"
 ---
 # <a name="remove-statements-that-modify-system-objects"></a>Удаление инструкций, которые изменяют системные объекты
   Советник по переходу обнаружил инструкции, производящие обновление системного каталога. Непосредственное изменение системного каталога не допускается. Измените свои SQL-скрипты так, чтобы они использовали официальные документированные функции API-интерфейса.  

@@ -1,5 +1,5 @@
 ---
-title: Примеры запросов модели линейной регрессии | Документы Microsoft
+title: Примеры запросов модели линейной регрессии | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - linear regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7dafee7e0aa5a95076c00f6aff9043014066c5da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 481774670258050b111820e88333a8354cfb14ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303184"
 ---
 # <a name="linear-regression-model-query-examples"></a>Примеры запросов модели линейной регрессии
   К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения о закономерностях, обнаруженных при анализе, и прогнозирующие запросы, использующие закономерности, содержащиеся в модели, для прогнозирования новых данных. Например, запрос содержимого предоставит дополнительные сведения о формуле регрессии, а прогнозирующий запрос определит, подходит ли к модели новая точка данных. Запрос также позволяет получить метаданные, описывающие модель.  
@@ -150,7 +150,7 @@ FROM LR_PredictIncome.CONTENT
  [Вернуться в начало](#bkmk_top)  
   
 ###  <a name="bkmk_Query4"></a> Пример запроса 4. Прогнозирование дохода с помощью одноэлементного запроса  
- Проще всего создать отдельный запрос к модели регрессии с помощью диалогового окна **Ввод одноэлементного запроса** . Например, можно построить следующий DMX-запрос, взяв подходящую модель регрессии, выбрав **одноэлементный запрос**и введя `20` как значение для **возраст**.  
+ Проще всего создать отдельный запрос к модели регрессии с помощью диалогового окна **Ввод одноэлементного запроса** . Например, можно построить следующий запрос расширений интеллектуального анализа данных, выбрав подходящую модель регрессии, выбрав **одноэлементный запрос**и введя `20` как значение для **возраст**.  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  
@@ -205,7 +205,7 @@ NATURAL PREDICTION JOIN
  Список общих функций для всех алгоритмов [!INCLUDE[msCoName](../../includes/msconame-md.md)] см. в статье [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining-algorithms-analysis-services-data-mining.md). Дополнительные сведения об использовании этих функций см. в разделе [Справочник по расширениям интеллектуального анализа данных](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм линейной регрессии Майкрософт](microsoft-linear-regression-algorithm.md)   
+ [Алгоритм линейной регрессии (Майкрософт)](microsoft-linear-regression-algorithm.md)   
  [Запросы интеллектуального анализа данных](data-mining-queries.md)   
  [Технический справочник по алгоритму линейной регрессии Майкрософт](microsoft-linear-regression-algorithm-technical-reference.md)   
  [Модель интеллектуального анализа данных для моделей линейной регрессии &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  

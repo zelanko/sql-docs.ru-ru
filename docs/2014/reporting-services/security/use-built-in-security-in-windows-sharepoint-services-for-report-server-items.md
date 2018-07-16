@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -17,13 +17,13 @@ ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4d9231800ea1cf583ae554fe10ecc217fa1e9a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80c3ca9a6ca7b966ba3af54e096d839314158082
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294144"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Использование встроенных средств безопасности служб Windows SharePoint Services при работе с элементами сервера отчетов
   Службы SharePoint предоставляют встроенные функции безопасности, которые можно использовать для доступа к элементам сервера отчетов с сайтов и из библиотек SharePoint. Если пользователям уже назначены разрешения на сайты и списки, они получат доступ к элементам и операциям сервера отчетов сразу после настройки параметров интеграции служб SharePoint и сервера отчетов.  
@@ -54,11 +54,11 @@ ms.locfileid: "36100559"
 |**Члены**|Участие|Члены могут создавать новые элементы и публиковать элементы отчетов и моделей из средств конструирования в библиотеке SharePoint.|Добавляют отчеты и другие элементы в библиотеки. Изменяют свойства элементов для отчетов и других документов. Удаляют отчеты и другие элементы. Просмотр отчетов, в том числе отчетов, в которых для просмотра данных используются модели отчетов. Просмотр предыдущих версий документа, а также моментальных снимков журнала отчета (при этом пользователю необходимо также разрешение на открытие отчета, для которого создан журнал отчета). Задание параметров отчетов. Задание параметров обработки отчета. Создают модели отчетов. Создают отчеты с помощью построителя отчетов. Создают и управляют общими источниками данных. Создают, изменяют и удаляют подписки, которыми владеют пользователи. Используют общие расписания с подпиской. Создают версии документа и управляют ими, в том числе журналом отчета. Загружают файл источника для определения отчета или модели отчета. Заменяют определение отчета, модель отчета, общий источник данных или ресурс (с сохранением свойств и разрешений элемента).|  
 |**Посетители** и **Наблюдатели**|Чтение|Посетители могут просматривать отчеты|Просмотр отчетов, в том числе отчетов, в которых для просмотра данных используются модели отчетов.|  
   
- Если встроенные группы и уровни разрешений не используются, то для доступа к компонентам служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] необходимо назначить специальные разрешения. Дополнительные сведения см. в разделе [Настройка разрешений для операций сервера отчетов в веб-приложении SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
+ Если встроенные группы и уровни разрешений не используются, то для доступа к компонентам служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] необходимо назначить специальные разрешения. Дополнительные сведения см. в разделе [задание разрешений для работы сервера отчетов в веб-приложения SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
   
 ## <a name="see-also"></a>См. также  
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Сравнение ролей и задач в службах Reporting Services to SharePoint Groups and Permissions](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Задание разрешений для работы сервера отчетов в веб-приложении SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

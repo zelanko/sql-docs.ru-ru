@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно «Добавочное обновление» (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Диалоговое окно «Добавочное обновление» (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.incrementalupdate.f1
 ms.assetid: d5a5ae27-44e7-4179-b9e2-efbf21d6c5f5
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 51fb9898eb2d43fd56cbefb6f08120669dcd6f0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22d7038fa3d8f07c5b32e35c5cb39e0d8db95766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284170"
 ---
 # <a name="incremental-update-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Добавочное обновление» (службы Analysis Services — многомерные данные)
   С помощью диалогового окна **Добавочное обновление** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] можно определить параметры, которые используются при добавочных обновлениях групп мер и секций. Диалоговое окно **Добавочное обновление** отображается при щелчке **Настроить** в столбце **Установки** сетки **Список объектов** в диалоговом окне **Обработка** .  
@@ -41,6 +41,6 @@ ms.locfileid: "36180155"
   
 ## <a name="see-also"></a>См. также  
  [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Диалоговое окно Обработка &#40;службы Analysis Services — многомерные данные&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+ [Диалоговое окно обработки &#40;службы Analysis Services — многомерные данные&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

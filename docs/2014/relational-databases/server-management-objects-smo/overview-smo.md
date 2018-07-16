@@ -1,5 +1,5 @@
 ---
-title: Общие сведения об SMO | Документы Microsoft
+title: Общие сведения об SMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,18 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 caps.latest.revision: 68
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85d8e44514e4d26be4c720e562c4db7ac7b7af12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 28ccb6ff5219277d25d56670cf46f84e8e7726fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315664"
 ---
 # <a name="overview-smo"></a>Общие сведения об SMO
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Объекты управления (SMO) представляют собой объекты, предназначенных для программного управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объекты SMO можно использовать для создания специализированных приложений управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Хотя среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] является мощным и универсальным приложением для управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], иногда удобнее работать с приложением SMO.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Управляющие объекты (SMO) представляют собой объекты, разработанные для программного управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объекты SMO можно использовать для создания специализированных приложений управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Хотя среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] является мощным и универсальным приложением для управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], иногда удобнее работать с приложением SMO.  
   
  К примеру, для удовлетворения потребностей новых пользователей, а также с целью сокращения издержек на подготовку персонала может возникнуть необходимость упрощения пользовательских приложений, выполняющих задачи управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может возникнуть необходимость в создании специализированных баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в создании приложения для формирования индексов и наблюдения за их эффективностью. Кроме того, приложение SMO можно использовать для бесшовной интеграции аппаратных или программных компонентов от независимых поставщиков в приложение управления базами данных.  
   
@@ -49,11 +49,11 @@ ms.locfileid: "36100601"
   
 -   Секционирование таблиц и индексов для хранения данных в схеме секционирования. Дополнительные сведения см. в разделе [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
   
--   Конечные точки HTTP для управления SOAP-запросами. Дополнительные сведения см. в разделе [реализации конечных точек](tasks/implementing-endpoints.md).  
+-   Конечные точки HTTP для управления SOAP-запросами. Дополнительные сведения см. в разделе [Implementing Endpoints](tasks/implementing-endpoints.md).  
   
 -   Изоляция моментальных снимков и управление версиями на уровне строк для повышения параллелизма. Дополнительные сведения см. в разделе [работа с изоляцией моментального снимка](../native-client/features/working-with-snapshot-isolation.md).  
   
--   Коллекции схем XML, XML-индексы и типы данных XML, обеспечивающие проверку и хранение XML-данных. Дополнительные сведения см. в разделе [коллекции XML-схем &#40;SQL Server&#41; ](../xml/xml-schema-collections-sql-server.md) и [XML-схем с помощью](tasks/using-xml-schemas.md).  
+-   Коллекции схем XML, XML-индексы и типы данных XML, обеспечивающие проверку и хранение XML-данных. Дополнительные сведения см. в разделе [коллекции XML-схем &#40;SQL Server&#41; ](../xml/xml-schema-collections-sql-server.md) и [Using XML Schemas](tasks/using-xml-schemas.md).  
   
 -   Базы данных моментальных снимков, позволяющие создавать копии баз данных только для чтения.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36100601"
   
 -   Триггеры DDL, обеспечивающие дополнительные функции при возникновении DDL-событий. Дополнительные сведения см. в разделе [DDL Triggers](../triggers/ddl-triggers.md).  
   
- Пространство имен объектов SMO — <xref:Microsoft.SqlServer.Management.Smo>. Модель SMO реализована в виде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] сборки. Это означает, что CLR из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] перед использованием объектов SMO необходимо установить версию 2.0. Сборки объектов SMO по умолчанию устанавливаются в глобальный кэш сборок с параметром пакета SDK [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти сборки размещаются в [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Дополнительные сведения см. в разделе [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] документации.  
+ Пространство имен объектов SMO — <xref:Microsoft.SqlServer.Management.Smo>. Объекты SMO реализованы в виде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] сборки. Это означает, что среда CLR из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] перед использованием объектов SMO необходимо установить версию 2.0. Сборки объектов SMO по умолчанию устанавливаются в глобальный кэш сборок с параметром пакета SDK [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти сборки размещаются в [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Дополнительные сведения см. в разделе [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] документации.  
   
 ## <a name="smo-classes"></a>Классы модели объектов SMO  
  Классы модели объектов SMO подразделяются на две категории: классы экземпляров и служебные классы.  
@@ -115,7 +115,7 @@ ms.locfileid: "36100601"
   
  **Создание скриптов**  
   
- В модели объектов SMO средства для работы со скриптами были улучшены и переданы в класс `Scripter`. `Scripter` Класс может находить зависимости, отношения между объектами и осуществлять манипуляции с иерархией зависимостей. Главным объектом, обеспечивающим работу со скриптами, является объект `Scripter`. Существует несколько поддерживающих объектов, которые осуществляют обработку зависимостей, а также реагируют на события состояния и на события ошибок.  
+ В модели объектов SMO средства для работы со скриптами были улучшены и переданы в класс `Scripter`. `Scripter` Класс может находить зависимости, выявлять связи между объектами и осуществлять манипуляции с иерархией зависимостей. Главным объектом, обеспечивающим работу со скриптами, является объект `Scripter`. Существует несколько поддерживающих объектов, которые осуществляют обработку зависимостей, а также реагируют на события состояния и на события ошибок.  
   
  Объект `Scripter` поддерживает следующие дополнительные параметры создания скриптов:  
   
@@ -150,7 +150,7 @@ ms.locfileid: "36100601"
   
  Запросы SOAP, а также запросы на зеркальное отображение баз данных обрабатываются конечными точками с использованием объекта <xref:Microsoft.SqlServer.Management.Smo.Endpoint>.  
   
- **Управление версиями на уровне изоляции/строки моментальных снимков**  
+ **Моментальный снимок управление версиями на уровне изоляции и строк**  
   
  Уровень изоляции моментального снимка (управление версиями на уровне строк) представлены свойствами нового объекта <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "36100601"
   
  Пространства имен схемы XML представлены в модели объектов SMO коллекцией объектов. XML-индексы представлены в модели SMO свойством объекта `Index`.  
   
- **Усовершенствования Full-Text Search**  
+ **Расширенные возможности полнотекстового поиска**  
   
  В модели объектов SMO реализованы новые объекты, представляющие расширенные возможности полнотекстового поиска.  
   

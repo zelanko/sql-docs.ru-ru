@@ -1,5 +1,5 @@
 ---
-title: Редактор передача сообщений об задачи (страница «сообщения») | Документы Microsoft
+title: Редактор передача сообщений об задачи (страница "сообщения") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.errormessages.F1
 helpviewer_keywords:
 - Transfer Error Messages Task Editor
 ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 833f092574c85ab83f6a384b77e7f8c99c91b2c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ee60f4bfe93996ee753f06063bcf7b16aef4d02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209424"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>Редактор задачи «Передача сообщений об ошибках» (страница «Сообщения»)
   Используйте страницу **Сообщения** диалогового окна **Редактор задачи "Передача сообщений об ошибках"**, чтобы указать свойства копирования одного или более определенных пользователем сообщений об ошибках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из одного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в другой. Дополнительные сведения об этой задаче см. в разделе [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  
@@ -61,11 +61,11 @@ ms.locfileid: "36101562"
 >  Необходимо указать значение параметра **SourceConnection** прежде, чем можно будет выбрать сообщения об ошибках для копирования.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи служб Integration Services](control-flow/integration-services-tasks.md)   
- [Редактор задач сообщений об ошибках передачи &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
+ [Редактор передача сообщений об задач &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Диспетчер соединений SMO](connection-manager/smo-connection-manager.md)   
- [Редактор задач сообщений об ошибках передачи &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
+ [Редактор передача сообщений об задач &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Диспетчер подключений управляющих объектов SQL Server](connection-manager/smo-connection-manager.md)  
   
   

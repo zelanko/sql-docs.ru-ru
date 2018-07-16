@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - HierarchyID
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c513aa5fb2c1f42b0eb2fa6c82deaac96c49d3ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 86aebcd1b6545782fed51991e3fe25e645c2e6c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321894"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>Заполнение иерархической таблицы с помощью иерархических методов
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] работает 8 человек. Иерархический список сотрудников выглядит следующим образом.  
@@ -68,7 +68,7 @@ ms.locfileid: "36101479"
   
 ### <a name="to-insert-a-subordinate-employee"></a>Вставка записи подчиненного  
   
-1.  **Сара** подчиняется **Дэвиду**. Чтобы вставить **Сара** узла, необходимо создать соответствующий **OrgNode** значение типа данных `hierarchyid`. Следующий код создает переменную типа `hierarchyid` и присваивает ей корневое значение OrgNode таблицы. Затем эта переменная используется методом [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) для вставки строки, представляющей подчиненный узел. `GetDescendant` принимает два аргумента. Вот список вариантов с разными значениями аргументов.  
+1.  **Сара** подчиняется **Дэвиду**. Чтобы вставить **Сара** узла, необходимо создать соответствующее **OrgNode** значение типа данных `hierarchyid`. Следующий код создает переменную типа `hierarchyid` и присваивает ей корневое значение OrgNode таблицы. Затем эта переменная используется методом [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) для вставки строки, представляющей подчиненный узел. `GetDescendant` принимает два аргумента. Вот список вариантов с разными значениями аргументов.  
   
     -   Если родительская запись — NULL, `GetDescendant` возвращает значение NULL.  
   

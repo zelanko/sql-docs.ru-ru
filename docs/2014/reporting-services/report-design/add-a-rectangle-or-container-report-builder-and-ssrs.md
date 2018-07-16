@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10061"
 - sql12.rtp.rptdesigner.rectangleproperties.general.f1
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d1cac8525b9343cc2719cd38d278f55b89839bbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 474fcf999291f9b26c242a8e1685431bd58297f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255776"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Добавление прямоугольника или контейнера (построитель отчетов и службы SSRS)
   Прямоугольник добавляется к отчету, если нужно разделить различные области отчета с помощью графического элемента, выделить области отчета или установить фон для одного или нескольких элементов отчета. Прямоугольники используются также в качестве контейнеров, помогающих управлять подготовкой к просмотру областей данных в отчете. Внешний вид прямоугольника можно настроить, изменяя его свойства, например цвета фона и границ. Дополнительные сведения об использовании прямоугольника как контейнера см. в разделах [Прямоугольники и линии (построитель отчетов и службы SSRS)](rectangles-and-lines-report-builder-and-ssrs.md) и [Отображение одних и тех же данных в матрице и на диаграмме (построитель отчетов)](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  
@@ -54,10 +54,10 @@ ms.locfileid: "36180202"
 2.  Для задания того, какие стороны прямоугольника изменять, нажмите стрелку рядом с кнопкой **Граница** .  
   
     > [!NOTE]  
-    >  Если установить для линии стиль **двойные** и толщина линии равна 1 пт или, строки могут не отображаться двойной при запуске отчета в построителе отчетов, конструктора отчетов или диспетчера отчетов. После экспорта отчета в другие форматы, такие как Microsoft Word и Acrobat PDF, линия будет отображаться двойной.  
+    >  Если установить для линии стиль **двойные** и толщина линии равна 1 1/2 пт или уже, линия может не отображаться двойной при запуске отчета в построителе отчетов, конструктора отчетов или диспетчера отчетов. После экспорта отчета в другие форматы, такие как Microsoft Word и Acrobat PDF, линия будет отображаться двойной.  
   
 ## <a name="see-also"></a>См. также  
- [Прямоугольники и линии &#40;отчетов построителя отчетов и службы SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Прямоугольники и линии &#40;построитель отчетов и службы SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

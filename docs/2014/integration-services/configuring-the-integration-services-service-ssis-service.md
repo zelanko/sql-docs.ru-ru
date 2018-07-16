@@ -1,5 +1,5 @@
 ---
-title: Настройка Integration Services (службы SSIS) | Документы Microsoft
+title: Настройка Integration Services (службы SSIS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
 - configuration files [Integration Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - default configuration files
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 caps.latest.revision: 70
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4d934191b491d4e8d348b7bd91004afc8f8f9545
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71a0436edf57e820b7e6b559814f65823d4390eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101373"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283680"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Настройка служб Integration Services (службы SSIS)
     
 > [!IMPORTANT]  
 >  В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] поддерживает эту службу для обеспечения обратной совместимости с более ранними версиями служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
   
- Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] используют для определения параметров файл конфигурации. По умолчанию имеет имя для этого файла конфигурации MsDtsSrvr.ini.xml и файл расположен в папке %ProgramFiles%\Microsoft SQL Server\120\DTS\Binn.  
+ Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] используют для определения параметров файл конфигурации. По умолчанию этот файл конфигурации называется MsDtsSrvr.ini.xml и файл расположен в папке %ProgramFiles%\Microsoft SQL Server\120\DTS\Binn.  
   
  Обычно не нужно делать какие-либо изменения в этом файле конфигурации или изменять расположение файла по умолчанию. Однако если пакеты хранятся в именованном или удаленном экземпляре компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]либо в нескольких экземплярах компонента [!INCLUDE[ssDE](../includes/ssde-md.md)], необходимо изменить файл конфигурации. Кроме того, если файл конфигурации переносится в расположение, отличное от расположения по умолчанию, необходимо изменить раздел реестра, указывающий расположение файла.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36101373"
 ```  
   
 ## <a name="modification-of-the-configuration-file-location"></a>Изменение расположения файла конфигурации  
-Раздел реестра **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\ServiceConfigFile** указывает расположение и имя конфигурации файла, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] использует служба. Значение по умолчанию раздела реестра **C:\Program Files\Microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**. Можно изменить значение этого раздела реестра, чтобы использовать другое имя и местонахождение файла конфигурации. Обратите внимание, что номер версии в пути (120 для SQL Server [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]) будет зависеть от версии SQL Server. 
+Раздел реестра **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\ServiceConfigFile** указывает расположение и имя для конфигурации файла, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] использует служба. Значение по умолчанию раздела реестра — **C:\Program Files\Microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**. Можно изменить значение этого раздела реестра, чтобы использовать другое имя и местонахождение файла конфигурации. Обратите внимание, что номер версии в пути (120 для SQL Server [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]) будет зависеть от версии SQL Server. 
   
   
 > [!CAUTION]  

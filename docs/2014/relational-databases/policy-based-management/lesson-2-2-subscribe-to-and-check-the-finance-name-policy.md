@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d6387825abc2b2eb3426bbbd19f05674615f9e7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8a564533f26faea5330da3c45cd8e00cd7e2c12d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253956"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Подписка на политику имен финансов и ее проверка
   В этой задаче будет произведена настройка по подписке базы данных Finance к категории политики финансов. Затем будет протестирована политика имен финансов.  
@@ -74,7 +74,7 @@ ms.locfileid: "36101055"
 ## <a name="next"></a>Дальше  
  Данный учебник завершен. Чтобы вернуться к началу, щелкните ссылку [Учебник. Администрирование серверов с помощью управления на основе политик](tutorial-administering-servers-by-using-policy-based-management.md).  
   
- Список учебников см. в разделе [учебники по SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  
+ Список учебников, см. в разделе [учебные материалы по SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  
   
 ## <a name="see-also"></a>См. также  
  [Администрирование серверов с помощью управления на основе политик](administer-servers-by-using-policy-based-management.md)  

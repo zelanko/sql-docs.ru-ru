@@ -1,5 +1,5 @@
 ---
-title: Конструктор представлений (службы Analysis Services — многомерные данные) источников данных | Документы Microsoft
+title: Конструктор представлений (службы Analysis Services — многомерные данные) источников данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.f1
 helpviewer_keywords:
 - Data Source View Designer
 ms.assetid: 6f40a074-761f-440b-a999-09b755bd86ce
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b440c0186e60e6622d861110a8de2284e2b2589
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08fb948e9dd0cd401e1cc2fa3fe2a4bc60ff4e11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296054"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>Конструктор представлений источников данных (службы Analysis Services — многомерные данные)
   Представление источника данных (DSV) — это логическое представление внешнего реляционного источника данных, используемых для создания кубов и измерений в многомерной модели.  
@@ -57,6 +57,6 @@ ms.locfileid: "36101409"
   
 ## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Добавление или удаление таблиц или представлений в данных представление источника &#40;служб Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [Добавление или удаление таблиц или представлений данных представление источника &#40;служб Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
   

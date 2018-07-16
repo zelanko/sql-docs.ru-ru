@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], SQL pane
 - View Designer, SQL pane
 - SQL pane [Visual Database Tools]
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3d6261a52d4ff41923e87402327b98ff60622af7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1894d321f6dc8321f4c2b53369d7140f500ce003
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310874"
 ---
 # <a name="sql-pane-visual-database-tools"></a>Панель SQL (визуальные инструменты для баз данных)
   Панель SQL можно использовать для создания собственных инструкций SQL; можно также создать инструкцию на панели критериев или панели диаграмм, и на панели SQL будут созданы инструкции SQL. После того как запрос построен, панель SQL его автоматически обновляет и меняет его формат для удобства чтения.  
@@ -58,11 +58,11 @@ ms.locfileid: "36100123"
 >  Если была введена инструкция SQL, но потом были внесены изменения в запрос, с изменением панелей диаграмм и критериев, конструктор запросов и представлений перестроит и заново отобразит инструкцию SQL. В некоторых случаях это приводит к тому, что инструкция SQL строится отлично от той, которая была введена изначально (хотя результат получится одинаковый). Эта разница особенно возможна, если ведется работа с условиями поиска, содержащими несколько предложений, связанных AND и OR.  
   
 ## <a name="see-also"></a>См. также  
- [Создание запросов &#40;визуальные средства базы данных&#41;](visual-database-tools.md)   
- [Выполнение запросов &#40;визуальные средства базы данных&#41;](run-queries-visual-database-tools.md)   
- [Проектировать запросы и представления инструкции &#40;визуальные средства базы данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [Панель диаграмм &#40;визуальные средства базы данных&#41;](diagram-pane-visual-database-tools.md)   
- [Панель критериев &#40;визуальные средства базы данных&#41;](criteria-pane-visual-database-tools.md)   
+ [Создание запросов &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
+ [Выполнение запросов &#40;визуальных инструментах баз данных&#41;](run-queries-visual-database-tools.md)   
+ [Проектирование запросов и представлений инструкции &#40;визуальных инструментах баз данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Панель диаграмм &#40;визуальных инструментах баз данных&#41;](diagram-pane-visual-database-tools.md)   
+ [Панель критериев &#40;визуальных инструментах баз данных&#41;](criteria-pane-visual-database-tools.md)   
  [Панель результатов (визуальные инструменты для баз данных)](results-pane-visual-database-tools.md)  
   
   

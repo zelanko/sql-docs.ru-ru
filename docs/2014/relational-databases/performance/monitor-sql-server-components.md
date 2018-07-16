@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a2351bd03a362e555ba285d81ff3660ef8058eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 986819015191d7fbb1f07738d25b3dab489e185b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290640"
 ---
 # <a name="monitor-sql-server-components"></a>Наблюдение за компонентами SQL Server
   Важность мониторинга обусловлена динамикой среды, в которой выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Данные приложений постоянно изменяются. Меняется тип доступа, который требуется пользователям. Меняется способ подключения пользователей. Может измениться даже тип приложений, обращающихся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , однако [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически управляет такими системными ресурсами, как память и место на диске, поэтому ручная настройка системы практически не требуется. Мониторинг позволяет администраторам следить за тенденциями изменения производительности и определять ситуации, когда требуются изменения.  

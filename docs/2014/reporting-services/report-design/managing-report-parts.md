@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7c74ae6ba5a8f69a0fef8f5fce9f4a18828867c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b8b08d19493528f1c93cea4752f548040fb47322
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286700"
 ---
 # <a name="managing-report-parts"></a>Управление элементами отчета
   Начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], элементы отчета могут быть публиковаться на серверах отчетов и повторно использоваться в других отчетах и другими пользователями, если они имеют соответствующие разрешения.  
@@ -96,10 +96,10 @@ ms.locfileid: "36101233"
   
 ## <a name="see-also"></a>См. также  
  [Элементы отчета и наборы данных в построителе отчетов](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [Страница «Общие свойства», элементы отчета &#40;диспетчера отчетов&#41;](../general-properties-page-report-parts-report-manager.md)   
+ [Элементы отчета «общие свойства», &#40;диспетчера отчетов&#41;](../general-properties-page-report-parts-report-manager.md)   
  [Перемещение элементов страницы &#40;диспетчера отчетов&#41;](../move-items-page-report-manager.md)   
  [Управление содержимым сервера отчетов &#40;собственный режим служб SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Устранение неполадок в элементах отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Устранение неполадок в элементах отчета &#40;построитель отчетов и службы SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Элементы отчетов в конструкторе отчетов (SSRS)](report-parts-in-report-designer-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Элемент Session (XML для Аналитики) | Документы Microsoft
+title: Элемент Session (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Session element
 ms.assetid: 884ed090-968e-41d3-97e5-6d12787467da
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4be4778be16da0271e2f46643a165864d679e8ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 74ce499ba167c7c0d439fba4e4099638f4e98db6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310374"
 ---
 # <a name="session-element-xmla"></a>Элемент Session (XML для аналитики)
   Использует заголовок SOAP в сообщении SOAP-запроса, чтобы идентифицировать существующий явный сеанс на экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -81,7 +81,7 @@ ms.locfileid: "36102072"
 ## <a name="remarks"></a>Примечания  
  Элемент заголовка `Session` определяет существующий, явно запущенный сеанс экземпляра служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Элемент `Session` является частью заголовка SOAP для следующих типов сообщений.  
   
--   Ответ SOAP, который содержит [BeginSession](session-element-xmla.md) элемент заголовка SOAP.  
+-   Ответ SOAP, содержащий [BeginSession](session-element-xmla.md) элемент заголовка SOAP.  
   
 -   SOAP-запрос на идентификацию сеанса, в которой будет выполняться [Discover](../xml-elements-methods-discover.md) или [Execute](../xml-elements-methods-execute.md) метод.  
   

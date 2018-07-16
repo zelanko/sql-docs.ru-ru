@@ -1,5 +1,5 @@
 ---
-title: Элемент DataSource (ASSL) | Документы Microsoft
+title: Элемент DataSource (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DataSource element
 ms.assetid: 113fba1c-2679-4d06-9339-90a4a76f9b31
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5c87b21c6a9b291728704d3e624c386d59b820ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ddee14c487f9e28d3bbeb83c419bcda548d5a7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281930"
 ---
 # <a name="datasource-element-assl"></a>Элемент DataSource (ASSL)
-  Определяет источник данных в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [базы данных](database-element-assl.md) элемента.  
+  Определяет источник данных в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [базы данных](database-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,10 +64,10 @@ ms.locfileid: "36101605"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.DataSource>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.DataSource>.  
   
 ## <a name="see-also"></a>См. также  
- [Элемент Database &#40;ASSL&#41;](database-element-assl.md)   
+ [Элемент Database описания &#40;ASSL&#41;](database-element-assl.md)   
  [Объекты &#40;ASSL&#41;](objects-assl.md)  
   
   

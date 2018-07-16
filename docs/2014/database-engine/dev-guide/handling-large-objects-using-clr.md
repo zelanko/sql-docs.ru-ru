@@ -1,5 +1,5 @@
 ---
-title: Обработка больших объектов в среде CLR | Документы Microsoft
+title: Обработка больших объектов в среде CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3cb48a2c342d24bd4d7df12dc3fd7759ffb06e8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a9408351a786192be62ca9c7c5e0cd8305effc3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310354"
 ---
 # <a name="handling-large-objects-using-clr"></a>Обработка больших объектов в среде CLR
   Образец `HandlingLOBUsingCLR` для SQL Server демонстрирует передачу больших объектов между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и файловой системой, доступной серверу, с использованием хранимых процедур CLR. Образец демонстрирует доступ к файлам в кодировке сервера и возможность вызова из хранимых процедур CLR динамических запросов и хранимых процедур. Также образец демонстрирует регистрацию и отмену регистрации методов среды CLR и сборок при помощи языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -28,7 +28,7 @@ ms.locfileid: "36100684"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
 -   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](http://go.microsoft.com/fwlink/?linkid=62796).  
   

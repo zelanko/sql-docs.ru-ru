@@ -1,5 +1,5 @@
 ---
-title: Вызов методов | Документы Microsoft
+title: Вызов методов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - SMO [SQL Server], method calling
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 345e3b217933f544239c849e5a279d8fcc3623e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b2d2cce4fa8bf38e8403af1a783c9b1d85eb14aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264310"
 ---
 # <a name="calling-methods"></a>Вызов методов
-  Методы выполняют специальные задачи, связанные с объектом, например устанавливают `Checkpoint` или запрашивают перечисляемый список имен входа для экземпляра базы данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Методы выполняют специальные задачи, связанные с объектом, например устанавливают `Checkpoint` в базу данных или запрашивают перечисляемый список имен входа для экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Методы выполняют операции с объектом. Они могут принимать параметры и часто возвращают значение. Возвращаемое значение может быть простым типом данных, сложным объектом или структурой, содержащей большое число членов.  
   
@@ -60,7 +60,7 @@ db.Create();
  }  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-basic"></a>Использование метода SMO с параметром на языке Visual Basic  
- <xref:Microsoft.SqlServer.Management.Smo.Table> Объект содержит метод с именем <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>. Этому методу требуется числовой параметр, задающий `FillFactor`.  
+ <xref:Microsoft.SqlServer.Management.Smo.Table> Объект имеет метод под названием <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>. Этому методу требуется числовой параметр, задающий `FillFactor`.  
   
 ```  
 Dim srv As Server  
@@ -71,7 +71,7 @@ tb.RebuildIndexes(70)
 ```  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-c"></a>Использование метода SMO с параметром на языке Visual C#  
- <xref:Microsoft.SqlServer.Management.Smo.Table> Объект содержит метод с именем <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>. Этому методу требуется числовой параметр, задающий `FillFactor`.  
+ <xref:Microsoft.SqlServer.Management.Smo.Table> Объект имеет метод под названием <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>. Этому методу требуется числовой параметр, задающий `FillFactor`.  
   
 ```  
 {   
@@ -84,7 +84,7 @@ tb.RebuildIndexes(70);
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-basic"></a>Использование метода перечисления, который возвращает объект DataTable, на языке Visual Basic  
- В этом разделе описывается вызов метода перечисления и обработки данных в возвращаемом <xref:System.Data.DataTable> объекта.  
+ В этом разделе описывается способ вызова метода перечисления и способ обработки данных в возвращаемом <xref:System.Data.DataTable> объекта.  
   
  Метод <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> возвращает объект <xref:System.Data.DataTable>, который требует дальнейшего перехода для доступа ко всем имеющимся сведениям о параметрах сортировки в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -108,9 +108,9 @@ Next
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-c"></a>Использование метода перечисления, который возвращает объект DataTable, на языке Visual C#  
- В этом разделе описывается вызов метода перечисления и обработки данных в возвращаемом <xref:System.Data.DataTable> объекта.  
+ В этом разделе описывается способ вызова метода перечисления и способ обработки данных в возвращаемом <xref:System.Data.DataTable> объекта.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> Метод возвращает системный <xref:System.Data.DataTable> объекта. <xref:System.Data.DataTable> Требует дальнейшего перехода для доступа ко все доступные параметры сортировки сведения об экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> Метод возвращает системный <xref:System.Data.DataTable> объекта. <xref:System.Data.DataTable> Объект требует дальнейшего перехода для доступа ко все сведения о доступных параметрах сортировки об экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```  
 //Connect to the local, default instance of SQL Server.   
@@ -161,12 +161,12 @@ Console.WriteLine(d.Name);
 ```  
   
 ## <a name="copying-an-smo-object-in-visual-basic"></a>Копирование объекта SMO на языке Visual Basic  
- Этот пример кода использует <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> метод для создания копии <xref:Microsoft.SqlServer.Management.Smo.Server> объекта. <xref:Microsoft.SqlServer.Management.Smo.Server> Представляет подключение к экземпляру компонента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Данный пример кода использует <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> метод, чтобы создать копию <xref:Microsoft.SqlServer.Management.Smo.Server> объекта. <xref:Microsoft.SqlServer.Management.Smo.Server> Представляет подключение к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VCMethods6](SMO How to#SMO_VCMethods6)]  -->  
   
 ## <a name="copying-an-smo-object-in-visual-c"></a>Копирование объекта SMO на языке Visual C#  
- Этот пример кода использует <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> метод для создания копии <xref:Microsoft.SqlServer.Management.Smo.Server> объекта. <xref:Microsoft.SqlServer.Management.Smo.Server> Представляет подключение к экземпляру компонента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Данный пример кода использует <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> метод, чтобы создать копию <xref:Microsoft.SqlServer.Management.Smo.Server> объекта. <xref:Microsoft.SqlServer.Management.Smo.Server> Представляет подключение к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```  
 {   
@@ -184,12 +184,12 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString);
 ```  
   
 ## <a name="monitoring-server-processes-in-visual-basic"></a>Наблюдение за процессами сервера на языке Visual Basic  
- Можно получить сведения об экземпляре типе состояние текущего [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] через методы перечисления. В этом примере кода метод <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> используется для получения сведений о текущих процессах. В нем также показана работа со столбцами и строками в возвращаемом объекте <xref:System.Data.DataTable>.  
+ Можно получить текущий тип сведения о состоянии об экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] через методы перечисления. В этом примере кода метод <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> используется для получения сведений о текущих процессах. В нем также показана работа со столбцами и строками в возвращаемом объекте <xref:System.Data.DataTable>.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBMethods5](SMO How to#SMO_VBMethods5)]  -->  
   
 ## <a name="monitoring-server-processes-in-visual-c"></a>Наблюдение за процессами сервера на языке Visual C#  
- Можно получить сведения об экземпляре типе состояние текущего [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] через методы перечисления. В этом примере кода метод <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> используется для получения сведений о текущих процессах. В нем также показана работа со столбцами и строками в возвращаемом объекте <xref:System.Data.DataTable>.  
+ Можно получить текущий тип сведения о состоянии об экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] через методы перечисления. В этом примере кода метод <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> используется для получения сведений о текущих процессах. В нем также показана работа со столбцами и строками в возвращаемом объекте <xref:System.Data.DataTable>.  
   
 ```  
 //Connect to the local, default instance of SQL Server.   

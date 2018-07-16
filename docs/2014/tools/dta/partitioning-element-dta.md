@@ -1,5 +1,5 @@
 ---
-title: Элемент partitioning (DTA) | Документы Microsoft
+title: Элемент partitioning (DTA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Partitioning element
 ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 379e5dae0c70278b7c0b576190faffea84c8fa19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c6d6ccf9db5904936331c796188ff8858194ab6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272360"
 ---
 # <a name="partitioning-element-dta"></a>Элемент Partitioning (DTA)
   Содержит схему секционирования, которую должен использовать помощник по настройке ядра СУБД во время анализа.  
@@ -45,7 +45,7 @@ ms.locfileid: "36101192"
 |**Тип данных и длина**|`string`, без ограничения длины|  
 |**Допустимые значения**|**NONE**<br /> Нет секционирования<br /><br /> **ПОЛНОЕ**<br /> Полное секционирование (повышает производительность)<br /><br /> **ALIGNED**<br /> Только секционирование с выравниванием (улучшает управляемость)<br /><br /> С этим элементом следует использовать только одно из данных значений.<br /><br /> Значение**ALIGNED** указывает, что в рекомендациях, созданных помощником по настройке ядра СУБД, каждый предлагаемый индекс будет секционирован точно так же, как и базовая таблица, для которой определяется этот индекс. Некластеризованные индексы в индексированном представлении выравниваются по индексированному представлению.|  
 |**Значение по умолчанию**|**NONE**|  
-|**Наличие**|Данный элемент должен быть указан один раз в элементе `TuningOptions`, если не используется элемент `DropOnlyMode`. Если `DropOnlyMode` — используется, нельзя использовать `Partitioning`. Эти элементы являются взаимоисключающими.|  
+|**Наличие**|Данный элемент должен быть указан один раз в элементе `TuningOptions`, если не используется элемент `DropOnlyMode`. Если `DropOnlyMode` — используется, вы не можете использовать `Partitioning`. Эти элементы являются взаимоисключающими.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   

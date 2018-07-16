@@ -1,5 +1,5 @@
 ---
-title: Воспроизведение таблицы трассировки (приложение SQL Server Profiler) | Документы Microsoft
+title: Воспроизведение таблицы трассировки (SQL Server Profiler) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 590ea6f3d35f49ece98916ea6c141017cac5b892
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0125b1911383d735b2329594207c6560c06351bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319904"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>воспроизвести таблицу трассировки (приложение SQL Server Profiler)
   Воспроизведением называется возможность открывать сохраненную трассировку и снова ее воспроизводить. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] содержит в себе многопоточный модуль воспроизведения, который имитирует соединения пользователей и проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Воспроизведение хорошо помогает при диагностике ошибок приложений и процессов. Отыскав и исправив ошибку, запустите трассировку, обнаружившую эту ошибку, в отношении исправленной версии приложения или процесса. а затем, после воспроизведения исходной трассировки, сравнить результаты.  
@@ -63,7 +63,7 @@ ms.locfileid: "36100992"
     -   чтобы указать, как сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен управлять процессами во время воспроизведения, настройте **Параметры монитора исправности**.  
   
 ## <a name="see-also"></a>См. также  
- [Разрешения, необходимые для запуска приложения SQL Server Profiler](sql-server-profiler.md)   
+ [Разрешения, необходимые для запуска SQL Server Profiler](sql-server-profiler.md)   
  [Воспроизведение трассировок](replay-traces.md)   
  [Открытие таблицы трассировки (приложение SQL Server Profiler)](open-a-trace-table-sql-server-profiler.md)   
  [Приложение SQL Server Profiler](sql-server-profiler.md)  

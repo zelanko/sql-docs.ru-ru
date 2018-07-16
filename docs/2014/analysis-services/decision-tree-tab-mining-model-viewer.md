@@ -1,5 +1,5 @@
 ---
-title: Вкладка «дерево» (средство просмотра моделей интеллектуального анализа данных) принятия решений | Документы Microsoft
+title: Решение вкладка «дерево» (средство просмотра моделей интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.decisiontree.f1
 ms.assetid: dc88606f-ba7c-4f8d-af65-bfa17ec16e2b
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8ac997463e15b862dafbb5e561e9ab5dd29601b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86c229c4adc57200a2d1867c167aa3d998498765
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276340"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Вкладка «Дерево принятия решений» (средство просмотра моделей интеллектуального анализа данных)
   В области **Дерево решений** отображается визуальное представление правил принятия решений, созданных в модели дерева принятия решений. Правила принятия решений описывают путь для достижения определенного результата.  
@@ -41,7 +41,7 @@ ms.locfileid: "36101412"
  **Увеличить масштаб**  
  Увеличить для более подробного представления узлов и ветвей дерева принятия решений. В сложной модели деревья принятия решений могут иметь много уровней ветвления.  
   
- **Уменьшение масштаба**  
+ **Уменьшить масштаб**  
  Уменьшить для общего представления древовидной структуры.  
   
  **Копировать представление диаграммы**  

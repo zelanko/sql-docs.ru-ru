@@ -1,5 +1,5 @@
 ---
-title: Подключение к хранилищу параллельных данных Microsoft SQL Server (SSAS) | Документы Microsoft
+title: Подключение к Microsoft SQL Server Parallel Data Warehouse (службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlparadatawh.f1
 ms.assetid: 98c879ee-7257-40c9-bc85-6766bd3b4885
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 87d025750a92a3ea62d91b14b67fca0bc33b98c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bc82bc4ed9e90305a8ca78adc9ee643fabf9800
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101187"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208164"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>Подключение к параллельному хранилищу данных Microsoft SQL Server (SSAS)
   Эта страница **мастера импорта таблиц** позволяет указать параметры подключения к Microsoft SQL Server Parallel Data Warehouse (PDW). Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], report history
 - history snapshots [Reporting Services]
@@ -19,18 +19,18 @@ ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 29ff943923807b88db27bd9c8c6a1cc8430f96a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b065fa70d102ff86c25aa0fffb78cfa4993cd284
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272580"
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>Обработка моментального снимка журнала отчета с использованием доступа по URL-адресу
   Подготовить отчет к просмотру можно с помощью моментального снимка журнала отчета. Для этого необходимо указать параметр *rs:Snapshot* и присвоить ему значение допустимого идентификатора моментального снимка. Значение параметра должно указываться в формате ГГГГ-ММ-ДДТЧЧ:ММ:СС согласно стандарту Международной организации по стандартизации (ISO) 8601.  
   
- Если этот параметр не указан, то отчет подготавливается к просмотру согласно параметрам его выполнения и параметрам управления кэшем на сервере отчетов. Дополнительные сведения о выполнении отчетов см. в разделе [задание свойств обработки отчетов](report-server/set-report-processing-properties.md).  
+ Если этот параметр не указан, то отчет подготавливается к просмотру согласно параметрам его выполнения и параметрам управления кэшем на сервере отчетов. Дополнительные сведения о выполнении отчетов см. в разделе [Установка свойств обработки отчетов](report-server/set-report-processing-properties.md).  
   
 ## <a name="example"></a>Пример  
  В приведенном ниже примере показан URL-адрес, по которому происходит получение моментального снимка журнала отчета.  

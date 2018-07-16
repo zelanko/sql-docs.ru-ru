@@ -1,5 +1,5 @@
 ---
-title: Тип данных MeasureGroupAttribute (ASSL) | Документы Microsoft
+title: Тип данных MeasureGroupAttribute (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupAttribute data type
 ms.assetid: dc7f71e6-3755-4d99-9fcd-5830e10eb653
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 05dfd16d5e1f3cb5a2af3926cca398678b649675
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43177fe7c63c241f4a66b326af2eca94bcd5d600
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261330"
 ---
 # <a name="measuregroupattribute-data-type-assl"></a>Тип данных MeasureGroupAttribute (ASSL)
   Определяет примитивный тип данных, представляющий связь между атрибутом и группой мер.  
@@ -63,9 +63,9 @@ ms.locfileid: "36101151"
 |Производные элементы|[Атрибут](../objects/attribute-element-assl.md) ([атрибуты](../collections/attributes-element-assl.md) коллекцию [RegularMeasureGroupDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

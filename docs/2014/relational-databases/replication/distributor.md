@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replicationutilities.selectdistributor.f1
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d5a2f5c5d7f70624baa9b3f55d732e54642708c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a482479689ebfbbb81f79ae7d3b71ede1039d834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296484"
 ---
 # <a name="distributor"></a>Распространитель
   Страница **Распространитель** доступна в мастере настройки распространения и в мастере создания публикаций. Распространитель — это сервер, который содержит базу данных распространителя и хранит метаданные и данные журнала всех типов репликации. Распространитель также хранит транзакции для репликации транзакций. Распространителем может быть тот же сервер, который является издателем (локальный распространитель), либо отдельный сервер (удаленный распространитель). Роль распространителя различна в зависимости от реализуемого типа репликации. В целом, его роль существенно важнее для репликации транзакций, чем для репликации слиянием и репликации моментальных снимков. Для репликации слиянием и репликации моментальных снимков, как правило, используется локальный распространитель, но для репликации транзакций на очень сильно загруженной системе может оказаться полезным удаленный распространитель.  

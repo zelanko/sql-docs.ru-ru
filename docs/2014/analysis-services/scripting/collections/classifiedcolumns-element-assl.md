@@ -1,5 +1,5 @@
 ---
-title: Элемент ClassifiedColumns (ASSL) | Документы Microsoft
+title: Элемент ClassifiedColumns (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ClassifiedColumns element
 ms.assetid: f16b4f51-c38d-4601-98b8-1497dbf12d02
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 95c00f4863223caaacfb7cc7554ec9b48a82922d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38436c97f74adef2af6d5645aea6547682740894
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102301"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286050"
 ---
 # <a name="classifiedcolumns-element-assl"></a>Элемент ClassifiedColumns (ASSL)
-  Содержит коллекцию связанных столбцов, классифицированных объектом [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) элемента.  
+  Содержит коллекцию связанных столбцов, классифицированных [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36102301"
 |Дочерние элементы|[ClassifiedColumnID](../properties/id-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `ClassifiedColumns` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
+ Элемент, соответствующий родителю параметра `ClassifiedColumns` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
 ## <a name="see-also"></a>См. также  
  [Тип данных MiningStructureColumn &#40;ASSL&#41;](../data-type/miningstructurecolumn-data-type-assl.md)   

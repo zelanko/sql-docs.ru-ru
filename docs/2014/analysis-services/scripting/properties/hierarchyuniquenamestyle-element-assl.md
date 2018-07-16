@@ -1,5 +1,5 @@
 ---
-title: Элемент HierarchyUniqueNameStyle (ASSL) | Документы Microsoft
+title: Элемент HierarchyUniqueNameStyle (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - HierarchyUniqueNameStyle element
 ms.assetid: 2ac57825-e9e5-4ec4-9856-fa2326d2c43f
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4948cc104e39c6d7aec7e2822594e891c52b112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d19fa53581241686d68179162762a0909fcc69f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304294"
 ---
 # <a name="hierarchyuniquenamestyle-element-assl"></a>Элемент HierarchyUniqueNameStyle (ASSL)
-  Определяет, каким образом уникальные имена формируются для иерархий, содержащихся в [CubeDimension](../data-type/dimension-data-type-assl.md).  
+  Определяет, как уникальные имена создаются для иерархий, содержащихся в [CubeDimension](../data-type/dimension-data-type-assl.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -67,10 +67,10 @@ ms.locfileid: "36102099"
 |*IncludeDimensionName*|Имя измерения включается в качестве части имени иерархии.|  
 |*ExcludeDimensionName*|Имя измерения не включается в качестве части имени иерархии.|  
   
- Элемент, соответствующий родителю параметра `HierarchyUniqueNameStyle` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.CubeDimension>.  
+ Элемент, соответствующий родителю параметра `HierarchyUniqueNameStyle` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.CubeDimension>.  
   
 ## <a name="see-also"></a>См. также  
- [Куб элемент &#40;ASSL&#41;](../objects/cube-element-assl.md)   
+ [Элемент куба &#40;ASSL&#41;](../objects/cube-element-assl.md)   
  [Элемент измерения &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [Свойства &#40;ASSL&#41;](properties-assl.md)  
   

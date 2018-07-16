@@ -1,5 +1,5 @@
 ---
-title: Элемент ActionID (ASSL) | Документы Microsoft
+title: Элемент ActionID (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ActionID element
 ms.assetid: 2c9c66b2-a7ea-4874-a0ed-020ce3feab20
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 13e83d3a022416de56cba7bbf6693ea408b51562
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7405b3b6dd7f673b199509388d43164f47dd90eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304554"
 ---
 # <a name="actionid-element-assl"></a>Элемент ActionID (ASSL)
-  Содержит имя [действия](../objects/action-element-assl.md) элемент, определенный на [куба](../objects/cube-element-assl.md) элемента, которое станет доступным в [перспективы](../objects/perspective-element-assl.md) элемент как [PerspectiveAction](../data-type/action-data-type-assl.md) элемента.  
+  Содержит имя [действие](../objects/action-element-assl.md) элемент, определенный на [куба](../objects/cube-element-assl.md) элемента, которая становится доступной в [перспективы](../objects/perspective-element-assl.md) элемент как [PerspectiveAction](../data-type/action-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36100091"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `ActionID` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.PerspectiveAction>.  
+ Элемент, соответствующий родителю параметра `ActionID` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.PerspectiveAction>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент Actions &#40;ASSL&#41;](../collections/actions-element-assl.md)   

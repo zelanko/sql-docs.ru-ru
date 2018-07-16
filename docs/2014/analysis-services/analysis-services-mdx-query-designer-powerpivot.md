@@ -1,5 +1,5 @@
 ---
-title: Службы Analysis Services конструктор запросов многомерных Выражений (PowerPivot) | Документы Microsoft
+title: Службы Analysis Services конструктора запросов многомерных Выражений (PowerPivot) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b1524b18-b9f1-46d2-a34e-dd7c91ca4684
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 09e174f18e06b8284f260dbc41be7ce2b4acf8a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 235f7cb4c724f03fddc662231a34b30639bc0256
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270010"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Конструктор запросов многомерных выражений служб Analysis Services (PowerPivot)
   Конструктор запросов многомерных выражений служб Analysis Services предоставляет графический пользовательский интерфейс, упрощающий создание запросов многомерных выражений для источника данных служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме есть панель метаданных, из которой можно перетаскивать элементы с выбранного куба для построения запроса многомерных выражений, который возвращает нужные данные.  

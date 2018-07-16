@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 2: При добавлении ссылки | Документы Microsoft'
+title: 'Занятие 2: Добавление веб-ссылки | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
 caps.latest.revision: 29
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ff574cf6ab00b4b368a7d372957b2348757ad0f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff0efdd840ee2f4efb0da802da64494640911b80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275630"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>Занятие 2: Добавление веб-ссылки
   Поиск веб-службы — это процесс, с помощью которого пользователь находит веб-службу и получает ее описание службы. Процесс поиска веб-службы в среде [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] заключается в опрашивании веб-сайта по определенному алгоритму. Целью процесса является обнаружение описания службы в виде XML-документа, составленного на языке описания веб-служб (WDSL).  
@@ -30,19 +30,19 @@ ms.locfileid: "36180166"
   
 ### <a name="to-add-a-web-reference"></a>Добавление веб-ссылки  
   
-1.  На **проекта** меню, нажмите кнопку **добавить ссылку на службу**.  
+1.  На **проекта** меню, щелкните **Add Service Reference**.  
   
-2.  В **добавить ссылку на службу** диалоговое окно, нажмите кнопку **Дополнительно**.  
+2.  В **Add Service Reference** диалоговом окне щелкните **Дополнительно**.  
   
-3.  В **настройки ссылок на службы** диалоговое окно, нажмите кнопку **Add Web Reference**.  
+3.  В **настройки ссылок на службы** диалоговом окне щелкните **Add Web Reference**.  
   
-4.  В **URL-адрес** поле **Add Web Reference** диалоговое окно, введите URL-адрес, чтобы получить описание службы для сервера веб-службы отчетов, такие как http://localhost/reportserver/reportservice2010.asmx. Нажмите кнопку **Go** кнопку, чтобы получить сведения о веб-службе.  
+4.  В **URL-адрес** поле **Add Web Reference** диалоговом окне введите URL-адрес, чтобы получить описание службы отчетов веб-службы сервера, такие как http://localhost/reportserver/reportservice2010.asmx. Нажмите кнопку **Go** кнопку, чтобы получить сведения о веб-службы.  
   
      \- или -  
   
      Если сервер веб-службы отчетов существует на локальном компьютере, щелкните **веб-службы на локальном компьютере** ссылку на панели обозревателя. Затем щелкните ссылку на веб-службу ReportService2010 из приведенного ниже списка.  
   
-5.  В **имя веб-ссылки** поле, переименование веб-ссылки ReportService2010, это пространство имен будет использоваться для этого веб-ссылки.  
+5.  В **имя веб-ссылки** окне Переименование веб-ссылки ReportService2010, которое является пространством имен, которые будут использоваться для этой веб-ссылки.  
   
 6.  Нажмите кнопку **добавить ссылку** для добавления веб-ссылки для целевого веб-службы.  
   
@@ -57,6 +57,6 @@ ms.locfileid: "36180166"
 ## <a name="see-also"></a>См. также  
  [Веб-служба сервера отчетов](../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Занятие 3: Доступ к веб-службы](../../2014/tutorials/lesson-3-accessing-the-web-service.md)   
- [Доступ к веб-службы сервера отчетов, с помощью Visual Basic или Visual C&#35; &#40;учебник по службам SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Доступ к веб-службы сервера отчетов, с помощью Visual Basic или Visual c#&#35; &#40;учебник по службам SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Web service [Reporting Services], scripts
 - rs utility
@@ -19,13 +19,13 @@ ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 091c437493b0f6829bd4b668c632897133a0a6f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e35f72419c9f97b0eae29b4982e1ddbb2c0d87b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255606"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Создание скриптов с помощью программы rs.exe и веб-службы
   Разработчики и администраторы сервера отчетов могут выполнять на сервере отчетов операции с помощью программы **rs** (RS.exe). Эта программа позволяет управлять сервером отчетов программно с помощью скриптов на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "36179983"
   
  Примеры скриптов см. в:  
   
- [Скрипт rs.exe для переноса содержимого между серверами отчетов служб отчетов образца](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+ [Образец служб Reporting Services скрипт rs.exe для переноса содержимого между серверами отчетов](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
  [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889)  
   

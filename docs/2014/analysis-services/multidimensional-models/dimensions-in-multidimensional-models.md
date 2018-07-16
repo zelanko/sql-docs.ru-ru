@@ -1,5 +1,5 @@
 ---
-title: Измерения в многомерных моделях | Документы Microsoft
+title: Измерения в многомерных моделях | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLAP [Analysis Services], dimensions
 - dimensions [Analysis Services], about dimensions
 - OLAP objects [Analysis Services], dimensions
 ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8f048b8c4a531ce32714a7bda328a60102e0ef2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 41e833e61095082e16511daae92eaed8e950ba73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102312"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303064"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Измерения в многомерных моделях
   Измерение базы данных является коллекцией объектов, называемых атрибутами, которые используются для предоставления сведений о данных фактов в одном или нескольких кубах. Например, типичным атрибутом измерения «Продукт» может быть название, категория, размер, цена продукта или линия товаров. Эти объекты привязаны к одному или нескольким столбцам в одной или нескольких таблицах в представлении источника данных. По умолчанию эти атрибуты отображаются как иерархии атрибутов и позволяют понять смысл данных фактов в кубе. Атрибуты могут быть организованы в пользовательские иерархии, которые обеспечивают различные пути доступа к данным и помогают пользователям при просмотре данных в кубе.  
@@ -39,7 +39,7 @@ ms.locfileid: "36102312"
  При создании куба в него можно также добавить любые измерения, которые уже существуют в базе данных. Эти измерения могли быть ранее определены мастером измерений для другого куба. После того как измерение базы данных определено, его изменение и настройка производятся в конструкторе измерений. Кроме того, в ограниченной степени измерение куба может быть настроено при помощи конструктора кубов.  
   
 > [!NOTE]  
->  Разрабатывать и настраивать измерения, атрибуты и иерархии можно также программным способом с помощью XML для аналитики или объектов AMO. Дополнительные сведения см. в разделе [язык сценариев служб Analysis Services &#40;ASSL&#41; ссылки](../scripting/analysis-services-scripting-language-assl-for-xmla.md) и [разработку с помощью объектов AMO &#40;AMO&#41;](analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+>  Разрабатывать и настраивать измерения, атрибуты и иерархии можно также программным способом с помощью XML для аналитики или объектов AMO. Дополнительные сведения см. в разделе [язык сценариев служб Analysis Services &#40;ASSL&#41; ссылку](../scripting/analysis-services-scripting-language-assl-for-xmla.md) и [Разработка объектов управления аналитикой &#40;AMO&#41;](analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
  В следующей таблице описаны подразделы, содержащиеся в этом разделе.  

@@ -1,5 +1,5 @@
 ---
-title: Столбцы модели интеллектуального анализа данных | Документы Microsoft
+title: Столбцы модели интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], mining model columns
 - columns [data mining]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - usage property [data mining]
 ms.assetid: fab47643-5bfd-424e-a0f7-69e665db6bab
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a982333d62398da617c7eae40c48a05181494c0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6067f165746f653819655063b9eb6798f23d3dc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101411"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326860"
 ---
 # <a name="mining-model-columns"></a>Столбцы модели интеллектуального анализа данных
   Модель интеллектуального анализа данных применяет алгоритм интеллектуального анализа к данным, представленным структурой интеллектуального анализа данных. Модель интеллектуального анализа данных, как и структура интеллектуального анализа, содержит столбцы. Модель интеллектуального анализа содержится в структуре интеллектуального анализа и наследует все значения свойств, определенных этой структурой. Модель может использовать все столбцы, содержащиеся в структуре интеллектуального анализа данных, или подмножества этих столбцов.  

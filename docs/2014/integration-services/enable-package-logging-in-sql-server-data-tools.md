@@ -1,5 +1,5 @@
 ---
-title: Включение средств ведения журналов в SQL Server Data Tools | Документы Microsoft
+title: Включение средств ведения журналов в SQL Server Data Tools | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], enabling
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3bfd9f1fff5f1c9d89edf923c87dfe805825ae56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0c34833bf458ce38a8e83a1a3db2a40f0760b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320674"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Включение средств ведения журналов в SQL Server Data Tools
   В этой процедуре описывается, как добавлять журналы в пакет, настраивать ведение журналов на уровне пакетов и сохранять настройку ведения журналов в XML-файле. Журнал можно добавить только на уровне пакета, однако пакеты не обязаны осуществлять ведение журналов, чтобы включить ведение журналов в контейнерах, которые содержатся в этих пакетах.  
@@ -72,7 +72,7 @@ ms.locfileid: "36099808"
 11. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
 ## <a name="see-also"></a>См. также  
- [Службы Integration Services &#40;SSIS&#41; ведения журнала](performance/integration-services-ssis-logging.md)   
+ [Службы Integration Services &#40;SSIS&#41; ведение журнала](performance/integration-services-ssis-logging.md)   
  [Ведение журналов в службах Integration Services (SSIS)](performance/integration-services-ssis-logging.md)  
   
   

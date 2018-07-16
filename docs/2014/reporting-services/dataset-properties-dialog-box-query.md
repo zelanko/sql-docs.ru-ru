@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно «Свойства набора данных», запрос | Документы Microsoft
+title: Диалоговое окно свойств набора данных, запрос | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10160"
 - sql12.rtp.rptdesigner.datasetproperties.query.f1
 ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
 caps.latest.revision: 37
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 56030cb08b8197958436e46438e1561165776101
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db00bf6e36f20da59e548acef394c786a70d40fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208564"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>Диалоговое окно «Свойства набора данных» — «Запрос»
   Перейдите на вкладку **Запрос** диалогового окна **Свойства набора данных** , чтобы выбрать источник данных и создать запрос.  
@@ -67,7 +67,7 @@ ms.locfileid: "36100361"
   
 ## <a name="see-also"></a>См. также  
  [Подключения к данным, источники данных и строки подключения в службах Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Добавление данных в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Конструкторы запросов (построитель отчетов)](../../2014/reporting-services/query-designers-report-builder.md)   
  [Конструкторы запросов служб Reporting Services](../../2014/reporting-services/reporting-services-query-designers.md)  
   

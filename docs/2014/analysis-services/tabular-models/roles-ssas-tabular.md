@@ -1,5 +1,5 @@
 ---
-title: Роли (табличные службы SSAS) | Документы Microsoft
+title: Роли (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3748f99899990bd46379928b3d524e43e48d277a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ac88882120b588599af625852675e9be95031ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235694"
 ---
 # <a name="roles-ssas-tabular"></a>Роли (табличные службы SSAS)
   В табличной модели роли определяют разрешения члена для модели. В каждой роли имеются члены, различаемые по имени пользователя или группе Windows, а также разрешениям (чтение, обработка, администрирование). Члены роли могут выполнять с моделью действия, заданные в разрешении роли. Роли, которым заданы разрешения на чтение, также могут обеспечивать дополнительную защиту на уровне строк с помощью фильтров уровня строк.  
@@ -101,7 +101,7 @@ ms.locfileid: "36101637"
 |Компонент|Описание|  
 |--------------|-----------------|  
 |[USERNAME, функция &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)|Возвращает значение вида «домен\имя пользователя» для пользователя, который находится в системе в настоящий момент.|  
-|[CUSTOMDATA, функция &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)|Возвращает свойство CustomData в строке подключения.|  
+|[Функция CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)|Возвращает свойство CustomData в строке подключения.|  
   
  Функция LOOKUPVALUE позволяет возвращать значения для столбца, в котором имя пользователя Windows соответствует имени пользователя, возвращенного функцией USERNAME, или строке, возвращенной функцией CustomData. После этого можно ограничить запросы строками, в которых значения, возвращенные функцией LOOKUPVALUE, совпадают со значениями в этой же или связанной таблице.  
   
@@ -146,6 +146,6 @@ ms.locfileid: "36101637"
  [Анализ в Excel &#40;табличные службы SSAS&#41;](analyze-in-excel-ssas-tabular.md)   
  [USERNAME, функция &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
  [Функция LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
- [CUSTOMDATA, функция &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [Функция CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
   
   

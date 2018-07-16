@@ -1,5 +1,5 @@
 ---
-title: Элемент Axis (XML для Аналитики) | Документы Microsoft
+title: Элемент Axis (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - Axis element
 ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e30ff03b6e1a58a079d35f8e846ed176c42a3a31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e3e68903dc828f4b14ac60892d1b6fc2baed2f30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263230"
 ---
 # <a name="axis-element-xmla"></a>Элемент Axis (XML для аналитики)
-  Содержит набор кортежей, используемых для представления единственной оси в многомерном наборе данных, содержащихся в [осей](axes-element-xmla.md) элемент, который использует [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) тип данных, возвращенных [Execute](../xml-elements-methods-execute.md) метод.  
+  Содержит набор кортежей, используемых для представления единственной оси в многомерном наборе данных, содержащихся в [осей](axes-element-xmla.md) элемент, использующий [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) тип данных, возвращенных [Execute](../xml-elements-methods-execute.md) метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -71,18 +71,18 @@ ms.locfileid: "36102263"
  Содержимое элемента `Axis` изменяется в зависимости от значения свойства XMLA `AxisFormat`, используемого методом `Execute`.  
   
 ## <a name="tupleformat"></a>TupleFormat  
- Когда клиентское приложение задает `AxisFormat` свойства *TupleFormat*, ось представляется в виде набора кортежей. Каждый элемент `Axis` содержит элемент `Tuples`, который представляет множество кортежей на этой оси. Каждый кортеж представляется с помощью элемента `Tuple`, который содержит элементы `Member` из каждой иерархии на оси.  
+ Когда клиентское приложение устанавливает `AxisFormat` свойства *TupleFormat*, ось представляется в виде набора кортежей. Каждый элемент `Axis` содержит элемент `Tuples`, который представляет множество кортежей на этой оси. Каждый кортеж представляется с помощью элемента `Tuple`, который содержит элементы `Member` из каждой иерархии на оси.  
   
 ## <a name="clusterformat"></a>ClusterFormat  
- Когда клиентское приложение задает `AxisFormat` свойства *ClusterFormat*, элементы на каждой оси разделяются на кластеры, в которых каждый кластер представляет перекрестное произведение упорядоченных множеств элементов из каждой иерархии. Каждый элемент `Axis` состоит из одного или нескольких элементов `CrossProduct`. Каждый элемент `CrossProduct` содержит элемент `Members` из каждой иерархии на оси.  
+ Когда клиентское приложение устанавливает `AxisFormat` свойства *ClusterFormat*, элементы на каждой оси разделяются на кластеры, в которых каждый кластер представляет перекрестное произведение упорядоченных множеств элементов из каждой иерархии. Каждый элемент `Axis` состоит из одного или нескольких элементов `CrossProduct`. Каждый элемент `CrossProduct` содержит элемент `Members` из каждой иерархии на оси.  
   
 ## <a name="customformat"></a>CustomFormat  
- Когда клиентское приложение задает `AxisFormat` свойства *CustomFormat*, значение интерпретируется таким же, как *TupleFormat* значение на экземпляре служб Analysis Services.  
+ Когда клиентское приложение устанавливает `AxisFormat` свойства *CustomFormat*, значение обрабатывается так же, как *TupleFormat* значение на экземпляре служб Analysis Services.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="description"></a>Описание  
- Следующий пример иллюстрирует структуру `Axis` элементы, если клиент указывает *TupleFormat* или *CustomFormat* для `AxisFormat` свойства XMLA, даны следующие члены для оси:  
+ Следующий пример иллюстрирует структуру `Axis` элементов, если клиент указывает *TupleFormat* или *CustomFormat* для `AxisFormat` свойство XMLA, даны следующие члены для оси:  
   
 |||||  
 |-|-|-|-|  
@@ -132,7 +132,7 @@ ms.locfileid: "36102263"
 ```  
   
 ### <a name="description"></a>Описание  
- Следующий пример иллюстрирует структуру `Axis` элементы, если клиент указывает *ClusterFormat* для `AxisFormat` свойства XMLA на оси имеются следующие члены:  
+ Следующий пример иллюстрирует структуру `Axis` элементов, если клиент указывает *ClusterFormat* для `AxisFormat` XMLA-свойства, на оси имеются следующие члены:  
   
 ||||||  
 |-|-|-|-|-|  

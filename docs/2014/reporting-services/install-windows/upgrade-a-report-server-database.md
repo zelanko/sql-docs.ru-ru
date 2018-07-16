@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - report server database
@@ -17,20 +17,20 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 1c27b2bed8932fd5dbb415be7889242c0752b52b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18ee01868f27e12f709ec5784e868eadcdd46f6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253582"
 ---
 # <a name="upgrade-a-report-server-database"></a>Обновление базы данных сервера отчетов
   База данных сервера отчетов обеспечивает хранение одного или нескольких экземпляров сервера отчетов. Схема базы данных сервера отчетов с каждым новым выпуском служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]может меняться, поэтому версия базы данных должна совпадать с версией используемого экземпляра сервера отчетов. В большинстве случаев обновление базы данных сервера отчетов может быть выполнено автоматически, без необходимости выполнения каких-либо действий со стороны пользователя.  
   
  **Собственный режим.** В собственном режиме [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] база данных сервера отчетов на самом деле состоит из двух баз данных с именами по умолчанию ReportServer и ReportServerTempDB.  
   
- **Режиме интеграции с SharePoint:** в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режиме интеграции с SharePoint сервера отчетов базы данных является фактически является коллекцией баз данных, который создается для каждого экземпляра [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] приложения службы.  
+ **Режим интеграции с SharePoint:** в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режиме интеграции с SharePoint сервера отчетов базы данных — это фактически является коллекцией баз данных, которая создается для каждого экземпляра [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] приложения службы.  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Способы обновления базы данных сервера отчетов в собственном режиме  
  В следующем списке приведены условия, при соблюдении которых происходит обновление базы данных сервера отчетов.  

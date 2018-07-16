@@ -1,5 +1,5 @@
 ---
-title: Hyperion Essbase пользовательский интерфейс конструктора запросов (построитель отчетов) | Документы Microsoft
+title: Hyperion Essbase пользовательский интерфейс конструктора запросов (построитель отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10013"
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - query designers, Hyperion
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 27dd20fae08317cd58fd9ca9b5084fda000906c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3653c8bf79c3c7527f72d01282fe7af961fbbec8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208594"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Пользовательский интерфейс конструктора запросов Hyperion Essbase (построитель отчетов)
   Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включают графический конструктор запросов, предназначенный для создания запросов многомерных выражений к источнику данных [!INCLUDE[extEssbase](../includes/extessbase-md.md)]. Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме есть панель «Метаданные», из которой можно перетаскивать элементы куба, определенного в источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
@@ -35,7 +35,7 @@ ms.locfileid: "36101959"
  В этом разделе описываются кнопки панели инструментов и области конструктора запросов для каждого режима работы графического конструктора запросов.  
   
 ## <a name="graphical-query-designer-in-design-mode"></a>Графический конструктор запросов в режиме конструктора  
- При изменении запроса многомерных Выражений для набора данных, который использует [!INCLUDE[extEssbase](../includes/extessbase-md.md)] источника данных, графический конструктор запросов открывается в режиме конструктора. На следующем рисунке отмечены панели в режиме конструктора.  
+ При изменении запроса многомерных Выражений для набора данных, использующий [!INCLUDE[extEssbase](../includes/extessbase-md.md)] источника данных, графический конструктор запросов открывается в режиме конструктора. На следующем рисунке отмечены панели в режиме конструктора.  
   
  ![Конструктор запросов для источника данных Hyperion Essbase](media/rsqd-dshyperionessbase-mdx-designmode.gif "Конструктор запросов для источника данных Hyperion Essbase")  
   

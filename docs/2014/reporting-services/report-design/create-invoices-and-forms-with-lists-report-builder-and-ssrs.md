@@ -1,5 +1,5 @@
 ---
-title: Списки (построитель отчетов и службы SSRS) | Документы Microsoft
+title: Списки (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0fcc8632285b80b2b4ba00310b8718650e39d99b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 43558261eff0d22d597cdfe63f7d01137aa467a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296034"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Списки (построитель отчетов и службы SSRS)
   Область списка данных повторяется с каждой группой или строкой набора данных отчета. Список может использоваться для создания отчетов произвольного формата, таких как счета, либо совместно с другими областями данных. Можно определять списки, содержащие любое количество элементов отчета. Список может быть вложен в другой список, образуя несколько групп данных.  
@@ -77,7 +77,7 @@ ms.locfileid: "36101467"
 
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям статистической обработки &#40;отчетов построителя отчетов и службы SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [Справочник по агрегатным функциям &#40;построитель отчетов и службы SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)  
   
   

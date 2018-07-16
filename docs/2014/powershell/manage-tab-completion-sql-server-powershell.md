@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 96eb376791d1b30fb73d834733de07df8a46c64e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a3f19a5c197eb519aa9e78a0d99d7e88132da123
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101097"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231434"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>Управление завершением по нажатию клавиши Tab (SQL Server PowerShell)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Оснастки PowerShell существуют три переменные (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems`, и `$SqlServerIncludeSystemObjects`) для элемента управления Tab в Windows PowerShell. Функция завершения по клавише TAB позволяет сократить объем вводимого текста, поскольку возвращает таблицы элементов, имена которых начинаются с набранной строки.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Оснастки PowerShell предоставляют три переменные (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems`, и `$SqlServerIncludeSystemObjects`) к элементу управления Windows PowerShell нажатием клавиши TAB. Функция завершения по клавише TAB позволяет сократить объем вводимого текста, поскольку возвращает таблицы элементов, имена которых начинаются с набранной строки.  
   
 ## <a name="before-you-begin"></a>Перед началом  
  Функция завершения по клавише TAB среды Windows PowerShell дает возможность после ввода части имени пути или командлета нажать клавишу TAB, чтобы получить список элементов, имена которых согласуются с уже набранным текстом. Затем можно выбрать нужный элемент из списка, не набирая остальную часть его имени.  

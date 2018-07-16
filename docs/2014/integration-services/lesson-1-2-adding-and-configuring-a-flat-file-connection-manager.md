@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 caps.latest.revision: 42
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c732e124ca8de59f28f4d5121a85e071d6fda7f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7527bbdd1e66db49851832052c8a9393201b202f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254546"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Шаг 2. Добавление и настройка диспетчера соединений с неструктурированными файлами
   В этом задании к только что созданному пакету будет добавлен диспетчер соединений с неструктурированными файлами. Диспетчер соединений с неструктурированными файлами позволяет пакету извлекать данные из неструктурированных файлов. С помощью диспетчера соединений с неструктурированными файлами можно указать имя и расположение файла, локали и кодовую страницу, а также формат файла, включая разделители столбцов. Эти данные будут использованы при извлечении пакета из неструктурированного файла. Кроме того, можно вручную указать тип данных для каждого столбца или в диалоговом окне **Предлагаемые типы столбцов** указать автоматическое сопоставление столбцов извлекаемых данных с типами данных в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -70,7 +70,7 @@ ms.locfileid: "36180313"
   
     -   Изменение **столбец 1** имя свойства `CurrencyID`.  
   
-    -   Изменение **столбец 2** имя свойства `CurrencyDate`.  
+    -   Изменение **Column 2** имя свойства `CurrencyDate`.  
   
     -   Изменение **Column 3** имя свойства `EndOfDayRate`.  
   
@@ -94,11 +94,11 @@ ms.locfileid: "36180313"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Дата|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-     Тип данных, предложенный для `CurrencyID` столбца несовместим с типом данных поля в таблице назначения. Так как тип данных `DimCurrency.CurrencyAlternateKey` является nchar (3) `CurrencyID` смены со строкового [DT_STR] на строковый [DT_WSTR]. Кроме того, поле `DimDate.FullDateAlternateKey` определен как тип данных date; таким образом, `CurrencyDate` должен быть изменен с типа даты [DT_Date] на даты базы данных [DT_DBDATE].  
+     Тип данных, предложенный для `CurrencyID` столбца несовместим с типом данных поля в таблице назначения. Так как тип данных `DimCurrency.CurrencyAlternateKey` является nchar (3), `CurrencyID` смены со строкового [DT_STR] на строковый [DT_WSTR]. Кроме того, поле `DimDate.FullDateAlternateKey` определяется как тип даты; таким образом, `CurrencyDate` должен быть изменен с типа даты [DT_Date] на даты базы данных [DT_DBDATE].  
   
-2.  В списке выберите столбец CurrencyID и в панели свойств измените тип данных столбца `CurrencyID` со строкового [DT_STR] в Unicode string [DT_WSTR].  
+2.  В списке, выберите столбец CurrencyID и на панели свойств измените тип данных столбца `CurrencyID` со строкового [DT_STR] на Unicode string [DT_WSTR].  
   
-3.  В панели свойств измените тип данных столбца `CurrencyDate` с типа даты [DT_DATE] на даты базы данных [DT_DBDATE].  
+3.  На панели свойств измените тип данных столбца `CurrencyDate` с типа даты [DT_DATE] на даты базы данных [DT_DBDATE].  
   
 4.  Нажмите кнопку **ОК**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36180313"
  [Шаг 3. Добавление и настройка диспетчера подключений OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a>См. также  
- [Диспетчер соединений с неструктурированными файлами](connection-manager/file-connection-manager.md)   
+ [Flat File Connection Manager](connection-manager/file-connection-manager.md)   
  [Типы данных служб Integration Services](data-flow/integration-services-data-types.md)  
   
   

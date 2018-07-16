@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - format files [SQL Server], importing data using
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f46357975476ac301c28f639a3508edc992e5e5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a3eb895440cc6680acd719b47a88200d6c92eff4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289060"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Использование файла форматирования для массового импорта данных (SQL Server)
   Эта тема посвящена использованию файла форматирования в операциях массового импорта. Файл форматирования сопоставляет поля файла данных столбцам таблицы.  При массовом импорте данных можно использовать как формат XML, так и формат, отличный от XML, если импорт выполняется с помощью команды **bcp** или инструкций BULK INSERT или INSERT... SELECT * FROM OPENROWSET(BULK...) языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -31,7 +30,7 @@ ms.locfileid: "36101751"
 >  Чтобы файл форматирования мог работать с файлом данных в Юникоде, все поля входных данных должны быть представлены в виде текстовых строк в Юникоде (то есть в Юникоде в виде строк фиксированной длины или заканчивающимися символом конца строки).  
   
 > [!NOTE]  
->  Если вы не знакомы с файлами форматирования, см. раздел [не XML-файлы форматирования &#40;SQL Server&#41; ](xml-format-files-sql-server.md) и [XML-файлы форматирования &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
+>  Если вы не знакомы с файлами форматирования, см. в разделе [файлы формата, отличные от XML &#40;SQL Server&#41; ](xml-format-files-sql-server.md) и [XML-файлы форматирования &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ## <a name="format-file-options-for-bulk-import-commands"></a>Параметры файла форматирования для команд массового импортирования  
  В следующей таблице перечислены параметры файла форматирования для каждой команды массового импортирования.  

@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay Security | Документы Microsoft
+title: Distributed Replay Security | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 408d899379150e88684df38713f94765a0c0c7cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b7c2c2a92ebbde62b20ba99539b31b4a3e40d267
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301284"
 ---
 # <a name="distributed-replay-security"></a>Безопасность распределенного воспроизведения
   Перед установкой и использованием программы распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо ознакомиться с важной информацией о безопасности в этом разделе. В этом разделе описываются шаги настройки мер безопасности после установки, необходимые перед началом использования распределенного воспроизведения. В этом разделе также описываются важные соображения по защите данных и важные шаги удаления.  

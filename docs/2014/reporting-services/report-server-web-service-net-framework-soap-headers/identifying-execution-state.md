@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 caps.latest.revision: 45
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 826e6feb86dec026d22bdfb255361bbbbcd93480
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 252ec37bb94881a04cfe1137c829274cac6ad893
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330874"
 ---
 # <a name="identifying-execution-state"></a>Определение состояния выполнения
   Протокол HTTP является протоколом без установления соединения и без сохранения состояния. Это означает, что он не может автоматически определить, что различные запросы получены от одного клиента или что один экземпляр браузера продолжает активно просматривать страницу или веб-сайт. Сеансы создают логическое соединение, чтобы сохранять состояние между сервером и клиентом по протоколу HTTP. Сведения конкретного пользователя, относящиеся к определенному сеансу, называются «состоянием сеанса».  

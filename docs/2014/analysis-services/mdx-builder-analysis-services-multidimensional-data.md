@@ -1,5 +1,5 @@
 ---
-title: Конструктор многомерных Выражений (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Конструктор многомерных Выражений (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.mdxbuilderdialof.f1
 helpviewer_keywords:
 - MDX Builder dialog box
 ms.assetid: fecbf093-65ea-4e1b-b637-f04876f1cb0f
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1df3416ee7b7016cbc6db8a1d694eadfdbc33a5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26bc55eb874f0d404c1d4f330e0c0841a8183157
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308544"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>Конструктор многомерных выражений (службы Analysis Services - Многомерные Данные)
   Используйте диалоговое окно **Конструктор многомерных выражений** среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] или [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для создания многомерных выражений. Вызвать диалоговое окно **Конструктор многомерных выражений** можно, нажав кнопку с многоточием ( **…** )**Изменить многомерное выражение**для параметра **Разрешить чтение содержимого куба** , **Разрешить чтение содержимого ячейки в зависимости от уровня безопасности, установленного для ячейки** или **Разрешить чтение и запись содержимого куба** на странице **Данные ячейки** в **Конструкторе роли**.  
@@ -39,6 +39,6 @@ ms.locfileid: "36102118"
   
 ## <a name="see-also"></a>См. также  
  [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Ячейки с данными &#40;конструктор ролей&#41; &#40;службы Analysis Services — многомерные данные&#41;](https://msdn.microsoft.com/library/ms177279(v=sql.120).aspx)  
+ [Данные ячейки &#40;конструктора ролей&#41; &#40;службы Analysis Services — многомерные данные&#41;](https://msdn.microsoft.com/library/ms177279(v=sql.120).aspx)  
   
   
