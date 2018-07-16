@@ -1,5 +1,5 @@
 ---
-title: Использование приложения SQL Server Profiler для создания набора элементов сбора трассировки SQL (SQL Server Management Studio) | Документы Microsoft
+title: Используйте SQL Server Profiler для создания набора элементов сбора трассировки SQL (SQL Server Management Studio) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5abf2baf12e8ae265020e9d4a5766506e9bcace3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 50754e92bad8bb6241129b53339b173d6d1d1bf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260860"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Использование приложения SQL Server Profiler для создания набора элементов сбора трассировки SQL (среда SQL Server Management Studio)
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно использовать возможности серверной трассировки приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], чтобы экспортировать определение трассировки для создания набора элементов сбора, использующего общий тип сборщика трассировки SQL. Этот процесс состоит из двух частей.  
@@ -58,7 +58,7 @@ ms.locfileid: "36109530"
   
 6.  На вкладке **Общие** выполните следующее.  
   
-    1.  В поле **Имя трассировки** введите требуемое имя трассировки. Для этого примера является имя трассировки `SPgt80`.  
+    1.  В поле **Имя трассировки** введите требуемое имя трассировки. В этом примере является имя трассировки `SPgt80`.  
   
     2.  В списке **Использовать шаблон**выберите шаблон для трассировки. В этом примере выберите **TSQL_SPs**.  
   
@@ -98,9 +98,9 @@ ms.locfileid: "36109530"
   
 3.  Прокрутите скрипт и выполните следующие замены, отмеченные в текстовом комментарии скрипта.  
   
-    -   Замените строку **Имя набора сбора SQLTrace** именем, которое будет использоваться для набора элементов сбора. В этом примере имя набора коллекции `SPROC_CollectionSet`.  
+    -   Замените строку **Имя набора сбора SQLTrace** именем, которое будет использоваться для набора элементов сбора. В этом примере имя набора элементов сбора `SPROC_CollectionSet`.  
   
-    -   Замените строку **Имя элемента сбора SQLTrace** именем, которое будет использоваться для элемента сбора. В этом примере имя элемента коллекции `SPROC_Collection_Item`.  
+    -   Замените строку **Имя элемента сбора SQLTrace** именем, которое будет использоваться для элемента сбора. В этом примере имя элемента сбора `SPROC_Collection_Item`.  
   
 4.  Нажмите кнопку **Выполнить** , чтобы запустить запрос и создать набор элементов сбора.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36109530"
   
     2.  Разверните узел **Управление**, затем **Сбор данных**.  
   
-     `SPROC_CollectionSet` Отображается набор элементов сбора на том же уровне, как **системные наборы сбора** узла. По умолчанию этот набор элементов сбора отключен.  
+     `SPROC_CollectionSet` Отображается набор элементов сбора на том же уровне, что **System Data Collection Sets** узла. По умолчанию этот набор элементов сбора отключен.  
   
 6.  С помощью обозревателя объектов измените свойства набора SPROC_CollectionSet, например режим сбора и расписание передачи. Остальные действия аналогичны тем, что выполнялись бы с наборами сбора системных данных, поставляемыми в составе поставщика данных.  
   

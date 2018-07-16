@@ -1,5 +1,5 @@
 ---
-title: Табличное моделирование (табличные службы SSAS) | Документы Microsoft
+title: Табличное моделирование (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80027288-c203-4667-a3e1-40fa572b4975
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df693d141f3a91c1c0b9b023a89d39c5f2c171ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fe54f13fb065b099983ae58934851af1a3f49a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257220"
 ---
 # <a name="tabular-modeling-ssas-tabular"></a>Табличное моделирование (табличные службы SSAS)
   Табличные модели являются базами данных в памяти служб Analysis Services. С помощью современных алгоритмов сжатия и многопоточного обработчика запросов подсистема аналитики в памяти xVelocity (VertiPaq) обеспечивает быстрый доступ к объектам табличной модели и данным через такие клиентские приложения для создания отчетов как Microsoft Excel и Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  

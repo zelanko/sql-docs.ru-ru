@@ -1,5 +1,5 @@
 ---
-title: Программирование объектов AMO дополнительных классов и методов | Документы Microsoft
+title: Программирование дополнительных классов AMO и методов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,28 +21,28 @@ helpviewer_keywords:
 - backups [AMO]
 ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d7f1a2a00b91e9bff4b735ff80d4ac927032ea2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 66fcd0c30acb2ddf62288cb549b96b74ebf7f7b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317334"
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>Программирование дополнительных классов и методов объектов AMO
   Этот раздел состоит из следующих подразделов.  
   
--   [Класс сборки](#Assembly)  
+-   [Класс Assembly](#Assembly)  
   
 -   [Резервное копирование и восстановление](#BU)  
   
--   [Trace-класс](#TRC)  
+-   [Класс Trace](#TRC)  
   
 -   [Класс CaptureLog и атрибут CaptureXML](#CL)  
   
-##  <a name="Assembly"></a> Класс сборки  
+##  <a name="Assembly"></a> Класс Assembly  
  Сборки позволяют пользователю расширять функциональные возможности [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] путем добавления новых хранимых процедур или функций многомерных выражений (MDX). Дополнительные сведения см. в разделе [AMO другие классы и методы](amo-other-classes-and-methods.md).  
   
  Добавление и удаление сборок является простой операцией, и ее можно выполнить в режиме в сети. Чтобы добавить сборку в базу данных, пользователь должен быть либо администратором базы данных, либо администратором сервера (чтобы иметь возможность добавить сборку к объекту сервера).  
@@ -103,7 +103,7 @@ static public void RestoreAdventureWorks(Server svr)
 }  
 ```  
   
-##  <a name="TRC"></a> Trace-класс  
+##  <a name="TRC"></a> Класс Trace  
  Для наблюдения за работой сервера необходимы два вида трассировок: трассировки сеансов и трассировки сервера. Трассировка сервера позволяет узнать ход выполнения текущей задачи на сервере (трассировки сеанса); трассировки также могут показать общую активность сервера в целом, при этом соединение с сервером даже не требуется (трассировки сервера).  
   
  При трассировке текущих действий (трассировки сеанса) сервер отправляет текущему приложению уведомления о происходящих на нем событиях, вызванных этим приложением. В текущем приложении события захватываются с помощью обработчиков событий. Сначала объекту <xref:Microsoft.AnalysisServices.SessionTrace> назначаются процедуры обработки событий, а затем запускается трассировка сеанса.  
@@ -282,7 +282,7 @@ static public string TestCaptureLog(Server svr)
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices>   
- [Знакомство с классами объектов AMO](amo-classes-introduction.md)   
+ [Введение в классы объектов AMO](amo-classes-introduction.md)   
  [Объекты AMO другие классы и методы](amo-other-classes-and-methods.md)   
  [Логическая архитектура &#40;службы Analysis Services — многомерные данные&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Объекты базы данных &#40;службы Analysis Services — многомерные данные&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)   

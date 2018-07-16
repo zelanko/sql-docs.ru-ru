@@ -1,5 +1,5 @@
 ---
-title: Конструкторы пользовательского интерфейса и диалоговые окна для многомерного анализа | Документы Microsoft
+title: Конструкторы пользовательского интерфейса и диалоговые окна для многомерного анализа | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
-author: Minewiskan
+ms.topic: conceptual
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 918ae7edaba07762efa81937412e4aff9c20f32e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a2e5c5fc61e206206df7666357990bdf517799f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267190"
 ---
 # <a name="ui-designers-and-dialogs-for-multidimensional-analysis"></a>Конструкторы пользовательского интерфейса и диалоговые окна для многомерного анализа
 
-Этот раздел содержит документацию по пользовательского интерфейса (UI) конструкторы и диалоговые окна для многомерного анализа.
+Этот раздел содержит документацию о конструкторы пользовательского интерфейса (UI) и диалоговые окна для многомерного анализа.
 
 ## <a name="next-steps"></a>Следующие шаги
 

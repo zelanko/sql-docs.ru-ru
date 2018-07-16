@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - User-Configurable event class
 ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7bf1ce2159300b790042ac7979cdc63adae3e05b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8bc28433c9d54f3563bb635cbdbb12590f985a40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300464"
 ---
 # <a name="user-configurable-event-class"></a>класс пользовательских событий
   Используйте категорию событий Пользовательские для наблюдения за пользовательскими событиями. Создайте пользовательские классы событий, чтобы наблюдать за событиями, которые не могут контролироваться системными классами событий в других категориях событий. Например, пользовательское событие может быть создано для наблюдения за ходом работы приложения, которое тестируется. В ходе работы приложения оно может создавать события в предопределенных позициях, позволяя определить текущий этап выполнения приложения.  

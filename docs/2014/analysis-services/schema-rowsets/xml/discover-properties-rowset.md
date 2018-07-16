@@ -1,5 +1,5 @@
 ---
-title: Набор строк DISCOVER_PROPERTIES | Документы Microsoft
+title: Набор строк DISCOVER_PROPERTIES | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DISCOVER_PROPERTIES rowset
 ms.assetid: 3e2b50e2-3855-4091-8b02-4968e8e57d4c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: af566467345e29362a7b2fdd2c5bda04a35a6dd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc02dd29ee02ad4d1730a6af72c5df3c3fee1c55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180366"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271840"
 ---
 # <a name="discoverproperties-rowset"></a>Набор строк DISCOVER_PROPERTIES
   Возвращает список сведений и значений для стандартных свойств и определяемых поставщиком свойств, которые поддерживаются поставщиком [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) для указанного источника данных. Неподдерживаемые свойства в возвращаемом результирующем наборе не указываются.  
   
- При вызове метода [Discover](../../xmla/xml-elements-methods-discover.md) метод с `DISCOVER_PROPERTIES` значения перечисления в [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) элемент, `Discover` возвращает `DISCOVER_PROPERTIES` строк...  
+ При вызове метода [Discover](../../xmla/xml-elements-methods-discover.md) метод с `DISCOVER_PROPERTIES` значение перечисления в [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) элемент, `Discover` возвращает метод `DISCOVER_PROPERTIES` набора строк...  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  `DISCOVER_PROPERTIES` Набор строк содержит следующие столбцы.  

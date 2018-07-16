@@ -1,5 +1,5 @@
 ---
-title: Диаграмма связи атрибутов (атрибутов связи вкладка «конструктор», конструктор измерений) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Атрибут в диаграмме связей (вкладки конструктора атрибута связи, конструктор измерений) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.ardiagram.f1
 ms.assetid: 320989ad-bd95-43f4-a2e7-b262d66dbda7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a8d895599cf800b7ca0e6b882f3d1451800b0db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4467e0ca268edd9d9e38ca4d915c489c5f65014
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208124"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Диаграмма связи атрибутов (вкладка «Конструктор связей атрибутов», конструктор измерений) (службы Analysis Services - многомерные данные)
   Используйте панель непосредственно под панелью инструментов на вкладке **Связи атрибутов** , чтобы просмотреть диаграмму связи атрибутов и создать, изменить и удалить связи атрибутов.  
   
- **Просмотр панели, содержащей диаграмму связей атрибутов**  
+ **Чтобы просмотреть панелью, содержащей диаграмму связей атрибутов**  
   
 -   В обозревателе решений в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]дважды щелкните измерение, чтобы открыть конструктор измерений, а затем перейдите на вкладку **Связь атрибутов** .  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36100322"
   
  Дополнительные сведения см. в разделах [Диалоговые окна "Создание связи атрибутов" и "Изменение связи атрибутов" (вкладка "Конструктор связей атрибутов", конструктор измерений) (службы Analysis Services — многомерные данные)](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) и [Определение связей атрибутов](multidimensional-models/attribute-relationships-define.md).  
   
- **Упорядочение фигур**  
+ **Упорядочить фигуры**  
  Упорядочивает фигуры по алгоритму разметки, используемому конструктором измерений.  
   
  **Автоупорядочивание фигур**  
@@ -97,8 +97,8 @@ ms.locfileid: "36100322"
   
 ## <a name="see-also"></a>См. также  
  [Связи атрибутов &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
- [Панель инструментов &#40;атрибут связи вкладка «конструктор», конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
- [Атрибуты &#40;атрибут связи вкладка «конструктор», конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   
- [Связи атрибутов &#40;атрибут связи вкладка «конструктор», конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Панель инструментов &#40;атрибут вкладки конструктора связи, конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Атрибуты &#40;атрибут вкладки конструктора связи, конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Связи атрибутов &#40;атрибут вкладки конструктора связи, конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

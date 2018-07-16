@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e32774c7577f357677c149bd3e222498945b9b82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e6e09fbd1af47c63d12d5c1b726e6a0ad23cf5b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294134"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Добавление или удаление индикатора (построитель отчетов и службы SSRS)
   Индикаторы — это минимальные датчики, обеспечивающие возможность быстрого определения состояния одиночного значения данных. Дополнительные сведения см. в разделе [Индикаторы (построитель отчетов и службы SSRS)](indicators-report-builder-and-ssrs.md).  
@@ -30,11 +30,11 @@ ms.locfileid: "36101013"
   
  Можно обновить значения и состояния индикаторов. Дополнительные сведения см. в следующих разделах:  
   
--   [Изменение значков индикаторов и наборов индикаторов &#40;отчетов построителя отчетов и службы SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Изменение значков индикаторов и наборов индикаторов &#40;построитель отчетов и службы SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Выбор и настройка единиц измерения &#40;отчетов построителя отчетов и службы SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Задание и настройка единиц измерения &#40;построитель отчетов и службы SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Задание области действия синхронизации &#40;отчетов построителя отчетов и службы SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Задание области действия синхронизации &#40;построитель отчетов и службы SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
  Поскольку индикатор располагается внутри панели датчиков, необходимо выбрать вместо панели индикатор при необходимости настройки индикатора с помощью диалогового окна **Свойства индикатора** или панели **Свойства** . На следующем рисунке отображается выбранный индикатор на панели датчиков.  
   

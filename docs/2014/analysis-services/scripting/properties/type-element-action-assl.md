@@ -1,5 +1,5 @@
 ---
-title: Введите элемент (Action) (ASSL) | Документы Microsoft
+title: Введите элемент (Action) (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 534cdf99-1edf-4490-9eaa-61f189a19434
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d71abdd26cea5fa03c8e70f882f893878a70969a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99147acb4b2a1b467913087f4e4df14469de9a03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249088"
 ---
 # <a name="type-element-action-assl"></a>Элемент Type (Action) (ASSL)
-  Содержит тип [действия](../objects/action-element-assl.md) элемента.  
+  Содержит тип [действие](../objects/action-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -69,14 +69,14 @@ ms.locfileid: "36100700"
 |*URL-адрес*|Отображает страницу переменных в интернет-браузере.|  
 |*HTML*|Выполняет HTML-скрипт в браузере Интернета.|  
 |*Инструкция*|Выполняет команду OLE DB.|  
-|*Детализация*|Получает набор строк для детализации.<br /><br /> Это значение идентично *строк* и определяет действия детализации. Это может быть только используется в операциях, чей [TargetType](targettype-element-assl.md) имеет значение *ячейки*.|  
+|*Детализация*|Получает набор строк для детализации.<br /><br /> Это значение идентично *набора строк* и определяет действия детализации. Это может быть только используемые в операциях, [TargetType](targettype-element-assl.md) присваивается значение *ячеек*.|  
 |*Набор данных*|Извлекает набор данных.|  
 |*Функции набора строк*|Извлекает набор строк.|  
-|*Командная строка*|Выполняет команду в командной строке.|  
-|*Частные*|Выполняет операцию с помощью интерфейса, отличного от перечисленного ранее в этой таблице.|  
+|*CommandLine*|Выполняет команду в командной строке.|  
+|*Защищенные авторским правом*|Выполняет операцию с помощью интерфейса, отличного от перечисленного ранее в этой таблице.|  
 |*Отчет*|Отображает страницу переменных в интернет-браузере.<br /><br /> Это значение идентично *URL-адрес* и определяет действия с отчетом.|  
   
- Элемент, соответствующий родителю параметра `Type` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Action>.  
+ Элемент, соответствующий родителю параметра `Type` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>См. также  
  [Тип данных DrillThroughAction &#40;ASSL&#41;](../data-type/action-data-type-assl.md)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7903ff16c9a7f16eca47be37adcefe35cfcb3aec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26a3efe2d36bd4c912b1b95fa2c00ab597dc44c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257190"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Извлечение данных с помощью источника ODBC
   Эта процедура описывает, как извлечь данные с использованием источника ODBC. Чтобы добавить и настроить источник ODBC, пакет должен уже содержать не менее одной задачи потока данных.  
@@ -57,6 +57,6 @@ ms.locfileid: "36180322"
 ## <a name="see-also"></a>См. также  
  [Редактор источника ODBC &#40;страницы диспетчера соединений&#41;](../odbc-source-editor-connection-manager-page.md)   
  [Редактор источника ODBC (страница "Столбцы")](../odbc-source-editor-columns-page.md)   
- [Редактор источника ODBC &#40;страницы вывода ошибок&#41;](../odbc-source-editor-error-output-page.md)  
+ [Редактор источника ODBC &#40;странице вывода ошибок&#41;](../odbc-source-editor-error-output-page.md)  
   
   

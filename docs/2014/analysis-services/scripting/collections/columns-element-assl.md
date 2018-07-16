@@ -1,5 +1,5 @@
 ---
-title: Элемент Columns (ASSL) | Документы Microsoft
+title: Элемент Columns (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Columns element
 ms.assetid: 14011eed-6f10-4120-b256-d599d59bde80
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e635738dddc7eabda62f0c35df860db3d9a10b60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ad5104e3b0fc0b6b34c7b0a4aa3eed9b18336aab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231914"
 ---
 # <a name="columns-element-assl"></a>Элемент Columns (ASSL)
   Содержит коллекцию столбцов, связанных с родительским элементом.  
@@ -80,9 +80,9 @@ ms.locfileid: "36100712"
 |[MiningStructure](../objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|[MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Для `DrillThroughAction` элементов, `Columns` коллекции определяет столбцы, которые содержат данные, возвращаемые при выполнении этого действия.  
+ Для `DrillThroughAction` элементы, `Columns` коллекции определяет столбцы, содержащие данные, возвращаемые при выполнении этого действия.  
   
- Для `TableMiningStructureColumn` элементов, `Columns` коллекции допускает только один уровень рекурсии. Иными словами, любой `TableMiningStructureColumn` не может содержать элементы, включаемые в эту коллекцию `TableMiningStructureColumn` элементов в его `Columns` коллекции.  
+ Для `TableMiningStructureColumn` элементы, `Columns` коллекции допускает применение только одного уровня рекурсии. Иными словами, любой `TableMiningStructureColumn` не может содержать элементы, включаемые в эту коллекцию `TableMiningStructureColumn` элементов в его `Columns` коллекции.  
   
  Некоторыми из соответствующих элементов в модели объектов AMO являются <xref:Microsoft.AnalysisServices.TraceColumnCollection>, <xref:Microsoft.AnalysisServices.MiningModelColumnCollection> и <xref:Microsoft.AnalysisServices.MiningStructureColumnCollection>.  
   

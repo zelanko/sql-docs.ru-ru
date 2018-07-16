@@ -1,5 +1,5 @@
 ---
-title: Параметры (текстовый редактор - обычный текст — страница "Табуляция") | Документы Microsoft
+title: Параметры (текстовый редактор - обычный текст — страница "Табуляция") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5c27514ea38602885c26733238f2564211d4f43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bce8fcc9ea458c3cf2408a3edeb497def4044b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275310"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Параметры ("Текстовый редактор" — "Обычный текст" — страница "Вкладки")
   Используйте это диалоговое окно для изменения режима табуляции в текстовом редакторе, который используется для редактирования документа, не связанного с определенным языком разработки. Для вывода этих параметров щелкните пункт **Параметры** в меню **Сервис**, раскройте узел **Текстовый редактор**, узел **Неформатированный текст**, затем щелкните **Табуляция**.  
@@ -33,7 +33,7 @@ ms.locfileid: "36180331"
  **None**  
  Не делать отступ при создании новой строки нажатием клавиши ВВОД. Курсор помещается в первый столбец новой строки.  
   
- **блок**  
+ **Блок**  
  Делать отступ на новой строке при нажатии клавиши ВВОД на такое же расстояние, как и у предыдущей строки.  
   
  **Смарт-**  

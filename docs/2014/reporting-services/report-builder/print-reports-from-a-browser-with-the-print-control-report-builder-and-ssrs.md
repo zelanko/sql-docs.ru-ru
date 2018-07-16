@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f92d638c07d28f424c0e6338f953cd716205f48b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e120229a41ae80490ab1950113c4de6f37b70c9e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270340"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Печать отчетов из браузера с помощью элемента управления печатью (построитель отчетов и службы SSRS)
   Хотя браузер является наиболее популярным средством просмотра отчетов, его функции печати могут оказаться недостаточными для печати отчетов. Функции печати браузера предназначены для печати веб-страниц. Как правило, страницы, печатаемые из браузера, включают все визуальные элементы веб-страницы, а также содержимое верхнего и нижнего колонтитулов, идентифицирующее веб-сайт. При печати из браузера на печать выводится содержимое текущего окна. В случае многостраничных отчетов браузер печатает первую страницу, если ее размеры не выходят за пределы области печати. Остальные страницы напечатаны не будут.  
   
  Чтобы улучшить качество отчетов, выводимых на печать при просмотре в браузере, а также для печати нескольких страниц можно использовать клиентские функции печати посредством служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Клиентские функции печати включают стандартное диалоговое окно **Печать** , которое может использоваться для выбора принтера, печатаемых страниц и границ, а также для предварительного просмотра отчета перед печатью. Клиентские функции печати предназначены для использования вместо команды **Печать** из меню браузера **Файл** . При использовании клиентских функций печати отчет выводится на печать в том виде, в котором он был разработан, без лишних элементов, которые выводятся при печати веб-страницы.  
   
- Для использования печати на стороне клиента необходимо установить элемент управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX. Дополнительные сведения см. в разделе [Включение и отключение клиентского печати для служб Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Для использования печати на стороне клиента необходимо установить элемент управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX. Дополнительные сведения см. в разделе [Включение и отключение печати на стороне клиента для служб Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -45,6 +45,6 @@ ms.locfileid: "36100355"
   
 ## <a name="see-also"></a>См. также  
  [Печать отчетов (построитель отчетов и службы SSRS)](print-reports-report-builder-and-ssrs.md)   
- [Печать отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
+ [Печать отчета &#40;построитель отчетов и службы SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
   
   

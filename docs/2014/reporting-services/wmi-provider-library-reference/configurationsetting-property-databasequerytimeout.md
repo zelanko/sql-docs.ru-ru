@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - DatabaseQueryTimeout Property
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DatabaseQueryTimeout property
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
 caps.latest.revision: 35
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bcfd675860851b62dd2868adae00c6f6f13f6357
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 2cf7248fe0052a23e3ceef2243a4b6b45645402b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258000"
 ---
 # <a name="databasequerytimeout-property-wmi-msreportserverconfigurationsetting"></a>Свойство DatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting)
   Задает число секунд, которое должно пройти до того, как сервер отчетов предположит, что при выполнении команды произошла ошибка или выполнение заняло слишком много времени. Сервер отчетов привязывает запросы по времени к каталогу SQL, а не к источнику данных для отчета. Read/write.  
@@ -43,7 +43,7 @@ public UInt32 DatabaseQueryTimeout;
 ```  
   
 ## <a name="property-values"></a>Значения свойств  
- Без знака в 32-разрядной `integer` , представляющий количество секунд, которые разрешено запускать запрос.  
+ 32-разрядного беззнакового `integer` , представляющий количество секунд, запрос может выполняться.  
   
 ## <a name="example-code"></a>Пример кода  
  [Класс MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  

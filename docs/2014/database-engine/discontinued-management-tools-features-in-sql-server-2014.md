@@ -1,33 +1,31 @@
 ---
-title: Неподдерживаемые возможности средств управления в SQL Server 2014 | Документы Microsoft
+title: Неподдерживаемые возможности средств управления в SQL Server 2014 | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e58acd0-73c5-4161-9fbc-8ea531bc681c
-caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4c166f5c6bf6676b5af2eb0fc53810bb317718de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5e64b28218f4d9912b06b1ab124de9c326133cc6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101385"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316084"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>Неподдерживаемые возможности средств управления в SQL Server 2014
   В этом разделе описываются функции средств управления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , которые недоступны в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>Функции, удаленные в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>Компоненты, удаленные в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  None  
   
-## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>Функции, удаленные в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>Компоненты, удаленные в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="sql-server-compact-edition"></a>SQL Server Compact Edition  
  Редактор кода SQL Server Compact Edition исключен из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Поддержка SQL Server Compact Edition также исключена из обозревателя объектов, обозревателя решений и обозревателя шаблонов. Вместо них используйте редакторы Transact-SQL в среде Microsoft Visual Studio 2010 с пакетом обновления 1 (SP1) или в WebMatrix.  

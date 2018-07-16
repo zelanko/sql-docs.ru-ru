@@ -1,5 +1,5 @@
 ---
-title: Область выражения для суммирования, статистических функций и встроенных коллекций (построитель отчетов и службы SSRS) | Документы Microsoft
+title: Область выражения для суммирования, агрегатов и встроенных коллекций (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7d5121675cb7448ae939b0442752b33af19dde5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b3347d17fd115e0d9eb8b8d71e672a63f4c0fa5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253516"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>Область выражения для итогов, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)
   Термин *область* используется в нескольких контекстах, что становится понятно при написании выражений. Область может указывать на данные, используемые для вычисления выражений, набор текстовых полей на подготавливаемой странице, набор элементов отчета, которые могут отображаться или быть скрытыми. Термин *область* используется в разделах о вычислении выражений, синтаксисе агрегатных функций, условной видимости и в сообщениях об ошибках, связанных с этими темами. Ниже приводится описание различий в употреблении термина *область* .  
@@ -173,8 +173,8 @@ ms.locfileid: "36100803"
 ## <a name="see-also"></a>См. также  
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Примеры выражений групп &#40;построитель отчетов и службы SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)   
- [Создание групп рекурсивной иерархии &#40;отчетов построителя отчетов и службы SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Создание групп рекурсивной иерархии &#40;построитель отчетов и службы SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Списки &#40;построитель отчетов и службы SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Форматирование текста и заполнителей &#40;отчетов построителя отчетов и службы SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Форматирование текста и заполнителей &#40;построитель отчетов и службы SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

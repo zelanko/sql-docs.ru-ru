@@ -1,5 +1,5 @@
 ---
-title: Отводы потоков данных | Документы Microsoft
+title: Отводы потоков данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e51ba64f0c9793b4d3cb0b0485c636de1acee3b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbf61a735450551573d0c3b2f2a6f5542bb7dc97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271480"
 ---
 # <a name="data-flow-taps"></a>Вкладки «Поток данных»
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] появилась новая функция, которая позволяет добавить отвод данных к пути потока данных пакета во время выполнения и перенаправить отвод данных во внешний файл. Для использования этой функции следует развернуть проект служб SSIS на сервере служб SSIS с помощью модели развертывания проекта. После развертывания пакета на сервере до выполнения пакета следует выполнить T-SQL скрипты на базе данных SSISDB, чтобы добавить отводы данных. Пример сценария.  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] появилась новая функция, которая позволяет добавить отвод данных в путь потока данных пакета во время выполнения и перенаправить отвод данных во внешний файл. Для использования этой функции следует развернуть проект служб SSIS на сервере служб SSIS с помощью модели развертывания проекта. После развертывания пакета на сервере до выполнения пакета следует выполнить T-SQL скрипты на базе данных SSISDB, чтобы добавить отводы данных. Пример сценария.  
   
 1.  Создайте экземпляр выполнения пакета с помощью хранимой процедуры [catalog.create_execution (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database).  
   

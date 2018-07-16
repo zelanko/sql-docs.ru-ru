@@ -1,5 +1,5 @@
 ---
-title: Элемент Tuple (XML для Аналитики) | Документы Microsoft
+title: Элемент Tuple (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Tuple element
 ms.assetid: d65aba10-55e1-49c1-81bc-0756c39c0da2
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fe470d60aa008723034e1bdbf95f3ecf593c8a3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e5db226260852207fbcfeb4dc0a071d03d0def7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233694"
 ---
 # <a name="tuple-element-xmla"></a>Элемент Tuple (XML для аналитики)
   Содержит коллекцию элементов [Member](member-element-xmla.md), содержащихся в родительском элементе [Tuples](tuples-element-xmla.md).  
@@ -65,10 +65,10 @@ ms.locfileid: "36110014"
 |Дочерние элементы|[Член](member-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Когда клиентское приложение задает `AxisFormat` свойства *TupleFormat*, ось представляется в виде набора кортежей. Каждый элемент `Axis` содержит элемент `Tuples`, представляющий набор кортежей на этой оси. Каждый кортеж представляется с помощью элемента `Tuple`, который содержит элементы `Member` из каждой иерархии на оси.  
+ Когда клиентское приложение устанавливает `AxisFormat` свойства *TupleFormat*, ось представляется в виде набора кортежей. Каждый элемент `Axis` содержит элемент `Tuples`, представляющий набор кортежей на этой оси. Каждый кортеж представляется с помощью элемента `Tuple`, который содержит элементы `Member` из каждой иерархии на оси.  
   
 ## <a name="example"></a>Пример  
- Следующий пример иллюстрирует структуру `Tuple` элемент, если клиент указывает *TupleFormat* или *CustomFormat* для `AxisFormat` свойства XMLA, даны следующие члены для оси:  
+ Следующий пример иллюстрирует структуру `Tuple` элемент, если клиент указывает *TupleFormat* или *CustomFormat* для `AxisFormat` свойство XMLA, даны следующие члены для оси:  
   
 |||||  
 |-|-|-|-|  

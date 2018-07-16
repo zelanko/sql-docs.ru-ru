@@ -1,5 +1,5 @@
 ---
-title: Страница свойств «параметры» (диспетчер отчетов) | Документы Microsoft
+title: Страница свойств параметров (диспетчер отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
 caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dae546d2c07e21c8c930c889f8931b683828b055
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0f3b3bf5c8d672be964dcd77453f16e7ac9cbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327564"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Страница «Свойства параметров» (диспетчер отчетов)
   На странице свойств «Параметры» можно просмотреть и изменить настройки для параметров параметризованного отчета.  
@@ -64,7 +64,7 @@ ms.locfileid: "36109878"
   
  Снимите этот флажок, если параметр должен быть видимым в отчете.  
   
- **Запрашивать у пользователей**  
+ **Подсказка пользователю**  
  Установите этот флажок для отображения текстового поля, запрашивающего значение параметра у пользователя.  
   
  Снимите этот флажок, если нужно, чтобы отчет выполнялся в автоматическом режиме (например, для создания журнала отчетов или моментальных снимков состояния выполнения отчетов), чтобы одно и то же значение параметра использовалось для всех пользователей, или чтобы не требовался ввод пользователем значения параметра.  

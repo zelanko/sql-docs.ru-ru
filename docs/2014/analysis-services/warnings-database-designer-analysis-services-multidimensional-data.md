@@ -1,5 +1,5 @@
 ---
-title: Предупреждения (конструктор баз данных) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Предупреждения (конструктор баз данных) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.warnings.f1
 ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e00890be8fac0fb97f0887034d5c7b04c049ebd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44fddc4c62bc9d0fddc71cf2b4249c3fab8d0d68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233854"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>Предупреждения (конструктор баз данных) (службы Analysis Services — многомерные данные)
   Чтобы просмотреть и отклонить правила глобально, а также просмотреть и повторно включить конкретные экземпляры отклоненных предупреждений, используется вкладка **Предупреждения**. На вкладке **Предупреждения** отображаются две сетки: **Правила предупреждений конструктора** и **Отключенные предупреждения**.  

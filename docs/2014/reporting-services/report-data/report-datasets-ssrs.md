@@ -1,5 +1,5 @@
 ---
-title: Добавление данных в отчет (построитель отчетов и службы SSRS) | Документы Microsoft
+title: Добавление данных в отчет (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: aeae106d4ab76cb6ab04248126b4b32e1e4a160a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 2b65b1ae16a7df30d161c7f45c594678264de0a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284751"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>Добавление данных в отчет (построитель отчетов и службы SSRS)
   Чтобы добавить данные в отчет, необходимо создать наборы данных. Каждый набор данных представляет результирующий набор команды запроса к источнику данных. Столбцы в результирующем наборе представляют собой коллекцию полей. Стройки в результирующем наборе представляют данные. Набор данных не содержит фактических данных. Набор данных содержит информацию, необходимую для получения определенного набора данных из источника данных.  
@@ -69,7 +69,7 @@ ms.locfileid: "36179991"
   
 -   [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
--   [Диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+-   [Диаграммы &#40;построитель отчетов и службы SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
 -   [Спарклайны и гистограммы (построитель отчетов и службы SSRS)](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -77,9 +77,9 @@ ms.locfileid: "36179991"
   
 -   [Параметры отчета (построитель отчетов и конструктор отчетов)](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Элементы отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
+-   [Элементы отчета &#40;построитель отчетов и службы SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
   
--   [Фильтрация, группирование и сортировка данных &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+-   [Фильтрация, группирование и сортировка данных &#40;построитель отчетов и службы SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
  ![Значок стрелки, используемый для ссылки возврата в начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый для ссылки возврата в начало") [В начало](#BackToTop)  
   
@@ -100,30 +100,30 @@ ms.locfileid: "36179991"
   
  В конструкторе запросов можно выполнить запрос, чтобы посмотреть пример данных и проверить синтаксис команды запроса. Имена столбцов в результирующем наборе становятся именами полей, отображаемых в области данных отчета. Результирующий набор должен быть простым набором строк и столбцов с одинаковым количеством значений для каждой строки данных. Получение нескольких результирующих наборов из одного запроса не поддерживается. Неоднородная иерархия без постоянного количества столбцов, из которой может быть получено разное количество значений данных для каждой строки, не поддерживается.  
   
- Для выполнения запроса необходимо иметь учетные данные времени разработки. Дополнительные сведения см. в разделе [укажите учетные данные в построителе отчетов](../specify-credentials-in-report-builder.md) и [подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ Для выполнения запроса необходимо иметь учетные данные времени разработки. Дополнительные сведения см. в разделе [указание учетных данных в построителе отчетов](../specify-credentials-in-report-builder.md) и [подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
  Взаимодействие между модулем обработки данных и внешним источником данных обрабатывается поставщиками данных. Поддержка синтаксиса команд запроса, параметров запроса, типов данных для значений в результирующем наборе определяется для каждого поставщика данных. Дополнительные сведения см. в разделе для конкретных модулей обработки данных и в разделе [Конструкторы запросов (построитель отчетов)](../query-designers-report-builder.md).  
   
  ![Значок стрелки, используемый для ссылки возврата в начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый для ссылки возврата в начало") [В начало](#BackToTop)  
   
 ##  <a name="HowTo"></a> Инструкции  
- [Добавление и проверка подключения к данным или источник данных &#40;отчетов построителя отчетов и службы SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Добавление и проверка подключения к данным или источнику данных &#40;построитель отчетов и службы SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
  [Добавление, изменение и обновление полей в области данных отчета (построитель отчетов и службы SSRS)](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
- [Построение запроса в конструкторе реляционных запросов &#40;отчетов построителя отчетов и службы SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
+ [Построение запроса в конструкторе реляционных запросов &#40;построитель отчетов и службы SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [Отображение скрытых наборов данных для значений параметра многомерных данных &#40;отчетов построителя отчетов и службы SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [Отображение скрытых наборов данных для значений параметра в многомерных данных &#40;построитель отчетов и службы SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
  [Добавление фильтра к набору данных (построитель отчетов и службы SSRS)](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- [Установка сообщения об отсутствии данных для области данных &#40;отчетов построителя отчетов и службы SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Установка сообщения об отсутствии данных для области данных &#40;построитель отчетов и службы SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Связать параметр запроса с параметром отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
+ [Связь параметра запроса с параметром отчета &#40;построитель отчетов и службы SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
- [Определение параметров в конструкторе запросов многомерных Выражений для служб Analysis Services &#40;отчетов построителя отчетов и службы SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
+ [Определение параметров в конструкторе запросов многомерных Выражений для служб Analysis Services &#40;построитель отчетов и службы SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
  ![Значок стрелки, используемый для ссылки возврата в начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый для ссылки возврата в начало") [В начало](#BackToTop)  
   
@@ -142,6 +142,6 @@ ms.locfileid: "36179991"
   
 ## <a name="see-also"></a>См. также  
  [Представление конструктора отчетов (построитель отчетов)](../report-builder/report-design-view-report-builder.md)   
- [Основные понятия разработки отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Основные понятия разработки отчетов &#40;построитель отчетов и службы SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

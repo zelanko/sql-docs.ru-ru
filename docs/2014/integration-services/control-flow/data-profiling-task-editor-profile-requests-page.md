@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.profilerequests.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1a493e342b9637d6e1498e38f9689897d8b65e64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc2c19b0ae0247a8cccbb75f56d943ef277625e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292914"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Редактор задачи «Профилирование данных» (страница «Запросы профиля»)
   **Страница «Запросы профиля»** **редактора задачи «Профилирование данных»** используется для выбора и настройки профилей, которые необходимо вычислить. В рамках одной задачи «Профилирование данных» можно вычислить несколько профилей для нескольких столбцов или сочетаний столбцов из нескольких таблиц или представлений.  
@@ -134,24 +134,24 @@ ms.locfileid: "36101379"
   
  Эти параметры различаются в зависимости от выделенного профиля. Сведения о параметрах отдельных типов профилей см. в следующих разделах:  
   
--   [Параметры запроса профиля ключей кандидата &#40;задачи «профилирование данных»&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Параметры профиля потенциальных ключей запроса &#40;задачи "профилирование данных"&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля соотношения значений Null столбца &#40;задачи «профилирование данных»&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля соотношение значений Null в столбцах &#40;задачи "профилирование данных"&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиль статистики столбцов &#40;задачи «профилирование данных»&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля статистики столбцов &#40;задачи "профилирование данных"&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля распределения значения столбца &#40;задачи «профилирование данных»&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля распределения значений столбцов &#40;задачи "профилирование данных"&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля распределения длины столбца &#40;задачи «профилирование данных»&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля распределения длины столбцов &#40;задачи "профилирование данных"&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля шаблона столбцов &#40;задачи «профилирование данных»&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля шаблона столбцов &#40;задачи "профилирование данных"&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля функциональной зависимости &#40;задачи «профилирование данных»&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля функциональной зависимости &#40;задачи "профилирование данных"&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля включения значений &#40;задачи «профилирование данных»&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля включения значений &#40;задачи "профилирование данных"&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="see-also"></a>См. также  
- [Редактор задачи «профилирование данных» &#40;страница «Общие»&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "профилирование данных" &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)   
  [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](single-table-quick-profile-form-data-profiling-task.md)  
   
   

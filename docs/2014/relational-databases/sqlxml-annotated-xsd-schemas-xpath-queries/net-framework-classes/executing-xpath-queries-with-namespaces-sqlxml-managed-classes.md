@@ -1,5 +1,5 @@
 ---
-title: Выполнение запросов XPath с пространствами имен (управляемые классы SQLXML) | Документы Microsoft
+title: Выполнение запросов XPath с пространствами имен (управляемые классы SQLXML) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - namespaces [SQLXML], XPath queries
 ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 67857d58d05f11f2b93465aec6cf3e0d7b2b2017
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c6be18c85f7c7baf1f38c492699bf9cb42209b0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284690"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Выполнение запросов XPath с пространствами имен (управляемые классы SQLXML)
   В запросы XPath могут быть включены пространства имен. Если имена элементов схемы уточнены именем пространства имен (используйте целевое пространство имен), оно должно быть указано в запросах XPath к этой схеме.  
@@ -59,7 +59,7 @@ ms.locfileid: "36180003"
   
  Поскольку эта схема задает целевое пространство имен, запрос XPath к этой схеме (например, «Employee») должен содержать пространство имен.  
   
- Следующие образец приложения на C# исполняет запрос XPath к предыдущей схеме XSD (MySchema.xml). Для разрешения префикса, укажите привязку пространств имен с помощью свойства объекта SqlXmlCommand пространства имен.  
+ Следующие образец приложения на C# исполняет запрос XPath к предыдущей схеме XSD (MySchema.xml). Для разрешения префикса, указываете привязку пространства имен с помощью пространства имен свойства объекта SqlXmlCommand.  
   
 > [!NOTE]  
 >  В коде необходимо задать имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения.  

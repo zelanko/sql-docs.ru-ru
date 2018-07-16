@@ -1,5 +1,5 @@
 ---
-title: Вычисляемый столбец представление (табличное) | Документы Microsoft
+title: Вычисляемый столбец представление (табличное) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0918b315df0b97b3750306b7c4469ef2ddfaa9e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9712182e3416a81edab77d1cb19b50ee5bc4bd07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285840"
 ---
 # <a name="calculated-column-representation-tabular"></a>Представление вычисляемого столбца (табличное)
   Вычисляемый столбец — это выражение DAX, которое создает новый столбец в таблице, а полученные значения сохраняются в таблице. Выражение вычисляемого столбца вычисляется каждый раз при обработке таблицы.  

@@ -1,5 +1,5 @@
 ---
-title: Определение полуаддитивного режима | Документы Microsoft
+title: Определение полуаддитивного режима | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semiadditive
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8aa76cf01672dec4edde7ded1049efbd2035839f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a96921b37affe35fcb4344a66ef36aaf26cadeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265420"
 ---
 # <a name="define-semiadditive-behavior"></a>Определение полуаддитивного режима
   Во многих бизнес-сценариях широко распространены полуаддитивные меры, которые не используют статистическое вычисление единообразно для всех измерений. Со временем данная проблема затрагивает все кубы, основанные на моментальных снимках балансов. Такие моментальные снимки можно найти в приложениях, связанных с ценными бумагами, балансом счета, бюджетированием, персоналом, страховыми полисами и требованиями, и многими другими областями коммерческой деятельности.  
@@ -38,7 +38,7 @@ ms.locfileid: "36109589"
  На странице **Определение полуаддитивного режима** мастера выберите способ определения полуаддитивности, выбрав один из следующих параметров:  
   
  **Отключить полуаддитивный режим**  
- Удаляет полуаддитивный режим из куба, в котором полуаддитивный режим был ранее определен. Данный выбор восстанавливает для показателя для `SUM` Если значение любого из следующих типов статистической функции:  
+ Удаляет полуаддитивный режим из куба, в котором полуаддитивный режим был ранее определен. Данный выбор восстанавливает для показателя `SUM` если он задан для любого из следующих типов статистической функции:  
   
 -   By Account  
   

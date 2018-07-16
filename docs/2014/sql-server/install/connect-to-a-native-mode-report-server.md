@@ -1,5 +1,5 @@
 ---
-title: Подключение к серверу отчетов собственный режим | Документы Microsoft
+title: Соединиться с сервера отчетов в собственном режиме | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.connectiondialog.F1
 helpviewer_keywords:
@@ -17,16 +17,16 @@ ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 703e25f513fa8482d62d8c454aca1dbe0edea92a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27b2d2d93d83057fd2de408b4a0cb61dd1cd0771
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321784"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>Соединение с сервером отчетов, работающим в собственном режиме
-  Используйте это диалоговое окно для подключения к локальному или удаленному [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] экземпляра сервера отчетов. Это средство нельзя использовать для подключения к более ранним версиям [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] серверов отчетов. Одновременно можно подключиться только к одному экземпляру.  
+  Это диалоговое окно используется для подключения к локальному или удаленному [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] экземпляра сервера отчетов. Это средство нельзя использовать для подключения к более ранним версиям [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] серверов отчетов. Одновременно можно подключиться только к одному экземпляру.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36101460"
  Найдите компьютер, указанный в **Имя сервера**.  
   
  **Экземпляр сервера отчетов**  
- Выберите, какие экземпляры подсоединять, если установлено несколько экземпляров сервера отчетов. Выбирать можно только допустимые экземпляры. Если вы используете более старых версий [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] side-by-side [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра эти экземпляры не будут отображаться в списке.  
+ Выберите, какие экземпляры подсоединять, если установлено несколько экземпляров сервера отчетов. Выбирать можно только допустимые экземпляры. Если вы используете более старых версиях [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] side-by-side [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра, эти экземпляры не будут приводиться в списке.  
   
  **Подключить**  
  Соединитесь с указанным сервером и экземпляром.  
