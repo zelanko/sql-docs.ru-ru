@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tempdb database [SQL Server], collations
 - collations [SQL Server], column
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3de84f26e894f00760a45d5e65769c0db8d4b009
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e215539e97e09fd7512f7673015d07f32e956730
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298514"
 ---
 # <a name="set-or-change-the-column-collation"></a>Задание или изменение параметров сортировки столбца
-  Можно переопределить параметры сортировки базы данных для `char`, `varchar`, `text`, `nchar`, `nvarchar`, и `ntext` данных, указание различных параметров сортировки для определенного столбца таблицы одним из следующих:  
+  Можно переопределить параметры сортировки базы данных для `char`, `varchar`, `text`, `nchar`, `nvarchar`, и `ntext` данных, указав другие параметры сортировки для определенного столбца таблицы и с помощью одного из следующих:  
   
 -   Предложением COLLATE в инструкциях [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) и [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql). Например:  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36087621"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Collation and Unicode Support](collation-and-unicode-support.md).  
   
--   С помощью `Column.Collation` свойства [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляющих объектов (SMO).  
+-   С помощью `Column.Collation` свойство в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляющих объектов (SMO).  
   
  Невозможно изменить параметры сортировки столбца, на который ссылаются:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36087621"
  При работе с базой данных **tempdb**предложение [COLLATE](/sql/t-sql/statements/collations) содержит параметр *database_default* , указывающий, что столбец, находящийся во временной таблице, использует параметры сортировки по умолчанию для текущей базы данных пользователя для соединения, а не параметра сортировки базы данных **tempdb**.  
   
 ## <a name="collations-and-text-columns"></a>Параметры сортировки и столбцы типа text  
- Можно добавлять или обновлять значения в `text` столбца параметры сортировки которого отличается от кодовой страницы параметров сортировки по умолчанию базы данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] неявно преобразует значения в параметры сортировки столбца.  
+ Можно добавлять или обновлять значения в `text` столбец, в которых параметры сортировки, отличные от кодовой страницы параметров сортировки по умолчанию базы данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] неявно преобразует значения в параметры сортировки столбца.  
   
 ## <a name="collations-and-tempdb"></a>Параметры сортировки и база данных tempdb  
  База данных **tempdb** создается каждый раз при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и имеет те же параметры сортировки по умолчанию, что и база данных **model** . Обычно они совпадают с параметрами сортировки экземпляра. Если при создании пользовательской базы данных указываются параметры сортировки, отличные от параметров сортировки базы данных **model**, то параметры сортировки пользовательской базы данных будут отличаться от базы данных **tempdb**. Все временные хранимые процедуры и временные таблицы создаются и сохраняются в базе данных **tempdb**. Это означает, что неявно столбцы временных таблиц и все константы, переменные и параметры хранимых процедур имеют параметры сортировки, отличные от сравниваемых объектов, создаваемых в постоянных таблицах и хранимых процедурах.  

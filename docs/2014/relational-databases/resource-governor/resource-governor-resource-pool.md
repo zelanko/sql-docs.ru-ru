@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, resource pool
 - resource pool [SQL Server], overview
 - resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 28ba9512021e149bc5861e968ad2f4a977dd7644
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 062ac00c7bf4e884f3f066549bed39dc938d1209
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280880"
 ---
 # <a name="resource-governor-resource-pool"></a>Пул ресурсов регулятора ресурсов
   В регуляторе ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пул ресурсов представляет подмножество физических ресурсов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Регулятор ресурсов позволяет задать ограничения на загрузку ЦП, физических средств ввода-вывода и использование памяти, которые доступны для входящих запросов приложений в пуле ресурсов. Каждый пул ресурсов может содержать одну или несколько групп рабочей нагрузки. После запуска сеанса классификатор регулятора ресурсов назначает этот сеанс группе рабочей нагрузки и этот сеанс должен функционировать с ресурсами, назначенными этой группе рабочей нагрузки.  

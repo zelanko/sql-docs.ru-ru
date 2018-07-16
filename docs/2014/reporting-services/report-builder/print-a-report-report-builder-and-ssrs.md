@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: baceb951040c86be5b42e8d881deb51d84df3849
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5a8bfc88933351eb818b1412c249475fa34222c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294234"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Печать отчета (построитель отчетов и службы SSRS)
   После сохранения отчета на сервере отчетов его можно просмотреть и распечатать из браузера, диспетчера отчетов или любого приложения, использующегося для просмотра экспортированных отчетов. Перед сохранением отчета его можно напечатать во время просмотра.  
@@ -101,7 +101,7 @@ ms.locfileid: "36100150"
   
 ## <a name="see-also"></a>См. также  
  [Печать отчетов (построитель отчетов и службы SSRS)](print-reports-report-builder-and-ssrs.md)   
- [Экспорт отчетов &#40;отчетов построителя отчетов и службы SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Диалоговое окно "Свойства отчета" — "Параметры страницы" (построитель отчетов)](../report-properties-dialog-box-page-setup-report-builder.md)   
  [Представление конструктора отчетов &#40;построитель отчетов&#41;](report-design-view-report-builder.md)  
   

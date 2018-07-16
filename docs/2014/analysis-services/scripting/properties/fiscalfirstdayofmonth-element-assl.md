@@ -1,5 +1,5 @@
 ---
-title: Элемент FiscalFirstDayOfMonth (ASSL) | Документы Microsoft
+title: Элемент FiscalFirstDayOfMonth (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FiscalFirstDayOfMonth element
 ms.assetid: f793e93f-62de-4c3b-90b0-a46bd3cadae5
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf66dd72e1d74104a2008a0535ff5986dd3c53cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d183e519ddd3a103cd8e9cf90105b9c8848acb55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235544"
 ---
 # <a name="fiscalfirstdayofmonth-element-assl"></a>Элемент FiscalFirstDayOfMonth (ASSL)
-  Определяет первый день финансового месяца для [TimeBinding](../data-type/binding-data-type-assl.md) элемента.  
+  Определяет первый день финансового месяца для [TimeBinding](../data-type/binding-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36099597"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `FiscalFirstDayOfMonth` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.TimeBinding>.  
+ Элемент, соответствующий родителю параметра `FiscalFirstDayOfMonth` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

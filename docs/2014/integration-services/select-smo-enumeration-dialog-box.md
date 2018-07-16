@@ -1,5 +1,5 @@
 ---
-title: Выбор перечисления SMO-диалоговое окно | Документы Microsoft
+title: Выбор перечисления SMO-диалоговое окно | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.selectsmoenumeration.f1
 helpviewer_keywords:
 - Select SMO Enumeration dialog box
 ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
 caps.latest.revision: 18
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d78fa28451a62f1c563fdecd99fdee25bd057504
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 50112efd67420e483a53d2eb116f296ae2c44899
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296774"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>Диалоговое окно «Выбор перечисления SMO»
   Диалоговое окно **Выбор перечисления SMO** позволяет указать в заданном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] управляющий объект [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SMO) для перечисления, а также выбрать тип перечисления.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic report server tasks
 - rs utility
@@ -21,13 +21,13 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 26e1dccb1d72ac0a743a545e29b175f5e8bb79fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9889c2a14d48a7c2bccd7087c96567e92e1e4112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255466"
 ---
 # <a name="rsexe-utility-ssrs"></a>Служебная программа RS.exe (SSRS)
   Скрипт, предоставленный во входном файле, обрабатывается служебной программой rs.exe. Используйте эту программу для автоматизации развертывания сервера отчетов и административных задач.  
@@ -78,7 +78,7 @@ ms.locfileid: "36100558"
  (Необязательный) Определяет учетную запись пользователя, используемую для подключения к серверу отчетов. В случае отсутствия `-u` и `-p` используется текущая учетная запись пользователя Windows.  
   
  `-p` *Пароль*  
- (Обязательно, если `-u` указано) задает пароль для использования с `-u` аргумент. Это значение учитывает регистр.  
+ (Обязательно, если `-u` указывается) указывает пароль для использования с `-u` аргумент. Это значение учитывает регистр.  
   
  `-e`  
  (Необязательный) Определяет конечную точку SOAP, с которой должен выполняться скрипт. Допустимы следующие значения.  
@@ -91,7 +91,7 @@ ms.locfileid: "36100558"
   
 -   Exec2005  
   
- Если значение не указано, то используется конечная точка Mgmt2005. Дополнительные сведения о конечных точках SOAP см. в разделе [конечные точки службы отчетов сервера Web](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
+ Если значение не указано, то используется конечная точка Mgmt2005. Дополнительные сведения о конечных точках SOAP см. в разделе [отчетов Server Web Service Endpoints](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
   
  `-l` *время_ожидания*  
  (Необязательный) Определяет количество секунд, которые должны пройти до истечения времени ожидания соединения с сервером. Значение по умолчанию — 60 секунд. Если значение времени ожидания не определено, то используется значение по умолчанию. Значение `0` определяет бесконечное время ожидания соединения.  
@@ -106,7 +106,7 @@ ms.locfileid: "36100558"
   
  `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- Глобальные переменные создаются с указанными именами и им присваиваются заданные значения. Например, **- v =**»`1`» **- v b =**»`2`» приводит к созданию переменной с именем `a` со значением»`1`» и переменной **b**со значением «`2`».  
+ Глобальные переменные создаются с указанными именами и им присваиваются заданные значения. Например, **- v =**"`1`" **- v b =**"`2`" приводит к получению переменной с именем `a` со значением»`1`"и переменной **b**со значением "`2`«.  
   
  Глобальные переменные доступны для любой функции в скрипте. Обратная косая черта и кавычка (**\\"**) интерпретируются как двойная кавычка. Кавычки требуются только в том случае, если строка содержит пробелы. Имена переменных должны быть допустимыми для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]; они должны начинаться с буквы или с символа подчеркивания и содержать буквы, цифры или символы подчеркивания. Зарезервированные слова не могут использоваться в качестве имен переменных. Дополнительные сведения об использовании глобальных переменных см. в разделе [Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -128,7 +128,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  Дополнительные примеры см. в разделе [Запуск файла скрипта для служб Reporting Services](run-a-reporting-services-script-file.md)  
   
 ## <a name="remarks"></a>Примечания  
- Можно определять скрипты, устанавливать системные свойства, публиковать отчеты и так далее. Создаваемые скрипты могут включать любые методы API-интерфейса служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения о методах и свойствах, доступных пользователю см. в разделе [веб-службы сервера отчетов](../report-server-web-service/report-server-web-service.md).  
+ Можно определять скрипты, устанавливать системные свойства, публиковать отчеты и так далее. Создаваемые скрипты могут включать любые методы API-интерфейса служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения о методах и свойствах, доступных пользователю, см. в разделе [веб-службы сервера отчетов](../report-server-web-service/report-server-web-service.md).  
   
  Скрипт должен быть написан на языке [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET и храниться в текстовом файле в кодировке Юникод или UTF-8 с расширением RSS. Отладить скрипт с помощью программы **rs** невозможно. Для отладки скрипта выполните код в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
@@ -136,9 +136,9 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 >  Подробный пример см. в разделе [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 ## <a name="see-also"></a>См. также  
- [Запустите файл скрипта служб Reporting Services](run-a-reporting-services-script-file.md)   
+ [Запуска файла скрипта служб Reporting Services](run-a-reporting-services-script-file.md)   
  [Написание скриптов для задач развертывания и администрирования](script-deployment-and-administrative-tasks.md)   
- [Сценарий с служебную программу rs.exe и веб-службы](script-with-the-rs-exe-utility-and-the-web-service.md)   
+ [Скриптов с помощью программы rs.exe и веб-службы](script-with-the-rs-exe-utility-and-the-web-service.md)   
  [Программы командной строки сервера отчетов &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Создание или удаление псевдонима сервера для использования клиентом (диспетчер конфигурации SQL Server) | Документы Microsoft
+title: Создание или удаление псевдонима сервера для использования клиентом (диспетчер конфигурации SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - server alias
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - aliases [SQL Server], creating
 ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8043f455177b3a34736b9d0d83d13411adfb8bfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ad94dc1af7f5725e0f32f5a3d6789122f1ca129c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312284"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client-sql-server-configuration-manager"></a>Создание или удаление псевдонима сервера для использования клиентом (диспетчер конфигурации SQL Server)
   В этом разделе описано, как создать и удалить псевдоним сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации SQL Server. Псевдоним является альтернативным именем, которое можно использовать для создания соединения. Псевдоним инкапсулирует необходимые элементы строки соединения и представляет их с помощью имени, выбранного пользователем. Псевдонимы могут использоваться с любым клиентским приложением. После создания псевдонима сервера клиент может соединяться с несколькими серверами по разным сетевым протоколам, не указывая протокол и сведения о соединении для каждого из них. Кроме того, можно также держать постоянно включенными несколько сетевых протоколов, даже если некоторые из них используются время от времени. Если сервер настроен на прослушивание порта или именованного канала, отличных от используемых по умолчанию, и служба браузера SQL Server отключена, то можно создать псевдоним, который будет определять другой номер порта или именованный канал.  

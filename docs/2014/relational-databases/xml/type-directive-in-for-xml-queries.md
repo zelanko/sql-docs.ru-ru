@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3e5a3ffe184513bce9f331f5d905a0587897e64a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2868591cbb80cfb39eaaa81d6cbe75d2bda08c6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294224"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Директива TYPE в запросах FOR XML
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поддержка [xml &#40;Transact-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) позволяет запросить получение результата запроса FOR XML как `xml` тип данных с помощью директивы TYPE. Это позволяет обрабатывать результат запроса FOR XML на сервере. Например, можно задать запрос XQuery, присвоить его результат `xml` переменной типа, или написать [вложенные запросы FOR XML](use-nested-for-xml-queries.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поддержка [xml &#40;Transact-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) позволяет запросить получение результата запроса FOR XML как `xml` тип данных путем указания директивы TYPE. Это позволяет обрабатывать результат запроса FOR XML на сервере. Например, можно задать запрос XQuery, присвоить его результат `xml` переменной типа, или написать [вложенные запросы FOR XML](use-nested-for-xml-queries.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Возвращает тип данных XML экземпляра данных клиенту в результате выполнения различных серверных конструкций, таких как запросы FOR XML, использующие директиву TYPE или там, где `xml` тип данных используется для возвращения значений XML-данных экземпляра из столбцов таблицы SQL и вывода параметры. В коде клиентского приложения поставщик ADO.NET запрашивает эти XML-данные для отправки с сервера в двоичной кодировке. Однако при использовании предложения FOR XML без директивы TYPE XML-данные возвращаются как данные строкового типа. В любом случае поставщик клиента всегда будет иметь возможность обрабатывать XML-данные в любом из форматов. Обратите внимание на то, что предложение FOR XML верхнего уровня без директивы TYPE не может быть использовано с курсорами.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Возвращает тип данных XML экземпляра данных клиенту в результате выполнения различных серверных конструкций, таких как запросы FOR XML, использующие директиву TYPE или там, где `xml` тип данных используется для возвращения значений XML-данных экземпляра из столбцов таблицы SQL и выходных данных параметры. В коде клиентского приложения поставщик ADO.NET запрашивает эти XML-данные для отправки с сервера в двоичной кодировке. Однако при использовании предложения FOR XML без директивы TYPE XML-данные возвращаются как данные строкового типа. В любом случае поставщик клиента всегда будет иметь возможность обрабатывать XML-данные в любом из форматов. Обратите внимание на то, что предложение FOR XML верхнего уровня без директивы TYPE не может быть использовано с курсорами.  
   
 ## <a name="examples"></a>Примеры  
  В следующих примерах показано использование директивы TYPE в запросах FOR XML.  
@@ -75,7 +75,7 @@ GO
 ```  
   
 ### <a name="querying-results-of-a-for-xml-query"></a>Запрос к результатам запроса FOR XML  
- Запросы FOR XML возвращают XML-данные. Таким образом, можно применить `xml` введите методы, такие как `query()` и `value()`, к XML, возвращенным запросами FOR XML.  
+ Запросы FOR XML возвращают XML-данные. Таким образом, вы можете применять `xml` введите методы, такие как `query()` и `value()`, к XML, возвращенным запросами FOR XML.  
   
  В следующем запросе `query()` метод `xml` тип данных используется для запроса к результатам `FOR XML` запроса. Дополнительные сведения см. в разделе [Метод query&#40;&#41;&#40;тип данных xml&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
   
@@ -91,7 +91,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- Внутренний `SELECT … FOR XML` запрос возвращает `xml` результат, к которому типа внешнего `SELECT` применяется `query()` метод `xml` типа. Обратите внимание на указанную директиву `TYPE` .  
+ Внутренний `SELECT … FOR XML` запрос возвращает `xml` результата, к которому типа внешнего `SELECT` применяется `query()` метод `xml` типа. Обратите внимание на указанную директиву `TYPE` .  
   
  Результат:  
   

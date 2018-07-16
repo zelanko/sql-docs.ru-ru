@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 49929fedf5b7d1e44a300919f2c9d903efca5bc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cd396e077ba63369d256c39ba104427f595f4df4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324404"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Способ определения разрешений (службы Master Data Services)
   Простейшим способом настройки безопасности служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]является назначение разрешений на объекты модели для группы, членом которой является пользователь.  
@@ -50,7 +50,7 @@ ms.locfileid: "36099291"
   
 -   Всем объектам на более высоком уровне предоставляется навигационный доступ. Дополнительные сведения о навигационном доступе см. в разделе [навигационный доступ &#40;службы Master Data Services&#41;](navigational-access-master-data-services.md).  
   
- В этом примере **только для чтения** сущности назначается разрешение и разрешение наследует его атрибутом, который находится на более низком уровне структуры модели. Модель предоставляет навигационный доступ к данной сущности и ее атрибуту. Другая сущность модели не имеет явно назначенного разрешения и не наследует никаких разрешений, поэтому доступ для нее неявно закрыт.  
+ В этом примере **только для чтения** сущности назначается разрешение и разрешение наследует его атрибутом, который находится на низком уровне структуры модели. Модель предоставляет навигационный доступ к данной сущности и ее атрибуту. Другая сущность модели не имеет явно назначенного разрешения и не наследует никаких разрешений, поэтому доступ для нее неявно закрыт.  
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36099291"
   
 -   Любым узлам на более высоких уровнях, которые не имеют явно назначенных разрешений, в разрешении неявно отказывается.  
   
- В этом примере **только для чтения** одного узла иерархии назначается разрешение и разрешение наследуется узлам на более низком уровне структуры иерархии. Корневому узлу разрешения не назначены, поэтому в разрешении ему неявно отказано. Другой узел в структуре иерархии не имеет явно назначенного разрешения и не наследует никаких разрешений, поэтому доступ для него неявно закрыт.  
+ В этом примере **только для чтения** одного узла иерархии назначается разрешение и разрешение наследует в виде узла на более низком уровне структуры иерархии. Корневому узлу разрешения не назначены, поэтому в разрешении ему неявно отказано. Другой узел в структуре иерархии не имеет явно назначенного разрешения и не наследует никаких разрешений, поэтому доступ для него неявно закрыт.  
   
  ![mds_conc_inheritance_hierarchy](../../2014/master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36099291"
  В этом случае пересечения разрешений пользователя и группы должны определяться, прежде чем можно будет сравнивать разрешения для объектов модели и элементов иерархии. Дополнительные сведения см. в разделе [Overlapping User and Group Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
 ## <a name="see-also"></a>См. также  
- [Перекрывающиеся разрешения пользователей и групп &#40;службы Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
+ [Перекрытие разрешений пользователей и групп &#40;службы Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
  [Перекрытие разрешений моделей и элементов (службы Master Data Services)](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

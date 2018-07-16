@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ad203a50e5ec274b0445b260d24a03fc32ff33eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1cc49e0138d71fcbb59e995bd69a9baf12ae655c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316024"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>Условия бизнес-правил (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]условия бизнес-правил — это условия, которые должны быть соблюдены для выполнения одного или нескольких действий.  
@@ -51,6 +51,6 @@ ms.locfileid: "36097780"
 ## <a name="see-also"></a>См. также  
  [Действия бизнес-правил &#40;службы Master Data Services&#41;](../../2014/master-data-services/business-rule-actions-master-data-services.md)   
  [Бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
- [Создание и публикация бизнес-правило &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+ [Создание и публикация бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   

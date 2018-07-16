@@ -1,5 +1,5 @@
 ---
-title: Элемент AllMemberTranslation (ASSL) | Документы Microsoft
+title: Элемент AllMemberTranslation (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllMemberTranslation element
 ms.assetid: 31ec0c44-8f1d-457c-9e8b-61dd5bc468f7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b4124f8e9b8af1d9203e1b9dc877598880da348b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f001f32cae974d8bc22de635e7776ba3b94451e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231854"
 ---
 # <a name="allmembertranslation-element-assl"></a>Элемент AllMemberTranslation (ASSL)
-  Содержит перевод заголовка элемента «все» [иерархии](hierarchy-element-assl.md) элемента.  
+  Содержит перевод заголовка элемента «все» элемента [иерархии](hierarchy-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   

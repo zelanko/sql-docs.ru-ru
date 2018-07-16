@@ -1,5 +1,5 @@
 ---
-title: Подзапросы выборки в запросах | Документы Microsoft
+title: Подзапросы выборки в запросах | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f5f616181a6fffe42fa04e3978142c48375adb0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce3ca1202c5e20676a4dbf1fa972f5bdfa52e9b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299184"
 ---
 # <a name="subselects-in-queries"></a>Подзапросы выборки в запросах
   Выражения подзапросов выборки являются вложенными выражениями SELECT, которые используются для ограничения пространства куба, из которого вычисляется внешнее выражение SELECT. Подзапросы выборки позволяют определять новое пространство, в котором будут выполняться все вычисления.  
@@ -353,6 +353,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   Предложение HAVING нельзя использовать в предложении оси, вместо него следует применять выражение функции [Filter (многомерные выражения)](/sql/mdx/filter-mdx).  
   
--   По умолчанию вычисляемые элементы не допускаются в подзапросах выборки; Тем не менее, это ограничение можно изменить, в сеансам, путем присвоения значения для `SubQueries` свойство строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или `DBPROP_MSMD_SUBQUERIES` свойство в [поддерживаемые свойства XMLA &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). В разделе [вычисляемых элементов в подзапросах выборки и вложенных кубах](calculated-members-in-subselects-and-subcubes.md) подробное описание поведения вычисляемых элементов в зависимости от значения `SubQueries` или `DBPROP_MSMD_SUBQUERIES`.  
+-   По умолчанию вычисляемые элементы не допускаются в подзапросах выборки; Тем не менее, это ограничение можно изменить, в сеансам, путем присвоения значения для `SubQueries` свойство строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или `DBPROP_MSMD_SUBQUERIES` свойство в [поддерживаемые свойства XMLA &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). См. в разделе [вычисляемые элементы в подзапросах выборки и вложенных кубах](calculated-members-in-subselects-and-subcubes.md) подробное описание поведения вычисляемых элементов в зависимости от значения `SubQueries` или `DBPROP_MSMD_SUBQUERIES`.  
   
   

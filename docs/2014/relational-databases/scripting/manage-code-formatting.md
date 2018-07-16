@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indenting code [SQL Server]
 - displaying URLs
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f57e209ec0bc4417af90b4d257d6be566cccb731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f64ca72111c89521277818573434e32ef82e028b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234870"
 ---
 # <a name="manage-code-formatting"></a>управлять форматированием кода
   В редакторе можно форматировать код отступами, скрывать текст, вводить URL-адреса и т. д. Можно также выполнять автоматическое форматирование кода с помощью интеллектуальных отступов.  

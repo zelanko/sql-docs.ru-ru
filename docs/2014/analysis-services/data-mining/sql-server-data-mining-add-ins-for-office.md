@@ -1,5 +1,5 @@
 ---
-title: Для Office надстройки интеллектуального анализа данных SQL Server | Документы Microsoft
+title: SQL Server Data Mining Add-Ins for Office | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 66865664b7713f869ef1f007ba5b35f04218e8f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d8897cdb41d1d72806bf93335b13bf8c683cc31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273900"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Надстройки интеллектуального анализа данных SQL Server для Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Надстройки для интеллектуального анализа данных — это упрощенный набор средств для прогнозирующего анализа, позволяющий использовать данные в Excel для построения аналитических моделей для прогнозирования, рекомендации и исследования.  
@@ -87,6 +87,6 @@ ms.locfileid: "36099909"
   
  В зависимости от выпуска служб SQL Server Analysis Services, с которым устанавливается соединение, некоторые дополнительные алгоритмы могут оказаться недоступными. Дополнительные сведения см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2014](https://msdn.microsoft.com/en-us/library/cc645993.aspx).  
   
- Дополнительные сведения об установке см. в центре загрузки этой странице: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ Дополнительные сведения об установке см. на странице центра загрузки: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   

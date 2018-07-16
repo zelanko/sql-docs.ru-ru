@@ -1,5 +1,5 @@
 ---
-title: Создание проекта Visual C# SMO в Visual Studio .NET | Документы Microsoft
+title: Создать проект Visual C# SMO в Visual Studio .NET | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Visual C# [SMO]
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b96b2f52b1d993c02536b70e39ba7d1868643a04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c63f02cc9496a09744f403eaac9ec8dd84cc38b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270670"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>создание проекта SMO на языке Visual C# в среде Visual Studio .NET
   В данном разделе описывается, как построить простое консольное приложение командной строки SMO.  
@@ -35,11 +35,11 @@ ms.locfileid: "36100167"
   
 2.  В меню **Файл** выберите пункт **Создать проект**. Откроется диалоговое окно **Создание проекта** .  
   
-3.  В **типы проектов** выберите **Visual C#**, а затем выберите **Windows**. В [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] выберите установленные шаблоны **приложение Windows**.  
+3.  В **типы проектов** выберите **Visual C#**, а затем выберите **Windows**. В [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] выберите установленные шаблоны **приложения Windows**.  
   
-4.  (Необязательно) В **имя** введите имя нового приложения.  
+4.  (Необязательно) В **имя** введите имя нового приложения  
   
-5.  Выберите тип приложения Visual C#. Примеры, которые следует выполнить, выберите **консольное приложение**.  
+5.  Выберите тип приложения Visual C#. Для последующих выберите примеров **консольное приложение**.  
   
 6.  В меню **Проект** выберите пункт **Добавить ссылку**. Откроется диалоговое окно **Добавление ссылки**.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36100167"
   
 9. Нажмите кнопку **Открыть**.  
   
-10. На **представление** меню, нажмите кнопку **кода**. - или - выберите «Program1.cs [Design] Windows и дважды щелкните форму windows для отображения окна кода.  
+10. На **представление** меню, щелкните **кода**. - или - выбрать окно «Program1.cs [Design] Windows и дважды щелкните форму windows для отображения окна кода.  
   
 11. В коде перед инструкцией пространства имен введите следующие инструкции `using` для определения типов в пространстве имен объектов SMO.  
   

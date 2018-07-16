@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - connections [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8eb2cc1bcfa9528eccd2764af954fb165b74daa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43cf572cca1062471e73ab47be5e687fee40c1db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208554"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Настройка подключения к базе данных сервера отчетов (диспетчер конфигурации служб Reporting Services)
   Для функционирования каждого экземпляра сервера отчетов необходимо соединение с базой данных сервера отчетов, в которой хранятся отчеты, модели отчетов, общие источники данных, ресурсы, а также метаданные, управляемые сервером. Исходное соединение может быть создано во время установки сервера отчетов, если производится установка конфигурации по умолчанию. В большинстве случаев после завершения установки настройка соединения осуществляется при помощи программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Такие параметры соединения, как тип учетной записи и учетные данные, можно изменять в любое время. Пошаговые инструкции по созданию базы данных и настройке соединения см. в разделе [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "36099935"
 ### <a name="storing-database-connection-information"></a>Хранение сведений о подключении к базе данных  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] хранят зашифрованные сведения о соединениях в представленных ниже установках RSreportserver.config. Чтобы создать зашифрованные значения указанных установок, необходимо использовать программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или программу rsconfig.  
   
- Не все из этих значений указываются для каждого из типов соединений. При настройке подключения, используя значения по умолчанию (то есть с помощью учетных записей службы для подключения), <`LogonUser`>, <`LogonDomain`>, и <`LogonCred`> будут пусты, следующим образом:  
+ Не все из этих значений указываются для каждого из типов соединений. Если вы настроите подключение, используя значения по умолчанию (то есть с использованием учетных записей служб для подключения), <`LogonUser`>, <`LogonDomain`>, и <`LogonCred`> будут пусты, следующим образом:  
   
 ```  
 <Dsn></Dsn>  

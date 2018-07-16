@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 - peer-to-peer transactional replication, conflict detection
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 01cc02c299d4a5fc617a8177efe141ea4916babe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 750781b73012b6815a3ad9c432ef83d1b02a7b11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318134"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Обнаружение конфликтов в одноранговой репликации
   Одноранговая репликация транзакций дает возможность вставлять, обновлять и удалять данные в любом узле топологии и передавать изменения в данных на другие узлы. Данные можно изменять в любом узле, поэтому изменения, вносимые на различных узлах, могут конфликтовать друг с другом. Если строка изменяется на нескольких узлах, это может вызвать конфликт или даже потерю обновления, когда эта строка передается на другие узлы.  
@@ -90,7 +90,7 @@ ms.locfileid: "36099259"
   
 -   Попытайтесь вновь синхронизировать узел, дав возможность агенту распространителя продолжить применение изменений.  
   
-    1.  Выполнение [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): укажите «p2p_continue_onconflict» для @property параметр и `true` для @value параметра.  
+    1.  Выполнение [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): ' p2p_continue_onconflict ' для @property параметр и `true` для @value параметра.  
   
     2.  Перезапустите агент распространителя.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36099259"
         > [!NOTE]  
         >  Если по выполнении этого шага несогласованность данных сохраняется, необходимо вручную обновить строки узла с самым высоким приоритетом, а затем разрешить распространение изменений с этого узла. Если в топологии более нет конфликтующих изменений, все узлы будут приведены в согласованное состояние.  
   
-    5.  Выполнение [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): укажите «p2p_continue_onconflict» для @property параметр и `false` для @value параметра.  
+    5.  Выполнение [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): ' p2p_continue_onconflict ' для @property параметр и `false` для @value параметра.  
   
 ## <a name="see-also"></a>См. также  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)  

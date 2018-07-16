@@ -1,5 +1,5 @@
 ---
-title: Обработка объектов интеллектуального анализа данных | Документы Microsoft
+title: Обработка объектов интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - processing objects [Analysis Services]
 - mining structures [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - mining structures [Analysis Services], processing
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 52caf01ea2f82b2d566b41ba402fa31b81283638
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09f62e8f3b9abcde430557641beb92a1f7566f1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257470"
 ---
 # <a name="processing-data-mining-objects"></a>Обработка объектов интеллектуального анализа данных
   До обработки объект интеллектуального анализа данных представляет собой просто пустой контейнер. *Обработка* модели интеллектуального анализа данных также называется *обучением*.  
@@ -37,7 +37,7 @@ ms.locfileid: "36100518"
   
  На следующей диаграмме показан поток данных во время обработки структуры интеллектуального анализа данных и во время обработки модели интеллектуального анализа данных.  
   
- ![Обработка данных: источник моделируемой структуры](../media/dmcon-modelarch.gif "обработка данных: источник моделируемой структуры")  
+ ![Обработка данных: источник моделируемой структуры](../media/dmcon-modelarch.gif "обработки данных: источник моделируемой структуры")  
   
 ## <a name="viewing-the-results-of-processing"></a>Просмотр результатов обработки  
  После обработки структура интеллектуального анализа данных содержит компактное представление данных для использования в статистическом анализе. Если кэш не очищен, доступ к хранящимся в нем данным можно получить следующими способами.  

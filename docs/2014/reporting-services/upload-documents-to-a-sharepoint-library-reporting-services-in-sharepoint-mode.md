@@ -1,5 +1,5 @@
 ---
-title: Передать документы в библиотеку SharePoint (службы Reporting Services в режиме интеграции с SharePoint) | Документы Microsoft
+title: Отправка документов в библиотеку SharePoint (службы Reporting Services в режиме интеграции с SharePoint) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - SharePoint integration [Reporting Services], content management
@@ -17,13 +17,13 @@ ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4dbac694b3c91cb75ba0bb5ffe54919ceee90437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 65f3388137c4fe26e1fcc51c11711944c89bd0c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099934"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295884"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Загрузка документов в библиотеку SharePoint (службы Reporting Services в режиме SharePoint)
   Можно передать определения отчета и модели отчета в библиотеку SharePoint. При передаче элемента сервера отчетов необходимо выбрать библиотеку или папку внутри библиотеки. Невозможно передать элемент сервера отчетов в список или на страницу.  

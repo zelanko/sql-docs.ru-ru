@@ -1,5 +1,5 @@
 ---
-title: Тип данных AttributeTranslation (ASSL) | Документы Microsoft
+title: Тип данных AttributeTranslation (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AttributeTranslation data type
 ms.assetid: a0e29941-ef08-42ad-ab9c-b2efd7910895
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e7f5fe2157b407cae3909666329537f85a8b7e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05e846e1cdec16388a96f7e0043aa5b0d49235be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267660"
 ---
 # <a name="attributetranslation-data-type-assl"></a>Тип данных AttributeTranslation (ASSL)
-  Определяет производный тип данных, представляющий перевод, связанный с [атрибут](../objects/attribute-element-assl.md) элемента  
+  Определяет производный тип данных, представляющий перевод, который связан с [атрибут](../objects/attribute-element-assl.md) элемент  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -59,12 +59,12 @@ ms.locfileid: "36098503"
 |------------------|-------------|  
 |Родительские элементы|None|  
 |Дочерние элементы|[CaptionColumn](../objects/column-element-assl.md), [MembersWithDataCaption](../properties/caption-element-assl.md)|  
-|Производные элементы|В разделе [перевода](../objects/translation-element-assl.md) ([переводы](../collections/translations-element-assl.md) коллекцию [DimensionAttribute](dimensionattribute-data-type-assl.md) или [ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md))|  
+|Производные элементы|См. в разделе [перевода](../objects/translation-element-assl.md) ([переводы](../collections/translations-element-assl.md) коллекцию [DimensionAttribute](dimensionattribute-data-type-assl.md) или [ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.AttributeTranslation>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.AttributeTranslation>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

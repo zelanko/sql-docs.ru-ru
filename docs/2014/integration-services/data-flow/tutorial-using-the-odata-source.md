@@ -1,5 +1,5 @@
 ---
-title: 'Учебник: Использование источника OData [SSIS] | Документы Microsoft'
+title: 'Учебник: Использование источника OData [SSIS] | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a9a680d00867de1a82a1ead0837961ce0492e466
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99695cbfb50a74488a2525544e892d5878e4392e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318809"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>Учебник: Использование источника OData [SSIS]
   Этот учебник содержит процедуру извлечения коллекции **Employees** из образца **Northwind** службы OData (http://services.odata.org/V3/Northwind/Northwind.svc/)) и последующей ее загрузки в неструктурированный файл.  
@@ -48,7 +48,7 @@ ms.locfileid: "36099318"
   
 5.  В меню **Создать…** , чтобы добавить новый диспетчера соединений с OData.  
   
-6.  Введите URL-адрес службы OData в поле **Расположение сервисного документа**. Это может быть URL-адрес сервисного документа либо определенный канал или сущность. В целях этого учебника введите [ http://services.odata.org/V3/Northwind/Northwind.svc/ ](http://services.odata.org/V3/Northwind/Northwind.svc/).  
+6.  Введите URL-адрес службы OData в поле **Расположение сервисного документа**. Это может быть URL-адрес сервисного документа либо определенный канал или сущность. Для целей этого учебного примера введите [ http://services.odata.org/V3/Northwind/Northwind.svc/ ](http://services.odata.org/V3/Northwind/Northwind.svc/).  
   
 7.  Убедитесь, что выбрано **Проверка подлинности Windows** для **проверки подлинности** для использования для доступа к службе OData. **Проверка подлинности Windows** выбрана по умолчанию. Чтобы использовалась обычная проверка подлинности, выберите **Использовать указанные имя пользователя и пароль**.  
   

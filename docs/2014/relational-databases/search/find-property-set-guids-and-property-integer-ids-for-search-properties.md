@@ -5,29 +5,28 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 966ec6aaf9a5cf0367dfc8d1b2e0f7895e4eb46c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: bd3deed243e921ea7c15065b127f455d30cad0a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236694"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Поиск идентификаторов GUID наборов свойств и целочисленных идентификаторов свойств для свойств поиска
   В этом разделе описывается получение значений, которые необходимы для добавления свойства в список свойств поиска и включения свойства для полнотекстового поиска. К таким значениям относится идентификатор GUID набора свойств и целочисленный идентификатор свойства документа.  
   
- Свойства документа, извлекаемые фильтрами IFilter из двоичных данных, то есть из данных, хранящихся в `varbinary`, `varbinary(max)` (включая `FILESTREAM`), или `image` столбца тип данных — можно сделать доступными для полнотекстового поиска. Чтобы сделать извлеченное свойство доступным для поиска, его необходимо вручную добавить в список свойств поиска. Список свойств поиска необходимо также связать с одним или несколькими полнотекстовыми индексами. Дополнительные сведения см. в статье [Поиск свойств документа с использованием списков свойств поиска](search-document-properties-with-search-property-lists.md).  
+ Свойства, которые извлекаются фильтром фильтры IFilter из двоичных данных — то есть из данных, хранящихся в документа `varbinary`, `varbinary(max)` (включая `FILESTREAM`), или `image` столбца тип данных — можно сделать доступными для полнотекстового поиска. Чтобы сделать извлеченное свойство доступным для поиска, его необходимо вручную добавить в список свойств поиска. Список свойств поиска необходимо также связать с одним или несколькими полнотекстовыми индексами. Дополнительные сведения см. в статье [Поиск свойств документа с использованием списков свойств поиска](search-document-properties-with-search-property-lists.md).  
   
  Перед добавлением доступных свойств к списку свойств необходимо найти 2 элемента данных о свойствах:  
   

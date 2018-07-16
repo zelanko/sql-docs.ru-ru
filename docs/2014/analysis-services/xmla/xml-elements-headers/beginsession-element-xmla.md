@@ -1,5 +1,5 @@
 ---
-title: Элемент BeginSession (XML для Аналитики) | Документы Microsoft
+title: Элемент BeginSession (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - BeginSession element
 ms.assetid: 49873a97-58d7-42a9-ab7f-e045e2856737
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2982709512433e5a6b87929f3a4efba4f77138b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cf272ae8221b66f7ac8390fab900d22d6b8aaf87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36100482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285830"
 ---
 # <a name="beginsession-element-xmla"></a>Элемент BeginSession (XML для аналитики)
   Использует заголовок SOAP в сообщении SOAP-запроса для запуска нового сеанса в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -72,7 +72,7 @@ ms.locfileid: "36100482"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент заголовка `BeginSession` представляет собой часть SOAP-запроса, отправленного в экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], и явно запускает в экземпляре новый сеанс. Заголовок SOAP, возвращенный в ответе SOAP содержит [сеанса](session-element-xmla.md) элемент, который идентифицирует новый сеанс. Этот идентификатор нового сеанса сохраняется и передается в последующих SOAP-запросах с помощью элемента заголовка `Session`.  
+ Элемент заголовка `BeginSession` представляет собой часть SOAP-запроса, отправленного в экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], и явно запускает в экземпляре новый сеанс. Содержит заголовок SOAP, возвращенный в ответе SOAP [сеанса](session-element-xmla.md) элемент, который идентифицирует новый сеанс. Этот идентификатор нового сеанса сохраняется и передается в последующих SOAP-запросах с помощью элемента заголовка `Session`.  
   
  Если элемент заголовка `BeginSession` не передается, явного запуска сеанса не происходит. Если сеанс не был явно запущен, отсутствует возможность управлять транзакциями в этом сеансе. Другими словами, нельзя использовать следующий код XML для аналитики (XMLA) команды: [BeginTransaction](../xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../xml-elements-commands/committransaction-element-xmla.md), и [RollbackTransaction](../xml-elements-commands/rollbacktransaction-element-xmla.md). Все методы и команды XMLA, вызываемые на выполнение в неявно запущенном сеансе, рассматриваются как неразрывные транзакции.  
   
