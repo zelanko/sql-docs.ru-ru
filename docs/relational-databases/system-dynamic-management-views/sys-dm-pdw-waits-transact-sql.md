@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_waits (Transact-SQL) | Документы Microsoft
+title: sys.dm_pdw_waits (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: ''
@@ -7,23 +7,22 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
+ms.component: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5130e498-1c77-4ae3-a80b-9aae396494e9
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e6f94590f63366e8483ac6bfcb493327f38f714
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: 217d79e5730a58ce8c50ccc894e36650d7d32756
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466550"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36848772"
 ---
 # <a name="sysdmpdwwaits-transact-sql"></a>sys.dm_pdw_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,19 +31,19 @@ ms.locfileid: "34466550"
   
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
-|wait_id|**bigint**|Уникальный числовой идентификатор, связанный с состояния ожидания.<br /><br /> Ключ для этого представления.|Уникален во всех случаях ожидания в системе.|  
-|session_id|**nvarchar(32)**|Идентификатор сеанса, в котором произошло состояния ожидания.|В разделе session_id в [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|Тип|**nvarchar(255)**|Тип ожидания, которую представляет эта запись.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|object_type|**nvarchar(255)**|Тип объекта, который распространяется ожидания.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|object_name|**nvarchar(386)**|Имя или идентификатор GUID объекта, который повлиял ожидания.||  
-|request_id|**nvarchar(32)**|Идентификатор запроса, в котором произошло состояния ожидания.|В разделе request_id в [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
-|request_time|**datetime**|Время, с которого был запрошен состояния ожидания.||  
-|acquire_time|**datetime**|Время, с которого была получена блокировка или ресурс.||  
+|wait_id|**bigint**|Уникальный числовой идентификатор, связанный с состояния ожидания.<br /><br /> Ключ для этого представления.|Уникальными среди всех ожиданий в системе.|  
+|session_id|**nvarchar(32)**|Идентификатор сеанса, в котором произошло состояния ожидания.|См. в разделе session_id в [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|Тип|**nvarchar(255)**|Тип ожидания, которые представляет эта запись.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|object_type|**nvarchar(255)**|Тип объекта, который зависит от ожидания.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|object_name|**nvarchar(386)**|Имя или идентификатор GUID для указанного объекта, который был подвергнут ожидания.||  
+|request_id|**nvarchar(32)**|Идентификатор запроса, в котором произошло состояния ожидания.|См. в разделе request_id в [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|request_time|**datetime**|Время, с которого была запрошена состояния ожидания.||  
+|acquire_time|**datetime**|Время, с которого была получена блокировка или ресурса.||  
 |state|**nvarchar(50)**|Состояние из состояния ожидания.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |priority|**int**|Приоритет элемента ожидания.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
   
 ## <a name="see-also"></a>См. также  
- [Хранилище данных SQL и параллельные хранилища данных динамических административных представлений &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [Хранилище данных SQL и параллельные хранилища данных динамические административные представления &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
  [sys.dm_pdw_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-wait-stats-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Работа с наборами строк схемы в ADOMD.NET | Документы Microsoft
+title: Работа с наборами строк схемы в ADOMD.NET | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c6acc3ffe3a0f0b7ae5523833cbb85f0c152cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e77a3a4c7d38779da149f63644ad9a3106034f51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310754"
 ---
 # <a name="working-with-schema-rowsets-in-adomdnet"></a>Работа с наборами строк схемы в ADOMD.NET
   Если требуется больший объем метаданных, чем тот, который доступен в объектной модели ADOMD.NET, компонент ADOMD.NET имеет возможность извлекать полный спектр наборов строк схемы XML для аналитики (XMLA), OLE DB, OLE DB для OLAP и OLE DB для интеллектуального анализа данных.  
@@ -32,7 +32,7 @@ ms.locfileid: "36188347"
  **Метаданные XML для аналитики**  
  Наборы строк схемы XML для аналитики предоставляют метод для получения сведений низкого уровня о сервере. Эти сведения включают имеющиеся на сервере источники данных, ключевые слова, зарезервированные поставщиком, литералы, поддерживаемые поставщиком и др. Набор строк схемы XML для аналитики можно использовать даже для обнаружения всех наборов строк схемы, поддерживаемых поставщиком.  
   
- Дополнительные сведения: [XML для аналитики наборы строк схемы](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ Дополнительные сведения: [XML для анализа наборов строк схемы](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
  **Метаданные OLE DB**  
  Наборы строк схемы OLE DB предоставляют метод получения сведений от различных поставщиков, стандартный для отрасли.  
@@ -42,12 +42,12 @@ ms.locfileid: "36188347"
  **Метаданные OLAP**  
  Сведения схемы, предоставленные для источника аналитических данных, включают базы данных или каталоги, доступные из этого источника аналитических данных, кубы и модели интеллектуального анализа в базе данных, роли, существующие для кубов в источнике данных и др.  
   
- Дополнительные сведения: [OLE DB для OLAP наборов строк схемы](../schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ Дополнительные сведения: [OLE DB для OLAP наборы строк схемы](../schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
  **Метаданные интеллектуального анализа данных**  
  Помимо метаданных OLAP, при помощи наборов строк схемы можно получать и метаданные интеллектуального анализа данных. Доступные наборы строк выдают сведения об имеющихся в базе данных моделях интеллектуального анализа данных, имеющихся алгоритмах интеллектуального анализа, требуемых алгоритмом параметрах, структурах интеллектуального анализа и др.  
   
- Дополнительные сведения: [наборы строк схемы интеллектуального анализа](../schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ Дополнительные сведения: [наборы строк схемы интеллектуального анализа данных](../schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
  Метаданные из каждого из этих различных наборов строк схемы извлекаются путем передачи идентификатора GUID или имени XMLA с методом <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.GetSchemaDataSet%2A> объекта <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36188347"
  Каждый из этих методов возвращает экземпляр объекта `DataSet`, заполненный сведениями схемы. Объект `DataSet` принадлежит к пространству имен `System.Data` библиотеки классов платформы Microsoft .NET Framework.  
   
 ## <a name="example"></a>Пример  
- В следующем примере функция GetActions принимает соединение, имя куба, координату и тип координаты, извлекает [строк MDSCHEMA_ACTIONS](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)и возвращает действия, доступные в выбранной координате.  
+ В следующем примере функция GetActions принимает соединение, имя куба, координату и тип координаты, извлекает [набор строк MDSCHEMA_ACTIONS](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)и возвращает действия, доступные в выбранной координате.  
   
  [!code-csharp[Adomd.NetClient#GetActions](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#getactions)]  
   

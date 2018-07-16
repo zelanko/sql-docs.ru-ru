@@ -1,5 +1,5 @@
 ---
-title: Тип данных AggregationDimension (ASSL) | Документы Microsoft
+title: Тип данных AggregationDimension (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AggregationDimension data type
 ms.assetid: 697e0e09-3210-4a56-882f-80726abc4c68
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a2e289e1ea6f5c91fc362f309eb73cf5586d6295
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0b67d679a9ade4986f2c9aab11ff3c758c3b7c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251436"
 ---
 # <a name="aggregationdimension-data-type-assl"></a>Тип данных AggregationDimension (ASSL)
-  Определяет тип-примитив, представляющий связь между измерением и [статистической обработки](../objects/aggregation-element-assl.md) элемента.  
+  Определяет тип-примитив, представляющий связь между измерением и [статистической обработки](../objects/aggregation-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36190293"
 |Производные элементы|[Измерение](../objects/dimension-element-assl.md) ([измерения](../collections/dimensions-element-assl.md) коллекцию [статистической обработки](../objects/aggregation-element-assl.md))|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это [AggregationDimension](dimension-data-type-assl.md).  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это [AggregationDimension](dimension-data-type-assl.md).  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

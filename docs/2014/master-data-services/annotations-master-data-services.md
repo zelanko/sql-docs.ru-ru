@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - annotations [Master Data Services]
 - annotations [Master Data Services], about annotations
 ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b9d56a2cf9a7744e028fdcc960fe63d97bab36a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 07aac915183194b32d87eed970cb8d8d838c34aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260930"
 ---
 # <a name="annotations-master-data-services"></a>Заметки (службы Master Data Services)
   Заметки в службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]представляют собой комментарии, вводимые для указания подробных сведений о транзакциях.  
@@ -39,7 +39,7 @@ ms.locfileid: "36086922"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Добавление заметки к транзакции.|[Заметки к транзакции &#40;службы Master Data Services&#41;](annotate-a-transaction-master-data-services.md)|  
+|Добавление заметки к транзакции.|[Добавление заметки для транзакции &#40;службы Master Data Services&#41;](annotate-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   

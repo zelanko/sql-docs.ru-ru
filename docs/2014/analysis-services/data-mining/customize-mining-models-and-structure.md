@@ -1,5 +1,5 @@
 ---
-title: Настройка структуры и моделей интеллектуального анализа данных | Документы Microsoft
+title: Настройка структуры и моделей интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - mining models [Analysis Services], properties
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 595e914741361fa0922da59a2e0fdc699d96054c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79790404f11ffc40ca3e4826217ab331fec92a85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188363"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286360"
 ---
 # <a name="customize-mining-models-and-structure"></a>Настройка структуры и моделей интеллектуального анализа данных
   После выбора алгоритма в соответствии с задачами организации, можно выполнить индивидуальную настройку модели, что может повысить эффективность результатов. Настройка выполняется следующими способами.  
@@ -65,7 +65,7 @@ ms.locfileid: "36188363"
 ### <a name="creating-aliases-for-model-columns"></a>Создание псевдонимов для столбцов модели  
  Когда службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают модель интеллектуального анализа данных, они используют те же имена столбцов, что существуют в структуре интеллектуального анализа данных. Любому столбцу в модели интеллектуального анализа данных можно добавить псевдоним. Это может облегчить понимание содержимого столбца или его использования. Также можно сократить имя, чтобы было удобнее создавать запросы. Псевдонимы также удобны при создании копии столбца с заданием для нее описательного имени.  
   
- Псевдоним создается путем редактирования `Name` свойство столбца модели интеллектуального анализа данных. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] продолжается использование исходного имени как идентификатор столбца и новое значение, введенное для `Name` становится псевдоним столбца и отображается в сетке в круглых скобках рядом со столбцом.  
+ Псевдоним создается путем редактирования `Name` свойство столбца модели интеллектуального анализа данных. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] продолжается использование исходного имени в качестве идентификатора столбца и новое значение, введенное для `Name` становится псевдоним столбца и отображается в сетке в круглых скобках рядом со столбцом.  
   
  ![псевдонимы для интеллектуального анализа данных столбцами модели](../media/modelcolumnalias-income.gif "столбцами модели псевдонимы для интеллектуального анализа данных")  
   

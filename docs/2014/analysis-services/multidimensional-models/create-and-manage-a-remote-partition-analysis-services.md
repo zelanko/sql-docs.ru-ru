@@ -1,5 +1,5 @@
 ---
-title: Создание и управление удаленной секции (службы Analysis Services) | Документы Microsoft
+title: Создание и управление ими удаленной секции (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10dc1d65f147c070a740b1e6adbe4b681af667bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44922bea51081a134410ac7f656cb5e3670001af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315044"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Создание удаленной секции и управление ей (Analysis Services)
   При секционировании группы мер можно указать в качестве хранилища секции базу данных-получатель на удаленном экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

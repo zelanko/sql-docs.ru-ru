@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - arguments [SQL Server Management Studio]
 - external tools [SQL Server Management Studio]
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a568423d865e9ffea07f4e4487ea6d3680e2b417
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2693c20a4b1e26730085e9f84fcf3f920cf50314
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189902"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310914"
 ---
 # <a name="arguments-for-external-tools"></a>Аргументы для внешних средств
   Аргументы — это переменные, с помощью которых среда Studio передает параметры внешним средствам, запускаемым через меню **Сервис** . Внешние средства, например «Блокнот», можно добавить в меню **Сервис** с помощью диалогового окна **Внешние средства** .  
@@ -47,10 +47,10 @@ ms.locfileid: "36189902"
 |**Каталог решения**|$(SolutionDir)|Каталог текущего решения (определяется как диск + путь).|  
 |**Имя файла решения**|$(SolutionFileName)|Имя файла текущего решения (определяется как диск + путь + имя файла).|  
   
- <sup>1</sup> текущая строка, текущий столбец или текущий текст зависит от положения курсора в редакторе текста как показано в строке состояния.  
+ <sup>1</sup> текущая строка, текущий столбец или текущий текст определяются по положению курсора в текстовом редакторе отображается в строке состояния.  
   
 ## <a name="see-also"></a>См. также  
- [Диалоговое окно «Внешние средства»](external-tools-dialog-box.md)   
+ [Диалоговое окно "Внешние инструменты"](external-tools-dialog-box.md)   
  [Общие элементы пользовательского интерфейса](general-user-interface-elements.md)  
   
   

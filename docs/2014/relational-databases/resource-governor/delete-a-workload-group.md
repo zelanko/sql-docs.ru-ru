@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - workload groups [SQL Server], delete
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 793052419843c2e2421458da07b2815932683645
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f48df99f595bb313d8ca2406850f75cae82c7020
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274210"
 ---
 # <a name="delete-a-workload-group"></a>Удаление группы рабочей нагрузки
   Группу рабочей нагрузки или пул ресурсов можно удалить в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] либо с помощью Transact-SQL.  
@@ -71,7 +71,7 @@ ms.locfileid: "36094778"
 ##  <a name="DelWGTSQL"></a> Удаление группы рабочей нагрузки с помощью Transact-SQL  
  **Удаление группы рабочей нагрузки с помощью Transact-SQL**  
   
-1.  Запустите `DROP WORKLOAD GROUP` инструкцию, указав имя группы рабочей нагрузки, подлежащей удалению.  
+1.  Запустите `DROP WORKLOAD GROUP` инструкцию, указав имя удаляемой группы рабочей нагрузки.  
   
 2.  Перед выполнением инструкции `ALTER RESOURCE GOVERNOR RECONFIGURE` убедитесь, что в удаляемой группе рабочей нагрузки нет активных запросов. Если активные запросы есть `ALTER RESOURCE GOVERNOR` завершится ошибкой. Во избежание этой ошибки можно предпринять одно из следующих действий:  
   

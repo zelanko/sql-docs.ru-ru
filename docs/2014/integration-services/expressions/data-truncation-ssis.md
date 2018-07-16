@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - truncating data
 - data truncation [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e735659fb2898c2ab6bc428d7ad6fc0f5759f17c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5f80a51df610040e18dbdae7b1552c56d81cb084
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328096"
 ---
 # <a name="data-truncation-ssis"></a>Усечение данных (службы SSIS)
   Выражение может непреднамеренно усекать данные. Усечение может произойти при следующих обстоятельствах:  
@@ -38,6 +38,6 @@ ms.locfileid: "36190034"
  Средство оценки выражений определяет явные приведения, которые могут привести к усечению, и выдает предупреждение, если выражение прошло синтаксический анализ. Например, средство оценки выражений выдаст предупреждение, если строка, состоящая из 30 символов, будет преобразована в строку, состоящую из 20 символов.  
   
 > [!NOTE]  
->  Во время выполнения программы проверка на усечение данных не происходит, данные усекаются без предупреждения. Однако большинство адаптеров обработки данных и преобразований поддерживают сообщения об ошибках, что позволяет обработать неправильно расположенные ошибочные строки. Дополнительные сведения об обработке усечения данных см. в разделе [Error Handling in Data](../data-flow/error-handling-in-data.md).  
+>  Во время выполнения программы проверка на усечение данных не происходит, данные усекаются без предупреждения. Однако большинство адаптеров обработки данных и преобразований поддерживают сообщения об ошибках, что позволяет обработать неправильно расположенные ошибочные строки. Дополнительные сведения об обработке усечения данных см. в разделе [обработка ошибок в данных](../data-flow/error-handling-in-data.md).  
   
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stoplists [full-text search]
 - full-text search [SQL Server], stoplists
@@ -18,20 +17,20 @@ helpviewer_keywords:
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f1d32fea4b5d9995628c187d39c7482c6694e828
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3ea419224478d1c4c45117795fe5a67ebfcaf5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284840"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска
   Чтобы предотвратить чрезмерное увеличение полнотекстового индекса, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализован механизм, отбрасывающий часто встречающиеся строки, не повышающие эффективность поиска. Эти отброшенные строки называются *стоп-словами*. Во время создания индекса средство полнотекстового поиска не включает стоп-слова в полнотекстовый индекс. Это значит, что полнотекстовые запросы не будут выполнять поиск по стоп-словам.  
   
-##  <a name="understand"></a> Основные сведения о стоп-словами и списками стоп-слов  
+##  <a name="understand"></a> Основные сведения о стоп-слов и списков стоп-слов  
  Стоп-слово может быть словом конкретного языка или *токеном* , не имеющим лингвистического значения. Например, в английском языке такие слова, как «a», «and», «is» и «the», не включаются в полнотекстовый индекс, потому что при поиске они бесполезны.  
   
  Хотя стоп-слова при поиске не учитываются, полнотекстовый индекс принимает во внимание расположение таких слов. Рассмотрим для примера фразу «Instructions are applicable to these Adventure Works Cycles models». Позиции слов в этой фразе приведены в следующей таблице.  
@@ -99,34 +98,34 @@ ms.locfileid: "36180234"
 -   [DROP FULLTEXT STOPLIST (Transact-SQL)](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
   
   
-##  <a name="queries"></a> Использование списка стоп-слов в полнотекстовых запросах  
+##  <a name="queries"></a> Использование списка стоп-слов в запросах полнотекстового поиска  
  Чтобы использовать список стоп-слов в запросах, нужно связать его с полнотекстовым индексом. Можно добавить список стоп-слов к полнотекстовому индексу при создании индекса или изменить индекс позже, добавив список стоп-слов.  
   
- **Для создания полнотекстового индекса и связать с ним список стоп-слов**  
+ **Для создания полнотекстового индекса и свяжите с ним список стоп-слов**  
   
 -   [CREATE FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
- **Связывание или разъединение списка стоп-слов с существующего полнотекстового индекса**  
+ **Связывание или разъединение списка стоп-слов с помощью существующего полнотекстового индекса**  
   
 -   [ALTER FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   
- **Чтобы подавить сообщение об ошибке при неуспешном завершении логической операции в полнотекстовом запросе к сбою**  
+ **Чтобы подавить сообщение об ошибке при неуспешном завершении логической операции, завершению запроса полнотекстового поиска**  
   
 -   [Параметр конфигурации сервера «transform noise words»](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)  
   
   
-##  <a name="viewing"></a> Просмотр списков стоп-слов и их метаданных  
+##  <a name="viewing"></a> Просмотр списков стоп-слов и метаданные списка стоп-слов  
  **Для просмотра всех стоп-слов из списка стоп-слов**  
   
 -   [sys.fulltext_stopwords (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
- **Для получения сведений о всех списков стоп-слов в текущей базе данных**  
+ **Для получения сведений о всех списков стоп-слов текущей базы данных**  
   
 -   [sys.fulltext_stoplists (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)  
   
 -   [sys.fulltext_stopwords (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
- **Просмотр итогового результата словам разбиения, тезауруса и списка стоп-слов**  
+ **Просмотр итогового результата разметки сочетания средства разбиения по словам, тезауруса и списка стоп-слов word**  
   
 -   [sys.dm_fts_parser (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   

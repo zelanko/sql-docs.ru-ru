@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.agentlocation.f1
 ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5f0e4ba168fb1e3feae466000cf2cba72f05cd12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9785817adc53b5386dfa511295fe2adc28d06bef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279210"
 ---
 # <a name="ltagentnamegt-agent-location"></a>Расположение агента &lt;имя_агента&gt;
   Агент слияния (для подписок на публикации слиянием) и агент распространителя (для подписок на публикацию транзакций и на моментальные снимки) работают на распространителе или на подписчике. Если агент работает на распространителе, подписка называется принудительной; если агент работает на подписчике, она называется подпиской по запросу. Дополнительные сведения о подписках см. в статье [Подписка на публикации](subscribe-to-publications.md). Все подписки, созданные в этом сеансе работы мастера, будут иметь выбранный тип. Чтобы создать подписки обоих типов, необходимо дважды запустить мастер.  

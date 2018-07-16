@@ -1,11 +1,11 @@
 ---
-title: Типы данных SQL Server в .NET Framework | Документы Microsoft
+title: Типы данных SQL Server в .NET Framework | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,16 +22,16 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fe3a5c99e2c1e9bf569ecdbb1ab31d683d340206
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ed5a1608807d1a05638ee1854ff6676c4cdc7db6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702055"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350196"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Типы данных SQL Server в платформе .NET Framework
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **SqlTypes** частью библиотеки базового класса [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Она предоставляет типы данных с той же семантикой и той же точностью, как те, что доступны в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В этом разделе о новой семантике для программистов, .NET Framework и предоставляет типы, реализованные в **System.Data.SqlTypes** пространства имен, которое включено в **System.Data** библиотеки.  
+  **SqlTypes** библиотеки является частью библиотеки базовых классов из [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Она предоставляет типы данных с той же семантикой и той же точностью, как те, что доступны в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В этом разделе описывается новой семантике для программистов .NET Framework и описывает типы, реализованные в **System.Data.SqlTypes** пространства имен, которое включено в **System.Data** библиотеки.  
   
  В следующей таблице перечислены подразделы этого раздела.  
   

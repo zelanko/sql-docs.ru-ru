@@ -1,5 +1,5 @@
 ---
-title: Олицетворение и безопасность интеграции со средой CLR | Документы Microsoft
+title: Олицетворение и безопасность интеграции CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - context [CLR integration]
 ms.assetid: 1495a7af-2248-4cee-afdb-9269fb3a7774
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8e5863ed19f306fbaf88cffd02903a958c63cfe0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 05b117f27d0c27ca9288f94aade079df876fafad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243204"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Олицетворение и средства обеспечения безопасности при интеграции со средой CLR
   При обращении управляемого кода к внешним ресурсам в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выполняется автоматически олицетворение текущего контекста выполнения, в котором выполняется процедура. В коде сборок `EXTERNAL_ACCESS` и `UNSAFE` олицетворение текущего контекста выполнения может проводиться явно.  

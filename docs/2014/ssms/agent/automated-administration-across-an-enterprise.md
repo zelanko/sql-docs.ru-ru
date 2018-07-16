@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - enterprise automatic administration [SQL Server]
 - multiserver administration [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - target servers [SQL Server]
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95ed4df18cfb4bcf433d08bbe9decacf35977c0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9c4cd4b54ef4659434f7b73b81c72f79c2cba4e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257860"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Автоматизация администрирования в масштабах предприятия
   Автоматическое администрирование нескольких экземпляров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] называется *администрированием нескольких серверов*. Оно предназначено для выполнения следующих задач.  
@@ -39,7 +39,7 @@ ms.locfileid: "36191547"
 -   Планирования потоков данных между серверами предприятия для организации хранилищ данных.  
   
 > [!NOTE]  
->  В рамках [!INCLUDE[msCoName](../../includes/msconame-md.md)] продолжающихся усилий, чтобы снизить совокупную стоимость владения, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] появилось два новшества: метод управления серверами, называемый управление на основе политик и многосерверные запросы, использующие серверы конфигурации и сервера группы. Эти функции могут использоваться вместо или совместно с некоторыми функциями, описанными в этом разделе. Дополнительные сведения см. в разделе [Администрирование серверов с помощью управления](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) и [администрирования нескольких серверов с использованием центральных серверов управления](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
+>  Как часть [!INCLUDE[msCoName](../../includes/msconame-md.md)] продолжающихся усилий, чтобы снизить совокупную стоимость владения, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] появилось два новшества: метод управления серверами, называемый управление на основе политик и многосерверные запросы, использующие серверы конфигурации и сервера группы. Эти функции могут использоваться вместо или совместно с некоторыми функциями, описанными в этом разделе. Дополнительные сведения см. в разделе [Администрирование серверов с управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) и [администрирования нескольких серверов с использованием центральных серверов управления](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
   
  Чтобы воспользоваться преимуществами администрирования нескольких серверов, необходимо иметь, по меньшей мере, один главный сервер и один целевой. Главный сервер распределяет задания целевым серверам и получает от них события. На главном сервере также хранится центральная копия определений заданий, выполняющихся на целевых серверах. Целевые серверы периодически подключаются к главному серверу для обновления расписаний своих заданий. Если на главном сервере имеется новое задание, то целевой сервер получает его. После завершения задания целевой сервер подключается к главному серверу и сообщает о состоянии его завершения.  
   

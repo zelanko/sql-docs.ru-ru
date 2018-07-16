@@ -1,25 +1,24 @@
 ---
-title: Настройка SQL Server Managed Backup to Windows Azure | Документы Microsoft
+title: Настройка SQL Server Managed Backup to Windows Azure | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 43a7ffba55ccae49ae83360b833184fe0908a41f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 436da2329cec73764cbeb73b34971352df83dfef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281530"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure"></a>Настройка управляемого резервного копирования SQL Server в Windows Azure
   В этот раздел входят два учебника:  
@@ -28,7 +27,7 @@ ms.locfileid: "36086926"
   
  Настройка [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] на уровне экземпляра, включение уведомлений по электронной почте и мониторинг резервного копирования.  
   
- Учебник по настройке [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для групп доступности см. в разделе [Настройка SQL Server Managed Backup to Microsoft Azure для группы доступности](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
+ Руководство по настройке [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для групп доступности, см. в разделе [Настройка SQL Server Managed Backup to Microsoft Azure для групп доступности](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
   
 ## <a name="setting-up-includesssmartbackupincludesss-smartbackup-mdmd"></a>Настройка [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
@@ -37,7 +36,7 @@ ms.locfileid: "36086926"
   
  **Разрешения:**  
   
--   Требуется членство в **db_backupoperator** роли базы данных с **ALTER ANY CREDENTIAL** разрешения, и `EXECUTE` разрешения на **sp_delete_backuphistory**хранимой процедуры.  
+-   Требуется членство в **db_backupoperator** роли базы данных с помощью **ALTER ANY CREDENTIAL** разрешения, и `EXECUTE` разрешения на **sp_delete_backuphistory**хранимой процедуры.  
   
 -   Требуется **ВЫБЕРИТЕ** разрешения на **smart_admin.fn_get_current_xevent_settings**функции.  
   
@@ -46,19 +45,19 @@ ms.locfileid: "36086926"
 -   Требуется `EXECUTE` разрешения на `smart_admin.sp_set_instance_backup` и `smart_admin.sp_backup_master_switch` хранимых процедур.  
 
 
-1.  **Создать учетную запись хранилища Microsoft Azure:** резервных копий в службе хранилища Microsoft Azure. Сначала необходимо создать учетную запись хранилища Microsoft Azure, если у вас еще нет учетной записи.
-    - SQL Server 2014 используются страничные большие двоичные объекты, которые отличаются от блока и добавить больших двоичных объектов. Поэтому необходимо создать учетную запись общего назначения, а не учетную запись больших двоичных объектов. Дополнительные сведения см. в разделе [учетных записей хранилища Azure о](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
+1.  **Создайте учетную запись хранилища Microsoft Azure:** резервные копии хранятся в службе хранилища Microsoft Azure. Во-первых, необходимо создать учетную запись хранения Microsoft Azure, если у вас еще нет учетной записи.
+    - SQL Server 2014 использует страничных BLOB-объектов, которые отличаются от блока и добавочных BLOB-объектов. Поэтому необходимо создать учетную запись общего назначения, а не учетной записи большого двоичного объекта. Дополнительные сведения см. в разделе [учетных записях хранения Azure о](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Запишите имя учетной записи хранения и ключи доступа. Имя учетной записи хранения и сведения о ключе доступа используются для создания учетных данных SQL. Учетные данные SQL используются для проверки подлинности учетной записи хранения.  
  
-2.  **Создание учетных данных SQL:** создайте учетные данные SQL, используя имя учетной записи хранения, как удостоверения и ключ доступа к хранилищу в качестве пароля.  
+2.  **Создание учетных данных SQL:** создать учетные данные SQL, используя имя учетной записи хранения как идентификатор и ключ доступа к хранилищу в качестве пароля.  
   
-3.  **Убедитесь, служба агента SQL Server запущена и работает:** запустите агент SQL Server, если он еще не запущен.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] требует, чтобы агент SQL Server был запущен на экземпляре.  Можно установить автоматический запуск агента SQL Server, чтобы обеспечить регулярное выполнение операций резервного копирования.  
+3.  **Убедитесь, что агент SQL Server служба запущена и работает:** запустите агент SQL Server, если он еще не запущен.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] требует, чтобы агент SQL Server был запущен на экземпляре.  Можно установить автоматический запуск агента SQL Server, чтобы обеспечить регулярное выполнение операций резервного копирования.  
   
 4.  **Определите срок хранения.** Задайте срок хранения файлов резервной копии. Срок хранения указывается в днях и может принимать значение от 1 до 30.  
   
 5.  **Включение и настройка [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** запустите SQL Server Management Studio и подключитесь к экземпляру, где установлена база данных. В окне запроса выполните приведенную ниже инструкцию, предварительно задав нужные значения имени базы данных, учетных данных SQL, срока хранения и параметров шифрования.  
   
-     Дополнительные сведения о создании сертификата для шифрования см. в разделе **создайте сертификат резервной копии** шага в [Create an Encrypted Backup](create-an-encrypted-backup.md).  
+     Дополнительные сведения о создании сертификата для шифрования см. в разделе **Создание резервной копии сертификата** шаг в [Create an Encrypted Backup](create-an-encrypted-backup.md).  
   
     ```  
     Use msdb;  
@@ -100,7 +99,7 @@ ms.locfileid: "36086926"
   
         ```  
   
-         Дополнительные сведения и полный пример скрипта см. [монитора SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
+         Дополнительные сведения и полный пример скрипта см. в разделе [монитора SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
 8.  **Просмотрите файлы резервных копий в учетной записи хранения Microsoft Azure.** Подключитесь к учетной записи хранения из SQL Server Management Studio либо с помощью портала управления Azure. Вы увидите контейнер экземпляра SQL Server, в котором размещается база данных, настроенная на использование [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Кроме того, можно настроить базу данных и резервное копирование журналов за 15 минут либо включить [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для базы данных.  
   
@@ -151,25 +150,25 @@ ms.locfileid: "36086926"
   
     ```  
   
- Шаги, описанные в этом разделе, специально предназначены для первой настройки [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] в базе данных. Можно изменить существующие конфигурации с помощью той же системной хранимой процедуре **smart_admin.sp_set_db_backup** и указывать новые значения. Дополнительные сведения см. в разделе [SQL Server Managed Backup to Microsoft Azure, хранения и настройки хранилищ](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
+ Шаги, описанные в этом разделе, специально предназначены для первой настройки [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] в базе данных. Можно изменить существующие конфигурации, с помощью той же системной хранимой процедуре **smart_admin.sp_set_db_backup** и указывать новые значения. Дополнительные сведения см. в разделе [SQL Server Managed Backup to Microsoft Azure — настройки хранения периода хранения и](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
   
 ### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd-for-the-instance-with-default-settings"></a>Включите [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для экземпляра с параметрами по умолчанию  
- Этот учебник описывает шаги для включения и настройки [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для экземпляра «MyInstance»,\\. В него входят шаги для включения мониторинга состояния работоспособности [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+ Этом руководстве описаны шаги по включению и настройке [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для экземпляра «MyInstance»,\\. В него входят шаги для включения мониторинга состояния работоспособности [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  **Разрешения:**  
   
--   Требуется членство в **db_backupoperator** роли базы данных с **ALTER ANY CREDENTIAL** разрешения, и `EXECUTE` разрешения на **sp_delete_backuphistory**хранимой процедуры.  
+-   Требуется членство в **db_backupoperator** роли базы данных с помощью **ALTER ANY CREDENTIAL** разрешения, и `EXECUTE` разрешения на **sp_delete_backuphistory**хранимой процедуры.  
   
 -   Требуется **ВЫБЕРИТЕ** разрешения на **smart_admin.fn_get_current_xevent_settings**функции.  
   
 -   Требуется `EXECUTE` разрешения на **smart_admin.sp_get_backup_diagnostics** хранимой процедуры. Кроме того, необходимы разрешения `VIEW SERVER STATE`, так как процедура автоматически вызывает другие системные объекты, которым требуется это разрешение.  
 
 
-1.  **Создать учетную запись хранилища Microsoft Azure:** резервных копий в службе хранилища Microsoft Azure. Сначала необходимо создать учетную запись хранилища Microsoft Azure, если у вас еще нет учетной записи.
-    - SQL Server 2014 используются страничные большие двоичные объекты, которые отличаются от блока и добавить больших двоичных объектов. Поэтому необходимо создать учетную запись общего назначения, а не учетную запись больших двоичных объектов. Дополнительные сведения см. в разделе [учетных записей хранилища Azure о](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
+1.  **Создайте учетную запись хранилища Microsoft Azure:** резервные копии хранятся в службе хранилища Microsoft Azure. Во-первых, необходимо создать учетную запись хранения Microsoft Azure, если у вас еще нет учетной записи.
+    - SQL Server 2014 использует страничных BLOB-объектов, которые отличаются от блока и добавочных BLOB-объектов. Поэтому необходимо создать учетную запись общего назначения, а не учетной записи большого двоичного объекта. Дополнительные сведения см. в разделе [учетных записях хранения Azure о](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Запишите имя учетной записи хранения и ключи доступа. Имя учетной записи хранения и сведения о ключе доступа используются для создания учетных данных SQL. Учетные данные SQL используются для проверки подлинности учетной записи хранения.  
   
-2.  **Создание учетных данных SQL:** создайте учетные данные SQL, используя имя учетной записи хранения, как удостоверения и ключ доступа к хранилищу в качестве пароля.  
+2.  **Создание учетных данных SQL:** создать учетные данные SQL, используя имя учетной записи хранения как идентификатор и ключ доступа к хранилищу в качестве пароля.  
   
 3.  **Убедитесь, что служба агента SQL Server запущена и работает.** Запустите агент SQL Server, если он еще не запущен. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] требует, чтобы агент SQL Server был запущен на экземпляре.  Можно установить автоматический запуск агента SQL Server, чтобы обеспечить регулярное выполнение операций резервного копирования.  
   
@@ -177,7 +176,7 @@ ms.locfileid: "36086926"
   
 5.  **Включение и настройка [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** запустите SQL Server Management Studio и подключитесь к экземпляру SQL Server. В окне запроса выполните приведенную ниже инструкцию, предварительно задав нужные значения имени базы данных, учетных данных SQL, срока хранения и параметров шифрования.  
   
-     Дополнительные сведения о создании сертификата для шифрования см. в разделе **создайте сертификат резервной копии** шага в [Create an Encrypted Backup](create-an-encrypted-backup.md).  
+     Дополнительные сведения о создании сертификата для шифрования см. в разделе **Создание резервной копии сертификата** шаг в [Create an Encrypted Backup](create-an-encrypted-backup.md).  
   
     ```  
     Use msdb;  
@@ -229,7 +228,7 @@ ms.locfileid: "36086926"
   
         ```  
   
-         Дополнительные сведения о мониторинге и полный пример скрипта см [монитора SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
+         Дополнительные сведения о том, как отслеживать и полный пример скрипта см. в разделе [монитора SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
 9. **Просмотрите файлы резервных копий в учетной записи хранения Microsoft Azure.** Подключитесь к учетной записи хранения из SQL Server Management Studio либо с помощью портала управления Azure. Вы увидите контейнер экземпляра SQL Server, в котором размещается база данных, настроенная на использование [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Кроме того, вы увидите базу данных и резервную копию журнала в течение 15 минут после создания новой базы данных.  
   
@@ -280,6 +279,6 @@ ms.locfileid: "36086926"
   
     ```  
   
- Параметры [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] по умолчанию могут переопределяться для конкретной базы данных путем специальной настройки параметров на уровне базы данных. Кроме того, можно временно приостанавливать службу [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] и возобновлять ее выполнение. Дополнительные сведения см. в разделе [SQL Server Managed Backup to Microsoft Azure, хранения и настройки хранилища](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)  
+ Параметры [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] по умолчанию могут переопределяться для конкретной базы данных путем специальной настройки параметров на уровне базы данных. Кроме того, можно временно приостанавливать службу [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] и возобновлять ее выполнение. Дополнительные сведения см. в разделе [SQL Server Managed Backup to Microsoft Azure — хранение и параметры хранилища](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)  
   
   

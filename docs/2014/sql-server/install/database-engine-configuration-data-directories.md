@@ -1,5 +1,5 @@
 ---
-title: Настройка компонента Database Engine — каталоги данных | Документы Microsoft
+title: Настройка компонента Database Engine — каталоги данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9b1fa0fc-623b-479a-afc3-4f13bd850487
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f28b0137d2d7aa3e5489c6c679f18cdbbb70a43e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5cffd3f38ae15132e9c7bafcc34bd469714f8452
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317504"
 ---
 # <a name="database-engine-configuration---data-directories"></a>Настройка компонента Database Engine — каталоги данных
   На этой странице указывается расположение, в которое будут установлены программные файлы и файлы данных компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]. В зависимости от типа установки в качестве хранилища можно использовать локальный диск, общее хранилище или файловый сервер SMB.  
@@ -40,7 +40,7 @@ ms.locfileid: "36086488"
 |Каталог журналов базы данных temp|Локальный диск, файловый сервер SMB, общее хранилище <sup>1</sup>|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< InstanceID > \MSSQL\Data|Убедитесь, что каталог журнала имеет достаточно свободного места.|  
 |Каталог резервного копирования|Локальный диск, файловый сервер SMB, общее хранилище <sup>1</sup>|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< InstanceID > \MSSQL\Backup|Установите необходимые разрешения для предотвращения потери данных и удостоверьтесь, что учетная запись пользователя службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет достаточно разрешений для записи в каталог резервного копирования. Использование подключенных дисков для размещения каталогов резервного копирования не поддерживается.|  
   
- <sup>1</sup> хотя общие диски и поддерживаются, это не рекомендуется для изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ <sup>1</sup> несмотря на то, что общие диски и поддерживаются, это не рекомендуется для изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  В следующей таблице приведены поддерживаемые типы хранилища и каталоги по умолчанию для экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые можно изменить в программе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -48,7 +48,7 @@ ms.locfileid: "36086488"
 |Описание|Поддерживаемые типы хранилища|Каталог по умолчанию|Рекомендации|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |Корневой каталог данных|Общее хранилище, файловый сервер SMB|\<Диск:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> Совет. Если на странице **Выбор диска кластера** был указан общий диск, по умолчанию используется первый общий диск. Если на странице **Выбор диска кластера** не было указано никакого значения, это поле по умолчанию остается пустым.|Программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроит списки ACL для каталогов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отменит наследование как часть конфигурации.|  
-|Каталог пользовательской базы данных|Общее хранилище, файловый сервер SMB|\<Диск: > программные файлы\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< InstanceID > \MSSQL\Data<br /><br /> Совет. Если на странице **Выбор диска кластера** был указан общий диск, по умолчанию используется первый общий диск. Если на странице **Выбор диска кластера** не было указано никакого значения, это поле по умолчанию остается пустым.|Рекомендации пользователю каталогов данных зависят от рабочей нагрузки и требований производительности.|  
+|Каталог пользовательской базы данных|Общее хранилище, файловый сервер SMB|\<Диск: > Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< InstanceID > \MSSQL\Data<br /><br /> Совет. Если на странице **Выбор диска кластера** был указан общий диск, по умолчанию используется первый общий диск. Если на странице **Выбор диска кластера** не было указано никакого значения, это поле по умолчанию остается пустым.|Рекомендации пользователю каталогов данных зависят от рабочей нагрузки и требований производительности.|  
 |Каталог журналов пользовательской базы данных|Общее хранилище, файловый сервер SMB|\<Диск: > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< InstanceID > \MSSQL\Data<br /><br /> Совет. Если на странице **Выбор диска кластера** был указан общий диск, по умолчанию используется первый общий диск. Если на странице **Выбор диска кластера** не было указано никакого значения, это поле по умолчанию остается пустым.|Убедитесь, что каталог журнала имеет достаточно свободного места.|  
 |Каталог базы данных temp|Локальный диск, общее хранилище, файловый сервер SMB|\<Диск: > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< InstanceID > \MSSQL\Data<br /><br /> Совет. Если на странице **Выбор диска кластера** был указан общий диск, по умолчанию используется первый общий диск. Если на странице **Выбор диска кластера** не было указано никакого значения, это поле по умолчанию остается пустым.|Указанный каталог должен быть допустимым для всех узлов кластера. Если во время отработки отказа каталоги tempdb недоступны на целевом узле отработки отказа, то при переводе ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режим «в сети» произойдет ошибка.|  
 |Каталог журналов базы данных temp|Локальный диск, общее хранилище, файловый сервер SMB|\<Диск: > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< InstanceID > \MSSQL\Data<br /><br /> Совет. Если на странице **Выбор диска кластера** был указан общий диск, по умолчанию используется первый общий диск. Если на странице **Выбор диска кластера** не было указано никакого значения, это поле по умолчанию остается пустым.|Указанный каталог должен быть допустимым для всех узлов кластера. Если во время отработки отказа каталоги tempdb недоступны на целевом узле отработки отказа, то при переводе ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режим «в сети» произойдет ошибка.|  

@@ -1,5 +1,5 @@
 ---
-title: Доступ к данным PowerPivot | Документы Microsoft
+title: Доступ к данным PowerPivot | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a1a209c87dc227497aad1808758373b0d98b4d77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d00d5ae30f7ed612657e185ed28307cc576bf040
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232000"
 ---
 # <a name="powerpivot-data-access"></a>Доступ к данным PowerPivot
   Данный раздел описывает способы, с помощью которых данные извлекаются из книги PowerPivot, опубликованной в библиотеке SharePoint.  
@@ -44,7 +44,7 @@ ms.locfileid: "36179955"
  Не все данные в книге PowerPivot обрабатываются компонентом PowerPivot для SharePoint. Службы Excel обрабатывают данные таблиц и ячеек листа. PowerPivot для SharePoint обрабатывает только сводные таблицы, диаграммы и срезы, связанные с данными PowerPivot.  
   
 ## <a name="see-also"></a>См. также  
- [Подключитесь к службам Analysis Services](../instances/connect-to-analysis-services.md)   
+ [Подключение к службам Analysis Services](../instances/connect-to-analysis-services.md)   
  [Доступ к данным табличной модели](../tabular-models/tabular-model-data-access.md)  
   
   

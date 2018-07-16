@@ -1,5 +1,5 @@
 ---
-title: Редактор назначения «Excel» (страница «Диспетчер соединений») | Документы Microsoft
+title: Редактор назначения «Excel» (страница «Диспетчер соединений») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldestadapter.connection.f1
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14b06c895b60f3965d7b7ccd0bea5c3d6f8b447b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af5336747676827b054d34ce2c4aa616fb383813
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330004"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Редактор назначения «Excel» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** в диалоговом окне **Редактор назначения «Excel»** , чтобы задать сведения об источнике данных и просмотреть результаты. Назначение «Excel» загружает данные в лист или именованный диапазон в книге [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  
   
 > [!NOTE]  
->  `CommandTimeout` Свойство назначения Excel недоступно в **Редактор назначения «Excel»**, но может быть задано с помощью **расширенный редактор**. Кроме того, некоторые параметры быстрой загрузки доступны только в **Расширенном редакторе**. Дополнительные сведения об этих свойствах см. в подразделе «Назначение "Excel"» раздела [Excel Custom Properties](data-flow/excel-custom-properties.md).  
+>  `CommandTimeout` Свойство назначения Excel недоступно в **Редактор назначения Excel**, однако его можно установить с помощью **расширенный редактор**. Кроме того, некоторые параметры быстрой загрузки доступны только в **Расширенном редакторе**. Дополнительные сведения об этих свойствах см. в подразделе «Назначение "Excel"» раздела [Excel Custom Properties](data-flow/excel-custom-properties.md).  
   
  Дополнительные сведения о назначении Excel см. в разделе [Excel Destination](data-flow/excel-destination.md).  
   
@@ -85,9 +85,9 @@ ms.locfileid: "36188735"
  Проверить синтаксис текста запроса.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор назначения «Excel» &#40;страница «сопоставления»&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
- [Редактор назначения «Excel» &#40;страницы вывода ошибок&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор назначения Excel &#40;страница «сопоставления»&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [Редактор назначения Excel &#40;странице вывода ошибок&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
  [Просмотр файлов и таблиц Excel с помощью контейнера «цикл по каждому элементу»](control-flow/foreach-loop-container.md)  
   
   

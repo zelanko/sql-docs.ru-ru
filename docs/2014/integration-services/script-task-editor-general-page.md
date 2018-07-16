@@ -1,5 +1,5 @@
 ---
-title: Редактор задачи «скрипт» (страница «Общие») | Документы Microsoft
+title: Редактор задачи скриптов (страница "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.general.f1
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 0d153dce-6661-4c99-b1db-2bd3b5038b4f
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c00a77cf5e83e82cd13b623520aa21217b365395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44373be3f5988cb166e29b61f3d8588559310f33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269140"
 ---
 # <a name="script-task-editor-general-page"></a>Редактор задачи «Скрипт» (страница «Общие»)
   Страница **Общие** диалогового окна **Редактор задачи «Скрипт»** позволяет дать имя и описание задаче «Скрипт».  
@@ -41,8 +41,8 @@ ms.locfileid: "36087887"
  Введите описание задачи «Скрипт».  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи «скрипт» &#40;страница "сценарий"&#41;](../../2014/integration-services/script-task-editor-script-page.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "скрипт" &#40;страница "сценарий"&#41;](../../2014/integration-services/script-task-editor-script-page.md)   
  [Страница «выражения»](expressions/expressions-page.md)   
  [Примеры задачи «Скрипт»](extending-packages-scripting-task-examples/script-task-examples.md)  
   

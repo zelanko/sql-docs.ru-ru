@@ -1,5 +1,5 @@
 ---
-title: Представление перспективы (табличное) | Документы Microsoft
+title: Представление перспективы (табличное) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6d2636c4-dae4-448f-a1d4-dbee739e177c
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 528e3dd1d5147a2e2f5a4712a79f88ad936cbaa7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 269ec7f8349697eb6911c789b73a1a1fc3111363
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252876"
 ---
 # <a name="perspective-representation-tabular"></a>Представление перспективы (табличное)
   Перспектива представляет собой механизм упрощения или фокусировки модели в меньшую ее часть для клиентского приложения.  
   
- В разделе [представление перспективы (табличные данные)](perspective-representation-tabular.md) подробные пояснения о том, как создать и управлять ею представление перспективы.  
+ См. в разделе [представление перспективы (табличные данные)](perspective-representation-tabular.md) Дополнительные сведения о способах создания и управления им представление перспективы.  
   
 > [!WARNING]  
 >  Перспективы не являются механизмом безопасности; к объектам вне перспективы пользователь все равно может получить доступ посредством других интерфейсов.  

@@ -1,5 +1,5 @@
 ---
-title: Модель интеллектуального анализа данных для моделей нейронных сетей (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+title: Модель интеллектуального анализа данных для моделей нейронных сетей (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - output neurons [Analysis Services]
 - neural network algorithms [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3d85b7b9ce95b0dc5a24ece14aa3a1e1203f49b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d90c182f664a6b89232a74da8d9ca5294dea465e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280460"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей нейронных сетей (службы Analysis Services — интеллектуальный анализ данных)
   В этом разделе приведено описание содержимого модели интеллектуального анализа данных, характерного для моделей, в которых используется алгоритм нейронной сети (Майкрософт). Объяснение способов интерпретации статистики и описание структуры, общей для всех типов моделей, а также общие определения терминов, связанных с содержимым моделей интеллектуального анализа данных, см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-analysis-services-data-mining.md).  
@@ -241,7 +241,7 @@ ms.locfileid: "36180389"
  **Непрерывный атрибут.** Последние две строки таблицы NODE_DISTRIBUTION содержат среднее значение атрибута, коэффициент для узла в целом и дисперсию коэффициента.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм нейронной сети Майкрософт](microsoft-neural-network-algorithm.md)   
+ [Алгоритм нейронной сети (Майкрософт)](microsoft-neural-network-algorithm.md)   
  [Технический справочник по алгоритму нейронной сети Майкрософт](microsoft-neural-network-algorithm-technical-reference.md)   
  [Примеры запросов к модели нейронной сети](neural-network-model-query-examples.md)  
   

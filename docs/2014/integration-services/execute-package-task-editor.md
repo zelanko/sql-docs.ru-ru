@@ -1,5 +1,5 @@
 ---
-title: Редактор задачи пакета выполнение | Документы Microsoft
+title: Редактор выполнение пакета задач | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.parameter.F1
 - sql12.dts.designer.executepackagetask.package.f1
 - sql12.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45d295035ecd4b01b481fc40573336a0fc5a0109
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91e6903528380735fde050decace5903e0a55c9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271720"
 ---
 # <a name="execute-package-task-editor"></a>редактор задачи «Выполнение пакета»
   Для настройки задачи «Выполнение пакета» используйте редактор задачи «Выполнение пакета». Задача «Выполнение пакета» расширяет возможности служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в рамках организации, позволяя одним пакетам выполнять другие пакеты как часть рабочего процесса.  
@@ -65,7 +65,7 @@ ms.locfileid: "36191028"
  Если дочерний пакет защищен паролем, введите пароль для него или нажмите кнопку с многоточием (...) и создайте новый пароль для данного дочернего пакета.  
   
  `ExecuteOutOfProcess`  
- Укажите, должен дочерний пакет выполняться в процессе родительского пакета или в отдельном процессе. По умолчанию ExecuteOutOfProcess задачи «Выполнение пакета» является свойство `False`, а дочерний пакет запускается в том же процессе, что и родительский пакет. Если установить свойство в значение `true`, дочерний пакет запускается в отдельном процессе. Это может замедлить запуск дочернего пакета. Кроме того, если свойству задано значение `true`, то выполнять отладку пакета только при установке средств нельзя. Для этого необходимо установить продукт службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Дополнительные сведения см. в статье [Установка служб Integration Services](install-windows/install-integration-services.md).  
+ Укажите, должен дочерний пакет выполняться в процессе родительского пакета или в отдельном процессе. По умолчанию свойство ExecuteOutOfProcess задачи «Выполнение пакета» имеет значение `False`, а дочерний пакет запускается в том же процессе, что и родительский пакет. Если установить свойство в значение `true`, дочерний пакет запускается в отдельном процессе. Это может замедлить запуск дочернего пакета. Кроме того, если свойству задано значение `true`, то выполнять отладку пакета только при установке средств нельзя. Для этого необходимо установить продукт службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Дополнительные сведения см. в статье [Установка служб Integration Services](install-windows/install-integration-services.md).  
   
 ### <a name="referencetype-dynamic-options"></a>Динамические параметры ReferenceType  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36191028"
  **Соединение**  
  Выберите диспетчер подключений OLE DB в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:**  [Диспетчер подключений OLE DB](connection-manager/ole-db-connection-manager.md), [Настройка диспетчера подключений OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **См. также: ** [Диспетчер подключений OLE DB](connection-manager/ole-db-connection-manager.md), [Настройка диспетчера подключений OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  Введите имя дочернего пакета или нажмите кнопку с многоточием (...) и определите местоположение пакета.  

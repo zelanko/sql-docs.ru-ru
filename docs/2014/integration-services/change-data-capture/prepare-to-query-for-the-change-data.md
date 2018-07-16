@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6fc278beec749f8698977a153c30b5c584ea8424
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88f2dd6e5caf6cf5b601f07ca826d85808f9e6f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248814"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Подготовка к запросу информации об изменениях
   В потоке управления пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , который выполняет добавочную загрузку измененных данных, третья и последняя задача состоит в том, чтобы подготовить запрос для измененных данных и добавить задачу потока данных.  
@@ -128,7 +128,7 @@ ms.locfileid: "36110000"
   
         ```  
   
-5.  Оставьте по умолчанию строку кода, которая возвращает `DtsExecResult.Success` , в результате выполнения скрипта.  
+5.  Оставьте по умолчанию строку кода, которая возвращает `DtsExecResult.Success` в результате выполнения скрипта.  
   
 6.  Закройте среду разработки скриптов и **Редактор задачи «Скрипт»**.  
   

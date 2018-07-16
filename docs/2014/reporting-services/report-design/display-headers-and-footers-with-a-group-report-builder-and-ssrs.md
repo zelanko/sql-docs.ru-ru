@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b1870bc8fdff52294fa2430534a7aed0b0c96680
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6b8813ab6a1d623cf8578bb498ffa4435438c37c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315624"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Отображение верхних и нижних колонтитулов в группе (построитель отчетов и службы SSRS)
   Для статических строк, таких как верхние или нижние колонтитулы групп, можно определить, будут ли они подготавливаться к просмотру совместно с динамическими строками, связанными с группой в области данных табликса.  
@@ -74,7 +74,7 @@ ms.locfileid: "36110108"
   
 ## <a name="see-also"></a>См. также  
  [Ячейки области данных Табликса, строк и столбцов &#40;построитель отчетов&#41; и службы SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
- [Разделах области данных Табликса &#40;отчетов построителя отчетов и службы SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)   
+ [Разделах области данных Табликса &#40;построитель отчетов и службы SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)   
  [Область данных табликса (построитель отчетов и службы SSRS)](../tablix-data-region-report-builder-and-ssrs.md)   
  [Таблицы &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Матрицы &#40;построитель отчетов и службы SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

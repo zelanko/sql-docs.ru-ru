@@ -1,5 +1,5 @@
 ---
-title: Параметры (запроса результаты SQL Server — главная страница) | Документы Microsoft
+title: Параметры (запроса результаты SQL Server — "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CUSTOMERID_TSQL
 - SQL12.SWB.TSQLRESULTS.F1
@@ -19,15 +19,15 @@ ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73901b4555760e4978317a620ed0ba15befa639b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56a2a5cd321ad6914efeda674d2bc6bf0e89f7d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282080"
 ---
-# <a name="options-query-results-sql-server-general-page"></a>Параметры (запроса результаты SQL Server — главная страница)
+# <a name="options-query-results-sql-server-general-page"></a>Параметры (запроса результаты SQL Server — "Общие")
   На этой странице можно определить поведение запроса на панели «Результаты» по умолчанию. Чтобы отобразить эти параметры, в меню **Сервис** выберите пункт **Параметры**, откройте папку **Результаты запроса** и выберите раздел **SQL Server**, а затем пункт **Общие**. Изменения этих параметров применяются только к новым запросам [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Чтобы изменить эти параметры для текущих запросов, в меню **Запрос** выберите пункт **Параметры запроса** или щелкните правой кнопкой мыши в окне запроса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и выберите пункт **Параметры запроса**.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
@@ -37,10 +37,10 @@ ms.locfileid: "36188526"
  **Расположение по умолчанию для сохранения результатов запроса**  
  Указывается расположение, в котором сохраняются страницы результатов по умолчанию. Первоначально, местом по умолчанию является папка пользователя «Мои документы».  
   
- **Воспроизвести звуковой сигнал после завершения выполнения пакета запросов**  
+ **Воспроизвести звуковой сигнал Windows после завершения выполнения пакета запросов**  
  Указывает, что после завершения выполнения пакета запросов должен подаваться звуковой сигнал.  
   
- **По умолчанию**  
+ **Восстановить значения по умолчанию**  
  Позволяет вернуть исходные значения по умолчанию для всех параметров на данной странице.  
   
   

@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a772fba6776195e914d9e4109a7973f355f3a270
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1989f166f519ddf732cca8cd47e32a14c414cae1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268650"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   `CurvePolygon` является топологически закрытой областью, определенной внешним ограничивающим кольцом, а также нулем или более внутренних колец.  
   
 > [!IMPORTANT]  
->  Подробное описание и примеры использования возможностей обработки пространственных данных, представленных в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], в том числе `CurvePolygon` подтипа, загрузив Технический документ [новые функции обработки пространственных данных в SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Подробное описание и примеры использования возможностей обработки пространственных данных в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], в том числе `CurvePolygon` подтипа, загрузив Технический документ, [новые функции обработки пространственных в SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Следующие критерии определяют атрибуты `CurvePolygon` экземпляр:  
   
@@ -33,10 +33,10 @@ ms.locfileid: "36192202"
   
 -   Внутреннее пространство экземпляра `CurvePolygon` ― это пространство между внешним кольцом и всеми внутренними кольцами.  
   
- Объект `CurvePolygon` отличается от `Polygon` экземпляр в том, что `CurvePolygon` экземпляра может содержать следующие сегменты дуги: `CircularString` и `CompoundCurve`.  
+ Объект `CurvePolygon` экземпляра отличается от `Polygon` что экземпляр `CurvePolygon` экземпляра может содержать следующие сегменты дуги: `CircularString` и `CompoundCurve`.  
   
 ## <a name="compoundcurve-instances"></a>Экземпляры CompoundCurve  
- На рисунке ниже показаны допустимые `CurvePolygon` цифры:  
+ На следующей иллюстрации показаны допустимые `CurvePolygon` данные:  
   
 ### <a name="accepted-instances"></a>Правильные экземпляры  
  Для `CurvePolygon` экземпляр был принят, он должен быть либо пустым, либо содержать только принимаемые кольца дуги. Принимаемое кольцо дуги удовлетворяет следующим требованиям.  
@@ -72,7 +72,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
  `@g1` не принимается, поскольку не совпадают значения Y для начальной и конечной точек. `@g2` не принимается, поскольку кольцо содержит недостаточное число точек.  
   
 ### <a name="valid-instances"></a>Допустимые экземпляры  
- Для `CurvePolygon` экземпляр должен иметь допустимый внешние и внутренние кольца должны удовлетворять следующим условиям:  
+ Для `CurvePolygon` экземпляр был допустимым внешние и внутренние кольца должны удовлетворять следующим условиям:  
   
 1.  Они могут соприкасаться только в одной точке касания.  
   
@@ -82,7 +82,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
 4.  Каждое кольцо должно принадлежать к приемлемому типу кривой.  
   
- `CurvePolygon` экземпляры также должны удовлетворять особым критериям в зависимости от того, являются ли они `geometry` или `geography` типов данных.  
+ `CurvePolygon` также необходимо соответствие определенным условиям, в зависимости от того, являются ли экземпляры `geometry` или `geography` типов данных.  
   
 #### <a name="geometry-data-type"></a>Тип данных Geometry  
  Допустимый экземпляр **geometryCurvePolygon** должен иметь следующие атрибуты:  
@@ -136,14 +136,14 @@ SET @g = geometry::Parse('CURVEPOLYGON EMPTY');
 ```  
   
 ### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>Б. Объявление и создание экземпляра типа Geometry с CurvePolygon в одной и той же инструкции  
- Этот фрагмент кода показывает, как объявить и инициализировать экземпляра типа geometry с `CurvePolygon` в одной инструкции:  
+ В этом фрагменте кода показано, как объявить и инициализировать экземпляра типа geometry с `CurvePolygon` в одной инструкции:  
   
 ```tsql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>В. Создание экземпляра типа Geometry с CurvePolygon  
- Следующий фрагмент кода показывает, как объявить и инициализировать `geography` экземпляра с `CurvePolygon`:  
+ В этом фрагменте кода показано, как объявить и инициализировать `geography` с экземпляром `CurvePolygon`:  
   
 ```tsql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -159,7 +159,7 @@ SELECT @g.STArea() AS Area;
 ```  
   
 ### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>Д. Сохранение CurvePolygon с внутренними кольцами  
- В этом примере создается кольцо в `CurvePolygon` экземпляра (используется для определения бублика как внешнее ограничивающее кольцо, так и внутреннее кольцо):  
+ В этом примере создается бублик в `CurvePolygon` экземпляра (используется для определения бублика как внешнее ограничивающее кольцо, так и внутреннее кольцо):  
   
 ```tsql  
 DECLARE @g geometry;  
@@ -167,7 +167,7 @@ SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), 
 SELECT @g.STArea() AS Area;  
 ```  
   
- В этом примере показано, как допустимый `CurvePolygon` экземпляра и недопустимый экземпляр при использовании внутренних колец:  
+ В этом примере показано, как допустимый `CurvePolygon` экземпляра и экземпляр, недопустимые при использовании внутренних колец:  
   
 ```tsql  
 DECLARE @g1 geometry, @g2 geometry;  

@@ -1,5 +1,5 @@
 ---
-title: Ключи элементов (XMLA) | Документы Microsoft
+title: Ключи элемент (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Keys element
 ms.assetid: 67291791-0032-412a-9a4f-74f68533e83d
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0d393f7d61189ced2397a7c230434364710b063e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6875795b79daa2be3942f0e9e71ab6c4d2e6c960
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310384"
 ---
 # <a name="keys-element-xmla"></a>Элемент Keys (XML для аналитики)
   Содержит коллекцию [ключ](key-element-xmla.md) элементы, используемые для идентификации ключей элементов, принадлежащих элементу атрибута, представленного родительским [атрибут](attribute-element-xmla.md) элемента.  
@@ -69,7 +69,7 @@ ms.locfileid: "36187799"
   
 ## <a name="see-also"></a>См. также  
  [Элемент DROP &#40;XML для Аналитики&#41;](../xml-elements-commands/drop-element-xmla.md)   
- [Элемент INSERT &#40;XML для Аналитики&#41;](../xml-elements-commands/insert-element-xmla.md)   
+ [Вставка элемента &#40;XML для Аналитики&#41;](../xml-elements-commands/insert-element-xmla.md)   
  [Элемент Update &#40;XML для Аналитики&#41;](../xml-elements-commands/update-element-xmla.md)   
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)  
   

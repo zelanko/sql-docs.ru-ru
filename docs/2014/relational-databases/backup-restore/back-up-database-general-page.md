@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7300b9be81e07a922079bc8e1b56aa02266d9b99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 025d5eac30815b6d9110dcca7214e7e88412a23d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290960"
 ---
 # <a name="back-up-database-general-page"></a>Резервное копирование базы данных (страница «Общие»)
   Страница **Общие** диалогового окна **Резервное копирование базы данных** служит для просмотра и изменения параметров резервного копирования базы данных.  
@@ -115,7 +114,7 @@ ms.locfileid: "36109963"
  Учетные данные SQL, используемые для проверки подлинности в хранилище Windows Azure. Если у вас нет существующих учетных данных SQL, нажмите кнопку **Создать** , чтобы создать новые учетные данные SQL.  
   
 > [!IMPORTANT]  
->  В диалоговом окне, которое открывается при нажатии кнопки **Создать** , необходимо ввести сертификат управления или профиль публикации подписки. Если у вас нет доступа к сертификату управления или профилю публикации, можно создать учетные данные SQL, указав имя учетной записи хранилища и сведения ключа доступа при помощи Transact-SQL или SQL Server Management Studio. В образце кода в [Создание учетных данных](../security/authentication-access/create-a-credential.md#Credential) раздела, чтобы создать учетные данные с помощью Transact-SQL. Также можно в среде SQL Server Management Studio, из экземпляра компонента database engine, щелкнуть правой кнопкой мыши **Безопасность**и выбрать пункт **Создать**, а затем **Учетные данные**. Укажите имя учетной записи хранения в поле **Идентификатор** и ключ доступа в поле **Пароль** .  
+>  В диалоговом окне, которое открывается при нажатии кнопки **Создать** , необходимо ввести сертификат управления или профиль публикации подписки. Если у вас нет доступа к сертификату управления или профилю публикации, можно создать учетные данные SQL, указав имя учетной записи хранилища и сведения ключа доступа при помощи Transact-SQL или SQL Server Management Studio. См. в коде в [Создание учетных данных](../security/authentication-access/create-a-credential.md#Credential) раздела, чтобы создать учетные данные с помощью Transact-SQL. Также можно в среде SQL Server Management Studio, из экземпляра компонента database engine, щелкнуть правой кнопкой мыши **Безопасность**и выбрать пункт **Создать**, а затем **Учетные данные**. Укажите имя учетной записи хранения в поле **Идентификатор** и ключ доступа в поле **Пароль** .  
   
  **Контейнер хранилища Azure**  
  Введите имя контейнера хранилища Windows Azure  

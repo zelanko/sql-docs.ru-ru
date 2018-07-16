@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a8cfcda0d6fc37db1b620fd64c044e322f81877e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 12d5a8666896337e288cd235b56c4b8c76f79131
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302434"
 ---
 # <a name="automatically-generate-code-attribute-values-master-data-services"></a>Автоматическое формирование значений атрибута Code (службы Master Data Services)
   Если необходимо автоматически задавать целое число для значения Code при создании нового элемента, то в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]значения для атрибута Code сущности могут формироваться автоматически.  
@@ -37,7 +37,7 @@ ms.locfileid: "36188715"
   
 1.  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]щелкните область **Администрирование системы**.  
   
-2.  На **обозревателя моделей** страницы, в строке меню наведите курсор на **управление** и нажмите кнопку **сущности**.  
+2.  На **обозревателя моделей** страницы, на панели меню наведите указатель мыши на **управление** и нажмите кнопку **сущностей**.  
   
 3.  На странице **Обслуживание сущности** выберите модель из списка **Модель** .  
   

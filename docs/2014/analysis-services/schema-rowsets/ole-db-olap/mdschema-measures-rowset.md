@@ -1,5 +1,5 @@
 ---
-title: Набор строк MDSCHEMA_MEASURES | Документы Microsoft
+title: Набор строк MDSCHEMA_MEASURES | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_MEASURES rowset
 ms.assetid: 6ff5bd1a-aad0-49b8-9f8d-7df2637caacf
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6608c64caa882499282ad7a7e30090ab4118b522
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84ea2ceeaef0c6431f3860f3b23da07f43ee6c5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086741"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237474"
 ---
 # <a name="mdschemameasures-rowset"></a>Набор строк MDSCHEMA_MEASURES
   Описывает каждую меру в кубе.  
@@ -55,7 +55,7 @@ ms.locfileid: "36086741"
 |`MEASURE_NAME_SQL_COLUMN_NAME`|`DBTYPE_WSTR`||Имя столбца в SQL-запросе, который соответствует имени меры.|  
 |`MEASURE_UNQUALIFIED_CAPTION`|`DBTYPE_WSTR`||Имя меры, не определенной с помощью имени группы мер.|  
 |`MEASUREGROUP_NAME`|`DBTYPE_WSTR`||Имя группы мер, которой принадлежит мера.|  
-|`MEASURE_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Путь, используемый при отображении меры в пользовательском интерфейсе. Имена папок разделяются точкой с запятой. Вложенные папки указываются обратная косая черта (\\).|  
+|`MEASURE_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Путь, используемый при отображении меры в пользовательском интерфейсе. Имена папок разделяются точкой с запятой. Вложенные папки указываются символами обратной косой черты (\\).|  
 |`DEFAULT_FORMAT_STRING`|`DBTYPE_WSTR`||Строка форматирования по умолчанию для меры.|  
   
  Набор строк отсортирован по полям `CATALOG_NAME`, `SCHEMA_NAME`, `CUBE_NAME`, `MEASURE_NAME`.  
@@ -71,8 +71,8 @@ ms.locfileid: "36086741"
 |`MEASURE_NAME`|`DBTYPE_WSTR`|Необязательный параметр.|  
 |`MEASURE_UNIQUE_NAME`|`DBTYPE_WSTR`|Необязательный параметр.|  
 |`MEASUREGROUP_NAME`|`DBTYPE_WSTR`|Необязательный параметр.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|Битовая карта с одним из следующих допустимых значений (необязательно).<br /><br /> -КУБ 1<br />-2 ИЗМЕРЕНИЯ.<br /><br /> Значение по умолчанию для ограничения — 1.|  
-|`MEASURE_VISIBILITY`|`DBTYPE_UI2`|Битовая карта с одним из следующих допустимых значений (необязательно).<br /><br /> — Visible 1<br />-2 не отображается<br /><br /> Значение по умолчанию для ограничения — 1.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|Битовая карта с одним из следующих допустимых значений (необязательно).<br /><br /> -КУБ 1<br />— ИЗМЕРЕНИЯ 2<br /><br /> Значение по умолчанию для ограничения — 1.|  
+|`MEASURE_VISIBILITY`|`DBTYPE_UI2`|Битовая карта с одним из следующих допустимых значений (необязательно).<br /><br /> -1 Visible<br />-2 не отображается<br /><br /> Значение по умолчанию для ограничения — 1.|  
   
 ## <a name="see-also"></a>См. также  
  [Наборы строк схемы OLE DB для OLAP](ole-db-for-olap-schema-rowsets.md)  

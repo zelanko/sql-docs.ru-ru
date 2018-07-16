@@ -1,5 +1,5 @@
 ---
-title: Элемент Goal (ASSL) | Документы Microsoft
+title: Элемент Goal (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Goal element
 ms.assetid: 75fa5b57-418e-43ad-8704-764e4f0a40cf
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8b408e73bd8cb376afe0b8cf36157628be908780
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 81a85c6bec79add033825311bb790ba6e39349bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250914"
 ---
 # <a name="goal-element-assl"></a>Элемент Goal (ASSL)
-  Определяет целевое в [ключевого показателя эффективности](../objects/kpi-element-assl.md) элемента.  
+  Определяет целевое в [ключевого показателя эффективности](../objects/kpi-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36087740"
 ## <a name="remarks"></a>Примечания  
  Элемент `Goal` содержит многомерное выражение.  
   
- Элемент, соответствующий родителю параметра `Goal` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Kpi>.  
+ Элемент, соответствующий родителю параметра `Goal` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Kpi>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент Status &#40;ASSL&#41;](status-element-assl.md)   
- [Тренд элемент &#40;ASSL&#41;](trend-element-assl.md)   
+ [Элемент Trend &#40;ASSL&#41;](trend-element-assl.md)   
  [Значение элемента &#40;ASSL&#41;](value-element-assl.md)   
  [Свойства &#40;ASSL&#41;](properties-assl.md)  
   

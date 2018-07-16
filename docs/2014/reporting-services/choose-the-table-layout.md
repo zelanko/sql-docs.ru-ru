@@ -1,5 +1,5 @@
 ---
-title: Выбор макета таблицы | Документы Microsoft
+title: Выбор макета таблицы | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.choosetablelayout.f1
 ms.assetid: 370079eb-4a13-42f6-8f90-8fb8adf4d55e
 caps.latest.revision: 24
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bddc275a09d142afc370b104ea0639e7079f46f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b0e1ab0a208695280d3757f4dbd27d86cb6f32f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187736"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276240"
 ---
 # <a name="choose-the-table-layout"></a>Выбор макета таблицы
   На этой странице мастера отчетов выберите макет таблицы в отчете.  
@@ -30,7 +30,7 @@ ms.locfileid: "36187736"
  **Шаг с заходом**  
  Создать отчет, содержащий один столбец для каждого поля, с полями групп, отображаемыми в верхних колонтитулах групп слева от строк полей сведений. Этот тип таблицы не имеет нижних колонтитулов групп.  
   
- **блок**  
+ **Блок**  
  Создать отчет, содержащий один столбец для каждого поля, в котором поля групп отображаются в первой строке сведений для каждой группы. Таблица этого типа содержит нижние колонтитулы для групп только в том случае, если также выбран параметр **Включить подытоги** .  
   
  **Включить подытоги**  

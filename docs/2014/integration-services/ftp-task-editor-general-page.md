@@ -1,5 +1,5 @@
 ---
-title: Редактор задачи «FTP» (страница «Общие») | Документы Microsoft
+title: Редактор задачи «FTP» (страница "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.general.f1
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 786f0d4371773f77045f0ef9cd6825057c12a937
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97f8761af335319cbd205eca3c57d4f6874e5829
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283640"
 ---
 # <a name="ftp-task-editor-general-page"></a>Редактор задачи «FTP» (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор задачи «FTP»** для задания диспетчера FTP-соединений, выполняющего соединение с FTP-сервером, с которым задача обменивается данными. Также здесь можно указать имя и описание задачи «FTP».  
@@ -52,8 +52,8 @@ ms.locfileid: "36189316"
  Введите описание задачи «FTP».  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи «FTP» &#40;страницы передача файлов&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи «FTP» &#40;передачу файла страницы&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [Страница "Выражения"](expressions/expressions-page.md)  
   
   

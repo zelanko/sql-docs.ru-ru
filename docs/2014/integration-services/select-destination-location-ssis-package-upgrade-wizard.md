@@ -1,5 +1,5 @@
 ---
-title: Выбор целевого расположения (мастер обновления пакетов служб SSIS) | Документы Microsoft
+title: Выбор целевого расположения (мастер обновления пакетов служб SSIS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectdestinationlocation.f1
 ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
 caps.latest.revision: 19
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 01d2788228da6244572a987700e1be64d297e63b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4754420ad4058e44e2bc07d3e68a18d076108c1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287540"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>Выбор целевого расположения (мастер обновления пакетов служб SSIS)
   Страница **Выбор целевого расположения** используется для указания назначения, в которое сохраняются обновленные пакеты.  

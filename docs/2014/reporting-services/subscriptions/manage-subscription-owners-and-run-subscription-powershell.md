@@ -1,5 +1,5 @@
 ---
-title: Использование PowerShell для смены и перечисления владельцев подписок служб Reporting Services и запуска подписки | Документы Microsoft
+title: Использование PowerShell для смены и перечисления владельцев подписок служб Reporting Services и запуска подписки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: daed1f77d5e1470f39e8ad2d7afe52e66db7e219
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31bf54cf103a269900ce9edc6caf9ec192a4f4b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323824"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
-  Начиная с [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] вы можете программно передать владение [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] подписки от одного пользователя. В этом разделе содержится несколько скриптов Windows PowerShell, которые можно использовать для смены владельца подписки или простого перечисления владельцев. В каждом примере содержится образец синтаксиса для собственного режима и режима SharePoint. После смены владельца подписки подписка будет выполняться в контексте безопасности нового владельца, а в отчете в поле «User!UserID» будет отображаться значение нового владельца. Дополнительные сведения об объектной модели вызовов образцов см. в разделе <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+  Начиная с [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] вы можете программно передать владение [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] подписки от одного пользователя в другой. В этом разделе содержится несколько скриптов Windows PowerShell, которые можно использовать для смены владельца подписки или простого перечисления владельцев. В каждом примере содержится образец синтаксиса для собственного режима и режима SharePoint. После смены владельца подписки подписка будет выполняться в контексте безопасности нового владельца, а в отчете в поле «User!UserID» будет отображаться значение нового владельца. Дополнительные сведения об объектной модели вызовов образцов см. в разделе <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  ![Содержимое, связанное с PowerShell](../media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36109638"
   
  **Собственный режим.**  
   
--   Список подписок: (гиперссылка «http://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx» ReadSubscription в отчете и пользователь является владельцем подписки) или ReadAnySubscription  
+-   Список подписок: (HYPERLINK "http://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription в отчете и пользователь является владельцем подписки) или ReadAnySubscription  
   
 -   Изменение подписок: пользователь должен состоять в группе BUILTIN\Administrators  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36109638"
   
  **Режим интеграции с SharePoint:**  
   
--   Список подписок: ManageAlerts или (гиперссылка «http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx» CreateAlerts в отчете и пользователь является владельцем подписки и подписка является подпиской по времени).  
+-   Список подписок: ManageAlerts или (гиперссылка "http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts в отчете и пользователь является владельцем подписки и подписка является подпиской по времени).  
   
 -   Изменение подписок: ManageWeb  
   
@@ -339,7 +339,7 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  `</Event>`  
   
- Дополнительные сведения о файле конфигурации см. в разделе [файл конфигурации RSReportServer](../report-server/rsreportserver-config-configuration-file.md).  
+ Дополнительные сведения о файле конфигурации, см. в разделе [файл конфигурации RSReportServer](../report-server/rsreportserver-config-configuration-file.md).  
   
  Скрипт содержит логику задержки «`Start-Sleep -s 6`», поэтому после запуска события есть небольшой период времени для ввода обновленного состояния в метод ListSubscription.  
   

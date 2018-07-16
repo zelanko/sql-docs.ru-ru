@@ -1,5 +1,5 @@
 ---
-title: Запуск проектов и пакетов | Документы Microsoft
+title: Запуск проектов и пакетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, running
 - SSIS packages, running
@@ -21,20 +21,20 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21c4bff7eb74b556aa41e27430b23e9eb2e2d061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc9e292b67bd282351bdea60068a58a39ecb0aad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287610"
 ---
 # <a name="execution-of-projects-and-packages"></a>Запуск проектов и пакетов
   Чтобы запустить пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , можно воспользоваться одним из предостовляемых средств. Выбор средства зависит от места хранения пакета. Эти средства приведены в следующей таблице.  
   
  Чтобы сохранить пакет на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , используется модель развертывания проекта. Дополнительные сведения см. в разделе [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md).  
   
- Чтобы сохранить пакет в хранилище пакетов SSIS, базе данных msdb, или в файловой системе, используется модель развертывания пакета. Дополнительные сведения см. в разделе [развертывание пакета &#40;SSIS&#41;](legacy-package-deployment-ssis.md).  
+ Чтобы сохранить пакет в хранилище пакетов SSIS, базе данных msdb, или в файловой системе, используется модель развертывания пакета. Дополнительные сведения см. в разделе [развертывания пакета &#40;SSIS&#41;](legacy-package-deployment-ssis.md).  
   
 |Инструмент|Пакеты, хранимые на сервере служб Integration Services|Пакеты, которые находятся в хранилище пакетов служб SSIS предыдущих версий или в базе данных msdb.|Пакеты, хранимые в файловой системе вне расположения входящего в состав хранилища пакетов SSIS.|  
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  

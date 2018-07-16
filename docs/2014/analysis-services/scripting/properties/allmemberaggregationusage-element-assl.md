@@ -1,5 +1,5 @@
 ---
-title: Элемент AllMemberAggregationUsage (ASSL) | Документы Microsoft
+title: Элемент AllMemberAggregationUsage (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllMemberAggregationUsage element
 ms.assetid: 264fe9d8-8e9a-4642-8cee-7c2804126926
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1da20a067a1f293bafbca858623ab477aacac6b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35d13952ed0cc77405f1c0518562a67749d1521f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252956"
 ---
 # <a name="allmemberaggregationusage-element-assl"></a>Элемент AllMemberAggregationUsage (ASSL)
   Элементы управления как конструктор статистических схем в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] статистических схем.  
@@ -68,14 +68,14 @@ ms.locfileid: "36180350"
 |-----------|-----------------|  
 |*Полный*|Каждый агрегат для куба должен включать элемент «Все».|  
 |*None*|Никакой агрегат для куба не должен включать элемент «Все».|  
-|*Без ограничений*|На конструктор статистических схем не налагаются никакие ограничения.|  
+|*Неограниченный*|На конструктор статистических схем не налагаются никакие ограничения.|  
 |*По умолчанию*|Эквивалентно *Unrestricted*.|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `AllMemberAggregationUsage` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.CubeDimension>.  
+ Элемент, соответствующий родителю параметра `AllMemberAggregationUsage` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.CubeDimension>.  
   
 ## <a name="see-also"></a>См. также  
- [Куб элемент &#40;ASSL&#41;](../objects/cube-element-assl.md)   
+ [Элемент куба &#40;ASSL&#41;](../objects/cube-element-assl.md)   
  [Элемент измерения &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [Свойства &#40;ASSL&#41;](properties-assl.md)  
   

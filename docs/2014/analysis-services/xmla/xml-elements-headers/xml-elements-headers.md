@@ -1,5 +1,5 @@
 ---
-title: Заголовки (XMLA) | Документы Microsoft
+title: Заголовки (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - headers [XML for Analysis]
 ms.assetid: 36407b5c-d98d-47e4-8d36-d8896e15a748
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: bb2cff2e70ccd1ac0cf391f7832db4978a415f56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1b04b85e3267e7432f37c5f70e823c859a82a952
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291300"
 ---
 # <a name="headers-xmla"></a>Заголовки (XML для аналитики)
   В протоколе XMLA предусматривается использование элементов XML в заголовке SOAP для управления функциями на уровне протокола, такими как поддержка сеансов и согласование поддерживаемых функций.  
@@ -44,8 +44,8 @@ ms.locfileid: "36190610"
 |[Элемент ProtocolCapabilities &#40;XML для Аналитики&#41;](protocolcapabilities-element-xmla.md)|Использует заголовок SOAP в сообщении SOAP-запроса для обозначения возможностей протокола обмена данными между экземпляром служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и клиентским приложением.|  
   
 ## <a name="see-also"></a>См. также  
- [XML-элементы &#40;XML для Аналитики&#41;](../../dev-guide/xml-elements-xmla.md)   
+ [XML-элементов &#40;XML для Аналитики&#41;](../../dev-guide/xml-elements-xmla.md)   
  [Типы данных XML &#40;XML для Аналитики&#41;](../xml-data-types/xml-data-types-xmla.md)   
- [XML-элементы &#40;XML для Аналитики&#41;](../../dev-guide/xml-elements-xmla.md)  
+ [XML-элементов &#40;XML для Аналитики&#41;](../../dev-guide/xml-elements-xmla.md)  
   
   

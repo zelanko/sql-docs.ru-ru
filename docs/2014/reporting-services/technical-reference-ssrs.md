@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, technical reference
 - technical reference [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9f749612e65681ec7daf2f556ada02e9f84b5fd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 87b75fe08c201d7aace1d2465351300447e5ae7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255916"
 ---
 # <a name="technical-reference-ssrs"></a>Технический справочник (службы SSRS)
   Найдите средства и справочную документацию по PowerShell для использования или администрирования служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -58,6 +58,6 @@ ms.locfileid: "36191926"
   
 ## <a name="see-also"></a>См. также  
  [Вики-статьи TechNet об устранении неполадок со службами Reporting Services](http://go.microsoft.com/fwlink/?LinkID=209153)   
- [Вики-статьи TechNet об устранении неполадок со Reporting Services SharePoint режиме](http://go.microsoft.com/fwlink/?LinkID=209158)  
+ [Вики-статьи TechNet об устранении неполадок со службами Reporting Services в режиме SharePoint](http://go.microsoft.com/fwlink/?LinkID=209158)  
   
   

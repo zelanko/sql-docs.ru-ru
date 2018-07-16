@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2ba53eed2e5d9bd7d3de0c85e27b049d002a67bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4bffa7a08382c025c3150287d1b09044d72047cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191231"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285410"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Диалоговое окно «Создание веб-сайта» (диспетчер конфигурации служб Master Data Services)
   Используйте диалоговое окно **Создание веб-сайта** для создания нового веб-сайта на локальном компьютере. При создании веб-сайта в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]сайт добавляется в службы IIS на локальном компьютере с корневым приложением, настроенным как веб-приложение [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Также создается новый пул приложений, и веб-приложение помещается в него.  
@@ -47,7 +47,7 @@ ms.locfileid: "36191231"
   
 ## <a name="see-also"></a>См. также  
  [Веб-страница конфигурации &#40;диспетчер конфигурации Master Data Services&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
- [Настройка базы данных и веб-сайт для служб Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Настройка веб-сайта и базы данных для служб Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [Веб-приложения требованиям &#40;службы Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [Создание веб-приложения диспетчера основных данных (службы Master Data Services)](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   

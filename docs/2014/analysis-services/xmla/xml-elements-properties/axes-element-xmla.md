@@ -1,5 +1,5 @@
 ---
-title: Оси элемент (XMLA) | Документы Microsoft
+title: Осей элемент (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Axes element
 ms.assetid: 2005d06a-f8a2-4b4f-8c0d-2f7f73eb6f5c
 caps.latest.revision: 21
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f508a92ca7ab8aca224c299723adddf3654c167c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b8ac4baded4dd516e12c31ffd701e1c4668d769e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237404"
 ---
 # <a name="axes-element-xmla"></a>Элемент Axes (XML для аналитики)
-  Содержит коллекцию [оси](axis-element-xmla.md) элементов, представляющих данные оси, содержащиеся в [корневой](root-element-xmla.md) элемент, который использует [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) тип данных.  
+  Содержит коллекцию [оси](axis-element-xmla.md) элементов, представляющих данные оси, содержащиеся в [корневой](root-element-xmla.md) элемент, использующий [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) тип данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,11 +63,11 @@ ms.locfileid: "36180124"
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительские элементы|[корень](root-element-xmla.md)|  
+|Родительские элементы|[корневой](root-element-xmla.md)|  
 |Дочерние элементы|[Axis](axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- В элементе `Axes` элементы `Axis` перечисляются в том порядке, в котором они появляются в наборе данных, начиная с нуля. Параметр свойства XMLA `AxisFormat` определяет, как должны быть отформатированы элементы `Axis`. Дополнительные сведения о `AxisFormat` свойство, в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md).  
+ В элементе `Axes` элементы `Axis` перечисляются в том порядке, в котором они появляются в наборе данных, начиная с нуля. Параметр свойства XMLA `AxisFormat` определяет, как должны быть отформатированы элементы `Axis`. Дополнительные сведения о `AxisFormat` свойство, см. в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md).  
   
  Ось представляет набор кортежей, в котором все кортежи набора имеют одну и ту же размерность. Набор может быть представлен с помощью разных способов, позволяющих достичь разных преимуществ. Например, следующий набор из четырех кортежей может быть представлен в виде коллекций двумерных кортежей или декартова произведения двух одномерных наборов.  
   

@@ -1,5 +1,5 @@
 ---
-title: Элемент Event (ASSL) | Документы Microsoft
+title: Элемент Event (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Event element
 ms.assetid: c7911bcd-e601-4a96-a6d8-20b7c7375ff2
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 441d8758f25092d1e10128a44ace8d12f3eee79a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 119bc279e1313e0b7b8bd0790c631b8e9a896428
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233884"
 ---
 # <a name="event-element-assl"></a>Элемент Event (ASSL)
-  Определяет `Event` фиксируемое как часть [трассировки](trace-element-assl.md) элемента.  
+  Определяет `Event` захвачен как часть [трассировки](trace-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36188336"
 |Дочерние элементы|[Столбцы](../collections/columns-element-assl.md), [EventID](../properties/id-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.TraceEvent>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.TraceEvent>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент Trace &#40;ASSL&#41;](trace-element-assl.md)   

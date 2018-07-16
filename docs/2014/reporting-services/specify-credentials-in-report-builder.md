@@ -1,5 +1,5 @@
 ---
-title: Указание учетных данных в построителе отчетов | Документы Microsoft
+title: Указание учетных данных в построителе отчетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4c5a9c27436bf80887a3f8917b1d4df71896ba2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bfa96110c521386cf6e7697f6f395f845ae6a83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280330"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Указание учетных данных в построителе отчетов
   Учетные данные удостоверяют подлинность пользователя, который пытается получить данные из источника данных. Владелец источника данных определяет тип учетных данных, которые необходимо использовать. Например, администратор базы данных может указать, что пользователь должен предоставить имя и пароль пользователя Windows.  
@@ -52,7 +52,7 @@ ms.locfileid: "36188388"
  Дополнительные сведения см. в разделе [Диалоговое окно "Свойства источника данных" — "Общие" (построитель отчетов)](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md) и [Предварительный просмотр отчетов в построителе отчетов](report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="types-of-credentials"></a>Типы учетных данных  
- Тип учетных данных, поддерживаемый источником данных, указывается владельцем источника данных. Например, для доступа к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] базы данных, может потребоваться указать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] входа имя пользователя и пароль. Для доступа к другому источнику данных может потребоваться ввести имя и пароль пользователя Windows. Некоторые источники данных могут не требовать учетных данных.  
+ Тип учетных данных, поддерживаемый источником данных, указывается владельцем источника данных. Например, для доступа к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] базы данных, может потребоваться указать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] имя пользователя для входа и пароль. Для доступа к другому источнику данных может потребоваться ввести имя и пароль пользователя Windows. Некоторые источники данных могут не требовать учетных данных.  
   
 ### <a name="options-for-specifying-credentials"></a>Параметры для указания учетных данных  
  Доступны следующие параметры для указания учетных данных для источника данных.  
@@ -75,14 +75,14 @@ ms.locfileid: "36188388"
  Если указан запрос учетных данных, каждый пользователь, обращающийся к отчету, должен ввести имя пользователя и пароль для получения данных. Этот режим рекомендуется для отчетов, содержащих конфиденциальные данные. Запрашиваемые учетные данные могут быть учетной записью Windows или именем входа базы данных. Если сервер базы данных не распознает предоставленные учетные данные или если указанному пользователю не было предоставлено разрешение для получения данных, соединение завершается ошибкой.  
   
 ### <a name="no-credentials"></a>Без учетных данных  
- Для этого источника данных учетные данные не требуются. Чтобы запустить этот отчет на сервере отчетов, необходимо настроить учетную запись автоматического выполнения. Дополнительные сведения см. в разделе [настройки учетной записи автоматического выполнения &#40;диспетчер конфигурации служб SSRS&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) в [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] документации в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [электронной документации по](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Для этого источника данных учетные данные не требуются. Чтобы запустить этот отчет на сервере отчетов, необходимо настроить учетную запись автоматического выполнения. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения &#40;диспетчер конфигурации служб SSRS&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) в [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] документации в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [документации](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 ## <a name="see-also"></a>См. также  
  [Установка, удаление и поддержка построителя отчетов](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
- [Внедренные и общие подключения к данным или источники данных &#40;отчетов построителя отчетов и службы SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Построитель отчетов параметры диалогового окна, параметры &#40;построитель отчетов&#41;](report-builder/set-default-options-for-report-builder.md)   
+ [Внедренные и общие подключения к данным или источники данных &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Построитель отчетов параметры в диалоговом окне Параметры &#40;построитель отчетов&#41;](report-builder/set-default-options-for-report-builder.md)   
  [Подключения к данным, источники данных и строки подключения в построителе отчетов](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Добавление данных в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Добавление и проверка подключения к данным или источник данных &#40;отчетов построителя отчетов и службы SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Добавление и проверка подключения к данным или источнику данных &#40;построитель отчетов и службы SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
   

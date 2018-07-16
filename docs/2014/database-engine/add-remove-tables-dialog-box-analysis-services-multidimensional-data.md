@@ -1,5 +1,5 @@
 ---
-title: Добавить удалить диалоговое окно «таблицы» (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Добавление и удаление диалоговое окно «таблицы» (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.addremoveobjects.f1
 helpviewer_keywords:
 - Add/Remove Tables dialog box
 ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 69e54f8696aa69d35fca6bb00d160520107411cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 702d07b93463671335b67f9672f5fff8dcb28c9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235674"
 ---
-# <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Добавить удалить диалоговое окно «таблицы» (службы Analysis Services — многомерные данные)
+# <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Добавление и удаление диалоговое окно «таблицы» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Добавление или удаление таблиц** в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для добавления или удаления таблиц в источнике данных или представлении источника данных. Способы открытия диалогового окна **Добавление или удаление таблиц**:  
   
 -   Нажать кнопку **Добавить или удалить объекты** на **панели инструментов** в **конструкторе представлений источников данных**.  
@@ -52,7 +52,7 @@ ms.locfileid: "36110011"
   
  Щелкните **<<** для переноса всех объектов, представленных в списке **Включенные объекты**, в список **Доступные объекты** или выберите один или несколько объектов и щелкните **<** для переноса выбранных объектов в список **Доступные объекты**.  
   
- **Добавить связанные таблицы**  
+ **Добавление связанных таблиц**  
  Щелкните для добавления всех таблиц, связанных с выбранными таблицами, в список **Включенные объекты**.  
   
 ## <a name="see-also"></a>См. также  

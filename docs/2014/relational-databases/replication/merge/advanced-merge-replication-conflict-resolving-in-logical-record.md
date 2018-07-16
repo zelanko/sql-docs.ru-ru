@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logical records [SQL Server replication]
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 59e4970a0a4ace2ba55344f5a2ddae36222d930d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1e12ca76aa43b61eef3b41e4ceadf587ce1f6824
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208854"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Detecting and Resolving Conflicts in Logical Records
   В разделе рассматриваются различные комбинации подходов к распознаванию конфликтов и устранению конфликтов, возможные при использовании логических записей. В репликации слиянием возникает конфликт, когда изменение одних и тех же данных производится более чем одним узлом, или же в репликации слиянием возникают определенные типы ошибок, такие как нарушение ограничений, когда изменяется репликация. Дополнительные сведения о распознавании и разрешении конфликтов см. в разделе [Расширенное обнаружение и разрешение конфликтов репликации слиянием](advanced-merge-replication-conflict-detection-and-resolution.md).  

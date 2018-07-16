@@ -1,5 +1,5 @@
 ---
-title: Настройка диспетчера соединений ADO.NET | Документы Microsoft
+title: Настройка диспетчера соединений ADO.NET | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetconnection.f1
 helpviewer_keywords:
 - Configure ADO.NET Connection Manager dialog box
 ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c6ea398365e4c612876216e1abebbbd682f545b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b938f3ab316f63caadb59ba8aa886a453b148a7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297034"
 ---
 # <a name="configure-adonet-connection-manager"></a>настройка диспетчера соединений ADO.NET
   Диалоговое окно **Настройка диспетчера соединений ADO.NET** используется для добавления соединения с источником данных, доступ к которому будет осуществляться с помощью поставщика данных .NET Framework, например поставщиком SqlClient. Диспетчер соединений использует существующее соединение, либо можно создать новое.  

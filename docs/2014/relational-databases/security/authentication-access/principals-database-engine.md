@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.roleproperties.selectroll.f1
 - sql12.swb.databaseuser.permissions.user.f1--May use common.permissions
@@ -29,20 +28,20 @@ helpviewer_keywords:
 - '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 caps.latest.revision: 54
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1023de7c9ba97728ce23057172ec419c81f9b812
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 55f86aa023d1c5ddfb03c24d9c97797b22a93973
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109902"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318044"
 ---
 # <a name="principals-database-engine"></a>Субъекты (компонент Database Engine)
   *Субъекты* — это сущности, которые могут запрашивать ресурсы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Как и другие компоненты модели авторизации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участников можно иерархически упорядочить. Область влияния субъекта зависит от его области определения (Windows, сервер, база данных) и того, неделимый это субъект или коллективный. Имя входа Windows является примером индивидуального (неделимого) субъекта, а группа Windows — коллективного. Каждый субъект имеет идентификатор безопасности (SID).  
   
- **Участники уровня Windows**  
+ **Субъекты уровня Windows**  
   
 -   Имя входа домена Windows  
   
@@ -89,10 +88,10 @@ ms.locfileid: "36109902"
 -   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>Пользователь-гость  
- Каждая база данных включает в себя пользователя **guest**. Разрешения, предоставленные пользователю **guest** , наследуются пользователями, которые имеют доступ к базе данных, но не обладают учетной записью пользователя в ней. **Гостевой** пользователь не может быть удален, но его можно отключить, отменив его в `CONNECT` разрешение. `CONNECT` Разрешение можно отменить, выполнив `REVOKE CONNECT FROM GUEST` в любой базе данных, кроме master или tempdb.  
+ Каждая база данных включает в себя пользователя **guest**. Разрешения, предоставленные пользователю **guest** , наследуются пользователями, которые имеют доступ к базе данных, но не обладают учетной записью пользователя в ней. **Гостевой** пользователя нельзя удалить, но его можно отключить, отменив его в `CONNECT` разрешение. `CONNECT` Разрешение можно отменить, выполнив `REVOKE CONNECT FROM GUEST` в любой базе данных, кроме master или tempdb.  
   
 ## <a name="client-and-database-server"></a>Клиент и сервер базы данных  
- По определению клиент и сервер базы данных являются защищаемыми субъектами безопасности. Данные сущности могут пройти взаимную проверку подлинности перед установкой безопасного сетевого соединения. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает [Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758) протокол проверки подлинности, который определяет, как клиенты взаимодействуют со службой проверки подлинности в сети.  
+ По определению клиент и сервер базы данных являются защищаемыми субъектами безопасности. Данные сущности могут пройти взаимную проверку подлинности перед установкой безопасного сетевого соединения. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает [Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758) протокола проверки подлинности, который определяет, как клиенты взаимодействуют со службой проверки подлинности в сети.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Данный раздел электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] содержит следующие подразделы.  

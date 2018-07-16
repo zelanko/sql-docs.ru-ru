@@ -1,5 +1,5 @@
 ---
-title: Элемент DbTableName (ASSL) | Документы Microsoft
+title: Элемент DbTableName (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DbTableName element
 ms.assetid: 842cae85-ab9c-4c75-ab44-51a4d9b1b943
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d167ccdd39d00e3071281d87cad0bf133237f5f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84c0b6ecb600a21eec059b2d1ddc7184c1c46e14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297384"
 ---
 # <a name="dbtablename-element-assl"></a>Элемент DbTableName (ASSL)
   Содержит имя таблицы, к которой привязан родительский элемент.  
@@ -62,7 +62,7 @@ ms.locfileid: "36190295"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элементы, соответствующие родителям элемента `DbTableName` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.TableBinding> и <xref:Microsoft.AnalysisServices.TableNotification>.  
+ Элементы, соответствующие родителям элемента `DbTableName` в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.TableBinding> и <xref:Microsoft.AnalysisServices.TableNotification>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

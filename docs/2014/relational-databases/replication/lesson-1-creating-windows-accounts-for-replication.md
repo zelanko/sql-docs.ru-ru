@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 - replication [SQL Server], administering
@@ -16,13 +16,13 @@ ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a7cf067ff7ebfb4f9990b424acf73d5084470d12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3bd3b0369c990b6db3dc1cbb44f7fd387289ce9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303654"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Занятие 1. Создание учетных записей Windows для репликации
   На этом занятии будут созданы учетные записи Windows для запуска агентов репликации. На локальном сервере будут созданы отдельные учетные записи Windows для следующих агентов:  
@@ -45,7 +45,7 @@ ms.locfileid: "36189972"
   
 3.  Щелкните правой кнопкой мыши значок **Пользователи** , а затем выберите пункт **Новый пользователь…**  
   
-4.  Введите `repl_snapshot` в **имя пользователя** , укажите пароль и другие важные сведения и нажмите кнопку **создать** Чтобы создать учетную запись repl_snapshot.  
+4.  Введите `repl_snapshot` в **имя пользователя** поле, укажите пароль и другие важные сведения и нажмите кнопку **создать** создать учетную запись repl_snapshot.  
   
 5.  Повторите предыдущий шаг, чтобы создать учетные записи repl_logreader, repl_distribution и repl_merge.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36189972"
   
 3.  Щелкните правой кнопкой мыши значок **Пользователи** , а затем выберите пункт **Новый пользователь…**  
   
-4.  Введите `repl_distribution` в **имя пользователя** , укажите пароль и другие важные сведения и нажмите кнопку **создать** Чтобы создать учетную запись repl_distribution.  
+4.  Введите `repl_distribution` в **имя пользователя** поле, укажите пароль и другие важные сведения и нажмите кнопку **создать** создать учетную запись repl_distribution.  
   
 5.  Повторите предыдущий шаг, чтобы создать учетную запись repl_merge.  
   

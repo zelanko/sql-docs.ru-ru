@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Reporting Services, RDL
 - Reporting Services, RDL
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 caps.latest.revision: 52
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cb0ac41fef9a28a5023e122963f59fa6d9720a19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 93fa1ac42172b4750db5e5dd385925f657fdfdd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262050"
 ---
 # <a name="report-definition-language-ssrs"></a>Язык определения отчетов (SSRS)
   Язык определения отчетов — это средство представления определений отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в формате XML. Определение отчета содержит сведения о получении данных и о макете для отчета. Язык определения отчетов состоит из элементов XML, которые соответствуют грамматике XML, созданной для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Предусмотрена возможность добавления пользовательских функций для управления значениями элементов отчета, стилями и форматированием путем обращения к сборкам кода в файлах определения отчета.  
@@ -47,7 +47,7 @@ ms.locfileid: "36189690"
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> Схема XML определения языка RDL  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] проверяется с помощью файла определения схемы XML (XSD-файла). Схема определяет правила применения элементов языка определения отчетов в RDL-файле. Элемент содержит сведения о своем типе данных и количестве элементов, т. е. о допустимом количестве вхождений. Элементы бывают простыми и составными. Простой элемент не включает дочерних элементов и атрибутов. Составной элемент, напротив, содержит дочерние элементы и, возможно, атрибуты.  
   
- Например, схема включает элемент языка определения Отчетов `ReportParameters`, который — это сложный тип `ReportParametersType`. По соглашению, сложный тип элемента является имя элемента, за которым следует слово `Type`. Объект `ReportParameters` могут содержаться элемент `Report` элемент (сложный тип) и может содержать `ReportParameter` элементов. Объект `ReportParameterType` — это простой тип, который может принимать только одно из следующих значений: `Boolean`, `DateTime`, `Integer`, `Float`, или `String`. Дополнительные сведения о типах данных схем XML см. в статье [XML Schema Part 2: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871)(Схема XML, часть 2. Типы данных, второе издание).  
+ Например, следующая схема включает элемент языка определения Отчетов `ReportParameters`, который является сложным типом `ReportParametersType`. По соглашению, сложный тип для элемента является имя элемента, за которым следует слово `Type`. Объект `ReportParameters` могут содержаться элемент `Report` элемент (сложного типа) и может содержать `ReportParameter` элементов. Объект `ReportParameterType` — это простой тип, который может принимать только одно из следующих значений: `Boolean`, `DateTime`, `Integer`, `Float`, или `String`. Дополнительные сведения о типах данных схем XML см. в статье [XML Schema Part 2: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871)(Схема XML, часть 2. Типы данных, второе издание).  
   
  Схема XSD для языка определения отчетов доступна в файле ReportDefinition.xsd, расположенном в папке Extras на компакт-диске продукта. Эта схема также доступна на сервере отчетов по следующему URL-адресу: http://servername/reportserver/reportdefinition.xsd.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36189690"
 |Тип|Описание|  
 |----------|-----------------|  
 |`Binary`|Свойство с закодированным в base-64 двоичным значением.|  
-|`Boolean`|Свойство объекта со значением `true` или `false`. Если не указано иное, значение дополнительного объекта Boolean равно `False`.|  
+|`Boolean`|Свойство объекта со значением `true` или `false`. Если не указано иное, значение дополнительного объекта Boolean `False`.|  
 |`Date`|Свойство с полностью указанной датой или датой-временем в формате даты ISO8601: YYYY-MM-DD[THH:MM[:SS[.S]]].|  
 |`Enum`|Свойство со строковым значением, которое может быть одним из списка определенных значений.|  
 |`Float`|Свойство со значением с плавающей точкой. Точка (.) используется как необязательный десятичный разделитель.|  

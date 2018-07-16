@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3745d2334f8b8abf4c60c292bba1a820432d088e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d1883651cc37b93383792b94f94695e0775436a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319834"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Перемещение баз данных сервера отчетов на другой компьютер (собственный режим служб SSRS)
   Базы данных сервера отчетов, используемые в установке, можно переместить на экземпляр компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] , находящийся на другом компьютере. Базы данных reportserver и reportservertempdb должны перемещаться или копироваться вместе. Установка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требует наличия обеих баз данных. База данных reportservertempdb должна быть связана по имени с перемещаемой базой данных reportserver.  
@@ -62,7 +62,7 @@ ms.locfileid: "36188395"
   
 8.  Нажмите кнопку **Добавить** , чтобы выбрать MDF- и LDF-файлы базы данных сервера отчетов, которые следует присоединить. Повторите этот шаг для временной базы данных сервера отчетов.  
   
-9. После присоединения базы данных, убедитесь, что `RSExecRole` — это роль базы данных в базе данных сервера отчетов и временной базы данных. `RSExecRole` необходимо иметь select, insert, update, delete и разрешения ссылок на таблицы базы данных сервера отчетов и разрешения на выполнение хранимых процедур. Дополнительные сведения см. в разделе [Создание RSExecRole](../security/create-the-rsexecrole.md).  
+9. После присоединения баз данных, убедитесь, что `RSExecRole` — это роль базы данных в базе данных сервера отчетов и временной базы данных. `RSExecRole` необходимо иметь select, insert, update, delete и разрешения ссылок на таблицы базы данных сервера отчетов и разрешения на выполнение для хранимых процедур. Дополнительные сведения см. в разделе [Создание RSExecRole](../security/create-the-rsexecrole.md).  
   
 10. Запустите программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и соединитесь с сервером отчетов.  
   
@@ -218,7 +218,7 @@ GO
 7.  Нажмите кнопку **Далее** , затем — кнопку **Готово**.  
   
 > [!NOTE]  
->  Объект [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требует установки, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] экземпляр включена `RSExecRole` роли. Создание роли, регистрация имени входа и назначения ролей происходят, когда с помощью программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливается подключение к базе данных сервера отчетов. При иных подходах к настройке соединения (особенно если используется программа командной строки rsconfig.exe) сервер отчетов окажется в неработоспособном состоянии. Чтобы сервер отчетов стал доступным, возможно, придется записать код инструментария WMI. Дополнительные сведения см. в разделе [Доступ к поставщику WMI для служб Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
+>  Объект [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требует установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] экземпляр содержит `RSExecRole` роли. Создание роли, регистрация имени входа и назначения ролей происходят, когда с помощью программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливается подключение к базе данных сервера отчетов. При иных подходах к настройке соединения (особенно если используется программа командной строки rsconfig.exe) сервер отчетов окажется в неработоспособном состоянии. Чтобы сервер отчетов стал доступным, возможно, придется записать код инструментария WMI. Дополнительные сведения см. в разделе [Доступ к поставщику WMI для служб Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
   
 ## <a name="see-also"></a>См. также  
  [Создание роли RSExecRole](../security/create-the-rsexecrole.md)   

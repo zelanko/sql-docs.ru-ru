@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 69e44adb0ee84c2831062acd7cd35432f5de5af5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0c2078adeff636f11acdc86b78355c43c46a30a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329924"
 ---
 # <a name="manage-a-cdc-service"></a>Управление службой CDC
   В консоли конструктора CDC можно просматривать службы, созданные с помощью консоли конфигурации служб CDC, а также управлять всеми экземплярами в службе CDC Oracle.  
@@ -47,7 +47,7 @@ ms.locfileid: "36189818"
  Нажмите кнопку **Остановить все экземпляры** , чтобы отслеживать измененные данные для всех экземпляров в службе.  
   
 ## <a name="see-also"></a>См. также  
- [Как создать экземпляр изменения базы данных SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
+ [Как создать экземпляр базы данных изменения SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Как управлять службой CDC из консоли конструктора CDC](how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [Использование мастера создания экземпляра](use-the-new-instance-wizard.md)  
   

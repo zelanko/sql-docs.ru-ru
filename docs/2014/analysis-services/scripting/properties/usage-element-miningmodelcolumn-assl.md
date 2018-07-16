@@ -1,5 +1,5 @@
 ---
-title: Элемент Usage (MiningModelColumn) (ASSL) | Документы Microsoft
+title: Элемент Usage (MiningModelColumn) (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Usage element
 ms.assetid: 435a857e-37a9-434e-9de1-354f1ff2993f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a4e4c2b11a9a9281f64062390257bf5ddf3145b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6767c4c5ac535ac603cc6182cbe645088c8ac05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265306"
 ---
 # <a name="usage-element-miningmodelcolumn-assl"></a>Элемент Usage (MiningModelColumn) (ASSL)
-  Описывает способ связанного столбца в родительском объекте [MiningStructure](../objects/miningstructure-element-assl.md) используется.  
+  Описывает как связанный столбец в родительском объекте [MiningStructure](../objects/miningstructure-element-assl.md) используется.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36190518"
 |*Входные данные*|Столбец является входным.|  
 |*Predict*|Столбец является столбцом прогноза.|  
 |*PredictOnly*|Столбец является только столбцом прогноза.|  
-|*None*|Столбец не используется этой моделью. **Предупреждение:** при Usage имеет значение «None», службы Analysis Services не отправляют никакого значения сервера по умолчанию; таким образом, атрибут Usage не включается в запрос или ответ.|  
+|*None*|Столбец не используется этой моделью. **Предупреждение:** при Usage имеет значение «None», службы Analysis Services не отправляют никакого значения сервера по умолчанию; таким образом, атрибут Usage не включается в запрос/ответ.|  
   
  Перечисление, соответствующее допустимым значениям элемента `Usage` в модели объектов AMO, — это <xref:Microsoft.AnalysisServices.MiningModelColumnUsages>.  
   

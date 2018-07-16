@@ -1,11 +1,11 @@
 ---
-title: Определяемые пользователем статистические функции CLR | Документы Microsoft
+title: Определяемые пользователем статистические функции CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,16 +18,16 @@ caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 456e550022912fe2b1e344b82dc405cb648288ab
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 17ce0cb5c20fc63fd5713aa244a9641bf5943f2a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700655"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356886"
 ---
 # <a name="clr-user-defined-aggregates"></a>Пользовательские агрегатные функции среды CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Агрегатные функции выполняют вычисление на наборе значений и возвращают одиночное значение. В большинстве случаев [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживала только встроенные агрегатные функции, такие как **сумма** или **MAX**, работать с набором входных скалярных величин и создавать единое Агрегированное значение из этого набора. Но теперь интеграция [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] со средой [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework CLR позволяет создавать в управляемом коде пользовательские агрегатные функции и предоставлять доступ к ним из [!INCLUDE[tsql](../../includes/tsql-md.md)] или другого управляемого кода.  
+  Агрегатные функции выполняют вычисление на наборе значений и возвращают одиночное значение. В большинстве случаев [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживала только встроенные агрегатные функции, такие как **SUM** или **MAX**, работать с набором входных скалярных значений и создания агрегатов значение из этого набора. Но теперь интеграция [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] со средой [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework CLR позволяет создавать в управляемом коде пользовательские агрегатные функции и предоставлять доступ к ним из [!INCLUDE[tsql](../../includes/tsql-md.md)] или другого управляемого кода.  
   
  В следующей таблице приводится список подразделов данного раздела.  
   

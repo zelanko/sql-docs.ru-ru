@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], initializing subscriptions
 - initializing subscriptions [SQL Server replication], snapshots
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3149d667a2f84aa24bd5ecd061959144abc95968
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 27614b3c2e0ac6669b9f0ad020d1c74b764a951d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233034"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>Инициализация подписки с помощью моментального снимка
   После того как публикация создана, обычно создается и копируется в папку моментальных снимков исходный моментальный снимок (это происходит по умолчанию для публикаций слиянием, созданных с помощью мастера создания публикаций). Затем, при начальной синхронизации подписки, снимок применяется к подписчику агентом распространителя (для публикаций транзакций и публикаций моментальных снимков) или агентом слияния (для публикаций слиянием). Процесс создания моментального снимка зависит от типа публикации:  

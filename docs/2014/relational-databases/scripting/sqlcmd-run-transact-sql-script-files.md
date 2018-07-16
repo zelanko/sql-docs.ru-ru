@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transact sql scripts
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ff18203f0120210f3443973ed7e44761b84ac8ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4aa1fd4418e4758ca41cce9d3aeba70838a0dce0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260410"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>Выполнение файлов скрипта Transact-SQL с использованием программы sqlcmd
-  Для запуска файла скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать программу командной строки `sqlcmd`. Объект [!INCLUDE[tsql](../../includes/tsql-md.md)] файла скрипта является текстовый файл, который может содержать сочетание [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций, `sqlcmd` команды и переменные сценария.  
+  Для запуска файла скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать программу командной строки `sqlcmd`. Объект [!INCLUDE[tsql](../../includes/tsql-md.md)] файл скрипта — это текстовый файл, который может содержать сочетание [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций, `sqlcmd` команды и переменные скрипта.  
   
  Чтобы создать простой файл скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)], используя приложение «Блокнот», следуйте перечисленным ниже шагам.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36188987"
   
 1.  Откройте окно командной строки.  
   
-2.  В окне командной строки введите: `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
+2.  В окне командной строки введите следующую команду: `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
   
 3.  Нажмите клавишу ВВОД.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36188987"
   
 1.  Откройте окно командной строки.  
   
-2.  В окне командной строки введите: `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
+2.  В окне командной строки введите следующую команду: `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
   
 3.  Нажмите клавишу ВВОД.  
   

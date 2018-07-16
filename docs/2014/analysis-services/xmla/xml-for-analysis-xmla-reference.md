@@ -1,5 +1,5 @@
 ---
-title: XML для аналитики (XMLA) ссылку | Документы Microsoft
+title: XML для аналитики (XMLA) ссылку | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XMLA, reference
 ms.assetid: 88045e05-ce47-4e28-999b-7f9c74af9faf
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32093211db376a156c456d4f769f78bcc1135ceb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec0d843ac46cbcf5d032d1f93190869fd5a37cb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241284"
 ---
 # <a name="xml-for-analysis--xmla-reference"></a>XML для аналитики (XMLA) ссылки
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] использует протокол XML для аналитики (XMLA) для обеспечения взаимодействия между клиентскими приложениями и экземпляром служб Analysis Services. На самом базовом уровне другие клиентские библиотеки, такие как ADOMD.NET и объекты AMO, составляют запросы и декодируют ответы в XMLA, образуя промежуточный слой для экземпляра служб Analysis Services, который использует исключительно XMLA.  
@@ -36,12 +36,12 @@ ms.locfileid: "36087429"
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[XML-элементы &#40;XML для Аналитики&#41;](../dev-guide/xml-elements-xmla.md)|Описывает элементы в спецификации XMLA.|  
+|[XML-элементов &#40;XML для Аналитики&#41;](../dev-guide/xml-elements-xmla.md)|Описывает элементы в спецификации XMLA.|  
 |[Типы данных XML &#40;XML для Аналитики&#41;](xml-data-types/xml-data-types-xmla.md)|Описывает типы данных в спецификации XMLA.|  
-|[XML для аналитики соответствия &#40;XML для Аналитики&#41;](xml-for-analysis-compliance-xmla.md)|Описывает уровень совместимости со спецификацией XMLA 1.1.|  
+|[XML для анализа соответствия &#40;XML для Аналитики&#41;](xml-for-analysis-compliance-xmla.md)|Описывает уровень совместимости со спецификацией XMLA 1.1.|  
   
 ## <a name="related-sections"></a>См. также  
- [Развертывание с помощью функций анализа служб языка сценариев &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Язык сценариев разработки с использованием Analysis Services &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  [Наборы строк схемы XML для аналитики](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   

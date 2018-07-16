@@ -1,5 +1,5 @@
 ---
-title: Указание целевого объекта установки | Документы Microsoft
+title: Указание целевого объекта установки | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - input files [Analysis Services]
 - installation targets [Analysis Services]
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - modifying installation targets
 ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3e2f46eeb01baa5f6f208a612ecba5ad61dad004
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a779e6ecbc32316d6d22ef8f270d9d0d2af6738e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254956"
 ---
 # <a name="specifying-the-installation-target"></a>Указание целевого объекта установки
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Мастер развертывания служб считывает сведения о целевом установки из \< *имя проекта*> .deploymenttargets файла. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] создает этот файл при построении проекта служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует базу данных и сервер, указанные на **развертывания** страница  *\<имя проекта >* **страницы свойств** диалоговое окно «» для создания \< *имя проекта*> TARGETS-файл.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Мастер развертывания служб считывает сведения о целевом установки из \< *имя_проекта*> .deploymenttargets файл. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] создает этот файл при построении проекта служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует базу данных и сервер, указанные на **развертывания** странице * \<имя проекта >* **страницы свойств** диалоговое окно, чтобы создать \< *имя_проекта*> TARGETS-файле.  
   
 ## <a name="modifying-the-installation-target-for-deployment"></a>Измерение целевого объекта установки для развертывания  
  В некоторых ситуациях может быть необходимо развернуть проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в базу данных или экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , отличающийся от указанного на странице **Развертывание** . Например может быть необходимо развернуть проект на сервер для тестирования перед развертыванием, а затем развернуть его на производственный сервер после окончания тестирования. Может также быть необходимо развернуть завершенный и протестированный проект на несколько производственных серверов в кластере балансирования сетевой нагрузки, или на промежуточный сервер и производственный сервер.  
@@ -46,11 +46,11 @@ ms.locfileid: "36191090"
   
      —или—  
   
--   Изменить \< *имя проекта*> .deploymenttargets файл, используя любой текстовый редактор.  
+-   Изменить \< *имя_проекта*> файл .deploymenttargets, используя любой текстовый редактор.  
   
 ## <a name="see-also"></a>См. также  
- [Указание параметров развертывания ролей и секций](deployment-script-files-partition-and-role-deployment-options.md)   
- [Задание параметров конфигурации для развертывания решения](deployment-script-files-solution-deployment-config-settings.md)   
+ [Указание секций и параметров развертывания ролей](deployment-script-files-partition-and-role-deployment-options.md)   
+ [Указание настроек конфигурации для развертывания решения](deployment-script-files-solution-deployment-config-settings.md)   
  [Указание параметров обработки](deployment-script-files-specifying-processing-options.md)  
   
   

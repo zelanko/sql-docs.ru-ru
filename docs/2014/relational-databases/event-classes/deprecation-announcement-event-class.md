@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Deprecation Announcement event class
 ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e3f0c25031a54be1b4b3131483e3aecacf1bb683
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c0c9511f650f86744b2fe96a724cfbe4c48010bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252516"
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement, класс событий
   Класс событий **Deprecation Announcement** происходит при использовании функции, которая будет удалена из будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](но не начиная со следующего выпуска). Для продления срока службы приложения избегайте использования функциональных возможностей, вызывающих события класса **Deprecation Announcement** или **Deprecation Final Support** .  
@@ -35,7 +35,7 @@ ms.locfileid: "36190781"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
-|DatabaseID|`int`|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Отображает имя базы данных, если `ServerName` столбец данных был захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
+|DatabaseID|`int`|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Отображает имя базы данных, если `ServerName` столбец данных фиксируется при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |DatabaseName|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |EventClass|`int`|Тип события = 125.|27|Нет|  
 |EventSequence|`int`|Последовательность данного события в запросе.|51|Нет|  
@@ -51,7 +51,7 @@ ms.locfileid: "36190781"
 |Offset|`int`|Начальное смещение инструкции в пределах хранимой процедуры или пакета.|61|Да|  
 |RequestID|`int`|Идентификатор запроса, содержащего инструкцию.|49|Да|  
 |ServerName|`nvarchar`|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
-|SessionLoginName|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием имени Имя_входа1 и выполнении инструкции под именем Имя_входа2, `SessionLoginName` выводит значение Имя_входа1 и `LoginName` Имя_входа2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
+|SessionLoginName|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Имя_входа1 и выполнении инструкции под именем Имя_входа2 в столбце `SessionLoginName` выводит значение Имя_входа1 и `LoginName` Имя_входа2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|`int`|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |SqlHandle|`image`|Двоичный дескриптор, который может быть использован для идентификации пакетов SQL или хранимых процедур.|63|Да|  
 |StartTime|`datetime`|Время начала события, если оно известно.|14|Да|  

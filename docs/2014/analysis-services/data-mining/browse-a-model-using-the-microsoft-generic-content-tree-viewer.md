@@ -1,5 +1,5 @@
 ---
-title: Просмотр модели с помощью средства просмотра деревьев содержимого Microsoft Generic | Документы Microsoft
+title: Просмотр модели с помощью средства просмотра деревьев содержимого Майкрософт | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, viewing
 ms.assetid: 4a5f7c51-c704-4214-b05d-21cf735e6d96
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 11c4eedca05eac85572bd30eddbc4d23b835fa33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5919fc4d600c8c4172edd4d067efbd37708dc87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273570"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Просмотр модели в средстве просмотра деревьев содержимого общего вида (Майкрософт)
   Средство просмотра содержимого общего вида модели интеллектуального анализа данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] предоставляет подробные сведения о закономерностях, обнаруженных алгоритмом интеллектуального анализа данных, а также доступ к различной статистической информации, созданной в процессе анализа. Объем и тип этих сведений зависит от использованного алгоритма, но может включать в себя следующие категории:  

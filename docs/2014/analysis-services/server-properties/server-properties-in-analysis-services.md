@@ -1,5 +1,5 @@
 ---
-title: Настройка свойств сервера в службах Analysis Services | Документы Microsoft
+title: Настройка свойств сервера в службах Analysis Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, configuration properties
 - Analysis Services, configuration properties
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fbb4d0682f7bb961b17901efc3cf3994fd81a7cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19f6f04dfe165cb5f3af5bd5587232d65c8c4582
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247354"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Настройка свойств сервера в службах Analysis Services
   Администратор служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может изменить по умолчанию свойства конфигурации сервера для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. У всех экземпляров имеются собственные свойства конфигурации, которые можно задать независимо от других экземпляров на этом же сервере.  
@@ -44,7 +44,7 @@ ms.locfileid: "36110032"
  Страницы свойств в среде SQL Server Management Studio содержат подмножество доступных свойств, при этом отображаются только те из свойств, которые с наибольшей вероятностью могут быть изменены. Полный набор свойств содержится в файле msmdsrv.ini.  
   
 > [!NOTE]  
->  В этом разделе не описываются свойства конфигурации развертывания в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения о конфигурации развертывания см. в разделе [Указание параметров конфигурации для развертывания решения](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
+>  В этом разделе не описываются свойства конфигурации развертывания в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения о конфигурации развертывания, см. в разделе [Указание настроек конфигурации для развертывания решения](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>Просмотр и настройка свойств конфигурации в среде Management Studio  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring databases [SQL Server], moving
 - database restores [SQL Server], creating new databases
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 caps.latest.revision: 64
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1e3f9f8ad10a31fa7af4b6a517c0c36fcc817494
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a2894baa94f9787a38d2c7c49f0f6e330a3537c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215564"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Восстановление базы данных в новое место (SQL Server)
   В этом разделе описано, как восстановить базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в новую папку и при необходимости переименовать ее в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эта процедура позволяет переместить базу данных по новому пути каталога или создать копию базы данных на том же или другом экземпляре сервера.  
@@ -45,7 +44,7 @@ ms.locfileid: "36180306"
   
      [безопасность](#Security)  
   
--   **Чтобы восстановить базу данных в новое расположение и при необходимости ее переименование с помощью:**  
+-   **Чтобы восстановить базу данных в новое расположение и при необходимости ее переименование, с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -166,7 +165,7 @@ ms.locfileid: "36180306"
      *устройство_резервного_копирования* [ `,`... *n* ]  
      Указывает список с разделителями-запятыми от 1 до 64 устройств резервного копирования, используемых для восстановления базы данных из резервной копии. Можно указать как физическое устройство резервного копирования, так и соответствующее логическое устройство, если оно определено. Для указания физического устройства резервного копирования используйте параметр DISK или TAPE.  
   
-     {ДИСК | ЛЕНТА} `=` *имя_физического_устройства_резервного _копирования*  
+     {ДИСК | ЛЕНТА} `=` *имя_физического_устройства_резервного_копирования*  
   
      Дополнительные сведения см. в разделе [Устройства резервного копирования (SQL Server)](backup-devices-sql-server.md).  
   

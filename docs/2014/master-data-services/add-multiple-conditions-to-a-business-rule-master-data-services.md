@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], multiple conditions
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e5ac7bab7712a268e3fe8fd37f1a5ae799ef55dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f7994861c246b31731dbff82069eed091379ad6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275180"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Добавление нескольких условий к бизнес-правилу (службы Master Data Services)
   Чтобы в среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]создать более сложное бизнес-правило, к нему с помощью операторов **AND** и **OR** можно добавить несколько условий.  
@@ -56,28 +56,28 @@ ms.locfileid: "36180083"
   
 8.  Нажмите **Изменить выбранное бизнес-правило**.  
   
-9. В **компоненты** области, разверните **логические операторы** узла.  
+9. В **компоненты** панели разверните **логические операторы** узла.  
   
-10. Нажмите кнопку **AND** или **или** и перетащите его на **IF** панели **AND** метки.  
+10. Нажмите кнопку **AND** или **OR** и перетащите его на значок **IF** области **AND** метки.  
   
 11. На панели **Компоненты** разверните узел **Условия** .  
   
-12. Выберите условие и перетащите его на **IF** области в **AND** или **или** из шага 10.  
+12. Щелкните условие и перетащите его на значок **IF** панели, чтобы **AND** или **OR** из шага 10.  
   
-13. В **атрибуты** щелкните атрибут и перетащите его на **Изменение условия** панели **Выбор атрибута** метки.  
+13. В **атрибуты** панели, щелкните атрибут и перетащите его на значок **Изменение условия** области **выбора атрибута** метки.  
   
-14. В **Изменение условия** панель, заполните все обязательные поля.  
+14. В **Изменение условия** области, заполните все необходимые поля.  
   
 15. На панели **Изменение условия** нажмите кнопку **Сохранить элемент**.  
   
-16. При необходимости добавьте дополнительные условия, из **компоненты** перетащите **AND** или **или** к любому **AND** или **или**в **IF** области. Затем выполните шаги 13–15.  
+16. При необходимости добавьте дополнительные условия, из **компоненты** панели перетащите **AND** или **OR** к любому **AND** или **OR**в **IF** области. Затем выполните шаги 13–15.  
   
     > [!TIP]  
-    >  Чтобы удалить условие, щелкните имя условия и в **Изменение условия** области, нажмите кнопку **удаления элемента**.  
+    >  Чтобы удалить условие, щелкните имя условия и в **Изменение условия** панели щелкните **удаления элемента**.  
   
 ## <a name="see-also"></a>См. также  
  [Бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
  [Изменение имени бизнес-правила (службы Master Data Services)](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)   
- [Настройка бизнес-правила для отправки уведомлений &#40;службы Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
+ [Настройка бизнес-правилах отправки уведомлений &#40;службы Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

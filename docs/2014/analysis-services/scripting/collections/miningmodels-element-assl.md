@@ -1,5 +1,5 @@
 ---
-title: Элемент MiningModels (ASSL) | Документы Microsoft
+title: Элемент MiningModels (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningModels element
 ms.assetid: 19824d92-2e23-4e5e-b329-e46baf709c4a
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f04f8f2f7872fb2472f1a4179019a2a74f72cc4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e1901ff4974104143928c9b5fb90d14118fda6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291610"
 ---
 # <a name="miningmodels-element-assl"></a>Элемент MiningModels (ASSL)
   Содержит коллекцию элементов [MiningModel](../objects/miningmodel-element-assl.md) элементы, связанные с [MiningStructure](../objects/miningstructure-element-assl.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "36191077"
 |Дочерние элементы|[MiningModel](../objects/miningmodel-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.MiningModelCollection>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.MiningModelCollection>.  
   
 ## <a name="see-also"></a>См. также  
  [Коллекции &#40;ASSL&#41;](collections-assl.md)  

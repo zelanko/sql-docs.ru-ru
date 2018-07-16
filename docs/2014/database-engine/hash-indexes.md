@@ -1,5 +1,5 @@
 ---
-title: Хэш-индексы | Документы Microsoft
+title: Хэш-индексы | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4bdc9c1-7922-4fac-8183-d11ec58fec4e
 caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 3da74688d6a2f65b191788ab9ecd2394bcca8597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2c2b4c055eea6aef2e7825ee6589c6611ceaf7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295234"
 ---
 # <a name="hash-indexes"></a>Хэш-индексы.
   Индексы используются в качестве точек входа для таблиц, оптимизированных для памяти. Для считывания строк из таблицы требуется индекс, который определяет местоположение данных в памяти.  
@@ -44,7 +44,7 @@ ms.locfileid: "36109780"
   
  Структура хэш-индекса в памяти состоит из массива указателей памяти. Каждый контейнер связан с определенным смещением в этом массиве. Каждый контейнер в массиве указывает на первую строку в этом хэш-контейнере. Каждая строка в контейнере указывает на следующую строку, образуя таким образом цепочку строк для каждого хэш-контейнера, как показано на рисунке ниже.  
   
- ![Структура индекса хэш в памяти. ] (../../2014/database-engine/media/hekaton-tables-3.gif "Хэш в памяти структуры индекса.")  
+ ![Структура индекса в памяти. ] (../../2014/database-engine/media/hekaton-tables-3.gif "Структуры индекса в памяти.")  
   
  На рисунке изображены три контейнера со строками. Второй контейнер сверху содержит три красные строки. Четвертый контейнер — одну голубую строку. Нижний контейнер содержит две зеленые строки. Это могут быть разные версии одной строки.  
   

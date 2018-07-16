@@ -1,5 +1,5 @@
 ---
-title: Учетные записи домена, необходимые для фермы SharePoint (Советник по переходу) | Документы Microsoft
+title: Учетные записи домена, необходимые для фермы SharePoint (Советник по переходу) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: fd013ae4f7266604dde798aa76393612cd578bad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 122f0209e7254d558ac5cc3db806d8bb648a849c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251216"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>Для фермы SharePoint требуются учетные записи домена (советник по переходу)
   Продукты SharePoint, которые настроены для среды ферм, требуют использования учетных записей домена.  
@@ -39,11 +39,11 @@ ms.locfileid: "36188383"
  «Сервер отчетов запущен от имени встроенной учетной записи NT AUTHORITY\NETWORK SERVICE, которая не поддерживается установкой фермы SharePoint. Необходимо повторно настроить службу сервера отчетов для запуска от имени учетной записи пользователя домена».  
   
 ## <a name="corrective-action"></a>Действие по исправлению  
- Для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и предыдущих версий, используйте диспетчер конфигурации служб Reporting Services для изменения учетной записи, назначенный в качестве учетной записи службы сервера отчетов.  
+ Для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и предыдущих версий, используйте диспетчер конфигурации служб Reporting Services, чтобы изменить учетную запись, которой назначена как учетная запись службы сервера отчетов.  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>Изменение учетной записи службы, используйте диспетчер конфигурации  
   
-1.  Из **запустить** последовательно выберите пункты **все программы**, а затем нажмите кнопку **Microsoft SQL Server 2008 R2**.  
+1.  Из **запустить** меню, выберите **все программы**, а затем нажмите кнопку **Microsoft SQL Server 2008 R2**.  
   
 2.  Выберите **средства настройки**, а затем нажмите кнопку **диспетчер конфигурации служб Reporting Services**.  
   

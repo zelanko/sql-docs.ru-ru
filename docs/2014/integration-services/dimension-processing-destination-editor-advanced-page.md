@@ -1,5 +1,5 @@
 ---
-title: (Страница «Дополнительно») Редактор назначения обработки измерений | Документы Microsoft
+title: Редактор назначения обработки измерений, в (страница "Дополнительно") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimprocessingtransformation.advanced.f1
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ec2e224cc5f5aefdc0d8b71f99ff227a282b4c58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3947568a5fed3c2a2467741e93928380ba472e0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254656"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>Редактор назначения обработки измерений (страница «Дополнительно»)
   Используйте страницу **Дополнительно** диалогового окна **Редактор назначения обработки измерений** для настройки обработки ошибок.  
@@ -102,7 +102,7 @@ ms.locfileid: "36188293"
  Укажите путь к журналу ошибок.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения обработки измерений &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
  [Редактор назначения обработки измерений &#40;страница «сопоставления»&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  
   

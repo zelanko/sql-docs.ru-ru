@@ -1,14 +1,13 @@
 ---
-title: Использование Подробности обозревателя объектов для отслеживания групп доступности (SQL Server Management Studio) | Документы Microsoft
+title: Использование сведений обозревателя объектов для отслеживания групп доступности (SQL Server Management Studio) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.OEdetails.f1
 helpviewer_keywords:
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: 28
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 29e86a6914ced21ac6c5941c2f728b18da2c7f9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ffadee68a6990a193d794a9af714fd7cd7f5ea08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282209"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>Использование раздела «Подробности обозревателя объектов» для мониторинга групп доступности (среда SQL Server Management Studio)
   В этом разделе описывается использование области **Подробности обозревателя объектов** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] для мониторинга существующих групп доступности, реплик доступности и баз данных доступности AlwaysOn, а также для управления этими объектами.  
@@ -39,7 +38,7 @@ ms.locfileid: "36189582"
   
 -   **Подробности обозревателя объектов:**  
   
-     [Сведения о группах доступности](#AvGroupsDetails)  
+     [Сведения о группе доступности](#AvGroupsDetails)  
   
      [Подробные сведения о реплике доступности](#AvReplicaDetails)  
   

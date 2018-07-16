@@ -1,5 +1,5 @@
 ---
-title: Просмотр моделей (надстройки интеллектуального анализа для Office данных) | Документы Microsoft
+title: Просмотр моделей (надстройки интеллектуального анализа для Office данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [Visio]
 - shapes, data mining
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - shapes, creating
 ms.assetid: 2054d1b0-3828-443e-b60e-529adb9afa7f
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6e956fe5f5968c174168398768719bef9f1829d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56405f4c8f178edbaebdd89ae31833affd8ae245
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319334"
 ---
 # <a name="viewing-models-data-mining-add-ins-for-office"></a>Просмотр моделей (надстройки интеллектуального анализа данных для Office)
   Надстройки интеллектуального анализа данных для Excel предоставляют следующие способы просмотра созданных аналитических моделей.  
@@ -37,7 +37,7 @@ ms.locfileid: "36188751"
   
      [Просмотр моделей интеллектуального анализа данных в Visio &#40;надстройки интеллектуального анализа данных&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
--   Используйте **модель документа** мастера для создания сводки метаданных и содержимого модели.  
+-   Используйте **модели документов** мастер для создания сводки метаданных и содержимого модели.  
   
      [Документирование моделей интеллектуального анализа данных &#40;интеллектуального анализа данных надстройки для Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
   

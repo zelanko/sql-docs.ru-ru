@@ -1,5 +1,5 @@
 ---
-title: 'Урок 1: Выполнение политик рекомендаций по запросу | Документы Microsoft'
+title: 'Занятие 1: Выполнение политик рекомендаций на основе по запросу | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 868338d3-29c8-4a55-ab02-51a358d5b7ca
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db311853675ad5dc80569bc5043e3124e790152c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 77a51ea896e6880ba373042b8201c55e5dec26eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289840"
 ---
 # <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Урок 1. Выполнение политик рекомендаций по запросу
   Метод оценки политики по требованию (называемый также нерегламентированным) позволяет быстро оценить рекомендованные политики, чтобы определить, соответствует ли экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] советам и рекомендациям.  

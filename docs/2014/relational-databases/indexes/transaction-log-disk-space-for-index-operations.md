@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index disk space [SQL Server]
 - space [SQL Server], indexes
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - space [SQL Server], transaction logs
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8d37e5411405282ff0d742f93aba28ff29ae9bf9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1f02923d1d5edef9a26766acfb3de77c7478c992
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276530"
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>Место на диске журнала транзакций для операций обработки индекса
   При крупномасштабных операциях обработки индекса могут формироваться большие объемы загружаемых данных, что может привести к быстрому заполнению журнала транзакций. Чтобы обеспечить возможность отката операции обработки индекса, журнал транзакций не может быть усечен до тех пор, пока операция обработки индекса не завершится; однако во время обработки индекса возможно выполнение резервного копирования журнала. Следовательно, журнал транзакций должен иметь достаточно места для хранения как транзакций обработки индекса, так и любых параллельных пользовательских транзакций, выполняющихся во время обработки индекса. Это верно для операций обработки индекса как в режиме вне сети, так и в режиме в сети. Так как доступ к базовым таблицам во время обработки индекса в режиме вне  сети невозможен, количество пользовательских транзакций может быть небольшим и заполнение журнала не будет таким стремительным. Операции обработки индекса в режиме в сети не препятствуют пользовательской работе, поэтому обработка больших индексов вкупе с большим количеством параллельных пользовательских транзакций может привести к непрерывному заполнению журнала транзакций без возможности его усечения.  

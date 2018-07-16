@@ -1,5 +1,5 @@
 ---
-title: Анализ изменения в работе функций в SQL Server 2014 служб | Документы Microsoft
+title: Изменения в работе для анализа служб в SQL Server 2014 | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,51 +8,51 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 51e0c23301c21cfb86ace1cf99e8aacef4b77fce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87ec5b84d5d74bae3be3c05dfcafd3a609780f82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289880"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>Изменение работы функций служб Analysis Services в SQL Server 2014
-  В этом разделе описаны изменения в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] анализа данных многомерный, табличный и [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] развертываний. Изменения в работе касаются того, как функциональные возможности работают или взаимодействуют в текущей версии в сравнении с предыдущими версиями SQL Server.  
+  В этом разделе описаны изменения в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] для интеллектуального анализа многомерный, табличный и [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] развертываний. Изменения в работе касаются того, как функциональные возможности работают или взаимодействуют в текущей версии в сравнении с предыдущими версиями SQL Server.  
   
 > [!NOTE]  
->  Напротив, критическое изменение — нарушает работу модели данных или приложения, интегрированного с [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] запуск. Дополнительные сведения см. в разделе [критические изменения функций служб Analysis Services в SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
+>  Напротив, критическое изменение нарушает работу модели данных или приложения, интегрированного с [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] применялось. Дополнительные сведения см. в разделе [критические изменения функций служб Analysis Services в SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
   
  В этом разделе.  
   
--   [Изменения в SQL Server 2014](#bkmk_sql2014)  
+-   [Изменения в поведении в SQL Server 2014](#bkmk_sql2014)  
   
--   [Изменения в SQL Server 2012 SP1](#bkmk_sql2012sp1)  
+-   [Изменения в SQL Server 2012 с пакетом обновления 1](#bkmk_sql2012sp1)  
   
--   [Изменения в SQL Server 2012](#bkmk_sql2012)  
+-   [Изменения в поведении в SQL Server 2012](#bkmk_sql2012)  
   
 ##  <a name="bkmk_sql2014"></a> Изменения в поведении [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
- Нет никаких новых изменений работы, о которых было объявлено табличных, многомерных данных интеллектуального анализа данных, или [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] функции в этой версии.  Тем не менее поскольку [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] аналогична [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] и [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] имеются версии, изменения в работе обоих предыдущих выпусков здесь для удобства в случае, если вы осуществили обновление [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
+ Существуют никаких новых изменений работы, о которых было объявлено интеллектуального анализа табличных, многомерных данных, или [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] возможностях этой версии.  Тем не менее так как [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] аналогична [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] и [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] версий, изменения в поведении обоих предыдущих выпусков предоставляются здесь для удобства в случае, если вы обновляете с [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
 ##  <a name="bkmk_sql2012sp1"></a> Изменения в поведении [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]  
- В этом разделе документированы изменения поведения для [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] функции в [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Эти изменения также применяются к [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ В этом разделе описаны изменения поведения для [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] возможности [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Эти изменения также применяются к [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 |Проблема|Описание|  
 |-----------|-----------------|  
-|Книги SQL Server 2008 R2 PowerPivot не обновляются автоматически и не обновляют модели, если используются в SQL Server 2012 PowerPivot с пакетом обновления 1 (SP1) для SharePoint 2013. Поэтому плановые обновления данных не будут действовать для книг SQL Server 2008 R2 PowerPivot.|Книги 2008 R2 открываются в [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)], однако плановые обновления не выполняются. При просмотре журнала обновления обнаруживается сообщение об ошибке следующего вида:<br /> «Книга содержит неподдерживаемую модель PowerPivot. Модель PowerPivot в книге представлена в формате SQL Server 2008 R2 PowerPivot для Excel 2010. Поддерживаются следующие модели PowerPivot: <br />SQL Server 2012 PowerPivot для Excel 2010,<br />SQL Server 2012 PowerPivot для Excel 2013»<br /><br /> **Обновление книги:** плановые обновления не будут действовать, пока книга не будет обновлена до книги версии 2012. Для обновления книги и содержащейся в ней модели выполните одно из следующих действий.<br /><br /> Загрузите и откройте книгу в Microsoft Excel 2010 с помощью установленной надстройки SQL Server 2012 PowerPivot для Excel. Затем сохраните книгу и повторно опубликуйте ее на сервере SharePoint.<br /><br /> Загрузите и откройте книгу в Microsoft Excel 2013. Затем сохраните книгу и повторно опубликуйте ее на сервере SharePoint.<br /><br /> <br /><br /> Дополнительные сведения об обновлении книг см. в разделе [обновление книг и запланированное обновление данных &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).|  
-|Изменение поведения в DAX [все функции](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx).|До появления [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], если столбец [Date] в указан пометить как таблицу дат для использования в логики операций со временем и, столбец [Date] передается в качестве аргумента функции ALL, в свою очередь, передается в качестве фильтра для функции CALCULATE, все фильтры для всех столбцов в таблице игнорируются, независимо от того, срезов в столбце данных.<br /><br /> Например,<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> До появления [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], все фильтры пропускались для всех столбцов DateTable, независимо от того, столбец [Date] передается в качестве аргумента для всех.<br /><br /> В [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] и в PowerPivot в Excel 2013, поведение фильтры пропускаются только для указанного столбца, передаваемого в качестве аргумента ко всем.<br /><br /> Чтобы отказаться от нового поведения, по существу игнорируя применение всех столбцов в качестве фильтров для всей таблицы, можно исключить столбец [Date] из аргумента, например<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> Результат будет такой же, как при организации работы до выхода версии [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)].|  
+|Книги SQL Server 2008 R2 PowerPivot не обновляются автоматически и не обновляют модели, если используются в SQL Server 2012 PowerPivot с пакетом обновления 1 (SP1) для SharePoint 2013. Поэтому плановые обновления данных не будут действовать для книг SQL Server 2008 R2 PowerPivot.|Книги 2008 R2 открываются в [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)], однако плановые обновления не выполняются. При просмотре журнала обновления обнаруживается сообщение об ошибке следующего вида:<br /> «Книга содержит неподдерживаемую модель PowerPivot. Модель PowerPivot в книге представлена в формате SQL Server 2008 R2 PowerPivot для Excel 2010. Поддерживаются следующие модели PowerPivot: <br />SQL Server 2012 PowerPivot для Excel 2010,<br />SQL Server 2012 PowerPivot для Excel 2013"<br /><br /> **Обновление книги:** плановые обновления не будут действовать, пока книга не будет обновлена до книги версии 2012. Для обновления книги и содержащейся в ней модели выполните одно из следующих действий.<br /><br /> Загрузите и откройте книгу в Microsoft Excel 2010 с помощью установленной надстройки SQL Server 2012 PowerPivot для Excel. Затем сохраните книгу и повторно опубликуйте ее на сервере SharePoint.<br /><br /> Загрузите и откройте книгу в Microsoft Excel 2013. Затем сохраните книгу и повторно опубликуйте ее на сервере SharePoint.<br /><br /> <br /><br /> Дополнительные сведения об обновлении книг см. в разделе [обновление книг и запланированное обновление данных &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).|  
+|Изменение поведения в DAX [функции ALL](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx).|До версии [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], если указать столбец [Date] в пометить как таблицу дат для использования в логику операций со временем, и что столбец [Date] передается в качестве аргумента в функцию ALL, в свою очередь, передается в качестве фильтра в функции CALCULATE, все фильтры для всех столбцов в таблице игнорируются, независимо от того, любой срез по столбцу дат.<br /><br /> Например,<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> До версии [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], все фильтры пропускались для всех столбцов DateTable, независимо от того, столбец [Date] передан в качестве аргумента для всех.<br /><br /> В [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] и в PowerPivot в Excel 2013, поведение будет игнорировать фильтры только для указанного столбца, который передается в качестве аргумента для всех.<br /><br /> Чтобы отказаться от нового поведения, по существу игнорируя применение всех столбцов в качестве фильтров для всей таблицы, можно исключить столбец [Date] из аргумента, например<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> Результат будет такой же, как при организации работы до выхода версии [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)].|  
   
 ##  <a name="bkmk_sql2012"></a> Изменения в поведении [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
- В этом разделе документированы изменения поведения для [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] функции в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Эти изменения также применяются к [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ В этом разделе описаны изменения поведения для [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] возможности [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Эти изменения также применяются к [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ### <a name="analysis-services-multidimensional-mode"></a>Службы Analysis Services, многомерный режим  
   
 #### <a name="nullprocessing-option-set-to-preserve-is-no-longer-supported-for-distinct-count-measures"></a>Параметр NullProcessing со значением «Сохранять» больше не поддерживается для мер числа различных объектов.  
- До появления [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], можно задать было [элемент NullProcessing &#40;ASSL&#41; ](scripting/properties/nullprocessing-element-assl.md) для `Preserve` для мер числа различных объектов.  К сожалению, такой подход часто приводил к недопустимым результатам, а иногда — к сбою задания обработки. В результате этой конфигурации больше не является допустимым в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. При попытке использовать эту конфигурацию возникнет следующая ошибка проверки: «Ошибки в диспетчере метаданных. Сохранение не является действительным значением NullProcessing для \<measurename > мера числа различных объектов.»  
+ До версии [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], можно задать было [элемент NullProcessing &#40;ASSL&#41; ](scripting/properties/nullprocessing-element-assl.md) для `Preserve` для мер числа различных объектов.  К сожалению, такой подход часто приводил к недопустимым результатам, а иногда — к сбою задания обработки. Таким образом, эта конфигурация больше не является допустимым в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. При попытке использовать эту конфигурацию возникнет следующая ошибка проверки: «Ошибки в диспетчере метаданных. Preserve не является действительным значением NullProcessing для \<measurename > мера числа различных объектов.»  
   
 #### <a name="cube-browser-in-management-studio-and-cube-designer-has-been-removed"></a>Браузер кубов в среде Management Studio и конструктор кубов были удалены  
  Элемент управления браузера кубов, который позволяет перетаскивать поля в структуру сводной таблицы в среде Management Studio или в конструкторе кубов, был удален из продукта. Элемент управления был веб-компонентом Office Web Control (OWC). Веб-компоненты Office работали с устаревшей версией Office, поэтому больше не доступны.  
@@ -76,7 +76,7 @@ ms.locfileid: "36180393"
   
  Изменять разрешения могут только владельцы сайтов.  
   
- **Как повысить разрешения на чтение уровень разрешений для отдельных книг**  
+ **Как повысить разрешения до уровня для отдельных книг «чтение»**  
   
 1.  Щелкните стрелку вниз, чтобы открыть меню для отдельного документа.  
   
@@ -106,10 +106,10 @@ ms.locfileid: "36180393"
 #### <a name="new-default-setting-for-load-balancing-requests-changed-from-round-robin-to-health-based"></a>Новое значение по умолчанию параметра для запросов балансировки нагрузки изменилось с «Циклический перебор» на «По исправности»  
  Приложение службы PowerPivot имеет параметры по умолчанию, определяющие способ распределения запросов к данным PowerPivot между несколькими серверами PowerPivot для SharePoint в ферме. В предыдущем выпуске значением по умолчанию было **Циклический перебор**, при котором запросы распределялись последовательно среди доступных серверов. В этом выпуске значением по умолчанию является **По исправности**. Приложение службы PowerPivot использует статистику работоспособности сервера, такую как доступный объем памяти или ЦП, для определения того, какому экземпляру сервера направить запрос.  
   
- В случае обновления сервера в предыдущем выпуске приложение службы PowerPivot сохранит предыдущее значение по умолчанию (**Циклический перебор**). Чтобы использовать способ распределения **По исправности** , необходимо изменить параметры конфигурации. Дополнительные сведения см. в разделе [создать и настроить приложение службы PowerPivot в центре администрирования](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
+ В случае обновления сервера в предыдущем выпуске приложение службы PowerPivot сохранит предыдущее значение по умолчанию (**Циклический перебор**). Чтобы использовать способ распределения **По исправности** , необходимо изменить параметры конфигурации. Дополнительные сведения см. в разделе [Создание и настройка приложения службы PowerPivot в центре администрирования](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
   
 ## <a name="see-also"></a>См. также  
  [Обратная совместимость](../../2014/getting-started/backward-compatibility.md)   
- [Критические изменения служб Analysis Services функции в SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)  
+ [Критические изменения служб Analysis Services в SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)  
   
   

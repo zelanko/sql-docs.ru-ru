@@ -1,5 +1,5 @@
 ---
-title: Задание параметров обработки (службы Reporting Services в режиме интеграции с SharePoint) | Документы Microsoft
+title: Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - snapshots [Reporting Services], creating
@@ -16,13 +16,13 @@ ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0b1d308718d1bfd1b9215cfe9595439f5657b95e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b04adc1d53fd4c41732a753cca5d7be1a3919c06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255656"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>установить параметры обработки (службы Reporting Services в режиме интеграции с SharePoint)
   Можно установить параметры обработки для отчета [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , определяющие время обработки данных. Также при обработке отчета можно определить интервал ожидания и задать параметры, определяющие порядок создания журнала отчета для текущего отчета.  
@@ -106,7 +106,7 @@ ms.locfileid: "36088004"
   
 ##  <a name="bkmk_set_database_timeout"></a> Задать время ожидания базы данных  
   
-1.  Задать время ожидания базы данных сервера отчетов SharePoint с помощью Windows PowerShell. Дополнительные сведения см. в разделе «Получение и задание свойств базы данных приложения службы отчетов» раздела [командлеты PowerShell для режима SharePoint службы Reporting Services](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+1.  Задать время ожидания базы данных сервера отчетов SharePoint с помощью Windows PowerShell. Дополнительные сведения см. в разделе «Get и set свойств базы данных приложения службы отчетов» раздела [командлеты PowerShell для режима SharePoint служб Reporting Services](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## <a name="see-also"></a>См. также  
  [Установка свойств обработки отчетов](report-server/set-report-processing-properties.md)   

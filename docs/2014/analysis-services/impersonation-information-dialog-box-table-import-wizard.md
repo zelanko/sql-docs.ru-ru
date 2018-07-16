@@ -1,5 +1,5 @@
 ---
-title: Сведения об олицетворении-диалоговое окно (мастер импорта таблиц) | Документы Microsoft
+title: Диалоговое окно сведений о олицетворения (мастер импорта таблиц) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.impersonationinfo.f1
 ms.assetid: bee7eee5-0650-41f1-a372-5076ae97a58c
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c53b71a06904bd3f898efa3dd2d9946670193845
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5c9d9b49d41d8f9320ff414925bb4532145d16f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245685"
 ---
 # <a name="impersonation-information-dialog-box-table-import-wizard"></a>Диалоговое окно «Сведения об олицетворении» (мастер импорта таблиц)
   Страница **Сведения об олицетворении** служит для указания учетных данных, которые будут использоваться [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] для соединения с источником данных. Дополнительные сведения об олицетворении учетных данных см. в разделе [Impersonation &#40;SSAS Tabular&#41;](tabular-models/impersonation-ssas-tabular.md).  
   
 ## <a name="options"></a>Параметры  
- **Указанные имя пользователя и пароль**  
+ **Конкретное имя пользователя Windows и пароль**  
  Выберите этот параметр, чтобы в табличной модели использовались учетные данные безопасности указанной пользовательской учетной записи Windows.  
   
  **Имя пользователя**  
  Введите требуемые домен и имя пользовательской учетной записи. Используйте следующий формат:  
   
- *\<Имя домена >* **\\**  *\<имя учетной записи пользователя >*  
+ *\<Имя домена >* ** \\ ** * \<учетную запись пользователя >*  
   
  Этот параметр будет включен только в случае выбора параметра **Использовать указанные имя пользователя и пароль** .  
   

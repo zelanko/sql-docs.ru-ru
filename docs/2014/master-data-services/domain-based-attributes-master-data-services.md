@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], about domain-based attributes
 - domain-based attributes [Master Data Services]
 - attributes [Master Data Services], domain-based attributes
 ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 18ee77e09ae711285e6dd640d725f1d57ec23104
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1f85f31f470d82685af660dfb6d7f76d8728263f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233374"
 ---
 # <a name="domain-based-attributes-master-data-services"></a>Атрибуты на основе домена (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]атрибут на основе домена — это атрибут, значения которого заполняются элементами другой сущности. Атрибут на основе домена можно представить как ограниченный список. Атрибуты на основе домена не позволяют пользователям вводить недопустимые значения атрибутов. Для задания значения атрибута пользователь должен выбрать его из списка.  
@@ -46,7 +46,7 @@ ms.locfileid: "36109537"
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |Создание нового атрибута на основе домена, источником для которого является существующая сущность.|[Создание атрибута на основе домена &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
-|Создание новой сущности.|[Создание сущности &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
+|Создание новой сущности.|[Создать сущность &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   

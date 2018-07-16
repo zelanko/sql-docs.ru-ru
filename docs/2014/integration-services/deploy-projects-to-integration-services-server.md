@@ -1,5 +1,5 @@
 ---
-title: Развертывание проектов на сервере служб Integration Services | Документы Microsoft
+title: Развертывание проектов на сервере служб Integration Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 caps.latest.revision: 21
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d70afea75523ddd231a26186ec6f2e8af317cee9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 615d289b3232c59c6266ec8864d52b0a14a67591
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316894"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   В текущей версии служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]вы можете развертывать проекты на сервере служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Сервер служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] позволяет управлять пакетами, выполнять пакеты и настраивать значения времени выполнения для пакетов с помощью сред.  
@@ -27,7 +27,7 @@ ms.locfileid: "36190488"
  Дополнительные сведения о средах см. в разделе [Создание и сопоставление серверной среды](../../2014/integration-services/create-and-map-a-server-environment.md).  
   
 > [!NOTE]  
->  Как и в более ранних версиях служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], в текущем выпуске можно также развертывать пакеты на экземпляре SQL Server, кроме того, запускать пакеты и управлять ими с помощью служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Использование модели развертывания пакетов. Дополнительные сведения см. в разделе [развертывание пакета &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+>  Как и в более ранних версиях служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], в текущем выпуске можно также развертывать пакеты на экземпляре SQL Server, кроме того, запускать пакеты и управлять ими с помощью служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Использование модели развертывания пакетов. Дополнительные сведения см. в разделе [развертывания пакета &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
   
  Для развертывания проекта на сервере служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] необходимо выполнить следующие задачи.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36190488"
   
      -или-  
   
-     В [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], разверните [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  **SSISDB** узел в обозревателе объектов и найдите папку «Проекты» для проекта, который вы хотите развернуть. Щелкните папку **Проекты** правой кнопкой мыши и выберите команду **Развернуть проект**.  
+     В [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], разверните [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  **SSISDB** узел в обозревателе объектов и найдите папку проектов для проекта, вы хотите развернуть. Щелкните папку **Проекты** правой кнопкой мыши и выберите команду **Развернуть проект**.  
   
      -или-  
   

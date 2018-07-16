@@ -1,5 +1,5 @@
 ---
-title: Элемент MeasureExpression (ASSL) | Документы Microsoft
+title: Элемент MeasureExpression (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureExpression element
 ms.assetid: a0b6490d-a793-41be-8c97-41b08e1580a1
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 686bfc84c39c502467089b5957f8320d346e518a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2eee18ad981c45c009350be926432a5a7a23c4a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265410"
 ---
 # <a name="measureexpression-element-assl"></a>Элемент MeasureExpression (ASSL)
   Содержит многомерное выражение, определяющее способ получения значений родительской меры.  
@@ -62,7 +62,7 @@ ms.locfileid: "36190516"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `MeasureExpression` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Measure>.  
+ Элемент, соответствующий родителю параметра `MeasureExpression` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Measure>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

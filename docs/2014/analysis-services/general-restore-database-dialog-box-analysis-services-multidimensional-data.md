@@ -1,5 +1,5 @@
 ---
-title: Общие (диалоговое окно «Восстановление базы данных») (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Общие (диалоговое окно для восстановления базы данных) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.f1
 ms.assetid: 319e7ef5-c9c7-4e50-8690-02a90aed006f
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4969ceb840f6c3d80b4d0854d582e695c109806b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95e8ba4b11509b73dfc1b529e89b612549de7308
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321324"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Общие (диалоговое окно «Восстановление базы данных») (службы Analysis Services - многомерные данные)
   Для задания файла резервной копии и общих настроек используется страница **Общие** диалогового окна **Восстановление базы данных** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] при восстановлении базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -32,7 +32,7 @@ ms.locfileid: "36190324"
 > [!NOTE]  
 >  После восстановления существующей базы данных пользователь, выполнявший восстановление, может утратить доступ к этой базе данных. Потеря доступа может произойти в случае, если на время создания резервной копии этот пользователь не был членом роли сервера и роли базы данных с разрешением «Полный доступ (Администратор)».  
   
- **Для отображения страницы «Общие» в диалоговом окне Восстановление базы данных**  
+ **Чтобы открыть страницу Общие в диалоговом окне Восстановление базы данных**  
   
 -   В среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]щелкните правой кнопкой мыши папку **Базы данных** экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или базу данных в окне **Обозреватель объектов**, выберите пункт **Восстановить**, а затем на панели **Выбор страницы**выберите **Общие**.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36190324"
   
 ## <a name="see-also"></a>См. также  
  [Восстановление базы данных-диалоговое окно &#40;службы Analysis Services — многомерные данные&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Секции &#40;восстановления базы данных-диалоговое окно&#41; &#40;службы Analysis Services — многомерные данные&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Секции &#40;восстановление базы данных-диалоговое окно&#41; &#40;службы Analysis Services — многомерные данные&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Создание и восстановление резервных копий баз данных служб Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

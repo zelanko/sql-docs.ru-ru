@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], creating
 - creating attribute groups [Master Data Services]
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0a063af91090ff2e8d5eb1145bb5968573d04523
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: bd50daa9250f46f17feecb7dfdd16e4998ea47d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290860"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Создание группы атрибутов (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]группы атрибутов создаются, когда нужно отобразить атрибуты на отдельных вкладках сетки **обозревателя** .  
@@ -43,7 +43,7 @@ ms.locfileid: "36189343"
   
 1.  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]щелкните область **Администрирование системы**.  
   
-2.  На **представление модели** страницы, в строке меню наведите курсор на **управление** и нажмите кнопку **группы атрибутов**.  
+2.  На **представление модели** страницы, на панели меню наведите указатель мыши на **управление** и нажмите кнопку **группы атрибутов**.  
   
 3.  Выберите модель из списка **Модель** .  
   
@@ -53,10 +53,10 @@ ms.locfileid: "36189343"
   
 6.  Нажмите кнопку **добавить группу атрибутов**.  
   
-7.  В **имя конечной группы** введите имя для группы. Это имя, отображаемое в вкладке **Explorer**.  
+7.  В **имя конечной группы** введите имя для группы. Это имя отображается на вкладке с **Explorer**.  
   
     > [!NOTE]  
-    >  Если вы выбрали **консолидированные группы** или **группы коллекции** на шаге 5, это поле не является **имя объединенной группы** или **имя группы коллекции**соответственно.  
+    >  Если вы выбрали **консолидированные группы** или **группы коллекций** на шаге 5, это поле не является **имя объединенной группы** или **имя группы коллекций**, соответственно.  
   
 8.  Нажмите кнопку **Сохранить группу**.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "36189343"
   
 11. Нажмите кнопку **изменить выбранный элемент**.  
   
-12. Выберите атрибуты в **доступно** и нажмите кнопку **добавить** стрелка. Чтобы добавить все, щелкните стрелку **Добавить все** .  
+12. Выберите атрибуты в **доступно** поле и нажмите кнопку **добавить** стрелку. Чтобы добавить все, щелкните стрелку **Добавить все** .  
   
-13. При необходимости щелкните **копирование** и **работу** стрелки, чтобы изменить порядок атрибутов слева направо.  
+13. При необходимости щелкните **вверх** и **вниз** кнопки со стрелками, чтобы изменить порядок атрибутов слева направо.  
   
 14. Нажмите кнопку **Сохранить**.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36189343"
  [Атрибуты &#40;службы Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
  [Изменение имени группы атрибутов (службы Master Data Services)](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
  [Удаление группы атрибутов (службы Master Data Services)](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)   
- [Конечные разрешения &#40;службы Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
- [Консолидированные разрешения &#40;службы Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
+ [Разрешения конечного элемента &#40;службы Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
+ [Объединенные разрешения &#40;службы Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
   

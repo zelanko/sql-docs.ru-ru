@@ -1,5 +1,5 @@
 ---
-title: Передача редактор задачи базы данных (страница «базы данных») | Документы Microsoft
+title: Редактор задач базы данных (страница «базы данных») передача | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.database.f1
 helpviewer_keywords:
 - Transfer Database Task Editor
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 64920a0b1d3a326cdda62359bd251a82190afe78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24de303a26a148ffe44b643e10a78c77a1ee4d3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231484"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Редактор задачи «Передача базы данных» (страница «Базы данных»)
   Используйте страницу **Базы данных** в диалоговом окне **Редактор задачи «Передача базы данных»** , чтобы указать свойства для базы данных-источника и целевой базы данных, участвующих в задаче «Передача базы данных». Задача «Передача базы данных» копирует или перемещает базу данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] между двумя экземплярами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Эту задачу можно также использовать для копирования базы данных в пределах того же сервера. Дополнительные сведения об этой задаче см. в разделе [Задача "Передача базы данных"](control-flow/transfer-database-task.md).  
@@ -92,9 +92,9 @@ ms.locfileid: "36188504"
 |**False**|Не присоединять повторно базу данных-источник.|  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи служб Integration Services](control-flow/integration-services-tasks.md)   
- [Редактор задачи базы данных передачи &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
+ [Редактор задач базы данных передача &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Страница «выражения»](expressions/expressions-page.md)   
  [Диспетчер подключений управляющих объектов SQL Server](connection-manager/smo-connection-manager.md)  
   

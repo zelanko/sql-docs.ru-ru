@@ -1,5 +1,5 @@
 ---
-title: Набор строк DISCOVER_TRACES | Документы Microsoft
+title: Набор строк DISCOVER_TRACES | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1be6a035-ffc9-489e-9d4d-7391b3e384e2
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7b3c8428b34a72f16986044db1652b9907384b07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f50b7fa39bca030c7864f75b856b8e7ee2953de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207974"
 ---
 # <a name="discovertraces-rowset"></a>Набор строк DISCOVER_TRACES
   Содержит сведения о трассировках, которые в настоящее время активны на сервере.  
@@ -49,7 +49,7 @@ ms.locfileid: "36188780"
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**Числовое обозначение TraceId**|`DBTYPE_I4`|Необязательный параметр.|  
+|**TraceId**|`DBTYPE_I4`|Необязательный параметр.|  
 |`Type`|WSTR|Необязательный параметр.|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>Использование ADOMD.NET для возврата набора строк  

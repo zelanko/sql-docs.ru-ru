@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
 - Windows Event log provider [Integration Services]
@@ -27,13 +27,13 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9611d78d6b94038511b29577aca5aaefb36366d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2656998d20bec2d0133a7158a3695f4163943181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291050"
 ---
 # <a name="integration-services-ssis-logging"></a>Ведение журналов в службах Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат регистраторы, которые могут использоваться для реализации ведения журналов в пакетах, контейнерах и задачах. При ведении журнала можно записать текущие сведения о пакете, что поможет при каждом выполнении пакета проводить его аудит и устранять неисправности. Например, журнал может записать имя оператора, запускающего пакет, и время, в которое пакет был начат или завершен.  

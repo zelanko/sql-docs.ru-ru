@@ -1,5 +1,5 @@
 ---
-title: Элемент DropOnlyMode (DTA) | Документы Microsoft
+title: Элемент DropOnlyMode (DTA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - DropOnlyMode element
 ms.assetid: 80960676-7581-4074-889b-80ee665963dd
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6316124a589b09d8b8dab39f866b9ce4585fcb9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bb4fae568cb1301d1407a2694f6a2e527b0b4243
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247794"
 ---
 # <a name="droponlymode-element-dta"></a>Элемент DropOnlyMode (DTA)
   Указывает, что помощник по настройке ядра СУБД должен в ходе сеанса настройки учитывать только возможность удаления существующих индексов, индексированных представлений или секций. При задании этого параметра настройки никакие новые структуры физического проектирования не рассматриваются.  
@@ -44,7 +44,7 @@ ms.locfileid: "36180173"
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Необязательный параметр. Может использоваться только один раз для каждого `TuningOptions` элемента. Не может использоваться, если в указаны следующие элементы `TuningOptions` элемента:<br /><br /> [Элемент FeatureSet &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Элемент partitioning &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [Элемент KeepExisting (DTA)](keepexisting-element-dta.md) имеет значение **ВСЕ**|  
+|**Наличие**|Необязательный параметр. Может использоваться только один раз для каждого `TuningOptions` элемент. Нельзя использовать следующие элементы, указанных в `TuningOptions` элемент:<br /><br /> [Элемент FeatureSet &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Элемент partitioning &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [Элемент KeepExisting (DTA)](keepexisting-element-dta.md) имеет значение **ВСЕ**|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36180173"
 |**Дочерние элементы**|Нет.|  
   
 ## <a name="example"></a>Пример  
- В следующем примере показан `TuningOptions` входного файла XML помощника по настройке ядра СУБД где `DropOnlyMode` указано. В данном примере время настройки ограничено 24 часами (1 440 минутами), а для всех существующих кластеризованных и некластеризованных индексов будет рассматриваться возможность их удаления.  
+ В следующем примере показан `TuningOptions` разделе входного файла XML помощника по настройке ядра СУБД где `DropOnlyMode` указан. В данном примере время настройки ограничено 24 часами (1 440 минутами), а для всех существующих кластеризованных и некластеризованных индексов будет рассматриваться возможность их удаления.  
   
 ```xml  
 <TuningOptions  

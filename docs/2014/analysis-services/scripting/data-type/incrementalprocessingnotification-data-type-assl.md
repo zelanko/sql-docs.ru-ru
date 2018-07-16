@@ -1,5 +1,5 @@
 ---
-title: Тип данных IncrementalProcessingNotification (ASSL) | Документы Microsoft
+title: Тип данных IncrementalProcessingNotification (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - IncrementalProcessingNotification data type
 ms.assetid: 66e27f92-65c1-4a34-b9c2-bfbb5aeb7d7c
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a913d847e6d328c3fc1289f964170af463a3f5be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ca951d727e32f576e4dc65bc005a5b423e90c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110241"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231814"
 ---
 # <a name="incrementalprocessingnotification-data-type-assl"></a>Тип данных IncrementalProcessingNotification (ASSL)
-  Определяет производный тип данных, представляющий сведения для [ProactiveCaching](../objects/proactivecaching-element-assl.md) о запросе, следует выполнить для определения хода выполнения добавочной обработки.  
+  Определяет производный тип данных, представляющий сведения для [ProactiveCaching](../objects/proactivecaching-element-assl.md) о запросе, необходимо выполнить, чтобы узнать ход выполнения добавочной обработки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -60,10 +60,10 @@ ms.locfileid: "36110241"
 |Производные элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>.  
   
 ## <a name="see-also"></a>См. также  
  [Тип данных ProactiveCachingQueryBinding &#40;ASSL&#41;](binding-data-type-assl.md)   
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

@@ -5,21 +5,19 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
-caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2f928645fb89757b2284628d0400847cf5f3a1f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 97aae9bc9e495694868c2f8dec8570cdb1742fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270230"
 ---
 # <a name="start-sql-server-management-studio"></a>Запуск среды SQL Server Management Studio
   В начале этого учебника кратко рассмотрим среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -31,9 +29,9 @@ ms.locfileid: "36087978"
 1.  На **запустить** последовательно выберите пункты **все программы**, пункты [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], а затем нажмите кнопку **SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не устанавливается по умолчанию. Если среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] недоступна, установите ее с помощью программы установки. Среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] не входит в состав [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express доступна для бесплатной загрузки из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), но имеет другой пользовательский интерфейс, отличный от описываемого в этом учебнике.  
+    >  Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не устанавливается по умолчанию. Если среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] недоступна, установите ее с помощью программы установки. Среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] не входит в состав [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express доступна для бесплатной загрузки с [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), но имеет другой пользовательский интерфейс, отличный от описываемого в этом руководстве.  
   
-2.  В диалоговом окне **Соединение с сервером** подтвердите заданные по умолчанию параметры, а затем нажмите кнопку **Подключиться**. Чтобы подключиться, **имя сервера** поле должно содержать имя компьютера, где [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен. Если [!INCLUDE[ssDE](../../includes/ssde-md.md)] является именованным экземпляром, **имя сервера** поле должно также содержать имя экземпляра в формате \< *имя_компьютера* > \\ < *имя_экземпляра*>.  
+2.  В диалоговом окне **Соединение с сервером** подтвердите заданные по умолчанию параметры, а затем нажмите кнопку **Подключиться**. Чтобы подключиться, **имя_сервера** поле должно содержать имя компьютера, где [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен. Если [!INCLUDE[ssDE](../../includes/ssde-md.md)] является именованным экземпляром, **имя_сервера** поле должно также содержать имя экземпляра в формате \< *имя_компьютера* > \\ < *имя_экземпляра*>.  
   
 ## <a name="management-studio-components"></a>Компоненты среды Management Studio  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] представляет данные в виде окон, выделенных для отдельных типов данных. Сведения о базе данных отображаются в обозревателе объектов и окнах документов.  
@@ -50,7 +48,7 @@ ms.locfileid: "36087978"
   
      Сверху от обозревателя объектов появится окно «Зарегистрированные серверы». В списке зарегистрированных серверов указаны серверы, работу которых приходится часто регулировать. В этом списке можно добавлять и удалять серверы. В этом списке указываются только экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере, где запущена среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-2.  Если ваш сервер не отображается, в списке зарегистрированных серверов щелкните правой кнопкой мыши **СУБД**, а затем нажмите кнопку **обновить регистрацию локального сервера**.  
+2.  Если сервер не отображается, в «зарегистрированные серверы» щелкните правой кнопкой мыши **СУБД**, а затем нажмите кнопку **обновить регистрацию локального сервера**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Подключение к зарегистрированным серверам и к обозревателю объектов](../object/object-explorer.md)  

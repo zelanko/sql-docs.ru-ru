@@ -1,25 +1,24 @@
 ---
-title: Использование PowerShell для резервного копирования нескольких баз данных в Windows Azure Blob Storage Service | Документы Microsoft
+title: Резервное копирование нескольких баз данных в Windows Azure Blob Storage Service с помощью PowerShell | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: acc1410256b89f3501ab261921d32c582ed2c80e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c53e405bad7e81b4ea0344eea857f5dd2e067151
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269120"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-windows-azure-blob-storage-service"></a>Использование PowerShell для резервного копирования нескольких баз данных в службе хранилища больших двоичных объектов Windows Azure
   В этом разделе приведены образцы скриптов, которые можно использовать для автоматизации резервного копирования в службу хранилища больших двоичных объектов Windows Azure с помощью командлетов PowerShell.  
@@ -55,7 +54,7 @@ ms.locfileid: "36191970"
   
 1.  **Навигация по путям SQL Server PowerShell.** В Windows PowerShell предусмотрены командлеты для навигации по структуре пути, которая представляет иерархию объектов, поддерживаемых поставщиком PowerShell. После перехода к нужному узлу можно использовать другие командлеты для выполнения основных операций с текущим объектом.  
   
-2.  `Get-ChildItem` командлет: информацию, возвращаемую `Get-ChildItem` зависит от расположения в пути SQL Server PowerShell. Например, если размещение находится на уровне компьютера, командлет возвращает все экземпляры ядра СУБД SQL Server, установленные на компьютере. Другой пример: если расположение находится на уровне объектов, таких как базы данных, командлет возвращает список объектов базы данных.  По умолчанию `Get-ChildItem` командлет не возвращает системные объекты.  Системные объекты можно просмотреть, задав параметр –Force.  
+2.  `Get-ChildItem` командлет: данные, возвращаемые командлетом `Get-ChildItem` зависит от расположения в пути SQL Server PowerShell. Например, если размещение находится на уровне компьютера, командлет возвращает все экземпляры ядра СУБД SQL Server, установленные на компьютере. Другой пример: если расположение находится на уровне объектов, таких как базы данных, командлет возвращает список объектов базы данных.  По умолчанию `Get-ChildItem` командлет не возвращает системные объекты.  Системные объекты можно просмотреть, задав параметр –Force.  
   
      Дополнительные сведения см. в статье [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md).  
   

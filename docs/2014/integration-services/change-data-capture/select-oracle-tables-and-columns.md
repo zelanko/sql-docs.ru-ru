@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - selTabCol
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 402927baa685e906e7f6669147f0e1c3be2d2918
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eaafdee895b1fe86fb5646b35dd3cdb2b30070d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207604"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Выберите столбцы и таблицы Oracle
   Страница «Выбор столбцов и таблиц Oracle» используется для выбора таблиц из базы данных-источника Oracle, изменения в которых будут отслеживаться. Эта страница содержит следующие элементы:  
@@ -54,7 +54,7 @@ ms.locfileid: "36188299"
  После [выбора таблиц Oracle для отслеживания изменений](select-oracle-tables-for-capturing-changes.md) и (или) [внесения изменений в выбранные для отслеживания изменений таблицы](make-changes-to-the-tables-selected-for-capturing-changes.md) с помощью соответствующих диалоговых окон нажмите кнопку **Далее** , чтобы [создать и запустить скрипт дополнительного журналирования](generate-and-run-the-supplemental-logging-script.md).  
   
 ## <a name="see-also"></a>См. также  
- [Как создать экземпляр изменения базы данных SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
+ [Как создать экземпляр базы данных изменения SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Редактирование таблиц](edit-tables.md)   
  [Добавление таблиц в экземпляр CDC](add-tables-to-a-cdc-instance.md)   
  [Изменение свойств таблицы](edit-the-table-properties.md)  

@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_column_store_segments (Transact-SQL) | Документы Microsoft
+title: sys.pdw_nodes_column_store_segments (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/28/2018
 ms.prod: ''
@@ -13,17 +13,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
-caps.latest.revision: 9
 author: hirokib
 ms.author: elbutter
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 92eee101d27c4483207ba1be9933b750aabdea3d
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: ddc64da5a0c1d5dc3f383213f711cb0f1f849eb7
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32632255"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36875232"
 ---
 # <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,13 +34,13 @@ ms.locfileid: "32632255"
 | **partition_id**            | **bigint** | Указывает идентификатор секции. Уникален в базе данных.     |
 | **hobt_id**                 | **bigint** | Идентификатор кучи или индекс сбалансированного дерева (hobt) для таблицы, в которой содержится индекс columnstore. |
 | **column_id**               | **int**    | Идентификатор столбца columnstore.                                |
-| **segment_id**              | **int**    | Идентификатор сегмента столбца. Для обеспечения обратной совместимости имя столбца по-прежнему вызываться segment_id, несмотря на то, что это идентификатор группы строк Можно однозначно определить сегмент с помощью < hobt_id, partition_id, column_id >, < segment_id >. |
+| **segment_id**              | **int**    | Идентификатор сегмента столбца. Для обеспечения обратной совместимости имя столбца по-прежнему вызываться segment_id, несмотря на то, что это идентификатор группы строк Можно однозначно определить сегмент с помощью < hobt_id partition_id, column_id >, < segment_id >. |
 | **version**                 | **int**    | Версия формата сегмента столбца.                        |
-| **encoding_type**           | **int**    | Тип кодировки, используемой для этого сегмента:<br /><br /> 1 = VALUE_BASED - строка/недвоичные с словарь (аналогично 4 с некоторые варианты внутренний)<br /><br /> 2 = VALUE_HASH_BASED - не строки или двоичного столбца с общими значениями в словаре<br /><br /> 3 = STRING_HASH_BASED - строка и двоичный столбец с общими значениями в словаре<br /><br /> 4 = STORE_BY_VALUE_BASED - строка/недвоичные с словарь<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - строка и двоичный файл с словарь<br /><br /> Все кодировки воспользоваться бит упаковки и длин кодирования, когда это возможно. |
+| **encoding_type**           | **int**    | Тип кодировки, используемой для этого сегмента:<br /><br /> 1 = VALUE_BASED - строка/недвоичных с словарь (аналогично 4 с некоторые варианты внутренний)<br /><br /> 2 = VALUE_HASH_BASED - строка/недвоичный столбец с общими значениями в словаре<br /><br /> 3 = STRING_HASH_BASED - двоичные данные строки или столбца с общими значениями в словаре<br /><br /> 4 = STORE_BY_VALUE_BASED - строка/недвоичных с словарь<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - строки или двоичного файла с помощью нет словаря<br /><br /> Все кодировки использовать преимущества упаковки бит и длин кодирования, когда это возможно. |
 | **row_count**               | **int**    | Число строк в группе строк.                             |
 | **has_nulls**               | **int**    | Значение 1, если сегмент столбца содержит значения NULL.                     |
 | **base_id**                 | **bigint** | Идентификатор базового значения, если используется тип кодирования 1.  Если тип кодирования 1 не используется, значение base_id устанавливается значение 1. |
-| **Величина**               | **float**  | Значение величины, если используется тип кодирования 1.  Если тип кодирования 1 не используется, то величина равен 1. |
+| **абсолютное значение**               | **float**  | Значение величины, если используется тип кодирования 1.  Если тип кодирования 1 не используется, абсолютное значение равным 1. |
 | **primary__dictionary_id**  | **int**    | Идентификатор основного словаря. Ненулевое значение указывает на локальный словарь для данного столбца в текущем сегменте (т. е. группу строк). Значение -1 указывает, что отсутствует локальный словарь для этого сегмента. |
 | **secondary_dictionary_id** | **int**    | Идентификатор дополнительного словаря. Ненулевое значение указывает на локальный словарь для данного столбца в текущем сегменте (т. е. группу строк). Значение -1 указывает, что отсутствует локальный словарь для этого сегмента. |
 | **min_data_id**             | **bigint** | Минимальный идентификатор данных в сегменте столбца.                       |
@@ -52,7 +51,7 @@ ms.locfileid: "32632255"
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-Присоедините sys.pdw_nodes_column_store_segments с другими системными таблицами для определения количества сегментов columnstore каждой логической таблицы. 
+Присоединяйтесь к sys.pdw_nodes_column_store_segments с другими системными таблицами для определения количества сегментов columnstore на логическую таблицу. 
 
 ```sql
 SELECT  sm.name           as schema_nm

@@ -1,5 +1,5 @@
 ---
-title: Настройка атрибутов измерения (мастер бизнес-аналитики) | Документы Microsoft
+title: Настройка атрибутов измерения (мастер бизнес-аналитики) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.selectattributes.f1
 ms.assetid: 3d046e63-bcb1-4ab1-9c37-652463fa68c3
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e9ce0f7535f111d5c9152304a4e27315f73e5087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae547b6182cdef585668c6888957ea89ef0db519
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299324"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>Настройка атрибутов измерения (мастер бизнес-аналитики)
   Страница **Настройка атрибутов измерения** используется для сопоставления атрибутов измерения с типами атрибутов, используемыми службами [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] для идентификации атрибутов для измерений счетов.  
@@ -31,7 +31,7 @@ ms.locfileid: "36110057"
  Отображает выбранный тип измерения.  
   
 > [!NOTE]  
->  Этот параметр недоступен из-за `Type` измерения нельзя добавить значение отличное от *учетной записи* для измерений счетов.  
+>  Этот параметр недоступен из-за `Type` свойство измерения не может быть присвоено значение отличное от *учетной записи* для измерений счетов.  
   
  **Атрибуты измерения**  
  Отображает допустимые типы атрибутов, которые можно сопоставить с существующими атрибутами измерений в измерении.  

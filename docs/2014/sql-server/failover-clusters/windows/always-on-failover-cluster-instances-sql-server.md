@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
 - high availability [SQL Server], failover clustering
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - AlwaysOn [SQL Server], see failover clustering [SQL Server]
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 caps.latest.revision: 76
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 14a25d065b617657c56ebcffa089959bf71376ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7a93c08669f0cf3ac962fa72df89423e3cbc8d0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251466"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Экземпляры отказоустойчивого кластера AlwaysOn (SQL Server)
   В рамках [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn экземпляры отказоустойчивой кластеризации AlwaysOn используют функциональные возможности отказоустойчивой кластеризации Windows Server (WSFC) для обеспечения высокого уровня доступности локальных ресурсов за счет избыточности на уровне экземпляра сервера — *экземпляра отказоустойчивого кластера* (FCI). Экземпляр отказоустойчивого кластера (FCI) является единственным экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , установленным на всех узлах отказоустойчивой кластеризации Windows Server (WSFC) и, возможно, в нескольких подсетях. Экземпляр отказоустойчивого кластера выглядит в сети как экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , запущенный на одном компьютере, но экземпляр отказоустойчивого кластера обеспечивает отработку отказа с переходом одного узла WSFC на другой узел, если текущий узел становится недоступным.  
@@ -149,7 +148,7 @@ ms.locfileid: "36189921"
 |------------------------|-----------|  
 |Описывает механизм обнаружения сбоя и гибкую политику отработки отказа.|[Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)|  
 |Описание основных понятий в управлении и обслуживании экземпляров отказоустойчивых кластеров.|[Администрирование и обслуживание экземпляров отказоустойчивого кластера](failover-cluster-instance-administration-and-maintenance.md)|  
-|Описание и понятия конфигурации с несколькими подсетями|[Кластеры SQL Server с несколькими подсетями (; SQL Server).](sql-server-multi-subnet-clustering-sql-server.md)|  
+|Описание и понятия конфигурации с несколькими подсетями|[Кластеры SQL Server с несколькими подсетями (; SQL Server);](sql-server-multi-subnet-clustering-sql-server.md)|  
   
 ##  <a name="RelatedTopics"></a> См. также  
   

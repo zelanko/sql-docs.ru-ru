@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 75137575-d1bf-46d6-8527-5afc85eea5e1
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0ab159cb9858abe50f74b4da4531bebad500d80b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 939aee299710da15e3b7714b40175e0edba4fb54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249574"
 ---
 # <a name="align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs"></a>Выравнивание данных в диаграмме в таблице или матрице (построитель отчетов и службы SSRS)
   Sparkline-графики и гистограммы — это маленькие, простые диаграммы, которые передают большой объем данных без ненужных подробностей. Если выбрать этот параметр, то значения в sparkline-графиках и гистограммах будут выравниваться по различным ячейкам в таблице или матрице даже в случае, если в базовых данных отсутствуют некоторые значения.  
@@ -41,6 +41,6 @@ ms.locfileid: "36109633"
   
 ## <a name="see-also"></a>См. также  
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
- [Добавление спарклайнов и гистограмм &#40;отчетов построителя отчетов и службы SSRS&#41;](add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
+ [Добавление спарклайнов и гистограмм &#40;построитель отчетов и службы SSRS&#41;](add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
   

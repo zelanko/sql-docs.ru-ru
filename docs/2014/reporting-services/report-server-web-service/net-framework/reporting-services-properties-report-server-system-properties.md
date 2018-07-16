@@ -15,15 +15,15 @@ helpviewer_keywords:
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 caps.latest.revision: 55
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 79fb5e55f54a07f8b3a770f39b3c738a59dab16e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cc749db6d8eee973ef4c146d62ce5ebebda230e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276600"
 ---
 # <a name="report-server-system-properties"></a>Системные свойства сервера отчетов
   Следующие имена системных свойств являются зарезервированными. Нельзя создавать определяемые пользователем свойства с такими именами. Многие из этих свойств можно считывать или изменять с помощью методов веб-службы.  

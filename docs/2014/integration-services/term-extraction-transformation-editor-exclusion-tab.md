@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразования извлечения терминов (вкладка «исключения») | Документы Microsoft
+title: Редактор преобразования извлечения терминов (вкладка "исключение") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextraction.inclusionexclusion.f1
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 90110d95-fd97-4542-9cda-832c86606130
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc7ff9ebc47db5a460113330f7b950e783359d59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 183814c58f867f0a9241d4dba1f01e96ee9b8982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246964"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>Редактор преобразования «Извлечение терминов» (вкладка «Исключения»)
   Используйте вкладку **Исключение** в диалоговом окне **Редактор преобразования «Извлечение терминов»** для установки соединения с таблицей исключений и указания столбцов, в которых содержатся исключаемые термины.  
@@ -50,9 +50,9 @@ ms.locfileid: "36189024"
  Используйте диалоговое окно [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) для указания метода обработки ошибок для строк, вызвавших ошибку.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор преобразования извлечения терминов &#40;вкладка извлечения терминов&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [Редактор преобразования извлечения терминов &#40;вкладка «Дополнительно»&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор преобразования извлечения терминов &#40;вкладке извлечения терминов&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [Редактор преобразования извлечения терминов &#40;вкладка "Дополнительно"&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
  [Преобразование "Уточняющий запрос термина"](data-flow/transformations/lookup-transformation.md)  
   
   

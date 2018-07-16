@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4aaf0727bdd7a41de570080751a4b93cfaccc89e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e082a4fa3062ffff5fd4ee46460d4f7ec8020561
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307034"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>Добавление, изменение и обновление полей в области данных отчета (построитель отчетов и службы SSRS)
   Поля набора данных являются встроенной коллекцией имен полей, представляющей данные, возвращаемые при выполнении запроса к внешнему источнику данных.  
@@ -95,7 +95,7 @@ ms.locfileid: "36188180"
   
 ## <a name="see-also"></a>См. также  
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)   
- [Добавление данных в отчет &#40;отчетов построителя отчетов и службы SSRS&#41;](report-datasets-ssrs.md)   
+ [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Конструкторы запросов служб Reporting Services](../reporting-services-query-designers.md)   
  [Конструкторы запросов (построитель отчетов)](../query-designers-report-builder.md)  

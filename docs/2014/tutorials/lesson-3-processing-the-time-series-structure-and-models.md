@@ -1,5 +1,5 @@
 ---
-title: 'Урок 3: Обработка временных рядов, структуры и моделей | Документы Microsoft'
+title: 'Урок 3: Обработка временных рядов, структуры и моделей | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16e27b57-eae1-47a7-a02c-47b6ed487d87
 caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 652d88a0c977b45f6c1628020ae4e6fd8fae4ad9
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: f69c21f87a56a65fabd781c18612e6b475ca85c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271990"
 ---
 # <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Урок 3. Обработка структуры и моделей временных рядов
-  На этом занятии будет использоваться [INSERT INTO &#40;расширений интеллектуального анализа данных&#41; ](/sql/dmx/insert-into-dmx) инструкции для обработки структуры интеллектуального анализа данных и созданные модели интеллектуального анализа данных временных рядов.  
+  На этом занятии вы воспользуетесь [INSERT INTO &#40;расширений интеллектуального анализа данных&#41; ](/sql/dmx/insert-into-dmx) инструкции для обработки структуры интеллектуального анализа данных и созданные модели интеллектуального анализа данных временных рядов.  
   
  При обработке структуры интеллектуального анализа данных службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] считывают исходные данные и создают структуры, поддерживающие модели интеллектуального анализа данных. Всегда необходимо выполнять обработку модели интеллектуального анализа данных и структуры при первом создании. Если задана структура интеллектуального анализа данных при использовании инструкции INSERT INTO, инструкция обрабатывает эту структуру и все связанные с ней модели интеллектуального анализа данных.  
   
  При добавлении модели интеллектуального анализа данных к уже обработанной структуре интеллектуального анализа данных можно использовать инструкцию `INSERT INTO MINING MODEL` для обработки новой модели интеллектуального анализа данных с помощью существующих данных.  
   
- Дополнительные сведения об обработке моделей интеллектуального анализа данных см. в разделе [обработке требования и соображения &#40;интеллектуального анализа данных&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+ Дополнительные сведения об обработке моделей интеллектуального анализа данных см. в разделе [обработки требования и соображения &#40;интеллектуального анализа данных&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="insert-into-statement"></a>Инструкция INSERT INTO  
  Для обучения структуры интеллектуального анализа данных временных рядов и все связанные с ней модели используется [INSERT INTO &#40;расширений интеллектуального анализа данных&#41; ](/sql/dmx/insert-into-dmx) инструкции. Код инструкции можно разбить на следующие части.  
@@ -126,7 +126,7 @@ OPENQUERY (<source data definition>)
     FROM vTimeSeries ORDER BY [ReportingDate]')  
     ```  
   
-     Исходный запрос ссылается на [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] источника данных, определенного в образце проекта «intermediatetutorial». Этот источник данных используется запросом для доступа к представлению vTimeSeries. Это представление содержит исходные данные, которые будут использованы для обучения модели интеллектуального анализа данных. Если вы не знакомы с этого проекта или этого представления, см. раздел[Lesson 2: построение сценария прогнозирования &#40;промежуточного Data Mining Tutorial&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+     Исходный запрос ссылается на [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] источник данных, определенный в образце проекта «intermediatetutorial». Этот источник данных используется запросом для доступа к представлению vTimeSeries. Это представление содержит исходные данные, которые будут использованы для обучения модели интеллектуального анализа данных. Если вы не знакомы с этого проекта или о представлении, см. в разделе[занятии 2: построение сценария прогнозирования &#40;данных учебник по интеллектуальному анализу&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
      Полная инструкция теперь должна выглядеть следующим образом.  
   
@@ -143,7 +143,7 @@ OPENQUERY (<source data definition>)
   
 6.  В меню **Файл** щелкните **Сохранить DMXQuery1.dmx как**.  
   
-7.  В **Сохранить как** диалоговое окно, перейдите к соответствующей папке и присвойте файлу имя `ProcessForecastingAll.dmx`.  
+7.  В **Сохранить как** диалоговом окне перейдите к соответствующей папке и присвойте файлу имя `ProcessForecastingAll.dmx`.  
   
 8.  На панели инструментов нажмите кнопку **Выполнить** .  
   
@@ -153,7 +153,7 @@ OPENQUERY (<source data definition>)
  [Урок 4. Создание прогнозов временных рядов с использованием расширений интеллектуального анализа данных](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
   
 ## <a name="see-also"></a>См. также  
- [Требования к обработке и вопросы &#40;интеллектуального анализа данных&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   
+ [Требования к обработке и рекомендации по &#40;интеллектуального анализа данных&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   
  [&#60;запрос источника данных&#62;](/sql/dmx/source-data-query)   
  [OPENQUERY &AMP;#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&AMP;#41;](/sql/dmx/source-data-query-openquery)  
   

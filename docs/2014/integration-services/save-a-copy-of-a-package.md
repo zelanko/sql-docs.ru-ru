@@ -1,5 +1,5 @@
 ---
-title: Сохранение копии пакета | Документы Microsoft
+title: Сохранить копию пакета | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, saving
 - packages [Integration Services], saving
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, saving
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d1a550e97bcb4cb14c56492edfa8cdd333599ecb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94439ee54ad468af77b89557fa63ad9c108d4f63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314164"
 ---
 # <a name="save-a-copy-of-a-package"></a>Сохранение одной копии пакета
   Эта процедура описывает, как сохранить копию пакета в файле, хранилище пакетов или базе данных **msdb** в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При указании места сохранения копии пакета можно также обновить имя пакета.  
@@ -69,6 +69,6 @@ ms.locfileid: "36189026"
   
 ## <a name="see-also"></a>См. также  
  [Службы Integration Services &#40;SSIS&#41; пакетов](../../2014/integration-services/integration-services-ssis-packages.md)   
- [Настройка интеграции службы &#40;службы SSIS&#41;](service/integration-services-service-ssis-service.md)  
+ [Настройка интеграции службы служб &#40;службы SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
   

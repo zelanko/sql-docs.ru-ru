@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: eb2234b466a41b58cc1dd137950514de4b7aa458
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 67212f7457e029b18f39b15c6f105ed315f28251
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248624"
 ---
 # <a name="start-the-sqlcmd-utility"></a>Запуск программу sqlcmd
   Чтобы начать использовать программу `sqlcmd`, требуется запустить ее и подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно соединиться или с экземпляром, установленным по умолчанию, или с именованным экземпляром. Первый шаг — запуск программы `sqlcmd`.  
@@ -42,9 +42,9 @@ ms.locfileid: "36187964"
   
      Теперь установлено доверительное соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию, запущенным на этом компьютере.  
   
-     **1 >** — `sqlcmd` приглашение, которое указывает номер строки. При каждом нажатии клавиши ВВОД номер увеличивается на единицу.  
+     **1 >** является `sqlcmd` приглашение, которое указывает номер строки. При каждом нажатии клавиши ВВОД номер увеличивается на единицу.  
   
-4.  Для завершения `sqlcmd` сеанса, введите `EXIT` в `sqlcmd` строки.  
+4.  Для завершения `sqlcmd` сеанса, тип `EXIT` в `sqlcmd` строки.  
   
 ### <a name="to-start-the-sqlcmd-utility-and-connect-to-a-named-instance-of-sql-server"></a>Запуск программы sqlcmd и соединение с именованным экземпляром SQL Server  
   

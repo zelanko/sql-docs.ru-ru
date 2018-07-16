@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IDREFS directive
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: efaa7da1a6e198f4e8fc122df0b7fe0360f625b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 48bb2922f8f86712a838de95b31a3be2b08c3150
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282900"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>Пример. Указание директив ID и IDREFS
-  Атрибут элемента может быть указан как `ID` атрибут type и `IDREFS` может быть использован для ссылки на него. Этим включаются связи внутри документа, которые похожи на связи первичного и внешнего ключей в реляционных базах данных.  
+  Атрибут элемента может быть указан как `ID` атрибут типа и `IDREFS` атрибут может затем использоваться для ссылки на него. Этим включаются связи внутри документа, которые похожи на связи первичного и внешнего ключей в реляционных базах данных.  
   
  Этот пример иллюстрирует, как директивы `ID` и `IDREFS` могут быть использованы для создания атрибутов с типами `ID` и `IDREFS`. Так как идентификаторы не могут быть целочисленными, значения ID в этом примере преобразуются. Другими словами, они подвергаются приведению типа. Префиксы используются для значений ID.  
   

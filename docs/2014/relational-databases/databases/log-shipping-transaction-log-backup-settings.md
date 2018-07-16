@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.logshipping.settings.tlogback.f1
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9092f0b072eebbdc64c45a6c6ecf06a949baf5e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d1eacdcf8bca99cd5351aaf92414c1d7fc67be73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320394"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Настройки резервного копирования журналов транзакций для доставки журналов
   Используйте данное диалоговое окно для внесения и изменения настроек создания резервных копий журнала транзакций для конфигурации доставки журналов.  

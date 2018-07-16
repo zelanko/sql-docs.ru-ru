@@ -1,5 +1,5 @@
 ---
-title: Набор строк DMSCHEMA_MINING_MODELS | Документы Microsoft
+title: Набор строк DMSCHEMA_MINING_MODELS | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_MODELS rowset
 ms.assetid: 1636f4cf-b342-4e2e-93b4-04136e2d41ef
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8296ddb800b7691936236aa0cdb6550c89c34c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9af1a9817ad116561b57b1d04b2e3df1d7313bb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208034"
 ---
 # <a name="dmschemaminingmodels-rowset"></a>Набор строк DMSCHEMA_MINING_MODELS
   Перечисляет модели интеллектуального анализа данных в текущем каталоге. В набор строк `DMSCHEMA_MINING_MODELS` могут быть включены такие сведения, как имена, типы и алгоритмы интеллектуального анализа данных, связанные со всеми моделями.  
   
- , и делает это по-другому. `DMSCHEMA_MINING_MODELS` Набора строк схемы очень похож на [DBSCHEMA_TABLES](../ole-db/dbschema-tables-rowset.md) набора строк схемы и может использоваться так же.  
+ , и делает это по-другому. `DMSCHEMA_MINING_MODELS` Набора строк схемы очень похожа на [DBSCHEMA_TABLES](../ole-db/dbschema-tables-rowset.md) набора строк схемы и может использоваться так же.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  `DMSCHEMA_MINING_MODELS` Набор строк содержит следующие столбцы.  
@@ -39,7 +39,7 @@ ms.locfileid: "36188108"
 |Имя столбца|Индикатор типа|Длина|Описание|  
 |-----------------|--------------------|------------|-----------------|  
 |`MODEL_CATALOG`|`DBTYPE_WSTR`||Имя каталога. Заполняется именем базы данных, элементом которой является модель.|  
-|`MODEL_SCHEMA`|`DBTYPE_WSTR`||Неполное имя схемы. Этот столбец не поддерживается [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; он всегда содержит `NULL`.|  
+|`MODEL_SCHEMA`|`DBTYPE_WSTR`||Неполное имя схемы. Этот столбец не поддерживается службами [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; он всегда содержит `NULL`.|  
 |`MODEL_NAME`|`DBTYPE_WSTR`||Имя модели интеллектуального анализа данных. Этот столбец содержит имя модели интеллектуального анализа данных и никогда не бывает пустым.|  
 |`MODEL_TYPE`|`DBTYPE_WSTR`||Тип модели.|  
 |`MODEL_GUID`|`DBTYPE_GUID`||Идентификатор GUID модели.|  
@@ -72,7 +72,7 @@ ms.locfileid: "36188108"
 |`SERVICE_TYPE_ID`|`DBTYPE_UI4`|Необязательный параметр.|  
 |`MINING_STRUCTURE`|`DBTYPE_WSTR`|Необязательный параметр.|  
   
- Примеры запросов этот набор строк. в разделе [запрос, параметры, используемые для создания модели интеллектуального анализа данных](../../data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
+ Примеры для запроса этот набор строк, см. в разделе [запрос параметров, используемых для создания модели интеллектуального анализа данных](../../data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 ## <a name="see-also"></a>См. также  
  [Наборы строк схемы интеллектуального анализа данных](../../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 

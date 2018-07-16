@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cmdlets [SQL Server], Encode-Sqlname
 - Encode-Sqlname cmdlet
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - Cmdlets [SQL Server], Decode-Sqlname
 ms.assetid: 720aa982-09ae-41a3-b603-a91004cfbe3e
 caps.latest.revision: 24
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 845b99288bc000d1bf6adf5f48c6ad5d3099c415
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e06c46020f0e3e04e81b3f46fada587ab55f7b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267130"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>Использование командлетов компонента Database Engine
   Командлеты Windows PowerShell представляют собой команды из одной функции, в именах которых, как правило, используется соглашение об именовании "глагол-существительное", например **Get-Help** или **Set-MachineName**. Поставщик [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для Windows PowerShell предоставляет командлеты, относящиеся к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -60,7 +60,7 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
 |Описывает использование командлета **Invoke-Sqlcmd** для выполнения скриптов **sqlcmd** или команд, содержащих инструкции [!INCLUDE[tsql](../includes/tsql-md.md)] или XQuery. Он может принимать входные данные **sqlcmd** в виде символьного строкового входного параметра или имени открываемого файла скрипта.|[Командлет Invoke-Sqlcmd](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
 |Описывает использование командлета **Invoke-PolicyEvaluation** для сообщения о том, соответствует ли целевой набор объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] условиям, определенным в схемах управления на основе политик. Кроме того, этот командлет можно использовать для повторного задания любых настраиваемых параметров в целевых объектах, которые не соответствуют условиям политики.|[Invoke-PolicyEvaluation, командлет](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
 |Описывает использование `Encode-Sqlname` и `Decode-Sqlname` для обработки идентификаторов SQL Server, которые содержат символы, не поддерживаемые в путях Windows PowerShell.|[Шифрование и расшифровка идентификаторов SQL Server](../powershell/encode-and-decode-sql-server-identifiers.md)|  
-|Описывает использование `Convert-UrnToPath` для преобразования управляемости объекта универсального ресурса имя (URN) SQL Server в эквивалентный путь поставщика SQL Server.|[Преобразование URNs в пути поставщика SQL Server](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
+|Описывает использование `Convert-UrnToPath` преобразуемый управляемости объект универсального кода ресурса имя (URN) SQL Server в эквивалентный путь поставщика SQL Server.|[Преобразование URNs в пути поставщика SQL Server](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
   
 ## <a name="see-also"></a>См. также  
  [SQL Server PowerShell, поставщик](../powershell/sql-server-powershell-provider.md)   

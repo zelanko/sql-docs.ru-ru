@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.ue.navigation.f1
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 15c92a525164cf2c8c2f89f2b3afb45bc47b70d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 456bd7ca29338e2e78b57ffdd8f523e05da7ca1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271190"
 ---
 # <a name="utility-explorer-f1-help"></a>Справка F1 проводника служебной программы
   В следующих разделах описываются функциональные возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] служебной программы и связанные операции.  
@@ -29,9 +29,9 @@ ms.locfileid: "36190211"
 ## <a name="in-this-section"></a>в этом разделе  
  [Панель мониторинга служебной программы &#40;служебная программа SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)  
   
- [Развернуть подробные сведения о приложении уровня данных &#40;служебная программа SQL Server&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
+ [Сведения о приложении уровня данных развернут &#40;служебная программа SQL Server&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
   
- [Управляемые сведения об экземпляре &#40;служебная программа SQL Server&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
+ [Подробные сведения об экземпляре управляемом &#40;служебная программа SQL Server&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
   
  [Администрирование программ (служебная программа SQL Server)](../../database-engine/utility-administration-sql-server-utility.md)  
   

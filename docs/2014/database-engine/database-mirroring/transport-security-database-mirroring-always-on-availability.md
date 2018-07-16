@@ -1,14 +1,13 @@
 ---
-title: Безопасность транспорта для зеркального отображения базы данных и группы доступности AlwaysOn (SQL Server) | Документы Microsoft
+title: Безопасность транспорта для зеркального отображения базы данных и групп доступности AlwaysOn (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sessions [SQL Server], database mirroring
 - cryptography [SQL Server], database mirroring
@@ -22,13 +21,13 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: fdcfc0b7d7ce374f65fac8dca13dc7136b129e57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3f2a6d5dfcba21cea89802a29eec7a56a58936c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291410"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)
   Защита транспорта подразумевает проверку подлинности и (необязательно) шифрование сообщений, которыми обмениваются базы данных. Для зеркального отображения базы данных и [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]проверка подлинности и шифрование настраиваются в конечной точке зеркального отображения базы данных. Базовые сведения о конечных точках зеркального отображения базы данных см. в разделе [Конечная точка зеркального отображения базы данных (SQL Server)](the-database-mirroring-endpoint-sql-server.md).  
@@ -104,6 +103,6 @@ ms.locfileid: "36190054"
  [sys.database_mirroring_endpoints (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)   
  [sys.dm_db_mirroring_connections (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)   
  [Диагностика конфигурации зеркального отображения базы данных (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Диагностика конфигурации групп доступности AlwaysOn &#40;SQL Server&#41;удалена](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)
+ [Устранение неполадок с конфигурацией групп доступности AlwaysOn &#40;SQL Server&#41;удален](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)
   
   

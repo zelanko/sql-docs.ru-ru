@@ -1,5 +1,5 @@
 ---
-title: Управление службой Integration Services | Документы Microsoft
+title: Управление службой Integration Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
 - services [Integration Services], configuring
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
 caps.latest.revision: 60
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45952fdec3955614cb7b69b053ffc635d9ab2ae3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e356283274c7ea741acfabcd6d56cb6bc0db7ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281520"
 ---
 # <a name="manage-the-integration-services-service"></a>Управление службой Integration Services
     
@@ -32,7 +32,7 @@ ms.locfileid: "36191489"
  При установке компонента служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]также устанавливается служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . По умолчанию запускается служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и устанавливается ее автоматический запуск. Однако необходимо также установить среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , чтобы использовать эту службу для управления хранимыми и эксплуатируемыми пакетами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 > [!NOTE]  
->  Не удается подключиться к экземпляру компонента [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] из [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] версии [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. То есть, в диалоговом окне **Соединение с сервером** нельзя вводить имя сервера, на котором работает только служба [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] версии [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Однако можно изменить файл конфигурации для этой службы и тем самым обеспечить управление пакетами, хранящимися на экземпляре [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] , из среды [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] версии [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Дополнительные сведения см. в разделе [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md).  
+>  Не удается подключиться к экземпляру [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] службы из [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] версии [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. То есть, в диалоговом окне **Соединение с сервером** нельзя вводить имя сервера, на котором работает только служба [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] версии [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Однако можно изменить файл конфигурации для этой службы и тем самым обеспечить управление пакетами, хранящимися на экземпляре [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] , из среды [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] версии [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Дополнительные сведения см. в разделе [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md).  
   
  Предусмотрена возможность установить только единственный экземпляр службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на отдельном компьютере. Эта служба не относится к конкретному экземпляру компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. Подключение к этой службе осуществляется с использованием имени компьютера, на котором она эксплуатируется.  
   
@@ -58,8 +58,8 @@ ms.locfileid: "36191489"
   
 ## <a name="see-also"></a>См. также  
  [Службе Integration Services &#40;службы SSIS&#41;](service/integration-services-service-ssis-service.md)   
- [Настройка интеграции службы &#40;службы SSIS&#41;](configuring-the-integration-services-service-ssis-service.md)   
- [Мастер экспорта и импорта SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
+ [Настройка интеграции службы служб &#40;службы SSIS&#41;](configuring-the-integration-services-service-ssis-service.md)   
+ [Мастер SQL Server импорта и экспорта](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [Программа dtexec](packages/dtexec-utility.md)   
  [Запуск проектов и пакетов](packages/run-integration-services-ssis-packages.md)  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ea043eaf389aa87e1162c2321220c4fd7878923a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5cdcdb6edb146393a9daee7221d0a0d979989046
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322385"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Создание и публикация бизнес-правила (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]бизнес-правило создается для гарантии точности основных данных. Чтобы применить к данным созданное правило, его необходимо опубликовать.  
@@ -54,14 +54,14 @@ ms.locfileid: "36188017"
   
 9. На панели **Компоненты** разверните узел **Условия** .  
   
-10. Выберите условие и перетащите его на **IF** панели **условия** метки.  
+10. Выберите условие и перетащите его на значок **IF** области **условия** метки.  
   
     > [!TIP]  
     >  Можно удалить элементы из бизнес-правила, щелкнув правой кнопкой мыши и выбрав **удалить**.  
   
-11. В **атрибуты** щелкните атрибут и перетащите его на **Изменение условия** панели **Выбор атрибута** метки.  
+11. В **атрибуты** панели, щелкните атрибут и перетащите его на значок **Изменение условия** области **выбора атрибута** метки.  
   
-12. В **Изменение условия** панель, заполните все обязательные поля.  
+12. В **Изменение условия** области, заполните все необходимые поля.  
   
 13. На панели **Изменение условия** нажмите кнопку **Сохранить элемент**.  
   
@@ -92,12 +92,12 @@ ms.locfileid: "36188017"
   
 -   Примените бизнес-правила к данным с помощью одной из следующих процедур:  
   
-    -   [Проверка конкретных элементов с использованием бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [Проверка конкретных членов, соответствие бизнес-правилам &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [Проверьте версию на соответствие бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [Проверка версии на соответствие бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также  
- [Настройка бизнес-правила для отправки уведомлений &#40;службы Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
+ [Настройка бизнес-правилах отправки уведомлений &#40;службы Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [Изменение имени бизнес-правила (службы Master Data Services)](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Добавление нескольких условий к бизнес-правилу (службы Master Data Services)](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   

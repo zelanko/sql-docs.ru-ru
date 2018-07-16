@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG024070 error
 ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 583603105c6c5ce4a7c24dc09ef50b56ccf77173
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c1d2141f51c0434fb0c03dee6c1a07875b8150f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305414"
 ---
 # <a name="mssqleng024070"></a>MSSQL_ENG024070
     
@@ -39,7 +39,7 @@ ms.locfileid: "36191008"
 ## <a name="explanation"></a>Объяснение  
  Это общая ошибка, которая может возникнуть независимо от того, реплицируется база данных или нет. Для сервера в топологии репликации эта ошибка обычно означает, что учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] была изменена с использованием диспетчера управления службами [!INCLUDE[msCoName](../../includes/msconame-md.md)] , а не с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если попытаться выполнить задание агента после изменения учетной записи службы, выполнение задания может закончится выдачей примерно следующего сообщения об ошибке:  
   
- «Выполняется от имени пользователя: \<учетная_запись_пользователя >. Подсистема репликации репликации моментальных снимков: агент \<Имя_агента > не удалось. Выполняется от имени пользователя: \<учетная_запись_пользователя >. Клиент не располагает требуемыми правами доступа. Шаг завершился с ошибкой. `[SQLSTATE 42000] (Error 14151)`. Шаг завершился с ошибкой».  
+ «Выполняется от имени пользователя: \<учетная_запись_пользователя >. Подсистема моментальных снимков репликации репликации: агент \<Имя_агента > не удалось. Выполняется от имени пользователя: \<учетная_запись_пользователя >. Клиент не располагает требуемыми правами доступа. Шаг завершился с ошибкой. `[SQLSTATE 42000] (Error 14151)`. Шаг завершился с ошибкой».  
   
  Эта проблема возникает из-за того, что диспетчер управления службами Windows не может предоставить новой учетной записи службы для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуемые разрешения.  
   

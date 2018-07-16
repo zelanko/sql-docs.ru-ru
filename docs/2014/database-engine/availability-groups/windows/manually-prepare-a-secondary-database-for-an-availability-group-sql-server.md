@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.configsecondarydbs.f1
 - sql12.swb.availabilitygroup.preparedbs.f1
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 caps.latest.revision: 44
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: e98f8b7db76d0a19041424242d3035934d02c5a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 47afad65db4f1de79bb1da395ce9954772929179
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295474"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Ручная подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)
   В этом разделе описывается Подготовка базы данных-получателя для группы доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], или PowerShell. Подготовка базы данных-получателя выполняется в два этапа: (1) восстановление базы данных из последней резервной копии базы данных-источника и соответствующих резервных копий журнала на каждом экземпляре сервера, где размещена вторичная реплика доступности, с помощью инструкции RESTORE WITH NORECOVERY и (2) присоединение восстановленной базы данных к группе доступности.  
   
 > [!TIP]  
->  Если имеется существующая конфигурация доставки журналов, можно будет преобразовать базу данных-источник доставки журналов вместе с одной или более базой данных-получателем в базу данных-источник AlwaysOn и одну или более баз данных-получателей AlwaysOn. Дополнительные сведения см. в разделе [необходимые условия для перехода от использования доставки журналов в группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
+>  Если имеется существующая конфигурация доставки журналов, можно будет преобразовать базу данных-источник доставки журналов вместе с одной или более базой данных-получателем в базу данных-источник AlwaysOn и одну или более баз данных-получателей AlwaysOn. Дополнительные сведения см. в разделе [необходимые условия для перехода от использования доставки журналов для групп доступности AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
   
 -   **Перед началом работы**  
   
@@ -199,7 +198,7 @@ ms.locfileid: "36086972"
         > [!IMPORTANT]  
         >  Если пути к базе данных-источнику и базе данных-получателю отличаются, то добавлять файлы нельзя. Обусловлено это тем, что при получении журнала для выполнения операции добавления файла экземпляр сервера, на котором размещена вторичная реплика, пытается поместить новый файл в местоположение, указанное для базы данных-источника.  
   
-         Например, следующая команда восстанавливает базу данных-источник из резервной копии, размещенной в каталоге данных экземпляра [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]по умолчанию, C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. Операция восстановления базы данных должна переместить базы данных в каталог удаленного экземпляра [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с именем (*AlwaysOn1*), который размещается вторичная реплика на другом узле кластера. Там файлы данных и журнала восстанавливаются в *C:\Program Files\Microsoft SQL Server\MSSQL12. ALWAYSON1\MSSQL\DATA* каталога. Операция восстановления использует параметр WITH NORECOVERY, чтобы оставить базу данных-получатель в восстанавливающейся базе данных.  
+         Например, следующая команда восстанавливает базу данных-источник из резервной копии, размещенной в каталоге данных экземпляра [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]по умолчанию, C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. Операция восстановления базы данных должна переместить базы данных каталог удаленного экземпляра [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с именем (*AlwaysOn1*), который размещается вторичная реплика на другом узле кластера. Там файлы данных и журнала восстанавливаются в *C:\Program Files\Microsoft SQL Server\MSSQL12. ALWAYSON1\MSSQL\DATA* каталога. Операция восстановления использует параметр WITH NORECOVERY, чтобы оставить базу данных-получатель в восстанавливающейся базе данных.  
   
         ```  
         RESTORE DATABASE MyDB1  
@@ -249,7 +248,7 @@ ms.locfileid: "36086972"
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
  **Подготовка базы данных-получателя**  
   
-1.  Если необходимо создать последней резервной копии базы данных-источника, перейдите в каталог (`cd`) к экземпляру сервера, на котором размещена первичная реплика.  
+1.  Если вам нужно создать недавняя резервная копия базы данных-источника, перейдите в каталог (`cd`) к экземпляру сервера, на котором размещена первичная реплика.  
   
 2.  Используйте командлет `Backup-SqlDatabase`, чтобы создать каждую их этих резервных копий.  
   
@@ -258,7 +257,7 @@ ms.locfileid: "36086972"
 4.  Чтобы восстановить резервные копии базы данных и журналов для каждой базы данных-источника, используйте командлет `restore-SqlDatabase`, указывая параметр восстановления `NoRecovery`. Если пути к файлам различны на компьютерах, на которых размещена основная реплика и целевая вторичная реплика, также следует использовать параметр восстановления `RelocateFile`.  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь `Get-Help` командлета в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] среде PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, используйте `Get-Help` командлет в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] среде PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 5.  Чтобы завершить настройку базы данных-получателя, необходимо присоединить ее к группе доступности. Дополнительные сведения см. в разделе [Присоединение базы данных-получателя к группе доступности (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
@@ -289,6 +288,6 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [Аргументы инструкции RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Устранение неполадок с операцией не удалось добавить файл &#40;группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+ [Устранение неполадок с операцией добавления файла, завершившейся сбоем &#40;группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
   

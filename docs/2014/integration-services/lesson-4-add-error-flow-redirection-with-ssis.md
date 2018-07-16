@@ -1,5 +1,5 @@
 ---
-title: 'Урок 4: Добавление перенаправления потока ошибок | Документы Microsoft'
+title: 'Занятие 4: Добавление перенаправления потока ошибок | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 caps.latest.revision: 23
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2b09bfa4b9ac8c0c6a35c57dab535fc8d1263e3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 230294eb45aec198ba5fd0cde396749bd0897b14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295094"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>Урок 4. Добавление перенаправления потока ошибок
   Для обработки ошибок, которые могут возникать в процессе преобразования, в службах [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] можно указать, как должны обрабатываться данные отдельных компонентов и столбцов, недоступные для преобразования. Можно проигнорировать ошибки в определенных столбцах, перенаправить всю строку с ошибкой или просто завершить работу компонента с ошибкой. По умолчанию для всех компонентов в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] указано завершение работы при возникновении ошибки. Завершение работы компонента с ошибкой, в свою очередь, приводит к сбою в работе пакета и остановке дальнейшей обработки.  

@@ -1,5 +1,5 @@
 ---
-title: Знакомство с классами объектов AMO | Документы Microsoft
+title: Введение в классы объектов AMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ helpviewer_keywords:
 - classes [AMO]
 ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3e525dec6972d68ce8695bc7fab6aa6ab177e0a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb4e3761642f8b03e5853ae99e00cc4bc2f4a46f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328534"
 ---
 # <a name="introducing-amo-classes"></a>Знакомство с классами объектов AMO
   Объекты AMO — это библиотека классов, предназначенных для управления экземпляром служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] из клиентского приложения. Классы AMO — это классы, которые используются для администрирования таких объектов служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , как базы данных, измерения, кубы, структуры и модели интеллектуального анализа, роли и разрешения, исключения и др.  
   
  На следующем рисунке показана связь между классами, описываемыми в этом разделе.  
   
- ![Классы, описываемые в разделы по основным понятиям AMO](../../../analysis-services/dev-guide/media/amo-reviewedclasses.gif "классы, описываемые в разделы по основным понятиям AMO")  
+ ![Классы, описываемые в концептуальных разделов AMO](../../../analysis-services/dev-guide/media/amo-reviewedclasses.gif "классы, описываемые в концептуальных разделов объектов AMO")  
   
  Библиотеку объектов AMO можно описать как логически связанные группы объектов, используемых для выполнения определенной задачи. Классы AMO можно категоризировать следующим образом. В этом разделе рассматриваются следующие вопросы.  
   

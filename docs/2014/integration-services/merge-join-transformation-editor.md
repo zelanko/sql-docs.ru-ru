@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразования соединения слиянием | Документы Microsoft
+title: Редактор преобразования соединения слиянием | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointransformation.f1
 helpviewer_keywords:
 - Merge Join Transformation Editor
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1f548972d99242a4bc3d3423eeed748de2c31704
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 209b6b64e200503144fb47e80d2f4e7c783e1db5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300484"
 ---
 # <a name="merge-join-transformation-editor"></a>редактор преобразования «Cоединение слиянием»
   Диалоговое окно **Редактор преобразования «Соединение слиянием»** используется для задания типа соединения, столбцов соединения и выходных столбцов для слияния двух входных наборов с помощью соединения.  
@@ -52,9 +52,9 @@ ms.locfileid: "36189018"
  Введите псевдоним для каждого выходного столбца. По умолчанию, используется имя входного столбца, однако можно выбрать любое уникальное описательное имя.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Сортировка данных для слияния и преобразования соединения слиянием](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [Расширение набора данных с помощью преобразование «Соединение слиянием»](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
+ [Расширение набора данных с помощью преобразования «Соединение слиянием»](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
  [Преобразование «Слияние»](data-flow/transformations/merge-transformation.md)   
  [Преобразование "Объединить все"](data-flow/transformations/union-all-transformation.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Задание и получение сведений о версии | Документы Microsoft
+title: Задание и получение сведений о версии | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - historical information [SQL Server]
 - source controls [SQL Server Management Studio], version information
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - historical information [SQL Server], source control files
 ms.assetid: c3f253c4-4e3d-48e8-8d90-bd6ee899faf7
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: da9b33474449140cb31b6dcfd752a5112ebb9d4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0dde0359b67d34e712b76e53a855efaafc29b5b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189573"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265242"
 ---
 # <a name="set-and-retrieve-version-information"></a>Задание и получение сведений о версии
   Сведения о версии содержат журнал изменений и текущее состояние файла в системе управления версиями. Для каждого файла, контролируемого системой управления версиями, [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe создает исчерпывающий журнал, с помощью которого с течением времени можно проследить развитие одного или нескольких файлов. Эти сведения можно также использовать для получения локальной копии версии файла или сравнения двух любых версий файла.  

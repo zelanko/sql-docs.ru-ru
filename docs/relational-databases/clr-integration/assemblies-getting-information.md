@@ -1,9 +1,8 @@
 ---
-title: Получение сведений о сборках | Документы Microsoft
+title: Получение сведений о сборках | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
@@ -19,12 +18,12 @@ caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b7cbf238a71c25d8cc24b106007db6acba73698b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 7b01592ad65a6db4acc8dee1c7f417096c6a6265
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697465"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352626"
 ---
 # <a name="assemblies---getting-information"></a>Сборки — получение сведений о
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "35697465"
   
 -   [sys.assembly_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)  
   
- **Для получения сведений о перекрестных ссылках между сборками**  
+ **Чтобы получить сведения о ссылках между сборками**  
   
 -   [sys.assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)  
   
@@ -52,11 +51,11 @@ ms.locfileid: "35697465"
   
 -   [sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
- **Для получения сведений о общий язык среды выполнения (CLR) хранимых процедурах, триггерах и функциях**  
+ **Получение сведений о среде выполнения (CLR) хранимые процедуры, триггеры и функции**  
   
 -   [sys.assembly_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)  
   
- **Для получения сведений об объектах, не использующей среду CLR**  
+ **Для получения сведений об объектах среды CLR**  
   
 -   [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
   

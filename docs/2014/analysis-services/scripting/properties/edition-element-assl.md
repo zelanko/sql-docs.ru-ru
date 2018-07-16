@@ -1,5 +1,5 @@
 ---
-title: Элемент Edition (ASSL) | Документы Microsoft
+title: Элемент Edition (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Edition element
 ms.assetid: 521e1286-097e-494f-b036-61047096e87e
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c9d801f2055513323f473a73662337349207ea6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a94ed085a345100579b3305fa43e7e360fe8258
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245664"
 ---
 # <a name="edition-element-assl"></a>Элемент Edition (ASSL)
-  Содержит доступный только для чтения выпуск экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] представленный [сервера](../objects/server-element-assl.md) элемента.  
+  Содержит доступный только для чтения выпуск экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] представленный [Server](../objects/server-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -72,9 +72,9 @@ ms.locfileid: "36109819"
 |*BusinessIntelligence*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Выпуск Business Intelligence для 32-разрядных процессоров.|  
 |*Разработчик*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Выпуск Developer edition для 32-разрядных процессоров|  
 |*Оценки*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Выпуск Evaluation для 64-разрядных процессоров.|  
-|*Локальные*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Локальный edition для 32-разрядных процессоров.|  
+|*Локальный*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Локальный выпуск для 32-разрядных процессоров.|  
 |*Standard64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Выпуск Standard для 64-разрядных процессоров.|  
-|*Enterprise64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise edition для 64-разрядных процессоров.|  
+|*Enterprise64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Выпуск Enterprise для 64-разрядных процессоров.|  
 |*EnterpriseCore64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Выпуск Enterprise edition: лицензирование по числу ядер для 64-разрядных процессоров.|  
 |*BusinessIntelligence64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Выпуск Business Intelligence для 64-разрядных процессоров.|  
 |*Developer64*|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Выпуск Developer edition для 64-разрядных процессоров|  

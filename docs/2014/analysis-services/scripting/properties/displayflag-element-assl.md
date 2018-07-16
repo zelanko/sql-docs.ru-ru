@@ -1,5 +1,5 @@
 ---
-title: Элемент DisplayFlag (ASSL) | Документы Microsoft
+title: Элемент DisplayFlag (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DisplayFlag element
 ms.assetid: a6750477-0763-46da-9add-1f4448146a6b
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43c797101826a614c67c7c4f213140a427b51395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1e36ef82a62c91575312fa4c2ead23538983402
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261460"
 ---
 # <a name="displayflag-element-assl"></a>Элемент DisplayFlag (ASSL)
-  Содержит подсказку только для чтения, которая указывает, должны ли компоненты пользовательского интерфейса Показывать связанный [ServerProperty](../objects/serverproperty-element-assl.md) элемента.  
+  Содержит доступное только для чтения Указание, которое указывает, должны ли компоненты пользовательского интерфейса Показывать связанный [ServerProperty](../objects/serverproperty-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36190515"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родительский `DisplayFlag` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ServerProperty>.  
+ Элемент, соответствующий родителю параметра `DisplayFlag` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент ServerProperties &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   

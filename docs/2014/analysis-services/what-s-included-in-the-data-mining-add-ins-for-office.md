@@ -1,5 +1,5 @@
 ---
-title: Что&#39;, включенных в интеллектуальном анализе данных надстроек для Office | Документы Microsoft
+title: Что&#39;включенных в интеллектуальном анализе данных надстроек для Office | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 282155ff681830e3b6c1b3f0bc0d4f281a6435e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5630c67926713b997adfe85fe0fd9f8da10e03e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232004"
 ---
-# <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Что&#39;, включенных в интеллектуальном анализе данных надстроек для Office
+# <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Что&#39;включенных в интеллектуальном анализе данных надстроек для Office
   Если установить надстройки интеллектуального анализа данных для Office 2013 и выбрать все параметры установки, будут добавлены следующие панели инструментов и шаблоны:  
   
 -   [Средства анализа таблиц для Excel](table-analysis-tools-for-excel.md)  
@@ -44,7 +44,7 @@ ms.locfileid: "36190828"
   
 -   [Средство настройки сервера &#40;интеллектуального анализа данных надстройки для Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
-     Для построения моделей необходимо соединение с сервером интеллектуального анализа данных. Если требуется помощь с настройкой, просто щелкните **справки** и следуйте инструкциям на каждой странице мастера настройки. Вы можете исправить ошибки самостоятельно. В противном случае мастер предоставит сведения, которые можно отправить администратору для обеспечения правильной установки.  
+     Для построения моделей необходимо соединение с сервером интеллектуального анализа данных. Если вам нужна помощь с настройкой, просто щелкните **помочь** и следуйте инструкциям на каждой странице мастера настройки. Вы можете исправить ошибки самостоятельно. В противном случае мастер предоставит сведения, которые можно отправить администратору для обеспечения правильной установки.  
   
 -   [Выбор данных и использование образца данных](choosing-data-for-data-mining.md)  
   
@@ -65,6 +65,6 @@ ms.locfileid: "36190828"
     -   \<диск >: \Program Files (x86) \Microsoft надстройки интеллектуального анализа данных для SQL Server 2014  
   
 ## <a name="see-also"></a>См. также  
- [Начало работы с интеллектуальным анализом данных &#40;интеллектуального анализа данных надстройки для Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
+ [Приступая к работе с интеллектуальным анализом данных &#40;интеллектуального анализа данных надстройки для Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
   
   

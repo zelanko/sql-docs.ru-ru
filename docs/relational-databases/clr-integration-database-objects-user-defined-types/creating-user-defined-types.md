@@ -1,11 +1,11 @@
 ---
-title: Создание определяемого пользователем типа | Документы Microsoft
+title: Создание определяемого пользователем типа | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -18,12 +18,12 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0f0f9599e5a529011528307b97e39dc68009852
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 62bcb175cebbfa4848bbc49ac21710d58bfafcc8
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702615"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349487"
 ---
 # <a name="creating-user-defined-types"></a>Создание определяемых пользователем типов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Reconfigure
  Демонстрирует требования к приемам кодирования, используемым при создании определяемых пользователем типов.  
   
 ## <a name="example"></a>Пример  
- Следующий пример кода определяет определяемый пользователем тип Point, который подробно описывается в [Coding User-Defined типов](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ Следующий пример кода определяет определяемый пользователем тип Point, который описан подробно [программирование определяемых пользователем типов](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
  Полные листинги кода для других примеров, описываемых в этом разделе, можно получить, установив образцы из среды CLR. Инструкции по установке этих образцов см. в разделе [образцы SQL Server Database Engine](http://msftengprodsamples.codeplex.com/).  
   

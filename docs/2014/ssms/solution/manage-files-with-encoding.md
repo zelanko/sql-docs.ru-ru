@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - files [SQL Server Management Studio]
 - encoding [SQL Server Management Studio]
 - files [SQL Server Management Studio], encoding
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7a252e4e766b85c83c97ee55a5204932932ee3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cc038e491f895ad3ee017ff9e06835ad25c48912
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208424"
 ---
 # <a name="manage-files-with-encoding"></a>Управление файлами с помощью кодировок
   Для отображения кода на конкретном языке и на конкретной платформе можно связать файл с определенной кодировкой.  
@@ -46,7 +46,7 @@ ms.locfileid: "36188957"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>Сохранение файла с другой кодировкой или символом конца строки  
   
-1.  На **файл** меню, нажмите кнопку **Сохранить \<имя файла > как**.  
+1.  На **файл** меню, щелкните **Сохранить \<filename > как**.  
   
 2.  В диалоговом окне **Сохранение файла** раскройте кнопку **Сохранить** и выберите пункт **Выбор кодировки для сохранения**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36188957"
 -   Файлы в кодировке UTF8 не могут надежно работать с Visual SourceSafe, поскольку при возврате, извлечении, проверке на наличие различий и слиянии производятся изменения, вызывающие проблемы при работе редакторов файлов UTF8.  
   
 ## <a name="see-also"></a>См. также  
- [Файлы, управлять решениями и проектами](files-that-manage-solutions-and-projects.md)   
+ [Файлы для управления решениями и проектами](files-that-manage-solutions-and-projects.md)   
  [Связывание расширения файла с редактором кода](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   
   

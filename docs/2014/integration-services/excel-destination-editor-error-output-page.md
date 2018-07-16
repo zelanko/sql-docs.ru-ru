@@ -1,5 +1,5 @@
 ---
-title: Редактор назначения «Excel» (страница «Вывод ошибок») | Документы Microsoft
+title: Редактор назначения «Excel» (страница "Вывод ошибок") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldestadapter.erroroutput.f1
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1c61d0ea9ed41bf238aa1cfdc05cb7c7615b657
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2199a6f6524e403139dba85c63519773cdceb1e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324644"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Редактор назначения «Excel» (страница «Вывод ошибок»)
   Используйте страницу **Дополнительно** диалогового окна **Редактор назначения «Excel»** , чтобы указать параметры обработки ошибок.  
@@ -55,9 +55,9 @@ ms.locfileid: "36109542"
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор назначения «Excel» &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Редактор назначения «Excel» &#40;страница «сопоставления»&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор назначения Excel &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
+ [Редактор назначения Excel &#40;страница «сопоставления»&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
  [Просмотр файлов и таблиц Excel с помощью контейнера «цикл по каждому элементу»](control-flow/foreach-loop-container.md)  
   
   

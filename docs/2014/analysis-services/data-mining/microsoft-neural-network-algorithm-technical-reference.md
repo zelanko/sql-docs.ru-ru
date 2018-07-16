@@ -1,5 +1,5 @@
 ---
-title: Технический справочник по алгоритму нейронной сети Майкрософт | Документы Microsoft
+title: Технический справочник по алгоритму нейронной сети Майкрософт | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HIDDEN_NODE_RATIO parameter
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e34d664a9eb2338f1a686c8a37303c03c8451ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18c5395a8da571a0c131cc6138a9eb499b3ef786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180398"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276510"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Технический справочник по алгоритму нейронной сети (Майкрософт)
   Алгоритм нейронной сети ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) использует сеть в виде *многослойного перцептрона* , также известного под названием *сеть дельта-правила с обратным распространением*, в состав которой может входить до трех слоев нейронов, или *перцептронов*. Такими слоями являются входной слой, необязательный скрытый слой и выходной слой.  
@@ -112,7 +112,7 @@ ms.locfileid: "36180398"
   
  **Непрерывные величины**  
   
- Имеется значение = 1 - μ/σ  
+ Значение существует = 1 - μ/σ  
   
  Нет существующего значения = - μ/σ  
   
@@ -205,7 +205,7 @@ ms.locfileid: "36180398"
 >  Типы содержимого Cyclical и Ordered поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм нейронной сети Майкрософт](microsoft-neural-network-algorithm.md)   
+ [Алгоритм нейронной сети (Майкрософт)](microsoft-neural-network-algorithm.md)   
  [Модель интеллектуального анализа данных для моделей нейронных сетей &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Примеры запросов к модели нейронной сети](neural-network-model-query-examples.md)  
   

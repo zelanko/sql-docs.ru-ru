@@ -1,5 +1,5 @@
 ---
-title: Работа с объектной моделью ADOMD.NET | Документы Microsoft
+title: Работа с объектной моделью ADOMD.NET | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - retrieving metadata
 ms.assetid: 0183dcdc-f2ea-4246-ad00-6e8ccc9d8217
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de2d73db65d10acdea5ec0c221eb994700ba5f41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ceb363b3911afb3a1ea21d51e6a65eff09cd3f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328544"
 ---
 # <a name="working-with-the-adomdnet-object-model"></a>Работа с объектной моделью ADOMD.NET
   Компонент ADOMD.NET предоставляет модель объектов для просмотра кубов и подчиненных объектов, содержащихся в источниках аналитических данных. Однако эта модель объектов предоставляет доступ не ко всем метаданным для источника аналитических данных. Модель объектов обеспечивает доступ только к наиболее полезным сведениям, которые будет отображать клиентское приложение, чтобы пользователь мог составлять команды в интерактивном режиме. Представляемые метаданные имеют менее высокую сложность, поэтому модель объектов ADOMD.NET проще использовать.  
@@ -37,7 +37,7 @@ ms.locfileid: "36180372"
  При возможности используйте объект <xref:Microsoft.AnalysisServices.AdomdClient.CubeDef> для представления метаданных в клиентских приложениях, предназначенных для поддержки нескольких серверов OLAP или для достижения общих целей отображения метаданных и доступа.  
   
 > [!NOTE]  
->  Для извлечения метаданных, характерных для поставщика, или для отображения и доступа к подробным метаданным используйте наборы строк схемы. Дополнительные сведения см. в разделе [работа с наборами строк схемы в ADOMD.NET](retrieving-metadata-working-with-schema-rowsets.md)).  
+>  Для извлечения метаданных, характерных для поставщика, или для отображения и доступа к подробным метаданным используйте наборы строк схемы. Дополнительные сведения см. в разделе [Working with Schema Rowsets in ADOMD.NET](retrieving-metadata-working-with-schema-rowsets.md)).  
   
  В следующем примере объект <xref:Microsoft.AnalysisServices.AdomdClient.CubeDef> используется для извлечения видимых кубов и их измерений из локального сервера:  
   

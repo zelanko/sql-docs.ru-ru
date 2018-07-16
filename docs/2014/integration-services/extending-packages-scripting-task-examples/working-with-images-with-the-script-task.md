@@ -27,13 +27,13 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 614e925a7481c574bce63c0815b587e4984604df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a9a34f810805817075651cfe148f2d5de252c91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243004"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Работа с изображениями в задаче «Скрипт»
   База данных продуктов или пользователи часто содержат изображения в дополнение к тексту и числовым данным. Пространство имен `System.Drawing` платформы Microsoft .NET Framework предоставляет классы для управления изображениями.  
@@ -52,7 +52,7 @@ ms.locfileid: "36086932"
   
 1.  Создайте строковую переменную с именем `CurrentImageFile` и задайте в качестве ее значения путь и имя существующего файла изображения.  
   
-2.  На **сценарий** страница **редактор задачи «скрипт»**, добавьте `CurrentImageFile` переменной `ReadOnlyVariables` свойство.  
+2.  На **сценарий** странице **редактор задачи "скрипт"**, добавьте `CurrentImageFile` переменной `ReadOnlyVariables` свойство.  
   
 3.  В проекте скрипта добавьте ссылку на пространство имен `System.Drawing`.  
   
@@ -163,7 +163,7 @@ End Function
   
 2.  Создайте также целочисленную переменную `MaxThumbSize` и присвойте значение в пикселях, например 100.  
   
-3.  На **сценарий** страница **редактор задачи «скрипт»**, добавьте обе переменные в `ReadOnlyVariables` свойство.  
+3.  На **сценарий** странице **редактор задачи "скрипт"**, добавьте обе переменные `ReadOnlyVariables` свойство.  
   
 4.  В проекте скрипта добавьте ссылку на пространство имен `System.Drawing`.  
   
@@ -294,6 +294,6 @@ bool ThumbnailCallback()
   
 ```  
   
-![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться установка последних со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services в MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services  **<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
   

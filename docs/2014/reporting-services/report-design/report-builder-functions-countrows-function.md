@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a8b972b629608cb1c93f1e0cfde6cf305184f3f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 86b8b79fc5bcac1842a4fae82535afdff06c305e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190902"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280270"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>Функция CountRows (построитель отчетов и службы SSRS)
   Возвращает число строк в указанной области, включая строки со значениями NULL.  
@@ -45,7 +45,7 @@ CountRows(scope, recursive)
  Возвращает `Integer`.  
   
 ## <a name="remarks"></a>Примечания  
- `CountRows` Подсчитывает все строки в указанной области, включая строки со значениями null.  
+ `CountRows` Подсчитывает все строки в заданной области, включая строки со значениями null.  
   
  Значение *scope* не может быть выражением и должно указывать на текущую или включающую область.  
   
@@ -61,9 +61,9 @@ CountRows(scope, recursive)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Выражения используются в отчетах &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
- [Область выражения для итогов, статистических функций и встроенных коллекций &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
