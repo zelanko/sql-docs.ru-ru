@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbfd4afc7b9a13baaf932146c4c2938d05289f60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 79e6a3adf386915ce70a9d116cff03778f2d7c63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324344"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Использование проводника служебных программ для управления служебной программой SQL Server
   Проводник служебной программы, компонент среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключается к экземплярам компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для отображения всех объектов в служебной программе представления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виде дерева. Панель содержимого обозревателя программ предоставляет несколько способов просмотра сводных и подробных данных о состоянии исправности ресурсов управляемых экземпляров SQL Server. Обозреватель программ также реализует пользовательский интерфейс для просмотра определений политик и управления ими. Возможности обозревателя программ немного различаются в зависимости от объектов, представленных в служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , однако в целом они охватывают объекты, данные и политики, управляемые служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Функции и задачи служебной программы SQL Server](sql-server-utility-features-and-tasks.md).  

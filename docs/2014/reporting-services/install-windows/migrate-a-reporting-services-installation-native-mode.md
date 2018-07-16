@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - manual Reporting Services migrations
 - Report Server Windows service
@@ -21,13 +21,13 @@ ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 60c6e0833fb2e8a8c20ca1dca6f3fe8bb43bed9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85ac1d802949d0398f628ba267afb4dcb354151a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194212"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309464"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Перенос установки служб Reporting Services (собственный режим)
   В этом разделе приводятся пошаговые инструкции, позволяющие выполнить миграцию одной из следующих поддерживаемых версий [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , развернутых в собственном режиме, в новый экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -38,7 +38,7 @@ ms.locfileid: "36194212"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Требует дополнительных шагов в разделе [нельзя использовать для размещения баз данных 2014 сервера отчетов SQL Server 2005](http://support.microsoft.com/kb/2796721).  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Требуются дополнительные действия, см. в разделе [нельзя использовать для размещения баз данных 2014 сервера отчетов SQL Server 2005](http://support.microsoft.com/kb/2796721).  
   
 ||  
 |-|  
@@ -144,7 +144,7 @@ ms.locfileid: "36194212"
   
  Перейдите по одной из следующих ссылок для просмотра инструкций по установке нового экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
--   [Установка с помощью мастера установки SQL Server 2014 &#40;установки&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
+-   [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
   
 -   [Установка SQL Server 2014 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   
@@ -238,12 +238,12 @@ ms.locfileid: "36194212"
   
 |Пользовательская настройка|Сведения|  
 |-------------------|-----------------|  
-|Доставка электронной почты сервера отчетов с пользовательскими параметрами|[Настройка сервера отчетов для доставки электронной почты &#40;диспетчер конфигурации служб SSRS&#41; ](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) и [Настройка почты - Configuration Manager &#40;собственный режим служб SSRS&#41;](e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
+|Доставка электронной почты сервера отчетов с пользовательскими параметрами|[Настройка сервера отчетов для доставки электронной почты &#40;диспетчер конфигурации служб SSRS&#41; ](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) и [параметры электронной почты — Configuration Manager &#40;собственный режим служб SSRS&#41;](e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |Настройки сведений об устройстве|[Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../customize-rendering-extension-parameters-in-rsreportserver-config.md)|  
 |Диспетчер отчетов на удаленном экземпляре|[Настройка диспетчера отчетов &#40;собственный режим&#41;](../report-server/configure-web-portal.md)|  
   
 ##  <a name="bkmk_windowsservice_group"></a> Группа служб Windows и списки управления доступом  
- В [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]есть одна группа служб, группа служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows, используемая для создания списков управления доступом для всех разделов реестра, файлов и папок, устанавливаемых со службами [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Имя этой группы Windows отображается в формате SQLServerReportServerUser$\<*имя_компьютера*>$\<*имя_экземпляра*>. Эта группа заменяет две группы служб Windows в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Если у вас есть настраиваемые списки управления доступом, связанные с любой из [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] групп Windows, необходимо применить эти списки управления доступом в новую группу для нового экземпляра сервера отчетов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ В [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]есть одна группа служб, группа служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows, используемая для создания списков управления доступом для всех разделов реестра, файлов и папок, устанавливаемых со службами [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Имя этой группы Windows отображается в формате SQLServerReportServerUser$\<*имя_компьютера*>$\<*имя_экземпляра*>. Эта группа заменяет две группы служб Windows в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Если у вас есть настраиваемые списки управления доступом, связанные с любой из [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] групп Windows, необходимо применить списки ACL в новую группу для нового экземпляра сервера отчетов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_verify"></a> Проверка развертывания  
   

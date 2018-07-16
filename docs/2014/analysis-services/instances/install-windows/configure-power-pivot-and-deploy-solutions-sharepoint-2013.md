@@ -1,5 +1,5 @@
 ---
-title: Настройка PowerPivot и развертывание решений (SharePoint 2013) | Документы Microsoft
+title: Настройка PowerPivot и развертывание решений (SharePoint 2013) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,39 +8,39 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 caps.latest.revision: 10
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f06b47e8f30c60152912c49901341a2d8fdef359
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: bb76491d121921f4e5b826ecf760923ba9e2238e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312674"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Настройка PowerPivot и развертывание решений (SharePoint 2013)
-  Этом разделе описаны развертывание и настройка расширений среднего уровня компонентов PowerPivot в [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] том числе коллекции PowerPivot, расписания обновления, на панели мониторинга и данные поставщиков данных. Запустите средство **Настройка PowerPivot для SharePoint 2013** , чтобы выполнить следующее.  
+  В этом разделе описаны развертывание и настройка расширений среднего уровня компонентов PowerPivot в [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] том числе коллекции PowerPivot, запланировать обновление, панель мониторинга управления и данных поставщиков данных. Запустите средство **Настройка PowerPivot для SharePoint 2013** , чтобы выполнить следующее.  
   
 -   Развертывание файлов решения SharePoint.  
   
 -   Создание приложения службы PowerPivot.  
   
--   Настройка приложения служб Excel на использование сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Сведения о серверных службах и установке [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] сервера в режиме интеграции с SharePoint в разделе [установки PowerPivot для SharePoint 2013](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+-   Настройка приложения служб Excel на использование сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Сведения о серверных службах и установке [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] сервера в режиме интеграции с SharePoint см. в разделе [установки PowerPivot для SharePoint 2013](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
  Сведения об установке PowerPivot для SharePoint 2013 см. в разделе [установки или удаления PowerPivot для SharePoint надстройка &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
  Этот раздел состоит из следующих подразделов.  
   
- [Запуск PowerPivot для SharePoint 2013](#bkmk_run_configuration_tool)  
+ [Запустите PowerPivot для SharePoint 2013](#bkmk_run_configuration_tool)  
   
  [Проверка конфигурации PowerPivot](#bkmk_verify_powerpivot)  
   
  [Устранение неполадок](#bkmk_troubleshoot_issues)  
   
-##  <a name="bkmk_run_configuration_tool"></a> Запуск PowerPivot для SharePoint 2013  
+##  <a name="bkmk_run_configuration_tool"></a> Запустите PowerPivot для SharePoint 2013  
  **Примечание.** Мастер программы установки [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] устанавливает два различных средства настройки для [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. Каждый из них поддерживает разные версии SharePoint.  
   
 |Имя|Описание|  
@@ -54,7 +54,7 @@ ms.locfileid: "36179967"
   
  Необходимо либо выполнить вход с учетной записью, при которой устанавливался SharePoint, либо настроить учетную запись установки в качестве главного администратора сайта центра администрирования SharePoint.  
   
-1.  На **запустить** меню, нажмите кнопку **все программы**, а затем нажмите кнопку [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], нажмите кнопку **средства настройки**и нажмите кнопку **PowerPivot для SharePoint Настройка 2013**. Средство присутствует в списке вариантов, только если на локальном сервере установлен компонент PowerPivot для SharePoint.  
+1.  На **запустить** меню, щелкните **все программы**, а затем нажмите кнопку [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], нажмите кнопку **средства настройки**и нажмите кнопку **PowerPivot для SharePoint Настройка 2013**. Средство присутствует в списке вариантов, только если на локальном сервере установлен компонент PowerPivot для SharePoint.  
   
 2.  Выберите **Настройка или восстановление PowerPivot для SharePoint** , а затем нажмите кнопку **ОК**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36179967"
   
     5.  В левом окне выберите **Создание семейства веб-сайтов** . Запишите **URL-адрес сайта** для ссылок на него на следующих шагах. Если сервер SharePoint еще не настроен, мастер настройки по умолчанию выбирает веб-приложение, а для URL-адресов семейства веб-сайтов назначается корень `http://[ServerName]`. Чтобы изменить значения по умолчанию, просмотрите следующие страницы в левом окне: **Создание веб-приложения по умолчанию** и **Развертывание решения веб-приложения**.  
   
-5.  При необходимости просмотрите остальные входные значения, которые использовались для завершения каждого действия. Для просмотра подробных сведений о действии выберите его в левом окне. Дополнительные сведения о каждой из них см. раздел «вводимые значения для настройки сервера в [Настройка или восстановление PowerPivot для SharePoint 2010 &#40;PowerPivot конфигурации средства&#41; ](../../../analysis-services/configure-repair-powerpivot-sharepoint-2010.md) in this раздела.  
+5.  При необходимости просмотрите остальные входные значения, которые использовались для завершения каждого действия. Для просмотра подробных сведений о действии выберите его в левом окне. Дополнительные сведения о каждом из них см. в разделе «вводимые значения для настройки сервера в [Настройка или восстановление PowerPivot для SharePoint 2010 &#40;PowerPivot конфигурации средство&#41; ](../../../analysis-services/configure-repair-powerpivot-sharepoint-2010.md) in this раздела.  
   
 6.  При необходимости удалите действия, которые не нужно выполнять на данном этапе. Например, при дальнейшей необходимости настройки службы Secure Store щелкните **Настроить службу Secure Store**и снимите флажок **Включить данное действие в список задач**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36179967"
   
 1.  Перейдите к URL-адресу сайта, который был создан средством настройки.  
   
-     Нажмите кнопку **параметры**![параметры SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "параметры SharePoint")и нажмите кнопку **параметры сайта**.  
+     Нажмите кнопку **параметры**![параметры SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "параметры SharePoint"), а затем нажмите кнопку **параметры сайта**.  
   
      Щелкните **Компоненты коллекции сайтов**.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "36179967"
   
 5.  Нажмите кнопку **ОК**.  
   
- Дополнительные сведения об устранении неполадок обновления данных см. в разделе [Устранение неполадок обновления данных PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
+ Дополнительные сведения о устранении неполадок обновления данных, см. в разделе [Устранение неполадок обновления данных PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
  Дополнительные сведения о средстве настройки см. в разделе [средства настройки PowerPivot](../../power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   

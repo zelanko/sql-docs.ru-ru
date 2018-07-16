@@ -1,5 +1,5 @@
 ---
-title: Образцы запросов XPath (SQLXML 4.0) | Документы Microsoft
+title: Образцы запросов XPath (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], samples
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7fc9ba8b275e495b53b405f8d16e1f66524be1ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7075537ce353793384d840ca0660062b0eef6823
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313374"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>Образцы запросов XPath (SQLXML 4.0)
   В этом разделе содержатся образцы запросов XPath для SQLXML 4.0. Для наглядности эти примеры запросов XPath задаются в шаблоне, выполняемом с помощью ADO. Поэтому необходимо использовать файл схемы сопоставления SampleSchema1.xml, который также содержится в этом разделе. Сохраните этот файл в каталоге, где хранятся шаблоны.  
@@ -44,7 +44,7 @@ ms.locfileid: "36194446"
  [Определение предикатов с логическим значением в запросах XPath &#40;SQLXML 4.0&#41;](specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)  
  Показывает, как задаются оси в запросах XPath.  
   
- [Применение реляционных операторов в запросах XPath &#40;SQLXML 4.0&#41;](specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)  
+ [Указание реляционных операторов в запросах XPath &#40;SQLXML 4.0&#41;](specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)  
  Показывает, как задаются реляционные операторы в запросах XPath.  
   
  [Задание арифметических операторов в запросах XPath &#40;SQLXML 4.0&#41;](specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)  

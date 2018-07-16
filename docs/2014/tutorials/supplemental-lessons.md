@@ -1,5 +1,5 @@
 ---
-title: Дополнительные занятия | Документы Microsoft
+title: Дополнительные занятия | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2018456f-b4a6-496c-89fb-043c62d8b82e
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 4a04fc1141c38f7cbf96889c01586438941f44eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d509719bc9a4f5a69635a875b30bea1513ba1198
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330774"
 ---
 # <a name="supplemental-lessons"></a>Дополнительные занятия
   В этом подразделе приведены дополнительные сведения и занятия по использованию функций расширенной табличной модели.  

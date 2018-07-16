@@ -1,5 +1,5 @@
 ---
-title: Редактор источника «ADO.NET» (страница «Диспетчер соединений») | Документы Microsoft
+title: Редактор источника «ado.net» (страница «Диспетчер соединений») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.connection.f1
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9ef6c300f4954d776dc3ca6bbb5a0504c56b0c3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83204d50049976aa70f3b35a6223abeb6ab07881
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109546"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322704"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>Редактор источника данных «ADO.NET» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор назначения «ADO.NET»** для выбора соединения [!INCLUDE[vstecado](../includes/vstecado-md.md)] применительно к источнику. На этой странице также можно выбрать таблицу или представление базы данных.  
@@ -74,8 +74,8 @@ ms.locfileid: "36109546"
  Воспользуйтесь диалоговым окном **Открыть** для выбора файла, содержащего текст SQL-запроса.  
   
 ## <a name="see-also"></a>См. также  
- [Редактор источника «ADO.NET» &#40;страница «столбцы»&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
- [Редактор источника «ADO.NET» &#40;страницы вывода ошибок&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [Редактор источника «ado.net» &#40;страница "столбцы"&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [Редактор источника «ado.net» &#40;странице вывода ошибок&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Диспетчер подключений ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Элемент ServerProperties (ASSL) | Документы Microsoft
+title: Элемент ServerProperties (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ServerProperties element
 ms.assetid: 8ccbef3f-1388-4fa3-b0a4-c89b89f09056
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0c0d24c6e74aa88e2ea27582214345ac40671d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 495577822a86549841bcae022164d5669c1e5b22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323094"
 ---
 # <a name="serverproperties-element-assl"></a>Элемент ServerProperties (ASSL)
-  Содержит коллекцию элементов [ServerProperty](../objects/serverproperty-element-assl.md) элементы, связанные с [сервера](../objects/server-element-assl.md) элемента.  
+  Содержит коллекцию элементов [ServerProperty](../objects/serverproperty-element-assl.md) элементы, связанные с [Server](../objects/server-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36109805"
 |Дочерние элементы|[ServerProperty](../objects/serverproperty-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.ServerPropertyCollection>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.ServerPropertyCollection>.  
   
 ## <a name="see-also"></a>См. также  
  [Коллекции &#40;ASSL&#41;](collections-assl.md)  

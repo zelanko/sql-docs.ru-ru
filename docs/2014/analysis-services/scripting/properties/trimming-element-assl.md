@@ -1,5 +1,5 @@
 ---
-title: Элемент trimming (ASSL) | Документы Microsoft
+title: Элемент trimming (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Trimming element
 ms.assetid: 8b3bbf89-8309-4d00-9aea-a5918f0c7027
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a7346e9ae91ca3d70ab2f6cf311ea3b7a8b8a06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d34a2b559dfcace0a8334916f66031b130763182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326544"
 ---
 # <a name="trimming-element-assl"></a>Элемент Trimming (ASSL)
   Определяет, как выполняется усечение пробелов в данных из источника данных.  
@@ -73,7 +73,7 @@ ms.locfileid: "36191894"
   
  Перечисление, соответствующее допустимым значениям элемента `Trimming` в модели объектов AMO, — это <xref:Microsoft.AnalysisServices.Trimming>.  
   
- Элемент, соответствующий родителю параметра `Trimming` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.DataItem>.  
+ Элемент, соответствующий родителю параметра `Trimming` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.DataItem>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

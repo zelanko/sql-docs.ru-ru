@@ -1,5 +1,5 @@
 ---
-title: Слияние секций (XMLA) | Документы Microsoft
+title: Слияние секций (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML for Analysis, partitions
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cdcd21c66320c5d29f597bc5f85b35c61f14cf36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a3de50e053ed8b3e16373e4aa5b162991f286dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332724"
 ---
 # <a name="merging-partitions-xmla"></a>Слияние секций (XMLA)
   Если секции имеют одинаковые статистические схемы и структуры, можно объединить секции с помощью [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) в XML для аналитики (XMLA) команду. При управлении секциями их слияние является важным действием, особенно для тех секций, в которых содержатся исторические данные, секционированные по дате.  
@@ -39,7 +39,7 @@ ms.locfileid: "36097161"
  В двух секциях установлены разные параметры хранения, но одинаковые статистические схемы. Вместо того чтобы в конце года обрабатывать куб по годам исторических данных, можно воспользоваться командой `MergePartitions`, чтобы выполнить слияние секции для текущего года с секцией для предыдущих лет. В этом случае будут сохранены данные статистических вычислений; при этом не требуется полной обработки куба, на что может уйти много времени.  
   
 ## <a name="specifying-partitions-to-merge"></a>Указание секций для слияния  
- При `MergePartitions` команда выполняет статистической обработки данных, хранящихся в исходных секций, указанный в [источника](../xmla/xml-elements-properties/source-element-xmla.md) свойство добавлено в целевую секцию, указанную в [целевой](../xmla/xml-elements-properties/target-element-xmla.md) свойство.  
+ При `MergePartitions` команда выполнена, статистической обработки данных, хранящихся в исходных секций, указанных в [источника](../xmla/xml-elements-properties/source-element-xmla.md) свойство добавляется в целевую секцию, указанную в [целевой](../xmla/xml-elements-properties/target-element-xmla.md) свойство.  
   
 > [!NOTE]  
 >  Свойство `Source` может содержать несколько ссылок объектов на секции. Но свойство `Target` не предоставляет такой возможности.  
@@ -51,7 +51,7 @@ ms.locfileid: "36097161"
 ## <a name="examples"></a>Примеры  
   
 ### <a name="description"></a>Описание  
- В следующем примере объединяются все разделы в **Customer Counts** группе мер, **Adventure Works** куба в **Adventure Works DW** пример [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных в **Customers_2004** секции.  
+ В следующем примере объединяются все секции в **Customer Counts** группе мер **Adventure Works** кубе **Adventure Works DW** пример [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных в **Customers_2004** секции.  
   
 ### <a name="code"></a>Код  
   

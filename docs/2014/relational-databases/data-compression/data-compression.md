@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-compression
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
 - indexes [SQL Server], compressed
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 986f0e94559804539889eeb1e7618327eee68165
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d76a9fa3b31b90890ae261ccce89acbc9829cc14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320414"
 ---
 # <a name="data-compression"></a>Сжатие данных
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает сжатие строк и страниц для таблиц и индексов rowstore, а также поддерживает columnstore и архивное сжатие columnstore для таблиц и индексов columnstore.  
@@ -67,7 +66,7 @@ ms.locfileid: "36192469"
   
 -   С помощью сжатия можно хранить больше строк в странице, максимальный размер строки таблицы или индекса при этом не изменяется.  
   
--   Для таблицы нельзя включить сжатие, если сумма максимального размера строки и служебных данных сжатия превышает максимальный размер строки в 8060 байт. Например, таблицу со столбцами c1`char(8000)` и c2`char(53)` не может быть сжата из-за дополнительного объема служебных данных. При использовании формата хранения vardecimal выполняется проверка размера строки (когда формат включен). При использовании сжатия строк и страниц проверка размера строки выполняется при первичном сжатии объекта, а также при всех последующих вставках и изменениях строк. При использовании сжатия обеспечивается выполнение следующих двух правил.  
+-   Для таблицы нельзя включить сжатие, если сумма максимального размера строки и служебных данных сжатия превышает максимальный размер строки в 8060 байт. Например, таблицу со столбцами c1`char(8000)` и c2`char(53)` не может быть сжата из-за дополнительных служебных данных сжатия. При использовании формата хранения vardecimal выполняется проверка размера строки (когда формат включен). При использовании сжатия строк и страниц проверка размера строки выполняется при первичном сжатии объекта, а также при всех последующих вставках и изменениях строк. При использовании сжатия обеспечивается выполнение следующих двух правил.  
   
     -   Обновление для типа с фиксированной длиной должно всегда завершаться успешно.  
   
@@ -173,7 +172,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   [sys.indexes &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - `type` и `type_desc` столбцы содержат CLUSTERED COLUMNSTORE и NONCLUSTERED COLUMNSTORE.  
   
--   [sys.partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) – `data_compression` и `data_compression_desc` столбцы содержат COLUMNSTORE и COLUMNSTORE_ARCHIVE.  
+-   [sys.partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) — `data_compression` и `data_compression_desc` столбцы содержат COLUMNSTORE и COLUMNSTORE_ARCHIVE.  
   
  Процедура [sp_estimate_data_compression_savings (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) не применяется к индексам columnstore.  
   

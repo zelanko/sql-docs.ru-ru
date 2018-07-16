@@ -1,5 +1,5 @@
 ---
-title: 'Урок 1: Создание проекта Visual Studio RDL-схемы | Документы Microsoft'
+title: 'Занятие 1: Создание проекта Visual Studio RDL-схема | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f420509c-51aa-4170-8c25-64c2954f4bb9
 caps.latest.revision: 17
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b6c502205f669c48efe1f939ba88e5352205f4de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc69b4bbcc40fa669ca9cf5f889944cb302e4b14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319814"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Урок 1. Создание проекта Visual Studio «RDL-схема»
-  В этом учебнике будет создано простое приложение командной строки. В этом учебнике предполагается, что разработка ведется в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
+  В этом учебнике будет создано простое приложение командной строки. В этом учебнике вы разрабатываете в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
   
 > [!NOTE]  
 >  Чтобы обращаться к веб-службе сервера отчетов, работающей на сервере [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] с дополнительными службами, необходимо добавить «_SQLExpress» к пути «ReportServer». Например:  
@@ -71,7 +71,7 @@ ms.locfileid: "36192357"
   
      В диалоговом окне **Добавить ссылку** на вкладке **.NET** выберите **System.Web.Services**и нажмите кнопку **ОК**.  
   
-     Дополнительные сведения о том, как подключиться к серверу веб-службы отчетов см. в разделе [построение приложений с помощью веб-службы и .NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
+     Дополнительные сведения о том, как подключиться к серверу веб-службы отчетов, см. в разделе [создание приложений с помощью веб-службы и .NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
 10. Раскройте узел проекта в обозревателе решений. К проекту будет добавлен файл кода с именем по умолчанию Program.cs (Module1.vb для [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]).  
   
@@ -201,7 +201,7 @@ ms.locfileid: "36192357"
     ```  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- На следующем занятии предстоит использовать программу определения XML-схемы (Xsd.exe) для формирования классов из RDL-схемы и включения их в проект. В разделе [Lesson 2: формирования классов из RDL-схемы с помощью инструмента xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
+ На следующем занятии предстоит использовать программу определения XML-схемы (Xsd.exe) для формирования классов из RDL-схемы и включения их в проект. См. в разделе [занятии 2: создания классов из RDL-схемы с помощью инструмента xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
   
 ## <a name="see-also"></a>См. также  
  [Обновление отчетов с помощью классов, созданных из RDL-схемы &#40;учебник по службам SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

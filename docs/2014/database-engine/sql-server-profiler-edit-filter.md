@@ -1,5 +1,5 @@
 ---
-title: Приложение SQL Server Profiler — изменение фильтра | Документы Microsoft
+title: SQL Server Profiler - Edit Filter | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.editfilter.f1
 ms.assetid: a589eff5-6ec6-4f6e-94b8-831658257f14
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a63c2bbfc6440cb6df36791c3e8fc26308ac2970
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dbf2067f6eb74798a8f1c9690c65b6e49132b6b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320764"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - Edit Filter
   Диалоговое окно **Изменить фильтр** используется для создания и изменения фильтров столбцов данных в трассировке. Нажмите имя столбца данных в списке, и в соседней панели будут отображены критерии фильтра, доступные для этого столбца. Введите критерии фильтра и нажмите кнопку **ОК** для применения их к выделенному столбцу данных. Если слева от имени столбца данных в списке выводится значок фильтра, то для этого столбца уже имеется сконфигурированный фильтр.  

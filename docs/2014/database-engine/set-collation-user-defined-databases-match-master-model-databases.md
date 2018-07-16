@@ -1,5 +1,5 @@
 ---
-title: Задание параметров сортировки пользовательских баз данных с соответствуют master и базам данных модели | Документы Microsoft
+title: Задание параметров сортировки пользовательских баз данных совпадают с главной и базами данных модели | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: c686446f-dae1-4b05-a3df-837b3422988d
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b437463c35face45918e567cbf42d31f63161cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a2c6cbe79e2af21444e39fb7da7546122cd273ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314584"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Задание параметров сортировки пользовательских баз данных в соответствии с параметрами баз данных master и model
   Это правило проверяет, определены ли в пользовательской базе данных те же параметры сортировки, что и в базах данных master и model.  
@@ -33,7 +33,7 @@ ms.locfileid: "36086715"
   
 -   Экспортируйте данные из пользовательской базы данных и импортируйте их в новые таблицы, параметры сортировки которых совпадают с параметрами сортировки баз данных master и model.  
   
--   Перестройте системные базы данных таким образом, чтобы их параметры сортировки совпадали с параметрами сортировки пользовательской базы данных. Дополнительные сведения о перестроении системных баз данных см. в разделе [Перестроение системных баз данных](../relational-databases/databases/system-databases.md).  
+-   Перестройте системные базы данных таким образом, чтобы их параметры сортировки совпадали с параметрами сортировки пользовательской базы данных. Дополнительные сведения о том, как Перестроение системных баз данных см. в разделе [Перестроение системных баз данных](../relational-databases/databases/system-databases.md).  
   
 -   Внесите изменения во все хранимые процедуры, производящие соединение пользовательских таблиц с таблицами в базе данных tempdb, чтобы таблицы в tempdb создавались с параметрами сортировки пользовательской базы данных. Для этого в определения столбцов временной таблицы добавьте предложение `COLLATE database_default`, как показано в следующем примере.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36086715"
   
  [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [В статье 325335 базы знаний Майкрософт](http://go.microsoft.com/fwlink/?linkid=117751)  
+ [Статье 325335 базы знаний Майкрософт](http://go.microsoft.com/fwlink/?linkid=117751)  
   
  [Как: установить SQL Server 2008 из командной строки](http://go.microsoft.com/fwlink/?LinkId=81585)  
   

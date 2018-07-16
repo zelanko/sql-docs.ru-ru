@@ -1,5 +1,5 @@
 ---
-title: Элемент WritebackTableCreation (XML для Аналитики) | Документы Microsoft
+title: Элемент WritebackTableCreation (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - WritebackTableCreation element
 ms.assetid: e9579d63-e28c-4d4e-9f4a-21c5da24c276
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 95b9639b34002aa69366f87cac48427624f7d0dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9908cf615ef5f767b72e639023b0444f02e71f7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187802"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319214"
 ---
 # <a name="writebacktablecreation-element-xmla"></a>Элемент WritebackTableCreation (XML для аналитики)
   Определяет, создается ли таблица обратной записи во время [процесс](../xml-elements-commands/process-element-xmla.md) операции.  
@@ -64,7 +64,7 @@ ms.locfileid: "36187802"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о параметрах обработки, доступных для объектов в экземпляре служб Analysis Services см. в разделе [многомерной модели обработки объекта](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Дополнительные сведения о параметрах обработки, доступных для объектов в экземпляре служб Analysis Services, см. в разделе [обработку объекта многомерных моделей](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  Значением элемента `WritebackTableCreation` может быть только одна из строк в следующей таблице.  
   

@@ -1,5 +1,5 @@
 ---
-title: Элемент AlgorithmParameters (ASSL) | Документы Microsoft
+title: Элемент AlgorithmParameters (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AlgorithmParameters element
 ms.assetid: 240cbb60-7fa3-46ef-b5be-cd14c9ec10de
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c73495677fd6a1eaf8ff1c70f154bf240b04e709
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3ab357b16b8b10b13d3ddb23b2a2bc1e7a32c486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330434"
 ---
 # <a name="algorithmparameters-element-assl"></a>Элемент AlgorithmParameters (ASSL)
-  Содержит коллекцию параметров для алгоритма, используемого в [MiningModel](../objects/miningmodel-element-assl.md) элемента.  
+  Содержит коллекцию параметров для алгоритма, используемого в [MiningModel](../objects/miningmodel-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36192986"
   
  Выборка доступных параметров алгоритма, включая информацию для проверки и отображения, может быть выполнена из набора строк схемы DMSCHEMA_MINING_SERVICE_PARAMETERS.  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.AlgorithmParameterCollection>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.AlgorithmParameterCollection>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент Algorithm &#40;ASSL&#41;](../properties/algorithm-element-assl.md)   

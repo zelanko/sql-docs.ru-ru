@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 03a681cf4ab018d82d991b91c463dfbef3fe8d73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 690c7a670ca448c14c984b9fda76098ae7269c4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322714"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Шаг 3. Проверка учебного пакета, созданного на занятии 3
   В этой задаче вы выполните пакет Lesson 3.dtsx. После запуска пакета в окне «Журнал событий» отображаются записи, которые заносятся в файл журнала. После завершения выполнения пакета следует проверить, что регистратор сформировал содержимое файла журнала.  
@@ -47,7 +47,7 @@ ms.locfileid: "36188284"
   
 -   В приложении «Блокнот» или другом текстовом редакторе откройте файл TutorialLog.log.  
   
--   Хотя семантика сведений, созданных для `PipelineExecutionPlan` и `PipelineExecutionTrees` событий выходят за рамки данного руководства, вы увидите, что в первой строке перечислены поля сведений, указанных в **сведения** вкладка **Настройка журналов служб SSIS** диалоговое окно. Кроме того, можно проверить, что два выбранных события (PipelineExecutionPlan и PipelineExecutionTrees) были занесены в журнал для каждой итерации цикла ForEach.  
+-   Хотя семантика сведений созданный для `PipelineExecutionPlan` и `PipelineExecutionTrees` событий выходят за рамки данного руководства, вы увидите, что в первой строке перечислены поля сведений, указанных в **сведения** вкладке **Настройка журналов служб SSIS** диалоговое окно. Кроме того, можно проверить, что два выбранных события (PipelineExecutionPlan и PipelineExecutionTrees) были занесены в журнал для каждой итерации цикла ForEach.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
  [Занятие 4. Добавление перенаправления потока ошибок](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  

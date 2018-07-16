@@ -1,13 +1,11 @@
 ---
-title: Вызов определяемых пользователем агрегатных функций CLR | Документы Microsoft
+title: Вызов определяемых пользователем агрегатных функций CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 96aaaeda1fd22044c5a4f86c11051966f3d8b341
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b648c81da85be1214dc8b1c7b78235cd23ab525a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086696"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355056"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Вызов определяемых пользователем агрегатных функций CLR
   В инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT можно вызывать определяемые пользователем статистические функции CLR, на которые распространяются те же правила, что и на системные агрегатные функции.  
@@ -39,9 +37,9 @@ ms.locfileid: "36086696"
   
 -   Определяемые пользователем статистические функции должны вызываться с помощью двухкомпонентное имя в виде *имя_схемы.имя_функции*.  
   
--   Тип аргумента определяемой пользователем статистической функции должно соответствовать или неявно преобразовываться в *input_type* агрегатной функции, как определено в `CREATE AGGREGATE` инструкции.  
+-   Тип аргумента определяемую пользователем агрегатную функцию должен совпадать или иметь могут быть неявно преобразованы *input_type* агрегатной функции, как определено в `CREATE AGGREGATE` инструкции.  
   
--   Тип возвращаемого значения определяемой пользователем статистической функции должно соответствовать *тип_возврата* в `CREATE AGGREGATE` инструкции.  
+-   Тип возвращаемого значения пользовательского статистического выражения должен соответствовать *return_type* в `CREATE AGGREGATE` инструкции.  
   
 ## <a name="example-1"></a>Пример 1  
  Ниже приводится пример определяемой пользователем агрегатной функции, объединяющей набор строковых значений из столбца таблицы.  

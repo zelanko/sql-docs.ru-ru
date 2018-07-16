@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 caps.latest.revision: 11
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 9f1dc6c0ff421909a672fe9abe1ccd94efe6c3b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 30707ed1e70c37fee37c4c84369853ef1fba5c12
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311844"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Отслеживание производительности скомпилированных в собственном коде хранимых процедур
   В этом разделе показано, как наблюдать за производительностью хранимых процедур, скомпилированных в собственном коде  
@@ -33,7 +33,7 @@ ms.locfileid: "36192237"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- Дополнительные сведения о `sp_statement_completed` расширенных событий, в разделе [как получить инструкцию, которая вызвала событие](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
+ Дополнительные сведения о `sp_statement_completed` расширенных событий, см. в разделе [как получить инструкцию, которая вызвала событие](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
   
 ## <a name="using-data-management-views"></a>Использование динамических административных представлений  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает сбор статистики выполнения для скомпилированных в собственном коде хранимых процедур как на уровне процедуры, так и на уровне запроса. Из-за влияния на производительность сбор статистики выполнения по умолчанию не используется.  

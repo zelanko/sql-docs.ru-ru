@@ -1,5 +1,5 @@
 ---
-title: Доступ к данным табличной модели | Документы Microsoft
+title: Доступ к данным табличной модели | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 47494073312225884997c2ca89ccfd84ed6968c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e5a92c5f71f670fe8e592087a8826217a0fd6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316984"
 ---
 # <a name="tabular-model-data-access"></a>Доступ к данным табличной модели
   К табличным шаблонам базы данных в службах Analysis Services можно получить доступ с помощью большинства тех же клиентов, интерфейсов и языков, которые используются для извлечения данных или метаданных из многомерной модели. Дополнительные сведения см. в разделе [Доступ к данным многомерной модели (службы Analysis Services — многомерные данные)](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "36180362"
  Excel также является рекомендуемым приложением для просмотра табличных моделей в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Это средство включает команду **Анализ в Excel** , которая запускает новый экземпляр Excel, создает книгу Excel и устанавливает подключение к данным между книгой и базой данных рабочей области модели. При просмотре данных табличной модели в Excel следует учитывать, что Excel направляет запросы к модели через клиент сводных таблиц Excel. Соответственно, операции внутри книги Excel приводят к отправке запросов многомерных выражений к базе данных рабочей области, а не запросов DAX. Если для отслеживания запросов используется приложение SQL Profiler или другое средство наблюдения, в трассировке профайлера могут появляться многомерные выражения (MDX), а не выражения DAX. Дополнительные сведения о функции "Анализ в Excel" см. в разделе [Анализ в Excel (табличные службы SSAS)](analyze-in-excel-ssas-tabular.md).  
   
 ### <a name="power-view"></a>Power View  
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] — это клиентское приложение для создания отчетов служб Reporting Services, которое выполняется в среде SharePoint 2010. В нем в интегрированной среде нерегламентированных отчетов сочетаются возможности исследования данных, конструктора запросов и создания презентаций. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] может использовать в качестве источников данных табличные модели, вне зависимости от того, размещена ли модель на экземпляре служб Analysis Services, работающем в табличном режиме, или же данные модели извлекаются из реляционного хранилища данных с использованием режима DirectQuery. Для подключения к табличной модели в [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]необходимо создать файл соединения, содержащий расположение сервера и имя базы данных. В SharePoint можно создать общий источник данных служб Reporting Services или соединение с семантической моделью бизнес-аналитики. Дополнительные сведения о соединения семантической модели бизнес-Аналитики см. в разделе [соединение семантической модели бизнес-Аналитики PowerPivot &#40;bism-файл&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] — это клиентское приложение для создания отчетов служб Reporting Services, которое выполняется в среде SharePoint 2010. В нем в интегрированной среде нерегламентированных отчетов сочетаются возможности исследования данных, конструктора запросов и создания презентаций. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] может использовать в качестве источников данных табличные модели, вне зависимости от того, размещена ли модель на экземпляре служб Analysis Services, работающем в табличном режиме, или же данные модели извлекаются из реляционного хранилища данных с использованием режима DirectQuery. Для подключения к табличной модели в [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]необходимо создать файл соединения, содержащий расположение сервера и имя базы данных. В SharePoint можно создать общий источник данных служб Reporting Services или соединение с семантической моделью бизнес-аналитики. Дополнительные сведения о соединениях с семантическими моделями, см. в разделе [PowerPivot соединения семантической модели &#40;bism-файлы&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
   
  Клиент [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] определяет структуру указанной модели, отправляя запрос к указанному источнику данных, возвращающему схему, которая может использоваться клиентом для создания запросов к модели как к источнику данных и выполнения операций на основе этих данных. Последующими операциями в пользовательском интерфейсе [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] для фильтрации данных, выполнения расчетов или агрегатных функций и отображения связанных данных управляет клиент, и программно манипулировать ими нельзя.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36180362"
   
 -   Пример объекта AMO табличной модели на сайте Codeplex  
   
--   [Используйте динамические административные представления &#40;динамических административных представлений&#41; для наблюдения за Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [Используйте динамические административные представления &#40;динамические административные представления&#41; мониторинг Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  Для поддержки доступа в OLE DB к табличным моделям в неуправляемых клиентских приложениях можно использовать поставщик OLE DB для служб Analysis Services версии 9.0. Для включения доступа к табличной модели требуется обновленная версия поставщика OLE DB для служб Analysis Services. Дополнительные сведения о поставщиках, используемых с табличными моделями, см. в статье [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) .  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36180362"
   
 -   [Набор строк DISCOVER_XEVENT_TRACE_DEFINITION](../dev-guide/discover-xevent-trace-definition-rowset.md)  
   
-     Новый набор строк схемы для мониторинга расширенных событий SQL Server. Дополнительные сведения см. в разделе [использование SQL Server Extended Events &#40;XEvents&#41; для мониторинга служб Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
+     Новый набор строк схемы для мониторинга расширенных событий SQL Server. Дополнительные сведения см. в разделе [использования SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
   
 -   [Набор строк DISCOVER_TRACES](../schema-rowsets/xml/discover-traces-rowset.md)  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36180362"
   
 -   [Набор строк MDSCHEMA_HIERARCHIES](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
   
-     Новый `STRUCTURE_TYPE` перечисление поддерживает идентификацию определяемых пользователем иерархий, создаваемых в табличных моделях. Дополнительные сведения см. в разделе [Иерархии (табличные службы SSAS)](hierarchies-ssas-tabular.md).  
+     Новый `STRUCTURE_TYPE` поддерживает идентификацию определяемых пользователем иерархий, создаваемых в табличных моделях. Дополнительные сведения см. в разделе [Иерархии (табличные службы SSAS)](hierarchies-ssas-tabular.md).  
   
  В данном выпуске нет обновлений для наборов строк схемы OLE DB для интеллектуального анализа данных.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36180362"
 >  Использовать запросы многомерных выражений или расширений интеллектуального анализа данных в базе данных, развернутой в режиме DirectQuery, нельзя; поэтому, если необходимо выполнить запрос к модели DirectQuery с использованием наборов строк схемы, следует использовать XMLA, а не связанное динамическое административное представление. Для динамических административных представлений, которые возвращают результаты для сервера в виде единого целого, например SELECT * from $system.DBSCHEMA_CATALOGS or DISCOVER_TRACES, можно выполнить запрос в содержимом базы данных, развернутой в режиме кэширования.  
   
 ## <a name="see-also"></a>См. также  
- [Соединиться с базой данных табличной модели &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)   
+ [Соединение с базой данных табличной модели &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)   
  [Доступ к данным PowerPivot](../power-pivot-sharepoint/power-pivot-data-access.md)   
  [Подключение к службам Analysis Services](../instances/connect-to-analysis-services.md)  
   

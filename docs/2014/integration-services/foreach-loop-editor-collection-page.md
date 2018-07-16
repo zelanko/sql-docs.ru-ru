@@ -1,5 +1,5 @@
 ---
-title: Редактор циклов по каждому элементу (страница «Коллекция») | Документы Microsoft
+title: Редактор циклов по каждому элементу (страница «коллекции») | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50ab22c5b36390645aa8f6fb961531479e592188
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d10057943aa872c919171227f072f6b2836eba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318884"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Редактор циклов по каждому элементу (страница «Коллекция»)
   Страница **Коллекция** в диалоговом окне **Редактор циклов по каждому элементу** используется для указания типа перечислителя и его настройки.  
@@ -42,7 +42,7 @@ ms.locfileid: "36190823"
 |**Перечислитель Foreach NodeList**|Перечисляет узлы в XML-документе. При выборе этого значения в разделе **Перечислитель Foreach Nodelist**отображаются динамические параметры.|  
 |**Перечислитель по объектам SMO**|Перечисляет объекты SMO. При выборе этого значения в разделе **Перечислитель по объектам SMO**отображаются динамические параметры.|  
 |**Перечислитель по большим двоичным объектам Azure**|Перечисляет файлы больших двоичных объектов в указанном расположении больших двоичных объектов. При выборе этого значения в разделе **Перечислитель по большим двоичным объектам Azure**отображаются динамические параметры.|  
-|**Перечислитель с циклом по каждому файлу ADLS**|Перечисляет файлы на ADLS с фильтрами. При выборе этого значения в разделе **Перечислитель с циклом по каждому файлу ADLS** отображаются динамические параметры.|
+|**Перечислитель с циклом по каждому файлу ADLS**|Перечисляет файлы в ADLS с фильтрами. При выборе этого значения в разделе **Перечислитель с циклом по каждому файлу ADLS** отображаются динамические параметры.|
   
  **Выражения**  
  Щелкните или разверните узел **Выражения** , чтобы посмотреть список существующих выражений свойств. Нажмите кнопку с многоточием **(…)**, чтобы добавить выражение свойства для свойства перечислителя или изменить и оценить существующее выражение свойства.  
@@ -165,7 +165,7 @@ ms.locfileid: "36190823"
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Перечислитель = перечислитель по набору узлов  
  Перечислитель по набору узлов можно использовать для перечисления набора XML-узлов, которые являются результатом применения выражения XPath к XML-файлу. Например: если цикл по каждому элементу включает задачу «Скрипт», то перечислитель по набору узлов можно использовать для передачи от XML-файла к задаче «Скрипт» значения, которое удовлетворяет критерию выражения XPath.  
   
- Выражение XPath, применяемое к XML-файлу, является внешней операцией XPath, сохраненной в свойстве OuterXPathString. Если тип перечисления XPath присвоено `ElementCollection`, перечислитель по набору узлов можно применять внутреннее выражение XPath, хранится в свойстве InnerXPathString элемент в коллекцию.  
+ Выражение XPath, применяемое к XML-файлу, является внешней операцией XPath, сохраненной в свойстве OuterXPathString. Если тип перечисления XPath присвоено `ElementCollection`, то перечислитель Foreach NodeList может применять внутреннее выражение XPath, сохраненное в свойстве InnerXPathString, к коллекции элементов.  
   
  Дополнительные сведения по работе с XML-документами и данными см. в разделе «[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)» в библиотеке MSDN.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "36190823"
  **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), [Добавление переменной](../../2014/integration-services/add-variable.md).  
   
  **InnerElementType**  
- Если **EnumerationType** равно `ElementCollection`, выберите из списка тип внутреннего элемента.  
+ Если **EnumerationType** присваивается `ElementCollection`, выберите тип внутреннего элемента в списке.  
   
  **InnerXPathStringSourceType**  
  Выбрать тип источника внутренней строки XPath. Это свойство имеет параметры, указанные в следующей таблице.  
@@ -277,14 +277,14 @@ ms.locfileid: "36190823"
   
  **Фильтр по диапазону времени для больших двоичных объектов "от-до"**  
  Укажите фильтр по диапазону времени. Файлы, измененные после **TimeRangeFrom** и до **TimeRangeTo** , будут перечислены.  
-### <a name="enumerator--foreach-adls-file-enumerator"></a>Перечислитель = перечислитель по каждому элементу ADLS файла  
-**ADLS файла перечислитель** позволяет пакету служб SSIS перечислить файлы на ADLS с фильтрами. Косая черта (`/`) — с префиксом полный путь к перечисляемыми файлами можно хранится в переменной и использоваться в задачах в контейнере цикла Foreach.
+### <a name="enumerator--foreach-adls-file-enumerator"></a>Перечислитель = перечислитель файлов ADLS по циклу Foreach  
+**Перечислитель файлов ADLS** позволяет пакету SSIS перечислять файлы в ADLS с фильтрами. Символ косой черты (`/`) — с префиксом полный путь к перечисляемыми файлами можно хранить в переменной и использоваться в задачах в контейнер цикла Foreach.
   
 **AzureDataLakeConnection**  
 Задает диспетчер подключений Azure Data Lake или создает новый, который ссылается на учетную запись ADLS.   
   
 **AzureDataLakeDirectory**  
-Указывает каталог для поиска ADLS.
+Указывает каталог ADLS, для поиска.
   
 **FileNamePattern**  
 Задает фильтр имен файлов. Будут перечислены только те файлы, имя которого соответствует указанному шаблону. Поддерживаются подстановочные знаки `*` и `?`. 
@@ -299,9 +299,9 @@ ms.locfileid: "36190823"
 -   Запись в блоге [SSIS–Dynamically set File Mask: FileSpec](http://go.microsoft.com/fwlink/?LinkId=238154)(SSIS — динамическое задание маски файлов: спецификация файла) на сайте beyondrelational.com.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор циклов по каждому элементу &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
- [Редактор циклов по каждому элементу &#40;страница «сопоставления переменных»&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор циклов по каждому элементу &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
+ [Редактор циклов по каждому элементу &#40;странице сопоставления переменной&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
  [Страница «выражения»](expressions/expressions-page.md)   
  [Контейнер «цикл по элементам»](control-flow/for-loop-container.md)  
   

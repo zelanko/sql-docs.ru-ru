@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7963860153e90a24879b51e47c67bed3423510fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a9b063510595a4c80f31433a1f793857ca35dd0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322734"
 ---
 # <a name="the-oracle-cdc-instance"></a>Экземпляр CDC Oracle
   Экземпляр Oracle CDC — это процесс, создаваемый службой Oracle CDC Service для обработки изменений, отслеживаемых в одной базе данных-источнике Oracle. Экземпляр Oracle CDC получает свою конфигурацию из таблицы **cdc.xdbcdc_config** и передает данные о своем состоянии в таблицу **cdc.xdbcdc_state** . Эти таблицы являются частью базы данных CDC, которая определяет экземпляр Oracle CDC. Дополнительные сведения о базе данных и таблицах xdbcdc см. в разделе [The CDC Databases](the-oracle-cdc-service.md).  

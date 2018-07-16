@@ -1,5 +1,5 @@
 ---
-title: Переименование экземпляра служб Analysis Services | Документы Microsoft
+title: Переименование экземпляра служб Analysis Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - instances of Analysis Services, renaming
 - renaming instances of Analysis Services
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4d9369a62a1fcd5dde7de92c7da81a4fcb6c02ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0dfa3a42caf787fad5e8eb64e5bdbab38997640b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326814"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Переименование экземпляра служб Analysis Services
   Можно переименовать существующий экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью **Переименование экземпляра** диалоговое окно.  
@@ -39,7 +39,7 @@ ms.locfileid: "36187830"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>Подключение к экземпляру служб Analysis Services  
   
-1.  Запустите **переименования экземпляра** средство, **asinstancerename.exe**, из C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
+1.  Запустите **переименования экземпляра** средство, **asinstancerename.exe**, из папки C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
   
 2.  В диалоговом окне **Переименование экземпляра** в списке **Экземпляр для переименования** выберите экземпляр, который необходимо переименовать.  
   

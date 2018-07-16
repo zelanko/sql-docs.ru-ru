@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2e1600f24a0cd4d8b667e5fa6a8110bd52dcb2e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e7f6f90aab70c08be52c002dc92a9bc3f1943358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314004"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Функциональная область системного администрирования (диспетчер основных данных)
   В функциональной области «Администрирование системы» администраторы могут создать модель и все ее объекты. Они также могут создать бизнес-правила, создать и развернуть пакеты модели. Дополнительные сведения об администраторах см. в разделе [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
@@ -27,11 +27,11 @@ ms.locfileid: "36194291"
 ## <a name="model"></a>Модель  
  [Модели (службы Master Data Services)](../../2014/master-data-services/models-master-data-services.md)  
   
- [Создать модель &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
+ [Создание модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
   
  [Сущности (службы Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)  
   
- [Создание сущности &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)  
+ [Создать сущность &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)  
   
  [Атрибуты &#40;службы Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36194291"
 ## <a name="business-rules"></a>Бизнес-правила  
  [Бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
- [Создание и публикация бизнес-правило &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+ [Создание и публикация бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
  [Условия бизнес-правил &#40;службы Master Data Services&#41;](../../2014/master-data-services/business-rule-conditions-master-data-services.md)  
   

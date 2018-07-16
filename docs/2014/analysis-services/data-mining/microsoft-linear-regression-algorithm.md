@@ -1,5 +1,5 @@
 ---
-title: Алгоритм линейной регрессии (Microsoft) | Документы Microsoft
+title: Алгоритм линейной регрессии (Майкрософт) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - linear regression algorithms [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a249f0c1a4ffde7e14841d53c01a9bdf6790931
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6efc2b76fe6a6c4b53a2b108a776f2104b02318d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315097"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Алгоритм линейной регрессии (Майкрософт)
   Алгоритм линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] является разновидностью алгоритма дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] , помогающего рассчитать линейную связь между зависимой и независимой переменной, а затем использовать эту связь при прогнозировании.  

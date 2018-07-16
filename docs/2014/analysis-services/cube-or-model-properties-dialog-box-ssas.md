@@ -1,5 +1,5 @@
 ---
-title: Куб или модель диалоговое окно «Свойства» (службы SSAS) | Документы Microsoft
+title: Куб или модель диалоговое окно «Свойства» (службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,31 +8,31 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.f1
 ms.assetid: 97e367f9-f95a-4163-add1-c74fd22db249
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90efe4a053104491b24e290641205d85628c3689
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ad93386960630ffe1a49b473304cce80e580e61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317482"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Диалоговое окно «Свойства куба или модели» (SSAS)
   Используйте диалоговое окно **Свойства базы данных** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для установки свойств куба или шаблона базы данных. Чтобы вызвать это диалоговое окно, необходимо щелкнуть правой клавишей мыши куб или модель в **обозревателе объектов** и выбрать пункт **Свойства**.  
   
  Это диалоговое окно также содержит вкладки для следующих свойств:  
   
--   [Редактор формы действий отчета &#40;вкладка «действия», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
+-   [Редактор форм действий отчетов &#40;вкладка «действия», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
   
--   [Конфигурация ошибок при обработке измерения кубов, секции и &#40;SSAS — многомерные данные&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)  
+-   [Конфигурация ошибок при обработке измерения кубов, секции и &#40;службы SSAS — многомерные&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)  
   
--   [Упреждающее кэширование &#40;секции диалоговое окно «Свойства»&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)  
+-   [Упреждающее кэширование &#40;секционировать диалоговое окно свойств&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)  
   
 ## <a name="options"></a>Параметры  
   

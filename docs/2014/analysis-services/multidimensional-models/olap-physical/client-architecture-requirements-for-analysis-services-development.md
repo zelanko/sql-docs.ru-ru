@@ -1,5 +1,5 @@
 ---
-title: Разработка служб требования к архитектуре клиента для анализа | Документы Microsoft
+title: Требования к архитектуре клиента для анализа разработки служб | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - local cubes [Analysis Services]
 ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c98ce98ad2b8d4e59b9e5701af776a8210adfc20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4eccbc79f0343403667b3aca7dbc159f59f7046b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308474"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Требования к архитектуре клиента для разработки служб Analysis Services
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживает архитектуры тонкого клиента. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Вычислительное ядро полностью серверных, поэтому все запросы разрешаются на сервере. В результате для каждого запроса требуется только одно перемещение данных от клиента к серверу и обратно, что позволяет масштабировать производительность по мере роста сложности запросов.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживают архитектуру с тонким клиентом. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Вычислительное ядро основан на полностью сервера, поэтому все запросы разрешаются на сервере. В результате для каждого запроса требуется только одно перемещение данных от клиента к серверу и обратно, что позволяет масштабировать производительность по мере роста сложности запросов.  
   
  Собственный протокол [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] — это XML для аналитики (XML/A). [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] содержит несколько интерфейсов доступа для клиентских приложений, но все эти компоненты взаимодействуют с экземпляром [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] с использованием XML для аналитики.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "36095580"
  И клиентские приложения, и приложения промежуточного уровня могут непосредственно связываться со службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] без использования поставщика. Клиентские приложения и приложения промежуточного уровня могут отправлять данные XML для аналитики в SOAP-пакетах по протоколам TCP/IP, HTTP или HTTPS. Клиент может быть написан на любом языке, поддерживающем SOAP. В этом случае сообщением проще всего управлять посредством служб IIS, используя протокол HTTP, хотя также можно запрограммировать прямое соединение с сервером по протоколу TCP/IP. Это наиболее тонкое из возможных клиентских решений для служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>Службы Analysis Services в табличном режиме или режиме интеграции с SharePoint.  
- В [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], сервер может быть запущен в режиме подсистемы vertipaq аналитики в памяти xVelocity для табличных баз данных, а также для [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] книг, которые были опубликованы на сайте SharePoint.  
+ В [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], сервер может быть запущен в режиме подсистемы vertipaq аналитики в памяти xVelocity для табличных баз данных, а также для [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] книг, опубликованных на сайте SharePoint.  
   
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] и [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] — единственные клиентские среды, которые поддерживаются при создании размещенных в памяти баз данных, использующих режим SharePoint или табличный режим соответственно. Внедренная база данных PowerPivot, создаваемом с помощью Excel и [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] средства содержится в книге Excel и сохраняется как часть Excel XLSX-файл.  
+ [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] и [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] — единственные клиентские среды, которые поддерживаются при создании размещенных в памяти баз данных, использующих режим SharePoint или табличный режим соответственно. Внедренная база данных PowerPivot, созданный с помощью Excel и [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] средства содержится в книге Excel и сохраняется как часть XLSX-файла Excel.  
   
  Однако в книге [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] могут использоваться данные, которые хранятся в традиционном кубе, если данные куба импортированы в книгу. Кроме того, можно импортировать данные из другой книги [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], если она была опубликована на сайте SharePoint.  
   
@@ -66,14 +66,14 @@ ms.locfileid: "36095580"
 >  При использовании куба в качестве источника данных для книги [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] получаемые из куба данные определяются как запрос многомерного выражения, но при этом данные импортируются как плоский моментальный снимок. Нельзя ни работать с данными в интерактивном режиме, ни обновлять их из куба.  
   
 ### <a name="interfaces-for-powerpivot-client"></a>Интерфейсы для клиента PowerPivot  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] взаимодействует с подсистемой хранилища подсистемы vertipaq аналитики в памяти xVelocity в книге с помощью общепринятых интерфейсов и языков для служб Analysis Services: объекты AMO и ADOMD.NET и многомерных Выражений и XML для Аналитики. В надстройке меры определяются с помощью языка формул, аналогичного языку формул Excel и DAX (выражения анализа данных). Выражения анализа данных внедряются в сообщения XMLA, отправляемые внутрипроцессному серверу.  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] взаимодействует с подсистемы хранилища подсистемы vertipaq аналитики в памяти xVelocity в книге с помощью общепринятых интерфейсов и языков для служб Analysis Services: AMO и ADOMD.NET и многомерных Выражений и XML для Аналитики. В надстройке меры определяются с помощью языка формул, аналогичного языку формул Excel и DAX (выражения анализа данных). Выражения анализа данных внедряются в сообщения XMLA, отправляемые внутрипроцессному серверу.  
   
 ### <a name="providers"></a>Поставщики  
  Обмен данными между [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] и Excel используется поставщик MSOLAP OLEDB (версия 11.0). В поставщике MSOLAP имеется четыре модуля (также называемых транспортами), которые можно использовать для пересылки сообщений между клиентом и сервером.  
   
- **TCP/IP** для подключений обычный клиент сервер.  
+ **TCP/IP** используется для подключений обычный клиент сервер.  
   
- **HTTP** используется для HTTP-соединений через службу переноса данных SSAS или путем вызова компонента SharePoint PowerPivot веб-служб (WS).  
+ **HTTP** используется для HTTP-соединений через службу переноса данных SSAS, или с помощью вызова компонента SharePoint PowerPivot веб-служб (WS).  
   
  **INPROC** используется для связи с внутрипроцессной подсистемой.  
   

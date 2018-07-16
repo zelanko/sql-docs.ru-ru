@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ec77f66bc627d851295a6afa90fb515c85b2ab84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9082ded2ceacd4a29364e3ee9b513887b2fcb1a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320774"
 ---
 # <a name="ado-net-source"></a>Источник ADO NET
   Источник ADO NET использует данные поставщика .NET и делает данные доступными для потока данных.  
@@ -71,7 +71,7 @@ ms.locfileid: "36191490"
 >  Когда инструкция SQL используется для вызова хранимой процедуры, возвращающей результаты из временной таблицы, используйте параметр WITH RESULT SETS для определения метаданных набора результатов.  
   
 > [!NOTE]  
->  Если использовать инструкцию SQL для выполнения хранимой процедуры и происходит сбой пакета со следующей ошибкой, можно устранить ошибку, добавив `SET FMTONLY OFF` инструкции перед инструкцией exec.  
+>  Если происходит сбой пакета со следующей ошибкой при использовании инструкции SQL для выполнения хранимой процедуры, можно устранить эту ошибку, добавив `SET FMTONLY OFF` перед инструкцией exec.  
 >   
 >  **Столбец <имя_столбца> не найден в источнике данных.**  
   

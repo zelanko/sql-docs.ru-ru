@@ -1,5 +1,5 @@
 ---
-title: Страница «фильтры», диалоговые окна диаграммы (построитель отчетов и службы SSRS) | Документы Microsoft
+title: Страница «фильтры», диалоговые окна диаграммы (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.filters.f1
 - "10409"
@@ -18,15 +18,15 @@ f1_keywords:
 - "10165"
 ms.assetid: fab97b2f-d53f-42f2-900c-c159653d89ed
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5b695b45a43f388a7dabf64bad327404ef4f6510
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3123a7c1ba3a520ad743ffe7dbd65dfd57443672
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317904"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>Страница «Фильтры», диалоговые окна диаграммы (построитель отчетов и SSRS)
   Выберите **Фильтры** :  
@@ -70,6 +70,6 @@ ms.locfileid: "36188177"
  [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](report-design/expressions-report-builder-and-ssrs.md)   
- [Фильтрация, группирование и сортировка данных &#40;отчетов построителя отчетов и службы SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Фильтрация, группирование и сортировка данных &#40;построитель отчетов и службы SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

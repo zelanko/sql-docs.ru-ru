@@ -1,5 +1,5 @@
 ---
-title: Обратная запись в куб (многомерные Выражения) | Документы Microsoft
+title: Обратная запись в куб (многомерные Выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - writeback [Analysis Services], cubes
 - cubes [Analysis Services], modifying
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], writeback
 ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 53a9b5ab5e3c5e6539304936bb62997f40576e02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e74303a0796f1b1ffbee4771b0e7ecbf40085b7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310774"
 ---
 # <a name="using-cube-writebacks-mdx"></a>Обратная запись в куб (многомерные выражения)
   Для обновления куба используется инструкция [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) . Эта инструкция позволяет записать в кортеж указанное значение. Для эффективного использования инструкции UPDATE CUBE необходимо понимать ее синтаксис, ситуации, в которых может возникнуть ошибка, и влияние обновления на весь куб.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a60ee091-b4ed-41e1-9b6a-032c316cd03f
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8defd1a842253d429629538361153cc0cdff8faf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 072af31ff2207822e7e9f1aa63e7d5582550d0dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188170"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317964"
 ---
 # <a name="add-an-expression-report-builder-and-ssrs"></a>Добавление выражения (построитель отчетов и службы SSRS)
   Выражения используются в отчете для определения свойств элементов отчета, фильтров, групп, порядка сортировки, строк подключения и значений параметров. Выражения начинаются со знака равенства (=) и создаются на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Во время выполнения отчета обработчик отчета вычисляет их и применяет результат вычисления к элементам макета отчета.  
@@ -40,10 +40,10 @@ ms.locfileid: "36188170"
          Выражение появится в области конструктора в следующем виде: `<<Expr>>`.  
   
 ## <a name="see-also"></a>См. также  
- [Форматирование текста и заполнителей &#40;отчетов построителя отчетов и службы SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Текстовые поля &#40;отчетов построителя отчетов и службы SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
- [Выражения используются в отчетах &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Примеры уравнений фильтра &#40;отчетов построителя отчетов и службы SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
+ [Форматирование текста и заполнителей &#40;построитель отчетов и службы SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Текстовые поля &#40;построитель отчетов и службы SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Примеры уравнений фильтра &#40;построитель отчетов и службы SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
  [Примеры выражений групп &#40;построитель отчетов и службы SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Диалоговое окно "Выражение" (построитель отчетов)](../expression-dialog-box-report-builder.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   

@@ -1,5 +1,5 @@
 ---
-title: Набор строк DISCOVER_TRACE_EVENT_CATEGORIES | Документы Microsoft
+title: Набор строк DISCOVER_TRACE_EVENT_CATEGORIES | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1ad74fd2-4740-469d-85b5-abf0171737fd
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f447e0acbdc2f5e5cbcbf7d3773330cfc9cd39e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 085e5a58105b2fecd20a603d9adb735ff79b63ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316884"
 ---
 # <a name="discovertraceeventcategories-rowset"></a>Набор строк DISCOVER_TRACE_EVENT_CATEGORIES
   Отображает список категорий событий, которые поддерживаются поставщиком трассировки.  
@@ -32,7 +32,7 @@ ms.locfileid: "36087230"
   
 |Имя столбца|Индикатор типа|Длина|Описание|  
 |-----------------|--------------------|------------|-----------------|  
-|`Data`|`DBTYPE_WSTR`||Содержит закодированную XML-строку, отображающую сведения о категории событий о поставщике трассировки, в том числе имя категории, тип и описание. «Type» — это строка, указывающая на тип категории событий. Возможны следующие значения перечислений:<br /><br /> -0 = обычный<br />-1 = значащих<br />-2 = Ошибка|  
+|`Data`|`DBTYPE_WSTR`||Содержит закодированную XML-строку, отображающую сведения о категории событий о поставщике трассировки, в том числе имя категории, тип и описание. «Type» — это строка, указывающая на тип категории событий. Возможны следующие значения перечислений:<br /><br /> -0 = норм.<br />-1 = значащих<br />-2 = Ошибка|  
   
  Этот набор строк схемы не отсортирован.  
   

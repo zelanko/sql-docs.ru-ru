@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 922df55ae21fe9eda3fa3fc5b040696a2ce1424d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3f039dcac25d3fab4c42f1f412f202f19c37d14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324654"
 ---
 # <a name="sap-bw-source"></a>Источник SAP BW
   Источник SAP BW — это компонент источника Connector 1.1 для SAP BW [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Таким образом, источник SAP BW извлекает данные из системы SAP Netweaver BW версии 7 и делает их доступными для потока данных в пакете [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -110,7 +110,7 @@ ms.locfileid: "36086930"
   
     -   Для параметра **E — только извлечь** укажите идентификатор запроса.  
   
--   Укажите правила преобразования строк. (Например, преобразовать все строки в зависимости от того, является ли система SAP Netweaver BW Юникод или нет, или все строки преобразуются в `varchar` или `nvarchar`).  
+-   Укажите правила преобразования строк. (Например, преобразование всех строк в зависимости от того, является ли в системе SAP Netweaver BW Юникод или нет, или все строки преобразуются в `varchar` или `nvarchar`).  
   
 -   Используйте параметры, выбранные для предварительного просмотра извлекаемых данных.  
   
@@ -123,13 +123,13 @@ ms.locfileid: "36086930"
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Использование конструктора служб SSIS для настройки источника  
  Дополнительные сведения о свойствах источника SAP BW, которые можно задать в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в одном из последующих разделов.  
   
--   [Редактор источников SAP BW &#40;страницы диспетчера соединений&#41;](sap-bw-source-editor-connection-manager-page.md)  
+-   [Редактор источника SAP BW &#40;страницы диспетчера соединений&#41;](sap-bw-source-editor-connection-manager-page.md)  
   
--   [Редактор источников SAP BW &#40;страница «столбцы»&#41;](sap-bw-source-editor-columns-page.md)  
+-   [Редактор источника SAP BW &#40;страница "столбцы"&#41;](sap-bw-source-editor-columns-page.md)  
   
--   [Редактор источников SAP BW &#40;страницы вывода ошибок&#41;](sap-bw-source-editor-error-output-page.md)  
+-   [Редактор источника SAP BW &#40;странице вывода ошибок&#41;](sap-bw-source-editor-error-output-page.md)  
   
--   [Редактор источников SAP BW &#40;страница «Дополнительно»&#41;](sap-bw-source-editor-advanced-page.md)  
+-   [Редактор источника SAP BW &#40;страница "Дополнительно"&#41;](sap-bw-source-editor-advanced-page.md)  
   
  При настройке источника SAP BW можно также использовать другие диалоговые окна для поиска объектов SAP Netweaver BW и предварительного просмотра исходных данных. Дополнительные сведения об этих диалоговых окнах см. в следующих разделах.  
   

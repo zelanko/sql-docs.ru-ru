@@ -1,5 +1,5 @@
 ---
-title: Получение данных с помощью объекта AdomdDataReader | Документы Microsoft
+title: Получение данных с помощью объекта AdomdDataReader | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17ed47d13aab29ea47c5f1d041705029844e359e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5631238b78804bb593e8db90f910aec0ddebb933
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321234"
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>Получение данных с помощью объекта AdomdDataReader
   Что касается извлечения аналитических данных, объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> обеспечивает достижение приемлемого равновесия между издержками и интерактивностью. Объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> извлекает из источника аналитических данных поток данных, предназначенный только для чтения и последовательного доступа, преобразованный в плоский формат. Этот небуферизованный поток данных позволяет применять процедурные средства для последовательной обработки результатов, получаемых из источника аналитических данных, с высокой эффективностью. Поэтому объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> хорошо подходит для извлечения больших объемов данных в целях отображения, поскольку данные не кэшируются в памяти.  
   
  Применение объекта <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> способствует также повышению производительности приложения, поскольку обеспечивает извлечение данных по мере их поступления, не дожидаясь полного возврата результатов запроса. Кроме того, объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> сокращает системные издержки, поскольку по умолчанию этот модуль чтения сохраняет в памяти только одну строку одновременно.  
   
- Платой за оптимизированную производительность является то, что объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> предоставляет меньше сведений об извлеченных данных, чем другие методы получения данных. Объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> не поддерживает большие модели объектов для представления данных или метаданных, кроме того, эта модель объектов не позволяет использовать более сложные аналитические функции, такие как обратная запись в ячейку. Однако объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> все же предоставляет набор строго типизированных методов для извлечения данных набора ячеек, а также метод для извлечения метаданных набора ячеек в табличном формате. Кроме того <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> реализует **IDbDataReader** интерфейс для поддержки привязки данных, а также для получения данных с помощью `SelectCommand` метода из **System.Data** пространство имен Библиотека классов Microsoft .NET Framework.  
+ Платой за оптимизированную производительность является то, что объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> предоставляет меньше сведений об извлеченных данных, чем другие методы получения данных. Объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> не поддерживает большие модели объектов для представления данных или метаданных, кроме того, эта модель объектов не позволяет использовать более сложные аналитические функции, такие как обратная запись в ячейку. Однако объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> все же предоставляет набор строго типизированных методов для извлечения данных набора ячеек, а также метод для извлечения метаданных набора ячеек в табличном формате. Кроме того <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> реализует **IDbDataReader** интерфейса для поддержки привязки данных и извлечения данных с помощью `SelectCommand` метод, из **System.Data** пространство имен Библиотека классов Microsoft .NET Framework.  
   
 ## <a name="retrieving-data-from-the-adomddatareader"></a>Извлечение данных из AdomdDataReader  
  Чтобы получить данные с помощью объекта <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>, выполните следующие действия.  
@@ -122,7 +122,7 @@ foreach (DataRow objRow in schemaTable.Rows)
   
 ## <a name="see-also"></a>См. также  
  [Получение данных из источника аналитических данных](retrieving-data-from-an-analytical-data-source.md)   
- [Получение данных с помощью набора ячеек](retrieving-data-using-the-cellset.md)   
+ [Получение данных с помощью объекта CellSet](retrieving-data-using-the-cellset.md)   
  [Получение данных с помощью объекта XmlReader](retrieving-data-using-the-xmlreader.md)  
   
   

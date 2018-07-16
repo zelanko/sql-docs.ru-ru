@@ -1,5 +1,5 @@
 ---
-title: Реализация политики подписывания путем задания параметра реестра | Документы Microsoft
+title: Реализация политики подписывания путем задания параметра реестра | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c101b66398d7259d97bdf4a828830764138df09c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7c1259e38a50ad11d3a0f074dd3c911f89f776d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320644"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Реализация политики подписывания путем задания параметра реестра
   Для управления организационной политикой при загрузке подписанных и неподписанных пакетов можно использовать необязательный параметр реестра. При использовании данного параметра реестра его необходимо создать на каждом компьютере, где будут выполняться пакеты [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и где требуется принудительное выполнение этой политики. После задания такого параметра реестра службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] будут проверять наличие и верность подписи перед загрузкой пакетов.  
@@ -52,7 +52,7 @@ ms.locfileid: "36094602"
   
 1.  В меню **Пуск** выберите команду **Выполнить**.  
   
-2.  В диалоговом окне "Выполнить" введите `Regedit`, а затем нажмите кнопку **ОК**.  
+2.  В диалоговом окне выполнения введите `Regedit`, а затем нажмите кнопку **ОК**.  
   
 3.  Найдите раздел реестра HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36094602"
 9. В меню **Файл** выберите пункт **Выход**.  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения о безопасности &#40;службы Integration Services&#41;](security/security-overview-integration-services.md)   
+ [Общие сведения о безопасности &#40;служб Integration Services&#41;](security/security-overview-integration-services.md)   
  [Определение источника пакетов с помощью цифровых подписей](security/identify-the-source-of-packages-with-digital-signatures.md)  
   
   

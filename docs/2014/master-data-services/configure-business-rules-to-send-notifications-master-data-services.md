@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], configuring notifications
 - e-mail [Master Data Services], configuring business rules
 - notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2d0c5d66a15ba476806df39792206c47a31bb26d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: c20519f4db37f398fefed79042cc2d3ecf5ba631
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326134"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Настройка в бизнес-правилах отправки уведомлений (службы Master Data Services)
   Бизнес-правила для отправки уведомлений в службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]настраивают в том случае, если нужно уведомлять пользователей об изменениях значений атрибутов.  
@@ -55,7 +55,7 @@ ms.locfileid: "36095708"
   
 6.  Выберите из списка **Атрибут** атрибут или оставьте **Все**по умолчанию.  
   
-7.  В сетке на строке бизнес-правила дважды щелкните **уведомления** поля.  
+7.  В сетке, в строке бизнес-правила, дважды щелкните **уведомления** поля.  
   
 8.  Во вложенном меню выберите пользователя или группу, куда необходимо отправлять уведомление.  
   
@@ -63,16 +63,16 @@ ms.locfileid: "36095708"
   
 -   Примените бизнес-правила к данным с помощью одной из следующих процедур:  
   
-    -   [Проверка конкретных элементов с использованием бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [Проверка конкретных членов, соответствие бизнес-правилам &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [Проверьте версию на соответствие бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [Проверка версии на соответствие бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 -   Настройте протокол электронной почты следующим образом.  
   
     -   [Настройка уведомлений по электронной почте &#40;службы Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также  
- [Уведомления о &#40;службы Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)   
+ [Уведомления &#40;службы Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)   
  [Настройка уведомлений по электронной почте &#40;службы Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Предоставление, Отмена и запрет разрешений | Документы Microsoft
+title: Предоставление, Отмена и запрет разрешений | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - revoking permissions [SMO]
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cdf6703e67b9c9c53c4b266154ea8a6cb0ed65d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d088fbddb4c3e293a0ba98de0eb2a7c6eba17dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321814"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Предоставление, отмена и запрет разрешений
   Объект <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> используется для назначения набора разрешений или индивидуального серверного разрешения объекту <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>. Применительно к разрешениям уровня сервера тот участник, которому предоставлено разрешение, ссылается на имя входа. Имена для входа в систему, проверка подлинности которых осуществляется Windows, перечислены как пользовательские имена Windows. При работе этого образца кода он отменяет разрешение участника, которому оно было предоставлено, и проверяет его удаление с помощью метода <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  
@@ -33,7 +33,7 @@ ms.locfileid: "36193975"
  Разрешения на базы данных и объекты баз данных назначаются аналогично с помощью объектов <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> и <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet>.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [создать Visual C&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Предоставление разрешений уровня сервера на языке Visual Basic  
  В этом примере кода указанному имени входа предоставляются разрешения на создание конечной точки и изменение любой конечной точки, а затем перечисляются и отображаются все разрешения. Одно из разрешений отменяется, затем эти разрешения перечисляются снова. В этом примере предполагается, что заданное имя входа обладает указанными разрешениями, с которых можно начать работу.  
