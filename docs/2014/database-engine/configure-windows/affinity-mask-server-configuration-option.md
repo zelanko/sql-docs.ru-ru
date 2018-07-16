@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default affinity mask option
 - reloading processor cache
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6c0c94785452841642edac541d9c120bfbd7ad14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 41fad115e39068b60f9d1a08b4fcf08b2c3d392a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271970"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>Параметр конфигурации сервера «affinity mask»
     
@@ -63,7 +63,7 @@ ms.locfileid: "36192750"
   
  Если указать маску сходства, которая попытается сопоставить поток несуществующему процессору, то команда RECONFIGURE отправит сообщение об ошибке в сеанс клиента и в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Использование параметра RECONFIGURE WITH OVERRIDE в этом случае ничего не изменит, и будет создано еще одно сообщение об ошибке.  
   
- Можно также исключить работу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на процессорах, получивших специальные рабочие нагрузки от операционной системы Windows 2000 или Windows Server 2003. Если установить значение бита, представляющего процессор, в 1, этот процессор будет выбран ядром СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для назначения потоков. При задании `affinity mask` (по умолчанию), Microsoft Windows 2000 или Windows Server 2003, алгоритмы планирования задано значение 0 схожесть потоков. Если в качестве `affinity mask` задано любое ненулевое значение, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретирует это значение схожести как битовую маску, определяющую процессоры, годные для выбора.  
+ Можно также исключить работу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на процессорах, получивших специальные рабочие нагрузки от операционной системы Windows 2000 или Windows Server 2003. Если установить значение бита, представляющего процессор, в 1, этот процессор будет выбран ядром СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для назначения потоков. При задании `affinity mask` задано значение 0 (по умолчанию), Microsoft Windows 2000 или Windows Server 2003, алгоритмов планирования схожесть потоков. Если в качестве `affinity mask` задано любое ненулевое значение, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретирует это значение схожести как битовую маску, определяющую процессоры, годные для выбора.  
   
  Если потокам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запрещено выполняться на определенных процессорах, ОС Microsoft Windows 2000 или Windows Server 2003 может лучше обрабатывать процессы, характерные для Windows. Например, на сервере с 8 процессорами, на котором работают два экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (экземпляры A и B), системный администратор может использовать параметр affinity mask для назначения первого набора из 4 процессоров экземпляру A и второго набора из 4 процессоров экземпляру B. Чтобы выполнить настройку больше чем для 32 процессоров, задавайте и параметр affinity mask, и параметр affinity64 mask. Возможны следующие значения `affinity mask`.  
   
@@ -118,7 +118,7 @@ GO
 |127|01111111|0, 1, 2, 3, 4, 5 и 6|  
 |255|11111111|0, 1, 2, 3, 4, 5, 6 и 7|  
   
- Параметр affinity mask является дополнительным. При использовании системной хранимой процедуры sp_configure для изменения параметра можно изменить `affinity mask` только если **Показывать дополнительные параметры** имеет значение 1. После выполнения команды [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE изменения параметров вступают в силу немедленно и не требуют перезапуска экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Параметр affinity mask является дополнительным. При использовании системной хранимой процедуры sp_configure для изменения параметра, можно изменить `affinity mask` только тогда, когда **Показать расширенные параметры** имеет значение 1. После выполнения команды [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE изменения параметров вступают в силу немедленно и не требуют перезапуска экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="non-uniform-memory-access-numa"></a>Доступ к неоднородной памяти (NUMA)  
  При использовании аппаратного доступа к неоднородной памяти (NUMA), если установлена маска сходства, каждый планировщик в узле сопоставляется своему собственному ЦП. Когда маска сходства не установлена, каждый планировщик соответствует группе процессоров в пределах узла NUMA, и планировщик, сопоставленный с узлом NUMA N1, может планировать работу на любом процессоре в узле, но не на процессорах, связанных с другим узлом.  

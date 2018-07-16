@@ -1,5 +1,5 @@
 ---
-title: Элемент annotation (ASSL) | Документы Microsoft
+title: Элемент annotation (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Annotation element
 ms.assetid: 7d75291a-47b4-498a-8ba4-3d093b8513b2
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5dfe8ea881948de8ed53cea0ddcff1e1325a96d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0453688aab37831c54bad3080a34409b078740bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304504"
 ---
 # <a name="annotation-element-assl"></a>Элемент Annotation (ASSL)
   Содержит элементы, используемые для расширения схемы языка ASSL.  
@@ -61,7 +61,7 @@ ms.locfileid: "36102105"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[Заметки](../collections/annotations-element-assl.md)|  
-|Дочерние элементы|[Имя](../properties/name-element-assl.md), [значение](../properties/value-element-assl.md), [видимость](../properties/visibility-element-assl.md)|  
+|Дочерние элементы|[Имя](../properties/name-element-assl.md), [значение](../properties/value-element-assl.md), [видимости](../properties/visibility-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
  Элемент `Annotation` предоставляет возможность расширения схемы ASSL для всех объектов, кроме тех, которые используются исключительно для определения сложного типа данных. Элемент `Value` элемента `Annotation` может содержать допустимый XML-код из любого пространства имен XML, отличного от ASSL. На эти значения распространяются следующие правила.  
@@ -74,7 +74,7 @@ ms.locfileid: "36102105"
   
  Комментарии и пробелы в элементе `Annotation` не сохраняются, если они не были заключены в дочерний элемент. Кроме того, все элементы должны быть доступными для чтения и записи; элементы, доступные только для чтения, будут пропускаться.  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.Annotation>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.Annotation>.  
   
 ## <a name="see-also"></a>См. также  
  [Объекты &#40;ASSL&#41;](objects-assl.md)  

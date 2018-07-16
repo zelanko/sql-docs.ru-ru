@@ -1,5 +1,5 @@
 ---
-title: Выполнение задач редактор процессов (страница «процесс») | Документы Microsoft
+title: Редактор задач процесса (страница «процесс») выполнение | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.process.f1
 helpviewer_keywords:
 - Execute Process Task Editor
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9257d82ea948a8f5561d62af2db8f28ce1bdcdfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd4a604c298f529296ed128f82f658ad3b329b13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246864"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Редактор задачи «Выполнение процесса» (страница «Процесс»)
   Страница **Процесс** диалогового окна **Редактор задачи «Выполнение процесса»** позволяет настраивать параметры выполнения процесса. Эти параметры включают исполняемый объект, его расположение, аргументы командной строки и переменные для входных и выходных данных.  
@@ -70,7 +70,7 @@ ms.locfileid: "36095245"
  Указывает стиль окна, в котором выполняется процесс.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Страница "Выражения"](expressions/expressions-page.md)  
   
   

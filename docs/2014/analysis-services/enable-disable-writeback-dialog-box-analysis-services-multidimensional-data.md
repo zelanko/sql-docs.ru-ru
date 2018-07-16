@@ -1,5 +1,5 @@
 ---
-title: Включение отключение обратной записи диалоговое окно «» (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Включение и отключение обратной записи диалоговое окно (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitiondesigner.writebackenabledisable.f1
 ms.assetid: 2d254393-3f0d-4b70-8b98-87159f9f3639
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0455e8f9efc76fa8ab254ac89d17b5ffb180e4ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7c5265987b846425aff4069a723804f009a013e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286200"
 ---
-# <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>Включение отключение обратной записи диалоговое окно «» (службы Analysis Services — многомерные данные)
+# <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>Включение и отключение обратной записи диалоговое окно (службы Analysis Services — многомерные данные)
   Диалоговое окно **Включение или отключение обратной записи** включает или отключает обратную запись для группы мер в кубе. Включение обратной записи в группе мер определяет секцию обратной записи и создает таблицу обратной записи для этой группы мер. Отключение обратной записи в группе мер удаляет секцию обратной записи, но сохраняет таблицу обратной записи, чтобы избежать непредвиденной потери данных. Диалоговое окно **Включение/отключение обратной записи** отображается следующими способами:  
   
 -   Нажмите **Настройки обратной записи** на панели **Группы мер** вкладки **Секции** конструктора кубов.  

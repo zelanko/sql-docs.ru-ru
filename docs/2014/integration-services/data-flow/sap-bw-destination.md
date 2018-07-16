@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f6d3eb993b999d17fa4d9c7ac547d30e4489afc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd72de564b67b9130f2cf4d8175a190f8d76a302
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300584"
 ---
 # <a name="sap-bw-destination"></a>Назначение SAP BW
   Назначение SAP BW — компонент назначения [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW. Таким образом, назначение SAP BW загружает данные из потока данных в пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в систему SAP Netweaver BW версии 7.  
@@ -96,9 +96,9 @@ ms.locfileid: "36190818"
   
 -   [Редактор назначений SAP BW &#40;страница «сопоставления»&#41;](sap-bw-destination-editor-mappings-page.md)  
   
--   [Редактор назначений SAP BW &#40;страницы вывода ошибок&#41;](sap-bw-destination-editor-error-output-page.md)  
+-   [Редактор назначений SAP BW &#40;странице вывода ошибок&#41;](sap-bw-destination-editor-error-output-page.md)  
   
--   [Редактор назначений SAP BW &#40;страница «Дополнительно»&#41;](sap-bw-destination-editor-advanced-page.md)  
+-   [Редактор назначений SAP BW &#40;страница "Дополнительно"&#41;](sap-bw-destination-editor-advanced-page.md)  
   
  При настройке целевого объекта SAP BW можно также использовать другие диалоговые окна для уточняющих запросов или создать объекты SAP Netweaver BW. Дополнительные сведения об этих диалоговых окнах см. в следующих разделах.  
   

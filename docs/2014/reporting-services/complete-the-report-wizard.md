@@ -1,5 +1,5 @@
 ---
-title: Завершите работу мастера отчетов | Документы Microsoft
+title: Завершите работу мастера отчетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.finish.f1
 ms.assetid: d430bc08-61b4-439f-956e-2e825ca7113b
 caps.latest.revision: 28
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bdbefcdf04166d0c1e54dff3965f04b1f8f5d06a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b9f101d61676b5364db2637bc9f0ff6f36c9daf1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297904"
 ---
 # <a name="complete-the-report-wizard"></a>Завершение работы мастера отчетов
   На этой странице можно указать имя отчета и просмотреть параметры, которые должны быть применены к отчету.  
   
 ## <a name="options"></a>Параметры  
- **Наименование отчета**  
+ **Имя отчета**  
  Введите имя отчета. Это имя также отображается в заголовке отчета. Заголовок отчета можно также изменить в режиме конструктора.  
   
  **Сводка по отчету**  

@@ -1,5 +1,5 @@
 ---
-title: Обработка данных (табличные службы SSAS) вручную | Документы Microsoft
+title: Обработка данных (табличные службы SSAS) вручную | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.datarefreshprogressdb.f1
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edfb5ab290d6a5756e88f23497a4ea88c14db5d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 427d7439395c9264741e215672d1ae9390b41b04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304614"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>Обработка данных вручную (табличные службы SSAS)
   В этом разделе описан процесс обработки данных рабочей области вручную в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -77,7 +77,7 @@ ms.locfileid: "36195037"
  Нажмите, чтобы остановить операцию обработки. Этот параметр может оказаться полезным в том случае, если операция развертывания занимает слишком много времени или обнаружено слишком много ошибок.  
   
 ## <a name="see-also"></a>См. также  
- [Обрабатывать данные &#40;табличные службы SSAS&#41;](process-data-ssas-tabular.md)   
+ [Обработка данных &#40;табличные службы SSAS&#41;](process-data-ssas-tabular.md)   
  [Устранение неполадок в данных процесса &#40;табличные службы SSAS&#41;](troubleshoot-process-data-ssas-tabular.md)  
   
   

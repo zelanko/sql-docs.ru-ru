@@ -1,5 +1,5 @@
 ---
-title: Элемент Description (XML для Аналитики) | Документы Microsoft
+title: Элемент Description (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Description element
 ms.assetid: db24bb51-3d75-49f9-82be-3380b2de1622
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 79bdbccedbe043561372c98f3629ddb3bda4b5ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 90c5bb021b41c60b8ce23473fef99bb04b42b7d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257140"
 ---
 # <a name="description-element-xmla"></a>Элемент Description (XML для аналитики)
   Содержит описание родительского элемента [Error](error-element-xmla.md) .  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc44d75cd4ab87623c84eff94f6569872038c1a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0e70c9c5e8060e4cd2daace9c4997ea324533106
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234904"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Указание вычисляемых столбцов в таблице
   Вычисляемый столбец представляет собой виртуальный столбец, физически не хранящийся в таблице, если для него не установлен признак PERSISTED. В выражении вычисляемого столбца для вычисления значения могут использоваться данные из других столбцов. Можно задать выражение для вычисляемого столбца в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с использованием [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -66,7 +66,7 @@ ms.locfileid: "36190179"
 4.  В дочернем свойстве **(Формула)** введите выражение для этого столбца в ячейку сетки справа. Например, в столбце `SalesTotal` можно ввести формулу `SubTotal+TaxAmt+Freight`, чтобы добавить значения в этих столбцах для каждой строки в таблице.  
   
     > [!IMPORTANT]  
-    >  Если формула связывает два выражения различных типов данных, то по правилам приоритета типов данных определяется, какой тип данных имеет меньший приоритет и будет преобразован в тип данных с большим приоритетом. Если неявное преобразование не поддерживается, возвращается ошибка «`Error validating the formula for column column_name.`». Используйте функцию CAST или CONVERT, чтобы устранить конфликт типа данных. Например, если столбец типа `nvarchar` объединяется со столбцом типа `int`, то целочисленный тип необходимо преобразовать в `nvarchar` , как показано в следующей формуле `('Prod'+CONVERT(nvarchar(23),ProductID))`. Дополнительные сведения см. в разделе [Функции CAST и CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql).  
+    >  Если формула связывает два выражения различных типов данных, то по правилам приоритета типов данных определяется, какой тип данных имеет меньший приоритет и будет преобразован в тип данных с большим приоритетом. Если неявное преобразование не поддерживается, возвращается ошибка «`Error validating the formula for column column_name.`». Используйте функцию CAST или CONVERT, чтобы устранить конфликт типа данных. Например, если столбец типа `nvarchar` объединяется со столбцом типа `int`, то целочисленный тип необходимо преобразовать в `nvarchar` так, как показано в следующей формуле `('Prod'+CONVERT(nvarchar(23),ProductID))`. Дополнительные сведения см. в разделе [Функции CAST и CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 5.  Выберите **Да** или **Нет** в раскрывающемся списке для дочернего свойства **Материализованный** , чтобы указать, следует ли сохранять данные.  
   

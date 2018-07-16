@@ -1,5 +1,5 @@
 ---
-title: Приложение SQL Server Profiler - источник таблицы-ядро СУБД помощник по настройке ядра СУБД — Выбор таблицы рабочей нагрузки | Документы Microsoft
+title: SQL Server Profiler - источника базы данных таблиц помощника по настройке ядра — Выбор таблицы рабочей нагрузки | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.tools.sourcetable.f1
 helpviewer_keywords:
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Source Table dialog box
 ms.assetid: 51185be7-7092-480a-a52c-cf7786c4a0a0
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8b5ccfddb032fb3833e517632290cfdf7d82e643
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8c371644630c24946b4acc50d77916fb8d0fd4a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285690"
 ---
-# <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>SQL Server Profiler - источник таблицы-ядро СУБД помощник по настройке ядра СУБД — Выбор таблицы рабочей нагрузки
+# <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>SQL Server Profiler - источника базы данных таблиц помощника по настройке ядра — Выбор таблицы рабочей нагрузки
   Microsoft [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] и помощник по настройке [!INCLUDE[ssDE](../includes/ssde-md.md)] используют это диалоговое окно для выбора таблиц.  
   
  В [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] диалоговое окно **Исходная таблица** используется для задания исходной таблицы для таблицы трассировки. This is a table from which a trace is loaded, and the contents of which are viewed or used for replaying the trace.  

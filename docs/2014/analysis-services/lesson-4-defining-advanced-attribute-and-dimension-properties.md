@@ -1,5 +1,5 @@
 ---
-title: 'Урок 4: Определение дополнительных свойств атрибутов и измерений | Документы Microsoft'
+title: 'Занятие 4: Определение дополнительных свойств атрибутов и измерений | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 853ce6e8fbbc559e690c46fda0ae1d7db02d2eb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9dd26e1f755f655dd5757c35c3232ce34981da6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279818"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Урок 4. Определение расширенных свойств атрибутов и измерений
   На этом занятии изучается использование расширенных свойств атрибутов, иерархий атрибутов и свойств измерений.  
@@ -33,7 +33,7 @@ ms.locfileid: "36192990"
  В этой задаче вы откроете, просмотрите и выполните развертывание измененной версии проекта «Учебник по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] », содержащей несколько групп мер и дополнительных измерений.  
   
  [Определение свойств родительского атрибута в иерархии "родители-потомки"](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
- В этой задаче вы зададите имена уровней в измерении типа «родители-потомки» и укажите, следует ли отображать данные, связанные с элементами-родителями. Дополнительные сведения см. в разделе [иерархии родители-потомки](multidimensional-models/parent-child-dimension.md) и [атрибутов в иерархии родители-потомки](multidimensional-models/parent-child-dimension-attributes.md).  
+ В этой задаче вы зададите имена уровней в измерении типа «родители-потомки» и укажите, следует ли отображать данные, связанные с элементами-родителями. Дополнительные сведения см. в разделе [«родители-потомки»](multidimensional-models/parent-child-dimension.md) и [атрибуты в иерархиях родителей-потомков](multidimensional-models/parent-child-dimension-attributes.md).  
   
  [Автоматическое группирование элементов атрибута](lesson-4-3-automatically-grouping-attribute-members.md)  
  В этой задаче автоматически создаются группирования элементов атрибутов на основе распределения членов в иерархии атрибутов. Дополнительные сведения см. в разделе [Группирование элементов атрибутов (дискретизация)](multidimensional-models/attribute-properties-group-attribute-members.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "36192990"
   
 ## <a name="see-also"></a>См. также  
  [Сценарий учебника по службам Analysis Services](analysis-services-tutorial-scenario.md)   
- [Многомерное моделирование &#40;компания Adventure Works учебника&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Многомерное моделирование &#40;руководством по Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

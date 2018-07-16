@@ -5,10 +5,9 @@ ms.date: 11/23/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption
 - database encryption key, about
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7e1f31b2cfced2f94ecf0417a4cf8b62f53fbb15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 25893299dfc708e952cbc2cb4673e34e5612cf23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236604"
 ---
 # <a name="transparent-data-encryption-tde"></a>Прозрачное шифрование данных (TDE)
   *Прозрачное шифрование данных* (TDE) позволяет шифровать файлы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] ; это называется шифрованием неактивных данных. Чтобы защитить базу данных, можно принять ряд мер предосторожности, например спроектировать систему безопасности, проводить шифрование конфиденциальных ресурсов и поместить серверы базы данных под защиту брандмауэра. Однако если будет похищен физический носитель (например, диск или ленты резервной копии), злоумышленник может легко восстановить или подключить базу данных и получить доступ к данным. Одним из решений может стать шифрование конфиденциальных данных в базе данных и защита ключей, используемых при шифровании, с помощью сертификата. Это не позволит использовать данные ни одному человеку, не имеющему ключей, но такой тип защиты следует планировать заранее.  
@@ -234,9 +233,9 @@ GO
  Прозрачное шифрование данных можно включить в базе данных, которая содержит объекты OLTP в памяти. Записи журнала OLTP в памяти шифруются, если TDE включено. Данные в файловой группе MEMORY_OPTIMIZED_DATA не шифруются при включенном TDE.  
   
 ## <a name="see-also"></a>См. также  
- [Переместить защищаемую базы данных на другой экземпляр SQL Server](move-a-tde-protected-database-to-another-sql-server.md)   
+ [Перемещение базы данных на другой экземпляр SQL Server, защищаемой прозрачным Шифрованием](move-a-tde-protected-database-to-another-sql-server.md)   
  [Включение прозрачного шифрования данных с помощью расширенного управления Ключами](enable-tde-on-sql-server-using-ekm.md)   
- [Прозрачное шифрование данных в базе данных Azure SQL](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
+ [Прозрачное шифрование данных с базой данных Azure SQL](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
  [Шифрование SQL Server](sql-server-encryption.md)   
  [Ключи шифрования базы данных и SQL Server (ядро СУБД)](sql-server-and-database-encryption-keys-database-engine.md)   
  [Центр обеспечения безопасности для Базы данных Azure SQL и ядра СУБД SQL Server](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

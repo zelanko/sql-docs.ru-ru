@@ -1,5 +1,5 @@
 ---
-title: Свойства файла (вкладка «Выбор событий») трассировки | Документы Microsoft
+title: Свойства файла (вкладка «Выбор событий») трассировки | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracefileproperties.eventsselection.f1
 helpviewer_keywords:
 - Trace File Properties dialog box
 ms.assetid: 158d442f-2225-4173-8545-fb1cf611b4d0
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fdc365671beae3d0037ca9f3dca9b0c2a1f21ad4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f74cc7160d66909523628c173e4b80db4045a90e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302644"
 ---
 # <a name="trace-file-properties-events-selection-tab"></a>Свойства файла трассировки (вкладка «Выбор событий»)
   Вкладка **Выбор событий** диалогового окна **Свойства шаблона файла трассировки** позволяет просматривать столбец свойств трассировки и удалять из трассировки столбцы данных.  

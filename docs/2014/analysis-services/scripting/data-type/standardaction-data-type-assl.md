@@ -1,5 +1,5 @@
 ---
-title: Тип данных StandardAction (ASSL) | Документы Microsoft
+title: Тип данных StandardAction (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - StandardAction data type
 ms.assetid: 81b574d5-06c1-4587-8bd2-0e5c5e3b1d99
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bdf3282c6f75cc762ae67a9fab9fc641f25fa3a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57116b91719dec65efef9be50926456e33109b4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267550"
 ---
 # <a name="standardaction-data-type-assl"></a>Тип данных StandardAction (ASSL)
-  Определяет производный тип данных, представляющий любой [действия](../objects/action-element-assl.md) элементом, кроме [DrillThroughAction](action-data-type-assl.md) элемент или [ReportAction](reportaction-data-type-assl.md) элемента.  
+  Определяет производный тип данных, представляющий любой [действие](../objects/action-element-assl.md) элементом, кроме [DrillThroughAction](action-data-type-assl.md) элемент или [ReportAction](reportaction-data-type-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -61,9 +61,9 @@ ms.locfileid: "36097146"
 |Производные элементы|[Действие](../objects/action-element-assl.md) ([действия](../collections/actions-element-assl.md) коллекцию [куба](../objects/cube-element-assl.md) или [перспективы](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.StandardAction>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.StandardAction>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

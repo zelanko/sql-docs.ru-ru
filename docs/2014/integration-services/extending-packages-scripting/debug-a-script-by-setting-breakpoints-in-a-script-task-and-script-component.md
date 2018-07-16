@@ -17,13 +17,13 @@ ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e171650a4f3fa04644bf87303cf26caf4eb172dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f6327983f42efbf0b8d891495c9048d1ab963d0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36086929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306214"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>Отладка скрипта с помощью точек останова в задаче и компоненте «Скрипт»
   Эта процедура описывает способ создания точки останова в скриптах, используемых задачей «Скрипт» и компонентом «Скрипт».  
@@ -31,7 +31,7 @@ ms.locfileid: "36086929"
  После задания точек останова в скрипте в диалоговом окне **Установка точек останова — \<имя объекта>** будет приведен список этих точек останова вместе со встроенными точками останова.  
   
 > [!IMPORTANT]  
->  В некоторых случаях точки останова из задачи «Скрипт» и компонента скрипта пропускаются. Дополнительные сведения см. в разделе **отладка задачи «скрипт»** статьи [кодировании и отладке задачи «скрипт»](../control-flow/script-task.md) и **отладка компонента скрипта** раздела [создание кода и отладка компонента скрипта] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
+>  В некоторых случаях точки останова из задачи «Скрипт» и компонента скрипта пропускаются. Дополнительные сведения см. в разделе **отладка задачи «скрипт»** статьи [кодирование и отладка задачи «скрипт»](../control-flow/script-task.md) и **отладка компонента скрипта** раздела [создание кода и отладка компонента скрипта] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
   
 ### <a name="to-set-a-breakpoint-in-script"></a>Задание точки останова в скрипте  
   

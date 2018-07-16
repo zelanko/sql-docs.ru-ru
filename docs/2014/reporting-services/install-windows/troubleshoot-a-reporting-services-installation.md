@@ -1,5 +1,5 @@
 ---
-title: Устранение неполадок установки служб Reporting Services | Документы Microsoft
+title: Устранение неполадок установки служб Reporting Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 95b88a3ad52ebce063a545f07e16cabb9ef00011
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 447cab185ce02b83b25af160421391ed73bb7cf6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248344"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Устранение неполадок при установке служб Reporting Services
   Если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не удалось установить из-за ошибок, возникших в процессе установки, воспользуйтесь инструкциями, приведенными в этом разделе, чтобы выяснить причины, которые, скорее всего, привели к их возникновению.  
   
- Последние сведения о проблемах с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], в разделе [Reporting Services SQL Server 2012 советы и устранение неполадок](http://go.microsoft.com/fwlink/?LinkId=221297)  
+ Последние сведения о проблемах с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], см. в разделе [Reporting Services SQL Server 2012 советы и устранение неполадок](http://go.microsoft.com/fwlink/?LinkId=221297)  
   
  Сведения о других ошибках и проблемах, связанных со службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , см. в разделе [Устранение неполадок и ошибок служб SSRS.](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)  
   
@@ -34,9 +34,9 @@ ms.locfileid: "36193751"
   
 -   [Проверка журналов установки](#bkmk_setuplogs)  
   
--   [Проверить наличие необходимых компонентов](#bkmk_prereq)  
+-   [Проверка предварительных требований](#bkmk_prereq)  
   
--   [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
+-   [Устранение неполадок установки в режиме SharePoint](#bkmk_tshoot_sharepoint)  
   
 -   [Устранение неполадок установки в собственном режиме](#bkmk_tshoot_native)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36193751"
   
 -   [Диспетчер конфигурации служб Reporting Services не запускается](#bkmk_configmanager_notstart)  
   
--   [Вы не видите службы SQL Server Reporting Services в центре администрирования SharePoint после установки SQL Server 2012 SSRS в режиме интеграции с SharePoint](#bkmk_no_ssrs_service)  
+-   [Вы не видите службу SQL Server Reporting Services в центре администрирования SharePoint после установки SQL Server 2012 SSRS в режиме интеграции с SharePoint](#bkmk_no_ssrs_service)  
   
 -   [Командлеты PowerShell для служб Reporting Services недоступны, и команды не распознаются.](#bkmk_cmdlets_not_recognized)  
   
@@ -91,8 +91,8 @@ ms.locfileid: "36193751"
   
  **Обходное решение.** Для настройки сервера отчетов в режиме Sharepoint используйте центр администрирования SharePoint. Дополнительные сведения см. в статье [Управление служебным приложением SharePoint службы Reporting Services](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
   
-###  <a name="bkmk_no_ssrs_service"></a> Вы не видите службы SQL Server Reporting Services в центре администрирования SharePoint после установки SQL Server 2012 SSRS в режиме интеграции с SharePoint  
- **Описание:** Если после успешной установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint и [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки для SharePoint 2010 вы не видите «SQL Server Reporting Services» в двух следующих меню, затем [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] служба не зарегистрирована:  
+###  <a name="bkmk_no_ssrs_service"></a> Вы не видите службу SQL Server Reporting Services в центре администрирования SharePoint после установки SQL Server 2012 SSRS в режиме интеграции с SharePoint  
+ **Описание:** Если после успешной установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint и [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки для SharePoint 2010, вы не видите «SQL Server Reporting Services» в двух следующих меню, затем [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] служба не зарегистрирована:  
   
 -   Центр администрирования SharePoint 2010 -> Управление приложениями -> Страница «Управление службами на сервере»  
   
@@ -116,7 +116,7 @@ ms.locfileid: "36193751"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  Убедитесь, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] служба состояние как «**Started**» на странице: центр администрирования SharePoint 2010 выберите "**управление приложениями**«->»**управление службами на Сервер**»  
+2.  Проверьте [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] службы отображается состояние "**Started**" на странице: центрального администрирования SharePoint 2010-> "**управление приложениями**«->»**управление службами на Сервер**"  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Командлеты PowerShell для служб Reporting Services недоступны, и команды не распознаются.  
  **Описание.** При попытке запуска командлета PowerShell [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выводится сообщение об ошибке следующего содержания:  
@@ -179,7 +179,7 @@ ms.locfileid: "36193751"
   
  Эта функция не поддерживается, поскольку приложения служб SQL Server Reporting Services не существует либо в центре администрирования не настроен URL-адрес сервера отчетов.  
   
- **Обходное решение.** Проверьте наличие и правильность настройки приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см в разделе «создать приложения службы Reporting Services» в [установить службы Reporting Services в режиме SharePoint для SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
+ **Обходное решение.** Проверьте наличие и правильность настройки приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. раздел «Создание приложения службы Reporting Services» в [установить службы Reporting Services в режиме SharePoint для SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> Отображается сообщение об ошибке: RS_SHP не поддерживается для действия PREPAREIMAGE  
  **Описание.** При попытке запуска PREPAREIMAGE для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выдается сообщение об ошибке примерно следующего содержания:  
@@ -203,10 +203,10 @@ ms.locfileid: "36193751"
   
 2.  Откройте окно командной строки и введите следующую команду:  
   
-    -   **Запустите \<**  *каталога .NET 2.0 Framework* **> \InstallUtil.exe \<**  *каталог Bin сервера отчетов* **> \ReportingServicesLibrary.dll**  
+    -   **Запустите \< ** *каталог .NET 2.0 Framework* **> \InstallUtil.exe \< ** *каталог Bin сервера отчетов* **> \ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
-        >  Замените \< *каталога .NET 2.0 Framework*> физическим путем к .NET Framework 2.0 файлы и замените \< *каталог Bin сервера отчетов*> на физический путь исполняемым файлам сервера отчетов.  
+        >  Замените \< *каталог .NET 2.0 Framework*> в .NET Framework 2.0 физический путь к файлам, а также замените \< *каталог Bin сервера отчетов*> физического пути к исполняемым файлам сервера отчетов.  
   
 3.  Перезапустите службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -218,7 +218,7 @@ ms.locfileid: "36193751"
   
     1.  Нажмите кнопку **Пуск**и выберите пункт **Выполнить**.  
   
-    2.  В **запуска** диалогового **откройте** введите `regedit`.  
+    2.  В **запуска** отображаемое в диалоговом окне **откройте** введите `regedit`.  
   
 2.  В редакторе реестра выберите следующий раздел реестра: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web Service\Performance`  
   
@@ -239,15 +239,15 @@ ms.locfileid: "36193751"
  После исправления 64-разрядного экземпляра или повторного добавления разделов реестра вручную можно использовать системный монитор для настройки объектов производительности служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , которые необходимо мониторить.  
   
 ###  <a name="ConfigPropsMissing"></a> Свойства настройки ReportServerExternalURL и PassThroughCookies не настраиваются после обновления с переходом от версии SQL Server 2005  
- Если вы обновляете [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] для [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], `ReportServerExternalURL` и `PassThroughCookies` свойства конфигурации не настраиваются процессом обновления. `ReportServerExternalURL` свойство является необязательным и должно устанавливаться только в том случае, если вы используете веб-частей SharePoint 2.0, а пользователи, чтобы иметь возможность получить отчет и открыть его в новом окне браузера. Дополнительные сведения о `ReportServerExternalURL`, в разделе [URL-адреса в файлах конфигурации &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). `PassThroughCookies` требуется только при использовании нестандартного метода проверки подлинности. Дополнительные сведения о `PassThroughCookies`, в разделе [Настройка диспетчера отчетов для передачи файлов cookie проверки подлинности пользовательского](../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
+ При обновлении с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] для [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], `ReportServerExternalURL` и `PassThroughCookies` свойства настройки не настраиваются процессом обновления. `ReportServerExternalURL` необязательное свойство, и его следует задавать только в том случае, если вы используете веб-части SharePoint 2.0, и пользователи должны иметь возможность получить отчет и открыть его в новом окне браузера. Дополнительные сведения о `ReportServerExternalURL`, см. в разделе [URL-адреса в файлах конфигурации &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). `PassThroughCookies` является обязательным, только в том случае, при использовании нестандартного метода проверки подлинности. Дополнительные сведения о `PassThroughCookies`, см. в разделе [Настройка диспетчера отчетов для передачи файлов cookie проверки подлинности в пользовательских](../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
   
 > [!NOTE]  
 >  При использовании нестандартной проверки подлинности рекомендуется произвести миграцию установки, а не выполнять обновление. Дополнительные сведения о переносе [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в статье [Перенос установки служб Reporting Services (собственный режим)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
  По умолчанию эти свойства в конфигурации служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] не существуют. Если эти свойства настроены в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и остается необходимость в предоставляемых ими функциях, необходимо вручную добавить их в файл **RSReportServer.config** после завершения процесса обновления. Дополнительные сведения см. в статье [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
-###  <a name="Default2005InstallBreaks2008"></a> Происходит сбой установки для экземпляра по умолчанию SQL Server 2005 Reporting Services на компьютере под управлением служб SQL Server 2012Reporting  
- Если вы попытаетесь установить экземпляр по умолчанию [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на компьютере, где уже запущен экземпляр [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] экземпляра не удастся установить следующее сообщение об ошибке:  
+###  <a name="Default2005InstallBreaks2008"></a> Не удается установить экземпляр по умолчанию SQL Server 2005 Reporting Services на компьютере, на котором выполняются службы SQL Server 2012Reporting  
+ Если попытаться установить экземпляр по умолчанию [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на компьютере, где уже запущен экземпляр [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] оканчивается неудачей Установка с помощью следующее сообщение об ошибке:  
   
  «Экземпляр с тем же именем уже установлен на этом компьютере. Чтобы продолжить программу установки SQL Server, предоставьте уникальное имя экземпляра».  
   
@@ -257,14 +257,14 @@ ms.locfileid: "36193751"
   
 -   Если необходимо запускать [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] как экземпляр по умолчанию на компьютере, необходимо установить [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] до экземпляра [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] экземпляра.  
   
--   Если [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] экземпляр не должен быть экземпляром по умолчанию, можно установить [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] экземпляр как именованный экземпляр после установки [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] экземпляра.  
+-   Если [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] экземпляр должен быть экземпляр по умолчанию, можно установить [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] экземпляр как именованный экземпляр после установки [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] экземпляра.  
   
-###  <a name="WindowsAuthBreaksAfterUpgrade"></a> Ошибка 401 — Нет доступа для проверки подлинности Windows после обновления SQL Server 2005 до SQL Server 2012  
+###  <a name="WindowsAuthBreaksAfterUpgrade"></a> Ошибка 401 — Нет доступа для проверки подлинности Windows после обновления с SQL Server 2005 до SQL Server 2012  
  Если выполнено обновление с переходом от служб [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] к службам [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], а после обновления используется проверка подлинности NTLM при помощи встроенной учетной записи для учетной записи службы сервера отчетов, то во время доступа к серверу отчетов или диспетчеру отчетов может возникнуть ошибка "401 — нет доступа".  
   
  Это происходит вследствие изменения в настройке по умолчанию служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] для проверки подлинности Windows. Настроено «Negotiate», если учетной записью службы сервера отчетов является Network Service или Local System. Настроена NTLM, если учетная запись службы сервера отчетов не входит в число этих встроенных учетных записей. Для устранения этой проблемы после обновления можно изменить файл RSReportServer.config и выполнить настройку, чтобы параметр `AuthenticationType` имел значение `RSWindowsNTLM`. Дополнительные сведения см. в статье [Configure Windows Authentication on the Report Server](../security/configure-windows-authentication-on-the-report-server.md).  
   
-###  <a name="Uninstall32BitBreaks64Bit"></a> При удалении 32-разрядного экземпляра SQL Server 2012 Reporting Services в развертывании side-by-side с 64-разрядного экземпляра приводит к нарушению работы 64-разрядного экземпляра  
+###  <a name="Uninstall32BitBreaks64Bit"></a> При удалении 32-разрядного экземпляра служб SQL Server 2012 Reporting Services в развертывании side-by-side с экземпляром разрывы в 64-разрядном 64-разрядного экземпляра  
  Параллельная установка на компьютер 32-разрядного и 64-разрядного экземпляров служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] и последующее удаление 32-разрядного экземпляра приводит к удалению четырех разделов реестра для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . В результате — нарушение работы 64-разрядного экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. При удалении 32-разрядного экземпляра удаляются следующие разделы реестра для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web Service\Performance:Counter Names` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2011 Windows Service\Performance:Counter Names` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web Service\Performance:Counter Types` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2011 Windows Service\Performance:Counter Types`  
@@ -281,6 +281,6 @@ ms.locfileid: "36193751"
   
 -   [Форум: службы SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
- ![Параметры SharePoint](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "параметры SharePoint") [отправки отзывов и контактных данных через Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![Параметры SharePoint](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "параметры SharePoint") [отправить отзыв и контактные данные через Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
   

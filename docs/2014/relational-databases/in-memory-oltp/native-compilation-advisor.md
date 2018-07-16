@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.nativecompilationwizard.f1
 - swb.nativecompilationwizard.f1
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 caps.latest.revision: 10
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a3aef7b96a5cd15f8bb22340cc2feeaf025b4072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1f156bee0da5d94043fa0ab04e5b74acdcd7f4f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256373"
 ---
 # <a name="native-compilation-advisor"></a>Помощник по собственной компиляции
   Средство создания отчетов о производительности транзакций (см. [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) информирует о том, какие интерпретируемые хранимые процедуры в базе данных смогут воспользоваться преимуществами перехода на компиляцию в собственном коде. После определения хранимой процедуры, для которой вы собираетесь использовать собственную компиляцию, можно запустить помощник по собственной компиляции, который облегчит миграцию интерпретированной хранимой процедуры для собственной компиляции. Дополнительные сведения о скомпилированных в собственном коде хранимых процедурах см. в разделе [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  

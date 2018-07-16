@@ -1,5 +1,5 @@
 ---
-title: Переключение базы данных служб Analysis Services между режимами ReadOnly и ReadWrite | Документы Microsoft
+title: Переключение базы данных служб Analysis Services между режимами ReadOnly и ReadWrite | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ReadOnly property
 - ReadWriteMode command
 - operations [Analysis Services - multidimensional data]
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 184a674d03e6c8fb6b30d10b91b2a58225894ba2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb0d9ae239d33cd55d50e0e876df1584ff2fe965
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286110"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Переключение базы данных служб Analysis Services между режимами ReadOnly и ReadWrite
-  Часто возникают ситуации при [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] хочет изменить режим чтения и записи табличной или многомерной базы данных администратор базы данных (dba). Такие ситуации часто обусловлены потребности бизнеса, такие как общий доступ к базе данных для пула [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] серверов для удобства работы пользователя.  
+  Часто возникают ситуации при [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] хочет изменить режим чтения и записи табличной или многомерной базы данных администратор базы данных (dba). Эти ситуации часто обусловлены производственной необходимостью, например общий доступ к базе данных пулом [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] серверов для удобства работы пользователя.  
   
  Существует много способов изменения режима работы базы данных. В этом документе описаны следующие распространенные сценарии:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36087238"
   
 8.  Выберите режим чтения/записи для базы данных.  
   
-9. Введите пароль, который использовался в шаге 3 и нажмите кнопку **ОК** выполнить команду присоединения.  
+9. Введите пароль, который использовался на шаге 3 и нажмите кнопку **ОК** Чтобы выполнить команду присоединения.  
   
 #### <a name="to-switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>Программное изменение режима чтения/записи базы данных с помощью объектов AMO  
   

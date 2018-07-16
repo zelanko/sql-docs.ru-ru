@@ -1,5 +1,5 @@
 ---
-title: Элемент DataSourceID (XML для Аналитики) | Документы Microsoft
+title: Элемент DataSourceID (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DataSourceID element
 ms.assetid: 695522c7-acca-420a-a5fb-f01f3fd9a96b
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2adec20f28e51639352dc89c70b6682e4df240fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e96d9386319fa9d850a755519fad7360da8ec3b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231824"
 ---
 # <a name="datasourceid-element-xmla"></a>Элемент DataSourceID (XML для аналитики)
-  Определяет источник данных, используемый [расположение](location-element-xmla.md) во время выполнения [резервного копирования](../xml-elements-commands/backup-element-xmla.md), [восстановить](../xml-elements-commands/restore-element-xmla.md), или [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) команды.  
+  Определяет источник данных, используемые [расположение](location-element-xmla.md) во время выполнения [резервного копирования](../xml-elements-commands/backup-element-xmla.md), [восстановить](../xml-elements-commands/restore-element-xmla.md), или [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) команды.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36180344"
 ## <a name="remarks"></a>Примечания  
  Элемент `DataSourceID` содержит имя источника данных на исходном экземпляре, позволяющее определить удаленный экземпляр для резервного копирования, восстановления или синхронизации сведений удаленной секции.  
   
- Дополнительные сведения о резервном копировании и восстановлении удаленных секций см. в разделе [резервное копирование, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Дополнительные сведения о резервном копировании и восстановлении удаленных секций, см. в разделе [резервного копирования, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>См. также  
  [Элемент ConnectionString &#40;XML для Аналитики&#41;](connectionstring-element-xmla.md)   

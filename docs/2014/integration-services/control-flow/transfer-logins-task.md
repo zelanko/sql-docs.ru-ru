@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferloginstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6f4c80e90e4df4d3c5495f1bfcfcdbfcb4b0ea7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef3d7d712f77055f965ebbc916e234bf891fc195
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248774"
 ---
 # <a name="transfer-logins-task"></a>Задача «Передача имен входа»
   Задача «Передача имен входа» служит для передачи одного или нескольких имен входа между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -72,9 +72,9 @@ ms.locfileid: "36193839"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор Передача имен входа задач &#40;страница «Общие»&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор Передача имен входа задачи &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор Передача имен входа задач &#40;страницы входа&#41;](../transfer-logins-task-editor-logins-page.md)  
+-   [Редактор Передача имен входа задачи &#40;страницы входа&#41;](../transfer-logins-task-editor-logins-page.md)  
   
 -   [Страница "Выражения"](../expressions/expressions-page.md)  
   

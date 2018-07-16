@@ -1,5 +1,5 @@
 ---
-title: Задачи редактора XML (страница «Общие») | Документы Microsoft
+title: Редактор задачи XML (страница "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.general.f1
 helpviewer_keywords:
 - XML Task Editor
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 67d02b183ab38ec046bf3fc0004c8d8f9de7e1d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae95fb2d0db4d052c241fb4b1968102b1bbe268c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237164"
 ---
 # <a name="xml-task-editor-general-page"></a>Редактор задачи «XML» (страница «Общие»)
   Используйте **Узел «Общие»** диалогового окна **Редактор задачи «XML»** для задания типа и настройки операции.  
@@ -320,7 +320,7 @@ ms.locfileid: "36095739"
 |**IgnoreProcessingInstructions**|Укажите, сравнивать ли инструкции по обработке.|  
 |**IgnoreOrderOf ChildElements**|Укажите, сравнивать ли порядок дочерних элементов.<br /><br /> Примечание: Если этот параметр имеет значение `True`, дочерние элементы, отличающиеся только положением в списке одноуровневых элементов, считаются идентичными.|  
 |**IgnoreComments**|Укажите, сравнивать ли узлы комментариев.|  
-|**IgnorePrefixes**|Укажите, сравнивать ли префиксы элементов и имена атрибутов.<br /><br /> Примечание: Если этот параметр установлен `True`, два элемента, имеющие одинаковое локальное имя, но разные URI пространств имен и префиксы, считаются идентичными.|  
+|**IgnorePrefixes**|Укажите, сравнивать ли префиксы элементов и имена атрибутов.<br /><br /> Примечание: Если выбран этот параметр `True`, два элемента, имеющие одинаковое локальное имя, но разные коды URI пространств имен и префиксы, считаются идентичными.|  
   
  **FailOnDifference**  
  Укажите, заканчивается ли задача с ошибкой, если не удается выполнить операцию поиска различий.  
@@ -418,7 +418,7 @@ ms.locfileid: "36095739"
  **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), [Добавление переменной](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Страница "Выражения"](expressions/expressions-page.md)  
   
   

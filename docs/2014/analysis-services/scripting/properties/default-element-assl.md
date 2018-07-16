@@ -1,5 +1,5 @@
 ---
-title: По умолчанию элемент (ASSL) | Документы Microsoft
+title: По умолчанию элемент (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Default element
 ms.assetid: 02c1844c-51fb-44fe-aafb-001e53ad293c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e63263397420c1350ea8a0eef681e158b101637a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9003b574d2fd38e39eff0dc9e32ea3015d0fa99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304184"
 ---
 # <a name="default-element-assl"></a>Элемент Default (ASSL)
   Определяет, является ли [DrillThroughAction](../data-type/action-data-type-assl.md) является действием детализации по умолчанию.  
@@ -62,7 +62,7 @@ ms.locfileid: "36188788"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `Default` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.DrillThroughAction>.  
+ Элемент, соответствующий родителю параметра `Default` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.DrillThroughAction>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

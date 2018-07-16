@@ -1,5 +1,5 @@
 ---
-title: Удалить фильтр из модели интеллектуального анализа данных | Документы Microsoft
+title: Удаление фильтра из модели интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [Analysis Services]
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 143ab55a3ebfa3036fe23afd120d8b9c36f73a77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 535859d04212b09af5a96745f3fb4e234af3f6e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289850"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>удалить фильтр из модели интеллектуального анализа данных
   При создании фильтра для модели интеллектуального анализа можно создавать модели для подмножества данных в представлении источника данных. Фильтры также полезны при тестировании точности модели на подмножестве исходных данных.  
@@ -58,13 +58,13 @@ ms.locfileid: "36096023"
   
 1.  В обозревателе решений щелкните модель интеллектуального анализа данных, содержащую фильтр.  
   
-2.  В **свойства** окно, щелкните правой кнопкой мыши текст фильтра в `Filter` , а затем выберите **выделить все**.  
+2.  В **свойства** окно, щелкните правой кнопкой текст фильтра в `Filter` свойства, а затем выберите **выбрать все**.  
   
 3.  Нажмите клавишу "BACKSPACE" или "DELETE".  
   
 ## <a name="see-also"></a>См. также  
- [Детализация данных вариантов из модели интеллектуального анализа данных](drill-through-to-case-data-from-a-mining-model.md)   
- [Задачи модели интеллектуального анализа данных и инструкции](mining-model-tasks-and-how-tos.md)   
+ [Детализация до данных вариантов из модели интеллектуального анализа данных](drill-through-to-case-data-from-a-mining-model.md)   
+ [Задачи модели интеллектуального анализа данных и инструкции по](mining-model-tasks-and-how-tos.md)   
  [Фильтры для моделей интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-models-analysis-services-data-mining.md)  
   
   

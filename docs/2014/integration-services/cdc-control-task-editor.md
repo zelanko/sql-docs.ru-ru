@@ -1,5 +1,5 @@
 ---
-title: CDC Control Task Editor | Документы Microsoft
+title: CDC Control Task Editor | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 caps.latest.revision: 9
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 498c46942b397f48fbaded6d4e98cb088d3c2dd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f6ce35e58b34e44690de9992f5e0296edbe4589f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256960"
 ---
 # <a name="cdc-control-task-editor"></a>Редактор задачи «Выполнение CDC»
   Диалоговое окно **Редактор задачи «Управление CDC»** служит для настройки задачи «Управление CDC». В процессе настройки задачи «Управление CDC» определяется соединение с базой данных CDC, операция задачи CDC и сведения об управлении состояниями.  

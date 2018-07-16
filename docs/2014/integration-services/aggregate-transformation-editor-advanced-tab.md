@@ -1,5 +1,5 @@
 ---
-title: Статистическая обработка преобразования редактор (вкладка «Дополнительно») | Документы Microsoft
+title: Статистическая обработка преобразования редактор (вкладка «Дополнительно») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.advanced.f1
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 917bffe5d88b30ffe5a3d56b7e8776c4e66c0051
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 398ec0597f0240548d6aba15ac2f29b218f4089a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192082"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254576"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>Редактор преобразований «Статистическая обработка» (вкладка «Дополнительно»)
   Вкладка **Дополнительно** диалогового окна **Редактор преобразования «Статистическая обработка»** позволяет задавать свойства компонентов, указывать агрегатные функции и задавать свойства входных и выходных столбцов.  
@@ -66,8 +66,8 @@ ms.locfileid: "36192082"
  Значение от 1 до 100 указывает процент, на который может увеличиваться объем памяти при статистической обработке. По умолчанию значение этого параметра — **25%**.  
   
 ## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор преобразования статистической обработки &#40;вкладка «агрегаты»&#41;](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)   
+ [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Статистическая обработка редактор преобразования &#40;вкладка «агрегаты»&#41;](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)   
  [Статистическая обработка значений в наборе данных с помощью преобразования "Статистическая обработка"](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

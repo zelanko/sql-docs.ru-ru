@@ -1,5 +1,5 @@
 ---
-title: Свойство ProtocolOrder (класс ClientNetworkProtocol) | Документы Microsoft
+title: Свойство ProtocolOrder (класс ClientNetworkProtocol) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolOrder property
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 388244724effee38b849742d211c446d3493d799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 26d3e5d3251d3954ba8c8410b48d471070bcba50
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266214"
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>Свойство ProtocolOrder (класс ClientNetworkProtocol)
   Возвращает порядковый номер текущего указанного сетевого протокола клиента, заданного методом [SetOrderValue (класс ClientNetworkProtocol)](clientnetworkprotocol-class.md) .  

@@ -1,5 +1,5 @@
 ---
-title: Элемент IsKey (ASSL) | Документы Microsoft
+title: Элемент IsKey (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - IsKey element
 ms.assetid: 523b26c8-5cce-415d-a360-9a0d8724b872
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ecf2b45a6cc6b7963a894bea8316f5080676fef7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 755d401f304b04e675f343911ef127050552b789
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288030"
 ---
 # <a name="iskey-element-assl"></a>Элемент IsKey (ASSL)
-  Указывает, предоставляет ли столбец ключ для варианта в [MiningStructure](../objects/miningstructure-element-assl.md) элемента.  
+  Указывает, предоставляет ли столбец ключ для варианта в [MiningStructure](../objects/miningstructure-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36193889"
 ## <a name="remarks"></a>Примечания  
  Один или несколько столбцов могут быть определены как ключевые столбцы для каждого уровня структуры вложенной таблицы.  
   
- Элемент, соответствующий родителю параметра `IsKey` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
+ Элемент, соответствующий родителю параметра `IsKey` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

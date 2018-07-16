@@ -1,5 +1,5 @@
 ---
-title: Мастера интеллектуального анализа данных | Документы Microsoft
+title: Мастера интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Mining Wizard
 - Analysis Services Data Mining Wizard
 ms.assetid: f949a5f0-d8f5-4da1-a9f8-200b918e29ff
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 442e77491d2254c230c60c99c8f1ede91117d171
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d309e9ce8d0ccfd48402be1bf6ce8f3f2ff2c3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263830"
 ---
 # <a name="data-mining-wizards"></a>Мастера интеллектуального анализа данных
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] предоставляет мастеры для использования в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "36192792"
   
 ## <a name="see-also"></a>См. также  
  [Средства интеллектуального анализа данных](data-mining/data-mining-tools.md)   
- [Учебник по интеллектуальному анализу данных](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Учебник интеллектуального анализа данных](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Создание структуры интеллектуального анализа данных OLAP](data-mining/create-an-olap-mining-structure.md)   
  [Создание реляционной структуры](data-mining/create-a-relational-mining-structure.md)   
  [Создать новую структуру интеллектуального анализа реляционных данных](data-mining/create-a-new-relational-mining-structure.md)   

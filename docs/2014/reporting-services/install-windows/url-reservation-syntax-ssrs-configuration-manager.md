@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 381abbb4ce34272a87f9b9a569fd6c869d0d7152
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1aabe7b98174ea420e9944c4a195a2fe3b15870
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301714"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Синтаксис резервирования URL-адресов (диспетчер конфигурации служб SSRS)
   В этом разделе описываются компоненты URL-адресов веб-службы сервера отчетов и диспетчера отчетов. Хранимое внутреннее представление URL-адреса имеет структуру, отличную от URL-адресов, вводимых в поле адреса окна браузера. Строка резервирования URL-адресов отображается в окне «Результаты» программы настройки служб Reporting Services и в файле конфигурации RSReportServer.config при настройке URL-адресов. Знание структуры определения URL-адреса может оказаться полезным при диагностике резервирования URL-адресов или при просмотре внутреннего резервирования URL-адресов сервера по запросу компонента HTTP.SYS.  
@@ -43,7 +43,7 @@ ms.locfileid: "36189710"
 |VirtualDirectory|ReportServer *[_ИмяЭкземпляра]*<br /><br /> Reports *[_ИмяЭкземпляра]*<br /><br /> \<пользовательский>|Указывает имя приложения. Это символьная строка. По умолчанию в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в качестве имен для приложений веб-службы сервера отчетов и диспетчера отчетов используются ReportServer и Reports соответственно. При желании можно указать другие имена.<br /><br /> Это значение обязательно. Оно идентифицирует приложение.<br /><br /> Для каждого экземпляра приложения указывается только один виртуальный каталог. Чтобы создать несколько URL-адресов для одного приложения в том же экземпляре, создайте несколько версий `UrlString`. Чтобы создать уникальные имена виртуального каталога для нескольких экземпляров приложения, включите в имя виртуального каталога после символа подчеркивания (_) имя экземпляра. *ИмяЭкземпляра* является необязательным, однако рекомендуется его указывать, если на одном компьютере существует несколько экземпляров. Дополнительные сведения о настройке резервирования URL-адресов для именованных экземпляров см. в разделе [Резервирование URL-адресов при развертывании сервера отчетов в нескольких экземплярах (диспетчер конфигураций служб SSRS)](url-reservations-for-multi-instance-report-server-deployments.md).<br /><br /> Имя виртуального каталога указывается без учета регистра. Оно может быть определено любой строкой, если она не содержит символы-разделители URL-адреса и кодировку URL.|  
   
 ## <a name="see-also"></a>См. также  
- [Настройка URL-адреса сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Настройка URL-адресов сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [Настройка URL-адрес &#40;диспетчер конфигурации служб SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   

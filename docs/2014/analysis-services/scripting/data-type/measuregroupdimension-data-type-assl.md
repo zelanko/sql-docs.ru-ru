@@ -1,5 +1,5 @@
 ---
-title: Тип данных MeasureGroupDimension (ASSL) | Документы Microsoft
+title: Тип данных MeasureGroupDimension (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupDimension data type
 ms.assetid: 9d1c1c19-31ce-4c42-b2e6-4c1b08875a83
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 369e20e1eaf3c5716e81a580b587c69efa64455f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3dcbba7071e1f2efc8ede59259a48a334652de81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249124"
 ---
 # <a name="measuregroupdimension-data-type-assl"></a>Тип данных MeasureGroupDimension (ASSL)
   Определяет абстрактный примитивный тип данных, представляющий связь между измерением и группой мер.  
@@ -72,9 +72,9 @@ ms.locfileid: "36192541"
   
  Каждая иерархия должна быть подмножеством иерархий, включенных в элемент [CubeDimension](cubedimension-data-type-assl.md). Выбрать уровни невозможно, хотя некоторые из них могут быть автоматически отключены в зависимости от гранулярности группы мер.  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.MeasureGroupDimension>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.MeasureGroupDimension>.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services сценариев типы данных XML в &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Типы данных XML в языке сценариев служб аналитики &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

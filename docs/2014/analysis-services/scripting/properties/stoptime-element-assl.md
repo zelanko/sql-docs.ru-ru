@@ -1,5 +1,5 @@
 ---
-title: Элемент StopTime (ASSL) | Документы Microsoft
+title: Элемент StopTime (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StopTime element
 ms.assetid: 6f863d53-033b-46e0-9837-e891e739b4b0
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8de76230ef19e04d921c93ce54d368e55424c230
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0a646cf736afbf78b656a2e891b6dafbcfead5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302674"
 ---
 # <a name="stoptime-element-assl"></a>Элемент StopTime (ASSL)
   Указывает дату и время, когда [трассировки](../objects/trace-element-assl.md) остановки элемента.  
@@ -61,10 +61,10 @@ ms.locfileid: "36188771"
 |Родительский элемент|[Trace](../objects/trace-element-assl.md)|  
 |Дочерние элементы|None|  
   
- Элемент, соответствующий родителю параметра `StopTime` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Trace>.  
+ Элемент, соответствующий родителю параметра `StopTime` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>См. также  
- [Отслеживает элемент &#40;ASSL&#41;](../collections/traces-element-assl.md)   
+ [Выполняет трассировку элемент &#40;ASSL&#41;](../collections/traces-element-assl.md)   
  [Свойства &#40;ASSL&#41;](properties-assl.md)  
   
   

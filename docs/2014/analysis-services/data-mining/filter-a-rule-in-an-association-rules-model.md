@@ -1,5 +1,5 @@
 ---
-title: Фильтр правила в ассоциации модели правил | Документы Microsoft
+title: Фильтр правила в ассоциации модели правил | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filtering rules [Analysis Services]
 - Mining Model Viewer [Analysis Services], rules
 - Rules Viewer
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36332206119e0cf3c75e62650f8f6d9ac60897e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2abb9180b446183764d96e95fe85f74d9bcd40f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289800"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>Фильтрация правила в модели ассоциативных правил
   Чтобы ограничить итоговый список, показав только нужные взаимосвязи, с моделями взаимосвязей можно использовать фильтрацию. Например, можно отфильтровать правила, чтобы показать только правила, содержащие определенный товар.  
@@ -64,7 +64,7 @@ ms.locfileid: "36195281"
   
 ## <a name="see-also"></a>См. также  
  [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](mining-model-viewer-tasks-and-how-tos.md)   
- [Просмотр модели с помощью средства просмотра правил взаимосвязи (Microsoft)](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Занятие 3: Построение сценария потребительской корзины &#40;промежуточного учебник по интеллектуальному анализу данных&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Просмотр модели с помощью средства просмотра правил взаимосвязей (Майкрософт)](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Занятие 3: Построение сценария потребительской корзины &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

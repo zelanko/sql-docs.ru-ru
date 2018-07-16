@@ -1,5 +1,5 @@
 ---
-title: Настройка типов атрибутов | Документы Microsoft
+title: Настройка типов атрибутов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - attributes [Analysis Services], types
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Type property
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cf258defa832969e438863038a4e0d6f0111c59d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5708b4f404bcd2487cfdd651df43234d4baa3af0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267740"
 ---
 # <a name="configure-attribute-types"></a>Настройка типов атрибутов
   В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]типы атрибутов помогают классифицировать атрибут с точки зрения функциональности бизнеса. Существует много типов атрибутов, большинство из которых используется клиентскими приложениями для облегчения отображения или поддержки атрибута. Однако некоторые типы атрибутов также имеют конкретное значение для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Например, некоторые типы атрибутов идентифицируют атрибуты, представляющие периоды времени в различных календарях для измерений времени.  

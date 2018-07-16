@@ -1,5 +1,5 @@
 ---
-title: Образец схемы XSD с заметками для примеров XPath (SQLXML 4.0) | Документы Microsoft
+title: Образец схемы XSD с заметками для примеров XPath (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - annotated XSD schemas, queries
 ms.assetid: fefa2cc8-2d3c-4336-aeae-ce063a3a8df2
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f4d8c06249a89f46317babc55b52eb45d8f6f8be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 9a78bacbc6c407946d20fc8e21a3ae91a30b04ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303604"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>Образец схемы XSD с заметками для примеров XPath (SQLXML 4.0)
   Образцы запросов XPath в этом разделе обращаются к схеме сопоставления. Схема сопоставления — это XSD-файл с заметками схемы XML. Дополнительные сведения о схемах сопоставления см. в разделе [введение в схемы XSD с заметками &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "36187963"
   
 -   Создайте шаблон с запросом XPath. В шаблоне укажите схему сопоставления, к который следует выполнять запрос XPath. В данном случае схема сопоставления должна храниться в каталоге (или одном из вложенных каталогов — в этом случае относительный путь указывается в виде значения атрибута `mapping-schema` в шаблоне), связанном с файлом шаблона.  
   
--   Создайте тестовое приложение, использующее для выполнения запросов расширения SQLXML для ADO. Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+-   Создайте тестовое приложение, использующее для выполнения запросов расширения SQLXML для ADO. Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Во всех примерах этого раздела запросы XPath в целях иллюстрации указаны в шаблоне, и шаблон выполняется с помощью ADO. Поэтому необходимо использовать следующий файл схемы сопоставления — SampleSchema1.xml. Сохраните этот файл в каталоге, где хранятся шаблоны.  
   

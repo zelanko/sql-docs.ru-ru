@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04518abb-8581-47c8-a601-ee9136c3c0eb
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bc9aa961911f8686ba3921fcf773ed47ecfb43a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: d1f3b7908e0ea58dad3f91b7a877fe5d64a1762a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188265"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292694"
 ---
 # <a name="database-features"></a>Функции базы данных
   Этот раздел содержит функции и задачи, связанные с базами данных, объектами баз данных, типами данных и механизмами для работы с данными и управления ими.  
@@ -38,6 +38,6 @@ ms.locfileid: "36188265"
 |[Поиск &#40;SQL Server&#41;](../database-engine/search-sql-server.md)|[Данные большого двоичного объекта (SQL Server)](blob/binary-large-object-blob-data-sql-server.md)||  
 |[Определяемые пользователем функции](user-defined-functions/user-defined-functions.md)|[Приложения уровня данных](data-tier-applications/data-tier-applications.md)||  
 |[Статистика](statistics/statistics.md)|[Журнал транзакций (SQL Server)](logs/the-transaction-log-sql-server.md)||  
-|[Руководства планов](performance/plan-guides.md)|[Контрольных точек базы данных &#40;SQL Server&#41;](logs/database-checkpoints-sql-server.md)||  
+|[Руководства планов](performance/plan-guides.md)|[Контрольные точки базы данных &#40;SQL Server&#41;](logs/database-checkpoints-sql-server.md)||  
   
   

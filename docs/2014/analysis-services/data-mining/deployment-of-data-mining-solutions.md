@@ -1,5 +1,5 @@
 ---
-title: Развертывание решений интеллектуального анализа данных | Документы Microsoft
+title: Развертывание решений интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], deploying
 - deploying [Analysis Services], production environments
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32f154993f65fc2e86538ebf5bff8528d2c491bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 73e598996172c6e29e8e6ed14ba863d28a7b3b43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249464"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Развертывание решений интеллектуального анализа данных
   Последний шаг процесса интеллектуального анализа данных — это развертывание моделей в производственной среде. Процесс развертывания важен, так как делает модели доступными пользователям для решения любой из следующих задач.  
   
--   Использование моделей для создания прогнозов и принятия бизнес-решений. Сведения о средствах, которые можно использовать для создания запросов, в разделе [интерфейсы запросов интеллектуального анализа данных](data-mining-query-tools.md).  
+-   Использование моделей для создания прогнозов и принятия бизнес-решений. Сведения о средствах, которые можно использовать для создания запросов, см. в разделе [интерфейсы запросов данных для интеллектуального анализа данных](data-mining-query-tools.md).  
   
 -   Внедрение функций интеллектуального анализа данных непосредственно в приложение. Можно включать объекты AMO или сборку, содержащую набор объектов, которые выбранное приложение может использовать для создания, изменения, обработки и удаления структур и моделей интеллектуального анализа данных.  
   
@@ -88,6 +88,6 @@ ms.locfileid: "36095588"
 ## <a name="see-also"></a>См. также  
  [Обработка объектов многомерной модели](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Интерфейсы запросов интеллектуального анализа данных](data-mining-query-tools.md)   
- [Требования к обработке и вопросы &#40;интеллектуального анализа данных&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Требования к обработке и рекомендации по &#40;интеллектуального анализа данных&#41;](processing-requirements-and-considerations-data-mining.md)  
   
   

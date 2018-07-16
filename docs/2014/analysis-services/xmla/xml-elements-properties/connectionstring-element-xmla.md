@@ -1,5 +1,5 @@
 ---
-title: Элемент ConnectionString (XML для Аналитики) | Документы Microsoft
+title: Элемент ConnectionString (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ConnectionString element
 ms.assetid: 3b0575aa-79ed-4f14-ae7e-dd587af4cdb1
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 12d69bfe2b8dc8bda91bc873167bb3208203d728
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e7345d2a35d80a2ce4d72875c4afb082b57ec1a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293214"
 ---
 # <a name="connectionstring-element-xmla"></a>Элемент ConnectionString (XML для аналитики)
-  Содержит строку соединения, используемой родительским [расположение](location-element-xmla.md) или [источника](source-element-xmla.md) элемента.  
+  Содержит строку подключения, используемой родительским [расположение](location-element-xmla.md) или [источника](source-element-xmla.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36095098"
   
  Для элементов `Source` элемент `ConnectionString` содержит строку соединения, используемую командой `Synchronize`, чтобы установить соединение с исходным экземпляром.  
   
- Дополнительные сведения о резервном копировании и восстановлении объектов см. в разделе [резервное копирование, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Дополнительные сведения о резервном копировании и восстановлении объектов см. в разделе [резервного копирования, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>См. также  
  [Элемент RESTORE &#40;XML для Аналитики&#41;](../xml-elements-commands/restore-element-xmla.md)   

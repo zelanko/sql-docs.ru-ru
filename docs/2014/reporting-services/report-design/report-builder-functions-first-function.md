@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 57683bf4fe9f4306eecd8bf170510a4b8bd29bb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4b8da17628c94d281168d9956b13a63512167c31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246524"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>Функция First (построитель отчетов и службы SSRS)
   Возвращает первое значение указанного выражения для заданной области.  
@@ -36,7 +36,7 @@ First(expression, scope)
   
 #### <a name="parameters"></a>Параметры  
  *expression*  
- (`Variant` или `Binary`) выражение, к которому применяется статистическая обработка, например, `=Fields!FieldName.Value`.  
+ (`Variant` или `Binary`) выражение, к которому статистическая обработка, например, `=Fields!FieldName.Value`.  
   
  *область*  
  (`String`) Необязательно. Имя набора данных, группы или области данных, содержащих элементы отчета, к которым применяется агрегатная функция. Если аргумент *scope* не задан, используется текущая область.  
@@ -47,9 +47,9 @@ First(expression, scope)
 ## <a name="remarks"></a>Примечания  
  Функция `First` возвращает первое значение в наборе данных после того, как для указанной области были применены сортировка и фильтрация.  
   
- `First` Функция не может использоваться в критериях фильтра группирования с либо, кроме текущей области (по умолчанию).  
+ `First` Функция не может использоваться в критериях фильтра группирования с какой-либо кроме текущей области (по умолчанию).  
   
- Можно также использовать `First` в заголовке страницы, чтобы вернуться в первое значение из `ReportItems` коллекции для страницы, чтобы произвести словарные заголовки, которые отображают первой и последней записи на странице.  
+ Можно также использовать `First` в верхнем колонтитуле страницы для возвращения первого значения из `ReportItems` сбор данных для страницы, чтобы произвести словарные заголовки, которые отображают первой и последней записях страницы.  
   
  Значение *scope* должно быть строковой константой и не может быть выражением. Для внешних агрегатов и агрегатов, в которых не задаются другие агрегаты, параметр *scope* должен ссылаться не текущую область или включающую область. Для агрегатов, содержащих агрегаты, во вложенных агрегатах может указываться дочерняя область.  
   
@@ -59,7 +59,7 @@ First(expression, scope)
   
 -   Параметр*Scope* для вложенных агрегатов не может быть именем набора данных.  
   
--   *Выражение* не должны содержать `First`, `Last`, `Previous`, или `RunningValue` функции.  
+-   *Выражение* не может содержать `First`, `Last`, `Previous`, или `RunningValue` функции.  
   
 -   *Expression* не может содержать вложенные агрегаты, в которых указан параметр *recursive*.  
   
@@ -75,9 +75,9 @@ First(expression, scope)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Выражения используются в отчетах &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
- [Область выражения для итогов, статистических функций и встроенных коллекций &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Развертывание Exception Message Box Application | Документы Microsoft
+title: Развертывание Exception Message Box Application | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - exception message box [SQL Server]
 ms.assetid: d8ecc67a-ef33-4d44-8ae6-eaacb8ca3e74
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b07b7b06757e2ed2c27f8a030a9322fcf92de678
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a9b10cab0b1eefe92c6355a723bd696fa0528643
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307976"
 ---
 # <a name="deploying-an-exception-message-box-application"></a>Развертывание приложения для вывода сообщения об исключении
-  Окно сообщения об исключении устанавливается по [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и поддерживается для использования в пользовательских приложениях Windows, чтобы улучшить обработку исключений. Поскольку окно сообщения об исключении устанавливается всеми выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] за исключением [!INCLUDE[ssEW](../../includes/ssew-md.md)], его можно использовать без дополнительной настройки на любом компьютере, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентских компонентов, включая пакет SDK, были установлены.  
+  Окно сообщения об исключении устанавливается по [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и поддерживается для использования в пользовательских приложениях Windows, чтобы улучшить обработку исключений. Так как окно сообщения об исключении устанавливается всеми выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] за исключением [!INCLUDE[ssEW](../../includes/ssew-md.md)], его можно использовать без дополнительной настройки на любом компьютере, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентских компонентов, включая пакет SDK, были установлены.  
   
 ## <a name="see-also"></a>См. также  
  [Окно сообщения об исключении программы](../../../2014/database-engine/dev-guide/program-exception-message-box.md)   

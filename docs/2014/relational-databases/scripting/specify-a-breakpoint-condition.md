@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.condition
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c9f8d69cd320009562b81c4b33c0cbd3374f1498
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8ecee19e4846d2ccf49c21d90b8ab9815ed63a5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282780"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Задание условия точки останова
   Условием для точки останова служит выражение [!INCLUDE[tsql](../../includes/tsql-md.md)] , проверяемое отладчиком по достижению точки останова. Если достигнуто указанное число попаданий или удовлетворяется указанное условие, то отладчик останавливает выполнение или выполняет действие, заданное для точки останова.  
@@ -43,7 +43,7 @@ ms.locfileid: "36194682"
   
 2.  Введите в поле **Условие** диалогового окна **Условие точки останова** допустимое логическое выражение.  
   
-3.  Выберите **верно** требуется прервать выполнение, если выражение, результатом которого является `true`, или выберите **изменилось** Если требуется прервать выполнение при изменении значения выражения.  
+3.  Выберите **верно** Если вы хотите прервать в случае выражение, результатом которого является `true`, или выберите **изменилось** Если требуется прервать выполнение при изменении значения выражения.  
   
     > [!NOTE]  
     >  Отладчик не проверяет это логическое выражение, пока не будет достигнута первая точка останова. Если выбрать **Изменилось**, отладчик не будет считать первую проверку изменением и, следовательно, не будет прерывать при ней исполнение.  

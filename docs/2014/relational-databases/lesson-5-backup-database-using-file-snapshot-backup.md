@@ -1,5 +1,5 @@
 ---
-title: 'Урок 6: Перенос базы данных из источника локального компьютера на целевой компьютер в Windows Azure | Документы Microsoft'
+title: 'Занятие 6: Перенос базы данных из источника локального компьютера на целевой компьютер в Windows Azure | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2f6f0ac359d5358994c0a3a5367c676ca2f83969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0412dad97550d5a9aaf601488559ef7c91e1880a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207064"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Урок 6: Перенос базы данных из источника локального компьютера на целевой компьютер в Windows Azure
-  Для этого занятия предполагается, что у вас уже есть другой экземпляр SQL Server, который может находиться на другом локальном компьютере или на виртуальной машине Windows Azure. Сведения о создании виртуальной машины с SQL Server в Windows Azure см. в разделе [подготовки виртуальной машины SQL Server в Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). После провизионирования виртуальной машины SQL Server в Windows Azure необходимо подключиться к экземпляру SQL Server на этой виртуальной машине с помощью среды SQL Server Management Studio, работающей на другом компьютере.  
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Занятие 6: Перенос базы данных из источника локального компьютера на целевой компьютер в Windows Azure
+  Для этого занятия предполагается, что у вас уже есть другой экземпляр SQL Server, который может находиться на другом локальном компьютере или на виртуальной машине Windows Azure. Сведения о том, как создать виртуальную машину SQL Server в Windows Azure, см. в разделе [подготовки виртуальной машины с SQL Server в Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). После провизионирования виртуальной машины SQL Server в Windows Azure необходимо подключиться к экземпляру SQL Server на этой виртуальной машине с помощью среды SQL Server Management Studio, работающей на другом компьютере.  
   
  Для этого занятия также предполагается, что вы уже выполнили следующие шаги.  
   
@@ -136,13 +136,13 @@ ms.locfileid: "36190985"
   
 3.  Подключитесь к целевому компьютеру, на котором установлен SQL Server 2014 CTP2 или более поздняя версия. Чтобы подготовить целевой компьютер, на нем необходимо создать учетные данные SQL Server, которые указывают на тот же контейнер, размещенный в TestDB1. Если вы собираетесь повторно присоединить базу данных на том же компьютере, то нет необходимости создавать другие учетные данные.  
   
-4.  В **обозревателя объектов**, щелкните правой кнопкой мыши **баз данных** и нажмите кнопку **присоединение**.  
+4.  В **обозревателя объектов**, щелкните правой кнопкой мыши **баз данных** и нажмите кнопку **Attach**.  
   
-5.  В **присоединение баз данных** диалоговое окно для указания базы данных для присоединения, щелкните **добавить**. В **расположение файлов базы данных** диалоговое окно:  
+5.  В **присоединение баз данных** щелкните диалоговое окно, чтобы указать присоединяемую базу данных **добавить**. В **расположение файлов базы данных** диалоговое окно:  
   
      Расположение файла базы данных, введите: `https://teststorageaccnt.blob.core.windows.net/testcontainer/`.  
   
-     Введите имя файла: `TestDB1Data.mdf`.  
+     Имя файла, введите: `TestDB1Data.mdf`.  
   
 6.  Нажмите кнопку **ОК**.  
   

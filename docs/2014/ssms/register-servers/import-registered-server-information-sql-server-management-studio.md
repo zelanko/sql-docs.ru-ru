@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.importregisteredservers.f1
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - importing registered server information
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f71d4174e159f84b7596600d1e4f8b5b4b99eb2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 14c42bbfb8bab13d074914ce8c1de37d4c35a133
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247964"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>Импорт сведений о зарегистрированном сервере (среда SQL Server Management Studio)
   В этом разделе описывается, как импортировать сохраненные сведения о зарегистрированных серверах в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Экспорт и импорт файлов зарегистрированных серверов позволяет легко настроить для нескольких компьютеров одинаковые зарегистрированные серверы. Это удобно при управлении большим количеством серверов с компьютеров, расположенных в различных местах, или если требуется сконфигурировать базовые настройки соединения для менее опытных пользователей.  
@@ -56,7 +56,7 @@ ms.locfileid: "36095776"
  Регистрации серверов, использующие метод проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , хранят пароли отдельно для каждого пользователя. После импорта регистраций серверов пользователи должны ввести пароль при первом подключении к каждому серверу, сохраняя пароли в списке зарегистрированных серверов. Если серверы зарегистрированы с помощью проверки подлинности Windows, нет необходимости использовать эту операцию.  
   
 ## <a name="see-also"></a>См. также  
- [Изменение регистрации сервера &#40;SQL Server Management Studio&#41; ](change-a-server-s-registration-sql-server-management-studio.md) [Экспорт сведений о зарегистрированных серверах &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
+ [Изменение регистрационных данных сервера &#40;SQL Server Management Studio&#41; ](change-a-server-s-registration-sql-server-management-studio.md) [Экспорт сведений о зарегистрированных серверах &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
  [Создание нового зарегистрированного сервера (среда SQL Server Management Studio)](create-a-new-registered-server-sql-server-management-studio.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Завершение работы мастера (мастер статистических схем) | Документы Microsoft
+title: Завершение работы мастера (мастер статистических схем) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.finish.f1
 ms.assetid: 0081efe0-815d-4c55-9844-965db953aafe
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba71cabd83b7fff5c3ae5069e6ac0adc539daf74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: deaa50661fb466dbe2048569e8d8971e9d527890
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282420"
 ---
 # <a name="completing-the-wizard-aggregation-design-wizard"></a>Завершение работы мастера (мастер статистических схем)
   Используйте страницу **Завершение работы мастера** для сохранения проекта статистических схем в выбранные секции. Можно также развернуть и обработать выбранные секции после завершения работы мастера статистических схем и сохранения статистических схем.  

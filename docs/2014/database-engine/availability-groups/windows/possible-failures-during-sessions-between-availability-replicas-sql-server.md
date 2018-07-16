@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [SQL Server, HADR]
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 caps.latest.revision: 11
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 5b3126f9839ebb8975a458aad43cd330d3cfef13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5a1d9f3e76d0ab3bb4c5b7560e38de8a208c0211
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245364"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Возможные сбои во время сеансов между репликами доступности (SQL Server)
   Физические неисправности, неполадки операционной системы или проблемы с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут привести к сбою сеанса между двумя репликами доступности. Реплика доступности не выполняет регулярных проверок компонентов, которые использует процесс Sqlservr.exe, и не контролирует правильность их работы. Однако при сбоях некоторых типов затронутый компонент сообщает приложению Sqlservr.exe об ошибке. Ошибка, о которой сообщил другой компонент, называется *постоянной ошибкой*. Чтобы обнаружить другие сбои, которые в противном случае могли бы быть не замечены, в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] реализован собственный механизм времени ожидания сеанса. Указывает интервал времени ожидания сеанса в секундах. Данный интервал времени ожидания — это максимальное время, в течение которого экземпляр сервера ожидает получение сообщения PING от другого экземпляра перед тем, как сделать вывод о том, что другой экземпляр отключен. По истечении времени ожидания сеанса между двумя репликами доступности эти реплики доступности предполагают наличие сбоя и объявляют о *программной ошибке*.  
@@ -93,7 +92,7 @@ ms.locfileid: "36193866"
  Если в течение периода ожидания от другой реплики не приходит сообщение проверки связи, то соединение завершается. Соединение закрывается, и реплика переходит в состояние DISCONNECTED. Даже если для отключенной реплики настроен режим синхронной фиксации, транзакции не будут ожидать ее повторного подключения и повторной синхронизации.  
   
 ## <a name="responding-to-an-error"></a>Реакция на ошибку  
- Независимо от типа ошибки, экземпляр сервера, который обнаружил ее, реагирует в соответствии с ролью экземпляра, режимом доступности сеанса и состоянием других подключений этого сеанса. Сведения о том, что происходит при потере участника см. в разделе [ режимы доступности (группы доступности AlwaysOn)](availability-modes-always-on-availability-groups.md).  
+ Независимо от типа ошибки, экземпляр сервера, который обнаружил ее, реагирует в соответствии с ролью экземпляра, режимом доступности сеанса и состоянием других подключений этого сеанса. Сведения о том, что происходит при потере участника, см. в разделе [ режимы доступности (группы доступности AlwaysOn)](availability-modes-always-on-availability-groups.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
  **Изменение значения времени ожидания (только в режиме синхронной фиксации)**  

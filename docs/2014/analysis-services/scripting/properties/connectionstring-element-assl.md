@@ -1,5 +1,5 @@
 ---
-title: Элемент ConnectionString (ASSL) | Документы Microsoft
+title: Элемент ConnectionString (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ConnectionString element
 ms.assetid: f74181c4-7df7-4fbd-94dd-e4ad03dffe14
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3f1782eb62cec4d028a17f380a8bd924458e1e65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca1905c6790ff71b9a263182a4812c2fedaa1e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286000"
 ---
 # <a name="connectionstring-element-assl"></a>Элемент ConnectionString (ASSL)
-  Содержит зашифрованную строку подключения для [DataSource](../objects/datasource-element-assl.md) элемента.  
+  Содержит зашифрованную строку соединения для [DataSource](../objects/datasource-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36191512"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, соответствующий родителю параметра `ConnectionString` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.DataSource>.  
+ Элемент, соответствующий родителю параметра `ConnectionString` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.DataSource>.  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;ASSL&#41;](properties-assl.md)  

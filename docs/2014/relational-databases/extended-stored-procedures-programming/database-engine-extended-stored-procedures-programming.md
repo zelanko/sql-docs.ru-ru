@@ -1,5 +1,5 @@
 ---
-title: Программирование расширенных хранимых процедур | Документы Microsoft
+title: Программирование расширенных хранимых процедур | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ODS [SQL Server]
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4b07d4486eb8cfe4c1b1cd63c2774f596df5ee35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: bc4dcf01c8a7d815fde3589c2d964b8a2d8c7c97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290820"
 ---
 # <a name="programming-extended-stored-procedures"></a>Программирование расширенных хранимых процедур
     
@@ -43,7 +43,7 @@ ms.locfileid: "36190001"
  В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] расширенные хранимые процедуры представляли собой единственный доступный механизм, позволяющий разработчикам баз данных создавать логику на стороне сервера, которую трудно или невозможно написать с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]. Интеграция со средой CLR более надежна, чем использование таких хранимых процедур. Более того, благодаря интеграции со средой CLR, логика, ранее создаваемая в виде хранимых процедур, зачастую лучше выражается возвращающими табличные значения функциями, что позволяет выполнять к результатам такой функции запросы в виде инструкций SELECT, внедряя их в предложение FROM.  
   
 ## <a name="see-also"></a>См. также  
- [Общеязыковая среда выполнения &#40;CLR&#41; интеграции](../clr-integration/common-language-runtime-integration-overview.md)   
+ [Среда CLR &#40;CLR&#41; Общие сведения об интеграции](../clr-integration/common-language-runtime-integration-overview.md)   
  [Функции среды CLR, возвращающие табличное значение](../clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Базовый скрипт многомерных Выражений (MDX) | Документы Microsoft
+title: Базовый скрипт многомерных Выражений (многомерные Выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default MDX scripts
 - statements [MDX]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - scripts [MDX], about scripts
 ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 501268fe4537e261b21af317fd90da32efb0e917
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fcdb7be7a4e3a9ab29dc93f899f3035cf68264c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098058"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303104"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>Базовый скрипт многомерных выражений (многомерные выражения)
   Скрипт многомерных выражений определяет процесс вычисления куба в службах [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Существует два типа скриптов многомерных выражений.  
@@ -60,14 +60,14 @@ ms.locfileid: "36098058"
   
 -   [ЗАКРЕПИТЬ](/sql/mdx/mdx-scripting-freeze)  
   
--   [ОБЛАСТЬ ДЕЙСТВИЯ](/sql/mdx/mdx-scripting-scope)  
+-   [ОБЛАСТЬ](/sql/mdx/mdx-scripting-scope)  
   
  Дополнительные сведения об инструкциях сценариев многомерных выражений см. в разделе [Инструкции сценариев многомерных выражений (многомерные выражения)](/sql/mdx/mdx-scripting-statements-mdx).  
   
- [СОЗДАНИЕ ЧЛЕНА](/sql/mdx/mdx-data-definition-create-member)  
+ [СОЗДАНИЕ ЭЛЕМЕНТА](/sql/mdx/mdx-data-definition-create-member)  
  Инструкция CREATE MEMBER служит для создания вычисляемых элементов. Дополнительные сведения о создании вычисляемых элементов см. в разделе [Создание вычисляемых элементов в многомерных выражениях (многомерные выражения)](mdx-calculated-members-building-calculated-members.md).  
   
- [СОЗДАТЬ НАБОР](/sql/mdx/mdx-data-definition-create-set)  
+ [СОЗДАНИЕ НАБОРА](/sql/mdx/mdx-data-definition-create-set)  
  Инструкция CREATE SET служит для создания именованных наборов. Дополнительные сведения о создании именованных наборов см. в разделе [Построение именованных наборов в многомерных выражениях (многомерные выражения)](mdx-named-sets-building-named-sets.md).  
   
  Условные инструкции  
@@ -95,6 +95,6 @@ ms.locfileid: "36098058"
   
 ## <a name="see-also"></a>См. также  
  [Справочник по языку многомерных Выражений &#40;многомерных Выражений&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Основные понятия о сценариях многомерных Выражений &#40;служб Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [Основные принципы создания скриптов многомерных Выражений &#40;служб Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

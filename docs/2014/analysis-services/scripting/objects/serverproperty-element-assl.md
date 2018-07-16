@@ -1,5 +1,5 @@
 ---
-title: Элемент ServerProperty (ASSL) | Документы Microsoft
+title: Элемент ServerProperty (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ServerProperty element
 ms.assetid: f152a1b5-0972-40d8-907f-f131c2a108bb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6cb62681b0c25c83d54076a67a37addc764102da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c6af3d46fac2b6ed02ff4cd261a8f5361d466ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300934"
 ---
 # <a name="serverproperty-element-assl"></a>Элемент ServerProperty (ASSL)
-  Определяет свойство сервера, связанное с [сервера](server-element-assl.md) элемента.  
+  Определяет свойство сервера, связанное с [Server](server-element-assl.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,12 +64,12 @@ ms.locfileid: "36095529"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[ServerProperties](../collections/serverproperties-element-assl.md)|  
-|Дочерние элементы|[Значение по умолчанию](../properties/value-element-assl.md), [DisplayFlag](../properties/displayflag-element-assl.md), [имя](../properties/name-element-assl.md), [PendingValue](../properties/pendingvalue-element-assl.md), [RequiresRestart](../properties/requiresrestart-element-assl.md), [значение](../properties/value-element-assl.md)|  
+|Дочерние элементы|[DefaultValue](../properties/value-element-assl.md), [DisplayFlag](../properties/displayflag-element-assl.md), [имя](../properties/name-element-assl.md), [PendingValue](../properties/pendingvalue-element-assl.md), [RequiresRestart](../properties/requiresrestart-element-assl.md), [значение](../properties/value-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- `ServerProperty` Элемент описывает данные и метаданные для свойства сервера, связанный с экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. В отличие от элементов, содержащихся в языке сценариев служб Analysis Services (ASSL), элемент `ServerProperty` для описания свойств сервера использует пары «имя-значение», а не явно поименованные свойства. Пары «имя-значение» обеспечивают гибкость применения и расширяемость.  
+ `ServerProperty` Элемент описывает данные и метаданные для свойства сервера, связанного с экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. В отличие от элементов, содержащихся в языке сценариев служб Analysis Services (ASSL), элемент `ServerProperty` для описания свойств сервера использует пары «имя-значение», а не явно поименованные свойства. Пары «имя-значение» обеспечивают гибкость применения и расширяемость.  
   
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.ServerProperty>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент Server &#40;ASSL&#41;](server-element-assl.md)   

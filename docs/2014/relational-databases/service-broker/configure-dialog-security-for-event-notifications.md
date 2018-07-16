@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-notifications
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0da3e8f61c3db9721d68c441ae2db0d497cf1741
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e129d7b64d079104a2378fb24dcc0419dd4e8647
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266220"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Настройка безопасности диалогов для уведомлений о событиях
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] на удаленном сервере, необходимо настроить безопасность диалога. Безопасность диалога должна настраиваться вручную согласно модели полной безопасности диалога компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Модель полной безопасности включает шифрование и дешифрование сообщений, посылаемых на удаленный сервер и принимаемых с этого сервера. Хотя уведомления о событиях посылаются в одном направлении, другие сообщения, например ошибки, возвращаются в противоположном направлении.  

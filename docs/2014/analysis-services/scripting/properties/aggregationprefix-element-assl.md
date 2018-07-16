@@ -1,5 +1,5 @@
 ---
-title: Элемент AggregationPrefix (ASSL) | Документы Microsoft
+title: Элемент AggregationPrefix (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationPrefix element
 ms.assetid: 1581e0df-ae8e-41ce-9c92-f0f7cac487f2
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 84f7b086e1cdc2516f0912a4580d0b3eb45132ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7f7fe7ad16c8949116edb13c7d2c9b5144443dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293284"
 ---
 # <a name="aggregationprefix-element-assl"></a>Элемент AggregationPrefix (ASSL)
   Определяет общий префикс для имен агрегатов везде в связанном родительском элементе.  
@@ -70,13 +70,13 @@ ms.locfileid: "36194590"
   
  Первые четыре части имени агрегата составляют префикс агрегата. Пользователь предоставляет первые четыре части.  
   
--   *DatabasePrefix* представляет значение `AggregationPrefix` элемента, связанного с `Database` элемента.  
+-   *DatabasePrefix* представляет значение `AggregationPrefix` элемент, связанный с `Database` элемент.  
   
--   *CubePrefix* представляет значение `AggregationPrefix` элемента, связанного с `Cube` элемента.  
+-   *CubePrefix* представляет значение `AggregationPrefix` элемент, связанный с `Cube` элемент.  
   
--   *MeasureGroupPrefix* представляет значение `AggregationPrefix` элемента, связанного с `MeasureGroup` элемента.  
+-   *MeasureGroupPrefix* представляет значение `AggregationPrefix` элемент, связанный с `MeasureGroup` элемент.  
   
--   *PartitionPrefix* представляет значение `AggregationPrefix` элемента, связанного с `Partition` элемента.  
+-   *PartitionPrefix* представляет значение `AggregationPrefix` элемент, связанный с `Partition` элемент.  
   
  Пятой частью имени, *AggregationID*, является идентификатор, определяемый системой, а пользователи не имеют контроля над этой частью имени.  
   

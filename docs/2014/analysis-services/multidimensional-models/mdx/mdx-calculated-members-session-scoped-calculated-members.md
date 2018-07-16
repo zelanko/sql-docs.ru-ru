@@ -1,5 +1,5 @@
 ---
-title: Создание областью действия сеанса вычисляемых элементов (многомерные Выражения) | Документы Microsoft
+title: Создание с областью действия сеанса вычисляемых элементов (многомерные Выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CREATE MEMBER statement
 - session-scoped calculated members [MDX]
 ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8e51a2fa5d8179134ac2654f55e9da7ff5ced67
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79e6466c7f514b3453f8840a72dc0028a215259b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249864"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>Создание вычисляемых элементов с областью действия сеанса (многомерные выражения)
   Для создания вычисляемых элементов, доступных в сеансе многомерных выражений, используется инструкция [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member). Вычисляемый элемент, созданный с помощью инструкции CREATE MEMBER, удаляется только при закрытии сеанса многомерных выражений.  
@@ -56,6 +56,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание областью действия запроса вычисляемые элементы &#40;многомерных Выражений&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
+ [Создание, областью действия запроса вычисляемые элементы &#40;многомерных Выражений&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

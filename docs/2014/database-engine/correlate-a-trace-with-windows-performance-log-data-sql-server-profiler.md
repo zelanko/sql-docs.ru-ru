@@ -1,5 +1,5 @@
 ---
-title: Сопоставление трассировки с журналом производительности Windows (SQL Server Profiler) | Документы Microsoft
+title: Сопоставление трассировки с журналом производительности Windows (SQL Server Profiler) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], logs
 ms.assetid: e1b3072c-8daf-49a7-9895-c8cccd2adb95
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 34e9b8543ea566f9f984b2cb19a602329d1c0d1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d5517f2962bef05e560697c55348a5372a80aa62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245354"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>согласовать трассировку с данными журнала производительности Windows (приложение SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] может согласовывать счетчики системного монитора Windows с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] события. Системный монитор Windows регистрирует системную активность указанных счетчиков журнала производительности.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] может согласовывать счетчики системного монитора Microsoft Windows с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] события. Системный монитор Windows регистрирует системную активность указанных счетчиков журнала производительности.  
   
 > [!NOTE]  
 >  Дополнительные сведения об общем доступе к журналам между различными версиями Windows приведены в конце данного подраздела.  

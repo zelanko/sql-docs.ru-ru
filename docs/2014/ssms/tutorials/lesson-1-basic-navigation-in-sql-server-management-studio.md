@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cab5279-86fd-482d-a690-de24bbc25299
-caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7ae7f0bfae887834f0e1cd619f5abe135a3b5a53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5c5fc0c3734f65518715e02a5213fc14c62d2fcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306924"
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Занятие 1. Основные возможности перемещения в среде SQL Server Management Studio
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] — это мощное и гибкое средство. Однако пользователи, не работавшие с Microsoft Visual Studio, иногда не знают, как быстро воспользоваться той или иной функцией. На этом занятии предстоит изучить, как взаимодействие окон образует область конструктора, которая облегчает выполнение задач. В конце занятия описано, как убирать ненужные окна, быстро открывать окна с требуемыми сведениями и задавать настройки по умолчанию таким образом, чтобы на экране отображались наиболее часто используемые в работе элементы.  

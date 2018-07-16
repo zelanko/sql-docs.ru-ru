@@ -1,5 +1,5 @@
 ---
-title: Страница «Общие свойства», элементы отчета (диспетчер отчетов) | Документы Microsoft
+title: Страница «Общие свойства», элементы (диспетчер отчетов) отчета | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0ce0b1ca08f1d0d97f268f3ec8c145c117d56a60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3823b01bfc318f26ba0135d054d913d3ffe1fd6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238514"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Страница «Общие свойства» — «элементы отчета» (диспетчер отчетов)
   Страница «Свойства» используется для просмотра и управления общими свойствами элемента отчета.  
@@ -84,7 +84,7 @@ ms.locfileid: "36095182"
  [Управление элементами отчета](report-design/managing-report-parts.md)   
  [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Содержимое страницы &#40;диспетчера отчетов&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Элементы отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [Элементы отчета &#40;построитель отчетов и службы SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
  [Элементы отчета и наборы данных в построителе отчетов](report-data/report-parts-and-datasets-in-report-builder.md)  
   

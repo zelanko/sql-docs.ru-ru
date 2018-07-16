@@ -1,5 +1,5 @@
 ---
-title: Тип данных Rowset (XML для Аналитики) | Документы Microsoft
+title: Тип данных Rowset (XML для Аналитики) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - Rowset data type
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 554217fe6d660040b51788d82a63f11ea0b7ce7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6f7dd6bc7f19d7d3eba42c21cda71a9216cbe32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279450"
 ---
 # <a name="rowset-data-type-xmla"></a>Тип данных Rowset (XML для аналитики)
   Определяет производный тип данных, представляющий [корневой](../xml-elements-properties/root-element-xmla.md) элемент, который возвращает табличные данные из [Discover](../xml-elements-methods-discover.md) или [Execute](../xml-elements-methods-execute.md) вызова метода.  
   
- **Пространство имен** urn: schemas-microsoft-com: XML-analysis: rowset  
+ **Пространство имен** urn: schemas-microsoft-com: XML-analysis: набор строк  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,13 +62,13 @@ ms.locfileid: "36195246"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|None|  
-|Дочерние элементы|[Строки](../xml-elements-properties/row-element-xmla.md)|  
-|Производные элементы|[корень](../xml-elements-properties/root-element-xmla.md)|  
+|Дочерние элементы|[строки](../xml-elements-properties/row-element-xmla.md)|  
+|Производные элементы|[корневой](../xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- В XML нельзя использовать определенные символы в качестве имен элементов и атрибутов. Чтобы устранить это ограничение по именованию, XML для аналитики (XMLA) поддерживает кодировку в соответствии с определением [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Для имен столбцов, содержащих XML-символы, недопустимые в соответствии со спецификацией XML 1.0 XML для Аналитики использует соответствующие шестнадцатеричные значения для преобразования символов Юникода, которые являются недопустимыми. Шестнадцатеричные значения экранируются как _x*HHHH*\_, где *HHHH* означает четырехзначный шестнадцатеричный код UCS-2 для символа в первый заказ старший значащий бит. Например, в XML для аналитики имя «Order Details» будет закодировано как Order_x0020_Details, где символ пробела заменен на соответствующий шестнадцатеричный код.  
+ В XML нельзя использовать определенные символы в качестве имен элементов и атрибутов. Чтобы устранить это ограничение по именованию, XML для аналитики (XMLA) поддерживает кодировку в соответствии с определением [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Для имен столбцов, содержащих XML-символы, недопустимые в соответствии со спецификацией XML 1.0 XML для Аналитики используются соответствующие шестнадцатеричные значения для кодирования символов Юникода, которые не являются допустимыми. Шестнадцатеричные значения экранируются как _x*HHHH*\_, где *HHHH* расшифровывается из четырех цифр шестнадцатеричный код UCS-2 для символа, в порядке старшинства наиболее значимый бит. Например, в XML для аналитики имя «Order Details» будет закодировано как Order_x0020_Details, где символ пробела заменен на соответствующий шестнадцатеричный код.  
   
- Кодирование может усложнить XSL-преобразования. Для поддержки уточняющих запросов для действительных незакодированных имен столбцов, добавьте `sql:field`атрибут схемы набора строк XML для каждого столбца, как показано в следующем примере:  
+ Кодирование может усложнить XSL-преобразования. Для поддержки уточняющих запросов для действительных незакодированных имен столбцов, добавить `sql:field`атрибут схемы набора строк XML для каждого столбца, как показано в следующем примере:  
   
 ```  
 <xsd:element name="Order_x0020_Details" type="string" sql:field="Order Details" />  

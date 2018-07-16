@@ -1,5 +1,5 @@
 ---
-title: Создание определяемой пользователем роли | Документы Microsoft
+title: Создание определяемой пользователем роли | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c4128993-2333-48c7-84b1-e51cdcea393d
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b8405be955cdfd4f0d8b9665665f8817c98b9d60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fcd15f49067a9c6a1091f98e6b361ab11baf2a0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295124"
 ---
 # <a name="create-a-user-defined-role"></a>Создание пользовательской роли
     
@@ -31,7 +31,7 @@ ms.locfileid: "36193615"
   
 3.  На панели инструментов обозревателя объектов нажмите кнопку **Соединить**и выберите **Компонент Database Engine**.  
   
-4.  В диалоговом окне **Соединение с сервером** введите имя сервера и выберите режим проверки подлинности. Можно использовать точку (.), (local) или `localhost` для указания локального сервера.  
+4.  В диалоговом окне **Соединение с сервером** введите имя сервера и выберите режим проверки подлинности. Можно использовать точку (.), (local), или `localhost` для указания локального сервера.  
   
 5.  Нажмите кнопку **Соединить**.  
   

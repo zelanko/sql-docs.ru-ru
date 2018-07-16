@@ -1,5 +1,5 @@
 ---
-title: Запуск SQL Server мастер импорта и экспорта | Документы Microsoft
+title: Запуск SQL Server мастер импорта и экспорта | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Import and Export Wizard
 - starting SQL Server Import and Export Wizard
@@ -18,18 +18,18 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 817172e78c7f7702aa4dc9d7555b25f6866a6897
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d39f6988fafe56210e5641b85f54adb644b8d8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307996"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Запуск мастера импорта и экспорта SQL Server
   Мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет самый простой способ копирования данных между источниками и создания основных пакетов. Дополнительные сведения о мастере см. в разделе [SQL Server Импорт и экспорт](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
   
- Видео, в котором демонстрируется использование мастера экспорта и импорта SQL Server для создания пакета, который экспортирует данные из базы данных SQL Server в электронную таблицу Microsoft Excel, в разделе [Экспорт данных SQL Server в Excel (видеоматериал SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131024).  
+ Видеоматериал, в котором демонстрируется использование мастера экспорта и импорта SQL Server для создания пакета, который экспортирует данные из базы данных SQL Server в электронную таблицу Microsoft Excel, см. в разделе [Экспорт данных SQL Server в Excel (видеоматериал SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131024).  
   
 ### <a name="to-start-the-sql-server-import-and-export-wizard"></a>Запуск мастера импорта и экспорта SQL Server  
   
@@ -37,15 +37,15 @@ ms.locfileid: "36194064"
   
      —или—  
   
-     В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], щелкните правой кнопкой мыши **пакетов служб SSIS** папки, а затем щелкните **SSISImport и экспорт**.  
+     В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], щелкните правой кнопкой мыши **пакетов служб SSIS** папку, а затем щелкните **SSISImport и экспорт**.  
   
      —или—  
   
-     В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]на **проекта** меню, нажмите кнопку **SSISImport и экспорт**.  
+     В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]на **проекта** меню, щелкните **SSISImport и экспорт**.  
   
      —или—  
   
-     В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключиться к [!INCLUDE[ssDE](../../includes/ssde-md.md)] тип сервера, разверните узел базы данных, щелкните правой кнопкой мыши базу данных, укажите **задачи**и нажмите кнопку **импорта данных** или **Экспорт данных**.  
+     В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключиться к [!INCLUDE[ssDE](../../includes/ssde-md.md)] тип сервера, разверните узел базы данных, щелкните правой кнопкой мыши базу данных, укажите **задачи**, а затем нажмите кнопку **Импорт данных** или **Экспорт данных**.  
   
      —или—  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36194064"
     > [!NOTE]  
     >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Поставщик OLE DB для Oracle не поддерживает типы данных Oracle BLOB, CLOB, NCLOB, BFILE и UROWID. Следовательно, источник OLE DB не может извлекать данные из таблиц, содержащих столбцы с этими типами данных.  
   
-     Доступны такие назначения включают [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] поставщиков данных, поставщики OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, Excel, доступ и «неструктурированный файл».  
+     Доступны такие назначения [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] поставщики данных, поставщики OLE DB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, Excel, Access и назначение «неструктурированный файл».  
   
 3.  Задайте параметры выбранного типа назначения.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36194064"
   
          Если источником является поставщик [!INCLUDE[vstecado](../../includes/vstecado-md.md)], можно также использовать этот параметр, чтобы скопировать результаты запроса, предоставляя строку DBCommand в качестве запроса.  
   
-         Если источник данных является представление, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастер импорта и экспорта автоматически преобразует это представление в таблицу в назначении.  
+         Если источник данных является представление, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастер импорта и экспорта автоматически преобразует представление в таблицу в месте назначения.  
   
     -   Укажите, следует ли удалить и создать повторно целевую таблицу, а также разрешить ли вставку идентификаторов.  
   
@@ -121,17 +121,17 @@ ms.locfileid: "36194064"
   
 6.  Сохраните и выполните пакет.  
   
-     Если мастер запущен из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или из командной строки, пакет может быть выполнен немедленно. При необходимости можно сохранить пакет, чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** базы данных или в файловой системе. Дополнительные сведения о **msdb** базы данных см. в разделе [пакета управления &#40;службы SSIS&#41;](../service/package-management-ssis-service.md).  
+     Если мастер запущен из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или из командной строки, пакет может быть выполнен немедленно. При необходимости можно сохранить пакет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** базы данных или в файловой системе. Дополнительные сведения о **msdb** базы данных, см. в разделе [управления пакетами &#40;службы SSIS&#41;](../service/package-management-ssis-service.md).  
   
-     Если пакет сохранен, то можно задать уровень защиты пакета, и если уровень защиты использует пароль, то необходимо предоставить пароль. Дополнительные сведения об уровнях защиты пакета см. в разделе [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
+     Если пакет сохранен, то можно задать уровень защиты пакета, и если уровень защиты использует пароль, то необходимо предоставить пароль. Дополнительные сведения об уровнях защиты пакета см. в разделе [контроль доступа для конфиденциальных данных в пакетах](../security/access-control-for-sensitive-data-in-packages.md).  
   
-     Если мастер запускается из [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проекта в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], невозможно запустить пакет из мастера. Вместо этого пакет добавляется в проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], из которого был запущен мастер. Затем можно запустить пакет в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+     Если мастер запускается из [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в проекте [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], невозможно запустить пакет из мастера. Вместо этого пакет добавляется в проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], из которого был запущен мастер. Затем вы можете запустить пакет [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
     > [!NOTE]  
     >  В [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], параметр, чтобы сохранить пакет, созданный мастером недоступен.  
   
 ## <a name="see-also"></a>См. также  
- [Мастер экспорта и импорта SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
+ [Мастер SQL Server импорта и экспорта](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [Создание пакетов в SQL Server Data Tools](../create-packages-in-sql-server-data-tools.md)  
   
   

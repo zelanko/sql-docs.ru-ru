@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - '&& (logical AND)'
 - AND, logical AND
@@ -17,13 +17,13 @@ ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f6cdb28a48a69ee1702b19918b9326ac861eb29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0185c28d970a1698a4159daefbbca9338b2a66cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302264"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (логическое И) (выражение служб SSIS)
   Выполняет логическую операцию И. Выражение принимает значение TRUE, если все условия имеют значение TRUE.  

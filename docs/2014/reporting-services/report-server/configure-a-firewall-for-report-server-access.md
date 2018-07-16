@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [Reporting Services]
 - configuring servers [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1f3c852712890d8a1cd67f9d2cabc6d5053c39ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60c593878f3c40094995a4d7b905d0bb59ff1a24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292174"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и опубликованным отчетам производится по URL-адресам, которые состоят из IP-адреса, номера порта и имени виртуального каталога. Если включен брандмауэр Windows, то порт, на который настроен сервер отчетов, скорее всего, закрыт. Обычно это выражается в том, что при обращении с удаленного клиентского компьютера к отчету или к диспетчеру отчетов выдается пустая страница.  
@@ -77,13 +77,13 @@ ms.locfileid: "36193947"
   
 #### <a name="to-open-port-80-on-windows-vista-or-windows-server-2008"></a>Открытие порта 80 в Windows Vista или Windows Server 2008  
   
-1.  Из **запустить** меню, нажмите кнопку **панели управления**, нажмите кнопку **безопасности**и нажмите кнопку **брандмауэра Windows**.  
+1.  Из **запустить** меню, нажмите кнопку **панели управления**, нажмите кнопку **безопасности**, а затем нажмите кнопку **брандмауэра Windows**.  
   
-2.  Нажмите кнопку **разрешить запуск программы через брандмауэр Windows**.  
+2.  Нажмите кнопку **разрешить программы через брандмауэр Windows**.  
   
 3.  Нажмите кнопку **Продолжить**.  
   
-4.  Щелкните вкладку "исключения" **добавить порт**.  
+4.  На вкладке «исключения» нажмите кнопку **добавить порт**.  
   
 5.  В поле Имя введите **ReportServer (TCP через порт 80)**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36193947"
   
 8.  Нажмите кнопку **изменить область**.  
   
-9. Нажмите кнопку **только локальная сеть (подсеть)**, а затем нажмите кнопку **ОК**.  
+9. Нажмите кнопку **только Моя сеть (подсеть)**, а затем нажмите кнопку **ОК**.  
   
 10. Чтобы закрыть диалоговое окно, нажмите кнопку **ОК** .  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36193947"
   
 ## <a name="see-also"></a>См. также  
  [Настройка учетной записи службы сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Настройка URL-адреса сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Настройка URL-адресов сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Создать базу данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Настройка учетной записи службы сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Управление сервером отчетов Reporting Services в собственном режиме](manage-a-reporting-services-native-mode-report-server.md)  

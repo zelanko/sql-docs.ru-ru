@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - UAC
 - installing Reporting Services
@@ -20,16 +20,16 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 80cdb989ed49604f2b860cf8d01ae15ae799f432
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 660a96d968410c2035ff194d83abb3e00c78d35d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36189441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273970"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)
-  Развертывание сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в одной из следующих операционных систем требует дополнительных шагов настройки, если вы желаете управлять экземпляром этого сервера локально. Данная тема объясняет как настроить сервер отчетов для локального администрирования. Если вы еще не установили или сервер отчетов, см. раздел [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) и [управление собственный режим сервера отчетов служб отчетов](manage-a-reporting-services-native-mode-report-server.md).  
+  Развертывание сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в одной из следующих операционных систем требует дополнительных шагов настройки, если вы желаете управлять экземпляром этого сервера локально. Данная тема объясняет как настроить сервер отчетов для локального администрирования. Если вы еще не установили или сервер отчетов, см. в разделе [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) и [управление собственный режим сервера отчетов служб отчетов](manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -59,7 +59,7 @@ ms.locfileid: "36189441"
   
 -   [Настройка среды SQL Server Management Studio (SSMS) для локального администрирования сервера отчетов](#bkmk_configure_ssms)  
   
--   [Настройка SQL Server Data Tools BI (SSDT) для публикации на локальном сервере отчетов](#bkmk_configure_ssdt)  
+-   [Чтобы настроить SQL Server Data Tools BI (SSDT) для публикации в локальном сервере отчетов](#bkmk_configure_ssdt)  
   
 -   [Дополнительные сведения](#bkmk_addiitonal_informaiton)  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36189441"
   
  Теперь при открытии [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] без запуска **от имени администратора** у вас будет доступ к свойствам сервера отчетов.  
   
-##  <a name="bkmk_configure_ssdt"></a> Настройка SQL Server Data Tools BI (SSDT) для публикации на локальном сервере отчетов  
+##  <a name="bkmk_configure_ssdt"></a> Чтобы настроить SQL Server Data Tools BI (SSDT) для публикации в локальном сервере отчетов  
  Если вы установили [!INCLUDE[SSDTDev11](../../includes/ssdtdev11-md.md)] в одной из операционных систем, приведенных в первом подразделе, и желаете, чтобы SSDT взаимодействовала с локальным сервером отчетов (в собственном режиме) без получения ошибок о допуске пользователя, нужно открывать [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с повышенными разрешениями или же настроить роли служб отчетности. Например, при недостатке разрешений могут возникнуть следующие проблемы.  
   
 -   При попытке развертывания элементов отчета на локальном сервере отчетов отображается сообщение об ошибке, похожее на приведенное в окне **Список ошибок** .  
@@ -187,7 +187,7 @@ ms.locfileid: "36189441"
 -   Смотрите предыдущие разделы [Параметры каталога диспетчера отчетов](#bkmk_configure_folder_settings) и [Параметры сайта диспетчера отчетов](#bkmk_configure_site_settings) данной темы.  
   
 ##  <a name="bkmk_addiitonal_informaiton"></a> Дополнительные сведения  
- Еще одно распространенное действие по настройке администрирования [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — открытие порта номер 80 в брандмауэре Windows для разрешения доступа к компьютеру с сервером отчетов. Инструкции см. в разделе [настроить брандмауэр для доступа к серверу отчетов](configure-a-firewall-for-report-server-access.md).  
+ Еще одно распространенное действие по настройке администрирования [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — открытие порта номер 80 в брандмауэре Windows для разрешения доступа к компьютеру с сервером отчетов. Инструкции см. в разделе [Настройка брандмауэра для доступа к серверу отчетов](configure-a-firewall-for-report-server-access.md).  
   
 ## <a name="see-also"></a>См. также  
  [Управление сервером отчетов Reporting Services в собственном режиме](manage-a-reporting-services-native-mode-report-server.md)  

@@ -1,14 +1,13 @@
 ---
-title: Полнотекстовый поиск обратной совместимости | Документы Microsoft
+title: Полнотекстовый поиск обратная совместимость | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [full-text search]
 - backward compatibility [SQL Server], Database Engine
@@ -17,13 +16,13 @@ ms.assetid: 1b5a9bbc-beb8-44fd-ab03-4c14908c604c
 caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7b86da9026f575db319c2d74b223998668d8133b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 206b42dbc1bdaccf8b3de757cc6453c4b066f92e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215684"
 ---
 # <a name="full-text-search-backward-compatibility"></a>Обратная совместимость компонента Full-Text Search
   В подразделах раздела, посвященного обратной совместимости, описаны изменения в поведении полнотекстового поиска в прежних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

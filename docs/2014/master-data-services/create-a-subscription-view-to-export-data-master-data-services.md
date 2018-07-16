@@ -1,5 +1,5 @@
 ---
-title: Создание представления подписки (Master Data Services) | Документы Microsoft
+title: Создание представления подписки (Master Data Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0b79bd1e50871fb921a3ce2b3fe9e43ab0995a9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4d8114d933027d5392896f14c33e1ea9685841b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252286"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>Создание представления подписки (службы Master Data Services)
-  Создание представления подписки, если вы хотите создать представление данных в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базы данных для использования системами-подписчиками.  
+  Создание представления подписки в том случае, если вы хотите создать представление данных в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базы данных для использования системами-подписчиками.  
   
 ## <a name="prerequisites"></a>предварительные требования  
  Для выполнения этой процедуры:  
@@ -46,12 +46,12 @@ ms.locfileid: "36191017"
   
 5.  Выберите модель из списка **Модель** .  
   
-6.  Выберите либо **версии** или **флаг версии** и затем выберите из соответствующего списка.  
+6.  Выберите либо **версии** или **флаг версии** параметр, а затем выберите из соответствующего списка.  
   
     > [!TIP]  
     >  Создайте представление подписки на основе флага версии. При блокировании версии флаг можно переприсвоить открытой версии, не обновляя представления подписки.  
   
-7.  Выберите либо **сущности** или **производной иерархии** параметр, а затем выберите из соответствующего списка.  
+7.  Выберите либо **сущности** или **производную иерархию** параметр, а затем выберите из соответствующего списка.  
   
 8.  Выберите формат представления подписки из списка **Формат** .  
   

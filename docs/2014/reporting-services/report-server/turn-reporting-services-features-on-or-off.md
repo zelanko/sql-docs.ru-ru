@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - security [Reporting Services], strategies
@@ -16,13 +16,13 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1362919f44915616d244364cee116c8fab376831
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6521a2bcdf080eb4a22c9540d965d0b5829d74fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190688"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282600"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Включение и отключение компонентов служб Reporting Services
   Неиспользуемые функции сервера отчетов можно отключить в рамках блокирующей стратегии, позволяющей снизить риск атак на рабочий сервер отчетов. В большинстве случаев рекомендуется использовать функции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] параллельно; это позволит использовать все функциональные возможности, предоставляемые службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Однако в зависимости от используемой модели развертывания можно отключить неиспользуемые функции. Например, если вся обработка отчетов производится с использованием операций по расписанию, то можно разрешить только фоновую обработку. Подобным же образом можно ограничиться запуском веб-службы сервера отчетов, если необходимо только интерактивное получение отчетов по требованию.  
@@ -45,7 +45,7 @@ ms.locfileid: "36190688"
   
 1.  Откройте файл `RsReportServer.config` в текстовом редакторе. Дополнительные сведения см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-2.  Чтобы включить на сервере веб-службы отчетов, присвойте `IsWebServiceEnabled` для `true`:  
+2.  Чтобы включить сервер веб-службы отчетов, присвойте `IsWebServiceEnabled` для `true`:  
   
     ```  
     <IsWebServiceEnabled>true</IsWebServiceEnabled>  
@@ -69,7 +69,7 @@ ms.locfileid: "36190688"
   
 4.  В разделе **Свойства аспекта**можно выполнить следующие действия.  
   
-    -   Чтобы включить на сервере веб-службы отчетов, присвойте **WebServiceAndHTTPAccessEnabled** для `True`.  
+    -   Чтобы включить сервер веб-службы отчетов, присвойте **WebServiceAndHTTPAccessEnabled** для `True`.  
   
     -   Чтобы отключить сервер веб-службы отчетов, присвойте **WebServiceAndHTTPAccessEnabled** для `False`.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36190688"
     <IsReportManagerEnabled>true</IsReportManagerEnabled>  
     ```  
   
-3.  Чтобы отключить диспетчер отчетов, присвойте `IsReportManagerEnabled` для `false`:  
+3.  Чтобы отключить диспетчер отчетов, задайте `IsReportManagerEnabled` для `false`:  
   
     ```  
     <IsReportManagerEnabled>false</IsReportManagerEnabled>  
@@ -153,7 +153,7 @@ ms.locfileid: "36190688"
   
     -   Чтобы включить диспетчер отчетов, присвойте **ReportManagerEnabled** для `True`.  
   
-    -   Чтобы отключить диспетчер отчетов, присвойте **ReportManagerEnabled** для `False`.  
+    -   Чтобы отключить диспетчер отчетов, задайте **ReportManagerEnabled** для `False`.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

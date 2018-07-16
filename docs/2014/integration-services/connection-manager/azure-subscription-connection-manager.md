@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpsubscrconn.f1
 - sql11.dts.designer.afpsubscrconn.f1
@@ -16,20 +16,20 @@ ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 878f8fc674659d91a732549fcd68da134cdf5fc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fa0589e7ac68f3662929c6316cdd0ddf427911d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194775"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306114"
 ---
 # <a name="azure-subscription-connection-manager"></a>Диспетчер подключений подписки Azure
-  Диспетчер подключений Azure HDInsight позволяет пакету служб SSIS для подключения к подписке Azure с помощью указываемых значений свойств: идентификатора подписки Azure и сертификат управления.  
+  Диспетчер подключений Azure HDInsight позволяет пакету служб SSIS для подключения к подписке Azure с помощью указываемых вами значений свойств: идентификатора подписки Azure и сертификат управления.  
   
 1.  В диалоговом окне **Добавление диспетчера соединений со службами SSIS** выберите **Подписка Azure**и щелкните **Добавить**.  Отобразится следующее диалоговое окно **Azure Subscription Connection Manager Editor** (Редактор диспетчера подключений подписки Azure).  
   
-     ![Службы SSIS AzureSubscriptionManager](../media/ssis-azuresubscriptionmanager.png "AzureSubscriptionManager служб SSIS")  
+     ![SSIS AzureSubscriptionManager](../media/ssis-azuresubscriptionmanager.png "AzureSubscriptionManager служб SSIS")  
   
 2.  Введите уникальный идентификатор подписки Azure, который идентифицирует подписку Azure, в поле **Идентификатор подписки Azure**.  Значение можно найти на [портале управления Azure](https://manage.windowsazure.com) на странице **Параметры** .  
   

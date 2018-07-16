@@ -1,5 +1,5 @@
 ---
-title: Вкладка «Сеть зависимостей» (средство просмотра моделей интеллектуального анализа данных) | Документы Microsoft
+title: Вкладка «сети зависимостей» (средство просмотра моделей интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.dependencynetwork.f1
 ms.assetid: e58ce1b7-20d6-42cb-ade5-916da8471e09
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3f8b993490c349cab5a6f25c722f83719b844af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01b3535c7a6c2547bdef9a4f74956ff647f1b864
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279990"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>Вкладка «Сеть зависимостей» (средство просмотра моделей интеллектуального анализа данных)
   Вкладка **Сеть зависимостей** обеспечивает графическое представление всех атрибутов, содержащихся в модели интеллектуального анализа данных, и показывает отношения этих атрибутов.  
@@ -47,7 +47,7 @@ ms.locfileid: "36087023"
  **Увеличить масштаб**  
  Увеличить масштаб диаграммы, что позволит увидеть атрибуты более подробно.  
   
- **Уменьшение масштаба**  
+ **Уменьшить масштаб**  
  Уменьшить масштаб диаграммы, что позволит увидеть больше атрибутов и связей между ними.  
   
  **Копировать представление диаграммы**  

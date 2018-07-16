@@ -1,5 +1,5 @@
 ---
-title: Свойство AliasName (класс SqlServerAlias) | Документы Microsoft
+title: Свойство AliasName (класс SqlServerAlias) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AliasName property
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b320caa58c70028a49be3b1984bfdbd9d80d7ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 263407a4da24424faa4f24b6811835090b4c3d13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36101028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214770"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>Свойство AliasName (класс SqlServerAlias)
   Возвращает имя псевдонима соединения сервера.  

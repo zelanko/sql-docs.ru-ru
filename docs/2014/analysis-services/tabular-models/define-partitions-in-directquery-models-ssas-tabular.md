@@ -1,5 +1,5 @@
 ---
-title: Секции и режим DirectQuery (табличные службы SSAS) | Документы Microsoft
+title: Секции и режим DirectQuery (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6153a5975dd342bfabb00b7f964ee04d6941a363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c928bbc87c39f76e8995c7c2d171d4f731b3171
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269690"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Секции и режим DirectQuery (табличные службы SSAS)
   В этом разделе объясняется использование секций в моделях DirectQuery. Дополнительные общие сведения о секциях в табличных моделях см. в разделе [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md).  
   
- Дополнительные сведения о том, как изменить секцию, которая используется, и просмотреть сведения о секции, в разделе [изменение секции DirectQuery &#40;табличные службы SSAS&#41;](../change-the-directquery-partition-ssas-tabular.md).  
+ Инструкции о том, как изменить секцию, которая используется, или Просмотр сведений о разделе, см. в разделе [изменение секции DirectQuery &#40;табличные службы SSAS&#41;](../change-the-directquery-partition-ssas-tabular.md).  
   
 ## <a name="using-partitions-in-directquery-mode"></a>Использование секций в режиме Direct Query  
  Для каждой таблицы следует указать одну секцию, которая будет использоваться в качестве источника данных DirectQuery.  Если есть несколько секций, при переводе модели в режим DirectQuery по умолчанию первая секция, которая была создана в таблице, будет отмечена как секция DirectQuery. Ее можно будет изменить позже с помощью диспетчера секций в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

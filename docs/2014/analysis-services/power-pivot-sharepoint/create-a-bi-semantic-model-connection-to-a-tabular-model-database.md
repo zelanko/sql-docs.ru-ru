@@ -1,5 +1,5 @@
 ---
-title: Создание соединения семантической модели бизнес-Аналитики в базе данных табличной модели | Документы Microsoft
+title: Создание соединения семантической модели в базу данных табличной модели | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 084de463855ba83051d5d4ceb41e58431ae5e4f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d1bac7c3bc5e328db1bc54908f1d78ad5829c45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192327"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269940"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных
   Сведения, приведенные в этом разделе, помогут настроить соединение семантической модели бизнес-аналитики, которое перенаправляется на базу данных табличной модели, запущенную в экземпляре служб Analysis Services за пределами фермы SharePoint.  
@@ -43,7 +43,7 @@ ms.locfileid: "36192327"
 ##  <a name="bkmk_prereq"></a> Проверка предварительных требований  
  Для создания файла соединения семантической модели бизнес-аналитики требуется разрешение «Участие» или выше.  
   
- Необходима библиотека, поддерживающая тип содержимого соединения семантической модели бизнес-аналитики. Дополнительные сведения см. в разделе [Добавление бизнес-Аналитики семантической модели подключения типа содержимого в библиотеку &#40;PowerPivot для SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
+ Необходима библиотека, поддерживающая тип содержимого соединения семантической модели бизнес-аналитики. Дополнительные сведения см. в разделе [Добавление BI семантической модели подключения типа содержимого в библиотеку &#40;PowerPivot для SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
   
  Необходимо знать имя сервера и базы данных, для которой настраивается соединение семантической модели бизнес-аналитики. Службы Analysis Services должны быть настроены для табличного режима. Базы данных на сервере должны быть табличным шаблоном баз данных. Инструкции по проверке режима сервера см. в разделе [Определение режима работы сервера экземпляра служб Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36192327"
   
  Для предоставления административных прав в среде Management Studio требуются права системного администратора служб Analysis Services.  
   
- Доступ к PowerPivot для SharePoint осуществляется посредством веб-приложений, использующих классический режим проверки подлинности. Соединение семантической модели бизнес-аналитики с внешними источниками данных имеет зависимость от входа в систему в классическом режиме. Дополнительные сведения см. в разделе [PowerPivot проверки подлинности и авторизации](power-pivot-authentication-and-authorization.md).  
+ Доступ к PowerPivot для SharePoint осуществляется посредством веб-приложений, использующих классический режим проверки подлинности. Соединение семантической модели бизнес-аналитики с внешними источниками данных имеет зависимость от входа в систему в классическом режиме. Дополнительные сведения см. в разделе [PowerPivot Authentication and Authorization](power-pivot-authentication-and-authorization.md).  
   
  Все компьютеры и пользователи, участвующие в последовательности соединения, должны относиться к одному домену или находиться в доверенном домене (двустороннее доверие).  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36192327"
  После создания и обеспечения безопасности соединения семантической модели бизнес-аналитики его можно указать в качестве источника данных. Дополнительные сведения см. в разделе [Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также  
- [Соединение семантической модели бизнес-Аналитики PowerPivot &#40;bism-файл&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
+ [Соединение семантической модели бизнес-Аналитики PowerPivot &#40;bism-файлы&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
  [Создание подключения семантической модели бизнес-аналитики с книгой PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
   

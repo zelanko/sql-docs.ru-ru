@@ -1,5 +1,5 @@
 ---
-title: Набор строк MDSCHEMA_DIMENSIONS | Документы Microsoft
+title: Набор строк MDSCHEMA_DIMENSIONS | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_DIMENSIONS rowset
 ms.assetid: a0fd94bb-359a-4df6-93a6-d60d50223944
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b00b617adf90e1dba8eac94a9872ce07c0773e7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69cb4e0c997d3d786a55a6673327e50d0aac27a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273400"
 ---
 # <a name="mdschemadimensions-rowset"></a>Набор строк MDSCHEMA_DIMENSIONS
   Описывает общие и закрытые измерения в базе данных.  
@@ -66,8 +66,8 @@ ms.locfileid: "36095806"
 |`CUBE_NAME`|`DBTYPE_WSTR`|Необязательный параметр.|  
 |`DIMENSION_NAME`|`DBTYPE_WSTR`|Необязательный параметр.|  
 |`DIMENSION_UNIQUE_NAME`|`DBTYPE_WSTR`|Необязательный параметр.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|Битовая карта с одним из следующих допустимых значений (необязательно).<br /><br /> -КУБ 1<br />-2 ИЗМЕРЕНИЯ.<br /><br /> Значение по умолчанию для ограничения — 1.|  
-|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|Битовая карта с одним из следующих допустимых значений (необязательно).<br /><br /> — Visible 1<br />-2 не отображается<br /><br /> Значение по умолчанию для ограничения — 1.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|Битовая карта с одним из следующих допустимых значений (необязательно).<br /><br /> -КУБ 1<br />— ИЗМЕРЕНИЯ 2<br /><br /> Значение по умолчанию для ограничения — 1.|  
+|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|Битовая карта с одним из следующих допустимых значений (необязательно).<br /><br /> -1 Visible<br />-2 не отображается<br /><br /> Значение по умолчанию для ограничения — 1.|  
   
 ## <a name="see-also"></a>См. также  
  [Наборы строк схемы OLE DB для OLAP](ole-db-for-olap-schema-rowsets.md)  

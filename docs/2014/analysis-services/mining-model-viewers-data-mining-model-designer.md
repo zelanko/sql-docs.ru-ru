@@ -1,5 +1,5 @@
 ---
-title: Интеллектуального анализа данных просмотра моделей интеллектуального анализа (конструктор моделей интеллектуального анализа данных) | Документы Microsoft
+title: Интеллектуального анализа данных средства просмотра моделей (конструктор моделей интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.viewers.f1
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e04799cbd5d78f82612732506e460008a4138117
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9fd7d89abbbbce1c55b20227d44c191cf315d52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293634"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)
   Вкладкой **Средство просмотра моделей интеллектуального анализа данных** можно воспользоваться для обзора моделей интеллектуального анализа данных, содержащихся в структуре интеллектуального анализа данных.  
@@ -57,45 +57,45 @@ ms.locfileid: "36192320"
   
 -   [Просмотр модели с помощью средства просмотра правил ассоциации (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
-    -   [Вкладка «наборы элементов» &#40;средство просмотра модели интеллектуального анализа&#41;](itemsets-tab-mining-model-viewer.md)  
+    -   [На вкладке наборы элементов &#40;просмотра модели интеллектуального анализа данных&#41;](itemsets-tab-mining-model-viewer.md)  
   
-    -   [Правила вкладку &#40;средство просмотра модели интеллектуального анализа&#41;](rules-tab-mining-model-viewer.md)  
+    -   [Правила вкладку &#40;просмотра модели интеллектуального анализа данных&#41;](rules-tab-mining-model-viewer.md)  
   
-    -   [Вкладка «Сеть зависимостей» &#40;средство просмотра модели интеллектуального анализа&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [Вкладка «Сеть зависимостей» &#40;просмотра модели интеллектуального анализа данных&#41;](dependency-network-tab-mining-model-viewer.md)  
   
 ### <a name="microsoft-clustering-algorithm"></a>Алгоритм кластеризации (Майкрософт)  
   
 -   [Просмотр модели с помощью средства просмотра кластеров (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
-    -   [Вкладка «Диаграмма» кластера &#40;средство просмотра модели интеллектуального анализа&#41;](cluster-diagram-tab-mining-model-viewer.md)  
+    -   [Вкладка «Диаграмма» кластера &#40;просмотра модели интеллектуального анализа данных&#41;](cluster-diagram-tab-mining-model-viewer.md)  
   
-    -   [Вкладка профили кластеров &#40;средство просмотра модели интеллектуального анализа&#41;](cluster-profiles-tab-mining-model-viewer.md)  
+    -   [Вкладка профили кластеров &#40;просмотра модели интеллектуального анализа данных&#41;](cluster-profiles-tab-mining-model-viewer.md)  
   
-    -   [Вкладка Характеристики кластера &#40;средство просмотра модели интеллектуального анализа&#41;](cluster-characteristics-tab-mining-model-viewer.md)  
+    -   [Вкладка «Характеристики» кластера &#40;просмотра модели интеллектуального анализа данных&#41;](cluster-characteristics-tab-mining-model-viewer.md)  
   
-    -   [Вкладка «Сравнение» кластера &#40;средство просмотра модели интеллектуального анализа&#41;](cluster-discrimination-tab-mining-model-viewer.md)  
+    -   [Вкладка «Сравнение» кластера &#40;просмотра модели интеллектуального анализа данных&#41;](cluster-discrimination-tab-mining-model-viewer.md)  
   
-    -   [Диалоговое окно условные обозначения интеллектуального анализа &#40;средство просмотра модели интеллектуального анализа&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
+    -   [Диалоговое окно условные обозначения интеллектуального &#40;просмотра модели интеллектуального анализа данных&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
 ### <a name="microsoft-decision-tree-algorithm"></a>Алгоритм дерева принятия решений (Майкрософт)  
   
 -   [Просмотр модели с помощью средства просмотра деревьев (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
-    -   [Вкладка «дерево» принятия решений &#40;средство просмотра модели интеллектуального анализа&#41;](decision-tree-tab-mining-model-viewer.md)  
+    -   [Вкладка «дерево» решение &#40;просмотра модели интеллектуального анализа данных&#41;](decision-tree-tab-mining-model-viewer.md)  
   
-    -   [Вкладка «Сеть зависимостей» &#40;средство просмотра модели интеллектуального анализа&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [Вкладка «Сеть зависимостей» &#40;просмотра модели интеллектуального анализа данных&#41;](dependency-network-tab-mining-model-viewer.md)  
   
-    -   [Диалоговое окно условные обозначения интеллектуального анализа &#40;средство просмотра модели интеллектуального анализа&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
+    -   [Диалоговое окно условные обозначения интеллектуального &#40;просмотра модели интеллектуального анализа данных&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
 ### <a name="microsoft-linear-regression-algorithm"></a>Алгоритм линейной регрессии (Майкрософт)  
   
 -   [Просмотр модели с помощью средства просмотра нейронных сетей (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
-    -   [Вкладка «дерево» принятия решений &#40;средство просмотра модели интеллектуального анализа&#41;](decision-tree-tab-mining-model-viewer.md)  
+    -   [Вкладка «дерево» решение &#40;просмотра модели интеллектуального анализа данных&#41;](decision-tree-tab-mining-model-viewer.md)  
   
-    -   [Вкладка «Сеть зависимостей» &#40;средство просмотра модели интеллектуального анализа&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [Вкладка «Сеть зависимостей» &#40;просмотра модели интеллектуального анализа данных&#41;](dependency-network-tab-mining-model-viewer.md)  
   
-    -   [Диалоговое окно условные обозначения интеллектуального анализа &#40;средство просмотра модели интеллектуального анализа&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
+    -   [Диалоговое окно условные обозначения интеллектуального &#40;просмотра модели интеллектуального анализа данных&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
 ### <a name="microsoft-logistic-regression-algorithm"></a>Алгоритм логистической регрессии (Майкрософт)  
   
@@ -105,37 +105,37 @@ ms.locfileid: "36192320"
   
 -   [Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
-    -   [Вкладка «Сеть зависимостей» &#40;средство просмотра модели интеллектуального анализа&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [Вкладка «Сеть зависимостей» &#40;просмотра модели интеллектуального анализа данных&#41;](dependency-network-tab-mining-model-viewer.md)  
   
-    -   [Вкладка Профили атрибутов &#40;средство просмотра модели интеллектуального анализа&#41;](attribute-profiles-tab-mining-model-viewer.md)  
+    -   [Атрибут профили вкладку &#40;просмотра модели интеллектуального анализа данных&#41;](attribute-profiles-tab-mining-model-viewer.md)  
   
-    -   [Вкладка «Характеристики» атрибут &#40;средство просмотра модели интеллектуального анализа&#41;](attribute-characteristics-tab-mining-model-viewer.md)  
+    -   [Вкладка «Характеристики» атрибут &#40;просмотра модели интеллектуального анализа данных&#41;](attribute-characteristics-tab-mining-model-viewer.md)  
   
-    -   [Вкладка «Сравнение» атрибут &#40;средство просмотра модели интеллектуального анализа&#41;](attribute-discrimination-tab-mining-model-viewer.md)  
+    -   [Вкладка «Сравнение» атрибут &#40;просмотра модели интеллектуального анализа данных&#41;](attribute-discrimination-tab-mining-model-viewer.md)  
   
 ### <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm  
   
 -   [Просмотр модели с помощью средства просмотра нейронных сетей (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
-    -   [Вкладка «Сеть зависимостей» &#40;средство просмотра модели интеллектуального анализа&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [Вкладка «Сеть зависимостей» &#40;просмотра модели интеллектуального анализа данных&#41;](dependency-network-tab-mining-model-viewer.md)  
   
-    -   [Нейронная сеть &#40;средство просмотра модели интеллектуального анализа&#41;](neural-network-mining-model-viewer.md)  
+    -   [Нейронная сеть &#40;просмотра модели интеллектуального анализа данных&#41;](neural-network-mining-model-viewer.md)  
   
-    -   [Поиск-диалоговое окно узла &#40;средство просмотра модели интеллектуального анализа&#41;](find-node-dialog-box-mining-model-viewer.md)  
+    -   [Найти узел-диалоговое окно &#40;просмотра модели интеллектуального анализа данных&#41;](find-node-dialog-box-mining-model-viewer.md)  
   
 ### <a name="microsoft-sequence-clustering-algorithm"></a>Алгоритм кластеризации последовательностей (Майкрософт)  
   
 -   [Просмотр модели с помощью средства просмотра кластеризации последовательностей (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-    -   [На вкладке Диаграмма кластеров кластеризации последовательностей &#40;средство просмотра модели интеллектуального анализа](sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
+    -   [Вкладка Диаграмма кластеров кластеризации последовательностей &#40;просмотра модели интеллектуального анализа данных](sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
   
-    -   [Вкладка профили кластеров кластеризации последовательностей &#40;средство просмотра модели интеллектуального анализа](sequence-clustering-cluster-profiles-tab-mining-model-viewer.md)  
+    -   [Вкладка профили кластеров кластеризации последовательностей &#40;просмотра модели интеллектуального анализа данных](sequence-clustering-cluster-profiles-tab-mining-model-viewer.md)  
   
-    -   [Вкладка «Характеристики кластеров» кластеризации последовательностей &#40;средство просмотра модели интеллектуального анализа&#41;](sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md)  
+    -   [Вкладка «Характеристики кластеров» кластеризации последовательностей &#40;просмотра модели интеллектуального анализа данных&#41;](sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md)  
   
-    -   [Вкладка «сравнения кластеров» кластеризации последовательностей &#40;средство просмотра модели интеллектуального анализа&#41;](sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md)  
+    -   [Вкладка «сравнения кластеров» кластеризации последовательностей &#40;просмотра модели интеллектуального анализа данных&#41;](sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md)  
   
-    -   [Вкладка Переход кластера кластеризации последовательностей &#40;средство просмотра модели интеллектуального анализа&#41;](sequence-clustering-cluster-transition-tab-mining-model-viewer.md)  
+    -   [Вкладка Переход кластера кластеризации последовательностей &#40;просмотра модели интеллектуального анализа данных&#41;](sequence-clustering-cluster-transition-tab-mining-model-viewer.md)  
   
 ### <a name="microsoft-time-series-algorithm"></a>Алгоритм временных рядов (Майкрософт)  
   
@@ -145,12 +145,12 @@ ms.locfileid: "36192320"
   
     -   [Диаграммы вкладка &#40;просмотра моделей интеллектуального анализа&#41;](chart-tab-mining-model-viewers.md)  
   
-    -   [Диалоговое окно условные обозначения интеллектуального анализа &#40;средство просмотра модели интеллектуального анализа&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
+    -   [Диалоговое окно условные обозначения интеллектуального &#40;просмотра модели интеллектуального анализа данных&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
 ## <a name="see-also"></a>См. также  
- [Просмотр моделей интеллектуального анализа данных &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-models-view-data-mining-model-designer.md)   
- [Представление структуры интеллектуального анализа данных &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-structure-view-data-mining-model-designer.md)   
- [Конструктор диаграммы точности интеллектуального анализа &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Представление моделей интеллектуального &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-models-view-data-mining-model-designer.md)   
+ [Представление структуры интеллектуального &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [Конструктор диаграммы точности интеллектуального &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Построитель прогнозирующих запросов &#40;интеллектуального анализа данных&#41;](prediction-query-builder-data-mining.md)  
   
   

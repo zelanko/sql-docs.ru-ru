@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:69636
 - vdt.ppg.querydesigner.query
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 28ccf2d9e3c039086a182466d6d93fd5b2606e47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 356121b8980d41a3abf3124d5249164d6d23b4e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102137"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247744"
 ---
 # <a name="query-properties-visual-database-tools"></a>Свойства запроса (визуальные инструменты для баз данных)
   Эти свойства отображаются в окне «Свойства» при открытии запроса в конструкторе запросов и представлений. Если не оговорено обратное, эти свойства можно изменять в окне «Свойства».  
@@ -87,7 +87,7 @@ ms.locfileid: "36102137"
  Указывает, что данное представление включает предложение WITH TIES. WITH TIES полезно, если представление включает предложения ORDER BY и TOP, основанные на процентах. Если этот режим установлен, граница процента приходится на середину набора строк с одинаковыми значениями в предложении ORDER BY, то данное представление будет расширено и включит все такие строки. (Применимо только для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0 либо более поздней версии.)  
   
 ## <a name="see-also"></a>См. также  
- [Запрос с параметрами &#40;визуальные средства базы данных&#41;](visual-database-tools.md)   
+ [Запрос с параметрами &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
  [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

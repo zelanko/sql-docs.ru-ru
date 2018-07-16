@@ -1,14 +1,13 @@
 ---
-title: Установка пакета обновления в системе с минимальным временем простоя для зеркально отображаемых баз данных | Документы Microsoft
+title: Установите пакет обновления в системе с минимальным временем простоя для зеркально отображаемых баз данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hotfixes [SQL Server]
 - database mirroring [SQL Server], upgrading system
@@ -18,18 +17,18 @@ helpviewer_keywords:
 - upgrading SQL Server, mirrored databases
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e15b15020dcf28ad83bfbc50ab18e0005c71a4d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cca85c8f2d38e5f786aa635380c3bd6199e3a48f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193231"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296924"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Установка пакета обновления на систему с минимальным временем простоя для зеркально отображаемых баз данных
-  В этом разделе описывается, как добиться минимального времени простоя зеркальных баз данных при установке пакетов обновления и исправлений. Этот процесс подразумевает последовательное обновление экземпляров [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], участвующих в зеркальном отображении базы данных. Этой форме обновления, которая называется *пошаговое обновление*, время простоя сокращается до одной отработки отказа. Обратите внимание, что для режима высокой производительности в сеансах на зеркальный сервер географически удален от основного сервера, пошаговое обновление может оказаться неподходящим.  
+  В этом разделе описывается, как добиться минимального времени простоя зеркальных баз данных при установке пакетов обновления и исправлений. Этот процесс подразумевает последовательное обновление экземпляров [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], участвующих в зеркальном отображении базы данных. Этой форме обновления, который известен как *последовательным обновлением*, время простоя сокращается до одной отработки отказа. Обратите внимание на то, что режим высокой производительности в сеансах на зеркальный сервер географически удален от основного сервера, последовательное обновление может оказаться неподходящим.  
   
  Последовательное обновление является сложным процессом, состоящим из следующих этапов.  
   
@@ -129,7 +128,7 @@ ms.locfileid: "36193231"
   
     -   В [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: измените параметр **Режим работы** на **Высокая производительность (асинхронный)** с помощью страницы [Зеркальное отображение](../relational-databases/databases/database-properties-mirroring-page.md) диалогового окна **Свойства базы данных** .  
   
-    -   В [!INCLUDE[tsql](../includes/tsql-md.md)]: использование [инструкции ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) установите безопасность транзакций в значение OFF.  
+    -   В [!INCLUDE[tsql](../includes/tsql-md.md)]: использование [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) установите безопасность транзакций в значение OFF.  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>Возврат следящего сервера в сеанс зеркального отображения  
   

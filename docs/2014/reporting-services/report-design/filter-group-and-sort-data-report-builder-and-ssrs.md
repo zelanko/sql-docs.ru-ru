@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.sorting.f1
 - "10403"
@@ -20,15 +20,15 @@ f1_keywords:
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c6e738ae473636e3fdd0c9d7efa1512a6b5b68f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4ba8d34b6f56bec66ce2fc1a8f0d4024e4a45493
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256353"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)
   Выражения в отчетах используются для управления, организации и сортировки данных отчетов. По умолчанию по мере создания наборов данных и разработки макета отчета свойства элементов отчета задаются автоматически выражениями, исходя из полей набора данных, параметров и других элементов, появляющихся на панели данных отчета. Можно также добавить кнопку интерактивной сортировки к таблице или ячейке матрицы, чтобы пользователь мог в интерактивном режиме изменять порядок сортировки рядов для групп или строк внутри групп.  
@@ -45,9 +45,9 @@ ms.locfileid: "36194201"
   
  Дополнительные сведения и примеры см. в следующих разделах:  
   
--   [Примеры выражений группы &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [Примеры выражений групп &#40;построитель отчетов и службы SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [Примеры уравнений фильтра &#40;отчетов построителя отчетов и службы SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Примеры уравнений фильтра &#40;построитель отчетов и службы SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
 -   [Учебники по &#40;построитель отчетов&#41;](../report-builder-tutorials.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36194201"
   
  Имя группы идентифицирует область выражения. Можно указать имя группы как область, в которой будет происходить вычисление агрегатных значений, организация данных иерархическим способом, переключение отображения дочерних узлов от родительских узлов в отчете с углубленной детализацией, отображение различных представлений одних и тех же данных в нескольких областях данных и отображение сводных данных в таблице, матрице, диаграмме, датчике или схеме. Дополнительные сведения см. в разделе [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- Чтобы обеспечить группирование по нескольким полям набора данных, необходимо добавить каждое поле к набору выражений группы. Также можно написать собственные выражения групп на [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Например, можно провести группирование по диапазону значений или применить параметр отчета, чтобы дать возможность пользователю выбрать способ группирования данных в области данных. Дополнительные сведения см. в разделе [Примеры выражений групп (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md).  
+ Чтобы обеспечить группирование по нескольким полям набора данных, необходимо добавить каждое поле к набору выражений группы. Можно также написать собственные выражения группы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Например, можно провести группирование по диапазону значений или применить параметр отчета, чтобы дать возможность пользователю выбрать способ группирования данных в области данных. Дополнительные сведения см. в разделе [Примеры выражений групп (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md).  
   
  Для представления отчета можно добавлять разрывы страниц до и после каждой группы или каждого экземпляра группы, чтобы уменьшить объем данных на странице и облегчить управление производительностью при подготовке к просмотру отчета. Дополнительные сведения см. в разделе [Добавление разрыва страницы (построитель отчетов и службы SSRS)](add-a-page-break-report-builder-and-ssrs.md).  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36194201"
 ### <a name="defining-group-variables"></a>Определение групповых переменных  
  При определении группы можно создать групповую переменную, которая будет использоваться в выражениях, связанных с группой и доступных из вложенных групп. Групповая переменная вычисляется один раз для каждого экземпляра группы, она доступна из выражений в дочерних группах. Например, для данных, группируемых в области и подобласти, можно вычислить налог для каждой области и использовать этот налог в вычислениях из группы подобласти.  
   
- Дополнительные сведения см. в разделе [отчета и ссылки на коллекции переменных группы &#40;построитель отчетов и службы SSRS&#41; ](built-in-collections-report-and-group-variables-references-report-builder.md) и [области выражений для суммирования, статистических функций и встроенных коллекций &#40;отчетов Построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Дополнительные сведения см. в разделе [отчет и ссылки на коллекции переменных группы &#40;построитель отчетов и службы SSRS&#41; ](built-in-collections-report-and-group-variables-references-report-builder.md) и [область выражения для суммирования, агрегатов и встроенных коллекций &#40;отчетов Построитель и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="groups-and-scope-in-data-regions"></a>Группы и область в областях данных  
  Для создания нескольких представлений данных из одного и того же набора данных можно задать одни и те же выражения группы для каждой области данных. Например, можно отобразить данные по категориям в таблице, чтобы показать все подробные данные, и в круговой диаграмме, чтобы показать обобщенные данные, а также показать каждую категорию относительно всего набора данных. Дополнительные сведения см. в разделе [Связывание нескольких областей данных с одним набором данных &#40;построитель отчетов и службы SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
@@ -120,7 +120,7 @@ ms.locfileid: "36194201"
 ### <a name="sorting-data-in-a-dataset-query"></a>Сортировка данных в запросе к набору данных  
  Сортировку можно включить в запрос к набору данных для предварительной сортировки данных до их возвращения в отчет. При сортировке внутри запроса все операции по сортировке выполняются источником данных, а не обработчиком отчетов.  
   
- Для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа источника данных можно добавить предложение ORDER BY в запросе набора данных. Например, следующая [!INCLUDE[tsql](../../../includes/tsql-md.md)] запроса выполняется сортировка столбцов Sales и Region по продажам в порядке убывания из таблицы заказов на продажу: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Дополнительные сведения см. в разделе «Сортировка строк при помощи предложения ORDER BY» [электронной документации по SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+ Для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа источника данных можно добавить предложение ORDER BY в запросе набора данных. Например, следующая [!INCLUDE[tsql](../../../includes/tsql-md.md)] запроса выполняется сортировка столбцов Sales и Region по Sales в нисходящем порядке в таблице SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Дополнительные сведения см. в разделе «Сортировка строк при помощи предложения ORDER BY» [электронной документации по SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
   
 > [!NOTE]  
 >  Не все источники данных поддерживают указание порядка сортировки в запросе.  
@@ -175,43 +175,43 @@ FROM Production.Product
  ![Значок стрелки, используемый для ссылки возврата в начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый для ссылки возврата в начало") [В начало](#BackToTop)  
   
 ##  <a name="HowTo"></a> Инструкции  
- [Сохранение заголовков видимыми при прокрутке отчета &#40;отчетов построителя отчетов и службы SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+ [Сохранение заголовков видимыми при прокрутке отчета &#40;построитель отчетов и службы SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
- [Отображение верхних и нижних колонтитулов в группе &#40;отчетов построителя отчетов и службы SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [Отображение верхних и нижних колонтитулов в группе &#40;построитель отчетов и службы SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [Добавление интерактивной сортировки в таблицу или матрицу &#40;отчетов построителя отчетов и службы SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [Добавление интерактивной сортировки в таблицу или матрицу &#40;построитель отчетов и службы SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
- [Установка сообщения об отсутствии данных для области данных &#40;отчетов построителя отчетов и службы SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Установка сообщения об отсутствии данных для области данных &#40;построитель отчетов и службы SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Создание группы рекурсивной иерархии &#40;отчетов построителя отчетов и службы SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+ [Создание группы рекурсивной иерархии &#40;построитель отчетов и службы SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
- [Добавление или удаление группы в области данных &#40;отчетов построителя отчетов и службы SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+ [Добавление или удаление группы в области данных &#40;построитель отчетов и службы SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
- [Отображение верхних и нижних колонтитулов в группе &#40;отчетов построителя отчетов и службы SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [Отображение верхних и нижних колонтитулов в группе &#40;построитель отчетов и службы SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [Добавление или удаление группы в диаграмме &#40;отчетов построителя отчетов и службы SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [Добавление или удаление группы в диаграмме &#40;построитель отчетов и службы SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
   
- [Добавление итога в группу или область данных Табликса &#40;отчетов построителя отчетов и службы SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+ [Добавление итога в группу или область данных Табликса &#40;построитель отчетов и службы SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
 ##  <a name="Section"></a> в этом разделе  
- [Примеры выражений группы &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+ [Примеры выражений групп &#40;построитель отчетов и службы SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
- [Примеры уравнений фильтра &#40;отчетов построителя отчетов и службы SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+ [Примеры уравнений фильтра &#40;построитель отчетов и службы SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
- [Добавление фильтров набора данных, фильтров области данных и групповых фильтров &#40;отчетов построителя отчетов и службы SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
+ [Добавление набора данных, фильтров области данных и групповых фильтров &#40;построитель отчетов и службы SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
   
 ##  <a name="Related"></a> См. также  
- [Общие сведения о группах &#40;отчетов построителя отчетов и службы SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
+ [Основные сведения о группах &#40;построитель отчетов и службы SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
   
- [Создание групп рекурсивной иерархии &#40;отчетов построителя отчетов и службы SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [Создание групп рекурсивной иерархии &#40;построитель отчетов и службы SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
   
- [Область выражения для итогов, статистических функций и встроенных коллекций &#40;отчетов построителя отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
- [Отчетов и сгруппируйте ссылки на коллекции переменных &#40;отчетов построителя отчетов и службы SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [Отчета и группы ссылки на коллекции переменных &#40;построитель отчетов и службы SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [Отображение на диаграмме ряда с несколькими диапазонами данных &#40;отчетов построителя отчетов и службы SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+ [Отображение на диаграмме ряда с несколькими диапазонами данных &#40;построитель отчетов и службы SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
   
- [Связывание нескольких областей данных с одним набором данных &#40;отчетов построителя отчетов и службы SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [Связывание нескольких областей данных с одним набором данных &#40;построитель отчетов и службы SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>См. также  
  [Выражения (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
@@ -219,7 +219,7 @@ FROM Production.Product
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Карты (построитель отчетов и службы SSRS)](maps-report-builder-and-ssrs.md)   
  [Спарклайны и гистограммы (построитель отчетов и службы SSRS)](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Датчики &#40;отчетов построителя отчетов и службы SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [Датчики &#40;построитель отчетов и службы SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Индикаторы (построитель отчетов и службы SSRS)](indicators-report-builder-and-ssrs.md)  
   
   

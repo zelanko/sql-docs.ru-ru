@@ -1,5 +1,5 @@
 ---
-title: Ссылка на образцы программ | Документы Microsoft
+title: Ссылка на образцы программ | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - SQL Server Management Objects, samples
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: df2b9636b3edb5ebb9ef45530204db543e204312
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c516bfd0f4086f9ec91974205e546e686612d2f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215014"
 ---
 # <a name="link-to-programming-samples"></a>Ссылка на образцы программ
-  В следующей таблице перечислены образцы программ с использованием объектов SMO [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые находятся в каталоге [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO directory. Эти образцы доступны как в [!INCLUDE[csprcs](../../includes/csprcs-md.md)] и [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  
+  В следующей таблице перечислены образцы программ с использованием объектов SMO [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые находятся в каталоге [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO directory. Эти образцы доступны в обоих [!INCLUDE[csprcs](../../includes/csprcs-md.md)] и [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  
   
  Дополнительные сведения об установке образцов см. в разделе [AdventureWorks для SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330).  
   

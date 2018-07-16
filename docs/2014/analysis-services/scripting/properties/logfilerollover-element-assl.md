@@ -1,5 +1,5 @@
 ---
-title: Элемент LogFileRollover (ASSL) | Документы Microsoft
+title: Элемент LogFileRollover (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - LogFileRollover element
 ms.assetid: 5484e167-b891-431a-bbae-946ea6eb4a3c
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4ecaf972c701175d388ab71fa61d94de1c6f2cad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12ed8df0217baeb5f760273ad6998e2344f4fbb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299024"
 ---
 # <a name="logfilerollover-element-assl"></a>Элемент LogFileRollover (ASSL)
-  Указывает, будет ли протоколирование данных [трассировки](../objects/trace-element-assl.md) должен продолжаться выходные данные в новый файл или при достижении максимального размера файла журнала, указанного в [LogFileSize](logfilesize-element-assl.md) достигается.  
+  Указывает ли ведение журнала [трассировки](../objects/trace-element-assl.md) выходные данные должны переносятся в новый файл, или когда файл журнала максимального размера, указанного в [LogFileSize](logfilesize-element-assl.md) достижения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,10 +64,10 @@ ms.locfileid: "36095096"
 ## <a name="remarks"></a>Примечания  
  Если элементу `LogFileRollover` присвоено значение TRUE, то при превышении файлом журналов размера, указанного в элементе `LogFileSize` родительского элемента `Trace`, начинается новый журнал; в противном случае ведение журнала останавливается.  
   
- Элемент, соответствующий родителю параметра `LogFileRollover` в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Trace>.  
+ Элемент, соответствующий родителю параметра `LogFileRollover` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>См. также  
- [Отслеживает элемент &#40;ASSL&#41;](../collections/traces-element-assl.md)   
+ [Выполняет трассировку элемент &#40;ASSL&#41;](../collections/traces-element-assl.md)   
  [Свойства &#40;ASSL&#41;](properties-assl.md)  
   
   

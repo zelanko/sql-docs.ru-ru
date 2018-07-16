@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SetEmailConfiguration method
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 caps.latest.revision: 19
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 67d63332e69e42b3f8631d37fe24626e108dde14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: aeb662c9457c2f07bda1541c5d21a59cd5cca8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36179984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258020"
 ---
 # <a name="setemailconfiguration-method-wmi-msreportserverconfigurationsetting"></a>Метод SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting)
   Настраивает модуль доставки электронной почты, используемый сервером отчетов для отправки электронной почты.  
@@ -63,7 +63,7 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 указывает, что вызов метода завершился успешно. Ненулевое значение указывает, что произошла ошибка.  
   
 ## <a name="remarks"></a>Примечания  
- Когда *SendUsingSMTPServer* параметра равным `true`, **SendUsing** запись в файл конфигурации сервера отчетов имеет значение 1. Когда *SendUsingSMTPServer* равно `false`, **SendUsing** запись не настроена.  
+ Когда *SendUsingSMTPServer* параметр имеет значение `true`, **SendUsing** запись в файле конфигурации сервера отчетов имеет значение 1. Когда *SendUsingSMTPServer* присваивается `false`, **SendUsing** запись не настроена.  
   
  Этот метод не позволяет пользователям задать для записи **SendUsing** в файле конфигурации сервера отчетов какое-либо значение, кроме 1. Чтобы настроить на сервере отчетов почтовый протокол, отличный от SMTP, необходимо изменить файл конфигурации вручную.  
   

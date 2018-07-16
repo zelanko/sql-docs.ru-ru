@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - users [Reporting Services]
 - roles [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d20737ae25412caa7af4c3aa82966a5b384d7126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed057d08c25d1988d4ccf03d1647aa4ef92e4b0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255586"
 ---
 # <a name="role-assignments"></a>Назначения ролей
   В службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] *назначения ролей* определяют доступ к сохраненным элементам и к самому серверу отчетов. Назначение ролей состоит из следующих частей.  
@@ -62,7 +62,7 @@ ms.locfileid: "36195733"
 ## <a name="predefined-role-assignments"></a>Предопределенное назначение ролей  
  По умолчанию применяются предопределенные назначения ролей, что позволяет локальным администраторам управлять сервером отчетов. Чтобы предоставить доступ другим пользователям, нужно добавить дополнительные назначения ролей.  
   
- Дополнительные сведения о стандартных назначениях ролей, обеспечивающих безопасность по умолчанию см. в разделе [предопределенных ролей](role-definitions-predefined-roles.md).  
+ Дополнительные сведения о стандартных назначениях ролей, обеспечивающих безопасность по умолчанию, см. в разделе [стандартные роли](role-definitions-predefined-roles.md).  
   
 ## <a name="see-also"></a>См. также  
  [Создание, удаление и изменение ролей (среда Management Studio)](role-definitions-create-delete-or-modify.md)   

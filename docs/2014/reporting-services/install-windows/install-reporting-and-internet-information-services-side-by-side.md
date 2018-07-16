@@ -1,5 +1,5 @@
 ---
-title: Установка служб Reporting Services и Internet сведения служб Side-by-Side (собственный режим SSRS) | Документы Microsoft
+title: Установка служб Reporting Services и Интернет сведения служб Side-by-Side (собственный режим служб SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2111d9ceda6e38f4abc079b94d678d981b075a91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3db5a0da0050541b0adec9b726184a959ac59001
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274660"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Параллельная установка служб Reporting Services и служб IIS (собственный режим SSRS)
   Службы [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) и IIS могут быть установлены и запущены на одном и том же компьютере. От используемой версии служб IIS будет зависеть, какие возникнут проблемы совместимости.  
@@ -49,7 +49,7 @@ ms.locfileid: "36188417"
 |-------------|-------------|  
 |http://123.234.345.456:80/reports|Получает все запросы, отправляемые http://123.234.345.456/reports или http://\<имя_компьютера > / reports, если служба доменных имен можно разрешить IP-адрес в это имя узла.|  
 |http://+:80/reports|Получает любые запросы, отправленные любому IP-адресу или имени узла, являющимся допустимыми для этого компьютера, при условии, что URL-адрес содержит имя виртуального каталога reports.|  
-|http://123.234.345.456:80|Получает любой запрос, который указывает http://123.234.345.456 или http://\<имя_компьютера > Если служба доменных имен можно разрешить IP-адрес в это имя узла.|  
+|http://123.234.345.456:80|Получает любой запрос, который указывает http://123.234.345.456 или http://\<имя_компьютера > Если служба доменных имен способна разрешить IP-адрес в это имя узла.|  
 |http://+:80|Получает запросы, которые еще не получены другими приложениями, применительно к любым конечным точкам приложений, сопоставленным со значением **Все назначенные**.|  
 |http://*:80|Получает запросы, которые еще не получены другими приложениями, применительно к любым конечным точкам приложений, сопоставленным со значением **Все неназначенные**.|  
   
@@ -69,9 +69,9 @@ ms.locfileid: "36188417"
   
 -   Веб-сайт в службах IIS, который назначен на порт 80 и виртуальный каталог с именем Reports.  
   
--   Объект [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] экземпляра сервера отчетов, установленный в конфигурации по умолчанию, где резервирование URL-адресов также указан порт 80 и диспетчеру отчетов использует «Отчеты» для имени виртуального каталога.  
+-   Объект [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] экземпляра сервера отчетов, установленный в конфигурации по умолчанию, где резервирование URL-адрес также указан порт 80 и диспетчера отчетов также используется «Reports» для имени виртуального каталога.  
   
- Такой конфигурации запрос, который отправляется http://\<имя_компьютера >: 80/reports будет получен диспетчером отчетов. Приложение, доступ к которому предоставляется с помощью виртуального каталога Reports в службах IIS, после установки экземпляра сервера отчетов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] больше не будет получать запросы.  
+ При такой конфигурации запрос, который отправляется http://\<имя_компьютера >: 80/reports будет получен диспетчером отчетов. Приложение, доступ к которому предоставляется с помощью виртуального каталога Reports в службах IIS, после установки экземпляра сервера отчетов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] больше не будет получать запросы.  
   
  При работе развернутых параллельно старой и новой версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], по всей вероятности будут обнаруживаться только что описанные проблемы маршрутизации. Это связано с тем, что во всех версиях служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в качестве имен виртуальных каталогов для приложений сервера отчетов и диспетчера отчетов используется ReportServer и Reports, в результате чего повышается вероятность наличия виртуальных каталогов reports и reportserver в службах IIS.  
   
@@ -82,8 +82,8 @@ ms.locfileid: "36188417"
 -   Для установок, настраиваемых вручную, применяйте предусмотренные по умолчанию соглашения об именах в настраиваемых URL-адресах. Если службы [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] устанавливаются в качестве именованного экземпляра, включите имя экземпляра при создании виртуального каталога.  
   
 ## <a name="see-also"></a>См. также  
- [Настройка URL-адреса сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Настройка URL-адресов сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [Настройка URL-адрес &#40;диспетчер конфигурации служб SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
- [Установка сервера отчетов собственный режим служб Reporting Services](install-reporting-services-native-mode-report-server.md)  
+ [Установка сервера отчетов собственный режим Reporting Services](install-reporting-services-native-mode-report-server.md)  
   
   

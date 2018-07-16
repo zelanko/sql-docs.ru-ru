@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_SETS, набор строк | Документы Microsoft
+title: Набор строк MDSCHEMA_SETS | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_SETS rowset
 ms.assetid: abb00dc0-2b83-48d6-b2ba-6615c1488d06
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edc33b87256fb680225eaaa087ff655be1b82851
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fecc8167d697be2195c9ae44e214afcbc1f3a05b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275480"
 ---
 # <a name="mdschemasets-rowset"></a>MDSCHEMA_SETS
   Описывает любые наборы, определенные на текущий момент в базе данных, в том числе наборы с областью сеанса.  
@@ -45,7 +45,7 @@ ms.locfileid: "36194841"
 |`EXPRESSION`|`DBTYPE_WSTR`||Выражение для набора.|  
 |`DIMENSIONS`|`DBTYPE_WSTR`||Разделенный запятыми список иерархий, включенных в набор.|  
 |`SET_CAPTION`|`DBTYPE_WSTR`||Метка или заголовок, связанный с набором. Метка или заголовок используются главным образом в целях визуального отображения.|  
-|`SET_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Строка, определяющая путь к папке отображения, которую клиентское приложение использует для демонстрации набора. Разделитель уровней вложенности папок определяется клиентским приложением. Для средств и клиентов, входящих в [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], обратная косая черта (\\) является разделитель уровней вложенности. Чтобы указать несколько папок отображения, используйте точку с запятой (;) для разделения папок.|  
+|`SET_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Строка, определяющая путь к папке отображения, которую клиентское приложение использует для демонстрации набора. Разделитель уровней вложенности папок определяется клиентским приложением. Для средств и клиентов, входящих [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], обратная косая черта (\\) — это разделитель уровней вложенности. Чтобы указать несколько папок отображения, используйте точку с запятой (;) для разделения папок.|  
 |`SET_EVALUATION_CONTEXT`|`DBTYPE_I4`||Контекст для набора. Набор может быть статическим или динамическим.<br /><br /> Этот столбец может иметь одно из следующих значений.<br /><br /> -MDSET_RESOLUTION_STATIC = 1<br />-MDSET_RESOLUTION_DYNAMIC = 2|  
   
  Набор строк отсортирован по `CATALOG_NAME`, `SCHEMA_NAME`, `CUBE_NAME`.  
@@ -61,7 +61,7 @@ ms.locfileid: "36194841"
 |`SET_NAME`|`DBTYPE_WSTR`|Необязательный параметр.|  
 |`SCOPE`|`DBTYPE_I4`|Необязательный параметр.|  
 |`HIERARCHY_UNIQUE_NAME`|`DBTYPE_WSTR`|Необязательный параметр.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|Необязательный параметр. **Примечание:** только одна иерархия может быть включено, и возвращаются только тех именованных наборов, иерархии которых точно соответствуют ограничению.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|Необязательный параметр. **Примечание:** только одна иерархия может быть включено, и возвращаются только тех именованных наборов иерархии которых точно соответствуют ограничению.|  
   
 ## <a name="see-also"></a>См. также  
  [Наборы строк схемы OLE DB для OLAP](ole-db-for-olap-schema-rowsets.md)  

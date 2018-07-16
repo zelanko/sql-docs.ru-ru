@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.placeholderproperties.number.f1
 - sql12.rtp.rptdesigner.serieslabelproperties.number.f1
@@ -20,15 +20,15 @@ f1_keywords:
 - "10285"
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6b274656ac656933053a6b246acdd21cff77e875
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: bf89915223f0ee141b77aacc8eec2a87191bfcca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095170"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288340"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Форматирование чисел и дат (построитель отчетов и службы SSRS)
   Формат чисел и дат в областях данных можно задать, выбрав формат на странице **Число** в диалоговом окне **Свойства** соответствующей области данных.  
@@ -61,10 +61,10 @@ ms.locfileid: "36095170"
 -   Если выбрать в группе **Категория** значения **Валюта** и установить флажок **Показывать значения в**, то для отображения чисел в финансовых форматов можно выбрать значение **Тысячи**, **Миллионы**или **Миллиарды** . Например, если значение поля равно 1 789 905 394, выбрано значение **Миллиарды** и указаны 2 десятичных разряда, то в отчете отображается значение 1,78.  
   
 ## <a name="see-also"></a>См. также  
- [Форматирование текста и заполнителей &#40;отчетов построителя отчетов и службы SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Форматирование текста и заполнителей &#40;построитель отчетов и службы SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Форматирование линий, цветов и изображений (построитель отчетов и службы SSRS)](images-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
  [Форматирование меток оси в виде значений даты или валюты &#40;построитель отчетов и службы SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Форматирование шкал на датчике &#40;отчетов построителя отчетов и службы SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [Форматирование шкал на датчике &#40;построитель отчетов и службы SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Реализация LOB Columns в таблице, оптимизированной для памяти | Документы Microsoft
+title: Реализация LOB Columns в таблице, оптимизированной для памяти | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 2af703360aa56e48658fc7b76098eb5db0cdc2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 733183e50a631e86f391070ae45b1e70d179a643
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283840"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Реализация LOB Columns в таблице, оптимизированной для памяти
   Оптимизированные для памяти таблицы не содержат внестрочное или LOB-хранилище, максимальный размер строки равен 8060 байтам. Хранить большие двоичные значения (LOB) и символьные строки можно двумя способами.  

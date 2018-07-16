@@ -1,5 +1,5 @@
 ---
-title: Элемент AllowedRowsExpression (ASSL) | Документы Microsoft
+title: Элемент AllowedRowsExpression (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ec24b11d-d11e-4369-a619-7e41a3c46159
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 99a340f2bbeb1e5d61a20b4031beeade9fbcc5c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f335861084f86fa509b8c2bc3f977332d5e1da7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087943"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291330"
 ---
 # <a name="allowedrowsexpression-element-assl"></a>Элемент AllowedRowsExpression (ASSL)
   Содержит выражение анализа данных (DAX) логического типа, которое определяет содержание родительского элемента.  
@@ -52,7 +52,7 @@ ms.locfileid: "36087943"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Для `CellPermission` элемент, `Expression` элемент содержит логическое Многомерное выражение, идентифицирующее ячейки, применимые к правами, указанными в [доступа](access-element-assl.md) элемент `CellPermission` элемента. Если значение элемента `Expression` для элемента `CellPermission` пусто, то элемент `CellPermission` не учитывается.  
+ Для `CellPermission` элемент, `Expression` элемент содержит логическое Многомерное выражение, определяющее ячейки, применимые к правами, указанными в [доступа](access-element-assl.md) элемент `CellPermission` элемент. Если значение элемента `Expression` для элемента `CellPermission` пусто, то элемент `CellPermission` не учитывается.  
   
  Для элемента `StandardAction` элемент `Expression` содержит многомерное выражение, представляющее содержимое действия. Если значение элемента `Expression` для элемента `StandardAction` пусто, то элемент `StandardAction` не учитывается.  
   

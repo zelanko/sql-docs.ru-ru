@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - concurrent installations [SQL Server]
 - versions [SQL Server], multiple
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - editions [SQL Server], side-by-side installations
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 caps.latest.revision: 63
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: abff13ee6139d74dbe0da10d37ff318d10b47f6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 920e7295d56f3b7bfadf91a9532f638911535d44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36195068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246374"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Работа с несколькими версиями и экземплярами SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает на одном компьютере несколько экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Кроме того, можно обновить уже установленные на компьютере предыдущие версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]либо установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на этот же компьютер с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поддерживаемые сценарии обновления см. в разделе [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
@@ -74,7 +74,7 @@ ms.locfileid: "36195068"
   
  Примеры: Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
- Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact установки см. в разделе [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md). Дополнительные сведения об удалении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact см. в разделе [Удаление существующего экземпляра SQL Server (программа установки)](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).  
+ Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact установки, см. в разделе [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md). Дополнительные сведения об удалении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact см. в разделе [Удаление существующего экземпляра SQL Server (программа установки)](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-side-by-side-with-previous-versions-of-includessnoversionincludesssnoversion-mdmd"></a>Применение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параллельно с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить на компьютер, где уже запущены экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] одной из предыдущих версий. Поскольку экземпляр по умолчанию на компьютере уже имеется, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть установлен как именованный экземпляр.  
@@ -82,7 +82,7 @@ ms.locfileid: "36195068"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep не поддерживает параллельную установку подготовленных экземпляров [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с выпущенными ранее версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на том же компьютере. Например, возможность подготавливать экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] параллельно с подготовленным экземпляром [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]отсутствует. Однако можно установить несколько подготовленных экземпляров одной и той же основной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параллельно на одном компьютере. Дополнительные сведения см. в разделе [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
 >   
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] нельзя установить параллельно с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере с Windows Server 2008 R2 Server Core с пакетом обновления 1 (SP1). Дополнительные сведения об установках Server Core см. в разделе [Установка SQL Server 2014 на Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] нельзя установить параллельно с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере с Windows Server 2008 R2 Server Core с пакетом обновления 1 (SP1). Дополнительные сведения об установке основных серверных компонентов, см. в разделе [Установка SQL Server 2014 на Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
  В следующей таблице показана поддержка параллельной эксплуатации для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -96,10 +96,10 @@ ms.locfileid: "36195068"
   
 ## <a name="see-also"></a>См. также  
  [Оборудованию и программному обеспечению для установки SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
- [Установка с помощью мастера установки SQL Server 2014 &#40;установки&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
+ [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Обновление до SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Возможности, поддерживаемые различными выпусками SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+ [Функции, поддерживаемые различными выпусками SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Обратная совместимость](../../../2014/getting-started/backward-compatibility.md)   
  [Использование помощника по обновлению для подготовки к обновлениям](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   

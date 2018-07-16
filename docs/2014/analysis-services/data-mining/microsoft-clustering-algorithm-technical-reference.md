@@ -1,5 +1,5 @@
 ---
-title: Технический справочник по алгоритму кластеризации (Майкрософт) | Документы Microsoft
+title: Технический справочник по алгоритму кластеризации (Майкрософт) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b217484efbaf10356005187eb494065299f7ba07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1d3ff592e05d2d8ee0b7e055a095de736d61902
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306604"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Технический справочник по алгоритму кластеризации (Майкрософт)
   Этот раздел посвящен алгоритму кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] , в том числе параметрам, с помощью которых можно управлять поведением моделей кластеризации. В разделе также содержатся советы по ускорению создания и обработки моделей кластеризации.  
@@ -169,7 +169,7 @@ ms.locfileid: "36087755"
 |NOT NULL|Этот столбец не может содержать значение NULL. Если во время обучения модели службы Analysis Services обнаружат значение NULL, возникнет ошибка.<br /><br /> Применяется к столбцу структуры интеллектуального анализа данных.|  
   
 ## <a name="requirements"></a>Требования  
- Модель кластеризации должна содержать ключевой столбец и входные столбцы. Входные столбцы также можно определить как прогнозируемые. Столбцы `Predict Only` не используются для построения кластеров. Их распределения в кластерах вычисляются после построения кластеров.  
+ Модель кластеризации должна содержать ключевой столбец и входные столбцы. Входные столбцы также можно определить как прогнозируемые. Столбцы `Predict Only` для построения кластеров не используются. Их распределения в кластерах вычисляются после построения кластеров.  
   
 ### <a name="input-and-predictable-columns"></a>Входные и прогнозируемые столбцы  
  Алгоритм кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает определенные входные столбцы данных и прогнозируемые столбцы, которые перечислены ниже в таблице. Дополнительные сведения о значении типов содержимого в применении к модели интеллектуального анализа данных см. в разделе [Типы содержимого (интеллектуальный анализ данных)](content-types-data-mining.md).  
@@ -183,7 +183,7 @@ ms.locfileid: "36087755"
 >  Типы содержимого Cyclical и Ordered поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм кластеризации Майкрософт](microsoft-clustering-algorithm.md)   
+ [Алгоритм кластеризации (Майкрософт)](microsoft-clustering-algorithm.md)   
  [Примеры запросов к модели кластеризации](clustering-model-query-examples.md)   
  [Содержимое модели интеллектуального анализа данных для моделей кластеризации &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   

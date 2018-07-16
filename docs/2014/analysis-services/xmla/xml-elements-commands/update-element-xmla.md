@@ -1,5 +1,5 @@
 ---
-title: Обновить элемент (XMLA) | Документы Microsoft
+title: Обновить элемент (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Update command [XMLA]
 ms.assetid: 324dcc16-865d-4d0a-b393-2b06c18ac807
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 68eb54e24daccb08a77cc88b2396d31114a29b25
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 75dda4a163ce6551246e11aa9eba6b57fcd9fb25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36188322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283962"
 ---
 # <a name="update-element-xmla"></a>Элемент Update (XML для аналитики)
   Обновляет элементы атрибута в измерении.  
@@ -64,7 +64,7 @@ ms.locfileid: "36188322"
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|Дочерние элементы|[Атрибуты](../xml-elements-properties/attributes-element-xmla.md), [MoveWithDescendants](../xml-elements-properties/movewithdescendants-element-xmla.md), [объекта](../xml-elements-properties/object-element-dimension-xmla.md), [где](../xml-elements-properties/where-element-xmla.md)|  
+|Дочерние элементы|[Атрибуты](../xml-elements-properties/attributes-element-xmla.md), [MoveWithDescendants](../xml-elements-properties/movewithdescendants-element-xmla.md), [объект](../xml-elements-properties/object-element-dimension-xmla.md), [где](../xml-elements-properties/where-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
  Команда `Update` перемещает элементы атрибута в пределах измерения, доступного для записи.  
@@ -73,7 +73,7 @@ ms.locfileid: "36188322"
   
 ## <a name="see-also"></a>См. также  
  [Элемент DROP &#40;XML для Аналитики&#41;](drop-element-xmla.md)   
- [Элемент INSERT &#40;XML для Аналитики&#41;](insert-element-xmla.md)   
+ [Вставка элемента &#40;XML для Аналитики&#41;](insert-element-xmla.md)   
  [Команды &#40;XML для Аналитики&#41;](xml-elements-commands.md)  
   
   

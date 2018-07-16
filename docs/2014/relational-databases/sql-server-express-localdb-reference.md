@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0241483c426b3b033e73c0313ec1ab57003d5ef4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 25ed8182742c68d2b7bd51502300135d6aa2c07c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253556"
 ---
 # <a name="sql-server-express-localdb-reference"></a>Справочник по SQL Server Express LocalDB
   В этом разделе содержатся сведения о SQL Server Express LocalDB.  

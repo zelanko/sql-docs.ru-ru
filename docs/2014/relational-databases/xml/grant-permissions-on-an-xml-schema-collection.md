@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0375361f4fa794045ab51d65cadada49b73a39dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f8c467de25ce8b8aac74c659b6109c3969f9f0d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087570"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276120"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Предоставление разрешений на коллекции схем XML
   На создание коллекции схем XML, а также на объекты коллекции схем XML можно предоставлять разрешения.  
@@ -61,7 +61,7 @@ ms.locfileid: "36087570"
   
 -   Разрешение TAKE OWNERSHIP необходимо для передачи прав на обладание коллекцией схем XML от одного участника к другому.  
   
--   Разрешение REFERENCES дает право участнику для использования коллекции XML-схем для типизации или ограничения `xml` типа столбцов в таблицах, представлениях и параметрах. Кроме того, разрешение REFERENCES необходимо, если одна коллекция схем XML ссылается на другую.  
+-   Разрешение REFERENCES дает участнику право на использование коллекции схем XML для типизации или ограничения `xml` типа столбцов в таблицах, представлениях и параметрах. Кроме того, разрешение REFERENCES необходимо, если одна коллекция схем XML ссылается на другую.  
   
 -   Разрешение VIEW DEFINITION позволяет участнику выполнять запрос к содержимому коллекции XML-схем через XML_SCHEMA_NAMESPACE или представления каталогов при условии, что этот участник также имеет разрешение ALTER, REFERENCES или CONTROL на эту коллекцию.  
   

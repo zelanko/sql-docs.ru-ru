@@ -1,5 +1,5 @@
 ---
-title: Элемент Original (XML для Аналитики) | Документы Microsoft
+title: Элемент Original (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Original element
 ms.assetid: c98a3700-ac19-4341-85d9-5afedf662601
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 63ee76cd3b476b3a8dbf45a50ad0f9d22a55e0fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e70d0f29f41a687cb0716fbb857ff1b3b59023e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249164"
 ---
 # <a name="original-element-xmla"></a>Элемент Original (XML для аналитики)
-  Содержит исходное место хранения файловой системе используется [папки](folder-element-xmla.md) элемента.  
+  Содержит исходное место в файловой системе хранилища используется [папку](folder-element-xmla.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36192297"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- `Original` Элемент содержит UNC-путь, чтобы заменить значение [New](new-element-xmla.md) элемента, содержащегося в родительском `Folder` элемент для всех объектов, восстановленных или синхронизированных соответственно, во время [восстановления ](../xml-elements-commands/restore-element-xmla.md) или [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) команды. Значение этого элемента сравнивается значение [StorageLocation](../../scripting/properties/storagelocation-element-assl.md) элемент для каждого куба, группы мер или секции и, если найдено совпадение, значение `New` элемент используется для обновления `StorageLocation` из объект во время восстановления или синхронизации.  
+ `Original` Элемент содержит UNC-пути заменяется значение [New](new-element-xmla.md) элемента, содержащегося в родительском `Folder` элемент для всех объектов, восстановленных или синхронизированных соответственно, во время [восстановления ](../xml-elements-commands/restore-element-xmla.md) или [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) команды. Значение этого элемента сравнивается значение [StorageLocation](../../scripting/properties/storagelocation-element-assl.md) элемент для каждого куба, группы мер или секции и, если найдено, значение `New` элемент используется для обновления `StorageLocation` из объект во время восстановления или синхронизации.  
   
- Дополнительные сведения о резервном копировании и восстановлении объектов см. в разделе [резервное копирование, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Дополнительные сведения о резервном копировании и восстановлении объектов см. в разделе [резервного копирования, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>См. также  
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)  

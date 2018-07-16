@@ -1,5 +1,5 @@
 ---
-title: Доступ к данным многомерной модели (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Доступ к данным многомерной модели (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, data access interfaces
 - objects [Analysis Services], data access interfaces
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
 caps.latest.revision: 46
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac594d938497d90acd87e047aa8370144f8e8ad2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9d979cbe0a870060d8435a4867afbed1667597e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087765"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291730"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Доступ к данным многомерной модели (службы Analysis Services — многомерные данные)
   Сведения в этом разделе помогут ознакомиться со способами доступа к многомерным данным служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] с помощью программных методов доступа, скриптов или клиентских приложений, включающих встроенную поддержку соединения с сервером служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в сети.  
@@ -77,7 +77,7 @@ ms.locfileid: "36087765"
   
  [Основные принципы запросов многомерных Выражений &#40;служб Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
- [Основные понятия о сценариях многомерных Выражений &#40;служб Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [Основные принципы создания скриптов многомерных Выражений &#40;служб Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
 ##  <a name="bkmk_api"></a> Программные интерфейсы  
  При разработке пользовательского приложения, использующего многомерные данные, скорее всего, будет использоваться один из следующих способов доступа к данным.  
@@ -100,9 +100,9 @@ ms.locfileid: "36087765"
 |Язык ASSL|ASSL — это описательный термин, который относится к расширениям протокола XML для аналитики в службах Analysis Services. Расширения ASSL позволяют службам Analysis Services использовать XML для аналитики за пределами базовых задач протокола, в том числе для определения данных, изменения данных и поддержки управления данными.  В то время как методы Execute и Discover описываются протоколом XML для аналитики, ASSL добавляет следующие возможности:<br /><br /> Скрипты XML для аналитики<br /><br /> Определения объектов XML для аналитики<br /><br /> Команды XMLA<br /><br /> <br /><br /> Дополнительные сведения см. в разделе [Разработка на языке ASSL (язык ASSL)](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).|  
   
 ## <a name="see-also"></a>См. также  
- [Подключитесь к службам Analysis Services](../../instances/connect-to-analysis-services.md)   
- [Развертывание с помощью функций анализа служб языка сценариев &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [Разработка с использованием XML для Аналитики в службах Analysis Services](../../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
+ [Подключение к службам Analysis Services](../../instances/connect-to-analysis-services.md)   
+ [Язык сценариев разработки с использованием Analysis Services &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [Разработка с использованием XMLA в службах Analysis Services](../../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
  [Доступ к данным табличной модели](../../tabular-models/tabular-model-data-access.md)  
   
   

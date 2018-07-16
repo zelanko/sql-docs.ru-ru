@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 04e2c152da025473f049159a8e9eff4f4d28c3c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c982204b6d8bbb5140a612388028db0fb0e194e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36097795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274980"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Скрипт дополнительного журналирования Oracle
   В этом диалоговом окне отображается скрипт дополнительного журналирования Oracle.  
@@ -41,7 +41,7 @@ ms.locfileid: "36097795"
  Копирует скрипт в буфер обмена. Когда все будет готово, скрипт дополнительного журналирования можно вставить в нужное место, если администратору базы данных Oracle необходимо ознакомиться с ним перед выполнением.  
   
 ## <a name="see-also"></a>См. также  
- [Управление экземпляром CDC](manage-a-cdc-instance.md)   
+ [Как управлять экземпляром CDC](manage-a-cdc-instance.md)   
  [Управление экземпляром CDC](manage-a-cdc-instance.md)  
   
   

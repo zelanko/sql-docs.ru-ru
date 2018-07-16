@@ -1,5 +1,5 @@
 ---
-title: Элемент Events (ASSL) | Документы Microsoft
+title: Элемент Events (ASSL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Events element
 ms.assetid: de887998-dc4b-44dc-8fec-08d67b92f96d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a9fd96d0ad375725d1b7efa72dda9c0467e0b93b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 33f6d302557369d7cbc90c1d5786bc21d37b0f42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36110242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293504"
 ---
 # <a name="events-element-assl"></a>Элемент Events (ASSL)
   Определяет коллекцию элементов [Event](../objects/event-element-assl.md) , которые будет отслеживать трассировка [Trace](../objects/trace-element-assl.md).  
@@ -64,10 +64,10 @@ ms.locfileid: "36110242"
 |Дочерние элементы|[Событие](../objects/event-element-assl.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.TraceEventCollection>.  
+ Соответствующий элемент в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.TraceEventCollection>.  
   
 ## <a name="see-also"></a>См. также  
- [Отслеживает элемент &#40;ASSL&#41;](traces-element-assl.md)   
+ [Выполняет трассировку элемент &#40;ASSL&#41;](traces-element-assl.md)   
  [Коллекции &#40;ASSL&#41;](collections-assl.md)  
   
   

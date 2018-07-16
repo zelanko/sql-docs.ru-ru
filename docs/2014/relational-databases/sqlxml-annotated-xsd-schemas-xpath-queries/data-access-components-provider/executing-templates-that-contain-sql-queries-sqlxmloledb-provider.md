@@ -1,5 +1,5 @@
 ---
-title: Выполнение шаблонов, содержащих запросы SQL (поставщик SQLXMLOLEDB) | Документы Microsoft
+title: Выполнение шаблонов, содержащих запросы SQL (поставщик SQLXMLOLEDB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - SQL queries [SQLXML]
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: affea1983c83dbf3cd0a8f5ab82292f88f1cae65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7d20d2a5bf5c465c26fcb1736386932b87d1d0a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294564"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>Выполнение шаблонов, содержащих SQL-запросы (поставщик SQLXMLOLEDB)
-  В этом примере показано использование свойства поставщика sqlxmloledb ClientSideXML. В этом образце клиентского приложения ADO на сервере выполняется XML-шаблон, содержащий SQL-запрос.  
+  В этом примере показано использование свойства поставщика SQLXMLOLEDB ClientSideXML. В этом образце клиентского приложения ADO на сервере выполняется XML-шаблон, содержащий SQL-запрос.  
   
- Поскольку ClientSideXML, свойство имеет значение True, на сервер отправляется инструкция SELECT без предложения FOR XML. Сервер выполняет запрос и возвращает клиенту набор строк. Затем клиент применяет к набору строк преобразование FOR XML и создает XML-документ.  
+ Так как ClientSideXML, свойство имеет значение True, на сервер отправляется инструкция SELECT без предложения FOR XML. Сервер выполняет запрос и возвращает клиенту набор строк. Затем клиент применяет к набору строк преобразование FOR XML и создает XML-документ.  
   
- Шаблон XML предоставляет единый корневой элемент (\<КОРНЕВОЙ >) для документа XML, который создается; поэтому корневое свойство xml не предоставляется.  
+ Шаблон XML предоставляет единый корневой элемент (\<КОРНЕВОЙ >) для XML-документ, созданный; таким образом, не предоставляется свойство корневого xml.  
   
  Для выполнения шаблонов XML должен быть указан диалект {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
   

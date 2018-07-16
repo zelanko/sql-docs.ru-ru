@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 3: Переименование столбцов | Документы Microsoft'
+title: 'Занятие 3: Переименование столбцов | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ed2f495f4300abca78b3a1b7597bd0d09fd15292
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6d4f9d156889bd3a761cff2a18a908df42e8aade
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246113"
 ---
 # <a name="lesson-3-rename-columns"></a>Занятие 3. Переименование столбцов
   На этом занятии мы переименуем несколько столбцов в каждой импортированной таблице. Переименование делает названия столбцов более понятными, и с ними становится легче работать в конструкторе моделей, а также при выборе полей в клиентском приложении. Дополнительные сведения см. в разделе [Переименование таблицы или столбца (табличные службы SSAS)](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
@@ -40,14 +40,14 @@ ms.locfileid: "36095584"
   
      При выборе вкладки соответствующая таблица становится активной в окне конструктора моделей.  
   
-2.  Дважды щелкните **CustomerKey** столбца и введите `Customer  Id`, а затем нажмите клавишу ВВОД.  
+2.  Дважды щелкните **CustomerKey** столбец имени, а затем введите `Customer  Id`, и нажмите клавишу ВВОД.  
   
     > [!TIP]  
     >  Столбец также можно переименовать в свойстве **Имя столбца** в окне **Свойства** столбца или в представлении диаграммы.  
   
 3.  Переименуйте оставшиеся столбцы в таблице **Заказчик** , а также столбцы в оставшихся таблицах, заменив исходное имя понятным именем.  
   
-     **Таблица Customer**  
+     **Таблицы Customer**  
   
     |Имя источника|Понятное имя|  
     |-----------------|-------------------|  

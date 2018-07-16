@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - TransactionLog event class
 ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3e46db5b0c789afe957eacd182807d514a3bce8c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d894a3df24db130f041223168e5e12b040ebb0fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36194032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236884"
 ---
 # <a name="transactionlog-event-class"></a>TransactionLog, класс событий
   Класс событий TransactionLog используются для наблюдения за активностью в журналах транзакций экземпляра [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  

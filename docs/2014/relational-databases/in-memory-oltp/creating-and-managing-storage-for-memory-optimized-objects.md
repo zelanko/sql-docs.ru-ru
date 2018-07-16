@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 caps.latest.revision: 61
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b619d8e97c18d002c5e5588305e4889234db49c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 324143732c9ae7830e1fb588cb0793795acb6f5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36191197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285240"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Создание и управление хранилищем для оптимизированных для памяти объектов
   Механизм [!INCLUDE[hek_2](../../includes/hek-2-md.md)] интегрирован в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], что позволяет использовать оптимизированные для памяти таблицы и (традиционные) таблицы на диске в одной базе данных. Тем не менее структуры хранилища оптимизированных для памяти таблиц и таблиц на диске отличаются.  
@@ -36,7 +36,7 @@ ms.locfileid: "36191197"
   
  Хранилище оптимизированных для памяти таблиц имеет следующие ключевые атрибуты:  
   
--   Все оптимизированные для памяти таблицы сопоставляются с оптимизированной для памяти файловой группы. Эта файловая группа построен с использованием файловой группы filestream.  
+-   Все оптимизированные для памяти таблицы сопоставляются с оптимизированной для памяти файловой группы. Эта файловая группа создается с использованием файловой группы filestream.  
   
 -   Страницы отсутствуют, а данные сохраняются в виде строки.  
   

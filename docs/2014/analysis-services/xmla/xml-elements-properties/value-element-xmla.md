@@ -1,5 +1,5 @@
 ---
-title: Значение элемента (XMLA) | Документы Microsoft
+title: Значение элемента (XMLA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Value element
 ms.assetid: f87ca7f8-d9fe-4730-a706-5d50fcfe21df
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 7a422298e8d1b77f3d036b4cea5761dc6dc6dde4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 8defb7fe2115bd1ea9ccb7b3f23b0717db8b9aef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263256"
 ---
 # <a name="value-element-xmla"></a>Value, элемент (XML для аналитики)
-  Содержит необходимое значение параметра [атрибута](attribute-element-xmla.md) элемента, который требуется добавить, [вставить](../xml-elements-commands/insert-element-xmla.md) команды, или [ячейки](cell-element-xmla.md) элемент будет обновлен [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)команды.  
+  Содержит необходимое значение параметра [атрибут](attribute-element-xmla.md) элемент могут добавить [вставить](../xml-elements-commands/insert-element-xmla.md) команды, или [ячейки](cell-element-xmla.md) элемента должны обновляться с [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)команды.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36094632"
   
 ## <a name="see-also"></a>См. также  
  [Элемент CellOrdinal &#40;XML для Аналитики&#41;](cellordinal-element-xmla.md)   
- [Элемент INSERT &#40;XML для Аналитики&#41;](../xml-elements-commands/insert-element-xmla.md)   
+ [Вставка элемента &#40;XML для Аналитики&#41;](../xml-elements-commands/insert-element-xmla.md)   
  [Элемент UpdateCells &#40;XML для Аналитики&#41;](../xml-elements-commands/updatecells-element-xmla.md)   
  [Свойства &#40;XML для Аналитики&#41;](xml-elements-properties.md)  
   

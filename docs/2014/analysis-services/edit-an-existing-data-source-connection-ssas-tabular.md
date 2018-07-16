@@ -1,5 +1,5 @@
 ---
-title: Изменение существующего соединения источника данных (табличные службы SSAS) | Документы Microsoft
+title: Изменение существующего соединения источника данных (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.selexistconn.f1
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 33c181ada4cb40eba4697f70d78933dcc26fc7bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 412529e536e23a988fddd78f83611f4460e3dbf4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248034"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>Изменение существующего соединения с источником данных (табличные службы SSAS)
   В этом разделе описано изменение свойств существующего соединения с источником данных в табличной модели.  
@@ -82,7 +82,7 @@ ms.locfileid: "36095587"
      При сохранении текущего набора свойств таблицы может появиться сообщение, указывающее на необходимость обработки таблиц. Чтобы загрузить обновленные данные в модель, нажмите кнопку **Обработать** .  
   
 ## <a name="see-also"></a>См. также  
- [Обрабатывать данные &#40;табличные службы SSAS&#41;](process-data-ssas-tabular.md)   
+ [Обработка данных &#40;табличные службы SSAS&#41;](process-data-ssas-tabular.md)   
  [Поддерживаемые источники данных &#40;табличные службы SSAS&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

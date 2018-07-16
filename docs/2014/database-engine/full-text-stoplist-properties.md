@@ -1,14 +1,13 @@
 ---
-title: Свойства полнотекстового списка стоп-слов | Документы Microsoft
+title: Свойства полнотекстового списка стоп-слов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplistproperties.general.f1
 - sql12.swb.fulltextsearch.ftstoplistproperties.schedule.f1
@@ -16,18 +15,18 @@ ms.assetid: 2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1b052e1987c120bb621da34c6f56d915333baf83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3802396c3b2ff6d64aa439af07e7dba2f9b30c60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36087922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241294"
 ---
 # <a name="full-text-stoplist-properties"></a>Свойства полнотекстового списка стоп-слов
   Это диалоговое окно используется для добавления и удаления отдельных стоп-слов, удаления всех стоп-слов указанного языка, а также для очистки текущего списка стоп-слов. Стоп-слово — это часто употребляемое слово, включенное в список стоп-слов. Стоп-слова из этого списка исключаются при полнотекстовом индексировании таблиц, в которых используется список стоп-слов. Дополнительные сведения см. в разделе [Настройка стоп-слов и списков стоп-слов для полнотекстового поиска и управление ими](../relational-databases/search/full-text-search.md).  
   
- **Использование среды SQL Server Management Studio для изменения свойств списка стоп-слов**  
+ **Чтобы использовать SQL Server Management Studio для изменения свойств списка стоп-слов**  
   
 -   [Настройка стоп-слов, списков стоп-слов и управление ими для полнотекстового поиска](../relational-databases/search/full-text-search.md)  
   

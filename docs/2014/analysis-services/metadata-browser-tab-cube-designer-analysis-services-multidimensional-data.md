@@ -1,5 +1,5 @@
 ---
-title: Метаданные (вкладка «браузер», конструктор кубов) (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Метаданные (вкладка «браузер», конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.metadatapane.f1
 ms.assetid: a1ace545-488d-4645-8330-56408a5e8abd
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8469a144844e7b4bb7c02ea7fa5255a04654a34c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3d3c2c707e42204fe3ae3eb75ea90b28525f2b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241694"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Метаданные (вкладка «Браузер», конструктор кубов) (службы Analysis Services — многомерные данные)
   Панель **Метаданные** на вкладке **Браузер** в конструкторе кубов предназначена для просмотра структур куба и связанных мер, а также для просмотра и создания измерений. В ней можно выполнять детализацию углублением иерархий, просматривать список доступных мер и ключевых показателей эффективности, а также копировать полные имена объектов.  
@@ -49,7 +49,7 @@ ms.locfileid: "36094663"
   
 |Параметр|Описание|  
 |------------|-----------------|  
-|**Добавить в запрос**|Нажмите, чтобы добавить выбранный объект на нижнюю панель области построения запроса.|  
+|**Добавить запрос**|Нажмите, чтобы добавить выбранный объект на нижнюю панель области построения запроса.|  
 |**Добавить в фильтр**|Нажмите, чтобы добавить выделенное измерение, атрибут, иерархию или уровень в область фильтра **браузера**.<br /><br /> Примечание. Этот параметр доступен только в том случае, если выбрано измерение, атрибут, иерархия или уровень.|  
 |**Копировать**|Выберите этот пункт, чтобы копировать выделенный элемент в буфер обмена.<br /><br /> Примечание. Этот параметр копирует полное имя объекта.|  
   
@@ -57,6 +57,6 @@ ms.locfileid: "36094663"
  [Панель инструментов &#40;вкладка «браузер», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Анализ в Excel &#40;вкладка «браузер», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
  [Запрос и фильтр &#40;вкладка «браузер», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Обозреватель &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
+ [Браузер &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

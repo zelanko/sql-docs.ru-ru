@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server], setting the refresh interval
 - refresh interval for Activity Monitor
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - opening Activity Monitor
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c2f067d5efbf5b8e3262311e3b351e0443920287
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8b1910e465e9f2f5d8341c5dd51596d5a6710bb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36190429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262440"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Открытие монитора активности (среда SQL Server Management Studio)
-  Описывается, как открыть монитор активности для получения сведений о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] процессов и как эти процессы влияют на текущий экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Кроме того, он описывает, как можно задать интервал обновления для монитора активности.  
+  В этом разделе описывается, как открыть монитор активности для получения сведений о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] процессов и как эти процессы влияют на текущий экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Кроме того, он описывает, как можно задать интервал обновления для монитора активности.  
   
  **В этом разделе**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36190429"
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>Открытие монитора активности в среде SQL Server Management Studio  
   
-1.  На [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] стандартной панели инструментов нажмите кнопку **монитора активности**.  
+1.  На [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] стандартной панели инструментов нажмите кнопку **монитор активности**.  
   
 2.  В диалоговом окне **Подключение к серверу** выберите имя сервера и режим проверки подлинности, а затем нажмите кнопку **Соединить**.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36190429"
   
 #### <a name="to-open-activity-monitor-in-object-explorer"></a>Открытие монитора активности в обозревателе объектов  
   
--   В обозревателе объектов щелкните правой кнопкой мыши имя экземпляра и выберите **монитора активности**.  
+-   В обозревателе объектов щелкните правой кнопкой мыши имя экземпляра и выберите **монитор активности**.  
   
 #### <a name="to-open-activity-monitor-when-opening-sql-server-management-studio"></a>Открытие монитора активности при открытии среды SQL Server Management Studio  
   

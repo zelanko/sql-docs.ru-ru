@@ -1,5 +1,5 @@
 ---
-title: Элемент Configuration (DTA) | Документы Microsoft
+title: Элемент Configuration (DTA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Configuration element
 ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6cca142282c59539d54d5e1d42d5d2269ac41635
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b0383bc1c8bef5a84b77c8b63fb424995a2181ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241754"
 ---
 # <a name="configuration-element-dta"></a>Элемент Configuration (DTA)
   Задает определенную пользователем конфигурацию, состоящую из существующих и гипотетических структур физического проектирования и позволяющую помощнику по настройке ядра СУБД производить анализ при настройке рабочей нагрузки.  
@@ -54,7 +54,7 @@ ms.locfileid: "36095147"
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Необязательный параметр. Может использоваться один раз для каждого `DTAInput` элемента.|  
+|**Наличие**|Необязательный параметр. Может использоваться один раз для каждого `DTAInput` элемент.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   

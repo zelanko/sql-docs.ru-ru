@@ -1,5 +1,5 @@
 ---
-title: Программа выполнения пакетов (DtExecUI) пользовательского интерфейса интерфейсу | Документы Microsoft
+title: Выполнение пакета справочника по пользовательскому Интерфейсу (DtExecUI) служебной программы | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtexecui.general.f1
 - sql12.dts.dtexecui.executionoptions.f1
@@ -26,16 +26,16 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6213873f823c8b4cb89a7db03c612971845b75a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 215634d6a42c25870c4cac476905f19386df69ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256850"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Программа выполнения пакетов справочника по пользовательскому интерфейсу (DtExecUI)
-  **Программа выполнения пакетов** используется для запуска пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Служебная программа запускает пакеты, которые хранятся в одном из трех расположений: в базе данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] и файловой системе. Этот пользовательский интерфейс, который можно открыть из [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или введя `dtexecui` в командной строке, представляет собой альтернативу запуску пакетов с помощью **DTExec** программы командной строки.  
+  **Программа выполнения пакетов** используется для запуска пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Служебная программа запускает пакеты, которые хранятся в одном из трех расположений: в базе данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] и файловой системе. Этот пользовательский интерфейс, который можно открыть из [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или введя `dtexecui` в командной строке, представляет собой альтернативу запуску пакетов с использованием **DTExec** средство командной строки.  
   
  Пакеты выполняются в том же процессе, что и служебная программа **dtexecui.exe** . Так как эта служебная программа является 32-разрядной, пакеты, запускаемые с помощью **dtexecui.exe** в 64-разрядной среде, выполняются в режиме WOW (Windows на платформе Win32). Занимаясь разработкой и отладкой команд на 64-разрядном компьютере с использованием программы dtexecui.exe, необходимо проверять эти команды в 64-разрядном режиме с помощью 64-разрядной версии программы **dtexec.exe** , прежде чем развертывать эти команды или включать их в расписание на рабочем сервере.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36094845"
   
 ### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>Открытие программы выполнения пакетов в командной строке  
   
--   Выполните в окне командной строки, `dtexecui`.  
+-   В окне командной строки, выполните `dtexecui`.  
   
  В следующих разделах описаны страницы диалогового окна **Программа выполнения пакетов** .  
   

@@ -1,5 +1,5 @@
 ---
-title: Страница "Параметры" (диспетчер отчетов) сайта | Документы Microsoft
+title: Сайтов странице "Параметры" (диспетчер отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dd5360f4f001d85c883291bf87a85ae0e48e3362
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ab466c2e6029a0da5e3ce5498fd85f8a1c8724f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232614"
 ---
 # <a name="site-settings-page-report-manager"></a>Страница «Настройки сайта» (диспетчер отчетов)
   Страница «Настройки сайта» позволяет изменить заголовок приложения, настроить серверные значения по умолчанию для ограничений журналов отчетов и значения времени ожидания обработки отчетов, а также управлять назначениями системных ролей и общими расписаниями. Для просмотра этой страницы требуются разрешения диспетчера содержимого или системного администратора.  
@@ -36,11 +36,11 @@ ms.locfileid: "36192816"
   
 2.  В верхней части страницы щелкните **Настройки сайта**. Откроется страница свойств сайта «Общие».  
   
-     **Примечание:** Если вы не видите **параметры сайта** параметр в меню, у вас необходимые разрешения, Дополнительные сведения см в разделе «Параметры сайта» [Настройка сервера отчетов в собственном режиме для Локальное администрирование &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+     **Примечание:** Если вы не видите **параметры сайта** параметр в меню, у вас нет необходимых разрешений, Дополнительные сведения см. раздел «Параметры сайта» [настроить сервер отчетов в собственном режиме для Локальное администрирование &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="options"></a>Параметры  
  **Название**  
- Укажите заголовок, используемый для данного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] диспетчера отчетов. По умолчанию используется "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]».  
+ Укажите заголовок, используемый для данного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] диспетчера отчетов. По умолчанию присваивается заголовок "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]«.  
   
  **Параметры по умолчанию для журнала отчета**  
  Выберите значение по умолчанию для количества сохраняемых копий журнала отчета. Значение по умолчанию предоставляет начальный параметр, устанавливающий ограничения для журнала отчета. Эти параметры могут быть изменены на уровне отчета. Дополнительные сведения см. в разделе [Страница "Свойства параметров моментального снимка" (диспетчер отчетов)](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "36192816"
   
  **Сервер отчетов в собственном режиме:** в установки в собственном режиме, URL-адрес по умолчанию будет принимать форму http://\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application.  
   
- Режим интеграции с SharePoint: URL-адрес по умолчанию будет принимать форму http://\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application.»  
+ В режиме интеграции с SharePoint: URL-адрес по умолчанию будет принимать форму http://\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application.»  
   
  **Применить**  
  Нажмите, чтобы сохранить изменения на сервере отчетов.  

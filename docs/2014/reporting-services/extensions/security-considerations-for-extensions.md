@@ -16,15 +16,15 @@ helpviewer_keywords:
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 caps.latest.revision: 29
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f94a5c1ad255b9caec8e004318b45f8be21afae0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8969c9caaa0e92aefeee4a3024c9044b65861870
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294164"
 ---
 # <a name="security-considerations-for-extensions"></a>Вопросы безопасности для модулей
   Все приложения, предназначенные для работы в среде CLR, должны взаимодействовать с системой безопасности этой среды. Такое приложение после вызова на выполнение автоматически проверяется средой CLR и получает от CLR набор разрешений. В зависимости от полученных разрешений приложение либо продолжает свою работу, либо вырабатывает исключение безопасности. Разрешения для кода, получаемые сборкой, определяются локальными параметрами безопасности и политиками в файлах конфигурации политики безопасности для конкретного сервера отчетов.  

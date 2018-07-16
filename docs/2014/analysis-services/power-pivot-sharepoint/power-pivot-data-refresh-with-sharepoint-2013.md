@@ -1,5 +1,5 @@
 ---
-title: Обновление данных PowerPivot в SharePoint 2013 | Документы Microsoft
+title: Обновление данных PowerPivot с SharePoint 2013 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca3c358b6cd8d371a0b93b33ab449998a38d24b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa5a4ddce8c51b3e360c4fc4f243b90b310fd07f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280780"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>Обновление данных PowerPivot с SharePoint 2013
   Обновление данных служб [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в SharePoint 2013 использует службы Excel в качестве основного компонента для загрузки и обновления данных модели на экземпляре [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] работает на внешней ферме SharePoint.  
   
- В предыдущей архитектуре обновления данных полагаться исключительно на системные службы PowerPivot, для загрузки и обновления данных модели в режиме интеграции с SharePoint [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра. Экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] запускался локально на сервере приложений PowerPivot. В новой архитектуре появился новый метод поддержания актуальности информации в виде метаданных элемента книги, находящейся в библиотеке документов. Архитектура служб SharePoint 2013 Excel поддерживает как **интерактивное** , так и **плановое**обновление данных.  
+ Прежней архитектуре обновления данных использовалась только системная служба PowerPivot для загрузки и обновления моделей данных в режиме интеграции с SharePoint [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра. Экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] запускался локально на сервере приложений PowerPivot. В новой архитектуре появился новый метод поддержания актуальности информации в виде метаданных элемента книги, находящейся в библиотеке документов. Архитектура служб SharePoint 2013 Excel поддерживает как **интерактивное** , так и **плановое**обновление данных.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36102542"
   
 -   **Учетные данные.** Используется сохраненные учетные данные. Удостоверение текущего пользователя не используется.  
   
--   **Поддерживаемые книги:** книги, созданные с помощью [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] надстройки PowerPivot для Excel 2010 и Excel 2013. Книги, созданные в Excel 2010 с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] надстройка PowerPivot не поддерживаются. Обновите книгу по крайней мере до [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] формата PowerPivot. Дополнительные сведения об обновлении книг см. в статье [Обновление книг и создание расписания обновления данных (SharePoint 2013)](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+-   **Поддерживаемые книги:** книги, созданные с помощью [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] надстройка PowerPivot для Excel 2010 или с помощью Excel 2013. Книги, созданные в Excel 2010 с помощью [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] надстройка PowerPivot не поддерживаются. Обновите книгу по крайней [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] формата PowerPivot. Дополнительные сведения об обновлении книг см. в статье [Обновление книг и создание расписания обновления данных (SharePoint 2013)](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
  Отображение страницы **Управление обновлением данных**  
   
@@ -170,12 +170,12 @@ ms.locfileid: "36102542"
  ![Управление контекстным меню обновления данных](../media/as-manage-datarefresh-sharepoint2013.gif "управление контекстным меню обновления данных")  
   
 > [!TIP]  
->  Сведения об обновлении книг из SharePoint online см. в разделе [обновление книг Excel с внедренными моделями PowerPivot из SharePoint Online (технический документ)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx).  
+>  Сведения об обновлении книг из SharePoint online, см. в разделе [обновление книг Excel с внедренными моделями PowerPivot из SharePoint Online (технический документ)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx).  
   
 ##  <a name="bkmk_refresh_architecture"></a> Архитектура планового обновления данных в SharePoint 2013  
  На следующем рисунке показана архитектура обновления данных для SharePoint 2013 и SQL Server 2012 с пакетом обновления 1 (SP1).  
   
- ![Архитектура обновления данных в SQL Server 2012 SP1](../media/as-scheduled-data-refresh2012sp1-architecture.gif "архитектура обновления данных в SQL Server 2012 SP1")  
+ ![Архитектура обновления данных SQL Server 2012 SP1](../media/as-scheduled-data-refresh2012sp1-architecture.gif "архитектура обновления данных SQL Server 2012 SP1")  
   
 ||Описание||  
 |-|-----------------|-|  
@@ -198,7 +198,7 @@ ms.locfileid: "36102542"
   
 2.  В нижней части панели мониторинга см. **Обновление данных — последние действия** и **Обновление данных — последние ошибки**.  
   
-3.  Дополнительные сведения об использовании и способах ее включения см. в разделе [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+3.  Дополнительные сведения об использовании и его включении см. в разделе [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
  **Данные диагностического журнала.** Можно просмотреть журнал диагностики SharePoint, связанный с обновлением данных. Сначала проверьте конфигурацию ведения журнала диагностики в разделе **Служба PowerPivot** на странице **Мониторинг** центра администрирования SharePoint. Может потребоваться повышение уровня журнала до регистрации «событий минимальной важности». Например, временно установите значение **Подробно** и снова выполните операцию обновления данных.  
   

@@ -1,5 +1,5 @@
 ---
-title: Указание сопоставления диалоговое окно «» (диаграмма точности интеллектуального анализа данных) столбцов | Документы Microsoft
+title: Укажите столбец, сопоставление диалоговое окно «» (диаграмма точности интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.coltotablecolmapping.f1
 ms.assetid: 68e9e2d2-173f-4363-a515-fc60bfee3af0
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 350b0f55f7ae4d445945905984f3e68a34d5c318
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ed607ca38d0cfda0aee7a3b5d8ebbd683570676
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36096005"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306534"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>Диалоговое окно «Указание сопоставления столбцов» (диаграмма точности интеллектуального анализа данных)
   Вкладка **Указание сопоставления столбцов** позволяет выбрать таблицы из внешнего источника данных и сопоставить столбцы с моделью интеллектуального анализа данных. Затем с помощью внешних данных можно проверить точность модели интеллектуального анализа данных и представить результаты в диаграмме точности.  
@@ -41,7 +41,7 @@ ms.locfileid: "36096005"
 > [!NOTE]  
 >  Если панель не содержит никаких таблиц, нажмите кнопку **Выбрать таблицу вариантов** , чтобы добавить таблицы из представления источников данных.  
   
- **Удаление таблицы**  
+ **Удалить таблицу**  
  Удаляет выбранную таблицу. Эта кнопка отключена, если не было выбрано ни одной таблицы или если в списке **Выбор входных таблиц** не отображаются никакие таблицы.  
   
  **Выбор таблицы вариантов**  
@@ -57,6 +57,6 @@ ms.locfileid: "36096005"
   
 ## <a name="see-also"></a>См. также  
  [Тестирование и проверка задачи и инструкции по &#40;интеллектуального анализа данных&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Конструктор диаграммы точности интеллектуального анализа &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)  
+ [Конструктор диаграммы точности интеллектуального &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e0fab127f224ba313e37e0bde49a0677514bb203
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63014b261a38078a209fc6fb08585b7aa1b7182b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36109997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233874"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Определение готовности информации об  изменениях данных
   В потоке управления пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , который выполняет добавочную загрузку измененных данных, вторая задача состоит в том, чтобы убедиться, что изменения данных за выбранный интервал времени подготовлены. Этот шаг необходим потому, что процесс асинхронной записи, возможно, еще не дошел до выбранной конечной точки.  
@@ -203,7 +203,7 @@ ms.locfileid: "36109997"
         > [!NOTE]  
         >  Метод `Thread.Sleep` ожидает аргумент, указанный в миллисекундах.  
   
-7.  Оставьте по умолчанию строку кода, которая возвращает `DtsExecResult.Success` , в результате выполнения скрипта.  
+7.  Оставьте по умолчанию строку кода, которая возвращает `DtsExecResult.Success` в результате выполнения скрипта.  
   
 8.  Закройте среду разработки скриптов и **Редактор задачи «Скрипт»**.  
   
@@ -279,7 +279,7 @@ ms.locfileid: "36109997"
   
 6.  В окне **Редактор задачи «Скрипт»** на странице **Скрипт** нажмите кнопку **Изменить скрипт** , чтобы открыть среду разработки скриптов.  
   
-7.  В главную процедуру добавьте код для регистрации ошибки путем вызова `Dts.Log` метода, или чтобы породить событие путем вызова одного из методов `Dts.Events` интерфейса. Информируйте пакет об ошибке, вернув `Dts.TaskResult = Dts.Results.Failure`.  
+7.  В главную процедуру добавьте код для регистрации ошибки путем вызова `Dts.Log` метод, или создайте событие путем вызова одного из методов класса `Dts.Events` интерфейс. Информируйте пакет об ошибке, вернув `Dts.TaskResult = Dts.Results.Failure`.  
   
      Следующий образец показывает, как записать сообщение в журнал. Дополнительные сведения см. в разделах [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md), [Raising Events in the Script Task](../extending-packages-scripting/task/raising-events-in-the-script-task.md)и [Returning Results from the Script Task](../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Справка F1 мастера интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+title: Справка F1 мастера интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.welcome.f1
 helpviewer_keywords:
 - Mining Model Wizard
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1f66b73d25762a949322b84859d12dd02053c80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6782013eab9b190efe2f6756c1ee409598eb1619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291681"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>Справка F1 мастера интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
   Чтобы создать новую структуру интеллектуального анализа данных и при необходимости связанную с ней модель интеллектуального анализа данных, используется **Мастер интеллектуального анализа данных** .  
@@ -34,7 +34,7 @@ ms.locfileid: "36192571"
   
  Дополнительные сведения см. в разделе [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md).  
   
- **Мастер интеллектуального анализа данных** содержит следующие этапы.  
+  **Мастер интеллектуального анализа данных** содержит следующие этапы.  
   
 -   Выберите тип источника данных, на базе которого будет создаваться модель интеллектуального анализа данных.  
   
@@ -72,9 +72,9 @@ ms.locfileid: "36192571"
  [Определение обучающих данных &#40;мастер интеллектуального анализа данных&#41;](specify-the-training-data-data-mining-wizard.md)   
  [Предложение связанных столбцов &#40;мастер интеллектуального анализа данных&#41;](suggest-related-columns-data-mining-wizard.md)   
  [Выбор измерения исходного куба &#40;мастер интеллектуального анализа данных&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
- [Выберите ключ варианта &#40;мастер интеллектуального анализа данных&#41;](select-the-case-key-data-mining-wizard.md)   
- [Выберите вариант столбцами уровня &#40;мастер интеллектуального анализа данных&#41;](select-case-level-columns-data-mining-wizard.md)   
- [Использование столбцов модели &#40;мастер интеллектуального анализа данных&#41;](specify-mining-model-column-usage-data-mining-wizard.md)   
+ [Выбор ключа варианта &#40;мастер интеллектуального анализа данных&#41;](select-the-case-key-data-mining-wizard.md)   
+ [Столбцы уровня вариантов выберите &#40;мастер интеллектуального анализа данных&#41;](select-case-level-columns-data-mining-wizard.md)   
+ [Укажите использование столбца модели интеллектуального &#40;мастер интеллектуального анализа данных&#41;](specify-mining-model-column-usage-data-mining-wizard.md)   
  [Выбор измерения группы мер &#40;мастер добавления новой вложенной таблицы&#41;](select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
  [Выбор ключа вложенной таблицы &#40;мастер добавления новой вложенной таблицы&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
  [Выбор столбцов вложенной таблицы &#40;мастер добавления новой вложенной таблицы&#41;](select-nested-table-columns-add-new-nested-table-wizard.md)   

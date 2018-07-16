@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking groups [Master Data Services]
 - attributes [Master Data Services], change tracking groups
 - change tracking groups [Master Data Services], adding attributes
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 77a151fe4238c7ed99282436a9668a94d85e2b35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1ae8616c44e6ba58c254989c718eb53ea53a197f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235184"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>Добавление атрибутов в группу отслеживания изменений (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]атрибуты можно добавить в группу отслеживания изменений, чтобы отслеживать изменение значений атрибута.  
@@ -44,7 +44,7 @@ ms.locfileid: "36094794"
   
 1.  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]щелкните область **Администрирование системы**.  
   
-2.  На **обозревателя моделей** страницы, в строке меню наведите курсор на **управление** и нажмите кнопку **сущности**.  
+2.  На **обозревателя моделей** страницы, на панели меню наведите указатель мыши на **управление** и нажмите кнопку **сущностей**.  
   
 3.  На странице **Обслуживание сущности** выберите модель из списка **Модель** .  
   
@@ -54,11 +54,11 @@ ms.locfileid: "36094794"
   
 6.  На странице **Изменение сущности** :  
   
-    -   Если атрибут предназначен для конечных элементов в **конечные атрибуты** выберите атрибут, а затем нажмите кнопку **изменить конечный атрибут**.  
+    -   Если атрибут предназначен для конечных элементов, в **конечные атрибуты** области, выберите атрибут и нажмите кнопку **изменить конечный атрибут**.  
   
-    -   Если атрибут предназначен для консолидированных элементов в **консолидированные атрибуты** выберите атрибут, а затем нажмите кнопку **изменить объединенный атрибут**.  
+    -   Если атрибут предназначен для консолидированных элементов в **консолидированные атрибуты** области, выберите атрибут и нажмите кнопку **изменить объединенный атрибут**.  
   
-    -   Если атрибут предназначен для коллекций, в **атрибуты коллекции** выберите атрибут, а затем нажмите кнопку **изменить атрибут коллекции**.  
+    -   Если атрибут предназначен для коллекций, в **атрибуты коллекции** области, выберите атрибут и нажмите кнопку **изменить атрибут коллекции**.  
   
 7.  Установите флажок **Включить отслеживание изменений** .  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36094794"
   
 ## <a name="next-steps"></a>Следующие шаги  
   
--   [Инициирование действия на основе значения атрибута &#40;службы Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
+-   [Инициирование действия на основе изменений значения атрибута &#40;службы Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также  
  [Создание текстового атрибута &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   

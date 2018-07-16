@@ -1,5 +1,5 @@
 ---
-title: Выберите вариант уровня столбцов (мастер интеллектуального анализа данных) | Документы Microsoft
+title: Select Case уровня столбцов (мастер интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectcaselevelcolumn.f1
 ms.assetid: b110af78-8eee-4817-93da-d63c1603f6c8
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9b80369e13d26b4bdb68f1b32dbf58179ec19f29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b57cf4ff913210c8a0fc7fd48593914c76a315dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241324"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>Выбор столбцов уровня вариантов (мастер интеллектуального анализа данных)
   Страница **Выбор столбцов уровня вариантов** используется для выбора атрибутов и мер из базового измерения исходного куба, которые будут столбцами вариантного уровня структуры интеллектуального анализа данных.  
@@ -37,7 +37,7 @@ ms.locfileid: "36094641"
   
 ## <a name="see-also"></a>См. также  
  [Справка F1 мастера интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Выберите ключ варианта &#40;мастер интеллектуального анализа данных&#41;](select-the-case-key-data-mining-wizard.md)   
- [Использование столбцов модели &#40;мастер интеллектуального анализа данных&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
+ [Выбор ключа варианта &#40;мастер интеллектуального анализа данных&#41;](select-the-case-key-data-mining-wizard.md)   
+ [Укажите использование столбца модели интеллектуального &#40;мастер интеллектуального анализа данных&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   
   

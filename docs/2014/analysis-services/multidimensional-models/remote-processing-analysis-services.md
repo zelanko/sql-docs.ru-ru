@@ -1,5 +1,5 @@
 ---
-title: Удаленной обработки (службы Analysis Services) | Документы Microsoft
+title: Удаленной обработки (службы Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e89e3be5679f9e4152eed81ee77d4a5e6bc89628
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eddc902acb9d3e1d2339f9d8efe2c62a9c07ad54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36193265"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274150"
 ---
 # <a name="remote-processing-analysis-services"></a>Удаленная обработка (службы Analysis Services)
   Можно выполнять запланированную или автоматическую обработку на удаленном экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , при этом запрос на обработку приходит с одного компьютера, но выполняется на другом компьютере из той же сети.  
@@ -97,7 +97,7 @@ ms.locfileid: "36193265"
 ## <a name="see-also"></a>См. также  
  [Компоненты агента SQL Server](../../ssms/agent/sql-server-agent.md#Components)   
  [Планирование задач администрирования служб SSAS с помощью агента SQL Server](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [Пакетную обработку &#40;служб Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [Пакетная обработка &#40;служб Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Обработка объектов многомерной модели](processing-a-multidimensional-model-analysis-services.md)   
  [Обработка объектов &#40;XML для Аналитики&#41;](../xmla/xml-elements-objects.md)  
   
