@@ -1,5 +1,5 @@
 ---
-title: Создание областью действия сеанса вычисляемых ячеек | Документы Microsoft
+title: Создание с областью действия сеанса вычисляемых ячеек | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - session-scoped calculated members [MDX]
 ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6cf66b12594d83e315e5cd1f633f0a4261e095e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1df213e83122d3d93a57c2bbdd131741043ffe7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36095802"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232094"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>Создание вычисляемых ячеек с областью действия сеанса
     

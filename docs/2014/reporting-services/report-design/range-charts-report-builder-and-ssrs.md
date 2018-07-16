@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
 caps.latest.revision: 4
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f6bd0852599c969b2d675af1d75a473fc0d46007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ac10ea59e329f89630510fa6529e54ff2417efd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36099722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215424"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>Диаграммы диапазонов (построитель отчетов и службы SSRS)
   Тип диаграммы диапазонов предназначен для отображения набора точек данных, каждая из которых определена несколькими значениями, относящимися к одной и той же категории. Значения представлены высотой маркера на оси значений. Метки категорий отображаются на оси категорий. В простой диаграмме диапазонов заполняется область между верхним и нижним значениями для каждой точки данных.  
@@ -58,6 +58,6 @@ ms.locfileid: "36099722"
 ## <a name="see-also"></a>См. также  
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Типы диаграмм (построитель отчетов и службы SSRS)](chart-types-report-builder-and-ssrs.md)   
- [Форматирование диаграммы &#40;отчетов построителя отчетов и службы SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [Форматирование диаграммы &#40;построитель отчетов и службы SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   
