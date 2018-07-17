@@ -53,6 +53,7 @@
 ### [Завершение работы мастера (мастер обновления пакетов служб SSIS)](complete-the-wizard-ssis-package-upgrade-wizard.md)
 ### [Обновление пакетов (мастер обновления пакетов служб SSIS)](upgrading-the-packages-ssis-package-upgrade-wizard.md)
 ## [Мастер импорта и экспорта SQL Server +](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
+## [Импорт из Excel и экспорт в Excel](load-data-to-from-excel-with-ssis.md)
 ## [Инструменты устранения неполадок при разработке пакета +](troubleshooting/troubleshooting-tools-for-package-development.md)
 ## [Регистрация событий в пакете служб Integration Services](performance/events-logged-by-an-integration-services-package.md)
 ## [Просмотр записей журнала в окне "Регистрация событий"](view-log-entries-in-the-log-events-window.md)

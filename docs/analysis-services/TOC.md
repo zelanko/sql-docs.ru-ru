@@ -130,10 +130,11 @@
 ## [Примеры Analysis Services](analysis-services-samples.md)
 
 # Справочник
+## [Справочник по PowerShell для Analysis Services](../analysis-services/powershell/analysis-services-powershell-reference.md)  
+## [Справочник по PowerShell для Power Pivot для SharePoint](../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
 ## [Выражения анализа данных (DAX) в MSDN](https://msdn.microsoft.com/library/gg413422.aspx)
 ## [Расширения интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-reference.md)
 ## [Многомерные выражения](../mdx/analysis-services-language-reference.md)
-## [Power Query M](https://msdn.microsoft.com/library/mt211003.aspx)
-## [PowerShell](../analysis-services/powershell/technical-reference-ssas.md)
+## [Power Query M](https://msdn.microsoft.com/library/mt211003.aspx)  
 ## [Свойства сервера](../analysis-services/server-properties/server-properties-in-analysis-services.md)
 ## [XML для аналитики (XMLA)](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)
