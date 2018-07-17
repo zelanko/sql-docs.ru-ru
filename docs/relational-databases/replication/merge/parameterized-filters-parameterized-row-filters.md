@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,11 +25,12 @@ caps.latest.revision: 69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf73ea957e5a918618b1172b65a905439831689
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a25fcf08c76a509e71a3bfdefbaf3c683854d07b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356366"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Параметризованные фильтры. Параметризованные фильтры строк
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>Установка параметра partition options  
  Значение свойства **partition options** указывается при создании статьи в соответствии с тем, как данные фильтрованной таблицы будут совместно использоваться подписчиками. Этому свойству при помощи хранимых процедур [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)и диалогового окна **Свойства статьи** может быть задано одно из четырех значений. Свойству можно задать одно из двух значений с помощью диалогов **Добавление фильтра** или **Изменение фильтра** , которые доступны из мастера создания публикаций и диалога **Свойства публикации** . Следующая таблица содержит сводку возможных значений.  
   
-|Description|Значение в диалоговых окнах «Добавить фильтр» и «Изменить фильтр»|Значение в диалоговом окне «Свойства статьи»|Значение в хранимых процедурах|  
+|Описание|Значение в диалоговых окнах «Добавить фильтр» и «Изменить фильтр»|Значение в диалоговом окне «Свойства статьи»|Значение в хранимых процедурах|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |Данные в секциях перекрываются, и подписчик может обновлять столбцы, на которые имеются ссылки в параметризованном фильтре.|**Строка из этой таблицы будет отправлена нескольким подпискам**|**Перекрывающиеся**|**0**|  
 |Данные в секциях перекрываются, и подписчик не может обновить столбцы, на которые имеются ссылки в параметризованном фильтре.|Недоступно*|**Перекрывающиеся, с запретом на изменение данных вне секции**|**1**|  
