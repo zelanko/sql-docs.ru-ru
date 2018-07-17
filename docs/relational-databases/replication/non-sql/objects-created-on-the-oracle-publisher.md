@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,18 +17,18 @@ caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 866eb9df9bffb4e1df8e16966cf69986bb14c267
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa0a1257f6cb873c92b88cbe00001ed39fcf2845
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32960889"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354196"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Репликация[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливает объекты базы данных на издателе Oracle для включения отслеживания и перенаправления изменений ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не устанавливает никаких двоичных файлов на издателе Oracle). В следующей таблице перечисляются объекты, которые создаются на издателе Oracle, если он определяется на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] как издатель. Описания объектов предоставляются только в информационных целях. Не следует изменять эти объекты.  
   
-|Имени объекта|Тип объекта|Description|  
+|Имени объекта|Тип объекта|Описание|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|Таблица|Таблица отслеживания изменений, используемая для хранения данных об изменениях, выполненных в опубликованной таблице. Таблица отслеживания изменений создается для каждой опубликованной таблицы.|  
 |HREPL_Changes|Таблица|Внутренняя таблица, используемая заданием «Набор транзакций» для определения количества изменений, ожидающих назначения в набор транзакций. Дополнительные сведения об этом задании см. в статье [Настройка производительности для издателей Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,16 +20,16 @@ helpviewer_keywords:
 - TYPEPROPERTY function
 ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e2da7509e05a6c66d86f7e14709612ae4e61c235
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 88aefe1fed48621e09c4c84c796851d8d07d90f9
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33058721"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787065"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +51,7 @@ TYPEPROPERTY (type , property)
  *property*  
  Тип возвращаемых сведений по этому типу данных. Аргумент *property* может иметь одно из перечисленных ниже значений.  
   
-|Свойство|Description|Возвращенное значение|  
+|Свойство|Описание|Возвращенное значение|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|Тип данных допускает значения NULL.|1 = True<br /><br /> 0 = False.<br /><br /> NULL = не удалось найти тип данных.|  
 |**OwnerId**|Владелец типа.<br /><br /> Примечание. Владелец схемы может не быть владельцем типа.|Не равен NULL = идентификатор пользователя базы данных владельца типа.<br /><br /> NULL = неподдерживаемый тип или идентификатор типа недопустим.|  
