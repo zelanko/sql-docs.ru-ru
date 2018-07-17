@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d93453054d5d899459291f3073bd8515b05b1178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 526fedc6fbc37f7180add6515048b4984dc3cc3b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32965289"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350426"
 ---
 # <a name="create-a-publication"></a>Create a Publication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +177,7 @@ ms.locfileid: "32965289"
     -   Задайте поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> в <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> для передачи данных учетной записи [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, под которой запущен агент чтения журнала.  
   
         > [!NOTE]  
-        >  Указывать свойство <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> не обязательно, если публикация создается членом предопределенной роли сервера **sysadmin** . В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+        >  Указывать свойство <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> не обязательно, если публикация создается членом предопределенной роли сервера **sysadmin** . В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Модель безопасности агента репликации](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
     -   (необязательно) при соединении с издателем с проверкой подлинности SQL Server укажите значения свойств <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> или <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> объекта <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> .  
   
@@ -197,7 +196,7 @@ ms.locfileid: "32965289"
     -   поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> свойства <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, чтобы указать учетные данные для учетной записи Windows, с которой работает агент моментальных снимков. Эта учетная запись также используется, когда агент моментальных снимков соединяется с локальным распространителем, и для любых удаленных соединений, где применяется проверка подлинности Windows;  
   
         > [!NOTE]  
-        >  Указывать свойство <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> не обязательно, если публикация создается членом предопределенной роли сервера **sysadmin** . В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+        >  Указывать свойство <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> не обязательно, если публикация создается членом предопределенной роли сервера **sysadmin** . В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Модель безопасности агента репликации](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
     -   Поля <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> или <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> в <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> при соединении с издателем с использованием проверки подлинности SQL Server (необязательно).  
   
@@ -231,7 +230,7 @@ ms.locfileid: "32965289"
     -   поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> свойства <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> , чтобы указать учетные данные для учетной записи Windows, с которой работает агент моментальных снимков. Эта учетная запись также используется, когда агент моментальных снимков соединяется с локальным распространителем, и для любых удаленных соединений, где применяется проверка подлинности Windows;  
   
         > [!NOTE]  
-        >  Указывать свойство <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> не обязательно, если публикация создается членом предопределенной роли сервера **sysadmin** . Дополнительные сведения см. в статье [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+        >  Указывать свойство <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> не обязательно, если публикация создается членом предопределенной роли сервера **sysadmin** . Дополнительные сведения см. в статье [Модель безопасности агента репликации](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
     -   С помощью операторов включающего логического ИЛИ (**|** в Visual C# и **Or** в Visual Basic) и исключающего логического ИЛИ (**^** в Visual C# и **Xor** в Visual Basic) задайте значение <xref:Microsoft.SqlServer.Replication.PublicationAttributes> для свойства <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> .  
   

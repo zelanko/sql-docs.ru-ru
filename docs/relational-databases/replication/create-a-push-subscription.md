@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 464fe19b441009e8a619cea6e478866890b19e8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f66fd7e355b453fc2d00a775c0a244b04763d19e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957119"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349986"
 ---
 # <a name="create-a-push-subscription"></a>Создание принудительной подписки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "32957119"
   
     -   Для подписок на публикации слиянием укажите учетные данные на странице **Безопасность агента слияния** .  
   
-     Дополнительные сведения о разрешениях, необходимых каждому агенту, см. в разделе [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+     Дополнительные сведения о разрешениях, необходимых каждому агенту, см. в разделе [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 -   Указать расписание синхронизации и время, когда подписчик должен быть инициализирован.  
   
@@ -130,11 +129,11 @@ ms.locfileid: "32957119"
   
     -   **@subscription_priority**. Для серверной подписки укажите приоритет подписки (в диапазоне от**0.00** до **99.99**).  
   
-         Дополнительные сведения см. в статье [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+         Дополнительные сведения см. в статье [Расширенное обнаружение и разрешение конфликтов репликации слиянием](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Укажите следующее.  
   
-    -   Учетные данные **@subscriber**, **@subscriber_db**и **@publication** .  
+    -   Значения параметров **@subscriber**, **@subscriber_db**и **@publication** .  
   
     -   Учетные данные Windows, с которыми будет запускаться агент слияния на распространителе в параметрах **@job_login** и значение **@job_password**.  
   
@@ -190,7 +189,7 @@ ms.locfileid: "32957119"
   
     -   Учетные данные <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и значение <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> или <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> объекта [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Эта учетная запись будет использоваться для создания локальных соединений с распространителем и удаленных с использованием проверки подлинности Windows.  
   
-        > **Примечание**. Указывать свойство <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> необязательно, если подписка создается членом предопределенной роли сервера **sysadmin**, но рекомендуется это сделать. В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+        > **Примечание**. Указывать свойство <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> необязательно, если подписка создается членом предопределенной роли сервера **sysadmin**, но рекомендуется это сделать. В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
     -   (необязательно) Значение **true** в свойстве <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> (задано по умолчанию). Если будет присвоено значение **false**, подписку можно будет синхронизировать только программно.  
   
@@ -198,7 +197,7 @@ ms.locfileid: "32957119"
   
 8.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> .  
   
-    > **Внимание**! При создании принудительной подписки на издателе с удаленным распространителем значения, заданные для всех свойств, включая <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, отправляются распространителю в виде обычного текста. Следует зашифровать соединение между издателем и его удаленным распространителем перед вызовом метода <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> . Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    > **Внимание**! При создании принудительной подписки на издателе с удаленным распространителем значения, заданные для всех свойств, включая <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, отправляются распространителю в виде обычного текста. Перед вызовом метода <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> следует зашифровать подключение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>Создание принудительной подписки на публикацию слиянием  
   
@@ -228,7 +227,7 @@ ms.locfileid: "32957119"
   
     -   Учетные данные <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и значение <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> или <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> объекта [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Эта учетная запись будет использоваться для создания локальных соединений с распространителем и удаленных с использованием проверки подлинности Windows.  
   
-        > **Примечание**. Указывать свойство <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> необязательно, если подписка создается членом предопределенной роли сервера **sysadmin**, но рекомендуется это сделать. В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+        > **Примечание**. Указывать свойство <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> необязательно, если подписка создается членом предопределенной роли сервера **sysadmin**, но рекомендуется это сделать. В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
     -   (необязательно) Значение **true** в свойстве <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> (задано по умолчанию). Если будет присвоено значение **false**, подписку можно будет синхронизировать только программно.  
   

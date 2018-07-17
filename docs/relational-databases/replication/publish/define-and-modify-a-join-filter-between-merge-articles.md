@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf7d996475800dfc34e472b42e76aa86696c0345
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9145358ea089647316e077e939da01e58c00c62e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964139"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349846"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Определение и изменение фильтра соединения между статьями публикации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +118,7 @@ ms.locfileid: "32964139"
   
     -   Дополнительные сведения о фильтрации статьи с помощью статического строкового фильтра см. в разделе [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-2.  Чтобы определить связанные с публикацией статьи (которые также называют дочерними), в базе данных публикации на издателе выполните хранимую процедуру [sp_addmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Дополнительные сведения см. в статье [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+2.  Чтобы определить связанные с публикацией статьи (которые также называют дочерними), в базе данных публикации на издателе выполните хранимую процедуру [sp_addmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
   
 3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergefilter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Задайте значение параметра **@publication**, а также укажите уникальное имя фильтра в параметре **@filtername**, имя дочерней статьи, созданной на шаге 2, в параметре **@article**, имя родительской статьи, к которой производится присоединение, в параметре **@join_articlename**, а в параметре **@join_unique_key**задайте одно из следующих значений.  
   

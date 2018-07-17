@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +19,12 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8eb5da1b801a492be4844967833373f80881f782
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12800181219baf82db30c25cc542dacd1975de6f
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359266"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Определение связи логических записей между статьями таблиц слияния
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ ms.lasthandoff: 05/03/2018
   
     -   Если статья отфильтрована горизонтально, задайте условие фильтра строк для свойства <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> (необязательно). Используйте это свойство для определения статического или параметризованного фильтра строк. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-     Дополнительные сведения см. в статье [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+     Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
   
 6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Article.Create%2A> .  
   
@@ -209,7 +209,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>См. также:  
  [Определение и изменение фильтра соединения между статьями публикации слиянием](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Определение и изменение статического строкового фильтра](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [Группирование изменений в связанных строках с помощью логических записей](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)   
  [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)   

@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38df2896997fe55f9072c481eb7678ce6c870aa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c762e0ceedad4c535f5eda7bafe017ed2d61d6d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351716"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Рассмотрение структуры и ограничений издателей Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -148,7 +148,7 @@ ms.lasthandoff: 05/03/2018
 -   Изменения схем для опубликованных таблиц Oracle не поддерживаются. Для внесения изменения схемы сначала надо удалить публикацию, внести изменения, и затем вновь создать публикацию и все подписки.  
   
     > [!NOTE]  
-    >  Если изменения схемы и последующее удаление с воссозданием публикации и подписок выполняются во время отсутствия активности на публикуемых таблицах, можно установить для подписок параметр «поддержка только репликации». Это позволяет им синхронизироваться без необходимости копировать моментальный снимок на каждый подписчик. Дополнительные сведения см. в статье [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+    >  Если изменения схемы и последующее удаление с воссозданием публикации и подписок выполняются во время отсутствия активности на публикуемых таблицах, можно установить для подписок параметр «поддержка только репликации». Это позволяет им синхронизироваться без необходимости копировать моментальный снимок на каждый подписчик. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 ### <a name="replication-security-model"></a>Модель безопасности репликации  
  Модель безопасности публикации Oracle — та же самая, что и модель безопасности стандартной репликации транзакций, за следующими исключениями.  

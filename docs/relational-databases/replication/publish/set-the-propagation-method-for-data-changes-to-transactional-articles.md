@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +18,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa1eef0787a96ddd1661c6276a692d3ad05d7b5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 787db7a15a214b029f55e315c41a624c09b9d244
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352856"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Задание метода распространения изменений данных в транзакционные статьи
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  При указании значения **SQL** для одного из перечисленных выше параметров репликация этого типа на подписчик будет производиться соответствующими командами [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
-     Дополнительные сведения см. в статье [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+     Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-create-an-article-that-does-not-propagate-data-changes"></a>Создание статьи, не распространяющей изменения данных  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  При указании значения **NONE** для одного из перечисленных выше параметров репликация команд указанного на подписчик производиться не будет.  
   
-     Дополнительные сведения см. в статье [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+     Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-create-an-article-with-user-modified-custom-stored-procedures"></a>Создание статьи с изменяемыми пользовательскими хранимыми процедурами  
   
@@ -134,7 +134,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  Подробные сведения о синтаксисе инструкций CALL, SCALL, XCALL и MCALL см. в статье [Указание способа распространения изменений для статей транзакций](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-     Дополнительные сведения см. в статье [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+     Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  После создания моментального снимка перейдите в папку моментальных снимков, относящуюся к публикации, которой принадлежит данная статья, затем найдите файл с расширением **.sch** и с таким же именем, что и статья. Откройте этот файл в блокноте, найдите инструкцию CREATE PROCEDURE для хранимой процедуры вставки, обновления или удаления и измените ее определение, задав пользовательскую логику распространения изменений данных. Дополнительные сведения см. в статье [Указание способа распространения изменений для статей транзакций](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -154,7 +154,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  Подробные сведения о синтаксисе инструкций CALL, SCALL, XCALL и MCALL см. в статье [Указание способа распространения изменений для статей транзакций](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-     Дополнительные сведения см. в статье [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+     Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  В базе данных публикации на издателе при помощи инструкции [ALTER PROCEDURE](../../../t-sql/statements/alter-procedure-transact-sql.md) измените хранимую процедуру [sp_scriptpublicationcustomprocs](../../../relational-databases/system-stored-procedures/sp-scriptpublicationcustomprocs-transact-sql.md) таким образом, чтобы она возвращала скрипт [CREATE PROCEDURE](../../../t-sql/statements/create-procedure-transact-sql.md) пользовательских хранимых процедур для вставки, обновления и удаления. Дополнительные сведения см. в статье [Указание способа распространения изменений для статей транзакций](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   

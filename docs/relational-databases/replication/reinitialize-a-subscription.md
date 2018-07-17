@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f6fc92335de75aa6ccbf18814b262ee17cec890
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c8fd8479cc560a532c9150f4c32f16fd8524a8e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964739"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352236"
 ---
 # <a name="reinitialize-a-subscription"></a>Повторная инициализация подписки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +121,7 @@ ms.locfileid: "32964739"
   
 1.  Выполните процедуру [sp_reinitpullsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md) на издателе. Задайте значения для параметров **@publication**, **@subscriber**и **@destination_db**. В результате подписка будет помечена к повторной инициализации при следующем запуске агента распространителя.  
   
-2.  (Необязательно) Чтобы синхронизировать подписку, запустите агент распространителя на распространителе. Дополнительные сведения см. в статье [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
+2.  (Необязательно) Чтобы синхронизировать подписку, запустите агент распространителя на распространителе. Дополнительные сведения см. в статье [Синхронизация принудительной подписки](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>Повторная инициализация подписки по запросу на публикацию слиянием  
   
@@ -140,7 +139,7 @@ ms.locfileid: "32964739"
     > [!IMPORTANT]  
     >  Если добавить, удалить или изменить параметризованный фильтр, ожидающие обработки изменения подписчика нельзя будет передать издателю во время повторной инициализации. Если нужно передать изменения, ожидающие обработки, то перед изменением фильтра необходимо синхронизировать все подписки.  
   
-2.  (Необязательно) Чтобы синхронизировать подписку, запустите агент слияния на распространителе. Дополнительные сведения см. в статье [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
+2.  (Необязательно) Чтобы синхронизировать подписку, запустите агент слияния на распространителе. Дополнительные сведения см. в статье [Синхронизация принудительной подписки](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
 #### <a name="to-set-the-reinitialization-policy-when-creating-a-new-merge-publication"></a>Установка политики повторной инициализации при создании публикации слиянием  
   

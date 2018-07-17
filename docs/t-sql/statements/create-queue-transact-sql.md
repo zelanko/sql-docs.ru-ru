@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -27,15 +26,15 @@ helpviewer_keywords:
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 caps.latest.revision: 67
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 23def6b6c02b49ae953c68a9e927de516582a605
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 50df822ad62216897cbcf13526646782938dc71f
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702917"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790825"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +153,7 @@ CREATE QUEUE <object>
   
  Следующая таблица содержит столбцы в очереди.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |status|**tinyint**|Состояние сообщения. Инструкция RECEIVE возвращает сообщения со значением состояния, равным **1**. Если хранение сообщений включено, то значение состояния устанавливается в 0. Если хранение сообщений выключено, то сообщение удаляется из очереди. Сообщения в очереди могут иметь одно из следующих состояний:<br /><br /> **0**=Сохраненное полученное сообщение<br /><br /> **1**=Готовность к получению<br /><br /> **2**=Еще не завершено<br /><br /> **3**=Сохраненное отправленное сообщение|  
 |priority|**tinyint**|Уровень приоритета, назначенный для этого сообщения.|  
