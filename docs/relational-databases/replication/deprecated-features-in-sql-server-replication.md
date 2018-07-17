@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 67
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56ef96334a4bf317bf54241d6b5ff0d129a77e58
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23c3395ce12f5a2d60c9c2472f6c4db39394e7d6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353446"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>Устаревшие функции репликации SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="items-deprecated-in-includesssql15includessssql15-mdmd"></a>Элементы, нерекомендуемые в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
-|Компонент|Description|  
+|Компонент|Описание|  
 |-------------|-----------------|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Репликация поддерживается, если на каждой конечной точке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлена одна из двух основных версий текущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Поэтому [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не поддерживает репликацию в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]либо оттуда.|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)]|Репликация поддерживается, если на каждой конечной точке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлена одна из двух основных версий текущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Поэтому [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не поддерживает репликацию в тип данных [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  

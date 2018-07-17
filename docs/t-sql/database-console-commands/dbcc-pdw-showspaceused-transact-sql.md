@@ -7,23 +7,22 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.suite: sql
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-caps.latest.revision: 10
-author: edmacauley
+author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b372a5cb516dbbeaa2732dfbfa676921d63708f3
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 24a2eb0a69a6fcbedf1d5323caa97cdccd180fd5
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33701917"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36915035"
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -54,7 +53,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 ## <a name="result-sets"></a>Результирующие наборы  
 Это результирующий набор для всех таблиц.
   
-|Столбец|Тип данных|Description|  
+|Столбец|Тип данных|Описание|  
 |------------|---------------|-----------------|  
 |reserved_space|BIGINT|Общий размер пространства, используемого для базы данных, в КБ.|  
 |data_space|BIGINT|Пространство, используемое для данных, в КБ.|  
@@ -64,7 +63,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
   
 Это результирующий набор для одной таблицы.
   
-|Столбец|Тип данных|Description|Диапазон|  
+|Столбец|Тип данных|Описание|Диапазон|  
 |------------|---------------|-----------------|-----------|  
 |rows|BIGINT|Число строк.||  
 |reserved_space|BIGINT|Общий размер пространства, зарезервированного для объекта, в КБ.||  
