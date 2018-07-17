@@ -3,8 +3,6 @@ title: Руководства по SQL Server | Документация Май�
 ms.custom: ''
 ms.date: 10/31/2017
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: performance
@@ -15,12 +13,12 @@ caps.latest.revision: 40
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 954ab1ff985054fa0aebaa3aba0711cacd5b4a35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce093e33e944e84b3985bbf79e0e3c895aa3ebdc
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033421"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36925965"
 ---
 # <a name="tutorials-for-sql-server"></a>Руководства по SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +31,7 @@ ms.locfileid: "33033421"
  
 ## <a name="current-tutorials"></a>Действующие учебники  
   
-|Технология|Description|  
+|Технология|Описание|  
 |--------------|---------------|  
 |[Учебники по службам Analysis Services (SSAS)](../analysis-services/analysis-services-tutorials-ssas.md)|Сведения о разработке и развертывании табличных и многомерных моделей служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Также рассказывается об использовании таких средств, как PowerPivot для анализа данных в моделях.|  
 |[Учебники по компоненту ядра СУБД](../relational-databases/database-engine-tutorials.md)|Узнайте, как подключаться к экземпляру ядра СУБД, а затем создавать и выполнять инструкции Transact-SQL.|  

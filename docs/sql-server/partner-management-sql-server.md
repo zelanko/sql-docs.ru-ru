@@ -3,11 +3,6 @@ title: Партнеры по управлению SQL Server | Документ
 description: Списки сторонних партнеров, предлагающих решения для мониторинга сервера.
 services: sql-server
 documentationcenter: NA
-author: MikeRayMSFT
-manager: craigg
-editor: ''
-ms.assetid: ''
-ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -15,21 +10,22 @@ ms.tgt_pltfrm: NA
 ms.custom: ''
 ms.date: 17/09/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 80a7cceee6693b00e2bd61bbdb82229edef5d8d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: MikeRayMSFT
+manager: craigg
+ms.openlocfilehash: 6307fa14838afc49545875d56fed0bc2978b92ae
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031951"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926395"
 ---
 # <a name="sql-server-managing-partners"></a>Партнеры по управлению SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 В отрасли доступно множество передовых средств для управления службами SQL Server.  В этой статье указаны партнеры корпорации Майкрософт, которые предлагают решения по управлению, поддерживающие Microsoft SQL Server.
 
 ## <a name="our-management-partners"></a>Наши партнеры по управлению
-| Партнер | Description | Ссылки |
+| Партнер | Описание | Ссылки |
 | --- | --- | --- | --- |
 |![idera][1] |**IDERA**<br>SQL Compliance Manager — это комплексное решение аудита, показывающее, кто и когда выполнял конкретные действия на серверах SQL Server, что позволяет обеспечить соответствие нормативным требованиям и требованиям к безопасности данных.<br><br>[Требования к системе][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Веб-сайт][idera_website]<br>[Twitter][idera_twitter]<br>[Видео][idera_youtube] | |
 

@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -25,12 +24,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19e2adba0742454e039f106f1ed5c3cd693384f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd96bf92b8e84185ceb7f85a442648c4726a5eee
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957309"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354046"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>обновить скрипты репликации (программирование репликации на языке Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ ms.locfileid: "32957309"
   
 1.  После вызова хранимой процедуры, которая создает подписку, обязательно выполните хранимую процедуру, формирующую задание агента распространителя для синхронизации подписки. Используемая хранимая процедура зависит от типа подписки.  
   
-    -   Для подписки по запросу обновите вызов процедуры [sp_addpullsubscription_agent (Transact-SQL) ](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md), указав в параметрах **@job_name** и **@job_password** учетные данные Windows, с использованием которых агент распространителя будет запускаться на подписчике. Это необходимо сделать после вызова хранимой процедуры [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Дополнительные сведения см. в статье [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
+    -   Для подписки по запросу обновите вызов процедуры [sp_addpullsubscription_agent (Transact-SQL) ](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md), указав в параметрах **@job_name** и **@job_password** учетные данные Windows, с использованием которых агент распространителя будет запускаться на подписчике. Это необходимо сделать после вызова хранимой процедуры [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Дополнительные сведения см. в статье [Создание подписки по запросу](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
     -   Для принудительной подписки выполните процедуру [sp_addpushsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) на издателе. Укажите параметр **@subscriber**, **@subscriber_db**, **@publication**, учетные данные Windows, от которых агент распространителя будет запускаться на распространителе, в параметрах **@job_name** @job_login **@job_password**, а также расписание для этого задания. Дополнительные сведения см. в статье [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md). Это необходимо сделать после вызова процедуры [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Дополнительные сведения см. в статье [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md).  
   
@@ -112,9 +111,9 @@ ms.locfileid: "32957309"
   
 1.  После вызова хранимой процедуры, которая создает подписку, обязательно выполните хранимую процедуру, формирующую задание агента слияния для синхронизации подписки. Используемая хранимая процедура зависит от типа подписки.  
   
-    -   Для подписки по запросу обновите вызов процедуры [sp_addmergepullsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md), указав в параметрах **@job_name** и **@job_password** учетные данные Windows, с использованием которых агент слияния будет запускаться на подписчике. Это необходимо сделать после вызова процедуры [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Дополнительные сведения см. в статье [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
+    -   Для подписки по запросу обновите вызов процедуры [sp_addmergepullsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md), указав в параметрах **@job_name** и **@job_password** учетные данные Windows, с использованием которых агент слияния будет запускаться на подписчике. Это необходимо сделать после вызова процедуры [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Дополнительные сведения см. в статье [Создание подписки по запросу](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
-    -   Для принудительной подписки, выполните процедуру [sp_addmergepushsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) на издателе. Укажите параметр **@subscriber**, **@subscriber_db**, **@publication**, в параметрах **@job_name** @job_login **@job_password**, а также расписание для этого задания. Дополнительные сведения см. в статье [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md). Это необходимо сделать после вызова хранимой процедуры [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Дополнительные сведения см. в статье [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md).  
+    -   Для принудительной подписки, выполните процедуру [sp_addmergepushsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) на издателе. Укажите параметр **@subscriber**, **@subscriber_db**, **@publication**, в параметрах **@job_name** @job_login **@job_password**, а также расписание для этого задания. Дополнительные сведения см. в статье [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md). Это необходимо сделать после вызова хранимой процедуры [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Дополнительные сведения см. в статье [Создание принудительной подписки](../../../relational-databases/replication/create-a-push-subscription.md).  
   
 ## <a name="example"></a>Пример  
  Ниже приведен пример скрипта [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] , который создает публикацию транзакций для таблицы Product. Эта публикация поддерживает немедленное обновление с переключением на обновление отработки отказа. Значения по умолчанию были удалены для удобства чтения.  

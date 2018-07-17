@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +20,12 @@ caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 756040486a286a294410858111c8f9258619839b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d959635a9d43bc03325a039b71fff1c0f827617b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356716"
 ---
 # <a name="replication-queue-reader-agent"></a>Агент чтения очереди репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ qrdrsvc [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Уровень шифрования по протоколу SSL, используемый агентом чтения очереди при установлении соединений.  
   
-|Значение EncryptionLevel|Description|  
+|Значение EncryptionLevel|Описание|  
 |---------------------------|-----------------|  
 |**0**|Указывает, что SSL не используется.|  
 |**1**|Указывает, что SSL используется, но агент не проверяет, подписан ли сертификат сервера SSL надежным издателем.|  
@@ -97,7 +97,7 @@ qrdrsvc [-?]
  **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
  Указывает объем данных, регистрируемых в журнале при работе агента чтения очереди. Выбрав значение **1**, можно свести к минимуму влияние ведения журнала на производительность.  
   
-|Значение HistoryVerboseLevel|Description|  
+|Значение HistoryVerboseLevel|Описание|  
 |-------------------------------|-----------------|  
 |**0**|Ведение журнала отключено (не рекомендуется).|  
 |**1**|По умолчанию. Всегда обновлять предыдущее сообщение журнала с таким же состоянием (запуск, выполнение, успех и т. д.). Если предыдущих сообщений с таким состоянием нет, то вставить новую запись.|  
