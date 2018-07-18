@@ -1,5 +1,5 @@
 ---
-title: Свойства сервера в службах Analysis Services | Документы Microsoft
+title: Свойства сервера в службах Analysis Services | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238824"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975102"
 ---
 # <a name="server-properties-in-analysis-services"></a>Свойства сервера в службах Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

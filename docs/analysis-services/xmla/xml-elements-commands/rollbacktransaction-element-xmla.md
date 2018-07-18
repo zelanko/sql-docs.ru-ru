@@ -1,5 +1,5 @@
 ---
-title: Элемент RollbackTransaction (XML для Аналитики) | Документы Microsoft
+title: Элемент RollbackTransaction (XML для Аналитики) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d1bf63b2e3db0add86927c2f624a01fafa31e3d7
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574506"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979156"
 ---
 # <a name="rollbacktransaction-element-xmla"></a>Элемент RollbackTransaction (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34574506"
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -37,7 +37,7 @@ ms.locfileid: "34574506"
 |Значение по умолчанию|None|  
 |Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  

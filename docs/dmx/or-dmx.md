@@ -1,5 +1,5 @@
 ---
-title: ИЛИ (DMX) | Документы Microsoft
+title: ИЛИ (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a57d0b1c7f1fa75504e786712029326fc958135
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842487"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023852"
 ---
 # <a name="or-dmx"></a>OR (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ Expression1 OR Expression2
  Логическое значение, возвращающее TRUE, если хотя бы один из аргументов возвращает TRUE, и FALSE в противном случае.  
   
 ## <a name="remarks"></a>Примечания  
- Оба аргумента считаются логическими значениями (0 — FALSE; любое ненулевое значение — TRUE), прежде чем оператор выполнит логическое сложение. Если хотя бы один аргумент возвращает TRUE, оператор возвращает TRUE. Если *Expression1* имеет значение TRUE и *Expression2* имеет значение FALSE, оператор возвращает TRUE.  
+ Оба аргумента считаются логическими значениями (0 — FALSE; любое ненулевое значение — TRUE), прежде чем оператор выполнит логическое сложение. Если хотя бы один аргумент возвращает TRUE, оператор возвращает TRUE. Если *Expression1* возвращает значение TRUE, и *Expression2* оценивается как FALSE, оператор возвращает TRUE.  
   
  В следующей таблице иллюстрируется выполнение логического сложения (дизъюнкции).  
   

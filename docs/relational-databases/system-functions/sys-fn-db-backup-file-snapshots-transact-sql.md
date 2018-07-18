@@ -1,5 +1,5 @@
 ---
-title: sys.fn_db_backup_file_snapshots (Transact-SQL) | Документы Microsoft
+title: sys.fn_db_backup_file_snapshots (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/03/2015
 ms.prod: sql
@@ -18,16 +18,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 085bf32115bfe84b00471de27e1fd9c11b3a1ab9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33231353"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023872"
 ---
 # <a name="sysfndbbackupfilesnapshots-transact-sql"></a>sys.fn_db_backup_file_snapshots (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает моментальные снимки Azure, связанных с файлами базы данных. Если указанная база данных не найден или если файлы базы данных не хранятся в службе хранилища больших двоичных объектов Microsoft Azure, строки не возвращаются. Использовать в сочетании с системной функцией **sys.sp_delete_backup_file_snapshot** системной хранимой процедуры для идентификации и удаление потерянных резервных копий моментальных снимков. Дополнительные сведения см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+  Возвращает моментальные снимки Azure, связанные с файлами базы данных. Если указанная база данных не найден или если файлы базы данных не хранятся в службе хранилища больших двоичных объектов Microsoft Azure, строки не возвращаются. Использовании этой системной функции в сочетании с **sys.sp_delete_backup_file_snapshot** системной хранимой процедуры для идентификации и удаление потерянных резервных копий моментальных снимков. Дополнительные сведения см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,8 +48,8 @@ sys.fn_db_backup_file_snapshots
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |file_id|**int**|Идентификатор файла для базы данных. Не допускает значение NULL.|  
-|snapshot_time|**nvarchar(260)**|Отметка времени моментального снимка, возвращаемый API-интерфейса REST. Возвращает значение NULL, если моментальный снимок не существует.|  
-|snapshot_url|**nvarchar(360)**|Полный URL-адрес файла моментального снимка. Возвращает значение NULL, если моментальный снимок не существует.|  
+|snapshot_time|**nvarchar(260)**|Отметка времени моментального снимка, так как он возвращается с REST API. Возвращает значение NULL, если моментальный снимок не существует.|  
+|snapshot_url|**nvarchar(360)**|Полный URL-адрес для моментальных снимков файлового ресурса. Возвращает значение NULL, если моментальный снимок не существует.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE на базу данных.  

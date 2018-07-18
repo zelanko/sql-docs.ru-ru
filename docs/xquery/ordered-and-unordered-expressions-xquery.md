@@ -1,5 +1,5 @@
 ---
-title: Упорядоченные и неупорядоченные выражения (XQuery) | Документы Microsoft
+title: Упорядоченные и неупорядоченные выражения (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,17 +26,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f36e7adf5334ce9ef343b6d518d762a2b4f4c0c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974017"
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>Упорядоченные и неупорядоченные выражения (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  По умолчанию режим упорядочения для всех операций в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] — **упорядоченные**. Таким образом, последовательности узлов возвращаемые выражениями пути и выражениями FLWOR без **Упорядочить по** предложение, располагаются в порядке документа.  
+  По умолчанию режим упорядочения для всех операций в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] — **упорядоченные**. Таким образом, последовательности узлов возвращаемые выражениями пути и выражениями FLWOR без **Упорядочить по** предложение, в порядке следования документов.  
   
- Дополнительный **упорядоченные** и **неупорядоченных** синтаксиса, описанного в спецификации XQuery не поддерживается.  
+ Дополнительный **упорядоченные** и **неупорядоченный** синтаксис, описанный в спецификации XQuery не поддерживается.  
   
 ## <a name="see-also"></a>См. также  
  [Выражения языка XQuery](../xquery/xquery-expressions.md)   
