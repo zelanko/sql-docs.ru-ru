@@ -1,5 +1,5 @@
 ---
-title: Свойства компонента | Документы Microsoft
+title: Свойства компонента | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8ee5a58d5c04cbfbb1f47f0d073ba6614490970c
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238924"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033322"
 ---
 # <a name="feature-properties"></a>Свойства функций
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

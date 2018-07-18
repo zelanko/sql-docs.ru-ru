@@ -1,5 +1,5 @@
 ---
-title: Задание арифметических операторов в запросах XPath (SQLXML 4.0) | Документы Microsoft
+title: Задание арифметических операторов в запросах XPath (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c6dbbac19be8ff9bd138995cb021012ee3b16373
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970625"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032362"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Задание арифметических операторов в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В следующем примере показано, как в запросах XPath указывать арифметические операторы. В этом примере задается запрос XPath к схеме сопоставления, содержащейся в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  В следующем примере показано, как в запросах XPath указывать арифметические операторы. В этом примере задается запрос XPath к схеме сопоставления, содержащейся в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -41,7 +41,7 @@ ms.locfileid: "32970625"
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- В запросе `child` является осью и `OrderDetail` является проверкой узла (значение TRUE, если **OrderDetail** —  **\<узел элемента >**, так как  **\< Элемент >** узел является основным узлом для **дочерних** оси). Для всех  **\<OrderDetail >** узлов элемента применяется проверка в предикате и возвращаются только те узлы, которые удовлетворяют условию.  
+ В запросе `child` является осью и `OrderDetail` является проверкой узла (значение TRUE, если **OrderDetail** —  **\<узла элемента >**, так как  **\< Элемент >** узел является основным узлом для **дочерних** оси). Для всех  **\<OrderDetail >** узлов элемента применяется проверка в предикате и возвращаются только те узлы, которые удовлетворяют условию.  
   
 > [!NOTE]  
 >  Числа в языке XPath являются числами с плавающей запятой двойной точности, и сравнение чисел с плавающей запятой, как указано в примере, приводит к округлению.  
@@ -68,7 +68,7 @@ ms.locfileid: "32970625"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ```  
 Here is the partial result set of the template execution:    

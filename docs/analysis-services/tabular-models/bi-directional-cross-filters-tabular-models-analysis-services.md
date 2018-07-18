@@ -1,5 +1,5 @@
 ---
-title: Двунаправленные кросс-фильтры в табличных моделях | Документы Microsoft
+title: Двунаправленный кросс-фильтры в табличных моделях | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89c3aee1bb762a5725e3242c88284d07abdb8de7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044878"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033312"
 ---
-# <a name="bi-directional-cross-filters-in-tabular-models"></a>Двунаправленные кросс-фильтры в табличных моделях
+# <a name="bi-directional-cross-filters-in-tabular-models"></a>Двунаправленный кросс-фильтры в табличных моделях
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Новым в SQL Server 2016 является стандартный подход по включению *двунаправленных кросс-фильтров* в табличные модели, исключающий необходимость вручную создавать обходные пути DAX для распространения контекста фильтра по связям между таблицами.  
   
  Концепцию можно разбить на две составляющих. *Кроссфильтрация* — это возможность задать контекст фильтра для таблицы на основе значений в связанной таблице, а *двунаправленность* означает передачу контекста фильтра второй связанной таблице на другой стороне связи. Само название указывает на то, что срез можно выполнить в обоих направлениях, а не только в одном.  На внутреннем уровне двусторонняя фильтрация расширяет контекст фильтра до запроса супермножества данных.  
   
- ![Службы SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS-BIDI-1-Filteroption")  
+ ![SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS-BIDI-1-Filteroption")  
   
- Существует два типа кросс-фильтры: односторонних и двусторонних фильтрации. Однонаправленный — это традиционный фильтр с направлением от многих к одному в связи между исходной таблицей и таблицей измерения. Двунаправленный — это кросс-фильтр, позволяющий использовать контекст фильтра одной связи в качестве контекста фильтра для другой связи с таблицей, когда одна таблица является общей для обеих связей.  
+ Существует два типа кросс-фильтры: односторонней и двусторонней фильтрации. Однонаправленный — это традиционный фильтр с направлением от многих к одному в связи между исходной таблицей и таблицей измерения. Двунаправленный — это кросс-фильтр, позволяющий использовать контекст фильтра одной связи в качестве контекста фильтра для другой связи с таблицей, когда одна таблица является общей для обеих связей.  
   
  С заданными **DimDate** и **DimProduct** с внешними ключами к **FactOnlineSales**двунаправленный кросс-фильтр эквивалентен **FactOnlineSales-DimDate** и **FactOnlineSales-DimProduct** , используемым одновременно.  
   
@@ -59,28 +59,28 @@ ms.locfileid: "34044878"
 ## <a name="walkthrough-an-example"></a>Пример с пошаговым руководством  
  Пример — лучший способ оценить эффект от двунаправленной кроссфильтрации. Рассмотрим следующий набор данных из [ContosoRetailDW](http://www.microsoft.com/en-us/download/details.aspx?id=18279), отражающий количество элементов и кросс-фильтры, которые создаются по умолчанию.  
   
- ![Модель служб SSAS-BIDI-2](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-модель")  
+ ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
   
 > [!NOTE]  
 >  По умолчанию во время импорта данных связи между таблицами создаются в конфигурации "многие-к-одному" на основе связей внешнего и первичного ключей между исходной таблицей и соответствующими таблицами измерений.  
   
  Обратите внимание, что направление фильтрации — от таблицы измерения к исходной таблице. Реклама, продукты, даты, клиенты и география заказчиков — все это допустимые фильтры, которые успешно дают статистическую обработку мер с фактическим значением, изменяющимся в зависимости от используемых измерений.  
   
- ![службы SSAS-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
+ ![SSAS-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
   
  Для этой простой схемы типа "звезда" тестирование в Excel подтверждает, что получаются хорошие срезы данных при фильтрации потоков из таблиц измерений в строках и столбцах в статистические данные, предоставляемые мерой **Суммы продаж** , расположенной в центре таблицы **FactOnlineSales** .  
   
- ![службы SSAS-bidi-4-excelSumSales](../../analysis-services/tabular-models/media/ssas-bidi-4-excelsumsales.PNG "ssas-bidi-4-excelSumSales")  
+ ![SSAS-bidi-4-excelSumSales](../../analysis-services/tabular-models/media/ssas-bidi-4-excelsumsales.PNG "ssas-bidi-4-excelSumSales")  
   
  Поскольку меры извлекаются из исходной таблицы, а контекст фильтра заканчивается в исходной таблице, статистические данные будут отфильтрованы правильно для этой модели. Но что произойдет, если создать меру в другом месте, например число различных элементов в таблице продуктов или клиентов или среднее значение скидки в таблице рекламной акции, и расширить существующий контекст фильтра, включив в него эту меру?  
   
  Давайте проверим это, добавив число различных элементов из **DimProducts** в сводную таблицу. Обратите внимание на повторяющиеся значения в поле **Число продуктов**. На первый взгляд это выглядит как отсутствие связи таблиц, но в нашей модели мы видим, что все связи полностью определены и активны. В этом случае повторяющиеся значения возникают из-за того, что нет фильтра даты в строках таблицы продуктов.  
   
- ![службы SSAS-bidi-5-prodcount-nofilter](../../analysis-services/tabular-models/media/ssas-bidi-5-prodcount-nofilter.png "ssas-bidi-5-prodcount-nofilter")  
+ ![SSAS-bidi-5-prodcount-nofilter](../../analysis-services/tabular-models/media/ssas-bidi-5-prodcount-nofilter.png "ssas-bidi-5-prodcount-nofilter")  
   
  После добавления двунаправленного кросс-фильтра между **FactOnlineSales** и **DimProduct**строки в таблице продуктов правильно фильтруются по изготовителю и дате.  
   
- ![службы SSAS-bidi-6-prodcount-withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "ssas-bidi-6-prodcount-withfilter")  
+ ![SSAS-bidi-6-prodcount-withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "ssas-bidi-6-prodcount-withfilter")  
   
 ## <a name="learn-step-by-step"></a>Пошаговое обучение  
  Опробовать двунаправленные кросс-фильтры можно по указаниям данного пошагового руководства. Для начала вам понадобится следующее.  
@@ -131,7 +131,7 @@ ms.locfileid: "34044878"
   
      На этом этапе можно изменить имена на более удобочитаемые в этой модели.  
   
-     ![службы SSAS-bidi-7-данные импорта](../../analysis-services/tabular-models/media/ssas-bidi-7-importdata.PNG "ssas-bidi-7-данные импорта")  
+     ![SSAS-bidi-7-данные импорта](../../analysis-services/tabular-models/media/ssas-bidi-7-importdata.PNG "ssas-bidi-7-данные импорта")  
   
 6.  Импорт данных.  
   
@@ -140,11 +140,11 @@ ms.locfileid: "34044878"
 ### <a name="review-default-table-relationships"></a>Просмотр связей таблицы по умолчанию  
  Переключитесь в представление схемы: **Модель** > **Модель View** > **Схема**. Количество элементов и активных связей отображаются визуально. Все связи между любыми двумя связанными таблицами строятся по принципу "один-ко-многим".  
   
- ![Модель служб SSAS-BIDI-2](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-модель")  
+ ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
   
  Для просмотра этих же данных в табличном виде можно щелкнуть **Таблицы** > **Управление связями** .  
   
- ![службы SSAS-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
+ ![SSAS-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
   
 ### <a name="create-measures"></a>Создание мер  
  Вам потребуется статистическая обработка, чтобы сложить суммы продаж по различным аспектам многомерных данных. В **DimProduct** можно создать меру, которая подсчитывает количество продуктов, а затем использовать ее в анализе сбыта продукции, показывающем количество продуктов, участвующих в продажах для заданного года, заданного региона или типа клиента.  
@@ -196,10 +196,10 @@ ms.locfileid: "34044878"
   
  На практике с помощью кросс-фильтрации можно получить такие формы для просмотра данных, которые обычно создаются только с помощью конструкций "многие-ко-многим". Следует отметить, что двунаправленная кросс-фильтрация не является конструкцией "многие-ко-многим".  Реальная табличная конфигурации "многие-ко-многим" не поддерживается в конструкторе для табличных моделей в этом выпуске.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание связей и управление ими в Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
- [Практический пример обработки простых многие manay связей в Power Pivot и табличных моделей](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
+ [Практический пример обработки простых связей многие к-типа "многим" в Power Pivot и табличных моделей](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
  [Разрешение связей многие ко многим, используя DAX кросс табличной фильтрации](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
- [Многие многие-ко (блог SQLBI)](http://www.sqlbi.com/articles/many2many/)  
+ [Многие ко многих (блог SQLBI)](http://www.sqlbi.com/articles/many2many/)  
   
   
