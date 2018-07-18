@@ -1,5 +1,5 @@
 ---
-title: Программа ssbdiagnose (компонент Service Broker) | Документы Microsoft
+title: (компонент Service Broker) программа ssbdiagnose | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
 - Service Broker, command prompt utilities
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37b52dd752b04c9aacb6ee49e1dbc2d4c590332a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fc76263bfc2be9d35839444b8fcd2cf8c116bc66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36192589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172335"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Программа ssbdiagnose (компонент Service Broker)
   Программа **ssbdiagnose** сообщает о проблемах в диалогах [!INCLUDE[ssSB](../../includes/sssb-md.md)] или в конфигурации службы [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Проверка конфигурации может быть выполнена для одной или для двух служб. Сведения о неполадках могут выводиться в окне командной строки в виде удобочитаемого текста или в формате XML, который может быть перенаправлен в файл или в другую программу.  
@@ -187,14 +187,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  Уникальный идентификатор, определяющий конечную точку диалога в приложении. Дескрипторы диалога уникальны для одной конечной точки диалога. Вызывающая и целевая конечные точки имеют различные дескрипторы диалога.  
   
- Дескрипторы диалога возвращаются в приложения с помощью *@dialog_handle* параметр **BEGIN DIALOG** инструкции и `conversation_handle` столбец результирующего набора из **RECEIVE**  инструкции.  
+ Дескрипторы диалога возвращаются в приложения с помощью *@dialog_handle* параметр **BEGIN DIALOG** инструкции и `conversation_handle` столбец результирующего набора **RECEIVE**  инструкции.  
   
  Дескрипторы диалогов отображаются в `conversation_handle` столбец **sys.transmission_queue** и **sys.conversation_endpoints** представления каталога.  
   
  *conversation_group_id*  
  Уникальный идентификатор, определяющий группу сообщений.  
   
- Идентификаторы группы диалогов возвращаются в приложения с помощью *@conversation_group_id* параметр **GET CONVERSATION GROUP** инструкции и `conversation_group_id` столбца в результирующем наборе **RECEIVE** инструкции.  
+ Идентификаторы групп диалогов возвращаются в приложения с помощью *@conversation_group_id* параметр **GET CONVERSATION GROUP** инструкции и `conversation_group_id` столбца в результирующем наборе **RECEIVE** инструкции.  
   
  Идентификаторы группы диалогов отображаются в `conversation_group_id` столбцы **sys.conversation_groups** и **sys.conversation_endpoints** представления каталога.  
   

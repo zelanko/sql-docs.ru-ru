@@ -1,5 +1,5 @@
 ---
-title: Редактор назначения «ADO.NET» (страница «Диспетчер соединений») | Документы Microsoft
+title: Редактор назначения «ado.net» (страница «Диспетчер соединений») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.connection.f1
 ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 674fff53082aae97171e8ee282590efabd0a6260
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 15f5a12e688d18a95e822fbaacb3714236ab7fff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36098702"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257000"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>Редактор назначения «ADO.NET» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор назначения «ADO.NET»** , чтобы выбрать соединение [!INCLUDE[vstecado](../includes/vstecado-md.md)] для назначения. На этой странице также можно выбрать таблицу или представление базы данных.  
@@ -65,7 +65,7 @@ ms.locfileid: "36098702"
  Если был выбран параметр **По возможности использовать массовую вставку**, а для параметра **Ошибка** задано значение **Перенаправить строку**, то в пакет данных, перенаправляемый объектом назначения в вывод ошибок, могут попасть и строки, не содержащие ошибок. Дополнительные сведения об обработке ошибок в массовых операциях см. в разделе [Обработка ошибок в данных](data-flow/error-handling-in-data.md). Дополнительные сведения о параметре **Ошибка** см. в разделе [ADO NET Destination Editor &#40;Ошибка Output Page&#41;.  
   
 > [!NOTE]  
->  Если исходная таблица [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или Sybase включает столбец идентификаторов, то необходимо использовать задачи «Выполнение SQL» для выполнения инструкции SET IDENTITY_INSERT до и после доступа к назначению «ADO.NET». Это свойство столбца идентификаторов указывает значение приращения для столбца. Инструкция SET IDENTITY_INSERT разрешает вставлять в столбец идентификаторов явно заданные значения. Для выполнения инструкции CREATE TABLE и SET IDENTITY в том же соединении базы данных, следует указать `RetainSameConnection` свойство [!INCLUDE[vstecado](../includes/vstecado-md.md)] диспетчера соединений для `True`. Кроме того, используйте один и тот же диспетчер соединений [!INCLUDE[vstecado](../includes/vstecado-md.md)] для задач «Выполнение SQL» и назначения «ADO NET».  
+>  Если исходная таблица [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или Sybase включает столбец идентификаторов, то необходимо использовать задачи «Выполнение SQL» для выполнения инструкции SET IDENTITY_INSERT до и после доступа к назначению «ADO.NET». Это свойство столбца идентификаторов указывает значение приращения для столбца. Инструкция SET IDENTITY_INSERT разрешает вставлять в столбец идентификаторов явно заданные значения. Чтобы выполнить инструкции CREATE TABLE и SET IDENTITY в одно и то же подключение базы данных, задайте `RetainSameConnection` свойство [!INCLUDE[vstecado](../includes/vstecado-md.md)] диспетчер соединений для `True`. Кроме того, используйте один и тот же диспетчер соединений [!INCLUDE[vstecado](../includes/vstecado-md.md)] для задач «Выполнение SQL» и назначения «ADO NET».  
 >   
 >  Дополнительные сведения см. в разделе [SET IDENTITY_INSERT (Transact-SQL)](/sql/t-sql/statements/set-identity-insert-transact-sql) и [IDENTITY (свойство) (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql-identity-property).  
   
@@ -73,8 +73,8 @@ ms.locfileid: "36098702"
  Техническая статья [Быстрый способ загрузки данных в базу данных SQL Windows Azure](http://go.microsoft.com/fwlink/?LinkId=244333)на сайте sqlcat.com  
   
 ## <a name="see-also"></a>См. также  
- [Редактор назначения «ADO.NET» &#40;страница «сопоставления»&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
- [Редактор назначения «ADO.NET» &#40;страницы вывода ошибок&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
+ [Редактор назначения «ado.net» &#40;страница «сопоставления»&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
+ [Редактор назначения «ado.net» &#40;странице вывода ошибок&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
  [Диспетчер соединений ADO.NET](connection-manager/ado-net-connection-manager.md)   
  [Задача «Выполнение SQL»](control-flow/execute-sql-task.md)  
   
