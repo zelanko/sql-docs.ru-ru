@@ -1,6 +1,6 @@
----
+﻿---
 title: Загрузите и установите Microsoft SQL Operations Studio (Предварительная версия) | Документы Microsoft
-description: >
+description: Загрузка и установка Microsoft SQL Operations Studio (Предварительная версия) для Windows, macOS или Linux
   Загрузка и установка Microsoft SQL Operations Studio (Предварительная версия) для Windows, macOS или Linux
 ms.custom: tools|sos
 ms.date: 06/20/2018
