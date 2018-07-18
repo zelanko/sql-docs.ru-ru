@@ -1,6 +1,6 @@
 ---
-title: Настройка служб SSIS в Linux с помощью служб ssis conf | Документы Microsoft
-description: В этой статье описывается настройка SQL Server Integration Services (SSIS) для Linux с помощью служебной программы conf служб ssis.
+title: Настройка служб SSIS в Linux с помощью служб ssis-conf | Документация Майкрософт
+description: В этой статье описывается настройка службы SQL Server Integration Services (SSIS) на платформе Linux с помощью служб ssis-conf служебной программы.
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -13,36 +13,36 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 67144e934914549fbb2605b660407c826c409880
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322925"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020641"
 ---
-# <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Настройка служб интеграции SQL Server в Linux с conf служб ssis
+# <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Настройка SQL Server Integration Services в Linux с помощью служб ssis-conf
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Запуском `ssis-conf` сценарий настройки при установке SQL Server Integration Services (SSIS) для Red Hat Enterprise Linux и Ubuntu. Дополнительные сведения об установке служб SSIS см. в разделе [установить SQL Server Integration Services (SSIS) в Linux](sql-server-linux-setup-ssis.md).
+Запуском `ssis-conf` сценарий конфигурации при установке служб SQL Server Integration Services (SSIS) для Red Hat Enterprise Linux и Ubuntu. Дополнительные сведения об установке служб SSIS см. в разделе [установить SQL Server Integration Services (SSIS) в Linux](sql-server-linux-setup-ssis.md).
 
 Можно также использовать `ssis-conf` программу, чтобы настроить следующие свойства:
 
 | Command | Описание |
 |-------------|---------------------------------------------------------------------|
-| SET-edition | Выберите выпуск SQL Server                                       |
-| Данные телеметрии   | Включение или отключение службы телеметрии SQL Server Integration Services |
+| SET-edition | Задает выпуск SQL Server                                       |
+| Данные телеметрии   | Включить или отключить службу телеметрии SQL Server Integration Services |
 | программа установки       | Инициализация и настройка Microsoft SQL Server Integration Services      |
 |||
 
-## <a name="run-ssis-conf"></a>Запустите conf служб ssis
+## <a name="run-ssis-conf"></a>Выполнения служб ssis-conf
 
-Примеры в этой статье запуска `ssis-conf` , указав полный путь: `/opt/ssis/bin/ssis-conf`. Если перейти в это расположение, прежде чем запускать `ssis-conf`, программу можно запустить в контексте текущего каталога: `./ssis-conf`.
+В примерах в этой статье выполните `ssis-conf` , указав полный путь: `/opt/ssis/bin/ssis-conf`. Если перейти в это расположение, перед запуском `ssis-conf`, программу можно запустить в контексте текущего каталога: `./ssis-conf`.
 
-Убедитесь, что для выполнения команд, описанных в этой статье, с привилегиями root. Например, запустите `sudo /opt/ssis/bin/ssis-conf setup` и не `/opt/ssis/bin/ssis-conf setup`.
+Убедитесь в том, что для выполнения команд, описанных в этой статье с правами привилегированного пользователя. Например, запустите `sudo /opt/ssis/bin/ssis-conf setup` и не `/opt/ssis/bin/ssis-conf setup`.
 
-Для запуска этих команд с помощью запросов на языке, который вы предпочитаете, можно указать языковой стандарт. Например, чтобы получать запросы на китайском языке, выполните следующую команду: `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`.
+Для выполнения этих команд с помощью запросов на языке, которое вы хотите использовать, можно указать языковой стандарт. Например, чтобы получать запросы на китайском языке, выполните следующую команду: `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`.
 
-## <a name="use-set-edition-to-set-the-edition-of-sql-server-integration-services"></a>Используйте набор выпуск, чтобы установить выпуск SQL Server Integration Services
+## <a name="use-set-edition-to-set-the-edition-of-sql-server-integration-services"></a>Использовать set-edition предназначен для указания выпуска SQL Server Integration Services
 
 Выпуск служб SSIS выравнивается с выпуском SQL Server.
 
@@ -78,21 +78,21 @@ By choosing a PAID edition, you are verifying that you have the appropriate numb
 Enter your edition (1-8):
 ```
 
-Если ввести значение от 1 до 7, производится настройка бесплатным или ПЛАТНЫМ выпуска. При вводе 8, программа предложит ввести ключ продукта, который вы приобрели:
+Если вы вводите значение от 1 до 7, система настраивает бесплатный или ПЛАТНЫЙ выпуск. При вводе 8, программа предложит ввести ключ продукта, который вы приобрели:
 
 ```
 Enter the 25-character product key:
 ```
 
-## <a name="use-telemetry-to-configure-customer-feedback"></a>Используйте данные телеметрии для настройки отзывов клиентов
+## <a name="use-telemetry-to-configure-customer-feedback"></a>Используйте данные телеметрии, чтобы настроить отзывов пользователей
 
 `telemetry` Команда определяет, отправляет ли SSIS отзыв в корпорацию Майкрософт.
 
-Службе телеметрии всегда включен для бесплатные выпуски (то есть выпуски Express, Developer и Evaluation). Если у вас есть бесплатный выпуск, нельзя использовать `telemetry` команду, чтобы отключить телеметрии.
+Для бесплатных выпусков (то есть выпуски Express, Developer и Evaluation) всегда включен в службу телеметрии. Если у вас есть бесплатный выпуск, нельзя использовать `telemetry` команду, чтобы отключить сбор данных телеметрии.
 
 Введите следующую команду: `$ sudo /opt/ssis/bin/ssis-conf telemetry`.
 
-Для выпусков ОПЛАЧЕНО после выполнения команды, вы получите следующее сообщение:
+Для ПЛАТНЫХ выпусков после ввода команды, вы получите следующее сообщение:
 
 ```
 Send feature usage data to Microsoft. Feature usage data includes information about your hardware configuration and how you use SQL Server Integration Services.
@@ -100,29 +100,29 @@ Send feature usage data to Microsoft. Feature usage data includes information ab
 [Yes/No]:
 ```
 
-При выборе **Да**, службе телеметрии включен и начинает выполнение. Служба запускается автоматически после каждой загрузки. При выборе **нет**, служба телеметрии останавливается и отключен.
+При выборе **Да**, служба телеметрии включена и запускает выполнение. Служба автоматически запускается после каждой загрузки. При выборе **нет**, службу телеметрии останавливается и она отключена.
 
-## <a name="use-setup-to-initialize-and-set-up-microsoft-sql-server-integration-services"></a>Использовать программу установки, чтобы инициализировать и настроить Microsoft SQL Server Integration Services
+## <a name="use-setup-to-initialize-and-set-up-microsoft-sql-server-integration-services"></a>Используйте программу установки для инициализации и настройка Microsoft SQL Server Integration Services
 
-Используйте `setup` команды всякий раз при установке служб SSIS.
+Используйте `setup` команды при каждой установке служб SSIS.
 
 Введите следующую команду: `sudo /opt/ssis/bin/ssis-conf setup`.
 
-Программа предложит подтвердить или предоставить значения для следующих элементов:
--   Лицензии продукта
+Программа предложит подтвердить или указать значения для следующих элементов:
+-   Лицензии на продукт
 -   Лицензионное соглашение
 -   Службе телеметрии
 -   Язык, используемый службами Integration Services
 
-Для запуска `setup` команды вывода сообщений на языке, что вы предпочитаете, можно указывать локаль. Например, чтобы получать запросы на китайском языке, выполните следующую команду: `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`.
+Для запуска `setup` команды с помощью запросов на языке, что вы предпочитаете, можно указать языковой стандарт. Например, чтобы получать запросы на китайском языке, выполните следующую команду: `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`.
 
 ## <a name="ssisconf-format"></a>Формат SSIS.conf
 
 Следующие `/var/opt/ssis/ssis.conf` файл содержит пример для каждого параметра.
 
-Для SQL Server, можно изменить параметры системы, изменив значения в `mssql.conf` файла. Для служб SSIS вы *не* изменить параметры системы путем изменения значения в `ssis.conf` файла. `ssis.conf` Файле отображаются только результаты установки. Если вы хотите изменить параметры для служб SSIS, можно удалить `ssis.conf` файл и запустите `setup` еще раз.
+Для SQL Server, можно изменить параметры системы, изменив значения в `mssql.conf` файл. Для служб SSIS вы *невозможно* изменять системные параметры, изменив значения в `ssis.conf` файл. `ssis.conf` Файл отображает только результаты настройки. Если вы хотите изменить параметры для служб SSIS, можно удалить `ssis.conf` файл и запустите `setup` еще раз выполните команду.
 
-Ниже приведен пример `ssis.conf` файла. Каждое поле соответствует результат одного шага установки.
+Ниже приведен пример `ssis.conf` файл. Каждое поле соответствует результат одного этапа установки.
 
 ```
 [LICENSE]
@@ -144,8 +144,8 @@ enabled = Y
 lcid = 2052
 ```
 
-## <a name="related-content-about-ssis-on-linux"></a>См. также о служб SSIS в Linux
+## <a name="related-content-about-ssis-on-linux"></a>См. также сведения о службах SSIS на платформе Linux
 -   [Извлечения, преобразования и загрузки данных в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md)
--   [Установка SQL Server Integration Services (SSIS) для Linux](sql-server-linux-setup-ssis.md)
+-   [Установка SQL Server Integration Services (SSIS) в Linux](sql-server-linux-setup-ssis.md)
 -   [Ограничения и известные проблемы для служб SSIS в Linux](sql-server-linux-ssis-known-issues.md)
--   [Выполнение в Linux с cron пакетов служб интеграции SQL Server расписание](sql-server-linux-schedule-ssis-packages.md)
+-   [Расписание SQL Server Integration Services выполнения пакета в Linux с помощью cron](sql-server-linux-schedule-ssis-packages.md)

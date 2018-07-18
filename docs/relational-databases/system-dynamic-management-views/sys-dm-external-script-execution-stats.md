@@ -1,5 +1,5 @@
 ---
-title: sys.dm_external_script_execution_stats | Документы Microsoft
+title: sys.dm_external_script_execution_stats | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: jeannt
 ms.author: jeannt
 manager: craigg
 ms.openlocfilehash: 01380a29665d848fff1620787a97aabbcdac4033
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468360"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023818"
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

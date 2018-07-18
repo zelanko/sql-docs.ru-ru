@@ -1,6 +1,6 @@
 ---
-title: Проверка подлинности Active Directory для SQL Server для Linux | Документы Microsoft
-description: В этой статье обзор проверки подлинности Active Directory для SQL Server в Linux.
+title: Проверка подлинности Active Directory для SQL Server в Linux | Документация Майкрософт
+description: Статья содержит общие сведения о проверке подлинности Active Directory для SQL Server в Linux.
 author: rothja
 ms.date: 02/23/2018
 ms.author: jroth
@@ -14,45 +14,46 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.openlocfilehash: 7f34cda192cbd909ac6c2392ab49acb58038b416
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020496"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Проверка подлинности Active Directory для SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этой статье содержится обзор проверки подлинности Active Directory (AD) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux. Проверки подлинности AD называется также встроенная проверка подлинности в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
+В этой статье представлен обзор проверки подлинности Active Directory (AD) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux. Проверка подлинности AD называется также встроенная проверка подлинности в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
 
 ## <a name="ad-authentication-overview"></a>Обзор проверки подлинности AD
 
-Проверка подлинности AD позволяет присоединенных к домену клиенты под управлением Windows или Linux, для проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью учетных данных домена, а протокол Kerberos.
+Проверка подлинности AD позволяет клиентов, присоединенных к домену, в ОС Windows или Linux, чтобы проходить проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью своих учетных данных домена и протокола Kerberos.
 
-Проверки подлинности AD имеет следующие преимущества по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] проверки подлинности:
+Проверка подлинности AD имеет следующие преимущества над [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] проверки подлинности:
 
-- Пользователи проходят проверку подлинности через единый вход, не вводя пароль.   
-- Создание имен входа для групп AD, можно управлять доступа и разрешений в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью членства в группах AD.  
-- Каждый пользователь получает одно удостоверение во всей организации, поэтому не нужно для отслеживания которой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] круг пользователей, которым соответствуют имена входа.   
-- AD позволяет принудительно применять политику централизованного пароль во всей организации.   
+- Пользователи проходят проверку подлинности с помощью единого входа, не вводя пароль.   
+- Создание имен входа для группы AD, можно управлять доступом и разрешениями в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью членства в группах AD.  
+- Каждый пользователь имеет единую идентификацию в вашей организации, поэтому не нужно для отслеживания которого [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] круг пользователей, которым соответствуют имена входа.   
+- AD позволяет принудительно применять политику централизованная паролей в организации.   
 
 ## <a name="configuration-steps"></a>Шаги настройки
 
-Для использования проверки подлинности Active Directory, контроллер домена AD (Windows) требуются в вашей сети.
+Чтобы использовать проверку подлинности Active Directory, необходимо иметь контроллера домена AD (Windows) в сети.
 
-В этом учебнике приведены подробные Настройка проверки подлинности AD [учебника: проверки подлинности Active Directory для использования с SQL Server в Linux](sql-server-linux-active-directory-authentication.md). Ниже приведены сводные данные и ссылки на каждый раздел в учебнике.
+В этом руководстве предоставляются подробные сведения о настройке проверки подлинности AD [руководство: проверка подлинности Active Directory для использования с SQL Server в Linux](sql-server-linux-active-directory-authentication.md). В следующем списке приведены Сводка со ссылкой на каждый раздел в этом руководстве:
 
-1. [Присоединение к домену Active Directory узла SQL Server](sql-server-linux-active-directory-authentication.md#join).
-1. [Создать пользователя AD для SQL Server и задайте параметру ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser).
+1. [Присоединение узла SQL Server к домену Active Directory](sql-server-linux-active-directory-authentication.md#join).
+1. [Создание пользователя AD для SQL Server и задайте ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser).
 1. [Настройка keytab службы SQL Server](sql-server-linux-active-directory-authentication.md#configurekeytab).
 1. [Создать имена входа SQL Server на основе AD в Transact-SQL](sql-server-linux-active-directory-authentication.md#createsqllogins).
 1. [Подключение к SQL Server с использованием проверки подлинности AD](sql-server-linux-active-directory-authentication.md#connect).
 
 ## <a name="known-issues"></a>Известные проблемы
 
-- В настоящее время единственного способа проверки подлинности поддерживается для конечной точки зеркального отображения базы данных является СЕРТИФИКАТ. Метод проверки подлинности WINDOWS будет включена в будущем выпуске.
-- AD сторонние средства, такие как Centrify Powerbroker, и Vintela не поддерживаются.
+- В настоящее время единственного способа проверки подлинности поддерживается для конечной точки зеркального отображения базы данных является СЕРТИФИКАТ. Метод проверки подлинности WINDOWS будет добавлена в будущем выпуске.
+- Сторонние средства AD, такие как Centrify, Powerbroker, и Vintela не поддерживаются.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о том, как реализовать проверку подлинности Active Directory для SQL Server в Linux см. в разделе [учебника: проверки подлинности Active Directory для использования с SQL Server в Linux](sql-server-linux-active-directory-authentication.md).
+Дополнительные сведения о том, как реализовать проверку подлинности Active Directory для SQL Server в Linux см. в разделе [руководство: проверка подлинности Active Directory для использования с SQL Server в Linux](sql-server-linux-active-directory-authentication.md).

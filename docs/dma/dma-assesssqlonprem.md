@@ -2,7 +2,7 @@
 title: Выполнение оценки миграции SQL Server (помощник по миграции данных) | Документация Майкрософт
 description: Узнайте, как использовать помощник по миграции данных для оценки на локальном сервере SQL Server перед миграцией на другой экземпляр SQL Server или базу данных SQL Azure
 ms.custom: ''
-ms.date: 10/04/2017
+ms.date: 07/09/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: bfb92c1217fe95687bdef5203189315b965b7446
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
-ms.translationtype: HT
+ms.openlocfilehash: 9a1e02c2db8f750b8beac70caf59cd7a0c509a25
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782225"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934956"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Выполнение оценки миграции SQL Server с помощью Data Migration Assistant
 
@@ -86,7 +86,7 @@ ms.locfileid: "37782225"
 
 2.  Ознакомьтесь с проблемами совместимости на всех уровнях совместимости, поддерживаемых целевая версия SQL Server, выбранные на **параметры** страницы.
 
-Можно просмотреть проблемы совместимости при анализе того или иного объекта и сведения о нем для каждой проблемы, обнаруженной в разделе **критические изменения**, **изменения в поведении**, и **устаревшие функции** .
+Можно просмотреть проблемы совместимости путем анализа того или иного объекта, сведения о нем и потенциально исправление для каждой проблемы, обнаруженной в разделе **критические изменения**, **изменения в поведении**, и  **Устаревшие функции**.
 
 ![Просмотр результатов оценки](../dma/media/ReviewResults.png)
 

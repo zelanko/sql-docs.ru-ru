@@ -1,5 +1,5 @@
 ---
-title: Использование коллекции PowerPivot | Документы Microsoft
+title: Использование коллекции PowerPivot | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7d47fc300b39e0dc7d63c2699e8a05f677573ea9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a2eb7bfae0c4fcbc82995c120ef588fdfd4710af
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980587"
 ---
 # <a name="use-power-pivot-gallery"></a>Использование коллекции PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -121,7 +122,7 @@ ms.lasthandoff: 05/10/2018
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Нажмите кнопку «Управление обновлением данных», чтобы создать или просмотреть расписание получения обновленных данных из подключенных источников данных. Дополнительные сведения о создании расписания см. в разделе [Планирование обновления данных (PowerPivot для SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b).|  
+|![GMNI_btn_NewDataRefreshReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Нажмите кнопку «Управление обновлением данных», чтобы создать или просмотреть расписание получения обновленных данных из подключенных источников данных. Дополнительные сведения о создании расписания см. в разделе [Планирование обновления данных (PowerPivot для SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b).|  
   
 ##  <a name="delete"></a> Удаление книги или отчета из коллекции PowerPivot  
  Чтобы удалить документ из библиотеки, сначала нужно переключиться на представление «Все документы».  
@@ -162,6 +163,6 @@ ms.lasthandoff: 05/10/2018
  [Создание надежного расположения для сайтов PowerPivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Удаление коллекции Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
  [Создание и настройка коллекции Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [Планирование обновления данных (Power Pivot для SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
+ [Планирование обновления данных (Power Pivot для SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
   
   

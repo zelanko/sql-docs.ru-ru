@@ -1,5 +1,5 @@
 ---
-title: Условные выражения (XQuery) | Документы Microsoft
+title: Условные выражения (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,10 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3634414fb0353c9152d317c718707c3ce26ec812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979016"
 ---
 # <a name="conditional-expressions-xquery"></a>Выражения условий (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +59,9 @@ else
   
 -   Выражение условия должно быть заключено в скобки.  
   
--   **Else** требуется выражение. Если оно не требуется, можно возвратить « ( ) », как показано в примерах, приведенных в этом подразделе.  
+-   **Else** выражение является обязательным. Если оно не требуется, можно возвратить « ( ) », как показано в примерах, приведенных в этом подразделе.  
   
- Например, следующий запрос адресован **xml** переменной типа. **Если** условие проверяется значение SQL-переменной (@v) внутри выражения XQuery с помощью [функции SQL: variable()](../xquery/xquery-extension-functions-sql-variable.md) функции расширения. Если оно равно «FirstName», возвращается элемент <`FirstName`>. В противном случае возвращается элемент <`LastName`>.  
+ Например, следующий запрос адресован **xml** переменной типа. **Если** проверяется значение SQL-переменной (@v) внутри выражения XQuery с помощью [функции SQL: variable()](../xquery/xquery-extension-functions-sql-variable.md) функцию расширения. Если оно равно «FirstName», возвращается элемент <`FirstName`>. В противном случае возвращается элемент <`LastName`>.  
   
 ```  
 declare @x xml  
@@ -109,7 +110,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- В предыдущем запросе, то условие в **Если** выражение проверяет наличие более двух дочерних элементов <`Features`>. Если да, в результат запроса включается элемент `\<there-is-more/>`.  
+ В предыдущем запросе, то условие в **Если** выражение проверяет наличие более двух дочерних элементов в <`Features`>. Если да, в результат запроса включается элемент `\<there-is-more/>`.  
   
  Результат:  
   

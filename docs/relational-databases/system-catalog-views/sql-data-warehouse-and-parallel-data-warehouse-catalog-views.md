@@ -1,5 +1,5 @@
 ---
-title: Хранилище данных SQL и параллельные хранилища данных представления каталога | Документы Microsoft
+title: Хранилище данных SQL и параллельные хранилища данных представления каталога | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: ''
@@ -19,11 +19,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f82ec61d5f78b2590f463cade01b044aae459dbc
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33698607"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029729"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>Хранилище данных SQL и представления каталога хранилища параллельных данных
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

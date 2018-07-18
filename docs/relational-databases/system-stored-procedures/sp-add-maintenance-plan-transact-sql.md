@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan (Transact-SQL) | Документы Microsoft
+title: sp_add_maintenance_plan (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12b5a6f22c7cfdde137b7e15b6a146175838ddd0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238135"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018471"
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,11 +59,11 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **sp_add_maintenance_plan** должна запускаться из **msdb** базы данных и создает план обслуживания новый, но пустой. Чтобы добавить один или несколько баз данных и связывать их с заданием или заданиями, выполните **sp_add_maintenance_plan_db** и **sp_add_maintenance_plan_job**.  
+## <a name="remarks"></a>Примечания  
+ **sp_add_maintenance_plan** должна запускаться из **msdb** базы данных и создает план обслуживания новый, но пустой. Чтобы добавить один или несколько баз данных и связывать их с заданием или заданиями, выполнение **sp_add_maintenance_plan_db** и **sp_add_maintenance_plan_job**.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_add_maintenance_plan**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_add_maintenance_plan**.  
   
 ## <a name="examples"></a>Примеры  
  Создание плана обслуживания с названием Myplan.  

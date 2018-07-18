@@ -1,5 +1,5 @@
 ---
-title: Power Pivot доступности и аварийного восстановления | Документы Microsoft
+title: Power Pivot доступности и аварийного восстановления | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b2b5a16ac487b52f3592743481e0013b4bf44856
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9ed5a7d272f5f21b720df33ef71c0c562f8d699a
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026541"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979586"
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Доступность и аварийное восстановление Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "34026541"
   
  ![доступность PowerPivot в sharepoint 2010](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2010.png "доступность powerpivot в sharepoint 2010")  
   
--   **(1)** Серверы клиентского веб-интерфейса. Установите поставщики данных на каждом сервере. Дополнительные сведения см. в статье [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+-   **(1)** Серверы клиентского веб-интерфейса. Установите поставщики данных на каждом сервере. Дополнительные сведения см. в статье [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
 -   **(2)** Две общие службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и **(4)** служба Windows **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** устанавливаются на серверы приложений SharePoint.  
   

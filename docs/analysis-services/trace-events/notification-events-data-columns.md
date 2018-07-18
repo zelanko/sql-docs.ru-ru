@@ -1,5 +1,5 @@
 ---
-title: Столбцы данных событий уведомлений | Документы Microsoft
+title: Столбцы данных событий уведомлений | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bf7695ec7dbbe7361641fb939718724f611e6c1e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017767"
 ---
 # <a name="notification-events-data-columns"></a>Столбцы данных событий уведомлений
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|Содержит текущее время события оповещения, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |StartTime|3|5|Содержит время начала события, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |EndTime|4|5|Содержит время окончания события. Этот столбец не заполняется для таких классов событий запуска, как SQL:BatchStarting или SP:Starting. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
-|Длительность|5|2|Содержит время в миллисекундах, использованное событием.|  
+|Duration|5|2|Содержит время в миллисекундах, использованное событием.|  
 |IntegerData|10|1|Содержит целочисленные данные, связанные с событием уведомления. Если в столбце EventSubclass содержится 8, значения следующие:<br /><br /> 1 = создано<br /><br /> 2 = удалено<br /><br /> 3 = изменены свойства объекта<br /><br /> 4 = изменены свойства потомков объекта<br /><br /> 6 = добавлены потомки<br /><br /> 7 = удалены потомки<br /><br /> 8 = объект полностью обработан<br /><br /> 9 = объект частично обработан<br /><br /> 10 = объект не обработан<br /><br /> 11 = объект полностью оптимизирован<br /><br /> 12 = объект частично оптимизирован<br /><br /> 13 = объект не оптимизирован|  
 |ObjectID|11|8|Содержит идентификатор объекта, для которого выдано данное уведомление; это строковое значение.|  
 |ObjectType|12|1|Содержит тип объекта, связанный с событием уведомления.|  
@@ -74,6 +75,6 @@ ms.lasthandoff: 05/10/2018
 |ServerName|43|8|Содержит имя экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , в котором было создано уведомление.|  
   
 ## <a name="see-also"></a>См. также  
- [Категория событий «события уведомления»](../../analysis-services/trace-events/notification-events-event-category.md)  
+ [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

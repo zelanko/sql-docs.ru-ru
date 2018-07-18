@@ -20,11 +20,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0365cedaa710627b8dab6b2060c9c414f126cf99
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428573"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972368"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Обновление приложения с переходом от компонентов MDAC к собственному клиенту SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -103,14 +103,14 @@ ms.locfileid: "37428573"
     |**varchar(max)**|**text**|  
     |**nvarchar(max)**|**ntext**|  
     |**varbinary(max)**|**image**|  
-    |**определяемый пользователем тип**|**varbinary**|  
+    |**udt**|**varbinary**|  
     |**xml**|**ntext**|  
   
      Это сопоставление типов затрагивает значения, возвращаемые для метаданных столбцов. Например **текст** столбец имеет максимальный размер 2 147 483 647, но [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента сообщает максимальный размер **varchar(max)** столбцы как значение SQL_SS_LENGTH_UNLIMITED и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]OLE DB для собственного клиента сообщает максимальный размер **varchar(max)** столбцы как 2 147 483 647 или -1, в зависимости от платформы.  
   
 -   В собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в целях обеспечения обратной совместимости допускается неоднозначность в строках соединений (например, некоторые ключевые слова могут быть указаны несколько раз, а также может допускаться использование конфликтующих ключевых слов; при этом разрешение конфликтов происходит с учетом позиции или приоритета). В следующих версиях собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] неоднозначность в строках соединения может стать недопустимой. При изменении приложения для работы с собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] необходимо предусмотреть устранение любых зависимостей от неоднозначности строки соединения.  
   
--   При запуске транзакций с помощью вызова ODBC или OLE DB собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и компоненты MDAC ведут себя по-разному; при работе с собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] транзакции запускаются немедленно, а при использовании компонентов MDAC запуск транзакций происходит только после первого доступа к базе данных. Это может повлиять на поведение хранимых процедур и пакетов, так как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] требует@TRANCOUNT должны совпадать, после завершения выполнения на момент, когда в пакете или хранимой процедуре запуска пакета или хранимой процедуры.  
+-   При запуске транзакций с помощью вызова ODBC или OLE DB собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и компоненты MDAC ведут себя по-разному; при работе с собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] транзакции запускаются немедленно, а при использовании компонентов MDAC запуск транзакций происходит только после первого доступа к базе данных. Это может повлиять на поведение хранимых процедур и пакетов, так как в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] требуется, чтобы значение @@TRANCOUNT после выполнения хранимой процедуры или пакета было таким же, как при запуске пакета или хранимой процедуры.  
   
 -   С помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ITransactionLocal::BeginTransaction вызывает немедленный запуск транзакции. При использовании компонентов MDAC запуск транзакции задерживается до выполнения приложением инструкции, которой требуется транзакция в неявном режиме. Дополнительные сведения см. в разделе [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   

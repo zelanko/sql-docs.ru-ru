@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_droptype (Transact-SQL) | Документы Microsoft
+title: sp_droptype (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 6f898820839afe4057805d9d6ed8bc4e53341065
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242567"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970316"
 ---
 # <a name="spdroptype-transact-sql"></a>sp_droptype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,17 @@ sp_droptype [ @typename = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@typename=**] **"***типа***"**  
+ [  **@typename=**] **"***тип***"**  
  Имя принадлежащего пользователю псевдонима типа данных. *Тип* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-type"></a>Тип кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
- **Тип** псевдоним типа данных нельзя удалить, если таблиц или других объектов базы данных ссылок на него.  
+## <a name="remarks"></a>Примечания  
+ **Тип** псевдоним типа данных нельзя удалить, если таблицы или другие объекты базы данных ссылаться на него.  
   
 > [!NOTE]  
 >  Псевдоним типа данных нельзя удалить, если он используется в определении таблицы или с ним связано правило или значение по умолчанию.  
@@ -76,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addtype &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
  [sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

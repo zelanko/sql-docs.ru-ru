@@ -1,5 +1,5 @@
 ---
-title: 'Занятие учебника Analysis Services 6: создание мер | Документы Microsoft'
+title: 'Analysis Services занятие для учебника по 6: создание мер | Документация Майкрософт'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,32 +10,33 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 61ead234a52f258f2c535f85c0992523b5b4e146
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973096"
 ---
 # <a name="create-measures"></a>Создание мер
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-На этом занятии вы создаете меры для включения в модель. Как и вычисляемые столбцы, которые вы создали, мера — это вычисление, создаваемое с помощью формулы DAX. Однако в отличие от вычисляемых столбцов меры вычисляются на основе пользователь выбрал *фильтра*. Например определенного столбца или среза, добавленного в поле метки строк в сводной таблице. Значение для каждой ячейки в фильтре вычисляется с помощью меры. Меры — это мощные гибкие вычисления, которые требуется включить почти все табличные модели для выполнения динамических вычислений с числовыми данными. Дополнительные сведения см. в разделе [меры](../tabular-models/measures-ssas-tabular.md).
+На этом занятии вы создадите меры для включения в модель. Как и вычисляемые столбцы, которые вы создали, мера представляет собой вычисление, созданное с помощью формулы DAX. Тем не менее, в отличие от вычисляемых столбцов меры вычисляются на основе выбранного пользователем *фильтра*. Например определенного столбца или среза, добавленного в поле метки строк в сводной таблице. Значение для каждой ячейки в фильтре вычисляется с помощью меры. Меры — это мощные гибкие вычисления, которые вы хотите включить в почти в любых табличных моделях для динамических расчетов с числовыми данными. Дополнительные сведения см. в разделе [меры](../tabular-models/measures-ssas-tabular.md).
   
-Создание мер производится *сетку мер*. По умолчанию каждая таблица имеет пустую сетку мер; Тем не менее обычно не меры создаются для каждой таблицы. Сетка мер появляется внизу таблицы в конструкторе моделей, когда открыто представление данных. Чтобы скрыть или отобразить сетку мер таблицы, в меню **Таблица** выберите команду **Показать сетку мер**.  
+Чтобы создать меры, используйте *сетку мер*. По умолчанию каждая таблица имеет пустая сетка мер; Тем не менее обычно не создают меры для каждой таблицы. Сетка мер появляется внизу таблицы в конструкторе моделей, когда открыто представление данных. Чтобы скрыть или отобразить сетку мер таблицы, в меню **Таблица** выберите команду **Показать сетку мер**.  
   
-Можно создать меру, щелкнув пустую ячейку в сетке мер и введя DAX-формулу в строке формул. Если нажать клавишу ВВОД для завершения формулы мера, то отображается в ячейке. Можно также создать меры, используя стандартную статистическую функцию, щелкнув столбец и затем нажать кнопку автосуммирования (**∑**) на панели инструментов. Меры, созданные с помощью кнопки автосуммирования отображается в ячейке сетки мер непосредственно под столбцом, но могут быть перемещены.  
+Можно создать меру, щелкнув пустую ячейку в сетке мер и введите формулу DAX в строке формул. При нажатии клавиши ВВОД для завершения формулы мера затем отображается в ячейке. Вы также можете создать меры с помощью стандартной статистической функции, щелкнув столбец, а затем нажать кнопку "Автосумма" (**∑**) на панели инструментов. Меры, созданные с помощью функции "Автосумма" отображаются в сетке мер под столбцом, но их можно перемещать.  
   
-На этом занятии вы создаете меры обоих ввода формулы DAX в строке формул, а также с помощью функции автосуммирования.  
+На этом занятии вы создадите меры путем ввода формулы DAX в строке формул и с помощью функции "Автосумма".  
   
 Предполагаемое время выполнения данного занятия: **30 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
 
-В этой статье является частью учебника по табличному моделированию, который необходимо изучать по порядку. Перед выполнением задач этого занятия, необходимо завершить предыдущее занятие: [занятия 5: Создание вычисляемых столбцов](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).  
+Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [занятия 5: Создание вычисляемых столбцов](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Создание мер  
   
-#### <a name="to-create-a-dayscurrentquartertodate-measure-in-the-dimdate-table"></a>Чтобы создать меру DaysCurrentQuarterToDate таблицы DimDate  
+#### <a name="to-create-a-dayscurrentquartertodate-measure-in-the-dimdate-table"></a>Создание меры DaysCurrentQuarterToDate в таблице DimDate  
   
 1.  В конструкторе моделей щелкните **DimDate** таблицы.  
   
@@ -47,16 +48,16 @@ ms.lasthandoff: 05/10/2018
     DaysCurrentQuarterToDate:=COUNTROWS( DATESQTD( 'DimDate'[Date])) 
     ```
   
-    Обратите внимание, верхняя левая ячейка теперь содержит имя меры, **DaysCurrentQuarterToDate**, а затем результат, **92**. Результат не применимо к этому моменту, так как был применен фильтр не пользователя.
+    Обратите внимание, что верхняя левая ячейка теперь содержит имя меры, **DaysCurrentQuarterToDate**, а затем результат **92**. Результат не относится к этому моменту поскольку применен ни один фильтр пользователя.
     
       ![как newmeasure lesson6](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
     
-    В отличие от вычисляемых столбцов причем формулы для мер можно ввести имя меры, за которым следует двоеточие, следуют выражении формулы.
+    В отличие от вычисляемых столбцов формул мер можно ввести имя меры, за которым следует двоеточие, а затем выражение формулы.
 
   
-#### <a name="to-create-a-daysincurrentquarter-measure-in-the-dimdate-table"></a>Чтобы создать меру DaysInCurrentQuarter таблицы DimDate  
+#### <a name="to-create-a-daysincurrentquarter-measure-in-the-dimdate-table"></a>Создание меры DaysInCurrentQuarter в таблице DimDate  
   
-1.  С **DimDate** таблицы все еще активна в конструкторе моделей в сетке мер щелкните пустую ячейку под созданную меру.  
+1.  С помощью **DimDate** таблицы все еще активна в конструкторе моделей в сетке мер щелкните пустую ячейку под созданной мерой.  
   
 2.  В строке формул введите следующую формулу:  
   
@@ -64,9 +65,9 @@ ms.lasthandoff: 05/10/2018
     DaysInCurrentQuarter:=COUNTROWS( DATESBETWEEN( 'DimDate'[Date], STARTOFQUARTER( LASTDATE('DimDate'[Date])), ENDOFQUARTER('DimDate'[Date])))
     ```
   
-    Во время создания пропорции сравнения между одним неполным периодом и предыдущим периодом. Формула вычисляет долю периода времени и сравнивать ее с той же пропорцией в предыдущем периоде. В этом случае [DaysCurrentQuarterToDate] / [DaysInCurrentQuarter] дает пропорцию затраченное за текущий период.  
+    При расчете коэффициента сопоставления между текущим неполным периодом и предыдущим периодом. Формула должна вычислить пропорцию периода, который истек и сравните его с такой же пропорцией в предыдущем периоде. В этом случае [DaysCurrentQuarterToDate] / [DaysInCurrentQuarter] дает пропорцию, прошедшую в текущем периоде.  
   
-#### <a name="to-create-an-internetdistinctcountsalesorder-measure-in-the-factinternetsales-table"></a>Создание меры InternetDistinctCountSalesOrder таблицы FactInternetSales  
+#### <a name="to-create-an-internetdistinctcountsalesorder-measure-in-the-factinternetsales-table"></a>Создание меры InternetDistinctCountSalesOrder в таблице FactInternetSales  
   
 1.  Нажмите кнопку **FactInternetSales** таблицы.   
   
@@ -78,25 +79,25 @@ ms.lasthandoff: 05/10/2018
     
        ![как newmeasure2 lesson6](../tutorial-tabular-1400/media/as-lesson6-newmeasure2.png)
   
-4.  В сетке мер щелкните новую меру, а затем в **свойства** окна в **имя меры**, переименуйте эту меру в **InternetDistinctCountSalesOrder**. 
+4.  В сетке мер щелкните новую меру, а затем в **свойства** окно в **имя меры**, переименуйте эту меру в **InternetDistinctCountSalesOrder**. 
  
   
-#### <a name="to-create-additional-measures-in-the-factinternetsales-table"></a>Создание дополнительных мер в таблицу FactInternetSales  
+#### <a name="to-create-additional-measures-in-the-factinternetsales-table"></a>Создание дополнительных мер в таблице FactInternetSales  
   
 1.  Создайте и назовите следующие меры, используя функцию автосуммирования.  
 
     |Столбец|Имя меры|Автосуммирование (∑)|Формула|  
     |----------------|----------|-----------------|-----------|  
     |SalesOrderLineNumber|InternetOrderLinesCount|Count|=COUNTA([SalesOrderLineNumber])|  
-    |OrderQuantity|InternetTotalUnits|Sum|=SUM([OrderQuantity])|  
-    |DiscountAmount|InternetTotalDiscountAmount|Sum|=SUM([DiscountAmount])|  
-    |TotalProductCost|InternetTotalProductCost|Sum|=SUM([TotalProductCost])|  
-    |SalesAmount|InternetTotalSales|Sum|=SUM([SalesAmount])|  
-    |Маржа|InternetTotalMargin|Sum|=SUM([маржа])|  
-    |TaxAmt|InternetTotalTaxAmt|Sum|=SUM([TaxAmt])|  
-    |Freight|InternetTotalFreight|Sum|=SUM([фрахт])|  
+    |OrderQuantity|InternetTotalUnits|SUM|=SUM([OrderQuantity])|  
+    |DiscountAmount|InternetTotalDiscountAmount|SUM|=SUM([DiscountAmount])|  
+    |TotalProductCost|InternetTotalProductCost|SUM|=SUM([TotalProductCost])|  
+    |SalesAmount|InternetTotalSales|SUM|=SUM([SalesAmount])|  
+    |Маржа|InternetTotalMargin|SUM|=SUM([маржа])|  
+    |TaxAmt|InternetTotalTaxAmt|SUM|=SUM([TaxAmt])|  
+    |Freight|InternetTotalFreight|SUM|=SUM([фрахт])|  
   
-2.  Щелкнув пустую ячейку в сетке мер, а также с помощью строки формул создайте, следующие пользовательские меры в порядке:  
+2.  Щелкнув пустую ячейку в сетке мер или с помощью строки формул создайте, следующие пользовательские меры в указанном порядке:  
   
       ```
       InternetPreviousQuarterMargin:=CALCULATE([InternetTotalMargin],PREVIOUSQUARTER('DimDate'[Date]))
@@ -122,7 +123,7 @@ ms.lasthandoff: 05/10/2018
       InternetPreviousQuarterSalesProportionToQTD:=[InternetPreviousQuarterSales]*([DaysCurrentQuarterToDate]/[DaysInCurrentQuarter])
       ```
   
-Меры, созданные для таблицы FactInternetSales может использоваться для анализа критических финансовых данных, таких как продажи, издержки и маржа прибыли для элементов, определенных фильтром, выбранным пользователем.  
+Меры, созданные для таблицы FactInternetSales может использоваться для анализа критических финансовых данных, таких как продажи, затраты и прибыли для элементов, определенных с помощью выбранного пользователем фильтра.  
   
 ## <a name="whats-next"></a>Дальнейшие действия
 

@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan_job (Transact-SQL) | Документы Microsoft
+title: sp_delete_maintenance_plan_job (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5617e3d37b6c880e2d35b9f562e26714eea05a51
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242891"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974020"
 ---
 # <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,18 +54,18 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
  Указывает идентификатор плана обслуживания. *plan_id* — **uniqueidentifier**, и должен быть допустимым идентификатором.  
   
  [ **@job_id =**] **'***job_id***'**  
- Указывает идентификатор задания, с которым связан план обслуживания. *Аргумент job_id* — **uniqueidentifier**, и должен быть допустимым идентификатором.  
+ Указывает идентификатор задания, с которым связан план обслуживания. *job_id* — **uniqueidentifier**, и должен быть допустимым идентификатором.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_delete_maintenance_plan_job** должна запускаться из **msdb** базы данных.  
   
  Если все задания удалены из плана обслуживания, рекомендуется выполнить процедуру **sp_delete_maintenance_plan_db** для удаления из плана оставшихся баз данных.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_delete_maintenance_plan_job**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_delete_maintenance_plan_job**.  
   
 ## <a name="examples"></a>Примеры  
  В этом примере задание B8FCECB1-E22C-11D2-AA64-00C04F688EAE удаляется из плана обслуживания.  

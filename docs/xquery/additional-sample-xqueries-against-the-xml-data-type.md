@@ -1,5 +1,5 @@
 ---
-title: Дополнительный пример запросы XQuery к xml-данных | Документы Microsoft
+title: Дополнительные образцы запросов XQuery для типа данных xml | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,10 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fa92635bcca9a206fcfb2f85e3da72e57facdeb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030372"
 ---
 # <a name="additional-sample-xqueries-against-the-xml-data-type"></a>Дополнительные примеры запросов на языке XQuery к XML-данным
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

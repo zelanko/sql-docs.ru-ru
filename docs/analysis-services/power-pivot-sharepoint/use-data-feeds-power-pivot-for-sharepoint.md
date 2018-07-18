@@ -1,5 +1,5 @@
 ---
-title: Использование веб-каналов данных (Power Pivot для SharePoint) | Документы Microsoft
+title: Использование веб-каналов данных (Power Pivot для SharePoint) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ac7d32ccb99776a85d82c3bc310bc29cdd82954b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 509d4a5293aef836f8ae9439ad7c8d315bbc790d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027754"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979872"
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Использование веб-каналов данных (PowerPivot для SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34027754"
   
  Необходима веб-служба или служба данных, которые поставляют данные в формате Atom 1.0. И службы [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , и SharePoint 2010 могут предоставлять данные в этом формате.  
   
- Перед экспортом списка SharePoint в качестве веб-канала данных необходимо установить на сервере SharePoint службы ADO.NET Data Services. Дополнительные сведения см. в разделе [Установка служб ADO.NET Data Services для поддержки экспорта списков SharePoint в виде веб-каналов данных](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
+ Перед экспортом списка SharePoint в качестве веб-канала данных необходимо установить на сервере SharePoint службы ADO.NET Data Services. Дополнительные сведения см. в разделе [Установка служб ADO.NET Data Services для поддержки экспорта списков SharePoint в виде веб-каналов данных](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
   
 ##  <a name="sharepointlist"></a> Создание веб-канала данных из списка SharePoint  
  На ферме SharePoint 2010 список SharePoint имеет кнопку «Экспортировать как веб-канал данных» на ленте списка. Нажав ее, можно экспортировать лист в качестве канала. Для получения наилучших результатов на рабочей станции необходимо установить Excel 2010 с клиентским приложением [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . В ответ на экспорт веб-канала данных запускается клиентское приложение [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и создается таблица [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , в которой содержится список.  
@@ -57,7 +57,7 @@ ms.locfileid: "34027754"
   
 5.  Если выбрано **открытие документа**, используйте мастер импорта таблиц для импорта веб-канала данных на лист. Веб-канал данных будет добавлен в окно [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в виде новой таблицы.  
   
- Если службы ADO.NET Data Services 3.5.1 не установлены на сервере SharePoint, возникнет ошибка. Дополнительные сведения об ошибках и способах их устранения см. в статье [Установка служб ADO.NET Data Services для поддержки экспорта списков SharePoint в виде веб-каналов данных](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
+ Если службы ADO.NET Data Services 3.5.1 не установлены на сервере SharePoint, возникнет ошибка. Дополнительные сведения об ошибках и способах их устранения см. в статье [Установка служб ADO.NET Data Services для поддержки экспорта списков SharePoint в виде веб-каналов данных](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
   
 ##  <a name="rsreport"></a> Создание веб-канала данных на основе отчета служб Reporting Services  
  Если на компьютере развернуты службы SQL Server 2008 R2 Reporting Services, можно использовать новый модуль подготовки отчетов Atom для создания веб-канала данных из существующего отчета. Для получения наилучших результатов на рабочей станции должно быть установлено приложение Excel 2010 с надстройкой [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel. Клиентское приложение [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] запустится в ответ на экспорт канала данных, автоматически добавит и свяжет таблицы и столбцы по мере их поступления в поток.  
@@ -82,7 +82,7 @@ ms.locfileid: "34027754"
   
     1.  **Базовый URL-адрес** является необязательным. Его следует указывать, если сервисный документ данных содержит несколько каналов. В базовом URL-адресе должна указываться часть URL-адреса, общая для всех каналов (например, имя сервера и сайт). Если создается сервисный документ данных для отчета служб Reporting Services, то базовым URL-адресом будет URL-адрес сервера отчетов и отчет.  
   
-    2.  **URL-адрес веб-службы** является обязательным. Без базовый URL-адрес, это значение должно содержать `http://` или `https://` в адресе. Если указан базовый URL-адрес, то URL-адрес веб-службы представляет часть URL-адреса, следующую за базовым адресом. Например, если полный URL-адрес `http://adventure-works/inventory/today.aspx`, базовый URL-адрес будет `http://adventure-works/inventory`, и URL веб-службы будет/Today.aspx.  
+    2.  **URL-адрес веб-службы** является обязательным. Без базовый URL-адрес, это значение должно содержать `http://` или `https://` в адресе. Если указан базовый URL-адрес, то URL-адрес веб-службы представляет часть URL-адреса, следующую за базовым адресом. Например, если используется полный URL-адрес `http://adventure-works/inventory/today.aspx`, базовый URL-адрес будет `http://adventure-works/inventory`, а /today.aspx URL веб-службы.  
   
          В URL-адрес веб-службы могут входить параметры, выполняющие фильтрацию или выбирающие подмножество данных. Приложение или служба, предоставляющие канал, должны поддерживать параметры, указываемые в URL-адресе.  
   

@@ -14,13 +14,13 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.openlocfilehash: 6b28ac7d654d04f5e0998ecda31d16ec597f8d3d
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455498"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020702"
 ---
-# <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Краткое руководство: Запуск образа контейнера 2017 г. SQL Server с помощью Docker
+# <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Краткое руководство: Запуск образа контейнера SQL Server 2017 с Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -52,7 +52,7 @@ ms.locfileid: "34455498"
 
    Предыдущая команда извлекает последнюю версию образа контейнера с SQL Server 2017. Если вы хотите извлечь конкретный образ, добавьте метку после двоеточия (например, `microsoft/mssql-server-linux:2017-GA`). Список всех доступных образов см. на странице [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/) центра Docker.
    
-   Для команд bash в этой статье `sudo` используется. На MacOS `sudo` не является обязательным. В Linux, если вы не хотите использовать `sudo` для запуска Docker, можно настроить **docker** группы и добавление пользователей в эту группу. Дополнительные сведения см. в разделе [действия после установки для Linux](https://docs.docker.com/install/linux/linux-postinstall/).
+   Для команд bash в этой статье `sudo` используется. В Mac OS `sudo` может не потребоваться. В Linux, если вы не хотите использовать `sudo` для запуска Docker, можно настроить **docker** группы и добавление пользователей в эту группу. Дополнительные сведения см. в разделе [действия после установки для Linux](https://docs.docker.com/install/linux/linux-postinstall/).
 
 1. Чтобы запустить образ контейнера с помощью Docker, выполните следующую команду в оболочке bash (Linux или macOS) или в командной строке PowerShell с повышенными привилегиями.
 
@@ -80,7 +80,7 @@ ms.locfileid: "34455498"
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  Присвойте переменной **ACCEPT_EULA** любое значение, чтобы подтвердить свое согласие с [лицензионным соглашением](http://go.microsoft.com/fwlink/?LinkId=746388). Обязательный параметр для образа SQL Server. |
    | **-e "SA_PASSWORD =\<YourStrong! Passw0rd\>"** | Укажите свой надежный пароль длиной не меньше восьми символов, соответствующий [требованиям к паролям в SQL Server](../relational-databases/security/password-policy.md). Обязательный параметр для образа SQL Server. |
-   | **1433:1433 -p** | Сопоставление TCP-порта среды узла (первое значение) с TCP-портом в контейнере (второе значение). В этом примере SQL Server прослушивает TCP 1433 в контейнере, и оно предоставляется на порт 1433 на узле. |
+   | **-p 1433:1433** | Сопоставление TCP-порта среды узла (первое значение) с TCP-портом в контейнере (второе значение). В этом примере SQL Server прослушивает TCP 1433 в контейнере, и он предоставляется к порту 1433 на узле. |
    | **--name sql1** | Укажите свое имя для контейнера вместо сгенерированного случайным образом. При запуске нескольких контейнеров использовать одинаковые имена запрещено. |
    | **microsoft/mssql-server-linux:2017-latest** | Контейнер образа Linux с SQL Server 2017. |
 
@@ -228,7 +228,7 @@ SELECT @@SERVERNAME,
 
 1. Определите IP-адрес компьютера, на котором размещен контейнер. В Linux используйте команды **ifconfig** или **IP-адрес**. В Windows используйте команду **ipconfig**.
 
-1. Запустите sqlcmd, указав IP-адрес и порт, сопоставленный с портом 1433 в контейнере. В этом примере это один и тот же порт 1433 на хост-компьютере. Если указан другой порт сопоставленные на хост-компьютере, будет использовать здесь.
+1. Запустите sqlcmd, указав IP-адрес и порт, сопоставленный с портом 1433 в контейнере. В этом примере это тот же порт 1433, на хост-компьютере. Если вы не указали другой порт сопоставленные на хост-компьютере, использовать его здесь.
 
    ```bash
    sqlcmd -S 10.3.2.4,1433 -U SA -P '<YourNewStrong!Passw0rd>'

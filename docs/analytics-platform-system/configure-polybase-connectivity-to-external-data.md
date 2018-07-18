@@ -1,6 +1,6 @@
 ---
-title: Настройка подключения к PolyBase - система платформы аналитики | Документы Microsoft
-description: В этой статье описывается настройка PolyBase в параллельное хранилище данных для подключения к внешней Hadoop или Microsoft Azure BLOB-объектов источников данных службы хранилища. Для выполнения запросов, объединяющие данные из нескольких источников, включая Hadoop, хранилище больших двоичных объектов и параллельного хранилища данных с помощью PolyBase.
+title: Настройка подключения PolyBase - Analytics Platform System | Документация Майкрософт
+description: В этой статье описывается настройка PolyBase в Parallel Data Warehouse для подключения к внешней Microsoft Azure или Hadoop хранилища BLOB-объектов источников данных. Для выполнения запросов, объединяющие данные из нескольких источников, включая Hadoop, хранилища BLOB-объектов Azure и Parallel Data Warehouse с помощью PolyBase.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,28 +9,28 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d87ea2b126fde6bf0b18f7a777216f04d45d98f6
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 26eeffb1d2a27ee49f01114b015ab4051b145d64
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539684"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909874"
 ---
-# <a name="configure-polybase-connectivity-to-external-data"></a>Настройка подключения к PolyBase для внешних данных
-В этой статье описывается настройка PolyBase в параллельное хранилище данных для подключения к внешней Hadoop или Microsoft Azure BLOB-объектов источников данных службы хранилища. Для выполнения запросов, объединяющие данные из нескольких источников, включая Hadoop, хранилище больших двоичных объектов и параллельного хранилища данных с помощью PolyBase.  
+# <a name="configure-polybase-connectivity-to-external-data"></a>Настройка подключения PolyBase к внешним данным
+В этой статье описывается настройка PolyBase в Parallel Data Warehouse для подключения к внешней Microsoft Azure или Hadoop хранилища BLOB-объектов источников данных. Для выполнения запросов, объединяющие данные из нескольких источников, включая Hadoop, хранилища BLOB-объектов Azure и Parallel Data Warehouse с помощью PolyBase.  
   
 ### <a name="to-configure-connectivity"></a>Для настройки подключения  
   
-1.  Откройте средство формирования запросов, например sqlcmd или SQL Server Data Tools (SSDT) и запустите хранимую процедуру sp_configure, чтобы просмотреть текущие параметры 'hadoop connectivity'.  
+1.  Откройте средство запроса, например sqlcmd или SQL Server Data Tools (SSDT) и выполнена процедура sp_configure, чтобы просмотреть текущие параметры 'hadoop connectivity'.  
   
     ![параметр подключения hadoop](./media/configure-polybase-connectivity-to-external-data/APS_PDW_sp_configure.png "APS_PDW_sp_configure")  
   
-2.  Решите, какой параметр, нужно ли изменить текущие настройки, а также подключение Hadoop. Этот параметр применяется к всей области SQL Server PDW. Полный список параметров конфигурации и версий см. в разделе [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+2.  Решите, где подключение Hadoop, параметр необходимости и нужно ли изменить текущие настройки. Этот параметр применяется для всего региона SQL Server PDW. Полный список параметров конфигурации и версии, см. в разделе [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
-3.  Чтобы изменить параметр 'hadoop connectivity', запустите хранимую процедуру sp_configure с RECONFIGURE. Ниже приведены некоторые примеры.  
+3.  Чтобы изменить параметр 'hadoop connectivity', выполнена процедура sp_configure, с помощью инструкции RECONFIGURE. Ниже приведены некоторые примеры.  
   
     ```sql  
-    --Enable connectivity to Hortonworks Data Platform for Windows Server (HDP), HDInsight on Analytics Platform System, or HDInsight’s Microsoft Azure blob storage  
+    --Enable connectivity to Hortonworks Data Platform for Windows Server (HDP) or HDInsight’s Microsoft Azure blob storage  
     EXEC sp_configure 'hadoop connectivity', 4;   
     RECONFIGURE;  
   
@@ -47,21 +47,21 @@ ms.locfileid: "31539684"
     RECONFIGURE;  
     ```  
   
-    Выполнение хранимой процедуры sp_configure RECONFIGURE задает значение параметра конфигурации. Перезапуск области требуется присвоить это значение. Поскольку требуется перезагрузка после остановки Далее также, выполните перезагрузку до и после следующего шага, изменяющий core-site.xml не нужно.  
+    Выполнение хранимой процедуры sp_configure RECONFIGURE задает значение параметра конфигурации. Перезапуск области необходим для задания значения. Поскольку требуется перезагрузка после следующей остановкой также, не нужно выполнять перезагрузку до и после следующего шага, который изменяет core-site.xml.  
   
-4.  Чтобы включить хранилище больших двоичных объектов Microsoft Azure в качестве внешнего источника данных, добавьте один или несколько ключей доступа Microsoft Azure хранилища учетных записей PDW core-site.xml файл. Чтобы добавить раздел:  
+4.  Чтобы включить хранилище BLOB-объектов Microsoft Azure в качестве внешнего источника данных, добавьте один или несколько ключей доступа Microsoft Azure хранилища учетной записи в файл PDW core-site.xml. Чтобы добавить ключ:  
   
-    1.  Найти имя учетной записи хранилища Microsoft Azure. Чтобы просмотреть учетные записи хранения, имя входа для[портал Azure](https://portal.azure.com) и нажмите кнопку **учетные записи хранения (классические)**.  
+    1.  Найти имя учетной записи хранения Microsoft Azure. Чтобы просмотреть учетные записи хранения, войдите в[портала Azure](https://portal.azure.com) и нажмите кнопку **учетные записи хранения (классика)**.  
   
-        ![Имя учетной записи хранилища Windows Azure](./media/configure-polybase-connectivity-to-external-data/APS_PDW_AzureStorageAccountName.png "APS_PDW_AzureStorageAccountName")  
+        ![Имя учетной записи хранения Windows Azure](./media/configure-polybase-connectivity-to-external-data/APS_PDW_AzureStorageAccountName.png "APS_PDW_AzureStorageAccountName")  
   
-    2.  Найти ключ доступа учетной записи хранилища Azure. Для этого щелкните имя вашей учетной записи хранилища, в колонке параметров щелкните **ключей**. Вы увидите имя и хранилища ключей учетной записи.  
+    2.  Найти ключ доступа учетной записи хранения Azure. Чтобы сделать это, щелкните имя вашей учетной записи хранения и в колонке "Параметры" щелкните **ключи**. Это показано имя и хранилища ключей учетной записи.  
   
-        ![Ключи доступа к учетной записи хранилища Windows Azure](./media/configure-polybase-connectivity-to-external-data/APS_PDW_AzureStorageAccountAccessKey.png "APS_PDW_AzureStorageAccountAccessKey")  
+        ![Ключи доступа учетной записи хранилища Windows Azure](./media/configure-polybase-connectivity-to-external-data/APS_PDW_AzureStorageAccountAccessKey.png "APS_PDW_AzureStorageAccountAccessKey")  
   
-    3.  Открытие удаленного рабочего стола для узла управления PDW.  
+    3.  Откройте удаленный рабочий стол для узла управления PDW.  
   
-    4.  Откройте файл C:\Program Files\Microsoft SQL Server параллельных данных Warehouse\100\Hadoop\conf\core-site.xml.  
+    4.  Откройте файл C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf\core-site.xml.  
   
     5.  Добавьте следующее свойство с именем и значением атрибутами core-site.xml.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "31539684"
         </property>  
         ```  
   
-        В этом примере использует имя и ключ учетной записи доступа показано ранее.  
+        В этом примере используется учетная запись имени и ключа доступа было показано ранее.  
   
         ```xml  
         <property>  
@@ -82,19 +82,19 @@ ms.locfileid: "31539684"
         ```  
   
         > [!CAUTION]  
-        > Прежде чем сохранить ключ доступа в core-site.xml примите меры предосторожности. Любой пользователь, имеющий разрешение CONTROL SERVER или ALTER ANY EXTERNAL DATA SOURCE можно создать источник внешних данных, который получает доступ к этой учетной записи. После создания внешнего источника данных SQL Server PDW все пользователи, имеющие разрешения CREATE TABLE можно создать внешнюю таблицу, которая обращается к этой учетной записи хранения. Пользователей можно получить доступ к данным учетной записи и потребляют ресурсы в учетной записи.  
+        > Примите меры безопасности, прежде чем сохранить ключ доступа в core-site.xml. Любой пользователь, получивший разрешение CONTROL SERVER или ALTER ANY EXTERNAL DATA SOURCE можно создать внешний источник данных, получает доступ к этой учетной записи. После создания внешнего источника данных всем пользователям SQL Server PDW с разрешениями CREATE TABLE можно создать внешнюю таблицу, которая обращается к этой учетной записи хранения. Пользователей можно получить доступ к данным учетной записи и потребляют ресурсы в учетной записи.  
   
-    6.  Сохраните изменения core-site.xml.  
+    6.  Сохраните изменения в файле core-site.xml.  
   
-5.  Добавление в файл yarn-site.xml yarn.application.classpath свойства и значения.  
+5.  Добавьте в файл yarn-site.xml yarn.application.classpath и значения.  
   
-    При подключении внешнего 1.3 Hadoop, пропустите этот шаг.  
+    Если вы подключаетесь к внешней 1.3 Hadoop, этот шаг можно пропустите.  
   
-    Начиная с версии 2.0 Hadoop, yarn-site.xml-файл содержит параметры конфигурации для Hadoop YARN framework. Этот файл находится на узле управления **C:\program files\Microsoft SQL Server параллельных данных Warehouse\100\Hadoop\conf\\**.  
+    Файл yarn-site.xml, начиная с Hadoop 2.0, содержит параметры конфигурации для платформы Hadoop YARN. Этот файл находится на узле управления в разделе **C:\program files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf\\**.  
   
-    Для выполнения запросов PolyBase внешних кластера Hadoop 2.0 в Windows или Linux, необходимо настроить yarn.application.classpath и значения для согласования с параметрами yarn-site.xml на внешних кластера Hadoop. Эта конфигурация необходима, даже если внешний кластер Hadoop использует параметры по умолчанию.  
+    Чтобы выполнение запросов PolyBase для внешних кластера Hadoop 2.0 в Windows или Linux, необходимо настроить yarn.application.classpath и значения для согласования с параметрами yarn-site.xml на внешних кластера Hadoop. Эта настройка необходима, даже если ваш внешний кластер Hadoop использует параметры по умолчанию.  
   
-    Пример настройки по умолчанию.  
+    Пример параметров по умолчанию.  
   
     ```xml  
     <property>  
@@ -111,26 +111,24 @@ ms.locfileid: "31539684"
       </property>  
     ```  
   
-    После определения любое свойство в yarn-site.xml PolyBase используются новые значения свойств при выполнении запросов к области HDInsight. Если вы планируете выполнять запросы PolyBase к область HDInsight и внешних кластера Hadoop 2.0 в Windows, должно быть согласованность всех файлов yarn-site.xml, иначе запросы PolyBase завершится ошибкой.  
+    После определения любое свойство в yarn-site.xml, PolyBase использует новые значения свойств при выполнении запросов в Hadoop. Если вы планируете выполнять запросы PolyBase к BLOB-объектов хранилища Azure и внешних кластера Hadoop 2.0 на Windows, должна существовать согласованность всех файлов yarn-site.xml, иначе запросы PolyBase завершится ошибкой.  
+   
+6.  Перезапустите регион PDW. Чтобы сделать это, используйте средство Configuration Manager. См. в разделе [запустить диспетчер конфигурации служб &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
-    Чтобы запустить PolyBase область HDInsight и внешних 2.0 кластера Hadoop, используйте параметры по умолчанию yarn-site.xml на внешних кластера Hadoop.  
+7.  Проверьте параметры безопасности для подключений Hadoop. Если **слабая аутентификация** в Hadoop на стороне включается с помощью `dfs.permission = true`, необходимо создать пользователя Hadoop **pdw_user** и предоставьте полный доступ для чтения и записи разрешения этого пользователя. SQL Server PDW и соответствующие вызовы из SQL Server PDW всегда выдается как **pdw_user**.  — Имя основного пользователя и нельзя изменить в этой версии Hadoop connectivity и выпуска SQL Server PDW. При отключении безопасности в Hadoop с помощью `dfs.permission = false`, а затем нужно принимать никаких дальнейших действий.  
   
-6.  Перезапустите регион PDW. Чтобы сделать это, используйте средство Configuration Manager. В разделе [запустите диспетчер конфигурации &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
+8.  Решите, какие пользователи могут создавать внешний источник данных в хранилище BLOB-объектов Microsoft Azure. Присвойте каждого пользователя имя учетной записи хранения, а также **ALTER ANY EXTERNAL DATA SOURCE** или **CONTROL SERVER** разрешение.  
   
-7.  Проверьте параметры безопасности для подключений Hadoop. Если **слабая проверка подлинности** в Hadoop стороне включен с помощью `dfs.permission = true`, необходимо создать пользователя Hadoop **pdw_user** и предоставьте полный доступ для чтения и разрешения на запись для этого пользователя. SQL Server PDW и соответствующие вызовы из SQL Server PDW всегда выдается как **pdw_user**.  — Имя основного пользователя и не может изменяться в этой версии подключения к Hadoop и выпуска SQL Server PDW. При отключенной безопасности в Hadoop с помощью `dfs.permission = false`, а затем нужно принимать никаких дальнейших действий.  
+9. Для соединений Hadoop решите, какие пользователи могут создавать внешний источник данных в Hadoop. Присвойте каждого пользователя IP-адрес и порт номер каждого узла имен заданий Hadoop и предоставить им **ALTER ANY EXTERNAL DATA SOURCE** или **CONTROL SERVER** разрешение.  
   
-8.  Решите, какие пользователи могут создавать внешнего источника данных в хранилище больших двоичных объектов Microsoft Azure. Предоставьте каждого пользователя, имя учетной записи хранилища, а также **ALTER ANY EXTERNAL DATA SOURCE** или **CONTROL SERVER** разрешение.  
+10. Также для подключения к WASB требуется перенаправление запросов DNS, чтобы настроить на устройстве. Чтобы настроить перенаправление запросов DNS, см. в разделе [использовать DNS-сервера пересылки для разрешения имен DNS не являющегося устройством &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
-9. Для подключений Hadoop решите, какие пользователи могут создавать внешнего источника данных в Hadoop. Присвойте каждого пользователя IP-адрес и порт номер каждого имени узла Hadoop и дать им **ALTER ANY EXTERNAL DATA SOURCE** или **CONTROL SERVER** разрешение.  
-  
-10. Также для подключения к WASB требуется пересылки DNS настроены на устройстве. Настройка пересылки DNS, в разделе [использовать DNS-сервер пересылки для разрешения DNS-имена устройств не &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
-  
-Авторизованные пользователи теперь можно создать внешние источники данных, внешние форматы файлов и внешних таблиц. Их можно использовать для интеграции данных из нескольких источников, включая Hadoop, хранилище больших двоичных объектов Microsoft Azure и SQL Server PDW.  
+Авторизованные пользователи теперь можно создать внешние источники данных, внешние форматы файлов и внешних таблиц. Их можно использовать для интеграции данных из нескольких источников, включая Hadoop, хранилище BLOB-объектов Microsoft Azure и SQL Server PDW.  
 
 ## <a name="kerberos-configuration"></a>Конфигурация Kerberos  
-Обратите внимание, что при PolyBase проходит проверку подлинности Kerberos защищенного кластера, параметр hadoop.rpc.protection должно быть присвоено проверки подлинности. При этом обмен данными между узлами Hadoop остается в незашифрованном виде. 
+Учтите, что когда PolyBase выполняет проверку подлинности в защищенном кластере Kerberos, параметр hadoop.rpc.protection должен быть установлен для проверки подлинности. При этом обмен данными между узлами Hadoop остается в незашифрованном виде. 
 
- Для подключения к защищенным с помощью Kerberos кластеру [с помощью MIT KDC]:
+ Для подключения к кластеру Hadoop с защитой Kerberos [с помощью MIT KDC]:
    
   
 1.  Найдите каталог конфигурации Hadoop в каталоге установки на узле управления:  
@@ -141,7 +139,7 @@ ms.locfileid: "31539684"
   
 2.  Найдите значение конфигурации для ключей конфигурации, перечисленных в таблице, на компьютере с Hadoop. (Найдите файлы в каталоге конфигурации Hadoop на этом же компьютере.)  
   
-3.  Скопируйте значения конфигурации в свойство value соответствующих файлов на узел элемента управления.  
+3.  Скопируйте значения конфигурации в свойство value соответствующих файлов в управляющем узле.  
   
     |**#**|**Файл конфигурации**|**Ключ конфигурации**|**Действие**|  
     |------------|----------------|---------------------|----------|   
@@ -155,9 +153,9 @@ ms.locfileid: "31539684"
   
 4. Создайте объект учетных данных для базы данных, чтобы указать аутентификационные сведения для каждого пользователя Hadoop. См. статью [Объекты T-SQL PolyBase](../relational-databases/polybase/polybase-t-sql-objects.md).  
 
-5. Перезапустите регион PDW. Чтобы сделать это, используйте средство Configuration Manager. В разделе [запустите диспетчер конфигурации &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).
+5. Перезапустите регион PDW. Чтобы сделать это, используйте средство Configuration Manager. См. в разделе [запустить диспетчер конфигурации служб &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).
  
 ## <a name="see-also"></a>См. также  
-[Конфигурация устройства &#40;система платформы аналитики&#41;](appliance-configuration.md)  
+[Конфигурация устройства &#40;Analytics Platform System&#41;](appliance-configuration.md)  
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  
   

@@ -1,5 +1,5 @@
 ---
-title: Планирование автоматических административных задач в агенте SQL Server | Документы Microsoft
+title: Планирование автоматических административных задач в агенте SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e03ca384c3e425eead6663537031411ca8583af9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029842"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Планирование автоматических административных задач в агенте SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -42,9 +43,9 @@ ms.lasthandoff: 05/03/2018
  Объекты агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] находятся в пространстве имен <xref:Microsoft.SqlServer.Management.Smo.Agent>.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [создать Visual C&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
-Для программ, использующих [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] агента, необходимо включить **с помощью** инструкции для уточнения пространства имен Agent. Вставьте инструкцию после других **с помощью** инструкции перед любыми декларациями в приложении, такие как:
+Для программ, использующих [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] агента, необходимо включить **с помощью** инструкции для уточнения пространства имен Agent. Вставьте инструкцию после других **с помощью** инструкций перед любыми декларациями в приложении, такие как:
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -172,7 +173,7 @@ $jbsch.Create();
   
  **ObjectName | CounterName | Экземпляр | ComparisionOp | CompValue**  
   
- Для предупреждающих уведомлений требуется оператор. <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> Типа требуется квадратные скобки, так как **оператор** — [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] ключевое слово.  
+ Для предупреждающих уведомлений требуется оператор. <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> Типа требуется квадратные скобки, так как **оператор** является [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] ключевое слово.  
   
 ```csharp  
 {  
@@ -205,7 +206,7 @@ $jbsch.Create();
   
  **ObjectName | CounterName | Экземпляр | ComparisionOp | CompValue**  
   
- Для предупреждающих уведомлений требуется оператор. <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> Типа требуется квадратные скобки, так как **оператор** — [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] ключевое слово.  
+ Для предупреждающих уведомлений требуется оператор. <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> Типа требуется квадратные скобки, так как **оператор** является [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] ключевое слово.  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  

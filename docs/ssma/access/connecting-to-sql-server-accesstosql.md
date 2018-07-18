@@ -1,5 +1,5 @@
 ---
-title: Подключение к SQL Server (AccessToSQL) | Документы Microsoft
+title: Подключение к SQL Server (AccessToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -28,64 +28,64 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8130650ac55171207ab663b40a73a5940efc112b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 085d42cc6401f665269610c18f44516f5afe7a83
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773370"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981626"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Подключение к SQL Server (AccessToSQL)
-Для переноса базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], необходимо подключиться к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. При подключении SSMA получает метаданные о базах данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и отображает метаданные базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обозреватель метаданных. SSMA хранит сведения о какой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] подключены, но не хранит пароли.  
+Для переноса баз данных Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], необходимо подключиться к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. При подключении, SSMA получает метаданные о базах данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и отображает метаданные базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обозреватель метаданных. SSMA хранит сведения о какой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] подключены, но не хранит пароли.  
   
-Подключение к SQL Server остается активным, если закрыть проект. При повторном открытии проекта, необходимо повторно подключить к серверу SQL Server, если требуется активное подключение к серверу. Вы можете работать вне сети до загрузки объектов базы данных в SQL Server и перенос данных.  
+Подключение к SQL Server остается активным, пока не закрыть проект. При повторном открытии проекта, вы должны повторно подключиться к SQL Server если требуется активное подключение к серверу. Вы можете работать вне сети до загрузки объектов базы данных в SQL Server и перенос данных.  
   
-Метаданные экземпляра SQL Server автоматически не синхронизированы. Вместо этого для обновления метаданных в обозревателе метаданных SQL Server, необходимо вручную обновить метаданные SQL Server. Дополнительные сведения см. в разделе «Синхронизация метаданные SQL Server» далее в этом разделе.  
+Метаданные об экземпляре SQL Server автоматически не синхронизирован. Вместо этого для обновления метаданных в обозревателе метаданных SQL Server, необходимо вручную обновить метаданные SQL Server. Дополнительные сведения см. в разделе «Синхронизация метаданных SQL Server» далее в этом разделе.  
   
 ## <a name="required-sql-server-permissions"></a>Разрешения требуется SQL Server  
-Учетная запись, используемая для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] требуются различные разрешения в зависимости от действий, выполняемых этой учетной записи.  
+Учетная запись, которая используется для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] требует разных разрешений в зависимости от действия, выполняемые с этой учетной записи.  
   
--   Для преобразования объектов доступа к [!INCLUDE[tsql](../../includes/tsql_md.md)] синтаксис для обновление метаданных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], или чтобы сохранить преобразованный синтаксис скриптов, учетная запись должна иметь разрешение на вход экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   Для преобразования объектов доступа к [!INCLUDE[tsql](../../includes/tsql_md.md)] синтаксис, чтобы обновить метаданные из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], или чтобы сохранить преобразованный синтаксис скриптов, она должна иметь разрешение на вход в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
--   Для загрузки объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], требование минимально необходимым разрешением является членство в **db_owner** роли базы данных в целевой базе данных.  
+-   Для загрузки объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и перенести данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], требование минимально необходимым разрешением является членство в **db_owner** роли базы данных в целевую базу данных.  
   
-## <a name="establishing-a-sql-server-connection"></a>Установление соединения с SQL Server  
-Перед началом преобразования объектов базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] синтаксис, необходимо установить соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] место для переноса базы данных Access.  
+## <a name="establishing-a-sql-server-connection"></a>Установки подключения к серверу SQL  
+Перед началом преобразования объектов базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] синтаксис, необходимо установить подключение к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] которых необходимо выполнить миграцию баз данных Access.  
   
-При определении свойств соединения, можно также указать базы данных, где будет выполнена миграция объектов и данных. Это сопоставление на уровне базы данных Access можно настроить после подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Дополнительные сведения см. в разделе [сопоставление исходной и целевой баз данных](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)  
+При определении свойств соединения, также указать базу данных, где объекты и данные будут перенесены. Это сопоставление на уровне базы данных Access можно настроить, после подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Дополнительные сведения см. в разделе [сопоставление исходной и целевой баз данных](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
   
 > [!IMPORTANT]  
-> Перед подключением к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], убедитесь, что экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] запущена и может принимать подключения. Дополнительные сведения см. в разделе «подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] компонент Database Engine» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] электронной документации.  
+> Перед подключением к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], убедитесь, что экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] работает и может принимать подключения. Дополнительные сведения см. в разделе «подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] компонент Database Engine» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
   
 **Для подключения к SQL Server**  
   
-1.  На **файл** последовательно выберите пункты **подключение к SQL Server**.  
+1.  На **файл** меню, выберите **подключение к SQL Server**.  
   
-    Если ранее подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], будет иметь имя команды **повторно подключиться к SQL Server**.  
+    Если вы ранее подключались к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], команда будет называться **повторно подключиться к SQL Server**.  
   
-2.  В **имя сервера** введите или выберите имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+2.  В **имя_сервера** введите или выберите имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-    -   При подключении к экземпляру по умолчанию на локальном компьютере, можно ввести **localhost** или точку (**.**).  
+    -   Если вы подключаетесь к экземпляру по умолчанию на локальном компьютере, можно ввести **localhost** или точку (**.**).  
   
-    -   При подключении к экземпляру по умолчанию на другом компьютере, введите имя компьютера.  
+    -   Если вы подключаетесь к экземпляру по умолчанию на другом компьютере, введите имя компьютера.  
   
-    -   При подключении к именованному экземпляру введите имя компьютера, обратную косую черту и имя экземпляра. Например: Сервер\экземпляр.  
+    -   Если вы подключаетесь к именованному экземпляру, введите имя компьютера, обратную косую черту и имя экземпляра. Например: Сервер\экземпляр.  
   
-    -   Для подключения к активному экземпляру пользователя [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], подключение по именованным каналам протокола и указав имя канала, такие как \\ \\.\pipe\sql\query. Дополнительные сведения см. в документации по [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
+    -   Для подключения к активному экземпляру пользователя из [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], подключение по именованным каналам протокола и указав имя канала, такие как \\ \\.\pipe\sql\query. Дополнительные сведения см. в документации по [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
   
-3.  Если ваш экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] настроен на прием подключений через порт не по умолчанию, введите номер порта, используемый для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] подключения в **порт сервера** поле. Для экземпляра по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], по умолчанию используется порт 1433. Для именованных экземпляров SSMA будет пытаться получить номер порта от [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] служба браузера.  
+3.  Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] настроен на прием подключений через нестандартный порт, введите номер порта, который используется для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] подключений в **порт сервера** поле. Для экземпляра по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], номер порта по умолчанию — 1433. Для именованных экземпляров SSMA будет пытаться получить номер порта из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] службы браузера.  
   
 4.  В **базы данных** введите имя целевой базы данных для миграции данных и объектов.  
   
-    Этот параметр недоступен, если повторное подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+    Этот параметр недоступен при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-    Имя целевой базы данных не может содержать пробелы или специальные символы. Например, можно перенести базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных с именем «abc». Но не может переносить базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных с именем «b-c».  
+    Имя целевой базы данных не может содержать пробелы или специальные символы. Например, можно перенести базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базу данных с именем «abc». Но нельзя выполнить миграцию баз данных Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных с именем «b-c».  
   
-    Это сопоставление каждой базы данных можно настроить, после подключения. Дополнительные сведения см. в разделе [сопоставление исходной и целевой баз данных](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)  
+    Это сопоставление каждой базы данных можно настроить, после подключения. Дополнительные сведения см. в разделе [сопоставление исходной и целевой баз данных](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
   
-5.  В **проверки подлинности** раскрывающееся меню, выберите тип проверки подлинности, используемый для соединения. Чтобы использовать текущую учетную запись Windows, выберите **проверки подлинности Windows**. Для использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] входа в систему, выберите **проверки подлинности SQL Server**, а затем укажите имя пользователя и пароль.  
+5.  В **проверки подлинности** раскрывающееся меню, выберите тип проверки подлинности, используемый для соединения. Чтобы использовать текущую учетную запись Windows, выберите **проверки подлинности Windows**. Для использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] имени входа, выберите **проверки подлинности SQL Server**, а затем укажите имя пользователя и пароль.  
   
-6.  Для безопасного подключения добавляются два элемента управления, **шифровать соединение** флажок и **TrustServerCertificate** флажок. Только если **шифровать соединение** флажок **TrustServerCertificate** отображается флажок. Когда **шифровать соединение** — checked(true) и **TrustServerCertificate** является unchecked(false), будет выполнять проверку сертификата SQL Server SSL. Проверка сертификата сервера является частью SSL-подтверждения и гарантирует, что для подключения выбран правильный сервер. Чтобы обеспечить это, необходимо установить сертификат на стороне клиента, так и на стороне сервера.  
+6.  Для безопасного подключения, добавляются два элемента управления, **шифровать соединение** флажок и **TrustServerCertificate** флажок. Только тогда, когда **шифровать соединение** флажок **TrustServerCertificate** отображается флажок. Когда **шифровать соединение** — checked(true) и **TrustServerCertificate** является unchecked(false), будет выполнять проверку сертификата SQL Server SSL. Проверка сертификата сервера является частью SSL-подтверждения и гарантирует, что для подключения выбран правильный сервер. Чтобы обеспечить это, необходимо установить сертификат на стороне клиента, а также на стороне сервера.  
   
 7.  Нажмите кнопку **Соединить**.  
   
@@ -95,15 +95,15 @@ ms.locfileid: "34773370"
   
 1.  Можно подключиться к SQL Server 2008 или SQL Server 2012, когда проект, созданный в SQL Server 2005.  
   
-2.  Можно подключиться к SQL Server 2012, если проект, созданный в SQL Server 2008, но не может подключиться к более ранние версии, т. е. SQL Server 2005.  
+2.  Можно подключиться к SQL Server 2012, если проект, созданный настроен SQL Server 2008, но он не разрешено подключаться к более ранние версии, т. е. SQL Server 2005.  
   
-3.  Можно подключиться только SQL Server 2012, когда проект, созданный в SQL Server 2012.  
+3.  Можно подключиться к только SQL Server 2012, когда проект, созданный в SQL Server 2012.  
   
 4.  Выше совместимость версий не является допустимым для SQL Azure.  
   
 ||||||||
 |-|-|-|-|-|-|-|
-|**ВЕРСИЯ проекта ТИПА Vs целевого сервера**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 г. (версия: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 (версия: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 (Version:13.x)|SQL Azure|  
+|**ВЕРСИЯ целевого сервера Vs тип проекта**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 (версия: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 (версия: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 (Version:13.x)|SQL Azure|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|Да|Да|Да|Да|Да||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||Да|Да|Да|Да||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||Да|Да|Да||
@@ -112,23 +112,23 @@ ms.locfileid: "34773370"
 |SQL Azure||||||Да|
   
 > [!IMPORTANT]  
-> Согласно типа проекта, но не согласно версии SQL Server, подключение выполняется преобразование объектов базы данных. В случае проекта SQL Server 2005 преобразование выполняется в соответствии с SQL Server 2005 несмотря на то, что вы подключены к более новой версии SQL Server (SQL Server 2008 и SQL Server 2012 или SQL Server 2014 или SQL Server 2016).  
+> Преобразование объектов базы данных выполняется в соответствии с типом проекта, но не в соответствии с версии SQL Server, подключенных к. В случае проекта SQL Server 2005 преобразование выполняется в соответствии с SQL Server 2005 несмотря на то, что вы подключены к более поздней версии SQL Server (SQL Server 2008 или SQL Server 2012 или SQL Server 2014 или SQL Server 2016).  
   
 ## <a name="synchronizing-sql-server-metadata"></a>Синхронизация метаданных SQL Server  
-Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] изменения схемы после подключения, вы можете синхронизировать метаданные с сервера.  
+Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] схемы изменяют после подключения, вы можете синхронизировать метаданные с сервера.  
   
 **Для синхронизации метаданных SQL Server**  
   
--   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обозреватель метаданных, щелкните правой кнопкой мыши **баз данных**, а затем выберите **синхронизации с базой данных**.  
+-   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обозреватель метаданных, щелкните правой кнопкой мыши **баз данных**, а затем выберите **синхронизация с базой данных**.  
   
 ## <a name="reconnecting-to-sql-server"></a>Повторное подключение к SQL Server  
-Подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] остается активным, пока закрыть проект. При повторном открытии проекта, необходимо повторно подключится [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Если требуется активное подключение к серверу. Можно работать вне сети до загрузки объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и переноса данных.  
+Подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] остается активным, пока не закрыть проект. При повторном открытии проекта, необходимо повторно подключить к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Если требуется активное подключение к серверу. Автономном время загрузки объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и перенос данных.  
   
-Процедуры для повторного подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] является так же, как для установления подключения.  
+Процедура при повторном подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] совпадает со значением процедуры для установления соединения.  
   
 ## <a name="next-steps"></a>Следующие шаги  
-Если вы хотите настроить сопоставление между исходной и целевой баз данных, см. раздел [сопоставления источника и целевым базам данных](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4) в противном случае следующим шагом является преобразование объектов базы данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью синтаксиса [преобразования объекты базы данных](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+Если вы хотите настроить сопоставление между исходной и целевой баз данных, см. в разделе [сопоставление исходной и целевой баз данных](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4) в противном случае следующим шагом является преобразование объектов базы данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью синтаксиса [преобразования объекты базы данных](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>См. также  
-[Миграция баз данных Access в SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Миграция баз данных Access в SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

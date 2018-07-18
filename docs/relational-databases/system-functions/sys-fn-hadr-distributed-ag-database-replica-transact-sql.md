@@ -1,5 +1,5 @@
 ---
-title: sys.fn_hadr_distributed_ag_database_replica (Transact-SQL) | Документы Microsoft
+title: sys.fn_hadr_distributed_ag_database_replica (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2016
 ms.prod: sql
@@ -25,15 +25,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 029292526c3714bbfb532301d314cab0d4797590
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971796"
 ---
 # <a name="sysfnhadrdistributedagdatabasereplica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Используется для сопоставления в распределенную группу доступности базы данных в базу данных в группе доступности локальных ресурсов.  
+  Используется для сопоставления базы данных в распределенной группе доступности с базой данных в группе доступности локальных ресурсов.  
    
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,10 +47,10 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
   
 ## <a name="arguments"></a>Аргументы  
  '*lag_Id*'  
- — Это идентификатор распределенной группы доступности. *lag_Id* — тип **uniqueidentifier**.  
+ — Это идентификатор распределенной группы доступности. *lag_Id* является типом **uniqueidentifier**.  
   
  "*database_id*"  
- — Это идентификатор базы данных в распределенной группы доступности. *database_id* — тип **uniqueidentifier**.  
+ — Это идентификатор базы данных в распределенной группе доступности. *database_id* является типом **uniqueidentifier**.  
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
  Возвращает следующие данные.  
@@ -61,7 +62,7 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
 ## <a name="examples"></a>Примеры  
   
 ### <a name="using-sysfnhadrdistributedagdatabasereplica"></a>С помощью sys.fn_hadr_distributed_ag_database_replica  
- В следующем примере передается в Идентификаторе базы данных в распределенной группы доступности. Он возвращает таблицу с Идентификатором базы данных, связанных с группой доступности локальных ресурсов.  
+ В следующем примере передается в идентификатор базы данных в распределенной группе доступности. Она возвращает таблицу с Идентификатором базы данных, связанные с группой доступности локальных ресурсов.  
   
 ```  
 DECLARE @lagId uniqueidentifier = '4A03D1A8-4AE6-B153-E7E9-ED22A546008D'  
@@ -74,8 +75,8 @@ GO
 ## <a name="see-also"></a>См. также  
  [Функции групп доступности Always On &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Распределенные группы доступности &#40;для групп доступности AlwaysOn&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)   
- [Создание группы ДОСТУПНОСТИ & #40; Transact-SQL & #41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [ALTER AVAILABILITY GROUP & #40; Transact-SQL & #41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
+ [Распределенные группы доступности &#40;группы доступности AlwaysOn&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)   
+ [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   

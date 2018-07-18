@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_config_advanced (Transact-SQL) | Документы Microsoft
+title: managed_backup.sp_backup_config_advanced (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 08c79b906a95c41013f28a559acdc7f98809c186
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238228"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970486"
 ---
 # <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ EXEC managed_backup.sp_backup_config_advanced
   
 ##  <a name="Arguments"></a> Аргументы  
  @database_name  
- Имя базы данных для включения управляемого резервного копирования в определенной базе данных. Если значение равно NULL или *, то это управляемое резервное копирование относится ко всем базам данных на сервере.  
+ Имя базы данных для включения управляемого резервного копирования на определенной базе данных. Если значение равно NULL или *, то этот управляемого резервного копирования применяется ко всем базам данных на сервере.  
   
  @encryption_algorithm  
  Имя алгоритма шифрования, используемого во время резервного копирования для шифрования файла резервной копии. @encryption_algorithm — **SYSNAME**. Это обязательный параметр при настройке конфигурации [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] в первый раз для базы данных. Укажите **NO_ENCRYPTION** Если шифровать файл резервной копии не требуется. При изменении параметров конфигурации [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] этот параметр не обязателен; если он не указан, сохраняются существующие значения. Разрешенные значения для этого параметра:  
@@ -70,7 +70,7 @@ EXEC managed_backup.sp_backup_config_advanced
  Дополнительные сведения об алгоритмах шифрования см. в разделе [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
   
  @encryptor_type  
- Тип шифратора, который может быть «СЕРТИФИКАТ» или "ASYMMETRIC_KEY». @encryptor_type — **Nvarchar(32)**. Этот параметр является необязательным, если указано значение NO_ENCRYPTION для @encryption_algorithm параметра.  
+ Тип шифратора, который может быть либо «СЕРТИФИКАТ» или "ASYMMETRIC_KEY». @encryptor_type — **Nvarchar(32)**. Этот параметр является необязательным, если указано значение NO_ENCRYPTION для @encryption_algorithm параметра.  
   
  @encryptor_name  
  Имя существующего сертификата или асимметричного ключа для шифрования резервной копии. @encryptor_name — **SYSNAME**. При использовании асимметричного ключа он должен быть сконфигурирован поставщиком расширенного управления ключами (EKM). Этот параметр является необязательным, если указано значение NO_ENCRYPTION для @encryption_algorithm параметра.  
@@ -86,7 +86,7 @@ EXEC managed_backup.sp_backup_config_advanced
 ## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- Требуется членство в **db_backupoperator** роли базы данных с **ALTER ANY CREDENTIAL** разрешения, и **EXECUTE** разрешения на **sp_delete_ backuphistory** хранимой процедуры.  
+ Требуется членство в **db_backupoperator** роли базы данных с помощью **ALTER ANY CREDENTIAL** разрешения, и **EXECUTE** разрешения на **sp_delete_ backuphistory** хранимой процедуры.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере задается Дополнительные параметры конфигурации для [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для экземпляра SQL Server.  

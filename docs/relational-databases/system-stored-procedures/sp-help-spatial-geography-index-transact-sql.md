@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geography_index (Transact-SQL) | Документы Microsoft
+title: sp_help_spatial_geography_index (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: f2f06d0955d8f7febece5cc98c0719131554e764
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019852"
 ---
 # <a name="sphelpspatialgeographyindex-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +47,18 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- В разделе [аргументов и свойств пространственного индекса хранимые процедуры](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ См. в разделе [аргументов и свойств пространственного индекса хранимых процедур](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="properties"></a>Свойства  
- В разделе [аргументов и свойств пространственного индекса хранимые процедуры](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ См. в разделе [аргументов и свойств пространственного индекса хранимых процедур](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Пользователю должна быть назначена роль PUBLIC для получения доступа к процедуре. Необходимо разрешение READ ACCESS на сервере и объекте.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется `sp_help_spatial_geography_index` исследовать **geography** пространственный индекс **SIndx_SpatialTable_geography_col2** определен в таблице **geography_col** для определенного образца запроса в **@qs**. Этот пример возвращает только основные свойства указанного индекса.  
+ В следующем примере используется `sp_help_spatial_geography_index` для изучения **geography** пространственный индекс **SIndx_SpatialTable_geography_col2** определен в таблице **geography_col** для определенного образца запроса в **@qs**. Этот пример возвращает только основные свойства указанного индекса.  
   
 ```  
 declare @qs geography  

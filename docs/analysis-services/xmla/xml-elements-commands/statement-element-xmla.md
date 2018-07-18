@@ -1,5 +1,5 @@
 ---
-title: Элемент Statement (XML для Аналитики) | Документы Microsoft
+title: Элемент Statement (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49238b50457a586bbf23cc75ee454003c57ac04e
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575026"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979166"
 ---
 # <a name="statement-element-xmla"></a>Элемент Statement (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34575026"
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -37,7 +37,7 @@ ms.locfileid: "34575026"
 |Значение по умолчанию|None|  
 |Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "34575026"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- **Инструкции** команда выполняет запрос или инструкцию на [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра. Службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживают следующие языки.  
+ **Инструкции** команда выполняет запрос или инструкцию в [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра. Службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживают следующие языки.  
   
 -   Многомерные выражения.  
   

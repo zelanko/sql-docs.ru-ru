@@ -1,6 +1,6 @@
 ---
-title: Урок 1 загрузки образцов данных и скриптов для внедренных R (SQL Server машинного обучения) | Документы Microsoft
-description: Руководство для внедрения в SQL Server R хранимые процедуры и функции T-SQL
+title: Занятие 1 загрузки демонстрационных данных и сценариев для внедренных R (машинного обучения SQL Server) | Документация Майкрософт
+description: Учебник, в котором показано, как внедрить R в SQL Server хранимых процедур и функций T-SQL
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/07/2018
@@ -9,20 +9,20 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 74a60a95da4fb701f3862c36e35a4bada6ef933b
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249837"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030382"
 ---
-# <a name="lesson-1-download-data-and-scripts"></a>Урок 1: Загрузка данных и сценариев
+# <a name="lesson-1-download-data-and-scripts"></a>Занятие 1: Загрузите данные и скрипты
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этой статье является частью учебника для разработчиков SQL по использованию R в SQL Server.
+Эта статья входит руководства для разработчиков SQL по использованию R в SQL Server.
 
-На этом шаге вы загрузить образец набора данных и [!INCLUDE[tsql](../../includes/tsql-md.md)] файлы, которые используются в этом учебнике сценариев. Совместно используются данные и файлы скриптов в GitHub, но сценарий PowerShell будет загрузить файлы данных и сценариев в локальный каталог, по своему выбору.
+На этом шаге вы скачаете образец набора данных и [!INCLUDE[tsql](../../includes/tsql-md.md)] файлы, которые используются в этом руководстве скриптов. Данные и файлы скриптов опубликованы в GitHub, но сценарий PowerShell будет загружать данные и файлы скриптов в локальный каталог по своему выбору.
 
-## <a name="download-tutorial-files-from-github"></a>Загрузить файлы учебника из Github
+## <a name="download-tutorial-files-from-github"></a>Скачать файлы учебника из репозитория Github
 
 1.  Откройте командную консоль Windows PowerShell.
   
@@ -66,4 +66,4 @@ ms.locfileid: "35249837"
 
 ## <a name="previous-lesson"></a>Предыдущее занятие
 
-[Внедренные analytics R для разработчиков SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md)
+[Внедренная аналитика R для разработчиков SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md)

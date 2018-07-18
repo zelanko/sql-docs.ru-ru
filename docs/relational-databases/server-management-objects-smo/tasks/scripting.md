@@ -1,5 +1,5 @@
 ---
-title: Сценарии | Документы Microsoft
+title: Создание сценариев | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 722c8f75c8fe759e632a3cefc5960e49ad0519f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969549"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970596"
 ---
 # <a name="scripting"></a>Создание скриптов
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Создание скрипта в SMO управляется <xref:Microsoft.SqlServer.Management.Smo.Scripter> объекта и его дочерних объектов или **сценарий** метод для отдельных объектов. <xref:Microsoft.SqlServer.Management.Smo.Scripter> Управляет сопоставлением связей зависимости для объектов в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Создание скрипта в SMO управляется <xref:Microsoft.SqlServer.Management.Smo.Scripter> объекта и его дочерних объектов или **скрипт** метод на индивидуальные объекты. <xref:Microsoft.SqlServer.Management.Smo.Scripter> Объекта управляет сопоставлением связей зависимости для объектов в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Расширенное создание сценария с помощью объекта <xref:Microsoft.SqlServer.Management.Smo.Scripter> и его дочерних объектов является процессом из трех фаз.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "32969549"
   
 3.  Создание скрипта  
   
- Фаза обнаружения использует объект <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker>. Учитывая URN-список объектов, метод <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> возвращает объект <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> объектам в URN-списке. Логическое значение *fParents* параметр используется для выбора родительских или дочерних объектов заданного объекта, должны быть обнаружены ли. На данном этапе можно изменить дерево зависимостей.  
+ Фаза обнаружения использует объект <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker>. Учитывая URN-список объектов, метод <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> возвращает объект <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> объектам в URN-списке. Логическое значение *fParents* параметр используется для выбора объектов, которые необходимо обнаружить родительских или дочерних элементов указанного объекта. На данном этапе можно изменить дерево зависимостей.  
   
  На фазе создания списка передается дерево и возвращается результирующий список. Данный список объекта существует в порядке создания сценария, и им можно управлять.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "32969549"
  В третьей и последней фазе сценарий формируется с указанным списком и параметрами создания скриптов. Этот результат возвращается в виде системного объекта <xref:System.Collections.Specialized.StringCollection>. На этой фазе имена зависимых объектов извлекаются из коллекции Items объекта <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> и свойств, таких как <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> и <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A>.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [создать Visual C&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
- Для этого примера кода требуются **Imports** оператор для пространства имен System.Collections.Specialized. Вставьте инструкцию с другими инструкциями Imports и перед любыми декларациями в приложении.  
+ Данный пример кода требует **Imports** оператор для пространства имен System.Collections.Specialized. Вставьте инструкцию с другими инструкциями Imports и перед любыми декларациями в приложении.  
   
 ```  
 Imports Microsoft.SqlServer.Management.Smo  

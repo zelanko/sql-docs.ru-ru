@@ -1,5 +1,5 @@
 ---
-title: Элемент MoveWithDescendants (XML для Аналитики) | Документы Microsoft
+title: Элемент MoveWithDescendants (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 518c95efa36c6a234036a1c7f293c3df8283749a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575736"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969194"
 ---
 # <a name="movewithdescendants-element-xmla"></a>Элемент MoveWithDescendants (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Указывает, является ли потомки элементов атрибутов обновляются в родительском [обновление](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) команды.  
+  Указывает ли потомки элементов атрибутов также обновляются в родительском [обновления](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) команды.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34575736"
 </Update>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "34575736"
 |Значение по умолчанию|False|  
 |Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34575736"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- **MoveWithDescendants** определяет ли **обновление** команды должен обновлять не только элементы атрибутов, определенных в [атрибуты](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md) элемент, но Кроме того, должны также обновить потомки этих элементов атрибутов.  
+ **MoveWithDescendants** определяет ли **обновление** команды должен обновлять не только элементы атрибутов, определенных в [атрибуты](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md) элемент, но Кроме того, которые тоже надо поменять потомки этих элементов атрибутов.  
   
 > [!NOTE]  
 >  Этот элемент применяется только к элементам атрибутов в иерархиях родителей-потомков.  
