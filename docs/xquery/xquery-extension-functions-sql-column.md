@@ -1,5 +1,5 @@
 ---
-title: 'SQL: column() (XQuery) | Документы Microsoft'
+title: 'SQL: column() (XQuery) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19a427f43667718225120cdd72a571eba66cd041
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077651"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981946"
 ---
-# <a name="xquery-extension-functions---sqlcolumn"></a>Функции расширения XQuery - функции SQL: column()
+# <a name="xquery-extension-functions---sqlcolumn"></a>Функции расширения XQuery — SQL: column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Как описано в разделе [Привязка реляционных данных внутри XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), можно использовать **методов** работы при использовании [методов типа данных XML](../t-sql/xml/xml-data-type-methods.md) для получения реляционного значения внутри XQuery.  
+  Как описано в разделе [Привязка реляционных данных внутри XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), можно использовать **SQL: column()** можно использовать функцию [методов типа данных XML](../t-sql/xml/xml-data-type-methods.md) для получения реляционного значения внутри XQuery.  
   
  Например [метода query() (тип данных XML)](../t-sql/xml/query-method-xml-data-type.md) используется для указания запроса к экземпляру XML, который хранится в переменной или столбце типа **xml** типа. Кроме того, иногда для совмещения реляционных данных с XML-данными бывает необходимо, чтобы запрос обрабатывал значения еще одного столбца, отличного от XML. Чтобы сделать это, используйте **SQL: column()** функции.  
   
@@ -46,10 +46,10 @@ ms.locfileid: "33077651"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>Замечания  
- Обратите внимание, что ссылка на столбец, указанный в **SQL: column()** внутри XQuery ссылается на столбец в строке, которая обрабатывается.  
+## <a name="remarks"></a>Примечания  
+ Обратите внимание, что ссылка на столбец, указанный в **SQL: column()** функции внутри XQuery ссылается на столбец в строке, которая обрабатывается.  
   
- В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], могут ссылаться только на **xml** инструкция insert экземпляр в контексте исходного выражения XML DML; в противном случае нельзя ссылаться на столбцы, имеющие тип **xml** или среды CLR определяемый пользователем тип.  
+ В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], могут ссылаться только на **xml** инструкция insert экземпляр в контексте исходного выражения XML DML; в противном случае — значение не может ссылаться на столбцы, которые относятся к типу **xml** или среды CLR определяемый пользователем тип.  
   
  **SQL: column()** функция не поддерживается в операции СОЕДИНЕНИЯ. Вместо этого можно использовать операцию APPLY.  
   
@@ -98,9 +98,9 @@ sql:column("columnName")
   
 -   Поскольку значения получаются из двух разных таблиц, предложение FROM задает пару таблиц. Условие в предложении WHERE фильтрует результаты и получает только те продукты, у которых в каталоге есть описание моделей.  
   
--   **Имен** ключевое слово в [прологе XQuery](../xquery/modules-and-prologs-xquery-prolog.md) определяет префикс пространства имен XML, «pd», который используется в теле запроса. Обратите внимание, что эти псевдонимы таблиц, «P» и «PM», задаются в предложении FROM самого запроса.  
+-   **Пространства имен** ключевое слово в [прологе XQuery](../xquery/modules-and-prologs-xquery-prolog.md) определяет префикс пространства имен XML, «pd», который используется в теле запроса. Обратите внимание, что эти псевдонимы таблиц, «P» и «PM», задаются в предложении FROM самого запроса.  
   
--   **SQL: column()** функция используется для перевода Реляционного значения внутри XML.  
+-   **SQL: column()** функция используется для добавления Реляционного значения внутри XML.  
   
  Частичный результат:  
   
@@ -138,7 +138,7 @@ select @x
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Функции расширения запросов XQuery в SQL Server](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [Функции расширения XQuery для SQL Server](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [Сравнение типизированного и нетипизированного XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [Создание экземпляров XML-данных](../relational-databases/xml/create-instances-of-xml-data.md)   

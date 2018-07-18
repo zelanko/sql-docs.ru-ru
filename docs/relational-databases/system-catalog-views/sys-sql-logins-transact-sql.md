@@ -1,5 +1,5 @@
 ---
-title: sys.sql_logins (Transact-SQL) | Документы Microsoft
+title: sys.sql_logins (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql
@@ -26,10 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: cdf6447b7673606224852078f80306c4b7fb4632
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985167"
 ---
 # <a name="syssqllogins-transact-sql"></a>sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -38,17 +39,17 @@ ms.lasthandoff: 05/04/2018
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<Унаследованные столбцы >**|--|Наследует от **sys.server_principals**.|  
-|**is_policy_checked**|**бит**|Проверяется политика паролей.|  
-|**is_expiration_checked**|**бит**|Проверяется истечение срока действия паролей.|  
+|**\<наследуемые столбцы >**|--|Наследует от **sys.server_principals**.|  
+|**is_policy_checked**|**bit**|Проверяется политика паролей.|  
+|**is_expiration_checked**|**bit**|Проверяется истечение срока действия паролей.|  
 |**password_hash**|**varbinary(256)**|Хэш пароля имени входа SQL. Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля.|  
   
- Список столбцов, наследуемых этим представлением см. в разделе [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ Список столбцов, наследуемых этим представлением, см. в разделе [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
-## <a name="remarks"></a>Замечания  
- Чтобы просмотреть оба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетные данные для входа и имена входа проверки подлинности Windows, в разделе [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+## <a name="remarks"></a>Примечания  
+ Чтобы просмотреть оба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имена входа проверки подлинности и имена входа проверки подлинности Windows, см. в разделе [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- Когда Автономные пользователи базы данных включены, подключения могут выполняться без имен входа. Для идентификации этих учетных записей, в разделе [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
+ Когда Автономные пользователи базы данных включены, подключения, которые могут выполняться без имен входа. Для идентификации этих учетных записей, см. в разделе [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Любое имя входа проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может видеть собственное имя входа и имя входа sa. Для просмотра других имен входа требуется разрешение ALTER ANY LOGIN или разрешение на имя входа.  

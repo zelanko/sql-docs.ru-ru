@@ -1,5 +1,5 @@
 ---
-title: sp_polybase_leave_group (Transact-SQL) | Документы Microsoft
+title: sp_polybase_leave_group (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +19,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8ad3a202ff910d19ea70192eb9cc5e114a8a4cb9
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984213"
 ---
 # <a name="sppolybaseleavegroup-transact-sql"></a>sp_polybase_leave_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Удаляет экземпляр SQL Server из группу PolyBase для вычислений с горизонтальным масштабированием. 
+  Удаляет экземпляр SQL Server из группы PolyBase для масштабируемых вычислений. 
  
- Экземпляр SQL Server должен иметь [руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md) установлен компонент.  PolyBase позволяет интегрировать источников данных SQL Server, например Hadoop и Azure хранилища больших двоичных объектов. См. также [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
+ Экземпляр SQL Server должен иметь [руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md) установлен компонент.  PolyBase позволяет интегрировать источников данных SQL Server, таких как Hadoop и Azure хранилище BLOB-объектов. См. также [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +51,10 @@ sp_polybase_leave_group;
 ## <a name="remarks"></a>Примечания  
  Вычислительный узел можно только удалить из группы.  
   
- После выполнения хранимой процедуры, перезапустите ядро PolyBase и служба перемещения данных PolyBase на компьютере. Для проверки выполнения следующих динамических административных Представлений на головном узле: **sys.dm_exec_compute_nodes**.  
+ После выполнения хранимой процедуры, перезапустите ядро PolyBase и служба перемещения данных PolyBase на компьютере. Для проверки выполнения следующему динамическому административному Представлению на головном узле: **sys.dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Пример  
- В примере текущий компьютер удаляется из группы PolyBase.  
+ В примере удаляется текущего компьютера из группы PolyBase.  
   
 ```sql  
 EXEC sp_polybase_leave_group ;  

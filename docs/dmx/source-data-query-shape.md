@@ -1,5 +1,5 @@
 ---
-title: ФИГУРЫ (ДАННЫХ DMX) | Документы Microsoft
+title: ФИГУРЫ (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e5c86484252d45c8c7edbd79690159e116d9b3a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841677"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985297"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;запрос источника данных&gt; -ФИГУРЫ
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Комбинирует запросы от нескольких источников данных в одну иерархическую таблицу (являющуюся таблицей с вложенными таблицами), которая становится таблицей вариантов для модели интеллектуального анализа данных.  
   
- Полный синтаксис **ФИГУРЫ** команда описана в [!INCLUDE[msCoName](../includes/msconame-md.md)] Data Access Components (MDAC) средств разработки программного обеспечения (SDK).  
+ Полный синтаксис **ФИГУРЫ** команда описана в [!INCLUDE[msCoName](../includes/msconame-md.md)] Data Access Components (MDAC) Software Development Kit (SDK).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -74,7 +74,7 @@ SHAPE {
 ## <a name="see-also"></a>См. также  
  [&#60;запрос источника данных&#62;](../dmx/source-data-query.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции обработки данных](../dmx/dmx-statements-data-manipulation.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкций по обработке данных](../dmx/dmx-statements-data-manipulation.md)   
  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

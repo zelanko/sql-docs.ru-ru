@@ -1,6 +1,6 @@
 ---
-title: DB Mail и оповещения по электронной почте с агентом SQL Server для Linux | Документы Microsoft
-description: В этой статье описывается использование компонента DB Mail и оповещения по электронной почте с помощью SQL Server в Linux
+title: DB Mail и оповещений по электронной почте с помощью агента SQL в Linux | Документация Майкрософт
+description: В этой статье описывается использование DB Mail и оповещений по электронной почте с помощью SQL Server в Linux
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
@@ -13,17 +13,17 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: tbd
 ms.openlocfilehash: f9ce71d799414171019143912bde19330742ec27
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585196"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984266"
 ---
-# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB Mail и оповещения по электронной почте с агентом SQL Server в Linux
+# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB Mail и оповещений по электронной почте с помощью агента SQL в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Следующие шаги показывают, как настройка компонента DB Mail и использовать его с помощью агента SQL Server (**mssql-server-agent**) в Linux. 
+Ниже показано, как настроить компонента DB Mail и использовать его с помощью агента SQL Server (**mssql-server-agent**) на платформе Linux. 
 
 ## <a name="1-enable-db-mail"></a>1. Включение компонента DB Mail
 
@@ -65,7 +65,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 GO
 ```
 
-## <a name="4-add-the-database-mail-account-to-a-database-mail-profile"></a>4. Добавьте учетную запись компонента Database Mail для профиля компонента Database Mail
+## <a name="4-add-the-database-mail-account-to-a-database-mail-profile"></a>4. Добавьте учетную запись компонента Database Mail к профилю компонента Database Mail
 ```sql
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp 
 @profile_name = 'default', 
@@ -73,7 +73,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 @is_default = 1 ; 
  ```
  
-## <a name="5-add-account-to-profile"></a>5. Добавьте учетную запись в профиль 
+## <a name="5-add-account-to-profile"></a>5. Добавить учетную запись в профиль 
 ```sql
 EXECUTE msdb.dbo.sysmail_add_profileaccount_sp   
 @profile_name = 'default',   
@@ -81,9 +81,9 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
 @sequence_number = 1;  
  ```
  
-## <a name="6-send-test-email"></a>6. Отправить тестовое сообщение электронной почты
+## <a name="6-send-test-email"></a>6. Отправить тестовое электронное сообщение
 > [!NOTE]
-> Возможно перейти к клиент электронной почты и установите флажок «Разрешать опаснее клиентами для отправки почты.» Не все клиенты считают компонента DB Mail управляющая программа электронной почты.
+> Возможно перейти к почтового клиента и установите флажок «Разрешать менее безопасных клиентов для отправки почты.» Не все клиенты распознает компонента DB Mail как управляющая программа электронной почты.
 
 ```
 EXECUTE msdb.dbo.sp_send_dbmail 
@@ -94,8 +94,8 @@ EXECUTE msdb.dbo.sp_send_dbmail
 GO
 ```
 
-## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7. Установить профиль электронной почты базы данных с помощью mssql conf или переменную среды
-Для регистрации профиль компонента DB Mail предназначена программа mssql conf или переменных среды. В этом случае назовем профиль по умолчанию.
+## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7. Установить профиль электронной почты базы данных с помощью mssql-conf или в переменной среды
+Служебная программа mssql-conf или переменные среды можно использовать для регистрации свой профиль для компонента DB Mail. В этом случае назовем профиль по умолчанию.
 
 ```bash
 # via mssql-conf
@@ -104,7 +104,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile default
 MSSQL_AGENT_EMAIL_PROFILE=default
 ```
 
-## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8. Настройка оператора для уведомления о задании SQLAgent 
+## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8. Настройте оператора для уведомления о задании SQLAgent 
 
 ```sql
 EXEC msdb.dbo.sp_add_operator 
@@ -115,7 +115,7 @@ EXEC msdb.dbo.sp_add_operator
 GO 
 ```
 
-## <a name="9-send-email-when-agent-test-job-succeeds"></a>9. Отправить по электронной почте после успешного завершения «Задание агента тестирования» 
+## <a name="9-send-email-when-agent-test-job-succeeds"></a>9. Отправка электронного сообщения при успешном завершении «Задания агента тестирования» 
 
 ```
 EXEC msdb.dbo.sp_update_job 
@@ -126,4 +126,4 @@ GO
 ```
 
 ## <a name="next-steps"></a>Следующие шаги
-Дополнительные сведения о том, как использовать для создания, планирования и запуска заданий агента SQL Server см. в разделе [запуска задания агента SQL Server в Linux](sql-server-linux-run-sql-server-agent-job.md).
+Дополнительные сведения о том, как использовать для создания, планирования и запуска заданий агента SQL Server см. в разделе [выполнение задания агента SQL Server в Linux](sql-server-linux-run-sql-server-agent-job.md).

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_parallel_workers (Transact-SQL) | Документы Microsoft
+title: sys.dm_exec_query_parallel_workers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
@@ -25,24 +25,24 @@ ms.author: pelopes
 manager: ajayj
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f2bc4634a5e2fddb4a3c8eda009eb28019089596
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463970"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036312"
 ---
 # <a name="sysdmexecqueryparallelworkers-transact-sql"></a>sys.dm_exec_query_parallel_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Возвращает рабочий сведений о доступности на каждом узле.  
+  Возвращает рабочие сведения о доступности на каждом узле.  
   
-|Название|Тип данных|Описание|  
+|Имя|Тип данных|Описание|  
 |----------|---------------|-----------------|  
 |**NODE_ID**|**int**|Идентификатор узла NUMA.|  
 |**scheduler_count**|**int**|Количество планировщиков на данном узле.|  
-|**max_worker_count**|**int**|Максимальное число рабочих процессов для параллельных запросов.|  
+|**max_worker_count**|**int**|Максимальное число рабочих ролей для параллельных запросов.|  
 |**reserved_worker_count**|**int**|Число рабочих процессов, зарезервированной с помощью параллельных запросов, а также число основных рабочих процессов, используемых всеми запросами.| 
-|**free_worker_count**|**int**|Количество рабочих потоков, доступных для задач.<br /><br />**Примечание:** по крайней мере 1 worker вычитается из число свободных рабочих потребляет каждого входящего запроса.  Это возможно, что число свободных рабочих может быть отрицательным числом на сильно загруженном сервере.| 
+|**free_worker_count**|**int**|Количество рабочих потоков, доступных для задач.<br /><br />**Примечание:** каждый входящий запрос использует по крайней мере 1 рабочего процесса, которая вычитается из общего числа бесплатной рабочей роли.  Вполне возможно, что свободного рабочих ролей может быть отрицательным числом на сильно загруженном сервере.| 
 |**used_worker_count**|**int**|Число рабочих процессов, используемых параллельных запросов.|  
   
 ## <a name="permissions"></a>Разрешения  
@@ -52,7 +52,7 @@ ms.locfileid: "34463970"
  
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-viewing-current-parallel-worker-availability"></a>A. Просмотр текущего параллельных доступности  
+### <a name="a-viewing-current-parallel-worker-availability"></a>A. Просмотр текущих данных о доступности параллельных рабочих  
 
 ```sql 
 SELECT * FROM sys.dm_exec_query_parallel_workers;  

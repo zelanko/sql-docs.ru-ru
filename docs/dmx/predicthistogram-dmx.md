@@ -1,5 +1,5 @@
 ---
-title: PredictHistogram (DMX) | Документы Microsoft
+title: PredictHistogram (расширения интеллектуального анализа данных) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7e7129985eac09d741ea9d00c551a9507ee92c9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842147"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985363"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 -   **$Probability**  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример возвращает спрогнозированное состояние столбца Bike Buyer в одноэлементном запросе. Этот запрос также возвращает два верхних наиболее вероятных состояния атрибута Bike Buyer, в зависимости от настроенной вероятности, полученной с помощью **PredictHistogram** функции.  
+ Следующий пример возвращает спрогнозированное состояние столбца Bike Buyer в одноэлементном запросе. Этот запрос также возвращает два верхних наиболее вероятных состояния атрибута «Покупатель велосипеда», в зависимости от настроенной вероятности, полученной с помощью **PredictHistogram** функции.  
   
 ```  
 SELECT  
@@ -93,7 +93,7 @@ NATURAL PREDICTION JOIN
  [PredictSupport &#40;расширений интеллектуального анализа данных&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;расширений интеллектуального анализа данных&#41;](../dmx/predictvariance-dmx.md)   
  [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; функции ссылки](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   
  [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)  
   

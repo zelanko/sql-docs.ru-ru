@@ -1,5 +1,5 @@
 ---
-title: Рекомендации и ограничения SQLXML 4.0 | Документы Microsoft
+title: Рекомендации и действующие ограничения SQLXML 4.0 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 407a3a50c6dfa6b88ddfb22b8c00b1b487607421
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967629"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032614"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>Рекомендации по использованию SQLXML 4.0 и действующие ограничения
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,6 +35,6 @@ ms.locfileid: "32967629"
   
      Выполняется приложение, использующее SQLXML 4.0 и независимые от версии идентификаторы PROGID, и требуется установить несколько других программ. Эта программа может установить предыдущую версию SQLXML. Приложение может завершиться с ошибкой, так как независимые от версии идентификаторы PROGID в приложении теперь указывают на предыдущую версию SQLXML, в которой может и не быть функции SQLXML, которую использует приложение.  
   
--   Если для какой-либо причине не хотите использовать поставщик SQLXMLOLEDB, а вместо этого необходимо использовать SQLOLEDB задайте поставщика для функций SQLXML, **версии SQLXML** свойства «SQLXML.4.0».  
+-   Если для какой-либо причине вы не хотите использовать поставщик SQLXMLOLEDB и вместо этого требуется использовать SQLOLEDB поставщику для функций SQLXML, установить **SQLXML Version** свойства «SQLXML.4.0».  
   
   

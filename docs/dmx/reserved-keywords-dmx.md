@@ -1,5 +1,5 @@
 ---
-title: Зарезервированные ключевые слова (расширения интеллектуального анализа данных) | Документы Microsoft
+title: Зарезервированные ключевые слова (расширения интеллектуального анализа данных) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7af060203d044435e364803ace67d35711eb63ea
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841817"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985316"
 ---
 # <a name="reserved-keywords-dmx"></a>Зарезервированные ключевые слова (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] резервируют определенные ключевые слова для эксклюзивного использования. Эти ключевые слова не могут использоваться где-либо в инструкциях расширений интеллектуального анализа данных (DMX), кроме как в позициях, которые определены в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в справочнике по языку расширений интеллектуального анализа данных. Эти регламентируемые ключевые слова расширений интеллектуального анализа данных включают следующие элементы.  
   
--   Все инструкции определения данных, перечисленных в разделе [инструкции определения расширений интеллектуального анализа данных](../dmx/dmx-statements-data-definition.md).  
+-   Все инструкции определения данных, перечисленные в разделе, [инструкции определения данных расширений интеллектуального анализа данных](../dmx/dmx-statements-data-definition.md).  
   
 -   Все функции запросов интеллектуального анализа, перечисленные в разделе, [Справочник по функциям расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-function-reference.md).  
   

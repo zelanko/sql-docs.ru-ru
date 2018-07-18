@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xe_database_sessions (база данных SQL Azure) | Документы Microsoft
+title: sys.dm_xe_database_sessions (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: ''
@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 28759d7101a8a798223a92b9201e0e9aa930a4fa
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466460"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984203"
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34466460"
   
 ||  
 |-|  
-|**Применяется к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 и все более поздние версии.|  
+|**Применяется к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 12 и любые более поздние версии.|  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "34466460"
  Необходимо разрешение VIEW DATABASE STATE.  
   
 ### <a name="relationship-cardinalities"></a>Количество элементов связей  
-Начиная с 2015-07-13 «sys.dm_xe_objects» является одним из этих динамических административных представлений XEvents, которые не содержат «_базы данных» в имени. Опечатка или ошибка в столбце справа в следующей таблице. Имя является одинаковым в Microsoft SQL Server и базы данных SQL Azure. GeneMi.  
+Начиная с 2015-07-13 «sys.dm_xe_objects» является одним из этих XEvents динамические административные представления, которые не содержат «_database» в имени. Опечатка или ошибка в столбце справа в следующей таблице. Имя будет соответствующим образом в Microsoft SQL Server и базы данных SQL Azure. GeneMi.  
   
 |От|Чтобы|Связь|  
 |--------|------|----------------|  
