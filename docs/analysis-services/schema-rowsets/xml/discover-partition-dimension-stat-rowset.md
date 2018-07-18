@@ -1,5 +1,5 @@
 ---
-title: Набор рядов Discover_partition_dimension_stat | Документы Microsoft
+title: Набор строк DISCOVER_PARTITION_DIMENSION_STAT | Документация Майкрософт
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fe43b694b8fdeb4128ae1ad2aa9dc137d2bc9d42
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34034515"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980427"
 ---
 # <a name="discoverpartitiondimensionstat-rowset"></a>Набор рядов DISCOVER_PARTITION_DIMENSION_STAT
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34034515"
   
 |Имя столбца|Индикатор типа|Ограничение|Описание|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**ИМЯ_БАЗЫ_ДАННЫХ**|**DBTYPE_WSTR**|Обязательно|Имя базы данных.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|Обязательно|Имя базы данных.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Обязательно|Имя куба или табличной модели.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Обязательно|Имя группы мер.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
 |**ИМЯ_РАЗДЕЛА**|**DBTYPE_WSTR**|Обязательно|Имя секции.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
@@ -49,7 +49,7 @@ ms.locfileid: "34034515"
 |GUID|a07ccd8e-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|PartitionDimensionStat|  
   
-## <a name="see-also"></a>См. также:  
- [XML для аналитики наборы строк схемы](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [Наборы строк схемы XML для аналитики](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

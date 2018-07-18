@@ -1,5 +1,5 @@
 ---
-title: Функция верхнего регистра (XQuery) | Документы Microsoft
+title: Функции Upper-case (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 177659d16f1fda6e0d6dd45430949baf6331eefe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981904"
 ---
-# <a name="functions-on-string-values---upper-case"></a>Строковые функции - верхний регистр
+# <a name="functions-on-string-values---upper-case"></a>Функции со строковыми значениями — верхний регистр
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Эта функция преобразует каждый символ в *$arg* в его эквивалент в верхнем регистре. В двоичном преобразовании регистра Microsoft Windows для кодовых точек Юникода указано, как символы преобразуются в верхний регистр. Этот стандарт отличается от сопоставления для стандарта кодовых точек Юникода.  
@@ -48,7 +49,7 @@ fn:upper-case($arg as xs:string?) as xs:string
 |Термин|Определение|  
 |*$arg*|Строковое значение для преобразования в верхний регистр.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если значение *$arg* является пустым, возвращается строка нулевой длины.  
   
 ## <a name="examples"></a>Примеры  

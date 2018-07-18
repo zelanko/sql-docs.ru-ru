@@ -1,5 +1,5 @@
 ---
-title: Объект роли (TMSL) | Документы Microsoft
+title: Объект Roles (TMSL) | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 730436ac6ff156d652879d9d8df202a14581097e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 375a0f62bbf482a7c033d235836ea64b78cb2da2
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983876"
 ---
-# <a name="roles-object-tmsl"></a>Объект роли (TMSL)
+# <a name="roles-object-tmsl"></a>Объект Roles (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Определяет роль для модели, которая указывает совокупность разрешений. Членство в роли состоит из принципов безопасности Windows. Фильтры можно установить в роли для ограничения доступа к отдельным объектам.  
+  Определяет роль в модели, определяющей набор разрешений. Членство в роли состоит из принципов безопасности Windows. Можно установить фильтры для роли для ограничения доступа к конкретным объектам.  
   
 ## <a name="object-definition"></a>Определение объекта  
  Все объекты имеют общий набор свойств, включая имя, тип, описание, коллекцию свойств и заметки. **Роль** объекты также имеют следующие свойства.  
@@ -27,20 +28,20 @@ ms.lasthandoff: 05/10/2018
                   чтение,  
                   readRefresh,  
                   обновления,  
-                  и администратора. В разделе [роли и разрешения &#40;служб Analysis Services&#41; ](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md) сведения о разрешениях базы данных.  
+                  и администратора. См. в разделе [роли и разрешения &#40;служб Analysis Services&#41; ](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md) сведения о разрешениях базы данных.  
   
  члены  
- Члены состоят из имени элемента и идентификатор, где имя — псевдоним или понятное имя участника безопасности Windows, а идентификатор — идентификатор безопасности. Оба они указываются в определении роли. В разделе [компоненты SID](https://msdn.microsoft.com/en-us/library/windows/desktop/aa379597\(v=vs.85\).aspx) подробные сведения об идентификаторах.  
+ Члены состоят из имени элемента и идентификатор, где имя — псевдоним или имя участника безопасности Windows, а идентификатор — идентификатор безопасности. Оба они указываются в определение роли. См. в разделе [компоненты SID](https://msdn.microsoft.com/library/windows/desktop/aa379597\(v=vs.85\).aspx) Дополнительные сведения об идентификаторах.  
   
  разрешений таблиц  
- Разрешение таблицы является именованный объект с разрешениями, определенное через выражение DAX. Это свойство является необязательным, используемая для применения фильтра безопасности.  
+ Разрешение таблицы является именованный объект с разрешениями, определенными с помощью выражения DAX. Это свойство является необязательным, используемая для применения фильтра безопасности.  
   
 ## <a name="usage"></a>Использование  
- **Роль** объекты используются в [Alter, команда &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [создать команду &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [команду CreateOrReplace &#40;TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), и [удалить команду &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md).  
+ **Роль** объекты используются в [команда Alter &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [создать команду &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [командой createorreplace в скрипте &#40;TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), и [команда Delete &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md).  
   
- Объект **роли** объект свойства модели, но также может быть указан как свойства объекта базы данных, учитывая однозначное сопоставление между моделью и базы данных.  
+ Объект **роли** объект свойства модели, но также можно указать как свойство объекта базы данных, учитывая однозначное сопоставление между моделью и базы данных.  
   
- При создании, замена или изменение объекта роли, укажите все свойства чтения и записи определения объекта. Пропуск свойства чтения и записи, считается удаления.  
+ При создании замена или изменение объекта, роли, укажите все свойства чтения и записи определения объекта. Пропуск свойства чтения и записи считается операция удаления.  
   
 ## <a name="full-syntax"></a>Полный синтаксис  
  Ниже приведено представление схемы роль объекта модели.  
@@ -258,6 +259,6 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="see-also"></a>См. также  
  [Справочник по языку TMSL (Tabular Model Scripting Language)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [Роли и разрешения & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [Роли и разрешения (службы Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

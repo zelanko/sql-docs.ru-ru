@@ -1,6 +1,6 @@
 ---
-title: Неудачно Red Hat Enterprise Linux общего кластера SQL Server | Документы Microsoft
-description: Реализация высокой доступности с помощью конфигурации кластера общего диска Red Hat Enterprise Linux для SQL Server.
+title: Работа кластера как общего Red Hat Enterprise Linux для SQL Server | Документация Майкрософт
+description: Реализации высокого уровня доступности, настроив кластер общих дисков Red Hat Enterprise Linux для SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -13,52 +13,53 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 71fef5396f5be6fa615de190a9374c646f467e7e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981866"
 ---
-# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Работать кластеров общих дисков Red Hat Enterprise Linux для SQL Server
+# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Работать кластер общих дисков Red Hat Enterprise Linux для SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этом документе описывается выполните следующие задачи для SQL Server на отказоустойчивый кластер общего диска с Red Hat Enterprise Linux.
+В этом документе описывается, как выполнить следующие задачи для SQL Server на отказоустойчивый кластер общего диска с Red Hat Enterprise Linux.
 
 - Вручную выполните отработку отказа кластера
-- Мониторинг отказоустойчивого кластера SQL Server службы
-- Добавление узла кластера
-- Удаление узла кластера
+- Мониторинг кластера отработки отказа службы SQL Server
+- Добавить узел к кластеру
+- Удалить узел кластера
 - Изменение ресурса SQL Server, мониторинг частоты
 
 ## <a name="architecture-description"></a>Описание архитектуры
 
-Уровень кластеризации основан на Red Hat Enterprise Linux (RHEL) [высокого уровня ДОСТУПНОСТИ надстройки](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) построены на основе [Pacemaker](http://clusterlabs.org/). Corosync и Pacemaker координировать кластерной связи и управления ресурсами. Экземпляр SQL Server активен на одном узле или другой.
+Кластеризации уровень основан на Red Hat Enterprise Linux (RHEL) [дополнение HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) создаются на основе [Pacemaker](http://clusterlabs.org/). Corosync и Pacemaker координировать кластерной связи и управления ресурсами. Экземпляр SQL Server активен на одном узле или в другой.
 
 На следующей схеме показана компонентов в кластере Linux с SQL Server. 
 
-![Red Hat Enterprise Linux 7 общий диск кластера SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
+![Red Hat Enterprise Linux 7 кластер с общими дисками SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Дополнительные сведения о конфигурации кластера, параметры агентов ресурсов и управление [RHEL справочной документации](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Дополнительные сведения о конфигурации кластера, параметры агентов ресурсов и управления, см. в статье [RHEL справочная документация по](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 ## <a name = "failManual"></a>Отказоустойчивый кластер вручную
 
-`resource move` Команда создает ограничение принудительное ресурса для запуска на целевом узле.  После выполнения `move` команду, ресурс `clear` приведет к удалению ограничения, можно снова переместить ресурс или ресурс автоматически отработки отказа. 
+`resource move` Команда создает ограничение, принудительно ресурсов для запуска на целевом узле.  После выполнения `move` команды, ресурс `clear` приведет к удалению ограничения, можно снова переместить ресурс или ресурс автоматически выполнить отработку отказа. 
 
 ```bash
 sudo pcs resource move <sqlResourceName> <targetNodeName>  
 sudo pcs resource clear <sqlResourceName> 
 ```
 
-В следующем примере перемещается **mssqlha** ресурса на узел с именем **sqlfcivm2**, а затем удаляется ограничение, чтобы позже ресурса можно переместить на другой узел.  
+В следующем примере выполняется перемещение **mssqlha** ресурсов на узел с именем **sqlfcivm2**, а затем удаляется ограничение таким образом, чтобы позже ресурс можно переместить на другой узел.  
 
 ```bash
 sudo pcs resource move mssqlha sqlfcivm2 
 sudo pcs resource clear mssqlha 
 ```
 
-## <a name="monitor-a-failover-cluster-sql-server-service"></a>Мониторинг отказоустойчивого кластера SQL Server службы
+## <a name="monitor-a-failover-cluster-sql-server-service"></a>Мониторинг кластера отработки отказа службы SQL Server
 
-Просмотр текущего состояния кластера:
+Просмотрите текущее состояние кластера:
 
 ```bash
 sudo pcs status  
@@ -70,7 +71,7 @@ sudo pcs status
 sudo crm_mon 
 ```
 
-Просмотр журналов агента ресурсов в `/var/log/cluster/corosync.log`
+Просмотр журналов агента ресурсов по адресу `/var/log/cluster/corosync.log`
 
 ## <a name="add-a-node-to-a-cluster"></a>Добавление узла в кластер
 
@@ -80,13 +81,13 @@ sudo crm_mon
    ip addr show
    ```
 
-3. Новый узел должен уникальное имя, которое составляет 15 символов или меньше. По умолчанию в Red Hat Linux — имя компьютера `localhost.localdomain`. Это имя по умолчанию не может быть уникальным и имеет слишком большую длину. Задайте имя компьютера на новый узел. Задайте имя компьютера, добавив его в `/etc/hosts`. Следующий сценарий позволяет изменить `/etc/hosts` с помощью `vi`. 
+3. Новый узел должен уникальное имя, которое не более 15 символов или меньше. По умолчанию в Red Hat Linux — имя компьютера `localhost.localdomain`. Это имя по умолчанию могут не быть уникальными и слишком длинное. Задайте имя компьютера на новый узел. Задайте имя компьютера, добавив его `/etc/hosts`. Следующий сценарий позволяет изменить `/etc/hosts` с помощью `vi`. 
 
    ```bash
    sudo vi /etc/hosts
    ```
 
-   В следующем примере показан `/etc/hosts` дополнений для трех узлов с именем `sqlfcivm1`, `sqlfcivm2`, и`sqlfcivm3`.
+   В следующем примере показан `/etc/hosts` с дополнениями для трех узлов с именем `sqlfcivm1`, `sqlfcivm2`, и`sqlfcivm3`.
 
    ```
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -98,11 +99,11 @@ sudo crm_mon
     
    Файл должен быть одинаковым на каждом узле. 
 
-1. Остановка службы SQL Server на новый узел.
+1. Остановите службу SQL Server на новом узле.
 
-1. Следуйте инструкциям для подключения к общей папке каталога файла базы данных.
+1. Следуйте инструкциям для подключения к общей папке каталога файла базы данных:
 
-   От NFS-сервера Установка `nfs-utils`
+   Начиная с NFS-сервер установить `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils 
@@ -117,15 +118,15 @@ sudo crm_mon
    sudo firewall-cmd --reload
    ```
 
-   Измените файл/etc/fstab для включения команды mount. 
+   Измените файл/etc/fstab, чтобы включить команду mount: 
 
    ```bash
    <IP OF NFS SERVER>:<shared_storage_path> <database_files_directory_path> nfs timeo=14,intr
    ```
 
-   Запустите `mount -a` чтобы изменения вступили в силу.
+   Запустите `mount -a` изменения вступили в силу.
    
-1. На новый узел создайте файл для хранения SQL Server имя пользователя и пароль для имени входа Pacemaker. Следующая команда создает и заполняет такой файл:
+1. На новом узле создайте файл для хранения SQL Server имя пользователя и пароль для входа Pacemaker. Следующая команда создает и заполняет такой файл:
 
    ```bash
    sudo touch /var/opt/mssql/passwd
@@ -135,7 +136,7 @@ sudo crm_mon
    sudo chmod 600 /var/opt/mssql/passwd
    ```
 
-3. На новый узел откройте в брандмауэре порты Pacemaker. Чтобы открыть эти порты с помощью `firewalld`, выполните следующую команду:
+3. На новом узле откройте порты брандмауэра для Pacemaker. Чтобы открыть эти порты с помощью `firewalld`, выполните следующую команду:
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -148,7 +149,7 @@ sudo crm_mon
    > * Порты TCP: 2224, 3121, 21064.
    > * Порт UDP: 5405.
 
-1. Установите пакеты Pacemaker на новый узел.
+1. Установите пакеты Pacemaker на новом узле.
 
    ```bash
    sudo yum install pacemaker pcs fence-agents-all resource-agents
@@ -160,7 +161,7 @@ sudo crm_mon
    sudo passwd hacluster
    ```
  
-3. Включите и запустите службу `pcsd` и Pacemaker. Это позволит нового узла, который приходящийся после перезагрузки. Выполните следующую команду на новый узел.
+3. Включите и запустите службу `pcsd` и Pacemaker. Таким образом, новый узел к кластеру после перезагрузки. Выполните следующую команду на новом узле.
 
    ```bash
    sudo systemctl enable pcsd
@@ -168,13 +169,13 @@ sudo crm_mon
    sudo systemctl enable pacemaker
    ```
 
-4. Установите агент ресурсов отказоустойчивого кластера для SQL Server. Выполните следующие команды на новый узел. 
+4. Установите агент ресурсов отказоустойчивого кластера для SQL Server. Выполните следующие команды на новом узле. 
 
    ```bash
    sudo yum install mssql-server-ha
    ```
 
-1. На существующий узел из кластера проверки подлинности новый узел и добавить в кластер:
+1. На существующий узел из кластера проверку подлинности новый узел и добавьте его в кластер:
 
     ```bash
     sudo pcs    cluster auth <nodeName3> -u hacluster 
@@ -196,34 +197,34 @@ sudo crm_mon
 sudo pcs    cluster node remove <nodeName>  
 ```
 
-## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>Изменение частоты ресурсов sqlservr интервал мониторинга
+## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>Изменение частоты интервал мониторинга ресурсов sqlservr
 
 ```bash
 sudo pcs    resource op monitor interval=<interval>s <sqlResourceName> 
 ```
 
-В следующем примере задается интервал мониторинга до 2 секунд для ресурса mssql:
+Следующий пример задает интервал мониторинга до 2 секунд для ресурса mssql:
 
 ```bash
 sudo pcs    resource op monitor interval=2s mssqlha 
 ```
-## <a name="troubleshoot-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Устранение неполадок кластера общего диска Red Hat Enterprise Linux для SQL Server
+## <a name="troubleshoot-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Устранение неполадок кластера общий диск Red Hat Enterprise Linux для SQL Server
 
-При устранении неполадок кластера может помочь понять, как три управляющие программы работают совместно для управления ресурсами кластера. 
+При устранении неполадок кластера может помочь понять, как три управляющие программы работают вместе для управления ресурсами кластера. 
 
 | Управляющая программа | Описание 
 | ----- | -----
-| Corosync | Предоставляет членства кворума и обмена сообщениями между узлами кластера.
-| Pacemaker | Находится в верхней части Corosync и предоставляет конечные автоматы для ресурсов. 
-| PCSD | Управляет Pacemaker и Corosync через `pcs` средств
+| Corosync | Предоставляет кворума членства и обмен сообщениями между узлами кластера.
+| Pacemaker | Размещается поверх Corosync и предоставляет конечные автоматы для ресурсов. 
+| PCSD | Управляет Pacemaker и Corosync через `pcs` средства
 
-PCSD должна быть запущена для использования `pcs` средства. 
+Для использования должен работать под управлением PCSD `pcs` средства. 
 
 ### <a name="current-cluster-status"></a>Текущее состояние кластера 
 
-`sudo pcs status` Возвращает основные сведения о состоянии для каждого узла кластера, кворума, узлов, ресурсы и управляющая программа. 
+`sudo pcs status` Возвращает основные сведения о состоянии для каждого узла кластера, кворума, узлов, ресурсы и управляющей программы. 
 
-Пример выходных данных кворума работоспособное pacemaker будет следующим:
+Пример вывода Исправен pacemaker кворума будет следующим:
 
 ```
 Cluster name: MyAppSQL 
@@ -248,7 +249,7 @@ corosync: active/disabled
 pacemaker: active/enabled 
 ```
 
-В примере `partition with quorum` означает, что кворума большинства узлов находится в оперативном режиме. Если потери кворума большинства узлов, `pcs status` вернет `partition WITHOUT quorum` и все ресурсы будут остановлены. 
+В примере `partition with quorum` означает, что кворума большинства узлов находится в сети. Если потери кворума большинства узлов, `pcs status` вернет `partition WITHOUT quorum` и все ресурсы будут остановлены. 
 
 `online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` Возвращает имя всех узлов, в настоящее время участвует в кластере. Если все узлы не участвуют, `pcs status` возвращает `OFFLINE: [<nodename>]`.
 
@@ -256,25 +257,25 @@ pacemaker: active/enabled
 
 ### <a name="reasons-why-a-node-may-be-offline"></a>Причины, почему узел может быть отключен
 
-Если узел находится в автономном режиме, выполните следующие действия.
+Когда узел находится в автономном режиме, выполните следующие действия.
 
 - **Брандмауэр**
 
-    Следующие порты должны быть открыты на всех узлах для Pacemaker иметь возможность обмениваться данными.
+    Следующие порты должны быть открыты на разных узлах для Pacemaker иметь возможность обмениваться данными.
     
-    - ** TCP: 2224 3121, 21064
+    - ** TCP: 2224, 3121, 21064
 
-- **Pacemaker или Corosync служб под управлением**
+- **Pacemaker и Corosync службам**
 
 - **Узел связи**
 
-- **Сопоставления имени узла**
+- **Сопоставления имен узлов**
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-* [Кластер с нуля](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) из Pacemaker руководства по
+* [Кластер с нуля](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) руководство из Pacemaker
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Настройка кластера общего диска Red Hat Enterprise Linux для SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
+[Настройка кластера общий диск Red Hat Enterprise Linux для SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 

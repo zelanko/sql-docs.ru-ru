@@ -1,5 +1,5 @@
 ---
-title: Сценарии глобализации для служб Analysis Services | Документы Microsoft
+title: Сценарии глобализации для служб Analysis Services | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bdc6ec79432d97d8ed53cade4a7db4c0b8bbec82
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018291"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031906"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Сценарии глобализации для служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "34018291"
  [Поддержка параметров перевода в службах Analysis Services](../analysis-services/translation-support-in-analysis-services.md)   
  [Интернационализация для приложений Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
  [Центр разработчиков go Global](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [Разработка приложения магазина Windows с адаптивной проектирования на основе языкового стандарта](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Разработка универсальных приложений Windows на C# и XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Приложения Windows Store записи с адаптивной конструкцией, основанной на языковых стандартах](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Разработка приложений для универсальной Windows на C# и XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Определение явных функций преобразования в запросах XPath (SQLXML 4.0) | Документы Microsoft
+title: Определение явных функций преобразования в запросах XPath (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 623f2814322a6a57e6845a8d3d8d734b1b7c68f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973159"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032352"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Определение явных функций преобразования в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Следующие примеры показывают, как явные функции преобразования указываются в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Следующие примеры показывают, как явные функции преобразования указываются в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -43,7 +43,7 @@ ms.locfileid: "32973159"
 /child::Contact[number(attribute::ContactID)= 4]  
 ```  
   
- Ярлык для **атрибута** оси (@) может быть указан, а потому, что **дочерних** оси используется по умолчанию, его можно исключить из запроса:  
+ Ярлык для **атрибут** оси (@) можно указать и поскольку **дочерних** оси используется по умолчанию, его можно исключить из запроса:  
   
 ```  
 /Contact[number(@ContactID) = 4]  
@@ -73,7 +73,7 @@ ms.locfileid: "32973159"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Результирующий набор для выполнения этого шаблона:  
   
@@ -92,7 +92,7 @@ ms.locfileid: "32973159"
 /child::Contact[string(attribute::ContactID)="4"]  
 ```  
   
- Ярлык для **атрибута** оси (@) может быть указан, а потому, что **дочерних** оси используется по умолчанию, его можно исключить из запроса:  
+ Ярлык для **атрибут** оси (@) можно указать и поскольку **дочерних** оси используется по умолчанию, его можно исключить из запроса:  
   
 ```  
 /Contact[string(@ContactID)="4"]  
@@ -122,7 +122,7 @@ ms.locfileid: "32973159"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Далее приведен результирующий набор, полученный в результате выполнения этого шаблона.  
   

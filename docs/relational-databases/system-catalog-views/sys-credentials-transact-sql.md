@@ -1,5 +1,5 @@
 ---
-title: sys.Credentials (Transact-SQL) | Документы Microsoft
+title: sys.Credentials (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -26,37 +26,38 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: ac0d1322be8e6c65d066c9de20d9a117b08f981a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031362"
 ---
 # <a name="syscredentials-transact-sql"></a>sys.credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Возвращает по одной строке для каждого набора учетных данных уровня сервера.  
+  Возвращает одну строку для каждых учетных данных на уровне сервера.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |credential_id|**int**|Идентификатор учетных данных. Уникально в пределах сервера.|  
-|имя|**sysname**|Имя учетных данных. Уникально в пределах сервера.|  
+|name|**sysname**|Имя учетных данных. Уникально в пределах сервера.|  
 |credential_identity|**nvarchar(4000)**|Имя применяемого идентификатора. Обычно это пользователь Windows. Это имя не обязательно должно быть уникальным.|  
 |create_date|**datetime**|Время создания учетных данных.|  
 |modify_date|**datetime**|Время последнего изменения учетных данных.|  
-|target_type|**Nvarchar(100)**|Тип учетных данных. Возвращает значение NULL для традиционных учетных данных и значение CRYPTOGRAPHIC PROVIDER для учетных данных, сопоставленных с поставщиком служб шифрования. Дополнительные сведения о поставщиках внешнее управление ключами см. в разделе [расширенного управления ключами &#40;расширенного управления Ключами&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
-|target_id|**int**|Идентификатор объекта, с которым сопоставлены учетные данные. Возвращает значение 0 для традиционных учетных данных и значение, отличное от 0, для учетных данных, сопоставленных с поставщиком служб шифрования. Дополнительные сведения о поставщиках внешнее управление ключами см. в разделе [расширенного управления ключами &#40;расширенного управления Ключами&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
+|target_type|**Nvarchar(100)**|Тип учетных данных. Возвращает значение NULL для традиционных учетных данных и значение CRYPTOGRAPHIC PROVIDER для учетных данных, сопоставленных с поставщиком служб шифрования. Дополнительные сведения о поставщиках управлении ключами см. в разделе [расширенного управления ключами &#40;расширенного управления Ключами&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
+|target_id|**int**|Идентификатор объекта, с которым сопоставлены учетные данные. Возвращает значение 0 для традиционных учетных данных и значение, отличное от 0, для учетных данных, сопоставленных с поставщиком служб шифрования. Дополнительные сведения о поставщиках управлении ключами см. в разделе [расширенного управления ключами &#40;расширенного управления Ключами&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
 
-## <a name="remarks"></a>Замечания  
-Учетные данные уровня базы данных, в разделе [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).
+## <a name="remarks"></a>Примечания  
+Учетные данные уровня базы данных, см. в разделе [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).
   
 ## <a name="permissions"></a>Разрешения  
- Требуется либо `VIEW ANY DEFINITION` разрешение или `ALTER ANY CREDENTIAL` разрешение. Кроме того, участник не должно быть запрещено `VIEW ANY DEFINITION` разрешение.  
+ Требует либо `VIEW ANY DEFINITION` разрешение или `ALTER ANY CREDENTIAL` разрешение. Кроме того, участник не должно быть запрещено `VIEW ANY DEFINITION` разрешение.  
   
 ## <a name="see-also"></a>См. также  
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
  [Учетные данные (ядро СУБД)](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)  
   
   

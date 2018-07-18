@@ -1,5 +1,5 @@
 ---
-title: Динамические административные представления (Transact-SQL), связанные с репликацией | Документы Microsoft
+title: Динамические административные представления (Transact-SQL), связанные с репликацией | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 245c6c3bf1d24b8d795b3a22315acb7198874e00
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463310"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981572"
 ---
 # <a name="replication-related-dynamic-management-views-transact-sql"></a>Динамические административные представления, связанные с репликацией (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

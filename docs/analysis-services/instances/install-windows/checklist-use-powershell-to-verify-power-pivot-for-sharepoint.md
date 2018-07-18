@@ -1,5 +1,5 @@
 ---
-title: 'Контрольный список: Использование PowerShell для проверки PowerPivot для SharePoint | Документы Microsoft'
+title: 'Контрольный список: Использование PowerShell для проверки Power Pivot для SharePoint | Документация Майкрософт'
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3bf217aee4222aec601c1dde08ffcb2e264eb31f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ce55062f33739f4f27769e4c3851cede820f6423
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019441"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985416"
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Контрольный список. Использование PowerShell для проверки PowerPivot для SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +57,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
 |-------------|-----------------|  
 |Обновление данных не выполняется|См. раздел [Задания таймера](#bkmk_timer_jobs) и проверьте, что **Оперативное задание таймера обновления данных [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** находится в сети.|  
 |На панели мониторинга управления отображаются старые данные|См. раздел [Задания таймера](#bkmk_timer_jobs) и проверьте, что **панель управления заданием таймера обработки** включена.|  
-|Некоторые части панели мониторинга управления|При установке [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint в ферму с топологией центра администрирования без служб Excel или [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint необходимо скачать и установить клиентскую библиотеку Microsoft ADOMD.NET, если требуется полный доступ к встроенным отчетам на информационной панели управления [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Некоторые отчеты на информационной панели используют ADOMD.NET для доступа к внутренним данным, предоставляющим данные отчетов об обработке запросов [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] и работоспособности сервера в ферме. Дополнительные сведения см. в разделе [ADOMD.Net client Library](#bkmk_adomd) и в статье [Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).|  
+|Некоторые части панели мониторинга управления|При установке [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint в ферму с топологией центра администрирования без служб Excel или [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint необходимо скачать и установить клиентскую библиотеку Microsoft ADOMD.NET, если требуется полный доступ к встроенным отчетам на информационной панели управления [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Некоторые отчеты на информационной панели используют ADOMD.NET для доступа к внутренним данным, предоставляющим данные отчетов об обработке запросов [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] и работоспособности сервера в ферме. Дополнительные сведения см. в разделе [ADOMD.Net client Library](#bkmk_adomd) и в статье [Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e).|  
   
 ##  <a name="bkmk_windows_service"></a> Службы Analysis Services для Windows  
  Приведенный в этом разделе скрипт проверяет экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Убедитесь в том, что служба **запущена**.  
@@ -167,7 +167,7 @@ Name                           Status ProcessAccountName Id
 SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a-2cec4b8b73ea  
 ```  
   
- ![Примечание](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Примечание")пул приложений также можно проверить на странице центра администрирования **управление приложениями службы**. Щелкните имя приложения службы, затем нажмите кнопку **Свойства** на ленте.  
+ ![Примечание](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Примечание")пул приложений также можно проверить на странице центра администрирования **управление приложениями служб**. Щелкните имя приложения службы, затем нажмите кнопку **Свойства** на ленте.  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] и прокси-серверы приложения службы Excel**  
   
@@ -350,7 +350,7 @@ MSOLAP.4   Oledb        Microsoft OLE DB Provider for OLAP Services 10.0
 MSOLAP.5   Oledb        Microsoft OLE DB Provider for OLAP Services 11.0  
 ```  
   
- Дополнительные сведения см. в статьях [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) и [Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+ Дополнительные сведения см. в статьях [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859) и [Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
 ##  <a name="bkmk_adomd"></a> Клиентская библиотека ADOMD.Net  
   
@@ -367,7 +367,7 @@ Microsoft SQL Server 2008 Analysis Services ADOMD.NET 10.1.2531.0  Microsoft Cor
 Microsoft SQL Server 2005 Analysis Services ADOMD.NET 9.00.1399.06 Microsoft Corporation  
 ```  
   
- Дополнительные сведения можно найти в статье [Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).  
+ Дополнительные сведения можно найти в статье [Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e).  
   
 ##  <a name="bkmk_health_collection"></a> Правила сбора данных об исправности  
  Убедитесь в том, что в поле **Состояние** указано значение «В сети», а в поле **Включен** — значение True.  

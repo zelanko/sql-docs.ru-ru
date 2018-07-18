@@ -1,5 +1,5 @@
 ---
-title: sys.sql_dependencies (Transact-SQL) | Документы Microsoft
+title: sys.sql_dependencies (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b458e22f8b0b803dcd359b870af6f14b85a95f48
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221386"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981395"
 ---
 # <a name="syssqldependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "33221386"
   Содержит по одной строке для каждой зависимости, связанной с упоминаемой сущностью с помощью выражения или инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], определяющих какой-либо другой ссылающийся объект.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) вместо него.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) вместо этого.  
 
   
 |Имя столбца|Тип данных|Описание|  
@@ -47,13 +47,13 @@ ms.locfileid: "33221386"
 |**object_id**|**int**|Идентификатор ссылающегося объекта.|  
 |**column_id**|**int**|Если ссылающийся идентификатор является столбцом, то идентификатор; в противном случае 0.|  
 |**referenced_major_id**|**int**|Идентификатор упоминаемой сущности, интерпретированный по значению класса следующим образом:<br /><br /> 0, 1 = идентификатор объекта или столбца;<br /><br /> 2 = идентификатор типа;<br /><br /> 3 = идентификатор коллекции XML-схем.|  
-|**referenced_minor_id**|**int**|Вспомогательный идентификатор упоминаемой сущности, интерпретированный по значению класса, как показано ниже.<br /><br /> Когда поле «class» равно:<br /><br /> 0, **referenced_minor_id** идентификатор столбца или не в столбце, он является 0.<br /><br /> 1, **referenced_minor_id** идентификатор столбца или не в столбце, он является 0.<br /><br /> В противном случае **referenced_minor_id** = 0.|  
-|**is_selected**|**бит**|Объект или столбец выбран.|  
-|**обновленном**|**бит**|Объект или столбец обновлен.|  
-|**is_select_all**|**бит**|Объект используется в предложении вида SELECT * (только уровень объектов).|  
+|**referenced_minor_id**|**int**|Вспомогательный идентификатор упоминаемой сущности, интерпретированный по значению класса, как показано ниже.<br /><br /> Когда поле «class» равно:<br /><br /> 0, **referenced_minor_id** идентификатор столбца; или если не один столбец, он равен 0.<br /><br /> 1, **referenced_minor_id** идентификатор столбца; или если не один столбец, он равен 0.<br /><br /> В противном случае **referenced_minor_id** = 0.|  
+|**is_selected**|**bit**|Объект или столбец выбран.|  
+|**обновленном**|**bit**|Объект или столбец обновлен.|  
+|**is_select_all**|**bit**|Объект используется в предложении вида SELECT * (только уровень объектов).|  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public** . Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: xp_sqlmaint (Transact-SQL) | Документы Microsoft
+title: xp_sqlmaint (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,15 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b5509b126a88ab2500fca0509789b61182af2ad2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979386"
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Вызовы **sqlmaint** строку, содержащую программу **sqlmaint**коммутаторов. **Sqlmaint** выполняет набор операций обслуживания с одной или нескольких баз данных.  
+  Вызовы **sqlmaint** утилиту строка, содержащая **sqlmaint**коммутаторов. **Sqlmaint** выполняет набор операций обслуживания с одной или нескольких баз данных.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -52,10 +53,10 @@ xp_sqlmaint 'switch_string'
  **-?** параметр не действует для **xp_sqlmaint**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет. Возвращает сообщение об ошибке, если **sqlmaint** программа завершается с ошибкой.  
+ Нет. Возвращает сообщение об ошибке, если **sqlmaint** программа завершается ошибкой.  
   
-## <a name="remarks"></a>Замечания  
- Если эта процедура вызывается пользователем, в систему с использованием проверки подлинности SQL Server, **- U "***login_id***»** и **-P"***пароль***»** коммутаторов добавляются к *switch_string* перед выполнением. Если пользователь вошел в систему с проверкой подлинности Windows, *switch_string* передаются без изменения **sqlmaint**.  
+## <a name="remarks"></a>Примечания  
+ Если эта процедура вызывается пользователем, в систему с использованием проверки подлинности SQL Server, **- U "***login_id***"** и **-P "***пароль***"** коммутаторов добавляются к *switch_string* перед выполнением. Если пользователь вошел в систему с проверкой подлинности Windows, *switch_string* передаются без изменения **sqlmaint**.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера **sysadmin** .  

@@ -1,5 +1,5 @@
 ---
-title: sp_attach_single_file_db (Transact-SQL) | Документы Microsoft
+title: sp_attach_single_file_db (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae97ca9a273b7467bd5ec6e35f68602ec1c7c101
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238804"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981876"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33238804"
   Присоединяет базу данных, которая имеет только один файл данных, к текущему серверу. **sp_attach_single_file_db** не может использоваться с несколькими файлами данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Мы рекомендуем использовать инструкцию CREATE DATABASE *имя_базы_данных* FOR ATTACH вместо него. Дополнительные сведения см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md). Не используйте эту процедуру на реплицированной базе данных.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Мы рекомендуем использовать инструкцию CREATE DATABASE *имя_базы_данных* FOR ATTACH вместо этого. Дополнительные сведения см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md). Не используйте эту процедуру на реплицированной базе данных.  
   
 > [!IMPORTANT]  
 >  Не рекомендуется подключать или восстанавливать базы данных, полученные из неизвестных или ненадежных источников. В этих базах данных может содержаться вредоносный код, вызывающий выполнение непредусмотренных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или появление ошибок из-за изменения схемы или физической структуры базы данных. Перед тем как использовать базу данных, полученную из неизвестного или ненадежного источника, выполните на тестовом сервере инструкцию [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) для этой базы данных, а также изучите исходный код в базе данных, например хранимые процедуры и другой пользовательский код.  
@@ -66,12 +66,12 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **sp_attach_single_file_db** только на базах данных, которые были предварительно отсоединены от сервера с помощью явной **sp_detach_db** операции или на скопированных базах данных.  
   
- **sp_attach_single_file_db** работает только на базах данных, которые имеют один файл журнала. Когда **sp_attach_single_file_db** присоединяет базу данных на сервере, он создает новый файл журнала. Если база данных находится в режиме «только для чтения», файл журнала будет создан в ее предыдущем местоположении.  
+ **sp_attach_single_file_db** применим только к базам данных, содержащим один файл журнала. Когда **sp_attach_single_file_db** присоединяет базу данных на сервере, он создает новый файл журнала. Если база данных находится в режиме «только для чтения», файл журнала будет создан в ее предыдущем местоположении.  
   
 > [!NOTE]  
 >  Невозможно отсоединить или присоединить моментальный снимок базы данных.  
@@ -79,7 +79,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  Не используйте эту процедуру на реплицированной базе данных.  
   
 ## <a name="permissions"></a>Разрешения  
- Сведения об управлении разрешениями при присоединении базы данных см. в разделе [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Сведения об управлении разрешениями при присоединении базы данных, см. в разделе [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример отсоединяет [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] и затем присоединяет один файл из [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] к текущему серверу.  

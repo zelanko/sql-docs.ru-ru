@@ -1,5 +1,5 @@
 ---
-title: Развертывание решений PowerPivot для SharePoint | Документы Microsoft
+title: Развертывание решений PowerPivot для SharePoint | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 51dffaf4569cf1aa0527ee0ba4d59379d4faab46
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 94f887aa48a63fbc84e941e6259839bff1327bd3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024201"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984766"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Развертывание решений PowerPivot в SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34024201"
  [О решениях PowerPivot](#intro)  
   
 ##  <a name="bkmk_classic"></a> Обязательное условие: убедитесь, что в веб-приложении используется классический режим проверки подлинности.  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint поддерживается только в тех веб-приложениях, которые используют классическую проверку подлинности Windows. Чтобы проверить, использует ли приложение классический режим, выполните следующий командлет PowerShell из **консоль управления SharePoint 2010**, заменив **http://\<имя верхнего уровня сайта >** с Имя сайта SharePoint:  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint поддерживается только в тех веб-приложениях, которые используют классическую проверку подлинности Windows. Чтобы проверить, использует ли приложение классический режим, выполните следующий командлет PowerShell из **консоль управления SharePoint 2010**, заменив **http://\<имя сайта верхнего уровня >** с Имя сайта SharePoint:  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
@@ -48,7 +48,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  Должно быть возвращено значение **false**. Если значение равно **true**, доступ к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] с помощью этого веб-приложения невозможен.  
   
 ##  <a name="bkmk_farm"></a> Шаг 1. Развертывание решения фермы  
- В этом разделе показано, как развертывать решения с помощью PowerShell, но для этой задачи можно использовать и средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Дополнительные сведения см. в разделе [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ В этом разделе показано, как развертывать решения с помощью PowerShell, но для этой задачи можно использовать и средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Дополнительные сведения см. в разделе [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Это действие выполняется один раз после установки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint.  
   
@@ -119,7 +119,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Нажмите **Отозвать решение**.  
   
- Если при развертывании сервера возникли проблемы, связанные с решением фермы, повторите развертывание, выбрав в средстве настройки **вариант** Восстановить [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Предпочтительнее выполнять операции восстановления с помощью PowerPivot Configuration Tool, так как они включают меньше шагов. Дополнительные сведения см. в разделе [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Если при развертывании сервера возникли проблемы, связанные с решением фермы, повторите развертывание, выбрав в средстве настройки **вариант** Восстановить [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Предпочтительнее выполнять операции восстановления с помощью PowerPivot Configuration Tool, так как они включают меньше шагов. Дополнительные сведения см. в разделе [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Если же необходимо повторное развертывание всех решений, обязательно выполните его в следующем порядке:  
   

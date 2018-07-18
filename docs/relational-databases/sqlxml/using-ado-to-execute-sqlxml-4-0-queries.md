@@ -1,5 +1,5 @@
 ---
-title: Использование ADO для выполнения SQLXML 4.0 запрашивает | Документы Microsoft
+title: Использование ADO для выполнения SQLXML 4.0 запросов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6ba44ff764f9adf8cc6b27f5ad298d8ebb5ad2c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972639"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031372"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Использование ADO для выполнения запросов SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,10 +123,10 @@ ms.locfileid: "32972639"
   
     2.  В панели управления откройте **Установка и удаление программ**  
   
-    3.  Убедитесь, что в списке установленных программ, **собственный клиент Microsoft SQL Server** появится в списке.  
+    3.  В списке установленных программ, убедитесь, что **Microsoft SQL Server Native Client** появится в списке.  
   
         > [!NOTE]  
-        >  Если необходимо установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client см. в разделе [Установка собственного клиента SQL Server](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
+        >  Если вам нужно установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, см. в разделе [Установка SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 2.  Проверьте, что на клиентском компьютере установлена версия MDAC 2.6 или более поздняя. Если нужно проверить сведения о версии MDAC, можно использовать средство проверки компонентов MDAC, которое можно бесплатно загрузить с веб-сайта Майкрософт (www.microsoft.com). Чтобы получить дополнительные сведения, выполните поиск с ключевыми словами «MDAC Component Checker» на веб-сайте корпорации Майкрософт.  
   

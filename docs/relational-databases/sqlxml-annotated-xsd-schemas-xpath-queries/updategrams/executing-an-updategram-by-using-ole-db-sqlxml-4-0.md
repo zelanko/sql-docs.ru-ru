@@ -1,5 +1,5 @@
 ---
-title: Выполнение диаграммы обновления с помощью OLE DB (SQLXML 4.0) | Документы Microsoft
+title: Выполнение диаграммы обновления с помощью OLE DB (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,26 +22,26 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1c80025b375cfa017d92a6ae1602c78ddc57d9f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973199"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032272"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Выполнение диаграммы обновления с помощью OLE DB (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Здесь представлен рабочий образец usingOLE DB выполняет диаграмму обновления.  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>Использование интерфейса ICommandStream для установки XML-команды  
- Интерфейс интерфейса ICommandStream OLE DB (версии 2.6 или более поздней) передает команду как объект потока, а не как строка.  
+ Интерфейс интерфейса ICommandStream OLE DB (версии 2.6 или более поздней) передает команду как объект потока, а не в виде строки.  
   
- Этот интерфейс позволяет представить команду в любой кодировке, приемлемой для синтаксического XML-анализатора. При вызове ICommand::Execute текст команды считывается из потока, непосредственно, и преобразование не требуется. Таким образом для выполнения команд XML, с помощью интерфейса ICommandStream интерфейс является более эффективным.  
+ Этот интерфейс позволяет представить команду в любой кодировке, приемлемой для синтаксического XML-анализатора. При вызове метода ICommand::Execute текст команды считывается из потока напрямую, и преобразование не требуется. Таким образом для выполнения команд XML, с помощью интерфейса ICommandStream интерфейс является более эффективным.  
   
 ### <a name="setting-xml-as-a-command-using-icommandstream-and-retrieving-the-results-as-an-xml-document"></a>Установка XML как команды с использованием интерфейса ICommandStream и получение результатов как XML-документа  
  ICommandStream, интерфейс может использоваться для установки XML-документов как команды, а результаты могут быть получены как XML-документа.  
   
 #### <a name="executing-templates-with-xpath-queries"></a>Выполнение шаблонов с запросами XPath  
- Следующий XML-шаблон, состоящий из запроса XPath указывается как команда с помощью интерфейса ICommandStream:  
+ Следующий XML-шаблон, состоящий из запроса XPath, указывается как команда с помощью интерфейса ICommandStream:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -65,7 +65,7 @@ ms.locfileid: "32973199"
 </Schema>  
 ```  
   
- Запрос возвращает все элементы работника. При использовании сопоставления по умолчанию  **\<Person.Contact >** элемент сопоставляется с таблицей Person.Contact в базе данных AdventureWorks.  
+ Запрос возвращает все элементы работника. С помощью сопоставления по умолчанию  **\<Person.Contact >** элемент сопоставляется с таблицей Person.Contact в базе данных AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Установка XML как команды и получение результата как XML-документа  
   
@@ -77,7 +77,7 @@ ms.locfileid: "32973199"
   
 4.  Используйте ICommandStream::SetCommandStream, чтобы указать поток команд. В этом примере выполняемый XML-шаблон считывается из файла. Эта возможность полезна, когда требуется выполнить большие XML-шаблоны.  
   
-5.  Выполните команду XML с помощью ICommand::Execute, запрашивающего идентификатор интерфейса IID_ISequentialStream.  
+5.  Выполните команду XML с помощью ICommand::Execute, запрашивает идентификатор интерфейса IID_ISequentialStream.  
   
 6.  Обработайте результат. В этом примере XML, считанный из потока, отображается на экране.  
   

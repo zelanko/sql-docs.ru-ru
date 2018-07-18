@@ -1,5 +1,5 @@
 ---
-title: Массовая загрузка вопросы безопасности (SQLXML 4.0) | Документы Microsoft
+title: Массовое вопросы безопасности загрузки (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dd240ede23b5ff4845531bebf24529bd0219c5ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969579"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971846"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Вопросы безопасности массовой загрузки (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Ниже приведены рекомендации по обеспечению безопасности при использовании массовой загрузки XML.  
   
--   При указании массовой загрузки, операция, которая должна быть выполнена как транзакция, используемая **TempFilePath** свойство, чтобы указать папку, в которой для создания временных файлов.  
+-   При указании Массовая загрузка выполняться как транзакция, используемая **TempFilePath** свойство, чтобы указать папку, в которой для создания временных файлов.  
   
      Процесс массовой загрузки создает эти временные файлы со следующими разрешениями.  
   
@@ -61,6 +61,6 @@ ms.locfileid: "32969579"
 -   Если пользователь задает для SQLXML файл журнала ошибок для записи ошибок, то каждый раз при выполнении массовой загрузки этот файл будет перезаписываться данными последнего процесса массовой загрузки.  
   
 ## <a name="see-also"></a>См. также  
- [Выполнение массовой загрузки XML-данных & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Выполнение массовой загрузки XML-данных &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

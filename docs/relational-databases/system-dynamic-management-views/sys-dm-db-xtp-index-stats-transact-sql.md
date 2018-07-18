@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_index_stats (Transact-SQL) | Документы Microsoft
+title: sys.dm_db_xtp_index_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,18 +25,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e59eeea065a0346a623d929562fc554ad842e416
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468510"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031462"
 ---
 # <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Содержит статистические данные, собранные со времени последнего перезапуска базы данных.  
   
- Дополнительные сведения см. в разделе [In-Memory OLTP &#40;оптимизация в памяти&#41; ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) и [правила с помощью индексов в таблицах, оптимизированных для памяти](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b).  
+ Дополнительные сведения см. в разделе [In-Memory OLTP &#40;оптимизация в памяти&#41; ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) и [Using Indexes on Memory-Optimized Tables, касающиеся](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b).  
 
   
 |Имя столбца|Тип данных|Описание|  

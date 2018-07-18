@@ -1,5 +1,5 @@
 ---
-title: Управление службами и сетевыми настройками с помощью поставщика WMI | Документы Microsoft
+title: Управление службами и сетевыми настройками с помощью поставщика WMI | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,23 +22,24 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 77eef3609246b60c7a49adcde9ee72498bb6f215
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031632"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Управление службами и сетевыми настройками с помощью поставщика WMI
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Поставщик WMI представляет собой опубликованный интерфейс, который используется [!INCLUDE[msCoName](../../../includes/msconame-md.md)] консоли управления (MMC) для управления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] служб и сетевых протоколов. В SMO <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> представляет поставщик инструментария WMI.  
+  Поставщик WMI представляет собой опубликованный интерфейс, который используется [!INCLUDE[msCoName](../../../includes/msconame-md.md)] консоли управления (MMC) для управления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] службами и сетевыми протоколами. В SMO <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> представляет объект поставщика WMI.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> Действует независимо от соединения, установленного <xref:Microsoft.SqlServer.Management.Smo.Server> объекта на экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]и использует учетные данные Windows для подключения к службе WMI.  
+ <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> Действует независимо от соединения, установленного <xref:Microsoft.SqlServer.Management.Smo.Server> объект в экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]и использует учетные данные Windows для подключения к службе WMI.  
   
 ## <a name="example"></a>Пример  
-Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [создать Visual C&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
- Для программ, использующих [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик WMI, необходимо включить **Imports** инструкции для определения пространства имен WMI. Вставьте инструкцию после других инструкций **Imports** и перед любыми декларациями в приложении.  
+ Для программ, использующих [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик инструментария WMI, необходимо включить **Imports** инструкцию для определения пространства имен WMI. Вставьте инструкцию после других инструкций **Imports** и перед любыми декларациями в приложении.  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
