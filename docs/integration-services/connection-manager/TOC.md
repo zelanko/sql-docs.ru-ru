@@ -5,6 +5,7 @@
 # [Диспетчер подключений служб Analysis Services](analysis-services-connection-manager.md)  
 ## [Справочник по пользовательскому интерфейсу: диалоговое окно "Добавление диспетчера подключений служб Analysis Services"](add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
 # [Диспетчер подключений Azure Data Lake Store](azure-data-lake-store-connection-manager.md)  
+# [Диспетчер подключений Azure Data Lake Analytics](azure-data-lake-analytics-connection-manager.md) 
 # [Диспетчер подключений Azure HDInsight](azure-hdinsight-connection-manager.md)  
 # [Диспетчер подключений Azure Resource Manager](azure-resource-manager-connection-manager.md)  
 # [Диспетчер подключений службы хранилища Azure](azure-storage-connection-manager.md)  

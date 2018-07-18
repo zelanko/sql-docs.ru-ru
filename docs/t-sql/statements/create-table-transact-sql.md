@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -48,15 +47,15 @@ helpviewer_keywords:
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 caps.latest.revision: 256
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3768086c0c4e959586eb1ab8620dbdfda4cabe9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1db17ce1dcf7cbc0c14c3ef1cf0edeaf3441e539
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075451"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786015"
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -260,6 +259,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
   | FILLFACTOR = fillfactor   
   | IGNORE_DUP_KEY = { ON | OFF }   
   | STATISTICS_NORECOMPUTE = { ON | OFF }   
+  | STATISTICS_INCREMENTAL = { ON | OFF }  
   | ALLOW_ROW_LOCKS = { ON | OFF}   
   | ALLOW_PAGE_LOCKS ={ ON | OFF}   
   | COMPRESSION_DELAY= {0 | delay [Minutes]}  
@@ -430,7 +430,7 @@ column_name <data_type>
   
 -   Инструкция [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) преобразует кластеризованный индекс в кучу. В этом случае можно указать другую файловую группу FILESTREAM, схему секционирования или значение **"** default **"**.  
   
- Для файловой группы в предложении `FILESTREAM_ON <filegroup>` либо для каждой файловой группы FILESTREAM, упомянутой в схеме секционирования, должен быть определен файл. Этот файл должен быть определен с помощью инструкции[CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) или [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md), иначе возникает ошибка.  
+ Для файловой группы в предложении `FILESTREAM_ON <filegroup>` либо для каждой файловой группы FILESTREAM, упомянутой в схеме секционирования, должен быть определен файл. Этот файл должен быть определен с помощью инструкции[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) или [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md), иначе возникает ошибка.  
   
  Дополнительные сведения о FILESTREAM см. в разделе [Данные большого двоичного объекта (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
@@ -550,7 +550,7 @@ column_name <data_type>
 
  Указывает размещение данных FILESTREAM для таблицы при создании кластеризованного индекса. Предложение FILESTREAM_ON позволяет перемещать данные FILESTREAM в другую файловую группу FILESTREAM или схему секционирования.  
   
- Аргумент *filestream_filegroup_name* указывает имя файловой группы FILESTREAM. В файловой группе должен быть определен один файл для файловой группы с помощью инструкции [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) или [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md), иначе возникает ошибка.  
+ Аргумент *filestream_filegroup_name* указывает имя файловой группы FILESTREAM. В файловой группе должен быть определен один файл для файловой группы с помощью инструкции [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) или [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md), иначе возникает ошибка.  
   
  Если таблица секционирована, должно быть включено предложение FILESTREAM_ON и указана схема секционирования файловых групп FILESTREAM, использующая те же функции и столбцы секционирования, что и схема секционирования для таблицы. В противном случае произойдет ошибка.  
   

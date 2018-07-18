@@ -3,8 +3,6 @@ title: CREATE DIAGNOSTICS SESSION (Transact-SQL) | Документы Майк�
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: pdw
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -13,17 +11,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
-caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 683b26f1b5896111a8f2602431eab548e043b9aa
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: aa24f75efeb5453573d54d0ec3a51d98414933e3
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33701842"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782325"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -83,7 +80,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *property_name*  
  Свойство, связанное с событием.  Имена свойств могут быть частью тега записи или использоваться как часть условия фильтрации.  
   
-|Имя свойства|Description|  
+|Имя свойства|Описание|  
 |-------------------|-----------------|  
 |UserName|Имя пользователя (имя для входа).|  
 |SessionId|Идентификатор сеанса.|  

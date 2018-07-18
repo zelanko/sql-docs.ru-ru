@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -12,15 +11,16 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ed7e6aeb0630a20ee39d512fc17dfe24040737f2
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 0fb3c753e4bde29eb9b5cbb5f287fc18d03a117a
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782435"
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>RESTORE DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -131,7 +131,7 @@ RESTORE HEADERONLY
   
 Например, при восстановлении базы данных размером 60 ГБ с устройства с двумя узлами (30 ГБ на каждом узле) на устройство с шестью узлами [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] создает базу данных размером 180 ГБ (6 узлов по 30 ГБ на каждом узле) на устройстве с шестью узлами. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] изначально восстанавливает базу данных на 2 узла, чтобы она соответствовала исходной конфигурации, и затем перераспределяет данные на все 6 узлов.  
   
- После распределения каждый вычислительный узел будет содержать меньше фактических данных и больше свободного пространства, чем каждый исходный узел на исходном устройстве меньшего размера. Используйте дополнительное место для добавления дополнительных данных в базу данных. Если размер восстановленной базы данных больше, чем необходимо, вы можете сжать файлы базы данных с помощью инструкции [ALTER DATABASE (Parallel Data Warehouse)](../../t-sql/statements/alter-database-parallel-data-warehouse.md).  
+ После распределения каждый вычислительный узел будет содержать меньше фактических данных и больше свободного пространства, чем каждый исходный узел на исходном устройстве меньшего размера. Используйте дополнительное место для добавления дополнительных данных в базу данных. Если размер восстановленной базы данных больше, чем необходимо, вы можете сжать файлы базы данных с помощью инструкции [ALTER DATABASE (Parallel Data Warehouse)](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw).  
   
 ## <a name="limitations-and-restrictions"></a>Ограничения  
  В этих ограничениях исходное устройство — это устройство, с которого была создана резервная копия базы данных, а целевое устройство — это устройство, на которое будет восстановлена база данных.  
