@@ -1,5 +1,5 @@
 ---
-title: sys.resource_usage (база данных SQL Azure) | Документы Microsoft
+title: sys.resource_usage (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -28,10 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: cc8f9c68bd6074439203c384c99b407022f90997
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985056"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/04/2018
 >  -   Если сбор данных включен, представление DMV возвращает текущие данные в том виде, в каком они были собраны.  
 > -   Если сбор данных включен, представление DMV возвращает данные предыстории, которые могут устареть.  
   
- Предоставляет почасовые сводные данные по использованию ресурсов для пользовательских баз данных на текущем сервере. Данные предыстории хранятся в течение 90 дней.  
+ Предоставляет почасовые сводные данные по использованию ресурсов для пользовательских баз данных на текущем сервере. Исторические данные будут храниться в течение 90 дней.  
   
  Для каждой пользовательской базы данных существует одна строка для каждого часа в непрерывном формате. Даже если база данных не использовалась в течение этого часа, для него существует соответствующая строка, а значение usage_in_seconds для этой базы данных будет равно 0. Сведения об использовании хранилища и номере SKU добавляются для часа соответствующим образом.  
   
@@ -53,8 +54,8 @@ ms.lasthandoff: 05/04/2018
 |-------------|---------------|-----------------|  
 |time|**datetime**|Время (UTC) в почасовых приращениях.|  
 |database_name|**nvarchar**|Имя пользовательской базы данных.|  
-|sku|**nvarchar**|Имя SKU. Допустимы следующие значения:<br /><br /> Web Edition<br /><br /> Business Edition<br /><br /> Basic<br /><br /> Standard Edition<br /><br /> Premium|  
-|usage_in_seconds|**int**|Время ЦП, использованное в течение часа.<br /><br /> Примечание: Этот столбец является устаревшим для V11 и не относится к версии 12. **Значение всегда равно 0.**|  
+|sku|**nvarchar**|Имя SKU. Допустимы следующие значения:<br /><br /> Web Edition<br /><br /> Business Edition<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
+|usage_in_seconds|**int**|Время ЦП, использованное в течение часа.<br /><br /> Примечание: Этот столбец является устаревшим для версии 11 и не относится к версии 12. **Значение всегда имеет значение 0.**|  
 |storage_in_megabytes|**decimal**|Максимальный объем хранилища в течение часа, включающий данные базы данных, индексы, хранимые процедуры и метаданные.|  
   
 ## <a name="permissions"></a>Разрешения  

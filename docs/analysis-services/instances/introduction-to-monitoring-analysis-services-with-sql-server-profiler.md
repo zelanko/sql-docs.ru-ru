@@ -1,5 +1,5 @@
 ---
-title: Введение в мониторинг служб Analysis Services в SQL Server Profiler | Документы Microsoft
+title: Введение в мониторинг служб Analysis Services с SQL Server Profiler | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7b3c2dcec84956cd83c09a6c9be1d70975df67cc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040852"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>Введение в мониторинг служб Analysis Services при помощи приложения SQL Server Profiler
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -54,6 +55,6 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="see-also"></a>См. также  
  [События трассировки служб Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)   
- [Создание трассировки приложения Profiler для воспроизведения & #40; Службы Analysis Services & #41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
+ [Создание трассировки приложения Profiler для воспроизведения (службы Analysis Services)](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
   
   

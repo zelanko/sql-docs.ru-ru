@@ -1,5 +1,5 @@
 ---
-title: С помощью диаграммы обновления в образце приложения ASP (SQLXML 4.0) | Документы Microsoft
+title: С помощью диаграммы обновления в образце приложения ASP (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 3e6ab461bc1916394b53e5b8c0017bbef71eabe7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970609"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049919"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Использование диаграммы обновления в образце приложения ASP (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

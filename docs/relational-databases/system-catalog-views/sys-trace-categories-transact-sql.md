@@ -1,5 +1,5 @@
 ---
-title: sys.trace_categories (Transact-SQL) | Документы Microsoft
+title: sys.trace_categories (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -25,17 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 85c5ad8a9cd6e901151797e763913713f2a228b7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993766"
 ---
 # <a name="systracecategories-transact-sql"></a>sys.trace_categories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Похожие классы событий группируются по категориям. Каждая строка в **sys.trace_categories** представление каталога идентифицирует категорию, которая является уникальным в пределах сервера. Эти категории не изменяются для данной версии [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
- Полный список поддерживаемых событий трассировки см. в разделе [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Полный список поддерживаемых событий трассировки, см. в разделе [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
 > **ВАЖНО!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте представления каталога расширенных событий.  
   

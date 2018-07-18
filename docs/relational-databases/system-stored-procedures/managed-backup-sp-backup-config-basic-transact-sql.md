@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_config_basic (Transact-SQL) | Документы Microsoft
+title: managed_backup.sp_backup_config_basic (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -26,19 +26,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f8f6a2bb437982bdc40c70b9e53c6c864dbc5b4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240064"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984836"
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Настраивает [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] базовые параметры для конкретной базы данных или экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Настраивает [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] основные параметры для конкретной базы данных или экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Эта процедура может вызываться для для создания стандартных конфигураций управляемого резервного копирования. Однако если планируется добавлять расширенные функции или настраиваемое расписание, сначала выполните эти настройки, с помощью [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) и [managed_backup.sp_ backup_config_schedule &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) перед включением управляемого резервного копирования с помощью этой процедуры.  
+>  Эта процедура может вызываться для для создания базовой управляемого резервного копирования конфигурации. Тем не менее, если вы планируете добавить возможности или настраиваемое расписание, сначала настроить эти параметры, с помощью [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) и [managed_backup.sp_ backup_config_schedule &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) перед включением управляемое резервное копирование с помощью этой процедуры.  
    
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,13 +52,13 @@ EXEC managed_backup.sp_backup_config_basic
   
 ##  <a name="Arguments"></a> Аргументы  
  @enable_backup  
- Включает или выключает [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для указанной базы данных. @enable_backup — **Бит**. Обязательный параметр при настройке [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для первого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При изменении существующего [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] конфигурации, этот параметр является необязательным. В этом случае все значения конфигурации не указан сохраняют свои существующие значения.  
+ Включает или выключает [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для указанной базы данных. @enable_backup — **Бит**. Обязательный параметр при настройке [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для первого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При изменении существующего [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] конфигурации, этот параметр является необязательным. В этом случае существующие значения сохраняются любые параметры конфигурации не указан.  
   
  @database_name  
- Имя базы данных для включения управляемого резервного копирования в определенной базе данных.  
+ Имя базы данных для включения управляемого резервного копирования на определенной базе данных.  
   
  @container_url  
- URL-адрес, указывающий расположение резервной копии. Когда @credential_name имеет значение NULL, этот URL-адрес является URL-адреса (SAS) общего доступа в контейнер больших двоичных объектов в хранилище Azure и резервные копии использовать новый резервного копирования на блок больших двоичных объектов. Дополнительные сведения см. в статье [основные сведения о SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Когда @credential_name указан, то это URL-адрес учетной записи хранилища, и резервные копии использовать устаревшие резервного копирования на странице большого двоичного объекта.  
+ URL-адрес, указывающий местоположение резервной копии. Когда @credential_name имеет значение NULL, этот URL-адрес является URL-адрес общего доступа URL-адреса (SAS) в контейнер больших двоичных объектов в службе хранилища Azure, и резервные копии использовать новый возможность резервного копирования на блок больших двоичных объектов. Дополнительные сведения см. в статье [основные сведения о SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Когда @credential_name указан, то это URL-адрес учетной записи хранения, а резервные копии использовать устаревшие возможность резервного копирования на странице большого двоичного объекта.  
   
 > [!NOTE]  
 >  Только URL-адрес SAS поддерживается для этого параметра в настоящее время.  
@@ -67,10 +67,10 @@ EXEC managed_backup.sp_backup_config_basic
  Срок хранения файлов резервной копии в днях. @storage_url — Целое число. Это обязательный параметр при настройке [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] в первый раз на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При изменении [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] конфигурации, этот параметр является необязательным. Если аргумент не указан, сохраняются существующие значения конфигурации.  
   
  @credential_name  
- Имя объекта учетных данных SQL, который используется для проверки подлинности учетной записи хранения Windows Azure. @credentail_name — **SYSNAME**. Если указано, страничный большой двоичный объект хранится резервная копия. Если этот параметр имеет значение NULL, резервной копии будет храниться как большой двоичный объект блока. Резервное копирование на страничный большой двоичный объект является устаревшими, поэтому лучше использовать новые возможности резервного копирования блока больших двоичных объектов. При использовании для изменения конфигурации [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] этот параметр не обязателен. Если не указан, сохраняются существующие значения конфигурации.  
+ Имя объекта учетных данных SQL, который используется для проверки подлинности учетной записи хранения Windows Azure. @credentail_name — **SYSNAME**. При указании страничный большой двоичный объект хранится резервная копия. Если этот параметр имеет значение NULL, резервная копия будет храниться как большой двоичный объект блока. Резервное копирование на страничный большой двоичный объект является устаревшими, поэтому рекомендуется использовать новые функции резервного копирования большого двоичного объекта блока. При использовании для изменения конфигурации [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] этот параметр не обязателен. Если не указан, сохраняются существующие значения конфигурации.  
   
 > [!WARNING]  
->  **@credential_name** Параметр в настоящее время не поддерживается. Поддерживается только резервное копирование в блочные BLOB-объектов, требующий этот параметр, чтобы иметь значение NULL.  
+>  **@credential_name** Параметр в настоящее время не поддерживается. Поддерживается только резервное копирование в блочные BLOB-объектов, на которой требуется этот параметр, чтобы иметь значение NULL.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -78,10 +78,10 @@ EXEC managed_backup.sp_backup_config_basic
 ## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- Требуется членство в **db_backupoperator** роли базы данных с **ALTER ANY CREDENTIAL** разрешения, и **EXECUTE** разрешения на **sp_delete_ backuphistory** хранимой процедуры.  
+ Требуется членство в **db_backupoperator** роли базы данных с помощью **ALTER ANY CREDENTIAL** разрешения, и **EXECUTE** разрешения на **sp_delete_ backuphistory** хранимой процедуры.  
   
 ## <a name="examples"></a>Примеры  
- Контейнер учетной записи хранилища и URL-адреса SAS можно создать с помощью последних команд Azure PowerShell. В следующем примере создается новый контейнер mycontainer, mystorageaccount учетной записи хранилища и затем получает URL-адрес SAS для него с полными правами.  
+ Можно создать контейнер учетной записи хранения и URL-адрес SAS, используя последнюю версию команд Azure PowerShell. В следующем примере создается новый контейнер, mycontainer, в учетную запись хранения mystorageaccount и затем получает URL-адрес SAS для него с полными правами.  
   
 ```powershell  
 $context = New-AzureStorageContext -StorageAccountName mystorageaccount -StorageAccountKey (Get-AzureStorageKey -StorageAccountName mystorageaccount).Primary  
@@ -89,7 +89,7 @@ New-AzureStorageContainer -Name mycontainer -Context $context
 New-AzureStorageContainerSASToken -Name mycontainer -Permission rwdl -FullUri -Context $context  
 ```  
   
- В следующем примере включается [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для экземпляра SQL Server, в котором выполняется, задает политику хранения 30 дней, задает назначение в контейнер с именем «mycontainer» в учетной записи хранилища с именем «mystorageaccount».  
+ В следующем примере включается [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для экземпляра SQL Server, в котором выполняется, задает политику хранения до 30 дней, задает в качестве назначения в контейнер с именем «mycontainer» в учетной записи хранения с именем «mystorageaccount».  
   
 ```Transact-SQL 
 Use msdb;  

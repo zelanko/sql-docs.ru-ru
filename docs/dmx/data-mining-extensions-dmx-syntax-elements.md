@@ -1,5 +1,5 @@
 ---
-title: Элементы синтаксиса расширений интеллектуального анализа данных | Документы Microsoft
+title: Элементы синтаксиса расширений интеллектуального анализа данных | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a745449428a0a348dc60a5b47304612bb889556c
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842387"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989926"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Элементы синтаксиса расширений интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  В [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], можно использовать различные элементы синтаксиса для определения инструкции расширений интеллектуального анализа данных (DMX), которые можно использовать для создания, управления и работы с моделями интеллектуального анализа данных. Эти элементы синтаксиса описаны в следующих разделах.  
+  В [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], можно использовать различные элементы синтаксиса для определения инструкций расширений интеллектуального анализа данных (DMX), которые можно использовать для создания, управления и работы с моделями интеллектуального анализа данных. Эти элементы синтаксиса описаны в следующих разделах.  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Идентификаторы &#40;расширений интеллектуального анализа данных&#41;](../dmx/identifiers-dmx.md)  
@@ -46,7 +46,7 @@ ms.locfileid: "34842387"
  [Типы содержимого &#40;расширений интеллектуального анализа данных&#41;](../dmx/content-types-dmx.md)  
  Позволяет определить содержимое столбца структуры интеллектуального анализа данных.  
   
- [Распределения &#40;расширений интеллектуального анализа данных&#41;](../dmx/distributions-dmx.md)  
+ [Дистрибутивы &#40;расширений интеллектуального анализа данных&#41;](../dmx/distributions-dmx.md)  
  Позволяет определить распределения данных внутри столбца.  
   
  [Использование &#40;расширений интеллектуального анализа данных&#41;](../dmx/usage-dmx.md)  
@@ -57,12 +57,12 @@ ms.locfileid: "34842387"
   
 ## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; ссылки](../dmx/data-mining-extensions-dmx-reference.md)   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; функции ссылки](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; синтаксические обозначения](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Структура и использовании прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Структура и методы использования прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Общие сведения об инструкции SELECT в расширении интеллектуального анализа данных](../dmx/understanding-the-dmx-select-statement.md)  
   
   

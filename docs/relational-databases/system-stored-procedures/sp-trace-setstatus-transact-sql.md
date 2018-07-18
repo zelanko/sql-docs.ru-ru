@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_trace_setstatus (Transact-SQL) | Документы Microsoft
+title: sp_trace_setstatus (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c8e3a2234d4213b78cbc828e71c602602e7a2481
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038322"
 ---
 # <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
 ## <a name="arguments"></a>Аргументы  
  [  **@traceid=** ] *trace_id*  
- Идентификатор изменяемой трассировки. *trace_id* — **int**, не имеет значения по умолчанию. Пользователь применяет это *trace_id* значение для определения, изменения и управления трассировкой. Сведения о получении *trace_id*, в разделе [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
+ Идентификатор изменяемой трассировки. *trace_id* — **int**, не имеет значения по умолчанию. Пользователь применяет это *trace_id* значение для определения, изменения и управления трассировкой. Сведения о получении *trace_id*, см. в разделе [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
  [  **@status=** ] *состояния*  
  Указывает действие с трассировкой для реализации. *состояние* — **int**, не имеет значения по умолчанию.  
@@ -74,10 +75,10 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 |**9**|Указан недопустимый дескриптор трассировки.|  
 |**13**|Нехватка памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
   
- Если трассировка уже находится в указанном состоянии, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вернет **0**.  
+ Если трассировка уже находится в указанном состоянии, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вернет **0**.  
   
-## <a name="remarks"></a>Замечания  
- Параметры всех трассировки SQL хранимые процедуры (**sp_trace_xx**) жестко типизированы. Если эти аргументы указываются с неправильными типами данных входных параметров, как указано в описании их аргументов, хранимая процедура возвратит ошибку.  
+## <a name="remarks"></a>Примечания  
+ Аргументы всех SQL-трассировки хранимых процедур (**sp_trace_xx**) жестко типизированы. Если эти аргументы указываются с неправильными типами данных входных параметров, как указано в описании их аргументов, хранимая процедура возвратит ошибку.  
   
  Пример использования хранимых процедур трассировки см. в разделе [Создание трассировки (Transact-SQL)](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_external_work (Transact-SQL) | Документы Microsoft
+title: sys.dm_exec_external_work (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,34 +27,34 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: a8500beb0be1e231e2beae4cd56e719ad8951c72
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464300"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048852"
 ---
 # <a name="sysdmexecexternalwork-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Возвращает сведения о рабочей нагрузки на рабочий, на каждом вычислительном узле.  
+  Возвращает сведения о каждой рабочей роли, рабочей нагрузки на каждом вычислительном узле.  
   
- Sys.dm_exec_external_work запроса для определения работы зацикливается для взаимодействия с внешнего источника данных (например, Hadoop или внешние SQL Server).  
+ Sys.dm_exec_external_work запроса для определения работы зацикливается для взаимодействия с внешним источником данных (например, Hadoop или внешних SQL Server).  
   
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|Уникальный идентификатор связанного запроса PolyBase.|В разделе *request_ID* в [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|step_index|**int**|Запрос выполняет этот рабочий процесс.|В разделе *step_index* в [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|dms_step_index|**int**|Шаг в плане DMS, выполняемый этим исполнителем.|В разделе [sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
-|compute_node_id|**int**|На узле рабочий процесс выполняется.|В разделе [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|execution_id|**nvarchar(32)**|Уникальный идентификатор для связанного запроса PolyBase.|См. в разделе *request_ID* в [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|step_index|**int**|Запрос выполняет этим исполнителем.|См. в разделе *step_index* в [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|dms_step_index|**int**|Шаг в плане DMS, который выполняется этим исполнителем.|См. в разделе [sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
+|compute_node_id|**int**|На узле рабочей роли выполняется.|См. в разделе [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |Тип|**nvarchar(60)**|Тип внешней работы.|«Файл разбиение»|  
 |work_id|**int**|Идентификатор фактического разбиения.|Больше или равно 0.|  
-|input_name|**nvarchar(4000)**|Имя входа для чтения|Имя файла, при использовании Hadoop.|  
+|input_name|**nvarchar(4000)**|Имя входных данных для чтения|Имя файла, при использовании Hadoop.|  
 |read_location|**bigint**|Смещение или чтения расположение.|Смещение файла для чтения.|  
-|bytes_processed|**bigint**|Общее количество байт, обработанных этим исполнителем.|Больше или равно 0.|  
-|length|**bigint**|Длина разбиение или блоке HDFS в случае Hadoop|Определяемые пользователем. Значение по умолчанию — 64 МБ|  
-|status|**nvarchar(32)**|Состояние рабочего процесса.|Ожидающие обработки, выполнить, не удалось, прервана|  
+|bytes_processed|**bigint**|Общее число байтов, обработанных этим исполнителем.|Больше или равно 0.|  
+|length|**bigint**|Длина разбиения или блока HDFS в случае Hadoop|Определяемые пользователем. Значение по умолчанию — 64 МБ|  
+|status|**nvarchar(32)**|Состояние рабочего процесса|Ожидающие обработки, сделать, не удалось, прервана|  
 |start_time|**datetime**|Начало работы||  
-|end_time|**datetime**|Завершения работы||  
+|end_time|**datetime**|Конец работы||  
 |total_elapsed_time|**int**|Общее время в миллисекундах||  
   
 ## <a name="see-also"></a>См. также  

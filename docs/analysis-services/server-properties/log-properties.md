@@ -9,11 +9,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238903"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999346"
 ---
 # <a name="log-properties"></a>Свойства журнала
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -21,7 +21,7 @@ ms.locfileid: "35238903"
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера журналов, список которых приведен в следующих таблицах. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
 
 > [!NOTE]
-> Не все свойства применимы к службам Analysis Services Azure.
+> Не все свойства применимы к службам Azure Analysis Services.
   
 ## <a name="general"></a>Общие  
  **Файл**  
@@ -36,7 +36,7 @@ ms.locfileid: "35238903"
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="error-log"></a>Журнал ошибок  
- Эти свойства можно задать на уровне экземпляра сервера, чтобы изменить значения по умолчанию для конфигурации обработки ошибок, которые применяются в других средствах и конструкторах. В разделе [конфигурации ошибок для кубов, секций и обработка измерения &#40;службы SSAS — многомерные&#41; ](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) и <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> для получения дополнительной информации.  
+ Эти свойства можно задать на уровне экземпляра сервера, чтобы изменить значения по умолчанию для конфигурации обработки ошибок, которые применяются в других средствах и конструкторах. См. в разделе [конфигурации ошибок для кубов, секций и обработка измерения &#40;службы SSAS — многомерные&#41; ](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) и <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> Дополнительные сведения.  
   
  **ErrorLog\ErrorLogFileName**  
  Свойство, используемое в качестве значения по умолчанию во время выполнения операции обработки сервером.  

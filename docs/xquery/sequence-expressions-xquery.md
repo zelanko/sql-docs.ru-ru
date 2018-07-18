@@ -1,5 +1,5 @@
 ---
-title: Последовательность выражения (XQuery) | Документы Microsoft
+title: Последовательность выражения (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 34c26b529aeaee5e9f80ecc0a1a07d3cb8cedbf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048742"
 ---
 # <a name="sequence-expressions-xquery"></a>Выражения последовательности (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +72,7 @@ select @x.query('(1, 2, <a/>, <b/>)')
 go  
 ```  
   
-### <a name="example-b"></a>Пример Б  
+### <a name="example-b"></a>Пример B-адреса  
  Следующий запрос конструирует последовательность из атомарных значений, соединяя последовательности разной длины в единую последовательность.  
   
 ```  
@@ -104,7 +105,7 @@ go
 ```  
   
 ### <a name="example-c"></a>Пример В  
- Следующий запрос адресован столбцу AdditionalContactInfo типа **xml** типа в таблице Contact. В этом столбце хранятся дополнительные контактные данные: адреса, номера телефонов и пейджеров. \<TelephoneNumber >, \<страничного навигатора >, и другие узлы могут находиться в любом месте документа. Запрос конструирует последовательность, которая содержит все \<telephoneNumber > дочерние элементы узла контекста, за которым следует \<страничного навигатора > дочерних элементов. Обратите внимание на применение оператора последовательности в возвращаемом выражении `($a//act:telephoneNumber, $a//act:pager)`.  
+ Следующий запрос адресован столбцу AdditionalContactInfo типа **xml** типа в таблице Contact. В этом столбце хранятся дополнительные контактные данные: адреса, номера телефонов и пейджеров. \<TelephoneNumber >, \<пейджер >, и другие узлы могут находиться в любом месте документа. Запрос конструирует последовательность, которая содержит все \<telephoneNumber > дочерние элементы узла контекста, за которым следует \<пейджер > дочерних элементов. Обратите внимание на применение оператора последовательности в возвращаемом выражении `($a//act:telephoneNumber, $a//act:pager)`.  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  

@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_delete_maintenance_plan_db (Transact-SQL) | Документы Microsoft
+title: sp_delete_maintenance_plan_db (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f21146a8fa893a40f3c613fce4105a19fc13dd6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247167"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049552"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>Хранимая процедура sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,15 +62,15 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **Хранимая процедура sp_delete_maintenance_plan_db** должна запускаться из **msdb** базы данных.  
+## <a name="remarks"></a>Примечания  
+ **sp_delete_maintenance_plan_db** должна запускаться из **msdb** базы данных.  
   
- **Sp_delete_maintenance_plan_db** хранимая процедура удаляет взаимосвязь между планом обслуживания и указанной базы данных, удаляет и не разрушает базу данных.  
+ **Sp_delete_maintenance_plan_db** хранимая процедура удаляет взаимосвязь плана обслуживания и указанной базой данных; он не удаляет и не разрушает базу данных.  
   
  Когда **sp_delete_maintenance_plan_db** Удаляет последнюю базу данных из плана обслуживания, эта хранимая процедура также удаляет план обслуживания.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_delete_maintenance_plan_db**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_delete_maintenance_plan_db**.  
   
 ## <a name="examples"></a>Примеры  
  Удаление плана обслуживания в **AdventureWorks2012** базы данных, добавленного ранее при помощи **sp_add_maintenance_plan_db**.  

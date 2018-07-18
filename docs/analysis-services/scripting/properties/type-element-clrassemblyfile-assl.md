@@ -1,5 +1,5 @@
 ---
-title: Введите элемент (ClrAssemblyFile) (ASSL) | Документы Microsoft
+title: Введите элемент (ClrAssemblyFile) (ASSL) | Документация Майкрософт
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,14 +10,15 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a4cf5d0a1ef4fd627dd10d0b73ca1520980484fe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990306"
 ---
 # <a name="type-element-clrassemblyfile-assl"></a>Элемент Type (ClrAssemblyFile) (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  Задает тип файла одного из файлов, принадлежащих к [!INCLUDE[msCoName](../../../includes/msconame-md.md)] сборки .NET Framework.  
+  Указывает тип файла одного из файлов, принадлежащих к [!INCLUDE[msCoName](../../../includes/msconame-md.md)] сборки .NET Framework.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,16 +55,16 @@ ms.lasthandoff: 05/10/2018
 |*Зависимые*|Указанный файл является зависимым в сборке.|  
 |*Отладка*|Указанный файл содержит сведения для отладки.|  
   
- Перечисление, соответствующее разрешенным значениям для **тип** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ClrAssemblyFileType>.  
+ Перечисление, соответствующее допустимым значениям для **тип** в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.ClrAssemblyFileType>.  
   
- Элемент, соответствующий родителю параметра **тип** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
+ Элемент, соответствующий родителю параметра **тип** в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>См. также  
- [Элемент файла & #40; ASSL & #41;](../../../analysis-services/scripting/objects/file-element-assl.md)   
+ [Файл элемента &#40;ASSL&#41;](../../../analysis-services/scripting/objects/file-element-assl.md)   
  [Файлы элемент &#40;ASSL&#41;](../../../analysis-services/scripting/collections/files-element-assl.md)   
  [Тип данных ClrAssembly &#40;ASSL&#41;](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)   
- [Элемент Assembly & #40; ASSL & #41;](../../../analysis-services/scripting/objects/assembly-element-assl.md)   
+ [Элемент Assembly &#40;ASSL&#41;](../../../analysis-services/scripting/objects/assembly-element-assl.md)   
  [Элемент Assemblies &#40;ASSL&#41;](../../../analysis-services/scripting/collections/assemblies-element-assl.md)   
- [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Свойства &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

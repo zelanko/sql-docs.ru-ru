@@ -1,5 +1,5 @@
 ---
-title: sp_delete_firewall_rule (база данных SQL Azure) | Документы Microsoft
+title: sp_delete_firewall_rule (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: ''
@@ -27,11 +27,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 5d5f53e8bd0062ca5ecf46c4462e326db5cdc243
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243837"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049478"
 ---
 # <a name="spdeletefirewallrule-azure-sql-database"></a>sp_delete_firewall_rule (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -50,16 +50,16 @@ sp_delete_firewall_rule [@name =] 'name'
  Аргумент хранимой процедуры:  
   
  [@name =] '*имя*"  
- Имя параметра брандмауэра уровня сервера, который будет удален. *имя* — **nvarchar (128)** без значения по умолчанию.  
+ Имя параметра брандмауэра уровня сервера, который будет удален. *имя* — **nvarchar (128)** не имеет значения по умолчанию.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] данные имени входа необходимы для проверки подлинности подключения, и правила брандмауэра на уровне сервера временно кэшируются в каждой базе данных. Этот кэш периодически обновляется. Чтобы принудительно обновить кэш проверки подлинности и убедиться в том, что база данных имеет последнюю версию таблицы имен входа, выполните инструкцию [DBCC FLUSHAUTHCACHE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Только имя входа субъекта серверного уровня, созданное в процессе провизионирования, может удалить правила брандмауэра на уровне сервера. Пользователь должен быть подключен к базе данных master для выполнения sp_delete_firewall_rule.  
   
 ## <a name="example"></a>Пример  
- Следующий пример удаляет параметр брандмауэра уровня сервера с именем «Example setting 1». Выполните инструкцию в виртуальной базы данных master.  
+ Следующий пример удаляет параметр брандмауэра уровня сервера с именем «Example setting 1». Выполните инструкцию в виртуальной базе данных master.  
   
 ```   
 EXEC sp_delete_firewall_rule N'Example setting 1';   
@@ -67,7 +67,7 @@ EXEC sp_delete_firewall_rule N'Example setting 1';
   
 ## <a name="see-also"></a>См. также  
  [Брандмауэр базы данных Azure SQL](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [Как: Настройка параметров брандмауэра (база данных Azure SQL)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [Практическое: Настройка параметров брандмауэра (база данных Azure SQL)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sp_set_firewall_rule &#40;базы данных SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [sys.firewall_rules &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)  
   

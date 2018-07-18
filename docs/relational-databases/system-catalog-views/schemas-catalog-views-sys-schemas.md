@@ -1,5 +1,5 @@
 ---
-title: sys.schemas (Transact-SQL) | Документы Microsoft
+title: sys.schemas (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,13 +26,13 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5fb74ca331e580ffa71111f987bf3a93450f2b56
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33178340"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049951"
 ---
-# <a name="schemas-catalog-views---sysschemas"></a>Представления - каталога схемы sys.schemas
+# <a name="schemas-catalog-views---sysschemas"></a>Схемы каталога представления — sys.schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Содержит по одной строке для каждой схемы базы данных.  
@@ -47,7 +47,7 @@ ms.locfileid: "33178340"
 |**principal_id**|**int**|Идентификатор участника, владеющего этой схемой.|  
   
 ## <a name="remarks"></a>Примечания  
- Схемы базы данных действуют как пространства имен или контейнеры для объектов, таких как таблицы, представления, процедуры и функции, которые можно найти в **sys.objects** представления каталога.  
+ Схемы базы данных действуют как пространства имен или контейнеры для объектов, таких как таблицы, представления, процедуры и функции, которые могут находиться в **sys.objects** представления каталога.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -1,5 +1,5 @@
 ---
-title: Управление на основе политик хранимые процедуры (Transact-SQL) | Документы Microsoft
+title: Управление на основе политик хранимые процедуры (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7b941921556665ef27fc20f8af706d45f44dbcd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238085"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991946"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>Хранимые процедуры управления на основе политик (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает следующие системные хранимые процедуры, используемые для управления на основе политик.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает следующие системные хранимые процедуры, которые используются для управления на основе политик.  
   
 > [!IMPORTANT]  
 >  Поддерживаются только хранимые процедуры управления на основе политик, описанные в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Недокументированные хранимые процедуры используются внутренними компонентами управления на основе политик и не должны использоваться для администрирования на основе политик.  

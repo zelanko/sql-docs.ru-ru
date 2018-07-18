@@ -1,5 +1,5 @@
 ---
-title: С помощью сообщений | Документы Microsoft
+title: С помощью сообщений | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,20 +19,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6d1b0f54854c6eebcbdfdf28d93e7df700cf4eb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037852"
 ---
 # <a name="using-messages"></a>Использование сообщений
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  В SMO системные сообщения представлены <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> объекта, которому принадлежит **сервера** объекта. Так как системные сообщения нельзя изменить, свойства объекта **SystemMessage** доступны только для чтения.  
+  В SMO системные сообщения представлены в виде <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> объекта, которому принадлежит **Server** объекта. Так как системные сообщения нельзя изменить, свойства объекта **SystemMessage** доступны только для чтения.  
   
  Определяемые пользователем сообщения представлены в SMO программно объектом <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection>. Существующие определяемые пользователем сообщения могут быть обнаружены при проходе по коллекции. Новые определяемые пользователем сообщения могут создаваться путем создания нового объекта **UserDefinedMessage** и установки соответствующих свойств.  
   
 ## <a name="examples"></a>Примеры  
- В следующих примерах кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в разделе [создать Visual C&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ В следующих примерах кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="finding-a-particular-system-message-in-visual-basic"></a>Обнаружение определенного системного сообщения на языке Visual Basic  
  Пример кода показывает, как определить системное сообщение по идентификатору и отобразить его.  

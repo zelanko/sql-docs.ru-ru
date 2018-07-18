@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_diag_events (Transact-SQL) | Документы Microsoft
+title: sys.pdw_diag_events (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 3c7cb2aaf1fac585514c4d7e540c35c1f44fad1b
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696367"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987227"
 ---
 # <a name="syspdwdiagevents-transact-sql"></a>sys.pdw_diag_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "33696367"
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |**name**|**nvarchar(255)**|Имя события, определенные диагностики.||  
-|**источник**|**nvarchar(255)**|Источник события (ядра, общие, dms, и т. д.)||  
-|**is_enabled**|**бит**|Публикуется ли событие.||  
+|**источник**|**nvarchar(255)**|Источник события (ядра, общие, dms т. д.)||  
+|**is_enabled**|**bit**|Публикуется ли событие.||  
   
 ## <a name="see-also"></a>См. также  
  [Хранилище данных SQL и представления каталога хранилища параллельных данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

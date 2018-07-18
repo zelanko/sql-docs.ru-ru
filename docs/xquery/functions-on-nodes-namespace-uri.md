@@ -1,5 +1,5 @@
 ---
-title: uri пространства имен, функция (XQuery) | Документы Microsoft
+title: Функция namespace-uri (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0107819414ce52418b369401feecff73441b63bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039636"
 ---
-# <a name="functions-on-nodes---namespace-uri"></a>Функции на узлах - uri пространства имен
+# <a name="functions-on-nodes---namespace-uri"></a>Функции с узлами — uri пространства имен
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает пространство имен URI QName, заданное в *$arg* как xs: String.  
@@ -45,18 +46,18 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  Имя узла, для которого будет получена часть URI-кода пространства имен.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
 -   Если аргумент опускается, значением по умолчанию является узел контекста.  
   
--   В SQL Server **fn:namespace-uri()** без аргумента может использоваться только в контексте контекстно зависимого предиката. Точнее, она может использоваться только внутри квадратных скобок ([ ]).  
+-   В SQL Server **fn:namespace-uri()** без аргумента может быть использована только в контексте контекстно зависимого предиката. Точнее, она может использоваться только внутри квадратных скобок ([ ]).  
   
--   Если *$arg* представляет собой пустую последовательность, возвращается строка нулевой длины.  
+-   Если *$arg* представляет пустую последовательность, возвращается строка нулевой длины.  
   
--   Если *$arg* — это элемент или узел атрибута которого расширенное имя QName не находится в пространстве имен, функция возвращает строку нулевой длины  
+-   Если *$arg* — элемент или узел атрибута которого expanded-QName не находится в пространстве имен, функция возвращает строку нулевой длины  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных **xml** столбцов типа в базе данных AdventureWorks.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных **xml** -столбец базы данных AdventureWorks.  
   
 ### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. Получение URI-адреса пространства имен определенного узла  
  Следующий запрос обращается к нетипизированному экземпляру XML. В выражении запроса выражение `namespace-uri(/ROOT[1])` получает часть URI-кода пространства имен указанного узла.  
@@ -85,7 +86,7 @@ http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuI
 ```  
   
 ### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>Б. Использование функции namespace-uri() без аргумента в предикате  
- Следующий запрос указывается в типизированном столбце xml типа CatalogDescription. Выражение возвращает все узлы элементов, чей URI-код пространства имен является адресом `http://www.adventure-works.com/schemas/OtherFeatures`. Пространства имен -**uri()** функция указывается без аргумента и использует узел контекста.  
+ Следующий запрос указывается в типизированном столбце xml типа CatalogDescription. Выражение возвращает все узлы элементов, чей URI-код пространства имен является адресом `http://www.adventure-works.com/schemas/OtherFeatures`. Пространства имен -**uri()** функции указан без аргумента и использует узел контекста.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -113,7 +114,7 @@ WHERE ProductModelID=19
 -   **Namespace-uri()** функция возвращает экземпляры типа xs: String вместо xs: anyURI.  
   
 ## <a name="see-also"></a>См. также  
- [Функции на узлах](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [Функции с узлами](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [Функция local-name &#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
   
   

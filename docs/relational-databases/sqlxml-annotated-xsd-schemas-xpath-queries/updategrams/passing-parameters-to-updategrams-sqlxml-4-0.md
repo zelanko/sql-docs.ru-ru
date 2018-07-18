@@ -1,5 +1,5 @@
 ---
-title: Передача параметров для диаграмм обновления (SQLXML 4.0) | Документы Microsoft
+title: Передача параметров в диаграммы обновления (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -23,30 +23,30 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d89d8d78b2d9f2439711756ae97f5fae5220724d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971749"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035475"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Передача параметров для диаграмм обновления (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Диаграммы обновления представляют собой шаблоны; следовательно, им можно передавать параметры. Дополнительные сведения о передаче параметров шаблонам см. в разделе [вопросы безопасности диаграмм обновления &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md).  
   
- Диаграммы обновления позволяют передавать значение NULL в качестве значения параметра. Чтобы передать параметр значение NULL, необходимо указать **nullvalue** атрибута. Значение, присвоенное **nullvalue** атрибут затем предоставляется в качестве значения параметра. В диаграммах обновления это значение рассматривается как NULL.  
+ Диаграммы обновления позволяют передавать значение NULL в качестве значения параметра. Чтобы передать значение NULL параметра, необходимо указать **nullvalue** атрибута. Значение, которое назначается **nullvalue** атрибут затем указывается в качестве значения параметра. В диаграммах обновления это значение рассматривается как NULL.  
   
 > [!NOTE]  
->  В  **\<sql:header >** и  **\<updg:header >**, следует указать **nullvalue** как неполное имя; Однако в  **\<updg:sync >**, указать **nullvalue** виде полного имени (например, **updg: nullValue**).  
+>  В  **\<sql:header >** и  **\<updg:header >**, следует указать **nullvalue** как неполное имя; в то время как в  **\<updg:sync >**, указать **nullvalue** виде полного имени (например, **updg: nullValue**).  
   
 ## <a name="examples"></a>Примеры  
- Чтобы создать рабочие образцы на основе следующих примеров, должен удовлетворять требованиям, указанным в [требования для выполнения примеров SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Чтобы создать рабочие образцы, используя следующие примеры, должны соответствовать требованиям, указанным в [требования для запуска примеров SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
  При использовании примеров диаграмм обновления необходимо учитывать следующие моменты.  
   
--   В примерах используется сопоставление по умолчанию (т. е. в диаграмме обновления не задана схема сопоставления). Дополнительные примеры диаграмм обновления, которые используются схемы сопоставления см. в разделе [определение схемы с заметками сопоставления в диаграмме обновления &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   В примерах используется сопоставление по умолчанию (т. е. в диаграмме обновления не задана схема сопоставления). Дополнительные примеры диаграмм обновления, которые используются схемы сопоставления, см. в разделе [определение схемы с заметками сопоставления в диаграмме обновления &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ### <a name="a-passing-parameters-to-an-updategram"></a>A. Передача параметров диаграмме обновления  
- В данном примере диаграмма обновления применяется для изменения фамилии сотрудника в таблице HumanResources.Shift. Диаграмма обновления передаются два параметра: ShiftID, которая позволяет однозначно определяющий рабочую смену и имя.  
+ В данном примере диаграмма обновления применяется для изменения фамилии сотрудника в таблице HumanResources.Shift. Диаграмма обновления передаются два параметра: ShiftID, который используется для уникальной идентификации смену и имя.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -69,7 +69,7 @@ ms.locfileid: "32971749"
   
 1.  Скопируйте приведенную выше диаграмму обновления в блокнот и сохраните как файл с именем UpdategramWithParameters.xml.  
   
-2.  Подготовьте тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs) в [с помощью ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) для выполнения диаграммы обновления, добавив следующие строки после `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Подготовьте тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs) в [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) для выполнения диаграммы обновления, добавив следующие строки после `cmd.Properties("Output Stream").Value = outStream`:  
   
     ```  
     cmd.NamedParameters = True  
@@ -104,7 +104,7 @@ ms.locfileid: "32971749"
   
 1.  Скопируйте приведенную выше диаграмму обновления в блокнот и сохраните как файл с именем UpdategramPassingNullvalues.xml.  
   
-2.  Подготовьте тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs) в [с помощью ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) для выполнения диаграммы обновления, добавив следующие строки после `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Подготовьте тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs) в [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) для выполнения диаграммы обновления, добавив следующие строки после `cmd.Properties("Output Stream").Value = outStream`:  
   
     ```  
     cmd.NamedParameters = True  

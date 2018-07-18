@@ -18,11 +18,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 93a6f3b3ca257a6f6d4c848b2d83bf441ab73cf4
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
-ms.translationtype: HT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36759619"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040412"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "36759619"
 |is_transactional|**bit**|Фиксирует сеанс находится ли в рамках транзакции или нет.|0 для автоматической фиксации, 1 для транзакций.|  
 |client_id|**nvarchar(255)**|Записывает сведения о клиенте для сеанса.|Любая допустимая строка.|  
 |APP_NAME|**nvarchar(255)**|Записывает сведения об имени приложения, при необходимости задать как часть процесса соединения.|Любая допустимая строка.|  
-|sql_spid|**int**|Идентификатор SPID. Используйте `session_id` этого сеанса. Используйте `sql_spid` столбца для присоединения к **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* Предупреждение \* \* ** этот столбец содержит закрытые SPID.||  
+|sql_spid|**int**|Идентификатор SPID. Используйте `session_id` этого сеанса. Используйте `sql_spid` столбца для присоединения к **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* Предупреждение \* \***  этот столбец содержит закрытые SPID.||  
   
  Сведения о максимальное число строк, сохраняемых в этом представлении см. в разделе максимальные значения представление системы в [минимальное и максимальное значения (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9) раздела.  
   

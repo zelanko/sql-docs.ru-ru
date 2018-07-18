@@ -1,5 +1,5 @@
 ---
-title: sys.partition_functions (Transact-SQL) | Документы Microsoft
+title: sys.partition_functions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2a537bc6906576c7eacd8f06d555ab4a3dc69a1d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987426"
 ---
 # <a name="syspartitionfunctions-transact-sql"></a>sys.partition_functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -42,14 +43,14 @@ ms.lasthandoff: 05/04/2018
 |**function_id**|**int**|Идентификатор функции секционирования. Уникален в пределах базы данных.|  
 |**type**|**char(2)**|Тип функции.<br /><br /> R = диапазон|  
 |**type_desc**|**nvarchar(60)**|Тип функции.<br /><br /> RANGE|  
-|**ветвления**|**int**|Число секций, создаваемых функцией.|  
-|**boundary_value_on_right**|**бит**|Для секционирования по диапазонам.<br /><br /> 1 = граничное значение включается в правый (RIGHT) диапазон границы.<br /><br /> 0 = LEFT (левый).|  
-|**is_system**||**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект используется для фрагментов полнотекстового индекса.<br /><br /> 0 = объект не используется для фрагментов полнотекстового индекса.|  
+|**Ветвление**|**int**|Число секций, создаваемых функцией.|  
+|**boundary_value_on_right**|**bit**|Для секционирования по диапазонам.<br /><br /> 1 = граничное значение включается в правый (RIGHT) диапазон границы.<br /><br /> 0 = LEFT (левый).|  
+|**is_system**||**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект используется для фрагментов полнотекстового индекса.<br /><br /> 0 = объект не используется для фрагментов полнотекстового индекса.|  
 |**create_date**|**datetime**|Дата создания функции.|  
 |**modify_date**|**datetime**|Дата последнего изменения функции с помощью инструкции ALTER.|  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public** . Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также  
  [Представления каталога функции секционирования &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)   

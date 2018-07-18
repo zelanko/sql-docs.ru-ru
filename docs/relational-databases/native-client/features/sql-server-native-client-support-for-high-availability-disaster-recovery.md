@@ -14,11 +14,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 496e105648b5153369400e47bf94a4603ea0179e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
-ms.translationtype: HT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416893"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997286"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -109,7 +109,7 @@ ms.locfileid: "37416893"
   
  В собственном клиенте [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] для поддержки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] было добавлено одно ключевое слово строки подключения OLE DB:  
   
--   **Назначение приложения**  
+-   **Application Intent**  
   
  Дополнительные сведения о ключевых словах строки подключения в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client см. в статье [Использование ключевых слов строки подключения с SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   

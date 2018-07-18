@@ -1,5 +1,5 @@
 ---
-title: sys.database_event_session_fields (база данных SQL Azure) | Документы Microsoft
+title: sys.database_event_session_fields (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0a7c7ee610ae5eb3a56a46c5b8c7ba1645b64532
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179660"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981856"
 ---
 # <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>sys.database_event_session_fields (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -32,19 +32,19 @@ ms.locfileid: "33179660"
   
 ||  
 |-|  
-|**Применяется к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 и все более поздние версии.|  
+|**Применяется к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 12 и любые более поздние версии.|  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Идентификатор сеанса событий. Не допускает значение NULL.|  
 |object_id|**int**|Идентификатор объекта, с которым связано это поле. Не допускает значение NULL.|  
-|имя|**sysname**|Имя поля. Не допускает значение NULL.|  
+|name|**sysname**|Имя поля. Не допускает значение NULL.|  
 |value|**sql_variant**|Значение поля. Не допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE на сервере.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Это представление имеет следующее количество элементов связей.  
   
 ||||  

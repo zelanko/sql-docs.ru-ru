@@ -1,5 +1,5 @@
 ---
-title: Запросы XQuery, обработка реляционных данных | Документы Microsoft
+title: Запросы XQuery, обработку реляционным данным | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,15 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b03a2aa4b8e6f2327a58884defe1e9435bfbc326
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987376"
 ---
 # <a name="xqueries-handling-relational-data"></a>Запросы XQuery, обрабатывающие реляционные данные
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Задать запрос XQuery для **xml** столбца или переменной с помощью одного из [методов типа данных XML](../t-sql/xml/xml-data-type-methods.md). К ним относятся **query()**, **value()**, **exist()**, или **modify()**. Запрос XQuery выполняется для экземпляра XML, указанного в запросе, создающем XML-код.  
+  Задать запрос XQuery для **xml** столбце или переменной с помощью одного из типа [методов типа данных XML](../t-sql/xml/xml-data-type-methods.md). К ним относятся **query()**, **value()**, **exist()**, или **modify()**. Запрос XQuery выполняется для экземпляра XML, указанного в запросе, создающем XML-код.  
   
  XML-код, созданный в результате выполнения запроса XQuery, может включать значения, полученные от других переменных Transact-SQL или столбцов набора строк. Для связи реляционных данных в формате, отличном от XML, с итоговым XML-кодом в SQL Server в форме расширений XQuery реализованы следующие псевдофункции:  
   
@@ -40,11 +41,11 @@ ms.lasthandoff: 05/03/2018
   
 -   **SQL: variable()** функции  
   
- Можно использовать эти расширения XQuery при указании запроса XQuery в **query()** метод **xml** тип данных. В результате **query()** метод может создать XML-ФАЙЛ, объединяющее данные из XML и не-**xml** типов данных.  
+ Можно использовать эти расширения XQuery при указании запроса XQuery в **query()** метод **xml** тип данных. В результате **query()** метод может создать XML, в котором объединяются данные из XML и не-**xml** типов данных.  
   
  Можно также использовать эти функции, при использовании **xml** методов типа данных **modify()**, **value()**, **query()**, и  **exist()** для получения реляционного значения внутри XML.  
   
- Дополнительные сведения см. в разделе [функции SQL: column() (XQuery)](../xquery/xquery-extension-functions-sql-column.md) и [функции SQL: variable() (XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
+ Дополнительные сведения см. в разделе [функция SQL: column() (XQuery)](../xquery/xquery-extension-functions-sql-column.md) и [функции SQL: variable() (XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
   
 ## <a name="see-also"></a>См. также  
  [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   

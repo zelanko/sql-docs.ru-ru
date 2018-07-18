@@ -1,5 +1,5 @@
 ---
-title: sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL) | Документы Microsoft
+title: sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 1d699e62251f8f2c750795d2389f338e9bd1bf11
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247063"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999626"
 ---
 # <a name="spestimatedrowsizereductionforvardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33247063"
   Вычисляет уменьшение среднего размера строк, если в таблице включен формат хранения vardecimal. С помощью этого числа можно вычислить общее уменьшение размера таблицы. Поскольку для вычисления среднего уменьшения размера строки используется статистическая выборка, это значение следует рассматривать только как приблизительное. В редких случаях размер строки может увеличиваться после включения формата хранения vardecimal.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Пользуйтесь вместо этого сжатием ROW и PAGE. Дополнительные сведения см. в разделе [Data Compression](../../relational-databases/data-compression/data-compression.md). Сжатие влияет на размер таблиц и индексов, в разделе [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Пользуйтесь вместо этого сжатием ROW и PAGE. Дополнительные сведения см. в разделе [Data Compression](../../relational-databases/data-compression/data-compression.md). Сжатие влияет на размер таблиц и индексов, см. в разделе [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,16 +62,16 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**avg_rowlen_fixed_format**|**Decimal (12, 2)**|Представляет длину строки в формате хранения fixed decimal.|  
-|**avg_rowlen_vardecimal_format**|**Decimal (12, 2)**|Представляет средний размер строки при использовании формата хранения vardecimal.|  
+|**avg_rowlen_fixed_format**|**Decimal ("12", "2")**|Представляет длину строки в формате хранения fixed decimal.|  
+|**avg_rowlen_vardecimal_format**|**Decimal ("12", "2")**|Представляет средний размер строки при использовании формата хранения vardecimal.|  
 |**row_count**|**int**|Количество строк в таблице.|  
   
-## <a name="remarks"></a>Замечания  
- Используйте **sp_estimated_rowsize_reduction_for_vardecimal** можно вычислить экономию, которую дает Включение формата хранения vardecimal в таблице. Например, если средний размер строки можно уменьшить на 40%, то размер самой таблицы также можно потенциально уменьшить на 40%. Наличие экономии места зависит от коэффициента заполнения и размера строки. Например, если длина строки, составляющая 8 000 байт, уменьшается на 40%, то на странице данных все равно помещается только одна строка, что в результате не дает никакой экономии.  
+## <a name="remarks"></a>Примечания  
+ Используйте **sp_estimated_rowsize_reduction_for_vardecimal** оценить экономию, которую при включении таблицы формат хранения vardecimal. Например, если средний размер строки можно уменьшить на 40%, то размер самой таблицы также можно потенциально уменьшить на 40%. Наличие экономии места зависит от коэффициента заполнения и размера строки. Например, если длина строки, составляющая 8 000 байт, уменьшается на 40%, то на странице данных все равно помещается только одна строка, что в результате не дает никакой экономии.  
   
- Если результаты **sp_estimated_rowsize_reduction_for_vardecimal** показывают, что размер таблицы будет увеличиваться, это означает, что множество строк в таблице используется почти полная точность типов данных decimal и Добавление небольшой объем затрат, необходимый для хранения vardecimal больше, чем экономия места от формата хранения vardecimal. В этом редком случае формат хранения vardecimal включать не следует.  
+ Если результаты **sp_estimated_rowsize_reduction_for_vardecimal** показывают, что размер таблицы будет увеличиваться, это означает, что множество строк в таблице использовать почти полная точность типов данных decimal и Добавление небольшой объем затрат, необходимый для формата хранения vardecimal больше, чем экономия места от формата хранения vardecimal. В этом редком случае формат хранения vardecimal включать не следует.  
   
- Если таблицы включен формат хранения vardecimal, используйте **sp_estimated_rowsize_reduction_for_vardecimal** Чтобы вычислить Средний размер строки при отключении этого формата хранения vardecimal.  
+ Если таблицы включен формат хранения vardecimal, используйте **sp_estimated_rowsize_reduction_for_vardecimal** позволяет оценить Средний размер строки формата хранения vardecimal отключено.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL на таблицу.  

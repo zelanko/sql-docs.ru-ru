@@ -1,5 +1,5 @@
 ---
-title: Столбцы данных событий обнаружения | Документы Microsoft
+title: Столбцы данных событий обнаружения | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 064bfcc90845082ad47caea23fa671152af486a2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042552"
 ---
 # <a name="discover-events-data-columns"></a>Столбцы данных событий обнаружения
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|Содержит текущее время события обнаружения, если доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |StartTime|3|5|Содержит время (если доступно) возникновения события окончания обнаружения. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |EndTime|4|5|Содержит время окончания события. Этот столбец не заполняется для таких классов событий запуска, как SQL:BatchStarting или SP:Starting. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
-|Длительность|5|2|Содержит приблизительное количество времени (в миллисекундах), которое заняло событие обнаружения.|  
+|Duration|5|2|Содержит приблизительное количество времени (в миллисекундах), которое заняло событие обнаружения.|  
 |CPUTime|6|2|Содержит время ЦП в миллисекундах, использованного событием.|  
 |Severity|22|1|Содержит степень серьезности исключения.|  
 |Успешно|23|1|Содержит результат события обнаружения. Возможны следующие значения.<br /><br /> 0 = неуспешное завершение;<br /><br /> 1 = успешное завершение.|  
@@ -76,6 +77,6 @@ ms.lasthandoff: 05/10/2018
 |RequestProperties|45|9|Содержит свойства в запросе XMLA.|  
   
 ## <a name="see-also"></a>См. также  
- [Категория события обнаружения событий](../../analysis-services/trace-events/discover-events-event-category.md)  
+ [Discover Events Event Category](../../analysis-services/trace-events/discover-events-event-category.md)  
   
   

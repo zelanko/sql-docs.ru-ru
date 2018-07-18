@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_dms_workers (Transact-SQL) | Документы Microsoft
+title: sys.dm_exec_dms_workers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,34 +27,34 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 940857ee9b723eed5adf1626d8db8c7868d30e7c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464750"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982616"
 ---
 # <a name="sysdmexecdmsworkers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Содержит сведения о всех работников, выполнив действия DMS.  
+  Содержит сведения о всех рабочих процессов, выполнив действия DMS.  
   
- В этом представлении отображаются данные для последних 1000 запросов и активных запросов; активные запросы всегда иметь эти данные, имеющиеся в этом представлении.  
+ В этом представлении отображаются данные для последней 1000 запросов и активных запросов; активные запросы всегда имеют данные в этом представлении.  
   
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|Запрос, что этот рабочий процесс DMS часть of.request_id, step_index, и dms_step_index формируют ключ для этого представления.||  
-|step_index|**int**|Запрос шаг, который входит в состав этого исполнителя DMS.|Индекс в разделе [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
-|dms_step_index|**int**|Шаг в плане DMS, на котором выполняется этот рабочий процесс.|В разделе [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|**int**|Узел, на котором выполняется рабочий процесс, на.|В разделе [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|execution_id|**nvarchar(32)**|Запрос, что этим исполнителем DMS of.request_id часть, step_index, и dms_step_index формируют ключ для этого представления.||  
+|step_index|**int**|Запрос шаг, который входит данный исполнитель DMS.|См. в разделе индекс этапа в [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
+|dms_step_index|**int**|Шаг в плане DMS, на котором выполняется этот рабочий процесс.|См. в разделе [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|compute_node_id|**int**|Узел, который выполняется рабочая роль.|См. в разделе [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|**int**|||  
 |Тип|**nvarcha(32)**|||  
 |status|**nvarchar(32)**|Состояние этого шага|«Ожидание» «Выполняется», «Завершено», «Сбой», «UndoFailed», «PendingCancel», «отменено», «Отменено», «Прервано»|  
 |bytes_per_sec|**bigint**|||  
 |bytes_processed|**bigint**|||  
 |rows_processed|**bigint**|||  
-|start_time|**datetime**|Время начала выполнения шага|Меньше или равно значению текущего времени и размером менее end_compile_time запроса, к которому принадлежит этот шаг.|  
-|end_time|**datetime**|Время, по которому этот шаг завершил выполнение, была отменена или не удалось.|Меньше или равно значению текущего времени и размером менее start_time присваивается значение NULL для шагов, которые в настоящее время выполнения или в очереди.|  
-|total_elapsed_time|**int**|Суммарное время действия запроса на выполнение, в миллисекундах|Между 0 и разницу между end_time и start_time. 0 для шаги в очереди.|  
+|start_time|**datetime**|Время начала выполнения шага|Меньше или равным текущее время и больше или равна end_compile_time запроса, к которой принадлежит этот шаг.|  
+|end_time|**datetime**|Время, по которому этот шаг завершил выполнение, было отменено и сбой.|Меньше или равно текущего времени и размером менее start_time, очереди или значение NULL для шагов в настоящее время выполнения.|  
+|total_elapsed_time|**int**|Общее количество времени этапа запроса на выполнение, в миллисекундах|Между 0 и разница между end_time и start_time. 0 для шаги в очереди.|  
 |cpu_time|**bigint**|||  
 |query_time|**int**|||  
 |buffers_available|**int**|||  

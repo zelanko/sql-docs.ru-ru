@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_columns_cursor (Transact-SQL) | Документы Microsoft
+title: sp_help_fulltext_columns_cursor (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 075411f7cfd3f8439a9cb15a4111fa3c3a5d1421
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999656"
 ---
 # <a name="sphelpfulltextcolumnscursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   Использует курсор для возврата столбцов, назначенных для полнотекстового индексирования.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) представления каталога.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) вместо этого представление каталога.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,10 +53,10 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
  Выходная переменная типа **курсор**. Этот результирующий курсор является динамическим, прокручиваемым и только для чтения.  
   
  [  **@table_name =**] **"***table_name***"**  
- Одно- или двухкомпонентное имя таблицы, для которой запрашиваются сведения о полнотекстовом индексе. *имя_таблицы* — **nvarchar(517)**, значение по умолчанию NULL. Если *table_name* опущен, сведения о столбце полнотекстового индекса извлекаются для каждой таблицы с индексом full-text.  
+ Одно- или двухкомпонентное имя таблицы, для которой запрашиваются сведения о полнотекстовом индексе. *TABLE_NAME* — **nvarchar(517)**, со значением по умолчанию NULL. Если *table_name* опущен, сведения о столбце полнотекстового индекса извлекаются для каждой таблицы с индексом полнотекстового поиска.  
   
  [  **@column_name =**] **"***column_name***"**  
- Имя столбца, для которого запрашиваются метаданные полнотекстового индекса. *column_name* — **sysname** со значением по умолчанию NULL. Если *column_name* опущен или имеет значение NULL, возвращаются сведения полнотекстового столбца для каждого полнотекстового индексированного столбца для *table_name*. Если *table_name* также опущен или имеет значение NULL, возвращаются сведения о столбце полнотекстового индекса для каждого полнотекстового индексированного столбца для всех таблиц в базе данных.  
+ Имя столбца, для которого запрашиваются метаданные полнотекстового индекса. *column_name* — **sysname** со значением по умолчанию NULL. Если *column_name* опущен или имеет значение NULL, возвращаются сведения о столбце полнотекстового поиска для каждого полнотекстового индексированного столбца для *table_name*. Если *table_name* также опущен или имеет значение NULL, возвращаются сведения о столбце полнотекстового индекса для каждого полнотекстового индексированного столбца для всех таблиц в базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -69,8 +70,8 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 |**ИМЯ_ТАБЛИЦЫ**|**sysname**|Имя таблицы.|  
 |**FULLTEXT_COLUMN_NAME**|**sysname**|Столбец таблицы с полнотекстовым индексом, предназначенной для индексирования.|  
 |**FULLTEXT_COLID**|**int**|Идентификатор столбца с полнотекстовым индексом.|  
-|**FULLTEXT_BLOBTP_COLNAME**|**sysname**|Столбец в таблице с полнотекстовым индексом, указывающий тип документа столбца с полнотекстовым индексом. Это значение применимо только в случае, если полнотекстовый индексированный столбец **varbinary(max)** или **изображения** столбца.|  
-|**FULLTEXT_BLOBTP_COLID**|**int**|Идентификатор столбца типа документа. Это значение применимо только в случае, если полнотекстовый индексированный столбец **varbinary(max)** или **изображения** столбца.|  
+|**FULLTEXT_BLOBTP_COLNAME**|**sysname**|Столбец в таблице с полнотекстовым индексом, указывающий тип документа столбца с полнотекстовым индексом. Это значение применимо только в случае, когда полнотекстовый индексированный столбец является **varbinary(max)** или **изображение** столбца.|  
+|**FULLTEXT_BLOBTP_COLID**|**int**|Идентификатор столбца типа документа. Это значение применимо только в случае, когда полнотекстовый индексированный столбец является **varbinary(max)** или **изображение** столбца.|  
 |**FULLTEXT_LANGUAGE**|**sysname**|Язык, используемый для полнотекстового поиска в столбце.|  
   
 ## <a name="permissions"></a>Разрешения  

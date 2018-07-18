@@ -1,5 +1,5 @@
 ---
-title: Оси элемент (XMLA) | Документы Microsoft
+title: Осей элемент (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3a8dfff1c8a551157661bcb1de5700bf51a7f914
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574916"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038022"
 ---
 # <a name="axes-element-xmla"></a>Элемент Axes (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Содержит коллекцию [оси](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) элементов, представляющих данные оси, содержащиеся в [корневой](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) элемент, который использует [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) тип данных.  
+  Содержит коллекцию [оси](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) элементов, представляющих данные оси, содержащиеся в [корневой](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) элемент, использующий [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) тип данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34574916"
 </root>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -41,15 +41,15 @@ ms.locfileid: "34574916"
 |Значение по умолчанию|None|  
 |Количество элементов|1-1: обязательный элемент, который встречается ровно один раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительские элементы|[корень](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
+|Родительские элементы|[корневой](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
 |Дочерние элементы|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- В разделе **осей** элемент, **оси** элементы перечислены в порядке их появления в наборе данных, начиная с нуля. **AxisFormat** определяет параметр свойства XMLA как **оси** должны быть отформатированы элементы. Дополнительные сведения о **AxisFormat** свойство, в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
+ В разделе **осей** элемент, **оси** элементы перечисляются в порядке их появления в наборе данных, начиная с нуля. **AxisFormat** определяет параметр свойства XMLA как **оси** должны быть отформатированы элементы. Дополнительные сведения о **AxisFormat** свойство, см. в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
  Ось представляет набор кортежей, в котором все кортежи набора имеют одну и ту же размерность. Набор может быть представлен с помощью разных способов, позволяющих достичь разных преимуществ. Например, следующий набор из четырех кортежей может быть представлен в виде коллекций двумерных кортежей или декартова произведения двух одномерных наборов.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "34574916"
 |Операция|Описание|  
 |---------------|-----------------|  
 |Член|Наименьшая единица измерения на оси, представляющая элемент в иерархии измерений.|  
-|Члены|Коллекция **член** объекты из той же иерархии измерений.|  
+|Члены|Коллекция **член** объектов с использованием того же иерархии измерений.|  
 |Кортеж|Коллекция элементов из разных иерархий измерений.|  
 |Кортежи|Коллекция **кортежа** объектов одинаковой размерности.|  
 |Union|Объединение наборов.|  
